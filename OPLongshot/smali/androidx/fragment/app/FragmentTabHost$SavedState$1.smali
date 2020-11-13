@@ -1,6 +1,6 @@
 .class final Landroidx/fragment/app/FragmentTabHost$SavedState$1;
 .super Ljava/lang/Object;
-.source "FragmentTabHost.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

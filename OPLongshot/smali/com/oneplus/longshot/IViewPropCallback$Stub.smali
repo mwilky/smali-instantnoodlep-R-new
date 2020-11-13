@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/IViewPropCallback$Stub;
 .super Landroid/os/Binder;
-.source "IViewPropCallback.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/IViewPropCallback;
@@ -39,7 +39,7 @@
 
     const-string v0, "com.oneplus.longshot.IViewPropCallback"
 
-    invoke-virtual {p0, p0, v0}, Lcom/oneplus/longshot/IViewPropCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -117,11 +117,6 @@
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
@@ -159,7 +154,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/longshot/IViewPropCallback$Stub;->performScroll(II)Z
+    invoke-interface {p0, p1, p2}, Lcom/oneplus/longshot/IViewPropCallback;->performScroll(II)Z
 
     move-result p1
 
@@ -172,7 +167,7 @@
     :cond_2
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/IViewPropCallback$Stub;->getViewProps()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/oneplus/longshot/IViewPropCallback;->getViewProps()Ljava/lang/String;
 
     move-result-object p1
 

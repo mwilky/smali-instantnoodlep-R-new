@@ -1,6 +1,6 @@
 .class final Landroidx/dynamicanimation/animation/FloatPropertyCompat$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "FloatPropertyCompat.java"
+.source ""
 
 
 # annotations

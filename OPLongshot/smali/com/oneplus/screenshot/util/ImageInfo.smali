@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/ImageInfo;
 .super Lcom/oneplus/screenshot/util/FileInfo;
-.source "ImageInfo.java"
+.source ""
 
 
 # direct methods

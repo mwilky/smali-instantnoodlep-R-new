@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$Adapter;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
+.source ""
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<VH:",
-        "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
+        "Landroidx/recyclerview/widget/RecyclerView$y;",
         ">",
         "Ljava/lang/Object;"
     }
@@ -50,15 +50,19 @@
 
 
 # virtual methods
-.method public final bindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+.method public final bindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
     .locals 2
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;I)V"
         }
     .end annotation
 
-    iput p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mPosition:I
+    iput p2, p1, Landroidx/recyclerview/widget/RecyclerView$y;->c:I
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->hasStableIds()Z
 
@@ -70,49 +74,56 @@
 
     move-result-wide v0
 
-    iput-wide v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mItemId:J
+    iput-wide v0, p1, Landroidx/recyclerview/widget/RecyclerView$y;->e:J
 
     :cond_0
     const/16 v0, 0x207
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->setFlags(II)V
+    invoke-virtual {p1, v1, v0}, Landroidx/recyclerview/widget/RecyclerView$y;->F(II)V
 
     const-string v0, "RV OnBindView"
 
-    invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getUnmodifiedPayloads()Ljava/util/List;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$y;->o()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)V
+    invoke-virtual {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;ILjava/util/List;)V
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->clearPayload()V
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$y;->d()V
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    instance-of p2, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
+    instance-of p2, p1, Landroidx/recyclerview/widget/RecyclerView$l;
 
     if-eqz p2, :cond_1
 
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView$l;
 
-    iput-boolean v1, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->mInsetsDirty:Z
+    iput-boolean v1, p1, Landroidx/recyclerview/widget/RecyclerView$l;->c:Z
 
     :cond_1
-    invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     return-void
 .end method
 
-.method public final createViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.method public final createViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
     .locals 1
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,13 +135,13 @@
     :try_start_0
     const-string v0, "RV CreateView"
 
-    invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
 
     move-result-object p1
 
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -138,11 +149,11 @@
 
     if-nez v0, :cond_0
 
-    iput p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mItemViewType:I
+    iput p2, p1, Landroidx/recyclerview/widget/RecyclerView$y;->f:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     return-object p1
 
@@ -161,7 +172,7 @@
     :catchall_0
     move-exception p1
 
-    invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     throw p1
 .end method
@@ -229,6 +240,10 @@
 
 .method public final notifyItemChanged(ILjava/lang/Object;)V
     .locals 2
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
@@ -273,6 +288,10 @@
 
 .method public final notifyItemRangeChanged(IILjava/lang/Object;)V
     .locals 1
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
@@ -315,11 +334,19 @@
 
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
-.method public abstract onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+.method public abstract onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;I)V"
@@ -327,8 +354,16 @@
     .end annotation
 .end method
 
-.method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)V
+.method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;ILjava/util/List;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;I",
@@ -338,12 +373,19 @@
         }
     .end annotation
 
-    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
 
     return-void
 .end method
 
-.method public abstract onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.method public abstract onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -355,12 +397,20 @@
 
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
-.method public onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
+.method public onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$y;)Z
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;)Z"
@@ -372,8 +422,12 @@
     return p1
 .end method
 
-.method public onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+.method public onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$y;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;)V"
@@ -383,8 +437,12 @@
     return-void
 .end method
 
-.method public onViewDetachedFromWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+.method public onViewDetachedFromWindow(Landroidx/recyclerview/widget/RecyclerView$y;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;)V"
@@ -394,8 +452,12 @@
     return-void
 .end method
 
-.method public onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+.method public onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$y;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TVH;)V"
@@ -405,12 +467,16 @@
     return-void
 .end method
 
-.method public registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
+.method public registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$g;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$g;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;->registerObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -438,12 +504,16 @@
     throw p1
 .end method
 
-.method public unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
+.method public unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$g;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$g;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -1,6 +1,14 @@
 .class public Landroidx/vectordrawable/graphics/drawable/AnimationUtilsCompat;
 .super Ljava/lang/Object;
-.source "AnimationUtilsCompat.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -14,12 +22,6 @@
 
 .method private static createInterpolatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
@@ -245,11 +247,6 @@
 
 .method public static loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -273,9 +270,9 @@
     if-ne p1, v1, :cond_1
 
     :try_start_0
-    new-instance p0, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;
+    new-instance p0, La/f/a/a/a;
 
-    invoke-direct {p0}, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;-><init>()V
+    invoke-direct {p0}, La/f/a/a/a;-><init>()V
 
     return-object p0
 
@@ -299,9 +296,9 @@
 
     if-ne p1, v1, :cond_2
 
-    new-instance p0, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
+    new-instance p0, La/f/a/a/b;
 
-    invoke-direct {p0}, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;-><init>()V
+    invoke-direct {p0}, La/f/a/a/b;-><init>()V
 
     return-object p0
 
@@ -310,9 +307,9 @@
 
     if-ne p1, v1, :cond_3
 
-    new-instance p0, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    new-instance p0, La/f/a/a/c;
 
-    invoke-direct {p0}, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;-><init>()V
+    invoke-direct {p0}, La/f/a/a/c;-><init>()V
 
     return-object p0
 

@@ -1,18 +1,9 @@
 .class public final enum Lcom/google/tagmanager/ContainerOpener$OpenType;
 .super Ljava/lang/Enum;
-.source "ContainerOpener.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/tagmanager/ContainerOpener;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
-    name = "OpenType"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Enum<",

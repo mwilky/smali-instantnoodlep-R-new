@@ -1,6 +1,6 @@
 .class abstract Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
 .super Ljava/lang/Object;
-.source "ModernAsyncTask.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;

@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/ArraySet;
 .super Ljava/lang/Object;
-.source "ArraySet.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -36,10 +36,16 @@
 .field private static final TAG:Ljava/lang/String; = "ArraySet"
 
 .field private static sBaseCache:[Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private static sBaseCacheSize:I
 
 .field private static sTwiceBaseCache:[Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private static sTwiceBaseCacheSize:I
 
@@ -118,6 +124,10 @@
 
 .method public constructor <init>(Landroidx/collection/ArraySet;)V
     .locals 0
+    .param p1    # Landroidx/collection/ArraySet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -138,6 +148,10 @@
 
 .method public constructor <init>(Ljava/util/Collection;)V
     .locals 0
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -159,19 +173,19 @@
 .method private allocArrays(I)V
     .locals 5
 
-    const-class v0, Landroidx/collection/ArraySet;
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/16 v3, 0x8
 
-    const/16 v4, 0x8
+    if-ne p1, v3, :cond_1
 
-    if-ne p1, v4, :cond_1
+    const-class v3, Landroidx/collection/ArraySet;
 
-    monitor-enter v0
+    monitor-enter v3
 
     :try_start_0
     sget-object v4, Landroidx/collection/ArraySet;->sTwiceBaseCache:[Ljava/lang/Object;
@@ -182,56 +196,54 @@
 
     iput-object p1, p0, Landroidx/collection/ArraySet;->mArray:[Ljava/lang/Object;
 
-    aget-object v4, p1, v2
-
-    check-cast v4, [Ljava/lang/Object;
+    aget-object v4, p1, v1
 
     check-cast v4, [Ljava/lang/Object;
 
     sput-object v4, Landroidx/collection/ArraySet;->sTwiceBaseCache:[Ljava/lang/Object;
 
-    aget-object v4, p1, v3
-
-    check-cast v4, [I
+    aget-object v4, p1, v2
 
     check-cast v4, [I
 
     iput-object v4, p0, Landroidx/collection/ArraySet;->mHashes:[I
 
-    aput-object v1, p1, v3
+    aput-object v0, p1, v2
 
-    aput-object v1, p1, v2
+    aput-object v0, p1, v1
 
     sget p1, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
 
-    sub-int/2addr p1, v3
+    sub-int/2addr p1, v2
 
     sput p1, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
 
-    monitor-exit v0
+    monitor-exit v3
 
     return-void
 
     :cond_0
-    monitor-exit v0
+    monitor-exit v3
 
     goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    monitor-exit v0
+    monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
 
     :cond_1
-    const/4 v4, 0x4
+    const/4 v3, 0x4
 
-    if-ne p1, v4, :cond_3
+    if-ne p1, v3, :cond_3
 
-    monitor-enter v0
+    const-class v3, Landroidx/collection/ArraySet;
+
+    monitor-enter v3
 
     :try_start_1
     sget-object v4, Landroidx/collection/ArraySet;->sBaseCache:[Ljava/lang/Object;
@@ -242,45 +254,41 @@
 
     iput-object p1, p0, Landroidx/collection/ArraySet;->mArray:[Ljava/lang/Object;
 
-    aget-object v4, p1, v2
-
-    check-cast v4, [Ljava/lang/Object;
+    aget-object v4, p1, v1
 
     check-cast v4, [Ljava/lang/Object;
 
     sput-object v4, Landroidx/collection/ArraySet;->sBaseCache:[Ljava/lang/Object;
 
-    aget-object v4, p1, v3
-
-    check-cast v4, [I
+    aget-object v4, p1, v2
 
     check-cast v4, [I
 
     iput-object v4, p0, Landroidx/collection/ArraySet;->mHashes:[I
 
-    aput-object v1, p1, v3
+    aput-object v0, p1, v2
 
-    aput-object v1, p1, v2
+    aput-object v0, p1, v1
 
     sget p1, Landroidx/collection/ArraySet;->sBaseCacheSize:I
 
-    sub-int/2addr p1, v3
+    sub-int/2addr p1, v2
 
     sput p1, Landroidx/collection/ArraySet;->sBaseCacheSize:I
 
-    monitor-exit v0
+    monitor-exit v3
 
     return-void
 
     :cond_2
-    monitor-exit v0
+    monitor-exit v3
 
     goto :goto_0
 
     :catchall_1
     move-exception p1
 
-    monitor-exit v0
+    monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -300,45 +308,45 @@
 .end method
 
 .method private static freeArrays([I[Ljava/lang/Object;I)V
-    .locals 8
+    .locals 7
+
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xa
+
+    const/4 v5, 0x1
+
+    const/16 v6, 0x8
+
+    if-ne v0, v6, :cond_2
 
     const-class v0, Landroidx/collection/ArraySet;
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xa
-
-    const/4 v6, 0x1
-
-    const/16 v7, 0x8
-
-    if-ne v1, v7, :cond_2
 
     monitor-enter v0
 
     :try_start_0
-    sget v1, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
+    sget v6, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
 
-    if-ge v1, v5, :cond_1
+    if-ge v6, v4, :cond_1
 
-    sget-object v1, Landroidx/collection/ArraySet;->sTwiceBaseCache:[Ljava/lang/Object;
+    sget-object v4, Landroidx/collection/ArraySet;->sTwiceBaseCache:[Ljava/lang/Object;
 
-    aput-object v1, p1, v4
+    aput-object v4, p1, v3
 
-    aput-object p0, p1, v6
+    aput-object p0, p1, v5
 
-    sub-int/2addr p2, v6
+    sub-int/2addr p2, v5
 
     :goto_0
-    if-lt p2, v3, :cond_0
+    if-lt p2, v2, :cond_0
 
-    aput-object v2, p1, p2
+    aput-object v1, p1, p2
 
     add-int/lit8 p2, p2, -0x1
 
@@ -349,7 +357,7 @@
 
     sget p0, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
 
-    add-int/2addr p0, v6
+    add-int/2addr p0, v5
 
     sput p0, Landroidx/collection/ArraySet;->sTwiceBaseCacheSize:I
 
@@ -368,31 +376,33 @@
     throw p0
 
     :cond_2
-    array-length v1, p0
+    array-length v0, p0
 
-    const/4 v7, 0x4
+    const/4 v6, 0x4
 
-    if-ne v1, v7, :cond_5
+    if-ne v0, v6, :cond_5
+
+    const-class v0, Landroidx/collection/ArraySet;
 
     monitor-enter v0
 
     :try_start_1
-    sget v1, Landroidx/collection/ArraySet;->sBaseCacheSize:I
+    sget v6, Landroidx/collection/ArraySet;->sBaseCacheSize:I
 
-    if-ge v1, v5, :cond_4
+    if-ge v6, v4, :cond_4
 
-    sget-object v1, Landroidx/collection/ArraySet;->sBaseCache:[Ljava/lang/Object;
+    sget-object v4, Landroidx/collection/ArraySet;->sBaseCache:[Ljava/lang/Object;
 
-    aput-object v1, p1, v4
+    aput-object v4, p1, v3
 
-    aput-object p0, p1, v6
+    aput-object p0, p1, v5
 
-    sub-int/2addr p2, v6
+    sub-int/2addr p2, v5
 
     :goto_1
-    if-lt p2, v3, :cond_3
+    if-lt p2, v2, :cond_3
 
-    aput-object v2, p1, p2
+    aput-object v1, p1, p2
 
     add-int/lit8 p2, p2, -0x1
 
@@ -403,7 +413,7 @@
 
     sget p0, Landroidx/collection/ArraySet;->sBaseCacheSize:I
 
-    add-int/2addr p0, v6
+    add-int/2addr p0, v5
 
     sput p0, Landroidx/collection/ArraySet;->sBaseCacheSize:I
 
@@ -466,7 +476,7 @@
     :cond_0
     iget-object v1, p0, Landroidx/collection/ArraySet;->mHashes:[I
 
-    invoke-static {v1, v0, p2}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v1, v0, p2}, Landroidx/collection/a;->a([III)I
 
     move-result v1
 
@@ -567,7 +577,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v1, v0, v2}, Landroidx/collection/a;->a([III)I
 
     move-result v1
 
@@ -644,6 +654,10 @@
 # virtual methods
 .method public add(Ljava/lang/Object;)Z
     .locals 8
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -782,6 +796,10 @@
 
 .method public addAll(Landroidx/collection/ArraySet;)V
     .locals 4
+    .param p1    # Landroidx/collection/ArraySet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -843,6 +861,10 @@
 
 .method public addAll(Ljava/util/Collection;)Z
     .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -921,6 +943,10 @@
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1}, Landroidx/collection/ArraySet;->indexOf(Ljava/lang/Object;)I
 
@@ -941,6 +967,10 @@
 
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 1
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1113,6 +1143,10 @@
 
 .method public indexOf(Ljava/lang/Object;)I
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p1, :cond_0
 
@@ -1180,6 +1214,10 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1}, Landroidx/collection/ArraySet;->indexOf(Ljava/lang/Object;)I
 
@@ -1201,6 +1239,10 @@
 
 .method public removeAll(Landroidx/collection/ArraySet;)Z
     .locals 5
+    .param p1    # Landroidx/collection/ArraySet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1243,6 +1285,10 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1424,6 +1470,10 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 4
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1476,6 +1526,8 @@
 
 .method public toArray()[Ljava/lang/Object;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget v0, p0, Landroidx/collection/ArraySet;->mSize:I
 
@@ -1492,6 +1544,13 @@
 
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 3
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1519,8 +1578,6 @@
     invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
 
     check-cast p1, [Ljava/lang/Object;
 
@@ -1621,6 +1678,9 @@
 
 .method public valueAt(I)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TE;"

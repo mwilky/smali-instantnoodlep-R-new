@@ -1,6 +1,12 @@
 .class Landroidx/documentfile/provider/SingleDocumentFile;
-.super Landroidx/documentfile/provider/DocumentFile;
-.source "SingleDocumentFile.java"
+.super Landroidx/documentfile/provider/a;
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
 
 
 # instance fields
@@ -10,10 +16,14 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+.method constructor <init>(Landroidx/documentfile/provider/a;Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
+    .param p1    # Landroidx/documentfile/provider/a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    invoke-direct {p0, p1}, Landroidx/documentfile/provider/DocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;)V
+    invoke-direct {p0, p1}, Landroidx/documentfile/provider/a;-><init>(Landroidx/documentfile/provider/a;)V
 
     iput-object p2, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
@@ -52,7 +62,7 @@
     return v0
 .end method
 
-.method public createDirectory(Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
+.method public createDirectory(Ljava/lang/String;)Landroidx/documentfile/provider/a;
     .locals 0
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -62,7 +72,7 @@
     throw p1
 .end method
 
-.method public createFile(Ljava/lang/String;Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
+.method public createFile(Ljava/lang/String;Ljava/lang/String;)Landroidx/documentfile/provider/a;
     .locals 0
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -114,6 +124,8 @@
 
 .method public getName()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
@@ -128,6 +140,8 @@
 
 .method public getType()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
@@ -218,7 +232,7 @@
     return-wide v0
 .end method
 
-.method public listFiles()[Landroidx/documentfile/provider/DocumentFile;
+.method public listFiles()[Landroidx/documentfile/provider/a;
     .locals 1
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;

@@ -1,6 +1,12 @@
 .class Landroidx/cardview/widget/RoundRectDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "RoundRectDrawable.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
@@ -82,7 +88,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v0
 
@@ -121,7 +127,7 @@
 
     iget-object v0, p0, Landroidx/cardview/widget/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v1
 
@@ -145,7 +151,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
 
@@ -184,7 +190,7 @@
 
     iget-boolean v1, p0, Landroidx/cardview/widget/RoundRectDrawable;->mInsetForRadius:Z
 
-    invoke-static {p1, v0, v1}, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->calculateVerticalPadding(FFZ)F
+    invoke-static {p1, v0, v1}, Landroidx/cardview/widget/e;->d(FFZ)F
 
     move-result p1
 
@@ -194,7 +200,7 @@
 
     iget-boolean v2, p0, Landroidx/cardview/widget/RoundRectDrawable;->mInsetForRadius:Z
 
-    invoke-static {v0, v1, v2}, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->calculateHorizontalPadding(FFZ)F
+    invoke-static {v0, v1, v2}, Landroidx/cardview/widget/e;->c(FFZ)F
 
     move-result v0
 
@@ -440,10 +446,14 @@
 
 .method public setColor(Landroid/content/res/ColorStateList;)V
     .locals 0
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1}, Landroidx/cardview/widget/RoundRectDrawable;->setBackground(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -488,7 +498,7 @@
 
     invoke-direct {p0, p1}, Landroidx/cardview/widget/RoundRectDrawable;->updateBounds(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -511,7 +521,7 @@
 
     invoke-direct {p0, p1}, Landroidx/cardview/widget/RoundRectDrawable;->updateBounds(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -529,7 +539,7 @@
 
     iput-object p1, p0, Landroidx/cardview/widget/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -547,7 +557,7 @@
 
     iput-object p1, p0, Landroidx/cardview/widget/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-virtual {p0}, Landroidx/cardview/widget/RoundRectDrawable;->invalidateSelf()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/util/MovePoint;
 .super Landroid/graphics/Point;
-.source "MovePoint.java"
+.source ""
 
 
 # static fields
@@ -105,13 +105,11 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/util/MovePoint;->mStart:Landroid/graphics/Point;
 
-    iget v0, v0, Landroid/graphics/Point;->x:I
+    iget v1, v0, Landroid/graphics/Point;->x:I
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/util/MovePoint;->mStart:Landroid/graphics/Point;
+    iget v0, v0, Landroid/graphics/Point;->y:I
 
-    iget v1, v1, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {p0, v0, v1}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->set(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/graphics/Point;->set(II)V
 
     return-void
 .end method

@@ -117,6 +117,7 @@
     <item type="id" name="date_picker_header_lunar" />
     <item type="id" name="date_picker_header_year" />
     <item type="id" name="date_picker_month_selection" />
+    <item type="id" name="date_picker_selection_layout" />
     <item type="id" name="date_picker_year_picker" />
     <item type="id" name="date_picker_year_selection" />
     <item type="id" name="day" />
@@ -183,6 +184,7 @@
     <item type="id" name="image" />
     <item type="id" name="imageLayoutPanel" />
     <item type="id" name="imagePanel" />
+    <item type="id" name="img_guider_bubble" />
     <item type="id" name="increment" />
     <item type="id" name="indeterminate" />
     <item type="id" name="info" />

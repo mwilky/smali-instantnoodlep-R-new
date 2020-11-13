@@ -1,6 +1,6 @@
 .class abstract Landroidx/collection/MapCollections;
 .super Ljava/lang/Object;
-.source "MapCollections.java"
+.source ""
 
 
 # annotations
@@ -28,6 +28,9 @@
 
 # instance fields
 .field mEntrySet:Landroidx/collection/MapCollections$EntrySet;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -37,6 +40,9 @@
 .end field
 
 .field mKeySet:Landroidx/collection/MapCollections$KeySet;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -46,6 +52,9 @@
 .end field
 
 .field mValues:Landroidx/collection/MapCollections$ValuesCollection;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -480,8 +489,6 @@
     invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
 
     check-cast p1, [Ljava/lang/Object;
 

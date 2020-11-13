@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/transform/Complex;
 .super Ljava/lang/Object;
-.source "Complex.java"
+.source ""
 
 
 # instance fields
@@ -56,11 +56,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/transform/Complex;->clone()Lcom/oneplus/screenshot/longshot/transform/Complex;
 

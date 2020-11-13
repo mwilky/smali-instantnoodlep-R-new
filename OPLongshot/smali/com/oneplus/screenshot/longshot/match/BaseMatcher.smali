@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
 .super Ljava/lang/Object;
-.source "BaseMatcher.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/match/Matcher;

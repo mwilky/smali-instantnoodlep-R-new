@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/anim/DropInterpolator;
 .super Lcom/oneplus/screenshot/anim/BaseInterpolator;
-.source "DropInterpolator.java"
+.source ""
 
 
 # static fields
@@ -21,46 +21,42 @@
 .method public getInterpolation(F)F
     .locals 3
 
-    iget v0, p0, Lcom/oneplus/screenshot/anim/DropInterpolator;->mDurationFactor:F
+    iget v0, p0, Lcom/oneplus/screenshot/anim/BaseInterpolator;->mDurationFactor:F
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    div-float/2addr v0, v1
+    div-float v1, v0, v1
 
-    cmpg-float v0, p1, v0
+    cmpg-float v1, p1, v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-gez v0, :cond_0
+    if-gez v1, :cond_0
 
-    return v1
+    return v2
 
     :cond_0
-    iget v0, p0, Lcom/oneplus/screenshot/anim/DropInterpolator;->mDurationFactor:F
-
     sub-float/2addr p1, v0
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iget v2, p0, Lcom/oneplus/screenshot/anim/DropInterpolator;->mDurationFactor:F
+    sub-float/2addr v1, v0
 
-    sub-float/2addr v0, v2
+    div-float/2addr p1, v1
 
-    div-float/2addr p1, v0
-
-    iget v0, p0, Lcom/oneplus/screenshot/anim/DropInterpolator;->mFactor:F
+    iget v0, p0, Lcom/oneplus/screenshot/anim/BaseInterpolator;->mFactor:F
 
     mul-float/2addr p1, v0
 
-    cmpg-float v0, p1, v1
+    cmpg-float v0, p1, v2
 
     if-gez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v1, p1
+    move v2, p1
 
     :goto_0
-    return v1
+    return v2
 .end method

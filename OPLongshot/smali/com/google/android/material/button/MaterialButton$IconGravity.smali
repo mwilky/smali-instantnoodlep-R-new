@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/button/MaterialButton$IconGravity;
 .super Ljava/lang/Object;
-.source "MaterialButton.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

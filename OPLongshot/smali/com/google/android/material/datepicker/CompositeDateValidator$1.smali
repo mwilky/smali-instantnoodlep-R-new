@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/datepicker/CompositeDateValidator$1;
 .super Ljava/lang/Object;
-.source "CompositeDateValidator.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -39,8 +39,14 @@
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/datepicker/CompositeDateValidator;
     .locals 2
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    const-class v0, Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
+    const-class v0, Lcom/google/android/material/datepicker/CalendarConstraints$b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -67,6 +73,12 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/CompositeDateValidator$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/datepicker/CompositeDateValidator;
 
@@ -77,6 +89,8 @@
 
 .method public newArray(I)[Lcom/google/android/material/datepicker/CompositeDateValidator;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-array p1, p1, [Lcom/google/android/material/datepicker/CompositeDateValidator;
 
@@ -85,6 +99,8 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/CompositeDateValidator$1;->newArray(I)[Lcom/google/android/material/datepicker/CompositeDateValidator;
 

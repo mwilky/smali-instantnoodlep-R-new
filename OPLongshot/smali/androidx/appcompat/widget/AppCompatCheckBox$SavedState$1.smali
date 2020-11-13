@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/AppCompatCheckBox$SavedState$1;
 .super Ljava/lang/Object;
-.source "AppCompatCheckBox.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;-><init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$1;)V
+    invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;-><init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$a;)V
 
     return-object v0
 .end method

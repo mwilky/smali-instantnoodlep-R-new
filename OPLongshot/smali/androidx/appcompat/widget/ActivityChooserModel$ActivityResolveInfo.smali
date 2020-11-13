@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 .super Ljava/lang/Object;
-.source "ActivityChooserModel.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -94,9 +94,7 @@
     return v1
 
     :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
+    const-class v2, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

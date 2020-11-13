@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;
 .super Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;
-.source "EditView.java"
+.source ""
 
 
 # annotations
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
 
-    iget v0, v0, Lcom/oneplus/screenshot/longshot/widget/EditView;->mTouchMode:I
+    iget v0, v0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
 
     const/4 v1, 0x3
 
@@ -90,19 +90,17 @@
 .end method
 
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
 
-    iget v0, v0, Lcom/oneplus/screenshot/longshot/widget/EditView;->mTouchMode:I
+    iget v1, v0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    if-ne v0, v1, :cond_1
+    if-ne v1, v2, :cond_1
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
@@ -120,19 +118,15 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
 
-    iget-boolean p1, p1, Lcom/oneplus/screenshot/longshot/widget/EditView;->mIsFirstScroll:Z
+    iget-boolean p3, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mIsFirstScroll:Z
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
+    if-eqz p3, :cond_0
 
     const/4 p3, 0x0
 
-    iput-boolean p3, p1, Lcom/oneplus/screenshot/longshot/widget/EditView;->mIsFirstScroll:Z
+    iput-boolean p3, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mIsFirstScroll:Z
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 

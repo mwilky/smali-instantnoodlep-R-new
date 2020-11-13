@@ -1,6 +1,12 @@
 .class Landroidx/transition/ViewUtilsApi19;
-.super Landroidx/transition/ViewUtilsBase;
-.source "ViewUtilsApi19.java"
+.super Landroidx/transition/y;
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
 
 
 # static fields
@@ -17,7 +23,7 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroidx/transition/ViewUtilsBase;-><init>()V
+    invoke-direct {p0}, Landroidx/transition/y;-><init>()V
 
     return-void
 .end method
@@ -26,12 +32,25 @@
 # virtual methods
 .method public clearNonTransitionAlpha(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public getTransitionAlpha(Landroid/view/View;)F
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     sget-boolean v0, Landroidx/transition/ViewUtilsApi19;->sTryHiddenTransitionAlpha:Z
 
@@ -61,12 +80,25 @@
 
 .method public saveNonTransitionAlpha(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setTransitionAlpha(Landroid/view/View;F)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     sget-boolean v0, Landroidx/transition/ViewUtilsApi19;->sTryHiddenTransitionAlpha:Z
 

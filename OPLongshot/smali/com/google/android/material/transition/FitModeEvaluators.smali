@@ -1,29 +1,35 @@
 .class Lcom/google/android/material/transition/FitModeEvaluators;
 .super Ljava/lang/Object;
-.source "FitModeEvaluators.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # static fields
-.field private static final HEIGHT:Lcom/google/android/material/transition/FitModeEvaluator;
+.field private static final HEIGHT:Lcom/google/android/material/transition/c;
 
-.field private static final WIDTH:Lcom/google/android/material/transition/FitModeEvaluator;
+.field private static final WIDTH:Lcom/google/android/material/transition/c;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/material/transition/FitModeEvaluators$1;
+    new-instance v0, Lcom/google/android/material/transition/FitModeEvaluators$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$a;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/FitModeEvaluator;
+    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/c;
 
-    new-instance v0, Lcom/google/android/material/transition/FitModeEvaluators$2;
+    new-instance v0, Lcom/google/android/material/transition/FitModeEvaluators$b;
 
-    invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$2;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$b;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/FitModeEvaluator;
+    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/c;
 
     return-void
 .end method
@@ -36,7 +42,7 @@
     return-void
 .end method
 
-.method static get(IZLandroid/graphics/RectF;Landroid/graphics/RectF;)Lcom/google/android/material/transition/FitModeEvaluator;
+.method static get(IZLandroid/graphics/RectF;Landroid/graphics/RectF;)Lcom/google/android/material/transition/c;
     .locals 0
 
     if-eqz p0, :cond_2
@@ -49,7 +55,7 @@
 
     if-ne p0, p1, :cond_0
 
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/FitModeEvaluator;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/c;
 
     return-object p0
 
@@ -75,7 +81,7 @@
     throw p1
 
     :cond_1
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/FitModeEvaluator;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/c;
 
     return-object p0
 
@@ -86,12 +92,12 @@
 
     if-eqz p0, :cond_3
 
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/FitModeEvaluator;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lcom/google/android/material/transition/c;
 
     goto :goto_0
 
     :cond_3
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/FitModeEvaluator;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lcom/google/android/material/transition/c;
 
     :goto_0
     return-object p0

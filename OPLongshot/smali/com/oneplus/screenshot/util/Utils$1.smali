@@ -1,6 +1,6 @@
 .class final Lcom/oneplus/screenshot/util/Utils$1;
 .super Ljava/lang/Object;
-.source "Utils.java"
+.source ""
 
 # interfaces
 .implements Landroid/media/MediaScannerConnection$OnScanCompletedListener;

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/task/MoveTask$1;
 .super Landroid/os/Handler;
-.source "MoveTask.java"
+.source ""
 
 
 # annotations

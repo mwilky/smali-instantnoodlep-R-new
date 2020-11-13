@@ -1,12 +1,16 @@
 .class Landroidx/core/widget/TextViewCompat$OreoCallback;
 .super Ljava/lang/Object;
-.source "TextViewCompat.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/ActionMode$Callback;
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/widget/TextViewCompat;
 .end annotation
@@ -100,11 +104,9 @@
 
     move-result-object p2
 
-    iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
@@ -234,9 +236,9 @@
     return v1
 
     :cond_0
-    iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-boolean v0, v0, Landroid/content/pm/ActivityInfo;->exported:Z
+    iget-boolean v0, p1, Landroid/content/pm/ActivityInfo;->exported:Z
 
     const/4 v2, 0x0
 
@@ -245,15 +247,9 @@
     return v2
 
     :cond_1
-    iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
-
-    if-eqz v0, :cond_3
-
-    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
+
+    if-eqz p1, :cond_3
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 

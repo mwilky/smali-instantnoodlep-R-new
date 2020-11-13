@@ -1,117 +1,71 @@
 .class Lcom/google/tagmanager/Runtime;
 .super Ljava/lang/Object;
-.source "Runtime.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/tagmanager/Runtime$CachedMacro;,
-        Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;,
-        Lcom/google/tagmanager/Runtime$MacroInfo;
+        Lcom/google/tagmanager/Runtime$a;,
+        Lcom/google/tagmanager/Runtime$b;
     }
 .end annotation
 
 
-# static fields
-.field static final DEFAULT_RULE_NAME:Ljava/lang/String; = "Unknown"
-
-.field private static final DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field static final EXPERIMENT_SUPPLEMENTAL_NAME_PREFIX:Ljava/lang/String; = "gaExperiment:"
-
-.field private static final MAX_CACHE_SIZE:I = 0x100000
-
-
 # instance fields
-.field private final eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
+.field private final a:Lcom/google/tagmanager/s0$d;
 
-.field private volatile mCurrentEventName:Ljava/lang/String;
-
-.field private final mDataLayer:Lcom/google/tagmanager/DataLayer;
-
-.field private final mFunctionCallCache:Lcom/google/tagmanager/Cache;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/tagmanager/Cache<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private final mMacroEvaluationCache:Lcom/google/tagmanager/Cache;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/tagmanager/Cache<",
-            "Ljava/lang/String;",
-            "Lcom/google/tagmanager/Runtime$CachedMacro;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final mMacroLookup:Ljava/util/Map;
+.field private final b:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/Runtime$MacroInfo;",
+            "Lcom/google/tagmanager/z;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mMacroMap:Ljava/util/Map;
+.field private final c:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
+            "Lcom/google/tagmanager/z;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mPredicateMap:Ljava/util/Map;
+.field private final d:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
+            "Lcom/google/tagmanager/z;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mResource:Lcom/google/tagmanager/ResourceUtil$ExpandedResource;
-
-.field private final mRules:Ljava/util/Set;
+.field private final e:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
+            "Lcom/google/tagmanager/s0$f;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mTrackingTagMap:Ljava/util/Map;
+.field private final f:Lcom/google/tagmanager/n;
+
+.field private final g:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
+            "Lcom/google/tagmanager/Runtime$b;",
             ">;"
         }
     .end annotation
@@ -124,7 +78,7 @@
 
     new-instance v0, Lcom/google/tagmanager/ObjectAndStatic;
 
-    invoke-static {}, Lcom/google/tagmanager/Types;->getDefaultValue()Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
+    invoke-static {}, Lcom/google/tagmanager/a1;->a()Lb/a/a/a/a/a/a;
 
     move-result-object v1
 
@@ -132,57 +86,29 @@
 
     invoke-direct {v0, v1, v2}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
 
-    sput-object v0, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/google/tagmanager/ResourceUtil$ExpandedResource;Lcom/google/tagmanager/DataLayer;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;)V
-    .locals 7
-
-    new-instance v6, Lcom/google/tagmanager/NoopEventInfoDistributor;
-
-    invoke-direct {v6}, Lcom/google/tagmanager/NoopEventInfoDistributor;-><init>()V
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/google/tagmanager/Runtime;-><init>(Landroid/content/Context;Lcom/google/tagmanager/ResourceUtil$ExpandedResource;Lcom/google/tagmanager/DataLayer;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/EventInfoDistributor;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lcom/google/tagmanager/ResourceUtil$ExpandedResource;Lcom/google/tagmanager/DataLayer;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/EventInfoDistributor;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/tagmanager/s0$d;Lcom/google/tagmanager/n;Lcom/google/tagmanager/m$a;Lcom/google/tagmanager/m$a;Lcom/google/tagmanager/w;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_9
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mResource:Lcom/google/tagmanager/ResourceUtil$ExpandedResource;
+    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->a:Lcom/google/tagmanager/s0$d;
 
     new-instance v0, Ljava/util/HashSet;
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedResource;->getRules()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$d;->c()Ljava/util/List;
 
     move-result-object p2
 
     invoke-direct {v0, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime;->mRules:Ljava/util/Set;
+    iput-object v0, p0, Lcom/google/tagmanager/Runtime;->e:Ljava/util/Set;
 
-    iput-object p3, p0, Lcom/google/tagmanager/Runtime;->mDataLayer:Lcom/google/tagmanager/DataLayer;
-
-    iput-object p6, p0, Lcom/google/tagmanager/Runtime;->eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
+    iput-object p3, p0, Lcom/google/tagmanager/Runtime;->f:Lcom/google/tagmanager/n;
 
     new-instance p2, Lcom/google/tagmanager/Runtime$1;
 
@@ -196,10 +122,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/google/tagmanager/CacheFactory;->createCache(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)Lcom/google/tagmanager/Cache;
 
-    move-result-object p2
-
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mFunctionCallCache:Lcom/google/tagmanager/Cache;
-
     new-instance p2, Lcom/google/tagmanager/Runtime$2;
 
     invoke-direct {p2, p0}, Lcom/google/tagmanager/Runtime$2;-><init>(Lcom/google/tagmanager/Runtime;)V
@@ -210,281 +132,277 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/google/tagmanager/CacheFactory;->createCache(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)Lcom/google/tagmanager/Cache;
 
-    move-result-object p2
+    new-instance p2, Ljava/util/HashMap;
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mMacroEvaluationCache:Lcom/google/tagmanager/Cache;
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->b:Ljava/util/Map;
+
+    new-instance p2, Lcom/google/tagmanager/g;
+
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/g;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->d(Lcom/google/tagmanager/z;)V
+
+    new-instance p2, Lcom/google/tagmanager/m;
+
+    invoke-direct {p2, p5}, Lcom/google/tagmanager/m;-><init>(Lcom/google/tagmanager/m$a;)V
+
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->d(Lcom/google/tagmanager/z;)V
+
+    new-instance p2, Lcom/google/tagmanager/p;
+
+    invoke-direct {p2, p3}, Lcom/google/tagmanager/p;-><init>(Lcom/google/tagmanager/n;)V
+
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->d(Lcom/google/tagmanager/z;)V
+
+    new-instance p2, Lcom/google/tagmanager/b1;
+
+    invoke-direct {p2, p1, p3}, Lcom/google/tagmanager/b1;-><init>(Landroid/content/Context;Lcom/google/tagmanager/n;)V
+
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->d(Lcom/google/tagmanager/z;)V
 
     new-instance p2, Ljava/util/HashMap;
 
     invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mTrackingTagMap:Ljava/util/Map;
+    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->c:Ljava/util/Map;
 
-    new-instance p2, Lcom/google/tagmanager/ArbitraryPixelTag;
+    new-instance p2, Lcom/google/tagmanager/l;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/ArbitraryPixelTag;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2}, Lcom/google/tagmanager/l;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addTrackingTag(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/CustomFunctionCall;
+    new-instance p2, Lcom/google/tagmanager/u;
 
-    invoke-direct {p2, p5}, Lcom/google/tagmanager/CustomFunctionCall;-><init>(Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;)V
+    invoke-direct {p2}, Lcom/google/tagmanager/u;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addTrackingTag(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/DataLayerWriteTag;
+    new-instance p2, Lcom/google/tagmanager/v;
 
-    invoke-direct {p2, p3}, Lcom/google/tagmanager/DataLayerWriteTag;-><init>(Lcom/google/tagmanager/DataLayer;)V
+    invoke-direct {p2}, Lcom/google/tagmanager/v;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addTrackingTag(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/UniversalAnalyticsTag;
+    new-instance p2, Lcom/google/tagmanager/a0;
 
-    invoke-direct {p2, p1, p3}, Lcom/google/tagmanager/UniversalAnalyticsTag;-><init>(Landroid/content/Context;Lcom/google/tagmanager/DataLayer;)V
+    invoke-direct {p2}, Lcom/google/tagmanager/a0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addTrackingTag(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Ljava/util/HashMap;
+    new-instance p2, Lcom/google/tagmanager/b0;
 
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/b0;-><init>()V
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mPredicateMap:Ljava/util/Map;
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/ContainsPredicate;
+    new-instance p2, Lcom/google/tagmanager/g0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/ContainsPredicate;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/g0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/EndsWithPredicate;
+    new-instance p2, Lcom/google/tagmanager/h0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/EndsWithPredicate;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/h0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/EqualsPredicate;
+    new-instance p2, Lcom/google/tagmanager/q0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/EqualsPredicate;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/q0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/GreaterEqualsPredicate;
+    new-instance p2, Lcom/google/tagmanager/v0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/GreaterEqualsPredicate;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/v0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
-
-    new-instance p2, Lcom/google/tagmanager/GreaterThanPredicate;
-
-    invoke-direct {p2}, Lcom/google/tagmanager/GreaterThanPredicate;-><init>()V
-
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
-
-    new-instance p2, Lcom/google/tagmanager/LessEqualsPredicate;
-
-    invoke-direct {p2}, Lcom/google/tagmanager/LessEqualsPredicate;-><init>()V
-
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
-
-    new-instance p2, Lcom/google/tagmanager/LessThanPredicate;
-
-    invoke-direct {p2}, Lcom/google/tagmanager/LessThanPredicate;-><init>()V
-
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
-
-    new-instance p2, Lcom/google/tagmanager/RegexPredicate;
-
-    invoke-direct {p2}, Lcom/google/tagmanager/RegexPredicate;-><init>()V
-
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
-
-    new-instance p2, Lcom/google/tagmanager/StartsWithPredicate;
-
-    invoke-direct {p2}, Lcom/google/tagmanager/StartsWithPredicate;-><init>()V
-
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->c(Lcom/google/tagmanager/z;)V
 
     new-instance p2, Ljava/util/HashMap;
 
     invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->mMacroMap:Ljava/util/Map;
+    iput-object p2, p0, Lcom/google/tagmanager/Runtime;->d:Ljava/util/Map;
 
-    new-instance p2, Lcom/google/tagmanager/AdvertiserIdMacro;
+    new-instance p2, Lcom/google/tagmanager/a;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/AdvertiserIdMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/a;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/AdvertisingTrackingEnabledMacro;
+    new-instance p2, Lcom/google/tagmanager/b;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/AdvertisingTrackingEnabledMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/b;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/AdwordsClickReferrerMacro;
+    new-instance p2, Lcom/google/tagmanager/c;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/AdwordsClickReferrerMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/AppIdMacro;
+    new-instance p2, Lcom/google/tagmanager/d;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/AppIdMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/d;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/AppNameMacro;
+    new-instance p2, Lcom/google/tagmanager/e;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/AppNameMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/e;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/AppVersionMacro;
+    new-instance p2, Lcom/google/tagmanager/f;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/AppVersionMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/f;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/ConstantMacro;
+    new-instance p2, Lcom/google/tagmanager/i;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/ConstantMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/i;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/ContainerVersionMacro;
+    new-instance p2, Lcom/google/tagmanager/k;
 
-    invoke-direct {p2, p0}, Lcom/google/tagmanager/ContainerVersionMacro;-><init>(Lcom/google/tagmanager/Runtime;)V
+    invoke-direct {p2, p0}, Lcom/google/tagmanager/k;-><init>(Lcom/google/tagmanager/Runtime;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/CustomFunctionCall;
+    new-instance p2, Lcom/google/tagmanager/m;
 
-    invoke-direct {p2, p4}, Lcom/google/tagmanager/CustomFunctionCall;-><init>(Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;)V
+    invoke-direct {p2, p4}, Lcom/google/tagmanager/m;-><init>(Lcom/google/tagmanager/m$a;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/DataLayerMacro;
+    new-instance p2, Lcom/google/tagmanager/o;
 
-    invoke-direct {p2, p3}, Lcom/google/tagmanager/DataLayerMacro;-><init>(Lcom/google/tagmanager/DataLayer;)V
+    invoke-direct {p2, p3}, Lcom/google/tagmanager/o;-><init>(Lcom/google/tagmanager/n;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/DeviceIdMacro;
+    new-instance p2, Lcom/google/tagmanager/r;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/DeviceIdMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/r;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/DeviceNameMacro;
+    new-instance p2, Lcom/google/tagmanager/s;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/DeviceNameMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/s;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/EncodeMacro;
+    new-instance p2, Lcom/google/tagmanager/t;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/EncodeMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/t;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/EventMacro;
+    new-instance p2, Lcom/google/tagmanager/x;
 
-    invoke-direct {p2, p0}, Lcom/google/tagmanager/EventMacro;-><init>(Lcom/google/tagmanager/Runtime;)V
+    invoke-direct {p2, p0}, Lcom/google/tagmanager/x;-><init>(Lcom/google/tagmanager/Runtime;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/GtmVersionMacro;
+    new-instance p2, Lcom/google/tagmanager/c0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/GtmVersionMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/c0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/HashMacro;
+    new-instance p2, Lcom/google/tagmanager/d0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/HashMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/d0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/InstallReferrerMacro;
+    new-instance p2, Lcom/google/tagmanager/e0;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/InstallReferrerMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/e0;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
     new-instance p2, Lcom/google/tagmanager/JoinerMacro;
 
     invoke-direct {p2}, Lcom/google/tagmanager/JoinerMacro;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/LanguageMacro;
+    new-instance p2, Lcom/google/tagmanager/f0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/LanguageMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/f0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/MobileAdwordsUniqueIdMacro;
+    new-instance p2, Lcom/google/tagmanager/j0;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/MobileAdwordsUniqueIdMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/j0;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/OsVersionMacro;
+    new-instance p2, Lcom/google/tagmanager/l0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/OsVersionMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/l0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/PlatformMacro;
+    new-instance p2, Lcom/google/tagmanager/m0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/PlatformMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/m0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/RandomMacro;
+    new-instance p2, Lcom/google/tagmanager/o0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/RandomMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/o0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/RegexGroupMacro;
+    new-instance p2, Lcom/google/tagmanager/p0;
 
-    invoke-direct {p2}, Lcom/google/tagmanager/RegexGroupMacro;-><init>()V
+    invoke-direct {p2}, Lcom/google/tagmanager/p0;-><init>()V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p2, Lcom/google/tagmanager/ResolutionMacro;
+    new-instance p2, Lcom/google/tagmanager/r0;
 
-    invoke-direct {p2, p1}, Lcom/google/tagmanager/ResolutionMacro;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/google/tagmanager/r0;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p2}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p1, Lcom/google/tagmanager/RuntimeVersionMacro;
+    new-instance p1, Lcom/google/tagmanager/t0;
 
-    invoke-direct {p1}, Lcom/google/tagmanager/RuntimeVersionMacro;-><init>()V
+    invoke-direct {p1}, Lcom/google/tagmanager/t0;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p1, Lcom/google/tagmanager/SdkVersionMacro;
+    new-instance p1, Lcom/google/tagmanager/u0;
 
-    invoke-direct {p1}, Lcom/google/tagmanager/SdkVersionMacro;-><init>()V
+    invoke-direct {p1}, Lcom/google/tagmanager/u0;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
-    new-instance p1, Lcom/google/tagmanager/TimeMacro;
+    new-instance p1, Lcom/google/tagmanager/x0;
 
-    invoke-direct {p1}, Lcom/google/tagmanager/TimeMacro;-><init>()V
+    invoke-direct {p1}, Lcom/google/tagmanager/x0;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->b(Lcom/google/tagmanager/z;)V
 
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/google/tagmanager/Runtime;->mMacroLookup:Ljava/util/Map;
+    iput-object p1, p0, Lcom/google/tagmanager/Runtime;->g:Ljava/util/Map;
 
-    iget-object p1, p0, Lcom/google/tagmanager/Runtime;->mRules:Ljava/util/Set;
+    iget-object p1, p0, Lcom/google/tagmanager/Runtime;->e:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -501,61 +419,61 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;
+    check-cast p2, Lcom/google/tagmanager/s0$f;
 
-    invoke-interface {p6}, Lcom/google/tagmanager/EventInfoDistributor;->debugMode()Z
+    invoke-interface {p6}, Lcom/google/tagmanager/w;->a()Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->b()Ljava/util/List;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->a()Ljava/util/List;
 
     move-result-object p4
 
     const-string p5, "add macro"
 
-    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->verifyFunctionAndNameListSizes(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->h(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->h()Ljava/util/List;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->g()Ljava/util/List;
 
     move-result-object p4
 
     const-string p5, "remove macro"
 
-    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->verifyFunctionAndNameListSizes(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->h(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddTags()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->d()Ljava/util/List;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddTagRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->c()Ljava/util/List;
 
     move-result-object p4
 
     const-string p5, "add tag"
 
-    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->verifyFunctionAndNameListSizes(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->h(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveTags()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->j()Ljava/util/List;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveTagRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->i()Ljava/util/List;
 
     move-result-object p4
 
     const-string p5, "remove tag"
 
-    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->verifyFunctionAndNameListSizes(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {p3, p4, p5}, Lcom/google/tagmanager/Runtime;->h(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
     :cond_1
     const/4 p3, 0x0
@@ -563,7 +481,7 @@
     move p4, p3
 
     :goto_0
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->b()Ljava/util/List;
 
     move-result-object p5
 
@@ -575,7 +493,7 @@
 
     if-ge p4, p5, :cond_3
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->b()Ljava/util/List;
 
     move-result-object p5
 
@@ -583,15 +501,15 @@
 
     move-result-object p5
 
-    check-cast p5, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
+    check-cast p5, Lcom/google/tagmanager/s0$b;
 
-    invoke-interface {p6}, Lcom/google/tagmanager/EventInfoDistributor;->debugMode()Z
+    invoke-interface {p6}, Lcom/google/tagmanager/w;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -601,7 +519,7 @@
 
     if-ge p4, v1, :cond_2
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getAddMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -612,21 +530,21 @@
     check-cast v0, Ljava/lang/String;
 
     :cond_2
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->mMacroLookup:Ljava/util/Map;
+    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->g:Ljava/util/Map;
 
-    invoke-static {p5}, Lcom/google/tagmanager/Runtime;->getFunctionName(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)Ljava/lang/String;
+    invoke-static {p5}, Lcom/google/tagmanager/Runtime;->e(Lcom/google/tagmanager/s0$b;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/google/tagmanager/Runtime;->getOrAddMacroInfo(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$MacroInfo;
+    invoke-static {v1, v2}, Lcom/google/tagmanager/Runtime;->f(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/google/tagmanager/Runtime$MacroInfo;->addRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;)V
+    invoke-virtual {v1, p2}, Lcom/google/tagmanager/Runtime$b;->e(Lcom/google/tagmanager/s0$f;)V
 
-    invoke-virtual {v1, p2, p5}, Lcom/google/tagmanager/Runtime$MacroInfo;->addAddMacroForRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)V
+    invoke-virtual {v1, p2, p5}, Lcom/google/tagmanager/Runtime$b;->a(Lcom/google/tagmanager/s0$f;Lcom/google/tagmanager/s0$b;)V
 
-    invoke-virtual {v1, p2, v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->addAddMacroRuleNameForRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Ljava/lang/String;)V
+    invoke-virtual {v1, p2, v0}, Lcom/google/tagmanager/Runtime$b;->b(Lcom/google/tagmanager/s0$f;Ljava/lang/String;)V
 
     add-int/lit8 p4, p4, 0x1
 
@@ -634,7 +552,7 @@
 
     :cond_3
     :goto_1
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->h()Ljava/util/List;
 
     move-result-object p4
 
@@ -644,7 +562,7 @@
 
     if-ge p3, p4, :cond_0
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacros()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->h()Ljava/util/List;
 
     move-result-object p4
 
@@ -652,15 +570,15 @@
 
     move-result-object p4
 
-    check-cast p4, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
+    check-cast p4, Lcom/google/tagmanager/s0$b;
 
-    invoke-interface {p6}, Lcom/google/tagmanager/EventInfoDistributor;->debugMode()Z
+    invoke-interface {p6}, Lcom/google/tagmanager/w;->a()Z
 
     move-result p5
 
     if-eqz p5, :cond_4
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->g()Ljava/util/List;
 
     move-result-object p5
 
@@ -670,7 +588,7 @@
 
     if-ge p3, p5, :cond_4
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getRemoveMacroRuleNames()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/google/tagmanager/s0$f;->g()Ljava/util/List;
 
     move-result-object p5
 
@@ -686,30 +604,30 @@
     move-object p5, v0
 
     :goto_2
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->mMacroLookup:Ljava/util/Map;
+    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->g:Ljava/util/Map;
 
-    invoke-static {p4}, Lcom/google/tagmanager/Runtime;->getFunctionName(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)Ljava/lang/String;
+    invoke-static {p4}, Lcom/google/tagmanager/Runtime;->e(Lcom/google/tagmanager/s0$b;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/google/tagmanager/Runtime;->getOrAddMacroInfo(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$MacroInfo;
+    invoke-static {v1, v2}, Lcom/google/tagmanager/Runtime;->f(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/google/tagmanager/Runtime$MacroInfo;->addRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;)V
+    invoke-virtual {v1, p2}, Lcom/google/tagmanager/Runtime$b;->e(Lcom/google/tagmanager/s0$f;)V
 
-    invoke-virtual {v1, p2, p4}, Lcom/google/tagmanager/Runtime$MacroInfo;->addRemoveMacroForRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)V
+    invoke-virtual {v1, p2, p4}, Lcom/google/tagmanager/Runtime$b;->c(Lcom/google/tagmanager/s0$f;Lcom/google/tagmanager/s0$b;)V
 
-    invoke-virtual {v1, p2, p5}, Lcom/google/tagmanager/Runtime$MacroInfo;->addRemoveMacroRuleNameForRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Ljava/lang/String;)V
+    invoke-virtual {v1, p2, p5}, Lcom/google/tagmanager/Runtime$b;->d(Lcom/google/tagmanager/s0$f;Ljava/lang/String;)V
 
     add-int/lit8 p3, p3, 0x1
 
     goto :goto_1
 
     :cond_5
-    iget-object p1, p0, Lcom/google/tagmanager/Runtime;->mResource:Lcom/google/tagmanager/ResourceUtil$ExpandedResource;
+    iget-object p1, p0, Lcom/google/tagmanager/Runtime;->a:Lcom/google/tagmanager/s0$d;
 
-    invoke-virtual {p1}, Lcom/google/tagmanager/ResourceUtil$ExpandedResource;->getAllMacros()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/google/tagmanager/s0$d;->a()Ljava/util/Map;
 
     move-result-object p1
 
@@ -756,9 +674,9 @@
 
     move-result-object p4
 
-    check-cast p4, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
+    check-cast p4, Lcom/google/tagmanager/s0$b;
 
-    invoke-virtual {p4}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->getProperties()Ljava/util/Map;
+    invoke-virtual {p4}, Lcom/google/tagmanager/s0$b;->a()Ljava/util/Map;
 
     move-result-object p5
 
@@ -772,9 +690,9 @@
 
     move-result-object p5
 
-    check-cast p5, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
+    check-cast p5, Lb/a/a/a/a/a/a;
 
-    invoke-static {p5}, Lcom/google/tagmanager/Types;->valueToBoolean(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Ljava/lang/Boolean;
+    invoke-static {p5}, Lcom/google/tagmanager/a1;->i(Lb/a/a/a/a/a/a;)Ljava/lang/Boolean;
 
     move-result-object p5
 
@@ -784,7 +702,7 @@
 
     if-nez p5, :cond_7
 
-    iget-object p5, p0, Lcom/google/tagmanager/Runtime;->mMacroLookup:Ljava/util/Map;
+    iget-object p5, p0, Lcom/google/tagmanager/Runtime;->g:Ljava/util/Map;
 
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -792,11 +710,11 @@
 
     check-cast p6, Ljava/lang/String;
 
-    invoke-static {p5, p6}, Lcom/google/tagmanager/Runtime;->getOrAddMacroInfo(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$MacroInfo;
+    invoke-static {p5, p6}, Lcom/google/tagmanager/Runtime;->f(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$b;
 
     move-result-object p5
 
-    invoke-virtual {p5, p4}, Lcom/google/tagmanager/Runtime$MacroInfo;->setDefault(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)V
+    invoke-virtual {p5, p4}, Lcom/google/tagmanager/Runtime$b;->f(Lcom/google/tagmanager/s0$b;)V
 
     goto :goto_3
 
@@ -813,21 +731,21 @@
     throw p1
 .end method
 
-.method private static addFunctionImplToMap(Ljava/util/Map;Lcom/google/tagmanager/FunctionCallImplementation;)V
+.method private static a(Ljava/util/Map;Lcom/google/tagmanager/z;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
+            "Lcom/google/tagmanager/z;",
             ">;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
+            "Lcom/google/tagmanager/z;",
             ")V"
         }
     .end annotation
 
-    invoke-virtual {p1}, Lcom/google/tagmanager/FunctionCallImplementation;->getInstanceFunctionId()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/tagmanager/z;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -837,7 +755,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/google/tagmanager/FunctionCallImplementation;->getInstanceFunctionId()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/tagmanager/z;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -856,7 +774,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/google/tagmanager/FunctionCallImplementation;->getInstanceFunctionId()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/tagmanager/z;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -871,668 +789,10 @@
     throw p0
 .end method
 
-.method private calculateGenericToRun(Ljava/util/Set;Ljava/util/Set;Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            ">;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;",
-            "Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            ">;>;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    :goto_0
-    move v3, v2
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;
-
-    invoke-interface {p4}, Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;->createResolvedRuleBuilder()Lcom/google/tagmanager/ResolvedRuleBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v4, p2, v5}, Lcom/google/tagmanager/Runtime;->evaluatePredicatesInRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Ljava/util/Set;Lcom/google/tagmanager/ResolvedRuleBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-interface {p3, v4, v0, v1, v5}, Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;->rulePassed(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Ljava/util/Set;Ljava/util/Set;Lcom/google/tagmanager/ResolvedRuleBuilder;)V
-
-    :cond_0
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v6}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {v0, v1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
-
-    invoke-interface {p4, v0}, Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;->setEnabledFunctions(Ljava/util/Set;)V
-
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-direct {p1, v0, v3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-.end method
-
-.method private evaluateMacroReferenceCycleDetection(Ljava/lang/String;Ljava/util/Set;Lcom/google/tagmanager/MacroEvaluationInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/MacroEvaluationInfoBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mMacroEvaluationCache:Lcom/google/tagmanager/Cache;
-
-    invoke-interface {v0, p1}, Lcom/google/tagmanager/Cache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/tagmanager/Runtime$CachedMacro;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
-
-    invoke-interface {v1}, Lcom/google/tagmanager/EventInfoDistributor;->debugMode()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$CachedMacro;->getPushAfterEvaluate()Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1, p2}, Lcom/google/tagmanager/Runtime;->pushUnevaluatedValueToDataLayer(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;)V
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$CachedMacro;->getObjectAndStatic()Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mMacroLookup:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/tagmanager/Runtime$MacroInfo;
-
-    if-nez v0, :cond_1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Invalid macro: "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_1
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getRules()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getAddMacros()Ljava/util/Map;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getAddMacroRuleNames()Ljava/util/Map;
-
-    move-result-object v5
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getRemoveMacros()Ljava/util/Map;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getRemoveMacroRuleNames()Ljava/util/Map;
-
-    move-result-object v7
-
-    invoke-interface {p3}, Lcom/google/tagmanager/MacroEvaluationInfoBuilder;->createRulesEvaluation()Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;
-
-    move-result-object v9
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v8, p2
-
-    invoke-virtual/range {v1 .. v9}, Lcom/google/tagmanager/Runtime;->calculateMacrosToRun(Ljava/lang/String;Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Set;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Set;
-
-    invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;->getDefault()Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->size()I
-
-    move-result v0
-
-    if-le v0, v3, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Multiple macros active for macroName "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/tagmanager/Log;->w(Ljava/lang/String;)V
-
-    :cond_3
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
-
-    :goto_0
-    if-nez v0, :cond_4
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_4
-    iget-object v2, p0, Lcom/google/tagmanager/Runtime;->mMacroMap:Ljava/util/Map;
-
-    invoke-interface {p3}, Lcom/google/tagmanager/MacroEvaluationInfoBuilder;->createResult()Lcom/google/tagmanager/ResolvedFunctionCallBuilder;
-
-    move-result-object p3
-
-    invoke-direct {p0, v2, v0, p2, p3}, Lcom/google/tagmanager/Runtime;->executeFunction(Ljava/util/Map;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p3
-
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p3}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    const/4 v3, 0x0
-
-    :goto_1
-    sget-object v1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-ne p3, v1, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    new-instance v1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-virtual {p3}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object p3
-
-    invoke-direct {v1, p3, v3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    :goto_2
-    invoke-virtual {v0}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->getPushAfterEvaluate()Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p3
-
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mMacroEvaluationCache:Lcom/google/tagmanager/Cache;
-
-    new-instance v2, Lcom/google/tagmanager/Runtime$CachedMacro;
-
-    invoke-direct {v2, v1, p3}, Lcom/google/tagmanager/Runtime$CachedMacro;-><init>(Lcom/google/tagmanager/ObjectAndStatic;Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    invoke-interface {v0, p1, v2}, Lcom/google/tagmanager/Cache;->put(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_7
-    invoke-direct {p0, p3, p2}, Lcom/google/tagmanager/Runtime;->pushUnevaluatedValueToDataLayer(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;)V
-
-    return-object v1
-.end method
-
-.method private executeFunction(Ljava/util/Map;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/tagmanager/FunctionCallImplementation;",
-            ">;",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/ResolvedFunctionCallBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->getProperties()Ljava/util/Map;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/google/analytics/containertag/common/Key;->FUNCTION:Lcom/google/analytics/containertag/common/Key;
-
-    invoke-virtual {v1}, Lcom/google/analytics/containertag/common/Key;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    if-nez v0, :cond_0
-
-    const-string p1, "No function id in properties"
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->functionId:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/tagmanager/FunctionCallImplementation;
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " has no backing implementation."
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_1
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->mFunctionCallCache:Lcom/google/tagmanager/Cache;
-
-    invoke-interface {v1, p2}, Lcom/google/tagmanager/Cache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, p0, Lcom/google/tagmanager/Runtime;->eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
-
-    invoke-interface {v2}, Lcom/google/tagmanager/EventInfoDistributor;->debugMode()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    return-object v1
-
-    :cond_2
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {p2}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->getProperties()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    move v4, v3
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    const/4 v6, 0x0
-
-    if-eqz v5, :cond_5
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Map$Entry;
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
-
-    invoke-interface {p4, v7}, Lcom/google/tagmanager/ResolvedFunctionCallBuilder;->createResolvedPropertyBuilder(Ljava/lang/String;)Lcom/google/tagmanager/ResolvedPropertyBuilder;
-
-    move-result-object v7
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-interface {v7, v9}, Lcom/google/tagmanager/ResolvedPropertyBuilder;->createPropertyValueBuilder(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Lcom/google/tagmanager/ValueBuilder;
-
-    move-result-object v7
-
-    invoke-direct {p0, v8, p3, v7}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v7
-
-    sget-object v8, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-ne v7, v8, :cond_3
-
-    return-object v8
-
-    :cond_3
-    invoke-virtual {v7}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_4
-
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/String;
-
-    invoke-virtual {v7}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-virtual {p2, v6, v8}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->updateCacheableProperty(Ljava/lang/String;Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    goto :goto_1
-
-    :cond_4
-    move v4, v6
-
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v7}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-interface {v1, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_5
-    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lcom/google/tagmanager/FunctionCallImplementation;->hasRequiredKeys(Ljava/util/Set;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_6
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Incorrect keys for function "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p3, " required "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/FunctionCallImplementation;->getRequiredKeys()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " had "
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_6
-    if-eqz v4, :cond_7
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/FunctionCallImplementation;->isCacheable()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    move v3, v6
-
-    :goto_2
-    new-instance p3, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-virtual {p1, v1}, Lcom/google/tagmanager/FunctionCallImplementation;->evaluate(Ljava/util/Map;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p1
-
-    invoke-direct {p3, p1, v3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    if-eqz v3, :cond_8
-
-    iget-object p1, p0, Lcom/google/tagmanager/Runtime;->mFunctionCallCache:Lcom/google/tagmanager/Cache;
-
-    invoke-interface {p1, p2, p3}, Lcom/google/tagmanager/Cache;->put(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_8
-    invoke-virtual {p3}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-interface {p4, p1}, Lcom/google/tagmanager/ResolvedFunctionCallBuilder;->setFunctionResult(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    return-object p3
-.end method
-
-.method private static getFunctionName(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;)Ljava/lang/String;
+.method private static e(Lcom/google/tagmanager/s0$b;)Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;->getProperties()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/google/tagmanager/s0$b;->a()Ljava/util/Map;
 
     move-result-object p0
 
@@ -1546,27 +806,27 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
+    check-cast p0, Lb/a/a/a/a/a/a;
 
-    invoke-static {p0}, Lcom/google/tagmanager/Types;->valueToString(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/google/tagmanager/a1;->k(Lb/a/a/a/a/a/a;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static getOrAddMacroInfo(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$MacroInfo;
+.method private static f(Ljava/util/Map;Ljava/lang/String;)Lcom/google/tagmanager/Runtime$b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/google/tagmanager/Runtime$MacroInfo;",
+            "Lcom/google/tagmanager/Runtime$b;",
             ">;",
             "Ljava/lang/String;",
             ")",
-            "Lcom/google/tagmanager/Runtime$MacroInfo;"
+            "Lcom/google/tagmanager/Runtime$b;"
         }
     .end annotation
 
@@ -1574,13 +834,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/tagmanager/Runtime$MacroInfo;
+    check-cast v0, Lcom/google/tagmanager/Runtime$b;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/tagmanager/Runtime$MacroInfo;
+    new-instance v0, Lcom/google/tagmanager/Runtime$b;
 
-    invoke-direct {v0}, Lcom/google/tagmanager/Runtime$MacroInfo;-><init>()V
+    invoke-direct {v0}, Lcom/google/tagmanager/Runtime$b;-><init>()V
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1588,521 +848,13 @@
     return-object v0
 .end method
 
-.method private macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/ValueBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;"
-        }
-    .end annotation
-
-    iget-boolean v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->containsReferences:Z
-
-    if-nez v0, :cond_0
-
-    new-instance p2, Lcom/google/tagmanager/ObjectAndStatic;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p1, p3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p2
-
-    :cond_0
-    iget v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->type:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_b
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_6
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_1
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Unknown type: "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->type:I
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_1
-    invoke-static {p1}, Lcom/google/tagmanager/ResourceUtil;->newValueBasedOnValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->templateToken:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v1, v1
-
-    new-array v1, v1, [Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    iput-object v1, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->templateToken:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move v1, v2
-
-    :goto_0
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->templateToken:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v3, v3
-
-    if-ge v1, v3, :cond_3
-
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->templateToken:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aget-object v3, v3, v1
-
-    invoke-interface {p3, v1}, Lcom/google/tagmanager/ValueBuilder;->getTemplateToken(I)Lcom/google/tagmanager/ValueBuilder;
-
-    move-result-object v4
-
-    invoke-direct {p0, v3, p2, v4}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v3
-
-    sget-object v4, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-ne v3, v4, :cond_2
-
-    return-object v4
-
-    :cond_2
-    iget-object v4, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->templateToken:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-virtual {v3}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aput-object v3, v4, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-direct {p1, v0, v2}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-
-    :cond_4
-    iget-object v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->macroReference:Ljava/lang/String;
-
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Macro cycle detected.  Current macro reference: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->macroReference:Ljava/lang/String;
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "."
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "  Previous macro references: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_5
-    iget-object v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->macroReference:Ljava/lang/String;
-
-    invoke-interface {p2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->macroReference:Ljava/lang/String;
-
-    invoke-interface {p3}, Lcom/google/tagmanager/ValueBuilder;->createValueMacroEvaluationInfoExtension()Lcom/google/tagmanager/MacroEvaluationInfoBuilder;
-
-    move-result-object p3
-
-    invoke-direct {p0, v0, p2, p3}, Lcom/google/tagmanager/Runtime;->evaluateMacroReferenceCycleDetection(Ljava/lang/String;Ljava/util/Set;Lcom/google/tagmanager/MacroEvaluationInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p3
-
-    iget-object v0, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->escaping:[I
-
-    invoke-static {p3, v0}, Lcom/google/tagmanager/ValueEscapeUtil;->applyEscapings(Lcom/google/tagmanager/ObjectAndStatic;[I)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p3
-
-    iget-object p1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->macroReference:Ljava/lang/String;
-
-    invoke-interface {p2, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    return-object p3
-
-    :cond_6
-    invoke-static {p1}, Lcom/google/tagmanager/ResourceUtil;->newValueBasedOnValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v1, v1
-
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapValue:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v3, v3
-
-    if-eq v1, v3, :cond_7
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "Invalid serving value: "
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->e(Ljava/lang/String;)V
-
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_7
-    iget-object v1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v1, v1
-
-    new-array v1, v1, [Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    iput-object v1, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    iget-object v1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v1, v1
-
-    new-array v1, v1, [Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    iput-object v1, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapValue:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move v1, v2
-
-    :goto_1
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v3, v3
-
-    if-ge v1, v3, :cond_a
-
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aget-object v3, v3, v1
-
-    invoke-interface {p3, v1}, Lcom/google/tagmanager/ValueBuilder;->getMapKey(I)Lcom/google/tagmanager/ValueBuilder;
-
-    move-result-object v4
-
-    invoke-direct {p0, v3, p2, v4}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapValue:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aget-object v4, v4, v1
-
-    invoke-interface {p3, v1}, Lcom/google/tagmanager/ValueBuilder;->getMapValue(I)Lcom/google/tagmanager/ValueBuilder;
-
-    move-result-object v5
-
-    invoke-direct {p0, v4, p2, v5}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v4
-
-    sget-object v5, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-eq v3, v5, :cond_9
-
-    if-ne v4, v5, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    iget-object v5, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapKey:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-virtual {v3}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aput-object v3, v5, v1
-
-    iget-object v3, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->mapValue:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-virtual {v4}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aput-object v4, v3, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_9
-    :goto_2
-    sget-object p1, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    return-object p1
-
-    :cond_a
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-direct {p1, v0, v2}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-
-    :cond_b
-    invoke-static {p1}, Lcom/google/tagmanager/ResourceUtil;->newValueBasedOnValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->listItem:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v1, v1
-
-    new-array v1, v1, [Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    iput-object v1, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->listItem:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move v1, v2
-
-    :goto_3
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->listItem:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    array-length v3, v3
-
-    if-ge v1, v3, :cond_d
-
-    iget-object v3, p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->listItem:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aget-object v3, v3, v1
-
-    invoke-interface {p3, v1}, Lcom/google/tagmanager/ValueBuilder;->getListItem(I)Lcom/google/tagmanager/ValueBuilder;
-
-    move-result-object v4
-
-    invoke-direct {p0, v3, p2, v4}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v3
-
-    sget-object v4, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-ne v3, v4, :cond_c
-
-    return-object v4
-
-    :cond_c
-    iget-object v4, v0, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;->listItem:[Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-virtual {v3}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    aput-object v3, v4, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_d
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-direct {p1, v0, v2}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-.end method
-
-.method private pushUnevaluatedValueToDataLayer(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lcom/google/tagmanager/NoopValueBuilder;
-
-    invoke-direct {v0}, Lcom/google/tagmanager/NoopValueBuilder;-><init>()V
-
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/tagmanager/Runtime;->macroExpandValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;Ljava/util/Set;Lcom/google/tagmanager/ValueBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    sget-object p2, Lcom/google/tagmanager/Runtime;->DEFAULT_VALUE_AND_STATIC:Lcom/google/tagmanager/ObjectAndStatic;
-
-    if-eq p1, p2, :cond_4
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-static {p1}, Lcom/google/tagmanager/Types;->valueToObject(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of p2, p1, Ljava/util/Map;
-
-    if-eqz p2, :cond_1
-
-    check-cast p1, Ljava/util/Map;
-
-    iget-object p2, p0, Lcom/google/tagmanager/Runtime;->mDataLayer:Lcom/google/tagmanager/DataLayer;
-
-    invoke-virtual {p2, p1}, Lcom/google/tagmanager/DataLayer;->push(Ljava/util/Map;)V
-
-    goto :goto_1
-
-    :cond_1
-    instance-of p2, p1, Ljava/util/List;
-
-    if-eqz p2, :cond_3
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    instance-of v0, p2, Ljava/util/Map;
-
-    if-eqz v0, :cond_2
-
-    check-cast p2, Ljava/util/Map;
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mDataLayer:Lcom/google/tagmanager/DataLayer;
-
-    invoke-virtual {v0, p2}, Lcom/google/tagmanager/DataLayer;->push(Ljava/util/Map;)V
-
-    goto :goto_0
-
-    :cond_2
-    const-string p2, "pushAfterEvaluate: value not a Map"
-
-    invoke-static {p2}, Lcom/google/tagmanager/Log;->w(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "pushAfterEvaluate: value not a Map or List"
-
-    invoke-static {p1}, Lcom/google/tagmanager/Log;->w(Ljava/lang/String;)V
-
-    :cond_4
-    :goto_1
-    return-void
-.end method
-
-.method private static verifyFunctionAndNameListSizes(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
+.method private static h(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
+            "Lcom/google/tagmanager/s0$b;",
             ">;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
@@ -2140,7 +892,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/google/tagmanager/Log;->i(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/google/tagmanager/i0;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -2148,570 +900,43 @@
 
 
 # virtual methods
-.method addMacro(Lcom/google/tagmanager/FunctionCallImplementation;)V
+.method b(Lcom/google/tagmanager/z;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mMacroMap:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->d:Ljava/util/Map;
 
-    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->addFunctionImplToMap(Ljava/util/Map;Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->a(Ljava/util/Map;Lcom/google/tagmanager/z;)V
 
     return-void
 .end method
 
-.method addPredicate(Lcom/google/tagmanager/FunctionCallImplementation;)V
+.method c(Lcom/google/tagmanager/z;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mPredicateMap:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->c:Ljava/util/Map;
 
-    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->addFunctionImplToMap(Ljava/util/Map;Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->a(Ljava/util/Map;Lcom/google/tagmanager/z;)V
 
     return-void
 .end method
 
-.method addTrackingTag(Lcom/google/tagmanager/FunctionCallImplementation;)V
+.method d(Lcom/google/tagmanager/z;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mTrackingTagMap:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->b:Ljava/util/Map;
 
-    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->addFunctionImplToMap(Ljava/util/Map;Lcom/google/tagmanager/FunctionCallImplementation;)V
+    invoke-static {v0, p1}, Lcom/google/tagmanager/Runtime;->a(Ljava/util/Map;Lcom/google/tagmanager/z;)V
 
     return-void
 .end method
 
-.method calculateMacrosToRun(Ljava/lang/String;Ljava/util/Set;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Set;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            ">;",
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            "Ljava/util/List<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            ">;>;",
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;>;",
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            "Ljava/util/List<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            ">;>;",
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;>;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            ">;>;"
-        }
-    .end annotation
-
-    new-instance p1, Lcom/google/tagmanager/Runtime$3;
-
-    move-object v0, p1
-
-    move-object v1, p0
-
-    move-object v2, p3
-
-    move-object v3, p4
-
-    move-object v4, p5
-
-    move-object v5, p6
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/tagmanager/Runtime$3;-><init>(Lcom/google/tagmanager/Runtime;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
-
-    invoke-direct {p0, p2, p7, p1, p8}, Lcom/google/tagmanager/Runtime;->calculateGenericToRun(Ljava/util/Set;Ljava/util/Set;Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method calculateTagsToRun(Ljava/util/Set;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            ">;",
-            "Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            ">;>;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v1, Lcom/google/tagmanager/Runtime$4;
-
-    invoke-direct {v1, p0}, Lcom/google/tagmanager/Runtime$4;-><init>(Lcom/google/tagmanager/Runtime;)V
-
-    invoke-direct {p0, p1, v0, v1, p2}, Lcom/google/tagmanager/Runtime;->calculateGenericToRun(Ljava/util/Set;Ljava/util/Set;Lcom/google/tagmanager/Runtime$AddRemoveSetPopulator;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public evaluateMacroReference(Ljava/lang/String;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
-
-    invoke-interface {v0, p1}, Lcom/google/tagmanager/EventInfoDistributor;->createMacroEvalutionEventInfo(Ljava/lang/String;)Lcom/google/tagmanager/EventInfoBuilder;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    invoke-interface {v0}, Lcom/google/tagmanager/EventInfoBuilder;->createMacroEvaluationInfoBuilder()Lcom/google/tagmanager/MacroEvaluationInfoBuilder;
-
-    move-result-object v2
-
-    invoke-direct {p0, p1, v1, v2}, Lcom/google/tagmanager/Runtime;->evaluateMacroReferenceCycleDetection(Ljava/lang/String;Ljava/util/Set;Lcom/google/tagmanager/MacroEvaluationInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    invoke-interface {v0}, Lcom/google/tagmanager/EventInfoBuilder;->processEventInfo()V
-
-    return-object p1
-.end method
-
-.method evaluatePredicate(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/ResolvedFunctionCallBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mPredicateMap:Ljava/util/Map;
-
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/google/tagmanager/Runtime;->executeFunction(Ljava/util/Map;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    invoke-static {p2}, Lcom/google/tagmanager/Types;->valueToBoolean(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcom/google/tagmanager/Types;->objectToValue(Ljava/lang/Object;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object v0
-
-    invoke-interface {p3, v0}, Lcom/google/tagmanager/ResolvedFunctionCallBuilder;->setFunctionResult(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    new-instance p3, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result p1
-
-    invoke-direct {p3, p2, p1}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p3
-.end method
-
-.method evaluatePredicatesInRule(Lcom/google/tagmanager/ResourceUtil$ExpandedRule;Ljava/util/Set;Lcom/google/tagmanager/ResolvedRuleBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/tagmanager/ResourceUtil$ExpandedRule;",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/tagmanager/ResolvedRuleBuilder;",
-            ")",
-            "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p1}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getNegativePredicates()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    :goto_0
-    move v3, v1
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
-
-    invoke-interface {p3}, Lcom/google/tagmanager/ResolvedRuleBuilder;->createNegativePredicate()Lcom/google/tagmanager/ResolvedFunctionCallBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v4, p2, v6}, Lcom/google/tagmanager/Runtime;->evaluatePredicate(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Types;->objectToValue(Ljava/lang/Object;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Lcom/google/tagmanager/ResolvedRuleBuilder;->setValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {v4}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result p3
-
-    invoke-direct {p1, p2, p3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-
-    :cond_0
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v4}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v3, v5
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Lcom/google/tagmanager/ResourceUtil$ExpandedRule;->getPositivePredicates()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
-
-    invoke-interface {p3}, Lcom/google/tagmanager/ResolvedRuleBuilder;->createPositivePredicate()Lcom/google/tagmanager/ResolvedFunctionCallBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v0, p2, v4}, Lcom/google/tagmanager/Runtime;->evaluatePredicate(Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/tagmanager/Types;->objectToValue(Ljava/lang/Object;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Lcom/google/tagmanager/ResolvedRuleBuilder;->setValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result p3
-
-    invoke-direct {p1, p2, p3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-
-    :cond_3
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v0}, Lcom/google/tagmanager/ObjectAndStatic;->isStatic()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    move v3, v1
-
-    goto :goto_2
-
-    :cond_4
-    move v3, v5
-
-    goto :goto_2
-
-    :cond_5
-    invoke-static {v2}, Lcom/google/tagmanager/Types;->objectToValue(Ljava/lang/Object;)Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Lcom/google/tagmanager/ResolvedRuleBuilder;->setValue(Lcom/google/analytics/midtier/proto/containertag/TypeSystem$Value;)V
-
-    new-instance p1, Lcom/google/tagmanager/ObjectAndStatic;
-
-    invoke-direct {p1, v2, v3}, Lcom/google/tagmanager/ObjectAndStatic;-><init>(Ljava/lang/Object;Z)V
-
-    return-object p1
-.end method
-
-.method public declared-synchronized evaluateTags(Ljava/lang/String;)V
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->setCurrentEventName(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->eventInfoDistributor:Lcom/google/tagmanager/EventInfoDistributor;
-
-    invoke-interface {v0, p1}, Lcom/google/tagmanager/EventInfoDistributor;->createDataLayerEventEvaluationEventInfo(Ljava/lang/String;)Lcom/google/tagmanager/EventInfoBuilder;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/google/tagmanager/EventInfoBuilder;->createDataLayerEventEvaluationInfoBuilder()Lcom/google/tagmanager/DataLayerEventEvaluationInfoBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->mRules:Ljava/util/Set;
-
-    invoke-interface {v0}, Lcom/google/tagmanager/DataLayerEventEvaluationInfoBuilder;->createRulesEvaluation()Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Lcom/google/tagmanager/Runtime;->calculateTagsToRun(Ljava/util/Set;Lcom/google/tagmanager/RuleEvaluationStepInfoBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/tagmanager/ObjectAndStatic;->getObject()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Set;
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;
-
-    iget-object v3, p0, Lcom/google/tagmanager/Runtime;->mTrackingTagMap:Ljava/util/Map;
-
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
-
-    invoke-interface {v0}, Lcom/google/tagmanager/DataLayerEventEvaluationInfoBuilder;->createAndAddResult()Lcom/google/tagmanager/ResolvedFunctionCallBuilder;
-
-    move-result-object v5
-
-    invoke-direct {p0, v3, v2, v4, v5}, Lcom/google/tagmanager/Runtime;->executeFunction(Ljava/util/Map;Lcom/google/tagmanager/ResourceUtil$ExpandedFunctionCall;Ljava/util/Set;Lcom/google/tagmanager/ResolvedFunctionCallBuilder;)Lcom/google/tagmanager/ObjectAndStatic;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Lcom/google/tagmanager/EventInfoBuilder;->processEventInfo()V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Runtime;->setCurrentEventName(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method declared-synchronized getCurrentEventName()Ljava/lang/String;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mCurrentEventName:Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public getResource()Lcom/google/tagmanager/ResourceUtil$ExpandedResource;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime;->mResource:Lcom/google/tagmanager/ResourceUtil$ExpandedResource;
-
-    return-object v0
-.end method
-
-.method declared-synchronized setCurrentEventName(Ljava/lang/String;)V
-    .locals 0
-
-    monitor-enter p0
-
-    :try_start_0
-    iput-object p1, p0, Lcom/google/tagmanager/Runtime;->mCurrentEventName:Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized setSupplementals(Ljava/util/List;)V
+.method public declared-synchronized g(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/google/analytics/containertag/proto/Serving$Supplemental;",
+            "Lcom/google/analytics/containertag/proto/h;",
             ">;)V"
         }
     .end annotation
@@ -2734,13 +959,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/analytics/containertag/proto/Serving$Supplemental;
+    check-cast v0, Lcom/google/analytics/containertag/proto/h;
 
-    iget-object v1, v0, Lcom/google/analytics/containertag/proto/Serving$Supplemental;->name:Ljava/lang/String;
+    iget-object v1, v0, Lcom/google/analytics/containertag/proto/h;->c:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/google/analytics/containertag/proto/Serving$Supplemental;->name:Ljava/lang/String;
+    iget-object v1, v0, Lcom/google/analytics/containertag/proto/h;->c:Ljava/lang/String;
 
     const-string v2, "gaExperiment:"
 
@@ -2753,9 +978,9 @@
     goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->mDataLayer:Lcom/google/tagmanager/DataLayer;
+    iget-object v1, p0, Lcom/google/tagmanager/Runtime;->f:Lcom/google/tagmanager/n;
 
-    invoke-static {v1, v0}, Lcom/google/tagmanager/ExperimentMacroHelper;->handleExperimentSupplemental(Lcom/google/tagmanager/DataLayer;Lcom/google/analytics/containertag/proto/Serving$Supplemental;)V
+    invoke-static {v1, v0}, Lcom/google/tagmanager/y;->b(Lcom/google/tagmanager/n;Lcom/google/analytics/containertag/proto/h;)V
 
     goto :goto_0
 
@@ -2775,7 +1000,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/tagmanager/Log;->v(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/tagmanager/i0;->c(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

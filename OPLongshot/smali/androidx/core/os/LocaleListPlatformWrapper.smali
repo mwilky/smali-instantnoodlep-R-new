@@ -1,9 +1,15 @@
 .class final Landroidx/core/os/LocaleListPlatformWrapper;
 .super Ljava/lang/Object;
-.source "LocaleListPlatformWrapper.java"
+.source ""
 
 # interfaces
-.implements Landroidx/core/os/LocaleListInterface;
+.implements Landroidx/core/os/b;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
 
 
 # instance fields
@@ -28,9 +34,9 @@
 
     iget-object v0, p0, Landroidx/core/os/LocaleListPlatformWrapper;->mLocaleList:Landroid/os/LocaleList;
 
-    check-cast p1, Landroidx/core/os/LocaleListInterface;
+    check-cast p1, Landroidx/core/os/b;
 
-    invoke-interface {p1}, Landroidx/core/os/LocaleListInterface;->getLocaleList()Ljava/lang/Object;
+    invoke-interface {p1}, Landroidx/core/os/b;->getLocaleList()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -55,6 +61,12 @@
 
 .method public getFirstMatch([Ljava/lang/String;)Ljava/util/Locale;
     .locals 1
+    .param p1    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/os/LocaleListPlatformWrapper;->mLocaleList:Landroid/os/LocaleList;
 

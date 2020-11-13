@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source "ExpandableBehavior.java"
+.source ""
 
 
 # annotations
@@ -97,6 +97,17 @@
 
 .method public static from(Landroid/view/View;Ljava/lang/Class;)Lcom/google/android/material/transformation/ExpandableBehavior;
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -112,13 +123,13 @@
 
     move-result-object p0
 
-    instance-of v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    instance-of v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    invoke-virtual {p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    invoke-virtual {p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->f()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object p0
 
@@ -155,10 +166,20 @@
 
 
 # virtual methods
-.method protected findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lcom/google/android/material/expandable/ExpandableWidget;
+.method protected findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lb/a/b/a/o/a;
     .locals 5
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->l(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 
@@ -183,7 +204,7 @@
 
     if-eqz v4, :cond_0
 
-    check-cast v3, Lcom/google/android/material/expandable/ExpandableWidget;
+    check-cast v3, Lb/a/b/a/o/a;
 
     return-object v3
 
@@ -203,10 +224,12 @@
 
 .method public onDependentViewChanged(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 1
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    check-cast p3, Lcom/google/android/material/expandable/ExpandableWidget;
+    check-cast p3, Lb/a/b/a/o/a;
 
-    invoke-interface {p3}, Lcom/google/android/material/expandable/ExpandableWidget;->isExpanded()Z
+    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
 
     move-result p1
 
@@ -216,7 +239,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p3}, Lcom/google/android/material/expandable/ExpandableWidget;->isExpanded()Z
+    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
 
     move-result p1
 
@@ -238,7 +261,7 @@
 
     check-cast p1, Landroid/view/View;
 
-    invoke-interface {p3}, Lcom/google/android/material/expandable/ExpandableWidget;->isExpanded()Z
+    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
 
     move-result p3
 
@@ -259,20 +282,30 @@
 
 .method public onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 2
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    invoke-static {p2}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
+    invoke-static {p2}, Landroidx/core/view/ViewCompat;->N(Landroid/view/View;)Z
 
     move-result p3
 
     if-nez p3, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableBehavior;->findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lcom/google/android/material/expandable/ExpandableWidget;
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableBehavior;->findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lb/a/b/a/o/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/google/android/material/expandable/ExpandableWidget;->isExpanded()Z
+    invoke-interface {p1}, Lb/a/b/a/o/a;->a()Z
 
     move-result p3
 
@@ -282,7 +315,7 @@
 
     if-eqz p3, :cond_1
 
-    invoke-interface {p1}, Lcom/google/android/material/expandable/ExpandableWidget;->isExpanded()Z
+    invoke-interface {p1}, Lb/a/b/a/o/a;->a()Z
 
     move-result p3
 
@@ -302,9 +335,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/transformation/ExpandableBehavior$1;
+    new-instance v1, Lcom/google/android/material/transformation/ExpandableBehavior$a;
 
-    invoke-direct {v1, p0, p2, p3, p1}, Lcom/google/android/material/transformation/ExpandableBehavior$1;-><init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILcom/google/android/material/expandable/ExpandableWidget;)V
+    invoke-direct {v1, p0, p2, p3, p1}, Lcom/google/android/material/transformation/ExpandableBehavior$a;-><init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILb/a/b/a/o/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 

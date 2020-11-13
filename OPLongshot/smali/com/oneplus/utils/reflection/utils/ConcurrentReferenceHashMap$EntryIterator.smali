@@ -1,6 +1,6 @@
 .class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;
 .super Ljava/lang/Object;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -196,7 +196,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->access$400(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->b(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object v0
 
@@ -291,7 +291,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/Assert;->state(Z)V
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/a;->c(Z)V
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 

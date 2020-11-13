@@ -1,6 +1,14 @@
 .class public interface abstract Lcom/google/android/material/appbar/DecorAppbar;
 .super Ljava/lang/Object;
-.source "DecorAppbar.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # virtual methods
@@ -134,5 +142,5 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
 .end method

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/SaveImageInBackgroundData;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # instance fields

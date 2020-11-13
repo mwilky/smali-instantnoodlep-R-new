@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/transform/Factory;
 .super Ljava/lang/Object;
-.source "Factory.java"
+.source ""
 
 
 # direct methods

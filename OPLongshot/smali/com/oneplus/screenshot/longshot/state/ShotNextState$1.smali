@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;
 .super Ljava/lang/Object;
-.source "ShotNextState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 5
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldStitchByView()Z
 
@@ -53,23 +53,21 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 
-    iget v1, v1, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mOffset:I
+    iget v2, v1, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
-    sub-int v1, v0, v1
+    sub-int/2addr v0, v2
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
+    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->access$000(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/graphics/Bitmap;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->access$000(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/graphics/Bitmap;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
+    move-result v1
 
     iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 
-    iget-object v2, v2, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+    iget-object v2, v2, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->getStart()Landroid/graphics/Point;
 
@@ -77,13 +75,19 @@
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v1, v2
 
     iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 
-    iget v2, v2, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mOffset:I
+    iget v2, v2, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v1, v2
+
+    move v4, v1
+
+    move v1, v0
+
+    move v0, v4
 
     goto :goto_0
 
@@ -117,16 +121,16 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     monitor-enter v0
 
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 
-    iget-object v1, v1, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v1, v1, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     monitor-exit v0
     :try_end_0
@@ -138,7 +142,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->recycleBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->recycleBitmap(Landroid/graphics/Bitmap;)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 

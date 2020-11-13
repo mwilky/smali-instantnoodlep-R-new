@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/FloatArrayEvaluator;
 .super Ljava/lang/Object;
-.source "FloatArrayEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -31,6 +31,10 @@
 
 .method public constructor <init>([F)V
     .locals 0
+    .param p1    # [F
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,6 +47,16 @@
 # virtual methods
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, [F
 
@@ -57,6 +71,16 @@
 
 .method public evaluate(F[F[F)[F
     .locals 4
+    .param p2    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/animation/FloatArrayEvaluator;->mArray:[F
 

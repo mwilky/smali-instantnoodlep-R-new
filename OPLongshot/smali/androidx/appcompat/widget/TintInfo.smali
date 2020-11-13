@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/widget/TintInfo;
 .super Ljava/lang/Object;
-.source "TintInfo.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields

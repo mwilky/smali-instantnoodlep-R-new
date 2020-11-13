@@ -1,6 +1,6 @@
 .class Landroidx/lifecycle/LiveData$LifecycleBoundObserver;
-.super Landroidx/lifecycle/LiveData$ObserverWrapper;
-.source "LiveData.java"
+.super Landroidx/lifecycle/LiveData$b;
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
@@ -19,25 +19,32 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/lifecycle/LiveData<",
-        "TT;>.ObserverWrapper;",
+        "TT;>.b;",
         "Landroidx/lifecycle/GenericLifecycleObserver;"
     }
 .end annotation
 
 
 # instance fields
-.field final mOwner:Landroidx/lifecycle/LifecycleOwner;
+.field final mOwner:Landroidx/lifecycle/e;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field final synthetic this$0:Landroidx/lifecycle/LiveData;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
+.method constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/e;Landroidx/lifecycle/Observer;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/LiveData;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/lifecycle/LifecycleOwner;",
+            "Landroidx/lifecycle/e;",
             "Landroidx/lifecycle/Observer<",
             "-TT;>;)V"
         }
@@ -45,9 +52,9 @@
 
     iput-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->this$0:Landroidx/lifecycle/LiveData;
 
-    invoke-direct {p0, p1, p3}, Landroidx/lifecycle/LiveData$ObserverWrapper;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
+    invoke-direct {p0, p1, p3}, Landroidx/lifecycle/LiveData$b;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
-    iput-object p2, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/LifecycleOwner;
+    iput-object p2, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/e;
 
     return-void
 .end method
@@ -57,21 +64,21 @@
 .method detachObserver()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/LifecycleOwner;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/e;
 
-    invoke-interface {v0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->c(Landroidx/lifecycle/d;)V
 
     return-void
 .end method
 
-.method isAttachedTo(Landroidx/lifecycle/LifecycleOwner;)Z
+.method isAttachedTo(Landroidx/lifecycle/e;)Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/LifecycleOwner;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/e;
 
     if-ne v0, p1, :cond_0
 
@@ -86,16 +93,16 @@
     return p1
 .end method
 
-.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
-    iget-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/LifecycleOwner;
+    iget-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/e;
 
-    invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+    invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->b()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p1
 
@@ -105,7 +112,7 @@
 
     iget-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->this$0:Landroidx/lifecycle/LiveData;
 
-    iget-object p2, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mObserver:Landroidx/lifecycle/Observer;
+    iget-object p2, p0, Landroidx/lifecycle/LiveData$b;->mObserver:Landroidx/lifecycle/Observer;
 
     invoke-virtual {p1, p2}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
 
@@ -116,7 +123,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->activeStateChanged(Z)V
+    invoke-virtual {p0, p1}, Landroidx/lifecycle/LiveData$b;->activeStateChanged(Z)V
 
     return-void
 .end method
@@ -124,13 +131,13 @@
 .method shouldBeActive()Z
     .locals 2
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/LifecycleOwner;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Landroidx/lifecycle/e;
 
-    invoke-interface {v0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->b()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
 

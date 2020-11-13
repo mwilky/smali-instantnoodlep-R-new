@@ -1,6 +1,6 @@
 .class final Landroidx/collection/MapCollections$EntrySet;
 .super Ljava/lang/Object;
-.source "MapCollections.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Set;
@@ -192,7 +192,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/collection/ContainerHelpers;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

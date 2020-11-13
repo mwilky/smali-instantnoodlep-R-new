@@ -1,6 +1,6 @@
 .class Landroidx/recyclerview/widget/MessageThreadUtil;
 .super Ljava/lang/Object;
-.source "MessageThreadUtil.java"
+.source ""
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil;
@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;,
-        Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+        Landroidx/recyclerview/widget/MessageThreadUtil$a;,
+        Landroidx/recyclerview/widget/MessageThreadUtil$b;
     }
 .end annotation
 

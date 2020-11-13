@@ -1,6 +1,6 @@
 .class public final enum Landroidx/loader/content/ModernAsyncTask$Status;
 .super Ljava/lang/Enum;
-.source "ModernAsyncTask.java"
+.source ""
 
 
 # annotations

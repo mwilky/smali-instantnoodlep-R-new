@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$20;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

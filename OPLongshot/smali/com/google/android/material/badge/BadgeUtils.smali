@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/badge/BadgeUtils;
 .super Ljava/lang/Object;
-.source "BadgeUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -40,6 +48,18 @@
 
 .method public static attachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Landroid/view/View;Landroid/widget/FrameLayout;)V
     .locals 1
+    .param p0    # Lcom/google/android/material/badge/BadgeDrawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/widget/FrameLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1, p2}, Lcom/google/android/material/badge/BadgeUtils;->setBadgeDrawableBounds(Lcom/google/android/material/badge/BadgeDrawable;Landroid/view/View;Landroid/widget/FrameLayout;)V
 
@@ -64,6 +84,13 @@
 
 .method public static createBadgeDrawablesFromSavedStates(Landroid/content/Context;Lcom/google/android/material/internal/ParcelableSparseArray;)Landroid/util/SparseArray;
     .locals 4
+    .param p1    # Lcom/google/android/material/internal/ParcelableSparseArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -78,7 +105,7 @@
 
     new-instance v0, Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lcom/google/android/material/internal/ParcelableSparseArray;->size()I
+    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
     move-result v1
 
@@ -87,17 +114,17 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {p1}, Lcom/google/android/material/internal/ParcelableSparseArray;->size()I
+    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
     move-result v2
 
     if-ge v1, v2, :cond_1
 
-    invoke-virtual {p1, v1}, Lcom/google/android/material/internal/ParcelableSparseArray;->keyAt(I)I
+    invoke-virtual {p1, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    invoke-virtual {p1, v1}, Lcom/google/android/material/internal/ParcelableSparseArray;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -105,7 +132,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {p0, v3}, Lcom/google/android/material/badge/BadgeDrawable;->createFromSavedState(Landroid/content/Context;Lcom/google/android/material/badge/BadgeDrawable$SavedState;)Lcom/google/android/material/badge/BadgeDrawable;
+    invoke-static {p0, v3}, Lcom/google/android/material/badge/BadgeDrawable;->e(Landroid/content/Context;Lcom/google/android/material/badge/BadgeDrawable$SavedState;)Lcom/google/android/material/badge/BadgeDrawable;
 
     move-result-object v3
 
@@ -130,6 +157,13 @@
 
 .method public static createParcelableBadgeStates(Landroid/util/SparseArray;)Lcom/google/android/material/internal/ParcelableSparseArray;
     .locals 4
+    .param p0    # Landroid/util/SparseArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -165,11 +199,11 @@
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/google/android/material/badge/BadgeDrawable;->getSavedState()Lcom/google/android/material/badge/BadgeDrawable$SavedState;
+    invoke-virtual {v3}, Lcom/google/android/material/badge/BadgeDrawable;->k()Lcom/google/android/material/badge/BadgeDrawable$SavedState;
 
     move-result-object v3
 
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/material/internal/ParcelableSparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -190,6 +224,18 @@
 
 .method public static detachBadgeDrawable(Lcom/google/android/material/badge/BadgeDrawable;Landroid/view/View;Landroid/widget/FrameLayout;)V
     .locals 1
+    .param p0    # Lcom/google/android/material/badge/BadgeDrawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/widget/FrameLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     if-nez p0, :cond_0
 
@@ -219,6 +265,18 @@
 
 .method public static setBadgeDrawableBounds(Lcom/google/android/material/badge/BadgeDrawable;Landroid/view/View;Landroid/widget/FrameLayout;)V
     .locals 2
+    .param p0    # Lcom/google/android/material/badge/BadgeDrawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/widget/FrameLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -238,15 +296,19 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/badge/BadgeDrawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/badge/BadgeDrawable;->updateBadgeCoordinates(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/badge/BadgeDrawable;->y(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method
 
 .method public static updateBadgeBounds(Landroid/graphics/Rect;FFFF)V
     .locals 2
+    .param p0    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sub-float v0, p1, p3
 

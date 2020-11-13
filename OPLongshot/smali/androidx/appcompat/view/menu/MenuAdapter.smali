@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/view/menu/MenuAdapter;
 .super Landroid/widget/BaseAdapter;
-.source "MenuAdapter.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -126,19 +134,15 @@
     :goto_0
     iget v1, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mExpandedIndex:I
 
-    if-gez v1, :cond_1
-
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
+
+    if-gez v1, :cond_1
 
     return v0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
     add-int/lit8 v0, v0, -0x1
 
     return v0
@@ -229,7 +233,7 @@
     :cond_0
     move-object p3, p2
 
-    check-cast p3, Landroidx/appcompat/view/menu/MenuView$ItemView;
+    check-cast p3, Landroidx/appcompat/view/menu/MenuView$a;
 
     iget-boolean v1, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mForceShowIcon:Z
 
@@ -248,7 +252,7 @@
 
     move-result-object p1
 
-    invoke-interface {p3, p1, v0}, Landroidx/appcompat/view/menu/MenuView$ItemView;->initialize(Landroidx/appcompat/view/menu/MenuItemImpl;I)V
+    invoke-interface {p3, p1, v0}, Landroidx/appcompat/view/menu/MenuView$a;->initialize(Landroidx/appcompat/view/menu/MenuItemImpl;I)V
 
     return-object p2
 .end method

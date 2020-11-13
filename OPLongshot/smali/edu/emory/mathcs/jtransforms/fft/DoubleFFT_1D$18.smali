@@ -1,6 +1,6 @@
 .class synthetic Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$18;
 .super Ljava/lang/Object;
-.source "DoubleFFT_1D.java"
+.source ""
 
 
 # annotations
@@ -35,7 +35,7 @@
     :try_start_0
     sget-object v1, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->SPLIT_RADIX:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
-    invoke-virtual {v1}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -51,7 +51,7 @@
 
     sget-object v1, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->MIXED_RADIX:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
-    invoke-virtual {v1}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -67,7 +67,7 @@
 
     sget-object v1, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->BLUESTEIN:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
-    invoke-virtual {v1}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

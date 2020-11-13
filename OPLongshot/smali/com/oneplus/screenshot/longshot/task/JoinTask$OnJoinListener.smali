@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/task/JoinTask$OnJoinListener;
 .super Ljava/lang/Object;
-.source "JoinTask.java"
+.source ""
 
 
 # annotations

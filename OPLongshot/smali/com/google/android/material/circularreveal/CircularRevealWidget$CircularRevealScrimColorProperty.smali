@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealScrimColorProperty;
 .super Landroid/util/Property;
-.source "CircularRevealWidget.java"
+.source ""
 
 
 # annotations
@@ -65,6 +65,12 @@
 # virtual methods
 .method public get(Lcom/google/android/material/circularreveal/CircularRevealWidget;)Ljava/lang/Integer;
     .locals 0
+    .param p1    # Lcom/google/android/material/circularreveal/CircularRevealWidget;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-interface {p1}, Lcom/google/android/material/circularreveal/CircularRevealWidget;->getCircularRevealScrimColor()I
 
@@ -79,6 +85,12 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p1, Lcom/google/android/material/circularreveal/CircularRevealWidget;
 
@@ -91,6 +103,14 @@
 
 .method public set(Lcom/google/android/material/circularreveal/CircularRevealWidget;Ljava/lang/Integer;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/circularreveal/CircularRevealWidget;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -103,6 +123,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Lcom/google/android/material/circularreveal/CircularRevealWidget;
 

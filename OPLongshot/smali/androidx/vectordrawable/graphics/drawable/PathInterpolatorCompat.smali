@@ -1,9 +1,17 @@
 .class public Landroidx/vectordrawable/graphics/drawable/PathInterpolatorCompat;
 .super Ljava/lang/Object;
-.source "PathInterpolatorCompat.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -42,7 +50,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PATH_INTERPOLATOR:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->l:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -412,7 +420,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/graphics/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p1}, Landroidx/core/graphics/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p2
 

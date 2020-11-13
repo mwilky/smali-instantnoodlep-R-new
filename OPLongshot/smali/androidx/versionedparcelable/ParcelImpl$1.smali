@@ -1,6 +1,6 @@
 .class final Landroidx/versionedparcelable/ParcelImpl$1;
 .super Ljava/lang/Object;
-.source "ParcelImpl.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

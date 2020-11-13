@@ -1,6 +1,12 @@
 .class Landroidx/documentfile/provider/DocumentsContractApi19;
 .super Ljava/lang/Object;
-.source "DocumentsContractApi19.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
 
 
 # static fields
@@ -127,6 +133,10 @@
 
 .method private static closeQuietly(Ljava/lang/AutoCloseable;)V
     .locals 0
+    .param p0    # Ljava/lang/AutoCloseable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
@@ -250,6 +260,8 @@
 
 .method public static getName(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const-string v0, "_display_name"
 
@@ -264,6 +276,8 @@
 
 .method private static getRawType(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const-string v0, "mime_type"
 
@@ -278,6 +292,8 @@
 
 .method public static getType(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p0, p1}, Landroidx/documentfile/provider/DocumentsContractApi19;->getRawType(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
@@ -523,6 +539,12 @@
 
 .method private static queryForString(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

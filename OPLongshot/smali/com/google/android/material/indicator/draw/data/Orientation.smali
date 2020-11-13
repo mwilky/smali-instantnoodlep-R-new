@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/indicator/draw/data/Orientation;
 .super Ljava/lang/Enum;
-.source "Orientation.java"
+.source ""
 
 
 # annotations

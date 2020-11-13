@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/Logger$LogLevel;
 .super Ljava/lang/Enum;
-.source "Logger.java"
+.source ""
 
 
 # annotations

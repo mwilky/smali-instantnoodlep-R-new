@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="complete_icon_margin_top">297.0px</dimen>
-    <dimen name="control_empty_base_height">800.0px</dimen>
+    <dimen name="control_empty_base_height">100.0px</dimen>
     <dimen name="control_empty_image_height">800.0px</dimen>
     <dimen name="control_empty_image_margin_top">424.0px</dimen>
     <dimen name="control_empty_image_width">1440.0px</dimen>

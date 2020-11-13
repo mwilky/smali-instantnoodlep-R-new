@@ -1,6 +1,6 @@
 .class final Landroidx/animation/AnimatorSet$3;
 .super Ljava/lang/Object;
-.source "AnimatorSet.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Landroidx/animation/AnimatorSet$AnimationEvent;",
+        "Landroidx/animation/AnimatorSet$c;",
         ">;"
     }
 .end annotation
@@ -37,14 +37,14 @@
 
 
 # virtual methods
-.method public compare(Landroidx/animation/AnimatorSet$AnimationEvent;Landroidx/animation/AnimatorSet$AnimationEvent;)I
+.method public compare(Landroidx/animation/AnimatorSet$c;Landroidx/animation/AnimatorSet$c;)I
     .locals 7
 
-    invoke-virtual {p1}, Landroidx/animation/AnimatorSet$AnimationEvent;->getTime()J
+    invoke-virtual {p1}, Landroidx/animation/AnimatorSet$c;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p2}, Landroidx/animation/AnimatorSet$AnimationEvent;->getTime()J
+    invoke-virtual {p2}, Landroidx/animation/AnimatorSet$c;->a()J
 
     move-result-wide v2
 
@@ -54,27 +54,19 @@
 
     if-nez v4, :cond_1
 
-    iget v0, p2, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
+    iget p2, p2, Landroidx/animation/AnimatorSet$c;->b:I
 
-    iget v1, p1, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
+    iget p1, p1, Landroidx/animation/AnimatorSet$c;->b:I
 
-    add-int/2addr v0, v1
+    add-int v0, p2, p1
 
     if-ne v0, v5, :cond_0
-
-    iget p1, p1, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
-
-    iget p2, p2, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
 
     sub-int/2addr p1, p2
 
     return p1
 
     :cond_0
-    iget p2, p2, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
-
-    iget p1, p1, Landroidx/animation/AnimatorSet$AnimationEvent;->mEvent:I
-
     sub-int/2addr p2, p1
 
     return p2
@@ -118,11 +110,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Landroidx/animation/AnimatorSet$AnimationEvent;
+    check-cast p1, Landroidx/animation/AnimatorSet$c;
 
-    check-cast p2, Landroidx/animation/AnimatorSet$AnimationEvent;
+    check-cast p2, Landroidx/animation/AnimatorSet$c;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/animation/AnimatorSet$3;->compare(Landroidx/animation/AnimatorSet$AnimationEvent;Landroidx/animation/AnimatorSet$AnimationEvent;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/animation/AnimatorSet$3;->compare(Landroidx/animation/AnimatorSet$c;Landroidx/animation/AnimatorSet$c;)I
 
     move-result p1
 

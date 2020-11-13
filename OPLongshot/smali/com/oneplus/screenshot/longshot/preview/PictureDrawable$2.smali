@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/preview/PictureDrawable$2;
 .super Ljava/lang/Object;
-.source "PictureDrawable.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable$2;->this$0:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->invalidateSelf()V
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

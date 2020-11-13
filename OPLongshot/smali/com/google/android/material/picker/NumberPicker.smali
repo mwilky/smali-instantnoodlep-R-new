@@ -1,150 +1,150 @@
 .class public Lcom/google/android/material/picker/NumberPicker;
 .super Landroid/widget/LinearLayout;
-.source "NumberPicker.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;,
-        Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;,
+        Lcom/google/android/material/picker/NumberPicker$d;,
+        Lcom/google/android/material/picker/NumberPicker$e;,
         Lcom/google/android/material/picker/NumberPicker$CustomEditText;,
-        Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;,
-        Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;,
-        Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;,
-        Lcom/google/android/material/picker/NumberPicker$InputTextFilter;,
-        Lcom/google/android/material/picker/NumberPicker$Formatter;,
+        Lcom/google/android/material/picker/NumberPicker$f;,
+        Lcom/google/android/material/picker/NumberPicker$k;,
+        Lcom/google/android/material/picker/NumberPicker$j;,
+        Lcom/google/android/material/picker/NumberPicker$h;,
+        Lcom/google/android/material/picker/NumberPicker$g;,
         Lcom/google/android/material/picker/NumberPicker$OnScrollListener;,
-        Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;,
-        Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;
+        Lcom/google/android/material/picker/NumberPicker$i;,
+        Lcom/google/android/material/picker/NumberPicker$l;
     }
 .end annotation
 
 
 # static fields
-.field private static final DEFAULT_LAYOUT_RESOURCE_ID:I
+.field private static final n0:I
 
-.field private static final DEFAULT_LONG_PRESS_UPDATE_INTERVAL:J = 0x12cL
+.field private static final o0:Lcom/google/android/material/picker/NumberPicker$l;
 
-.field private static final DIGIT_CHARACTERS:[C
-
-.field private static final SELECTOR_ADJUSTMENT_DURATION_MILLIS:I = 0x320
-
-.field private static final SELECTOR_MAX_FLING_VELOCITY_ADJUSTMENT:I = 0x8
-
-.field private static final SELECTOR_WHEEL_ITEM_COUNT:I = 0x3
-
-.field private static final SIZE_UNSPECIFIED:I = -0x1
-
-.field private static final SNAP_SCROLL_DURATION:I = 0x12c
-
-.field private static final TOP_AND_BOTTOM_FADING_EDGE_STRENGTH:F = 0.9f
-
-.field private static final UNSCALED_DEFAULT_SELECTION_DIVIDERS_DISTANCE:I = 0x30
-
-.field private static final UNSCALED_DEFAULT_SELECTION_DIVIDER_HEIGHT:I = 0x2
-
-.field private static final sTwoDigitFormatter:Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;
+.field private static final p0:[C
 
 
 # instance fields
-.field private mAccessibilityNodeProvider:Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+.field private A:I
 
-.field private final mAdjustScroller:Landroid/widget/Scroller;
+.field private B:I
 
-.field private mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+.field private final C:Landroid/widget/Scroller;
 
-.field private mBottomSelectionDividerBottom:I
+.field private final D:Landroid/widget/Scroller;
 
-.field private mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+.field private E:I
 
-.field private final mComputeMaxWidth:Z
+.field private F:Lcom/google/android/material/picker/NumberPicker$k;
 
-.field private mCurrentScrollOffset:I
+.field private G:Lcom/google/android/material/picker/NumberPicker$f;
 
-.field private final mDecrementButton:Landroid/widget/ImageButton;
+.field private H:Lcom/google/android/material/picker/NumberPicker$e;
 
-.field private mDecrementVirtualButtonPressed:Z
+.field private I:F
 
-.field private mDisplayedValues:[Ljava/lang/String;
+.field private J:J
 
-.field private final mFlingScroller:Landroid/widget/Scroller;
+.field private K:F
 
-.field private mFormatter:Lcom/google/android/material/picker/NumberPicker$Formatter;
+.field private L:Landroid/view/VelocityTracker;
 
-.field private final mHasSelectorWheel:Z
+.field private M:I
 
-.field private mHideWheelUntilFocused:Z
+.field private N:I
 
-.field private mIgnoreMoveEvents:Z
+.field private O:I
 
-.field private final mIncrementButton:Landroid/widget/ImageButton;
+.field private P:Z
 
-.field private mIncrementVirtualButtonPressed:Z
+.field private final Q:I
 
-.field private mInitialScrollOffset:I
+.field private R:I
 
-.field private final mInputText:Landroid/widget/EditText;
+.field private S:I
 
-.field private mIsBold:Z
+.field private final T:Z
 
-.field private mLastDownEventTime:J
+.field private final U:Landroid/graphics/drawable/Drawable;
 
-.field private mLastDownEventY:F
+.field private final V:I
 
-.field private mLastDownOrMoveEventY:F
+.field private W:I
 
-.field private mLastHandledDownDpadKeyCode:I
+.field private a:Z
 
-.field private mLastHoveredChildVirtualViewId:I
+.field private a0:I
 
-.field private mLongPressUpdateInterval:J
+.field private b:Z
 
-.field private final mMaxHeight:I
+.field private b0:Z
 
-.field private mMaxValue:I
+.field private final c:Landroid/widget/ImageButton;
 
-.field private mMaxWidth:I
+.field private c0:Z
 
-.field private mMaximumFlingVelocity:I
+.field private final d:Landroid/widget/ImageButton;
 
-.field private final mMinHeight:I
+.field private d0:I
 
-.field private mMinValue:I
+.field private final e:Landroid/widget/EditText;
 
-.field private final mMinWidth:I
+.field private e0:I
 
-.field private mMinimumFlingVelocity:I
+.field private final f:I
 
-.field private mOnScrollListener:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
+.field private f0:I
 
-.field private mOnValueChangeListener:Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;
+.field private final g:I
 
-.field private mPaintColor:I
+.field private g0:Z
 
-.field private mPerformClickOnTap:Z
+.field private final h:I
 
-.field private final mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+.field private h0:Z
 
-.field private mPreviousScrollerY:I
+.field private final i:I
 
-.field private mScrollState:I
+.field private i0:Lcom/google/android/material/picker/NumberPicker$d;
 
-.field private mSelectMiddleCount:I
+.field private j:I
 
-.field private mSelectedValueColor:I
+.field private final j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-.field private final mSelectionDivider:Landroid/graphics/drawable/Drawable;
+.field private final k:Z
 
-.field private final mSelectionDividerHeight:I
+.field private k0:I
 
-.field private mSelectionDividerWidth:I
+.field private final l:I
 
-.field private final mSelectionDividersDistance:I
+.field private l0:Z
 
-.field private mSelectorElementHeight:I
+.field private m:I
 
-.field private final mSelectorIndexToStringCache:Landroid/util/SparseArray;
+.field private m0:I
+
+.field private n:[Ljava/lang/String;
+
+.field private o:I
+
+.field private p:I
+
+.field private q:I
+
+.field private r:Lcom/google/android/material/picker/NumberPicker$i;
+
+.field private s:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
+
+.field private t:Lcom/google/android/material/picker/NumberPicker$g;
+
+.field private u:J
+
+.field private final v:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -154,46 +154,28 @@
     .end annotation
 .end field
 
-.field private final mSelectorIndices:[I
+.field private final w:[I
 
-.field private mSelectorTextGapHeight:I
+.field private final x:Landroid/graphics/Paint;
 
-.field private final mSelectorWheelPaint:Landroid/graphics/Paint;
+.field private final y:Landroid/graphics/drawable/Drawable;
 
-.field private mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
-
-.field private final mSolidColor:I
-
-.field private final mTextSize:I
-
-.field private mTopSelectionDividerTop:I
-
-.field private mTouchSlop:I
-
-.field private mValue:I
-
-.field private mVelocityTracker:Landroid/view/VelocityTracker;
-
-.field private final mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
-
-.field private mWrapSelectorWheel:Z
-
-.field private mWrapSelectorWheelPreferred:Z
+.field private z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$layout;->op_number_picker:I
+    sget v0, Lb/a/b/a/h;->op_number_picker:I
 
-    sput v0, Lcom/google/android/material/picker/NumberPicker;->DEFAULT_LAYOUT_RESOURCE_ID:I
+    sput v0, Lcom/google/android/material/picker/NumberPicker;->n0:I
 
-    new-instance v0, Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;
+    new-instance v0, Lcom/google/android/material/picker/NumberPicker$l;
 
-    invoke-direct {v0}, Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/picker/NumberPicker$l;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/picker/NumberPicker;->sTwoDigitFormatter:Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;
+    sput-object v0, Lcom/google/android/material/picker/NumberPicker;->o0:Lcom/google/android/material/picker/NumberPicker$l;
 
     const/16 v0, 0x3c
 
@@ -201,7 +183,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/google/android/material/picker/NumberPicker;->DIGIT_CHARACTERS:[C
+    sput-object v0, Lcom/google/android/material/picker/NumberPicker;->p0:[C
 
     return-void
 
@@ -272,20 +254,10 @@
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$attr;->numberPickerStyle:I
+    sget v0, Lb/a/b/a/b;->numberPickerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/picker/NumberPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -301,53 +273,53 @@
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheelPreferred:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->a:Z
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->b:Z
 
     const-wide/16 v2, 0x12c
 
-    iput-wide v2, p0, Lcom/google/android/material/picker/NumberPicker;->mLongPressUpdateInterval:J
+    iput-wide v2, p0, Lcom/google/android/material/picker/NumberPicker;->u:J
 
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndexToStringCache:Landroid/util/SparseArray;
+    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->v:Landroid/util/SparseArray;
 
     const/4 v2, 0x3
 
     new-array v2, v2, [I
 
-    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     const/high16 v2, -0x80000000
 
-    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     const/4 v2, -0x1
 
-    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHandledDownDpadKeyCode:I
+    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->k0:I
 
-    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
-    sget-object v3, Lcom/google/android/material/R$styleable;->NumberPicker:[I
+    sget-object v3, Lb/a/b/a/l;->NumberPicker:[I
 
     invoke-virtual {p1, p2, v3, p3, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget p3, Lcom/google/android/material/R$styleable;->NumberPicker_internalLayout:I
+    sget p3, Lb/a/b/a/l;->NumberPicker_internalLayout:I
 
-    sget v3, Lcom/google/android/material/picker/NumberPicker;->DEFAULT_LAYOUT_RESOURCE_ID:I
+    sget v3, Lcom/google/android/material/picker/NumberPicker;->n0:I
 
     invoke-virtual {p2, p3, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p3
 
-    sget v3, Lcom/google/android/material/picker/NumberPicker;->DEFAULT_LAYOUT_RESOURCE_ID:I
+    sget v3, Lcom/google/android/material/picker/NumberPicker;->n0:I
 
     if-eq p3, v3, :cond_0
 
@@ -359,25 +331,25 @@
     move v3, v0
 
     :goto_0
-    iput-boolean v3, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iput-boolean v3, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_hideWheelUntilFocused:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_hideWheelUntilFocused:I
 
     invoke-virtual {p2, v3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/google/android/material/picker/NumberPicker;->mHideWheelUntilFocused:Z
+    iput-boolean v3, p0, Lcom/google/android/material/picker/NumberPicker;->l0:Z
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_opsolidColor:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_opsolidColor:I
 
     invoke-virtual {p2, v3, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSolidColor:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->Q:I
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_selectionDivider:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_selectionDivider:I
 
     invoke-virtual {p2, v3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -393,7 +365,7 @@
 
     if-lt v4, v5, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getLayoutDirection()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutDirection()I
 
     move-result v4
 
@@ -406,18 +378,18 @@
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getDrawableState()[I
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     :cond_2
-    iput-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iput-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     const/high16 v3, 0x40000000    # 2.0f
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -431,25 +403,25 @@
 
     float-to-int v3, v3
 
-    sget v4, Lcom/google/android/material/R$styleable;->NumberPicker_selectionDividerHeight:I
+    sget v4, Lb/a/b/a/l;->NumberPicker_selectionDividerHeight:I
 
     invoke-virtual {p2, v4, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerHeight:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->V:I
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_selectionDividerWidth:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_selectionDividerWidth:I
 
     invoke-virtual {p2, v3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerWidth:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->W:I
 
     const/high16 v3, 0x42400000    # 48.0f
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -463,31 +435,31 @@
 
     float-to-int v3, v3
 
-    sget v4, Lcom/google/android/material/R$styleable;->NumberPicker_selectionDividersDistance:I
+    sget v4, Lb/a/b/a/l;->NumberPicker_selectionDividersDistance:I
 
     invoke-virtual {p2, v4, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividersDistance:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->f:I
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_internalMinHeight:I
-
-    invoke-virtual {p2, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mMinHeight:I
-
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_internalMaxHeight:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_internalMinHeight:I
 
     invoke-virtual {p2, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxHeight:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->g:I
 
-    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->mMinHeight:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_internalMaxHeight:I
+
+    invoke-virtual {p2, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->h:I
+
+    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->g:I
 
     if-eq v4, v2, :cond_4
 
@@ -508,23 +480,23 @@
 
     :cond_4
     :goto_1
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_internalMinWidth:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_internalMinWidth:I
 
     invoke-virtual {p2, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mMinWidth:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->i:I
 
-    sget v3, Lcom/google/android/material/R$styleable;->NumberPicker_internalMaxWidth:I
+    sget v3, Lb/a/b/a/l;->NumberPicker_internalMaxWidth:I
 
     invoke-virtual {p2, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
-    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->mMinWidth:I
+    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->i:I
 
     if-eq v4, v2, :cond_6
 
@@ -545,7 +517,7 @@
 
     :cond_6
     :goto_2
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
     if-ne v3, v2, :cond_7
 
@@ -557,17 +529,17 @@
     move v2, v0
 
     :goto_3
-    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->mComputeMaxWidth:Z
+    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->k:Z
 
-    sget v2, Lcom/google/android/material/R$styleable;->NumberPicker_virtualButtonPressedDrawable:I
+    sget v2, Lb/a/b/a/l;->NumberPicker_virtualButtonPressedDrawable:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
-    sget v2, Lcom/google/android/material/R$styleable;->NumberPicker_selectionOtherNumberColor:I
+    sget v2, Lb/a/b/a/l;->NumberPicker_selectionOtherNumberColor:I
 
     const/high16 v3, -0x1000000
 
@@ -577,19 +549,19 @@
 
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    new-instance p2, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    new-instance p2, Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/picker/NumberPicker$j;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    iput-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iput-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     xor-int/2addr p2, v1
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumberPicker;->setWillNotDraw(Z)V
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setWillNotDraw(Z)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -603,77 +575,77 @@
 
     invoke-virtual {p2, p3, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    new-instance p2, Lcom/google/android/material/picker/NumberPicker$1;
+    new-instance p2, Lcom/google/android/material/picker/NumberPicker$a;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/picker/NumberPicker$1;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/picker/NumberPicker$a;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    new-instance p3, Lcom/google/android/material/picker/NumberPicker$2;
+    new-instance p3, Lcom/google/android/material/picker/NumberPicker$b;
 
-    invoke-direct {p3, p0}, Lcom/google/android/material/picker/NumberPicker$2;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {p3, p0}, Lcom/google/android/material/picker/NumberPicker$b;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     const/4 v5, 0x0
 
     if-nez v4, :cond_8
 
-    sget v4, Lcom/google/android/material/R$id;->increment:I
+    sget v4, Lb/a/b/a/f;->increment:I
 
-    invoke-virtual {p0, v4}, Lcom/google/android/material/picker/NumberPicker;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
     check-cast v4, Landroid/widget/ImageButton;
 
-    iput-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementButton:Landroid/widget/ImageButton;
+    iput-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->c:Landroid/widget/ImageButton;
 
     invoke-virtual {v4, p2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementButton:Landroid/widget/ImageButton;
+    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->c:Landroid/widget/ImageButton;
 
     invoke-virtual {v4, p3}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     goto :goto_4
 
     :cond_8
-    iput-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementButton:Landroid/widget/ImageButton;
+    iput-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->c:Landroid/widget/ImageButton;
 
     :goto_4
-    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v4, :cond_9
 
-    sget v4, Lcom/google/android/material/R$id;->decrement:I
+    sget v4, Lb/a/b/a/f;->decrement:I
 
-    invoke-virtual {p0, v4}, Lcom/google/android/material/picker/NumberPicker;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
     check-cast v4, Landroid/widget/ImageButton;
 
-    iput-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementButton:Landroid/widget/ImageButton;
+    iput-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->d:Landroid/widget/ImageButton;
 
     invoke-virtual {v4, p2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementButton:Landroid/widget/ImageButton;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->d:Landroid/widget/ImageButton;
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     goto :goto_5
 
     :cond_9
-    iput-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementButton:Landroid/widget/ImageButton;
+    iput-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->d:Landroid/widget/ImageButton;
 
     :goto_5
-    sget p2, Lcom/google/android/material/R$id;->numberpicker_input:I
+    sget p2, Lb/a/b/a/f;->numberpicker_input:I
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumberPicker;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/EditText;
 
-    iput-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p2}, Landroid/widget/EditText;->getPaint()Landroid/text/TextPaint;
 
@@ -681,33 +653,33 @@
 
     invoke-virtual {p2, v1}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
-    new-instance p3, Lcom/google/android/material/picker/NumberPicker$3;
+    new-instance p3, Lcom/google/android/material/picker/NumberPicker$c;
 
-    invoke-direct {p3, p0}, Lcom/google/android/material/picker/NumberPicker$3;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {p3, p0}, Lcom/google/android/material/picker/NumberPicker$c;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     new-array p3, v1, [Landroid/text/InputFilter;
 
-    new-instance v4, Lcom/google/android/material/picker/NumberPicker$InputTextFilter;
+    new-instance v4, Lcom/google/android/material/picker/NumberPicker$h;
 
-    invoke-direct {v4, p0}, Lcom/google/android/material/picker/NumberPicker$InputTextFilter;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {v4, p0}, Lcom/google/android/material/picker/NumberPicker$h;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
     aput-object v4, p3, v0
 
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const/4 p3, 0x2
 
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->setRawInputType(I)V
 
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const/4 p3, 0x6
 
@@ -721,13 +693,13 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mTouchSlop:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->M:I
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mMinimumFlingVelocity:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->N:I
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
@@ -735,9 +707,9 @@
 
     div-int/lit8 p1, p1, 0x8
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaximumFlingVelocity:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->O:I
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getTextSize()F
 
@@ -745,23 +717,23 @@
 
     float-to-int p1, p1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mTextSize:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->l:I
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    sget-object p2, Lcom/google/android/material/picker/NumberPicker;->ENABLED_STATE_SET:[I
+    sget-object p2, Landroid/widget/LinearLayout;->ENABLED_STATE_SET:[I
 
     invoke-virtual {p1, p2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectedValueColor:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->R:I
 
-    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->mPaintColor:I
+    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->S:I
 
     new-instance p1, Landroid/graphics/Paint;
 
@@ -773,7 +745,7 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mTextSize:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->l:I
 
     int-to-float p2, p2
 
@@ -781,21 +753,21 @@
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
     new-instance p1, Landroid/widget/Scroller;
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
     invoke-direct {p1, p2, v5, v1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;Z)V
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     new-instance p1, Landroid/widget/Scroller;
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -807,365 +779,26 @@
 
     invoke-direct {p1, p2, p3}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getImportantForAccessibility()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getImportantForAccessibility()I
 
     move-result p1
 
     if-nez p1, :cond_a
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->setImportantForAccessibility(I)V
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setImportantForAccessibility(I)V
 
     :cond_a
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/picker/NumberPicker;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->hideSoftInput()V
-
-    return-void
-.end method
-
-.method static synthetic access$100(Lcom/google/android/material/picker/NumberPicker;)Landroid/widget/EditText;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1000(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
-
-    return p0
-.end method
-
-.method static synthetic access$1100(Lcom/google/android/material/picker/NumberPicker;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/NumberPicker;->postSetSelectionCommand(II)V
-
-    return-void
-.end method
-
-.method static synthetic access$1200(Lcom/google/android/material/picker/NumberPicker;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementVirtualButtonPressed:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1202(Lcom/google/android/material/picker/NumberPicker;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementVirtualButtonPressed:Z
-
-    return p1
-.end method
-
-.method static synthetic access$1300(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
-
-    return p0
-.end method
-
-.method static synthetic access$1400(Lcom/google/android/material/picker/NumberPicker;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementVirtualButtonPressed:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1402(Lcom/google/android/material/picker/NumberPicker;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementVirtualButtonPressed:Z
-
-    return p1
-.end method
-
-.method static synthetic access$1500(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
-
-    return p0
-.end method
-
-.method static synthetic access$1600(Lcom/google/android/material/picker/NumberPicker;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLongPressUpdateInterval:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$1700(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerHeight:I
-
-    return p0
-.end method
-
-.method static synthetic access$1800(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
-
-    return p0
-.end method
-
-.method static synthetic access$1900(Lcom/google/android/material/picker/NumberPicker;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
-
-    return p0
-.end method
-
-.method static synthetic access$200(Lcom/google/android/material/picker/NumberPicker;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->changeValueByOne(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$2000(Lcom/google/android/material/picker/NumberPicker;I)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->getWrappedSelectorIndex(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$2100(Lcom/google/android/material/picker/NumberPicker;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
-
-    return p0
-.end method
-
-.method static synthetic access$2200(Lcom/google/android/material/picker/NumberPicker;I)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->formatNumber(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/picker/NumberPicker;ZJ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/picker/NumberPicker;->postChangeCurrentByOneFromLongPress(ZJ)V
-
-    return-void
-.end method
-
-.method static synthetic access$400(Lcom/google/android/material/picker/NumberPicker;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->validateInputTextView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method static synthetic access$600()[C
-    .locals 1
-
-    sget-object v0, Lcom/google/android/material/picker/NumberPicker;->DIGIT_CHARACTERS:[C
-
-    return-object v0
-.end method
-
-.method static synthetic access$700(Lcom/google/android/material/picker/NumberPicker;)Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
-
-    return-object p0
-.end method
-
-.method static synthetic access$800(Lcom/google/android/material/picker/NumberPicker;)[Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/google/android/material/picker/NumberPicker;Ljava/lang/String;)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->getSelectedPos(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private changeValueByOne(Z)V
-    .locals 13
-
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->moveToFinalScrollerPosition(Landroid/widget/Scroller;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->moveToFinalScrollerPosition(Landroid/widget/Scroller;)Z
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
-
-    if-eqz p1, :cond_1
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
-
-    neg-int v5, p1
-
-    const/16 v6, 0x12c
-
-    invoke-virtual/range {v1 .. v6}, Landroid/widget/Scroller;->startScroll(IIIII)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v7, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    iget v11, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
-
-    const/16 v12, 0x12c
-
-    invoke-virtual/range {v7 .. v12}, Landroid/widget/Scroller;->startScroll(IIIII)V
-
-    :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_3
-
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
-
-    add-int/2addr p1, v0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
-
-    goto :goto_1
-
-    :cond_3
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
-
-    sub-int/2addr p1, v0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
-
-    :goto_1
-    return-void
-.end method
-
-.method private decrementSelectorIndices([I)V
+.method private A(I)V
     .locals 3
 
-    array-length v0, p1
-
-    const/4 v1, 0x1
-
-    sub-int/2addr v0, v1
-
-    :goto_0
-    if-lez v0, :cond_0
-
-    add-int/lit8 v2, v0, -0x1
-
-    aget v2, p1, v2
-
-    aput v2, p1, v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    aget v0, p1, v1
-
-    sub-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
-
-    if-ge v0, v1, :cond_1
-
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
-
-    :cond_1
-    const/4 v1, 0x0
-
-    aput v0, p1, v1
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->ensureCachedScrollSelectorValue(I)V
-
-    return-void
-.end method
-
-.method private ensureCachedScrollSelectorValue(I)V
-    .locals 3
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndexToStringCache:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->v:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1178,18 +811,18 @@
     return-void
 
     :cond_0
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     if-lt p1, v1, :cond_3
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     if-le p1, v2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
@@ -1200,7 +833,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->formatNumber(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->D(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1216,12 +849,12 @@
     return-void
 .end method
 
-.method private ensureScrollWheelAdjusted()Z
+.method private B()Z
     .locals 7
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     sub-int/2addr v0, v1
 
@@ -1229,13 +862,13 @@
 
     if-eqz v0, :cond_2
 
-    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     div-int/lit8 v3, v2, 0x2
 
@@ -1251,7 +884,7 @@
     :cond_1
     move v5, v0
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
     const/4 v2, 0x0
 
@@ -1263,7 +896,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     const/4 v0, 0x1
 
@@ -1273,44 +906,27 @@
     return v1
 .end method
 
-.method private fling(I)V
+.method private C(I)V
     .locals 10
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
-    if-lez p1, :cond_0
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     const/4 v2, 0x0
 
+    if-lez p1, :cond_0
+
     const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const v9, 0x7fffffff
-
-    move v5, p1
-
-    invoke-virtual/range {v1 .. v9}, Landroid/widget/Scroller;->fling(IIIIIIII)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
-
-    const/4 v2, 0x0
-
     const v3, 0x7fffffff
 
+    :goto_0
     const/4 v4, 0x0
 
     const/4 v6, 0x0
@@ -1325,27 +941,26 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/widget/Scroller;->fling(IIIIIIII)V
 
-    :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 .end method
 
-.method private formatNumber(I)Ljava/lang/String;
+.method private D(I)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mFormatter:Lcom/google/android/material/picker/NumberPicker$Formatter;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->t:Lcom/google/android/material/picker/NumberPicker$g;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/google/android/material/picker/NumberPicker$Formatter;->format(I)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lcom/google/android/material/picker/NumberPicker$g;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->formatNumberWithLocale(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->E(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1353,7 +968,7 @@
     return-object p1
 .end method
 
-.method private static formatNumberWithLocale(I)Ljava/lang/String;
+.method private static E(I)Ljava/lang/String;
     .locals 3
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -1381,10 +996,10 @@
     return-object p0
 .end method
 
-.method private getSelectedPos(Ljava/lang/String;)I
+.method private F(Ljava/lang/String;)I
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1401,7 +1016,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     array-length v1, v1
 
@@ -1411,7 +1026,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
@@ -1425,7 +1040,7 @@
 
     if-eqz v1, :cond_1
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     add-int/2addr p1, v0
 
@@ -1447,27 +1062,19 @@
     return p1
 
     :catch_0
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     return p1
 .end method
 
-.method public static final getTwoDigitFormatter()Lcom/google/android/material/picker/NumberPicker$Formatter;
-    .locals 1
-
-    sget-object v0, Lcom/google/android/material/picker/NumberPicker;->sTwoDigitFormatter:Lcom/google/android/material/picker/NumberPicker$TwoDigitFormatter;
-
-    return-object v0
-.end method
-
-.method private getWrappedSelectorIndex(I)I
+.method private G(I)I
     .locals 2
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
+
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     if-le p1, v0, :cond_0
-
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
 
     sub-int/2addr p1, v0
 
@@ -1482,8 +1089,6 @@
     return v1
 
     :cond_0
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
-
     if-ge p1, v1, :cond_1
 
     sub-int p1, v1, p1
@@ -1502,10 +1107,10 @@
     return p1
 .end method
 
-.method private hideSoftInput()V
+.method private H()V
     .locals 3
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1519,7 +1124,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/view/inputmethod/InputMethodManager;->isActive(Landroid/view/View;)Z
 
@@ -1527,7 +1132,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
 
@@ -1535,11 +1140,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const/4 v1, 0x4
 
@@ -1549,7 +1154,7 @@
     return-void
 .end method
 
-.method private incrementSelectorIndices([I)V
+.method private I([I)V
     .locals 3
 
     const/4 v0, 0x0
@@ -1580,15 +1185,15 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     if-le v0, v1, :cond_1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     :cond_1
     array-length v1, p1
@@ -1597,57 +1202,57 @@
 
     aput v0, p1, v1
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->ensureCachedScrollSelectorValue(I)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->A(I)V
 
     return-void
 .end method
 
-.method private initializeFadingEdges()V
+.method private J()V
     .locals 2
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->setVerticalFadingEdgeEnabled(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setVerticalFadingEdgeEnabled(Z)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getBottom()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBottom()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getTop()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getTop()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mTextSize:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->l:I
 
     sub-int/2addr v0, v1
 
     div-int/lit8 v0, v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->setFadingEdgeLength(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setFadingEdgeLength(I)V
 
     return-void
 .end method
 
-.method private initializeSelectorWheel()V
+.method private K()V
     .locals 4
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     array-length v1, v0
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mTextSize:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->l:I
 
     mul-int/2addr v1, v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getBottom()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBottom()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getTop()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getTop()I
 
     move-result v3
 
@@ -1669,21 +1274,21 @@
 
     float-to-int v0, v1
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorTextGapHeight:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->m:I
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mTextSize:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->l:I
 
     add-int/2addr v1, v0
 
-    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getBaseline()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getTop()I
 
@@ -1691,31 +1296,31 @@
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     mul-int/2addr v1, v2
 
     sub-int/2addr v0, v1
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     return-void
 .end method
 
-.method private initializeSelectorWheelIndices()V
+.method private L()V
     .locals 5
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndexToStringCache:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->v:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
 
@@ -1724,23 +1329,23 @@
     const/4 v2, 0x0
 
     :goto_0
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     array-length v3, v3
 
     if-ge v2, v3, :cond_1
 
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     sub-int v3, v2, v3
 
     add-int/2addr v3, v1
 
-    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v4, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-eqz v4, :cond_0
 
-    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->getWrappedSelectorIndex(I)I
+    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->G(I)I
 
     move-result v3
 
@@ -1749,7 +1354,7 @@
 
     aget v3, v0, v2
 
-    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->ensureCachedScrollSelectorValue(I)V
+    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->A(I)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -1759,7 +1364,7 @@
     return-void
 .end method
 
-.method private makeMeasureSpec(II)I
+.method private M(II)I
     .locals 4
 
     const/4 v0, -0x1
@@ -1829,7 +1434,7 @@
     return p1
 .end method
 
-.method private moveToFinalScrollerPosition(Landroid/widget/Scroller;)Z
+.method private N(Landroid/widget/Scroller;)Z
     .locals 6
 
     const/4 v0, 0x1
@@ -1846,15 +1451,15 @@
 
     sub-int/2addr v1, p1
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     add-int/2addr p1, v1
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     rem-int/2addr p1, v2
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
     sub-int/2addr v2, p1
 
@@ -1866,7 +1471,7 @@
 
     move-result v3
 
-    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v4, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     div-int/lit8 v5, v4, 0x2
 
@@ -1893,10 +1498,10 @@
     return p1
 .end method
 
-.method private notifyChange(II)V
+.method private O(II)V
     .locals 1
 
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
+    invoke-static {}, Lb/b/a/e;->b()Z
 
     move-result p2
 
@@ -1905,7 +1510,7 @@
     const/4 p2, 0x5
 
     :try_start_0
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumberPicker;->performHapticFeedback(I)Z
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->performHapticFeedback(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1918,96 +1523,96 @@
 
     :cond_0
     :goto_0
-    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mOnValueChangeListener:Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;
+    iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->r:Lcom/google/android/material/picker/NumberPicker$i;
 
     if-eqz p2, :cond_1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
-    invoke-interface {p2, p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;->onValueChange(Lcom/google/android/material/picker/NumberPicker;II)V
+    invoke-interface {p2, p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker$i;->a(Lcom/google/android/material/picker/NumberPicker;II)V
 
     :cond_1
     return-void
 .end method
 
-.method private onScrollStateChange(I)V
+.method private P(I)V
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
     :cond_0
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mOnScrollListener:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->s:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p0, p1}, Lcom/google/android/material/picker/NumberPicker$OnScrollListener;->onScrollStateChange(Lcom/google/android/material/picker/NumberPicker;I)V
+    invoke-interface {v0, p0, p1}, Lcom/google/android/material/picker/NumberPicker$OnScrollListener;->a(Lcom/google/android/material/picker/NumberPicker;I)V
 
     :cond_1
     return-void
 .end method
 
-.method private onScrollerFinished(Landroid/widget/Scroller;)V
+.method private Q(Landroid/widget/Scroller;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     if-ne p1, v0, :cond_1
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->ensureScrollWheelAdjusted()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->B()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     :cond_0
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->onScrollStateChange(I)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->P(I)V
 
     goto :goto_0
 
     :cond_1
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_2
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method private postBeginSoftInputOnLongPressCommand()V
+.method private R()V
     .locals 3
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->H:Lcom/google/android/material/picker/NumberPicker$e;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    new-instance v0, Lcom/google/android/material/picker/NumberPicker$e;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$e;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->H:Lcom/google/android/material/picker/NumberPicker$e;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :goto_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->H:Lcom/google/android/material/picker/NumberPicker$e;
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
@@ -2015,122 +1620,122 @@
 
     int-to-long v1, v1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/material/picker/NumberPicker;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
 
-.method private postChangeCurrentByOneFromLongPress(ZJ)V
+.method private S(ZJ)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    new-instance v0, Lcom/google/android/material/picker/NumberPicker$f;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$f;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :goto_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
-    invoke-static {v0, p1}, Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->access$500(Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;Z)V
+    invoke-static {v0, p1}, Lcom/google/android/material/picker/NumberPicker$f;->a(Lcom/google/android/material/picker/NumberPicker$f;Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/picker/NumberPicker;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, p1, p2, p3}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
 
-.method private postSetSelectionCommand(II)V
+.method private T(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->F:Lcom/google/android/material/picker/NumberPicker$k;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
+    new-instance v0, Lcom/google/android/material/picker/NumberPicker$k;
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
-    invoke-direct {v0, v1}, Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;-><init>(Landroid/widget/EditText;)V
+    invoke-direct {v0, v1}, Lcom/google/android/material/picker/NumberPicker$k;-><init>(Landroid/widget/EditText;)V
 
-    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
+    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->F:Lcom/google/android/material/picker/NumberPicker$k;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->F:Lcom/google/android/material/picker/NumberPicker$k;
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;->post(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/google/android/material/picker/NumberPicker$k;->b(II)V
 
     return-void
 .end method
 
-.method private removeAllCallbacks()V
+.method private U()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSetSelectionCommand:Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->F:Lcom/google/android/material/picker/NumberPicker$k;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$SetSelectionCommand;->cancel()V
+    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$k;->a()V
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->H:Lcom/google/android/material/picker/NumberPicker$e;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->cancel()V
+    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$j;->c()V
 
     return-void
 .end method
 
-.method private removeBeginSoftInputCommand()V
+.method private V()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBeginSoftInputOnLongPressCommand:Lcom/google/android/material/picker/NumberPicker$BeginSoftInputOnLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->H:Lcom/google/android/material/picker/NumberPicker$e;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_0
     return-void
 .end method
 
-.method private removeChangeCurrentByOneFromLongPress()V
+.method private W()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lcom/google/android/material/picker/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->G:Lcom/google/android/material/picker/NumberPicker$f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_0
     return-void
 .end method
 
-.method private resolveSizeAndStateRespectingMinSize(III)I
+.method private X(III)I
     .locals 1
 
     const/4 v0, -0x1
@@ -2143,7 +1748,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p3, p2}, Lcom/google/android/material/picker/NumberPicker;->resolveSizeAndState(III)I
+    invoke-static {p1, p3, p2}, Landroid/widget/LinearLayout;->resolveSizeAndState(III)I
 
     move-result p1
 
@@ -2153,62 +1758,62 @@
     return p2
 .end method
 
-.method private setValueInternal(IZ)V
+.method private Y(IZ)V
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
     :cond_0
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->getWrappedSelectorIndex(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->G(I)I
 
     move-result p1
 
     goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     :goto_0
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     if-eqz p2, :cond_2
 
-    invoke-direct {p0, v0, p1}, Lcom/google/android/material/picker/NumberPicker;->notifyChange(II)V
+    invoke-direct {p0, v0, p1}, Lcom/google/android/material/picker/NumberPicker;->O(II)V
 
     :cond_2
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 .end method
 
-.method private showSoftInput()V
+.method private Z()V
     .locals 3
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2222,22 +1827,22 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setVisibility(I)V
 
     :cond_0
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->requestFocus()Z
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
@@ -2245,17 +1850,25 @@
     return-void
 .end method
 
-.method private tryComputeMaxWidth()V
+.method static synthetic a(Lcom/google/android/material/picker/NumberPicker;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->H()V
+
+    return-void
+.end method
+
+.method private a0()V
     .locals 5
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mComputeMaxWidth:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->k:Z
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -2270,9 +1883,9 @@
 
     if-gt v2, v3, :cond_2
 
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
-    invoke-static {v2}, Lcom/google/android/material/picker/NumberPicker;->formatNumberWithLocale(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/google/android/material/picker/NumberPicker;->E(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -2292,7 +1905,7 @@
     goto :goto_0
 
     :cond_2
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     :goto_1
     if-lez v2, :cond_3
@@ -2320,9 +1933,9 @@
     :goto_2
     if-ge v1, v0, :cond_6
 
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
-    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     aget-object v4, v4, v1
 
@@ -2347,13 +1960,13 @@
     move v0, v2
 
     :goto_3
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getPaddingLeft()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getPaddingRight()I
 
@@ -2363,47 +1976,55 @@
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
     if-eq v1, v0, :cond_8
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinWidth:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->i:I
 
     if-le v0, v1, :cond_7
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
     goto :goto_4
 
     :cond_7
-    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
     :goto_4
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     :cond_8
     return-void
 .end method
 
-.method private updateInputTextView()Z
+.method static synthetic b(Lcom/google/android/material/picker/NumberPicker;)Landroid/widget/EditText;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
+
+    return-object p0
+.end method
+
+.method private b0()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->formatNumber(I)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->D(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     sub-int/2addr v1, v2
 
@@ -2416,7 +2037,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2432,7 +2053,7 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -2446,16 +2067,24 @@
     return v0
 .end method
 
-.method private updateWrapSelectorWheel()V
+.method static synthetic c(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
+
+    return p0
+.end method
+
+.method private c0()V
     .locals 4
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     array-length v1, v1
 
@@ -2475,7 +2104,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheelPreferred:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->a:Z
 
     if-eqz v0, :cond_1
 
@@ -2485,12 +2114,20 @@
     move v2, v3
 
     :goto_1
-    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     return-void
 .end method
 
-.method private validateInputTextView(Landroid/view/View;)V
+.method static synthetic d(Lcom/google/android/material/picker/NumberPicker;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/NumberPicker;->T(II)V
+
+    return-void
+.end method
+
+.method private d0(Landroid/view/View;)V
     .locals 1
 
     check-cast p1, Landroid/widget/TextView;
@@ -2509,7 +2146,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     goto :goto_0
 
@@ -2518,15 +2155,329 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->getSelectedPos(Ljava/lang/String;)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->F(Ljava/lang/String;)I
 
     move-result p1
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->Y(IZ)V
 
     :goto_0
+    return-void
+.end method
+
+.method static synthetic e(Lcom/google/android/material/picker/NumberPicker;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->g0:Z
+
+    return p0
+.end method
+
+.method static synthetic f(Lcom/google/android/material/picker/NumberPicker;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->g0:Z
+
+    return p1
+.end method
+
+.method static synthetic g(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
+
+    return p0
+.end method
+
+.method public static final getTwoDigitFormatter()Lcom/google/android/material/picker/NumberPicker$g;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/material/picker/NumberPicker;->o0:Lcom/google/android/material/picker/NumberPicker$l;
+
+    return-object v0
+.end method
+
+.method static synthetic h(Lcom/google/android/material/picker/NumberPicker;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->h0:Z
+
+    return p0
+.end method
+
+.method static synthetic i(Lcom/google/android/material/picker/NumberPicker;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->h0:Z
+
+    return p1
+.end method
+
+.method static synthetic j(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
+
+    return p0
+.end method
+
+.method static synthetic k(Lcom/google/android/material/picker/NumberPicker;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/google/android/material/picker/NumberPicker;->u:J
+
+    return-wide v0
+.end method
+
+.method static synthetic l(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->V:I
+
+    return p0
+.end method
+
+.method static synthetic m(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
+
+    return p0
+.end method
+
+.method static synthetic n(Lcom/google/android/material/picker/NumberPicker;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
+
+    return p0
+.end method
+
+.method static synthetic o(Lcom/google/android/material/picker/NumberPicker;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->y(Z)V
+
+    return-void
+.end method
+
+.method static synthetic p(Lcom/google/android/material/picker/NumberPicker;I)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->G(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic q(Lcom/google/android/material/picker/NumberPicker;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
+
+    return p0
+.end method
+
+.method static synthetic r(Lcom/google/android/material/picker/NumberPicker;I)Ljava/lang/String;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->D(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic s(Lcom/google/android/material/picker/NumberPicker;ZJ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/picker/NumberPicker;->S(ZJ)V
+
+    return-void
+.end method
+
+.method static synthetic t(Lcom/google/android/material/picker/NumberPicker;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->d0(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method static synthetic u()[C
+    .locals 1
+
+    sget-object v0, Lcom/google/android/material/picker/NumberPicker;->p0:[C
+
+    return-object v0
+.end method
+
+.method static synthetic v(Lcom/google/android/material/picker/NumberPicker;)Lcom/google/android/material/picker/NumberPicker$k;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->F:Lcom/google/android/material/picker/NumberPicker$k;
+
+    return-object p0
+.end method
+
+.method static synthetic w(Lcom/google/android/material/picker/NumberPicker;)[Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic x(Lcom/google/android/material/picker/NumberPicker;Ljava/lang/String;)I
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->F(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private y(Z)V
+    .locals 13
+
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
+
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->N(Landroid/widget/Scroller;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
+
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->N(Landroid/widget/Scroller;)Z
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
+
+    if-eqz p1, :cond_1
+
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
+
+    neg-int v5, p1
+
+    const/16 v6, 0x12c
+
+    invoke-virtual/range {v1 .. v6}, Landroid/widget/Scroller;->startScroll(IIIII)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v7, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    iget v11, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
+
+    const/16 v12, 0x12c
+
+    invoke-virtual/range {v7 .. v12}, Landroid/widget/Scroller;->startScroll(IIIII)V
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_3
+
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
+
+    add-int/2addr p1, v0
+
+    goto :goto_1
+
+    :cond_3
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
+
+    sub-int/2addr p1, v0
+
+    :goto_1
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->Y(IZ)V
+
+    :goto_2
+    return-void
+.end method
+
+.method private z([I)V
+    .locals 3
+
+    array-length v0, p1
+
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
+
+    :goto_0
+    if-lez v0, :cond_0
+
+    add-int/lit8 v2, v0, -0x1
+
+    aget v2, p1, v2
+
+    aput v2, p1, v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    aget v0, p1, v1
+
+    sub-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
+
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
+
+    if-ge v0, v1, :cond_1
+
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
+
+    :cond_1
+    const/4 v1, 0x0
+
+    aput v0, p1, v1
+
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->A(I)V
+
     return-void
 .end method
 
@@ -2535,7 +2486,7 @@
 .method public computeScroll()V
     .locals 4
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -2543,7 +2494,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -2560,7 +2511,7 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
     if-nez v2, :cond_1
 
@@ -2568,18 +2519,18 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iput v2, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
     :cond_1
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
     sub-int v3, v1, v3
 
     invoke-virtual {p0, v2, v3}, Lcom/google/android/material/picker/NumberPicker;->scrollBy(II)V
 
-    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->mPreviousScrollerY:I
+    iput v1, p0, Lcom/google/android/material/picker/NumberPicker;->E:I
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -2587,12 +2538,12 @@
 
     if-eqz v1, :cond_2
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->onScrollerFinished(Landroid/widget/Scroller;)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->Q(Landroid/widget/Scroller;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     :goto_0
     return-void
@@ -2601,7 +2552,7 @@
 .method protected computeVerticalScrollExtent()I
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result v0
 
@@ -2611,7 +2562,7 @@
 .method protected computeVerticalScrollOffset()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     return v0
 .end method
@@ -2619,15 +2570,15 @@
 .method protected computeVerticalScrollRange()I
     .locals 2
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     sub-int/2addr v0, v1
 
     add-int/lit8 v0, v0, 0x1
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     mul-int/2addr v0, v1
 
@@ -2637,7 +2588,7 @@
 .method protected dispatchHoverEvent(Landroid/view/MotionEvent;)Z
     .locals 8
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -2648,7 +2599,7 @@
     return p1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2674,7 +2625,7 @@
 
     float-to-int v0, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
     if-ge v0, v1, :cond_1
 
@@ -2683,7 +2634,7 @@
     goto :goto_0
 
     :cond_1
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
     if-le v0, v1, :cond_2
 
@@ -2703,7 +2654,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+    check-cast v1, Lcom/google/android/material/picker/NumberPicker$d;
 
     const/4 v2, 0x7
 
@@ -2727,41 +2678,38 @@
 
     if-eq p1, v2, :cond_3
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
-    invoke-virtual {v1, v0, v4}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->sendAccessibilityEventForVirtualView(II)V
+    invoke-virtual {v1, v0, v4}, Lcom/google/android/material/picker/NumberPicker$d;->k(II)V
 
-    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHoveredChildVirtualViewId:I
+    iput v3, p0, Lcom/google/android/material/picker/NumberPicker;->f0:I
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_4
-    invoke-virtual {v1, v0, v7}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->sendAccessibilityEventForVirtualView(II)V
+    :goto_1
+    invoke-virtual {v1, v0, v7}, Lcom/google/android/material/picker/NumberPicker$d;->k(II)V
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHoveredChildVirtualViewId:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->f0:I
 
-    invoke-virtual {v1, v0, v6, v5}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->performAction(IILandroid/os/Bundle;)Z
+    invoke-virtual {v1, v0, v6, v5}, Lcom/google/android/material/picker/NumberPicker$d;->performAction(IILandroid/os/Bundle;)Z
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_5
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHoveredChildVirtualViewId:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->f0:I
 
     if-eq p1, v0, :cond_6
 
     if-eq p1, v3, :cond_6
 
-    invoke-virtual {v1, p1, v4}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->sendAccessibilityEventForVirtualView(II)V
+    invoke-virtual {v1, p1, v4}, Lcom/google/android/material/picker/NumberPicker$d;->k(II)V
 
-    invoke-virtual {v1, v0, v7}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->sendAccessibilityEventForVirtualView(II)V
-
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHoveredChildVirtualViewId:I
-
-    invoke-virtual {v1, v0, v6, v5}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;->performAction(IILandroid/os/Bundle;)Z
+    goto :goto_1
 
     :cond_6
-    :goto_1
+    :goto_2
     const/4 p1, 0x0
 
     return p1
@@ -2793,12 +2741,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
     goto :goto_0
 
     :cond_1
-    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v1, :cond_2
 
@@ -2818,26 +2766,26 @@
     goto :goto_0
 
     :cond_3
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHandledDownDpadKeyCode:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->k0:I
 
     if-ne v1, v0, :cond_6
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHandledDownDpadKeyCode:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->k0:I
 
     return v3
 
     :cond_4
-    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-nez v1, :cond_7
-
-    if-ne v0, v2, :cond_5
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
 
     move-result v1
+
+    if-ne v0, v2, :cond_5
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMaxValue()I
 
@@ -2848,10 +2796,6 @@
     goto :goto_1
 
     :cond_5
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
-
-    move-result v1
-
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMinValue()I
 
     move-result v4
@@ -2870,13 +2814,13 @@
 
     :cond_7
     :goto_1
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->requestFocus()Z
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->requestFocus()Z
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastHandledDownDpadKeyCode:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->k0:I
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -2894,7 +2838,7 @@
     const/4 p1, 0x0
 
     :goto_2
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->changeValueByOne(Z)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->y(Z)V
 
     :cond_9
     return v3
@@ -2918,7 +2862,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2946,7 +2890,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
@@ -2961,7 +2905,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->drawableStateChanged()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -2971,7 +2915,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getDrawableState()[I
 
     move-result-object v1
 
@@ -2981,7 +2925,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void
@@ -2990,7 +2934,7 @@
 .method public getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -3001,18 +2945,18 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mAccessibilityNodeProvider:Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->i0:Lcom/google/android/material/picker/NumberPicker$d;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+    new-instance v0, Lcom/google/android/material/picker/NumberPicker$d;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/picker/NumberPicker$d;-><init>(Lcom/google/android/material/picker/NumberPicker;)V
 
-    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mAccessibilityNodeProvider:Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->i0:Lcom/google/android/material/picker/NumberPicker$d;
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mAccessibilityNodeProvider:Lcom/google/android/material/picker/NumberPicker$AccessibilityNodeProviderImpl;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->i0:Lcom/google/android/material/picker/NumberPicker$d;
 
     return-object v0
 .end method
@@ -3028,7 +2972,7 @@
 .method public getDisplayedValueForCurrentSelection()Ljava/lang/CharSequence;
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndexToStringCache:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->v:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
 
@@ -3046,7 +2990,7 @@
 .method public getDisplayedValues()[Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3054,7 +2998,7 @@
 .method public getMaxValue()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     return v0
 .end method
@@ -3062,7 +3006,7 @@
 .method public getMinValue()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     return v0
 .end method
@@ -3070,7 +3014,7 @@
 .method public getSolidColor()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSolidColor:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->Q:I
 
     return v0
 .end method
@@ -3086,7 +3030,7 @@
 .method public getValue()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     return v0
 .end method
@@ -3094,7 +3038,7 @@
 .method public getWrapSelectorWheel()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     return v0
 .end method
@@ -3104,7 +3048,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->jumpDrawablesToCurrentState()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -3119,7 +3063,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
     return-void
 .end method
@@ -3127,7 +3071,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 10
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -3136,13 +3080,13 @@
     return-void
 
     :cond_0
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHideWheelUntilFocused:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->l0:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->hasFocus()Z
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->hasFocus()Z
 
     move-result v0
 
@@ -3152,11 +3096,11 @@
     move v0, v1
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRight()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getLeft()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLeft()I
 
     move-result v3
 
@@ -3166,7 +3110,7 @@
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     int-to-float v3, v3
 
@@ -3174,67 +3118,67 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
     if-eqz v5, :cond_3
 
-    iget v6, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget v6, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     if-nez v6, :cond_3
 
-    iget-boolean v6, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementVirtualButtonPressed:Z
+    iget-boolean v6, p0, Lcom/google/android/material/picker/NumberPicker;->h0:Z
 
     if-eqz v6, :cond_2
 
-    sget-object v6, Lcom/google/android/material/picker/NumberPicker;->PRESSED_STATE_SET:[I
+    sget-object v6, Landroid/widget/LinearLayout;->PRESSED_STATE_SET:[I
 
     invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRight()I
 
     move-result v6
 
-    iget v7, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iget v7, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
     invoke-virtual {v5, v4, v4, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_2
-    iget-boolean v5, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementVirtualButtonPressed:Z
+    iget-boolean v5, p0, Lcom/google/android/material/picker/NumberPicker;->g0:Z
 
     if-eqz v5, :cond_3
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
-    sget-object v6, Lcom/google/android/material/picker/NumberPicker;->PRESSED_STATE_SET:[I
+    sget-object v6, Landroid/widget/LinearLayout;->PRESSED_STATE_SET:[I
 
     invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
-    iget v6, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iget v6, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRight()I
 
     move-result v7
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getBottom()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBottom()I
 
     move-result v8
 
     invoke-virtual {v5, v4, v6, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mVirtualButtonPressedDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->y:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_3
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
     move v6, v4
 
@@ -3245,7 +3189,7 @@
 
     aget v7, v5, v6
 
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndexToStringCache:Landroid/util/SparseArray;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->v:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -3255,16 +3199,16 @@
 
     if-eqz v0, :cond_4
 
-    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     if-ne v6, v8, :cond_5
 
     :cond_4
-    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     if-ne v6, v8, :cond_8
 
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v8}, Landroid/widget/EditText;->getVisibility()I
 
@@ -3273,45 +3217,45 @@
     if-eqz v8, :cond_8
 
     :cond_5
-    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v8, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     if-ne v6, v8, :cond_6
 
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
-    iget v9, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectedValueColor:I
+    iget v9, p0, Lcom/google/android/material/picker/NumberPicker;->R:I
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-boolean v8, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
+    iget-boolean v8, p0, Lcom/google/android/material/picker/NumberPicker;->b:Z
 
     if-eqz v8, :cond_7
 
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
     invoke-virtual {v8, v1}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     goto :goto_2
 
     :cond_6
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
-    iget v9, p0, Lcom/google/android/material/picker/NumberPicker;->mPaintColor:I
+    iget v9, p0, Lcom/google/android/material/picker/NumberPicker;->S:I
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
     invoke-virtual {v8, v4}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     :cond_7
     :goto_2
-    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorWheelPaint:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/google/android/material/picker/NumberPicker;->x:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v2, v3, v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     :cond_8
-    iget v7, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v7, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     int-to-float v7, v7
 
@@ -3324,19 +3268,19 @@
     :cond_9
     if-eqz v0, :cond_c
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_c
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result v1
 
     div-int/lit8 v1, v1, 0x2
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerWidth:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->W:I
 
     div-int/lit8 v3, v2, 0x2
 
@@ -3344,15 +3288,15 @@
 
     add-int/2addr v1, v3
 
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerHeight:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->V:I
 
     add-int/2addr v3, v0
 
     if-nez v2, :cond_a
 
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRight()I
 
     move-result v6
 
@@ -3361,28 +3305,28 @@
     goto :goto_3
 
     :cond_a
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v5, v0, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :goto_3
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
-    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerHeight:I
+    iget v2, p0, Lcom/google/android/material/picker/NumberPicker;->V:I
 
     sub-int v2, v0, v2
 
-    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerWidth:I
+    iget v3, p0, Lcom/google/android/material/picker/NumberPicker;->W:I
 
     if-nez v3, :cond_b
 
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRight()I
 
     move-result v3
 
@@ -3391,12 +3335,12 @@
     goto :goto_4
 
     :cond_b
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, v5, v2, v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :goto_4
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->U:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -3407,13 +3351,13 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->isEnabled()Z
 
     move-result v0
 
@@ -3431,9 +3375,9 @@
     return v1
 
     :cond_1
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const/4 v2, 0x4
 
@@ -3443,23 +3387,23 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventY:F
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->I:F
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownOrMoveEventY:F
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->K:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventTime:J
+    iput-wide v2, p0, Lcom/google/android/material/picker/NumberPicker;->J:J
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mIgnoreMoveEvents:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->b0:Z
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mPerformClickOnTap:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->c0:Z
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventY:F
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->I:F
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
     int-to-float v0, v0
 
@@ -3469,20 +3413,20 @@
 
     if-gez v0, :cond_2
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     if-nez p1, :cond_3
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
     const/4 v0, 0x2
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->buttonPressDelayed(I)V
+    invoke-virtual {p1, v0}, Lcom/google/android/material/picker/NumberPicker$j;->a(I)V
 
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
     int-to-float v0, v0
 
@@ -3490,23 +3434,23 @@
 
     if-lez p1, :cond_3
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     if-nez p1, :cond_3
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-virtual {p1, v2}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->buttonPressDelayed(I)V
+    invoke-virtual {p1, v2}, Lcom/google/android/material/picker/NumberPicker$j;->a(I)V
 
     :cond_3
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
     invoke-interface {p1, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -3514,20 +3458,20 @@
 
     if-nez p1, :cond_4
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     invoke-virtual {p1, v2}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
     invoke-virtual {p1, v2}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->onScrollStateChange(I)V
+    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->P(I)V
 
     goto :goto_1
 
     :cond_4
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -3535,20 +3479,20 @@
 
     if-nez p1, :cond_5
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFlingScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->C:Landroid/widget/Scroller;
 
     invoke-virtual {p1, v2}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mAdjustScroller:Landroid/widget/Scroller;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->D:Landroid/widget/Scroller;
 
     invoke-virtual {p1, v2}, Landroid/widget/Scroller;->forceFinished(Z)V
 
     goto :goto_1
 
     :cond_5
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventY:F
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->I:F
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
     int-to-float v0, v0
 
@@ -3556,7 +3500,7 @@
 
     if-gez v0, :cond_6
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->hideSoftInput()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->H()V
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
@@ -3564,12 +3508,12 @@
 
     int-to-long v3, p1
 
-    invoke-direct {p0, v1, v3, v4}, Lcom/google/android/material/picker/NumberPicker;->postChangeCurrentByOneFromLongPress(ZJ)V
+    invoke-direct {p0, v1, v3, v4}, Lcom/google/android/material/picker/NumberPicker;->S(ZJ)V
 
     goto :goto_1
 
     :cond_6
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
     int-to-float v0, v0
 
@@ -3577,7 +3521,7 @@
 
     if-lez p1, :cond_7
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->hideSoftInput()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->H()V
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
@@ -3585,14 +3529,14 @@
 
     int-to-long v0, p1
 
-    invoke-direct {p0, v2, v0, v1}, Lcom/google/android/material/picker/NumberPicker;->postChangeCurrentByOneFromLongPress(ZJ)V
+    invoke-direct {p0, v2, v0, v1}, Lcom/google/android/material/picker/NumberPicker;->S(ZJ)V
 
     goto :goto_1
 
     :cond_7
-    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->mPerformClickOnTap:Z
+    iput-boolean v2, p0, Lcom/google/android/material/picker/NumberPicker;->c0:Z
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->postBeginSoftInputOnLongPressCommand()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->R()V
 
     :goto_1
     return v2
@@ -3605,7 +3549,7 @@
 .method protected onLayout(ZIIII)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -3614,21 +3558,21 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result p3
 
-    iget-object p4, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p4, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p4}, Landroid/widget/EditText;->getMeasuredWidth()I
 
     move-result p4
 
-    iget-object p5, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p5, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p5}, Landroid/widget/EditText;->getMeasuredHeight()I
 
@@ -3646,31 +3590,31 @@
 
     add-int/2addr p5, p3
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0, p2, p3, p4, p5}, Landroid/widget/EditText;->layout(IIII)V
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheel()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->K()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeFadingEdges()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->J()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result p1
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividersDistance:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->f:I
 
     sub-int/2addr p1, p2
 
     div-int/lit8 p1, p1, 0x2
 
-    iget p3, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerHeight:I
+    iget p3, p0, Lcom/google/android/material/picker/NumberPicker;->V:I
 
     sub-int/2addr p1, p3
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mTopSelectionDividerTop:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->d0:I
 
     mul-int/lit8 p3, p3, 0x2
 
@@ -3678,7 +3622,7 @@
 
     add-int/2addr p1, p2
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mBottomSelectionDividerBottom:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->e0:I
 
     :cond_1
     return-void
@@ -3687,7 +3631,7 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -3696,41 +3640,41 @@
     return-void
 
     :cond_0
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxWidth:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->j:I
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->makeMeasureSpec(II)I
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->M(II)I
 
     move-result v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxHeight:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->h:I
 
-    invoke-direct {p0, p2, v1}, Lcom/google/android/material/picker/NumberPicker;->makeMeasureSpec(II)I
+    invoke-direct {p0, p2, v1}, Lcom/google/android/material/picker/NumberPicker;->M(II)I
 
     move-result v1
 
     invoke-super {p0, v0, v1}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinWidth:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->i:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v1
 
-    invoke-direct {p0, v0, v1, p1}, Lcom/google/android/material/picker/NumberPicker;->resolveSizeAndStateRespectingMinSize(III)I
+    invoke-direct {p0, v0, v1, p1}, Lcom/google/android/material/picker/NumberPicker;->X(III)I
 
     move-result p1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinHeight:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->g:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v1
 
-    invoke-direct {p0, v0, v1, p2}, Lcom/google/android/material/picker/NumberPicker;->resolveSizeAndStateRespectingMinSize(III)I
+    invoke-direct {p0, v0, v1, p2}, Lcom/google/android/material/picker/NumberPicker;->X(III)I
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/widget/LinearLayout;->setMeasuredDimension(II)V
 
     return-void
 .end method
@@ -3738,7 +3682,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 9
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->isEnabled()Z
 
     move-result v0
 
@@ -3746,14 +3690,14 @@
 
     if-eqz v0, :cond_c
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
     goto/16 :goto_4
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_1
 
@@ -3761,10 +3705,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -3783,7 +3727,7 @@
     goto/16 :goto_3
 
     :cond_2
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mIgnoreMoveEvents:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->b0:Z
 
     if-eqz v0, :cond_3
 
@@ -3794,11 +3738,11 @@
 
     move-result p1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mScrollState:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->a0:I
 
     if-eq v0, v3, :cond_4
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventY:F
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->I:F
 
     sub-float v0, p1, v0
 
@@ -3808,18 +3752,18 @@
 
     float-to-int v0, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mTouchSlop:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->M:I
 
     if-le v0, v1, :cond_5
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeAllCallbacks()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->U()V
 
-    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->onScrollStateChange(I)V
+    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->P(I)V
 
     goto :goto_0
 
     :cond_4
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownOrMoveEventY:F
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->K:F
 
     sub-float v0, p1, v0
 
@@ -3827,28 +3771,28 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/google/android/material/picker/NumberPicker;->scrollBy(II)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     :cond_5
     :goto_0
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownOrMoveEventY:F
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->K:F
 
     goto/16 :goto_3
 
     :cond_6
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeBeginSoftInputCommand()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->V()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->removeChangeCurrentByOneFromLongPress()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->W()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->cancel()V
+    invoke-virtual {v0}, Lcom/google/android/material/picker/NumberPicker$j;->c()V
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     const/16 v4, 0x3e8
 
-    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->mMaximumFlingVelocity:I
+    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->O:I
 
     int-to-float v5, v5
 
@@ -3864,13 +3808,13 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->mMinimumFlingVelocity:I
+    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->N:I
 
     if-le v4, v5, :cond_7
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->fling(I)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker;->C(I)V
 
-    invoke-direct {p0, v2}, Lcom/google/android/material/picker/NumberPicker;->onScrollStateChange(I)V
+    invoke-direct {p0, v2}, Lcom/google/android/material/picker/NumberPicker;->P(I)V
 
     goto :goto_2
 
@@ -3883,7 +3827,7 @@
 
     int-to-float v4, v0
 
-    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventY:F
+    iget v5, p0, Lcom/google/android/material/picker/NumberPicker;->I:F
 
     sub-float/2addr v4, v5
 
@@ -3897,11 +3841,11 @@
 
     move-result-wide v5
 
-    iget-wide v7, p0, Lcom/google/android/material/picker/NumberPicker;->mLastDownEventTime:J
+    iget-wide v7, p0, Lcom/google/android/material/picker/NumberPicker;->J:J
 
     sub-long/2addr v5, v7
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mTouchSlop:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->M:I
 
     if-gt v4, p1, :cond_a
 
@@ -3915,61 +3859,61 @@
 
     if-gez p1, :cond_a
 
-    iget-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mPerformClickOnTap:Z
+    iget-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->c0:Z
 
     if-eqz p1, :cond_8
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mPerformClickOnTap:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->c0:Z
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->performClick()Z
 
     goto :goto_1
 
     :cond_8
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     div-int/2addr v0, p1
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     sub-int/2addr v0, p1
 
     if-lez v0, :cond_9
 
-    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->changeValueByOne(Z)V
+    invoke-direct {p0, v3}, Lcom/google/android/material/picker/NumberPicker;->y(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-virtual {p1, v3}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->buttonTapped(I)V
+    invoke-virtual {p1, v3}, Lcom/google/android/material/picker/NumberPicker$j;->b(I)V
 
     goto :goto_1
 
     :cond_9
     if-gez v0, :cond_b
 
-    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->changeValueByOne(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->y(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mPressedStateHelper:Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->j0:Lcom/google/android/material/picker/NumberPicker$j;
 
-    invoke-virtual {p1, v2}, Lcom/google/android/material/picker/NumberPicker$PressedStateHelper;->buttonTapped(I)V
+    invoke-virtual {p1, v2}, Lcom/google/android/material/picker/NumberPicker$j;->b(I)V
 
     goto :goto_1
 
     :cond_a
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->ensureScrollWheelAdjusted()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->B()Z
 
     :cond_b
     :goto_1
-    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->onScrollStateChange(I)V
+    invoke-direct {p0, v1}, Lcom/google/android/material/picker/NumberPicker;->P(I)V
 
     :goto_2
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mVelocityTracker:Landroid/view/VelocityTracker;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->L:Landroid/view/VelocityTracker;
 
     :goto_3
     return v3
@@ -3982,7 +3926,7 @@
 .method public performClick()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -3999,7 +3943,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->showSoftInput()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->Z()V
 
     :cond_1
     const/4 v0, 0x1
@@ -4010,7 +3954,7 @@
 .method public performLongClick()Z
     .locals 2
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
@@ -4029,9 +3973,9 @@
 
     if-nez v0, :cond_1
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->showSoftInput()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->Z()V
 
-    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->mIgnoreMoveEvents:Z
+    iput-boolean v1, p0, Lcom/google/android/material/picker/NumberPicker;->b0:Z
 
     :cond_1
     return v1
@@ -4040,147 +3984,144 @@
 .method public scrollBy(II)V
     .locals 3
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorIndices:[I
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->w:[I
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-nez v0, :cond_0
 
     if-lez p2, :cond_0
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget v0, p1, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     if-gt v0, v1, :cond_0
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    :goto_0
+    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     return-void
 
     :cond_0
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-nez v0, :cond_1
 
     if-gez p2, :cond_1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget v0, p1, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     if-lt v0, v1, :cond_1
 
-    iget p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
-
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
-
-    return-void
+    goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     add-int/2addr v0, p2
 
-    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput v0, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
     :cond_2
-    :goto_0
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    :goto_1
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
     sub-int v0, p2, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorTextGapHeight:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->m:I
 
     const/4 v2, 0x1
 
     if-le v0, v1, :cond_3
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     sub-int/2addr p2, v0
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->decrementSelectorIndices([I)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->z([I)V
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget p2, p1, p2
 
-    invoke-direct {p0, p2, v2}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
+    invoke-direct {p0, p2, v2}, Lcom/google/android/material/picker/NumberPicker;->Y(IZ)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-nez p2, :cond_2
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget p2, p1, p2
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     if-gt p2, v0, :cond_2
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
-    :goto_1
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    :goto_2
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
     sub-int v0, p2, v0
 
-    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorTextGapHeight:I
+    iget v1, p0, Lcom/google/android/material/picker/NumberPicker;->m:I
 
     neg-int v1, v1
 
     if-ge v0, v1, :cond_4
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectorElementHeight:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->z:I
 
     add-int/2addr p2, v0
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->incrementSelectorIndices([I)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker;->I([I)V
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget p2, p1, p2
 
-    invoke-direct {p0, p2, v2}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
+    invoke-direct {p0, p2, v2}, Lcom/google/android/material/picker/NumberPicker;->Y(IZ)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheel:Z
+    iget-boolean p2, p0, Lcom/google/android/material/picker/NumberPicker;->P:Z
 
     if-nez p2, :cond_3
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectMiddleCount:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->m0:I
 
     aget p2, p1, p2
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     if-lt p2, v0, :cond_3
 
-    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->mInitialScrollOffset:I
+    iget p2, p0, Lcom/google/android/material/picker/NumberPicker;->A:I
 
-    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->mCurrentScrollOffset:I
+    iput p2, p0, Lcom/google/android/material/picker/NumberPicker;->B:I
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_4
     return-void
@@ -4189,38 +4130,36 @@
 .method public setDisplayedValues([Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
     :cond_0
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->n:[Ljava/lang/String;
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const v0, 0x80001
-
-    invoke-virtual {p1, v0}, Landroid/widget/EditText;->setRawInputType(I)V
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     const/4 v0, 0x2
 
+    :goto_0
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setRawInputType(I)V
 
-    :goto_0
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->tryComputeMaxWidth()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->a0()V
 
     return-void
 .end method
@@ -4228,9 +4167,9 @@
 .method public setDividerWidth(I)V
     .locals 0
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mSelectionDividerWidth:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->W:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 .end method
@@ -4240,46 +4179,46 @@
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mIncrementButton:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->c:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
     :cond_0
-    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->mHasSelectorWheel:Z
+    iget-boolean v0, p0, Lcom/google/android/material/picker/NumberPicker;->T:Z
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mDecrementButton:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->d:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setEnabled(Z)V
 
     return-void
 .end method
 
-.method public setFormatter(Lcom/google/android/material/picker/NumberPicker$Formatter;)V
+.method public setFormatter(Lcom/google/android/material/picker/NumberPicker$g;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mFormatter:Lcom/google/android/material/picker/NumberPicker$Formatter;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->t:Lcom/google/android/material/picker/NumberPicker$g;
 
     if-ne p1, v0, :cond_0
 
     return-void
 
     :cond_0
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mFormatter:Lcom/google/android/material/picker/NumberPicker$Formatter;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->t:Lcom/google/android/material/picker/NumberPicker$g;
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
     return-void
 .end method
@@ -4287,7 +4226,7 @@
 .method public setMaxValue(I)V
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
     if-ne v0, p1, :cond_0
 
@@ -4296,24 +4235,24 @@
     :cond_0
     if-ltz p1, :cond_2
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mMaxValue:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->p:I
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     if-ge p1, v0, :cond_1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     :cond_1
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateWrapSelectorWheel()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->c0()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->tryComputeMaxWidth()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->a0()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 
@@ -4330,7 +4269,7 @@
 .method public setMinValue(I)V
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
     if-ne v0, p1, :cond_0
 
@@ -4339,24 +4278,24 @@
     :cond_0
     if-ltz p1, :cond_2
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mMinValue:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->o:I
 
-    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     if-le p1, v0, :cond_1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
+    iput p1, p0, Lcom/google/android/material/picker/NumberPicker;->q:I
 
     :cond_1
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateWrapSelectorWheel()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->c0()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->initializeSelectorWheelIndices()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->L()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateInputTextView()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->b0()Z
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->tryComputeMaxWidth()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->a0()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 
@@ -4373,7 +4312,7 @@
 .method public setOnLongPressUpdateInterval(J)V
     .locals 0
 
-    iput-wide p1, p0, Lcom/google/android/material/picker/NumberPicker;->mLongPressUpdateInterval:J
+    iput-wide p1, p0, Lcom/google/android/material/picker/NumberPicker;->u:J
 
     return-void
 .end method
@@ -4381,15 +4320,15 @@
 .method public setOnScrollListener(Lcom/google/android/material/picker/NumberPicker$OnScrollListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mOnScrollListener:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->s:Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
 
     return-void
 .end method
 
-.method public setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;)V
+.method public setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mOnValueChangeListener:Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->r:Lcom/google/android/material/picker/NumberPicker$i;
 
     return-void
 .end method
@@ -4405,7 +4344,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->setValueInternal(IZ)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker;->Y(IZ)V
 
     return-void
 .end method
@@ -4413,9 +4352,9 @@
 .method public setWithoutSelectBoldText(Z)V
     .locals 1
 
-    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mIsBold:Z
+    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->b:Z
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getPaint()Landroid/text/TextPaint;
 
@@ -4423,7 +4362,7 @@
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->mInputText:Landroid/widget/EditText;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker;->e:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->invalidate()V
 
@@ -4433,9 +4372,9 @@
 .method public setWrapSelectorWheel(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->mWrapSelectorWheelPreferred:Z
+    iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker;->a:Z
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->updateWrapSelectorWheel()V
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker;->c0()V
 
     return-void
 .end method

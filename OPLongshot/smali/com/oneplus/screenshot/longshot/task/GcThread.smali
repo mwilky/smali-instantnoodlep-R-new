@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/GcThread;
 .super Lcom/oneplus/screenshot/longshot/task/BaseThread;
-.source "GcThread.java"
+.source ""
 
 
 # static fields
@@ -17,7 +17,7 @@
 
     const-wide/16 v0, 0x32
 
-    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/task/GcThread;->mDelay:J
+    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/task/BaseThread;->mDelay:J
 
     return-void
 .end method

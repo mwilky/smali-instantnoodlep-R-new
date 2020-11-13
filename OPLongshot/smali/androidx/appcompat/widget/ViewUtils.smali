@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/widget/ViewUtils;
 .super Ljava/lang/Object;
-.source "ViewUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -123,7 +131,7 @@
 .method public static isLayoutRtl(Landroid/view/View;)Z
     .locals 1
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result p0
 
@@ -187,21 +195,20 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p0
-
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_1
     move-exception p0
 
+    :goto_0
     invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_2
     const-string p0, "Could not find method makeOptionalFitsSystemWindows. Oh well..."
@@ -209,6 +216,6 @@
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method

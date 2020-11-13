@@ -1,6 +1,14 @@
 .class public final Lcom/google/android/material/tabbar/TabBarMenu;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source "TabBarMenu.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -23,7 +31,7 @@
 .method protected addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 3
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarMenu;->size()I
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->size()I
 
     move-result v0
 
@@ -35,7 +43,7 @@
 
     if-gt v0, v2, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarMenu;->stopDispatchingItemsChanged()V
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->stopDispatchingItemsChanged()V
 
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
@@ -52,7 +60,7 @@
     invoke-virtual {p2, v1}, Landroidx/appcompat/view/menu/MenuItemImpl;->setExclusiveCheckable(Z)V
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarMenu;->startDispatchingItemsChanged()V
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->startDispatchingItemsChanged()V
 
     return-object p1
 
@@ -68,6 +76,8 @@
 
 .method public addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 

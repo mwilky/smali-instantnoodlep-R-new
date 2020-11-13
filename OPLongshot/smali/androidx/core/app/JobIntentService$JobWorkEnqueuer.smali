@@ -1,9 +1,13 @@
 .class final Landroidx/core/app/JobIntentService$JobWorkEnqueuer;
-.super Landroidx/core/app/JobIntentService$WorkEnqueuer;
-.source "JobIntentService.java"
+.super Landroidx/core/app/JobIntentService$b;
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/app/JobIntentService;
 .end annotation
@@ -24,13 +28,13 @@
 .method constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
     .locals 2
 
-    invoke-direct {p0, p2}, Landroidx/core/app/JobIntentService$WorkEnqueuer;-><init>(Landroid/content/ComponentName;)V
+    invoke-direct {p0, p2}, Landroidx/core/app/JobIntentService$b;-><init>(Landroid/content/ComponentName;)V
 
-    invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->ensureJobId(I)V
+    invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$b;->ensureJobId(I)V
 
     new-instance p2, Landroid/app/job/JobInfo$Builder;
 
-    iget-object v0, p0, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->mComponentName:Landroid/content/ComponentName;
+    iget-object v0, p0, Landroidx/core/app/JobIntentService$b;->mComponentName:Landroid/content/ComponentName;
 
     invoke-direct {p2, p3, v0}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 

@@ -1,6 +1,6 @@
 .class final Landroidx/transition/ViewUtils$2;
 .super Landroid/util/Property;
-.source "ViewUtils.java"
+.source ""
 
 
 # annotations
@@ -37,7 +37,7 @@
 .method public get(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 0
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->r(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 .method public set(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->m0(Landroid/view/View;Landroid/graphics/Rect;)V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class final enum Lcom/google/tagmanager/JoinerMacro$EscapeType;
 .super Ljava/lang/Enum;
-.source "JoinerMacro.java"
+.source ""
 
 
 # annotations

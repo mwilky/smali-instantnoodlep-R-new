@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/dump/FullDumper;
 .super Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
-.source "FullDumper.java"
+.source ""
 
 
 # static fields
@@ -37,7 +37,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/dump/FullDumper;->mTag:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->mTag:Ljava/lang/String;
 
     return-void
 .end method

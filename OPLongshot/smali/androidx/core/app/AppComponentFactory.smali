@@ -1,6 +1,12 @@
 .class public Landroidx/core/app/AppComponentFactory;
 .super Landroid/app/AppComponentFactory;
-.source "AppComponentFactory.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
 
 
 # direct methods
@@ -16,12 +22,19 @@
 # virtual methods
 .method public final instantiateActivity(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateActivityCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
@@ -39,12 +52,19 @@
 
 .method public instantiateActivityCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 p3, 0x0
@@ -93,12 +113,15 @@
 
 .method public final instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateApplicationCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
@@ -116,12 +139,15 @@
 
 .method public instantiateApplicationCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 v0, 0x0
@@ -170,12 +196,15 @@
 
 .method public final instantiateProvider(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateProviderCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
@@ -193,12 +222,15 @@
 
 .method public instantiateProviderCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 v0, 0x0
@@ -247,12 +279,19 @@
 
 .method public final instantiateReceiver(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateReceiverCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
@@ -270,12 +309,19 @@
 
 .method public instantiateReceiverCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 p3, 0x0
@@ -324,12 +370,19 @@
 
 .method public final instantiateService(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateServiceCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
@@ -347,12 +400,19 @@
 
 .method public instantiateServiceCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InstantiationException;,
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/ClassNotFoundException;
-        }
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 p3, 0x0

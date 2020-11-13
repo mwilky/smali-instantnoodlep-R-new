@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/preview/PictureDrawable$1;
 .super Landroid/os/Handler;
-.source "PictureDrawable.java"
+.source ""
 
 
 # annotations

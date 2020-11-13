@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$13;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations

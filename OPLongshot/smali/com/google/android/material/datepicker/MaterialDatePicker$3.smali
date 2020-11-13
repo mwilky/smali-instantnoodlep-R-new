@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/datepicker/MaterialDatePicker$3;
 .super Ljava/lang/Object;
-.source "MaterialDatePicker.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/datepicker/OnSelectionChangedListener;
@@ -74,8 +74,6 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/widget/Button;->setEnabled(Z)V
-
     goto :goto_0
 
     :cond_0
@@ -87,8 +85,8 @@
 
     const/4 v0, 0x0
 
+    :goto_0
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    :goto_0
     return-void
 .end method

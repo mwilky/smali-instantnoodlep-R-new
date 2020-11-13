@@ -1,6 +1,6 @@
 .class final enum Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 .super Ljava/lang/Enum;
-.source "DoubleFFT_1D.java"
+.source ""
 
 
 # annotations

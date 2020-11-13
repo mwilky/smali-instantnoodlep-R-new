@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">%s ile paylaş</string>
     <string name="abc_toolbar_collapse_description">Daralt</string>
     <string name="about_action_bar_title">Hakkında</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Sürüm %s</string>
     <string name="about_privacy_policy">Gizlilik Politikası</string>
     <string name="about_release_note_title">Güncelleme kaydı:</string>
     <string name="about_terms_service">Hizmet Koşulları</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Ekran görüntüleri</string>
     <string name="oneplus_delete">Sil</string>
     <string name="oneplus_share">Gönder</string>
+    <string name="permission_btn_text_denied">Çık</string>
+    <string name="permission_btn_text_grant">Tamam</string>
+    <string name="permission_dialog_title">İzin bildirimi</string>
     <string name="preference_copied">\"%1$s\" panoya kopyalandı.</string>
     <string name="quick_share_description1">"Paylaşmak için küçük resme
 uzun basın"</string>

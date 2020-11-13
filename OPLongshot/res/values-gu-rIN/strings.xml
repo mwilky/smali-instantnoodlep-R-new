@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">વિશે</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">સંસ્કરણ %s</string>
     <string name="about_privacy_policy">ગોપનીયતા નીતિ</string>
-    <string name="about_release_note_title">અપડેટ લૉગ:</string>
+    <string name="about_release_note_title">લૉગ અપડેટ કરો:</string>
     <string name="about_terms_service">સેવાની શરતો</string>
     <string name="app_name">સ્ક્રીનશોટ</string>
     <string name="got_it">સમજાઈ ગયું</string>
@@ -15,6 +15,9 @@
     <string name="notification_channel_screenshot">સ્ક્રીનશૉટ</string>
     <string name="oneplus_delete">કાઢી નાખો</string>
     <string name="oneplus_share">મોકલો</string>
+    <string name="permission_btn_text_denied">બહાર નીકળો</string>
+    <string name="permission_btn_text_grant">ઓકે</string>
+    <string name="permission_dialog_title">પરવાનગી વિધાન</string>
     <string name="quick_share_description1">"થંબનેલને શેર પર 
 લાંબો સમય દબાવો"</string>
     <string name="quick_share_more_text">વધુ</string>

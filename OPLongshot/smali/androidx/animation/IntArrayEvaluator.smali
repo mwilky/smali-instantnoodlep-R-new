@@ -1,6 +1,6 @@
 .class public Landroidx/animation/IntArrayEvaluator;
 .super Ljava/lang/Object;
-.source "IntArrayEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -31,6 +31,10 @@
 
 .method public constructor <init>([I)V
     .locals 0
+    .param p1    # [I
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,6 +47,16 @@
 # virtual methods
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, [I
 
@@ -57,6 +71,16 @@
 
 .method public evaluate(F[I[I)[I
     .locals 5
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/animation/IntArrayEvaluator;->mArray:[I
 

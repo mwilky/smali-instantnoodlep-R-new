@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 .super Lcom/google/android/material/appbar/HeaderBehavior;
-.source "AppBarLayout.java"
+.source ""
 
 
 # annotations
@@ -39,6 +39,9 @@
 
 # instance fields
 .field private lastNestedScrollingChildRef:Ljava/lang/ref/WeakReference;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -132,6 +135,14 @@
 
 .method private addAccessibilityScrollActions(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)V
     .locals 9
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -162,11 +173,11 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    sget-object v0, Landroidx/core/view/accessibility/d$a;->f:Landroidx/core/view/accessibility/d$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Z)V
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/d$a;Z)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopBottomOffsetForScrollingSibling()I
@@ -191,11 +202,11 @@
 
     if-eqz v6, :cond_2
 
-    sget-object v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    sget-object v0, Landroidx/core/view/accessibility/d$a;->g:Landroidx/core/view/accessibility/d$a;
 
     const/4 v7, 0x0
 
-    new-instance v8, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$4;
+    new-instance v8, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;
 
     move-object v1, v8
 
@@ -207,52 +218,66 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$4;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
 
-    invoke-static {p1, v0, v7, v8}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
+    invoke-static {p1, v0, v7, v8}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Landroidx/core/view/accessibility/d$a;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/f;)V
 
     goto :goto_0
 
     :cond_1
-    sget-object p3, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    sget-object p3, Landroidx/core/view/accessibility/d$a;->g:Landroidx/core/view/accessibility/d$a;
 
-    invoke-direct {p0, p1, p2, p3, v2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Z)V
+    invoke-direct {p0, p1, p2, p3, v2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/d$a;Z)V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method private addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Z)V
+.method private addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroidx/core/view/accessibility/d$a;Z)V
     .locals 1
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/core/view/accessibility/d$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
             "TT;",
-            "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;",
+            "Landroidx/core/view/accessibility/d$a;",
             "Z)V"
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$5;
+    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$e;
 
-    invoke-direct {v0, p0, p2, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$5;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Lcom/google/android/material/appbar/AppBarLayout;Z)V
+    invoke-direct {v0, p0, p2, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$e;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Lcom/google/android/material/appbar/AppBarLayout;Z)V
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Landroidx/core/view/accessibility/d$a;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/f;)V
 
     return-void
 .end method
 
-.method private animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
-    .locals 1
+.method private animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IFLandroid/view/View;)V
+    .locals 6
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
-            "TT;IF)V"
+            "TT;IF",
+            "Landroid/view/View;",
+            ")V"
         }
     .end annotation
 
@@ -268,7 +293,7 @@
 
     int-to-float p4, p4
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getHeight()I
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result v0
 
@@ -280,24 +305,36 @@
 
     add-float/2addr p4, v0
 
-    const/high16 v0, 0x43610000    # 225.0f
+    const/high16 v0, 0x43340000    # 180.0f
 
     mul-float/2addr p4, v0
 
-    float-to-int p4, p4
+    float-to-int v4, p4
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetWithDuration(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;II)V
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v5, p5
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetWithDuration(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IILandroid/view/View;)V
 
     return-void
 .end method
 
-.method private animateOffsetWithDuration(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;II)V
-    .locals 4
+.method private animateOffsetWithDuration(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IILandroid/view/View;)V
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
-            "TT;II)V"
+            "TT;II",
+            "Landroid/view/View;",
+            ")V"
         }
     .end annotation
 
@@ -335,45 +372,88 @@
 
     iput-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v2, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$3;
+    new-instance v2, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$c;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$3;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$c;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     :cond_2
-    new-instance p1, Landroid/view/animation/PathInterpolator;
+    instance-of p1, p5, Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
-    const p2, 0x3ebd70a4    # 0.37f
+    const/high16 p2, 0x3f800000    # 1.0f
 
-    const/4 v1, 0x0
+    if-eqz p1, :cond_3
 
-    const v2, 0x3f2b851f    # 0.67f
+    new-instance p1, Landroid/graphics/Path;
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    invoke-direct {p1, p2, v1, v2, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    const p5, 0x3f4ccccd    # 0.8f
+
+    invoke-virtual {p1, p5, p5}, Landroid/graphics/Path;->lineTo(FF)V
+
+    invoke-virtual {p1, p5, p5}, Landroid/graphics/Path;->moveTo(FF)V
+
+    const v2, 0x3f4ccccd    # 0.8f
+
+    const v3, 0x3f4ccccd    # 0.8f
+
+    const v4, 0x3f733333    # 0.95f
+
+    const v5, 0x3f7d70a4    # 0.99f
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/high16 v7, 0x3f800000    # 1.0f
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    invoke-virtual {p1, p2, p2}, Landroid/graphics/Path;->lineTo(FF)V
+
+    invoke-static {p1}, Landroidx/core/view/y/b;->b(Landroid/graphics/Path;)Landroid/view/animation/Interpolator;
+
+    move-result-object p1
 
     sub-int p2, p3, v0
 
-    if-gez p2, :cond_3
-
-    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    if-gez p2, :cond_5
 
     goto :goto_0
 
     :cond_3
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {p1, v2, v1, v3, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    const p5, 0x3ebd70a4    # 0.37f
 
+    const v1, 0x3f7851ec    # 0.97f
+
+    const v2, 0x3f2b851f    # 0.67f
+
+    invoke-direct {p1, v2, p5, v1, p2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    sub-int p5, p3, v0
+
+    if-gez p5, :cond_4
+
+    :goto_0
+    goto :goto_1
+
+    :cond_4
+    new-instance p1, Landroid/view/animation/PathInterpolator;
+
+    const/4 p5, 0x0
+
+    invoke-direct {p1, v2, p5, p2, p2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    :goto_1
     iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    :goto_0
+    :cond_5
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
     const/16 p2, 0x258
@@ -382,9 +462,9 @@
 
     move-result p2
 
-    int-to-long v1, p2
+    int-to-long p4, p2
 
-    invoke-virtual {p1, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {p1, p4, p5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
@@ -411,6 +491,18 @@
 
 .method private canScrollChildren(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)Z
     .locals 1
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -421,13 +513,13 @@
         }
     .end annotation
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->hasScrollableChildren()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getHeight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p1
 
@@ -437,7 +529,7 @@
 
     sub-int/2addr p1, p3
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getHeight()I
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result p2
 
@@ -474,8 +566,14 @@
 
 .method private findFirstScrollingChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
     .locals 4
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildCount()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -484,11 +582,11 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    invoke-virtual {p1, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    instance-of v3, v2, Landroidx/core/view/NestedScrollingChild;
+    instance-of v3, v2, Landroidx/core/view/g;
 
     if-nez v3, :cond_1
 
@@ -519,12 +617,18 @@
 
 .method private static getAppBarChildOnOffset(Lcom/google/android/material/appbar/AppBarLayout;I)Landroid/view/View;
     .locals 4
+    .param p0    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -533,7 +637,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -564,13 +668,17 @@
 
 .method private getChildIndexOnOffset(Lcom/google/android/material/appbar/AppBarLayout;I)I
     .locals 7
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)I"
         }
     .end annotation
 
-    invoke-virtual {p1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -579,7 +687,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    invoke-virtual {p1, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -597,7 +705,7 @@
 
     check-cast v2, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {v2}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollFlags()I
+    invoke-virtual {v2}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a()I
 
     move-result v5
 
@@ -609,11 +717,11 @@
 
     if-eqz v5, :cond_0
 
-    iget v5, v2, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
+    iget v5, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v3, v5
 
-    iget v2, v2, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
+    iget v2, v2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v4, v2
 
@@ -639,6 +747,10 @@
 
 .method private interpolateOffset(Lcom/google/android/material/appbar/AppBarLayout;I)I
     .locals 8
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)I"
@@ -649,7 +761,7 @@
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
@@ -660,7 +772,7 @@
     :goto_0
     if-ge v3, v1, :cond_3
 
-    invoke-virtual {p1, v3}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -670,7 +782,7 @@
 
     check-cast v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {v5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollInterpolator()Landroid/view/animation/Interpolator;
+    invoke-virtual {v5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->b()Landroid/view/animation/Interpolator;
 
     move-result-object v6
 
@@ -688,7 +800,7 @@
 
     if-eqz v6, :cond_3
 
-    invoke-virtual {v5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollFlags()I
+    invoke-virtual {v5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a()I
 
     move-result v1
 
@@ -700,11 +812,11 @@
 
     move-result v3
 
-    iget v7, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
+    iget v7, v5, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v3, v7
 
-    iget v5, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
+    iget v5, v5, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v3, v5
 
@@ -714,14 +826,14 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result v1
 
     sub-int/2addr v2, v1
 
     :cond_0
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result v1
 
@@ -783,6 +895,14 @@
 
 .method private shouldJumpElevationState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)Z
     .locals 4
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -791,7 +911,7 @@
         }
     .end annotation
 
-    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getDependents(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->m(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p1
 
@@ -816,9 +936,9 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v2, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    invoke-virtual {v2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    invoke-virtual {v2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->f()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object v2
 
@@ -828,7 +948,7 @@
 
     check-cast v2, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
 
-    invoke-virtual {v2}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;->getOverlayTop()I
+    invoke-virtual {v2}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->getOverlayTop()I
 
     move-result p1
 
@@ -848,13 +968,19 @@
     return v0
 .end method
 
-.method private snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
-    .locals 8
+.method private snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)V
+    .locals 12
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
-            "TT;)V"
+            "TT;",
+            "Landroid/view/View;",
+            ")V"
         }
     .end annotation
 
@@ -868,7 +994,7 @@
 
     if-ltz v1, :cond_6
 
-    invoke-virtual {p2, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p2, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -878,7 +1004,7 @@
 
     check-cast v3, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {v3}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollFlags()I
+    invoke-virtual {v3}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a()I
 
     move-result v4
 
@@ -900,7 +1026,7 @@
 
     neg-int v6, v6
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v7
 
@@ -923,7 +1049,7 @@
 
     if-eqz v7, :cond_1
 
-    invoke-static {v2}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v2}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result v2
 
@@ -940,7 +1066,7 @@
 
     if-eqz v7, :cond_3
 
-    invoke-static {v2}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v2}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result v2
 
@@ -965,11 +1091,11 @@
 
     if-eqz v2, :cond_4
 
-    iget v2, v3, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
+    iget v2, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v5, v2
 
-    iget v2, v3, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
+    iget v2, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     sub-int/2addr v6, v2
 
@@ -991,13 +1117,21 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v5, v0, v1}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {v5, v0, v1}, La/d/d/a;->b(III)I
 
-    move-result v0
+    move-result v9
 
-    const/4 v1, 0x0
+    const/4 v10, 0x0
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
+    move-object v6, p0
+
+    move-object v7, p1
+
+    move-object v8, p2
+
+    move-object v11, p3
+
+    invoke-direct/range {v6 .. v11}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IFLandroid/view/View;)V
 
     :cond_6
     return-void
@@ -1005,6 +1139,10 @@
 
 .method private updateAccessibilityActions(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
     .locals 2
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1013,21 +1151,21 @@
         }
     .end annotation
 
-    sget-object v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    sget-object v0, Landroidx/core/view/accessibility/d$a;->f:Landroidx/core/view/accessibility/d$a;
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->removeAccessibilityAction(Landroid/view/View;I)V
-
-    sget-object v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d$a;->b()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->removeAccessibilityAction(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->b0(Landroid/view/View;I)V
+
+    sget-object v0, Landroidx/core/view/accessibility/d$a;->g:Landroidx/core/view/accessibility/d$a;
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d$a;->b()I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->b0(Landroid/view/View;I)V
 
     invoke-direct {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->findFirstScrollingChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
 
@@ -1048,9 +1186,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    invoke-virtual {v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    invoke-virtual {v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->f()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object v1
 
@@ -1070,6 +1208,14 @@
 
 .method private updateAppBarLayoutDrawableState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IIZ)V
     .locals 5
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1090,7 +1236,7 @@
 
     check-cast v1, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {v1}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollFlags()I
+    invoke-virtual {v1}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a()I
 
     move-result v1
 
@@ -1100,7 +1246,7 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result v2
 
@@ -1158,7 +1304,7 @@
 
     :cond_1
     :goto_1
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->isLiftOnScroll()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->m()Z
 
     move-result p3
 
@@ -1168,12 +1314,12 @@
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->shouldLift(Landroid/view/View;)Z
+    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->w(Landroid/view/View;)Z
 
     move-result v3
 
     :cond_2
-    invoke-virtual {p2, v3}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftedState(Z)Z
+    invoke-virtual {p2, v3}, Lcom/google/android/material/appbar/AppBarLayout;->u(Z)Z
 
     move-result p3
 
@@ -1188,7 +1334,7 @@
     if-eqz p1, :cond_4
 
     :cond_3
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->jumpDrawablesToCurrentState()V
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->jumpDrawablesToCurrentState()V
 
     :cond_4
     return-void
@@ -1267,6 +1413,10 @@
 
 .method bridge synthetic getMaxDragOffset(Landroid/view/View;)I
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1279,6 +1429,10 @@
 
 .method getMaxDragOffset(Lcom/google/android/material/appbar/AppBarLayout;)I
     .locals 0
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)I"
@@ -1296,6 +1450,10 @@
 
 .method bridge synthetic getScrollRangeForDragFling(Landroid/view/View;)I
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1308,6 +1466,10 @@
 
 .method getScrollRangeForDragFling(Lcom/google/android/material/appbar/AppBarLayout;)I
     .locals 0
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)I"
@@ -1324,7 +1486,7 @@
 .method getTopBottomOffsetForScrollingSibling()I
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v0
 
@@ -1337,6 +1499,8 @@
 
 .method isOffsetAnimatorRunning()Z
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetAnimator:Landroid/animation/ValueAnimator;
 
@@ -1361,6 +1525,14 @@
 
 .method bridge synthetic onFlingFinished(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1371,6 +1543,14 @@
 
 .method onFlingFinished(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
     .locals 1
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1379,9 +1559,11 @@
         }
     .end annotation
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->isLiftOnScroll()Z
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)V
+
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->m()Z
 
     move-result v0
 
@@ -1391,11 +1573,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->shouldLift(Landroid/view/View;)Z
+    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->w(Landroid/view/View;)Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftedState(Z)Z
+    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->u(Z)Z
 
     :cond_0
     return-void
@@ -1430,9 +1612,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;
+    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$1;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$a;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -1447,6 +1629,14 @@
 
 .method public bridge synthetic onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1458,7 +1648,15 @@
 .end method
 
 .method public onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;I)Z
-    .locals 7
+    .locals 9
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1467,7 +1665,7 @@
         }
     .end annotation
 
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/HeaderBehavior;->onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
 
     move-result p3
 
@@ -1485,7 +1683,7 @@
 
     if-nez v3, :cond_1
 
-    invoke-virtual {p2, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p2, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1499,7 +1697,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result v0
 
@@ -1529,9 +1727,9 @@
     :goto_0
     add-int/2addr v1, v0
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
+    invoke-virtual {p0, p1, p2, v1}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_1
     if-eqz v0, :cond_6
@@ -1552,26 +1750,22 @@
     :goto_1
     and-int/lit8 v4, v0, 0x2
 
-    const/4 v5, 0x0
-
     if-eqz v4, :cond_4
 
     invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getUpNestedPreScrollRange()I
 
     move-result v0
 
-    neg-int v0, v0
+    neg-int v6, v0
 
     if-eqz v1, :cond_3
-
-    invoke-direct {p0, p1, p2, v0, v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
 
     goto :goto_2
 
     :cond_3
-    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
+    invoke-virtual {p0, p1, p2, v6}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_4
     and-int/2addr v0, v3
@@ -1580,22 +1774,35 @@
 
     if-eqz v1, :cond_5
 
-    invoke-direct {p0, p1, p2, v2, v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IF)V
+    const/4 v6, 0x0
 
-    goto :goto_2
+    :goto_2
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    move-object v3, p0
+
+    move-object v4, p1
+
+    move-object v5, p2
+
+    invoke-direct/range {v3 .. v8}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->animateOffsetTo(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IFLandroid/view/View;)V
+
+    goto :goto_3
 
     :cond_5
-    invoke-virtual {p0, p1, p2, v2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
+    invoke-virtual {p0, p1, p2, v2}, Lcom/google/android/material/appbar/HeaderBehavior;->setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
 
     :cond_6
-    :goto_2
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->resetPendingAction()V
+    :goto_3
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->q()V
 
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetToChildIndexOnLayout:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v0
 
@@ -1605,13 +1812,13 @@
 
     neg-int v1, v1
 
-    invoke-static {v0, v1, v2}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {v0, v1, v2}, La/d/d/a;->b(III)I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setTopAndBottomOffset(I)Z
+    invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->setTopAndBottomOffset(I)Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v4
 
@@ -1627,11 +1834,11 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->updateAppBarLayoutDrawableState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IIZ)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v0
 
-    invoke-virtual {p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;->onOffsetChanged(I)V
+    invoke-virtual {p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;->n(I)V
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->updateAccessibilityActions(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
 
@@ -1640,6 +1847,14 @@
 
 .method public bridge synthetic onMeasureChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1652,6 +1867,14 @@
 
 .method public onMeasureChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IIII)Z
     .locals 6
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1660,13 +1883,13 @@
         }
     .end annotation
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    iget v0, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->height:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
     const/4 v1, -0x2
 
@@ -1688,14 +1911,14 @@
 
     move v5, p6
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onMeasureChild(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->D(Landroid/view/View;IIII)V
 
     const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/HeaderBehavior;->onMeasureChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
+    invoke-super/range {p0 .. p6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onMeasureChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
 
     move-result p1
 
@@ -1704,6 +1927,10 @@
 
 .method public bridge synthetic onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[II)V
     .locals 0
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1714,6 +1941,10 @@
 
 .method public onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
     .locals 6
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1768,24 +1999,24 @@
 
     move v3, p5
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/HeaderBehavior;->scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
 
     move-result p1
 
     aput p1, p6, p4
 
     :cond_1
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->isLiftOnScroll()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->m()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->shouldLift(Landroid/view/View;)Z
+    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->w(Landroid/view/View;)Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftedState(Z)Z
+    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->u(Z)Z
 
     :cond_2
     return-void
@@ -1793,6 +2024,10 @@
 
 .method public bridge synthetic onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
     .locals 0
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1803,6 +2038,10 @@
 
 .method public onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;IIIII[I)V
     .locals 6
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1813,11 +2052,11 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getRootView()Landroid/view/View;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getRootView()Landroid/view/View;
 
     move-result-object p3
 
-    invoke-static {p3}, Lcom/oneplus/common/OPViewGroupUtils;->getAllChildViews(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p3}, Lb/b/a/f;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p3
 
@@ -1840,8 +2079,6 @@
 
     const/4 p6, 0x0
 
-    const/4 p8, 0x1
-
     if-eqz p4, :cond_2
 
     move p4, p6
@@ -1849,35 +2086,33 @@
     :goto_0
     invoke-interface {p3}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result p8
 
-    if-ge p4, v0, :cond_2
+    if-ge p4, p8, :cond_2
+
+    invoke-interface {p3, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p8
+
+    instance-of p8, p8, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    if-eqz p8, :cond_1
+
+    iget-object p8, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
 
     invoke-interface {p3, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    check-cast v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p8, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
 
-    invoke-interface {p3, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
-
-    invoke-static {p8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
     add-int/lit8 p4, p4, 0x1
@@ -1893,77 +2128,71 @@
 
     if-nez p3, :cond_5
 
-    move p3, p6
-
     :goto_1
-    iget-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
 
-    invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
+
+    move-result p3
+
+    if-ge p6, p3, :cond_5
+
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
+
+    invoke-virtual {p3, p6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    if-eqz p3, :cond_4
+
+    invoke-virtual {p3}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getScrollHideBoolean()Z
 
     move-result p4
 
-    if-ge p3, p4, :cond_5
-
-    iget-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->mFabList:Ljava/util/ArrayList;
-
-    invoke-virtual {p4, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
     if-eqz p4, :cond_4
-
-    invoke-virtual {p4}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getScrollHideBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
 
     if-lez p5, :cond_3
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p4, p6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p4
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast p4, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result p4
 
-    if-eqz v0, :cond_3
+    if-eqz p4, :cond_3
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
 
-    invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p8, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object v1
+    invoke-virtual {p4, p6, p8}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p3, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onHide(Landroid/view/View;)V
+    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onHide(Landroid/view/View;)V
 
     goto :goto_2
 
     :cond_3
     if-gez p5, :cond_4
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->visibleList:Ljava/util/ArrayList;
 
-    invoke-static {p8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p8, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    move-result-object v1
+    invoke-virtual {p4, p6, p8}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p3, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onShow(Landroid/view/View;)V
+    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onShow(Landroid/view/View;)V
 
     :cond_4
     :goto_2
-    add-int/lit8 p3, p3, 0x1
+    add-int/lit8 p6, p6, 0x1
 
     goto :goto_1
 
@@ -1986,11 +2215,13 @@
 
     move v3, p7
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/appbar/HeaderBehavior;->scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
 
     move-result p3
 
-    aput p3, p9, p8
+    const/4 p4, 0x1
+
+    aput p3, p9, p4
 
     :cond_6
     if-nez p7, :cond_7
@@ -2003,6 +2234,14 @@
 
 .method public bridge synthetic onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -2013,6 +2252,14 @@
 
 .method public onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/os/Parcelable;)V
     .locals 1
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2029,28 +2276,28 @@
 
     check-cast p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 
-    invoke-virtual {p3}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p3}, Landroidx/customview/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, p1, p2, v0}, Lcom/google/android/material/appbar/HeaderBehavior;->onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
+    invoke-super {p0, p1, p2, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
 
-    iget p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildIndex:I
+    iget p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
 
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetToChildIndexOnLayout:I
 
-    iget p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildPercentageShown:F
+    iget p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
 
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetToChildIndexOnLayoutPerc:F
 
-    iget-boolean p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    iget-boolean p1, p3, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
 
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->offsetToChildIndexOnLayoutIsMinHeight:Z
 
     goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/HeaderBehavior;->onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
+    invoke-super {p0, p1, p2, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onRestoreInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
 
     const/4 p1, -0x1
 
@@ -2062,6 +2309,14 @@
 
 .method public bridge synthetic onSaveInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -2074,6 +2329,14 @@
 
 .method public onSaveInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)Landroid/os/Parcelable;
     .locals 7
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2083,15 +2346,15 @@
         }
     .end annotation
 
-    invoke-super {p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior;->onSaveInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
+    invoke-super {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onSaveInstanceState(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
@@ -2102,7 +2365,7 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    invoke-virtual {p2, v3}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p2, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -2126,9 +2389,9 @@
 
     invoke-direct {v0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    iput v3, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildIndex:I
+    iput v3, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
 
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
 
     move-result p1
 
@@ -2143,7 +2406,7 @@
     const/4 v2, 0x1
 
     :cond_0
-    iput-boolean v2, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    iput-boolean v2, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
 
     int-to-float p1, v5
 
@@ -2155,7 +2418,7 @@
 
     div-float/2addr p1, p2
 
-    iput p1, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildPercentageShown:F
+    iput p1, v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
 
     return-object v0
 
@@ -2195,9 +2458,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;
+    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$b;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -2212,6 +2475,18 @@
 
 .method public bridge synthetic onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -2224,6 +2499,18 @@
 
 .method public onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;Landroid/view/View;II)Z
     .locals 3
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2235,11 +2522,11 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getRootView()Landroid/view/View;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getRootView()Landroid/view/View;
 
     move-result-object p4
 
-    invoke-static {p4}, Lcom/oneplus/common/OPViewGroupUtils;->getAllChildViews(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p4}, Lb/b/a/f;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p4
 
@@ -2261,13 +2548,13 @@
 
     check-cast v0, Landroid/view/View;
 
-    instance-of v1, v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    instance-of v1, v0, Lcom/google/android/material/appbar/a;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    check-cast v0, Lcom/google/android/material/appbar/a;
 
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
@@ -2275,7 +2562,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
@@ -2283,9 +2570,9 @@
 
     const/16 v2, 0x13
 
-    invoke-virtual {v1, v2}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->setScrollFlags(I)V
+    invoke-virtual {v1, v2}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->d(I)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
@@ -2294,7 +2581,7 @@
 
     if-eqz p4, :cond_3
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->isLiftOnScroll()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->m()Z
 
     move-result p4
 
@@ -2335,6 +2622,10 @@
 
 .method public bridge synthetic onStopNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
     .locals 0
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -2345,6 +2636,10 @@
 
 .method public onStopNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
     .locals 1
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2364,19 +2659,19 @@
     if-ne p4, v0, :cond_1
 
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->snapToChildIfNeeded(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)V
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->isLiftOnScroll()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->m()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->shouldLift(Landroid/view/View;)Z
+    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->w(Landroid/view/View;)Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftedState(Z)Z
+    invoke-virtual {p2, p1}, Lcom/google/android/material/appbar/AppBarLayout;->u(Z)Z
 
     :cond_1
     new-instance p1, Ljava/lang/ref/WeakReference;
@@ -2398,6 +2693,10 @@
 
 .method public setDragCallback(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onDragCallback:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;
 
@@ -2406,6 +2705,14 @@
 
 .method bridge synthetic setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -2418,6 +2725,14 @@
 
 .method setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;III)I
     .locals 8
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2438,13 +2753,13 @@
 
     if-gt v0, p5, :cond_3
 
-    invoke-static {p3, p4, p5}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {p3, p4, p5}, La/d/d/a;->b(III)I
 
     move-result v5
 
     if-eq v0, v5, :cond_4
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->hasChildWithInterpolator()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->i()Z
 
     move-result p3
 
@@ -2460,7 +2775,7 @@
     move p3, v5
 
     :goto_0
-    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->setTopAndBottomOffset(I)Z
+    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->setTopAndBottomOffset(I)Z
 
     move-result p4
 
@@ -2472,20 +2787,20 @@
 
     if-nez p4, :cond_1
 
-    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->hasChildWithInterpolator()Z
+    invoke-virtual {p2}, Lcom/google/android/material/appbar/AppBarLayout;->i()Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->dispatchDependentViewsChanged(Landroid/view/View;)V
+    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->f(Landroid/view/View;)V
 
     :cond_1
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result p3
 
-    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->onOffsetChanged(I)V
+    invoke-virtual {p2, p3}, Lcom/google/android/material/appbar/AppBarLayout;->n(I)V
 
     if-ge v5, v0, :cond_2
 

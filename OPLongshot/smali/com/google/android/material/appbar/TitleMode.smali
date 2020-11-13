@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/appbar/TitleMode;
 .super Ljava/lang/Object;
-.source "TitleMode.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

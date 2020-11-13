@@ -1,10 +1,10 @@
 .class public abstract Lcom/oneplus/screenshot/util/FileInfo;
 .super Ljava/lang/Object;
-.source "FileInfo.java"
+.source ""
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "FileInfo"
 
 .field private static final TEMPLATE_FILE_NAME:Ljava/lang/String; = "_%s"
 
@@ -29,15 +29,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/oneplus/screenshot/util/FileInfo;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/screenshot/util/FileInfo;->TAG:Ljava/lang/String;
+    .locals 0
 
     return-void
 .end method

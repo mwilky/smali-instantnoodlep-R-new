@@ -1,12 +1,18 @@
 .class public Lcom/google/android/material/internal/CheckableImageButton;
-.super Landroidx/appcompat/widget/AppCompatImageButton;
-.source "CheckableImageButton.java"
+.super Landroidx/appcompat/widget/j;
+.source ""
 
 # interfaces
 .implements Landroid/widget/Checkable;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/internal/CheckableImageButton$SavedState;
@@ -58,7 +64,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Landroidx/appcompat/R$attr;->imageButtonStyle:I
+    sget v0, La/a/a;->imageButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/internal/CheckableImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -68,7 +74,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/j;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x1
 
@@ -76,11 +82,11 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->pressable:Z
 
-    new-instance p1, Lcom/google/android/material/internal/CheckableImageButton$1;
+    new-instance p1, Lcom/google/android/material/internal/CheckableImageButton$a;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/internal/CheckableImageButton$1;-><init>(Lcom/google/android/material/internal/CheckableImageButton;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/internal/CheckableImageButton$a;-><init>(Lcom/google/android/material/internal/CheckableImageButton;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
 
     return-void
 .end method
@@ -124,20 +130,20 @@
 
     add-int/2addr p1, v0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onCreateDrawableState(I)[I
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
     sget-object v0, Lcom/google/android/material/internal/CheckableImageButton;->DRAWABLE_STATE_CHECKED:[I
 
-    invoke-static {p1, v0}, Lcom/google/android/material/internal/CheckableImageButton;->mergeDrawableStates([I[I)[I
+    invoke-static {p1, v0}, Landroid/widget/ImageButton;->mergeDrawableStates([I[I)[I
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onCreateDrawableState(I)[I
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
@@ -151,20 +157,20 @@
 
     if-nez v0, :cond_0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
     :cond_0
     check-cast p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 
-    invoke-virtual {p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Landroidx/customview/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Landroidx/appcompat/widget/AppCompatImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v0}, Landroid/widget/ImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-boolean p1, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->checked:Z
+    iget-boolean p1, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->setChecked(Z)V
 
@@ -173,8 +179,10 @@
 
 .method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageButton;->onSaveInstanceState()Landroid/os/Parcelable;
+    invoke-super {p0}, Landroid/widget/ImageButton;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -184,7 +192,7 @@
 
     iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->checked:Z
 
-    iput-boolean v0, v1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->checked:Z
+    iput-boolean v0, v1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
 
     return-object v1
 .end method
@@ -200,7 +208,7 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->sendAccessibilityEvent(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
@@ -219,11 +227,11 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->checked:Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/CheckableImageButton;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->refreshDrawableState()V
 
     const/16 p1, 0x800
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->sendAccessibilityEvent(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
@@ -244,7 +252,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->setPressed(Z)V
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setPressed(Z)V
 
     :cond_0
     return-void

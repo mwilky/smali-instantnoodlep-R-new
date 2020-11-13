@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/MatrixEvaluator;
 .super Ljava/lang/Object;
-.source "MatrixEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -54,6 +54,16 @@
 # virtual methods
 .method public evaluate(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
     .locals 3
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/animation/MatrixEvaluator;->tempStartValues:[F
 
@@ -106,6 +116,16 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, Landroid/graphics/Matrix;
 

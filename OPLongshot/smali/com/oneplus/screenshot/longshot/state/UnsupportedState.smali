@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/UnsupportedState;
 .super Lcom/oneplus/screenshot/longshot/state/MainState;
-.source "UnsupportedState.java"
+.source ""
 
 
 # static fields

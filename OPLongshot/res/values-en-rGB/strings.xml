@@ -41,6 +41,9 @@
     <string name="not_set">Not set</string>
     <string name="not_support_longshot">Expanded screenshot is not supported on this page.</string>
     <string name="notification_channel_screenshot">Screenshots</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="preference_copied">"'%1$s' copied to clipboard."</string>
     <string name="quick_share_description1">Long press the thumbnail to share</string>
     <string name="quick_share_more_text">More</string>

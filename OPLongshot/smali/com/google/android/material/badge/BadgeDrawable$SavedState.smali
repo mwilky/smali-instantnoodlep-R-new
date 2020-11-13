@@ -1,12 +1,18 @@
 .class public final Lcom/google/android/material/badge/BadgeDrawable$SavedState;
 .super Ljava/lang/Object;
-.source "BadgeDrawable.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/badge/BadgeDrawable;
 .end annotation
@@ -33,22 +39,42 @@
 .field private alpha:I
 
 .field private backgroundColor:I
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
+.end field
 
 .field private badgeGravity:I
 
 .field private badgeTextColor:I
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
+.end field
 
 .field private contentDescriptionNumberless:Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private contentDescriptionQuantityStrings:I
+    .annotation build Landroidx/annotation/PluralsRes;
+    .end annotation
+.end field
 
 .field private horizontalOffset:I
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x1
+    .end annotation
+.end field
 
 .field private maxCharacterCount:I
 
 .field private number:I
 
 .field private verticalOffset:I
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x1
+    .end annotation
+.end field
 
 
 # direct methods
@@ -66,6 +92,10 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,7 +109,7 @@
 
     new-instance v0, Lcom/google/android/material/resources/TextAppearance;
 
-    sget v1, Lcom/google/android/material/R$style;->TextAppearance_MaterialComponents_Badge:I
+    sget v1, Lb/a/b/a/k;->TextAppearance_MaterialComponents_Badge:I
 
     invoke-direct {v0, p1, v1}, Lcom/google/android/material/resources/TextAppearance;-><init>(Landroid/content/Context;I)V
 
@@ -91,7 +121,7 @@
 
     iput v0, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->badgeTextColor:I
 
-    sget v0, Lcom/google/android/material/R$string;->mtrl_badge_numberless_content_description:I
+    sget v0, Lb/a/b/a/j;->mtrl_badge_numberless_content_description:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -99,7 +129,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->contentDescriptionNumberless:Ljava/lang/CharSequence;
 
-    sget p1, Lcom/google/android/material/R$plurals;->mtrl_badge_content_description:I
+    sget p1, Lb/a/b/a/i;->mtrl_badge_content_description:I
 
     iput p1, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->contentDescriptionQuantityStrings:I
 
@@ -108,6 +138,10 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -354,6 +388,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget p2, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->backgroundColor:I
 

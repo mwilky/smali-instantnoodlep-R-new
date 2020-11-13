@@ -1,6 +1,6 @@
 .class final Landroidx/recyclerview/widget/GapWorker$1;
 .super Ljava/lang/Object;
-.source "GapWorker.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Landroidx/recyclerview/widget/GapWorker$Task;",
+        "Landroidx/recyclerview/widget/GapWorker$a;",
         ">;"
     }
 .end annotation
@@ -37,10 +37,10 @@
 
 
 # virtual methods
-.method public compare(Landroidx/recyclerview/widget/GapWorker$Task;Landroidx/recyclerview/widget/GapWorker$Task;)I
+.method public compare(Landroidx/recyclerview/widget/GapWorker$a;Landroidx/recyclerview/widget/GapWorker$a;)I
     .locals 5
 
-    iget-object v0, p1, Landroidx/recyclerview/widget/GapWorker$Task;->view:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p1, Landroidx/recyclerview/widget/GapWorker$a;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v1, 0x0
 
@@ -56,7 +56,7 @@
     move v0, v1
 
     :goto_0
-    iget-object v3, p2, Landroidx/recyclerview/widget/GapWorker$Task;->view:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v3, p2, Landroidx/recyclerview/widget/GapWorker$a;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     if-nez v3, :cond_1
 
@@ -72,7 +72,7 @@
 
     if-eq v0, v3, :cond_3
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/GapWorker$Task;->view:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p1, Landroidx/recyclerview/widget/GapWorker$a;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     if-nez p1, :cond_2
 
@@ -85,15 +85,13 @@
     return v2
 
     :cond_3
-    iget-boolean v0, p1, Landroidx/recyclerview/widget/GapWorker$Task;->immediate:Z
+    iget-boolean v0, p1, Landroidx/recyclerview/widget/GapWorker$a;->a:Z
 
-    iget-boolean v3, p2, Landroidx/recyclerview/widget/GapWorker$Task;->immediate:Z
+    iget-boolean v3, p2, Landroidx/recyclerview/widget/GapWorker$a;->a:Z
 
     if-eq v0, v3, :cond_5
 
-    iget-boolean p1, p1, Landroidx/recyclerview/widget/GapWorker$Task;->immediate:Z
-
-    if-eqz p1, :cond_4
+    if-eqz v0, :cond_4
 
     move v2, v4
 
@@ -101,9 +99,9 @@
     return v2
 
     :cond_5
-    iget v0, p2, Landroidx/recyclerview/widget/GapWorker$Task;->viewVelocity:I
+    iget v0, p2, Landroidx/recyclerview/widget/GapWorker$a;->b:I
 
-    iget v2, p1, Landroidx/recyclerview/widget/GapWorker$Task;->viewVelocity:I
+    iget v2, p1, Landroidx/recyclerview/widget/GapWorker$a;->b:I
 
     sub-int/2addr v0, v2
 
@@ -112,9 +110,9 @@
     return v0
 
     :cond_6
-    iget p1, p1, Landroidx/recyclerview/widget/GapWorker$Task;->distanceToItem:I
+    iget p1, p1, Landroidx/recyclerview/widget/GapWorker$a;->c:I
 
-    iget p2, p2, Landroidx/recyclerview/widget/GapWorker$Task;->distanceToItem:I
+    iget p2, p2, Landroidx/recyclerview/widget/GapWorker$a;->c:I
 
     sub-int/2addr p1, p2
 
@@ -129,11 +127,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Landroidx/recyclerview/widget/GapWorker$Task;
+    check-cast p1, Landroidx/recyclerview/widget/GapWorker$a;
 
-    check-cast p2, Landroidx/recyclerview/widget/GapWorker$Task;
+    check-cast p2, Landroidx/recyclerview/widget/GapWorker$a;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/GapWorker$1;->compare(Landroidx/recyclerview/widget/GapWorker$Task;Landroidx/recyclerview/widget/GapWorker$Task;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/GapWorker$1;->compare(Landroidx/recyclerview/widget/GapWorker$a;Landroidx/recyclerview/widget/GapWorker$a;)I
 
     move-result p1
 

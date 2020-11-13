@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotOverState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotNextState;
-.source "ShotOverState.java"
+.source ""
 
 
 # static fields
@@ -21,31 +21,25 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_OVER_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotOverState;->mOffset:I
-
     goto :goto_0
 
     :cond_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_OVER_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotOverState;->mOffset:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
-    :goto_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_OVER_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotOverState;->mCaptureDelay:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
     return-void
 .end method

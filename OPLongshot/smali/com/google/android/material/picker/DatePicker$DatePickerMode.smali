@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/picker/DatePicker$DatePickerMode;
 .super Ljava/lang/Object;
-.source "DatePicker.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

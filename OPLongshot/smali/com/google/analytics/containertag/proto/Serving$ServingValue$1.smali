@@ -1,6 +1,6 @@
 .class final Lcom/google/analytics/containertag/proto/Serving$ServingValue$1;
 .super Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;
-.source "Serving.java"
+.source ""
 
 
 # annotations

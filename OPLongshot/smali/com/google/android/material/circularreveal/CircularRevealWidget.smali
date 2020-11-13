@@ -1,9 +1,6 @@
 .class public interface abstract Lcom/google/android/material/circularreveal/CircularRevealWidget;
 .super Ljava/lang/Object;
-.source "CircularRevealWidget.java"
-
-# interfaces
-.implements Lcom/google/android/material/circularreveal/CircularRevealHelper$Delegate;
+.source ""
 
 
 # annotations
@@ -12,38 +9,45 @@
         Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealScrimColorProperty;,
         Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealEvaluator;,
         Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealProperty;,
-        Lcom/google/android/material/circularreveal/CircularRevealWidget$RevealInfo;
+        Lcom/google/android/material/circularreveal/CircularRevealWidget$b;
     }
 .end annotation
 
 
 # virtual methods
-.method public abstract buildCircularRevealCache()V
+.method public abstract a()V
 .end method
 
-.method public abstract destroyCircularRevealCache()V
-.end method
-
-.method public abstract draw(Landroid/graphics/Canvas;)V
-.end method
-
-.method public abstract getCircularRevealOverlayDrawable()Landroid/graphics/drawable/Drawable;
+.method public abstract b()V
 .end method
 
 .method public abstract getCircularRevealScrimColor()I
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 .end method
 
-.method public abstract getRevealInfo()Lcom/google/android/material/circularreveal/CircularRevealWidget$RevealInfo;
-.end method
-
-.method public abstract isOpaque()Z
+.method public abstract getRevealInfo()Lcom/google/android/material/circularreveal/CircularRevealWidget$b;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract setCircularRevealOverlayDrawable(Landroid/graphics/drawable/Drawable;)V
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setCircularRevealScrimColor(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 .end method
 
-.method public abstract setRevealInfo(Lcom/google/android/material/circularreveal/CircularRevealWidget$RevealInfo;)V
+.method public abstract setRevealInfo(Lcom/google/android/material/circularreveal/CircularRevealWidget$b;)V
+    .param p1    # Lcom/google/android/material/circularreveal/CircularRevealWidget$b;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method

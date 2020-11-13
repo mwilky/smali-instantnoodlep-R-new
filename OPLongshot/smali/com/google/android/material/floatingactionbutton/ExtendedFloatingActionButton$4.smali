@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$4;
 .super Landroid/util/Property;
-.source "ExtendedFloatingActionButton.java"
+.source ""
 
 
 # annotations
@@ -36,6 +36,12 @@
 # virtual methods
 .method public get(Landroid/view/View;)Ljava/lang/Float;
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -54,6 +60,12 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p1, Landroid/view/View;
 
@@ -66,6 +78,14 @@
 
 .method public set(Landroid/view/View;Ljava/lang/Float;)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Float;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -84,6 +104,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Landroid/view/View;
 

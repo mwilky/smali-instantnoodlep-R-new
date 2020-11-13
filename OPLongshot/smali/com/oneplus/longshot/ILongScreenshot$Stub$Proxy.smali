@@ -1,6 +1,6 @@
 .class Lcom/oneplus/longshot/ILongScreenshot$Stub$Proxy;
 .super Ljava/lang/Object;
-.source "ILongScreenshot.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;
@@ -48,11 +48,6 @@
 
 .method public dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -71,7 +66,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2}, Lcom/oneplus/longshot/IViewPropCallback;->asBinder()Landroid/os/IBinder;
+    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
@@ -139,11 +134,6 @@
 
 .method public getConfigValues()Ljava/lang/String;
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -228,11 +218,6 @@
 
 .method public isHandleState()Z
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -314,11 +299,6 @@
 
 .method public isMoveState()Z
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -400,11 +380,6 @@
 
 .method public notifyLongshotScrollChanged(IIII)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -483,11 +458,6 @@
 
 .method public notifyScroll(Z)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -570,11 +540,6 @@
 
 .method public notifyScrollViewSearchComplete(III)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -651,11 +616,6 @@
 
 .method public notifyScrollViewTop(I)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -728,11 +688,6 @@
 
 .method public notifyWindowLayerChange(Landroid/os/IBinder;)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -805,11 +760,6 @@
 
 .method public onUnscrollableView()V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -880,11 +830,6 @@
 
 .method public start(Lcom/oneplus/longshot/ILongScreenshotCallback;)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -901,7 +846,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/oneplus/longshot/ILongScreenshotCallback;->asBinder()Landroid/os/IBinder;
+    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
@@ -969,11 +914,6 @@
 
 .method public stopLongshot(I)V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

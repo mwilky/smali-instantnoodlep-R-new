@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ShareElementViewAttrs;
 .super Ljava/lang/Object;
-.source "ShareElementViewAttrs.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -19,17 +19,17 @@
 
 
 # instance fields
-.field public alpha:F
+.field public a:I
 
-.field public height:F
+.field public b:F
 
-.field public id:I
+.field public c:F
 
-.field public startX:F
+.field public d:F
 
-.field public startY:F
+.field public e:F
 
-.field public width:F
+.field public f:F
 
 
 # direct methods
@@ -45,48 +45,6 @@
     return-void
 .end method
 
-.method public constructor <init>(IFFFF)V
-    .locals 7
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/animation/ShareElementViewAttrs;-><init>(IFFFFF)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IFFFFF)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->id:I
-
-    iput p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startX:F
-
-    iput p3, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startY:F
-
-    iput p4, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->width:F
-
-    iput p5, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->height:F
-
-    iput p6, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->alpha:F
-
-    return-void
-.end method
-
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
@@ -96,37 +54,37 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->id:I
+    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startX:F
+    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->b:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startY:F
+    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->c:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->width:F
+    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->d:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->height:F
+    iput v0, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->e:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->alpha:F
+    iput p1, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->f:F
 
     return-void
 .end method
@@ -144,27 +102,27 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->id:I
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startX:F
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->b:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->startY:F
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->c:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->width:F
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->d:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->height:F
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->e:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->alpha:F
+    iget p2, p0, Lcom/google/android/material/animation/ShareElementViewAttrs;->f:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 

@@ -1,22 +1,31 @@
 .class public Lcom/google/android/material/internal/TextDrawableHelper;
 .super Ljava/lang/Object;
-.source "TextDrawableHelper.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;
+        Lcom/google/android/material/internal/TextDrawableHelper$b;
     }
 .end annotation
 
 
 # instance fields
 .field private delegate:Ljava/lang/ref/WeakReference;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;",
+            "Lcom/google/android/material/internal/TextDrawableHelper$b;",
             ">;"
         }
     .end annotation
@@ -25,6 +34,9 @@
 .field private final fontCallback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
 .field private textAppearance:Lcom/google/android/material/resources/TextAppearance;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private final textPaint:Landroid/text/TextPaint;
 
@@ -34,8 +46,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;)V
+.method public constructor <init>(Lcom/google/android/material/internal/TextDrawableHelper$b;)V
     .locals 2
+    .param p1    # Lcom/google/android/material/internal/TextDrawableHelper$b;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,9 +63,9 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textPaint:Landroid/text/TextPaint;
 
-    new-instance v0, Lcom/google/android/material/internal/TextDrawableHelper$1;
+    new-instance v0, Lcom/google/android/material/internal/TextDrawableHelper$a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/internal/TextDrawableHelper$1;-><init>(Lcom/google/android/material/internal/TextDrawableHelper;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/internal/TextDrawableHelper$a;-><init>(Lcom/google/android/material/internal/TextDrawableHelper;)V
 
     iput-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->fontCallback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
@@ -63,7 +79,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->delegate:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/TextDrawableHelper;->setDelegate(Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/TextDrawableHelper;->setDelegate(Lcom/google/android/material/internal/TextDrawableHelper$b;)V
 
     return-void
 .end method
@@ -86,6 +102,10 @@
 
 .method private calculateTextWidth(Ljava/lang/CharSequence;)F
     .locals 3
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p1, :cond_0
 
@@ -113,6 +133,8 @@
 # virtual methods
 .method public getTextAppearance()Lcom/google/android/material/resources/TextAppearance;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textAppearance:Lcom/google/android/material/resources/TextAppearance;
 
@@ -121,6 +143,8 @@
 
 .method public getTextPaint()Landroid/text/TextPaint;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textPaint:Landroid/text/TextPaint;
 
@@ -160,8 +184,12 @@
     return v0
 .end method
 
-.method public setDelegate(Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;)V
+.method public setDelegate(Lcom/google/android/material/internal/TextDrawableHelper$b;)V
     .locals 1
+    .param p1    # Lcom/google/android/material/internal/TextDrawableHelper$b;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -174,6 +202,10 @@
 
 .method public setTextAppearance(Lcom/google/android/material/resources/TextAppearance;Landroid/content/Context;)V
     .locals 2
+    .param p1    # Lcom/google/android/material/resources/TextAppearance;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textAppearance:Lcom/google/android/material/resources/TextAppearance;
 
@@ -195,13 +227,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;
+    check-cast v0, Lcom/google/android/material/internal/TextDrawableHelper$b;
 
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textPaint:Landroid/text/TextPaint;
 
-    invoke-interface {v0}, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;->getState()[I
+    invoke-interface {v0}, Lcom/google/android/material/internal/TextDrawableHelper$b;->getState()[I
 
     move-result-object v0
 
@@ -225,17 +257,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;
+    check-cast p1, Lcom/google/android/material/internal/TextDrawableHelper$b;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;->onTextSizeChange()V
+    invoke-interface {p1}, Lcom/google/android/material/internal/TextDrawableHelper$b;->a()V
 
-    invoke-interface {p1}, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;->getState()[I
+    invoke-interface {p1}, Lcom/google/android/material/internal/TextDrawableHelper$b;->getState()[I
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;->onStateChange([I)Z
+    invoke-interface {p1, p2}, Lcom/google/android/material/internal/TextDrawableHelper$b;->onStateChange([I)Z
 
     :cond_2
     return-void

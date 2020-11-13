@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/EditTask;
 .super Landroid/os/AsyncTask;
-.source "EditTask.java"
+.source ""
 
 
 # annotations

@@ -1,12 +1,18 @@
 .class public Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
 .super Ljava/lang/Object;
-.source "BottomNavigationPresenter.java"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;
@@ -108,17 +114,17 @@
 
     check-cast p1, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;
 
-    iget v1, p1, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->selectedItemId:I
+    iget v1, p1, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->a:I
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->tryRestoreSelectedItemId(I)V
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;->menuView:Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object p1, p1, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
+    iget-object p1, p1, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->b:Lcom/google/android/material/internal/ParcelableSparseArray;
 
     invoke-static {v0, p1}, Lcom/google/android/material/badge/BadgeUtils;->createBadgeDrawablesFromSavedStates(Landroid/content/Context;Lcom/google/android/material/internal/ParcelableSparseArray;)Landroid/util/SparseArray;
 
@@ -134,6 +140,8 @@
 
 .method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;
 
@@ -145,7 +153,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->selectedItemId:I
+    iput v1, v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->a:I
 
     iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;->menuView:Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;
 
@@ -157,7 +165,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
+    iput-object v1, v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;->b:Lcom/google/android/material/internal/ParcelableSparseArray;
 
     return-object v0
 .end method
@@ -178,7 +186,7 @@
     return-void
 .end method
 
-.method public setCallback(Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
+.method public setCallback(Landroidx/appcompat/view/menu/MenuPresenter$a;)V
     .locals 0
 
     return-void

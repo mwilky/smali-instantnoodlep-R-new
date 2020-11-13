@@ -1,12 +1,18 @@
 .class public interface abstract Landroidx/appcompat/view/menu/MenuPresenter;
 .super Ljava/lang/Object;
-.source "MenuPresenter.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+        Landroidx/appcompat/view/menu/MenuPresenter$a;
     }
 .end annotation
 
@@ -42,7 +48,7 @@
 .method public abstract onSubMenuSelected(Landroidx/appcompat/view/menu/SubMenuBuilder;)Z
 .end method
 
-.method public abstract setCallback(Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
+.method public abstract setCallback(Landroidx/appcompat/view/menu/MenuPresenter$a;)V
 .end method
 
 .method public abstract updateMenuView(Z)V

@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar$BaseCallback;
 .super Ljava/lang/Object;
-.source "BaseTransientBottomBar.java"
+.source ""
 
 
 # annotations

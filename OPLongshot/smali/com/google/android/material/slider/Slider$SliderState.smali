@@ -1,17 +1,6 @@
 .class Lcom/google/android/material/slider/Slider$SliderState;
 .super Landroid/view/View$BaseSavedState;
-.source "Slider.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/slider/Slider;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = "SliderState"
-.end annotation
+.source ""
 
 
 # static fields
@@ -27,17 +16,17 @@
 
 
 # instance fields
-.field hasFocus:Z
+.field a:F
 
-.field stepSize:F
+.field b:F
 
-.field thumbPosition:F
+.field c:F
 
-.field ticksCoordinates:[F
+.field d:F
 
-.field valueFrom:F
+.field e:[F
 
-.field valueTo:F
+.field f:Z
 
 
 # direct methods
@@ -55,6 +44,10 @@
 
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
@@ -62,27 +55,27 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->valueFrom:F
+    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->a:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->valueTo:F
+    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->b:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->thumbPosition:F
+    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->c:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->stepSize:F
+    iput v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->d:F
 
-    iget-object v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->ticksCoordinates:[F
+    iget-object v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->e:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
 
@@ -94,23 +87,15 @@
 
     aget-boolean p1, p1, v0
 
-    iput-boolean p1, p0, Lcom/google/android/material/slider/Slider$SliderState;->hasFocus:Z
+    iput-boolean p1, p0, Lcom/google/android/material/slider/Slider$SliderState;->f:Z
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/slider/Slider$1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/slider/a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/slider/Slider$SliderState;-><init>(Landroid/os/Parcel;)V
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/os/Parcelable;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
 .end method
@@ -119,26 +104,30 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->valueFrom:F
+    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->a:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->valueTo:F
+    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->b:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->thumbPosition:F
+    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->c:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->stepSize:F
+    iget p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->d:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-object p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->ticksCoordinates:[F
+    iget-object p2, p0, Lcom/google/android/material/slider/Slider$SliderState;->e:[F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
 
@@ -146,7 +135,7 @@
 
     new-array p2, p2, [Z
 
-    iget-boolean v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->hasFocus:Z
+    iget-boolean v0, p0, Lcom/google/android/material/slider/Slider$SliderState;->f:Z
 
     const/4 v1, 0x0
 

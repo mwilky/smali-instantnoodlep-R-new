@@ -1,9 +1,13 @@
 .class Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "AnimatedVectorDrawableCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 .end annotation
@@ -68,11 +72,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
-
-    iget-object v2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mCallback:Landroid/graphics/drawable/Drawable$Callback;
+    iget-object v2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -92,11 +94,9 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
-    iget-object p1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
-
-    iget-object v1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mCallback:Landroid/graphics/drawable/Drawable$Callback;
+    iget-object v1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -116,11 +116,9 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
-    iget-object p1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
-
-    iget-object p2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->mCallback:Landroid/graphics/drawable/Drawable$Callback;
+    iget-object p2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 

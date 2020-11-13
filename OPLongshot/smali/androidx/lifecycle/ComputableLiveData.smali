@@ -1,9 +1,15 @@
 .class public abstract Landroidx/lifecycle/ComputableLiveData;
 .super Ljava/lang/Object;
-.source "ComputableLiveData.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -22,6 +28,9 @@
 .field final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 .field final mInvalidationRunnable:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field final mLiveData:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
@@ -33,6 +42,9 @@
 .end field
 
 .field final mRefreshRunnable:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -50,6 +62,10 @@
 
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,15 +85,15 @@
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v0, Landroidx/lifecycle/ComputableLiveData$2;
+    new-instance v0, Landroidx/lifecycle/ComputableLiveData$a;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$2;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$a;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mRefreshRunnable:Ljava/lang/Runnable;
 
-    new-instance v0, Landroidx/lifecycle/ComputableLiveData$3;
+    new-instance v0, Landroidx/lifecycle/ComputableLiveData$b;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$3;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$b;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalidationRunnable:Ljava/lang/Runnable;
 
@@ -95,6 +111,9 @@
 
 # virtual methods
 .method protected abstract compute()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/WorkerThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -104,6 +123,9 @@
 
 .method public getLiveData()Landroidx/lifecycle/LiveData;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -126,7 +148,7 @@
 
     iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalidationRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Landroidx/arch/core/executor/ArchTaskExecutor;->executeOnMainThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroidx/arch/core/executor/TaskExecutor;->executeOnMainThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

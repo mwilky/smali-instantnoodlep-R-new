@@ -1,6 +1,14 @@
 .class public final Landroid/support/v4/graphics/drawable/IconCompatParcelizer;
 .super Landroidx/core/graphics/drawable/IconCompatParcelizer;
-.source "IconCompatParcelizer.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods

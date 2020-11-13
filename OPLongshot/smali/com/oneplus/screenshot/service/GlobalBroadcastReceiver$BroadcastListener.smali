@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;
 .super Ljava/lang/Object;
-.source "GlobalBroadcastReceiver.java"
+.source ""
 
 
 # annotations

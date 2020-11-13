@@ -1,6 +1,14 @@
 .class public Landroidx/core/graphics/TypefaceCompatUtil;
 .super Ljava/lang/Object;
-.source "TypefaceCompatUtil.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -35,6 +43,12 @@
 
 .method public static copyToDirectBuffer(Landroid/content/Context;Landroid/content/res/Resources;I)Ljava/nio/ByteBuffer;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
 
     invoke-static {p0}, Landroidx/core/graphics/TypefaceCompatUtil;->getTempFile(Landroid/content/Context;)Ljava/io/File;
 
@@ -230,6 +244,8 @@
 
 .method public static getTempFile(Landroid/content/Context;)Ljava/io/File;
     .locals 5
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
@@ -318,6 +334,12 @@
 
 .method public static mmap(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 7
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -456,6 +478,12 @@
 
 .method private static mmap(Ljava/io/File;)Ljava/nio/ByteBuffer;
     .locals 7
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
 
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;

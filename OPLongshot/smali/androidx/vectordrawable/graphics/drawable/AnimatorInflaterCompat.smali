@@ -1,9 +1,15 @@
 .class public Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;
 .super Ljava/lang/Object;
-.source "AnimatorInflaterCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat$PathDataEvaluator;
@@ -42,12 +48,6 @@
 
 .method private static createAnimatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;F)Landroid/animation/Animator;
     .locals 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-static {p3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -76,12 +76,6 @@
 
 .method private static createAnimatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/animation/AnimatorSet;IF)Landroid/animation/Animator;
     .locals 18
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     move-object/from16 v8, p1
 
@@ -204,7 +198,7 @@
 
     invoke-direct {v15}, Landroid/animation/AnimatorSet;-><init>()V
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_ANIMATOR_SET:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->h:[I
 
     move-object/from16 v7, p4
 
@@ -218,10 +212,6 @@
 
     move-result v16
 
-    move-object v5, v15
-
-    check-cast v5, Landroid/animation/AnimatorSet;
-
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -231,6 +221,8 @@
     move-object/from16 v3, p3
 
     move-object/from16 v4, p4
+
+    move-object v5, v15
 
     move-object/from16 v17, v6
 
@@ -664,11 +656,11 @@
 
     move-result-object p0
 
-    invoke-static {p1}, Landroidx/core/graphics/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;
+    invoke-static {p1}, Landroidx/core/graphics/e;->d(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object p2
 
-    invoke-static {p0}, Landroidx/core/graphics/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;
+    invoke-static {p0}, Landroidx/core/graphics/e;->d(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object p3
 
@@ -685,7 +677,7 @@
 
     if-eqz p3, :cond_b
 
-    invoke-static {p2, p3}, Landroidx/core/graphics/PathParser;->canMorph([Landroidx/core/graphics/PathParser$PathDataNode;[Landroidx/core/graphics/PathParser$PathDataNode;)Z
+    invoke-static {p2, p3}, Landroidx/core/graphics/e;->b([Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)Z
 
     move-result v3
 
@@ -1082,7 +1074,7 @@
 .method private static inferValueTypeOfKeyframe(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)I
     .locals 1
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_KEYFRAME:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->j:[I
 
     invoke-static {p0, p1, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -1148,11 +1140,10 @@
 
 .method public static loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    .param p1    # I
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1185,11 +1176,10 @@
 
 .method public static loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    .param p3    # I
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -1202,11 +1192,10 @@
 
 .method public static loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    .param p3    # I
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
 
     const-string v0, "Can\'t load animation resource ID #0x"
 
@@ -1305,19 +1294,14 @@
 
 .method private static loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Landroid/animation/ValueAnimator;FLorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ValueAnimator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_ANIMATOR:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->g:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PROPERTY_ANIMATOR:[I
+    sget-object v1, Landroidx/vectordrawable/graphics/drawable/a;->k:[I
 
     invoke-static {p1, p2, p3, v1}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -1361,14 +1345,8 @@
 
 .method private static loadKeyframe(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;ILorg/xmlpull/v1/XmlPullParser;)Landroid/animation/Keyframe;
     .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_KEYFRAME:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->j:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -1500,11 +1478,6 @@
 
 .method private static loadObjectAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;FLorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ObjectAnimator;
     .locals 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     new-instance v7, Landroid/animation/ObjectAnimator;
 
@@ -1531,12 +1504,6 @@
 
 .method private static loadPvh(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/animation/PropertyValuesHolder;
     .locals 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -1812,12 +1779,6 @@
 
 .method private static loadValues(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;)[Landroid/animation/PropertyValuesHolder;
     .locals 17
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     move-object/from16 v6, p3
 
@@ -1844,6 +1805,7 @@
 
     if-eq v0, v2, :cond_0
 
+    :goto_1
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     goto :goto_0
@@ -1861,7 +1823,7 @@
 
     if-eqz v0, :cond_4
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PROPERTY_VALUES_HOLDER:[I
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->i:[I
 
     move-object/from16 v11, p1
 
@@ -1937,10 +1899,7 @@
 
     move-object/from16 v13, p4
 
-    :goto_1
-    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_5
     if-eqz v8, :cond_6
@@ -2148,7 +2107,7 @@
 
     :cond_2
     :goto_0
-    invoke-static {v0}, Landroidx/core/graphics/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {v0}, Landroidx/core/graphics/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p1
 
@@ -2345,9 +2304,9 @@
     move-result-object v12
 
     :cond_4
-    if-nez v0, :cond_5
-
     const/4 v2, 0x1
+
+    if-nez v0, :cond_5
 
     new-array v0, v2, [Landroid/animation/PropertyValuesHolder;
 
@@ -2358,8 +2317,6 @@
     goto :goto_2
 
     :cond_5
-    const/4 v2, 0x1
-
     if-nez v12, :cond_6
 
     new-array v2, v2, [Landroid/animation/PropertyValuesHolder;

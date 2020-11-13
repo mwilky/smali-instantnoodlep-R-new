@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/util/TimeTrace;
 .super Ljava/lang/Object;
-.source "TimeTrace.java"
+.source ""
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "TimeTrace"
 
 .field private static mLast:J
 
@@ -17,25 +17,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    const-class v0, Lcom/oneplus/screenshot/util/TimeTrace;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/screenshot/util/TimeTrace;->TAG:Ljava/lang/String;
-
-    const-wide/16 v0, 0x0
-
-    sput-wide v0, Lcom/oneplus/screenshot/util/TimeTrace;->mLast:J
-
-    sput-wide v0, Lcom/oneplus/screenshot/util/TimeTrace;->mStart:J
-
-    sput-wide v0, Lcom/oneplus/screenshot/util/TimeTrace;->mMarkLast:J
-
-    sput-wide v0, Lcom/oneplus/screenshot/util/TimeTrace;->mMarkStart:J
+    .locals 0
 
     return-void
 .end method

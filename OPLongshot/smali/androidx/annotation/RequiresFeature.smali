@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/RequiresFeature;
 .super Ljava/lang/Object;
-.source "RequiresFeature.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

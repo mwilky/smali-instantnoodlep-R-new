@@ -1,12 +1,18 @@
 .class Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;
 .super Ljava/lang/Object;
-.source "GapWorker.java"
+.source ""
 
 # interfaces
-.implements Landroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;
+.implements Landroidx/recyclerview/widget/RecyclerView$k$c;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "VisibleForTests"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/recyclerview/widget/GapWorker;
 .end annotation
@@ -154,7 +160,7 @@
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([II)V
 
     :cond_0
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$k;
 
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -162,7 +168,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->isItemPrefetchEnabled()Z
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$k;->u0()Z
 
     move-result v1
 
@@ -170,9 +176,9 @@
 
     if-eqz p2, :cond_1
 
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/AdapterHelper;
+    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/AdapterHelper;->hasPendingUpdates()Z
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->p()Z
 
     move-result v1
 
@@ -184,7 +190,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->collectInitialPrefetchPositions(ILandroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;)V
+    invoke-virtual {v0, v1, p0}, Landroidx/recyclerview/widget/RecyclerView$k;->p(ILandroidx/recyclerview/widget/RecyclerView$k$c;)V
 
     goto :goto_0
 
@@ -199,27 +205,25 @@
 
     iget v2, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mPrefetchDy:I
 
-    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
+    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$v;
 
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->collectAdjacentPrefetchPositions(IILandroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;)V
+    invoke-virtual {v0, v1, v2, v3, p0}, Landroidx/recyclerview/widget/RecyclerView$k;->o(IILandroidx/recyclerview/widget/RecyclerView$v;Landroidx/recyclerview/widget/RecyclerView$k$c;)V
 
     :cond_2
     :goto_0
     iget v1, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mCount:I
 
-    iget v2, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mPrefetchMaxCountObserved:I
+    iget v2, v0, Landroidx/recyclerview/widget/RecyclerView$k;->m:I
 
     if-le v1, v2, :cond_3
 
-    iget v1, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mCount:I
+    iput v1, v0, Landroidx/recyclerview/widget/RecyclerView$k;->m:I
 
-    iput v1, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mPrefetchMaxCountObserved:I
+    iput-boolean p2, v0, Landroidx/recyclerview/widget/RecyclerView$k;->n:Z
 
-    iput-boolean p2, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->mPrefetchMaxObservedInInitialPrefetch:Z
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->mRecycler:Landroidx/recyclerview/widget/RecyclerView$r;
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->mRecycler:Landroidx/recyclerview/widget/RecyclerView$Recycler;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->updateViewCacheSize()V
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$r;->K()V
 
     :cond_3
     return-void

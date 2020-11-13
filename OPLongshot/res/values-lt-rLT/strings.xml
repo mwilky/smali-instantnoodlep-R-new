@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Apie</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versija %s</string>
     <string name="about_privacy_policy">Privatumo politika</string>
     <string name="about_release_note_title">Naujinimo žurnalas:</string>
     <string name="about_terms_service">Paslaugos teikimo sąlygos</string>
@@ -10,6 +10,9 @@
     <string name="longshot_guide_not_support">Šiame puslapyje išplėsto ekrano kopijavimas nepalaikomas.</string>
     <string name="longshot_guide_support">Bakstelėkite čia ir išbandykite išplėsto ekrano kopijavimo funkciją.</string>
     <string name="not_support_longshot">Šiame puslapyje išplėsto ekrano kopijavimas nepalaikomas.</string>
+    <string name="permission_btn_text_denied">Išeiti</string>
+    <string name="permission_btn_text_grant">Gerai</string>
+    <string name="permission_dialog_title">Leidimų pranešimas</string>
     <string name="quick_share_description1">"Ilgai paspauskite miniatiūrą 
 ir bendrinkite"</string>
     <string name="quick_share_more_text">Daugiau</string>

@@ -1,6 +1,6 @@
 .class Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$9;
 .super Ljava/lang/Object;
-.source "DoubleFFT_1D.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

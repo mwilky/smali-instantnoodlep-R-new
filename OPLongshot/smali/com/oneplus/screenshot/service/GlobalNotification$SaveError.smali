@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;
 .super Lcom/oneplus/screenshot/service/GlobalNotification$Builder;
-.source "GlobalNotification.java"
+.source ""
 
 
 # annotations
@@ -26,11 +26,11 @@
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;-><init>(Lcom/oneplus/screenshot/service/GlobalNotification;Landroid/graphics/Bitmap;)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mBuilder:Landroid/app/Notification$Builder;
+    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mBuilder:Landroid/app/Notification$Builder;
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mResources:Landroid/content/res/Resources;
+    iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f0f0087
+    const v0, 0x7f10008a
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -38,11 +38,11 @@
 
     invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mBuilder:Landroid/app/Notification$Builder;
+    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mBuilder:Landroid/app/Notification$Builder;
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mResources:Landroid/content/res/Resources;
+    iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f0f0086
+    const v0, 0x7f100089
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -50,7 +50,7 @@
 
     invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mBuilder:Landroid/app/Notification$Builder;
+    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mBuilder:Landroid/app/Notification$Builder;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -58,7 +58,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mBuilder:Landroid/app/Notification$Builder;
+    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mBuilder:Landroid/app/Notification$Builder;
 
     const/4 p2, 0x1
 
@@ -88,7 +88,7 @@
 .method protected getSmallIcon()I
     .locals 1
 
-    const v0, 0x7f0801c4
+    const v0, 0x7f0801c5
 
     return v0
 .end method
@@ -96,9 +96,9 @@
 .method protected getTicker()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;->mResources:Landroid/content/res/Resources;
+    iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f0f0087
+    const v1, 0x7f10008a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

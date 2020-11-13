@@ -1,12 +1,18 @@
 .class public Lcom/google/android/material/picker/NumericTextView;
 .super Landroid/widget/TextView;
-.source "NumericTextView.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "AppCompatCustomView"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+        Lcom/google/android/material/picker/NumericTextView$a;
     }
 .end annotation
 
@@ -20,7 +26,7 @@
 # instance fields
 .field private mCount:I
 
-.field private mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+.field private mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
 .field private mMaxCount:I
 
@@ -71,7 +77,7 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/picker/NumericTextView;->mShowLeadingZeroes:Z
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumericTextView;->setFocusable(Z)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFocusable(Z)V
 
     return-void
 .end method
@@ -99,9 +105,10 @@
 
     sub-int/2addr p1, v1
 
+    :goto_0
     iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-static {p1}, Lcom/google/android/material/picker/NumericTextView;->isKeyCodeNumeric(I)Z
@@ -136,10 +143,10 @@
 
     add-int/2addr p1, v1
 
-    iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     iget p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
     if-lez p1, :cond_2
@@ -178,15 +185,15 @@
 
     move-result-object p1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
     const-string p1, ""
 
-    :goto_1
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    :goto_2
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
     if-eqz p1, :cond_6
 
@@ -198,12 +205,12 @@
 
     move p1, v1
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_3
     move p1, v0
 
-    :goto_2
+    :goto_3
     iget v2, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
     iget v3, p0, Lcom/google/android/material/picker/NumericTextView;->mMaxCount:I
@@ -222,11 +229,11 @@
     move v0, v1
 
     :cond_5
-    iget-object v2, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+    iget-object v2, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
     iget v3, p0, Lcom/google/android/material/picker/NumericTextView;->mValue:I
 
-    invoke-interface {v2, p0, v3, p1, v0}, Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;->onValueChanged(Lcom/google/android/material/picker/NumericTextView;IZZ)V
+    invoke-interface {v2, p0, v3, p1, v0}, Lcom/google/android/material/picker/NumericTextView$a;->a(Lcom/google/android/material/picker/NumericTextView;IZZ)V
 
     :cond_6
     return v1
@@ -352,7 +359,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -360,7 +367,7 @@
 .method private updateMinimumWidth()V
     .locals 7
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumericTextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -409,11 +416,11 @@
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, v1, v1}, Lcom/google/android/material/picker/NumericTextView;->measure(II)V
+    invoke-virtual {p0, v1, v1}, Landroid/widget/TextView;->measure(II)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumericTextView;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v4
 
@@ -427,21 +434,21 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, v3}, Lcom/google/android/material/picker/NumericTextView;->setMinWidth(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setMinWidth(I)V
 
-    invoke-virtual {p0, v3}, Lcom/google/android/material/picker/NumericTextView;->setMinimumWidth(I)V
+    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setMinimumWidth(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOnDigitEnteredListener()Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+.method public final getOnDigitEnteredListener()Lcom/google/android/material/picker/NumericTextView$a;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+    iget-object v0, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
     return-object v0
 .end method
@@ -497,13 +504,13 @@
 
     iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumericTextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumericTextView;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -516,13 +523,13 @@
 
     iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mValue:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumericTextView;->getHint()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getHint()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumericTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumericTextView;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
     :cond_1
     iget p1, p0, Lcom/google/android/material/picker/NumericTextView;->mValue:I
@@ -538,7 +545,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumericTextView;->setValue(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+    iget-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
     if-eqz p1, :cond_3
 
@@ -546,7 +553,7 @@
 
     const/4 p3, 0x1
 
-    invoke-interface {p1, p0, p2, p3, p3}, Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;->onValueChanged(Lcom/google/android/material/picker/NumericTextView;IZZ)V
+    invoke-interface {p1, p0, p2, p3, p3}, Lcom/google/android/material/picker/NumericTextView$a;->a(Lcom/google/android/material/picker/NumericTextView;IZZ)V
 
     :cond_3
     :goto_0
@@ -651,10 +658,10 @@
     return p1
 .end method
 
-.method public final setOnDigitEnteredListener(Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;)V
+.method public final setOnDigitEnteredListener(Lcom/google/android/material/picker/NumericTextView$a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$OnValueChangedListener;
+    iput-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
     return-void
 .end method

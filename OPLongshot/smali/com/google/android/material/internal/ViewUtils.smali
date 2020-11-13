@@ -1,13 +1,19 @@
 .class public Lcom/google/android/material/internal/ViewUtils;
 .super Ljava/lang/Object;
-.source "ViewUtils.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/internal/ViewUtils$RelativePadding;,
-        Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;
+        Lcom/google/android/material/internal/ViewUtils$f;,
+        Lcom/google/android/material/internal/ViewUtils$e;
     }
 .end annotation
 
@@ -59,28 +65,26 @@
     move v3, v2
 
     :goto_0
-    sget-object v4, Lcom/google/android/material/R$styleable;->ViewDrawableStatesCompat:[I
+    sget-object v4, Lb/a/b/a/l;->ViewDrawableStatesCompat:[I
 
-    array-length v4, v4
+    array-length v5, v4
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    if-ge v3, v4, :cond_2
-
-    sget-object v4, Lcom/google/android/material/R$styleable;->ViewDrawableStatesCompat:[I
+    if-ge v3, v5, :cond_2
 
     aget v4, v4, v3
 
-    move v6, v2
+    move v5, v2
 
     :goto_1
     sget-object v7, Lcom/google/android/material/internal/ViewUtils;->VIEW_STATE_IDS:[I
 
     array-length v8, v7
 
-    if-ge v6, v8, :cond_1
+    if-ge v5, v8, :cond_1
 
-    aget v8, v7, v6
+    aget v8, v7, v5
 
     if-ne v8, v4, :cond_0
 
@@ -88,16 +92,16 @@
 
     aput v4, v1, v8
 
-    add-int/2addr v8, v5
+    add-int/2addr v8, v6
 
-    add-int/lit8 v9, v6, 0x1
+    add-int/lit8 v9, v5, 0x1
 
     aget v7, v7, v9
 
     aput v7, v1, v8
 
     :cond_0
-    add-int/lit8 v6, v6, 0x2
+    add-int/lit8 v5, v5, 0x2
 
     goto :goto_1
 
@@ -113,7 +117,7 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    shl-int v3, v5, v3
+    shl-int v3, v6, v3
 
     new-array v3, v3, [[I
 
@@ -211,28 +215,48 @@
 
 .method public static doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, p2, p3, v0}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
+    invoke-static {p0, p1, p2, p3, v0}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$e;)V
 
     return-void
 .end method
 
-.method public static doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
+.method public static doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$e;)V
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Lcom/google/android/material/internal/ViewUtils$e;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v1, Lcom/google/android/material/R$styleable;->Insets:[I
+    sget-object v1, Lb/a/b/a/l;->Insets:[I
 
     invoke-virtual {v0, p1, v1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->Insets_paddingBottomSystemWindowInsets:I
+    sget p2, Lb/a/b/a/l;->Insets_paddingBottomSystemWindowInsets:I
 
     const/4 p3, 0x0
 
@@ -240,13 +264,13 @@
 
     move-result p2
 
-    sget v0, Lcom/google/android/material/R$styleable;->Insets_paddingLeftSystemWindowInsets:I
+    sget v0, Lb/a/b/a/l;->Insets_paddingLeftSystemWindowInsets:I
 
     invoke-virtual {p1, v0, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
 
-    sget v1, Lcom/google/android/material/R$styleable;->Insets_paddingRightSystemWindowInsets:I
+    sget v1, Lb/a/b/a/l;->Insets_paddingRightSystemWindowInsets:I
 
     invoke-virtual {p1, v1, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -254,21 +278,29 @@
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    new-instance p1, Lcom/google/android/material/internal/ViewUtils$2;
+    new-instance p1, Lcom/google/android/material/internal/ViewUtils$b;
 
-    invoke-direct {p1, p2, v0, p3, p4}, Lcom/google/android/material/internal/ViewUtils$2;-><init>(ZZZLcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
+    invoke-direct {p1, p2, v0, p3, p4}, Lcom/google/android/material/internal/ViewUtils$b;-><init>(ZZZLcom/google/android/material/internal/ViewUtils$e;)V
 
-    invoke-static {p0, p1}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
+    invoke-static {p0, p1}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Lcom/google/android/material/internal/ViewUtils$e;)V
 
     return-void
 .end method
 
-.method public static doOnApplyWindowInsets(Landroid/view/View;Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
+.method public static doOnApplyWindowInsets(Landroid/view/View;Lcom/google/android/material/internal/ViewUtils$e;)V
     .locals 5
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lcom/google/android/material/internal/ViewUtils$e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    new-instance v0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;
+    new-instance v0, Lcom/google/android/material/internal/ViewUtils$f;
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getPaddingStart(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->D(Landroid/view/View;)I
 
     move-result v1
 
@@ -276,7 +308,7 @@
 
     move-result v2
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getPaddingEnd(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->C(Landroid/view/View;)I
 
     move-result v3
 
@@ -284,13 +316,13 @@
 
     move-result v4
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/material/internal/ViewUtils$RelativePadding;-><init>(IIII)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/material/internal/ViewUtils$f;-><init>(IIII)V
 
-    new-instance v1, Lcom/google/android/material/internal/ViewUtils$3;
+    new-instance v1, Lcom/google/android/material/internal/ViewUtils$c;
 
-    invoke-direct {v1, p1, v0}, Lcom/google/android/material/internal/ViewUtils$3;-><init>(Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)V
+    invoke-direct {v1, p1, v0}, Lcom/google/android/material/internal/ViewUtils$c;-><init>(Lcom/google/android/material/internal/ViewUtils$e;Lcom/google/android/material/internal/ViewUtils$f;)V
 
-    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
+    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Landroidx/core/view/m;)V
 
     invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->requestApplyInsetsWhenAttached(Landroid/view/View;)V
 
@@ -299,6 +331,15 @@
 
 .method public static dpToPx(Landroid/content/Context;I)F
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/Dimension;
+            unit = 0x0
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -321,6 +362,12 @@
 
 .method public static getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     :cond_0
     :goto_0
@@ -367,6 +414,12 @@
 
 .method public static getContentViewOverlay(Landroid/view/View;)Lcom/google/android/material/internal/ViewOverlayImpl;
     .locals 0
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
 
@@ -381,6 +434,12 @@
 
 .method public static getOverlay(Landroid/view/View;)Lcom/google/android/material/internal/ViewOverlayImpl;
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -395,7 +454,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p0}, Lcom/google/android/material/internal/ViewOverlayApi14;->createFrom(Landroid/view/View;)Lcom/google/android/material/internal/ViewOverlayApi14;
+    invoke-static {p0}, Lcom/google/android/material/internal/ViewOverlayApi14;->a(Landroid/view/View;)Lcom/google/android/material/internal/ViewOverlayApi14;
 
     move-result-object p0
 
@@ -404,6 +463,10 @@
 
 .method public static getParentAbsoluteElevation(Landroid/view/View;)F
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -420,7 +483,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    invoke-static {v1}, Landroidx/core/view/ViewCompat;->getElevation(Landroid/view/View;)F
+    invoke-static {v1}, Landroidx/core/view/ViewCompat;->t(Landroid/view/View;)F
 
     move-result v1
 
@@ -462,7 +525,7 @@
 .method public static isLayoutRtl(Landroid/view/View;)Z
     .locals 1
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result p0
 
@@ -481,6 +544,11 @@
 
 .method public static isVisibleToUser(Landroid/view/View;Landroid/graphics/Rect;)Z
     .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
@@ -588,21 +656,25 @@
 
 .method public static requestApplyInsetsWhenAttached(Landroid/view/View;)V
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->M(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->requestApplyInsets(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->e0(Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/google/android/material/internal/ViewUtils$4;
+    new-instance v0, Lcom/google/android/material/internal/ViewUtils$d;
 
-    invoke-direct {v0}, Lcom/google/android/material/internal/ViewUtils$4;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/internal/ViewUtils$d;-><init>()V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
@@ -612,12 +684,16 @@
 
 .method public static requestFocusAndShowKeyboard(Landroid/view/View;)V
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
 
-    new-instance v0, Lcom/google/android/material/internal/ViewUtils$1;
+    new-instance v0, Lcom/google/android/material/internal/ViewUtils$a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/internal/ViewUtils$1;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/internal/ViewUtils$a;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

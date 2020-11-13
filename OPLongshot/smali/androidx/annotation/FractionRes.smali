@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/FractionRes;
 .super Ljava/lang/Object;
-.source "FractionRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/CaptureTask;
 .super Landroid/os/AsyncTask;
-.source "CaptureTask.java"
+.source ""
 
 
 # annotations
@@ -316,13 +316,11 @@
 
     iget-object v5, p0, Lcom/oneplus/screenshot/longshot/task/CaptureTask;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    iget v5, v5, Landroid/util/DisplayMetrics;->widthPixels:I
+    iget v6, v5, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iget-object v6, p0, Lcom/oneplus/screenshot/longshot/task/CaptureTask;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iget v5, v5, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    invoke-direct {v3, v2, v2, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v3, v2, v2, v6, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
@@ -334,17 +332,17 @@
 
     const-string v7, "Longshot.capture"
 
-    invoke-static {v7}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
+    invoke-static {v7}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
-    invoke-static {v3, v5, v6, v2}, Lcom/oneplus/compat/view/SurfaceControlNative;->screenshot(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
+    invoke-static {v3, v5, v6, v2}, Lb/b/b/l/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     const-string v7, "Longshot.hwBitmap.copy"
 
-    invoke-static {v7}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
+    invoke-static {v7}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getBitmapConfig()Landroid/graphics/Bitmap$Config;
 
@@ -354,7 +352,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 

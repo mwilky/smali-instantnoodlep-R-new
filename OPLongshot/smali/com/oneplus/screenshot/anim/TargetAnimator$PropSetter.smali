@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;
 .super Ljava/util/HashMap;
-.source "TargetAnimator.java"
+.source ""
 
 
 # annotations

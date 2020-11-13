@@ -1,6 +1,14 @@
 .class public Landroidx/core/util/DebugUtils;
 .super Ljava/lang/Object;
-.source "DebugUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -19,9 +27,10 @@
 
     const-string p0, "null"
 
+    :goto_0
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -78,8 +87,8 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    :goto_0
+    :goto_1
     return-void
 .end method

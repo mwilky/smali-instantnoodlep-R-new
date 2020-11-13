@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Screenshots</string>
     <string name="oneplus_delete">Löschen</string>
     <string name="oneplus_share">Senden</string>
+    <string name="permission_btn_text_denied">Beenden</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Berechtigungserklärung</string>
     <string name="preference_copied">\"%1$s\" in Zwischenablage kopiert.</string>
     <string name="quick_share_description1">"Drucke zum Freigeben lange auf 
 die Miniaturansicht"</string>

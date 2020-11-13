@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/edgeeffect/SpringListView2$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "SpringListView2.java"
+.source ""
 
 
 # annotations
@@ -36,7 +36,7 @@
 .method public getValue(Lcom/google/android/material/edgeeffect/SpringListView2;)F
     .locals 0
 
-    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->access$000(Lcom/google/android/material/edgeeffect/SpringListView2;)F
+    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->a(Lcom/google/android/material/edgeeffect/SpringListView2;)F
 
     move-result p1
 

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringNestScrollView$SEdgeEffectFactory;
 .super Ljava/lang/Object;
-.source "SpringNestScrollView.java"
+.source ""
 
 
 # annotations
@@ -20,16 +20,6 @@
 .end annotation
 
 
-# static fields
-.field public static final DIRECTION_BOTTOM:I = 0x3
-
-.field public static final DIRECTION_LEFT:I = 0x0
-
-.field public static final DIRECTION_RIGHT:I = 0x2
-
-.field public static final DIRECTION_TOP:I = 0x1
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -41,8 +31,14 @@
 
 
 # virtual methods
-.method protected createEdgeEffect(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+.method protected a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance p2, Landroid/widget/EdgeEffect;
 

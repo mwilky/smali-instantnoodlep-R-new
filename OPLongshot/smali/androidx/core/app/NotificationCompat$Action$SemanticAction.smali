@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/core/app/NotificationCompat$Action$SemanticAction;
 .super Ljava/lang/Object;
-.source "NotificationCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/EditView;
 .super Lcom/oneplus/screenshot/longshot/widget/ImageView;
-.source "EditView.java"
+.source ""
 
 
 # annotations
@@ -154,9 +154,9 @@
     :goto_0
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/EditView;->setCutPosition(I)V
 
-    invoke-virtual {p0, v0, v0, v0, v0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->onScrollChanged(IIII)V
+    invoke-virtual {p0, v0, v0, v0, v0}, Landroid/view/View;->onScrollChanged(IIII)V
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
 .end method
@@ -198,17 +198,17 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v3
 
@@ -224,7 +224,7 @@
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v6
 
@@ -244,13 +244,13 @@
 
     add-int/2addr v5, v7
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
     sub-int/2addr v8, v2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
@@ -281,19 +281,19 @@
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->onMeasure(II)V
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView;->mCutBottom:I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result p2
 
     sub-int/2addr p1, p2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/EditView;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result p2
 
@@ -303,7 +303,7 @@
 
     div-int/lit8 p1, p1, 0x6
 
-    iget p2, p0, Lcom/oneplus/screenshot/longshot/widget/EditView;->mNavBarHeight:I
+    iget p2, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mNavBarHeight:I
 
     sub-int/2addr p1, p2
 

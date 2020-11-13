@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/TakeScreenshotService$1;
 .super Landroid/os/Handler;
-.source "TakeScreenshotService.java"
+.source ""
 
 
 # annotations
@@ -56,8 +56,6 @@
     const/4 v3, 0x1
 
     if-eqz v0, :cond_1
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
@@ -124,7 +122,7 @@
 
     const-class v5, Landroid/os/UserManager;
 
-    invoke-virtual {v0, v5}, Lcom/oneplus/screenshot/TakeScreenshotService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v5}, Landroid/app/Service;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -140,7 +138,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0, v4}, Lcom/oneplus/screenshot/TakeScreenshotService$1;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
@@ -189,7 +187,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0, v4}, Lcom/oneplus/screenshot/TakeScreenshotService$1;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 

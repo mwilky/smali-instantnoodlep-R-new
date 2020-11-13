@@ -1,6 +1,6 @@
 .class public Landroidx/collection/LruCache;
 .super Ljava/lang/Object;
-.source "LruCache.java"
+.source ""
 
 
 # annotations
@@ -123,6 +123,13 @@
 # virtual methods
 .method protected create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"
@@ -158,6 +165,18 @@
 
 .method protected entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZTK;TV;TV;)V"
@@ -201,6 +220,13 @@
 
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"
@@ -404,6 +430,17 @@
 
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -513,6 +550,13 @@
 
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"
@@ -640,6 +684,14 @@
 
 .method protected sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)I"

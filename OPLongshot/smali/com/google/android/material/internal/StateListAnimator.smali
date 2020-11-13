@@ -1,12 +1,18 @@
 .class public final Lcom/google/android/material/internal/StateListAnimator;
 .super Ljava/lang/Object;
-.source "StateListAnimator.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/internal/StateListAnimator$Tuple;
+        Lcom/google/android/material/internal/StateListAnimator$b;
     }
 .end annotation
 
@@ -14,15 +20,21 @@
 # instance fields
 .field private final animationListener:Landroid/animation/Animator$AnimatorListener;
 
-.field private lastMatch:Lcom/google/android/material/internal/StateListAnimator$Tuple;
+.field private lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field runningAnimator:Landroid/animation/ValueAnimator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private final tuples:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/google/android/material/internal/StateListAnimator$Tuple;",
+            "Lcom/google/android/material/internal/StateListAnimator$b;",
             ">;"
         }
     .end annotation
@@ -43,13 +55,13 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$Tuple;
+    iput-object v0, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
 
     iput-object v0, p0, Lcom/google/android/material/internal/StateListAnimator;->runningAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v0, Lcom/google/android/material/internal/StateListAnimator$1;
+    new-instance v0, Lcom/google/android/material/internal/StateListAnimator$a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/internal/StateListAnimator$1;-><init>(Lcom/google/android/material/internal/StateListAnimator;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/internal/StateListAnimator$a;-><init>(Lcom/google/android/material/internal/StateListAnimator;)V
 
     iput-object v0, p0, Lcom/google/android/material/internal/StateListAnimator;->animationListener:Landroid/animation/Animator$AnimatorListener;
 
@@ -73,10 +85,14 @@
     return-void
 .end method
 
-.method private start(Lcom/google/android/material/internal/StateListAnimator$Tuple;)V
+.method private start(Lcom/google/android/material/internal/StateListAnimator$b;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/internal/StateListAnimator$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget-object p1, p1, Lcom/google/android/material/internal/StateListAnimator$Tuple;->animator:Landroid/animation/ValueAnimator;
+    iget-object p1, p1, Lcom/google/android/material/internal/StateListAnimator$b;->b:Landroid/animation/ValueAnimator;
 
     iput-object p1, p0, Lcom/google/android/material/internal/StateListAnimator;->runningAnimator:Landroid/animation/ValueAnimator;
 
@@ -90,9 +106,9 @@
 .method public addState([ILandroid/animation/ValueAnimator;)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/material/internal/StateListAnimator$Tuple;
+    new-instance v0, Lcom/google/android/material/internal/StateListAnimator$b;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/material/internal/StateListAnimator$Tuple;-><init>([ILandroid/animation/ValueAnimator;)V
+    invoke-direct {v0, p1, p2}, Lcom/google/android/material/internal/StateListAnimator$b;-><init>([ILandroid/animation/ValueAnimator;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/StateListAnimator;->animationListener:Landroid/animation/Animator$AnimatorListener;
 
@@ -142,9 +158,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/google/android/material/internal/StateListAnimator$Tuple;
+    check-cast v2, Lcom/google/android/material/internal/StateListAnimator$b;
 
-    iget-object v3, v2, Lcom/google/android/material/internal/StateListAnimator$Tuple;->specs:[I
+    iget-object v3, v2, Lcom/google/android/material/internal/StateListAnimator$b;->a:[I
 
     invoke-static {v3, p1}, Landroid/util/StateSet;->stateSetMatches([I[I)Z
 
@@ -163,7 +179,7 @@
     const/4 v2, 0x0
 
     :goto_1
-    iget-object p1, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$Tuple;
+    iget-object p1, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
 
     if-ne v2, p1, :cond_2
 
@@ -175,11 +191,11 @@
     invoke-direct {p0}, Lcom/google/android/material/internal/StateListAnimator;->cancel()V
 
     :cond_3
-    iput-object v2, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$Tuple;
+    iput-object v2, p0, Lcom/google/android/material/internal/StateListAnimator;->lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
 
     if-eqz v2, :cond_4
 
-    invoke-direct {p0, v2}, Lcom/google/android/material/internal/StateListAnimator;->start(Lcom/google/android/material/internal/StateListAnimator$Tuple;)V
+    invoke-direct {p0, v2}, Lcom/google/android/material/internal/StateListAnimator;->start(Lcom/google/android/material/internal/StateListAnimator$b;)V
 
     :cond_4
     return-void

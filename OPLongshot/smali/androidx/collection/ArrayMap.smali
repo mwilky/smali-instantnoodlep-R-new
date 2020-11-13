@@ -1,6 +1,6 @@
 .class public Landroidx/collection/ArrayMap;
 .super Landroidx/collection/SimpleArrayMap;
-.source "ArrayMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Map;
@@ -24,6 +24,9 @@
 
 # instance fields
 .field mCollections:Landroidx/collection/MapCollections;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -88,6 +91,10 @@
 # virtual methods
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 0
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,7 +163,7 @@
         }
     .end annotation
 
-    iget v0, p0, Landroidx/collection/ArrayMap;->mSize:I
+    iget v0, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
 
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
@@ -164,7 +171,7 @@
 
     add-int/2addr v0, v1
 
-    invoke-virtual {p0, v0}, Landroidx/collection/ArrayMap;->ensureCapacity(I)V
+    invoke-virtual {p0, v0}, Landroidx/collection/SimpleArrayMap;->ensureCapacity(I)V
 
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -195,7 +202,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -205,6 +212,10 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 0
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -222,6 +233,10 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 0
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

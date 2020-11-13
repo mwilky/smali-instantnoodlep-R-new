@@ -1,6 +1,14 @@
 .class public final Landroidx/core/util/Preconditions;
 .super Ljava/lang/Object;
-.source "Preconditions.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -29,6 +37,10 @@
 
 .method public static checkArgument(ZLjava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
@@ -48,6 +60,10 @@
 
 .method public static checkArgumentInRange(IIILjava/lang/String;)I
     .locals 5
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x2
 
@@ -128,6 +144,9 @@
 
 .method public static checkArgumentNonnegative(I)I
     .locals 0
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x0L
+    .end annotation
 
     if-ltz p0, :cond_0
 
@@ -143,6 +162,13 @@
 
 .method public static checkArgumentNonnegative(ILjava/lang/String;)I
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x0L
+    .end annotation
 
     if-ltz p0, :cond_0
 
@@ -158,6 +184,13 @@
 
 .method public static checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -178,6 +211,17 @@
 
 .method public static checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -216,6 +260,10 @@
 
 .method public static checkState(ZLjava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 

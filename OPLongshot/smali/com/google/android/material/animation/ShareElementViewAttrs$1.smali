@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/animation/ShareElementViewAttrs$1;
 .super Ljava/lang/Object;
-.source "ShareElementViewAttrs.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

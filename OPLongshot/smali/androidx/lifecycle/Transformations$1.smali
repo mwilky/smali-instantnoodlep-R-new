@@ -1,21 +1,12 @@
 .class final Landroidx/lifecycle/Transformations$1;
 .super Ljava/lang/Object;
-.source "Transformations.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/Transformations;->map(Landroidx/lifecycle/LiveData;Landroidx/arch/core/util/Function;)Landroidx/lifecycle/LiveData;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -48,6 +39,10 @@
 # virtual methods
 .method public onChanged(Ljava/lang/Object;)V
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TX;)V"
@@ -62,7 +57,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/MediatorLiveData;->setValue(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
 
     return-void
 .end method

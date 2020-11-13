@@ -1,6 +1,6 @@
 .class final Landroidx/coordinatorlayout/widget/CoordinatorLayout$SavedState$1;
 .super Ljava/lang/Object;
-.source "CoordinatorLayout.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

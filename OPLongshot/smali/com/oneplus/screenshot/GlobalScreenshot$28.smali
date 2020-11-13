@@ -1,11 +1,11 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$28;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/screenshot/GlobalScreenshot;->createSmallScreenshotDropInAnimation()Landroid/animation/ValueAnimator;
+    value = Lcom/oneplus/screenshot/GlobalScreenshot;->createSmallScreenshotDropOutAnimation()Landroid/animation/ValueAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,33 +32,37 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 3
 
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$28;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
 
     move-result-object p1
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
-
-    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$28;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
-
-    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
+    const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$28;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
+
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$28;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3000(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     return-void
 .end method

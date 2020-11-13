@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
 .super Ljava/lang/Object;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Map$Entry;
@@ -105,7 +105,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -119,7 +119,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -165,13 +165,13 @@
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->key:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeHashCode(Ljava/lang/Object;)I
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/c;->f(Ljava/lang/Object;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->value:Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeHashCode(Ljava/lang/Object;)I
+    invoke-static {v1}, Lcom/oneplus/utils/reflection/utils/c;->f(Ljava/lang/Object;)I
 
     move-result v1
 

@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/edgeeffect/SpringNestScrollView$SEdgeEffectFactory$EdgeDirection;
 .super Ljava/lang/Object;
-.source "SpringNestScrollView.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

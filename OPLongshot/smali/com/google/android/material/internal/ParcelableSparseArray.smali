@@ -1,12 +1,18 @@
 .class public Lcom/google/android/material/internal/ParcelableSparseArray;
 .super Landroid/util/SparseArray;
-.source "ParcelableSparseArray.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/util/SparseArray<",
@@ -52,6 +58,14 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
@@ -76,7 +90,7 @@
 
     aget-object v3, p1, p2
 
-    invoke-virtual {p0, v2, v3}, Lcom/google/android/material/internal/ParcelableSparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {p0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     add-int/lit8 p2, p2, 0x1
 
@@ -98,8 +112,12 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ParcelableSparseArray;->size()I
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
@@ -112,13 +130,13 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    invoke-virtual {p0, v3}, Lcom/google/android/material/internal/ParcelableSparseArray;->keyAt(I)I
+    invoke-virtual {p0, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v4
 
     aput v4, v1, v3
 
-    invoke-virtual {p0, v3}, Lcom/google/android/material/internal/ParcelableSparseArray;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 

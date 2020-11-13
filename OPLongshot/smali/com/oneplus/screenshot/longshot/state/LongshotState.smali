@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/longshot/state/LongshotState;
 .super Ljava/lang/Enum;
-.source "LongshotState.java"
+.source ""
 
 
 # annotations

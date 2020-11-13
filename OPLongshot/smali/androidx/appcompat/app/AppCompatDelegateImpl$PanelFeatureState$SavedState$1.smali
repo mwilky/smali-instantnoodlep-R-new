@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState$1;
 .super Ljava/lang/Object;
-.source "AppCompatDelegateImpl.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

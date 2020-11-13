@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/IntProperty;
 .super Landroid/util/Property;
-.source "IntProperty.java"
+.source ""
 
 
 # annotations
@@ -32,6 +32,10 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const-class v0, Ljava/lang/Integer;
 
@@ -72,6 +76,10 @@
 .end method
 
 .method public abstract setValue(Ljava/lang/Object;I)V
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)V"

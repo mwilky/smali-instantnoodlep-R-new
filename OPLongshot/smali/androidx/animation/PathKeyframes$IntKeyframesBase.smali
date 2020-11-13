@@ -1,6 +1,6 @@
 .class abstract Landroidx/animation/PathKeyframes$IntKeyframesBase;
 .super Landroidx/animation/PathKeyframes$SimpleKeyframes;
-.source "PathKeyframes.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes$IntKeyframes;
@@ -32,7 +32,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Landroidx/animation/PathKeyframes$SimpleKeyframes;-><init>(Landroidx/animation/PathKeyframes$1;)V
+    invoke-direct {p0, v0}, Landroidx/animation/PathKeyframes$SimpleKeyframes;-><init>(Landroidx/animation/PathKeyframes$a;)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 .method public getValue(F)Ljava/lang/Integer;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroidx/animation/PathKeyframes$IntKeyframesBase;->getIntValue(F)I
+    invoke-interface {p0, p1}, Landroidx/animation/Keyframes$IntKeyframes;->getIntValue(F)I
 
     move-result p1
 

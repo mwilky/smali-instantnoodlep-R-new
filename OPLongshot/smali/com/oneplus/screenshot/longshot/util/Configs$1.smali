@@ -1,6 +1,6 @@
 .class final Lcom/oneplus/screenshot/longshot/util/Configs$1;
 .super Ljava/lang/Object;
-.source "Configs.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;

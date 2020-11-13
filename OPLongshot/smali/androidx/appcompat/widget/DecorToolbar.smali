@@ -1,6 +1,14 @@
 .class public interface abstract Landroidx/appcompat/widget/DecorToolbar;
 .super Ljava/lang/Object;
-.source "DecorToolbar.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # virtual methods
@@ -146,10 +154,10 @@
 .method public abstract setLogo(Landroid/graphics/drawable/Drawable;)V
 .end method
 
-.method public abstract setMenu(Landroid/view/Menu;Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
+.method public abstract setMenu(Landroid/view/Menu;Landroidx/appcompat/view/menu/MenuPresenter$a;)V
 .end method
 
-.method public abstract setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$Callback;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
+.method public abstract setMenuCallbacks(Landroidx/appcompat/view/menu/MenuPresenter$a;Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
 .end method
 
 .method public abstract setMenuPrepared()V
@@ -185,7 +193,7 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
 .end method
 
 .method public abstract showOverflowMenu()Z

@@ -1,6 +1,6 @@
 .class final Landroidx/preference/Preference$BaseSavedState$1;
 .super Ljava/lang/Object;
-.source "Preference.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

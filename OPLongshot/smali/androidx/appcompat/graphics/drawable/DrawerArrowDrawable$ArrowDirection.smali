@@ -1,19 +1,16 @@
 .class public interface abstract annotation Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable$ArrowDirection;
 .super Ljava/lang/Object;
-.source "DrawerArrowDrawable.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2609
-    name = "ArrowDirection"
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Retention;

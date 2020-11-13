@@ -1,18 +1,9 @@
 .class public final enum Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
 .super Ljava/lang/Enum;
-.source "AnimationGriditemView.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/recyclerview/AnimationGriditemView;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
-    name = "RadiusMode"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Enum<",

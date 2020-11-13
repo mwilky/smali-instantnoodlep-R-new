@@ -1,18 +1,9 @@
 .class final Landroidx/transition/ChangeImageTransform$2;
 .super Landroid/util/Property;
-.source "ChangeImageTransform.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/transition/ChangeImageTransform;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/util/Property<",
@@ -57,7 +48,7 @@
 .method public set(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
     .locals 0
 
-    invoke-static {p1, p2}, Landroidx/transition/ImageViewUtils;->animateTransform(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Landroidx/transition/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

@@ -1,9 +1,15 @@
 .class public Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;
-.super Landroidx/appcompat/widget/DropDownListView;
-.source "MenuPopupWindow.java"
+.super Landroidx/appcompat/widget/x;
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/MenuPopupWindow;
 .end annotation
@@ -28,7 +34,7 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 3
 
-    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/DropDownListView;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/content/Context;Z)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -78,7 +84,7 @@
 
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->setSelection(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ListView;->setSelection(I)V
 
     return-void
 .end method
@@ -86,7 +92,7 @@
 .method public bridge synthetic hasFocus()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/DropDownListView;->hasFocus()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->hasFocus()Z
 
     move-result v0
 
@@ -96,7 +102,7 @@
 .method public bridge synthetic hasWindowFocus()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/DropDownListView;->hasWindowFocus()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->hasWindowFocus()Z
 
     move-result v0
 
@@ -106,7 +112,7 @@
 .method public bridge synthetic isFocused()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/DropDownListView;->isFocused()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->isFocused()Z
 
     move-result v0
 
@@ -116,7 +122,7 @@
 .method public bridge synthetic isInTouchMode()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/DropDownListView;->isInTouchMode()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->isInTouchMode()Z
 
     move-result v0
 
@@ -126,7 +132,7 @@
 .method public bridge synthetic lookForSelectablePosition(IZ)I
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/DropDownListView;->lookForSelectablePosition(IZ)I
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/x;->lookForSelectablePosition(IZ)I
 
     move-result p1
 
@@ -136,7 +142,7 @@
 .method public bridge synthetic measureHeightOfChildrenCompat(IIIII)I
     .locals 0
 
-    invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/DropDownListView;->measureHeightOfChildrenCompat(IIIII)I
+    invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/x;->measureHeightOfChildrenCompat(IIIII)I
 
     move-result p1
 
@@ -146,7 +152,7 @@
 .method public bridge synthetic onForwardedEvent(Landroid/view/MotionEvent;I)Z
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/DropDownListView;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
 
     move-result p1
 
@@ -160,7 +166,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->getAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
@@ -178,16 +184,14 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/appcompat/view/menu/MenuAdapter;
-
     goto :goto_0
 
     :cond_0
     const/4 v1, 0x0
 
+    :goto_0
     check-cast v0, Landroidx/appcompat/view/menu/MenuAdapter;
 
-    :goto_0
     const/4 v2, 0x0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -210,7 +214,7 @@
 
     float-to-int v4, v4
 
-    invoke-virtual {p0, v3, v4}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->pointToPosition(II)I
+    invoke-virtual {p0, v3, v4}, Landroid/widget/ListView;->pointToPosition(II)I
 
     move-result v3
 
@@ -257,7 +261,7 @@
     invoke-interface {v1, v0, v2}, Landroidx/appcompat/widget/MenuItemHoverListener;->onItemHoverEnter(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V
 
     :cond_3
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/DropDownListView;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -267,7 +271,7 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 4
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->getSelectedView()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/widget/ListView;->getSelectedView()Landroid/view/View;
 
     move-result-object v0
 
@@ -281,7 +285,7 @@
 
     if-ne p1, v2, :cond_1
 
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/ListMenuItemView;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->isEnabled()Z
 
     move-result p1
 
@@ -297,15 +301,15 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->getSelectedItemPosition()I
+    invoke-virtual {p0}, Landroid/widget/ListView;->getSelectedItemPosition()I
 
     move-result p1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->getSelectedItemId()J
+    invoke-virtual {p0}, Landroid/widget/ListView;->getSelectedItemId()J
 
     move-result-wide v2
 
-    invoke-virtual {p0, v0, p1, v2, v3}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->performItemClick(Landroid/view/View;IJ)Z
+    invoke-virtual {p0, v0, p1, v2, v3}, Landroid/widget/ListView;->performItemClick(Landroid/view/View;IJ)Z
 
     :cond_0
     return v1
@@ -319,9 +323,9 @@
 
     const/4 p1, -0x1
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->setSelection(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ListView;->setSelection(I)V
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;->getAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object p1
 
@@ -338,7 +342,7 @@
     return v1
 
     :cond_2
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/DropDownListView;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/widget/ListView;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -348,7 +352,7 @@
 .method public bridge synthetic onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/DropDownListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -366,7 +370,7 @@
 .method public bridge synthetic setSelector(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/DropDownListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

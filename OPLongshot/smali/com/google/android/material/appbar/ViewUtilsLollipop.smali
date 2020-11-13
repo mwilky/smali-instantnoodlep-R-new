@@ -1,6 +1,12 @@
 .class Lcom/google/android/material/appbar/ViewUtilsLollipop;
 .super Ljava/lang/Object;
-.source "ViewUtilsLollipop.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # static fields
@@ -36,6 +42,10 @@
 
 .method static setBoundsViewOutlineProvider(Landroid/view/View;)V
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroid/view/ViewOutlineProvider;->BOUNDS:Landroid/view/ViewOutlineProvider;
 
@@ -46,12 +56,16 @@
 
 .method static setDefaultAppBarLayoutStateListAnimator(Landroid/view/View;F)V
     .locals 11
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$integer;->app_bar_elevation_anim_duration:I
+    sget v1, Lb/a/b/a/g;->app_bar_elevation_anim_duration:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -71,13 +85,13 @@
 
     aput v4, v2, v3
 
-    sget v5, Lcom/google/android/material/R$attr;->state_liftable:I
+    sget v5, Lb/a/b/a/b;->state_liftable:I
 
     const/4 v6, 0x1
 
     aput v5, v2, v6
 
-    sget v5, Lcom/google/android/material/R$attr;->state_lifted:I
+    sget v5, Lb/a/b/a/b;->state_lifted:I
 
     neg-int v5, v5
 
@@ -148,6 +162,10 @@
 
 .method static setStateListAnimatorFromAttrs(Landroid/view/View;Landroid/util/AttributeSet;II)V
     .locals 8
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 

@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
 .super Ljava/lang/Object;
-.source "ThreadUtil.java"
+.source ""
 
 
 # annotations

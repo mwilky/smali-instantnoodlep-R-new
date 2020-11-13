@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/ContentView;
 .super Ljava/lang/Object;
-.source "ContentView.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

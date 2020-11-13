@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/indicator/draw/data/PositionSavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "PositionSavedState.java"
+.source ""
 
 
 # static fields
@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private lastSelectedPosition:I
+.field private a:I
 
-.field private selectedPosition:I
+.field private b:I
 
-.field private selectingPosition:I
+.field private c:I
 
 
 # direct methods
@@ -45,19 +45,19 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectedPosition:I
+    iput v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectingPosition:I
+    iput v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->b:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->lastSelectedPosition:I
+    iput p1, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->c:I
 
     return-void
 .end method
@@ -70,78 +70,22 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcelable;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public getLastSelectedPosition()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->lastSelectedPosition:I
-
-    return v0
-.end method
-
-.method public getSelectedPosition()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectedPosition:I
-
-    return v0
-.end method
-
-.method public getSelectingPosition()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectingPosition:I
-
-    return v0
-.end method
-
-.method public setLastSelectedPosition(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->lastSelectedPosition:I
-
-    return-void
-.end method
-
-.method public setSelectedPosition(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectedPosition:I
-
-    return-void
-.end method
-
-.method public setSelectingPosition(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectingPosition:I
-
-    return-void
-.end method
-
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectedPosition:I
+    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->selectingPosition:I
+    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->b:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->lastSelectedPosition:I
+    iget p2, p0, Lcom/google/android/material/indicator/draw/data/PositionSavedState;->c:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

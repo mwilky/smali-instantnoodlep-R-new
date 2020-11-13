@@ -1,6 +1,14 @@
 .class public Landroidx/arch/core/executor/DefaultTaskExecutor;
 .super Landroidx/arch/core/executor/TaskExecutor;
-.source "DefaultTaskExecutor.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -9,6 +17,9 @@
 .field private final mLock:Ljava/lang/Object;
 
 .field private volatile mMainHandler:Landroid/os/Handler;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,9 +34,9 @@
 
     iput-object v0, p0, Landroidx/arch/core/executor/DefaultTaskExecutor;->mLock:Ljava/lang/Object;
 
-    new-instance v0, Landroidx/arch/core/executor/DefaultTaskExecutor$1;
+    new-instance v0, Landroidx/arch/core/executor/DefaultTaskExecutor$a;
 
-    invoke-direct {v0, p0}, Landroidx/arch/core/executor/DefaultTaskExecutor$1;-><init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
+    invoke-direct {v0, p0}, Landroidx/arch/core/executor/DefaultTaskExecutor$a;-><init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
 
     const/4 v1, 0x2
 

@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/textfield/TextInputLayout$SavedState$1;
 .super Ljava/lang/Object;
-.source "TextInputLayout.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

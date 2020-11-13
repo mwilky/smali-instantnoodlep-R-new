@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
-.source "ImageView.java"
+.source ""
 
 
 # annotations
@@ -74,32 +74,28 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    iget p1, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
+    iget p2, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
 
-    const/4 p2, 0x1
+    const/4 p3, 0x1
 
-    if-ne p1, p2, :cond_0
+    if-ne p2, p3, :cond_0
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
+    const/4 p2, 0x2
 
-    const/4 p3, 0x2
-
-    iput p3, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
-
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
+    iput p2, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
 
     invoke-static {p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->access$100(Lcom/oneplus/screenshot/longshot/widget/ImageView;)Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
 
     move-result-object p1
 
-    neg-float p3, p4
+    neg-float p2, p4
 
-    float-to-int p3, p3
+    float-to-int p2, p2
 
-    invoke-virtual {p1, p3}, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->startUsingVelocity(I)V
+    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->startUsingVelocity(I)V
 
     :cond_0
-    return p2
+    return p3
 .end method
 
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
@@ -107,7 +103,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
@@ -117,11 +113,9 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    iget p1, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
+    iget p3, p1, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mTouchMode:I
 
-    if-ne p1, p2, :cond_0
-
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
+    if-ne p3, p2, :cond_0
 
     float-to-int p3, p4
 

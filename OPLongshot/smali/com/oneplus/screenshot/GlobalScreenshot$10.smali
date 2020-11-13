@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$10;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;

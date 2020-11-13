@@ -1,14 +1,14 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$29;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/view/animation/Interpolator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/screenshot/GlobalScreenshot;->createSmallScreenshotDropInAnimation()Landroid/animation/ValueAnimator;
+    value = Lcom/oneplus/screenshot/GlobalScreenshot;->createSmallScreenshotDropOutAnimation()Landroid/animation/ValueAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-.field final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
-
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;Landroid/view/animation/Interpolator;)V
+.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$29;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
-
-    iput-object p2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$29;->val$scaleInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,34 +34,37 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public getInterpolation(F)F
+    .locals 7
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const v0, 0x3f5c4771
 
-    move-result-object p1
+    cmpg-float v1, p1, v0
 
-    check-cast p1, Ljava/lang/Float;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    if-gez v1, :cond_0
 
-    move-result p1
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$29;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    div-float/2addr p1, v0
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$1900(Lcom/oneplus/screenshot/GlobalScreenshot;)F
+    sub-float/2addr v2, p1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$29;->val$scaleInterpolator:Landroid/view/animation/Interpolator;
+    float-to-double v0, v2
 
-    invoke-interface {v0, p1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+    const-wide/high16 v5, 0x4000000000000000L    # 2.0
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$29;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    invoke-static {v0, v1, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2800(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/view/ViewGroup;
+    move-result-wide v0
 
-    move-result-object v0
+    sub-double/2addr v3, v0
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setAlpha(F)V
+    double-to-float p1, v3
 
-    return-void
+    return p1
+
+    :cond_0
+    return v2
 .end method

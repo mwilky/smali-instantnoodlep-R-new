@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/task/BaseThread;
 .super Ljava/lang/Object;
-.source "BaseThread.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

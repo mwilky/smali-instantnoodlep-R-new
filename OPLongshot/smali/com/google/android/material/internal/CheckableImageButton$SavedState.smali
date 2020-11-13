@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "CheckableImageButton.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field checked:Z
+.field a:Z
 
 
 # direct methods
@@ -45,10 +45,14 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->readFromParcel(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->b(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -61,8 +65,12 @@
     return-void
 .end method
 
-.method private readFromParcel(Landroid/os/Parcel;)V
+.method private b(Landroid/os/Parcel;)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -78,7 +86,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iput-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->checked:Z
+    iput-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
 
     return-void
 .end method
@@ -87,10 +95,14 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->checked:Z
+    iget-boolean p2, p0, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/StitchBgNextMatcher;
-.source "StitchBgOverMatcher.java"
+.source ""
 
 
 # static fields
@@ -19,7 +19,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;->mSize:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_STITCH_BGOVER_LAST:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -27,7 +27,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;->mOffsetLast:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mOffsetLast:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_STITCH_BGOVER_CURR:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -35,7 +35,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;->mOffsetCurr:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mOffsetCurr:I
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/RawRes;
 .super Ljava/lang/Object;
-.source "RawRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

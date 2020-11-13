@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/ScreenshotApplication;
 .super Landroid/app/Application;
-.source "ScreenshotApplication.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/util/Cachable;

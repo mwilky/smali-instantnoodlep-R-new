@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/edgeeffect/SpringRecyclerView$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "SpringRecyclerView.java"
+.source ""
 
 
 # annotations
@@ -36,7 +36,7 @@
 .method public getValue(Lcom/google/android/material/edgeeffect/SpringRecyclerView;)F
     .locals 0
 
-    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->access$000(Lcom/google/android/material/edgeeffect/SpringRecyclerView;)F
+    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->a(Lcom/google/android/material/edgeeffect/SpringRecyclerView;)F
 
     move-result p1
 

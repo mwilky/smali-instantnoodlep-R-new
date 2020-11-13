@@ -1,10 +1,24 @@
 .class public final Landroidx/core/util/TimeUtils;
 .super Ljava/lang/Object;
-.source "TimeUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
 .field public static final HUNDRED_DAY_FIELD_LEN:I = 0x13
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+.end field
 
 .field private static final SECONDS_PER_DAY:I = 0x15180
 
@@ -105,6 +119,11 @@
 
 .method public static formatDuration(JJLjava/io/PrintWriter;)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const-wide/16 v0, 0x0
 
@@ -130,6 +149,11 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -140,6 +164,11 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;I)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
@@ -176,6 +205,11 @@
 
 .method public static formatDuration(JLjava/lang/StringBuilder;)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 

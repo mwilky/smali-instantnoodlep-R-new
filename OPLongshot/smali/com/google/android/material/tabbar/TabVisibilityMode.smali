@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/tabbar/TabVisibilityMode;
 .super Ljava/lang/Object;
-.source "TabVisibilityMode.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

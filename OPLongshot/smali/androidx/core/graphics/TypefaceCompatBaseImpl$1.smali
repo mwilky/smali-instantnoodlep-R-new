@@ -1,6 +1,6 @@
 .class Landroidx/core/graphics/TypefaceCompatBaseImpl$1;
 .super Ljava/lang/Object;
-.source "TypefaceCompatBaseImpl.java"
+.source ""
 
 # interfaces
 .implements Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
+    value = Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor<",
-        "Landroidx/core/provider/FontsContractCompat$FontInfo;",
+        "Landroidx/core/provider/FontsContractCompat$b;",
         ">;"
     }
 .end annotation
@@ -43,10 +43,10 @@
 
 
 # virtual methods
-.method public getWeight(Landroidx/core/provider/FontsContractCompat$FontInfo;)I
+.method public getWeight(Landroidx/core/provider/FontsContractCompat$b;)I
     .locals 0
 
-    invoke-virtual {p1}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
+    invoke-virtual {p1}, Landroidx/core/provider/FontsContractCompat$b;->d()I
 
     move-result p1
 
@@ -56,19 +56,19 @@
 .method public bridge synthetic getWeight(Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Landroidx/core/provider/FontsContractCompat$FontInfo;
+    check-cast p1, Landroidx/core/provider/FontsContractCompat$b;
 
-    invoke-virtual {p0, p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;->getWeight(Landroidx/core/provider/FontsContractCompat$FontInfo;)I
+    invoke-virtual {p0, p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;->getWeight(Landroidx/core/provider/FontsContractCompat$b;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public isItalic(Landroidx/core/provider/FontsContractCompat$FontInfo;)Z
+.method public isItalic(Landroidx/core/provider/FontsContractCompat$b;)Z
     .locals 0
 
-    invoke-virtual {p1}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
+    invoke-virtual {p1}, Landroidx/core/provider/FontsContractCompat$b;->e()Z
 
     move-result p1
 
@@ -78,9 +78,9 @@
 .method public bridge synthetic isItalic(Ljava/lang/Object;)Z
     .locals 0
 
-    check-cast p1, Landroidx/core/provider/FontsContractCompat$FontInfo;
+    check-cast p1, Landroidx/core/provider/FontsContractCompat$b;
 
-    invoke-virtual {p0, p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;->isItalic(Landroidx/core/provider/FontsContractCompat$FontInfo;)Z
+    invoke-virtual {p0, p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;->isItalic(Landroidx/core/provider/FontsContractCompat$b;)Z
 
     move-result p1
 

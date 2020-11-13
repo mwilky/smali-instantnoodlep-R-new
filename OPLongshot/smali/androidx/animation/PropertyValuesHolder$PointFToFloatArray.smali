@@ -1,6 +1,6 @@
 .class Landroidx/animation/PropertyValuesHolder$PointFToFloatArray;
 .super Landroidx/animation/TypeConverter;
-.source "PropertyValuesHolder.java"
+.source ""
 
 
 # annotations
@@ -70,15 +70,11 @@
 
     aput v1, v0, v2
 
-    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder$PointFToFloatArray;->mCoordinates:[F
-
     iget p1, p1, Landroid/graphics/PointF;->y:F
 
     const/4 v1, 0x1
 
     aput p1, v0, v1
 
-    iget-object p1, p0, Landroidx/animation/PropertyValuesHolder$PointFToFloatArray;->mCoordinates:[F
-
-    return-object p1
+    return-object v0
 .end method

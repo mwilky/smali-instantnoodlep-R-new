@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">%s से शेयर करें</string>
     <string name="abc_toolbar_collapse_description">छोटा करें</string>
     <string name="about_action_bar_title">इसके बारे में</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">संस्करण %s</string>
     <string name="about_privacy_policy">गोपनीयता नीति</string>
     <string name="about_release_note_title">अपडेट लॉग:</string>
     <string name="about_terms_service">सेवा की शर्तें</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">स्‍क्रीनशॉट</string>
     <string name="oneplus_delete">हटाएं</string>
     <string name="oneplus_share">भेजें</string>
+    <string name="permission_btn_text_denied">बाहर निकलें</string>
+    <string name="permission_btn_text_grant">ठीक है</string>
+    <string name="permission_dialog_title">अनुमति कथन</string>
     <string name="preference_copied">\"%1$s\" क्लिपबोर्ड पर कॉपी किया गया.</string>
     <string name="quick_share_description1">"साझा करने के लिए 
 लंबे समय तक थंबनेल दबाएं"</string>

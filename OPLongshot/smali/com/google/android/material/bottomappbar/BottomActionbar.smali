@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/bottomappbar/BottomActionbar;
 .super Landroidx/appcompat/widget/Toolbar;
-.source "BottomActionbar.java"
+.source ""
 
 # interfaces
-.implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$AttachedBehavior;
+.implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;
 
 
 # annotations
@@ -11,7 +11,7 @@
     value = {
         Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;,
         Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;,
-        Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;,
+        Lcom/google/android/material/bottomappbar/BottomActionbar$h;,
         Lcom/google/android/material/bottomappbar/BottomActionbar$FabAnimationMode;,
         Lcom/google/android/material/bottomappbar/BottomActionbar$FabAlignmentMode;
     }
@@ -19,47 +19,71 @@
 
 
 # static fields
-.field private static final ANIMATION_DURATION:J = 0x12cL
-
-.field private static final DEF_STYLE_RES:I
-
-.field public static final FAB_ALIGNMENT_MODE_CENTER:I = 0x0
-
-.field public static final FAB_ALIGNMENT_MODE_END:I = 0x1
-
-.field public static final FAB_ANIMATION_MODE_SCALE:I = 0x0
-
-.field public static final FAB_ANIMATION_MODE_SLIDE:I = 0x1
+.field private static final q0:I
 
 
 # instance fields
-.field private animatingModeChangeCounter:I
+.field private S:Landroid/view/View;
 
-.field private animationListeners:Ljava/util/ArrayList;
+.field private T:Z
+
+.field private final U:I
+
+.field private final V:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+.field private W:Landroid/animation/Animator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private a0:Landroid/animation/Animator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private b0:I
+
+.field private c0:I
+
+.field private d0:Z
+
+.field private final e0:Z
+
+.field private final f0:Z
+
+.field private final g0:Z
+
+.field private h0:I
+
+.field private i0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;",
+            "Lcom/google/android/material/bottomappbar/BottomActionbar$h;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private behavior:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+.field private j0:Z
 
-.field private bottomInset:I
+.field private k0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
-.field private fabAlignmentMode:I
+.field private l0:I
 
-.field fabAnimationListener:Landroid/animation/AnimatorListenerAdapter;
+.field private m0:I
 
-.field private fabAnimationMode:I
+.field private n0:I
 
-.field private fabAttached:Z
+.field o0:Landroid/animation/AnimatorListenerAdapter;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private final fabOffsetEndMode:I
+.field p0:Lcom/google/android/material/animation/TransformationCallback;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-.field fabTransformationCallback:Lcom/google/android/material/animation/TransformationCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/material/animation/TransformationCallback<",
@@ -69,56 +93,30 @@
     .end annotation
 .end field
 
-.field private hideOnScroll:Z
-
-.field private leftInset:I
-
-.field private mDividerLine:Landroid/view/View;
-
-.field private mLimitDivider:Z
-
-.field private final materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-.field private menuAnimator:Landroid/animation/Animator;
-
-.field private modeAnimator:Landroid/animation/Animator;
-
-.field private final paddingBottomSystemWindowInsets:Z
-
-.field private final paddingLeftSystemWindowInsets:Z
-
-.field private final paddingRightSystemWindowInsets:Z
-
-.field private rightInset:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$style;->Widget_MaterialComponents_BottomAppBar:I
+    sget v0, Lb/a/b/a/k;->Widget_MaterialComponents_BottomAppBar:I
 
-    sput v0, Lcom/google/android/material/bottomappbar/BottomActionbar;->DEF_STYLE_RES:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/bottomappbar/BottomActionbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    sput v0, Lcom/google/android/material/bottomappbar/BottomActionbar;->q0:I
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    sget v0, Lcom/google/android/material/R$attr;->bottomAppBarStyle:I
+    sget v0, Lb/a/b/a/b;->bottomAppBarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -127,10 +125,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 8
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    sget v0, Lcom/google/android/material/bottomappbar/BottomActionbar;->DEF_STYLE_RES:I
+    sget v0, Lcom/google/android/material/bottomappbar/BottomActionbar;->q0:I
 
-    invoke-static {p1, p2, p3, v0}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, p3, v0}, Lb/a/b/a/q/a/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
@@ -140,37 +146,37 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mLimitDivider:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->T:Z
 
     new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-direct {v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iput-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animatingModeChangeCounter:I
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->h0:I
 
-    iput-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
+    iput-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
 
-    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$1;
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$1;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$a;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
 
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationListener:Landroid/animation/AnimatorListenerAdapter;
+    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->o0:Landroid/animation/AnimatorListenerAdapter;
 
     new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;
 
     invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$2;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
 
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabTransformationCallback:Lcom/google/android/material/animation/TransformationCallback;
+    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->p0:Lcom/google/android/material/animation/TransformationCallback;
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v3, Lcom/google/android/material/R$styleable;->BottomAppBar:[I
+    sget-object v3, Lb/a/b/a/l;->BottomAppBar:[I
 
-    sget v5, Lcom/google/android/material/bottomappbar/BottomActionbar;->DEF_STYLE_RES:I
+    sget v5, Lcom/google/android/material/bottomappbar/BottomActionbar;->q0:I
 
     new-array v6, p1, [I
 
@@ -184,19 +190,19 @@
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$styleable;->BottomAppBar_backgroundTint:I
+    sget v2, Lb/a/b/a/l;->BottomAppBar_backgroundTint:I
 
     invoke-static {v0, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
-    sget v3, Lcom/google/android/material/R$styleable;->BottomAppBar_elevation:I
+    sget v3, Lb/a/b/a/l;->BottomAppBar_elevation:I
 
     invoke-virtual {v1, v3, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v3
 
-    sget v4, Lcom/google/android/material/R$styleable;->BottomAppBar_fabCradleMargin:I
+    sget v4, Lb/a/b/a/l;->BottomAppBar_fabCradleMargin:I
 
     invoke-virtual {v1, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -204,7 +210,7 @@
 
     int-to-float v4, v4
 
-    sget v5, Lcom/google/android/material/R$styleable;->BottomAppBar_fabCradleRoundedCornerRadius:I
+    sget v5, Lb/a/b/a/l;->BottomAppBar_fabCradleRoundedCornerRadius:I
 
     invoke-virtual {v1, v5, p1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -212,7 +218,7 @@
 
     int-to-float v5, v5
 
-    sget v6, Lcom/google/android/material/R$styleable;->BottomAppBar_fabCradleVerticalOffset:I
+    sget v6, Lb/a/b/a/l;->BottomAppBar_fabCradleVerticalOffset:I
 
     invoke-virtual {v1, v6, p1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -220,642 +226,137 @@
 
     int-to-float v6, v6
 
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_fabAlignmentMode:I
+    sget v7, Lb/a/b/a/l;->BottomAppBar_fabAlignmentMode:I
 
     invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v7
 
-    iput v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iput v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_fabAnimationMode:I
+    sget v7, Lb/a/b/a/l;->BottomAppBar_fabAnimationMode:I
 
     invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v7
 
-    iput v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationMode:I
+    iput v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->c0:I
 
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_hideOnScroll:I
-
-    invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v7
-
-    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->hideOnScroll:Z
-
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_paddingBottomSystemWindowInsets:I
+    sget v7, Lb/a/b/a/l;->BottomAppBar_hideOnScroll:I
 
     invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v7
 
-    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingBottomSystemWindowInsets:Z
+    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->d0:Z
 
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_paddingLeftSystemWindowInsets:I
+    sget v7, Lb/a/b/a/l;->BottomAppBar_paddingBottomSystemWindowInsets:I
 
     invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v7
 
-    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingLeftSystemWindowInsets:Z
+    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->e0:Z
 
-    sget v7, Lcom/google/android/material/R$styleable;->BottomAppBar_paddingRightSystemWindowInsets:I
+    sget v7, Lb/a/b/a/l;->BottomAppBar_paddingLeftSystemWindowInsets:I
+
+    invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v7
+
+    iput-boolean v7, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->f0:Z
+
+    sget v7, Lb/a/b/a/l;->BottomAppBar_paddingRightSystemWindowInsets:I
 
     invoke-virtual {v1, v7, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p1
 
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingRightSystemWindowInsets:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->g0:Z
 
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    sget v1, Lcom/google/android/material/R$dimen;->mtrl_bottomappbar_fabOffsetEndMode:I
+    sget v1, Lb/a/b/a/d;->mtrl_bottomappbar_fabOffsetEndMode:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabOffsetEndMode:I
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->U:I
 
-    new-instance p1, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    new-instance p1, Lcom/google/android/material/bottomappbar/a;
 
-    invoke-direct {p1, v4, v5, v6}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;-><init>(FFF)V
+    invoke-direct {p1, v4, v5, v6}, Lcom/google/android/material/bottomappbar/a;-><init>(FFF)V
 
-    invoke-static {}, Lcom/google/android/material/shape/ShapeAppearanceModel;->builder()Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
+    invoke-static {}, Lcom/google/android/material/shape/ShapeAppearanceModel;->a()Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopEdge(Lcom/google/android/material/shape/EdgeTreatment;)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
+    invoke-virtual {v1, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->x(Lcom/google/android/material/shape/e;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+
+    invoke-virtual {v1}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->m()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->build()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {v1, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShadowCompatibilityMode(I)V
+    invoke-virtual {p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->a0(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setPaintStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->V(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->J(Landroid/content/Context;)V
 
     int-to-float p1, v3
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setElevation(F)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {p1, v2}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v2}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
-    sget p1, Lcom/google/android/material/bottomappbar/BottomActionbar;->DEF_STYLE_RES:I
+    sget p1, Lcom/google/android/material/bottomappbar/BottomActionbar;->q0:I
 
-    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$3;
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$b;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$3;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$b;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
 
-    invoke-static {p0, p2, p3, p1, v0}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;)V
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
-
-    return p0
-.end method
-
-.method static synthetic access$100(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1000(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->rightInset:I
-
-    return p0
-.end method
-
-.method static synthetic access$1002(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->rightInset:I
-
-    return p1
-.end method
-
-.method static synthetic access$1100(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->cancelAnimations()V
+    invoke-static {p0, p2, p3, p1, v0}, Lcom/google/android/material/internal/ViewUtils;->doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;IILcom/google/android/material/internal/ViewUtils$e;)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setCutoutState()V
-
-    return-void
-.end method
-
-.method static synthetic access$1300(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setActionMenuViewPosition()V
-
-    return-void
-.end method
-
-.method static synthetic access$1400(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->dispatchAnimationStart()V
-
-    return-void
-.end method
-
-.method static synthetic access$1500(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->dispatchAnimationEnd()V
-
-    return-void
-.end method
-
-.method static synthetic access$1600(Lcom/google/android/material/bottomappbar/BottomActionbar;I)F
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX(I)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$1702(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroid/animation/Animator;)Landroid/animation/Animator;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->menuAnimator:Landroid/animation/Animator;
-
-    return-object p1
-.end method
-
-.method static synthetic access$1800(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomActionbar;->translateActionMenuView(Landroidx/appcompat/widget/ActionMenuView;IZ)V
-
-    return-void
-.end method
-
-.method static synthetic access$1900(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentFab()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$200(Lcom/google/android/material/bottomappbar/BottomActionbar;IZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->maybeAnimateMenuView(IZ)V
-
-    return-void
-.end method
-
-.method static synthetic access$2000(Lcom/google/android/material/bottomappbar/BottomActionbar;)F
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$2500(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getBottomInset()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$2600(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getLeftInset()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$2700(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getRightInset()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$2800(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabOffsetEndMode:I
-
-    return p0
-.end method
-
-.method static synthetic access$2900(Lcom/google/android/material/bottomappbar/BottomActionbar;)Landroid/view/View;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentView()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/shape/MaterialShapeDrawable;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3000(Lcom/google/android/material/bottomappbar/BottomActionbar;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->addFabAnimationListeners(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
-
-    return-void
-.end method
-
-.method static synthetic access$400(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$500(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingBottomSystemWindowInsets:Z
-
-    return p0
-.end method
-
-.method static synthetic access$602(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->bottomInset:I
-
-    return p1
-.end method
-
-.method static synthetic access$700(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingLeftSystemWindowInsets:Z
-
-    return p0
-.end method
-
-.method static synthetic access$800(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->leftInset:I
-
-    return p0
-.end method
-
-.method static synthetic access$802(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->leftInset:I
-
-    return p1
-.end method
-
-.method static synthetic access$900(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->paddingRightSystemWindowInsets:Z
-
-    return p0
-.end method
-
-.method private addDividerLine()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_divider_height_standard:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v1, 0x30
-
-    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/google/android/material/R$color;->op_control_divider_color_default:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->addView(Landroid/view/View;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private addFabAnimationListeners(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationListener:Landroid/animation/AnimatorListenerAdapter;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->addOnHideAnimationListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$8;
-
-    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$8;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->addOnShowAnimationListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabTransformationCallback:Lcom/google/android/material/animation/TransformationCallback;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->addTransformationCallback(Lcom/google/android/material/animation/TransformationCallback;)V
-
-    return-void
-.end method
-
-.method private cancelAnimations()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->menuAnimator:Landroid/animation/Animator;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->modeAnimator:Landroid/animation/Animator;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    :cond_1
-    return-void
-.end method
-
-.method private createFabTranslationXAnimation(ILjava/util/List;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/List<",
-            "Landroid/animation/Animator;",
-            ">;)V"
-        }
-    .end annotation
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentFab()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [F
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX(I)F
-
-    move-result p1
-
-    const/4 v2, 0x0
-
-    aput p1, v1, v2
-
-    const-string p1, "translationX"
-
-    invoke-static {v0, p1, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0x12c
-
-    invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method private createMenuViewTranslationAnimation(IZLjava/util/List;)V
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IZ",
-            "Ljava/util/List<",
-            "Landroid/animation/Animator;",
-            ">;)V"
-        }
-    .end annotation
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuView()Landroidx/appcompat/widget/ActionMenuView;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v1, 0x1
-
-    new-array v2, v1, [F
-
-    const/4 v3, 0x0
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    aput v4, v2, v3
-
-    const-string v5, "alpha"
-
-    invoke-static {v0, v5, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getTranslationX()F
-
-    move-result v6
-
-    invoke-virtual {p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuViewTranslationX(Landroidx/appcompat/widget/ActionMenuView;IZ)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    sub-float/2addr v6, v7
-
-    invoke-static {v6}, Ljava/lang/Math;->abs(F)F
-
-    move-result v6
-
-    cmpl-float v6, v6, v4
-
-    if-lez v6, :cond_1
-
-    new-array v4, v1, [F
-
-    const/4 v6, 0x0
-
-    aput v6, v4, v3
-
-    invoke-static {v0, v5, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    new-instance v5, Lcom/google/android/material/bottomappbar/BottomActionbar$7;
-
-    invoke-direct {v5, p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar$7;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
-
-    invoke-virtual {v4, v5}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    const-wide/16 v5, 0x96
-
-    invoke-virtual {p1, v5, v6}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
-
-    const/4 p2, 0x2
-
-    new-array p2, p2, [Landroid/animation/Animator;
-
-    aput-object v4, p2, v3
-
-    aput-object v2, p2, v1
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
-
-    invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuView;->getAlpha()F
-
-    move-result p1
-
-    cmpg-float p1, p1, v4
-
-    if-gez p1, :cond_2
-
-    invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method private dispatchAnimationEnd()V
+.method private A0()V
     .locals 2
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animatingModeChangeCounter:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->h0:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animatingModeChangeCounter:I
+    iput v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->h0:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->i0:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
@@ -874,9 +375,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;
+    check-cast v1, Lcom/google/android/material/bottomappbar/BottomActionbar$h;
 
-    invoke-interface {v1, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;->onAnimationEnd(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    invoke-interface {v1, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$h;->a(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
 
     goto :goto_0
 
@@ -884,18 +385,18 @@
     return-void
 .end method
 
-.method private dispatchAnimationStart()V
+.method private B0()V
     .locals 2
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animatingModeChangeCounter:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->h0:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animatingModeChangeCounter:I
+    iput v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->h0:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->i0:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
@@ -914,9 +415,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;
+    check-cast v1, Lcom/google/android/material/bottomappbar/BottomActionbar$h;
 
-    invoke-interface {v1, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;->onAnimationStart(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    invoke-interface {v1, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$h;->b(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
 
     goto :goto_0
 
@@ -924,10 +425,12 @@
     return-void
 .end method
 
-.method private findDependentFab()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+.method private C0()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentView()Landroid/view/View;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->D0()Landroid/view/View;
 
     move-result-object v0
 
@@ -946,10 +449,12 @@
     return-object v0
 .end method
 
-.method private findDependentView()Landroid/view/View;
+.method private D0()Landroid/view/View;
     .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -962,13 +467,13 @@
     return-object v1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-virtual {v0, p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getDependents(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {v0, p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->m(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1008,19 +513,454 @@
     return-object v1
 .end method
 
+.method private F0(I)F
+    .locals 3
+
+    invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_2
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0:I
+
+    goto :goto_0
+
+    :cond_0
+    iget p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->m0:I
+
+    :goto_0
+    iget v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->U:I
+
+    add-int/2addr v2, p1
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    sub-int/2addr p1, v2
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, -0x1
+
+    :cond_1
+    mul-int/2addr p1, v1
+
+    int-to-float p1, p1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method private G0()Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->C0()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method private H0(IZ)V
+    .locals 3
+
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->N(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->a0:Landroid/animation/Animator;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->G0()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    move p1, v2
+
+    move p2, p1
+
+    :cond_2
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->z0(IZLjava/util/List;)V
+
+    new-instance p1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->a0:Landroid/animation/Animator;
+
+    new-instance p2, Lcom/google/android/material/bottomappbar/BottomActionbar$e;
+
+    invoke-direct {p2, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$e;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->a0:Landroid/animation/Animator;
+
+    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
+
+    return-void
+.end method
+
+.method private I0(I)V
+    .locals 3
+
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
+
+    if-eq v0, p1, :cond_3
+
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->N(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->W:Landroid/animation/Animator;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->c0:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_2
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->y0(ILjava/util/List;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->x0(ILjava/util/List;)V
+
+    :goto_0
+    new-instance p1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->W:Landroid/animation/Animator;
+
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$c;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$c;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->W:Landroid/animation/Animator;
+
+    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method private J0()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuView()Landroidx/appcompat/widget/ActionMenuView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setAlpha(F)V
+
+    iget v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
+
+    iget-boolean v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->M0(Landroidx/appcompat/widget/ActionMenuView;IZ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private K0()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomappbar/a;->l(F)V
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->D0()Landroid/view/View;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    iget-boolean v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->G0()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->U(F)V
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationY()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private M0(Landroidx/appcompat/widget/ActionMenuView;IZ)V
+    .locals 0
+    .param p1    # Landroidx/appcompat/widget/ActionMenuView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomActionbar;->E0(Landroidx/appcompat/widget/ActionMenuView;IZ)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setTranslationX(F)V
+
+    return-void
+.end method
+
+.method static synthetic R(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
+
+    return p0
+.end method
+
+.method static synthetic S(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
+
+    return p0
+.end method
+
+.method static synthetic T(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->m0:I
+
+    return p0
+.end method
+
+.method static synthetic U(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->m0:I
+
+    return p1
+.end method
+
+.method static synthetic V(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->w0()V
+
+    return-void
+.end method
+
+.method static synthetic W(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->K0()V
+
+    return-void
+.end method
+
+.method static synthetic X(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->J0()V
+
+    return-void
+.end method
+
+.method static synthetic Y(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->B0()V
+
+    return-void
+.end method
+
+.method static synthetic Z(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->A0()V
+
+    return-void
+.end method
+
+.method static synthetic a0(Lcom/google/android/material/bottomappbar/BottomActionbar;I)F
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->F0(I)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic b0(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroid/animation/Animator;)Landroid/animation/Animator;
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->a0:Landroid/animation/Animator;
+
+    return-object p1
+.end method
+
+.method static synthetic c0(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomActionbar;->M0(Landroidx/appcompat/widget/ActionMenuView;IZ)V
+
+    return-void
+.end method
+
+.method static synthetic d0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->C0()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic e0(Lcom/google/android/material/bottomappbar/BottomActionbar;IZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->H0(IZ)V
+
+    return-void
+.end method
+
+.method static synthetic f0(Lcom/google/android/material/bottomappbar/BottomActionbar;)F
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic g0(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getBottomInset()I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private getActionMenuView()Landroidx/appcompat/widget/ActionMenuView;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1046,7 +986,7 @@
 .method private getBottomInset()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->bottomInset:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->l0:I
 
     return v0
 .end method
@@ -1054,73 +994,23 @@
 .method private getFabTranslationX()F
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX(I)F
+    invoke-direct {p0, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->F0(I)F
 
     move-result v0
 
     return v0
 .end method
 
-.method private getFabTranslationX(I)F
-    .locals 3
-
-    invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_2
-
-    if-eqz v0, :cond_0
-
-    iget p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->leftInset:I
-
-    goto :goto_0
-
-    :cond_0
-    iget p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->rightInset:I
-
-    :goto_0
-    iget v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabOffsetEndMode:I
-
-    add-int/2addr v2, p1
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getMeasuredWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    sub-int/2addr p1, v2
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, -0x1
-
-    :cond_1
-    mul-int/2addr p1, v1
-
-    int-to-float p1, p1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method private getFabTranslationY()F
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->getCradleVerticalOffset()F
+    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/a;->c()F
 
     move-result v0
 
@@ -1132,7 +1022,7 @@
 .method private getLeftInset()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->leftInset:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0:I
 
     return v0
 .end method
@@ -1140,309 +1030,256 @@
 .method private getRightInset()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->rightInset:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->m0:I
 
     return v0
 .end method
 
-.method private getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+.method private getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->getTopEdge()Lcom/google/android/material/shape/EdgeTreatment;
+    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->p()Lcom/google/android/material/shape/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    check-cast v0, Lcom/google/android/material/bottomappbar/a;
 
     return-object v0
 .end method
 
-.method private isFabVisibleOrWillBeShown()Z
-    .locals 1
+.method static synthetic h0(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentFab()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getLeftInset()I
 
-    move-result-object v0
+    move-result p0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->isOrWillBeShown()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    return p0
 .end method
 
-.method private maybeAnimateMenuView(IZ)V
-    .locals 3
+.method static synthetic i0(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getRightInset()I
 
-    move-result v0
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic j0(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->U:I
+
+    return p0
+.end method
+
+.method static synthetic k0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Landroid/view/View;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->D0()Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic l0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/shape/MaterialShapeDrawable;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    return-object p0
+.end method
+
+.method static synthetic m0(Lcom/google/android/material/bottomappbar/BottomActionbar;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->v0(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+
+    return-void
+.end method
+
+.method static synthetic n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lcom/google/android/material/bottomappbar/a;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic o0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->e0:Z
+
+    return p0
+.end method
+
+.method static synthetic p0(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->l0:I
+
+    return p1
+.end method
+
+.method static synthetic q0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->f0:Z
+
+    return p0
+.end method
+
+.method static synthetic r0(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0:I
+
+    return p0
+.end method
+
+.method static synthetic s0(Lcom/google/android/material/bottomappbar/BottomActionbar;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0:I
+
+    return p1
+.end method
+
+.method static synthetic t0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->g0:Z
+
+    return p0
+.end method
+
+.method private u0()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    return-void
+    new-instance v0, Landroid/view/View;
 
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->menuAnimator:Landroid/animation/Animator;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+    invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->isFabVisibleOrWillBeShown()Z
+    const/4 v1, -0x1
 
-    move-result v1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    if-nez v1, :cond_2
+    sget v3, Lb/a/b/a/d;->op_control_divider_height_standard:I
 
-    move p1, v2
-
-    move p2, p1
-
-    :cond_2
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->createMenuViewTranslationAnimation(IZLjava/util/List;)V
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->menuAnimator:Landroid/animation/Animator;
-
-    new-instance p2, Lcom/google/android/material/bottomappbar/BottomActionbar$6;
-
-    invoke-direct {p2, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$6;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->menuAnimator:Landroid/animation/Animator;
-
-    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
-
-    return-void
-.end method
-
-.method private maybeAnimateModeChange(I)V
-    .locals 3
-
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
-
-    if-eq v0, p1, :cond_3
-
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->modeAnimator:Landroid/animation/Animator;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationMode:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_2
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->createFabTranslationXAnimation(ILjava/util/List;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->createFabDefaultXAnimation(ILjava/util/List;)V
-
-    :goto_0
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->modeAnimator:Landroid/animation/Animator;
-
-    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$4;
-
-    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$4;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
-
-    invoke-virtual {p1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->modeAnimator:Landroid/animation/Animator;
-
-    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
-
-    :cond_3
-    :goto_1
-    return-void
-.end method
-
-.method private setActionMenuViewPosition()V
-    .locals 3
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuView()Landroidx/appcompat/widget/ActionMenuView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuView;->setAlpha(F)V
-
-    iget v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
-
-    iget-boolean v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
-
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->translateActionMenuView(Landroidx/appcompat/widget/ActionMenuView;IZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private setCutoutState()V
-    .locals 3
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->setHorizontalOffset(F)V
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentView()Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    iget-boolean v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
-
-    if-eqz v2, :cond_0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->isFabVisibleOrWillBeShown()Z
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/16 v1, 0x30
 
-    goto :goto_0
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lb/a/b/a/c;->op_control_divider_color_default:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_0
-    const/4 v2, 0x0
+    return-void
+.end method
 
-    :goto_0
-    invoke-virtual {v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setInterpolation(F)V
+.method private v0(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    .locals 1
+    .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->o0:Landroid/animation/AnimatorListenerAdapter;
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->d(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$g;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$g;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;)V
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->e(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->p0:Lcom/google/android/material/animation/TransformationCallback;
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->f(Lcom/google/android/material/animation/TransformationCallback;)V
+
+    return-void
+.end method
+
+.method private w0()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->a0:Landroid/animation/Animator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->W:Landroid/animation/Animator;
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationY()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
     :cond_1
     return-void
 .end method
 
-.method private translateActionMenuView(Landroidx/appcompat/widget/ActionMenuView;IZ)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuViewTranslationX(Landroidx/appcompat/widget/ActionMenuView;IZ)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ActionMenuView;->setTranslationX(F)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method addAnimationListener(Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public addDivider()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mLimitDivider:Z
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->addDividerLine()V
-
-    return-void
-.end method
-
-.method protected createFabDefaultXAnimation(ILjava/util/List;)V
-    .locals 1
+.method private y0(ILjava/util/List;)V
+    .locals 3
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -1452,36 +1289,159 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->findDependentFab()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->C0()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    move-result-object p2
+    move-result-object v0
 
-    if-eqz p2, :cond_1
+    const/4 v1, 0x1
 
-    invoke-virtual {p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->isOrWillBeHidden()Z
+    new-array v1, v1, [F
 
-    move-result v0
+    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->F0(I)F
 
-    if-eqz v0, :cond_0
+    move-result p1
+
+    const/4 v2, 0x0
+
+    aput p1, v1, v2
+
+    const-string p1, "translationX"
+
+    invoke-static {v0, p1, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0x12c
+
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method private z0(IZLjava/util/List;)V
+    .locals 8
+    .param p3    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(IZ",
+            "Ljava/util/List<",
+            "Landroid/animation/Animator;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getActionMenuView()Landroidx/appcompat/widget/ActionMenuView;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    new-array v2, v1, [F
+
+    const/4 v3, 0x0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    aput v4, v2, v3
+
+    const-string v5, "alpha"
+
+    invoke-static {v0, v5, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getTranslationX()F
+
+    move-result v6
+
+    invoke-virtual {p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->E0(Landroidx/appcompat/widget/ActionMenuView;IZ)I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    sub-float/2addr v6, v7
+
+    invoke-static {v6}, Ljava/lang/Math;->abs(F)F
+
+    move-result v6
+
+    cmpl-float v6, v6, v4
+
+    if-lez v6, :cond_1
+
+    new-array v4, v1, [F
+
+    const/4 v6, 0x0
+
+    aput v6, v4, v3
+
+    invoke-static {v0, v5, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    new-instance v5, Lcom/google/android/material/bottomappbar/BottomActionbar$f;
+
+    invoke-direct {v5, p0, v0, p1, p2}, Lcom/google/android/material/bottomappbar/BottomActionbar$f;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
+
+    invoke-virtual {v4, v5}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance p1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    const-wide/16 v5, 0x96
+
+    invoke-virtual {p1, v5, v6}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+
+    const/4 p2, 0x2
+
+    new-array p2, p2, [Landroid/animation/Animator;
+
+    aput-object v4, p2, v3
+
+    aput-object v2, p2, v1
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
+
+    invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->dispatchAnimationStart()V
-
-    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$5;
-
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar$5;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;I)V
-
-    invoke-virtual {p2, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->hide(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)V
-
     :cond_1
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getAlpha()F
+
+    move-result p1
+
+    cmpg-float p1, p1, v4
+
+    if-gez p1, :cond_2
+
+    invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_2
     :goto_0
     return-void
 .end method
 
-.method protected getActionMenuViewTranslationX(Landroidx/appcompat/widget/ActionMenuView;IZ)I
+
+# virtual methods
+.method protected E0(Landroidx/appcompat/widget/ActionMenuView;IZ)I
     .locals 6
+    .param p1    # Landroidx/appcompat/widget/ActionMenuView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x1
 
@@ -1500,7 +1460,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result p3
 
@@ -1513,13 +1473,13 @@
     move v2, v1
 
     :goto_1
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     if-ge v2, v3, :cond_5
 
-    invoke-virtual {p0, v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -1527,7 +1487,7 @@
 
     move-result-object v4
 
-    instance-of v4, v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;
+    instance-of v4, v4, Landroidx/appcompat/widget/Toolbar$e;
 
     if-eqz v4, :cond_2
 
@@ -1535,9 +1495,9 @@
 
     move-result-object v4
 
-    check-cast v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;
+    check-cast v4, Landroidx/appcompat/widget/Toolbar$e;
 
-    iget v4, v4, Landroidx/appcompat/widget/Toolbar$LayoutParams;->gravity:I
+    iget v4, v4, Landroidx/appcompat/app/ActionBar$a;->a:I
 
     const v5, 0x800007
 
@@ -1587,26 +1547,26 @@
     :cond_5
     if-eqz p2, :cond_6
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ActionMenuView;->getRight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getRight()I
 
     move-result p1
 
     goto :goto_4
 
     :cond_6
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ActionMenuView;->getLeft()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLeft()I
 
     move-result p1
 
     :goto_4
     if-eqz p2, :cond_7
 
-    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->rightInset:I
+    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->m0:I
 
     goto :goto_5
 
     :cond_7
-    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->leftInset:I
+    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0:I
 
     neg-int p2, p2
 
@@ -1622,12 +1582,55 @@
     return v1
 .end method
 
+.method L0(I)Z
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+
+    int-to-float p1, p1
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/a;->f()F
+
+    move-result v0
+
+    cmpl-float v0, p1, v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/a;->k(F)V
+
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->invalidateSelf()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
 .method public getBackgroundTint()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->B()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -1636,6 +1639,8 @@
 
 .method public bridge synthetic getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getBehavior()Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
@@ -1646,35 +1651,39 @@
 
 .method public getBehavior()Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->behavior:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->k0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
     if-nez v0, :cond_0
 
     new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->behavior:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->k0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->behavior:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->k0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
     return-object v0
 .end method
 
 .method public getCradleVerticalOffset()F
     .locals 1
+    .annotation build Landroidx/annotation/Dimension;
+    .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->getCradleVerticalOffset()F
+    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/a;->c()F
 
     move-result v0
 
@@ -1684,7 +1693,7 @@
 .method public getFabAlignmentMode()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
     return v0
 .end method
@@ -1692,7 +1701,7 @@
 .method public getFabAnimationMode()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationMode:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->c0:I
 
     return v0
 .end method
@@ -1700,11 +1709,11 @@
 .method public getFabCradleMargin()F
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->getFabCradleMargin()F
+    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/a;->d()F
 
     move-result v0
 
@@ -1713,12 +1722,14 @@
 
 .method public getFabCradleRoundedCornerRadius()F
     .locals 1
+    .annotation build Landroidx/annotation/Dimension;
+    .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->getFabCradleRoundedCornerRadius()F
+    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/a;->e()F
 
     move-result v0
 
@@ -1728,29 +1739,21 @@
 .method public getHideOnScroll()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->hideOnScroll:Z
+    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->d0:Z
 
     return v0
-.end method
-
-.method public limitDividerShown(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mLimitDivider:Z
-
-    return-void
 .end method
 
 .method protected onAttachedToWindow()V
     .locals 2
 
-    invoke-super {p0}, Landroidx/appcompat/widget/Toolbar;->onAttachedToWindow()V
+    invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {p0, v0}, Lcom/google/android/material/shape/MaterialShapeUtils;->setParentAbsoluteElevation(Landroid/view/View;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
+    invoke-static {p0, v0}, Lcom/google/android/material/shape/f;->f(Landroid/view/View;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -1758,7 +1761,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -1775,13 +1778,13 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/Toolbar;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
-    iget-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mLimitDivider:Z
+    iget-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->T:Z
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->addDividerLine()V
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->u0()V
 
     :cond_0
     return-void
@@ -1792,18 +1795,18 @@
 
     invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/Toolbar;->onLayout(ZIIII)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p2
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->cancelAnimations()V
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->w0()V
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setCutoutState()V
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->K0()V
 
     :cond_0
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->S:Landroid/view/View;
 
     if-eqz p1, :cond_1
 
@@ -1814,7 +1817,7 @@
     invoke-virtual {p1, p4, p4, p2, p3}, Landroid/view/View;->layout(IIII)V
 
     :cond_1
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setActionMenuViewPosition()V
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->J0()V
 
     return-void
 .end method
@@ -1833,25 +1836,27 @@
     :cond_0
     check-cast p1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;
 
-    invoke-virtual {p1}, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->getSuperState()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Landroidx/customview/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroidx/appcompat/widget/Toolbar;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget v0, p1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAlignmentMode:I
+    iget v0, p1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->a:I
 
-    iput v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iput v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
-    iget-boolean p1, p1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAttached:Z
+    iget-boolean p1, p1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->b:Z
 
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
 
     return-void
 .end method
 
 .method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-super {p0}, Landroidx/appcompat/widget/Toolbar;->onSaveInstanceState()Landroid/os/Parcelable;
 
@@ -1861,100 +1866,37 @@
 
     invoke-direct {v1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iget v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
-    iput v0, v1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAlignmentMode:I
+    iput v0, v1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->a:I
 
-    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
+    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
 
-    iput-boolean v0, v1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAttached:Z
+    iput-boolean v0, v1, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->b:Z
 
     return-object v1
 .end method
 
-.method public performHide()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getBehavior()Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->slideDown(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public performShow()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getBehavior()Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->slideUp(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method removeAnimationListener(Lcom/google/android/material/bottomappbar/BottomActionbar$AnimationListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->animationListeners:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public removeDivider()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->removeView(Landroid/view/View;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mLimitDivider:Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->mDividerLine:Landroid/view/View;
-
-    return-void
-.end method
-
-.method public replaceMenu(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getMenu()Landroid/view/Menu;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/view/Menu;->clear()V
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->inflateMenu(I)V
-
-    return-void
-.end method
-
 .method public setBackgroundTint(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
 .method public setCradleVerticalOffset(F)V
     .locals 1
+    .param p1    # F
+        .annotation build Landroidx/annotation/Dimension;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getCradleVerticalOffset()F
 
@@ -1964,17 +1906,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->setCradleVerticalOffset(F)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/a;->h(F)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->invalidateSelf()V
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->setCutoutState()V
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->K0()V
 
     :cond_0
     return-void
@@ -1983,19 +1925,19 @@
 .method public setElevation(F)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setElevation(F)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->S(F)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShadowRadius()I
+    invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->z()I
 
     move-result p1
 
-    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShadowOffsetY()I
+    invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->y()I
 
     move-result v0
 
@@ -2005,7 +1947,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->setAdditionalHiddenOffsetY(Landroid/view/View;I)V
+    invoke-virtual {v0, p0, p1}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->setAdditionalHiddenOffsetY(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -2013,13 +1955,13 @@
 .method public setFabAlignmentMode(I)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->maybeAnimateModeChange(I)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->I0(I)V
 
-    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAttached:Z
+    iget-boolean v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->j0:Z
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->maybeAnimateMenuView(IZ)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->H0(IZ)V
 
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAlignmentMode:I
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->b0:I
 
     return-void
 .end method
@@ -2027,13 +1969,17 @@
 .method public setFabAnimationMode(I)V
     .locals 0
 
-    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->fabAnimationMode:I
+    iput p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->c0:I
 
     return-void
 .end method
 
 .method public setFabCradleMargin(F)V
     .locals 1
+    .param p1    # F
+        .annotation build Landroidx/annotation/Dimension;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabCradleMargin()F
 
@@ -2043,13 +1989,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->setFabCradleMargin(F)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/a;->i(F)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->invalidateSelf()V
 
@@ -2059,6 +2005,10 @@
 
 .method public setFabCradleRoundedCornerRadius(F)V
     .locals 1
+    .param p1    # F
+        .annotation build Landroidx/annotation/Dimension;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabCradleRoundedCornerRadius()F
 
@@ -2068,13 +2018,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->setFabCradleRoundedCornerRadius(F)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/a;->j(F)V
 
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->V:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->invalidateSelf()V
 
@@ -2082,47 +2032,10 @@
     return-void
 .end method
 
-.method setFabDiameter(I)Z
-    .locals 1
-
-    int-to-float p1, p1
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->getFabDiameter()F
-
-    move-result v0
-
-    cmpl-float v0, p1, v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getTopEdgeTreatment()Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomappbar/BottomAppBarTopEdgeTreatment;->setFabDiameter(F)V
-
-    iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    invoke-virtual {p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->invalidateSelf()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method public setHideOnScroll(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->hideOnScroll:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar;->d0:Z
 
     return-void
 .end method
@@ -2136,5 +2049,44 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
+    return-void
+.end method
+
+.method protected x0(ILjava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Landroid/animation/Animator;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->C0()Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->B0()V
+
+    new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$d;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/bottomappbar/BottomActionbar$d;-><init>(Lcom/google/android/material/bottomappbar/BottomActionbar;I)V
+
+    invoke-virtual {p2, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

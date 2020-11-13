@@ -1,9 +1,17 @@
 .class public Lcom/google/android/material/internal/NavigationMenuView;
 .super Landroidx/recyclerview/widget/RecyclerView;
-.source "NavigationMenuView.java"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuView;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -40,7 +48,7 @@
 
     invoke-direct {p2, p1, p3, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/internal/NavigationMenuView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$k;)V
 
     return-void
 .end method

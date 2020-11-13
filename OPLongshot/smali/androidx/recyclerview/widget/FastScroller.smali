@@ -1,16 +1,19 @@
 .class Landroidx/recyclerview/widget/FastScroller;
-.super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
-.source "FastScroller.java"
+.super Landroidx/recyclerview/widget/RecyclerView$j;
+.source ""
 
 # interfaces
-.implements Landroidx/recyclerview/widget/RecyclerView$OnItemTouchListener;
+.implements Landroidx/recyclerview/widget/RecyclerView$o;
 
 
 # annotations
+.annotation build Landroidx/annotation/VisibleForTesting;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/recyclerview/widget/FastScroller$AnimatorUpdater;,
-        Landroidx/recyclerview/widget/FastScroller$AnimatorListener;
+        Landroidx/recyclerview/widget/FastScroller$d;,
+        Landroidx/recyclerview/widget/FastScroller$c;
     }
 .end annotation
 
@@ -59,16 +62,25 @@
 .field private final mHideRunnable:Ljava/lang/Runnable;
 
 .field mHorizontalDragX:F
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private final mHorizontalRange:[I
 
 .field mHorizontalThumbCenterX:I
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private final mHorizontalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
 .field private final mHorizontalThumbHeight:I
 
 .field mHorizontalThumbWidth:I
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private final mHorizontalTrackDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -80,7 +92,7 @@
 
 .field private mNeedVerticalScrollbar:Z
 
-.field private final mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+.field private final mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
 
 .field private mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -95,14 +107,23 @@
 .field private mState:I
 
 .field mVerticalDragY:F
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private final mVerticalRange:[I
 
 .field mVerticalThumbCenterY:I
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field final mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
 .field mVerticalThumbHeight:I
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private final mVerticalThumbWidth:I
 
@@ -137,7 +158,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;III)V
     .locals 3
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$j;-><init>()V
 
     const/4 v0, 0x0
 
@@ -175,17 +196,17 @@
 
     iput v0, p0, Landroidx/recyclerview/widget/FastScroller;->mAnimationState:I
 
-    new-instance v0, Landroidx/recyclerview/widget/FastScroller$1;
+    new-instance v0, Landroidx/recyclerview/widget/FastScroller$a;
 
-    invoke-direct {v0, p0}, Landroidx/recyclerview/widget/FastScroller$1;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
+    invoke-direct {v0, p0}, Landroidx/recyclerview/widget/FastScroller$a;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mHideRunnable:Ljava/lang/Runnable;
 
-    new-instance v0, Landroidx/recyclerview/widget/FastScroller$2;
+    new-instance v0, Landroidx/recyclerview/widget/FastScroller$b;
 
-    invoke-direct {v0, p0}, Landroidx/recyclerview/widget/FastScroller$2;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
+    invoke-direct {v0, p0}, Landroidx/recyclerview/widget/FastScroller$b;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
 
-    iput-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+    iput-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
@@ -251,17 +272,17 @@
 
     iget-object p2, p0, Landroidx/recyclerview/widget/FastScroller;->mShowHideAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance p3, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;
+    new-instance p3, Landroidx/recyclerview/widget/FastScroller$c;
 
-    invoke-direct {p3, p0}, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
+    invoke-direct {p3, p0}, Landroidx/recyclerview/widget/FastScroller$c;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     iget-object p2, p0, Landroidx/recyclerview/widget/FastScroller;->mShowHideAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance p3, Landroidx/recyclerview/widget/FastScroller$AnimatorUpdater;
+    new-instance p3, Landroidx/recyclerview/widget/FastScroller$d;
 
-    invoke-direct {p3, p0}, Landroidx/recyclerview/widget/FastScroller$AnimatorUpdater;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
+    invoke-direct {p3, p0}, Landroidx/recyclerview/widget/FastScroller$d;-><init>(Landroidx/recyclerview/widget/FastScroller;)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -283,7 +304,7 @@
 
     iget-object v1, p0, Landroidx/recyclerview/widget/FastScroller;->mHideRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -293,17 +314,17 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$j;)V
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->removeOnItemTouchListener(Landroidx/recyclerview/widget/RecyclerView$OnItemTouchListener;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->removeOnItemTouchListener(Landroidx/recyclerview/widget/RecyclerView$o;)V
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+    iget-object v1, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$p;)V
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/FastScroller;->cancelHide()V
 
@@ -435,16 +456,6 @@
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbWidth:I
 
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    neg-int v1, v2
-
-    int-to-float v1, v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
-
     goto :goto_0
 
     :cond_0
@@ -466,6 +477,7 @@
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/StateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
+    :goto_0
     neg-int v0, v0
 
     int-to-float v0, v0
@@ -476,7 +488,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    :goto_0
     return-void
 .end method
 
@@ -611,7 +622,7 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result v0
 
@@ -639,7 +650,7 @@
 
     int-to-long v2, p1
 
-    invoke-virtual {v0, v1, v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
@@ -693,17 +704,17 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$j;)V
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->addOnItemTouchListener(Landroidx/recyclerview/widget/RecyclerView$OnItemTouchListener;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->addOnItemTouchListener(Landroidx/recyclerview/widget/RecyclerView$o;)V
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+    iget-object v1, p0, Landroidx/recyclerview/widget/FastScroller;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$p;)V
 
     return-void
 .end method
@@ -794,6 +805,10 @@
 # virtual methods
 .method public attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -819,6 +834,8 @@
 
 .method getHorizontalThumbDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mHorizontalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
@@ -827,6 +844,8 @@
 
 .method getHorizontalTrackDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mHorizontalTrackDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -835,6 +854,8 @@
 
 .method getVerticalThumbDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
@@ -843,6 +864,8 @@
 
 .method getVerticalTrackDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalTrackDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -851,6 +874,8 @@
 
 .method hide(I)V
     .locals 5
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mAnimationState:I
 
@@ -934,6 +959,8 @@
 
 .method isPointInsideHorizontalThumb(FF)Z
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerViewHeight:I
 
@@ -984,6 +1011,8 @@
 
 .method isPointInsideVerticalThumb(FF)Z
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/FastScroller;->isLayoutRTL()Z
 
@@ -1054,6 +1083,8 @@
 
 .method isVisible()Z
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mState:I
 
@@ -1070,14 +1101,14 @@
     return v1
 .end method
 
-.method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
+.method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$v;)V
     .locals 0
 
     iget p2, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerViewWidth:I
 
     iget-object p3, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
+    invoke-virtual {p3}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p3
 
@@ -1087,7 +1118,7 @@
 
     iget-object p3, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getHeight()I
+    invoke-virtual {p3}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p3
 
@@ -1120,7 +1151,7 @@
     :goto_0
     iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p1
 
@@ -1128,7 +1159,7 @@
 
     iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getHeight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p1
 
@@ -1143,6 +1174,14 @@
 
 .method public onInterceptTouchEvent(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
     .locals 5
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MotionEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget p1, p0, Landroidx/recyclerview/widget/FastScroller;->mState:I
 
@@ -1244,6 +1283,14 @@
 
 .method public onTouchEvent(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)V
     .locals 4
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MotionEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget p1, p0, Landroidx/recyclerview/widget/FastScroller;->mState:I
 
@@ -1397,7 +1444,7 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
     return-void
 .end method
@@ -1446,8 +1493,6 @@
 
     const/16 v0, 0x4b0
 
-    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/FastScroller;->resetHideDelay(I)V
-
     goto :goto_1
 
     :cond_2
@@ -1457,10 +1502,10 @@
 
     const/16 v0, 0x5dc
 
+    :goto_1
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/FastScroller;->resetHideDelay(I)V
 
     :cond_3
-    :goto_1
     iput p1, p0, Landroidx/recyclerview/widget/FastScroller;->mState:I
 
     return-void

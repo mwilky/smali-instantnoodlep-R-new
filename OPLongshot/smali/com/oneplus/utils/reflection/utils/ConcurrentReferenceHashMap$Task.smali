@@ -1,6 +1,6 @@
 .class abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
 .super Ljava/lang/Object;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 
 # annotations
@@ -91,7 +91,7 @@
     return-object p1
 .end method
 
-.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entries;)Ljava/lang/Object;
+.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -101,7 +101,7 @@
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry<",
             "TK;TV;>;",
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap<",
-            "TK;TV;>.Entries;)TT;"
+            "TK;TV;>.a;)TT;"
         }
     .end annotation
 

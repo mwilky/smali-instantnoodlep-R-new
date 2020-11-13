@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/dump/SameDumper;
 .super Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
-.source "SameDumper.java"
+.source ""
 
 
 # static fields
@@ -13,7 +13,7 @@
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;-><init>(Landroid/content/Context;IZ)V
 
-    invoke-virtual {p0, p4}, Lcom/oneplus/screenshot/longshot/dump/SameDumper;->setTag(Ljava/lang/String;)V
+    invoke-virtual {p0, p4}, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->setTag(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/Toolbar$SavedState$1;
 .super Ljava/lang/Object;
-.source "Toolbar.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

@@ -1,9 +1,9 @@
 .class Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
 .super Ljava/lang/Object;
-.source "FloatingActionButton.java"
+.source ""
 
 # interfaces
-.implements Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalTransformationCallback;
+.implements Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$h;
 
 
 # annotations
@@ -22,13 +22,16 @@
         "Lcom/google/android/material/floatingactionbutton/FloatingActionButton;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalTransformationCallback;"
+        "Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$h;"
     }
 .end annotation
 
 
 # instance fields
 .field private final listener:Lcom/google/android/material/animation/TransformationCallback;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/material/animation/TransformationCallback<",
@@ -43,6 +46,10 @@
 # direct methods
 .method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/animation/TransformationCallback;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,6 +71,10 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     instance-of v0, p1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
 

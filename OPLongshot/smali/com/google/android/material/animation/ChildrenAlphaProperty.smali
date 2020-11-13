@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ChildrenAlphaProperty;
 .super Landroid/util/Property;
-.source "ChildrenAlphaProperty.java"
+.source ""
 
 
 # annotations
@@ -56,8 +56,14 @@
 # virtual methods
 .method public get(Landroid/view/ViewGroup;)Ljava/lang/Float;
     .locals 1
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    sget v0, Lcom/google/android/material/R$id;->mtrl_internal_children_alpha_tag:I
+    sget v0, Lb/a/b/a/f;->mtrl_internal_children_alpha_tag:I
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
@@ -81,6 +87,12 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -93,12 +105,20 @@
 
 .method public set(Landroid/view/ViewGroup;Ljava/lang/Float;)V
     .locals 3
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Float;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
 
-    sget v0, Lcom/google/android/material/R$id;->mtrl_internal_children_alpha_tag:I
+    sget v0, Lb/a/b/a/f;->mtrl_internal_children_alpha_tag:I
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -131,6 +151,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Landroid/view/ViewGroup;
 

@@ -1,6 +1,6 @@
 .class Landroidx/arch/core/internal/SafeIterableMap$DescendingIterator;
 .super Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
-.source "SafeIterableMap.java"
+.source ""
 
 
 # annotations

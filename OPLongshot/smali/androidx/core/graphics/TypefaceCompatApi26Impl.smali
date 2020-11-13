@@ -1,6 +1,18 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi26Impl;
 .super Landroidx/core/graphics/TypefaceCompatApi21Impl;
-.source "TypefaceCompatApi26Impl.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -185,6 +197,10 @@
 
 .method private addFontFromAssetManager(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/String;III[Landroid/graphics/fonts/FontVariationAxis;)Z
     .locals 3
+    .param p7    # [Landroid/graphics/fonts/FontVariationAxis;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -215,9 +231,7 @@
 
     const/4 p1, 0x3
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p3
+    sget-object p3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object p3, v2, p1
 
@@ -391,6 +405,8 @@
 
 .method private newFamily()Ljava/lang/Object;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     :try_start_0
     iget-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamilyCtor:Ljava/lang/reflect/Constructor;
@@ -419,6 +435,8 @@
 # virtual methods
 .method protected createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 5
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -474,8 +492,10 @@
     return-object v0
 .end method
 
-.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
+.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 10
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->isFontFamilyPrivateAPIAvailable()Z
 
@@ -483,7 +503,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -501,7 +521,7 @@
     return-object p4
 
     :cond_1
-    invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$b;->a()[Landroidx/core/content/res/FontResourcesParserCompat$c;
 
     move-result-object p2
 
@@ -516,23 +536,23 @@
 
     aget-object v0, p2, v9
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getFileName()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->a()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getTtcIndex()I
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->c()I
 
     move-result v4
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getWeight()I
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->e()I
 
     move-result v5
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->isItalic()Z
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->f()Z
 
     move-result v6
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getVariationSettings()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -578,8 +598,18 @@
     return-object p1
 .end method
 
-.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
+.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$b;I)Landroid/graphics/Typeface;
     .locals 10
+    .param p2    # Landroid/os/CancellationSignal;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # [Landroidx/core/provider/FontsContractCompat$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     array-length v0, p3
 
@@ -598,7 +628,7 @@
 
     if-nez v0, :cond_5
 
-    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
+    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p3
 
@@ -607,7 +637,7 @@
     move-result-object p1
 
     :try_start_0
-    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$b;->c()Landroid/net/Uri;
 
     move-result-object p4
 
@@ -638,7 +668,7 @@
 
     invoke-direct {p2, p4}, Landroid/graphics/Typeface$Builder;-><init>(Ljava/io/FileDescriptor;)V
 
-    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
+    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$b;->d()I
 
     move-result p4
 
@@ -646,7 +676,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
+    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$b;->e()Z
 
     move-result p3
 
@@ -706,7 +736,7 @@
     return-object v2
 
     :cond_5
-    invoke-static {p1, p3, p2}, Landroidx/core/provider/FontsContractCompat;->prepareFontData(Landroid/content/Context;[Landroidx/core/provider/FontsContractCompat$FontInfo;Landroid/os/CancellationSignal;)Ljava/util/Map;
+    invoke-static {p1, p3, p2}, Landroidx/core/provider/FontsContractCompat;->i(Landroid/content/Context;[Landroidx/core/provider/FontsContractCompat$b;Landroid/os/CancellationSignal;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -730,7 +760,7 @@
 
     aget-object v4, p3, v9
 
-    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$b;->c()Landroid/net/Uri;
 
     move-result-object v5
 
@@ -745,15 +775,15 @@
     goto :goto_2
 
     :cond_7
-    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getTtcIndex()I
+    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$b;->b()I
 
     move-result v6
 
-    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getWeight()I
+    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$b;->d()I
 
     move-result v7
 
-    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$FontInfo;->isItalic()Z
+    invoke-virtual {v4}, Landroidx/core/provider/FontsContractCompat$b;->e()Z
 
     move-result v8
 
@@ -814,6 +844,8 @@
 
 .method public createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 8
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatApi26Impl;->isFontFamilyPrivateAPIAvailable()Z
 
@@ -821,7 +853,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-super/range {p0 .. p5}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
+    invoke-super/range {p0 .. p5}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -893,12 +925,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
-        }
-    .end annotation
-
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -920,12 +946,6 @@
             "Ljava/lang/Class<",
             "*>;)",
             "Ljava/lang/reflect/Method;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
         }
     .end annotation
 
@@ -963,13 +983,9 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
-
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v2, 0x6
 
@@ -991,19 +1007,13 @@
 .end method
 
 .method protected obtainAddFontFromBufferMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Class<",
             "*>;)",
             "Ljava/lang/reflect/Method;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
         }
     .end annotation
 
@@ -1023,19 +1033,15 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    const-class v2, [Landroid/graphics/fonts/FontVariationAxis;
+    const-class v3, [Landroid/graphics/fonts/FontVariationAxis;
 
-    aput-object v2, v0, v1
-
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    aput-object v3, v0, v2
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
-
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v2, 0x4
 
@@ -1058,12 +1064,6 @@
             "Ljava/lang/Class<",
             "*>;)",
             "Ljava/lang/reflect/Method;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
         }
     .end annotation
 
@@ -1091,8 +1091,6 @@
 
     aput-object p1, v2, v0
 
-    sget-object p1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
     const/4 v3, 0x2
 
     aput-object p1, v2, v3
@@ -1118,12 +1116,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/ClassNotFoundException;
-        }
-    .end annotation
-
     const-string v0, "android.graphics.FontFamily"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -1142,12 +1134,6 @@
             "*>;)",
             "Ljava/lang/reflect/Constructor<",
             "*>;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
         }
     .end annotation
 
@@ -1170,12 +1156,6 @@
             "Ljava/lang/Class<",
             "*>;)",
             "Ljava/lang/reflect/Method;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
         }
     .end annotation
 

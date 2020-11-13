@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/GuardedBy;
 .super Ljava/lang/Object;
-.source "GuardedBy.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

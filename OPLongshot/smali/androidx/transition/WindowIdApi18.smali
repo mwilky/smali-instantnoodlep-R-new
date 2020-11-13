@@ -1,9 +1,15 @@
 .class Landroidx/transition/WindowIdApi18;
 .super Ljava/lang/Object;
-.source "WindowIdApi18.java"
+.source ""
 
 # interfaces
-.implements Landroidx/transition/WindowIdImpl;
+.implements Landroidx/transition/a0;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x12
+.end annotation
 
 
 # instance fields
@@ -13,6 +19,10 @@
 # direct methods
 .method constructor <init>(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

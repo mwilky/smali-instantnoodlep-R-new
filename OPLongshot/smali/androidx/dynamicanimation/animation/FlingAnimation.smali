@@ -1,12 +1,12 @@
 .class public final Landroidx/dynamicanimation/animation/FlingAnimation;
 .super Landroidx/dynamicanimation/animation/DynamicAnimation;
-.source "FlingAnimation.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+        Landroidx/dynamicanimation/animation/FlingAnimation$a;
     }
 .end annotation
 
@@ -20,26 +20,26 @@
 
 
 # instance fields
-.field private final mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+.field private final mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+.method public constructor <init>(Landroidx/dynamicanimation/animation/a;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/a;)V
 
-    new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;-><init>()V
+    invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$a;-><init>()V
 
-    iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/FlingAnimation;->getValueThreshold()F
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->getValueThreshold()F
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->setValueThreshold(F)V
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->e(F)V
 
     return-void
 .end method
@@ -58,17 +58,17 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
-    new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;-><init>()V
+    invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$a;-><init>()V
 
-    iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/FlingAnimation;->getValueThreshold()F
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->getValueThreshold()F
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->setValueThreshold(F)V
+    invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->e(F)V
 
     return-void
 .end method
@@ -78,9 +78,9 @@
 .method getAcceleration(FF)F
     .locals 1
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->getAcceleration(FF)F
+    invoke-virtual {v0, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->a(FF)F
 
     move-result p1
 
@@ -90,9 +90,9 @@
 .method public getFriction()F
     .locals 1
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->getFrictionScalar()F
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->b()F
 
     move-result v0
 
@@ -102,21 +102,21 @@
 .method isAtEquilibrium(FF)Z
     .locals 1
 
-    iget v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMaxValue:F
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     cmpl-float v0, p1, v0
 
     if-gez v0, :cond_1
 
-    iget v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMinValue:F
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     cmpg-float v0, p1, v0
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->isAtEquilibrium(FF)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->c(FF)Z
 
     move-result p1
 
@@ -139,6 +139,12 @@
 
 .method public setFriction(F)Landroidx/dynamicanimation/animation/FlingAnimation;
     .locals 1
+    .param p1    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            fromInclusive = false
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -146,9 +152,9 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->setFrictionScalar(F)V
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->d(F)V
 
     return-object p0
 
@@ -219,9 +225,9 @@
 .method setValueThreshold(F)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->setValueThreshold(F)V
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->e(F)V
 
     return-void
 .end method
@@ -229,67 +235,55 @@
 .method updateValueAndVelocity(J)Z
     .locals 3
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$a;
 
-    iget v1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
+    iget v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    iget v2, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mVelocity:F
+    iget v2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
-    invoke-virtual {v0, v1, v2, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->updateValueAndVelocity(FFJ)Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
+    invoke-virtual {v0, v1, v2, p1, p2}, Landroidx/dynamicanimation/animation/FlingAnimation$a;->f(FFJ)Landroidx/dynamicanimation/animation/DynamicAnimation$p;
 
     move-result-object p1
 
-    iget p2, p1, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;->mValue:F
+    iget p2, p1, Landroidx/dynamicanimation/animation/DynamicAnimation$p;->a:F
 
-    iput p2, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
+    iput p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    iget p1, p1, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;->mVelocity:F
+    iget p1, p1, Landroidx/dynamicanimation/animation/DynamicAnimation$p;->b:F
 
-    iput p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mVelocity:F
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
-    iget p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
-    iget p2, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMinValue:F
+    cmpg-float v1, p2, v0
 
-    cmpg-float p1, p1, p2
+    const/4 v2, 0x1
 
-    const/4 p2, 0x1
+    if-gez v1, :cond_0
 
-    if-gez p1, :cond_0
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    iget p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMinValue:F
-
-    iput p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
-
-    return p2
+    return v2
 
     :cond_0
-    iget p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
-    iget v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMaxValue:F
+    cmpl-float v1, p2, v0
 
-    cmpl-float p1, p1, v0
+    if-lez v1, :cond_1
 
-    if-lez p1, :cond_1
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    iget p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mMaxValue:F
-
-    iput p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
-
-    return p2
+    return v2
 
     :cond_1
-    iget p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mValue:F
-
-    iget v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mVelocity:F
-
-    invoke-virtual {p0, p1, v0}, Landroidx/dynamicanimation/animation/FlingAnimation;->isAtEquilibrium(FF)Z
+    invoke-virtual {p0, p2, p1}, Landroidx/dynamicanimation/animation/FlingAnimation;->isAtEquilibrium(FF)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    return p2
+    return v2
 
     :cond_2
     const/4 p1, 0x0

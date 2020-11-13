@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/animation/AnimatorSetCompat;
 .super Ljava/lang/Object;
-.source "AnimatorSetCompat.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -14,6 +22,14 @@
 
 .method public static playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
     .locals 10
+    .param p0    # Landroid/animation/AnimatorSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

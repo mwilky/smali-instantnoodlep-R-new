@@ -27,17 +27,11 @@
     <string name="abc_shareactionprovider_share_with">分享對象</string>
     <string name="abc_shareactionprovider_share_with_application">使用「%s」分享</string>
     <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="about_action_bar_title">關於</string>
-    <string name="about_app_version_text">版本 %s</string>
-    <string name="about_privacy_policy">隱私政策</string>
-    <string name="about_release_note_title">更新日誌:</string>
-    <string name="about_terms_service">用戶協議</string>
     <string name="app_name">截屏</string>
     <string name="copy">複製</string>
     <string name="expand_button_title">進階</string>
     <string name="got_it">知道了</string>
     <string name="join_error">圖像拼接失敗</string>
-    <string name="loading_text">正在載入...</string>
     <string name="longshot_guide_not_support">該頁面不支援長截圖。</string>
     <string name="longshot_guide_support">點擊試試長截圖。</string>
     <string name="maximum_pages">已截取最大長度</string>

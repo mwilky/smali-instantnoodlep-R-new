@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/ArgbEvaluator;
 .super Ljava/lang/Object;
-.source "ArgbEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -44,6 +44,8 @@
 
 .method public static getInstance()Landroidx/animation/ArgbEvaluator;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Landroidx/animation/ArgbEvaluator;->sInstance:Landroidx/animation/ArgbEvaluator;
 
@@ -54,6 +56,16 @@
 # virtual methods
 .method public evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 11
+    .param p2    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -270,6 +282,16 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, Ljava/lang/Integer;
 

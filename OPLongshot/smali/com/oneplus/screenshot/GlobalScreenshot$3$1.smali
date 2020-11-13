@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$3$1;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -43,23 +43,17 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$3;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$3;
+    iget-object v2, v0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$finisher:Ljava/lang/Runnable;
 
-    iget-object v1, v1, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$finisher:Ljava/lang/Runnable;
+    iget-boolean v3, v0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$statusBarVisible:Z
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$3;
-
-    iget-boolean v2, v2, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$statusBarVisible:Z
-
-    iget-object v3, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$3;
-
-    iget-boolean v3, v3, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$navBarVisible:Z
+    iget-boolean v0, v0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->val$navBarVisible:Z
 
     iget-object v4, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;->val$rect:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/oneplus/screenshot/GlobalScreenshot;->takeScreenshot(Ljava/lang/Runnable;ZZLandroid/graphics/Rect;)V
+    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/oneplus/screenshot/GlobalScreenshot;->takeScreenshot(Ljava/lang/Runnable;ZZLandroid/graphics/Rect;)V
 
     return-void
 .end method

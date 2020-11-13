@@ -1,14 +1,20 @@
 .class public Landroidx/appcompat/widget/EpicenterTranslateClipReveal;
 .super Landroid/transition/Visibility;
-.source "EpicenterTranslateClipReveal.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;,
         Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;,
-        Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+        Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
     }
 .end annotation
 
@@ -57,7 +63,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Landroidx/appcompat/R$styleable;->EpicenterTranslateClipReveal:[I
+    sget-object v0, La/a/j;->EpicenterTranslateClipReveal:[I
 
     const/4 v1, 0x0
 
@@ -65,7 +71,7 @@
 
     move-result-object p2
 
-    sget v0, Landroidx/appcompat/R$styleable;->EpicenterTranslateClipReveal_interpolatorX:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorX:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -77,17 +83,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
-
     goto :goto_0
 
     :cond_0
     sget-object v0, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_0
     iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
 
-    :goto_0
-    sget v0, Landroidx/appcompat/R$styleable;->EpicenterTranslateClipReveal_interpolatorY:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorY:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -99,17 +103,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorY:Landroid/animation/TimeInterpolator;
-
     goto :goto_1
 
     :cond_1
     sget-object v0, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_1
     iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorY:Landroid/animation/TimeInterpolator;
 
-    :goto_1
-    sget v0, Landroidx/appcompat/R$styleable;->EpicenterTranslateClipReveal_interpolatorZ:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorZ:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -121,16 +123,14 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorZ:Landroid/animation/TimeInterpolator;
-
     goto :goto_2
 
     :cond_2
     sget-object p1, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_2
     iput-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorZ:Landroid/animation/TimeInterpolator;
 
-    :goto_2
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -241,14 +241,14 @@
     return-void
 .end method
 
-.method private static createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
+.method private static createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
     .locals 5
 
     new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;-><init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$1;)V
+    invoke-direct {v0, v1}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;-><init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;)V
 
     sget-object v1, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
 
@@ -279,7 +279,7 @@
 
     invoke-direct {p10, v1}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;-><init>(C)V
 
-    new-array v1, v2, [Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-array v1, v2, [Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     aput-object p1, v1, v4
 
@@ -300,7 +300,7 @@
 
     invoke-direct {p4, p8}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;-><init>(C)V
 
-    new-array p8, v2, [Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-array p8, v2, [Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     aput-object p2, p8, v4
 
@@ -325,9 +325,9 @@
 
     check-cast p4, Landroid/graphics/Rect;
 
-    new-instance p5, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$1;
+    new-instance p5, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;
 
-    invoke-direct {p5, p0, p4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$1;-><init>(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-direct {p5, p0, p4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;-><init>(Landroid/view/View;Landroid/graphics/Rect;)V
 
     new-instance p0, Landroid/animation/AnimatorSet;
 
@@ -384,7 +384,7 @@
 .method private getEpicenterOrCenter(Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->getEpicenter()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/transition/Visibility;->getEpicenter()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -560,37 +560,37 @@
 
     invoke-virtual {v1, v10}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    new-instance v11, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v11, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v12, v10, Landroid/graphics/Rect;->left:I
 
     iget v13, v10, Landroid/graphics/Rect;->right:I
 
-    invoke-direct {v11, v12, v13, v4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v11, v12, v13, v4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v12, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v12, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v4, v9, Landroid/graphics/Rect;->left:I
 
     iget v13, v9, Landroid/graphics/Rect;->right:I
 
-    invoke-direct {v12, v4, v13, v3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v12, v4, v13, v3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v4, v10, Landroid/graphics/Rect;->top:I
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    invoke-direct {v3, v4, v10, v2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v3, v4, v10, v2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v10, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v10, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v2, v9, Landroid/graphics/Rect;->top:I
 
     iget v4, v9, Landroid/graphics/Rect;->bottom:I
 
-    invoke-direct {v10, v2, v4, v6}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v10, v2, v4, v6}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
     iget-object v9, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
 
@@ -614,7 +614,7 @@
 
     move-object v11, v14
 
-    invoke-static/range {v1 .. v11}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
+    invoke-static/range {v1 .. v11}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
 
     move-result-object v1
 
@@ -747,37 +747,37 @@
 
     invoke-virtual {v10, v1}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    new-instance v11, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v11, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v12, v1, Landroid/graphics/Rect;->left:I
 
     iget v13, v1, Landroid/graphics/Rect;->right:I
 
-    invoke-direct {v11, v12, v13, v3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v11, v12, v13, v3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v12, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v12, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v3, v9, Landroid/graphics/Rect;->left:I
 
     iget v13, v9, Landroid/graphics/Rect;->right:I
 
-    invoke-direct {v12, v3, v13, v4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v12, v3, v13, v4}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v4, v1, Landroid/graphics/Rect;->top:I
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-direct {v3, v4, v1, v5}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v3, v4, v1, v5}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
-    new-instance v13, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v13, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v1, v9, Landroid/graphics/Rect;->top:I
 
     iget v4, v9, Landroid/graphics/Rect;->bottom:I
 
-    invoke-direct {v13, v1, v4, v2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>(IIF)V
+    invoke-direct {v13, v1, v4, v2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>(IIF)V
 
     iget-object v9, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
 
@@ -801,7 +801,7 @@
 
     move-object v11, v15
 
-    invoke-static/range {v1 .. v11}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
+    invoke-static/range {v1 .. v11}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
 
     move-result-object v1
 

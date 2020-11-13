@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Udostępnij przez: %s</string>
     <string name="abc_toolbar_collapse_description">Zwiń</string>
     <string name="about_action_bar_title">Informacje</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Wersja %s</string>
     <string name="about_privacy_policy">Polityka prywatności</string>
     <string name="about_release_note_title">Dziennik aktualizacji:</string>
     <string name="about_terms_service">Regulamin</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Zrzuty ekranu</string>
     <string name="oneplus_delete">Usuń</string>
     <string name="oneplus_share">Wyślij</string>
+    <string name="permission_btn_text_denied">Zakończ</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Oświadczenie dotyczące uprawnień</string>
     <string name="preference_copied">Skopiowano „%1$s” do schowka.</string>
     <string name="quick_share_description1">"Naciśnij i przytrzymaj miniaturkę, 
 aby udostępnić"</string>

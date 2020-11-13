@@ -1,6 +1,6 @@
 .class public abstract Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 .super Ljava/lang/Object;
-.source "FloatPropertyCompat.java"
+.source ""
 
 
 # annotations
@@ -31,6 +31,10 @@
 
 .method public static createFloatPropertyCompat(Landroid/util/FloatProperty;)Landroidx/dynamicanimation/animation/FloatPropertyCompat;
     .locals 2
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x18
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

@@ -1,6 +1,6 @@
 .class final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
 .super Landroidx/loader/content/ModernAsyncTask;
-.source "AsyncTaskLoader.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -85,14 +85,14 @@
 
     move-result-object p1
     :try_end_0
-    .catch Landroidx/core/os/OperationCanceledException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroidx/core/os/c; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
 
     :catch_0
     move-exception p1
 
-    invoke-virtual {p0}, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->isCancelled()Z
+    invoke-virtual {p0}, Landroidx/loader/content/ModernAsyncTask;->isCancelled()Z
 
     move-result v0
 

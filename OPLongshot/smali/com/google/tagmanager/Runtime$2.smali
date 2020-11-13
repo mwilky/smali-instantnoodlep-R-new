@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/Runtime$2;
 .super Ljava/lang/Object;
-.source "Runtime.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/tagmanager/Runtime;-><init>(Landroid/content/Context;Lcom/google/tagmanager/ResourceUtil$ExpandedResource;Lcom/google/tagmanager/DataLayer;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/CustomFunctionCall$CustomEvaluator;Lcom/google/tagmanager/EventInfoDistributor;)V
+    value = Lcom/google/tagmanager/Runtime;-><init>(Landroid/content/Context;Lcom/google/tagmanager/s0$d;Lcom/google/tagmanager/n;Lcom/google/tagmanager/m$a;Lcom/google/tagmanager/m$a;Lcom/google/tagmanager/w;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/google/tagmanager/CacheFactory$CacheSizeManager<",
         "Ljava/lang/String;",
-        "Lcom/google/tagmanager/Runtime$CachedMacro;",
+        "Lcom/google/tagmanager/Runtime$a;",
         ">;"
     }
 .end annotation
@@ -49,23 +49,23 @@
 
     check-cast p1, Ljava/lang/String;
 
-    check-cast p2, Lcom/google/tagmanager/Runtime$CachedMacro;
+    check-cast p2, Lcom/google/tagmanager/Runtime$a;
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/tagmanager/Runtime$2;->sizeOf(Ljava/lang/String;Lcom/google/tagmanager/Runtime$CachedMacro;)I
+    invoke-virtual {p0, p1, p2}, Lcom/google/tagmanager/Runtime$2;->sizeOf(Ljava/lang/String;Lcom/google/tagmanager/Runtime$a;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public sizeOf(Ljava/lang/String;Lcom/google/tagmanager/Runtime$CachedMacro;)I
+.method public sizeOf(Ljava/lang/String;Lcom/google/tagmanager/Runtime$a;)I
     .locals 0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1
 
-    invoke-virtual {p2}, Lcom/google/tagmanager/Runtime$CachedMacro;->getSize()I
+    invoke-virtual {p2}, Lcom/google/tagmanager/Runtime$a;->a()I
 
     move-result p2
 

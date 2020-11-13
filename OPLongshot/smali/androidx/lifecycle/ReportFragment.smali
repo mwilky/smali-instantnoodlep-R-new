@@ -1,12 +1,18 @@
 .class public Landroidx/lifecycle/ReportFragment;
 .super Landroid/app/Fragment;
-.source "ReportFragment.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+        Landroidx/lifecycle/ReportFragment$a;
     }
 .end annotation
 
@@ -16,7 +22,7 @@
 
 
 # instance fields
-.field private mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+.field private mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
 
 # direct methods
@@ -31,75 +37,75 @@
 .method private dispatch(Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/lifecycle/ReportFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/lifecycle/LifecycleRegistryOwner;
+    instance-of v1, v0, Landroidx/lifecycle/g;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroidx/lifecycle/LifecycleRegistryOwner;
+    check-cast v0, Landroidx/lifecycle/g;
 
-    invoke-interface {v0}, Landroidx/lifecycle/LifecycleRegistryOwner;->getLifecycle()Landroidx/lifecycle/LifecycleRegistry;
+    invoke-interface {v0}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 
     :cond_0
-    instance-of v1, v0, Landroidx/lifecycle/LifecycleOwner;
+    instance-of v1, v0, Landroidx/lifecycle/e;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Landroidx/lifecycle/LifecycleOwner;
+    check-cast v0, Landroidx/lifecycle/e;
 
-    invoke-interface {v0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/lifecycle/LifecycleRegistry;
+    instance-of v1, v0, Landroidx/lifecycle/f;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Landroidx/lifecycle/LifecycleRegistry;
+    check-cast v0, Landroidx/lifecycle/f;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     return-void
 .end method
 
-.method private dispatchCreate(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+.method private dispatchCreate(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;->onCreate()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->a()V
 
     :cond_0
     return-void
 .end method
 
-.method private dispatchResume(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+.method private dispatchResume(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;->onResume()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->b()V
 
     :cond_0
     return-void
 .end method
 
-.method private dispatchStart(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+.method private dispatchStart(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;->onStart()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->c()V
 
     :cond_0
     return-void
@@ -165,9 +171,9 @@
 
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    iget-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+    iget-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
-    invoke-direct {p0, p1}, Landroidx/lifecycle/ReportFragment;->dispatchCreate(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+    invoke-direct {p0, p1}, Landroidx/lifecycle/ReportFragment;->dispatchCreate(Landroidx/lifecycle/ReportFragment$a;)V
 
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
@@ -187,7 +193,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+    iput-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
     return-void
 .end method
@@ -209,9 +215,9 @@
 
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
-    iget-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+    iget-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/ReportFragment;->dispatchResume(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/ReportFragment;->dispatchResume(Landroidx/lifecycle/ReportFragment$a;)V
 
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
@@ -225,9 +231,9 @@
 
     invoke-super {p0}, Landroid/app/Fragment;->onStart()V
 
-    iget-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+    iget-object v0, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/ReportFragment;->dispatchStart(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/ReportFragment;->dispatchStart(Landroidx/lifecycle/ReportFragment$a;)V
 
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
@@ -248,10 +254,10 @@
     return-void
 .end method
 
-.method setProcessListener(Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;)V
+.method setProcessListener(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+    iput-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
     return-void
 .end method

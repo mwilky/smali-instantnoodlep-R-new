@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;
 .super Ljava/lang/Object;
-.source "AbsShotState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getStatusbarBarHeight()I
 
@@ -61,7 +61,7 @@
     :goto_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getNavBarHeight()I
 
@@ -83,7 +83,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v3, v4, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v3, v4, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
@@ -91,7 +91,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v3, v3, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v3, v3, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -99,7 +99,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v3, v3, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v3, v3, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getWindowToken()Landroid/os/IBinder;
 
@@ -119,21 +119,19 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureTask:Lcom/oneplus/screenshot/longshot/task/CaptureTask;
+    iget-object v3, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureTask:Lcom/oneplus/screenshot/longshot/task/CaptureTask;
 
     new-array v1, v1, [Ljava/lang/Integer;
 
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
+    iget v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
-    iget v3, v3, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v3
+    aput-object v0, v1, v2
 
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/task/CaptureTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v3, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method

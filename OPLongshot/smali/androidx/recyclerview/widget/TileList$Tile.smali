@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/TileList$Tile;
 .super Ljava/lang/Object;
-.source "TileList.java"
+.source ""
 
 
 # annotations
@@ -62,8 +62,6 @@
     invoke-static {p1, p2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
 
     check-cast p1, [Ljava/lang/Object;
 

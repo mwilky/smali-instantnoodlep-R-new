@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/ShotNextState$2;
 .super Ljava/lang/Object;
-.source "ShotNextState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,9 +1,15 @@
 .class Landroidx/core/graphics/TypefaceCompatBaseImpl;
 .super Ljava/lang/Object;
-.source "TypefaceCompatBaseImpl.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
@@ -23,7 +29,7 @@
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/Long;",
-            "Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;",
+            "Landroidx/core/content/res/FontResourcesParserCompat$b;",
             ">;"
         }
     .end annotation
@@ -45,7 +51,7 @@
     return-void
 .end method
 
-.method private addFontFamily(Landroid/graphics/Typeface;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;)V
+.method private addFontFamily(Landroid/graphics/Typeface;Landroidx/core/content/res/FontResourcesParserCompat$b;)V
     .locals 4
 
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->getUniqueKey(Landroid/graphics/Typeface;)J
@@ -70,10 +76,10 @@
     return-void
 .end method
 
-.method private findBestEntry(Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;I)Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+.method private findBestEntry(Landroidx/core/content/res/FontResourcesParserCompat$b;I)Landroidx/core/content/res/FontResourcesParserCompat$c;
     .locals 1
 
-    invoke-virtual {p1}, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    invoke-virtual {p1}, Landroidx/core/content/res/FontResourcesParserCompat$b;->a()[Landroidx/core/content/res/FontResourcesParserCompat$c;
 
     move-result-object p1
 
@@ -85,7 +91,7 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    check-cast p1, Landroidx/core/content/res/FontResourcesParserCompat$c;
 
     return-object p1
 .end method
@@ -191,6 +197,10 @@
 
 .method private static getUniqueKey(Landroid/graphics/Typeface;)J
     .locals 6
+    .param p0    # Landroid/graphics/Typeface;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const-string v0, "Could not retrieve font from family."
 
@@ -248,10 +258,12 @@
 
 
 # virtual methods
-.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
+.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-direct {p0, p2, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestEntry(Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;I)Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    invoke-direct {p0, p2, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestEntry(Landroidx/core/content/res/FontResourcesParserCompat$b;I)Landroidx/core/content/res/FontResourcesParserCompat$c;
 
     move-result-object v0
 
@@ -262,11 +274,11 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getResourceId()I
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->b()I
 
     move-result v1
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getFileName()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$c;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -274,13 +286,23 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->addFontFamily(Landroid/graphics/Typeface;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;)V
+    invoke-direct {p0, p1, p2}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->addFontFamily(Landroid/graphics/Typeface;Landroidx/core/content/res/FontResourcesParserCompat$b;)V
 
     return-object p1
 .end method
 
-.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
+.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$b;I)Landroid/graphics/Typeface;
     .locals 2
+    .param p2    # Landroid/os/CancellationSignal;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # [Landroidx/core/provider/FontsContractCompat$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     array-length p2, p3
 
@@ -293,7 +315,7 @@
     return-object v0
 
     :cond_0
-    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
+    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p2
 
@@ -302,7 +324,7 @@
 
     move-result-object p3
 
-    invoke-virtual {p2}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {p2}, Landroidx/core/provider/FontsContractCompat$b;->c()Landroid/net/Uri;
 
     move-result-object p2
 
@@ -409,6 +431,8 @@
 
 .method public createFromResourcesFontFile(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatUtil;->getTempFile(Landroid/content/Context;)Ljava/io/File;
 
@@ -465,7 +489,7 @@
     return-object p4
 .end method
 
-.method protected findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
+.method protected findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
     .locals 1
 
     new-instance v0, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;
@@ -476,13 +500,15 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/core/provider/FontsContractCompat$FontInfo;
+    check-cast p1, Landroidx/core/provider/FontsContractCompat$b;
 
     return-object p1
 .end method
 
-.method getFontFamily(Landroid/graphics/Typeface;)Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;
+.method getFontFamily(Landroid/graphics/Typeface;)Landroidx/core/content/res/FontResourcesParserCompat$b;
     .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->getUniqueKey(Landroid/graphics/Typeface;)J
 
@@ -509,7 +535,7 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;
+    check-cast p1, Landroidx/core/content/res/FontResourcesParserCompat$b;
 
     return-object p1
 .end method

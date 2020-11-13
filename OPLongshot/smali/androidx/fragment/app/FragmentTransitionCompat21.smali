@@ -1,6 +1,12 @@
 .class Landroidx/fragment/app/FragmentTransitionCompat21;
 .super Landroidx/fragment/app/FragmentTransitionImpl;
-.source "FragmentTransitionCompat21.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # direct methods
@@ -19,7 +25,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionCompat21;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -29,7 +35,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionCompat21;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -39,7 +45,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/fragment/app/FragmentTransitionCompat21;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {p0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result p0
 
@@ -130,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionCompat21;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -447,9 +453,9 @@
 
     check-cast p1, Landroid/transition/Transition;
 
-    new-instance v0, Landroidx/fragment/app/FragmentTransitionCompat21$2;
+    new-instance v0, Landroidx/fragment/app/FragmentTransitionCompat21$b;
 
-    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionCompat21$2;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/view/View;Ljava/util/ArrayList;)V
+    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionCompat21$b;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/view/View;Ljava/util/ArrayList;)V
 
     invoke-virtual {p1, v0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
@@ -481,7 +487,7 @@
 
     check-cast v0, Landroid/transition/Transition;
 
-    new-instance v9, Landroidx/fragment/app/FragmentTransitionCompat21$3;
+    new-instance v9, Landroidx/fragment/app/FragmentTransitionCompat21$c;
 
     move-object v1, v9
 
@@ -499,7 +505,7 @@
 
     move-object/from16 v8, p7
 
-    invoke-direct/range {v1 .. v8}, Landroidx/fragment/app/FragmentTransitionCompat21$3;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+    invoke-direct/range {v1 .. v8}, Landroidx/fragment/app/FragmentTransitionCompat21$c;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
 
     invoke-virtual {v0, v9}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
@@ -513,9 +519,9 @@
 
     check-cast p1, Landroid/transition/Transition;
 
-    new-instance v0, Landroidx/fragment/app/FragmentTransitionCompat21$4;
+    new-instance v0, Landroidx/fragment/app/FragmentTransitionCompat21$d;
 
-    invoke-direct {v0, p0, p2}, Landroidx/fragment/app/FragmentTransitionCompat21$4;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
+    invoke-direct {v0, p0, p2}, Landroidx/fragment/app/FragmentTransitionCompat21$d;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
 
     invoke-virtual {p1, v0}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
 
@@ -534,11 +540,11 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/FragmentTransitionCompat21;->getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    new-instance p2, Landroidx/fragment/app/FragmentTransitionCompat21$1;
+    new-instance p2, Landroidx/fragment/app/FragmentTransitionCompat21$a;
 
-    invoke-direct {p2, p0, v0}, Landroidx/fragment/app/FragmentTransitionCompat21$1;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
+    invoke-direct {p2, p0, v0}, Landroidx/fragment/app/FragmentTransitionCompat21$a;-><init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
 
     invoke-virtual {p1, p2}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
 
@@ -582,7 +588,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v0, v3}, Landroidx/fragment/app/FragmentTransitionCompat21;->bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
+    invoke-static {v0, v3}, Landroidx/fragment/app/FragmentTransitionImpl;->bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
 
     add-int/lit8 v2, v2, 0x1
 

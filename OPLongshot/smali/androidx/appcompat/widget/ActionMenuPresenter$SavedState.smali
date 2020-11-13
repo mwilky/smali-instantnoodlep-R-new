@@ -1,12 +1,18 @@
 .class Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;
 .super Ljava/lang/Object;
-.source "ActionMenuPresenter.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/ActionMenuPresenter;
 .end annotation

@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsMoveState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "AbsMoveState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;
@@ -98,13 +98,13 @@
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/state/BaseState;->enter(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     const/4 p2, 0x0
 
     invoke-interface {p1, p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->setOverScroll(Z)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1, p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->setScroll(Z)V
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getDisplayHeight()I
 
@@ -134,7 +134,7 @@
 
     new-instance p1, Lcom/oneplus/screenshot/longshot/task/MoveTask;
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
@@ -142,13 +142,13 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v4
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getDisplayHeight()I
 
@@ -203,7 +203,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/task/MoveTask;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     const/4 v0, 0x0
 
@@ -221,7 +221,7 @@
 .method public isOverScroll()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->isOverScroll()Z
 
@@ -233,7 +233,7 @@
 .method public onMoveFinished()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
@@ -249,7 +249,7 @@
 .method public setOverScroll(Z)V
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0, p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->setOverScroll(Z)V
 

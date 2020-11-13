@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;
 .super Lcom/oneplus/screenshot/longshot/util/MovePoint;
-.source "LongshotMode.java"
+.source ""
 
 
 # annotations
@@ -34,9 +34,9 @@
 .method public canMove()Z
     .locals 2
 
-    iget v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->y:I
+    iget v0, p0, Landroid/graphics/Point;->y:I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->getEnd()Landroid/graphics/Point;
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->getEnd()Landroid/graphics/Point;
 
     move-result-object v1
 
@@ -74,7 +74,7 @@
 .method public move()V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->getDistance()I
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->getDistance()I
 
     move-result v0
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v0}, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->offset(II)V
+    invoke-virtual {p0, v1, v0}, Landroid/graphics/Point;->offset(II)V
 
     return-void
 .end method
@@ -90,9 +90,9 @@
 .method public moveTo(II)V
     .locals 0
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->x:I
+    iput p1, p0, Landroid/graphics/Point;->x:I
 
-    iput p2, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;->y:I
+    iput p2, p0, Landroid/graphics/Point;->y:I
 
     return-void
 .end method

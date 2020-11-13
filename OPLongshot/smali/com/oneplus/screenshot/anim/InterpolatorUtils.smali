@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/InterpolatorUtils;
 .super Ljava/lang/Object;
-.source "InterpolatorUtils.java"
+.source ""
 
 
 # static fields
@@ -18,12 +18,6 @@
 
 .method private static createInterpolatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
@@ -147,11 +141,6 @@
 
 .method public static loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     const-string v0, "Can\'t load animation resource ID #0x"
 

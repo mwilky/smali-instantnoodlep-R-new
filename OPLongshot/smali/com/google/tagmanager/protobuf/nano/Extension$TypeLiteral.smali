@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;
 .super Ljava/lang/Object;
-.source "Extension.java"
+.source ""
 
 
 # annotations
@@ -150,6 +150,7 @@
 
     aget-object v0, v0, v1
 
+    :goto_0
     check-cast v0, Ljava/lang/Class;
 
     return-object v0
@@ -157,9 +158,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;->type:Ljava/lang/reflect/Type;
 
-    check-cast v0, Ljava/lang/Class;
-
-    return-object v0
+    goto :goto_0
 .end method
 
 .method private isList()Z

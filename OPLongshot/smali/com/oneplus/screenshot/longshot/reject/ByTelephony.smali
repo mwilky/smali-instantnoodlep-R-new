@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/reject/ByTelephony;
 .super Lcom/oneplus/screenshot/longshot/reject/Reject;
-.source "ByTelephony.java"
+.source ""
 
 
 # static fields

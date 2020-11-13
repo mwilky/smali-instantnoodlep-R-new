@@ -1,6 +1,6 @@
 .class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;
 .super Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 
 # annotations
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entries;)Ljava/lang/Object;
+.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -56,7 +56,7 @@
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry<",
             "TK;TV;>;",
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap<",
-            "TK;TV;>.Entries;)TV;"
+            "TK;TV;>.a;)TV;"
         }
     .end annotation
 
@@ -80,7 +80,7 @@
     :cond_1
     iget-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;->val$value:Ljava/lang/Object;
 
-    invoke-virtual {p3, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entries;->add(Ljava/lang/Object;)V
+    invoke-virtual {p3, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;->add(Ljava/lang/Object;)V
 
     const/4 p1, 0x0
 

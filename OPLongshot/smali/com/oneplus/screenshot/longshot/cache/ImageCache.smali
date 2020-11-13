@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 .super Ljava/util/ArrayList;
-.source "ImageCache.java"
+.source ""
 
 
 # annotations

@@ -1,6 +1,6 @@
 .class Landroidx/loader/content/ModernAsyncTask$2;
 .super Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
-.source "ModernAsyncTask.java"
+.source ""
 
 
 # annotations
@@ -46,12 +46,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
     iget-object v0, p0, Landroidx/loader/content/ModernAsyncTask$2;->this$0:Landroidx/loader/content/ModernAsyncTask;
 
     iget-object v0, v0, Landroidx/loader/content/ModernAsyncTask;->mTaskInvoked:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -69,7 +63,7 @@
 
     iget-object v0, p0, Landroidx/loader/content/ModernAsyncTask$2;->this$0:Landroidx/loader/content/ModernAsyncTask;
 
-    iget-object v3, p0, Landroidx/loader/content/ModernAsyncTask$2;->mParams:[Ljava/lang/Object;
+    iget-object v3, p0, Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;->mParams:[Ljava/lang/Object;
 
     invoke-virtual {v0, v3}, Landroidx/loader/content/ModernAsyncTask;->doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
 

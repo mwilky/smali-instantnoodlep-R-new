@@ -1,6 +1,6 @@
 .class Landroidx/recyclerview/widget/AsyncListUtil$2;
 .super Ljava/lang/Object;
-.source "AsyncListUtil.java"
+.source ""
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
@@ -90,13 +90,11 @@
 
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
-    iget-object v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTClass:Ljava/lang/Class;
+    iget-object v2, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTClass:Ljava/lang/Class;
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+    iget v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
 
-    iget v2, v2, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
-
-    invoke-direct {v0, v1, v2}, Landroidx/recyclerview/widget/TileList$Tile;-><init>(Ljava/lang/Class;I)V
+    invoke-direct {v0, v2, v1}, Landroidx/recyclerview/widget/TileList$Tile;-><init>(Ljava/lang/Class;I)V
 
     return-object v0
 .end method
@@ -339,33 +337,29 @@
 
     iput p1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+    iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
-    iget p1, p1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
+    iget v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
 
-    iget v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mItemCount:I
+    iget v2, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mItemCount:I
 
-    iget v2, v0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
+    sub-int/2addr v2, p1
 
-    sub-int/2addr v1, v2
-
-    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     iput p1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mItemCount:I
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+    iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
+    iget-object v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
 
-    iget-object v1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mItems:[Ljava/lang/Object;
+    iget-object v2, v0, Landroidx/recyclerview/widget/TileList$Tile;->mItems:[Ljava/lang/Object;
 
-    iget v2, v0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
+    iget v3, v0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
 
-    iget v3, v0, Landroidx/recyclerview/widget/TileList$Tile;->mItemCount:I
-
-    invoke-virtual {p1, v1, v2, v3}, Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;->fillData([Ljava/lang/Object;II)V
+    invoke-virtual {v1, v2, v3, p1}, Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;->fillData([Ljava/lang/Object;II)V
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/AsyncListUtil$2;->flushTileCache(I)V
 
@@ -422,15 +416,13 @@
 
     iput p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mItemCount:I
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+    iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/AsyncListUtil;->mMainThreadProxy:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
+    iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mMainThreadProxy:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
 
-    iget v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mGeneration:I
+    iget v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mGeneration:I
 
-    iget v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mItemCount:I
-
-    invoke-interface {p1, v0, v1}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->updateItemCount(II)V
+    invoke-interface {v0, v1, p1}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->updateItemCount(II)V
 
     return-void
 .end method

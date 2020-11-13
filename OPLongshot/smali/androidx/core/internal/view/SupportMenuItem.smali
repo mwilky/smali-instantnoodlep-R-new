@@ -1,9 +1,17 @@
 .class public interface abstract Landroidx/core/internal/view/SupportMenuItem;
 .super Ljava/lang/Object;
-.source "SupportMenuItem.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/MenuItem;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields

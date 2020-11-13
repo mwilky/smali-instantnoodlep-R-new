@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/internal/NavigationMenu;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source "NavigationMenu.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -16,8 +24,10 @@
 # virtual methods
 .method public addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/material/internal/NavigationMenu;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/appcompat/view/menu/MenuBuilder;->addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -25,7 +35,7 @@
 
     new-instance p2, Lcom/google/android/material/internal/NavigationSubMenu;
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenu;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
 
     move-result-object p3
 

@@ -1,6 +1,6 @@
 .class public final Landroidx/core/app/TaskStackBuilder;
 .super Ljava/lang/Object;
-.source "TaskStackBuilder.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Iterable;
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/app/TaskStackBuilder$SupportParentable;
+        Landroidx/core/app/TaskStackBuilder$a;
     }
 .end annotation
 
@@ -60,6 +60,12 @@
 
 .method public static create(Landroid/content/Context;)Landroidx/core/app/TaskStackBuilder;
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/core/app/TaskStackBuilder;
 
@@ -84,6 +90,12 @@
 # virtual methods
 .method public addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;
     .locals 1
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
@@ -94,6 +106,12 @@
 
 .method public addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;
     .locals 1
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -124,16 +142,22 @@
 
 .method public addParentStack(Landroid/app/Activity;)Landroidx/core/app/TaskStackBuilder;
     .locals 1
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    instance-of v0, p1, Landroidx/core/app/TaskStackBuilder$SupportParentable;
+    instance-of v0, p1, Landroidx/core/app/TaskStackBuilder$a;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Landroidx/core/app/TaskStackBuilder$SupportParentable;
+    check-cast v0, Landroidx/core/app/TaskStackBuilder$a;
 
-    invoke-interface {v0}, Landroidx/core/app/TaskStackBuilder$SupportParentable;->getSupportParentActivityIntent()Landroid/content/Intent;
+    invoke-interface {v0}, Landroidx/core/app/TaskStackBuilder$a;->a()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -145,7 +169,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    invoke-static {p1}, Landroidx/core/app/NavUtils;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-static {p1}, Landroidx/core/app/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -189,11 +213,11 @@
     :try_start_0
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    invoke-static {v1, p1}, Landroidx/core/app/NavUtils;->getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
+    :goto_0
+    invoke-static {v1, p1}, Landroidx/core/app/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
 
-    :goto_0
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
@@ -203,10 +227,6 @@
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Landroidx/core/app/NavUtils;->getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
     :try_end_0
@@ -235,6 +255,13 @@
 
 .method public addParentStack(Ljava/lang/Class;)Landroidx/core/app/TaskStackBuilder;
     .locals 2
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -259,6 +286,8 @@
 
 .method public editIntentAt(I)Landroid/content/Intent;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
@@ -297,6 +326,8 @@
 
 .method public getIntents()[Landroid/content/Intent;
     .locals 5
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
@@ -362,6 +393,8 @@
 
 .method public getPendingIntent(II)Landroid/app/PendingIntent;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -374,6 +407,12 @@
 
 .method public getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;
     .locals 4
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
@@ -481,6 +520,10 @@
 
 .method public startActivities(Landroid/os/Bundle;)V
     .locals 4
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
@@ -522,7 +565,7 @@
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    invoke-static {v1, v0, p1}, Landroidx/core/content/ContextCompat;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
+    invoke-static {v1, v0, p1}, Landroidx/core/content/b;->d(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p1
 

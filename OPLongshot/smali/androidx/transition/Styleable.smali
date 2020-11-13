@@ -1,48 +1,71 @@
 .class Landroidx/transition/Styleable;
 .super Ljava/lang/Object;
-.source "Styleable.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation build Landroid/annotation/SuppressLint;
     value = {
-        Landroidx/transition/Styleable$PatternPathMotion;,
-        Landroidx/transition/Styleable$ArcMotion;,
-        Landroidx/transition/Styleable$TransitionSet;,
-        Landroidx/transition/Styleable$Slide;,
-        Landroidx/transition/Styleable$ChangeTransform;,
-        Landroidx/transition/Styleable$Fade;,
-        Landroidx/transition/Styleable$VisibilityTransition;,
-        Landroidx/transition/Styleable$ChangeBounds;,
-        Landroidx/transition/Styleable$Transition;,
-        Landroidx/transition/Styleable$TransitionManager;,
-        Landroidx/transition/Styleable$TransitionTarget;
+        "InlinedApi"
     }
 .end annotation
 
 
 # static fields
 .field static final ARC_MOTION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final CHANGE_BOUNDS:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final CHANGE_TRANSFORM:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final FADE:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final PATTERN_PATH_MOTION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final SLIDE:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final TRANSITION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final TRANSITION_MANAGER:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final TRANSITION_SET:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final TRANSITION_TARGET:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 .field static final VISIBILITY_TRANSITION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 
 # direct methods

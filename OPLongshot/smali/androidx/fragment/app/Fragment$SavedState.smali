@@ -1,12 +1,18 @@
 .class public Landroidx/fragment/app/Fragment$SavedState;
 .super Ljava/lang/Object;
-.source "Fragment.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/fragment/app/Fragment;
 .end annotation
@@ -19,6 +25,9 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -58,6 +67,14 @@
 
 .method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,6 +106,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object p2, p0, Landroidx/fragment/app/Fragment$SavedState;->mState:Landroid/os/Bundle;
 

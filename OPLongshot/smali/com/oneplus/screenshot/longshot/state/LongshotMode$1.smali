@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/LongshotMode$1;
 .super Ljava/lang/Object;
-.source "LongshotMode.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

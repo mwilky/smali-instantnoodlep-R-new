@@ -1,6 +1,6 @@
 .class final Landroidx/lifecycle/Lifecycling$1;
 .super Ljava/lang/Object;
-.source "Lifecycling.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$observer:Landroidx/lifecycle/LifecycleEventObserver;
+.field final synthetic a:Landroidx/lifecycle/c;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/LifecycleEventObserver;)V
+.method constructor <init>(Landroidx/lifecycle/c;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/lifecycle/Lifecycling$1;->val$observer:Landroidx/lifecycle/LifecycleEventObserver;
+    iput-object p1, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,12 +34,20 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->val$observer:Landroidx/lifecycle/LifecycleEventObserver;
+    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/c;
 
-    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/LifecycleEventObserver;->onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/c;->onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

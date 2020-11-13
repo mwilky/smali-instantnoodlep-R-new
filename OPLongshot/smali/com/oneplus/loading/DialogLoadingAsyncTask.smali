@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/loading/DialogLoadingAsyncTask;
 .super Lcom/oneplus/loading/LoadingAsyncTask;
-.source "DialogLoadingAsyncTask.java"
+.source ""
 
 
 # annotations

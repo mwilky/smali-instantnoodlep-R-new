@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$ScreenInfo;
 .super Ljava/lang/Object;
-.source "PreviewWindowController.java"
+.source ""
 
 
 # annotations

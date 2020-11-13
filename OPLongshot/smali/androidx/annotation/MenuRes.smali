@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/MenuRes;
 .super Ljava/lang/Object;
-.source "MenuRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,14 @@
 .class public Landroidx/core/util/LogWriter;
 .super Ljava/io/Writer;
-.source "LogWriter.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields

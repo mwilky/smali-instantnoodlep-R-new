@@ -1,9 +1,17 @@
 .class public Landroidx/appcompat/view/menu/SubMenuBuilder;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source "SubMenuBuilder.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/SubMenu;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields

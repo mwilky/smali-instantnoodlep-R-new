@@ -1,6 +1,6 @@
 .class interface abstract Landroidx/recyclerview/widget/ThreadUtil;
 .super Ljava/lang/Object;
-.source "ThreadUtil.java"
+.source ""
 
 
 # annotations

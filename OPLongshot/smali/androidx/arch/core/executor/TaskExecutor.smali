@@ -1,6 +1,14 @@
 .class public abstract Landroidx/arch/core/executor/TaskExecutor;
 .super Ljava/lang/Object;
-.source "TaskExecutor.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -15,10 +23,18 @@
 
 # virtual methods
 .method public abstract executeOnDiskIO(Ljava/lang/Runnable;)V
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
 .method public executeOnMainThread(Ljava/lang/Runnable;)V
     .locals 1
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroidx/arch/core/executor/TaskExecutor;->isMainThread()Z
 
@@ -41,4 +57,8 @@
 .end method
 
 .method public abstract postToMainThread(Ljava/lang/Runnable;)V
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

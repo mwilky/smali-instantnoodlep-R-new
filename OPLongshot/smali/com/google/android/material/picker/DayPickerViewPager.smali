@@ -1,10 +1,10 @@
 .class Lcom/google/android/material/picker/DayPickerViewPager;
 .super Landroidx/viewpager/widget/ViewPager;
-.source "DayPickerViewPager.java"
+.source ""
 
 
 # instance fields
-.field private final mMatchParentChildren:Ljava/util/ArrayList;
+.field private final j0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -16,16 +16,6 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/DayPickerViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -37,7 +27,7 @@
 
     invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/picker/DayPickerViewPager;->mMatchParentChildren:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/google/android/material/picker/DayPickerViewPager;->j0:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -54,7 +44,7 @@
     :try_start_0
     const-class v2, Landroidx/viewpager/widget/ViewPager;
 
-    const-string v3, "populate"
+    const-string v3, "C"
 
     new-array v4, v1, [Ljava/lang/Class;
 
@@ -74,7 +64,7 @@
 
     :catch_0
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
@@ -117,7 +107,7 @@
 
     if-ge v5, v2, :cond_5
 
-    invoke-virtual {p0, v5}, Lcom/google/android/material/picker/DayPickerViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v10
 
@@ -129,13 +119,13 @@
 
     if-eq v11, v12, :cond_4
 
-    invoke-virtual {p0, v10, p1, p2}, Lcom/google/android/material/picker/DayPickerViewPager;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v10, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     invoke-virtual {v10}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v11
 
-    check-cast v11, Landroidx/viewpager/widget/ViewPager$LayoutParams;
+    check-cast v11, Landroidx/viewpager/widget/ViewPager$e;
 
     invoke-virtual {v10}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -157,22 +147,22 @@
 
     move-result v12
 
-    invoke-static {v8, v12}, Lcom/google/android/material/picker/DayPickerViewPager;->combineMeasuredStates(II)I
+    invoke-static {v8, v12}, Landroid/view/ViewGroup;->combineMeasuredStates(II)I
 
     move-result v8
 
     if-eqz v3, :cond_4
 
-    iget v12, v11, Landroidx/viewpager/widget/ViewPager$LayoutParams;->width:I
+    iget v12, v11, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-eq v12, v9, :cond_3
 
-    iget v11, v11, Landroidx/viewpager/widget/ViewPager$LayoutParams;->height:I
+    iget v11, v11, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-ne v11, v9, :cond_4
 
     :cond_3
-    iget-object v9, p0, Lcom/google/android/material/picker/DayPickerViewPager;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v9, p0, Lcom/google/android/material/picker/DayPickerViewPager;->j0:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -182,11 +172,11 @@
     goto :goto_2
 
     :cond_5
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v3
 
@@ -194,11 +184,11 @@
 
     add-int/2addr v6, v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v3
 
@@ -206,7 +196,7 @@
 
     add-int/2addr v7, v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getSuggestedMinimumHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
 
     move-result v2
 
@@ -214,7 +204,7 @@
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getSuggestedMinimumWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
 
     move-result v3
 
@@ -228,7 +218,7 @@
 
     if-lt v5, v6, :cond_6
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getForeground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getForeground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -251,19 +241,19 @@
     move-result v3
 
     :cond_6
-    invoke-static {v3, p1, v8}, Lcom/google/android/material/picker/DayPickerViewPager;->resolveSizeAndState(III)I
+    invoke-static {v3, p1, v8}, Landroid/view/ViewGroup;->resolveSizeAndState(III)I
 
     move-result v3
 
     shl-int/lit8 v5, v8, 0x10
 
-    invoke-static {v2, p2, v5}, Lcom/google/android/material/picker/DayPickerViewPager;->resolveSizeAndState(III)I
+    invoke-static {v2, p2, v5}, Landroid/view/ViewGroup;->resolveSizeAndState(III)I
 
     move-result v2
 
-    invoke-virtual {p0, v3, v2}, Lcom/google/android/material/picker/DayPickerViewPager;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v3, v2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
-    iget-object v2, p0, Lcom/google/android/material/picker/DayPickerViewPager;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/google/android/material/picker/DayPickerViewPager;->j0:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -274,7 +264,7 @@
     :goto_3
     if-ge v1, v2, :cond_9
 
-    iget-object v0, p0, Lcom/google/android/material/picker/DayPickerViewPager;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/google/android/material/picker/DayPickerViewPager;->j0:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -286,23 +276,23 @@
 
     move-result-object v3
 
-    check-cast v3, Landroidx/viewpager/widget/ViewPager$LayoutParams;
+    check-cast v3, Landroidx/viewpager/widget/ViewPager$e;
 
-    iget v5, v3, Landroidx/viewpager/widget/ViewPager$LayoutParams;->width:I
+    iget v5, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-ne v5, v9, :cond_7
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v6
 
     sub-int/2addr v5, v6
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v6
 
@@ -315,38 +305,38 @@
     goto :goto_4
 
     :cond_7
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v6
 
     add-int/2addr v5, v6
 
-    iget v6, v3, Landroidx/viewpager/widget/ViewPager$LayoutParams;->width:I
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    invoke-static {p1, v5, v6}, Lcom/google/android/material/picker/DayPickerViewPager;->getChildMeasureSpec(III)I
+    invoke-static {p1, v5, v6}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 
     move-result v5
 
     :goto_4
-    iget v6, v3, Landroidx/viewpager/widget/ViewPager$LayoutParams;->height:I
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-ne v6, v9, :cond_8
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v6
 
     sub-int/2addr v3, v6
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v6
 
@@ -359,19 +349,19 @@
     goto :goto_5
 
     :cond_8
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v6
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/DayPickerViewPager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v7
 
     add-int/2addr v6, v7
 
-    iget v3, v3, Landroidx/viewpager/widget/ViewPager$LayoutParams;->height:I
+    iget v3, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    invoke-static {p2, v6, v3}, Lcom/google/android/material/picker/DayPickerViewPager;->getChildMeasureSpec(III)I
+    invoke-static {p2, v6, v3}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 
     move-result v3
 
@@ -383,7 +373,7 @@
     goto :goto_3
 
     :cond_9
-    iget-object p1, p0, Lcom/google/android/material/picker/DayPickerViewPager;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/picker/DayPickerViewPager;->j0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 

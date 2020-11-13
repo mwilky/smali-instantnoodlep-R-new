@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotOneState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotNextState;
-.source "ShotOneState.java"
+.source ""
 
 
 # static fields

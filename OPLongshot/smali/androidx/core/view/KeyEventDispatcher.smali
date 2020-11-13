@@ -1,12 +1,18 @@
 .class public Landroidx/core/view/KeyEventDispatcher;
 .super Ljava/lang/Object;
-.source "KeyEventDispatcher.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/view/KeyEventDispatcher$Component;
+        Landroidx/core/view/KeyEventDispatcher$a;
     }
 .end annotation
 
@@ -156,7 +162,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->dispatchUnhandledKeyEventBeforeCallback(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->g(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v1
 
@@ -225,7 +231,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->dispatchUnhandledKeyEventBeforeCallback(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->g(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v2
 
@@ -255,16 +261,40 @@
 
 .method public static dispatchBeforeHierarchy(Landroid/view/View;Landroid/view/KeyEvent;)Z
     .locals 0
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/KeyEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->dispatchUnhandledKeyEventBeforeHierarchy(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->h(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static dispatchKeyEvent(Landroidx/core/view/KeyEventDispatcher$Component;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
+.method public static dispatchKeyEvent(Landroidx/core/view/KeyEventDispatcher$a;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
     .locals 3
+    .param p0    # Landroidx/core/view/KeyEventDispatcher$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/Window$Callback;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/KeyEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -279,7 +309,7 @@
 
     if-lt v1, v2, :cond_1
 
-    invoke-interface {p0, p3}, Landroidx/core/view/KeyEventDispatcher$Component;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-interface {p0, p3}, Landroidx/core/view/KeyEventDispatcher$a;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p0
 
@@ -314,14 +344,14 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    invoke-static {p1, p3}, Landroidx/core/view/ViewCompat;->dispatchUnhandledKeyEventBeforeCallback(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {p1, p3}, Landroidx/core/view/ViewCompat;->g(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result p1
 
     if-nez p1, :cond_5
 
     :cond_4
-    invoke-interface {p0, p3}, Landroidx/core/view/KeyEventDispatcher$Component;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-interface {p0, p3}, Landroidx/core/view/KeyEventDispatcher$a;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p0
 

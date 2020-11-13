@@ -1,6 +1,6 @@
 .class final Landroidx/collection/MapCollections$MapIterator;
 .super Ljava/lang/Object;
-.source "MapCollections.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -98,7 +98,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroidx/collection/ContainerHelpers;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -118,7 +118,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroidx/collection/ContainerHelpers;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/SaveImageInBackgroundTask$1;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Landroid/media/MediaScannerConnection$OnScanCompletedListener;

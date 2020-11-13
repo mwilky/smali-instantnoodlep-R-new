@@ -1,6 +1,6 @@
 .class Landroidx/animation/FloatKeyframeSet;
 .super Landroidx/animation/KeyframeSet;
-.source "FloatKeyframeSet.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes$FloatKeyframes;
@@ -31,11 +31,9 @@
 .method public clone()Landroidx/animation/FloatKeyframeSet;
     .locals 5
 
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
-    iget-object v1, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
@@ -94,11 +92,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/animation/FloatKeyframeSet;->clone()Landroidx/animation/FloatKeyframeSet;
 
@@ -120,7 +113,7 @@
 
     if-gtz v0, :cond_2
 
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -128,7 +121,7 @@
 
     check-cast v0, Landroidx/animation/Keyframe$FloatKeyframe;
 
-    iget-object v1, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v1, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -144,21 +137,21 @@
 
     move-result v3
 
-    invoke-virtual {v0}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v0
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v4
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroidx/animation/Interpolator;
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1, p1}, Landroidx/animation/Interpolator;->getInterpolation(F)F
+    invoke-interface {v1, p1}, Landroidx/animation/d;->getInterpolation(F)F
 
     move-result p1
 
@@ -169,7 +162,7 @@
 
     div-float/2addr p1, v4
 
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
 
     if-nez v0, :cond_1
 
@@ -182,8 +175,6 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
-
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -212,9 +203,9 @@
 
     if-ltz v0, :cond_5
 
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
-    iget v1, p0, Landroidx/animation/FloatKeyframeSet;->mNumKeyframes:I
+    iget v1, p0, Landroidx/animation/KeyframeSet;->mNumKeyframes:I
 
     add-int/lit8 v1, v1, -0x2
 
@@ -224,9 +215,9 @@
 
     check-cast v0, Landroidx/animation/Keyframe$FloatKeyframe;
 
-    iget-object v1, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v1, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
-    iget v3, p0, Landroidx/animation/FloatKeyframeSet;->mNumKeyframes:I
+    iget v3, p0, Landroidx/animation/KeyframeSet;->mNumKeyframes:I
 
     sub-int/2addr v3, v2
 
@@ -244,21 +235,21 @@
 
     move-result v3
 
-    invoke-virtual {v0}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v0
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v4
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroidx/animation/Interpolator;
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    invoke-interface {v1, p1}, Landroidx/animation/Interpolator;->getInterpolation(F)F
+    invoke-interface {v1, p1}, Landroidx/animation/d;->getInterpolation(F)F
 
     move-result p1
 
@@ -269,7 +260,7 @@
 
     div-float/2addr p1, v4
 
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
 
     if-nez v0, :cond_4
 
@@ -282,8 +273,6 @@
     goto :goto_1
 
     :cond_4
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
-
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -306,7 +295,7 @@
     return v2
 
     :cond_5
-    iget-object v0, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -317,11 +306,11 @@
     move v1, v2
 
     :goto_2
-    iget v3, p0, Landroidx/animation/FloatKeyframeSet;->mNumKeyframes:I
+    iget v3, p0, Landroidx/animation/KeyframeSet;->mNumKeyframes:I
 
     if-ge v1, v3, :cond_9
 
-    iget-object v3, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object v3, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -329,7 +318,7 @@
 
     check-cast v3, Landroidx/animation/Keyframe$FloatKeyframe;
 
-    invoke-virtual {v3}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v3}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v4
 
@@ -337,21 +326,21 @@
 
     if-gez v4, :cond_8
 
-    invoke-virtual {v3}, Landroidx/animation/Keyframe$FloatKeyframe;->getInterpolator()Landroidx/animation/Interpolator;
+    invoke-virtual {v3}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v2
 
     sub-float/2addr p1, v2
 
-    invoke-virtual {v3}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v3}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v2
 
-    invoke-virtual {v0}, Landroidx/animation/Keyframe$FloatKeyframe;->getFraction()F
+    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v4
 
@@ -369,12 +358,12 @@
 
     if-eqz v1, :cond_6
 
-    invoke-interface {v1, p1}, Landroidx/animation/Interpolator;->getInterpolation(F)F
+    invoke-interface {v1, p1}, Landroidx/animation/d;->getInterpolation(F)F
 
     move-result p1
 
     :cond_6
-    iget-object v1, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
+    iget-object v1, p0, Landroidx/animation/KeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
 
     if-nez v1, :cond_7
 
@@ -387,8 +376,6 @@
     goto :goto_3
 
     :cond_7
-    iget-object v1, p0, Landroidx/animation/FloatKeyframeSet;->mEvaluator:Landroidx/animation/TypeEvaluator;
-
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
@@ -418,13 +405,11 @@
     goto :goto_2
 
     :cond_9
-    iget-object p1, p0, Landroidx/animation/FloatKeyframeSet;->mKeyframes:Ljava/util/List;
+    iget-object p1, p0, Landroidx/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
-    iget v0, p0, Landroidx/animation/FloatKeyframeSet;->mNumKeyframes:I
+    sub-int/2addr v3, v2
 
-    sub-int/2addr v0, v2
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 

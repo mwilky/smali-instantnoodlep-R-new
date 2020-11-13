@@ -1,9 +1,17 @@
 .class public abstract Landroidx/versionedparcelable/CustomVersionedParcelable;
 .super Ljava/lang/Object;
-.source "CustomVersionedParcelable.java"
+.source ""
 
 # interfaces
-.implements Landroidx/versionedparcelable/VersionedParcelable;
+.implements Landroidx/versionedparcelable/a;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -19,12 +27,22 @@
 # virtual methods
 .method public onPostParceling()V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onPreParceling(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method

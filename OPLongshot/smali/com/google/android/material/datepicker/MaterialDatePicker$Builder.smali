@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
 .super Ljava/lang/Object;
-.source "MaterialDatePicker.java"
+.source ""
 
 
 # annotations
@@ -40,6 +40,9 @@
 .field overrideThemeResId:I
 
 .field selection:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TS;"
@@ -86,6 +89,13 @@
 
 .method public static customDatePicker(Lcom/google/android/material/datepicker/DateSelector;)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 1
+    .param p0    # Lcom/google/android/material/datepicker/DateSelector;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
@@ -107,6 +117,9 @@
 
 .method public static datePicker()Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -129,6 +142,9 @@
 
 .method public static dateRangePicker()Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -155,6 +171,9 @@
 # virtual methods
 .method public build()Lcom/google/android/material/datepicker/MaterialDatePicker;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -167,11 +186,11 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;
+    new-instance v0, Lcom/google/android/material/datepicker/CalendarConstraints$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/datepicker/CalendarConstraints$a;-><init>()V
 
-    invoke-virtual {v0}, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->build()Lcom/google/android/material/datepicker/CalendarConstraints;
+    invoke-virtual {v0}, Lcom/google/android/material/datepicker/CalendarConstraints$a;->a()Lcom/google/android/material/datepicker/CalendarConstraints;
 
     move-result-object v0
 
@@ -209,6 +228,9 @@
 
 .method public setCalendarConstraints(Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -226,6 +248,9 @@
 
 .method public setInputMode(I)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -241,6 +266,9 @@
 
 .method public setSelection(Ljava/lang/Object;)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TS;)",
@@ -256,6 +284,13 @@
 
 .method public setTheme(I)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -271,6 +306,13 @@
 
 .method public setTitleText(I)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -290,6 +332,13 @@
 
 .method public setTitleText(Ljava/lang/CharSequence;)Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

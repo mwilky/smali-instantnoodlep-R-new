@@ -1,18 +1,9 @@
 .class public Landroidx/core/util/Pools$SynchronizedPool;
 .super Landroidx/core/util/Pools$SimplePool;
-.source "Pools.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/core/util/Pools;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "SynchronizedPool"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -78,6 +69,10 @@
 
 .method public release(Ljava/lang/Object;)Z
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

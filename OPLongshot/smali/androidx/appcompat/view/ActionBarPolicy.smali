@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/view/ActionBarPolicy;
 .super Ljava/lang/Object;
-.source "ActionBarPolicy.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -172,7 +180,7 @@
 
     move-result-object v0
 
-    sget v1, Landroidx/appcompat/R$dimen;->abc_action_bar_stacked_tab_max_width:I
+    sget v1, La/a/d;->abc_action_bar_stacked_tab_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -186,9 +194,9 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
-    sget-object v1, Landroidx/appcompat/R$styleable;->ActionBar:[I
+    sget-object v1, La/a/j;->ActionBar:[I
 
-    sget v2, Landroidx/appcompat/R$attr;->actionBarStyle:I
+    sget v2, La/a/a;->actionBarStyle:I
 
     const/4 v3, 0x0
 
@@ -198,7 +206,7 @@
 
     move-result-object v0
 
-    sget v1, Landroidx/appcompat/R$styleable;->ActionBar_height:I
+    sget v1, La/a/j;->ActionBar_height:I
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
@@ -216,7 +224,7 @@
 
     if-nez v3, :cond_0
 
-    sget v3, Landroidx/appcompat/R$dimen;->abc_action_bar_stacked_max_height:I
+    sget v3, La/a/d;->abc_action_bar_stacked_max_height:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -241,7 +249,7 @@
 
     move-result-object v0
 
-    sget v1, Landroidx/appcompat/R$bool;->abc_action_bar_embed_tabs:I
+    sget v1, La/a/b;->abc_action_bar_embed_tabs:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

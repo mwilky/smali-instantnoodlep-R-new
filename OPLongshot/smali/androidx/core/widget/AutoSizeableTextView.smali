@@ -1,10 +1,24 @@
 .class public interface abstract Landroidx/core/widget/AutoSizeableTextView;
 .super Ljava/lang/Object;
-.source "AutoSizeableTextView.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
 .field public static final PLATFORM_SUPPORTS_AUTOSIZE:Z
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -48,19 +62,13 @@
 .end method
 
 .method public abstract setAutoSizeTextTypeUniformWithConfiguration(IIII)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalArgumentException;
-        }
-    .end annotation
 .end method
 
 .method public abstract setAutoSizeTextTypeUniformWithPresetSizes([II)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalArgumentException;
-        }
-    .end annotation
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setAutoSizeTextTypeWithDefaults(I)V

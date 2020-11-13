@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;
 .super Ljava/lang/Object;
-.source "PreviewWindowController.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

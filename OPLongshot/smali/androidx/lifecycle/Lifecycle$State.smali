@@ -1,6 +1,6 @@
 .class public final enum Landroidx/lifecycle/Lifecycle$State;
 .super Ljava/lang/Enum;
-.source "Lifecycle.java"
+.source ""
 
 
 # annotations
@@ -162,8 +162,12 @@
 # virtual methods
 .method public isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
     .locals 0
+    .param p1    # Landroidx/lifecycle/Lifecycle$State;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {p0, p1}, Landroidx/lifecycle/Lifecycle$State;->compareTo(Ljava/lang/Enum;)I
+    invoke-virtual {p0, p1}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
     move-result p1
 

@@ -1,6 +1,6 @@
 .class final Landroidx/core/provider/FontsContractCompat$3;
 .super Ljava/lang/Object;
-.source "FontsContractCompat.java"
+.source ""
 
 # interfaces
 .implements Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/FontsContractCompat;->getFontSync(Landroid/content/Context;Landroidx/core/provider/FontRequest;Landroidx/core/content/res/ResourcesCompat$FontCallback;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/core/provider/SelfDestructiveThread$ReplyCallback<",
-        "Landroidx/core/provider/FontsContractCompat$TypefaceResult;",
+        "Landroidx/core/provider/FontsContractCompat$c;",
         ">;"
     }
 .end annotation
@@ -43,15 +43,15 @@
 
 
 # virtual methods
-.method public onReply(Landroidx/core/provider/FontsContractCompat$TypefaceResult;)V
+.method public onReply(Landroidx/core/provider/FontsContractCompat$c;)V
     .locals 4
 
-    sget-object v0, Landroidx/core/provider/FontsContractCompat;->sLock:Ljava/lang/Object;
+    sget-object v0, Landroidx/core/provider/FontsContractCompat;->c:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Landroidx/core/provider/FontsContractCompat;->sPendingReplies:Landroidx/collection/SimpleArrayMap;
+    sget-object v1, Landroidx/core/provider/FontsContractCompat;->d:Landroidx/collection/SimpleArrayMap;
 
     iget-object v2, p0, Landroidx/core/provider/FontsContractCompat$3;->val$id:Ljava/lang/String;
 
@@ -68,7 +68,7 @@
     return-void
 
     :cond_0
-    sget-object v2, Landroidx/core/provider/FontsContractCompat;->sPendingReplies:Landroidx/collection/SimpleArrayMap;
+    sget-object v2, Landroidx/core/provider/FontsContractCompat;->d:Landroidx/collection/SimpleArrayMap;
 
     iget-object v3, p0, Landroidx/core/provider/FontsContractCompat$3;->val$id:Ljava/lang/String;
 
@@ -116,9 +116,9 @@
 .method public bridge synthetic onReply(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Landroidx/core/provider/FontsContractCompat$TypefaceResult;
+    check-cast p1, Landroidx/core/provider/FontsContractCompat$c;
 
-    invoke-virtual {p0, p1}, Landroidx/core/provider/FontsContractCompat$3;->onReply(Landroidx/core/provider/FontsContractCompat$TypefaceResult;)V
+    invoke-virtual {p0, p1}, Landroidx/core/provider/FontsContractCompat$3;->onReply(Landroidx/core/provider/FontsContractCompat$c;)V
 
     return-void
 .end method

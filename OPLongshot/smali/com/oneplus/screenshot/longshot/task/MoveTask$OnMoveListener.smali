@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;
 .super Ljava/lang/Object;
-.source "MoveTask.java"
+.source ""
 
 
 # annotations

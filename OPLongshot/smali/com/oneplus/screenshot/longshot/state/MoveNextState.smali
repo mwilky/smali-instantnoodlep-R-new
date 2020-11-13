@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/MoveNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsMoveState;
-.source "MoveNextState.java"
+.source ""
 
 
 # static fields
@@ -115,7 +115,7 @@
 .method private isScroll()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MoveNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->isScroll()Z
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/MoveNextState;->isOverScroll()Z
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->isOverScroll()Z
 
     move-result v3
 
@@ -181,7 +181,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/MoveNextState;->isOverScroll()Z
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->isOverScroll()Z
 
     move-result v1
 

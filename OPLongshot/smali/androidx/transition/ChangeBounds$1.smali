@@ -1,6 +1,6 @@
 .class final Landroidx/transition/ChangeBounds$1;
 .super Landroid/util/Property;
-.source "ChangeBounds.java"
+.source ""
 
 
 # annotations
@@ -55,17 +55,15 @@
 
     iget-object v0, p0, Landroidx/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
 
-    iget v0, v0, Landroid/graphics/Rect;->left:I
-
-    int-to-float v0, v0
-
-    iget-object v1, p0, Landroidx/transition/ChangeBounds$1;->mBounds:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
+    iget v1, v0, Landroid/graphics/Rect;->left:I
 
     int-to-float v1, v1
 
-    invoke-direct {p1, v0, v1}, Landroid/graphics/PointF;-><init>(FF)V
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    int-to-float v0, v0
+
+    invoke-direct {p1, v1, v0}, Landroid/graphics/PointF;-><init>(FF)V
 
     return-object p1
 .end method

@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/ActivityOptionsCompat;
 .super Ljava/lang/Object;
-.source "ActivityOptionsCompat.java"
+.source ""
 
 
 # annotations
@@ -28,6 +28,8 @@
 
 .method public static makeBasic()Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -55,6 +57,12 @@
 
 .method public static makeClipRevealAnimation(Landroid/view/View;IIII)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -82,6 +90,12 @@
 
 .method public static makeCustomAnimation(Landroid/content/Context;II)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -109,6 +123,12 @@
 
 .method public static makeScaleUpAnimation(Landroid/view/View;IIII)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -136,6 +156,20 @@
 
 .method public static makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p0    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -163,6 +197,13 @@
 
 .method public static varargs makeSceneTransitionAnimation(Landroid/app/Activity;[Landroidx/core/util/Pair;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 4
+    .param p0    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -236,6 +277,8 @@
 
 .method public static makeTaskLaunchBehind()Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -263,6 +306,16 @@
 
 .method public static makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -292,6 +345,8 @@
 # virtual methods
 .method public getLaunchBounds()Landroid/graphics/Rect;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -300,18 +355,30 @@
 
 .method public requestUsageTimeReport(Landroid/app/PendingIntent;)V
     .locals 0
+    .param p1    # Landroid/app/PendingIntent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setLaunchBounds(Landroid/graphics/Rect;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 0
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     return-object p0
 .end method
 
 .method public toBundle()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -320,6 +387,10 @@
 
 .method public update(Landroidx/core/app/ActivityOptionsCompat;)V
     .locals 0
+    .param p1    # Landroidx/core/app/ActivityOptionsCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method

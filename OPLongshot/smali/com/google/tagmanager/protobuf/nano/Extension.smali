@@ -1,6 +1,6 @@
 .class public Lcom/google/tagmanager/protobuf/nano/Extension;
 .super Ljava/lang/Object;
-.source "Extension.java"
+.source ""
 
 
 # annotations

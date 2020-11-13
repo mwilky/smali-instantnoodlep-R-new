@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/match/MatchRange;
 .super Ljava/lang/Object;
-.source "MatchRange.java"
+.source ""
 
 
 # static fields

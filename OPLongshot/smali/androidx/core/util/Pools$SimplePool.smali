@@ -1,21 +1,12 @@
 .class public Landroidx/core/util/Pools$SimplePool;
 .super Ljava/lang/Object;
-.source "Pools.java"
+.source ""
 
 # interfaces
 .implements Landroidx/core/util/Pools$Pool;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/core/util/Pools;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "SimplePool"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -60,6 +51,10 @@
 
 .method private isInPool(Ljava/lang/Object;)Z
     .locals 3
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -130,6 +125,10 @@
 
 .method public release(Ljava/lang/Object;)Z
     .locals 3
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

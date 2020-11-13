@@ -1,6 +1,14 @@
 .class public Landroidx/animation/AnimatorUtils;
 .super Ljava/lang/Object;
-.source "AnimatorUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
 
 
 # static fields
@@ -407,9 +415,9 @@
 
     move-result-object p0
 
-    new-instance v0, Landroidx/animation/AnimatorUtils$1;
+    new-instance v0, Landroidx/animation/AnimatorUtils$a;
 
-    invoke-direct {v0, p1}, Landroidx/animation/AnimatorUtils$1;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Landroidx/animation/AnimatorUtils$a;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -676,9 +684,9 @@
 
     move-result-object p1
 
-    new-instance p2, Landroidx/animation/AnimatorUtils$2;
+    new-instance p2, Landroidx/animation/AnimatorUtils$b;
 
-    invoke-direct {p2, p0}, Landroidx/animation/AnimatorUtils$2;-><init>(Landroid/app/Activity;)V
+    invoke-direct {p2, p0}, Landroidx/animation/AnimatorUtils$b;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -723,60 +731,28 @@
 
     packed-switch p1, :pswitch_data_0
 
-    goto/16 :goto_0
+    goto :goto_7
 
     :pswitch_0
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_1
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_2
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_2
 
     :pswitch_3
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -785,19 +761,12 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_0
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_3
 
     :pswitch_4
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -806,21 +775,12 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_1
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_4
 
     :pswitch_5
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -829,48 +789,47 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_2
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_6
 
     :pswitch_6
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_5
 
     :pswitch_7
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_4
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p1
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_5
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
 
-    goto :goto_0
+    goto :goto_7
 
     :pswitch_8
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_6
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
 
-    :goto_0
+    :goto_7
     return-void
 
     :pswitch_data_0

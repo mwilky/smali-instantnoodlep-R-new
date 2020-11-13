@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/GuideLayout;
 .super Landroid/widget/RelativeLayout;
-.source "GuideLayout.java"
+.source ""
 
 
 # static fields

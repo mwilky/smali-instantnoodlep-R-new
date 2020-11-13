@@ -1,6 +1,6 @@
 .class Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;
 .super Ljava/lang/Object;
-.source "SafeIterableMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -136,6 +136,7 @@
 
     iget-object v0, v0, Landroidx/arch/core/internal/SafeIterableMap;->mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
+    :goto_0
     iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     goto :goto_1
@@ -152,8 +153,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    :goto_0
-    iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+    goto :goto_0
 
     :goto_1
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
@@ -163,6 +163,10 @@
 
 .method public supportRemove(Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
     .locals 1
+    .param p1    # Landroidx/arch/core/internal/SafeIterableMap$Entry;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

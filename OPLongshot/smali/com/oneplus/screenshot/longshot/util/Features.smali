@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/longshot/util/Features;
 .super Ljava/lang/Enum;
-.source "Features.java"
+.source ""
 
 
 # annotations

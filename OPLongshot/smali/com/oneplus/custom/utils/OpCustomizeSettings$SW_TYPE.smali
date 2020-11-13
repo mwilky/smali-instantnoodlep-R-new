@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 .super Ljava/lang/Enum;
-.source "OpCustomizeSettings.java"
+.source ""
 
 
 # annotations

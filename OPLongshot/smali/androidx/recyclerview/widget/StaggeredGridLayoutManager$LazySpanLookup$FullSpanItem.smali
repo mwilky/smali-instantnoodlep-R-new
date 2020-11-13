@@ -1,12 +1,18 @@
 .class Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
 .super Ljava/lang/Object;
-.source "StaggeredGridLayoutManager.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup;
 .end annotation

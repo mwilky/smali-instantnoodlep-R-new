@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/compare/Comparable;
 .super Ljava/lang/Object;
-.source "Comparable.java"
+.source ""
 
 
 # virtual methods

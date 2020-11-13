@@ -1,6 +1,12 @@
 .class public Lcom/google/android/material/transition/Hold;
 .super Landroid/transition/Visibility;
-.source "Hold.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # direct methods
@@ -16,6 +22,24 @@
 # virtual methods
 .method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 p1, 0x1
 
@@ -36,6 +60,24 @@
 
 .method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 p1, 0x1
 

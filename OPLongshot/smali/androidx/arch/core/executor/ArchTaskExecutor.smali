@@ -1,35 +1,55 @@
 .class public Landroidx/arch/core/executor/ArchTaskExecutor;
 .super Landroidx/arch/core/executor/TaskExecutor;
-.source "ArchTaskExecutor.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
 .field private static final sIOThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private static volatile sInstance:Landroidx/arch/core/executor/ArchTaskExecutor;
 
 .field private static final sMainThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # instance fields
 .field private mDefaultTaskExecutor:Landroidx/arch/core/executor/TaskExecutor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private mDelegate:Landroidx/arch/core/executor/TaskExecutor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroidx/arch/core/executor/ArchTaskExecutor$1;
+    new-instance v0, Landroidx/arch/core/executor/ArchTaskExecutor$a;
 
-    invoke-direct {v0}, Landroidx/arch/core/executor/ArchTaskExecutor$1;-><init>()V
+    invoke-direct {v0}, Landroidx/arch/core/executor/ArchTaskExecutor$a;-><init>()V
 
     sput-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sMainThreadExecutor:Ljava/util/concurrent/Executor;
 
-    new-instance v0, Landroidx/arch/core/executor/ArchTaskExecutor$2;
+    new-instance v0, Landroidx/arch/core/executor/ArchTaskExecutor$b;
 
-    invoke-direct {v0}, Landroidx/arch/core/executor/ArchTaskExecutor$2;-><init>()V
+    invoke-direct {v0}, Landroidx/arch/core/executor/ArchTaskExecutor$b;-><init>()V
 
     sput-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sIOThreadExecutor:Ljava/util/concurrent/Executor;
 
@@ -54,6 +74,8 @@
 
 .method public static getIOThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sIOThreadExecutor:Ljava/util/concurrent/Executor;
 
@@ -62,6 +84,8 @@
 
 .method public static getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sInstance:Landroidx/arch/core/executor/ArchTaskExecutor;
 
@@ -109,6 +133,8 @@
 
 .method public static getMainThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Landroidx/arch/core/executor/ArchTaskExecutor;->sMainThreadExecutor:Ljava/util/concurrent/Executor;
 
@@ -151,6 +177,10 @@
 
 .method public setDelegate(Landroidx/arch/core/executor/TaskExecutor;)V
     .locals 0
+    .param p1    # Landroidx/arch/core/executor/TaskExecutor;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p1, :cond_0
 

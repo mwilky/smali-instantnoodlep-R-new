@@ -1,6 +1,6 @@
 .class public Landroidx/core/util/Pair;
 .super Ljava/lang/Object;
-.source "Pair.java"
+.source ""
 
 
 # annotations
@@ -18,6 +18,9 @@
 
 # instance fields
 .field public final first:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TF;"
@@ -26,6 +29,9 @@
 .end field
 
 .field public final second:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TS;"
@@ -37,6 +43,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TF;TS;)V"
@@ -54,6 +68,17 @@
 
 .method public static create(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/Pair;
     .locals 1
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A:",
@@ -93,7 +118,7 @@
 
     iget-object v2, p0, Landroidx/core/util/Pair;->first:Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Landroidx/core/util/ObjectsCompat;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -103,7 +128,7 @@
 
     iget-object v0, p0, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Landroidx/core/util/ObjectsCompat;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -153,6 +178,8 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;
 

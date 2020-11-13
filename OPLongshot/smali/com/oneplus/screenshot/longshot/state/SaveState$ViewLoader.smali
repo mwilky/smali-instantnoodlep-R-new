@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/SaveState$ViewLoader;
 .super Ljava/lang/Object;
-.source "SaveState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;

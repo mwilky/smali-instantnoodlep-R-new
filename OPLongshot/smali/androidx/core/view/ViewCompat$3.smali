@@ -1,11 +1,11 @@
 .class final Landroidx/core/view/ViewCompat$3;
 .super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
-.source "ViewCompat.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewCompat;->screenReaderFocusableProperty()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
+    value = Landroidx/core/view/ViewCompat;->f0()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,6 +35,9 @@
 # virtual methods
 .method frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p1}, Landroid/view/View;->isScreenReaderFocusable()Z
 
@@ -49,6 +52,9 @@
 
 .method bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$3;->frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
 
@@ -59,6 +65,9 @@
 
 .method frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -71,6 +80,9 @@
 
 .method bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     check-cast p2, Ljava/lang/Boolean;
 
@@ -82,7 +94,7 @@
 .method shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$3;->booleanNullToFalseEquals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+    invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;->booleanNullToFalseEquals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
 
     move-result p1
 

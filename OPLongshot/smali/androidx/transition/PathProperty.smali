@@ -1,6 +1,6 @@
 .class Landroidx/transition/PathProperty;
 .super Landroid/util/Property;
-.source "PathProperty.java"
+.source ""
 
 
 # annotations
@@ -162,13 +162,9 @@
 
     const/4 v1, 0x0
 
-    aget v0, v0, v1
+    aget v1, v0, v1
 
-    iput v0, p2, Landroid/graphics/PointF;->x:F
-
-    iget-object p2, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
-
-    iget-object v0, p0, Landroidx/transition/PathProperty;->mPosition:[F
+    iput v1, p2, Landroid/graphics/PointF;->x:F
 
     const/4 v1, 0x1
 
@@ -176,11 +172,9 @@
 
     iput v0, p2, Landroid/graphics/PointF;->y:F
 
-    iget-object p2, p0, Landroidx/transition/PathProperty;->mProperty:Landroid/util/Property;
+    iget-object v0, p0, Landroidx/transition/PathProperty;->mProperty:Landroid/util/Property;
 
-    iget-object v0, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
-
-    invoke-virtual {p2, p1, v0}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method

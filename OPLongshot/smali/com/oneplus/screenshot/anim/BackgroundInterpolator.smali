@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/BackgroundInterpolator;
 .super Lcom/oneplus/screenshot/anim/DropInterpolator;
-.source "BackgroundInterpolator.java"
+.source ""
 
 
 # static fields

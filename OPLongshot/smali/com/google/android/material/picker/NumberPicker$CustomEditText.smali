@@ -1,9 +1,15 @@
 .class public Lcom/google/android/material/picker/NumberPicker$CustomEditText;
 .super Landroid/widget/EditText;
-.source "NumberPicker.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "AppCompatCustomView"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/picker/NumberPicker;
 .end annotation
@@ -34,7 +40,7 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$CustomEditText;->clearFocus()V
+    invoke-virtual {p0}, Landroid/widget/EditText;->clearFocus()V
 
     :cond_0
     return-void

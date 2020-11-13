@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 .super Ljava/lang/Object;
-.source "BitmapCache.java"
+.source ""
 
 
 # annotations

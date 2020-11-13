@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/util/Configs$Types;
 .super Ljava/lang/Object;
-.source "Configs.java"
+.source ""
 
 
 # annotations

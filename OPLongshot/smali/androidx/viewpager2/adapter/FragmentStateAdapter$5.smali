@@ -1,9 +1,9 @@
 .class Landroidx/viewpager2/adapter/FragmentStateAdapter$5;
 .super Ljava/lang/Object;
-.source "FragmentStateAdapter.java"
+.source ""
 
 # interfaces
-.implements Landroidx/lifecycle/LifecycleEventObserver;
+.implements Landroidx/lifecycle/c;
 
 
 # annotations
@@ -18,22 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
+.field final synthetic a:Landroid/os/Handler;
 
-.field final synthetic val$handler:Landroid/os/Handler;
-
-.field final synthetic val$runnable:Ljava/lang/Runnable;
+.field final synthetic b:Ljava/lang/Runnable;
 
 
 # direct methods
 .method constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
+    iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->a:Landroid/os/Handler;
 
-    iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->val$handler:Landroid/os/Handler;
-
-    iput-object p3, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->val$runnable:Ljava/lang/Runnable;
+    iput-object p3, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->b:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,24 +38,32 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, v0, :cond_0
 
-    iget-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->val$handler:Landroid/os/Handler;
+    iget-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->a:Landroid/os/Handler;
 
-    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->val$runnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$5;->b:Ljava/lang/Runnable;
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->c(Landroidx/lifecycle/d;)V
 
     :cond_0
     return-void

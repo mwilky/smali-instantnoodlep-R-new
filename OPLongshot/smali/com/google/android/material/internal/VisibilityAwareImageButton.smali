@@ -1,6 +1,20 @@
 .class public Lcom/google/android/material/internal/VisibilityAwareImageButton;
 .super Landroid/widget/ImageButton;
-.source "VisibilityAwareImageButton.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "AppCompatCustomView"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -33,7 +47,7 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->getVisibility()I
 
     move-result p1
 

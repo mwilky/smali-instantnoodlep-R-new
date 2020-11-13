@@ -1,11 +1,11 @@
 .class final Landroidx/core/view/ViewCompat$4;
 .super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
-.source "ViewCompat.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewCompat;->paneTitleProperty()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
+    value = Landroidx/core/view/ViewCompat;->W()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,6 +35,9 @@
 # virtual methods
 .method frameworkGet(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p1}, Landroid/view/View;->getAccessibilityPaneTitle()Ljava/lang/CharSequence;
 
@@ -45,6 +48,9 @@
 
 .method bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$4;->frameworkGet(Landroid/view/View;)Ljava/lang/CharSequence;
 
@@ -55,6 +61,9 @@
 
 .method frameworkSet(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setAccessibilityPaneTitle(Ljava/lang/CharSequence;)V
 
@@ -63,6 +72,9 @@
 
 .method bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
+    .end annotation
 
     check-cast p2, Ljava/lang/CharSequence;
 

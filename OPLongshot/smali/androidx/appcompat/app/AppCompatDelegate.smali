@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/app/AppCompatDelegate;
 .super Ljava/lang/Object;
-.source "AppCompatDelegate.java"
+.source ""
 
 
 # annotations
@@ -138,42 +138,90 @@
     throw v1
 .end method
 
-.method public static create(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/app/Activity;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
+    .param p0    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/appcompat/app/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
+    .param p0    # Landroid/app/Dialog;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/appcompat/app/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)V
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/appcompat/app/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/Window;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/appcompat/app/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
@@ -198,6 +246,10 @@
 
 .method static markStarted(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
+    .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
 
@@ -230,6 +282,10 @@
 
 .method static markStopped(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 1
+    .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
 
@@ -254,6 +310,10 @@
 
 .method private static removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
+    .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
 
@@ -376,9 +436,28 @@
 .end method
 
 .method public abstract createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract findViewById(I)Landroid/view/View;
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -388,7 +467,9 @@
     .end annotation
 .end method
 
-.method public abstract getDrawerToggleDelegate()Landroidx/appcompat/app/ActionBarDrawerToggle$Delegate;
+.method public abstract getDrawerToggleDelegate()Landroidx/appcompat/app/a;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public getLocalNightMode()I
@@ -403,6 +484,8 @@
 .end method
 
 .method public abstract getSupportActionBar()Landroidx/appcompat/app/ActionBar;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract hasWindowFeature(I)Z
@@ -445,6 +528,10 @@
 .end method
 
 .method public abstract setContentView(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/LayoutRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setContentView(Landroid/view/View;)V
@@ -460,16 +547,34 @@
 .end method
 
 .method public abstract setSupportActionBar(Landroidx/appcompat/widget/Toolbar;)V
+    .param p1    # Landroidx/appcompat/widget/Toolbar;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public setTheme(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public abstract setTitle(Ljava/lang/CharSequence;)V
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
-.method public abstract startSupportActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
+.method public abstract startSupportActionMode(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
+    .param p1    # Landroidx/appcompat/view/a$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method

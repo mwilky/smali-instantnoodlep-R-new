@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/AsyncDifferConfig;
 .super Ljava/lang/Object;
-.source "AsyncDifferConfig.java"
+.source ""
 
 
 # annotations
@@ -22,8 +22,14 @@
 
 # instance fields
 .field private final mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/DiffUtil$ItemCallback<",
@@ -33,11 +39,26 @@
 .end field
 
 .field private final mMainThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
 .method constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 0
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -63,6 +84,8 @@
 # virtual methods
 .method public getBackgroundThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
@@ -71,6 +94,9 @@
 
 .method public getDiffCallback()Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -86,6 +112,14 @@
 
 .method public getMainThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mMainThreadExecutor:Ljava/util/concurrent/Executor;
 

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/preview/PreviewController$1;
 .super Landroid/os/Handler;
-.source "PreviewController.java"
+.source ""
 
 
 # annotations

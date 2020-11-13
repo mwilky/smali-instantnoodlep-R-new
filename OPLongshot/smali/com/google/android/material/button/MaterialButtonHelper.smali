@@ -1,6 +1,14 @@
 .class Lcom/google/android/material/button/MaterialButtonHelper;
 .super Ljava/lang/Object;
-.source "MaterialButtonHelper.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -11,8 +19,14 @@
 .field private backgroundOverwritten:Z
 
 .field private backgroundTint:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private backgroundTintMode:Landroid/graphics/PorterDuff$Mode;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private checkable:Z
 
@@ -29,18 +43,30 @@
 .field private insetTop:I
 
 .field private maskDrawable:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private final materialButton:Lcom/google/android/material/button/MaterialButton;
 
 .field private rippleColor:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private rippleDrawable:Landroid/graphics/drawable/LayerDrawable;
 
 .field private shapeAppearanceModel:Lcom/google/android/material/shape/ShapeAppearanceModel;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private shouldDrawSurfaceColorStroke:Z
 
 .field private strokeColor:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private strokeWidth:I
 
@@ -70,6 +96,10 @@
 
 .method constructor <init>(Lcom/google/android/material/button/MaterialButton;Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 1
+    .param p2    # Lcom/google/android/material/shape/ShapeAppearanceModel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -99,21 +129,21 @@
 
     iget-object v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v1}, Lcom/google/android/material/button/MaterialButton;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/widget/Button;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->J(Landroid/content/Context;)V
 
     iget-object v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTint:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     iget-object v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTintMode:Landroid/graphics/PorterDuff$Mode;
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     iget v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeWidth:I
@@ -122,7 +152,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeColor:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FLandroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->c0(FLandroid/content/res/ColorStateList;)V
 
     new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
@@ -144,9 +174,9 @@
 
     iget-object v4, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    sget v5, Lcom/google/android/material/R$attr;->colorSurface:I
+    sget v5, Lb/a/b/a/b;->colorSurface:I
 
-    invoke-static {v4, v5}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
+    invoke-static {v4, v5}, Lb/a/b/a/m/a;->b(Landroid/view/View;I)I
 
     move-result v4
 
@@ -156,7 +186,7 @@
     move v4, v2
 
     :goto_0
-    invoke-virtual {v1, v3, v4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FI)V
+    invoke-virtual {v1, v3, v4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->b0(FI)V
 
     sget-boolean v3, Lcom/google/android/material/button/MaterialButtonHelper;->IS_LOLLIPOP:Z
 
@@ -176,7 +206,7 @@
 
     const/4 v6, -0x1
 
-    invoke-static {v3, v6}, Landroidx/core/graphics/drawable/DrawableCompat;->setTint(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v3, v6}, Landroidx/core/graphics/drawable/a;->n(Landroid/graphics/drawable/Drawable;I)V
 
     new-instance v3, Landroid/graphics/drawable/RippleDrawable;
 
@@ -223,7 +253,7 @@
 
     move-result-object v6
 
-    invoke-static {v3, v6}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v3, v6}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     new-instance v3, Landroid/graphics/drawable/LayerDrawable;
 
@@ -252,6 +282,8 @@
 
 .method private getMaterialShapeDrawable(Z)Lcom/google/android/material/shape/MaterialShapeDrawable;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleDrawable:Landroid/graphics/drawable/LayerDrawable;
 
@@ -283,6 +315,7 @@
 
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
+    :goto_0
     xor-int/lit8 p1, p1, 0x1
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -296,15 +329,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleDrawable:Landroid/graphics/drawable/LayerDrawable;
 
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    return-object p1
+    goto :goto_0
 
     :cond_1
     const/4 p1, 0x0
@@ -314,6 +339,8 @@
 
 .method private getSurfaceColorStrokeDrawable()Lcom/google/android/material/shape/MaterialShapeDrawable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -326,6 +353,10 @@
 
 .method private updateButtonShape(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 1
+    .param p1    # Lcom/google/android/material/shape/ShapeAppearanceModel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButtonHelper;->getMaterialShapeDrawable()Lcom/google/android/material/shape/MaterialShapeDrawable;
 
@@ -353,17 +384,17 @@
     invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
     :cond_1
-    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButtonHelper;->getMaskDrawable()Lcom/google/android/material/shape/Shapeable;
+    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButtonHelper;->getMaskDrawable()Lcom/google/android/material/shape/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButtonHelper;->getMaskDrawable()Lcom/google/android/material/shape/Shapeable;
+    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButtonHelper;->getMaskDrawable()Lcom/google/android/material/shape/j;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/google/android/material/shape/Shapeable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/j;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
     :cond_2
     return-void
@@ -388,7 +419,7 @@
 
     iget-object v3, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeColor:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FLandroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, v2, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->c0(FLandroid/content/res/ColorStateList;)V
 
     if-eqz v1, :cond_1
 
@@ -402,9 +433,9 @@
 
     iget-object v2, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    sget v3, Lcom/google/android/material/R$attr;->colorSurface:I
+    sget v3, Lb/a/b/a/b;->colorSurface:I
 
-    invoke-static {v2, v3}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
+    invoke-static {v2, v3}, Lb/a/b/a/m/a;->b(Landroid/view/View;I)I
 
     move-result v2
 
@@ -414,7 +445,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v1, v0, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FI)V
+    invoke-virtual {v1, v0, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->b0(FI)V
 
     :cond_1
     return-void
@@ -422,6 +453,8 @@
 
 .method private wrapDrawableWithInset(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/InsetDrawable;
     .locals 7
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v6, Landroid/graphics/drawable/InsetDrawable;
 
@@ -452,8 +485,10 @@
     return v0
 .end method
 
-.method public getMaskDrawable()Lcom/google/android/material/shape/Shapeable;
+.method public getMaskDrawable()Lcom/google/android/material/shape/j;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleDrawable:Landroid/graphics/drawable/LayerDrawable;
 
@@ -483,7 +518,8 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/material/shape/Shapeable;
+    :goto_0
+    check-cast v0, Lcom/google/android/material/shape/j;
 
     return-object v0
 
@@ -494,9 +530,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/material/shape/Shapeable;
-
-    return-object v0
+    goto :goto_0
 
     :cond_1
     const/4 v0, 0x0
@@ -506,6 +540,8 @@
 
 .method getMaterialShapeDrawable()Lcom/google/android/material/shape/MaterialShapeDrawable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -518,6 +554,8 @@
 
 .method getRippleColor()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleColor:Landroid/content/res/ColorStateList;
 
@@ -526,6 +564,8 @@
 
 .method getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->shapeAppearanceModel:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
@@ -534,6 +574,8 @@
 
 .method getStrokeColor()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeColor:Landroid/content/res/ColorStateList;
 
@@ -582,8 +624,12 @@
 
 .method loadFromAttributes(Landroid/content/res/TypedArray;)V
     .locals 6
+    .param p1    # Landroid/content/res/TypedArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_android_insetLeft:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_android_insetLeft:I
 
     const/4 v1, 0x0
 
@@ -593,7 +639,7 @@
 
     iput v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->insetLeft:I
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_android_insetRight:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_android_insetRight:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -601,7 +647,7 @@
 
     iput v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->insetRight:I
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_android_insetTop:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_android_insetTop:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -609,7 +655,7 @@
 
     iput v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->insetTop:I
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_android_insetBottom:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_android_insetBottom:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -617,7 +663,7 @@
 
     iput v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->insetBottom:I
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_cornerRadius:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_cornerRadius:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -627,7 +673,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_cornerRadius:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_cornerRadius:I
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -639,7 +685,7 @@
 
     int-to-float v0, v0
 
-    invoke-virtual {v3, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->withCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel;
+    invoke-virtual {v3, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->w(F)Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object v0
 
@@ -650,7 +696,7 @@
     iput-boolean v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->cornerRadiusSet:Z
 
     :cond_0
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_strokeWidth:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_strokeWidth:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -658,7 +704,7 @@
 
     iput v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeWidth:I
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_backgroundTintMode:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_backgroundTintMode:I
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -674,11 +720,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/widget/Button;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v2, Lcom/google/android/material/R$styleable;->MaterialButton_backgroundTint:I
+    sget v2, Lb/a/b/a/l;->MaterialButton_backgroundTint:I
 
     invoke-static {v0, p1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -688,11 +734,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/widget/Button;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v2, Lcom/google/android/material/R$styleable;->MaterialButton_strokeColor:I
+    sget v2, Lb/a/b/a/l;->MaterialButton_strokeColor:I
 
     invoke-static {v0, p1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -702,11 +748,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/widget/Button;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v2, Lcom/google/android/material/R$styleable;->MaterialButton_rippleColor:I
+    sget v2, Lb/a/b/a/l;->MaterialButton_rippleColor:I
 
     invoke-static {v0, p1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -714,7 +760,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleColor:Landroid/content/res/ColorStateList;
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_android_checkable:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_android_checkable:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -722,7 +768,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->checkable:Z
 
-    sget v0, Lcom/google/android/material/R$styleable;->MaterialButton_elevation:I
+    sget v0, Lb/a/b/a/l;->MaterialButton_elevation:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -730,25 +776,25 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getPaddingStart(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->D(Landroid/view/View;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v1}, Lcom/google/android/material/button/MaterialButton;->getPaddingTop()I
+    invoke-virtual {v1}, Landroid/widget/Button;->getPaddingTop()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-static {v2}, Landroidx/core/view/ViewCompat;->getPaddingEnd(Landroid/view/View;)I
+    invoke-static {v2}, Landroidx/core/view/ViewCompat;->C(Landroid/view/View;)I
 
     move-result v2
 
     iget-object v3, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v3}, Lcom/google/android/material/button/MaterialButton;->getPaddingBottom()I
+    invoke-virtual {v3}, Landroid/widget/Button;->getPaddingBottom()I
 
     move-result v3
 
@@ -768,7 +814,7 @@
 
     int-to-float p1, p1
 
-    invoke-virtual {v4, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setElevation(F)V
+    invoke-virtual {v4, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->S(F)V
 
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
@@ -789,7 +835,7 @@
 
     add-int/2addr v3, v4
 
-    invoke-static {p1, v0, v1, v2, v3}, Landroidx/core/view/ViewCompat;->setPaddingRelative(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, v1, v2, v3}, Landroidx/core/view/ViewCompat;->t0(Landroid/view/View;IIII)V
 
     return-void
 .end method
@@ -865,7 +911,7 @@
 
     int-to-float p1, p1
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->withCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel;
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->w(F)Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p1
 
@@ -877,6 +923,10 @@
 
 .method setRippleColor(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->rippleColor:Landroid/content/res/ColorStateList;
 
@@ -890,7 +940,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -900,7 +950,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -921,7 +971,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -931,7 +981,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButton;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -950,6 +1000,10 @@
 
 .method setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/shape/ShapeAppearanceModel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->shapeAppearanceModel:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
@@ -970,6 +1024,10 @@
 
 .method setStrokeColor(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->strokeColor:Landroid/content/res/ColorStateList;
 
@@ -1000,6 +1058,10 @@
 
 .method setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTint:Landroid/content/res/ColorStateList;
 
@@ -1019,7 +1081,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTint:Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
@@ -1027,6 +1089,10 @@
 
 .method setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTintMode:Landroid/graphics/PorterDuff$Mode;
 
@@ -1050,7 +1116,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonHelper;->backgroundTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void

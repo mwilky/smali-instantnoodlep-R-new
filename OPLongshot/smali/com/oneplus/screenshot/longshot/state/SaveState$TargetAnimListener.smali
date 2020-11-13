@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/SaveState$TargetAnimListener;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SaveState.java"
+.source ""
 
 
 # annotations
@@ -64,7 +64,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState$TargetAnimListener;->this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
 
-    iget-object p1, p1, Lcom/oneplus/screenshot/longshot/state/SaveState;->mImageView:Landroid/widget/ImageView;
+    iget-object p1, p1, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -80,7 +80,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState$TargetAnimListener;->this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
 
-    iget-object p1, p1, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p1, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->stop()V
 

@@ -1,16 +1,11 @@
 .class Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
-.super Landroidx/core/app/FrameMetricsAggregator$FrameMetricsBaseImpl;
-.source "FrameMetricsAggregator.java"
+.super Landroidx/core/app/b;
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/core/app/FrameMetricsAggregator;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
-    name = "FrameMetricsApi24Impl"
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
 .end annotation
 
 
@@ -53,7 +48,7 @@
 .method constructor <init>(I)V
     .locals 1
 
-    invoke-direct {p0}, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsBaseImpl;-><init>()V
+    invoke-direct {p0}, Landroidx/core/app/b;-><init>()V
 
     const/16 v0, 0x9
 
@@ -67,9 +62,9 @@
 
     iput-object v0, p0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;->mActivities:Ljava/util/ArrayList;
 
-    new-instance v0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$1;
+    new-instance v0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$a;
 
-    invoke-direct {v0, p0}, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$1;-><init>(Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;)V
+    invoke-direct {v0, p0}, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$a;-><init>(Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;)V
 
     iput-object v0, p0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;->mListener:Landroid/view/Window$OnFrameMetricsAvailableListener;
 

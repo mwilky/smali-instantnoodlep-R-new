@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/TypeOrFailure;
 .super Ljava/lang/Object;
-.source "TypeOrFailure.java"
+.source ""
 
 
 # annotations

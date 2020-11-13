@@ -1,6 +1,6 @@
 .class Lcom/oneplus/longshot/ILongScreenshotCallback$Stub$Proxy;
 .super Ljava/lang/Object;
-.source "ILongScreenshotCallback.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshotCallback;
@@ -56,11 +56,6 @@
 
 .method public isTopActivityDisplayCompat(Ljava/lang/String;I)Z
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -146,11 +141,6 @@
 
 .method public notifyMove()V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -221,11 +211,6 @@
 
 .method public stop()V
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

@@ -1,6 +1,20 @@
 .class public Landroidx/appcompat/widget/DrawableUtils;
 .super Ljava/lang/Object;
-.source "DrawableUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedAPI"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -82,6 +96,10 @@
 
 .method public static canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 4
+    .param p0    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -173,6 +191,7 @@
 
     move-result-object p0
 
+    :goto_1
     invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p0
@@ -190,11 +209,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p0
-
-    return p0
+    goto :goto_1
 
     :cond_6
     instance-of v0, p0, Landroid/graphics/drawable/ScaleDrawable;
@@ -207,11 +222,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p0
-
-    return p0
+    goto :goto_1
 
     :cond_7
     const/4 p0, 0x1
@@ -221,6 +232,10 @@
 
 .method static fixDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
+    .param p0    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -228,17 +243,17 @@
 
     if-ne v0, v1, :cond_0
 
+    const-string v0, "android.graphics.drawable.VectorDrawable"
+
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "android.graphics.drawable.VectorDrawable"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -325,7 +340,7 @@
     if-eqz v0, :cond_7
 
     :try_start_0
-    invoke-static {p0}, Landroidx/core/graphics/drawable/DrawableCompat;->unwrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Landroidx/core/graphics/drawable/a;->q(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 

@@ -1,6 +1,12 @@
 .class public Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;
 .super Landroid/widget/RelativeLayout;
-.source "SwitchFloatingActionButton.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    api = 0x15
+.end annotation
 
 
 # static fields
@@ -71,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$attr;->switchFloatingActionButtonStyle:I
+    sget v0, Lb/a/b/a/b;->switchFloatingActionButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -83,9 +89,9 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$1;-><init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$a;-><init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
 
     iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
 
@@ -95,35 +101,35 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mIsSwitchState:Z
 
-    sget-object v0, Lcom/google/android/material/R$styleable;->switchFloatingActionButton:[I
+    sget-object v0, Lb/a/b/a/l;->switchFloatingActionButton:[I
 
-    sget v1, Lcom/google/android/material/R$style;->Widget_Design_SwitchFloatingActionButton:I
+    sget v1, Lb/a/b/a/k;->Widget_Design_SwitchFloatingActionButton:I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    sget v0, Lcom/google/android/material/R$dimen;->op_float_action_button_shadow_z8:I
+    sget v0, Lb/a/b/a/d;->op_float_action_button_shadow_z8:I
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p3
 
-    sget v0, Lcom/google/android/material/R$styleable;->switchFloatingActionButton_tintColor:I
+    sget v0, Lb/a/b/a/l;->switchFloatingActionButton_tintColor:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$drawable;->switch_floating_action_button:I
+    sget v2, Lb/a/b/a/e;->switch_floating_action_button:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -137,7 +143,7 @@
 
     new-instance v0, Landroid/graphics/drawable/RippleDrawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -155,13 +161,13 @@
 
     invoke-direct {v0, v2, v1, v3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p0, p3}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setElevation(F)V
+    invoke-virtual {p0, p3}, Landroid/widget/RelativeLayout;->setElevation(F)V
 
     iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
 
-    invoke-virtual {p0, p3}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    invoke-virtual {p0, p3}, Landroid/widget/RelativeLayout;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     const-string p3, "layout_inflater"
 
@@ -171,13 +177,13 @@
 
     check-cast p1, Landroid/view/LayoutInflater;
 
-    sget p3, Lcom/google/android/material/R$layout;->float_switch_button:I
+    sget p3, Lb/a/b/a/h;->float_switch_button:I
 
     invoke-virtual {p1, p3, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget p1, Lcom/google/android/material/R$id;->normal_imageview:I
+    sget p1, Lb/a/b/a/f;->normal_imageview:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -185,7 +191,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mNormalImageView:Landroid/widget/ImageView;
 
-    sget p1, Lcom/google/android/material/R$styleable;->switchFloatingActionButton_image:I
+    sget p1, Lb/a/b/a/l;->switchFloatingActionButton_image:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -195,9 +201,9 @@
 
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget p1, Lcom/google/android/material/R$id;->switch_imageview:I
+    sget p1, Lb/a/b/a/f;->switch_imageview:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -217,7 +223,7 @@
 
     invoke-direct {v0}, Landroid/animation/StateListAnimator;-><init>()V
 
-    sget-object v1, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->PRESSED_ENABLED_STATE_SET:[I
+    sget-object v1, Landroid/widget/RelativeLayout;->PRESSED_ENABLED_STATE_SET:[I
 
     const/4 v2, 0x1
 
@@ -257,7 +263,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    sget-object v1, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->EMPTY_STATE_SET:[I
+    sget-object v1, Landroid/widget/RelativeLayout;->EMPTY_STATE_SET:[I
 
     new-array v2, v2, [F
 
@@ -273,7 +279,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
     return-void
 .end method
@@ -384,13 +390,13 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mIsDisappear1:Z
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     const/4 v0, 0x5
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotType(I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -494,9 +500,9 @@
 
     invoke-virtual {v5, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$2;
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$b;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$2;-><init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$b;-><init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
 
     invoke-virtual {v5, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -746,7 +752,7 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotType(I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -854,7 +860,7 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotType(I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -932,11 +938,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$drawable;->switch_floating_action_button:I
+    sget v1, Lb/a/b/a/e;->switch_floating_action_button:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -950,7 +956,7 @@
 
     new-instance p1, Landroid/graphics/drawable/RippleDrawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -968,7 +974,7 @@
 
     invoke-direct {p1, v1, v0, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -980,154 +986,105 @@
 
     packed-switch p1, :pswitch_data_0
 
-    goto/16 :goto_0
+    goto :goto_7
 
     :pswitch_0
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_1
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_2
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_2
 
     :pswitch_3
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
     div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
-
-    :pswitch_4
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
-
-    :pswitch_5
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getHeight()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
-
-    :pswitch_6
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
-
-    :pswitch_7
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
-
-    goto :goto_0
-
-    :pswitch_8
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotY(F)V
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->setPivotX(F)V
 
     :goto_0
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    goto :goto_3
+
+    :pswitch_4
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    :goto_1
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    goto :goto_4
+
+    :pswitch_5
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    :goto_2
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    goto :goto_6
+
+    :pswitch_6
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    :goto_3
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    goto :goto_5
+
+    :pswitch_7
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    :goto_4
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    :goto_5
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_7
+
+    :pswitch_8
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    :goto_6
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    :goto_7
     return-void
 
     :pswitch_data_0

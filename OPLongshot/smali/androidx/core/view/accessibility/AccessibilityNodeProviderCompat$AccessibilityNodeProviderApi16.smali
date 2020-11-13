@@ -1,9 +1,13 @@
 .class Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
 .super Landroid/view/accessibility/AccessibilityNodeProvider;
-.source "AccessibilityNodeProviderCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 .end annotation
@@ -36,7 +40,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->createAccessibilityNodeInfo(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a(I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
@@ -47,7 +51,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->unwrap()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {p1}, Landroidx/core/view/accessibility/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
 
@@ -69,7 +73,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
+    invoke-virtual {v0, p1, p2}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->b(Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -97,9 +101,9 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+    check-cast v2, Landroidx/core/view/accessibility/d;
 
-    invoke-virtual {v2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->unwrap()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {v2}, Landroidx/core/view/accessibility/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 
@@ -118,7 +122,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->performAction(IILandroid/os/Bundle;)Z
+    invoke-virtual {v0, p1, p2, p3}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->e(IILandroid/os/Bundle;)Z
 
     move-result p1
 

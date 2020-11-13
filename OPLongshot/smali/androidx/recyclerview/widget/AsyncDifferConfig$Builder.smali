@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 .super Ljava/lang/Object;
-.source "AsyncDifferConfig.java"
+.source ""
 
 
 # annotations
@@ -42,6 +42,9 @@
 .end field
 
 .field private mMainThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -54,15 +57,15 @@
 
     sput-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sExecutorLock:Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    sput-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sDiffExecutor:Ljava/util/concurrent/Executor;
-
     return-void
 .end method
 
 .method public constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -82,6 +85,9 @@
 # virtual methods
 .method public build()Landroidx/recyclerview/widget/AsyncDifferConfig;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -149,6 +155,9 @@
 
 .method public setBackgroundThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -166,6 +175,15 @@
 
 .method public setMainThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

@@ -1,6 +1,6 @@
 .class final Landroidx/fragment/app/Fragment$SavedState$1;
 .super Ljava/lang/Object;
-.source "Fragment.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;
 .super Ljava/util/AbstractSet;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 
 # annotations
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

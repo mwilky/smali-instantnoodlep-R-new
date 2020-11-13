@@ -1,18 +1,9 @@
 .class public final enum Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
 .super Ljava/lang/Enum;
-.source "BatterySipperNative.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/compat/os/BatterySipperNative;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
-    name = "DrainTypeNative"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Enum<",

@@ -1,6 +1,6 @@
 .class Landroidx/lifecycle/MediatorLiveData$Source;
 .super Ljava/lang/Object;
-.source "MediatorLiveData.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -80,6 +80,10 @@
 # virtual methods
 .method public onChanged(Ljava/lang/Object;)V
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)V"

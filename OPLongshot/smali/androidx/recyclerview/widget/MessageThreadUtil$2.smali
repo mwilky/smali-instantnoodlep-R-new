@@ -1,6 +1,6 @@
 .class Landroidx/recyclerview/widget/MessageThreadUtil$2;
 .super Ljava/lang/Object;
-.source "MessageThreadUtil.java"
+.source ""
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
@@ -42,7 +42,7 @@
 
 .field private final mExecutor:Ljava/util/concurrent/Executor;
 
-.field final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+.field final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
 .field final synthetic this$0:Landroidx/recyclerview/widget/MessageThreadUtil;
 
@@ -59,11 +59,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+    new-instance p1, Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
-    invoke-direct {p1}, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;-><init>()V
+    invoke-direct {p1}, Landroidx/recyclerview/widget/MessageThreadUtil$a;-><init>()V
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+    iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
     sget-object p1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -77,9 +77,9 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance p1, Landroidx/recyclerview/widget/MessageThreadUtil$2$1;
+    new-instance p1, Landroidx/recyclerview/widget/MessageThreadUtil$2$a;
 
-    invoke-direct {p1, p0}, Landroidx/recyclerview/widget/MessageThreadUtil$2$1;-><init>(Landroidx/recyclerview/widget/MessageThreadUtil$2;)V
+    invoke-direct {p1, p0}, Landroidx/recyclerview/widget/MessageThreadUtil$2$a;-><init>(Landroidx/recyclerview/widget/MessageThreadUtil$2;)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mBackgroundRunnable:Ljava/lang/Runnable;
 
@@ -111,24 +111,24 @@
     return-void
 .end method
 
-.method private sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+.method private sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+    iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$a;->c(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->maybeExecuteBackgroundRunnable()V
 
     return-void
 .end method
 
-.method private sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+.method private sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+    iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$a;->d(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->maybeExecuteBackgroundRunnable()V
 
@@ -142,11 +142,11 @@
 
     const/4 v0, 0x3
 
-    invoke-static {v0, p1, p2}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->obtainMessage(III)Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+    invoke-static {v0, p1, p2}, Landroidx/recyclerview/widget/MessageThreadUtil$b;->a(III)Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     return-void
 .end method
@@ -165,11 +165,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->obtainMessage(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+    invoke-static {v0, v1, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$b;->c(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     return-void
 .end method
@@ -181,11 +181,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->obtainMessage(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+    invoke-static {v0, p1, v1}, Landroidx/recyclerview/widget/MessageThreadUtil$b;->c(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     return-void
 .end method
@@ -207,11 +207,11 @@
 
     move v5, p5
 
-    invoke-static/range {v0 .. v6}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->obtainMessage(IIIIIILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+    invoke-static/range {v0 .. v6}, Landroidx/recyclerview/widget/MessageThreadUtil$b;->b(IIIIIILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
 
     return-void
 .end method

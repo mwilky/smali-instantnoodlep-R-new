@@ -1,6 +1,14 @@
 .class public Landroidx/core/app/RemoteActionCompatParcelizer;
 .super Ljava/lang/Object;
-.source "RemoteActionCompatParcelizer.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -19,19 +27,19 @@
 
     invoke-direct {v0}, Landroidx/core/app/RemoteActionCompat;-><init>()V
 
-    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
+    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;I)Landroidx/versionedparcelable/VersionedParcelable;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable(Landroidx/versionedparcelable/a;I)Landroidx/versionedparcelable/a;
 
     move-result-object v1
 
     check-cast v1, Landroidx/core/graphics/drawable/IconCompat;
 
-    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
+    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
 
-    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mTitle:Ljava/lang/CharSequence;
+    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
     const/4 v2, 0x2
 
@@ -39,9 +47,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mTitle:Ljava/lang/CharSequence;
+    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
-    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mContentDescription:Ljava/lang/CharSequence;
+    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
     const/4 v2, 0x3
 
@@ -49,9 +57,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mContentDescription:Ljava/lang/CharSequence;
+    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
-    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mActionIntent:Landroid/app/PendingIntent;
+    iget-object v1, v0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
     const/4 v2, 0x4
 
@@ -61,9 +69,9 @@
 
     check-cast v1, Landroid/app/PendingIntent;
 
-    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->mActionIntent:Landroid/app/PendingIntent;
+    iput-object v1, v0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
-    iget-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->mEnabled:Z
+    iget-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
     const/4 v2, 0x5
 
@@ -71,9 +79,9 @@
 
     move-result v1
 
-    iput-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->mEnabled:Z
+    iput-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
-    iget-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->mShouldShowIcon:Z
+    iget-boolean v1, v0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     const/4 v2, 0x6
 
@@ -81,7 +89,7 @@
 
     move-result p0
 
-    iput-boolean p0, v0, Landroidx/core/app/RemoteActionCompat;->mShouldShowIcon:Z
+    iput-boolean p0, v0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     return-object v0
 .end method
@@ -93,37 +101,37 @@
 
     invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/VersionedParcel;->setSerializationFlags(ZZ)V
 
-    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
+    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;I)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/a;I)V
 
-    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->mTitle:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
     const/4 v1, 0x2
 
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeCharSequence(Ljava/lang/CharSequence;I)V
 
-    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->mContentDescription:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
     const/4 v1, 0x3
 
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeCharSequence(Ljava/lang/CharSequence;I)V
 
-    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->mActionIntent:Landroid/app/PendingIntent;
+    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
     const/4 v1, 0x4
 
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget-boolean v0, p0, Landroidx/core/app/RemoteActionCompat;->mEnabled:Z
+    iget-boolean v0, p0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
     const/4 v1, 0x5
 
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeBoolean(ZI)V
 
-    iget-boolean p0, p0, Landroidx/core/app/RemoteActionCompat;->mShouldShowIcon:Z
+    iget-boolean p0, p0, Landroidx/core/app/RemoteActionCompat;->f:Z
 
     const/4 v0, 0x6
 

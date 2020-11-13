@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/smallscreen/TraceCallBack;
 .super Ljava/lang/Object;
-.source "TraceCallBack.java"
+.source ""
 
 
 # virtual methods

@@ -1,12 +1,16 @@
 .class public Lcom/google/android/material/transition/SlideDistanceProvider;
 .super Ljava/lang/Object;
-.source "SlideDistanceProvider.java"
+.source ""
 
 # interfaces
-.implements Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.implements Lcom/google/android/material/transition/e;
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/transition/SlideDistanceProvider$GravityFlag;
@@ -16,6 +20,9 @@
 
 # instance fields
 .field private slideDistance:I
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
+.end field
 
 .field private slideEdge:I
 
@@ -23,6 +30,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,7 +43,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$dimen;->mtrl_transition_shared_axis_slide_distance:I
+    sget p2, Lb/a/b/a/d;->mtrl_transition_shared_axis_slide_distance:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -414,7 +425,7 @@
 .method private static isRtl(Landroid/view/View;)Z
     .locals 1
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result p0
 
@@ -435,6 +446,24 @@
 # virtual methods
 .method public createAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/transition/SlideDistanceProvider;->createTranslationAppearAnimator(Landroid/view/View;Landroid/view/View;)Landroid/animation/Animator;
 
@@ -445,6 +474,24 @@
 
 .method public createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/transition/SlideDistanceProvider;->createTranslationDisappearAnimator(Landroid/view/View;Landroid/view/View;)Landroid/animation/Animator;
 
@@ -455,6 +502,8 @@
 
 .method public getSlideDistance()I
     .locals 1
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
     iget v0, p0, Lcom/google/android/material/transition/SlideDistanceProvider;->slideDistance:I
 
@@ -471,6 +520,10 @@
 
 .method public setSlideDistance(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     iput p1, p0, Lcom/google/android/material/transition/SlideDistanceProvider;->slideDistance:I
 

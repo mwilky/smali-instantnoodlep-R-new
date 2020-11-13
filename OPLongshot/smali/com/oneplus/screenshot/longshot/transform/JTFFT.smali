@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/transform/JTFFT;
 .super Ljava/lang/Object;
-.source "JTFFT.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/transform/FFT;

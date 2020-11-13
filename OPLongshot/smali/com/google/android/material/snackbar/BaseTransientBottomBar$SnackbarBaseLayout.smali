@@ -1,9 +1,15 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 .super Landroid/widget/FrameLayout;
-.source "BaseTransientBottomBar.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 .end annotation
@@ -36,13 +42,13 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lcom/google/android/material/R$styleable;->SnackbarLayout:[I
+    sget-object v0, Lb/a/b/a/l;->SnackbarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->SnackbarLayout_elevation:I
+    sget p2, Lb/a/b/a/l;->SnackbarLayout_elevation:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -50,7 +56,7 @@
 
     if-eqz p2, :cond_0
 
-    sget p2, Lcom/google/android/material/R$styleable;->SnackbarLayout_elevation:I
+    sget p2, Lb/a/b/a/l;->SnackbarLayout_elevation:I
 
     const/4 v0, 0x0
 
@@ -60,14 +66,14 @@
 
     int-to-float p2, p2
 
-    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->setElevation(Landroid/view/View;F)V
+    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->n0(Landroid/view/View;F)V
 
     :cond_0
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->setClickable(Z)V
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
     return-void
 .end method
@@ -86,7 +92,7 @@
     invoke-interface {v0, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;->onViewAttachedToWindow(Landroid/view/View;)V
 
     :cond_0
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->requestApplyInsets(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->e0(Landroid/view/View;)V
 
     return-void
 .end method

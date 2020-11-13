@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/internal/ContextUtils;
 .super Ljava/lang/Object;
-.source "ContextUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -14,6 +22,8 @@
 
 .method public static getActivity(Landroid/content/Context;)Landroid/app/Activity;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     :goto_0
     instance-of v0, p0, Landroid/content/ContextWrapper;

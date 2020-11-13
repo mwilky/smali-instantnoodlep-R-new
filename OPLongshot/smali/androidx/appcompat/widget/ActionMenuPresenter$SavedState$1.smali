@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/ActionMenuPresenter$SavedState$1;
 .super Ljava/lang/Object;
-.source "ActionMenuPresenter.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

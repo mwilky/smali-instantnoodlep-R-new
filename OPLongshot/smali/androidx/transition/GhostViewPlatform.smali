@@ -1,9 +1,15 @@
 .class Landroidx/transition/GhostViewPlatform;
 .super Ljava/lang/Object;
-.source "GhostViewPlatform.java"
+.source ""
 
 # interfaces
-.implements Landroidx/transition/GhostView;
+.implements Landroidx/transition/f;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # static fields
@@ -36,6 +42,10 @@
 # direct methods
 .method private constructor <init>(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +54,7 @@
     return-void
 .end method
 
-.method static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroidx/transition/GhostView;
+.method static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroidx/transition/f;
     .locals 5
 
     invoke-static {}, Landroidx/transition/GhostViewPlatform;->fetchAddGhostMethod()V
@@ -56,9 +66,7 @@
     if-eqz v0, :cond_0
 
     :try_start_0
-    new-instance v0, Landroidx/transition/GhostViewPlatform;
-
-    sget-object v2, Landroidx/transition/GhostViewPlatform;->sAddGhostMethod:Ljava/lang/reflect/Method;
+    new-instance v2, Landroidx/transition/GhostViewPlatform;
 
     const/4 v3, 0x3
 
@@ -76,18 +84,18 @@
 
     aput-object p2, v3, p0
 
-    invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/View;
 
-    invoke-direct {v0, p0}, Landroidx/transition/GhostViewPlatform;-><init>(Landroid/view/View;)V
+    invoke-direct {v2, p0}, Landroidx/transition/GhostViewPlatform;-><init>(Landroid/view/View;)V
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    return-object v2
 
     :catch_0
     move-exception p0

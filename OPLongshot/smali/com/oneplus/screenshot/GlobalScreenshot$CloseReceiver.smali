@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations

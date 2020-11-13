@@ -1,5 +1,6 @@
 .class public final Lcom/oneplus/screenshot/R$dimen;
 .super Ljava/lang/Object;
+.source ""
 
 
 # annotations
@@ -1496,93 +1497,95 @@
 
 .field public static final small_longshot_width:I = 0x7f0702e4
 
-.field public static final small_screenshot_padding:I = 0x7f0702e5
+.field public static final small_screenshot_inner_radius:I = 0x7f0702e5
 
-.field public static final smallscreenshot_margin_bottom:I = 0x7f0702e6
+.field public static final small_screenshot_padding:I = 0x7f0702e6
 
-.field public static final smallscreenshotlayout_bottom_shadow:I = 0x7f0702e7
+.field public static final smallscreenshot_margin_bottom:I = 0x7f0702e7
 
-.field public static final smallscreenshotlayout_right_shadow:I = 0x7f0702e8
+.field public static final smallscreenshotlayout_bottom_shadow:I = 0x7f0702e8
 
-.field public static final snackbar_control_item_half_width:I = 0x7f0702e9
+.field public static final smallscreenshotlayout_right_shadow:I = 0x7f0702e9
 
-.field public static final status_bar_height_default:I = 0x7f0702ea
+.field public static final snackbar_control_item_half_width:I = 0x7f0702ea
 
-.field public static final tabs_padding_end:I = 0x7f0702eb
+.field public static final status_bar_height_default:I = 0x7f0702eb
 
-.field public static final tabs_padding_start:I = 0x7f0702ec
+.field public static final tabs_padding_end:I = 0x7f0702ec
 
-.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ed
+.field public static final tabs_padding_start:I = 0x7f0702ed
 
-.field public static final timepicker_am_top_padding:I = 0x7f0702ee
+.field public static final text_selection_highlight_alpha_material:I = 0x7f0702ee
 
-.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702ef
+.field public static final timepicker_am_top_padding:I = 0x7f0702ef
 
-.field public static final timepicker_ampm_label_size:I = 0x7f0702f0
+.field public static final timepicker_ampm_horizontal_padding:I = 0x7f0702f0
 
-.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702f1
+.field public static final timepicker_ampm_label_size:I = 0x7f0702f1
 
-.field public static final timepicker_center_dot_radius:I = 0x7f0702f2
+.field public static final timepicker_ampm_vertical_padding:I = 0x7f0702f2
 
-.field public static final timepicker_edit_text_size:I = 0x7f0702f3
+.field public static final timepicker_center_dot_radius:I = 0x7f0702f3
 
-.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f4
+.field public static final timepicker_edit_text_size:I = 0x7f0702f4
 
-.field public static final timepicker_header_height:I = 0x7f0702f5
+.field public static final timepicker_extra_time_label_margin:I = 0x7f0702f5
 
-.field public static final timepicker_input_field_width:I = 0x7f0702f6
+.field public static final timepicker_header_height:I = 0x7f0702f6
 
-.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f7
+.field public static final timepicker_input_field_width:I = 0x7f0702f7
 
-.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f8
+.field public static final timepicker_minimum_margin_sides:I = 0x7f0702f8
 
-.field public static final timepicker_pm_top_padding:I = 0x7f0702f9
+.field public static final timepicker_minimum_margin_top_bottom:I = 0x7f0702f9
 
-.field public static final timepicker_radial_picker_dimen:I = 0x7f0702fa
+.field public static final timepicker_pm_top_padding:I = 0x7f0702fa
 
-.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702fb
+.field public static final timepicker_radial_picker_dimen:I = 0x7f0702fb
 
-.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fc
+.field public static final timepicker_radial_picker_left_margin:I = 0x7f0702fc
 
-.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fd
+.field public static final timepicker_radial_picker_right_margin:I = 0x7f0702fd
 
-.field public static final timepicker_selector_dot_radius:I = 0x7f0702fe
+.field public static final timepicker_radial_picker_top_margin:I = 0x7f0702fe
 
-.field public static final timepicker_selector_radius:I = 0x7f0702ff
+.field public static final timepicker_selector_dot_radius:I = 0x7f0702ff
 
-.field public static final timepicker_selector_stroke:I = 0x7f070300
+.field public static final timepicker_selector_radius:I = 0x7f070300
 
-.field public static final timepicker_separator_padding:I = 0x7f070301
+.field public static final timepicker_selector_stroke:I = 0x7f070301
 
-.field public static final timepicker_text_inset_inner:I = 0x7f070302
+.field public static final timepicker_separator_padding:I = 0x7f070302
 
-.field public static final timepicker_text_inset_normal:I = 0x7f070303
+.field public static final timepicker_text_inset_inner:I = 0x7f070303
 
-.field public static final timepicker_text_size_inner:I = 0x7f070304
+.field public static final timepicker_text_inset_normal:I = 0x7f070304
 
-.field public static final timepicker_text_size_normal:I = 0x7f070305
+.field public static final timepicker_text_size_inner:I = 0x7f070305
 
-.field public static final timepicker_time_label_size:I = 0x7f070306
+.field public static final timepicker_text_size_normal:I = 0x7f070306
 
-.field public static final toolbar_elevation:I = 0x7f070307
+.field public static final timepicker_time_label_size:I = 0x7f070307
 
-.field public static final toolbar_icon_min_width:I = 0x7f070308
+.field public static final toolbar_elevation:I = 0x7f070308
 
-.field public static final tooltip_corner_radius:I = 0x7f070309
+.field public static final toolbar_icon_min_width:I = 0x7f070309
 
-.field public static final tooltip_horizontal_padding:I = 0x7f07030a
+.field public static final tooltip_corner_radius:I = 0x7f07030a
 
-.field public static final tooltip_margin:I = 0x7f07030b
+.field public static final tooltip_horizontal_padding:I = 0x7f07030b
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030c
+.field public static final tooltip_margin:I = 0x7f07030c
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030d
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07030d
 
-.field public static final tooltip_vertical_padding:I = 0x7f07030e
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f07030e
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f07030f
+.field public static final tooltip_vertical_padding:I = 0x7f07030f
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070310
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070310
+
+.field public static final tooltip_y_offset_touch:I = 0x7f070311
 
 
 # direct methods

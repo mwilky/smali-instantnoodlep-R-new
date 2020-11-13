@@ -1,18 +1,10 @@
 .class public Lcom/google/android/material/appbar/AppBarLayoutBehavior;
 .super Lcom/google/android/material/appbar/AppBarLayout$Behavior;
-.source "AppBarLayoutBehavior.java"
-
-
-# static fields
-.field private static final TAG:Ljava/lang/String; = "chenhb"
-
-.field private static final TYPE_FLING:I = 0x1
+.source ""
 
 
 # instance fields
-.field private isFlinging:Z
-
-.field private shouldBlockNestedScroll:Z
+.field private a:Z
 
 
 # direct methods
@@ -24,7 +16,7 @@
     return-void
 .end method
 
-.method private getSuperSuperField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+.method private a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
     :try_start_0
@@ -71,7 +63,7 @@
     return-object p1
 .end method
 
-.method private stopAppbarLayoutFling(Lcom/google/android/material/appbar/AppBarLayout;)V
+.method private d(Lcom/google/android/material/appbar/AppBarLayout;)V
     .locals 5
 
     :try_start_0
@@ -125,7 +117,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p1, v2}, Lcom/google/android/material/appbar/AppBarLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     const/4 p1, 0x0
 
@@ -166,19 +158,7 @@
 
 
 # virtual methods
-.method public bridge synthetic onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 0
-
-    check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/MotionEvent;)Z
+.method public b(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/MotionEvent;)Z
     .locals 2
 
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
@@ -189,7 +169,7 @@
 
     const-string v0, "scroller"
 
-    invoke-direct {p0, p0, v0}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->getSuperSuperField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {p0, p0, v0}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -204,7 +184,32 @@
     invoke-virtual {v0}, Landroid/widget/OverScroller;->abortAnimation()V
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/appbar/HeaderBehavior;->onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public c(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;IIIII)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->a:Z
+
+    if-nez v0, :cond_0
+
+    invoke-super/range {p0 .. p8}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public bridge synthetic onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->b(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -224,51 +229,46 @@
 .method public onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
     .locals 9
 
-    move-object v8, p0
-
     const/4 v0, 0x1
 
-    move/from16 v7, p7
-
-    if-ne v7, v0, :cond_0
-
-    iput-boolean v0, v8, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->isFlinging:Z
-
-    :cond_0
-    iget-boolean v0, v8, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->shouldBlockNestedScroll:Z
-
-    if-nez v0, :cond_2
-
-    const/16 v0, -0x1e
-
-    move v1, p5
-
-    if-ge v1, v0, :cond_1
-
-    const/16 v5, -0x1e
+    move/from16 v8, p7
 
     move-object v0, p0
 
-    move-object v1, p1
+    iget-boolean v1, v0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->a:Z
 
-    move-object v2, p2
+    if-nez v1, :cond_1
 
-    move-object v3, p3
+    const/16 v1, -0x1e
 
-    move v4, p4
+    move v2, p5
 
-    move-object v6, p6
+    if-ge v2, v1, :cond_0
 
-    move/from16 v7, p7
+    const/16 v6, -0x1e
 
-    invoke-super/range {v0 .. v7}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    move-object v7, p6
+
+    move/from16 v8, p7
+
+    invoke-super/range {v1 .. v8}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     invoke-super/range {p0 .. p7}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
 
-    :cond_2
+    :cond_1
     :goto_0
     return-void
 .end method
@@ -278,21 +278,8 @@
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
-    invoke-virtual/range {p0 .. p8}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;IIIII)V
+    invoke-virtual/range {p0 .. p8}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->c(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;IIIII)V
 
-    return-void
-.end method
-
-.method public onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;IIIII)V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->shouldBlockNestedScroll:Z
-
-    if-nez v0, :cond_0
-
-    invoke-super/range {p0 .. p8}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII)V
-
-    :cond_0
     return-void
 .end method
 
@@ -311,7 +298,7 @@
 .method public onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
-    invoke-direct {p0, p2}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->stopAppbarLayoutFling(Lcom/google/android/material/appbar/AppBarLayout;)V
+    invoke-direct {p0, p2}, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->d(Lcom/google/android/material/appbar/AppBarLayout;)V
 
     invoke-super/range {p0 .. p6}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;->onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;Landroid/view/View;II)Z
 
@@ -337,9 +324,7 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->isFlinging:Z
-
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->shouldBlockNestedScroll:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayoutBehavior;->a:Z
 
     return-void
 .end method

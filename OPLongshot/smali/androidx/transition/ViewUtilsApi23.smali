@@ -1,6 +1,12 @@
 .class Landroidx/transition/ViewUtilsApi23;
 .super Landroidx/transition/ViewUtilsApi22;
-.source "ViewUtilsApi23.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x17
+.end annotation
 
 
 # static fields
@@ -26,6 +32,15 @@
 # virtual methods
 .method public setTransitionVisibility(Landroid/view/View;I)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -33,7 +48,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-super {p0, p1, p2}, Landroidx/transition/ViewUtilsApi22;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-super {p0, p1, p2}, Landroidx/transition/y;->setTransitionVisibility(Landroid/view/View;I)V
 
     goto :goto_0
 

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveTracker;
 .super Ljava/lang/Object;
-.source "LongshotMode.java"
+.source ""
 
 
 # annotations

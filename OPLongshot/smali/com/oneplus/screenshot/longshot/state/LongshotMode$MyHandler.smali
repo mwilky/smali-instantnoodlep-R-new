@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/LongshotMode$MyHandler;
 .super Landroid/os/Handler;
-.source "LongshotMode.java"
+.source ""
 
 
 # annotations

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "DynamicAnimation.java"
+.source ""
 
 
 # annotations
@@ -31,7 +31,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+.method synthetic constructor <init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$g;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;)V

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/longshot/IViewPropCallback$Stub$Proxy;
 .super Ljava/lang/Object;
-.source "IViewPropCallback.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/IViewPropCallback;
@@ -56,11 +56,6 @@
 
 .method public getViewProps()Ljava/lang/String;
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -137,11 +132,6 @@
 
 .method public performScroll(II)Z
     .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;
 .super Ljava/lang/Object;
-.source "AppCompatSpinner.java"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
@@ -8,6 +8,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/VisibleForTesting;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/AppCompatSpinner;
 .end annotation
@@ -21,7 +24,10 @@
 # instance fields
 .field private mListAdapter:Landroid/widget/ListAdapter;
 
-.field mPopup:Landroidx/appcompat/app/AlertDialog;
+.field mPopup:Landroidx/appcompat/app/b;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private mPrompt:Ljava/lang/CharSequence;
 
@@ -44,15 +50,15 @@
 .method public dismiss()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/AlertDialog;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/AlertDialog;
+    iput-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/b;
 
     :cond_0
     return-void
@@ -101,11 +107,11 @@
 .method public isShowing()Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/AlertDialog;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
@@ -127,7 +133,7 @@
 
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/AppCompatSpinner;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
+    invoke-virtual {p1}, Landroid/widget/Spinner;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
 
     move-result-object p1
 
@@ -143,7 +149,7 @@
 
     move-result-wide v1
 
-    invoke-virtual {p1, v0, p2, v1, v2}, Landroidx/appcompat/widget/AppCompatSpinner;->performItemClick(Landroid/view/View;IJ)Z
+    invoke-virtual {p1, v0, p2, v1, v2}, Landroid/widget/Spinner;->performItemClick(Landroid/view/View;IJ)Z
 
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->dismiss()V
@@ -225,7 +231,7 @@
     return-void
 
     :cond_0
-    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+    new-instance v0, Landroidx/appcompat/app/b$b;
 
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
@@ -233,34 +239,32 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroidx/appcompat/app/b$b;-><init>(Landroid/content/Context;)V
 
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/b$b;->h(Ljava/lang/CharSequence;)Landroidx/appcompat/app/b$b;
 
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
     iget-object v2, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    invoke-virtual {v2}, Landroidx/appcompat/widget/AppCompatSpinner;->getSelectedItemPosition()I
+    invoke-virtual {v2}, Landroid/widget/Spinner;->getSelectedItemPosition()I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2, p0}, Landroidx/appcompat/app/b$b;->g(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/b$b;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/b$b;->a()Landroidx/appcompat/app/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+    iput-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/b;
 
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/AlertDialog;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->getListView()Landroid/widget/ListView;
+    invoke-virtual {v0}, Landroidx/appcompat/app/b;->j()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -275,9 +279,9 @@
     invoke-virtual {v0, p2}, Landroid/widget/ListView;->setTextAlignment(I)V
 
     :cond_2
-    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/AlertDialog;
+    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DialogPopup;->mPopup:Landroidx/appcompat/app/b;
 
-    invoke-virtual {p1}, Landroidx/appcompat/app/AlertDialog;->show()V
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
 
     return-void
 .end method

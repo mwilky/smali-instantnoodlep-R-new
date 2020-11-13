@@ -1,6 +1,14 @@
 .class public final Lcom/google/android/material/internal/ThemeEnforcement;
 .super Ljava/lang/Object;
-.source "ThemeEnforcement.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -21,7 +29,7 @@
 
     new-array v1, v0, [I
 
-    sget v2, Lcom/google/android/material/R$attr;->colorPrimary:I
+    sget v2, Lb/a/b/a/b;->colorPrimary:I
 
     const/4 v3, 0x0
 
@@ -31,7 +39,7 @@
 
     new-array v0, v0, [I
 
-    sget v1, Lcom/google/android/material/R$attr;->colorPrimaryVariant:I
+    sget v1, Lb/a/b/a/b;->colorPrimaryVariant:I
 
     aput v1, v0, v3
 
@@ -50,6 +58,10 @@
 
 .method public static checkAppCompatTheme(Landroid/content/Context;)V
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Lcom/google/android/material/internal/ThemeEnforcement;->APPCOMPAT_CHECK_ATTRS:[I
 
@@ -62,14 +74,26 @@
 
 .method private static checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
 
-    sget-object v0, Lcom/google/android/material/R$styleable;->ThemeEnforcement:[I
+    sget-object v0, Lb/a/b/a/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->ThemeEnforcement_enforceMaterialTheme:I
+    sget p2, Lb/a/b/a/l;->ThemeEnforcement_enforceMaterialTheme:I
 
     const/4 p3, 0x0
 
@@ -89,7 +113,7 @@
 
     move-result-object p2
 
-    sget p3, Lcom/google/android/material/R$attr;->isMaterialTheme:I
+    sget p3, Lb/a/b/a/b;->isMaterialTheme:I
 
     const/4 v0, 0x1
 
@@ -120,6 +144,10 @@
 
 .method public static checkMaterialTheme(Landroid/content/Context;)V
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Lcom/google/android/material/internal/ThemeEnforcement;->MATERIAL_CHECK_ATTRS:[I
 
@@ -132,14 +160,40 @@
 
 .method private static varargs checkTextAppearance(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
     .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
 
-    sget-object v0, Lcom/google/android/material/R$styleable;->ThemeEnforcement:[I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .param p5    # [I
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    sget-object v0, Lb/a/b/a/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$styleable;->ThemeEnforcement_enforceTextAppearance:I
+    sget v1, Lb/a/b/a/l;->ThemeEnforcement_enforceTextAppearance:I
 
     const/4 v2, 0x0
 
@@ -171,7 +225,7 @@
 
     :cond_2
     :goto_0
-    sget p0, Lcom/google/android/material/R$styleable;->ThemeEnforcement_android_textAppearance:I
+    sget p0, Lb/a/b/a/l;->ThemeEnforcement_android_textAppearance:I
 
     const/4 p1, -0x1
 
@@ -205,6 +259,14 @@
 
 .method private static checkTheme(Landroid/content/Context;[ILjava/lang/String;)V
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1}, Lcom/google/android/material/internal/ThemeEnforcement;->isTheme(Landroid/content/Context;[I)Z
 
@@ -242,6 +304,10 @@
 
 .method public static isAppCompatTheme(Landroid/content/Context;)Z
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Lcom/google/android/material/internal/ThemeEnforcement;->APPCOMPAT_CHECK_ATTRS:[I
 
@@ -254,6 +320,32 @@
 
 .method private static varargs isCustomTextAppearanceValid(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Z
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .param p5    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -297,6 +389,10 @@
 
 .method public static isMaterialTheme(Landroid/content/Context;)Z
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Lcom/google/android/material/internal/ThemeEnforcement;->MATERIAL_CHECK_ATTRS:[I
 
@@ -309,6 +405,14 @@
 
 .method private static isTheme(Landroid/content/Context;[I)Z
     .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
@@ -348,6 +452,31 @@
 
 .method public static varargs obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
     .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .param p5    # [I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-static {p0, p1, p3, p4}, Lcom/google/android/material/internal/ThemeEnforcement;->checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -362,6 +491,29 @@
 
 .method public static varargs obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/TintTypedArray;
     .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .param p5    # [I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1, p3, p4}, Lcom/google/android/material/internal/ThemeEnforcement;->checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 

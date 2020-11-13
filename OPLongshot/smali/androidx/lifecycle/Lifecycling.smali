@@ -1,6 +1,14 @@
 .class public Landroidx/lifecycle/Lifecycling;
 .super Ljava/lang/Object;
-.source "Lifecycling.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -127,6 +135,9 @@
 
 .method private static generatedConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -285,16 +296,19 @@
 
 .method static getCallback(Ljava/lang/Object;)Landroidx/lifecycle/GenericLifecycleObserver;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/LifecycleEventObserver;
+    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/c;
 
     move-result-object p0
 
     new-instance v0, Landroidx/lifecycle/Lifecycling$1;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Landroidx/lifecycle/LifecycleEventObserver;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Landroidx/lifecycle/c;)V
 
     return-object v0
 .end method
@@ -353,7 +367,7 @@
 
     if-eqz p0, :cond_0
 
-    const-class v0, Landroidx/lifecycle/LifecycleObserver;
+    const-class v0, Landroidx/lifecycle/d;
 
     invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -372,12 +386,14 @@
     return p0
 .end method
 
-.method static lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/LifecycleEventObserver;
+.method static lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/c;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    instance-of v0, p0, Landroidx/lifecycle/LifecycleEventObserver;
+    instance-of v0, p0, Landroidx/lifecycle/c;
 
-    instance-of v1, p0, Landroidx/lifecycle/FullLifecycleObserver;
+    instance-of v1, p0, Landroidx/lifecycle/b;
 
     if-eqz v0, :cond_0
 
@@ -387,11 +403,11 @@
 
     move-object v1, p0
 
-    check-cast v1, Landroidx/lifecycle/FullLifecycleObserver;
+    check-cast v1, Landroidx/lifecycle/b;
 
-    check-cast p0, Landroidx/lifecycle/LifecycleEventObserver;
+    check-cast p0, Landroidx/lifecycle/c;
 
-    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/FullLifecycleObserver;Landroidx/lifecycle/LifecycleEventObserver;)V
+    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/b;Landroidx/lifecycle/c;)V
 
     return-object v0
 
@@ -400,18 +416,18 @@
 
     new-instance v0, Landroidx/lifecycle/FullLifecycleObserverAdapter;
 
-    check-cast p0, Landroidx/lifecycle/FullLifecycleObserver;
+    check-cast p0, Landroidx/lifecycle/b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/FullLifecycleObserver;Landroidx/lifecycle/LifecycleEventObserver;)V
+    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/b;Landroidx/lifecycle/c;)V
 
     return-object v0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    check-cast p0, Landroidx/lifecycle/LifecycleEventObserver;
+    check-cast p0, Landroidx/lifecycle/c;
 
     return-object p0
 
@@ -547,9 +563,9 @@
     return v2
 
     :cond_1
-    sget-object v0, Landroidx/lifecycle/ClassesInfoCache;->sInstance:Landroidx/lifecycle/ClassesInfoCache;
+    sget-object v0, Landroidx/lifecycle/a;->c:Landroidx/lifecycle/a;
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/ClassesInfoCache;->hasLifecycleMethods(Ljava/lang/Class;)Z
+    invoke-virtual {v0, p0}, Landroidx/lifecycle/a;->d(Ljava/lang/Class;)Z
 
     move-result v0
 

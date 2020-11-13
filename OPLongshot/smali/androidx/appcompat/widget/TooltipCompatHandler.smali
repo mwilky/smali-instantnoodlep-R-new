@@ -1,11 +1,19 @@
 .class Landroidx/appcompat/widget/TooltipCompatHandler;
 .super Ljava/lang/Object;
-.source "TooltipCompatHandler.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
 .implements Landroid/view/View$OnHoverListener;
 .implements Landroid/view/View$OnAttachStateChangeListener;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -48,15 +56,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroidx/appcompat/widget/TooltipCompatHandler$1;
+    new-instance v0, Landroidx/appcompat/widget/TooltipCompatHandler$a;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/TooltipCompatHandler$1;-><init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/widget/TooltipCompatHandler$a;-><init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
 
     iput-object v0, p0, Landroidx/appcompat/widget/TooltipCompatHandler;->mShowRunnable:Ljava/lang/Runnable;
 
-    new-instance v0, Landroidx/appcompat/widget/TooltipCompatHandler$2;
+    new-instance v0, Landroidx/appcompat/widget/TooltipCompatHandler$b;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/TooltipCompatHandler$2;-><init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/widget/TooltipCompatHandler$b;-><init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
 
     iput-object v0, p0, Landroidx/appcompat/widget/TooltipCompatHandler;->mHideRunnable:Ljava/lang/Runnable;
 
@@ -72,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/view/ViewConfigurationCompat;->getScaledHoverSlop(Landroid/view/ViewConfiguration;)I
+    invoke-static {p1}, Landroidx/core/view/q;->c(Landroid/view/ViewConfiguration;)I
 
     move-result p1
 
@@ -449,7 +457,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipCompatHandler;->mAnchor:Landroid/view/View;
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->M(Landroid/view/View;)Z
 
     move-result v0
 
@@ -512,7 +520,7 @@
     :cond_2
     iget-object p1, p0, Landroidx/appcompat/widget/TooltipCompatHandler;->mAnchor:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getWindowSystemUiVisibility(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->G(Landroid/view/View;)I
 
     move-result p1
 
@@ -524,20 +532,16 @@
 
     const-wide/16 v0, 0xbb8
 
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
-
-    move-result p1
-
     goto :goto_0
 
     :cond_3
     const-wide/16 v0, 0x3a98
 
+    :goto_0
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p1
 
-    :goto_0
     int-to-long v2, p1
 
     sub-long/2addr v0, v2

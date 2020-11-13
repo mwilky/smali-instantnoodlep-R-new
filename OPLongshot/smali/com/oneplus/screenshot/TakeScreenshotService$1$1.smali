@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/TakeScreenshotService$1$1;
 .super Ljava/lang/Object;
-.source "TakeScreenshotService.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

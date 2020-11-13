@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
-.source "StitchBgNextState.java"
+.source ""
 
 
 # static fields
@@ -33,15 +33,15 @@
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getIndex()I
 
@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->getErrorText()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->getErrorText()Ljava/lang/String;
 
     move-result-object v0
 
@@ -80,9 +80,9 @@
 .method protected getPageText()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v0
 
@@ -92,13 +92,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0f003e
+    const v1, 0x7f10003e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 .method protected updateIndex()V
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/StitchBgNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     const/4 v1, 0x1
 

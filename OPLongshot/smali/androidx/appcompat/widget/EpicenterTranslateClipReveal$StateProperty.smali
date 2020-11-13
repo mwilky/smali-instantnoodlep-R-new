@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;
 .super Landroid/util/Property;
-.source "EpicenterTranslateClipReveal.java"
+.source ""
 
 
 # annotations
@@ -17,7 +17,7 @@
     value = {
         "Landroid/util/Property<",
         "Landroid/view/View;",
-        "Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;",
+        "Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;",
         ">;"
     }
 .end annotation
@@ -34,14 +34,14 @@
 
 .field private final mTempRect:Landroid/graphics/Rect;
 
-.field private final mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+.field private final mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
 
 # direct methods
 .method public constructor <init>(C)V
     .locals 3
 
-    const-class v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    const-class v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -65,11 +65,11 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempRect:Landroid/graphics/Rect;
 
-    new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iput p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTargetDimension:I
 
@@ -78,7 +78,7 @@
 
 
 # virtual methods
-.method public get(Landroid/view/View;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+.method public get(Landroid/view/View;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
     .locals 4
 
     iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempRect:Landroid/graphics/Rect;
@@ -98,7 +98,7 @@
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     :cond_0
-    iget-object v1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iget-object v1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     iget v2, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTargetDimension:I
 
@@ -110,27 +110,17 @@
 
     move-result p1
 
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    iget p1, v0, Landroid/graphics/Rect;->left:I
+    iget v2, v0, Landroid/graphics/Rect;->left:I
 
-    iget v2, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    float-to-int v3, p1
 
-    float-to-int v2, v2
+    add-int/2addr v2, v3
 
-    add-int/2addr p1, v2
+    iput v2, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
-
-    iget p1, v0, Landroid/graphics/Rect;->right:I
-
-    iget v0, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
-
-    float-to-int v0, v0
-
-    add-int/2addr p1, v0
-
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
+    iget v0, v0, Landroid/graphics/Rect;->right:I
 
     goto :goto_0
 
@@ -139,29 +129,25 @@
 
     move-result p1
 
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    iget p1, v0, Landroid/graphics/Rect;->top:I
+    iget v2, v0, Landroid/graphics/Rect;->top:I
 
-    iget v2, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    float-to-int v3, p1
 
-    float-to-int v2, v2
+    add-int/2addr v2, v3
 
-    add-int/2addr p1, v2
+    iput v2, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
-
-    iget p1, v0, Landroid/graphics/Rect;->bottom:I
-
-    iget v0, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
-
-    float-to-int v0, v0
-
-    add-int/2addr p1, v0
-
-    iput p1, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
     :goto_0
+    float-to-int p1, p1
+
+    add-int/2addr v0, p1
+
+    iput v0, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
+
     return-object v1
 .end method
 
@@ -170,15 +156,15 @@
 
     check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->get(Landroid/view/View;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->get(Landroid/view/View;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public set(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;)V
-    .locals 4
+.method public set(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;)V
+    .locals 5
 
     iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTempRect:Landroid/graphics/Rect;
 
@@ -200,19 +186,17 @@
 
     if-ne v1, v2, :cond_0
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    float-to-int v3, v3
+    float-to-int v4, v3
 
-    sub-int/2addr v1, v3
+    sub-int/2addr v1, v4
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
-
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
     float-to-int v3, v3
 
@@ -223,19 +207,17 @@
     goto :goto_0
 
     :cond_0
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    float-to-int v3, v3
+    float-to-int v4, v3
 
-    sub-int/2addr v1, v3
+    sub-int/2addr v1, v4
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
-
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
     float-to-int v3, v3
 
@@ -249,17 +231,15 @@
     :cond_1
     iget v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTargetDimension:I
 
-    if-ne v0, v2, :cond_2
+    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    if-ne v0, v2, :cond_2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_1
 
     :cond_2
-    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
-
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
 
     :goto_1
@@ -271,9 +251,9 @@
 
     check-cast p1, Landroid/view/View;
 
-    check-cast p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    check-cast p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->set(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->set(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;)V
 
     return-void
 .end method

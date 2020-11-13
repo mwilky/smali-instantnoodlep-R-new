@@ -1,6 +1,6 @@
 .class final Landroidx/core/app/JobIntentService$CommandProcessor;
 .super Landroid/os/AsyncTask;
-.source "JobIntentService.java"
+.source ""
 
 
 # annotations
@@ -59,7 +59,7 @@
     :goto_0
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->dequeueWork()Landroidx/core/app/JobIntentService$GenericWorkItem;
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->a()Landroidx/core/app/JobIntentService$a;
 
     move-result-object p1
 
@@ -67,13 +67,13 @@
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-interface {p1}, Landroidx/core/app/JobIntentService$GenericWorkItem;->getIntent()Landroid/content/Intent;
+    invoke-interface {p1}, Landroidx/core/app/JobIntentService$a;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/core/app/JobIntentService;->onHandleWork(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Landroidx/core/app/JobIntentService;->d(Landroid/content/Intent;)V
 
-    invoke-interface {p1}, Landroidx/core/app/JobIntentService$GenericWorkItem;->complete()V
+    invoke-interface {p1}, Landroidx/core/app/JobIntentService$a;->a()V
 
     goto :goto_0
 
@@ -98,7 +98,7 @@
 
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->processorFinished()V
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->e()V
 
     return-void
 .end method
@@ -118,7 +118,7 @@
 
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->processorFinished()V
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->e()V
 
     return-void
 .end method

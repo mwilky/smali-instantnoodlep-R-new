@@ -1,6 +1,6 @@
 .class Landroidx/core/widget/NestedScrollView$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "NestedScrollView.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public scrollPosition:I
+.field public a:I
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     move-result p1
 
-    iput p1, p0, Landroidx/core/widget/NestedScrollView$SavedState;->scrollPosition:I
+    iput p1, p0, Landroidx/core/widget/NestedScrollView$SavedState;->a:I
 
     return-void
 .end method
@@ -69,6 +69,8 @@
 # virtual methods
 .method public toString()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -92,7 +94,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroidx/core/widget/NestedScrollView$SavedState;->scrollPosition:I
+    iget v1, p0, Landroidx/core/widget/NestedScrollView$SavedState;->a:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -112,7 +114,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Landroidx/core/widget/NestedScrollView$SavedState;->scrollPosition:I
+    iget p2, p0, Landroidx/core/widget/NestedScrollView$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

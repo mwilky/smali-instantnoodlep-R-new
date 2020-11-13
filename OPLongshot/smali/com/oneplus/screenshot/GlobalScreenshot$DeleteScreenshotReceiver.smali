@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/GlobalScreenshot$DeleteScreenshotReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations
@@ -51,7 +51,7 @@
 
     const-string v5, "Click"
 
-    invoke-static {p1, v3, v4, v5, v2}, Lcom/oneplus/common/AppTrackerUtils;->sendAppTracker(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v3, v4, v5, v2}, Lb/b/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "notification"
 
@@ -69,7 +69,7 @@
 
     move-result-object p2
 
-    sget v0, Lcom/oneplus/compat/messages/nano/SystemMessageProtoNative$SystemMessage;->NOTE_GLOBAL_SCREENSHOT:I
+    sget v0, Lb/b/b/i/a/a;->a:I
 
     invoke-virtual {v2, v0}, Landroid/app/NotificationManager;->cancel(I)V
 
@@ -83,7 +83,7 @@
 
     aput-object p2, p1, v1
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, p1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method

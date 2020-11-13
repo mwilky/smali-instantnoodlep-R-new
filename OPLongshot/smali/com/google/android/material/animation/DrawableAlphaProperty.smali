@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/DrawableAlphaProperty;
 .super Landroid/util/Property;
-.source "DrawableAlphaProperty.java"
+.source ""
 
 
 # annotations
@@ -75,6 +75,12 @@
 # virtual methods
 .method public get(Landroid/graphics/drawable/Drawable;)Ljava/lang/Integer;
     .locals 2
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -123,6 +129,12 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
@@ -135,6 +147,14 @@
 
 .method public set(Landroid/graphics/drawable/Drawable;Ljava/lang/Integer;)V
     .locals 2
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -158,6 +178,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Landroid/graphics/drawable/Drawable;
 

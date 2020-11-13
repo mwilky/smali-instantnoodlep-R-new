@@ -1,10 +1,10 @@
 .class public abstract Landroidx/recyclerview/widget/SortedList$Callback;
 .super Ljava/lang/Object;
-.source "SortedList.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
-.implements Landroidx/recyclerview/widget/ListUpdateCallback;
+.implements Landroidx/recyclerview/widget/i;
 
 
 # annotations
@@ -25,7 +25,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
         "TT2;>;",
-        "Landroidx/recyclerview/widget/ListUpdateCallback;"
+        "Landroidx/recyclerview/widget/i;"
     }
 .end annotation
 
@@ -67,6 +67,9 @@
 
 .method public getChangePayload(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT2;TT2;)",
@@ -88,4 +91,13 @@
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->onChanged(II)V
 
     return-void
+.end method
+
+.method public abstract synthetic onInserted(II)V
+.end method
+
+.method public abstract synthetic onMoved(II)V
+.end method
+
+.method public abstract synthetic onRemoved(II)V
 .end method

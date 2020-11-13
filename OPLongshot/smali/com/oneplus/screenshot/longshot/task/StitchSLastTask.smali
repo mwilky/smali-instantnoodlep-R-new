@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchSLastTask;
 .super Lcom/oneplus/screenshot/longshot/task/StitchLastTask;
-.source "StitchSLastTask.java"
+.source ""
 
 
 # static fields
@@ -106,15 +106,16 @@
 
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeTop()Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchSLastTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 
     invoke-direct {v1, p1, v5, v5}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     if-lt p1, v1, :cond_3
@@ -144,7 +145,7 @@
     :cond_2
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeTop()Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchSLastTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 
@@ -153,8 +154,6 @@
     move-result-object v2
 
     invoke-direct {v1, p1, v5, v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -180,7 +179,7 @@
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeTop()Landroid/graphics/Bitmap;
 
     :cond_4
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchSLastTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 
@@ -194,10 +193,10 @@
 
     invoke-direct {v1, v2, p1, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    goto :goto_0
 
     :cond_5
-    :goto_0
+    :goto_1
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
     return-void

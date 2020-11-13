@@ -28,8 +28,8 @@
     <string name="abc_shareactionprovider_share_with_application">Zdieľať s aplikáciou %s</string>
     <string name="abc_toolbar_collapse_description">Zbaliť</string>
     <string name="about_action_bar_title">Informácie</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Ochrana osobných údajov</string>
+    <string name="about_app_version_text">Verzia %s</string>
+    <string name="about_privacy_policy">Zásady ochrany osobných údajov</string>
     <string name="about_release_note_title">Denník aktualizácie:</string>
     <string name="about_terms_service">Podmienky služby</string>
     <string name="app_name">Snímok obrazovky</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Snímky obrazovky</string>
     <string name="oneplus_delete">Odstrániť</string>
     <string name="oneplus_share">Odoslať</string>
+    <string name="permission_btn_text_denied">Ukončiť</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Vyhlásenie o povolení</string>
     <string name="preference_copied">Položka %1$s bola skopírovaná do schránky.</string>
     <string name="quick_share_description1">"Dlhým stlačením 
 miniatúry zdieľate"</string>

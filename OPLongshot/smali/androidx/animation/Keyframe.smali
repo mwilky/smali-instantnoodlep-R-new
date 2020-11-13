@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/Keyframe;
 .super Ljava/lang/Object;
-.source "Keyframe.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -31,7 +31,7 @@
 
 .field mHasValue:Z
 
-.field private mInterpolator:Landroidx/animation/Interpolator;
+.field private mInterpolator:Landroidx/animation/d;
 
 .field mValueType:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
@@ -53,13 +53,21 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/Interpolator;
+    iput-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-void
 .end method
 
 .method public static ofFloat(F)Landroidx/animation/Keyframe$FloatKeyframe;
     .locals 1
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/animation/Keyframe$FloatKeyframe;
 
@@ -70,6 +78,14 @@
 
 .method public static ofFloat(FF)Landroidx/animation/Keyframe$FloatKeyframe;
     .locals 1
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/animation/Keyframe$FloatKeyframe;
 
@@ -80,6 +96,14 @@
 
 .method public static ofInt(F)Landroidx/animation/Keyframe$IntKeyframe;
     .locals 1
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/animation/Keyframe$IntKeyframe;
 
@@ -90,6 +114,14 @@
 
 .method public static ofInt(FI)Landroidx/animation/Keyframe$IntKeyframe;
     .locals 1
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/animation/Keyframe$IntKeyframe;
 
@@ -100,6 +132,15 @@
 
 .method public static ofObject(F)Landroidx/animation/Keyframe$ObjectKeyframe;
     .locals 2
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -121,6 +162,19 @@
 
 .method public static ofObject(FLjava/lang/Object;)Landroidx/animation/Keyframe$ObjectKeyframe;
     .locals 1
+    .param p0    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -145,11 +199,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/animation/Keyframe;->clone()Landroidx/animation/Keyframe;
 
@@ -160,22 +209,30 @@
 
 .method public getFraction()F
     .locals 1
+    .annotation build Landroidx/annotation/FloatRange;
+        from = 0.0
+        to = 1.0
+    .end annotation
 
     iget v0, p0, Landroidx/animation/Keyframe;->mFraction:F
 
     return v0
 .end method
 
-.method public getInterpolator()Landroidx/animation/Interpolator;
+.method public getInterpolator()Landroidx/animation/d;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/Interpolator;
+    iget-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-object v0
 .end method
 
 .method public getType()Ljava/lang/Class;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/animation/Keyframe;->mValueType:Ljava/lang/Class;
 
@@ -183,6 +240,9 @@
 .end method
 
 .method public abstract getValue()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -200,21 +260,35 @@
 
 .method public setFraction(F)V
     .locals 0
+    .param p1    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
 
     iput p1, p0, Landroidx/animation/Keyframe;->mFraction:F
 
     return-void
 .end method
 
-.method public setInterpolator(Landroidx/animation/Interpolator;)V
+.method public setInterpolator(Landroidx/animation/d;)V
     .locals 0
+    .param p1    # Landroidx/animation/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    iput-object p1, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/Interpolator;
+    iput-object p1, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-void
 .end method
 
 .method public abstract setValue(Ljava/lang/Object;)V
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

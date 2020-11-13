@@ -1,11 +1,11 @@
 .class Landroidx/appcompat/app/AlertController$AlertParams$1;
 .super Landroid/widget/ArrayAdapter;
-.source "AlertController.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/app/AlertController$AlertParams;->createListView(Landroidx/appcompat/app/AlertController;)V
+    value = Landroidx/appcompat/app/AlertController$AlertParams;->b(Landroidx/appcompat/app/AlertController;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -60,7 +60,7 @@
 
     check-cast p3, Landroid/widget/CheckedTextView;
 
-    sget v0, Landroidx/appcompat/R$id;->singlechoice_subtitle:I
+    sget v0, La/a/f;->singlechoice_subtitle:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -72,21 +72,13 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mSubItems:[Ljava/lang/CharSequence;
+    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->w:[Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
+    array-length v2, v1
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mSubItems:[Ljava/lang/CharSequence;
-
-    array-length v1, v1
-
-    if-le v1, p1, :cond_0
-
-    iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mSubItems:[Ljava/lang/CharSequence;
+    if-le v2, p1, :cond_0
 
     aget-object v1, v1, p1
 
@@ -99,7 +91,7 @@
 
     iget-object v2, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v2, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
+    iget-object v2, v2, Landroidx/appcompat/app/AlertController$AlertParams;->G:[Z
 
     if-eqz v2, :cond_5
 
@@ -121,21 +113,13 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Landroidx/appcompat/R$dimen;->oneplus_dialog_subtitle_minHeight_multiline:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v1
-
-    invoke-virtual {p3, v1}, Landroid/widget/CheckedTextView;->setHeight(I)V
-
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    sget v2, La/a/d;->oneplus_dialog_subtitle_minHeight_multiline:I
 
     goto :goto_0
 
@@ -152,23 +136,25 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Landroidx/appcompat/R$dimen;->oneplus_dialog_subtitle_minHeight_singleline:I
+    sget v2, La/a/d;->oneplus_dialog_subtitle_minHeight_singleline:I
 
+    :goto_0
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v1
 
     invoke-virtual {p3, v1}, Landroid/widget/CheckedTextView;->setHeight(I)V
 
+    :goto_1
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -183,13 +169,13 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Landroidx/appcompat/R$dimen;->oneplus_dialog_subtitle_minHeight_noline:I
+    sget v2, La/a/d;->oneplus_dialog_subtitle_minHeight_noline:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -201,18 +187,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_3
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Landroidx/appcompat/R$dimen;->oneplus_dialog_subtitle_minHeight_singleline:I
+    sget v2, La/a/d;->oneplus_dialog_subtitle_minHeight_singleline:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -220,14 +206,14 @@
 
     invoke-virtual {p3, v1}, Landroid/widget/CheckedTextView;->setMinHeight(I)V
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    goto :goto_1
 
-    :goto_0
-    invoke-virtual {p0}, Landroidx/appcompat/app/AlertController$AlertParams$1;->notifyDataSetChanged()V
+    :goto_2
+    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
+    iget-object v0, v0, Landroidx/appcompat/app/AlertController$AlertParams;->G:[Z
 
     aget-boolean v0, v0, p1
 
@@ -235,15 +221,15 @@
 
     invoke-virtual {p3, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    goto :goto_1
+    goto :goto_3
 
     :cond_4
     invoke-virtual {p3, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    :goto_1
+    :goto_3
     iget-object p3, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-    iget-object p3, p3, Landroidx/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
+    iget-object p3, p3, Landroidx/appcompat/app/AlertController$AlertParams;->G:[Z
 
     aget-boolean p3, p3, p1
 
@@ -251,7 +237,7 @@
 
     iget-object p3, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-    invoke-virtual {p3, p1, v3}, Landroidx/appcompat/app/AlertController$RecycleListView;->setItemChecked(IZ)V
+    invoke-virtual {p3, p1, v3}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     :cond_5
     return-object p2

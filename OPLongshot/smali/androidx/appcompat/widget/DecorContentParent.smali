@@ -1,6 +1,14 @@
 .class public interface abstract Landroidx/appcompat/widget/DecorContentParent;
 .super Ljava/lang/Object;
-.source "DecorContentParent.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # virtual methods
@@ -62,7 +70,7 @@
 .method public abstract setLogo(I)V
 .end method
 
-.method public abstract setMenu(Landroid/view/Menu;Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
+.method public abstract setMenu(Landroid/view/Menu;Landroidx/appcompat/view/menu/MenuPresenter$a;)V
 .end method
 
 .method public abstract setMenuPrepared()V

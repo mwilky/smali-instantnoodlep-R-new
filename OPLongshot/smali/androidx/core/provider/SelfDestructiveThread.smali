@@ -1,9 +1,15 @@
 .class public Landroidx/core/provider/SelfDestructiveThread;
 .super Ljava/lang/Object;
-.source "SelfDestructiveThread.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
@@ -23,14 +29,26 @@
 .field private final mDestructAfterMillisec:I
 
 .field private mGeneration:I
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
 .field private mHandler:Landroid/os/Handler;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
 .field private final mLock:Ljava/lang/Object;
 
 .field private final mPriority:I
 
 .field private mThread:Landroid/os/HandlerThread;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
 .field private final mThreadName:Ljava/lang/String;
 
@@ -47,9 +65,9 @@
 
     iput-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
-    new-instance v0, Landroidx/core/provider/SelfDestructiveThread$1;
+    new-instance v0, Landroidx/core/provider/SelfDestructiveThread$a;
 
-    invoke-direct {v0, p0}, Landroidx/core/provider/SelfDestructiveThread$1;-><init>(Landroidx/core/provider/SelfDestructiveThread;)V
+    invoke-direct {v0, p0}, Landroidx/core/provider/SelfDestructiveThread$a;-><init>(Landroidx/core/provider/SelfDestructiveThread;)V
 
     iput-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mCallback:Landroid/os/Handler$Callback;
 
@@ -147,6 +165,8 @@
 # virtual methods
 .method public getGeneration()I
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
@@ -171,6 +191,8 @@
 
 .method public isRunning()Z
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
@@ -312,9 +334,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Landroidx/core/provider/SelfDestructiveThread$2;
+    new-instance v1, Landroidx/core/provider/SelfDestructiveThread$b;
 
-    invoke-direct {v1, p0, p1, v0, p2}, Landroidx/core/provider/SelfDestructiveThread$2;-><init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/Callable;Landroid/os/Handler;Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;)V
+    invoke-direct {v1, p0, p1, v0, p2}, Landroidx/core/provider/SelfDestructiveThread$b;-><init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/Callable;Landroid/os/Handler;Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;)V
 
     invoke-direct {p0, v1}, Landroidx/core/provider/SelfDestructiveThread;->post(Ljava/lang/Runnable;)V
 
@@ -330,12 +352,6 @@
             ">(",
             "Ljava/util/concurrent/Callable<",
             "TT;>;I)TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;
         }
     .end annotation
 
@@ -357,7 +373,7 @@
 
     invoke-direct {v10, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    new-instance v11, Landroidx/core/provider/SelfDestructiveThread$3;
+    new-instance v11, Landroidx/core/provider/SelfDestructiveThread$c;
 
     move-object v0, v11
 
@@ -373,7 +389,7 @@
 
     move-object v6, v8
 
-    invoke-direct/range {v0 .. v6}, Landroidx/core/provider/SelfDestructiveThread$3;-><init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
+    invoke-direct/range {v0 .. v6}, Landroidx/core/provider/SelfDestructiveThread$c;-><init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
 
     invoke-direct {p0, v11}, Landroidx/core/provider/SelfDestructiveThread;->post(Ljava/lang/Runnable;)V
 

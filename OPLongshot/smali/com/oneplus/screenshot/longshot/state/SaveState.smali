@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/SaveState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsImageState;
-.source "SaveState.java"
+.source ""
 
 
 # annotations
@@ -41,7 +41,7 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mNaviBar:Landroid/graphics/Bitmap;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
@@ -111,9 +111,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
@@ -137,13 +137,13 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mCachable:Lcom/oneplus/screenshot/util/Cachable;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getBarCache()Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->size()I
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
@@ -151,7 +151,7 @@
 
     if-le p1, p2, :cond_0
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getNavBarHeight()I
 
@@ -159,13 +159,13 @@
 
     if-lez p1, :cond_0
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getBarCache()Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
     :try_start_0
     iget-object p2, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mCachable:Lcom/oneplus/screenshot/util/Cachable;
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
     invoke-interface {p2, v0}, Lcom/oneplus/screenshot/util/Cachable;->setCache(Ljava/util/List;)V
 
@@ -231,7 +231,7 @@
     invoke-interface {p1}, Lcom/oneplus/screenshot/util/Cachable;->clearNaviBar()V
 
     :cond_1
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     const/4 p2, 0x0
 
@@ -267,7 +267,7 @@
 .method public onShow(Lcom/oneplus/screenshot/longshot/app/LongshotDialog;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->onShow(Lcom/oneplus/screenshot/longshot/app/LongshotDialog;)V
+    invoke-super {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsViewState;->onShow(Lcom/oneplus/screenshot/longshot/app/LongshotDialog;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -277,9 +277,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/SaveState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsImageState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->size()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 

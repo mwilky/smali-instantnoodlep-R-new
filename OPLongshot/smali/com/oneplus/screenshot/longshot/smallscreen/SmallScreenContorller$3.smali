@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$3;
 .super Ljava/lang/Object;
-.source "SmallScreenContorller.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

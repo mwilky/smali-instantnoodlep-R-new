@@ -1,6 +1,20 @@
 .class public Landroidx/preference/internal/PreferenceImageView;
 .super Landroid/widget/ImageView;
-.source "PreferenceImageView.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "AppCompatCustomView"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -41,7 +55,7 @@
 
     iput v0, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxHeight:I
 
-    sget-object v1, Landroidx/preference/R$styleable;->PreferenceImageView:[I
+    sget-object v1, Landroidx/preference/m;->PreferenceImageView:[I
 
     const/4 v2, 0x0
 
@@ -49,7 +63,7 @@
 
     move-result-object p1
 
-    sget p2, Landroidx/preference/R$styleable;->PreferenceImageView_maxWidth:I
+    sget p2, Landroidx/preference/m;->PreferenceImageView_maxWidth:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -57,7 +71,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/internal/PreferenceImageView;->setMaxWidth(I)V
 
-    sget p2, Landroidx/preference/R$styleable;->PreferenceImageView_maxHeight:I
+    sget p2, Landroidx/preference/m;->PreferenceImageView_maxHeight:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 

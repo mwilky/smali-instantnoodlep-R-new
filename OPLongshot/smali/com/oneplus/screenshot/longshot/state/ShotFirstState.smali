@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotFirstState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source "ShotFirstState.java"
+.source ""
 
 
 # static fields
@@ -19,7 +19,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mCaptureDelay:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
     return-void
 .end method
@@ -56,11 +56,11 @@
     iput-object p1, v0, Lcom/oneplus/screenshot/StitchViewService;->mFirstPreview:Landroid/graphics/Bitmap;
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
@@ -69,14 +69,14 @@
     move-result-object p1
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    invoke-virtual {v1, p1}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     monitor-exit v0
     :try_end_0
@@ -100,13 +100,13 @@
 .method protected onStatusbarCaptureSuccess(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -114,7 +114,7 @@
 .method public updateMovePoint(Lcom/oneplus/screenshot/longshot/util/MovePoint;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
     return-void
 .end method
@@ -122,18 +122,16 @@
 .method protected updateState()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
 
     if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;->updateState()V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotFirstState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->MAIN:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

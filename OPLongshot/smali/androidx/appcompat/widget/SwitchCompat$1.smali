@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/SwitchCompat$1;
 .super Landroid/util/Property;
-.source "SwitchCompat.java"
+.source ""
 
 
 # annotations
@@ -37,7 +37,7 @@
 .method public get(Landroidx/appcompat/widget/SwitchCompat;)Ljava/lang/Float;
     .locals 0
 
-    iget p1, p1, Landroidx/appcompat/widget/SwitchCompat;->mThumbPosition:F
+    iget p1, p1, Landroidx/appcompat/widget/SwitchCompat;->x:F
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 

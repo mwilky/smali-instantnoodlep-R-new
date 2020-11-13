@@ -1,6 +1,6 @@
 .class final Landroidx/transition/ChangeBounds$6;
 .super Landroid/util/Property;
-.source "ChangeBounds.java"
+.source ""
 
 
 # annotations
@@ -81,7 +81,7 @@
 
     add-int/2addr v2, p2
 
-    invoke-static {p1, v0, p2, v1, v2}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, p2, v1, v2}, Landroidx/transition/ViewUtils;->g(Landroid/view/View;IIII)V
 
     return-void
 .end method

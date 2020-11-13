@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">%sと共有</string>
     <string name="abc_toolbar_collapse_description">折りたたむ</string>
     <string name="about_action_bar_title">情報</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">バージョン %s</string>
     <string name="about_privacy_policy">プライバシーポリシー</string>
     <string name="about_release_note_title">更新履歴：</string>
     <string name="about_terms_service">サービス利用規約</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">スクリーンショット</string>
     <string name="oneplus_delete">削除</string>
     <string name="oneplus_share">送信</string>
+    <string name="permission_btn_text_denied">終了</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">権限に関する宣言</string>
     <string name="preference_copied">「%1$s」をクリップボードにコピーしました。</string>
     <string name="quick_share_description1">"共有するには、
 サムネールを長押ししてください"</string>

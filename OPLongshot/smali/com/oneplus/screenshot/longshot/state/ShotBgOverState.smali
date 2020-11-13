@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotBgOverState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;
-.source "ShotBgOverState.java"
+.source ""
 
 
 # static fields
@@ -19,7 +19,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgOverState;->mOffset:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_OVER_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -27,7 +27,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgOverState;->mCaptureDelay:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
     return-void
 .end method

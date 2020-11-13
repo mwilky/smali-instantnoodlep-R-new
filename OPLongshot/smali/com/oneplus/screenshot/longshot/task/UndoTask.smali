@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/UndoTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source "UndoTask.java"
+.source ""
 
 
 # static fields
@@ -45,9 +45,9 @@
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/UndoTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 .method protected onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
     .locals 6
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/UndoTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
 
     invoke-interface {v0, p1, p2}, Lcom/oneplus/screenshot/longshot/match/Matcher;->run(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Lcom/oneplus/screenshot/longshot/match/MatchData;
 
@@ -124,7 +124,7 @@
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeBitmap()Landroid/graphics/Bitmap;
 
     :cond_1
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/task/UndoTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     new-instance v3, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 
@@ -138,16 +138,16 @@
 
     invoke-direct {v3, v0, v4, v5}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v2, v3}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
     goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/UndoTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v0, p2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v0, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :goto_1
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;
 .super Ljava/lang/Object;
-.source "DrawPadding.java"
+.source ""
 
 
 # static fields
@@ -65,15 +65,13 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;->mDrawMatrix:Landroid/graphics/Matrix;
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;->mMatrix:Landroid/graphics/Matrix;
-
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;->mMatrix:Landroid/graphics/Matrix;
 
-    :goto_0
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class final Landroidx/core/provider/FontsContractCompat$1;
 .super Ljava/lang/Object;
-.source "FontsContractCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/FontsContractCompat;->getFontSync(Landroid/content/Context;Landroidx/core/provider/FontRequest;Landroidx/core/content/res/ResourcesCompat$FontCallback;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Landroidx/core/provider/FontsContractCompat$TypefaceResult;",
+        "Landroidx/core/provider/FontsContractCompat$c;",
         ">;"
     }
 .end annotation
@@ -31,18 +31,18 @@
 
 .field final synthetic val$id:Ljava/lang/String;
 
-.field final synthetic val$request:Landroidx/core/provider/FontRequest;
+.field final synthetic val$request:Landroidx/core/provider/a;
 
 .field final synthetic val$style:I
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroidx/core/provider/FontRequest;ILjava/lang/String;)V
+.method constructor <init>(Landroid/content/Context;Landroidx/core/provider/a;ILjava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$context:Landroid/content/Context;
 
-    iput-object p2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/FontRequest;
+    iput-object p2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/a;
 
     iput p3, p0, Landroidx/core/provider/FontsContractCompat$1;->val$style:I
 
@@ -55,35 +55,28 @@
 
 
 # virtual methods
-.method public call()Landroidx/core/provider/FontsContractCompat$TypefaceResult;
+.method public call()Landroidx/core/provider/FontsContractCompat$c;
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
     iget-object v0, p0, Landroidx/core/provider/FontsContractCompat$1;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/FontRequest;
+    iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/a;
 
     iget v2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$style:I
 
-    invoke-static {v0, v1, v2}, Landroidx/core/provider/FontsContractCompat;->getFontInternal(Landroid/content/Context;Landroidx/core/provider/FontRequest;I)Landroidx/core/provider/FontsContractCompat$TypefaceResult;
+    invoke-static {v0, v1, v2}, Landroidx/core/provider/FontsContractCompat;->f(Landroid/content/Context;Landroidx/core/provider/a;I)Landroidx/core/provider/FontsContractCompat$c;
 
     move-result-object v0
 
-    iget-object v1, v0, Landroidx/core/provider/FontsContractCompat$TypefaceResult;->mTypeface:Landroid/graphics/Typeface;
+    iget-object v1, v0, Landroidx/core/provider/FontsContractCompat$c;->a:Landroid/graphics/Typeface;
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Landroidx/core/provider/FontsContractCompat;->sTypefaceCache:Landroidx/collection/LruCache;
+    sget-object v2, Landroidx/core/provider/FontsContractCompat;->a:Landroidx/collection/LruCache;
 
-    iget-object v2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$id:Ljava/lang/String;
+    iget-object v3, p0, Landroidx/core/provider/FontsContractCompat$1;->val$id:Ljava/lang/String;
 
-    iget-object v3, v0, Landroidx/core/provider/FontsContractCompat$TypefaceResult;->mTypeface:Landroid/graphics/Typeface;
-
-    invoke-virtual {v1, v2, v3}, Landroidx/collection/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3, v1}, Landroidx/collection/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0
@@ -91,13 +84,8 @@
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
-    invoke-virtual {p0}, Landroidx/core/provider/FontsContractCompat$1;->call()Landroidx/core/provider/FontsContractCompat$TypefaceResult;
+    invoke-virtual {p0}, Landroidx/core/provider/FontsContractCompat$1;->call()Landroidx/core/provider/FontsContractCompat$c;
 
     move-result-object v0
 

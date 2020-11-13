@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/Container$RefreshType;
 .super Ljava/lang/Enum;
-.source "Container.java"
+.source ""
 
 
 # annotations
