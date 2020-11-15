@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/AbsMoveState$1;
 .super Ljava/lang/Object;
-.source "AbsMoveState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/AbsMoveState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->hide()V
 

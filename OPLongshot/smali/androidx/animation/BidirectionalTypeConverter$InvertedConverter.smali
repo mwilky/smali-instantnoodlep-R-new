@@ -1,6 +1,6 @@
 .class Landroidx/animation/BidirectionalTypeConverter$InvertedConverter;
 .super Landroidx/animation/BidirectionalTypeConverter;
-.source "BidirectionalTypeConverter.java"
+.source ""
 
 
 # annotations
@@ -40,6 +40,10 @@
 # direct methods
 .method constructor <init>(Landroidx/animation/BidirectionalTypeConverter;)V
     .locals 2
+    .param p1    # Landroidx/animation/BidirectionalTypeConverter;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,11 +52,11 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroidx/animation/BidirectionalTypeConverter;->getTargetType()Ljava/lang/Class;
+    invoke-virtual {p1}, Landroidx/animation/TypeConverter;->getTargetType()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Landroidx/animation/BidirectionalTypeConverter;->getSourceType()Ljava/lang/Class;
+    invoke-virtual {p1}, Landroidx/animation/TypeConverter;->getSourceType()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -92,7 +96,7 @@
 
     iget-object v0, p0, Landroidx/animation/BidirectionalTypeConverter$InvertedConverter;->mConverter:Landroidx/animation/BidirectionalTypeConverter;
 
-    invoke-virtual {v0, p1}, Landroidx/animation/BidirectionalTypeConverter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/animation/TypeConverter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

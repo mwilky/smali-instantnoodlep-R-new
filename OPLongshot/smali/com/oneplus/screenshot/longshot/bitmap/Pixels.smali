@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 .super Ljava/lang/Object;
-.source "Pixels.java"
+.source ""
 
 
 # static fields
@@ -123,48 +123,44 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     goto/16 :goto_2
 
     :cond_0
-    sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
-
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    sget-object v3, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     array-length v2, v2
 
-    iget-object v3, p1, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    array-length v1, v1
 
-    array-length v3, v3
-
-    if-eq v2, v3, :cond_1
+    if-eq v2, v1, :cond_1
 
     return v0
 
     :cond_1
-    move v2, v0
+    move v1, v0
 
-    move v3, v2
+    move v2, v1
 
-    move v4, v3
+    move v4, v2
 
     :goto_0
     iget-object v5, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
     array-length v6, v5
 
-    if-ge v2, v6, :cond_3
+    if-ge v1, v6, :cond_3
 
     iget-object v6, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mComparable:Lcom/oneplus/screenshot/longshot/compare/ColorCompare;
 
-    aget v5, v5, v2
+    aget v5, v5, v1
 
     iget-object v7, p1, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
-    aget v7, v7, v2
+    aget v7, v7, v1
 
     invoke-virtual {v6, v5, v7}, Lcom/oneplus/screenshot/longshot/compare/ColorCompare;->compare(II)Z
 
@@ -172,7 +168,7 @@
 
     if-eqz v5, :cond_2
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_2
     add-int/lit8 v4, v4, 0x1
@@ -183,29 +179,29 @@
 
     move-result v5
 
-    add-int/2addr v2, v5
+    add-int/2addr v1, v5
 
     goto :goto_0
 
     :cond_3
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
     :cond_4
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_6
+    if-eqz v3, :cond_6
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Ljava/util/List;
+    check-cast v3, Ljava/util/List;
 
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -218,7 +214,7 @@
     :goto_1
     const/4 v6, 0x1
 
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -250,14 +246,14 @@
 
     if-eqz v6, :cond_5
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     const/4 v6, 0x2
 
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -284,11 +280,11 @@
 
     sub-int/2addr p1, v1
 
-    if-le v3, p1, :cond_7
+    if-le v2, p1, :cond_7
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
-    array-length v3, p1
+    array-length v2, p1
 
     :cond_7
     if-nez v4, :cond_8
@@ -302,11 +298,11 @@
     return v0
 
     :cond_8
-    mul-int/lit8 v3, v3, 0x64
+    mul-int/lit8 v2, v2, 0x64
 
-    div-int/2addr v3, v4
+    div-int/2addr v2, v4
 
-    return v3
+    return v2
 
     :cond_9
     :goto_2
@@ -338,37 +334,33 @@
 
     if-eqz v1, :cond_c
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     goto/16 :goto_4
 
     :cond_0
-    sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
-
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    sget-object v3, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     array-length v2, v2
 
-    iget-object v3, p1, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
+    array-length v1, v1
 
-    array-length v3, v3
-
-    if-eq v2, v3, :cond_1
+    if-eq v2, v1, :cond_1
 
     return v0
 
     :cond_1
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     if-eqz p2, :cond_3
 
     move p2, v0
 
-    move v1, p2
+    move v2, p2
 
-    move v3, v1
+    move v3, v2
 
     :goto_0
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
@@ -391,7 +383,7 @@
 
     if-eqz v4, :cond_2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_2
     add-int/lit8 v3, v3, 0x1
@@ -403,9 +395,9 @@
     :cond_3
     move p2, v0
 
-    move v3, p2
+    move v2, p2
 
-    move v4, v3
+    move v4, v2
 
     :goto_1
     iget-object v5, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
@@ -428,7 +420,7 @@
 
     if-eqz v5, :cond_4
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_4
     add-int/lit8 v4, v4, 0x1
@@ -444,11 +436,9 @@
     goto :goto_1
 
     :cond_5
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
-
-    move v1, v3
 
     move v3, v4
 
@@ -476,7 +466,7 @@
     move-result v5
 
     :goto_2
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -508,7 +498,7 @@
 
     if-eqz v6, :cond_7
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     :cond_7
     add-int/lit8 v3, v3, 0x1
@@ -542,11 +532,11 @@
 
     sub-int/2addr p1, p2
 
-    if-le v1, p1, :cond_9
+    if-le v2, p1, :cond_9
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
-    array-length v1, p1
+    array-length v2, p1
 
     :cond_9
     if-nez v3, :cond_a
@@ -560,9 +550,9 @@
     return v0
 
     :cond_a
-    mul-int/lit8 v1, v1, 0x64
+    mul-int/lit8 v2, v2, 0x64
 
-    div-int/2addr v1, v3
+    div-int/2addr v2, v3
 
     sget-boolean p1, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
 
@@ -578,9 +568,9 @@
     move-result p1
 
     :goto_3
-    if-lt v1, p1, :cond_c
+    if-lt v2, p1, :cond_c
 
-    move v0, v2
+    move v0, v1
 
     :cond_c
     :goto_4

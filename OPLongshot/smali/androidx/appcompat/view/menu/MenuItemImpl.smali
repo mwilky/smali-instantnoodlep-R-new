@@ -1,9 +1,17 @@
 .class public final Landroidx/appcompat/view/menu/MenuItemImpl;
 .super Ljava/lang/Object;
-.source "MenuItemImpl.java"
+.source ""
 
 # interfaces
 .implements Landroidx/core/internal/view/SupportMenuItem;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -174,7 +182,7 @@
     if-eqz v0, :cond_3
 
     :cond_0
-    invoke-static {p1}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -188,7 +196,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mIconTintList:Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget-boolean v0, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mHasIconTintMode:Z
@@ -197,7 +205,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mIconTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
     const/4 v0, 0x0
@@ -577,7 +585,7 @@
 
     if-eqz v3, :cond_1
 
-    sget v3, Landroidx/appcompat/R$string;->abc_prepend_shortcut_label:I
+    sget v3, La/a/h;->abc_prepend_shortcut_label:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -604,7 +612,7 @@
     :goto_0
     const/high16 v4, 0x10000
 
-    sget v5, Landroidx/appcompat/R$string;->abc_menu_meta_shortcut_label:I
+    sget v5, La/a/h;->abc_menu_meta_shortcut_label:I
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -614,7 +622,7 @@
 
     const/16 v4, 0x1000
 
-    sget v5, Landroidx/appcompat/R$string;->abc_menu_ctrl_shortcut_label:I
+    sget v5, La/a/h;->abc_menu_ctrl_shortcut_label:I
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -624,7 +632,7 @@
 
     const/4 v4, 0x2
 
-    sget v5, Landroidx/appcompat/R$string;->abc_menu_alt_shortcut_label:I
+    sget v5, La/a/h;->abc_menu_alt_shortcut_label:I
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -634,7 +642,7 @@
 
     const/4 v4, 0x1
 
-    sget v5, Landroidx/appcompat/R$string;->abc_menu_shift_shortcut_label:I
+    sget v5, La/a/h;->abc_menu_shift_shortcut_label:I
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -644,7 +652,7 @@
 
     const/4 v4, 0x4
 
-    sget v5, Landroidx/appcompat/R$string;->abc_menu_sym_shortcut_label:I
+    sget v5, La/a/h;->abc_menu_sym_shortcut_label:I
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -652,7 +660,7 @@
 
     invoke-static {v2, v3, v4, v5}, Landroidx/appcompat/view/menu/MenuItemImpl;->appendModifier(Ljava/lang/StringBuilder;IILjava/lang/String;)V
 
-    sget v4, Landroidx/appcompat/R$string;->abc_menu_function_shortcut_label:I
+    sget v4, La/a/h;->abc_menu_function_shortcut_label:I
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -674,40 +682,29 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
-    sget v0, Landroidx/appcompat/R$string;->abc_menu_space_shortcut_label:I
-
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, La/a/h;->abc_menu_space_shortcut_label:I
 
     goto :goto_1
 
     :cond_4
-    sget v0, Landroidx/appcompat/R$string;->abc_menu_enter_shortcut_label:I
-
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, La/a/h;->abc_menu_enter_shortcut_label:I
 
     goto :goto_1
 
     :cond_5
-    sget v0, Landroidx/appcompat/R$string;->abc_menu_delete_shortcut_label:I
+    sget v0, La/a/h;->abc_menu_delete_shortcut_label:I
 
+    :goto_1
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
+    :goto_2
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -774,12 +771,12 @@
     return-object v0
 .end method
 
-.method getTitleForItemView(Landroidx/appcompat/view/menu/MenuView$ItemView;)Ljava/lang/CharSequence;
+.method getTitleForItemView(Landroidx/appcompat/view/menu/MenuView$a;)Ljava/lang/CharSequence;
     .locals 0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/appcompat/view/menu/MenuView$ItemView;->prefersCondensedTitle()Z
+    invoke-interface {p1}, Landroidx/appcompat/view/menu/MenuView$a;->prefersCondensedTitle()Z
 
     move-result p1
 
@@ -1468,8 +1465,6 @@
 
     or-int/lit8 p1, p1, 0x10
 
-    iput p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mFlags:I
-
     goto :goto_0
 
     :cond_0
@@ -1477,9 +1472,9 @@
 
     and-int/lit8 p1, p1, -0x11
 
+    :goto_0
     iput p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mFlags:I
 
-    :goto_0
     iget-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1557,6 +1552,10 @@
 
 .method public setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
     .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mIconTintList:Landroid/content/res/ColorStateList;
 
@@ -1612,8 +1611,6 @@
 
     or-int/lit8 p1, p1, 0x20
 
-    iput p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mFlags:I
-
     goto :goto_0
 
     :cond_0
@@ -1621,9 +1618,9 @@
 
     and-int/lit8 p1, p1, -0x21
 
+    :goto_0
     iput p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mFlags:I
 
-    :goto_0
     return-void
 .end method
 
@@ -1850,11 +1847,11 @@
 
     if-eqz p1, :cond_1
 
-    new-instance v0, Landroidx/appcompat/view/menu/MenuItemImpl$1;
+    new-instance v0, Landroidx/appcompat/view/menu/MenuItemImpl$a;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/view/menu/MenuItemImpl$1;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/view/menu/MenuItemImpl$a;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/ActionProvider;->setVisibilityListener(Landroidx/core/view/ActionProvider$VisibilityListener;)V
+    invoke-virtual {p1, v0}, Landroidx/core/view/ActionProvider;->setVisibilityListener(Landroidx/core/view/ActionProvider$a;)V
 
     :cond_1
     return-object p0

@@ -1,6 +1,6 @@
 .class abstract Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
 .super Ljava/lang/Object;
-.source "SafeIterableMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -187,6 +187,10 @@
 
 .method public supportRemove(Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
     .locals 1
+    .param p1    # Landroidx/arch/core/internal/SafeIterableMap$Entry;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

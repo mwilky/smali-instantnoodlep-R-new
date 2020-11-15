@@ -1,9 +1,17 @@
 .class public Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 .super Ljava/lang/Object;
-.source "ArgbEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields

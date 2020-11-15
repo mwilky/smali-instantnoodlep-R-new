@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/ripple/RippleUtils;
 .super Ljava/lang/Object;
-.source "RippleUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -13,6 +21,9 @@
 .field private static final HOVERED_STATE_SET:[I
 
 .field static final LOG_TAG:Ljava/lang/String;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field private static final PRESSED_STATE_SET:[I
 
@@ -27,6 +38,9 @@
 .field private static final SELECTED_STATE_SET:[I
 
 .field static final TRANSPARENT_DEFAULT_COLOR_WARNING:Ljava/lang/String; = "Use a non-transparent color for the default color as it will be used to finish ripple animations."
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 .field public static final USE_FRAMEWORK_RIPPLE:Z
 
@@ -185,6 +199,12 @@
 
 .method public static convertToRippleDrawableColor(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
     .locals 6
+    .param p0    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-boolean v0, Lcom/google/android/material/ripple/RippleUtils;->USE_FRAMEWORK_RIPPLE:Z
 
@@ -352,6 +372,16 @@
 
 .method private static doubleAlpha(I)I
     .locals 2
+    .param p0    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x15
+    .end annotation
+
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
@@ -365,7 +395,7 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+    invoke-static {p0, v0}, Landroidx/core/graphics/d;->d(II)I
 
     move-result p0
 
@@ -374,6 +404,12 @@
 
 .method private static getColorForState(Landroid/content/res/ColorStateList;[I)I
     .locals 1
+    .param p0    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
     if-eqz p0, :cond_0
 
@@ -405,6 +441,12 @@
 
 .method public static sanitizeRippleDrawableColor(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
     .locals 3
+    .param p0    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -415,8 +457,6 @@
     const/16 v2, 0x16
 
     if-lt v1, v2, :cond_0
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1b
 
@@ -463,6 +503,10 @@
 
 .method public static shouldDrawRippleCompat([I)Z
     .locals 8
+    .param p0    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     array-length v0, p0
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/ScaleInInterpolator;
 .super Lcom/oneplus/screenshot/anim/DropInterpolator;
-.source "ScaleInInterpolator.java"
+.source ""
 
 
 # static fields

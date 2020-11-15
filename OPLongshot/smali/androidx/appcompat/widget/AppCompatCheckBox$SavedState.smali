@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "AppCompatCheckBox.java"
+.source ""
 
 
 # annotations
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field checked:Z
+.field a:Z
 
-.field indeterminate:Z
+.field b:Z
 
-.field threeState:Z
+.field c:Z
 
 
 # direct methods
@@ -64,7 +64,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->checked:Z
+    iput-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->c:Z
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
@@ -76,7 +76,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->threeState:Z
+    iput-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->a:Z
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
@@ -88,12 +88,12 @@
 
     move-result p1
 
-    iput-boolean p1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->indeterminate:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->b:Z
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -136,7 +136,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->checked:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->c:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->indeterminate:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->b:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->threeState:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->a:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -172,7 +172,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->checked:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->c:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -180,7 +180,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->threeState:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->a:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -188,7 +188,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->indeterminate:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;->b:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

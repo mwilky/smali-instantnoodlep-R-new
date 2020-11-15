@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/FloatRange;
 .super Ljava/lang/Object;
-.source "FloatRange.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,6 @@
 .class Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomThreadFactory;
 .super Ljava/lang/Object;
-.source "ConcurrencyUtils.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;

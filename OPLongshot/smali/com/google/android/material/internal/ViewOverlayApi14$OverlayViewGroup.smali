@@ -1,9 +1,16 @@
 .class Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;
 .super Landroid/view/ViewGroup;
-.source "ViewOverlayApi14.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "ViewConstructor",
+        "PrivateApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/internal/ViewOverlayApi14;
 .end annotation
@@ -106,13 +113,13 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->setRight(I)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setRight(I)V
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->setBottom(I)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setBottom(I)V
 
     invoke-virtual {p2, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -143,7 +150,7 @@
 .method private disposeIfEmpty()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -246,7 +253,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->invalidate(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Landroid/graphics/Rect;)V
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -283,7 +290,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->M(Landroid/view/View;)Z
 
     move-result v1
 
@@ -309,7 +316,7 @@
 
     sub-int/2addr v4, v3
 
-    invoke-static {p1, v4}, Landroidx/core/view/ViewCompat;->offsetLeftAndRight(Landroid/view/View;I)V
+    invoke-static {p1, v4}, Landroidx/core/view/ViewCompat;->S(Landroid/view/View;I)V
 
     const/4 v3, 0x1
 
@@ -319,7 +326,7 @@
 
     sub-int/2addr v2, v1
 
-    invoke-static {p1, v2}, Landroidx/core/view/ViewCompat;->offsetTopAndBottom(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;I)V
 
     :cond_0
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -483,7 +490,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p0, p2}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->invalidate(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->invalidate(Landroid/graphics/Rect;)V
 
     :cond_1
     const/4 p1, 0x0
@@ -493,6 +500,11 @@
 
 .method protected invalidateChildInParentFast(IILandroid/graphics/Rect;)Landroid/view/ViewParent;
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->hostView:Landroid/view/ViewGroup;
 
@@ -563,12 +575,16 @@
 
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->invalidate(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->invalidate(Landroid/graphics/Rect;)V
 
     return-void
 .end method
@@ -592,7 +608,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->invalidate(Landroid/graphics/Rect;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->invalidate(Landroid/graphics/Rect;)V
 
     const/4 v0, 0x0
 
@@ -616,6 +632,10 @@
 
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 

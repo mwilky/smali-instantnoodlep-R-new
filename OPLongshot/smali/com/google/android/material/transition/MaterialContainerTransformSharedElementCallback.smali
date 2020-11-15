@@ -1,10 +1,19 @@
 .class public Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;
 .super Landroid/app/SharedElementCallback;
-.source "MaterialContainerTransformSharedElementCallback.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # static fields
 .field private static capturedSharedElement:Ljava/lang/ref/WeakReference;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -19,6 +28,9 @@
 .field private entering:Z
 
 .field private returnEndBounds:Landroid/graphics/Rect;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private transparentWindowBackgroundEnabled:Z
 
@@ -89,7 +101,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Landroidx/core/graphics/BlendModeColorFilterCompat;->createBlendModeColorFilterCompat(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
+    invoke-static {v1, v0}, Landroidx/core/graphics/b;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
 
     move-result-object v0
 
@@ -137,11 +149,11 @@
 
     invoke-static {p1, v0}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/MaterialContainerTransform;)V
 
-    new-instance v1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$1;
+    new-instance v1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$1;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/view/Window;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$a;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/view/Window;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/transition/MaterialContainerTransform;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    invoke-virtual {v0, v1}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
     :cond_0
     return-void
@@ -164,11 +176,11 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/transition/MaterialContainerTransform;->setHoldAtEndEnabled(Z)V
 
-    new-instance v1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$2;
+    new-instance v1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$2;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/app/Activity;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$b;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/transition/MaterialContainerTransform;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    invoke-virtual {v0, v1}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
     iget-boolean p1, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->transparentWindowBackgroundEnabled:Z
 
@@ -176,11 +188,11 @@
 
     invoke-static {p2, v0}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/MaterialContainerTransform;)V
 
-    new-instance p1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$3;
+    new-instance p1, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$c;
 
-    invoke-direct {p1, p0, p2}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$3;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/view/Window;)V
+    invoke-direct {p1, p0, p2}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$c;-><init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/view/Window;)V
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/transition/MaterialContainerTransform;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    invoke-virtual {v0, p1}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
     :cond_0
     return-void
@@ -189,7 +201,7 @@
 .method private static updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/MaterialContainerTransform;)V
     .locals 4
 
-    invoke-virtual {p1}, Lcom/google/android/material/transition/MaterialContainerTransform;->getDuration()J
+    invoke-virtual {p1}, Landroid/transition/Transition;->getDuration()J
 
     move-result-wide v0
 
@@ -214,6 +226,20 @@
 
 .method public onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -230,6 +256,16 @@
 
 .method public onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Parcelable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-super {p0, p1, p2}, Landroid/app/SharedElementCallback;->onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
 
@@ -243,7 +279,7 @@
 
     move-result-object p2
 
-    instance-of p2, p2, Lcom/google/android/material/shape/Shapeable;
+    instance-of p2, p2, Lcom/google/android/material/shape/j;
 
     if-eqz p2, :cond_0
 
@@ -253,9 +289,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/android/material/shape/Shapeable;
+    check-cast p2, Lcom/google/android/material/shape/j;
 
-    invoke-interface {p2}, Lcom/google/android/material/shape/Shapeable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
+    invoke-interface {p2}, Lcom/google/android/material/shape/j;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p2
 
@@ -267,6 +303,14 @@
 
 .method public onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -338,6 +382,18 @@
 
 .method public onSharedElementEnd(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -416,6 +472,18 @@
 
 .method public onSharedElementStart(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .locals 2
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -504,21 +572,15 @@
 
     iget-object p2, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->returnEndBounds:Landroid/graphics/Rect;
 
-    iget p2, p2, Landroid/graphics/Rect;->left:I
+    iget p3, p2, Landroid/graphics/Rect;->left:I
 
-    iget-object p3, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->returnEndBounds:Landroid/graphics/Rect;
+    iget v0, p2, Landroid/graphics/Rect;->top:I
 
-    iget p3, p3, Landroid/graphics/Rect;->top:I
+    iget v1, p2, Landroid/graphics/Rect;->right:I
 
-    iget-object v0, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->returnEndBounds:Landroid/graphics/Rect;
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
-    iget v0, v0, Landroid/graphics/Rect;->right:I
-
-    iget-object v1, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->returnEndBounds:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {p1, p2, p3, v0, v1}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {p1, p3, v0, v1, p2}, Landroid/view/View;->layout(IIII)V
 
     :cond_1
     return-void

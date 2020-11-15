@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
 .super Ljava/lang/Object;
-.source "ViewPropertyAnimatorCompatSet.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -8,7 +16,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Landroidx/core/view/ViewPropertyAnimatorCompat;",
+            "Landroidx/core/view/t;",
             ">;"
         }
     .end annotation
@@ -20,9 +28,9 @@
 
 .field private mIsStarted:Z
 
-.field mListener:Landroidx/core/view/ViewPropertyAnimatorListener;
+.field mListener:Landroidx/core/view/u;
 
-.field private final mProxyListener:Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
+.field private final mProxyListener:Landroidx/core/view/v;
 
 
 # direct methods
@@ -35,11 +43,11 @@
 
     iput-wide v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mDuration:J
 
-    new-instance v0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet$1;
+    new-instance v0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet$a;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet$1;-><init>(Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet$a;-><init>(Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;)V
 
-    iput-object v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mProxyListener:Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
+    iput-object v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mProxyListener:Landroidx/core/view/v;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -79,9 +87,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/view/ViewPropertyAnimatorCompat;
+    check-cast v1, Landroidx/core/view/t;
 
-    invoke-virtual {v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->cancel()V
+    invoke-virtual {v1}, Landroidx/core/view/t;->b()V
 
     goto :goto_0
 
@@ -103,7 +111,7 @@
     return-void
 .end method
 
-.method public play(Landroidx/core/view/ViewPropertyAnimatorCompat;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
+.method public play(Landroidx/core/view/t;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
     .locals 1
 
     iget-boolean v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mIsStarted:Z
@@ -118,18 +126,18 @@
     return-object p0
 .end method
 
-.method public playSequentially(Landroidx/core/view/ViewPropertyAnimatorCompat;Landroidx/core/view/ViewPropertyAnimatorCompat;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
+.method public playSequentially(Landroidx/core/view/t;Landroidx/core/view/t;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
     .locals 2
 
     iget-object v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mAnimators:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->getDuration()J
+    invoke-virtual {p1}, Landroidx/core/view/t;->c()J
 
     move-result-wide v0
 
-    invoke-virtual {p2, v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setStartDelay(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {p2, v0, v1}, Landroidx/core/view/t;->h(J)Landroidx/core/view/t;
 
     iget-object p1, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mAnimators:Ljava/util/ArrayList;
 
@@ -164,14 +172,14 @@
     return-object p0
 .end method
 
-.method public setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
+.method public setListener(Landroidx/core/view/u;)Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;
     .locals 1
 
     iget-boolean v0, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
-    iput-object p1, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mListener:Landroidx/core/view/ViewPropertyAnimatorListener;
+    iput-object p1, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mListener:Landroidx/core/view/u;
 
     :cond_0
     return-object p0
@@ -204,7 +212,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/view/ViewPropertyAnimatorCompat;
+    check-cast v1, Landroidx/core/view/t;
 
     iget-wide v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mDuration:J
 
@@ -214,26 +222,26 @@
 
     if-ltz v4, :cond_1
 
-    invoke-virtual {v1, v2, v3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {v1, v2, v3}, Landroidx/core/view/t;->d(J)Landroidx/core/view/t;
 
     :cond_1
     iget-object v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v1, v2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {v1, v2}, Landroidx/core/view/t;->e(Landroid/view/animation/Interpolator;)Landroidx/core/view/t;
 
     :cond_2
-    iget-object v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mListener:Landroidx/core/view/ViewPropertyAnimatorListener;
+    iget-object v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mListener:Landroidx/core/view/u;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mProxyListener:Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
+    iget-object v2, p0, Landroidx/appcompat/view/ViewPropertyAnimatorCompatSet;->mProxyListener:Landroidx/core/view/v;
 
-    invoke-virtual {v1, v2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {v1, v2}, Landroidx/core/view/t;->f(Landroidx/core/view/u;)Landroidx/core/view/t;
 
     :cond_3
-    invoke-virtual {v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
+    invoke-virtual {v1}, Landroidx/core/view/t;->j()V
 
     goto :goto_0
 

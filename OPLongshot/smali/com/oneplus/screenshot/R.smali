@@ -1,5 +1,6 @@
 .class public final Lcom/oneplus/screenshot/R;
 .super Ljava/lang/Object;
+.source ""
 
 
 # annotations
@@ -19,6 +20,7 @@
         Lcom/oneplus/screenshot/R$interpolator;,
         Lcom/oneplus/screenshot/R$layout;,
         Lcom/oneplus/screenshot/R$plurals;,
+        Lcom/oneplus/screenshot/R$raw;,
         Lcom/oneplus/screenshot/R$string;,
         Lcom/oneplus/screenshot/R$style;,
         Lcom/oneplus/screenshot/R$styleable;,

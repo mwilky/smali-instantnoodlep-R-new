@@ -1,6 +1,20 @@
 .class public abstract Landroidx/fragment/app/FragmentTransitionImpl;
 .super Ljava/lang/Object;
-.source "FragmentTransitionImpl.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "UnknownNullness"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -269,13 +283,11 @@
 
     check-cast p2, Landroid/view/ViewGroup;
 
-    invoke-static {p2}, Landroidx/core/view/ViewGroupCompat;->isTransitionGroup(Landroid/view/ViewGroup;)Z
+    invoke-static {p2}, Landroidx/core/view/r;->a(Landroid/view/ViewGroup;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
@@ -300,10 +312,10 @@
     goto :goto_0
 
     :cond_1
+    :goto_1
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    :goto_1
     return-void
 .end method
 
@@ -312,6 +324,10 @@
 
 .method findNamedViews(Ljava/util/Map;Landroid/view/View;)V
     .locals 3
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -330,7 +346,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {p2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/core/view/ViewCompat;->E(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -445,7 +461,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v3}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v3}, Landroidx/core/view/ViewCompat;->E(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -453,7 +469,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v4}, Landroidx/core/view/ViewCompat;->setTransitionName(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Landroidx/core/view/ViewCompat;->v0(Landroid/view/View;Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -510,11 +526,11 @@
         }
     .end annotation
 
-    new-instance v0, Landroidx/fragment/app/FragmentTransitionImpl$3;
+    new-instance v0, Landroidx/fragment/app/FragmentTransitionImpl$c;
 
-    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$3;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
+    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$c;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Landroidx/core/view/OneShotPreDrawListener;->add(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/OneShotPreDrawListener;
+    invoke-static {p1, v0}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method
@@ -562,11 +578,11 @@
         }
     .end annotation
 
-    new-instance v0, Landroidx/fragment/app/FragmentTransitionImpl$2;
+    new-instance v0, Landroidx/fragment/app/FragmentTransitionImpl$b;
 
-    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$2;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
+    invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$b;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Landroidx/core/view/OneShotPreDrawListener;->add(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/OneShotPreDrawListener;
+    invoke-static {p1, v0}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method
@@ -614,7 +630,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v3}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v3}, Landroidx/core/view/ViewCompat;->E(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -627,7 +643,7 @@
     :cond_0
     const/4 v5, 0x0
 
-    invoke-static {v3, v5}, Landroidx/core/view/ViewCompat;->setTransitionName(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Landroidx/core/view/ViewCompat;->v0(Landroid/view/View;Ljava/lang/String;)V
 
     invoke-interface {p5, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -656,7 +672,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v3, v4}, Landroidx/core/view/ViewCompat;->setTransitionName(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Landroidx/core/view/ViewCompat;->v0(Landroid/view/View;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -672,7 +688,7 @@
     goto :goto_0
 
     :cond_3
-    new-instance p5, Landroidx/fragment/app/FragmentTransitionImpl$1;
+    new-instance p5, Landroidx/fragment/app/FragmentTransitionImpl$a;
 
     move-object v0, p5
 
@@ -684,9 +700,9 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v6}, Landroidx/fragment/app/FragmentTransitionImpl$1;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-direct/range {v0 .. v6}, Landroidx/fragment/app/FragmentTransitionImpl$a;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    invoke-static {p1, p5}, Landroidx/core/view/OneShotPreDrawListener;->add(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/OneShotPreDrawListener;
+    invoke-static {p1, p5}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method

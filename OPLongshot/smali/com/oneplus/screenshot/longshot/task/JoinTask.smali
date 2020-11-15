@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/task/JoinTask;
 .super Landroid/os/AsyncTask;
-.source "JoinTask.java"
+.source ""
 
 
 # annotations
@@ -144,7 +144,7 @@
 
     if-nez p2, :cond_0
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
@@ -159,7 +159,7 @@
 
     if-nez v2, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
@@ -182,6 +182,7 @@
 
     const-string p1, "join fail 3"
 
+    :goto_0
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -210,20 +211,16 @@
     return p1
 
     :cond_5
-    :goto_0
+    :goto_1
     const-string p1, "join fail 2"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    goto :goto_0
 
     :cond_6
-    :goto_1
+    :goto_2
     const-string p1, "join fail 1"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    goto :goto_0
 .end method
 
 
@@ -250,7 +247,7 @@
 .end method
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
-    .locals 4
+    .locals 3
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
@@ -261,7 +258,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->removeLast()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -273,7 +270,7 @@
     :try_start_1
     iget-object v2, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->removeLast()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -309,21 +306,19 @@
 
     invoke-virtual {v1, p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
-    const/4 v2, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
     invoke-direct {p0, v0, v1}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->join(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
 
-    move-result v3
+    move-result p1
 
-    if-eqz v3, :cond_0
+    if-eqz p1, :cond_0
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p1
 
@@ -332,9 +327,7 @@
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p1
 
@@ -387,7 +380,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_1
     if-eqz p2, :cond_3
@@ -403,7 +396,7 @@
     :cond_2
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_3
     return-void

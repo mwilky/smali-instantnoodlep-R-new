@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/DrawableRes;
 .super Ljava/lang/Object;
-.source "DrawableRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

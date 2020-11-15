@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;
 .super Ljava/lang/Object;
-.source "AppBarLayout.java"
+.source ""
 
 
 # annotations
@@ -35,6 +35,10 @@
 
 # virtual methods
 .method public abstract canDrag(Lcom/google/android/material/appbar/AppBarLayout;)Z
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

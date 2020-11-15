@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/IdleState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "IdleState.java"
+.source ""
 
 
 # static fields

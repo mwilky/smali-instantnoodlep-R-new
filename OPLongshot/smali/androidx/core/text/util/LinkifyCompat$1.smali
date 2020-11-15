@@ -1,26 +1,17 @@
 .class final Landroidx/core/text/util/LinkifyCompat$1;
 .super Ljava/lang/Object;
-.source "LinkifyCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/core/text/util/LinkifyCompat;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Landroidx/core/text/util/LinkifyCompat$LinkSpec;",
+        "Landroidx/core/text/util/a;",
         ">;"
     }
 .end annotation
@@ -37,12 +28,12 @@
 
 
 # virtual methods
-.method public compare(Landroidx/core/text/util/LinkifyCompat$LinkSpec;Landroidx/core/text/util/LinkifyCompat$LinkSpec;)I
+.method public compare(Landroidx/core/text/util/a;Landroidx/core/text/util/a;)I
     .locals 4
 
-    iget v0, p1, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->start:I
+    iget v0, p1, Landroidx/core/text/util/a;->a:I
 
-    iget v1, p2, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->start:I
+    iget v1, p2, Landroidx/core/text/util/a;->a:I
 
     const/4 v2, -0x1
 
@@ -51,10 +42,6 @@
     return v2
 
     :cond_0
-    iget v0, p1, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->start:I
-
-    iget v1, p2, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->start:I
-
     const/4 v3, 0x1
 
     if-le v0, v1, :cond_1
@@ -62,19 +49,15 @@
     return v3
 
     :cond_1
-    iget v0, p1, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->end:I
+    iget p1, p1, Landroidx/core/text/util/a;->b:I
 
-    iget v1, p2, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->end:I
+    iget p2, p2, Landroidx/core/text/util/a;->b:I
 
-    if-ge v0, v1, :cond_2
+    if-ge p1, p2, :cond_2
 
     return v3
 
     :cond_2
-    iget p1, p1, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->end:I
-
-    iget p2, p2, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->end:I
-
     if-le p1, p2, :cond_3
 
     return v2
@@ -88,11 +71,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Landroidx/core/text/util/LinkifyCompat$LinkSpec;
+    check-cast p1, Landroidx/core/text/util/a;
 
-    check-cast p2, Landroidx/core/text/util/LinkifyCompat$LinkSpec;
+    check-cast p2, Landroidx/core/text/util/a;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Landroidx/core/text/util/LinkifyCompat$LinkSpec;Landroidx/core/text/util/LinkifyCompat$LinkSpec;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Landroidx/core/text/util/a;Landroidx/core/text/util/a;)I
 
     move-result p1
 

@@ -1,23 +1,13 @@
 .class final Lcom/google/android/material/datepicker/MaterialCalendarGridView;
 .super Landroid/widget/GridView;
-.source "MaterialCalendarGridView.java"
+.source ""
 
 
 # instance fields
-.field private final dayCompute:Ljava/util/Calendar;
+.field private final a:Ljava/util/Calendar;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -33,13 +23,13 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getUtcCalendar()Ljava/util/Calendar;
+    invoke-static {}, Lcom/google/android/material/datepicker/h;->q()Ljava/util/Calendar;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->dayCompute:Ljava/util/Calendar;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/GridView;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -49,57 +39,56 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lcom/google/android/material/R$id;->cancel_button:I
+    sget p1, Lb/a/b/a/f;->cancel_button:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->setNextFocusLeftId(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/GridView;->setNextFocusLeftId(I)V
 
-    sget p1, Lcom/google/android/material/R$id;->confirm_button:I
+    sget p1, Lb/a/b/a/f;->confirm_button:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->setNextFocusRightId(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/GridView;->setNextFocusRightId(I)V
 
     :cond_0
-    new-instance p1, Lcom/google/android/material/datepicker/MaterialCalendarGridView$1;
+    new-instance p1, Lcom/google/android/material/datepicker/MaterialCalendarGridView$a;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView$1;-><init>(Lcom/google/android/material/datepicker/MaterialCalendarGridView;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView$a;-><init>(Lcom/google/android/material/datepicker/MaterialCalendarGridView;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
 
     return-void
 .end method
 
-.method private gainFocus(ILandroid/graphics/Rect;)V
+.method private a(ILandroid/graphics/Rect;)V
     .locals 1
 
     const/16 v0, 0x21
 
     if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MonthAdapter;->lastPositionInMonth()I
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/f;->h()I
 
     move-result p1
 
+    :goto_0
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->setSelection(I)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     const/16 v0, 0x82
 
     if-ne p1, v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->setSelection(I)V
 
     goto :goto_0
 
@@ -108,12 +97,16 @@
 
     invoke-super {p0, v0, p1, p2}, Landroid/widget/GridView;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
-.method private static horizontalMidPoint(Landroid/view/View;)I
+.method private static c(Landroid/view/View;)I
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
@@ -130,8 +123,24 @@
     return v0
 .end method
 
-.method private static skipMonth(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)Z
+.method private static d(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)Z
     .locals 3
+    .param p0    # Ljava/lang/Long;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Long;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Long;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Long;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x1
 
@@ -182,10 +191,26 @@
 
 
 # virtual methods
+.method public b()Lcom/google/android/material/datepicker/f;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    invoke-super {p0}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/material/datepicker/f;
+
+    return-object v0
+.end method
+
 .method public bridge synthetic getAdapter()Landroid/widget/Adapter;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v0
 
@@ -194,22 +219,12 @@
 
 .method public bridge synthetic getAdapter()Landroid/widget/ListAdapter;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
-    .locals 1
-
-    invoke-super {p0}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/datepicker/MonthAdapter;
 
     return-object v0
 .end method
@@ -219,43 +234,47 @@
 
     invoke-super {p0}, Landroid/widget/GridView;->onAttachedToWindow()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/datepicker/MonthAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     return-void
 .end method
 
 .method protected final onDraw(Landroid/graphics/Canvas;)V
     .locals 23
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     move-object/from16 v0, p0
 
     invoke-super/range {p0 .. p1}, Landroid/widget/GridView;->onDraw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v1
 
-    iget-object v2, v1, Lcom/google/android/material/datepicker/MonthAdapter;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+    iget-object v2, v1, Lcom/google/android/material/datepicker/f;->b:Lcom/google/android/material/datepicker/DateSelector;
 
-    iget-object v3, v1, Lcom/google/android/material/datepicker/MonthAdapter;->calendarStyle:Lcom/google/android/material/datepicker/CalendarStyle;
+    iget-object v3, v1, Lcom/google/android/material/datepicker/f;->c:Lcom/google/android/material/datepicker/b;
 
-    invoke-virtual {v1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {v1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result v4
 
-    invoke-virtual {v1, v4}, Lcom/google/android/material/datepicker/MonthAdapter;->getItem(I)Ljava/lang/Long;
+    invoke-virtual {v1, v4}, Lcom/google/android/material/datepicker/f;->c(I)Ljava/lang/Long;
 
     move-result-object v4
 
-    invoke-virtual {v1}, Lcom/google/android/material/datepicker/MonthAdapter;->lastPositionInMonth()I
+    invoke-virtual {v1}, Lcom/google/android/material/datepicker/f;->h()I
 
     move-result v5
 
-    invoke-virtual {v1, v5}, Lcom/google/android/material/datepicker/MonthAdapter;->getItem(I)Ljava/lang/Long;
+    invoke-virtual {v1, v5}, Lcom/google/android/material/datepicker/f;->c(I)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -284,15 +303,13 @@
 
     if-eqz v7, :cond_8
 
-    iget-object v7, v6, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
+    iget-object v8, v6, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
-    if-nez v7, :cond_0
+    if-nez v8, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v7, v6, Landroidx/core/util/Pair;->first:Ljava/lang/Object;
-
     check-cast v7, Ljava/lang/Long;
 
     invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
@@ -315,7 +332,7 @@
 
     move-result-object v11
 
-    invoke-static {v4, v5, v6, v11}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->skipMonth(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)Z
+    invoke-static {v4, v5, v6, v11}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->d(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)Z
 
     move-result v6
 
@@ -334,11 +351,11 @@
 
     if-gez v6, :cond_3
 
-    invoke-virtual {v1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {v1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result v6
 
-    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/MonthAdapter;->isFirstInRow(I)Z
+    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/f;->f(I)Z
 
     move-result v7
 
@@ -351,7 +368,7 @@
     :cond_2
     add-int/lit8 v7, v6, -0x1
 
-    invoke-virtual {v0, v7}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v7}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
@@ -362,25 +379,25 @@
     goto :goto_1
 
     :cond_3
-    iget-object v6, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->dayCompute:Ljava/util/Calendar;
+    iget-object v6, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
     invoke-virtual {v6, v7, v8}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    iget-object v6, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->dayCompute:Ljava/util/Calendar;
+    iget-object v6, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
     invoke-virtual {v6, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
-    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/MonthAdapter;->dayToPosition(I)I
+    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/f;->a(I)I
 
     move-result v6
 
-    invoke-virtual {v0, v6}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->horizontalMidPoint(Landroid/view/View;)I
+    invoke-static {v7}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->c(Landroid/view/View;)I
 
     move-result v7
 
@@ -393,24 +410,24 @@
 
     if-lez v8, :cond_5
 
-    invoke-virtual {v1}, Lcom/google/android/material/datepicker/MonthAdapter;->lastPositionInMonth()I
+    invoke-virtual {v1}, Lcom/google/android/material/datepicker/f;->h()I
 
     move-result v8
 
-    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/MonthAdapter;->isLastInRow(I)Z
+    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/f;->g(I)Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/GridView;->getWidth()I
 
     move-result v9
 
     goto :goto_2
 
     :cond_4
-    invoke-virtual {v0, v8}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v8}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v9
 
@@ -421,36 +438,36 @@
     goto :goto_2
 
     :cond_5
-    iget-object v8, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->dayCompute:Ljava/util/Calendar;
+    iget-object v8, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
     invoke-virtual {v8, v9, v10}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    iget-object v8, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->dayCompute:Ljava/util/Calendar;
+    iget-object v8, v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
     invoke-virtual {v8, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v8
 
-    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/MonthAdapter;->dayToPosition(I)I
+    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/f;->a(I)I
 
     move-result v8
 
-    invoke-virtual {v0, v8}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v8}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->horizontalMidPoint(Landroid/view/View;)I
+    invoke-static {v9}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->c(Landroid/view/View;)I
 
     move-result v9
 
     :goto_2
-    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/MonthAdapter;->getItemId(I)J
+    invoke-virtual {v1, v6}, Lcom/google/android/material/datepicker/f;->getItemId(I)J
 
     move-result-wide v12
 
     long-to-int v10, v12
 
-    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/MonthAdapter;->getItemId(I)J
+    invoke-virtual {v1, v8}, Lcom/google/android/material/datepicker/f;->getItemId(I)J
 
     move-result-wide v12
 
@@ -459,13 +476,13 @@
     :goto_3
     if-gt v10, v12, :cond_8
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getNumColumns()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/GridView;->getNumColumns()I
 
     move-result v13
 
     mul-int/2addr v13, v10
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getNumColumns()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/GridView;->getNumColumns()I
 
     move-result v14
 
@@ -473,7 +490,7 @@
 
     add-int/lit8 v14, v14, -0x1
 
-    invoke-virtual {v0, v13}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v13}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v15
 
@@ -481,9 +498,9 @@
 
     move-result v16
 
-    iget-object v11, v3, Lcom/google/android/material/datepicker/CalendarStyle;->day:Lcom/google/android/material/datepicker/CalendarItemStyle;
+    iget-object v11, v3, Lcom/google/android/material/datepicker/b;->a:Lcom/google/android/material/datepicker/a;
 
-    invoke-virtual {v11}, Lcom/google/android/material/datepicker/CalendarItemStyle;->getTopInset()I
+    invoke-virtual {v11}, Lcom/google/android/material/datepicker/a;->c()I
 
     move-result v11
 
@@ -493,9 +510,9 @@
 
     move-result v15
 
-    iget-object v0, v3, Lcom/google/android/material/datepicker/CalendarStyle;->day:Lcom/google/android/material/datepicker/CalendarItemStyle;
+    iget-object v0, v3, Lcom/google/android/material/datepicker/b;->a:Lcom/google/android/material/datepicker/a;
 
-    invoke-virtual {v0}, Lcom/google/android/material/datepicker/CalendarItemStyle;->getBottomInset()I
+    invoke-virtual {v0}, Lcom/google/android/material/datepicker/a;->b()I
 
     move-result v0
 
@@ -513,7 +530,7 @@
     :goto_4
     if-le v8, v14, :cond_7
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/GridView;->getWidth()I
 
     move-result v13
 
@@ -531,7 +548,7 @@
 
     int-to-float v14, v15
 
-    iget-object v15, v3, Lcom/google/android/material/datepicker/CalendarStyle;->rangeFill:Landroid/graphics/Paint;
+    iget-object v15, v3, Lcom/google/android/material/datepicker/b;->h:Landroid/graphics/Paint;
 
     move-object/from16 v17, p1
 
@@ -567,7 +584,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0, p2, p3}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->gainFocus(ILandroid/graphics/Rect;)V
+    invoke-direct {p0, p2, p3}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a(ILandroid/graphics/Rect;)V
 
     goto :goto_0
 
@@ -594,7 +611,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getSelectedItemPosition()I
+    invoke-virtual {p0}, Landroid/widget/GridView;->getSelectedItemPosition()I
 
     move-result p2
 
@@ -604,15 +621,15 @@
 
     if-eq p2, v1, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getSelectedItemPosition()I
+    invoke-virtual {p0}, Landroid/widget/GridView;->getSelectedItemPosition()I
 
     move-result p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {v1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result v1
 
@@ -625,11 +642,11 @@
 
     if-ne p2, p1, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result p1
 
@@ -658,7 +675,7 @@
 .method public final setAdapter(Landroid/widget/ListAdapter;)V
     .locals 3
 
-    instance-of v0, p1, Lcom/google/android/material/datepicker/MonthAdapter;
+    instance-of v0, p1, Lcom/google/android/material/datepicker/f;
 
     if-eqz v0, :cond_0
 
@@ -685,7 +702,7 @@
 
     const/4 v1, 0x1
 
-    const-class v2, Lcom/google/android/material/datepicker/MonthAdapter;
+    const-class v2, Lcom/google/android/material/datepicker/f;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -707,31 +724,26 @@
 .method public setSelection(I)V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {v0}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->getAdapter()Lcom/google/android/material/datepicker/MonthAdapter;
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MonthAdapter;->firstPositionInMonth()I
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/f;->b()I
 
     move-result p1
-
-    invoke-super {p0, p1}, Landroid/widget/GridView;->setSelection(I)V
-
-    goto :goto_0
 
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/GridView;->setSelection(I)V
 
-    :goto_0
     return-void
 .end method

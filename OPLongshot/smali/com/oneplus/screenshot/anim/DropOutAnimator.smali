@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/DropOutAnimator;
 .super Lcom/oneplus/screenshot/anim/TargetAnimator;
-.source "DropOutAnimator.java"
+.source ""
 
 
 # direct methods

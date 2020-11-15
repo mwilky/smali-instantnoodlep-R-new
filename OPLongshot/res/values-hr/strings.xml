@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Dijeli putem aplikacije %s</string>
     <string name="abc_toolbar_collapse_description">Sažmi</string>
     <string name="about_action_bar_title">Informacije</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verzija %s</string>
     <string name="about_privacy_policy">Pravilnik o zaštiti privatnosti</string>
     <string name="about_release_note_title">Zapisnik ažuriranja:</string>
     <string name="about_terms_service">Uvjeti usluge</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Snimke zaslona</string>
     <string name="oneplus_delete">Izbriši</string>
     <string name="oneplus_share">Pošalji</string>
+    <string name="permission_btn_text_denied">Izađi</string>
+    <string name="permission_btn_text_grant">U redu</string>
+    <string name="permission_dialog_title">Izjava o dozvoli</string>
     <string name="preference_copied">Sažetak \"%1$s\" kopiran je u međuspremnik.</string>
     <string name="quick_share_description1">"Dugo pritisnite sličicu 
 za dijeljenje"</string>

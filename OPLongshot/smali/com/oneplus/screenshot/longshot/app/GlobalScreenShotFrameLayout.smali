@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "GlobalScreenShotFrameLayout.java"
+.source ""
 
 
 # static fields

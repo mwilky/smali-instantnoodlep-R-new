@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/tracking/android/GAUsage$Field;
 .super Ljava/lang/Enum;
-.source "GAUsage.java"
+.source ""
 
 
 # annotations

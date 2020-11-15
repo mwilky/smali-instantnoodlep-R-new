@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/StringDef;
 .super Ljava/lang/Object;
-.source "StringDef.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

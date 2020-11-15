@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/transform/FFT;
 .super Ljava/lang/Object;
-.source "FFT.java"
+.source ""
 
 
 # virtual methods

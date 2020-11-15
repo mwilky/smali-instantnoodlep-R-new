@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Trimiteți folosind %s</string>
     <string name="abc_toolbar_collapse_description">Restrângeți</string>
     <string name="about_action_bar_title">Despre</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versiunea %s</string>
     <string name="about_privacy_policy">Politica de confidențialitate</string>
     <string name="about_release_note_title">Jurnal de actualizări:</string>
     <string name="about_terms_service">Termenii serviciului</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Capturi de ecran</string>
     <string name="oneplus_delete">Ștergeți</string>
     <string name="oneplus_share">Trimiteți</string>
+    <string name="permission_btn_text_denied">Ieșire</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Declarație despre permisiuni</string>
     <string name="preference_copied">„%1$s” a fost copiat în clipboard.</string>
     <string name="quick_share_description1">"Apăsați lung miniatura
 pentru a partaja"</string>

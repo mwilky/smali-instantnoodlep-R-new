@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/anim/TargetAnimator$OnAnimRun;
 .super Ljava/lang/Object;
-.source "TargetAnimator.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/anim/TargetAnimator$Runner;

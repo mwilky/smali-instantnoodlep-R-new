@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/statistics/EventStatistics$Action;
 .super Ljava/lang/Enum;
-.source "EventStatistics.java"
+.source ""
 
 
 # annotations
@@ -179,7 +179,7 @@
 .method public valueOf()I
     .locals 2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/statistics/EventStatistics$Action;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 

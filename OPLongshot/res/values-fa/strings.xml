@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">هم‌رسانی با %s</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
     <string name="about_action_bar_title">درباره</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">نسخه %s</string>
     <string name="about_privacy_policy">سیاست حفظ حریم خصوصی</string>
     <string name="about_release_note_title">گزارش به‌روزرسانی:</string>
     <string name="about_terms_service">شرایط استفاده از خدمات</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">عکس‌های صفحه‌نمایش</string>
     <string name="oneplus_delete">حذف</string>
     <string name="oneplus_share">ارسال</string>
+    <string name="permission_btn_text_denied">خروج</string>
+    <string name="permission_btn_text_grant">تأیید</string>
+    <string name="permission_dialog_title">بیانیه مجوز</string>
     <string name="preference_copied">«%1$s» در بریده‌دان کپی شد.</string>
     <string name="quick_share_description1">"برای اشتراک‌گذاری،
  تصویر بندانگشتی را

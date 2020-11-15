@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/MainState$1;
 .super Ljava/lang/Object;
-.source "MainState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState$1;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->MOVE_NEXT:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

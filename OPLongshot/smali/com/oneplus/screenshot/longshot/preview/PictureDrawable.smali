@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "PictureDrawable.java"
+.source ""
 
 
 # static fields
@@ -116,6 +116,10 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 9
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -235,12 +239,22 @@
 
 .method public setAlpha(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+            to = 0xffL
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
+    .param p1    # Landroid/graphics/ColorFilter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     return-void
 .end method

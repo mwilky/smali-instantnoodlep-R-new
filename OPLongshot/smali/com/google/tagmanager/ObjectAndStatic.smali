@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/ObjectAndStatic;
 .super Ljava/lang/Object;
-.source "ObjectAndStatic.java"
+.source ""
 
 
 # annotations

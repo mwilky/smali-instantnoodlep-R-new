@@ -1,6 +1,6 @@
 .class final Landroidx/recyclerview/widget/LinearLayoutManager$SavedState$1;
 .super Ljava/lang/Object;
-.source "LinearLayoutManager.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

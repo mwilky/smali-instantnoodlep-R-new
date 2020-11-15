@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsViewState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "AbsViewState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;

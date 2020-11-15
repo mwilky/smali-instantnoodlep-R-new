@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/TypeConverter;
 .super Ljava/lang/Object;
-.source "TypeConverter.java"
+.source ""
 
 
 # annotations
@@ -39,6 +39,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 0
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,6 +69,13 @@
 
 # virtual methods
 .method public abstract convert(Ljava/lang/Object;)Ljava/lang/Object;
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TV;"
@@ -70,6 +85,9 @@
 
 .method getSourceType()Ljava/lang/Class;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -85,6 +103,9 @@
 
 .method getTargetType()Ljava/lang/Class;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",

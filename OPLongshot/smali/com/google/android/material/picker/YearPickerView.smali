@@ -1,39 +1,33 @@
 .class Lcom/google/android/material/picker/YearPickerView;
 .super Landroid/widget/FrameLayout;
-.source "YearPickerView.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
+        Lcom/google/android/material/picker/YearPickerView$b;
     }
 .end annotation
 
 
 # static fields
-.field private static final ITEM_LAYOUT:I
-
-.field private static final MAX_NUMBER_COUNT:I = 0x5
+.field private static final c:I
 
 
 # instance fields
-.field private final mChildSize:I
+.field private a:Lcom/google/android/material/picker/YearPickerView$b;
 
-.field private mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
-
-.field private mPicker:Lcom/google/android/material/picker/NumberPicker;
-
-.field private final mViewSize:I
+.field private b:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$layout;->op_year_label_text_view:I
+    sget v0, Lb/a/b/a/h;->op_year_label_text_view:I
 
-    sput v0, Lcom/google/android/material/picker/YearPickerView;->ITEM_LAYOUT:I
+    sput v0, Lcom/google/android/material/picker/YearPickerView;->c:I
 
     return-void
 .end method
@@ -71,89 +65,81 @@
 
     move-result-object p1
 
-    sget p3, Lcom/google/android/material/picker/YearPickerView;->ITEM_LAYOUT:I
+    sget p3, Lcom/google/android/material/picker/YearPickerView;->c:I
 
     const/4 p4, 0x1
 
     invoke-virtual {p1, p3, p0, p4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget p1, Lcom/google/android/material/R$dimen;->datepicker_view_animator_height:I
+    sget p1, Lb/a/b/a/d;->datepicker_view_animator_height:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/material/picker/YearPickerView;->mViewSize:I
-
-    sget p1, Lcom/google/android/material/R$dimen;->datepicker_year_label_height:I
+    sget p1, Lb/a/b/a/d;->datepicker_year_label_height:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    move-result p1
+    sget p1, Lb/a/b/a/f;->year_picker:I
 
-    iput p1, p0, Lcom/google/android/material/picker/YearPickerView;->mChildSize:I
-
-    sget p1, Lcom/google/android/material/R$id;->year_picker:I
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/YearPickerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/android/material/picker/NumberPicker;
 
-    iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     const/4 p2, 0x5
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setSelectNumberCount(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     const/4 p2, 0x0
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setWithoutSelectBoldText(Z)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
-    new-instance p2, Lcom/google/android/material/picker/YearPickerView$1;
+    new-instance p2, Lcom/google/android/material/picker/YearPickerView$a;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/picker/YearPickerView$1;-><init>(Lcom/google/android/material/picker/YearPickerView;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/picker/YearPickerView$a;-><init>(Lcom/google/android/material/picker/YearPickerView;)V
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;)V
+    invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setOnValueChangedListener(Lcom/google/android/material/picker/NumberPicker$i;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public setCurrentYear()V
+.method public a()V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
+    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->a:Lcom/google/android/material/picker/YearPickerView$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object v1, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-virtual {v1}, Lcom/google/android/material/picker/NumberPicker;->getValue()I
 
     move-result v1
 
-    invoke-interface {v0, p0, v1}, Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;->onYearChanged(Lcom/google/android/material/picker/YearPickerView;I)V
+    invoke-interface {v0, p0, v1}, Lcom/google/android/material/picker/YearPickerView$b;->a(Lcom/google/android/material/picker/YearPickerView;I)V
 
     :cond_0
     return-void
 .end method
 
-.method public setOnYearSelectedListener(Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;)V
+.method public b(Lcom/google/android/material/picker/YearPickerView$b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mOnYearSelectedListener:Lcom/google/android/material/picker/YearPickerView$OnYearSelectedListener;
+    iput-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->a:Lcom/google/android/material/picker/YearPickerView$b;
 
     return-void
 .end method
 
-.method public setRange(Ljava/util/Calendar;Ljava/util/Calendar;)V
+.method public c(Ljava/util/Calendar;Ljava/util/Calendar;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -166,29 +152,21 @@
 
     move-result p2
 
-    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/picker/NumberPicker;->setMinValue(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object p1, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/picker/NumberPicker;->setMaxValue(I)V
 
     return-void
 .end method
 
-.method public setSelectionCentered(I)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    return-void
-.end method
-
-.method public setYear(I)V
+.method public d(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->mPicker:Lcom/google/android/material/picker/NumberPicker;
+    iget-object v0, p0, Lcom/google/android/material/picker/YearPickerView;->b:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/picker/NumberPicker;->setValue(I)V
 

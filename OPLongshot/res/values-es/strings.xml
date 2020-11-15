@@ -27,8 +27,8 @@
     <string name="abc_shareactionprovider_share_with">Compartir con</string>
     <string name="abc_shareactionprovider_share_with_application">Compartir con %s</string>
     <string name="abc_toolbar_collapse_description">Ocultar</string>
-    <string name="about_action_bar_title">Información</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_action_bar_title">Acerca de</string>
+    <string name="about_app_version_text">Versión %s</string>
     <string name="about_privacy_policy">Política de privacidad</string>
     <string name="about_release_note_title">Registro de actualización:</string>
     <string name="about_terms_service">Condiciones de servicio</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Capturas de pantalla</string>
     <string name="oneplus_delete">Eliminar</string>
     <string name="oneplus_share">Enviar</string>
+    <string name="permission_btn_text_denied">Salir</string>
+    <string name="permission_btn_text_grant">Aceptar</string>
+    <string name="permission_dialog_title">Declaración sobre permisos</string>
     <string name="preference_copied">\"%1$s\" se ha copiado en el portapapeles.</string>
     <string name="quick_share_description1">"Mantén presionada la miniatura 
 para compartir"</string>

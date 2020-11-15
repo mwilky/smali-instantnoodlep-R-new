@@ -1,6 +1,6 @@
 .class final enum Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 .super Ljava/lang/Enum;
-.source "MaterialCalendar.java"
+.source ""
 
 
 # annotations

@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/edgeeffect/SpringNestScrollView$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "SpringNestScrollView.java"
+.source ""
 
 
 # annotations
@@ -36,7 +36,7 @@
 .method public getValue(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)F
     .locals 0
 
-    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->access$000(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)F
+    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->K(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)F
 
     move-result p1
 

@@ -1,18 +1,24 @@
 .class public final Lcom/google/android/material/resources/CancelableFontCallback;
 .super Lcom/google/android/material/resources/TextAppearanceFontCallback;
-.source "CancelableFontCallback.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;
+        Lcom/google/android/material/resources/CancelableFontCallback$a;
     }
 .end annotation
 
 
 # instance fields
-.field private final applyFont:Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;
+.field private final applyFont:Lcom/google/android/material/resources/CancelableFontCallback$a;
 
 .field private cancelled:Z
 
@@ -20,14 +26,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;Landroid/graphics/Typeface;)V
+.method public constructor <init>(Lcom/google/android/material/resources/CancelableFontCallback$a;Landroid/graphics/Typeface;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/android/material/resources/TextAppearanceFontCallback;-><init>()V
 
     iput-object p2, p0, Lcom/google/android/material/resources/CancelableFontCallback;->fallbackFont:Landroid/graphics/Typeface;
 
-    iput-object p1, p0, Lcom/google/android/material/resources/CancelableFontCallback;->applyFont:Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;
+    iput-object p1, p0, Lcom/google/android/material/resources/CancelableFontCallback;->applyFont:Lcom/google/android/material/resources/CancelableFontCallback$a;
 
     return-void
 .end method
@@ -39,9 +45,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/resources/CancelableFontCallback;->applyFont:Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;
+    iget-object v0, p0, Lcom/google/android/material/resources/CancelableFontCallback;->applyFont:Lcom/google/android/material/resources/CancelableFontCallback$a;
 
-    invoke-interface {v0, p1}, Lcom/google/android/material/resources/CancelableFontCallback$ApplyFont;->apply(Landroid/graphics/Typeface;)V
+    invoke-interface {v0, p1}, Lcom/google/android/material/resources/CancelableFontCallback$a;->a(Landroid/graphics/Typeface;)V
 
     :cond_0
     return-void

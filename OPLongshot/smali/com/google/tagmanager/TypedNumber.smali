@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/TypedNumber;
 .super Ljava/lang/Number;
-.source "TypedNumber.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -80,11 +80,6 @@
 
 .method public static numberWithString(Ljava/lang/String;)Lcom/google/tagmanager/TypedNumber;
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NumberFormatException;
-        }
-    .end annotation
 
     :try_start_0
     new-instance v0, Lcom/google/tagmanager/TypedNumber;

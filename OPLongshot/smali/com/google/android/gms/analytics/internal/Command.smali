@@ -1,18 +1,12 @@
 .class public Lcom/google/android/gms/analytics/internal/Command;
 .super Ljava/lang/Object;
-.source "Command.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final APPEND_CACHE_BUSTER:Ljava/lang/String; = "appendCacheBuster"
-
-.field public static final APPEND_QUEUE_TIME:Ljava/lang/String; = "appendQueueTime"
-
-.field public static final APPEND_VERSION:Ljava/lang/String; = "appendVersion"
-
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -25,11 +19,11 @@
 
 
 # instance fields
-.field private id:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field private urlParam:Ljava/lang/String;
+.field private b:Ljava/lang/String;
 
-.field private value:Ljava/lang/String;
+.field private c:Ljava/lang/String;
 
 
 # direct methods
@@ -58,7 +52,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/analytics/internal/Command;->readFromParcel(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/analytics/internal/Command;->d(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -68,41 +62,57 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/analytics/internal/Command;->id:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->urlParam:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/google/android/gms/analytics/internal/Command;->value:Ljava/lang/String;
+    iput-object p3, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private readFromParcel(Landroid/os/Parcel;)V
+.method private d(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->id:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->urlParam:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->b:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/gms/analytics/internal/Command;->value:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -111,42 +121,18 @@
     return v0
 .end method
 
-.method public getId()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->id:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getUrlParam()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->urlParam:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getValue()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->value:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->id:Ljava/lang/String;
+    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->urlParam:Ljava/lang/String;
+    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->b:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->value:Ljava/lang/String;
+    iget-object p2, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

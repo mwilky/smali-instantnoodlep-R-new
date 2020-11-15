@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/FlashInterpolator;
 .super Lcom/oneplus/screenshot/anim/BaseInterpolator;
-.source "FlashInterpolator.java"
+.source ""
 
 
 # static fields
@@ -19,25 +19,23 @@
 
 # virtual methods
 .method public getInterpolation(F)F
-    .locals 4
+    .locals 5
 
-    iget v0, p0, Lcom/oneplus/screenshot/anim/FlashInterpolator;->mDurationFactor:F
+    iget v0, p0, Lcom/oneplus/screenshot/anim/BaseInterpolator;->mDurationFactor:F
 
-    cmpg-float v0, p1, v0
+    cmpg-float v1, p1, v0
 
-    if-gtz v0, :cond_0
+    if-gtz v1, :cond_0
 
-    const-wide v0, 0x400921fb54442d18L    # Math.PI
+    const-wide v1, 0x400921fb54442d18L    # Math.PI
 
-    iget v2, p0, Lcom/oneplus/screenshot/anim/FlashInterpolator;->mDurationFactor:F
+    div-float/2addr p1, v0
 
-    div-float/2addr p1, v2
+    float-to-double v3, p1
 
-    float-to-double v2, p1
+    mul-double/2addr v3, v1
 
-    mul-double/2addr v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v0
 

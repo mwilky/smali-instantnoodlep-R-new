@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/CrashHandler;
 .super Ljava/lang/Object;
-.source "CrashHandler.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;
@@ -303,20 +303,14 @@
 
     invoke-direct {v2, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    invoke-virtual {p1, v2}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
     :goto_1
-    if-eqz p1, :cond_1
-
     invoke-virtual {p1, v2}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
+
+    if-eqz p1, :cond_1
 
     goto :goto_1
 

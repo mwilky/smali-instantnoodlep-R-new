@@ -1,6 +1,6 @@
 .class final Landroid/support/v4/os/ResultReceiver$1;
 .super Ljava/lang/Object;
-.source "ResultReceiver.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

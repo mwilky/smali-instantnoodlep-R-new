@@ -1,6 +1,6 @@
 .class final enum Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
 .super Ljava/lang/Enum;
-.source "EventStatistics.java"
+.source ""
 
 
 # annotations

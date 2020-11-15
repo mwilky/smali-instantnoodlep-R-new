@@ -1,18 +1,9 @@
 .class Landroidx/print/PrintHelper$1;
 .super Landroid/os/AsyncTask;
-.source "PrintHelper.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/print/PrintHelper;->writeBitmap(Landroid/print/PrintAttributes;ILandroid/graphics/Bitmap;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/os/AsyncTask<",
@@ -102,7 +93,7 @@
 
     iget-object v1, p0, Landroidx/print/PrintHelper$1;->this$0:Landroidx/print/PrintHelper;
 
-    iget-object v1, v1, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/print/PrintHelper;->a:Landroid/content/Context;
 
     iget-object v2, p0, Landroidx/print/PrintHelper$1;->val$pdfAttributes:Landroid/print/PrintAttributes;
 
@@ -116,7 +107,7 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Landroidx/print/PrintHelper;->convertBitmapForColorMode(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+    invoke-static {v1, v2}, Landroidx/print/PrintHelper;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -140,7 +131,7 @@
 
     move-result-object v3
 
-    sget-boolean v4, Landroidx/print/PrintHelper;->IS_MIN_MARGINS_HANDLING_CORRECT:Z
+    sget-boolean v4, Landroidx/print/PrintHelper;->f:Z
 
     if-eqz v4, :cond_2
 
@@ -163,7 +154,7 @@
 
     iget-object v5, p0, Landroidx/print/PrintHelper$1;->this$0:Landroidx/print/PrintHelper;
 
-    iget-object v5, v5, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
+    iget-object v5, v5, Landroidx/print/PrintHelper;->a:Landroid/content/Context;
 
     iget-object v6, p0, Landroidx/print/PrintHelper$1;->val$attributes:Landroid/print/PrintAttributes;
 
@@ -202,11 +193,11 @@
 
     iget v6, p0, Landroidx/print/PrintHelper$1;->val$fittingMode:I
 
-    invoke-static {v4, v5, v2, v6}, Landroidx/print/PrintHelper;->getMatrix(IILandroid/graphics/RectF;I)Landroid/graphics/Matrix;
+    invoke-static {v4, v5, v2, v6}, Landroidx/print/PrintHelper;->b(IILandroid/graphics/RectF;I)Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    sget-boolean v5, Landroidx/print/PrintHelper;->IS_MIN_MARGINS_HANDLING_CORRECT:Z
+    sget-boolean v5, Landroidx/print/PrintHelper;->f:Z
 
     if-eqz v5, :cond_3
 

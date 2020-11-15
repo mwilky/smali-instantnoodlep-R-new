@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/app/LongshotDialog;
 .super Ljava/lang/Object;
-.source "LongshotDialog.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;
@@ -78,7 +78,7 @@
 
     new-instance v8, Landroid/view/WindowManager$LayoutParams;
 
-    sget v5, Lcom/oneplus/compat/view/WindowManagerNative$LayoutParams;->TYPE_SCREENSHOT:I
+    sget v5, Lb/b/b/l/e;->a:I
 
     const/4 v1, -0x1
 
@@ -102,11 +102,9 @@
 
     iput v0, v8, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/app/LongshotDialog;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+    iput v0, v8, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     new-instance v0, Landroid/widget/FrameLayout;
 
@@ -384,6 +382,10 @@
 
 .method public setTitle(I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/app/LongshotDialog;->mContext:Landroid/content/Context;
 
@@ -398,6 +400,10 @@
 
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 2
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/app/LongshotDialog;->isShowing()Z
 

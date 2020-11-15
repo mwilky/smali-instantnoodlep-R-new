@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 .super Ljava/lang/Object;
-.source "SmallScreenContorller.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/smallscreen/TraceCallBack;
@@ -265,7 +265,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;->isAttachedToWindow()Z
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
 
     move-result v0
 
@@ -281,8 +281,6 @@
 
     or-int/2addr v0, v1
 
-    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
-
     goto :goto_0
 
     :cond_0
@@ -294,9 +292,9 @@
 
     and-int/2addr v0, v1
 
+    :goto_0
     iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    :goto_0
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
@@ -365,9 +363,10 @@
 
     move-result-object v0
 
+    :goto_0
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->isScrolledToLeft()Z
@@ -388,14 +387,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
-
     goto :goto_0
 
     :cond_1
     invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->hookWindowTouch(Z)V
 
-    :goto_0
+    :goto_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 
     if-eqz v0, :cond_2
@@ -470,7 +467,7 @@
 
     iget-object p2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 
-    invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;->isAttachedToWindow()Z
+    invoke-virtual {p2}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
 
     move-result p2
 
@@ -482,15 +479,11 @@
 
     const/4 v1, 0x0
 
-    aget v0, v0, v1
+    aget v1, v0, v1
 
-    add-int/2addr v0, p1
+    add-int/2addr v1, p1
 
-    iput v0, p2, Landroid/view/WindowManager$LayoutParams;->x:I
-
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayoutLp:Landroid/view/WindowManager$LayoutParams;
-
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mDefaultPostion:[I
+    iput v1, p2, Landroid/view/WindowManager$LayoutParams;->x:I
 
     const/4 v1, 0x1
 
@@ -498,13 +491,11 @@
 
     iput v0, p2, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    iget-object p2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayoutLp:Landroid/view/WindowManager$LayoutParams;
-
-    invoke-interface {p2, v0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v0, v1, p2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->isScrolledToLeft()Z
 
@@ -550,7 +541,7 @@
     move p1, v0
 
     :goto_1
-    invoke-virtual {p2, p1}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;->setAlpha(F)V
+    invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     :cond_2
     return-void
@@ -603,7 +594,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -688,6 +679,12 @@
     invoke-direct {v0, p0, v1, p1}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;-><init>(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;FF)V
 
     iput-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mVelocityTracler:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
+
+    const-string p1, "Longshot.SmallScreenContorller"
+
+    const-string v0, "ACTION DOWN"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 

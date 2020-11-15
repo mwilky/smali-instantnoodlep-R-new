@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">שיתוף עם %s</string>
     <string name="abc_toolbar_collapse_description">כיווץ</string>
     <string name="about_action_bar_title">אודות</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">גרסה %s</string>
     <string name="about_privacy_policy">מדיניות פרטיות</string>
     <string name="about_release_note_title">עדכן יומן:</string>
     <string name="about_terms_service">תנאי שירות</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">צילומי מסך</string>
     <string name="oneplus_delete">מחק</string>
     <string name="oneplus_share">שלח</string>
+    <string name="permission_btn_text_denied">יציאה</string>
+    <string name="permission_btn_text_grant">אישור</string>
+    <string name="permission_dialog_title">הצהרת הרשאות</string>
     <string name="preference_copied">\"%1$s\" הועתק ללוח.</string>
     <string name="quick_share_description1">"לחץ לחיצה ארוכה על תמונה
  ממוזערת כדי לשתף"</string>

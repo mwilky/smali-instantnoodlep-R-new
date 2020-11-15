@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/reject/ByKeyguard;
 .super Lcom/oneplus/screenshot/longshot/reject/Reject;
-.source "ByKeyguard.java"
+.source ""
 
 
 # instance fields

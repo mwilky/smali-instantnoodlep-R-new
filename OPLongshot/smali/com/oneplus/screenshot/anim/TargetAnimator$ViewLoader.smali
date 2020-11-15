@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;
 .super Ljava/lang/Object;
-.source "TargetAnimator.java"
+.source ""
 
 
 # annotations

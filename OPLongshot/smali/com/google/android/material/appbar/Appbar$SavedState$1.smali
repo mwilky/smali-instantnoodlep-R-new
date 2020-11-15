@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/appbar/Appbar$SavedState$1;
 .super Ljava/lang/Object;
-.source "Appbar.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

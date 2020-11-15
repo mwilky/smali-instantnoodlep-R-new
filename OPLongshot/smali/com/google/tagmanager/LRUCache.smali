@@ -1,12 +1,16 @@
 .class Lcom/google/tagmanager/LRUCache;
 .super Ljava/lang/Object;
-.source "LRUCache.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/tagmanager/Cache;
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xc
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<K:",

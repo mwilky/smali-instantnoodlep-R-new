@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalNotification;
 .super Ljava/lang/Object;
-.source "GlobalNotification.java"
+.source ""
 
 
 # annotations

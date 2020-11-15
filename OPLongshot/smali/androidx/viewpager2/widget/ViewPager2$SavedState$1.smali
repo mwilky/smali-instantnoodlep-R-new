@@ -1,6 +1,6 @@
 .class final Landroidx/viewpager2/widget/ViewPager2$SavedState$1;
 .super Ljava/lang/Object;
-.source "ViewPager2.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

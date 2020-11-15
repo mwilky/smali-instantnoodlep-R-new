@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotSLastState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotLastState;
-.source "ShotSLastState.java"
+.source ""
 
 
 # static fields
@@ -19,7 +19,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotSLastState;->mOffset:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
     return-void
 .end method

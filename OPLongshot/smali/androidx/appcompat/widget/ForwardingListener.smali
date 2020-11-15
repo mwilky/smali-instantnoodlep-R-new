@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/widget/ForwardingListener;
 .super Ljava/lang/Object;
-.source "ForwardingListener.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -8,10 +8,16 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/widget/ForwardingListener$TriggerLongPress;,
-        Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;
+        Landroidx/appcompat/widget/ForwardingListener$b;,
+        Landroidx/appcompat/widget/ForwardingListener$a;
     }
 .end annotation
 
@@ -141,11 +147,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/appcompat/widget/DropDownListView;
+    check-cast v1, Landroidx/appcompat/widget/x;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Landroidx/appcompat/widget/DropDownListView;->isShown()Z
+    invoke-virtual {v1}, Landroid/widget/ListView;->isShown()Z
 
     move-result v3
 
@@ -164,7 +170,7 @@
 
     iget v0, p0, Landroidx/appcompat/widget/ForwardingListener;->mActivePointerId:I
 
-    invoke-virtual {v1, v3, v0}, Landroidx/appcompat/widget/DropDownListView;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
+    invoke-virtual {v1, v3, v0}, Landroidx/appcompat/widget/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
 
     move-result v0
 
@@ -288,9 +294,9 @@
 
     if-nez p1, :cond_4
 
-    new-instance p1, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;
+    new-instance p1, Landroidx/appcompat/widget/ForwardingListener$a;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;-><init>(Landroidx/appcompat/widget/ForwardingListener;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/ForwardingListener$a;-><init>(Landroidx/appcompat/widget/ForwardingListener;)V
 
     iput-object p1, p0, Landroidx/appcompat/widget/ForwardingListener;->mDisallowIntercept:Ljava/lang/Runnable;
 
@@ -307,9 +313,9 @@
 
     if-nez p1, :cond_5
 
-    new-instance p1, Landroidx/appcompat/widget/ForwardingListener$TriggerLongPress;
+    new-instance p1, Landroidx/appcompat/widget/ForwardingListener$b;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/ForwardingListener$TriggerLongPress;-><init>(Landroidx/appcompat/widget/ForwardingListener;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/ForwardingListener$b;-><init>(Landroidx/appcompat/widget/ForwardingListener;)V
 
     iput-object p1, p0, Landroidx/appcompat/widget/ForwardingListener;->mTriggerLongPress:Ljava/lang/Runnable;
 

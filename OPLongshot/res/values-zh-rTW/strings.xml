@@ -52,6 +52,9 @@
     <string name="oneplus_delete">刪除</string>
     <string name="oneplus_share">發送</string>
     <string name="op_accessibility_quick_settings_page">第 %1$d 頁，共 %2$d 頁</string>
+    <string name="permission_btn_text_denied">退出</string>
+    <string name="permission_btn_text_grant">同意並繼續</string>
+    <string name="permission_dialog_title">權限聲明</string>
     <string name="preference_copied">已將「%1$s」複製到剪貼簿。</string>
     <string name="quick_share_description1">長按縮圖以分享</string>
     <string name="quick_share_more_text">更多</string>

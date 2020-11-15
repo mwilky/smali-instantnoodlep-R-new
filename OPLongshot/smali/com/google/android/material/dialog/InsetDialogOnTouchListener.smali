@@ -1,13 +1,24 @@
 .class public Lcom/google/android/material/dialog/InsetDialogOnTouchListener;
 .super Ljava/lang/Object;
-.source "InsetDialogOnTouchListener.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # instance fields
 .field private final dialog:Landroid/app/Dialog;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private final leftInset:I
 
@@ -19,6 +30,14 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
     .locals 1
+    .param p1    # Landroid/app/Dialog;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,6 +72,14 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 5
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MotionEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const v0, 0x1020002
 

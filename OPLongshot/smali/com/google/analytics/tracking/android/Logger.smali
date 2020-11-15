@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/analytics/tracking/android/Logger;
 .super Ljava/lang/Object;
-.source "Logger.java"
+.source ""
 
 
 # annotations
@@ -12,23 +12,20 @@
 
 
 # virtual methods
-.method public abstract error(Ljava/lang/Exception;)V
+.method public abstract a(Lcom/google/analytics/tracking/android/Logger$LogLevel;)V
 .end method
 
-.method public abstract error(Ljava/lang/String;)V
+.method public abstract b(Ljava/lang/String;)V
 .end method
 
-.method public abstract getLogLevel()Lcom/google/analytics/tracking/android/Logger$LogLevel;
+.method public abstract c(Ljava/lang/String;)V
 .end method
 
-.method public abstract info(Ljava/lang/String;)V
+.method public abstract d(Ljava/lang/String;)V
 .end method
 
-.method public abstract setLogLevel(Lcom/google/analytics/tracking/android/Logger$LogLevel;)V
+.method public abstract e()Lcom/google/analytics/tracking/android/Logger$LogLevel;
 .end method
 
-.method public abstract verbose(Ljava/lang/String;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;)V
+.method public abstract f(Ljava/lang/String;)V
 .end method

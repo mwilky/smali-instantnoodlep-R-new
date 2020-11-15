@@ -1,6 +1,6 @@
 .class final Landroidx/transition/ViewUtils$1;
 .super Landroid/util/Property;
-.source "ViewUtils.java"
+.source ""
 
 
 # annotations
@@ -37,7 +37,7 @@
 .method public get(Landroid/view/View;)Ljava/lang/Float;
     .locals 0
 
-    invoke-static {p1}, Landroidx/transition/ViewUtils;->getTransitionAlpha(Landroid/view/View;)F
+    invoke-static {p1}, Landroidx/transition/ViewUtils;->c(Landroid/view/View;)F
 
     move-result p1
 
@@ -67,7 +67,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->setTransitionAlpha(Landroid/view/View;F)V
+    invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->h(Landroid/view/View;F)V
 
     return-void
 .end method

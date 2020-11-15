@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">แชร์ทาง %s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
     <string name="about_action_bar_title">เกี่ยวกับ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">เวอร์ชัน %s</string>
     <string name="about_privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="about_release_note_title">ล็อกการอัปเดต:</string>
     <string name="about_terms_service">เงื่อนไขการใช้บริการ</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">ภาพหน้าจอ</string>
     <string name="oneplus_delete">ลบ</string>
     <string name="oneplus_share">ส่ง</string>
+    <string name="permission_btn_text_denied">ออก</string>
+    <string name="permission_btn_text_grant">ตกลง</string>
+    <string name="permission_dialog_title">คำชี้แจงสิทธิ์</string>
     <string name="preference_copied">คัดลอก \"%1$s\" ไปยังคลิปบอร์ดแล้ว</string>
     <string name="quick_share_description1">"กดค้างที่รูปขนาดย่อ
 เพื่อแชร์"</string>

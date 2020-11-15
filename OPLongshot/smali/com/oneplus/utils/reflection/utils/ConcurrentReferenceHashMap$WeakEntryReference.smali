@@ -1,6 +1,6 @@
 .class final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;
 .super Ljava/lang/ref/WeakReference;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -110,9 +110,9 @@
 .method public release()V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;->enqueue()Z
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->enqueue()Z
 
-    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;->clear()V
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->clear()V
 
     return-void
 .end method

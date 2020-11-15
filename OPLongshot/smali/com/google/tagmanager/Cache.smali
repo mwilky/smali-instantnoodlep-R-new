@@ -1,6 +1,6 @@
 .class interface abstract Lcom/google/tagmanager/Cache;
 .super Ljava/lang/Object;
-.source "Cache.java"
+.source ""
 
 
 # annotations

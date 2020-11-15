@@ -1,9 +1,17 @@
 .class public Lcom/google/android/material/internal/ParcelableSparseBooleanArray;
 .super Landroid/util/SparseBooleanArray;
-.source "ParcelableSparseBooleanArray.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -49,6 +57,10 @@
 
 .method public constructor <init>(Landroid/util/SparseBooleanArray;)V
     .locals 3
+    .param p1    # Landroid/util/SparseBooleanArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -73,7 +85,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v1, v2}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->put(IZ)V
+    invoke-virtual {p0, v1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -95,14 +107,18 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->size()I
+    invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result p2
 
     new-array p2, p2, [I
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->size()I
+    invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v0
 
@@ -111,19 +127,19 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->size()I
+    invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->keyAt(I)I
+    invoke-virtual {p0, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v2
 
     aput v2, p2, v1
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->valueAt(I)Z
+    invoke-virtual {p0, v1}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
 
     move-result v2
 
@@ -134,7 +150,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ParcelableSparseBooleanArray;->size()I
+    invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v1
 

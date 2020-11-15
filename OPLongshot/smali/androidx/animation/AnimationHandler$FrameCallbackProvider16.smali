@@ -1,13 +1,17 @@
 .class Landroidx/animation/AnimationHandler$FrameCallbackProvider16;
 .super Ljava/lang/Object;
-.source "AnimationHandler.java"
+.source ""
 
 # interfaces
-.implements Landroidx/animation/AnimationHandler$AnimationFrameCallbackProvider;
+.implements Landroidx/animation/AnimationHandler$c;
 .implements Landroid/view/Choreographer$FrameCallback;
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/animation/AnimationHandler;
 .end annotation
@@ -44,7 +48,7 @@
 
     div-long/2addr p1, v1
 
-    invoke-virtual {v0, p1, p2}, Landroidx/animation/AnimationHandler;->onAnimationFrame(J)V
+    invoke-virtual {v0, p1, p2}, Landroidx/animation/AnimationHandler;->k(J)V
 
     return-void
 .end method
@@ -59,7 +63,7 @@
     return-wide v0
 .end method
 
-.method public onNewCallbackAdded(Landroidx/animation/AnimationHandler$AnimationFrameCallback;)V
+.method public onNewCallbackAdded(Landroidx/animation/AnimationHandler$b;)V
     .locals 0
 
     return-void

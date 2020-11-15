@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/tracking/android/Logger$LogLevel;
 .super Ljava/lang/Enum;
-.source "Logger.java"
+.source ""
 
 
 # annotations

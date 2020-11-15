@@ -1,6 +1,6 @@
 .class Landroidx/animation/Keyframe$ObjectKeyframe;
 .super Landroidx/animation/Keyframe;
-.source "Keyframe.java"
+.source ""
 
 
 # annotations
@@ -45,7 +45,7 @@
 
     invoke-direct {p0}, Landroidx/animation/Keyframe;-><init>()V
 
-    iput p1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mFraction:F
+    iput p1, p0, Landroidx/animation/Keyframe;->mFraction:F
 
     iput-object p2, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mValue:Ljava/lang/Object;
 
@@ -59,9 +59,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mHasValue:Z
-
-    iget-boolean p1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mHasValue:Z
+    iput-boolean p1, p0, Landroidx/animation/Keyframe;->mHasValue:Z
 
     if-eqz p1, :cond_1
 
@@ -75,7 +73,7 @@
     const-class p1, Ljava/lang/Object;
 
     :goto_1
-    iput-object p1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mValueType:Ljava/lang/Class;
+    iput-object p1, p0, Landroidx/animation/Keyframe;->mValueType:Ljava/lang/Class;
 
     return-void
 .end method
@@ -94,11 +92,11 @@
 
     new-instance v0, Landroidx/animation/Keyframe$ObjectKeyframe;
 
-    invoke-virtual {p0}, Landroidx/animation/Keyframe$ObjectKeyframe;->getFraction()F
+    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getFraction()F
 
     move-result v1
 
-    invoke-virtual {p0}, Landroidx/animation/Keyframe$ObjectKeyframe;->hasValue()Z
+    invoke-virtual {p0}, Landroidx/animation/Keyframe;->hasValue()Z
 
     move-result v2
 
@@ -114,15 +112,15 @@
     :goto_0
     invoke-direct {v0, v1, v2}, Landroidx/animation/Keyframe$ObjectKeyframe;-><init>(FLjava/lang/Object;)V
 
-    iget-boolean v1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mValueWasSetOnStart:Z
+    iget-boolean v1, p0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z
 
-    iput-boolean v1, v0, Landroidx/animation/Keyframe$ObjectKeyframe;->mValueWasSetOnStart:Z
+    iput-boolean v1, v0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z
 
-    invoke-virtual {p0}, Landroidx/animation/Keyframe$ObjectKeyframe;->getInterpolator()Landroidx/animation/Interpolator;
+    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe$ObjectKeyframe;->setInterpolator(Landroidx/animation/Interpolator;)V
+    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe;->setInterpolator(Landroidx/animation/d;)V
 
     return-object v0
 .end method
@@ -139,11 +137,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/animation/Keyframe$ObjectKeyframe;->clone()Landroidx/animation/Keyframe$ObjectKeyframe;
 
@@ -185,7 +178,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Landroidx/animation/Keyframe$ObjectKeyframe;->mHasValue:Z
+    iput-boolean p1, p0, Landroidx/animation/Keyframe;->mHasValue:Z
 
     return-void
 .end method

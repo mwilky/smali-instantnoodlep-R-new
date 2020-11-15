@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 .super Ljava/util/ArrayList;
-.source "RunnableCache.java"
+.source ""
 
 
 # annotations
@@ -37,7 +37,7 @@
 .method public clear()V
     .locals 3
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/cache/RunnableCache;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 .method public postDelayed(Ljava/lang/Runnable;J)V
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/cache/RunnableCache;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/cache/RunnableCache;->mHandler:Landroid/os/Handler;
 

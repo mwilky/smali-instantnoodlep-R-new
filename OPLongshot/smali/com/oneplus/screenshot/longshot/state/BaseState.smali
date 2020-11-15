@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/BaseState;
 .super Ljava/lang/Object;
-.source "BaseState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/state/LongshotAction;

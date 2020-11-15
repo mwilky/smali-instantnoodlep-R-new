@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/ScreenshotSelectorView;
 .super Landroid/view/View;
-.source "ScreenshotSelectorView.java"
+.source ""
 
 
 # instance fields
@@ -26,6 +26,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
@@ -65,25 +69,25 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 7
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->getLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
     int-to-float v2, v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->getTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
     move-result v0
 
     int-to-float v3, v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->getRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getRight()I
 
     move-result v0
 
     int-to-float v4, v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->getBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
@@ -198,7 +202,7 @@
 
     iput p2, p1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
     return-void

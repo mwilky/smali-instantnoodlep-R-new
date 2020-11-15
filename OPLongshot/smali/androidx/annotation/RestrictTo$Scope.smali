@@ -1,6 +1,6 @@
 .class public final enum Landroidx/annotation/RestrictTo$Scope;
 .super Ljava/lang/Enum;
-.source "RestrictTo.java"
+.source ""
 
 
 # annotations

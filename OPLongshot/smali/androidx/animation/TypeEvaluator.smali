@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/animation/TypeEvaluator;
 .super Ljava/lang/Object;
-.source "TypeEvaluator.java"
+.source ""
 
 
 # annotations
@@ -16,6 +16,17 @@
 
 # virtual methods
 .method public abstract evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(FTT;TT;)TT;"

@@ -1,6 +1,12 @@
 .class public Lcom/google/android/material/transition/MaterialArcMotion;
 .super Landroid/transition/PathMotion;
-.source "MaterialArcMotion.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # direct methods
@@ -37,6 +43,8 @@
 # virtual methods
 .method public getPath(FFFF)Landroid/graphics/Path;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroid/graphics/Path;
 

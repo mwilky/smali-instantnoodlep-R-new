@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotLastState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotNextState;
-.source "ShotLastState.java"
+.source ""
 
 
 # static fields
@@ -31,42 +31,30 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_LAST_DELAY_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mCaptureDelay:I
-
     goto :goto_0
 
     :cond_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_LAST_DELAY_3:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mCaptureDelay:I
 
     goto :goto_0
 
     :cond_1
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_LAST_DELAY_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mCaptureDelay:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
-    :goto_0
     return-void
 .end method
 
 .method private checkOffset()V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->isRecognizeScrollView()Z
 
@@ -90,44 +78,20 @@
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
-
     goto :goto_0
 
     :cond_0
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_4:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
 
     goto :goto_0
 
     :cond_1
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_3:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
-
     goto :goto_0
 
     :cond_2
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
 
     goto :goto_0
 
@@ -146,57 +110,33 @@
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_LAST_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
-
     goto :goto_0
 
     :cond_4
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_LAST_LEVEL_5:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
 
     goto :goto_0
 
     :cond_5
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_LAST_LEVEL_4:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
-
     goto :goto_0
 
     :cond_6
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_LAST_LEVEL_3:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
 
     goto :goto_0
 
     :cond_7
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_LAST_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result v0
 
-    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
+    iput v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
-    :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +145,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->mOffset:I
+    iget v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -235,7 +175,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->checkOffset()V
 
-    invoke-super {p0}, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->onEnter()V
+    invoke-super {p0}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->onEnter()V
 
     return-void
 .end method

@@ -1,12 +1,18 @@
 .class public final Landroidx/appcompat/content/res/AppCompatResources;
 .super Ljava/lang/Object;
-.source "AppCompatResources.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedAPI"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;
+        Landroidx/appcompat/content/res/AppCompatResources$a;
     }
 .end annotation
 
@@ -32,7 +38,7 @@
             "Ljava/util/WeakHashMap<",
             "Landroid/content/Context;",
             "Landroid/util/SparseArray<",
-            "Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;",
+            "Landroidx/appcompat/content/res/AppCompatResources$a;",
             ">;>;"
         }
     .end annotation
@@ -76,6 +82,18 @@
 
 .method private static addColorStateListToCache(Landroid/content/Context;ILandroid/content/res/ColorStateList;)V
     .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object v0, Landroidx/appcompat/content/res/AppCompatResources;->sColorStateCacheLock:Ljava/lang/Object;
 
@@ -101,7 +119,7 @@
     invoke-virtual {v2, p0, v1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance v2, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;
+    new-instance v2, Landroidx/appcompat/content/res/AppCompatResources$a;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -111,7 +129,7 @@
 
     move-result-object p0
 
-    invoke-direct {v2, p2, p0}, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;-><init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;)V
+    invoke-direct {v2, p2, p0}, Landroidx/appcompat/content/res/AppCompatResources$a;-><init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;)V
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
@@ -131,6 +149,16 @@
 
 .method private static getCachedColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 4
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     sget-object v0, Landroidx/appcompat/content/res/AppCompatResources;->sColorStateCacheLock:Ljava/lang/Object;
 
@@ -157,11 +185,11 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;
+    check-cast v2, Landroidx/appcompat/content/res/AppCompatResources$a;
 
     if-eqz v2, :cond_1
 
-    iget-object v3, v2, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;->configuration:Landroid/content/res/Configuration;
+    iget-object v3, v2, Landroidx/appcompat/content/res/AppCompatResources$a;->b:Landroid/content/res/Configuration;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -177,7 +205,7 @@
 
     if-eqz p0, :cond_0
 
-    iget-object p0, v2, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;->value:Landroid/content/res/ColorStateList;
+    iget-object p0, v2, Landroidx/appcompat/content/res/AppCompatResources$a;->a:Landroid/content/res/ColorStateList;
 
     monitor-exit v0
 
@@ -205,6 +233,14 @@
 
 .method public static getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -239,7 +275,7 @@
     return-object v0
 
     :cond_2
-    invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Landroidx/core/content/b;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -248,6 +284,16 @@
 
 .method public static getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {}, Landroidx/appcompat/widget/ResourceManagerInternal;->get()Landroidx/appcompat/widget/ResourceManagerInternal;
 
@@ -262,6 +308,8 @@
 
 .method private static getTypedValue()Landroid/util/TypedValue;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Landroidx/appcompat/content/res/AppCompatResources;->TL_TYPED_VALUE:Ljava/lang/ThreadLocal;
 
@@ -287,6 +335,8 @@
 
 .method private static inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-static {p0, p1}, Landroidx/appcompat/content/res/AppCompatResources;->isColorInt(Landroid/content/Context;I)Z
 
@@ -334,6 +384,14 @@
 
 .method private static isColorInt(Landroid/content/Context;I)Z
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -352,8 +410,6 @@
     const/16 p1, 0x1c
 
     if-lt p0, p1, :cond_0
-
-    iget p0, v0, Landroid/util/TypedValue;->type:I
 
     const/16 p1, 0x1f
 

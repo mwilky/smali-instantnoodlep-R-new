@@ -1,17 +1,6 @@
 .class Landroidx/preference/SeekBarPreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
-.source "SeekBarPreference.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/preference/SeekBarPreference;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
-    name = "SavedState"
-.end annotation
+.source ""
 
 
 # static fields
@@ -27,11 +16,11 @@
 
 
 # instance fields
-.field mMax:I
+.field a:I
 
-.field mMin:I
+.field b:I
 
-.field mSeekBarValue:I
+.field c:I
 
 
 # direct methods
@@ -56,27 +45,19 @@
 
     move-result v0
 
-    iput v0, p0, Landroidx/preference/SeekBarPreference$SavedState;->mSeekBarValue:I
+    iput v0, p0, Landroidx/preference/SeekBarPreference$SavedState;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMin:I
+    iput v0, p0, Landroidx/preference/SeekBarPreference$SavedState;->b:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMax:I
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/os/Parcelable;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroidx/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
+    iput p1, p0, Landroidx/preference/SeekBarPreference$SavedState;->c:I
 
     return-void
 .end method
@@ -86,17 +67,17 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->mSeekBarValue:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMin:I
+    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMax:I
+    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->c:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

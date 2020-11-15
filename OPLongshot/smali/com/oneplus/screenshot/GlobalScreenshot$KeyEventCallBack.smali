@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/GlobalScreenshot$KeyEventCallBack;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations

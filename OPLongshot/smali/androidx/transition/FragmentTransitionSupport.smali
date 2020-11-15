@@ -1,6 +1,20 @@
 .class public Landroidx/transition/FragmentTransitionSupport;
 .super Landroidx/fragment/app/FragmentTransitionImpl;
-.source "FragmentTransitionSupport.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedApi"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -19,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/transition/FragmentTransitionSupport;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -29,7 +43,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/transition/FragmentTransitionSupport;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -39,7 +53,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/transition/FragmentTransitionSupport;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {p0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result p0
 
@@ -94,22 +108,22 @@
     return-void
 
     :cond_0
-    instance-of v0, p1, Landroidx/transition/TransitionSet;
+    instance-of v0, p1, Landroidx/transition/p;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Landroidx/transition/TransitionSet;
+    check-cast p1, Landroidx/transition/p;
 
-    invoke-virtual {p1}, Landroidx/transition/TransitionSet;->getTransitionCount()I
+    invoke-virtual {p1}, Landroidx/transition/p;->i()I
 
     move-result v0
 
     :goto_0
     if-ge v1, v0, :cond_2
 
-    invoke-virtual {p1, v1}, Landroidx/transition/TransitionSet;->getTransitionAt(I)Landroidx/transition/Transition;
+    invoke-virtual {p1, v1}, Landroidx/transition/p;->h(I)Landroidx/transition/Transition;
 
     move-result-object v2
 
@@ -130,7 +144,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/transition/FragmentTransitionSupport;->isNullOrEmpty(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentTransitionImpl;->isNullOrEmpty(Ljava/util/List;)Z
 
     move-result v0
 
@@ -164,7 +178,7 @@
 
     check-cast p2, Landroidx/transition/Transition;
 
-    invoke-static {p1, p2}, Landroidx/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
+    invoke-static {p1, p2}, Landroidx/transition/n;->a(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
 
     return-void
 .end method
@@ -210,23 +224,19 @@
 
     if-eqz p2, :cond_0
 
-    new-instance v0, Landroidx/transition/TransitionSet;
+    new-instance v0, Landroidx/transition/p;
 
-    invoke-direct {v0}, Landroidx/transition/TransitionSet;-><init>()V
+    invoke-direct {v0}, Landroidx/transition/p;-><init>()V
 
-    invoke-virtual {v0, p1}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {v0, p1}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
-    move-result-object p1
+    invoke-virtual {v0, p2}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
-    invoke-virtual {p1, p2}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    const/4 p1, 0x1
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Landroidx/transition/p;->q(I)Landroidx/transition/p;
 
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroidx/transition/TransitionSet;->setOrdering(I)Landroidx/transition/TransitionSet;
-
-    move-result-object p1
+    move-object p1, v0
 
     goto :goto_0
 
@@ -248,16 +258,16 @@
     :goto_0
     if-eqz p3, :cond_4
 
-    new-instance p2, Landroidx/transition/TransitionSet;
+    new-instance p2, Landroidx/transition/p;
 
-    invoke-direct {p2}, Landroidx/transition/TransitionSet;-><init>()V
+    invoke-direct {p2}, Landroidx/transition/p;-><init>()V
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p2, p1}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {p2, p1}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     :cond_3
-    invoke-virtual {p2, p3}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {p2, p3}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     return-object p2
 
@@ -268,29 +278,29 @@
 .method public mergeTransitionsTogether(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Landroidx/transition/TransitionSet;
+    new-instance v0, Landroidx/transition/p;
 
-    invoke-direct {v0}, Landroidx/transition/TransitionSet;-><init>()V
+    invoke-direct {v0}, Landroidx/transition/p;-><init>()V
 
     if-eqz p1, :cond_0
 
     check-cast p1, Landroidx/transition/Transition;
 
-    invoke-virtual {v0, p1}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {v0, p1}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     :cond_0
     if-eqz p2, :cond_1
 
     check-cast p2, Landroidx/transition/Transition;
 
-    invoke-virtual {v0, p2}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {v0, p2}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     :cond_1
     if-eqz p3, :cond_2
 
     check-cast p3, Landroidx/transition/Transition;
 
-    invoke-virtual {v0, p3}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {v0, p3}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     :cond_2
     return-object v0
@@ -326,22 +336,22 @@
 
     check-cast p1, Landroidx/transition/Transition;
 
-    instance-of v0, p1, Landroidx/transition/TransitionSet;
+    instance-of v0, p1, Landroidx/transition/p;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroidx/transition/TransitionSet;
+    check-cast p1, Landroidx/transition/p;
 
-    invoke-virtual {p1}, Landroidx/transition/TransitionSet;->getTransitionCount()I
+    invoke-virtual {p1}, Landroidx/transition/p;->i()I
 
     move-result v0
 
     :goto_0
     if-ge v1, v0, :cond_3
 
-    invoke-virtual {p1, v1}, Landroidx/transition/TransitionSet;->getTransitionAt(I)Landroidx/transition/Transition;
+    invoke-virtual {p1, v1}, Landroidx/transition/p;->h(I)Landroidx/transition/Transition;
 
     move-result-object v2
 
@@ -445,11 +455,11 @@
 
     check-cast p1, Landroidx/transition/Transition;
 
-    new-instance v0, Landroidx/transition/FragmentTransitionSupport$2;
+    new-instance v0, Landroidx/transition/FragmentTransitionSupport$b;
 
-    invoke-direct {v0, p0, p2, p3}, Landroidx/transition/FragmentTransitionSupport$2;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/view/View;Ljava/util/ArrayList;)V
+    invoke-direct {v0, p0, p2, p3}, Landroidx/transition/FragmentTransitionSupport$b;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/view/View;Ljava/util/ArrayList;)V
 
-    invoke-virtual {p1, v0}, Landroidx/transition/Transition;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
+    invoke-virtual {p1, v0}, Landroidx/transition/Transition;->addListener(Landroidx/transition/Transition$g;)Landroidx/transition/Transition;
 
     return-void
 .end method
@@ -479,7 +489,7 @@
 
     check-cast v0, Landroidx/transition/Transition;
 
-    new-instance v9, Landroidx/transition/FragmentTransitionSupport$3;
+    new-instance v9, Landroidx/transition/FragmentTransitionSupport$c;
 
     move-object v1, v9
 
@@ -497,9 +507,9 @@
 
     move-object/from16 v8, p7
 
-    invoke-direct/range {v1 .. v8}, Landroidx/transition/FragmentTransitionSupport$3;-><init>(Landroidx/transition/FragmentTransitionSupport;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+    invoke-direct/range {v1 .. v8}, Landroidx/transition/FragmentTransitionSupport$c;-><init>(Landroidx/transition/FragmentTransitionSupport;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
 
-    invoke-virtual {v0, v9}, Landroidx/transition/Transition;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
+    invoke-virtual {v0, v9}, Landroidx/transition/Transition;->addListener(Landroidx/transition/Transition$g;)Landroidx/transition/Transition;
 
     return-void
 .end method
@@ -511,11 +521,11 @@
 
     check-cast p1, Landroidx/transition/Transition;
 
-    new-instance v0, Landroidx/transition/FragmentTransitionSupport$4;
+    new-instance v0, Landroidx/transition/FragmentTransitionSupport$d;
 
-    invoke-direct {v0, p0, p2}, Landroidx/transition/FragmentTransitionSupport$4;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
+    invoke-direct {v0, p0, p2}, Landroidx/transition/FragmentTransitionSupport$d;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
 
-    invoke-virtual {p1, v0}, Landroidx/transition/Transition;->setEpicenterCallback(Landroidx/transition/Transition$EpicenterCallback;)V
+    invoke-virtual {p1, v0}, Landroidx/transition/Transition;->setEpicenterCallback(Landroidx/transition/Transition$f;)V
 
     :cond_0
     return-void
@@ -532,13 +542,13 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-virtual {p0, p2, v0}, Landroidx/transition/FragmentTransitionSupport;->getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    new-instance p2, Landroidx/transition/FragmentTransitionSupport$1;
+    new-instance p2, Landroidx/transition/FragmentTransitionSupport$a;
 
-    invoke-direct {p2, p0, v0}, Landroidx/transition/FragmentTransitionSupport$1;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
+    invoke-direct {p2, p0, v0}, Landroidx/transition/FragmentTransitionSupport$a;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
 
-    invoke-virtual {p1, p2}, Landroidx/transition/Transition;->setEpicenterCallback(Landroidx/transition/Transition$EpicenterCallback;)V
+    invoke-virtual {p1, p2}, Landroidx/transition/Transition;->setEpicenterCallback(Landroidx/transition/Transition$f;)V
 
     :cond_0
     return-void
@@ -557,9 +567,9 @@
         }
     .end annotation
 
-    check-cast p1, Landroidx/transition/TransitionSet;
+    check-cast p1, Landroidx/transition/p;
 
-    invoke-virtual {p1}, Landroidx/transition/TransitionSet;->getTargets()Ljava/util/List;
+    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
 
     move-result-object v0
 
@@ -580,7 +590,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v0, v3}, Landroidx/transition/FragmentTransitionSupport;->bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
+    invoke-static {v0, v3}, Landroidx/fragment/app/FragmentTransitionImpl;->bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -611,17 +621,17 @@
         }
     .end annotation
 
-    check-cast p1, Landroidx/transition/TransitionSet;
+    check-cast p1, Landroidx/transition/p;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Landroidx/transition/TransitionSet;->getTargets()Ljava/util/List;
+    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-virtual {p1}, Landroidx/transition/TransitionSet;->getTargets()Ljava/util/List;
+    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
 
     move-result-object v0
 
@@ -643,13 +653,13 @@
     return-object p1
 
     :cond_0
-    new-instance v0, Landroidx/transition/TransitionSet;
+    new-instance v0, Landroidx/transition/p;
 
-    invoke-direct {v0}, Landroidx/transition/TransitionSet;-><init>()V
+    invoke-direct {v0}, Landroidx/transition/p;-><init>()V
 
     check-cast p1, Landroidx/transition/Transition;
 
-    invoke-virtual {v0, p1}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+    invoke-virtual {v0, p1}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
 
     return-object v0
 .end method

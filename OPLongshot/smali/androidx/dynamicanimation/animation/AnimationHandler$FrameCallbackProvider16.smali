@@ -1,9 +1,13 @@
 .class Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;
-.super Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
-.source "AnimationHandler.java"
+.super Landroidx/dynamicanimation/animation/AnimationHandler$c;
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/dynamicanimation/animation/AnimationHandler;
 .end annotation
@@ -21,10 +25,10 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
+.method constructor <init>(Landroidx/dynamicanimation/animation/AnimationHandler$a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
+    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/AnimationHandler$c;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$a;)V
 
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
@@ -32,9 +36,9 @@
 
     iput-object p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;->mChoreographer:Landroid/view/Choreographer;
 
-    new-instance p1, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16$1;
+    new-instance p1, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16$a;
 
-    invoke-direct {p1, p0}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16$1;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;)V
+    invoke-direct {p1, p0}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16$a;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;)V
 
     iput-object p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;->mChoreographerCallback:Landroid/view/Choreographer$FrameCallback;
 

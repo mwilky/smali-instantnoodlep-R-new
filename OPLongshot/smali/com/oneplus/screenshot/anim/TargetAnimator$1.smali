@@ -1,6 +1,6 @@
 .class synthetic Lcom/oneplus/screenshot/anim/TargetAnimator$1;
 .super Ljava/lang/Object;
-.source "TargetAnimator.java"
+.source ""
 
 
 # annotations

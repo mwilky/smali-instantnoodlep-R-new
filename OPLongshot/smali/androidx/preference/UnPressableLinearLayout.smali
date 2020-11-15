@@ -1,6 +1,14 @@
 .class public Landroidx/preference/UnPressableLinearLayout;
 .super Landroid/widget/LinearLayout;
-.source "UnPressableLinearLayout.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods

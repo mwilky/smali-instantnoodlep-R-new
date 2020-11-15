@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
 .super Ljava/lang/Object;
-.source "ImageView.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -35,7 +35,7 @@
 
     new-instance v0, Landroid/widget/Scroller;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -118,7 +118,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
@@ -165,7 +165,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {p1, p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -214,7 +214,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {p1, p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -224,7 +224,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->endFling(Z)V
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/AnimatorInflater;
 .super Ljava/lang/Object;
-.source "AnimatorInflater.java"
+.source ""
 
 
 # static fields
@@ -188,7 +188,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v2, v8, v7}, Lcom/oneplus/screenshot/anim/TargetAnimator$TargetProp;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
@@ -203,7 +203,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v8, v7}, Lcom/oneplus/screenshot/anim/TargetAnimator$TargetProp;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
@@ -228,7 +228,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    invoke-virtual {v1, v7, v8}, Lcom/oneplus/screenshot/anim/TargetAnimator$TargetProp;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_1
     add-int/lit8 v6, v6, 0x1
@@ -250,12 +250,6 @@
 
 .method private static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Landroid/animation/Animator;
     .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -280,12 +274,6 @@
 
 .method private static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;Landroid/util/AttributeSet;Landroid/animation/AnimatorSet;I)Landroid/animation/Animator;
     .locals 14
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     move-object v6, p0
 
@@ -394,10 +382,6 @@
 
     move-result v5
 
-    move-object v4, v12
-
-    check-cast v4, Landroid/animation/AnimatorSet;
-
     move-object v0, p0
 
     move-object v1, p1
@@ -405,6 +389,8 @@
     move-object/from16 v2, p2
 
     move-object/from16 v3, p3
+
+    move-object v4, v12
 
     invoke-static/range {v0 .. v5}, Lcom/oneplus/screenshot/anim/AnimatorInflater;->createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;Landroid/util/AttributeSet;Landroid/animation/AnimatorSet;I)Landroid/animation/Animator;
 
@@ -653,11 +639,6 @@
 
 .method public static loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -670,11 +651,6 @@
 
 .method public static loadAnimator(Landroid/content/Context;ILcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Landroid/animation/Animator;
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     const-string v0, "Can\'t load animation resource ID #0x"
 
@@ -777,11 +753,6 @@
 
 .method private static loadAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 17
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     move-object/from16 v0, p0
 
@@ -1199,11 +1170,6 @@
 
 .method private static loadObjectAnimator(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/animation/ObjectAnimator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     new-instance v0, Landroid/animation/ObjectAnimator;
 
@@ -1232,11 +1198,6 @@
 
 .method private static loadTargetAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Lcom/oneplus/screenshot/anim/TargetAnimator;
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 

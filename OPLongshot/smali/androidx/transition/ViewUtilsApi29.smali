@@ -1,6 +1,12 @@
 .class Landroidx/transition/ViewUtilsApi29;
 .super Landroidx/transition/ViewUtilsApi23;
-.source "ViewUtilsApi29.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1d
+.end annotation
 
 
 # direct methods
@@ -16,6 +22,10 @@
 # virtual methods
 .method public getTransitionAlpha(Landroid/view/View;)F
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/view/View;->getTransitionAlpha()F
 
@@ -26,6 +36,14 @@
 
 .method public setAnimationMatrix(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setAnimationMatrix(Landroid/graphics/Matrix;)V
 
@@ -34,6 +52,10 @@
 
 .method public setLeftTopRightBottom(Landroid/view/View;IIII)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
 
@@ -42,6 +64,10 @@
 
 .method public setTransitionAlpha(Landroid/view/View;F)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionAlpha(F)V
 
@@ -50,6 +76,10 @@
 
 .method public setTransitionVisibility(Landroid/view/View;I)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
 
@@ -58,6 +88,14 @@
 
 .method public transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
 
@@ -66,6 +104,14 @@
 
 .method public transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
 

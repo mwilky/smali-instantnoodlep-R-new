@@ -1,6 +1,6 @@
 .class final enum Lcom/google/tagmanager/PreviewManager$PreviewMode;
 .super Ljava/lang/Enum;
-.source "PreviewManager.java"
+.source ""
 
 
 # annotations

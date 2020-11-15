@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source "StitchNextByDistanceTask.java"
+.source ""
 
 
 # static fields
@@ -145,9 +145,9 @@
 
     invoke-virtual {v1, v0}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_2
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
@@ -182,9 +182,9 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v1, v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
@@ -212,9 +212,9 @@
 
     invoke-direct {p0, p2}, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->stitchForCurr(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result p1
 
@@ -226,9 +226,9 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->getLast()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
     move-result-object p1
 

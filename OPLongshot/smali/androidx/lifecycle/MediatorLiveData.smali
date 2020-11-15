@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/MediatorLiveData;
 .super Landroidx/lifecycle/MutableLiveData;
-.source "MediatorLiveData.java"
+.source ""
 
 
 # annotations
@@ -54,6 +54,17 @@
 # virtual methods
 .method public addSource(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
     .locals 2
+    .param p1    # Landroidx/lifecycle/LiveData;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Observer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
@@ -102,7 +113,7 @@
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Landroidx/lifecycle/MediatorLiveData;->hasActiveObservers()Z
+    invoke-virtual {p0}, Landroidx/lifecycle/LiveData;->hasActiveObservers()Z
 
     move-result p1
 
@@ -116,6 +127,8 @@
 
 .method protected onActive()V
     .locals 2
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
@@ -152,6 +165,8 @@
 
 .method protected onInactive()V
     .locals 2
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
@@ -188,6 +203,13 @@
 
 .method public removeSource(Landroidx/lifecycle/LiveData;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/LiveData;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",

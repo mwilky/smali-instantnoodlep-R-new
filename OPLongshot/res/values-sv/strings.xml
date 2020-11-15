@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Skärmdumpar</string>
     <string name="oneplus_delete">Ta bort</string>
     <string name="oneplus_share">Skicka</string>
+    <string name="permission_btn_text_denied">Avsluta</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Behörighetsvillkor</string>
     <string name="preference_copied">%1$s har kopierats till Urklipp.</string>
     <string name="quick_share_description1">"Tryck länge på miniatyren 
 för att dela"</string>

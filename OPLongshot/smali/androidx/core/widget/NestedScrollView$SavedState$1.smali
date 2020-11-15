@@ -1,6 +1,6 @@
 .class final Landroidx/core/widget/NestedScrollView$SavedState$1;
 .super Ljava/lang/Object;
-.source "NestedScrollView.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

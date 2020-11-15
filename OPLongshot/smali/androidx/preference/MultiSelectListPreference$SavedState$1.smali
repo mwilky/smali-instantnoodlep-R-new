@@ -1,6 +1,6 @@
 .class final Landroidx/preference/MultiSelectListPreference$SavedState$1;
 .super Ljava/lang/Object;
-.source "MultiSelectListPreference.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

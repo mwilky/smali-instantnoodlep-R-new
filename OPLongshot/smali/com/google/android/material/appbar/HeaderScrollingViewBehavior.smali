@@ -1,6 +1,6 @@
 .class abstract Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;
 .super Lcom/google/android/material/appbar/ViewOffsetBehavior;
-.source "HeaderScrollingViewBehavior.java"
+.source ""
 
 
 # annotations
@@ -86,6 +86,9 @@
 
 # virtual methods
 .method abstract findFirstDependency(Ljava/util/List;)Landroid/view/View;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -121,7 +124,7 @@
 
     float-to-int p1, p1
 
-    invoke-static {p1, v1, v0}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {p1, v1, v0}, La/d/d/a;->b(III)I
 
     move-result v1
 
@@ -147,6 +150,10 @@
 
 .method getScrollRange(Landroid/view/View;)I
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -165,8 +172,16 @@
 
 .method protected layoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
     .locals 8
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->l(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
 
@@ -180,15 +195,15 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
     iget-object v5, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->tempRect1:Landroid/graphics/Rect;
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getPaddingLeft()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v2
 
-    iget v3, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->leftMargin:I
+    iget v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     add-int/2addr v2, v3
 
@@ -196,25 +211,25 @@
 
     move-result v3
 
-    iget v4, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->topMargin:I
+    iget v4, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     add-int/2addr v3, v4
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getWidth()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v4
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getPaddingRight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v6
 
     sub-int/2addr v4, v6
 
-    iget v6, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->rightMargin:I
+    iget v6, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     sub-int/2addr v4, v6
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getHeight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v6
 
@@ -224,31 +239,31 @@
 
     add-int/2addr v6, v7
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getPaddingBottom()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v7
 
     sub-int/2addr v6, v7
 
-    iget v7, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->bottomMargin:I
+    iget v7, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     sub-int/2addr v6, v7
 
     invoke-virtual {v5, v2, v3, v4, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/WindowInsetsCompat;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/x;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p2}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {p2}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result p1
 
@@ -256,7 +271,7 @@
 
     iget p1, v5, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetLeft()I
+    invoke-virtual {v2}, Landroidx/core/view/x;->c()I
 
     move-result v3
 
@@ -266,7 +281,7 @@
 
     iget p1, v5, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v2}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetRight()I
+    invoke-virtual {v2}, Landroidx/core/view/x;->d()I
 
     move-result v2
 
@@ -277,7 +292,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->tempRect2:Landroid/graphics/Rect;
 
-    iget v1, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->gravity:I
+    iget v1, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->c:I
 
     invoke-static {v1}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->resolveGravity(I)I
 
@@ -295,7 +310,7 @@
 
     move v7, p3
 
-    invoke-static/range {v2 .. v7}, Landroidx/core/view/GravityCompat;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-static/range {v2 .. v7}, Landroidx/core/view/b;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->getOverlapPixelsForOffset(Landroid/view/View;)I
 
@@ -323,8 +338,6 @@
 
     sub-int/2addr p1, p2
 
-    iput p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->verticalLayoutGap:I
-
     goto :goto_0
 
     :cond_1
@@ -332,14 +345,22 @@
 
     const/4 p1, 0x0
 
+    :goto_0
     iput p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->verticalLayoutGap:I
 
-    :goto_0
     return-void
 .end method
 
 .method public onMeasureChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
     .locals 7
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -356,7 +377,7 @@
     if-ne v0, v2, :cond_5
 
     :cond_0
-    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getDependencies(Landroid/view/View;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->l(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v2
 
@@ -372,23 +393,23 @@
 
     if-lez p5, :cond_1
 
-    invoke-static {v2}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {v2}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/WindowInsetsCompat;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/x;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
+    invoke-virtual {v3}, Landroidx/core/view/x;->e()I
 
     move-result v4
 
-    invoke-virtual {v3}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetBottom()I
+    invoke-virtual {v3}, Landroidx/core/view/x;->b()I
 
     move-result v3
 
@@ -399,7 +420,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getHeight()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p5
 
@@ -457,7 +478,7 @@
 
     move v6, p6
 
-    invoke-virtual/range {v1 .. v6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onMeasureChild(Landroid/view/View;IIII)V
+    invoke-virtual/range {v1 .. v6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->D(Landroid/view/View;IIII)V
 
     const/4 p1, 0x1
 

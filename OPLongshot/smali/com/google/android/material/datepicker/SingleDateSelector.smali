@@ -1,12 +1,18 @@
 .class public Lcom/google/android/material/datepicker/SingleDateSelector;
 .super Ljava/lang/Object;
-.source "SingleDateSelector.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/datepicker/DateSelector;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -31,6 +37,9 @@
 
 # instance fields
 .field private selectedItem:Ljava/lang/Long;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -93,7 +102,7 @@
 .method public getDefaultThemeResId(Landroid/content/Context;)I
     .locals 2
 
-    sget v0, Lcom/google/android/material/R$attr;->materialCalendarTheme:I
+    sget v0, Lb/a/b/a/b;->materialCalendarTheme:I
 
     const-class v1, Lcom/google/android/material/datepicker/MaterialDatePicker;
 
@@ -111,13 +120,16 @@
 .method public getDefaultTitleResId()I
     .locals 1
 
-    sget v0, Lcom/google/android/material/R$string;->mtrl_picker_date_header_title:I
+    sget v0, Lb/a/b/a/j;->mtrl_picker_date_header_title:I
 
     return v0
 .end method
 
 .method public getSelectedDays()Ljava/util/Collection;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -143,6 +155,9 @@
 
 .method public getSelectedRanges()Ljava/util/Collection;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -163,6 +178,8 @@
 
 .method public getSelection()Ljava/lang/Long;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/SingleDateSelector;->selectedItem:Ljava/lang/Long;
 
@@ -171,6 +188,8 @@
 
 .method public bridge synthetic getSelection()Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     invoke-virtual {p0}, Lcom/google/android/material/datepicker/SingleDateSelector;->getSelection()Ljava/lang/Long;
 
@@ -181,6 +200,12 @@
 
 .method public getSelectionDisplayString(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -190,7 +215,7 @@
 
     if-nez v0, :cond_0
 
-    sget v0, Lcom/google/android/material/R$string;->mtrl_picker_date_header_unselected:I
+    sget v0, Lb/a/b/a/j;->mtrl_picker_date_header_unselected:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -203,11 +228,11 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getYearMonthDay(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/d;->i(J)Ljava/lang/String;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$string;->mtrl_picker_date_header_selected:I
+    sget v1, Lb/a/b/a/j;->mtrl_picker_date_header_selected:I
 
     const/4 v2, 0x1
 
@@ -244,6 +269,22 @@
 
 .method public onCreateTextInputView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Landroid/view/View;
     .locals 7
+    .param p1    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Lcom/google/android/material/datepicker/OnSelectionChangedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -258,7 +299,7 @@
         }
     .end annotation
 
-    sget p3, Lcom/google/android/material/R$layout;->mtrl_picker_text_input_date:I
+    sget p3, Lb/a/b/a/h;->mtrl_picker_text_input_date:I
 
     const/4 v0, 0x0
 
@@ -266,7 +307,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$id;->mtrl_picker_text_input_date:I
+    sget p2, Lb/a/b/a/f;->mtrl_picker_text_input_date:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -297,7 +338,7 @@
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->setInputType(I)V
 
     :cond_0
-    invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getTextInputFormat()Ljava/text/SimpleDateFormat;
+    invoke-static {}, Lcom/google/android/material/datepicker/h;->l()Ljava/text/SimpleDateFormat;
 
     move-result-object v3
 
@@ -305,7 +346,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, v3}, Lcom/google/android/material/datepicker/UtcDates;->getTextInputHint(Landroid/content/res/Resources;Ljava/text/SimpleDateFormat;)Ljava/lang/String;
+    invoke-static {p3, v3}, Lcom/google/android/material/datepicker/h;->m(Landroid/content/res/Resources;Ljava/text/SimpleDateFormat;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -320,7 +361,7 @@
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     :cond_1
-    new-instance p3, Lcom/google/android/material/datepicker/SingleDateSelector$1;
+    new-instance p3, Lcom/google/android/material/datepicker/SingleDateSelector$a;
 
     move-object v0, p3
 
@@ -330,7 +371,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/datepicker/SingleDateSelector$1;-><init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/datepicker/SingleDateSelector$a;-><init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
 
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -353,6 +394,10 @@
 
 .method public setSelection(Ljava/lang/Long;)V
     .locals 2
+    .param p1    # Ljava/lang/Long;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p1, :cond_0
 
@@ -365,7 +410,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/UtcDates;->canonicalYearMonthDay(J)J
+    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/h;->a(J)J
 
     move-result-wide v0
 
@@ -381,6 +426,10 @@
 
 .method public bridge synthetic setSelection(Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     check-cast p1, Ljava/lang/Long;
 
@@ -391,6 +440,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object p2, p0, Lcom/google/android/material/datepicker/SingleDateSelector;->selectedItem:Ljava/lang/Long;
 

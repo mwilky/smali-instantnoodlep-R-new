@@ -1,6 +1,6 @@
 .class public final enum Landroidx/annotation/InspectableProperty$ValueType;
 .super Ljava/lang/Enum;
-.source "InspectableProperty.java"
+.source ""
 
 
 # annotations

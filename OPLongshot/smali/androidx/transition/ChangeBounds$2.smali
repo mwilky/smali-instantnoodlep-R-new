@@ -1,6 +1,6 @@
 .class final Landroidx/transition/ChangeBounds$2;
 .super Landroid/util/Property;
-.source "ChangeBounds.java"
+.source ""
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/util/Property<",
-        "Landroidx/transition/ChangeBounds$ViewBounds;",
+        "Landroidx/transition/ChangeBounds$e;",
         "Landroid/graphics/PointF;",
         ">;"
     }
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public get(Landroidx/transition/ChangeBounds$ViewBounds;)Landroid/graphics/PointF;
+.method public get(Landroidx/transition/ChangeBounds$e;)Landroid/graphics/PointF;
     .locals 0
 
     const/4 p1, 0x0
@@ -45,19 +45,19 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
+    check-cast p1, Landroidx/transition/ChangeBounds$e;
 
-    invoke-virtual {p0, p1}, Landroidx/transition/ChangeBounds$2;->get(Landroidx/transition/ChangeBounds$ViewBounds;)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1}, Landroidx/transition/ChangeBounds$2;->get(Landroidx/transition/ChangeBounds$e;)Landroid/graphics/PointF;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public set(Landroidx/transition/ChangeBounds$ViewBounds;Landroid/graphics/PointF;)V
+.method public set(Landroidx/transition/ChangeBounds$e;Landroid/graphics/PointF;)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Landroidx/transition/ChangeBounds$ViewBounds;->setTopLeft(Landroid/graphics/PointF;)V
+    invoke-virtual {p1, p2}, Landroidx/transition/ChangeBounds$e;->c(Landroid/graphics/PointF;)V
 
     return-void
 .end method
@@ -65,11 +65,11 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
+    check-cast p1, Landroidx/transition/ChangeBounds$e;
 
     check-cast p2, Landroid/graphics/PointF;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeBounds$2;->set(Landroidx/transition/ChangeBounds$ViewBounds;Landroid/graphics/PointF;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeBounds$2;->set(Landroidx/transition/ChangeBounds$e;Landroid/graphics/PointF;)V
 
     return-void
 .end method

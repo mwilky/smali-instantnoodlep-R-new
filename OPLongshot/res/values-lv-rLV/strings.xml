@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Par</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versija %s</string>
     <string name="about_privacy_policy">Konfidencialitātes politika</string>
     <string name="about_release_note_title">Atjauninājumu žurnāls:</string>
     <string name="about_terms_service">Pakalpojuma lietošanas noteikumi</string>
@@ -10,6 +10,9 @@
     <string name="longshot_guide_not_support">Šī lapa neatbalsta paplašinātos ekrānuzņēmumus.</string>
     <string name="longshot_guide_support">Pieskarieties šeit, lai izmēģinātu paplašinātā ekrānuzņēmuma funkciju.</string>
     <string name="not_support_longshot">Šī lapa neatbalsta paplašinātos ekrānuzņēmumus.</string>
+    <string name="permission_btn_text_denied">Iziet</string>
+    <string name="permission_btn_text_grant">Labi</string>
+    <string name="permission_dialog_title">Atļaujas paziņojums</string>
     <string name="quick_share_description1">"Paturiet piespiestu sīktēlu,
 lai kopīgotu"</string>
     <string name="quick_share_more_text">Vairāk</string>

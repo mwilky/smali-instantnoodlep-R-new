@@ -1,5 +1,6 @@
 .class public final Lcom/oneplus/screenshot/R$color;
 .super Ljava/lang/Object;
+.source ""
 
 
 # annotations

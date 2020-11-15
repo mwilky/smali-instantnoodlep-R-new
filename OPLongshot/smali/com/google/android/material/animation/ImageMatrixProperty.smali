@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ImageMatrixProperty;
 .super Landroid/util/Property;
-.source "ImageMatrixProperty.java"
+.source ""
 
 
 # annotations
@@ -41,6 +41,12 @@
 # virtual methods
 .method public get(Landroid/widget/ImageView;)Landroid/graphics/Matrix;
     .locals 1
+    .param p1    # Landroid/widget/ImageView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/animation/ImageMatrixProperty;->matrix:Landroid/graphics/Matrix;
 
@@ -57,6 +63,12 @@
 
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -69,6 +81,14 @@
 
 .method public set(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
     .locals 0
+    .param p1    # Landroid/widget/ImageView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
@@ -77,6 +97,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p1, Landroid/widget/ImageView;
 

@@ -1,6 +1,6 @@
 .class Landroidx/lifecycle/Transformations$2$1;
 .super Ljava/lang/Object;
-.source "Transformations.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -44,6 +44,10 @@
 # virtual methods
 .method public onChanged(Ljava/lang/Object;)V
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TY;)V"
@@ -54,7 +58,7 @@
 
     iget-object v0, v0, Landroidx/lifecycle/Transformations$2;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/MediatorLiveData;->setValue(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
 
     return-void
 .end method

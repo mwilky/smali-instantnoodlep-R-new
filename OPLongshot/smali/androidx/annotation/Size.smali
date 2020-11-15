@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/Size;
 .super Ljava/lang/Object;
-.source "Size.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

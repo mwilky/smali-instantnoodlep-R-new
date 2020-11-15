@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;
 .super Landroid/widget/RelativeLayout;
-.source "QuickShareAppPanelView.java"
+.source ""
 
 
 # static fields
@@ -48,6 +48,10 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -58,6 +62,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, -0x1
 
@@ -68,6 +80,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -164,13 +184,13 @@
     move v1, v0
 
     :goto_0
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getChildCount()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -369,7 +389,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getChildCount()I
 
     move-result p2
 
@@ -400,7 +420,7 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getChildCount()I
 
     move-result p3
 
@@ -420,7 +440,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getMeasuredHeight()I
 
     move-result p1
 

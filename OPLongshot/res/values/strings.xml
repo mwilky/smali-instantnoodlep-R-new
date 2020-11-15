@@ -36,10 +36,10 @@
     <string name="alert_window_show">Other window overlay while capturing expanded screenshots.</string>
     <string name="app_name">Screenshot</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="back_button_label">Pre</string>
+    <string name="back_button_label">Back</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
-    <string name="capital_off">Off</string>
-    <string name="capital_on">On</string>
+    <string name="capital_off">OFF</string>
+    <string name="capital_on">ON</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern">%1$d / %2$d</string>
@@ -108,7 +108,7 @@
     <string name="oneplus_lunar_leap">闰</string>
     <string name="oneplus_lunar_year">年</string>
     <string name="oneplus_share">Share</string>
-    <string name="op_accessibility_quick_settings_page">page %1$d ,Total %2$d pages</string>
+    <string name="op_accessibility_quick_settings_page">Page %1$d of %2$d</string>
     <string name="op_character_counter_pattern">%1$d / %2$d</string>
     <string name="op_control_font_display_h1">sans-serif-light</string>
     <string name="op_control_font_display_h2">sans-serif-light</string>
@@ -126,6 +126,9 @@
     <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="permission_btn_text_denied">Exit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Permission statement</string>
     <string name="preference_copied">\"%1$s\" copied to clipboard.</string>
     <string name="quick_share_description1">Long press the thumbnail to share</string>
     <string name="quick_share_more_text">More</string>
@@ -150,10 +153,10 @@ quick share"</string>
     <string name="screenshot_stoped_text">The expanded screenshot has stopped</string>
     <string name="scrolling">The screen will scroll automatically while capturing expanded screenshots.</string>
     <string name="search_menu_title">Search</string>
-    <string name="searchview_description_clear">Clear</string>
-    <string name="searchview_description_search">Search something</string>
-    <string name="searchview_description_submit">Submit</string>
-    <string name="searchview_description_voice">Voice Search</string>
+    <string name="searchview_description_clear">Clear query</string>
+    <string name="searchview_description_search">Search</string>
+    <string name="searchview_description_submit">Submit query</string>
+    <string name="searchview_description_voice">Voice search</string>
     <string name="select_day">Select month and day</string>
     <string name="select_hours">Select hours</string>
     <string name="select_minutes">Select minutes</string>

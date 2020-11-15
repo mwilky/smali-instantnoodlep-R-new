@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/CheckThread;
 .super Lcom/oneplus/screenshot/longshot/task/BaseThread;
-.source "CheckThread.java"
+.source ""
 
 
 # static fields
@@ -33,7 +33,7 @@
 
     const-wide/16 v1, 0x32
 
-    iput-wide v1, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mDelay:J
+    iput-wide v1, p0, Lcom/oneplus/screenshot/longshot/task/BaseThread;->mDelay:J
 
     iput-boolean v0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mIsStopped:Z
 

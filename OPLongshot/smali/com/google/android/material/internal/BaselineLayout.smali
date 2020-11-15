@@ -1,29 +1,13 @@
 .class public Lcom/google/android/material/internal/BaselineLayout;
 .super Landroid/view/ViewGroup;
-.source "BaselineLayout.java"
+.source ""
 
 
 # instance fields
-.field private baseline:I
+.field private a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -33,19 +17,7 @@
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
+    iput p1, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
     return-void
 .end method
@@ -55,7 +27,7 @@
 .method public getBaseline()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
+    iget v0, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
     return v0
 .end method
@@ -63,17 +35,17 @@
 .method protected onLayout(ZIIII)V
     .locals 6
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result p3
 
     sub-int/2addr p4, p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result p2
 
@@ -81,7 +53,7 @@
 
     sub-int/2addr p4, p3
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result p2
 
@@ -90,7 +62,7 @@
     :goto_0
     if-ge p5, p1, :cond_2
 
-    invoke-virtual {p0, p5}, Lcom/google/android/material/internal/BaselineLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -119,7 +91,7 @@
 
     add-int/2addr v3, p3
 
-    iget v4, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
+    iget v4, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
     const/4 v5, -0x1
 
@@ -131,7 +103,7 @@
 
     if-eq v4, v5, :cond_1
 
-    iget v4, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
+    iget v4, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
     add-int/2addr v4, p2
 
@@ -165,7 +137,7 @@
 .method protected onMeasure(II)V
     .locals 11
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -186,7 +158,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    invoke-virtual {p0, v2}, Lcom/google/android/material/internal/BaselineLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v8
 
@@ -201,7 +173,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-virtual {p0, v8, p1, p2}, Lcom/google/android/material/internal/BaselineLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v8, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     invoke-virtual {v8}, Landroid/view/View;->getBaseline()I
 
@@ -256,7 +228,7 @@
     :cond_2
     if-eq v6, v1, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v0
 
@@ -270,10 +242,10 @@
 
     move-result v3
 
-    iput v6, p0, Lcom/google/android/material/internal/BaselineLayout;->baseline:I
+    iput v6, p0, Lcom/google/android/material/internal/BaselineLayout;->a:I
 
     :cond_3
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getSuggestedMinimumHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
 
     move-result v0
 
@@ -281,7 +253,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/BaselineLayout;->getSuggestedMinimumWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
 
     move-result v1
 
@@ -299,7 +271,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/BaselineLayout;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     return-void
 .end method

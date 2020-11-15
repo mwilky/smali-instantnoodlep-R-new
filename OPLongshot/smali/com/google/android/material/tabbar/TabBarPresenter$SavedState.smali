@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;
 .super Ljava/lang/Object;
-.source "TabBarPresenter.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -30,9 +30,12 @@
 
 
 # instance fields
-.field badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
+.field a:I
 
-.field selectedItemId:I
+.field b:Lcom/google/android/material/internal/ParcelableSparseArray;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -58,6 +61,10 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,11 +72,9 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->selectedItemId:I
+    iput v0, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
+    const-class v0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -81,7 +86,7 @@
 
     check-cast p1, Lcom/google/android/material/internal/ParcelableSparseArray;
 
-    iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
+    iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->b:Lcom/google/android/material/internal/ParcelableSparseArray;
 
     return-void
 .end method
@@ -98,12 +103,16 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget p2, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->selectedItemId:I
+    iget p2, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->badgeSavedStates:Lcom/google/android/material/internal/ParcelableSparseArray;
+    iget-object p2, p0, Lcom/google/android/material/tabbar/TabBarPresenter$SavedState;->b:Lcom/google/android/material/internal/ParcelableSparseArray;
 
     const/4 v0, 0x0
 

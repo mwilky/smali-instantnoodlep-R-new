@@ -1,6 +1,6 @@
 .class final Landroidx/collection/MapCollections$ValuesCollection;
 .super Ljava/lang/Object;
-.source "MapCollections.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Collection;

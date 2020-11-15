@@ -36,7 +36,7 @@
     <string name="copy">Kopiér</string>
     <string name="expand_button_title">Avanceret</string>
     <string name="got_it">Forstået</string>
-    <string name="loading_text">Indlæser ...</string>
+    <string name="loading_text">Indlæser...</string>
     <string name="longshot_guide_not_support">Udvidet screenshot understøttes ikke på denne side.</string>
     <string name="longshot_guide_support">Tryk her for at prøve Udvidet Screenshot.</string>
     <string name="not_set">Ikke angivet</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Screenshots</string>
     <string name="oneplus_delete">Slet</string>
     <string name="oneplus_share">Send</string>
+    <string name="permission_btn_text_denied">Afslut</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Erklæring om tilladelse</string>
     <string name="preference_copied">\"%1$s\" blev kopieret til udklipsholderen.</string>
     <string name="quick_share_description1">"Langt tryk på miniature-galleriet 
 for at dele"</string>

@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/edgeeffect/Rotation;
 .super Ljava/lang/Enum;
-.source "Rotation.java"
+.source ""
 
 
 # annotations
@@ -253,9 +253,9 @@
 .method public isInverse()Z
     .locals 3
 
-    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$1;->$SwitchMap$com$google$android$material$edgeeffect$Rotation:[I
+    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$a;->a:[I
 
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/Rotation;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -280,9 +280,9 @@
 .method public isLandscape()Z
     .locals 2
 
-    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$1;->$SwitchMap$com$google$android$material$edgeeffect$Rotation:[I
+    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$a;->a:[I
 
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/Rotation;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -309,9 +309,9 @@
 .method public isPortrait()Z
     .locals 3
 
-    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$1;->$SwitchMap$com$google$android$material$edgeeffect$Rotation:[I
+    sget-object v0, Lcom/google/android/material/edgeeffect/Rotation$a;->a:[I
 
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/Rotation;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

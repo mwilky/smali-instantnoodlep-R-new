@@ -1,6 +1,6 @@
 .class Landroidx/transition/TransitionUtils;
 .super Ljava/lang/Object;
-.source "TransitionUtils.java"
+.source ""
 
 
 # annotations
@@ -12,13 +12,11 @@
 
 
 # static fields
-.field private static final HAS_IS_ATTACHED_TO_WINDOW:Z
+.field private static final a:Z
 
-.field private static final HAS_OVERLAY:Z
+.field private static final b:Z
 
-.field private static final HAS_PICTURE_BITMAP:Z
-
-.field private static final MAX_IMAGE_SIZE:I = 0x100000
+.field private static final c:Z
 
 
 # direct methods
@@ -43,7 +41,7 @@
     move v0, v2
 
     :goto_0
-    sput-boolean v0, Landroidx/transition/TransitionUtils;->HAS_IS_ATTACHED_TO_WINDOW:Z
+    sput-boolean v0, Landroidx/transition/TransitionUtils;->a:Z
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -59,7 +57,7 @@
     move v0, v2
 
     :goto_1
-    sput-boolean v0, Landroidx/transition/TransitionUtils;->HAS_OVERLAY:Z
+    sput-boolean v0, Landroidx/transition/TransitionUtils;->b:Z
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -73,20 +71,12 @@
     move v1, v2
 
     :goto_2
-    sput-boolean v1, Landroidx/transition/TransitionUtils;->HAS_PICTURE_BITMAP:Z
+    sput-boolean v1, Landroidx/transition/TransitionUtils;->c:Z
 
     return-void
 .end method
 
-.method private constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method static copyViewImage(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)Landroid/view/View;
+.method static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)Landroid/view/View;
     .locals 7
 
     new-instance v0, Landroid/graphics/Matrix;
@@ -111,9 +101,9 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    invoke-static {p1, v0}, Landroidx/transition/ViewUtils;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p1, v0}, Landroidx/transition/ViewUtils;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    invoke-static {p0, v0}, Landroidx/transition/ViewUtils;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p0, v0}, Landroidx/transition/ViewUtils;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     new-instance p2, Landroid/graphics/RectF;
 
@@ -171,7 +161,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    invoke-static {p1, v0, p2, p0}, Landroidx/transition/TransitionUtils;->createViewBitmap(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, p2, p0}, Landroidx/transition/TransitionUtils;->b(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -201,10 +191,10 @@
     return-object v5
 .end method
 
-.method private static createViewBitmap(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
+.method private static b(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
     .locals 8
 
-    sget-boolean v0, Landroidx/transition/TransitionUtils;->HAS_IS_ATTACHED_TO_WINDOW:Z
+    sget-boolean v0, Landroidx/transition/TransitionUtils;->a:Z
 
     const/4 v1, 0x0
 
@@ -235,7 +225,7 @@
     move v2, v0
 
     :goto_0
-    sget-boolean v3, Landroidx/transition/TransitionUtils;->HAS_OVERLAY:Z
+    sget-boolean v3, Landroidx/transition/TransitionUtils;->b:Z
 
     const/4 v4, 0x0
 
@@ -334,7 +324,7 @@
 
     invoke-virtual {p1, v4, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    sget-boolean p2, Landroidx/transition/TransitionUtils;->HAS_PICTURE_BITMAP:Z
+    sget-boolean p2, Landroidx/transition/TransitionUtils;->c:Z
 
     if-eqz p2, :cond_4
 
@@ -375,7 +365,7 @@
 
     :cond_5
     :goto_2
-    sget-boolean p1, Landroidx/transition/TransitionUtils;->HAS_OVERLAY:Z
+    sget-boolean p1, Landroidx/transition/TransitionUtils;->b:Z
 
     if-eqz p1, :cond_6
 
@@ -393,7 +383,7 @@
     return-object v4
 .end method
 
-.method static mergeAnimators(Landroid/animation/Animator;Landroid/animation/Animator;)Landroid/animation/Animator;
+.method static c(Landroid/animation/Animator;Landroid/animation/Animator;)Landroid/animation/Animator;
     .locals 3
 
     if-nez p0, :cond_0

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source "StitchBgNextTask.java"
+.source ""
 
 
 # static fields
@@ -89,9 +89,9 @@
 
     invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1, v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_0
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
@@ -176,9 +176,9 @@
 
     invoke-virtual {v0, p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1, v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_0
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
@@ -201,7 +201,7 @@
 .method protected onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
     .locals 4
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->checkMatcher()Z
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->checkMatcher()Z
 
     move-result v0
 
@@ -212,7 +212,7 @@
     return v1
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
 
     invoke-interface {v0, p1, p2}, Lcom/oneplus/screenshot/longshot/match/Matcher;->run(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Lcom/oneplus/screenshot/longshot/match/MatchData;
 
@@ -235,9 +235,9 @@
 
     invoke-direct {p0, v0, p2}, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result p1
 
@@ -247,9 +247,9 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->getLast()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
     move-result-object p1
 

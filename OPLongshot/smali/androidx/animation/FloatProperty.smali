@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/FloatProperty;
 .super Landroid/util/Property;
-.source "FloatProperty.java"
+.source ""
 
 
 # annotations
@@ -32,6 +32,10 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const-class v0, Ljava/lang/Float;
 
@@ -44,6 +48,14 @@
 # virtual methods
 .method public final set(Ljava/lang/Object;Ljava/lang/Float;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Float;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -63,6 +75,14 @@
 
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     check-cast p2, Ljava/lang/Float;
 
@@ -72,6 +92,10 @@
 .end method
 
 .method public abstract setValue(Ljava/lang/Object;F)V
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;F)V"

@@ -1,6 +1,6 @@
 .class public final enum Landroidx/lifecycle/Lifecycle$Event;
 .super Ljava/lang/Enum;
-.source "Lifecycle.java"
+.source ""
 
 
 # annotations

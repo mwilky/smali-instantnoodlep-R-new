@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "NavigationMenuPresenter.java"
+.source ""
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;",
+        "Lcom/google/android/material/internal/NavigationMenuPresenter$k;",
         ">;"
     }
 .end annotation
@@ -43,7 +43,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;",
+            "Lcom/google/android/material/internal/NavigationMenuPresenter$d;",
             ">;"
         }
     .end annotation
@@ -85,11 +85,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast v0, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->needsEmptyIcon:Z
+    iput-boolean v1, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->b:Z
 
     add-int/lit8 p1, p1, 0x1
 
@@ -121,9 +121,9 @@
 
     iget-object v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v3, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;
+    new-instance v3, Lcom/google/android/material/internal/NavigationMenuPresenter$c;
 
-    invoke-direct {v3}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;-><init>()V
+    invoke-direct {v3}, Lcom/google/android/material/internal/NavigationMenuPresenter$c;-><init>()V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -204,22 +204,22 @@
 
     iget-object v10, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v11, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    new-instance v11, Lcom/google/android/material/internal/NavigationMenuPresenter$e;
 
     iget-object v12, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget v12, v12, Lcom/google/android/material/internal/NavigationMenuPresenter;->paddingSeparator:I
 
-    invoke-direct {v11, v12, v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;-><init>(II)V
+    invoke-direct {v11, v12, v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$e;-><init>(II)V
 
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
     iget-object v10, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v11, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    new-instance v11, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-direct {v11, v8}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+    invoke-direct {v11, v8}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
 
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -283,9 +283,9 @@
     :cond_6
     iget-object v15, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    new-instance v1, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-direct {v1, v14}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+    invoke-direct {v1, v14}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
 
     invoke-virtual {v15, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -342,17 +342,13 @@
 
     iget-object v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v9, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    new-instance v9, Lcom/google/android/material/internal/NavigationMenuPresenter$e;
 
     iget-object v10, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget v10, v10, Lcom/google/android/material/internal/NavigationMenuPresenter;->paddingSeparator:I
 
-    iget-object v11, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
-
-    iget v11, v11, Lcom/google/android/material/internal/NavigationMenuPresenter;->paddingSeparator:I
-
-    invoke-direct {v9, v10, v11}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;-><init>(II)V
+    invoke-direct {v9, v10, v10}, Lcom/google/android/material/internal/NavigationMenuPresenter$e;-><init>(II)V
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -379,11 +375,11 @@
 
     :cond_c
     :goto_3
-    new-instance v2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    new-instance v2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-direct {v2, v8}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+    invoke-direct {v2, v8}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;-><init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
 
-    iput-boolean v6, v2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->needsEmptyIcon:Z
+    iput-boolean v6, v2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->b:Z
 
     iget-object v8, v0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
@@ -409,6 +405,8 @@
 # virtual methods
 .method public createInstanceState()Landroid/os/Bundle;
     .locals 7
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -448,15 +446,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;
+    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$d;
 
-    instance-of v5, v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    instance-of v5, v4, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
     if-eqz v5, :cond_2
 
-    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-virtual {v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object v4
 
@@ -536,9 +534,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;
+    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$d;
 
-    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$e;
 
     if-eqz v0, :cond_0
 
@@ -547,7 +545,7 @@
     return p1
 
     :cond_0
-    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;
+    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$c;
 
     if-eqz v0, :cond_1
 
@@ -556,13 +554,13 @@
     return p1
 
     :cond_1
-    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-virtual {p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object p1
 
@@ -645,18 +643,26 @@
     return v0
 .end method
 
-.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$k;
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onBindViewHolder(Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onBindViewHolder(Lcom/google/android/material/internal/NavigationMenuPresenter$k;I)V
 
     return-void
 .end method
 
-.method public onBindViewHolder(Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;I)V
+.method public onBindViewHolder(Lcom/google/android/material/internal/NavigationMenuPresenter$k;I)V
     .locals 3
+    .param p1    # Lcom/google/android/material/internal/NavigationMenuPresenter$k;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->getItemViewType(I)I
 
@@ -683,15 +689,15 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$e;
 
-    iget-object p1, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
-    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;->getPaddingTop()I
+    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$e;->b()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;->getPaddingBottom()I
+    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$e;->a()I
 
     move-result p2
 
@@ -700,7 +706,7 @@
     goto/16 :goto_1
 
     :cond_1
-    iget-object p1, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -710,9 +716,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object p2
 
@@ -725,7 +731,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object p1, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
     check-cast p1, Lcom/google/android/material/internal/NavigationMenuItemView;
 
@@ -737,11 +743,9 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    iget-boolean v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->textAppearanceSet:Z
+    iget-boolean v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->textAppearanceSet:Z
 
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
+    if-eqz v2, :cond_3
 
     iget v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->textAppearance:I
 
@@ -754,10 +758,6 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
-
-    iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->textColor:Landroid/content/res/ColorStateList;
-
     invoke-virtual {p1, v0}, Lcom/google/android/material/internal/NavigationMenuItemView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     :cond_4
@@ -766,10 +766,6 @@
     iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->itemBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
-
-    iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->itemBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -785,7 +781,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->items:Ljava/util/ArrayList;
 
@@ -793,9 +789,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast p2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    iget-boolean v0, p2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->needsEmptyIcon:Z
+    iget-boolean v0, p2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->b:Z
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/internal/NavigationMenuItemView;->setNeedsEmptyIcon(Z)V
 
@@ -813,11 +809,9 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    iget-boolean v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->hasCustomItemIconSize:Z
+    iget-boolean v2, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->hasCustomItemIconSize:Z
 
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
+    if-eqz v2, :cond_6
 
     iget v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->itemIconSize:I
 
@@ -832,7 +826,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/internal/NavigationMenuItemView;->setMaxLines(I)V
 
-    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object p2
 
@@ -842,18 +836,22 @@
     return-void
 .end method
 
-.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/google/android/material/internal/NavigationMenuPresenter$k;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/google/android/material/internal/NavigationMenuPresenter$k;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-eqz p2, :cond_3
 
@@ -874,72 +872,70 @@
     return-object p1
 
     :cond_0
-    new-instance p1, Lcom/google/android/material/internal/NavigationMenuPresenter$HeaderViewHolder;
+    new-instance p1, Lcom/google/android/material/internal/NavigationMenuPresenter$b;
 
     iget-object p2, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget-object p2, p2, Lcom/google/android/material/internal/NavigationMenuPresenter;->headerLayout:Landroid/widget/LinearLayout;
 
-    invoke-direct {p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$HeaderViewHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p1, p2}, Lcom/google/android/material/internal/NavigationMenuPresenter$b;-><init>(Landroid/view/View;)V
 
     return-object p1
 
     :cond_1
-    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$SeparatorViewHolder;
+    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$i;
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    invoke-direct {p2, v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$SeparatorViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
+    invoke-direct {p2, v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$i;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
     return-object p2
 
     :cond_2
-    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$SubheaderViewHolder;
+    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$j;
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    invoke-direct {p2, v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$SubheaderViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
+    invoke-direct {p2, v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$j;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
     return-object p2
 
     :cond_3
-    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$NormalViewHolder;
+    new-instance p2, Lcom/google/android/material/internal/NavigationMenuPresenter$h;
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
+    iget-object v1, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
+    iget-object v0, v0, Lcom/google/android/material/internal/NavigationMenuPresenter;->onClickListener:Landroid/view/View$OnClickListener;
 
-    iget-object v1, v1, Lcom/google/android/material/internal/NavigationMenuPresenter;->onClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-direct {p2, v0, p1, v1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NormalViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
+    invoke-direct {p2, v1, p1, v0}, Lcom/google/android/material/internal/NavigationMenuPresenter$h;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
 
     return-object p2
 .end method
 
-.method public bridge synthetic onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+.method public bridge synthetic onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$y;)V
     .locals 0
 
-    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;
+    check-cast p1, Lcom/google/android/material/internal/NavigationMenuPresenter$k;
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onViewRecycled(Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->onViewRecycled(Lcom/google/android/material/internal/NavigationMenuPresenter$k;)V
 
     return-void
 .end method
 
-.method public onViewRecycled(Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;)V
+.method public onViewRecycled(Lcom/google/android/material/internal/NavigationMenuPresenter$k;)V
     .locals 1
 
-    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$NormalViewHolder;
+    instance-of v0, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$h;
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lcom/google/android/material/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
 
     check-cast p1, Lcom/google/android/material/internal/NavigationMenuItemView;
 
@@ -951,6 +947,10 @@
 
 .method public restoreInstanceState(Landroid/os/Bundle;)V
     .locals 6
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const-string v0, "android:menu:checked"
 
@@ -983,15 +983,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;
+    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$d;
 
-    instance-of v5, v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    instance-of v5, v4, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
     if-eqz v5, :cond_0
 
-    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast v4, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-virtual {v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {v4}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object v4
 
@@ -1042,18 +1042,18 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuItem;
+    check-cast v2, Lcom/google/android/material/internal/NavigationMenuPresenter$d;
 
-    instance-of v3, v2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    instance-of v3, v2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
     if-nez v3, :cond_3
 
     goto :goto_3
 
     :cond_3
-    check-cast v2, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast v2, Lcom/google/android/material/internal/NavigationMenuPresenter$f;
 
-    invoke-virtual {v2}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuTextItem;->getMenuItem()Landroidx/appcompat/view/menu/MenuItemImpl;
+    invoke-virtual {v2}, Lcom/google/android/material/internal/NavigationMenuPresenter$f;->a()Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object v2
 
@@ -1099,6 +1099,10 @@
 
 .method public setCheckedItem(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 2
+    .param p1    # Landroidx/appcompat/view/menu/MenuItemImpl;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->checkedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
@@ -1146,7 +1150,7 @@
 
     invoke-direct {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->prepareMenuItems()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
 .end method

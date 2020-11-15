@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/AbsShotState$ClearDecorForegroundRunnable;
 .super Ljava/lang/Object;
-.source "AbsShotState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -49,7 +49,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState$ClearDecorForegroundRunnable;->mDecor:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->clearDecorForeground(Landroid/widget/FrameLayout;)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/state/AbsViewState;->clearDecorForeground(Landroid/widget/FrameLayout;)V
 
     return-void
 .end method

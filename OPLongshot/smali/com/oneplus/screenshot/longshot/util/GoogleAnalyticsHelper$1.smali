@@ -1,6 +1,6 @@
 .class final Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper$1;
 .super Ljava/lang/Object;
-.source "GoogleAnalyticsHelper.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -39,7 +39,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v0, Lcom/oneplus/compat/config/ConfigGrabberNative;
+    new-instance v0, Lb/b/b/b/a;
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->access$100()Landroid/content/Context;
 
@@ -51,9 +51,9 @@
 
     const-string v2, "OPSystemUIGAConfig"
 
-    invoke-direct {v0, v1, v2}, Lcom/oneplus/compat/config/ConfigGrabberNative;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lb/b/b/b/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/oneplus/compat/config/ConfigGrabberNative;->grabConfig()Lorg/json/JSONArray;
+    invoke-virtual {v0}, Lb/b/b/b/a;->a()Lorg/json/JSONArray;
 
     move-result-object v0
 

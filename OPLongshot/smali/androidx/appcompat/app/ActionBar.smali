@@ -1,16 +1,16 @@
 .class public abstract Landroidx/appcompat/app/ActionBar;
 .super Ljava/lang/Object;
-.source "ActionBar.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/app/ActionBar$LayoutParams;,
-        Landroidx/appcompat/app/ActionBar$TabListener;,
-        Landroidx/appcompat/app/ActionBar$Tab;,
-        Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;,
-        Landroidx/appcompat/app/ActionBar$OnNavigationListener;,
+        Landroidx/appcompat/app/ActionBar$a;,
+        Landroidx/appcompat/app/ActionBar$e;,
+        Landroidx/appcompat/app/ActionBar$d;,
+        Landroidx/appcompat/app/ActionBar$b;,
+        Landroidx/appcompat/app/ActionBar$c;,
         Landroidx/appcompat/app/ActionBar$DisplayOptions;,
         Landroidx/appcompat/app/ActionBar$NavigationMode;
     }
@@ -55,49 +55,56 @@
 
 
 # virtual methods
-.method public abstract addOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
+.method public abstract addOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$b;)V
 .end method
 
-.method public abstract addTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+.method public abstract addTab(Landroidx/appcompat/app/ActionBar$d;)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
-.method public abstract addTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
+.method public abstract addTab(Landroidx/appcompat/app/ActionBar$d;I)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
-.method public abstract addTab(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+.method public abstract addTab(Landroidx/appcompat/app/ActionBar$d;IZ)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
-.method public abstract addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+.method public abstract addTab(Landroidx/appcompat/app/ActionBar$d;Z)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public closeOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public collapseActionView()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract collapseActionView()Z
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
-.method public dispatchMenuVisibilityChanged(Z)V
-    .locals 0
-
-    return-void
+.method public abstract dispatchMenuVisibilityChanged(Z)V
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
 .method public abstract getCustomView()Landroid/view/View;
@@ -106,12 +113,7 @@
 .method public abstract getDisplayOptions()I
 .end method
 
-.method public getElevation()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract getElevation()F
 .end method
 
 .method public abstract getHeight()I
@@ -140,15 +142,20 @@
     .end annotation
 .end method
 
-.method public abstract getSelectedTab()Landroidx/appcompat/app/ActionBar$Tab;
+.method public abstract getSelectedTab()Landroidx/appcompat/app/ActionBar$d;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public abstract getSubtitle()Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
-.method public abstract getTabAt(I)Landroidx/appcompat/app/ActionBar$Tab;
+.method public abstract getTabAt(I)Landroidx/appcompat/app/ActionBar$d;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
@@ -158,15 +165,12 @@
     .end annotation
 .end method
 
-.method public getThemedContext()Landroid/content/Context;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract getThemedContext()Landroid/content/Context;
 .end method
 
 .method public abstract getTitle()Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract hide()V
@@ -174,6 +178,11 @@
 
 .method public invalidateOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -193,19 +202,29 @@
 
 .method public isTitleTruncated()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public abstract newTab()Landroidx/appcompat/app/ActionBar$Tab;
+.method public abstract newTab()Landroidx/appcompat/app/ActionBar$d;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
@@ -216,16 +235,21 @@
     return-void
 .end method
 
-.method public onKeyShortcut(ILandroid/view/KeyEvent;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract onKeyShortcut(ILandroid/view/KeyEvent;)Z
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
 .method public onMenuKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -234,6 +258,11 @@
 
 .method public openOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -245,10 +274,10 @@
     .end annotation
 .end method
 
-.method public abstract removeOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
+.method public abstract removeOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$b;)V
 .end method
 
-.method public abstract removeTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+.method public abstract removeTab(Landroidx/appcompat/app/ActionBar$d;)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
@@ -258,20 +287,24 @@
     .end annotation
 .end method
 
-.method requestFocus()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method abstract requestFocus()Z
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
-.method public abstract selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+.method public abstract selectTab(Landroidx/appcompat/app/ActionBar$d;)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setCustomView(I)V
@@ -280,13 +313,15 @@
 .method public abstract setCustomView(Landroid/view/View;)V
 .end method
 
-.method public abstract setCustomView(Landroid/view/View;Landroidx/appcompat/app/ActionBar$LayoutParams;)V
+.method public abstract setCustomView(Landroid/view/View;Landroidx/appcompat/app/ActionBar$a;)V
 .end method
 
-.method public setDefaultDisplayHomeAsUpEnabled(Z)V
-    .locals 0
-
-    return-void
+.method public abstract setDefaultDisplayHomeAsUpEnabled(Z)V
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
 .method public abstract setDisplayHomeAsUpEnabled(Z)V
@@ -310,25 +345,7 @@
 .method public abstract setDisplayUseLogoEnabled(Z)V
 .end method
 
-.method public setElevation(F)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    cmpl-float p1, p1, v0
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Setting a non-zero elevation is not supported in this action bar configuration."
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract setElevation(F)V
 .end method
 
 .method public setHideOffset(I)V
@@ -365,48 +382,57 @@
     throw p1
 .end method
 
-.method public setHomeActionContentDescription(I)V
-    .locals 0
-
-    return-void
+.method public abstract setHomeActionContentDescription(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 .end method
 
-.method public setHomeActionContentDescription(Ljava/lang/CharSequence;)V
-    .locals 0
-
-    return-void
+.method public abstract setHomeActionContentDescription(Ljava/lang/CharSequence;)V
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
-.method public setHomeAsUpIndicator(I)V
-    .locals 0
-
-    return-void
+.method public abstract setHomeAsUpIndicator(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
-.method public setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    return-void
+.method public abstract setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
-.method public setHomeButtonEnabled(Z)V
-    .locals 0
-
-    return-void
+.method public abstract setHomeButtonEnabled(Z)V
 .end method
 
 .method public abstract setIcon(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setIcon(Landroid/graphics/drawable/Drawable;)V
 .end method
 
-.method public abstract setListNavigationCallbacks(Landroid/widget/SpinnerAdapter;Landroidx/appcompat/app/ActionBar$OnNavigationListener;)V
+.method public abstract setListNavigationCallbacks(Landroid/widget/SpinnerAdapter;Landroidx/appcompat/app/ActionBar$c;)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public abstract setLogo(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setLogo(Landroid/graphics/drawable/Drawable;)V
@@ -422,22 +448,18 @@
     .end annotation
 .end method
 
-.method public setShowHideAnimationEnabled(Z)V
-    .locals 0
-
-    return-void
+.method public abstract setShowHideAnimationEnabled(Z)V
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
-.method public setSplitBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    return-void
+.method public abstract setSplitBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 .end method
 
-.method public setStackedBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    return-void
+.method public abstract setStackedBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 .end method
 
 .method public abstract setSubtitle(I)V
@@ -447,22 +469,33 @@
 .end method
 
 .method public abstract setTitle(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public setWindowTitle(Ljava/lang/CharSequence;)V
-    .locals 0
-
-    return-void
+.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 .end method
 
 .method public abstract show()V
 .end method
 
-.method public startActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
+.method public startActionMode(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 p1, 0x0
 

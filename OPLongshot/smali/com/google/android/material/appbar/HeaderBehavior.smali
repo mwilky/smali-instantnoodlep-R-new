@@ -1,12 +1,12 @@
 .class abstract Lcom/google/android/material/appbar/HeaderBehavior;
 .super Lcom/google/android/material/appbar/ViewOffsetBehavior;
-.source "HeaderBehavior.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/appbar/HeaderBehavior$FlingRunnable;
+        Lcom/google/android/material/appbar/HeaderBehavior$a;
     }
 .end annotation
 
@@ -29,6 +29,9 @@
 .field public activePointerId:I
 
 .field private flingRunnable:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field public isBeingDragged:Z
 
@@ -39,6 +42,9 @@
 .field public touchSlop:I
 
 .field private velocityTracker:Landroid/view/VelocityTracker;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -104,6 +110,10 @@
 
 .method final fling(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIF)Z
     .locals 13
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -146,7 +156,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/HeaderBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v6
 
@@ -174,15 +184,15 @@
 
     if-eqz v2, :cond_2
 
-    new-instance v2, Lcom/google/android/material/appbar/HeaderBehavior$FlingRunnable;
+    new-instance v2, Lcom/google/android/material/appbar/HeaderBehavior$a;
 
     move-object v3, p1
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior$FlingRunnable;-><init>(Lcom/google/android/material/appbar/HeaderBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/google/android/material/appbar/HeaderBehavior$a;-><init>(Lcom/google/android/material/appbar/HeaderBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
 
     iput-object v2, v0, Lcom/google/android/material/appbar/HeaderBehavior;->flingRunnable:Ljava/lang/Runnable;
 
-    invoke-static {p2, v2}, Landroidx/core/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p2, v2}, Landroidx/core/view/ViewCompat;->Z(Landroid/view/View;Ljava/lang/Runnable;)V
 
     const/4 v1, 0x1
 
@@ -200,6 +210,10 @@
 
 .method getMaxDragOffset(Landroid/view/View;)I
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)I"
@@ -217,6 +231,10 @@
 
 .method getScrollRangeForDragFling(Landroid/view/View;)I
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)I"
@@ -233,7 +251,7 @@
 .method getTopBottomOffsetForScrollingSibling()I
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/HeaderBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result v0
 
@@ -255,6 +273,18 @@
 
 .method public onInterceptTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/MotionEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -269,7 +299,7 @@
 
     if-gez v0, :cond_0
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -367,7 +397,7 @@
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {p1, p2, v0, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->isPointInChildBounds(Landroid/view/View;II)Z
+    invoke-virtual {p1, p2, v0, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->v(Landroid/view/View;II)Z
 
     move-result p1
 
@@ -424,6 +454,18 @@
 
 .method public onTouchEvent(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 11
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/MotionEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -694,7 +736,7 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/HeaderBehavior;->getTopAndBottomOffset()I
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
 
     move-result p1
 
@@ -704,13 +746,13 @@
 
     if-gt p1, p5, :cond_0
 
-    invoke-static {p3, p4, p5}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {p3, p4, p5}, La/d/d/a;->b(III)I
 
     move-result p2
 
     if-eq p1, p2, :cond_0
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/HeaderBehavior;->setTopAndBottomOffset(I)Z
+    invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->setTopAndBottomOffset(I)Z
 
     sub-int/2addr p1, p2
 

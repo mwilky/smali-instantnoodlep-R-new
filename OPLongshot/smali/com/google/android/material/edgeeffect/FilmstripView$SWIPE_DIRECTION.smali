@@ -1,18 +1,9 @@
 .class final enum Lcom/google/android/material/edgeeffect/FilmstripView$SWIPE_DIRECTION;
 .super Ljava/lang/Enum;
-.source "FilmstripView.java"
+.source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/edgeeffect/FilmstripView;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4018
-    name = "SWIPE_DIRECTION"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Enum<",

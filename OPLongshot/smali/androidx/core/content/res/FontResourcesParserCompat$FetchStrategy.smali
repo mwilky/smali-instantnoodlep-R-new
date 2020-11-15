@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/core/content/res/FontResourcesParserCompat$FetchStrategy;
 .super Ljava/lang/Object;
-.source "FontResourcesParserCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

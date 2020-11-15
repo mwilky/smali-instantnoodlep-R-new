@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/edgeeffect/SpringRelativeLayout$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "SpringRelativeLayout.java"
+.source ""
 
 
 # annotations
@@ -36,7 +36,7 @@
 .method public getValue(Lcom/google/android/material/edgeeffect/SpringRelativeLayout;)F
     .locals 0
 
-    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->access$000(Lcom/google/android/material/edgeeffect/SpringRelativeLayout;)F
+    invoke-static {p1}, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->a(Lcom/google/android/material/edgeeffect/SpringRelativeLayout;)F
 
     move-result p1
 

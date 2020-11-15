@@ -1,6 +1,6 @@
 .class abstract Landroidx/animation/PathKeyframes$SimpleKeyframes;
 .super Ljava/lang/Object;
-.source "PathKeyframes.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes;
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/animation/PathKeyframes$1;)V
+.method synthetic constructor <init>(Landroidx/animation/PathKeyframes$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/animation/PathKeyframes$SimpleKeyframes;-><init>()V
@@ -99,11 +99,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/animation/PathKeyframes$SimpleKeyframes;->clone()Landroidx/animation/Keyframes;
 

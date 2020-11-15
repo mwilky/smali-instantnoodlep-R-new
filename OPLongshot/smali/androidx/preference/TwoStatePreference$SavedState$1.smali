@@ -1,6 +1,6 @@
 .class final Landroidx/preference/TwoStatePreference$SavedState$1;
 .super Ljava/lang/Object;
-.source "TwoStatePreference.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

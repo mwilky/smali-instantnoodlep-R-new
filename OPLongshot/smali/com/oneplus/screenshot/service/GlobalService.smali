@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalService;
 .super Landroid/app/Service;
-.source "GlobalService.java"
+.source ""
 
 
 # static fields

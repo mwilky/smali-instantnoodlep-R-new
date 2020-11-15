@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/viewpager/widget/ViewPager$DecorView;
 .super Ljava/lang/Object;
-.source "ViewPager.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

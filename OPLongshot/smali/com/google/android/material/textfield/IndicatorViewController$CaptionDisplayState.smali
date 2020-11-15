@@ -1,6 +1,6 @@
 .class interface abstract annotation Lcom/google/android/material/textfield/IndicatorViewController$CaptionDisplayState;
 .super Ljava/lang/Object;
-.source "IndicatorViewController.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

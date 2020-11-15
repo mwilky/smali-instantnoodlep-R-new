@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotPrevState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source "ShotPrevState.java"
+.source ""
 
 
 # static fields
@@ -21,7 +21,7 @@
 .method public onCaptureSuccess(Landroid/graphics/Bitmap;)V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->getStart()Landroid/graphics/Point;
 
@@ -41,7 +41,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/util/MovePoint;->getEnd()Landroid/graphics/Point;
 
@@ -59,14 +59,14 @@
 
     sub-int/2addr v1, v2
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
     monitor-enter v2
 
     :try_start_0
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v3}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->removeLast()Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -78,9 +78,9 @@
 
     invoke-direct {v3, p1, v0, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;II)V
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v0, v3}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v0, v3}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     monitor-exit v2
     :try_end_0
@@ -88,7 +88,7 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->onCaptureSuccess(Landroid/graphics/Bitmap;)V
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotPrevState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->UNDO:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

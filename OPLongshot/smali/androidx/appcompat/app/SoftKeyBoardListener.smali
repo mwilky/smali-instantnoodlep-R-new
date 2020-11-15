@@ -1,26 +1,26 @@
 .class public Landroidx/appcompat/app/SoftKeyBoardListener;
 .super Ljava/lang/Object;
-.source "SoftKeyBoardListener.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;
+        Landroidx/appcompat/app/SoftKeyBoardListener$b;
     }
 .end annotation
 
 
 # instance fields
-.field isShow:Z
+.field private a:Landroid/view/View;
 
-.field private listener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.field private b:I
 
-.field private onSoftKeyBoardChangeListener:Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;
+.field private c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
 
-.field private rootView:Landroid/view/View;
+.field d:Z
 
-.field private screenBottom:I
+.field private e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->isShow:Z
+    iput-boolean v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->d:Z
 
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -58,7 +58,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->isShow:Z
+    iput-boolean v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->d:Z
 
     :goto_0
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->rootView:Landroid/view/View;
+    iput-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->a:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
@@ -83,117 +83,93 @@
 
     move-result v0
 
-    iput v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->screenBottom:I
+    iput v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->b:I
 
-    new-instance v0, Landroidx/appcompat/app/SoftKeyBoardListener$1;
+    new-instance v0, Landroidx/appcompat/app/SoftKeyBoardListener$a;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener$1;-><init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener$a;-><init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
 
-    iput-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->listener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    iput-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-    iget-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->rootView:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->listener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    iget-object v1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->addLifeObServer(Landroid/app/Activity;)V
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->e(Landroid/app/Activity;)V
 
     return-void
 .end method
 
-.method static synthetic access$000(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/View;
+.method static synthetic a(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/View;
     .locals 0
 
-    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->rootView:Landroid/view/View;
+    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->a:Landroid/view/View;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Landroidx/appcompat/app/SoftKeyBoardListener;)I
+.method static synthetic b(Landroidx/appcompat/app/SoftKeyBoardListener;)I
     .locals 0
 
-    iget p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->screenBottom:I
+    iget p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->b:I
 
     return p0
 .end method
 
-.method static synthetic access$200(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;
+.method static synthetic c(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroidx/appcompat/app/SoftKeyBoardListener$b;
     .locals 0
 
-    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->onSoftKeyBoardChangeListener:Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;
+    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.method static synthetic d(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
     .locals 0
 
-    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->listener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     return-object p0
 .end method
 
-.method public static closeKeybord(Landroid/widget/EditText;Landroid/content/Context;)V
-    .locals 2
-
-    const-string v0, "input_method"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {p0}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    invoke-virtual {p0, v1}, Landroid/widget/EditText;->setFocusable(Z)V
-
-    return-void
-.end method
-
-.method public static setListener(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
+.method public static f(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/app/SoftKeyBoardListener;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener;-><init>(Landroid/app/Activity;)V
 
-    invoke-direct {v0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->setOnSoftKeyBoardChangeListener(Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
+    invoke-direct {v0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
 
     return-void
 .end method
 
-.method private setOnSoftKeyBoardChangeListener(Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;)V
+.method private g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->onSoftKeyBoardChangeListener:Landroidx/appcompat/app/SoftKeyBoardListener$OnSoftKeyBoardChangeListener;
+    iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public addLifeObServer(Landroid/app/Activity;)V
+.method public e(Landroid/app/Activity;)V
     .locals 1
 
-    instance-of v0, p1, Landroidx/lifecycle/LifecycleOwner;
+    instance-of v0, p1, Landroidx/lifecycle/e;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroidx/lifecycle/LifecycleOwner;
+    check-cast p1, Landroidx/lifecycle/e;
 
-    invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
@@ -201,7 +177,7 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener$2;-><init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
 
     :cond_0
     return-void

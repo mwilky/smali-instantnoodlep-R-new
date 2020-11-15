@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/NavigationRes;
 .super Ljava/lang/Object;
-.source "NavigationRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

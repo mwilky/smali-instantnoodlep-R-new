@@ -1,9 +1,17 @@
 .class final Landroidx/fragment/app/FragmentManagerState;
 .super Ljava/lang/Object;
-.source "FragmentManagerState.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
 
 
 # static fields

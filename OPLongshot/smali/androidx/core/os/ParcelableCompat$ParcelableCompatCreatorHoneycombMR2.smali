@@ -1,21 +1,12 @@
 .class Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
 .super Ljava/lang/Object;
-.source "ParcelableCompat.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/core/os/ParcelableCompat;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = "ParcelableCompatCreatorHoneycombMR2"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",

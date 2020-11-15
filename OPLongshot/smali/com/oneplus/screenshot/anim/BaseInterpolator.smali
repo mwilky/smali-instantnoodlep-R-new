@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/anim/BaseInterpolator;
 .super Ljava/lang/Object;
-.source "BaseInterpolator.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;

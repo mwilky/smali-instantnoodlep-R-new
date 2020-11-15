@@ -1,6 +1,6 @@
 .class final Landroidx/recyclerview/widget/StaggeredGridLayoutManager$SavedState$1;
 .super Ljava/lang/Object;
-.source "StaggeredGridLayoutManager.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

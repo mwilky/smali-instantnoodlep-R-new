@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/TagManager$RefreshMode;
 .super Ljava/lang/Enum;
-.source "TagManager.java"
+.source ""
 
 
 # annotations

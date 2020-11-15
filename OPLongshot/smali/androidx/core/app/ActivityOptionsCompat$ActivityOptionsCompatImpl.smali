@@ -1,9 +1,13 @@
 .class Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 .super Landroidx/core/app/ActivityOptionsCompat;
-.source "ActivityOptionsCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/app/ActivityOptionsCompat;
 .end annotation
@@ -56,6 +60,10 @@
 
 .method public requestUsageTimeReport(Landroid/app/PendingIntent;)V
     .locals 2
+    .param p1    # Landroid/app/PendingIntent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -73,6 +81,12 @@
 
 .method public setLaunchBounds(Landroid/graphics/Rect;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -110,6 +124,10 @@
 
 .method public update(Landroidx/core/app/ActivityOptionsCompat;)V
     .locals 1
+    .param p1    # Landroidx/core/app/ActivityOptionsCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     instance-of v0, p1, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 

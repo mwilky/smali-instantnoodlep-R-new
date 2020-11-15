@@ -1,10 +1,21 @@
 .class public Lcom/google/android/material/internal/ForegroundLinearLayout;
 .super Landroidx/appcompat/widget/LinearLayoutCompat;
-.source "ForegroundLinearLayout.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
 .field private foreground:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field foregroundBoundsChanged:Z
 
@@ -20,6 +31,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -30,6 +45,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -40,6 +63,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 8
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/LinearLayoutCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -67,7 +98,7 @@
 
     iput-boolean v1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z
 
-    sget-object v4, Lcom/google/android/material/R$styleable;->ForegroundLinearLayout:[I
+    sget-object v4, Lb/a/b/a/l;->ForegroundLinearLayout:[I
 
     new-array v7, v1, [I
 
@@ -83,7 +114,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->ForegroundLinearLayout_android_foregroundGravity:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_android_foregroundGravity:I
 
     iget p3, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
@@ -93,7 +124,7 @@
 
     iput p2, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
-    sget p2, Lcom/google/android/material/R$styleable;->ForegroundLinearLayout_android_foreground:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_android_foreground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -104,7 +135,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/internal/ForegroundLinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    sget p2, Lcom/google/android/material/R$styleable;->ForegroundLinearLayout_foregroundInsidePadding:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_foregroundInsidePadding:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -121,8 +152,12 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 8
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->draw(Landroid/graphics/Canvas;)V
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -140,21 +175,21 @@
 
     iget-object v3, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->overlayBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getRight()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getLeft()I
 
     move-result v5
 
     sub-int/2addr v4, v5
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getBottom()I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getTop()I
 
     move-result v6
 
@@ -169,21 +204,21 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v6
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v7
 
     sub-int/2addr v4, v7
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v7
 
@@ -215,8 +250,15 @@
 
 .method public drawableHotspotChanged(FF)V
     .locals 1
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x15
+    .end annotation
 
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/LinearLayoutCompat;->drawableHotspotChanged(FF)V
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
+    invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->drawableHotspotChanged(FF)V
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -231,7 +273,7 @@
 .method protected drawableStateChanged()V
     .locals 2
 
-    invoke-super {p0}, Landroidx/appcompat/widget/LinearLayoutCompat;->drawableStateChanged()V
+    invoke-super {p0}, Landroid/view/ViewGroup;->drawableStateChanged()V
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -245,7 +287,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getDrawableState()[I
 
     move-result-object v1
 
@@ -257,6 +299,8 @@
 
 .method public getForeground()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -273,8 +317,11 @@
 
 .method public jumpDrawablesToCurrentState()V
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0xb
+    .end annotation
 
-    invoke-super {p0}, Landroidx/appcompat/widget/LinearLayoutCompat;->jumpDrawablesToCurrentState()V
+    invoke-super {p0}, Landroid/view/ViewGroup;->jumpDrawablesToCurrentState()V
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -303,7 +350,7 @@
 .method protected onSizeChanged(IIII)V
     .locals 0
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/LinearLayoutCompat;->onSizeChanged(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->onSizeChanged(IIII)V
 
     const/4 p1, 0x1
 
@@ -314,6 +361,10 @@
 
 .method public setForeground(Landroid/graphics/drawable/Drawable;)V
     .locals 2
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
@@ -327,7 +378,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     iput-object p1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
@@ -336,7 +387,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -346,7 +397,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getDrawableState()[I
 
     move-result-object v0
 
@@ -370,13 +421,13 @@
     :cond_2
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ForegroundLinearLayout;->setWillNotDraw(Z)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
     :cond_3
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     :cond_4
     return-void
@@ -426,7 +477,7 @@
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ForegroundLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     :cond_3
     return-void
@@ -435,7 +486,7 @@
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 

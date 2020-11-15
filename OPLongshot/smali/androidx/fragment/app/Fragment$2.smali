@@ -1,9 +1,9 @@
 .class Landroidx/fragment/app/Fragment$2;
 .super Ljava/lang/Object;
-.source "Fragment.java"
+.source ""
 
 # interfaces
-.implements Landroidx/lifecycle/LifecycleEventObserver;
+.implements Landroidx/lifecycle/c;
 
 
 # annotations
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/Fragment;
+.field final synthetic a:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
 .method constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/fragment/app/Fragment$2;->this$0:Landroidx/fragment/app/Fragment;
+    iput-object p1, p0, Landroidx/fragment/app/Fragment$2;->a:Landroidx/fragment/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,22 +34,26 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
-    iget-object p1, p0, Landroidx/fragment/app/Fragment$2;->this$0:Landroidx/fragment/app/Fragment;
+    iget-object p1, p0, Landroidx/fragment/app/Fragment$2;->a:Landroidx/fragment/app/Fragment;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
     if-eqz p1, :cond_0
-
-    iget-object p1, p0, Landroidx/fragment/app/Fragment$2;->this$0:Landroidx/fragment/app/Fragment;
-
-    iget-object p1, p1, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/longshot/ILongScreenshot$Default;
 .super Ljava/lang/Object;
-.source "ILongScreenshot.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;
@@ -38,22 +38,12 @@
 
 .method public dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public getConfigValues()Ljava/lang/String;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -62,11 +52,6 @@
 
 .method public isHandleState()Z
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -75,11 +60,6 @@
 
 .method public isMoveState()Z
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -88,88 +68,48 @@
 
 .method public notifyLongshotScrollChanged(IIII)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public notifyScroll(Z)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public notifyScrollViewSearchComplete(III)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public notifyScrollViewTop(I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public notifyWindowLayerChange(Landroid/os/IBinder;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public onUnscrollableView()V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public start(Lcom/oneplus/longshot/ILongScreenshotCallback;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method
 
 .method public stopLongshot(I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     return-void
 .end method

@@ -1,6 +1,14 @@
 .class public final Landroidx/core/content/res/ComplexColorCompat;
 .super Ljava/lang/Object;
-.source "ComplexColorCompat.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -18,6 +26,10 @@
 # direct methods
 .method private constructor <init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
     .locals 0
+    .param p3    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,11 +44,19 @@
 
 .method private static createFromXml(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lorg/xmlpull/v1/XmlPullParserException;
-        }
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
@@ -175,6 +195,10 @@
 
 .method static from(I)Landroidx/core/content/res/ComplexColorCompat;
     .locals 2
+    .param p0    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
@@ -187,6 +211,10 @@
 
 .method static from(Landroid/content/res/ColorStateList;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
+    .param p0    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
@@ -203,6 +231,10 @@
 
 .method static from(Landroid/graphics/Shader;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
+    .param p0    # Landroid/graphics/Shader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
@@ -217,6 +249,20 @@
 
 .method public static inflate(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 0
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     :try_start_0
     invoke-static {p0, p1, p2}, Landroidx/core/content/res/ComplexColorCompat;->createFromXml(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
@@ -245,6 +291,8 @@
 # virtual methods
 .method public getColor()I
     .locals 1
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
     iget v0, p0, Landroidx/core/content/res/ComplexColorCompat;->mColor:I
 
@@ -253,6 +301,8 @@
 
 .method public getShader()Landroid/graphics/Shader;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/content/res/ComplexColorCompat;->mShader:Landroid/graphics/Shader;
 
@@ -343,6 +393,10 @@
 
 .method public setColor(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     iput p1, p0, Landroidx/core/content/res/ComplexColorCompat;->mColor:I
 

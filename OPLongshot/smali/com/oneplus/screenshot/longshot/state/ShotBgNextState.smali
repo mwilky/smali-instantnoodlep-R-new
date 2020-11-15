@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source "ShotBgNextState.java"
+.source ""
 
 
 # static fields
@@ -33,7 +33,7 @@
 
     new-instance p1, Landroid/os/Handler;
 
-    invoke-static {}, Lcom/oneplus/compat/os/BackgroundThreadNative;->getHandler()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object p2
 
@@ -63,7 +63,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;->mOffset:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_NEXT_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -71,7 +71,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;->mCaptureDelay:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mCaptureDelay:I
 
     return-void
 .end method
@@ -113,9 +113,9 @@
 .method protected getTopBase()I
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
-    iget v0, v0, Lcom/oneplus/screenshot/longshot/util/MovePoint;->y:I
+    iget v0, v0, Landroid/graphics/Point;->y:I
 
     return v0
 .end method
@@ -143,7 +143,7 @@
 .method protected updateState()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/ShotBgNextState;->getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

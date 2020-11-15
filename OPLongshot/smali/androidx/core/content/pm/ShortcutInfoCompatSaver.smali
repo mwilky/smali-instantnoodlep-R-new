@@ -1,9 +1,15 @@
 .class public abstract Landroidx/core/content/pm/ShortcutInfoCompatSaver;
 .super Ljava/lang/Object;
-.source "ShortcutInfoCompatSaver.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;
@@ -32,11 +38,14 @@
 
 # virtual methods
 .method public abstract addShortcuts(Ljava/util/List;)Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/ShortcutInfoCompat;",
+            "Ljava/lang/Object;",
             ">;)TT;"
         }
     .end annotation
@@ -44,18 +53,15 @@
 
 .method public getShortcuts()Ljava/util/List;
     .locals 1
+    .annotation build Landroidx/annotation/WorkerThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/ShortcutInfoCompat;",
+            "Ljava/lang/Object;",
             ">;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
         }
     .end annotation
 
@@ -67,6 +73,9 @@
 .end method
 
 .method public abstract removeAllShortcuts()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -75,6 +84,9 @@
 .end method
 
 .method public abstract removeShortcuts(Ljava/util/List;)Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

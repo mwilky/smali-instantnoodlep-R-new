@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchBgOverTask;
 .super Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;
-.source "StitchBgOverTask.java"
+.source ""
 
 
 # static fields

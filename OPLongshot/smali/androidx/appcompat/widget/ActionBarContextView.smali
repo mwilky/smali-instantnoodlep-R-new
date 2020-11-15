@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/widget/ActionBarContextView;
-.super Landroidx/appcompat/widget/AbsActionBarView;
-.source "ActionBarContextView.java"
+.super Landroidx/appcompat/widget/a;
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -30,6 +38,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -40,8 +52,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    sget v0, Landroidx/appcompat/R$attr;->actionModeStyle:I
+    sget v0, La/a/a;->actionModeStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/ActionBarContextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -50,10 +70,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AbsActionBarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object v0, Landroidx/appcompat/R$styleable;->ActionMode:[I
+    sget-object v0, La/a/j;->ActionMode:[I
 
     const/4 v1, 0x0
 
@@ -61,15 +89,15 @@
 
     move-result-object p1
 
-    sget p2, Landroidx/appcompat/R$styleable;->ActionMode_background:I
+    sget p2, La/a/j;->ActionMode_background:I
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
-    sget p2, Landroidx/appcompat/R$styleable;->ActionMode_titleTextStyle:I
+    sget p2, La/a/j;->ActionMode_titleTextStyle:I
 
     invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -77,7 +105,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleStyleRes:I
 
-    sget p2, Landroidx/appcompat/R$styleable;->ActionMode_subtitleTextStyle:I
+    sget p2, La/a/j;->ActionMode_subtitleTextStyle:I
 
     invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -85,17 +113,17 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mSubtitleStyleRes:I
 
-    sget p2, Landroidx/appcompat/R$styleable;->ActionMode_height:I
+    sget p2, La/a/j;->ActionMode_height:I
 
     invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/TintTypedArray;->getLayoutDimension(II)I
 
     move-result p2
 
-    iput p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mContentHeight:I
+    iput p2, p0, Landroidx/appcompat/widget/a;->mContentHeight:I
 
-    sget p2, Landroidx/appcompat/R$styleable;->ActionMode_closeItemLayout:I
+    sget p2, La/a/j;->ActionMode_closeItemLayout:I
 
-    sget p3, Landroidx/appcompat/R$layout;->abc_action_mode_close_item_material:I
+    sget p3, La/a/g;->abc_action_mode_close_item_material:I
 
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -115,7 +143,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -123,17 +151,17 @@
 
     move-result-object v0
 
-    sget v1, Landroidx/appcompat/R$layout;->abc_action_bar_title_item:I
+    sget v1, La/a/g;->abc_action_bar_title_item:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -141,7 +169,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    sget v1, Landroidx/appcompat/R$id;->action_bar_title:I
+    sget v1, La/a/f;->action_bar_title:I
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +181,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    sget v1, Landroidx/appcompat/R$id;->action_bar_subtitle:I
+    sget v1, La/a/f;->action_bar_subtitle:I
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +197,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -184,7 +212,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -264,7 +292,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_5
     return-void
@@ -275,7 +303,7 @@
 .method public bridge synthetic animateToVisibility(I)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AbsActionBarView;->animateToVisibility(I)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/a;->animateToVisibility(I)V
 
     return-void
 .end method
@@ -283,7 +311,7 @@
 .method public bridge synthetic canShowOverflowMenu()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->canShowOverflowMenu()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->canShowOverflowMenu()Z
 
     move-result v0
 
@@ -306,7 +334,7 @@
 .method public bridge synthetic dismissPopupMenus()V
     .locals 0
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->dismissPopupMenus()V
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->dismissPopupMenus()V
 
     return-void
 .end method
@@ -330,7 +358,7 @@
 
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -342,7 +370,7 @@
 .method public bridge synthetic getAnimatedVisibility()I
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->getAnimatedVisibility()I
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->getAnimatedVisibility()I
 
     move-result v0
 
@@ -360,7 +388,7 @@
 .method public bridge synthetic getContentHeight()I
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->getContentHeight()I
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->getContentHeight()I
 
     move-result v0
 
@@ -370,7 +398,7 @@
 .method public getMenuView()Landroidx/appcompat/widget/ActionMenuView;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     return-object v0
 .end method
@@ -394,13 +422,11 @@
 .method public hideOverflowMenu()Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->hideOverflowMenu()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->k()Z
 
     move-result v0
 
@@ -412,14 +438,14 @@
     return v0
 .end method
 
-.method public initForMode(Landroidx/appcompat/view/ActionMode;)V
+.method public initForMode(Landroidx/appcompat/view/a;)V
     .locals 3
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -437,9 +463,10 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->addView(Landroid/view/View;)V
+    :goto_0
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -450,54 +477,50 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->addView(Landroid/view/View;)V
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
 
-    sget v1, Landroidx/appcompat/R$id;->action_mode_close_button:I
+    sget v1, La/a/f;->action_mode_close_button:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Landroidx/appcompat/widget/ActionBarContextView$1;
+    new-instance v1, Landroidx/appcompat/widget/ActionBarContextView$a;
 
-    invoke-direct {v1, p0, p1}, Landroidx/appcompat/widget/ActionBarContextView$1;-><init>(Landroidx/appcompat/widget/ActionBarContextView;Landroidx/appcompat/view/ActionMode;)V
+    invoke-direct {v1, p0, p1}, Landroidx/appcompat/widget/ActionBarContextView$a;-><init>(Landroidx/appcompat/widget/ActionBarContextView;Landroidx/appcompat/view/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {p1}, Landroidx/appcompat/view/ActionMode;->getMenu()Landroid/view/Menu;
+    invoke-virtual {p1}, Landroidx/appcompat/view/a;->getMenu()Landroid/view/Menu;
 
     move-result-object p1
 
     check-cast p1, Landroidx/appcompat/view/menu/MenuBuilder;
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->dismissPopupMenus()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->h()Z
 
     :cond_2
     new-instance v0, Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroidx/appcompat/widget/ActionMenuPresenter;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iput-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuPresenter;->setReserveOverflow(Z)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuPresenter;->t(Z)V
 
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
@@ -507,13 +530,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    iget-object v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v1, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mPopupContext:Landroid/content/Context;
+    iget-object v2, p0, Landroidx/appcompat/widget/a;->mPopupContext:Landroid/content/Context;
 
     invoke-virtual {p1, v1, v2}, Landroidx/appcompat/view/menu/MenuBuilder;->addMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;Landroid/content/Context;)V
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object p1, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     invoke-virtual {p1, p0}, Landroidx/appcompat/widget/ActionMenuPresenter;->getMenuView(Landroid/view/ViewGroup;)Landroidx/appcompat/view/menu/MenuView;
 
@@ -521,17 +544,15 @@
 
     check-cast p1, Landroidx/appcompat/widget/ActionMenuView;
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
-
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iput-object p1, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, v1}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object p1, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    invoke-virtual {p0, p1, v0}, Landroidx/appcompat/widget/ActionBarContextView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -539,7 +560,7 @@
 .method public bridge synthetic isOverflowMenuShowPending()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->isOverflowMenuShowPending()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->isOverflowMenuShowPending()Z
 
     move-result v0
 
@@ -549,13 +570,11 @@
 .method public isOverflowMenuShowing()Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->isOverflowMenuShowing()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->n()Z
 
     move-result v0
 
@@ -570,7 +589,7 @@
 .method public bridge synthetic isOverflowReserved()Z
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->isOverflowReserved()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->isOverflowReserved()Z
 
     move-result v0
 
@@ -588,13 +607,13 @@
 .method public killMode()V
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->removeAllViews()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mCustomView:Landroid/view/View;
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iput-object v0, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     return-void
 .end method
@@ -602,19 +621,17 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->onDetachedFromWindow()V
+    invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->k()Z
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->hideOverflowMenu()Z
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->hideSubMenus()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->l()Z
 
     :cond_0
     return-void
@@ -623,7 +640,7 @@
 .method public bridge synthetic onHoverEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AbsActionBarView;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/a;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -643,9 +660,7 @@
 
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityEvent;->setSource(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
+    const-class v0, Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -653,7 +668,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -670,7 +685,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AbsActionBarView;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     :goto_0
     return-void
@@ -687,7 +702,7 @@
 
     sub-int v0, p4, p2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v1
 
@@ -696,24 +711,24 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v0
 
     :goto_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v6
 
     sub-int/2addr p5, p3
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result p3
 
     sub-int/2addr p5, p3
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result p3
 
@@ -759,7 +774,7 @@
     iget p5, p5, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     :goto_2
-    invoke-static {v0, v1, p1}, Landroidx/appcompat/widget/ActionBarContextView;->next(IIZ)I
+    invoke-static {v0, v1, p1}, Landroidx/appcompat/widget/a;->next(IIZ)I
 
     move-result v8
 
@@ -775,13 +790,13 @@
 
     move v5, p1
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/ActionBarContextView;->positionChild(Landroid/view/View;IIIZ)I
+    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/a;->positionChild(Landroid/view/View;IIIZ)I
 
     move-result v0
 
     add-int/2addr v8, v0
 
-    invoke-static {v8, p5, p1}, Landroidx/appcompat/widget/ActionBarContextView;->next(IIZ)I
+    invoke-static {v8, p5, p1}, Landroidx/appcompat/widget/a;->next(IIZ)I
 
     move-result v0
 
@@ -814,7 +829,7 @@
 
     move v5, p1
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/ActionBarContextView;->positionChild(Landroid/view/View;IIIZ)I
+    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/a;->positionChild(Landroid/view/View;IIIZ)I
 
     move-result v0
 
@@ -835,12 +850,12 @@
 
     move v5, p1
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/ActionBarContextView;->positionChild(Landroid/view/View;IIIZ)I
+    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/widget/a;->positionChild(Landroid/view/View;IIIZ)I
 
     :cond_5
     if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result p2
 
@@ -851,7 +866,7 @@
     :cond_6
     sub-int/2addr p4, p2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result p2
 
@@ -860,11 +875,9 @@
     move v3, p4
 
     :goto_3
-    iget-object p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v2, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    if-eqz p2, :cond_7
-
-    iget-object v2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    if-eqz v2, :cond_7
 
     xor-int/lit8 p1, p1, 0x1
 
@@ -876,7 +889,7 @@
 
     move v6, p1
 
-    invoke-virtual/range {v1 .. v6}, Landroidx/appcompat/widget/ActionBarContextView;->positionChild(Landroid/view/View;IIIZ)I
+    invoke-virtual/range {v1 .. v6}, Landroidx/appcompat/widget/a;->positionChild(Landroid/view/View;IIIZ)I
 
     :cond_7
     return-void
@@ -905,43 +918,41 @@
 
     move-result p1
 
-    iget v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mContentHeight:I
+    iget v0, p0, Landroidx/appcompat/widget/a;->mContentHeight:I
 
     if-lez v0, :cond_0
-
-    iget p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->mContentHeight:I
 
     goto :goto_0
 
     :cond_0
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    move-result p2
-
-    :goto_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingTop()I
-
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingBottom()I
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v1
 
-    add-int/2addr v0, v1
+    add-int/2addr p2, v1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v1
 
     sub-int v1, p1, v1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v3
 
     sub-int/2addr v1, v3
 
-    sub-int v3, p2, v0
+    sub-int v3, v0, p2
 
     const/high16 v4, -0x80000000
 
@@ -955,7 +966,7 @@
 
     if-eqz v6, :cond_1
 
-    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/ActionBarContextView;->measureChildView(Landroid/view/View;III)I
+    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/a;->measureChildView(Landroid/view/View;III)I
 
     move-result v1
 
@@ -976,21 +987,19 @@
     sub-int/2addr v1, v8
 
     :cond_1
-    iget-object v6, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v6, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
     if-eqz v6, :cond_2
 
-    iget-object v6, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
-
-    invoke-virtual {v6}, Landroidx/appcompat/widget/ActionMenuView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v6}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v6
 
     if-ne v6, p0, :cond_2
 
-    iget-object v6, p0, Landroidx/appcompat/widget/ActionBarContextView;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v6, p0, Landroidx/appcompat/widget/a;->mMenuView:Landroidx/appcompat/widget/ActionMenuView;
 
-    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/ActionBarContextView;->measureChildView(Landroid/view/View;III)I
+    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/a;->measureChildView(Landroid/view/View;III)I
 
     move-result v1
 
@@ -1053,7 +1062,7 @@
     goto :goto_3
 
     :cond_6
-    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/ActionBarContextView;->measureChildView(Landroid/view/View;III)I
+    invoke-virtual {p0, v6, v1, v5, v7}, Landroidx/appcompat/widget/a;->measureChildView(Landroid/view/View;III)I
 
     move-result v1
 
@@ -1085,8 +1094,6 @@
 
     if-ltz v9, :cond_9
 
-    iget v9, v5, Landroid/view/ViewGroup$LayoutParams;->width:I
-
     invoke-static {v9, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -1106,8 +1113,6 @@
 
     if-ltz v4, :cond_b
 
-    iget v4, v5, Landroid/view/ViewGroup$LayoutParams;->height:I
-
     invoke-static {v4, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
@@ -1126,20 +1131,20 @@
     invoke-virtual {v4, v1, v2}, Landroid/view/View;->measure(II)V
 
     :cond_c
-    iget v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mContentHeight:I
+    iget v1, p0, Landroidx/appcompat/widget/a;->mContentHeight:I
 
     if-gtz v1, :cond_f
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result p2
+    move-result v0
 
     move v1, v7
 
     :goto_6
-    if-ge v7, p2, :cond_e
+    if-ge v7, v0, :cond_e
 
-    invoke-virtual {p0, v7}, Landroidx/appcompat/widget/ActionBarContextView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -1147,7 +1152,7 @@
 
     move-result v2
 
-    add-int/2addr v2, v0
+    add-int/2addr v2, p2
 
     if-le v2, v1, :cond_d
 
@@ -1159,12 +1164,12 @@
     goto :goto_6
 
     :cond_e
-    invoke-virtual {p0, p1, v1}, Landroidx/appcompat/widget/ActionBarContextView;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, v1}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     goto :goto_7
 
     :cond_f
-    invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/ActionBarContextView;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     :goto_7
     return-void
@@ -1176,9 +1181,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
+    const-class v0, Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -1207,9 +1210,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
+    const-class v0, Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -1235,7 +1236,7 @@
 .method public bridge synthetic onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AbsActionBarView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/a;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -1245,7 +1246,7 @@
 .method public bridge synthetic postShowOverflowMenu()V
     .locals 0
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AbsActionBarView;->postShowOverflowMenu()V
+    invoke-super {p0}, Landroidx/appcompat/widget/a;->postShowOverflowMenu()V
 
     return-void
 .end method
@@ -1253,7 +1254,7 @@
 .method public setContentHeight(I)V
     .locals 0
 
-    iput p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mContentHeight:I
+    iput p1, p0, Landroidx/appcompat/widget/a;->mContentHeight:I
 
     return-void
 .end method
@@ -1265,7 +1266,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_0
     iput-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mCustomView:Landroid/view/View;
@@ -1276,7 +1277,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionBarContextView;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     const/4 v0, 0x0
 
@@ -1285,10 +1286,10 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_2
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     return-void
 .end method
@@ -1320,7 +1321,7 @@
 
     if-eq p1, v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     :cond_0
     iput-boolean p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleOptional:Z
@@ -1331,15 +1332,15 @@
 .method public bridge synthetic setVisibility(I)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AbsActionBarView;->setVisibility(I)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/a;->setVisibility(I)V
 
     return-void
 .end method
 
-.method public bridge synthetic setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+.method public bridge synthetic setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/AbsActionBarView;->setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/a;->setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
 
     move-result-object p1
 
@@ -1357,13 +1358,11 @@
 .method public showOverflowMenu()Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mActionMenuPresenter:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->showOverflowMenu()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->u()Z
 
     move-result v0
 

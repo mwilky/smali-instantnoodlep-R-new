@@ -1,6 +1,12 @@
 .class Landroidx/documentfile/provider/TreeDocumentFile;
-.super Landroidx/documentfile/provider/DocumentFile;
-.source "TreeDocumentFile.java"
+.super Landroidx/documentfile/provider/a;
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
@@ -10,10 +16,14 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+.method constructor <init>(Landroidx/documentfile/provider/a;Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
+    .param p1    # Landroidx/documentfile/provider/a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    invoke-direct {p0, p1}, Landroidx/documentfile/provider/DocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;)V
+    invoke-direct {p0, p1}, Landroidx/documentfile/provider/a;-><init>(Landroidx/documentfile/provider/a;)V
 
     iput-object p2, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -24,6 +34,10 @@
 
 .method private static closeQuietly(Ljava/lang/AutoCloseable;)V
     .locals 0
+    .param p0    # Ljava/lang/AutoCloseable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
@@ -48,6 +62,8 @@
 
 .method private static createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -98,8 +114,10 @@
     return v0
 .end method
 
-.method public createDirectory(Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
+.method public createDirectory(Ljava/lang/String;)Landroidx/documentfile/provider/a;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -117,7 +135,7 @@
 
     iget-object v1, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1, p1}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v0, p0, v1, p1}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/a;Landroid/content/Context;Landroid/net/Uri;)V
 
     goto :goto_0
 
@@ -128,8 +146,10 @@
     return-object v0
 .end method
 
-.method public createFile(Ljava/lang/String;Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
+.method public createFile(Ljava/lang/String;Ljava/lang/String;)Landroidx/documentfile/provider/a;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -145,7 +165,7 @@
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, p0, v0, p1}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {p2, p0, v0, p1}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/a;Landroid/content/Context;Landroid/net/Uri;)V
 
     goto :goto_0
 
@@ -198,6 +218,8 @@
 
 .method public getName()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -212,6 +234,8 @@
 
 .method public getType()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -302,7 +326,7 @@
     return-wide v0
 .end method
 
-.method public listFiles()[Landroidx/documentfile/provider/DocumentFile;
+.method public listFiles()[Landroidx/documentfile/provider/a;
     .locals 9
 
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
@@ -422,7 +446,7 @@
 
     array-length v1, v0
 
-    new-array v1, v1, [Landroidx/documentfile/provider/DocumentFile;
+    new-array v1, v1, [Landroidx/documentfile/provider/a;
 
     :goto_3
     array-length v2, v0
@@ -435,7 +459,7 @@
 
     aget-object v4, v0, v7
 
-    invoke-direct {v2, p0, v3, v4}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v2, p0, v3, v4}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/a;Landroid/content/Context;Landroid/net/Uri;)V
 
     aput-object v2, v1, v7
 

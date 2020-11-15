@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Skupna raba z drugimi prek aplikacije %s</string>
     <string name="abc_toolbar_collapse_description">Strnitev</string>
     <string name="about_action_bar_title">Več</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Različica %s</string>
     <string name="about_privacy_policy">Pravilnik o zasebnosti</string>
     <string name="about_release_note_title">Dnevnik posodobitev:</string>
     <string name="about_terms_service">Pogoji storitve</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Posnetki zaslona</string>
     <string name="oneplus_delete">Izbriši</string>
     <string name="oneplus_share">Pošlji</string>
+    <string name="permission_btn_text_denied">Izhod</string>
+    <string name="permission_btn_text_grant">V redu</string>
+    <string name="permission_dialog_title">Izjava za dovoljenje</string>
     <string name="preference_copied">»%1$s« je bilo kopirano v odložišče.</string>
     <string name="quick_share_description1">"Delite z dolgim 
 pritiskom na sličico"</string>

@@ -1,6 +1,6 @@
 .class Landroidx/print/PrintHelper$PrintUriAdapter$1;
 .super Landroid/os/AsyncTask;
-.source "PrintHelper.java"
+.source ""
 
 
 # annotations
@@ -69,7 +69,7 @@
 
     iget-object v0, v0, Landroidx/print/PrintHelper$PrintUriAdapter;->mImageFile:Landroid/net/Uri;
 
-    invoke-virtual {p1, v0}, Landroidx/print/PrintHelper;->loadConstrainedBitmap(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+    invoke-virtual {p1, v0}, Landroidx/print/PrintHelper;->d(Landroid/net/Uri;)Landroid/graphics/Bitmap;
 
     move-result-object p1
     :try_end_0
@@ -128,7 +128,7 @@
 
     if-eqz p1, :cond_1
 
-    sget-boolean v0, Landroidx/print/PrintHelper;->PRINT_ACTIVITY_RESPECTS_ORIENTATION:Z
+    sget-boolean v0, Landroidx/print/PrintHelper;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -136,7 +136,7 @@
 
     iget-object v0, v0, Landroidx/print/PrintHelper$PrintUriAdapter;->this$0:Landroidx/print/PrintHelper;
 
-    iget v0, v0, Landroidx/print/PrintHelper;->mOrientation:I
+    iget v0, v0, Landroidx/print/PrintHelper;->d:I
 
     if-nez v0, :cond_1
 
@@ -162,7 +162,7 @@
 
     move-result v0
 
-    invoke-static {p1}, Landroidx/print/PrintHelper;->isPortrait(Landroid/graphics/Bitmap;)Z
+    invoke-static {p1}, Landroidx/print/PrintHelper;->c(Landroid/graphics/Bitmap;)Z
 
     move-result v1
 
@@ -284,9 +284,9 @@
 
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
 
-    new-instance v1, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;
+    new-instance v1, Landroidx/print/PrintHelper$PrintUriAdapter$1$a;
 
-    invoke-direct {v1, p0}, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;-><init>(Landroidx/print/PrintHelper$PrintUriAdapter$1;)V
+    invoke-direct {v1, p0}, Landroidx/print/PrintHelper$PrintUriAdapter$1$a;-><init>(Landroidx/print/PrintHelper$PrintUriAdapter$1;)V
 
     invoke-virtual {v0, v1}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 

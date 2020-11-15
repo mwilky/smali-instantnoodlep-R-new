@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;
 .super Ljava/lang/Object;
-.source "EpicenterTranslateClipReveal.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -20,14 +20,14 @@
     value = {
         "Ljava/lang/Object;",
         "Landroid/animation/TypeEvaluator<",
-        "Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;",
+        "Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+.field private final mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
 
 # direct methods
@@ -36,16 +36,16 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$1;)V
+.method synthetic constructor <init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;-><init>()V
@@ -55,18 +55,16 @@
 
 
 # virtual methods
-.method public evaluate(FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
-    .locals 4
+.method public evaluate(FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
+    .locals 3
 
-    iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
-    iget v2, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
+    iget v2, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
-
-    sub-int/2addr v2, v3
+    sub-int/2addr v2, v1
 
     int-to-float v2, v2
 
@@ -76,17 +74,13 @@
 
     add-int/2addr v1, v2
 
-    iput v1, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->upper:I
+    iput v1, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
-    iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
+    iget v2, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iget v2, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
-
-    iget v3, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
-
-    sub-int/2addr v2, v3
+    sub-int/2addr v2, v1
 
     int-to-float v2, v2
 
@@ -96,15 +90,11 @@
 
     add-int/2addr v1, v2
 
-    iput v1, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->lower:I
+    iput v1, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->a:I
 
-    iget-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    iget v1, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
-
-    iget p3, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
-
-    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iget p3, p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
     sub-float/2addr p3, p2
 
@@ -114,23 +104,21 @@
 
     int-to-float p1, p1
 
-    add-float/2addr v1, p1
+    add-float/2addr p2, p1
 
-    iput v1, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;->trans:F
+    iput p2, v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
-    iget-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
-
-    return-object p1
+    return-object v0
 .end method
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    check-cast p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    check-cast p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    check-cast p3, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
-    invoke-virtual {p0, p1, p2, p3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->evaluate(FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$State;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$State;
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;->evaluate(FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;)Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
     move-result-object p1
 

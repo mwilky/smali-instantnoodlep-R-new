@@ -224,7 +224,7 @@
     <dimen name="control_tooltip_width">18.0dip</dimen>
     <dimen name="date_picker_date_label_size">32.0sp</dimen>
     <dimen name="date_picker_day_height">40.0dip</dimen>
-    <dimen name="date_picker_day_of_week_height">36.0dip</dimen>
+    <dimen name="date_picker_day_of_week_height">40.0dip</dimen>
     <dimen name="date_picker_day_of_week_text_size">12.0sp</dimen>
     <dimen name="date_picker_day_selector_radius">40.0dip</dimen>
     <dimen name="date_picker_day_text_size">12.0sp</dimen>
@@ -741,6 +741,7 @@
     <dimen name="small_longshot_layout_height">160.0dip</dimen>
     <item type="dimen" name="small_longshot_layout_width">@dimen/op_control_icon_size_display3</item>
     <dimen name="small_longshot_width">91.22998dip</dimen>
+    <dimen name="small_screenshot_inner_radius">9.0dip</dimen>
     <dimen name="small_screenshot_padding">3.0dip</dimen>
     <dimen name="smallscreenshot_margin_bottom">14.0dip</dimen>
     <dimen name="smallscreenshotlayout_bottom_shadow">17.5dip</dimen>

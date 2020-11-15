@@ -1,13 +1,17 @@
 .class abstract Lcom/google/android/material/transition/MaterialVisibility;
 .super Landroid/transition/Visibility;
-.source "MaterialVisibility.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<P::",
-        "Lcom/google/android/material/transition/VisibilityAnimatorProvider;",
+        "Lcom/google/android/material/transition/e;",
         ">",
         "Landroid/transition/Visibility;"
     }
@@ -15,7 +19,7 @@
 
 
 # instance fields
-.field private primaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.field private primaryAnimatorProvider:Lcom/google/android/material/transition/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TP;"
@@ -23,7 +27,10 @@
     .end annotation
 .end field
 
-.field private secondaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.field private secondaryAnimatorProvider:Lcom/google/android/material/transition/e;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -46,24 +53,20 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz p5, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
 
     move-result-object v2
 
-    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/VisibilityAnimatorProvider;->createAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    if-eqz p5, :cond_0
+
+    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/e;->createAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
-
-    move-result-object v2
-
-    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/VisibilityAnimatorProvider;->createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/e;->createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object v2
 
@@ -73,7 +76,7 @@
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getSecondaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
 
     move-result-object v2
 
@@ -81,14 +84,14 @@
 
     if-eqz p5, :cond_2
 
-    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/VisibilityAnimatorProvider;->createAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/e;->createAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object p1
 
     goto :goto_1
 
     :cond_2
-    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/VisibilityAnimatorProvider;->createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    invoke-interface {v2, p1, p2, p3, p4}, Lcom/google/android/material/transition/e;->createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object p1
 
@@ -105,7 +108,10 @@
 
 
 # virtual methods
-.method abstract getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.method abstract getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TP;"
@@ -113,37 +119,44 @@
     .end annotation
 .end method
 
-.method abstract getDefaultSecondaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.method abstract getDefaultSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
-.method public getPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.method public getPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TP;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     return-object v0
 .end method
 
-.method public getSecondaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+.method public getSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iget-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     return-object v0
 .end method
@@ -151,17 +164,17 @@
 .method initialize()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->primaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
-    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultSecondaryAnimatorProvider()Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getDefaultSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iput-object v0, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     return-void
 .end method
@@ -210,10 +223,14 @@
     return-object p1
 .end method
 
-.method public setSecondaryAnimatorProvider(Lcom/google/android/material/transition/VisibilityAnimatorProvider;)V
+.method public setSecondaryAnimatorProvider(Lcom/google/android/material/transition/e;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/transition/e;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    iput-object p1, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/VisibilityAnimatorProvider;
+    iput-object p1, p0, Lcom/google/android/material/transition/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/e;
 
     return-void
 .end method

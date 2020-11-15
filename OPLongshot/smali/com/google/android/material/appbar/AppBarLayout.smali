@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/appbar/AppBarLayout;
 .super Landroid/widget/LinearLayout;
-.source "AppBarLayout.java"
+.source ""
 
 # interfaces
-.implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$AttachedBehavior;
+.implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;
 
 
 # annotations
@@ -19,56 +19,25 @@
 .end annotation
 
 
-# static fields
-.field private static final DEF_STYLE_RES:I
-
-.field private static final INVALID_SCROLL_RANGE:I = -0x1
-
-.field static final PENDING_ACTION_ANIMATE_ENABLED:I = 0x4
-
-.field static final PENDING_ACTION_COLLAPSED:I = 0x2
-
-.field static final PENDING_ACTION_EXPANDED:I = 0x1
-
-.field static final PENDING_ACTION_FORCE:I = 0x8
-
-.field static final PENDING_ACTION_NONE:I
-
-
 # instance fields
-.field private currentOffset:I
+.field private a:I
 
-.field private downPreScrollRange:I
+.field private b:I
 
-.field private downScrollRange:I
+.field private c:I
 
-.field private elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+.field private d:I
 
-.field private haveChildWithInterpolator:Z
+.field private e:Z
 
-.field private lastInsets:Landroidx/core/view/WindowInsetsCompat;
+.field private f:I
 
-.field private liftOnScroll:Z
-
-.field private liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Landroid/view/View;",
-            ">;"
-        }
+.field private g:Landroidx/core/view/x;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private liftOnScrollTargetViewId:I
-
-.field private liftable:Z
-
-.field private liftableOverride:Z
-
-.field private lifted:Z
-
-.field private listeners:Ljava/util/List;
+.field private h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -78,266 +47,56 @@
     .end annotation
 .end field
 
-.field private pendingAction:I
+.field private i:Z
 
-.field private statusBarForeground:Landroid/graphics/drawable/Drawable;
+.field private j:Z
 
-.field private tmpStatesArray:[I
+.field private k:Z
 
-.field private totalScrollRange:I
+.field private l:Z
+
+.field private m:I
+    .annotation build Landroidx/annotation/IdRes;
+    .end annotation
+.end field
+
+.field private n:Ljava/lang/ref/WeakReference;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private o:Landroid/animation/ValueAnimator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private p:[I
+
+.field private q:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lcom/google/android/material/R$style;->Widget_Design_AppBarLayout:I
-
-    sput v0, Lcom/google/android/material/appbar/AppBarLayout;->DEF_STYLE_RES:I
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
+.method private c()V
     .locals 1
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/appbar/AppBarLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    sget v0, Lcom/google/android/material/R$attr;->appBarLayoutStyle:I
-
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 9
-
-    sget v0, Lcom/google/android/material/appbar/AppBarLayout;->DEF_STYLE_RES:I
-
-    invoke-static {p1, p2, p3, v0}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->totalScrollRange:I
-
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->downPreScrollRange:I
-
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->downScrollRange:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->pendingAction:I
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->setOrientation(I)V
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v8, 0x15
-
-    if-lt v1, v8, :cond_0
-
-    invoke-static {p0}, Lcom/google/android/material/appbar/ViewUtilsLollipop;->setBoundsViewOutlineProvider(Landroid/view/View;)V
-
-    sget v1, Lcom/google/android/material/appbar/AppBarLayout;->DEF_STYLE_RES:I
-
-    invoke-static {p0, p2, p3, v1}, Lcom/google/android/material/appbar/ViewUtilsLollipop;->setStateListAnimatorFromAttrs(Landroid/view/View;Landroid/util/AttributeSet;II)V
-
-    :cond_0
-    sget-object v3, Lcom/google/android/material/R$styleable;->AppBarLayout:[I
-
-    sget v5, Lcom/google/android/material/appbar/AppBarLayout;->DEF_STYLE_RES:I
-
-    new-array v6, v0, [I
-
-    move-object v1, v7
-
-    move-object v2, p2
-
-    move v4, p3
-
-    invoke-static/range {v1 .. v6}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
-
-    move-result-object p2
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_android_background:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    invoke-static {p0, p3}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    instance-of p3, p3, Landroid/graphics/drawable/ColorDrawable;
-
-    if-eqz p3, :cond_1
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/graphics/drawable/ColorDrawable;
-
-    new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    invoke-direct {v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>()V
-
-    invoke-virtual {p3}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
-
-    move-result p3
-
-    invoke-static {p3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p3
-
-    invoke-virtual {v1, p3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setFillColor(Landroid/content/res/ColorStateList;)V
-
-    invoke-virtual {v1, v7}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
-
-    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-
-    :cond_1
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_expanded:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_2
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_expanded:I
-
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p3
-
-    invoke-direct {p0, p3, v0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setExpanded(ZZZ)V
-
-    :cond_2
-    sget p3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt p3, v8, :cond_3
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_elevation:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_3
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_elevation:I
-
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result p3
-
-    int-to-float p3, p3
-
-    invoke-static {p0, p3}, Lcom/google/android/material/appbar/ViewUtilsLollipop;->setDefaultAppBarLayoutStateListAnimator(Landroid/view/View;F)V
-
-    :cond_3
-    sget p3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1a
-
-    if-lt p3, v1, :cond_5
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_android_keyboardNavigationCluster:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_4
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_android_keyboardNavigationCluster:I
-
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p3
-
-    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout;->setKeyboardNavigationCluster(Z)V
-
-    :cond_4
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_android_touchscreenBlocksFocus:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_5
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_android_touchscreenBlocksFocus:I
-
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p3
-
-    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout;->setTouchscreenBlocksFocus(Z)V
-
-    :cond_5
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_liftOnScroll:I
-
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p3
-
-    iput-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScroll:Z
-
-    sget p3, Lcom/google/android/material/R$styleable;->AppBarLayout_liftOnScrollTargetViewId:I
-
-    invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetViewId:I
-
-    sget p1, Lcom/google/android/material/R$styleable;->AppBarLayout_statusBarForeground:I
-
-    invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setStatusBarForeground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
-
-    new-instance p1, Lcom/google/android/material/appbar/AppBarLayout$1;
-
-    invoke-direct {p1, p0}, Lcom/google/android/material/appbar/AppBarLayout$1;-><init>(Lcom/google/android/material/appbar/AppBarLayout;)V
-
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
-
-    return-void
-.end method
-
-.method private clearLiftOnScrollTargetView()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->n:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
@@ -346,15 +105,21 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->n:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
-.method private findFirstScrollingBehaviorChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+.method private d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
     .locals 4
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildCount()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -363,7 +128,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    invoke-virtual {p1, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -371,9 +136,9 @@
 
     move-result-object v3
 
-    check-cast v3, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v3, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    invoke-virtual {v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    invoke-virtual {v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->f()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object v3
 
@@ -394,16 +159,22 @@
     return-object p1
 .end method
 
-.method private findLiftOnScrollTargetView(Landroid/view/View;)Landroid/view/View;
+.method private e(Landroid/view/View;)Landroid/view/View;
     .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->n:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_2
 
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetViewId:I
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->m:I
 
     const/4 v2, -0x1
 
@@ -423,7 +194,7 @@
     :goto_0
     if-nez p1, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -431,13 +202,13 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetViewId:I
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->m:I
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -450,10 +221,10 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->n:Ljava/lang/ref/WeakReference;
 
     :cond_2
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetView:Ljava/lang/ref/WeakReference;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->n:Ljava/lang/ref/WeakReference;
 
     if-eqz p1, :cond_3
 
@@ -469,10 +240,10 @@
     return-object v1
 .end method
 
-.method private hasCollapsibleChild()Z
+.method private j()Z
     .locals 4
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -483,7 +254,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    invoke-virtual {p0, v2}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -493,7 +264,7 @@
 
     check-cast v3, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {v3}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->isCollapsible()Z
+    invoke-virtual {v3}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->c()Z
 
     move-result v3
 
@@ -512,21 +283,21 @@
     return v1
 .end method
 
-.method private invalidateScrollRanges()V
+.method private l()V
     .locals 1
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->totalScrollRange:I
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->b:I
 
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downPreScrollRange:I
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->c:I
 
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downScrollRange:I
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->d:I
 
     return-void
 .end method
 
-.method private setExpanded(ZZZ)V
+.method private s(ZZZ)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -560,23 +331,23 @@
     :cond_2
     or-int/2addr p1, v0
 
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->pendingAction:I
+    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->f:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->requestLayout()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->requestLayout()V
 
     return-void
 .end method
 
-.method private setLiftableState(Z)Z
+.method private t(Z)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
     if-eq v0, p1, :cond_0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->refreshDrawableState()V
 
     const/4 p1, 0x1
 
@@ -588,10 +359,10 @@
     return p1
 .end method
 
-.method private shouldDrawStatusBarForeground()Z
+.method private v()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -612,10 +383,10 @@
     return v0
 .end method
 
-.method private shouldOffsetFirstChild()Z
+.method private x()Z
     .locals 4
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -623,7 +394,7 @@
 
     if-lez v0, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -635,7 +406,7 @@
 
     if-eq v2, v3, :cond_0
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result v0
 
@@ -647,14 +418,18 @@
     return v1
 .end method
 
-.method private startLiftOnScrollElevationOverlayAnimation(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)V
+.method private y(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)V
     .locals 3
+    .param p1    # Lcom/google/android/material/shape/MaterialShapeDrawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$dimen;->design_appbar_elevation:I
+    sget v1, Lb/a/b/a/d;->design_appbar_elevation:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -680,7 +455,7 @@
     move v0, v1
 
     :goto_1
-    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->o:Landroid/animation/ValueAnimator;
 
     if-eqz p2, :cond_2
 
@@ -703,13 +478,13 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+    iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->o:Landroid/animation/ValueAnimator;
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$integer;->app_bar_elevation_anim_duration:I
+    sget v1, Lb/a/b/a/g;->app_bar_elevation_anim_duration:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -719,47 +494,51 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->o:Landroid/animation/ValueAnimator;
 
     sget-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+    iget-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->o:Landroid/animation/ValueAnimator;
 
-    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$2;
+    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$a;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$2;-><init>(Lcom/google/android/material/appbar/AppBarLayout;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$a;-><init>(Lcom/google/android/material/appbar/AppBarLayout;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->elevationOverlayAnimator:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->o:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 .end method
 
-.method private updateWillNotDraw()V
+.method private z()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->shouldDrawStatusBarForeground()Z
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->v()Z
 
     move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setWillNotDraw(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public addOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
+.method public a(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
     .locals 1
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -767,12 +546,12 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
 
     :cond_0
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -780,7 +559,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -788,10 +567,10 @@
     return-void
 .end method
 
-.method public addOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;)V
+.method public b(Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->addOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->a(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
 
     return-void
 .end method
@@ -806,10 +585,14 @@
 
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 3
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->shouldDrawStatusBarForeground()Z
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->v()Z
 
     move-result v0
 
@@ -821,7 +604,7 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->currentOffset:I
+    iget v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->a:I
 
     neg-int v2, v2
 
@@ -829,7 +612,7 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -844,11 +627,11 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->drawableStateChanged()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getDrawableState()[I
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
@@ -864,33 +647,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void
 .end method
 
-.method protected bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->generateDefaultLayoutParams()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected bridge synthetic generateDefaultLayoutParams()Landroid/widget/LinearLayout$LayoutParams;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->generateDefaultLayoutParams()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected generateDefaultLayoutParams()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+.method protected f()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
     .locals 3
 
     new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
@@ -904,10 +667,44 @@
     return-object v0
 .end method
 
+.method public g(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    .locals 2
+
+    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p1}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-object v0
+.end method
+
+.method protected bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->f()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected bridge synthetic generateDefaultLayoutParams()Landroid/widget/LinearLayout$LayoutParams;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->f()Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->g(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
     move-result-object p1
 
@@ -917,7 +714,7 @@
 .method protected bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->h(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
     move-result-object p1
 
@@ -927,7 +724,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->g(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
     move-result-object p1
 
@@ -937,28 +734,473 @@
 .method protected bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->h(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public generateLayoutParams(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-    .locals 2
+.method public getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior<",
+            "Lcom/google/android/material/appbar/AppBarLayout;",
+            ">;"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getContext()Landroid/content/Context;
+    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$Behavior;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1, p1}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;-><init>()V
 
     return-object v0
 .end method
 
-.method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+.method getDownNestedPreScrollRange()I
+    .locals 9
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->c:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ltz v0, :cond_6
+
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v5
+
+    iget v6, v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I
+
+    and-int/lit8 v7, v6, 0x5
+
+    const/4 v8, 0x5
+
+    if-ne v7, v8, :cond_4
+
+    iget v7, v4, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    iget v4, v4, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    add-int/2addr v7, v4
+
+    and-int/lit8 v4, v6, 0x8
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v3}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v4
+
+    :goto_1
+    add-int/2addr v7, v4
+
+    goto :goto_2
+
+    :cond_1
+    and-int/lit8 v4, v6, 0x2
+
+    if-eqz v4, :cond_2
+
+    invoke-static {v3}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v4
+
+    sub-int v4, v5, v4
+
+    goto :goto_1
+
+    :cond_2
+    add-int/2addr v7, v5
+
+    :goto_2
+    if-nez v0, :cond_3
+
+    invoke-static {v3}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
+
+    move-result v3
+
+    sub-int/2addr v5, v3
+
+    invoke-static {v7, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
+    :cond_3
+    add-int/2addr v2, v7
+
+    goto :goto_3
+
+    :cond_4
+    if-lez v2, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    :goto_3
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_6
+    :goto_4
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->c:I
+
+    return v0
+.end method
+
+.method getDownNestedScrollRange()I
+    .locals 9
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->d:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v6
+
+    iget v7, v5, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    iget v8, v5, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    add-int/2addr v7, v8
+
+    add-int/2addr v6, v7
+
+    iget v5, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I
+
+    and-int/lit8 v7, v5, 0x1
+
+    if-eqz v7, :cond_2
+
+    add-int/2addr v3, v6
+
+    and-int/lit8 v5, v5, 0x2
+
+    if-eqz v5, :cond_1
+
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v0
+
+    sub-int/2addr v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->d:I
+
+    return v0
+.end method
+
+.method public getLiftOnScrollTargetViewId()I
+    .locals 1
+    .annotation build Landroidx/annotation/IdRes;
+    .end annotation
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->m:I
+
+    return v0
+.end method
+
+.method public final getMinimumHeightForVisibleOverlappingContent()I
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
+
+    move-result v0
+
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-lt v1, v2, :cond_1
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_1
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x3
+
+    return v0
+.end method
+
+.method getPendingAction()I
+    .locals 1
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->f:I
+
+    return v0
+.end method
+
+.method public getStatusBarForeground()Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public getTargetElevation()F
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method final getTopInset()I
+    .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->g:Landroidx/core/view/x;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroidx/core/view/x;->e()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public final getTotalScrollRange()I
+    .locals 9
+
+    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->b:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v2, v0, :cond_3
+
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v6
+
+    iget v7, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I
+
+    and-int/lit8 v8, v7, 0x1
+
+    if-eqz v8, :cond_3
+
+    iget v8, v5, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    add-int/2addr v6, v8
+
+    iget v5, v5, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    add-int/2addr v6, v5
+
+    add-int/2addr v3, v6
+
+    if-nez v2, :cond_1
+
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
+
+    move-result v5
+
+    sub-int/2addr v3, v5
+
+    :cond_1
+    and-int/lit8 v5, v7, 0x2
+
+    if-eqz v5, :cond_2
+
+    invoke-static {v4}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
+
+    move-result v0
+
+    sub-int/2addr v3, v0
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->b:I
+
+    return v0
+.end method
+
+.method getUpNestedPreScrollRange()I
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTotalScrollRange()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected h(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1000,465 +1242,15 @@
     return-object v0
 .end method
 
-.method public getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior<",
-            "Lcom/google/android/material/appbar/AppBarLayout;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$Behavior;
-
-    invoke-direct {v0}, Lcom/google/android/material/appbar/AppBarLayout$Behavior;-><init>()V
-
-    return-object v0
-.end method
-
-.method getDownNestedPreScrollRange()I
-    .locals 9
-
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downPreScrollRange:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ltz v0, :cond_6
-
-    invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v5
-
-    iget v6, v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->scrollFlags:I
-
-    and-int/lit8 v7, v6, 0x5
-
-    const/4 v8, 0x5
-
-    if-ne v7, v8, :cond_4
-
-    iget v7, v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
-
-    iget v4, v4, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
-
-    add-int/2addr v7, v4
-
-    and-int/lit8 v4, v6, 0x8
-
-    if-eqz v4, :cond_1
-
-    invoke-static {v3}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v4
-
-    :goto_1
-    add-int/2addr v7, v4
-
-    goto :goto_2
-
-    :cond_1
-    and-int/lit8 v4, v6, 0x2
-
-    if-eqz v4, :cond_2
-
-    invoke-static {v3}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v4
-
-    sub-int v4, v5, v4
-
-    goto :goto_1
-
-    :cond_2
-    add-int/2addr v7, v5
-
-    :goto_2
-    if-nez v0, :cond_3
-
-    invoke-static {v3}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
-
-    move-result v3
-
-    sub-int/2addr v5, v3
-
-    invoke-static {v7, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v7
-
-    :cond_3
-    add-int/2addr v2, v7
-
-    goto :goto_3
-
-    :cond_4
-    if-lez v2, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_6
-    :goto_4
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downPreScrollRange:I
-
-    return v0
-.end method
-
-.method getDownNestedScrollRange()I
-    .locals 9
-
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downScrollRange:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    invoke-virtual {p0, v2}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v6
-
-    iget v7, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
-
-    iget v8, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
-
-    add-int/2addr v7, v8
-
-    add-int/2addr v6, v7
-
-    iget v5, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->scrollFlags:I
-
-    and-int/lit8 v7, v5, 0x1
-
-    if-eqz v7, :cond_2
-
-    add-int/2addr v3, v6
-
-    and-int/lit8 v5, v5, 0x2
-
-    if-eqz v5, :cond_1
-
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v0
-
-    sub-int/2addr v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->downScrollRange:I
-
-    return v0
-.end method
-
-.method public getLiftOnScrollTargetViewId()I
+.method i()Z
     .locals 1
 
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetViewId:I
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->e:Z
 
     return v0
 .end method
 
-.method public final getMinimumHeightForVisibleOverlappingContent()I
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
-
-    move-result v0
-
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x2
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-lt v1, v2, :cond_1
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getHeight()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x3
-
-    return v0
-.end method
-
-.method getPendingAction()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->pendingAction:I
-
-    return v0
-.end method
-
-.method public getStatusBarForeground()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public getTargetElevation()F
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method final getTopInset()I
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->lastInsets:Landroidx/core/view/WindowInsetsCompat;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public final getTotalScrollRange()I
-    .locals 9
-
-    iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->totalScrollRange:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    if-ge v2, v0, :cond_3
-
-    invoke-virtual {p0, v2}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v6
-
-    iget v7, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->scrollFlags:I
-
-    and-int/lit8 v8, v7, 0x1
-
-    if-eqz v8, :cond_3
-
-    iget v8, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->topMargin:I
-
-    add-int/2addr v6, v8
-
-    iget v5, v5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->bottomMargin:I
-
-    add-int/2addr v6, v5
-
-    add-int/2addr v3, v6
-
-    if-nez v2, :cond_1
-
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
-
-    move-result v5
-
-    sub-int/2addr v3, v5
-
-    :cond_1
-    and-int/lit8 v5, v7, 0x2
-
-    if-eqz v5, :cond_2
-
-    invoke-static {v4}, Landroidx/core/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
-
-    move-result v0
-
-    sub-int/2addr v3, v0
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->totalScrollRange:I
-
-    return v0
-.end method
-
-.method getUpNestedPreScrollRange()I
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTotalScrollRange()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method hasChildWithInterpolator()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->haveChildWithInterpolator:Z
-
-    return v0
-.end method
-
-.method hasScrollableChildren()Z
+.method k()Z
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getTotalScrollRange()I
@@ -1478,12 +1270,79 @@
     return v0
 .end method
 
-.method public isLiftOnScroll()Z
+.method public m()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScroll:Z
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->l:Z
 
     return v0
+.end method
+
+.method n(I)V
+    .locals 3
+
+    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->a:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->willNotDraw()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->Y(Landroid/view/View;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    iget-object v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v2, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;->onOffsetChanged(Lcom/google/android/material/appbar/AppBarLayout;I)V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public o(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
+    .locals 1
+    .param p1    # Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->h:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
 .end method
 
 .method protected onAttachedToWindow()V
@@ -1491,7 +1350,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
-    invoke-static {p0}, Lcom/google/android/material/shape/MaterialShapeUtils;->setParentAbsoluteElevation(Landroid/view/View;)V
+    invoke-static {p0}, Lcom/google/android/material/shape/f;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1499,7 +1358,7 @@
 .method protected onCreateDrawableState(I)[I
     .locals 3
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->tmpStatesArray:[I
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->p:[I
 
     if-nez v0, :cond_0
 
@@ -1507,10 +1366,10 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->tmpStatesArray:[I
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->p:[I
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->tmpStatesArray:[I
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->p:[I
 
     array-length v1, v0
 
@@ -1522,16 +1381,16 @@
 
     const/4 v1, 0x0
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
     if-eqz v2, :cond_1
 
-    sget v2, Lcom/google/android/material/R$attr;->state_liftable:I
+    sget v2, Lb/a/b/a/b;->state_liftable:I
 
     goto :goto_0
 
     :cond_1
-    sget v2, Lcom/google/android/material/R$attr;->state_liftable:I
+    sget v2, Lb/a/b/a/b;->state_liftable:I
 
     neg-int v2, v2
 
@@ -1540,20 +1399,20 @@
 
     const/4 v1, 0x1
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
     if-eqz v2, :cond_2
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->lifted:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->k:Z
 
     if-eqz v2, :cond_2
 
-    sget v2, Lcom/google/android/material/R$attr;->state_lifted:I
+    sget v2, Lb/a/b/a/b;->state_lifted:I
 
     goto :goto_1
 
     :cond_2
-    sget v2, Lcom/google/android/material/R$attr;->state_lifted:I
+    sget v2, Lb/a/b/a/b;->state_lifted:I
 
     neg-int v2, v2
 
@@ -1562,16 +1421,16 @@
 
     const/4 v1, 0x2
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
     if-eqz v2, :cond_3
 
-    sget v2, Lcom/google/android/material/R$attr;->state_collapsible:I
+    sget v2, Lb/a/b/a/b;->state_collapsible:I
 
     goto :goto_2
 
     :cond_3
-    sget v2, Lcom/google/android/material/R$attr;->state_collapsible:I
+    sget v2, Lb/a/b/a/b;->state_collapsible:I
 
     neg-int v2, v2
 
@@ -1580,27 +1439,27 @@
 
     const/4 v1, 0x3
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftable:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->j:Z
 
     if-eqz v2, :cond_4
 
-    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->lifted:Z
+    iget-boolean v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->k:Z
 
     if-eqz v2, :cond_4
 
-    sget v2, Lcom/google/android/material/R$attr;->state_collapsed:I
+    sget v2, Lb/a/b/a/b;->state_collapsed:I
 
     goto :goto_3
 
     :cond_4
-    sget v2, Lcom/google/android/material/R$attr;->state_collapsed:I
+    sget v2, Lb/a/b/a/b;->state_collapsed:I
 
     neg-int v2, v2
 
     :goto_3
     aput v2, v0, v1
 
-    invoke-static {p1, v0}, Lcom/google/android/material/appbar/AppBarLayout;->mergeDrawableStates([I[I)[I
+    invoke-static {p1, v0}, Landroid/widget/LinearLayout;->mergeDrawableStates([I[I)[I
 
     move-result-object p1
 
@@ -1612,7 +1471,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->clearLiftOnScrollTargetView()V
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->c()V
 
     return-void
 .end method
@@ -1622,7 +1481,7 @@
 
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result p1
 
@@ -1630,7 +1489,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->shouldOffsetFirstChild()Z
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->x()Z
 
     move-result p1
 
@@ -1640,7 +1499,7 @@
 
     move-result p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result p3
 
@@ -1649,24 +1508,24 @@
     :goto_0
     if-ltz p3, :cond_0
 
-    invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p4
 
-    invoke-static {p4, p1}, Landroidx/core/view/ViewCompat;->offsetTopAndBottom(Landroid/view/View;I)V
+    invoke-static {p4, p1}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;I)V
 
     add-int/lit8 p3, p3, -0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->invalidateScrollRanges()V
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->l()V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->haveChildWithInterpolator:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->e:Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result p3
 
@@ -1675,7 +1534,7 @@
     :goto_1
     if-ge p4, p3, :cond_2
 
-    invoke-virtual {p0, p4}, Lcom/google/android/material/appbar/AppBarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p4}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p5
 
@@ -1685,13 +1544,13 @@
 
     check-cast p5, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 
-    invoke-virtual {p5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->getScrollInterpolator()Landroid/view/animation/Interpolator;
+    invoke-virtual {p5}, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->b()Landroid/view/animation/Interpolator;
 
     move-result-object p5
 
     if-eqz p5, :cond_1
 
-    iput-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->haveChildWithInterpolator:Z
+    iput-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout;->e:Z
 
     goto :goto_2
 
@@ -1702,11 +1561,11 @@
 
     :cond_2
     :goto_2
-    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eqz p3, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result p4
 
@@ -1717,15 +1576,15 @@
     invoke-virtual {p3, p1, p1, p4, p5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :cond_3
-    iget-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftableOverride:Z
+    iget-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->i:Z
 
     if-nez p3, :cond_6
 
-    iget-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScroll:Z
+    iget-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->l:Z
 
     if-nez p3, :cond_5
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->hasCollapsibleChild()Z
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->j()Z
 
     move-result p3
 
@@ -1738,7 +1597,7 @@
 
     :cond_5
     :goto_3
-    invoke-direct {p0, p2}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftableState(Z)Z
+    invoke-direct {p0, p2}, Lcom/google/android/material/appbar/AppBarLayout;->t(Z)Z
 
     :cond_6
     return-void
@@ -1757,19 +1616,19 @@
 
     if-eq p1, v0, :cond_2
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->v(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->shouldOffsetFirstChild()Z
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->x()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v0
 
@@ -1791,7 +1650,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result p1
 
@@ -1807,135 +1666,47 @@
 
     move-result p2
 
-    invoke-static {p1, v0, p2}, Landroidx/core/math/MathUtils;->clamp(III)I
+    invoke-static {p1, v0, p2}, La/d/d/a;->b(III)I
 
     move-result v0
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result p1
 
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, v0}, Landroid/widget/LinearLayout;->setMeasuredDimension(II)V
 
     :cond_2
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->invalidateScrollRanges()V
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->l()V
 
     return-void
 .end method
 
-.method onOffsetChanged(I)V
-    .locals 3
-
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->currentOffset:I
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->willNotDraw()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    :goto_0
-    if-ge v1, v0, :cond_2
-
-    iget-object v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
-
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2, p0, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;->onOffsetChanged(Lcom/google/android/material/appbar/AppBarLayout;I)V
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-.end method
-
-.method onWindowInsetChanged(Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
-    .locals 2
-
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->lastInsets:Landroidx/core/view/WindowInsetsCompat;
-
-    invoke-static {v1, v0}, Landroidx/core/util/ObjectsCompat;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->lastInsets:Landroidx/core/view/WindowInsetsCompat;
-
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->updateWillNotDraw()V
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->requestLayout()V
-
-    :cond_1
-    return-object p1
-.end method
-
-.method public removeOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->listeners:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public removeOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;)V
+.method public p(Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->removeOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->o(Lcom/google/android/material/appbar/AppBarLayout$BaseOnOffsetChangedListener;)V
 
     return-void
 .end method
 
-.method resetPendingAction()V
+.method q()V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->pendingAction:I
+    iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->f:I
+
+    return-void
+.end method
+
+.method public r(ZZ)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;->s(ZZZ)V
 
     return-void
 .end method
@@ -1943,7 +1714,7 @@
 .method public setContentVelocity(I)V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -1951,13 +1722,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->findFirstScrollingBehaviorChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+    invoke-direct {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1967,9 +1738,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;
 
-    invoke-virtual {v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
+    invoke-virtual {v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->f()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object v0
 
@@ -1987,10 +1758,13 @@
 
 .method public setElevation(F)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setElevation(F)V
 
-    invoke-static {p0, p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->setElevation(Landroid/view/View;F)V
+    invoke-static {p0, p1}, Lcom/google/android/material/shape/f;->d(Landroid/view/View;F)V
 
     return-void
 .end method
@@ -1998,21 +1772,11 @@
 .method public setExpanded(Z)V
     .locals 1
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->N(Landroid/view/View;)Z
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setExpanded(ZZ)V
-
-    return-void
-.end method
-
-.method public setExpanded(ZZ)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setExpanded(ZZZ)V
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/appbar/AppBarLayout;->r(ZZ)V
 
     return-void
 .end method
@@ -2020,85 +1784,23 @@
 .method public setLiftOnScroll(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScroll:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->l:Z
 
     return-void
 .end method
 
 .method public setLiftOnScrollTargetViewId(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
 
-    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScrollTargetViewId:I
+    iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->m:I
 
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->clearLiftOnScrollTargetView()V
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->c()V
 
     return-void
-.end method
-
-.method public setLiftable(Z)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftableOverride:Z
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftableState(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public setLifted(Z)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setLiftedState(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method setLiftedState(Z)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->lifted:Z
-
-    if-eq v0, p1, :cond_1
-
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->lifted:Z
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->refreshDrawableState()V
-
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->liftOnScroll:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    invoke-direct {p0, v0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->startLiftOnScrollElevationOverlayAnimation(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
 .end method
 
 .method public setOrientation(I)V
@@ -2124,8 +1826,12 @@
 
 .method public setStatusBarForeground(Landroid/graphics/drawable/Drawable;)V
     .locals 2
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_5
 
@@ -2143,7 +1849,7 @@
     move-result-object v1
 
     :cond_1
-    iput-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iput-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_4
 
@@ -2153,26 +1859,26 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getDrawableState()[I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getDrawableState()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     :cond_2
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->m(Landroid/graphics/drawable/Drawable;I)Z
 
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getVisibility()I
 
     move-result v0
 
@@ -2190,14 +1896,14 @@
     :goto_0
     invoke-virtual {p1, v0, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     :cond_4
-    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->updateWillNotDraw()V
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout;->z()V
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->Y(Landroid/view/View;)V
 
     :cond_5
     return-void
@@ -2205,6 +1911,10 @@
 
 .method public setStatusBarForegroundColor(I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
@@ -2217,8 +1927,12 @@
 
 .method public setStatusBarForegroundResource(I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
-    invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2265,7 +1979,7 @@
     move p1, v0
 
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
@@ -2275,10 +1989,88 @@
     return-void
 .end method
 
-.method shouldLift(Landroid/view/View;)Z
+.method u(Z)Z
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->findLiftOnScrollTargetView(Landroid/view/View;)Landroid/view/View;
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->k:Z
+
+    if-eq v0, p1, :cond_1
+
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->k:Z
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->refreshDrawableState()V
+
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->l:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    invoke-direct {p0, v0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->y(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)V
+
+    :cond_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+.end method
+
+.method w(Landroid/view/View;)Z
+    .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->e(Landroid/view/View;)Landroid/view/View;
 
     move-result-object v0
 
@@ -2313,34 +2105,6 @@
 
     :cond_2
     const/4 p1, 0x0
-
-    :goto_1
-    return p1
-.end method
-
-.method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->statusBarForeground:Landroid/graphics/drawable/Drawable;
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
 
     :goto_1
     return p1

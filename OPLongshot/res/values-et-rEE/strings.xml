@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Teave</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Privaatsuspoliitika</string>
+    <string name="about_app_version_text">Versioon %s</string>
+    <string name="about_privacy_policy">Privaatsuseeskirjad</string>
     <string name="about_release_note_title">Uuenduste logi:</string>
     <string name="about_terms_service">Teenusetingimused</string>
     <string name="got_it">Selge</string>
@@ -11,6 +11,9 @@
     <string name="longshot_guide_support">Laiendatud kuvatõmmise proovimiseks puudutage siin.</string>
     <string name="not_support_longshot">Laiendatud kuvatõmmis pole sellel leheküljel toetatud.</string>
     <string name="notification_channel_screenshot">Ekraanipildid</string>
+    <string name="permission_btn_text_denied">Välju</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Lubade avaldus</string>
     <string name="quick_share_description1">"Pikk vajutus pisipildil
 jagamiseks"</string>
     <string name="quick_share_more_text">Rohkem</string>

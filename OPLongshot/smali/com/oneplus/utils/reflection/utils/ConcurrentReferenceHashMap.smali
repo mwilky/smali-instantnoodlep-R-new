@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 .super Ljava/util/AbstractMap;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/ConcurrentMap;
@@ -11,11 +11,11 @@
     value = {
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;,
-        Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceManager;,
+        Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;,
-        Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entries;,
+        Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;,
         Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;,
@@ -164,7 +164,7 @@
     :goto_0
     const-string v3, "Initial capacity must not be negative"
 
-    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/Assert;->isTrue(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -182,7 +182,7 @@
     :goto_1
     const-string v3, "Load factor must be positive"
 
-    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/Assert;->isTrue(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     if-lez p3, :cond_2
 
@@ -196,11 +196,11 @@
     :goto_2
     const-string v3, "Concurrency level must be positive"
 
-    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/Assert;->isTrue(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     const-string v2, "Reference type must not be null"
 
-    invoke-static {p4, v2}, Lcom/oneplus/utils/reflection/utils/Assert;->notNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v2}, Lcom/oneplus/utils/reflection/utils/a;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput p2, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->loadFactor:F
 
@@ -344,7 +344,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, p1, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->doTask(ILjava/lang/Object;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p1, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->f(ILjava/lang/Object;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -431,7 +431,7 @@
 
     aget-object v3, v0, v2
 
-    invoke-virtual {v3}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->clear()V
+    invoke-virtual {v3}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->d()V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -468,7 +468,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/oneplus/utils/reflection/utils/ObjectUtils;->nullSafeEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -485,19 +485,19 @@
     return p1
 .end method
 
-.method protected createReferenceManager()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceManager;
+.method protected createReferenceManager()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap<",
-            "TK;TV;>.ReferenceManager;"
+            "TK;TV;>.b;"
         }
     .end annotation
 
-    new-instance v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceManager;
+    new-instance v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceManager;-><init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;-><init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
 
     return-object v0
 .end method
@@ -648,7 +648,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, v0, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->getReference(Ljava/lang/Object;ILcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-virtual {v1, p1, v0, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->j(Ljava/lang/Object;ILcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object p1
 
@@ -698,7 +698,7 @@
 
     aget-object v4, v0, v3
 
-    invoke-virtual {v4, v2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->restructureIfNecessary(Z)V
+    invoke-virtual {v4, v2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->k(Z)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -907,7 +907,7 @@
 
     aget-object v4, v0, v2
 
-    invoke-virtual {v4}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->getCount()I
+    invoke-virtual {v4}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->h()I
 
     move-result v4
 

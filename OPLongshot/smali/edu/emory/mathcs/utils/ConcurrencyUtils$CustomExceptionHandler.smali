@@ -1,6 +1,6 @@
 .class Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomExceptionHandler;
 .super Ljava/lang/Object;
-.source "ConcurrencyUtils.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;

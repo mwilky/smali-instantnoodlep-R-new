@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchOneTask;
 .super Lcom/oneplus/screenshot/longshot/task/StitchOverTask;
-.source "StitchOneTask.java"
+.source ""
 
 
 # static fields
@@ -34,9 +34,9 @@
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/StitchOneTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     const/4 p1, 0x1
 

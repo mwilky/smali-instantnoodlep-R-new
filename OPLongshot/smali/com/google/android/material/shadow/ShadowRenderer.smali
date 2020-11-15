@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/shadow/ShadowRenderer;
 .super Ljava/lang/Object;
-.source "ShadowRenderer.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -21,8 +29,14 @@
 
 # instance fields
 .field private final cornerShadowPaint:Landroid/graphics/Paint;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private final edgeShadowPaint:Landroid/graphics/Paint;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private final scratch:Landroid/graphics/Path;
 
@@ -31,6 +45,9 @@
 .field private shadowMiddleColor:I
 
 .field private final shadowPaint:Landroid/graphics/Paint;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private shadowStartColor:I
 
@@ -153,6 +170,18 @@
 # virtual methods
 .method public drawCornerShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;IFF)V
     .locals 19
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     move-object/from16 v0, p0
 
@@ -346,6 +375,18 @@
 
 .method public drawEdgeShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;I)V
     .locals 9
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget v0, p3, Landroid/graphics/RectF;->bottom:F
 
@@ -387,11 +428,9 @@
 
     new-instance v8, Landroid/graphics/LinearGradient;
 
-    iget v1, p3, Landroid/graphics/RectF;->left:F
+    iget v3, p3, Landroid/graphics/RectF;->left:F
 
     iget v2, p3, Landroid/graphics/RectF;->top:F
-
-    iget v3, p3, Landroid/graphics/RectF;->left:F
 
     iget v4, p3, Landroid/graphics/RectF;->bottom:F
 
@@ -402,6 +441,8 @@
     sget-object v7, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
     move-object v0, v8
+
+    move v1, v3
 
     invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
@@ -422,6 +463,8 @@
 
 .method public getShadowPaint()Landroid/graphics/Paint;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/shadow/ShadowRenderer;->shadowPaint:Landroid/graphics/Paint;
 
@@ -433,7 +476,7 @@
 
     const/16 v0, 0x44
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
 
     move-result v0
 
@@ -441,7 +484,7 @@
 
     const/16 v0, 0x14
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
 
     move-result v0
 
@@ -449,7 +492,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
 
     move-result p1
 

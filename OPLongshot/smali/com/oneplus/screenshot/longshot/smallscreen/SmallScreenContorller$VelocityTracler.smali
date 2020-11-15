@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
 .super Ljava/lang/Object;
-.source "SmallScreenContorller.java"
+.source ""
 
 
 # annotations
@@ -62,50 +62,46 @@
 
 # virtual methods
 .method public isDrop()Z
-    .locals 9
+    .locals 10
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
 
-    iget v0, v0, Landroid/graphics/Point;->x:I
+    iget v1, v0, Landroid/graphics/Point;->x:I
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
 
-    iget v1, v1, Landroid/graphics/Point;->x:I
+    iget v3, v2, Landroid/graphics/Point;->x:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v1, v3
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
+    iget v0, v0, Landroid/graphics/Point;->y:I
 
-    iget v1, v1, Landroid/graphics/Point;->y:I
+    iget v0, v2, Landroid/graphics/Point;->y:I
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
+    iget-wide v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->endTime:J
 
-    iget v1, v1, Landroid/graphics/Point;->y:I
+    iget-wide v4, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->startTime:J
 
-    iget-wide v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->endTime:J
+    sub-long v6, v2, v4
 
-    iget-wide v3, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->startTime:J
+    const-wide/16 v8, 0x0
 
-    sub-long v5, v1, v3
+    cmp-long v0, v6, v8
 
-    const-wide/16 v7, 0x0
+    if-lez v0, :cond_0
 
-    cmp-long v5, v5, v7
+    mul-int/lit8 v0, v1, 0xa
 
-    if-lez v5, :cond_0
+    int-to-long v6, v0
 
-    mul-int/lit8 v5, v0, 0xa
+    sub-long/2addr v2, v4
 
-    int-to-long v5, v5
+    div-long/2addr v6, v2
 
-    sub-long/2addr v1, v3
-
-    div-long/2addr v5, v1
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->abs(J)J
+    invoke-static {v6, v7}, Ljava/lang/Math;->abs(J)J
 
     :cond_0
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 

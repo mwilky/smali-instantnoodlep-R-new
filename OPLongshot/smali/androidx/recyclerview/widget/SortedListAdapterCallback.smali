@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/SortedListAdapterCallback;
 .super Landroidx/recyclerview/widget/SortedList$Callback;
-.source "SortedListAdapterCallback.java"
+.source ""
 
 
 # annotations

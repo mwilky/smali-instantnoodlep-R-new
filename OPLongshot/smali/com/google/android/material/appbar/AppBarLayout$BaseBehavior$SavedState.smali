@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "AppBarLayout.java"
+.source ""
 
 
 # annotations
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field firstVisibleChildAtMinimumHeight:Z
+.field a:I
 
-.field firstVisibleChildIndex:I
+.field b:F
 
-.field firstVisibleChildPercentageShown:F
+.field c:Z
 
 
 # direct methods
@@ -49,6 +49,10 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
@@ -56,13 +60,13 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildIndex:I
+    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildPercentageShown:F
+    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -78,7 +82,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
 
     return-void
 .end method
@@ -95,18 +99,22 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildIndex:I
+    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildPercentageShown:F
+    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    iget-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
 
     int-to-byte p2, p2
 

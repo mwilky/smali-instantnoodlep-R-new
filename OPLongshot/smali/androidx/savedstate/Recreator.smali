@@ -1,15 +1,21 @@
 .class final Landroidx/savedstate/Recreator;
 .super Ljava/lang/Object;
-.source "Recreator.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/savedstate/Recreator$SavedStateProvider;
+        Landroidx/savedstate/Recreator$a;
     }
 .end annotation
 
@@ -21,16 +27,16 @@
 
 
 # instance fields
-.field private final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+.field private final mOwner:Landroidx/savedstate/b;
 
 
 # direct methods
-.method constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
+.method constructor <init>(Landroidx/savedstate/b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+    iput-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/b;
 
     return-void
 .end method
@@ -51,7 +57,7 @@
 
     move-result-object v0
 
-    const-class v2, Landroidx/savedstate/SavedStateRegistry$AutoRecreated;
+    const-class v2, Landroidx/savedstate/SavedStateRegistry$a;
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -79,13 +85,13 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/savedstate/SavedStateRegistry$AutoRecreated;
+    check-cast v0, Landroidx/savedstate/SavedStateRegistry$a;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+    iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/b;
 
-    invoke-interface {v0, p1}, Landroidx/savedstate/SavedStateRegistry$AutoRecreated;->onRecreated(Landroidx/savedstate/SavedStateRegistryOwner;)V
+    invoke-interface {v0, p1}, Landroidx/savedstate/SavedStateRegistry$a;->a(Landroidx/savedstate/b;)V
 
     return-void
 
@@ -173,22 +179,22 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
 
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, v0, :cond_3
 
-    invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->c(Landroidx/lifecycle/d;)V
 
-    iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+    iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/b;
 
-    invoke-interface {p1}, Landroidx/savedstate/SavedStateRegistryOwner;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
+    invoke-interface {p1}, Landroidx/savedstate/b;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
 
     move-result-object p1
 

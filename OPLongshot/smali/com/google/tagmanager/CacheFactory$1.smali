@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/CacheFactory$1;
 .super Ljava/lang/Object;
-.source "CacheFactory.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/tagmanager/CacheFactory$CacheSizeManager;

@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">%sతో షేర్ చేస్తుంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
     <string name="about_action_bar_title">పరిచయం</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">వర్షన్ %s</string>
     <string name="about_privacy_policy">గోప్యతా విధానం</string>
     <string name="about_release_note_title">అప్‌డేట్ లాగ్:</string>
     <string name="about_terms_service">సేవా నిబంధనలు</string>
@@ -40,6 +40,9 @@
     <string name="longshot_guide_support">విస్తరించబడ్డ స్క్రీన్‌షాట్ ప్రయత్నించడం కొరకు ఇక్కడ తట్టండి.</string>
     <string name="not_set">సెట్ చేయలేదు</string>
     <string name="not_support_longshot">ఈ పేజీ విస్తరించబడ్డ స్క్రీన్‌షాట్ మద్దతు ఇవ్వదు.</string>
+    <string name="permission_btn_text_denied">నిష్క్రమించు</string>
+    <string name="permission_btn_text_grant">సరే</string>
+    <string name="permission_dialog_title">అనుమతి ప్రకటన</string>
     <string name="preference_copied">\"%1$s\" క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది.</string>
     <string name="quick_share_description1">"షేర్ చెయ్యడానికి థంబ్ నెయిల్ 
 ని ఎక్కువసేపు నొక్కండి"</string>

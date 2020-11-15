@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "ScrimInsetsFrameLayout.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -9,6 +17,9 @@
 .field private drawTopInsetForeground:Z
 
 .field insetForeground:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field insets:Landroid/graphics/Rect;
 
@@ -18,6 +29,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -28,6 +43,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -38,6 +61,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 7
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -53,9 +84,9 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->drawBottomInsetForeground:Z
 
-    sget-object v3, Lcom/google/android/material/R$styleable;->ScrimInsetsFrameLayout:[I
+    sget-object v3, Lb/a/b/a/l;->ScrimInsetsFrameLayout:[I
 
-    sget v5, Lcom/google/android/material/R$style;->Widget_Design_ScrimInsetsFrameLayout:I
+    sget v5, Lb/a/b/a/k;->Widget_Design_ScrimInsetsFrameLayout:I
 
     const/4 v1, 0x0
 
@@ -71,7 +102,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->ScrimInsetsFrameLayout_insetForeground:I
+    sget p2, Lb/a/b/a/l;->ScrimInsetsFrameLayout_insetForeground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -81,13 +112,13 @@
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    new-instance p1, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;
+    new-instance p1, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Landroidx/core/view/m;)V
 
     return-void
 .end method
@@ -96,14 +127,18 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 8
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v1
 
@@ -119,13 +154,13 @@
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->getScrollX()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScrollX()I
 
     move-result v3
 
     int-to-float v3, v3
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->getScrollY()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScrollY()I
 
     move-result v4
 
@@ -187,19 +222,15 @@
 
     iget-object v5, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
 
-    iget v5, v5, Landroid/graphics/Rect;->top:I
+    iget v6, v5, Landroid/graphics/Rect;->top:I
 
-    iget-object v6, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
+    iget v7, v5, Landroid/graphics/Rect;->left:I
 
-    iget v6, v6, Landroid/graphics/Rect;->left:I
+    iget v5, v5, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v7, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
+    sub-int v5, v1, v5
 
-    iget v7, v7, Landroid/graphics/Rect;->bottom:I
-
-    sub-int v7, v1, v7
-
-    invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v3, v4, v6, v7, v5}, Landroid/graphics/Rect;->set(IIII)V
 
     iget-object v3, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insetForeground:Landroid/graphics/drawable/Drawable;
 
@@ -215,21 +246,17 @@
 
     iget-object v4, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
 
-    iget v4, v4, Landroid/graphics/Rect;->right:I
+    iget v5, v4, Landroid/graphics/Rect;->right:I
 
-    sub-int v4, v0, v4
+    sub-int v5, v0, v5
 
-    iget-object v5, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
+    iget v6, v4, Landroid/graphics/Rect;->top:I
 
-    iget v5, v5, Landroid/graphics/Rect;->top:I
+    iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v6, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
+    sub-int/2addr v1, v4
 
-    iget v6, v6, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v1, v6
-
-    invoke-virtual {v3, v4, v5, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v3, v5, v6, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
     iget-object v0, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insetForeground:Landroid/graphics/drawable/Drawable;
 
@@ -279,7 +306,7 @@
     return-void
 .end method
 
-.method protected onInsetsChanged(Landroidx/core/view/WindowInsetsCompat;)V
+.method protected onInsetsChanged(Landroidx/core/view/x;)V
     .locals 0
 
     return-void
@@ -303,6 +330,10 @@
 
 .method public setScrimInsetForeground(Landroid/graphics/drawable/Drawable;)V
     .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insetForeground:Landroid/graphics/drawable/Drawable;
 

@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/CircularArray;
 .super Ljava/lang/Object;
-.source "CircularArray.java"
+.source ""
 
 
 # annotations
@@ -75,8 +75,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    check-cast p1, [Ljava/lang/Object;
-
     iput-object p1, p0, Landroidx/collection/CircularArray;->mElements:[Ljava/lang/Object;
 
     return-void
@@ -126,8 +124,6 @@
     iget v2, p0, Landroidx/collection/CircularArray;->mHead:I
 
     invoke-static {v0, v6, v5, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    check-cast v5, [Ljava/lang/Object;
 
     iput-object v5, p0, Landroidx/collection/CircularArray;->mElements:[Ljava/lang/Object;
 

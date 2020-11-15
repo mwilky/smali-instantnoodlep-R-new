@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/appcompat/view/menu/CascadingMenuPopup$HorizPosition;
 .super Ljava/lang/Object;
-.source "CascadingMenuPopup.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

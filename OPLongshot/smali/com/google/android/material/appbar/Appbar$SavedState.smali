@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/Appbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "Appbar.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field isOverflowOpen:Z
+.field a:Z
 
 
 # direct methods
@@ -39,16 +39,6 @@
     invoke-direct {v0}, Lcom/google/android/material/appbar/Appbar$SavedState$1;-><init>()V
 
     sput-object v0, Lcom/google/android/material/appbar/Appbar$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/appbar/Appbar$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
@@ -72,7 +62,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/Appbar$SavedState;->isOverflowOpen:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/Appbar$SavedState;->a:Z
 
     return-void
 .end method
@@ -92,7 +82,7 @@
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/Appbar$SavedState;->isOverflowOpen:Z
+    iget-boolean p2, p0, Lcom/google/android/material/appbar/Appbar$SavedState;->a:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

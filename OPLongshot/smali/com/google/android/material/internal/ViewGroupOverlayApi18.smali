@@ -1,9 +1,15 @@
 .class Lcom/google/android/material/internal/ViewGroupOverlayApi18;
 .super Ljava/lang/Object;
-.source "ViewGroupOverlayApi18.java"
+.source ""
 
 # interfaces
-.implements Lcom/google/android/material/internal/ViewGroupOverlayImpl;
+.implements Lcom/google/android/material/internal/ViewOverlayImpl;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x12
+.end annotation
 
 
 # instance fields
@@ -13,6 +19,10 @@
 # direct methods
 .method constructor <init>(Landroid/view/ViewGroup;)V
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,6 +39,10 @@
 # virtual methods
 .method public add(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
@@ -39,6 +53,10 @@
 
 .method public add(Landroid/view/View;)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
@@ -49,6 +67,10 @@
 
 .method public remove(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
@@ -59,6 +81,10 @@
 
 .method public remove(Landroid/view/View;)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/internal/ViewGroupOverlayApi18;->viewGroupOverlay:Landroid/view/ViewGroupOverlay;
 

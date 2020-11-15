@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Κοινοποίηση στην εφαρμογή %s</string>
     <string name="abc_toolbar_collapse_description">Σύμπτυξη</string>
     <string name="about_action_bar_title">Πληροφορίες</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Έκδοση %s</string>
     <string name="about_privacy_policy">Πολιτική απορρήτου</string>
     <string name="about_release_note_title">Αρχείο καταγραφής ενημέρωσης:</string>
     <string name="about_terms_service">Όροι χρήσης υπηρεσίας</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">Στιγμιότυπα οθόνης</string>
     <string name="oneplus_delete">Διαγραφή</string>
     <string name="oneplus_share">Αποστολή</string>
+    <string name="permission_btn_text_denied">Έξοδος</string>
+    <string name="permission_btn_text_grant">OΚ</string>
+    <string name="permission_dialog_title">Δήλωση χορήγησης άδειας</string>
     <string name="preference_copied">Το \"%1$s\" αντιγράφηκε στο πρόχειρο.</string>
     <string name="quick_share_description1">"Πιέστε παρατεταμένα τη 
 μικρογραφία για να

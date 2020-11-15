@@ -1,6 +1,14 @@
 .class public Landroidx/appcompat/widget/TintTypedArray;
 .super Ljava/lang/Object;
-.source "TintTypedArray.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -82,6 +90,9 @@
 
 .method public getChangingConfigurations()I
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
 
     iget-object v0, p0, Landroidx/appcompat/widget/TintTypedArray;->mWrapped:Landroid/content/res/TypedArray;
 
@@ -273,8 +284,18 @@
     return p1
 .end method
 
-.method public getFont(IILandroidx/core/content/res/ResourcesCompat$FontCallback;)Landroid/graphics/Typeface;
+.method public getFont(IILandroidx/core/content/res/b$a;)Landroid/graphics/Typeface;
     .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/core/content/res/b$a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/appcompat/widget/TintTypedArray;->mWrapped:Landroid/content/res/TypedArray;
 
@@ -306,7 +327,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/TintTypedArray;->mTypedValue:Landroid/util/TypedValue;
 
-    invoke-static {v0, p1, v1, p2, p3}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/ResourcesCompat$FontCallback;)Landroid/graphics/Typeface;
+    invoke-static {v0, p1, v1, p2, p3}, Landroidx/core/content/res/b;->c(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/b$a;)Landroid/graphics/Typeface;
 
     move-result-object p1
 

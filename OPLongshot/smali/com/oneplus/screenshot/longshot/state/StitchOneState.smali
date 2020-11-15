@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchOneState;
 .super Lcom/oneplus/screenshot/longshot/state/StitchOverState;
-.source "StitchOneState.java"
+.source ""
 
 
 # static fields
@@ -23,15 +23,15 @@
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/StitchOneTask;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/StitchOneState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/StitchOneState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/StitchOneState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getIndex()I
 

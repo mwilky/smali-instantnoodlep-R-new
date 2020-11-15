@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "AbsJoinState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/task/JoinTask$OnJoinListener;
@@ -32,7 +32,7 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getJoinCache()Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
@@ -40,7 +40,7 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getRunnableCache()Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 
@@ -75,7 +75,7 @@
 
     new-array p2, p2, [Ljava/lang/Void;
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {p1, p2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
@@ -95,7 +95,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     :cond_0
     invoke-static {}, Landroid/os/Trace;->endSection()V
@@ -108,13 +108,13 @@
 .method protected getErrorText()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0f0039
+    const v1, 0x7f100039
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -151,7 +151,7 @@
 .method protected getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->getContext()Landroid/content/Context;
 
@@ -159,7 +159,7 @@
 
     sget-object v1, Lcom/oneplus/screenshot/statistics/EventStatistics$Error;->JOIN:Lcom/oneplus/screenshot/statistics/EventStatistics$Error;
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/BaseState;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->updateIndex()V
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
@@ -234,7 +234,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
@@ -252,7 +252,7 @@
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->updateIndex()V
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/shape/CornerFamily;
 .super Ljava/lang/Object;
-.source "CornerFamily.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;
 .super Landroid/os/AsyncTask;
-.source "GlobalScreenshot.java"
+.source ""
 
 
 # annotations

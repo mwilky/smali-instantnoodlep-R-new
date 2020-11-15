@@ -1,20 +1,20 @@
 .class public Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$Behavior;
-.source "FabScrollBehavior.java"
+.source ""
 
 
 # instance fields
-.field private mFabList:Ljava/util/ArrayList;
+.field private a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/google/android/material/floatingactionbutton/FloatingActionButton;",
+            "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private mViewList:Ljava/util/List;
+.field private b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -24,13 +24,11 @@
     .end annotation
 .end field
 
-.field private visible:Z
-
-.field private visibleList:Ljava/util/ArrayList;
+.field private c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Ljava/lang/Boolean;",
+            "Lcom/google/android/material/floatingactionbutton/FloatingActionButton;",
             ">;"
         }
     .end annotation
@@ -43,60 +41,62 @@
 
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$Behavior;-><init>()V
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visible:Z
-
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visibleList:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onHide(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+.method public a(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 0
 
-    invoke-virtual {p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->hideWithAnim()V
+    invoke-virtual {p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->m()V
 
     return-void
 .end method
 
-.method public bridge synthetic onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
+.method public b(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;IIIII[I)V
     .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p9    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    check-cast p2, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    invoke-super/range {p0 .. p9}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
 
-    invoke-virtual/range {p0 .. p9}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;IIIII[I)V
-
-    return-void
-.end method
-
-.method public onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;IIIII[I)V
-    .locals 0
-
-    invoke-super/range {p0 .. p9}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$Behavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
-
-    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mViewList:Ljava/util/List;
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b:Ljava/util/List;
 
     if-nez p2, :cond_0
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getRootView()Landroid/view/View;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getRootView()Landroid/view/View;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/oneplus/common/OPViewGroupUtils;->getAllChildViews(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p1}, Lb/b/a/f;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mViewList:Ljava/util/List;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b:Ljava/util/List;
 
     :cond_0
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
     if-nez p1, :cond_1
 
@@ -104,10 +104,10 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
     :cond_1
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -115,50 +115,46 @@
 
     const/4 p2, 0x0
 
-    const/4 p3, 0x1
-
     if-eqz p1, :cond_3
 
     move p1, p2
 
     :goto_0
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mViewList:Ljava/util/List;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b:Ljava/util/List;
 
-    invoke-interface {p4}, Ljava/util/List;->size()I
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    move-result p4
+    move-result p3
 
-    if-ge p1, p4, :cond_3
+    if-ge p1, p3, :cond_3
 
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mViewList:Ljava/util/List;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b:Ljava/util/List;
+
+    invoke-interface {p3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    instance-of p3, p3, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    if-eqz p3, :cond_2
+
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
+
+    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b:Ljava/util/List;
 
     invoke-interface {p4, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p4
 
-    instance-of p4, p4, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    check-cast p4, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    if-eqz p4, :cond_2
+    invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a:Ljava/util/ArrayList;
 
-    iget-object p6, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mViewList:Ljava/util/List;
+    sget-object p4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-interface {p6, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p6
-
-    check-cast p6, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    invoke-virtual {p4, p6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visibleList:Ljava/util/ArrayList;
-
-    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p6
-
-    invoke-virtual {p4, p6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
     add-int/lit8 p1, p1, 0x1
@@ -166,7 +162,7 @@
     goto :goto_0
 
     :cond_3
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -174,77 +170,71 @@
 
     if-nez p1, :cond_6
 
-    move p1, p2
-
     :goto_1
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result p4
+    move-result p1
 
-    if-ge p1, p4, :cond_6
+    if-ge p2, p1, :cond_6
 
-    iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->mFabList:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {p4, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object p4
+    move-result-object p1
 
-    check-cast p4, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+    check-cast p1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    if-eqz p4, :cond_5
+    if-eqz p1, :cond_5
 
-    invoke-virtual {p4}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getScrollHideBoolean()Z
+    invoke-virtual {p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getScrollHideBoolean()Z
 
-    move-result p6
+    move-result p3
 
-    if-eqz p6, :cond_5
+    if-eqz p3, :cond_5
 
     if-lez p5, :cond_4
 
-    iget-object p6, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p6, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object p6
+    move-result-object p3
 
-    check-cast p6, Ljava/lang/Boolean;
+    check-cast p3, Ljava/lang/Boolean;
 
-    invoke-virtual {p6}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p6
+    move-result p3
 
-    if-eqz p6, :cond_4
+    if-eqz p3, :cond_4
 
-    iget-object p6, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a:Ljava/util/ArrayList;
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object p7
+    invoke-virtual {p3, p2, p4}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p6, p1, p7}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p4}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->onHide(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
 
     goto :goto_2
 
     :cond_4
     if-gez p5, :cond_5
 
-    iget-object p6, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->visibleList:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->a:Ljava/util/ArrayList;
 
-    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    move-result-object p7
+    invoke-virtual {p3, p2, p4}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p6, p1, p7}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p4}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->onShow(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->c(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
 
     :cond_5
     :goto_2
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_1
 
@@ -252,34 +242,22 @@
     return-void
 .end method
 
-.method public onShow(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+.method public c(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 0
 
-    invoke-virtual {p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->showWithAnim()V
+    invoke-virtual {p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->u()V
 
     return-void
 .end method
 
-.method public bridge synthetic onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z
-    .locals 0
-
-    check-cast p2, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    invoke-virtual/range {p0 .. p5}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;Landroid/view/View;I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;Landroid/view/View;I)Z
+.method public d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;Landroid/view/View;I)Z
     .locals 1
 
     const/4 v0, 0x2
 
     if-eq p5, v0, :cond_1
 
-    invoke-super/range {p0 .. p5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$Behavior;->onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z
+    invoke-super/range {p0 .. p5}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z
 
     move-result p1
 
@@ -297,5 +275,43 @@
     const/4 p1, 0x1
 
     :goto_1
+    return p1
+.end method
+
+.method public bridge synthetic onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
+    .locals 0
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p9    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    check-cast p2, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual/range {p0 .. p9}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->b(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;IIIII[I)V
+
+    return-void
+.end method
+
+.method public bridge synthetic onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z
+    .locals 0
+
+    check-cast p2, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual/range {p0 .. p5}, Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;->d(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/view/View;Landroid/view/View;I)Z
+
+    move-result p1
+
     return p1
 .end method

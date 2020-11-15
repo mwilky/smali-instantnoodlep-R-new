@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
 .super Ljava/lang/Enum;
-.source "BitmapDumper.java"
+.source ""
 
 
 # annotations

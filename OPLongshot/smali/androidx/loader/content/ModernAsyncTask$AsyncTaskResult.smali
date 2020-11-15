@@ -1,6 +1,6 @@
 .class Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;
 .super Ljava/lang/Object;
-.source "ModernAsyncTask.java"
+.source ""
 
 
 # annotations

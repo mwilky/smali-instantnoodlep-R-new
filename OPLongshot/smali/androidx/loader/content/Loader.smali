@@ -1,6 +1,6 @@
 .class public Landroidx/loader/content/Loader;
 .super Ljava/lang/Object;
-.source "Loader.java"
+.source ""
 
 
 # annotations
@@ -8,7 +8,7 @@
     value = {
         Landroidx/loader/content/Loader$OnLoadCanceledListener;,
         Landroidx/loader/content/Loader$OnLoadCompleteListener;,
-        Landroidx/loader/content/Loader$ForceLoadContentObserver;
+        Landroidx/loader/content/Loader$a;
     }
 .end annotation
 
@@ -59,6 +59,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,6 +93,8 @@
 # virtual methods
 .method public abandon()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -101,6 +107,8 @@
 
 .method public cancelLoad()Z
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onCancelLoad()Z
 
@@ -121,6 +129,13 @@
 
 .method public dataToString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)",
@@ -149,6 +164,8 @@
 
 .method public deliverCancellation()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-object v0, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
@@ -162,6 +179,13 @@
 
 .method public deliverResult(Ljava/lang/Object;)V
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)V"
@@ -274,6 +298,8 @@
 
 .method public forceLoad()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onForceLoad()V
 
@@ -282,6 +308,8 @@
 
 .method public getContext()Landroid/content/Context;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-object v0, p0, Landroidx/loader/content/Loader;->mContext:Landroid/content/Context;
 
@@ -322,12 +350,16 @@
 
 .method protected onAbandon()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method
 
 .method protected onCancelLoad()Z
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -336,6 +368,8 @@
 
 .method public onContentChanged()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
@@ -356,30 +390,45 @@
 
 .method protected onForceLoad()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method
 
 .method protected onReset()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method
 
 .method protected onStartLoading()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method
 
 .method protected onStopLoading()V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method
 
 .method public registerListener(ILandroidx/loader/content/Loader$OnLoadCompleteListener;)V
     .locals 1
+    .param p2    # Landroidx/loader/content/Loader$OnLoadCompleteListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -410,6 +459,13 @@
 
 .method public registerOnLoadCanceledListener(Landroidx/loader/content/Loader$OnLoadCanceledListener;)V
     .locals 1
+    .param p1    # Landroidx/loader/content/Loader$OnLoadCanceledListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -438,6 +494,8 @@
 
 .method public reset()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onReset()V
 
@@ -473,6 +531,8 @@
 
 .method public final startLoading()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -491,6 +551,8 @@
 
 .method public stopLoading()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -551,6 +613,13 @@
 
 .method public unregisterListener(Landroidx/loader/content/Loader$OnLoadCompleteListener;)V
     .locals 1
+    .param p1    # Landroidx/loader/content/Loader$OnLoadCompleteListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -592,6 +661,13 @@
 
 .method public unregisterOnLoadCanceledListener(Landroidx/loader/content/Loader$OnLoadCanceledListener;)V
     .locals 1
+    .param p1    # Landroidx/loader/content/Loader$OnLoadCanceledListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

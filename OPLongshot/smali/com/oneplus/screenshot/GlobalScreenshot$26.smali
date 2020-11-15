@@ -1,9 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$26;
-.super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
-
-# interfaces
-.implements Landroid/view/animation/Interpolator;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source ""
 
 
 # annotations
@@ -27,40 +24,41 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$26;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getInterpolation(F)F
-    .locals 5
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    const v0, 0x3f1aca6b
+    return-void
+.end method
 
-    cmpg-float v1, p1, v0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
-    if-gtz v1, :cond_0
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$26;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    const-wide v1, 0x400921fb54442d18L    # Math.PI
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
 
-    div-float/2addr p1, v0
+    move-result-object p1
 
-    float-to-double v3, p1
+    const/4 v0, 0x0
 
-    mul-double/2addr v3, v1
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$26;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    move-result-wide v0
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
 
-    double-to-float p1, v0
+    move-result-object p1
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    return p1
+    return-void
 .end method

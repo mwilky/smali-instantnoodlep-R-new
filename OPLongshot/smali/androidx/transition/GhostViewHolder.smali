@@ -1,12 +1,23 @@
 .class Landroidx/transition/GhostViewHolder;
 .super Landroid/widget/FrameLayout;
-.source "GhostViewHolder.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "ViewConstructor"
+    }
+.end annotation
 
 
 # instance fields
 .field private mAttached:Z
 
 .field private mParent:Landroid/view/ViewGroup;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -21,21 +32,21 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroidx/transition/GhostViewHolder;->setClipChildren(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
     iput-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Landroidx/transition/R$id;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
+    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Landroidx/transition/ViewGroupOverlayImpl;->add(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Landroidx/transition/t;->add(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
@@ -46,8 +57,12 @@
 
 .method static getHolder(Landroid/view/ViewGroup;)Landroidx/transition/GhostViewHolder;
     .locals 1
+    .param p0    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    sget v0, Landroidx/transition/R$id;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
@@ -73,7 +88,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p0}, Landroidx/transition/GhostViewHolder;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result v1
 
@@ -88,7 +103,7 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    invoke-virtual {p0, v3}, Landroidx/transition/GhostViewHolder;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -212,7 +227,7 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
-    invoke-static {v0, v2}, Landroidx/transition/ViewGroupUtils;->getChildDrawingOrder(Landroid/view/ViewGroup;I)I
+    invoke-static {v0, v2}, Landroidx/transition/u;->a(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
@@ -363,7 +378,7 @@
 
     if-ltz v0, :cond_1
 
-    invoke-virtual {p0}, Landroidx/transition/GhostViewHolder;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result v1
 
@@ -372,13 +387,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, p1, v0}, Landroidx/transition/GhostViewHolder;->addView(Landroid/view/View;I)V
+    invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    invoke-virtual {p0, p1}, Landroidx/transition/GhostViewHolder;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     :goto_1
     return-void
@@ -410,7 +425,7 @@
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onViewRemoved(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Landroidx/transition/GhostViewHolder;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result v0
 
@@ -420,14 +435,14 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-virtual {p0, v1}, Landroidx/transition/GhostViewHolder;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
     if-eq v0, p1, :cond_1
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/transition/GhostViewHolder;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p1
 
@@ -436,7 +451,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Landroidx/transition/R$id;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     const/4 v2, 0x0
 
@@ -444,11 +459,11 @@
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
+    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Landroidx/transition/ViewGroupOverlayImpl;->remove(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Landroidx/transition/t;->remove(Landroid/view/View;)V
 
     iput-boolean v1, p0, Landroidx/transition/GhostViewHolder;->mAttached:Z
 
@@ -465,19 +480,19 @@
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
+    invoke-static {v0}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Landroidx/transition/ViewGroupOverlayImpl;->remove(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Landroidx/transition/t;->remove(Landroid/view/View;)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Landroidx/transition/ViewGroupUtils;->getOverlay(Landroid/view/ViewGroup;)Landroidx/transition/ViewGroupOverlayImpl;
+    invoke-static {v0}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Landroidx/transition/ViewGroupOverlayImpl;->add(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Landroidx/transition/t;->add(Landroid/view/View;)V
 
     return-void
 

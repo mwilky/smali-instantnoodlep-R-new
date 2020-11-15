@@ -1,21 +1,12 @@
 .class final Landroidx/transition/ChangeImageTransform$1;
 .super Ljava/lang/Object;
-.source "ChangeImageTransform.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/transition/ChangeImageTransform;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",

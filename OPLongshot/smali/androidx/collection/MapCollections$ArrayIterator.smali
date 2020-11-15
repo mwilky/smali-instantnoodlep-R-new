@@ -1,6 +1,6 @@
 .class final Landroidx/collection/MapCollections$ArrayIterator;
 .super Ljava/lang/Object;
-.source "MapCollections.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;

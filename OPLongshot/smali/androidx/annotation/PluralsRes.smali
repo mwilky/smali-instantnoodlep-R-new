@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/PluralsRes;
 .super Ljava/lang/Object;
-.source "PluralsRes.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

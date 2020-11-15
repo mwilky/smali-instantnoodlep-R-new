@@ -1,9 +1,17 @@
 .class public Lcom/google/android/material/tabbar/TabBarItemView;
 .super Landroid/widget/FrameLayout;
-.source "TabBarItemView.java"
+.source ""
 
 # interfaces
-.implements Landroidx/appcompat/view/menu/MenuView$ItemView;
+.implements Landroidx/appcompat/view/menu/MenuView$a;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -12,28 +20,57 @@
 .field public static final INVALID_ITEM_POSITION:I = -0x1
 
 .field private static final ITEM_BOTTOM_MARGIN:I = 0x5
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x0
+    .end annotation
+.end field
 
 .field private static final ITEM_LEFT_MARGIN:I = 0x8
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x0
+    .end annotation
+.end field
 
 .field private static final ITEM_LINE_HEIGHT:I = 0x8
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x0
+    .end annotation
+.end field
 
 .field private static final ITEM_TOP_MARGIN:I = 0x6
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x0
+    .end annotation
+.end field
 
 .field private static final ITEM_TOP_MARGIN_WITHOUTANIM:I = 0x6
+    .annotation build Landroidx/annotation/Dimension;
+        unit = 0x0
+    .end annotation
+.end field
 
 .field private static final POST_DELAY_TIME:I = 0x5dc
 
 
 # instance fields
 .field private badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private icon:Landroid/widget/ImageView;
 
 .field private iconTint:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private isShifting:Z
 
 .field private itemData:Landroidx/appcompat/view/menu/MenuItemImpl;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private itemPosition:I
 
@@ -44,8 +81,14 @@
 .field private mLineDrawable:Landroid/graphics/drawable/Drawable;
 
 .field private originalIconDrawable:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -69,6 +112,10 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -79,6 +126,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -89,6 +144,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -100,19 +163,19 @@
 
     iput-boolean p2, p0, Lcom/google/android/material/tabbar/TabBarItemView;->mDisplay:Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    sget p3, Lcom/google/android/material/R$layout;->op_tab_bar_item:I
+    sget p3, Lb/a/b/a/h;->op_tab_bar_item:I
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget p1, Lcom/google/android/material/R$id;->icon:I
+    sget p1, Lb/a/b/a/f;->icon:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/tabbar/TabBarItemView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -120,15 +183,15 @@
 
     iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/tabbar/TabBarItemView;->setFocusable(Z)V
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setFocusable(Z)V
 
     iget-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
-    new-instance p2, Lcom/google/android/material/tabbar/TabBarItemView$1;
+    new-instance p2, Lcom/google/android/material/tabbar/TabBarItemView$a;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/tabbar/TabBarItemView$1;-><init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/tabbar/TabBarItemView$a;-><init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -162,6 +225,8 @@
 
 .method private getCustomParentForBadge(Landroid/view/View;)Landroid/widget/FrameLayout;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
 
@@ -173,9 +238,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
-
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
@@ -212,9 +275,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/tabbar/TabBarItemView$2;
+    new-instance v0, Lcom/google/android/material/tabbar/TabBarItemView$b;
 
-    invoke-direct {v0, p0}, Lcom/google/android/material/tabbar/TabBarItemView$2;-><init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
+    invoke-direct {v0, p0}, Lcom/google/android/material/tabbar/TabBarItemView$b;-><init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
 
     iget v1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->itemPosition:I
 
@@ -224,12 +287,12 @@
 
     int-to-long v1, v1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/material/tabbar/TabBarItemView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -249,6 +312,10 @@
 
 .method private setViewLayoutParams(Landroid/view/View;II)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -267,6 +334,10 @@
 
 .method private setViewValues(Landroid/view/View;FFI)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
 
@@ -287,11 +358,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$drawable;->op_tabbar_land_short:I
+    sget v1, Lb/a/b/a/e;->op_tabbar_land_short:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -314,7 +385,7 @@
     move-result-object v0
 
     :goto_1
-    invoke-static {v0}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -328,7 +399,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_2
     iget-object v1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
@@ -339,7 +410,7 @@
 
     const/4 v1, -0x1
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -355,7 +426,7 @@
 
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -369,7 +440,7 @@
 
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -390,6 +461,10 @@
 
 .method private tryAttachBadgeToAnchor(Landroid/view/View;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->hasBadge()Z
 
@@ -404,9 +479,9 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabbar/TabBarItemView;->setClipChildren(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabbar/TabBarItemView;->setClipToPadding(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipToPadding(Z)V
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
@@ -422,6 +497,10 @@
 
 .method private tryRemoveBadgeFromAnchor(Landroid/view/View;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->hasBadge()Z
 
@@ -436,9 +515,9 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabbar/TabBarItemView;->setClipChildren(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/tabbar/TabBarItemView;->setClipToPadding(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClipToPadding(Z)V
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
@@ -483,6 +562,8 @@
 # virtual methods
 .method getBadge()Lcom/google/android/material/badge/BadgeDrawable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
@@ -507,6 +588,10 @@
 
 .method public initialize(Landroidx/appcompat/view/menu/MenuItemImpl;I)V
     .locals 1
+    .param p1    # Landroidx/appcompat/view/menu/MenuItemImpl;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->itemData:Landroidx/appcompat/view/menu/MenuItemImpl;
 
@@ -545,7 +630,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/tabbar/TabBarItemView;->setId(I)V
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setId(I)V
 
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -561,7 +646,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/google/android/material/tabbar/TabBarItemView;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->isVisible()Z
@@ -578,7 +663,7 @@
     const/16 p1, 0x8
 
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/google/android/material/tabbar/TabBarItemView;->setVisibility(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     return-void
 .end method
@@ -612,7 +697,7 @@
 
     sget-object v0, Lcom/google/android/material/tabbar/TabBarItemView;->CHECKED_STATE_SET:[I
 
-    invoke-static {p1, v0}, Lcom/google/android/material/tabbar/TabBarItemView;->mergeDrawableStates([I[I)[I
+    invoke-static {p1, v0}, Landroid/widget/FrameLayout;->mergeDrawableStates([I[I)[I
 
     :cond_0
     return-object p1
@@ -620,6 +705,10 @@
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 6
+    .param p1    # Landroid/view/accessibility/AccessibilityNodeInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
@@ -627,7 +716,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/google/android/material/badge/BadgeDrawable;->isVisible()Z
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
 
     move-result v0
 
@@ -670,7 +759,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
-    invoke-virtual {v0}, Lcom/google/android/material/badge/BadgeDrawable;->getContentDescription()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/google/android/material/badge/BadgeDrawable;->h()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -683,7 +772,7 @@
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
-    invoke-static {p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->wrap(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+    invoke-static {p1}, Landroidx/core/view/accessibility/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
@@ -699,17 +788,17 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->isSelected()Z
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->isSelected()Z
 
     move-result v5
 
-    invoke-static/range {v0 .. v5}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->obtain(IIIIZZ)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;
+    invoke-static/range {v0 .. v5}, Landroidx/core/view/accessibility/d$c;->a(IIIIZZ)Landroidx/core/view/accessibility/d$c;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setCollectionItemInfo(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->Z(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->isSelected()Z
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->isSelected()Z
 
     move-result v0
 
@@ -717,16 +806,16 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClickable(Z)V
+    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->X(Z)V
 
-    sget-object v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_CLICK:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    sget-object v0, Landroidx/core/view/accessibility/d$a;->e:Landroidx/core/view/accessibility/d$a;
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->removeAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)Z
+    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->N(Landroidx/core/view/accessibility/d$a;)Z
 
     :cond_2
     const-string v0, "Tab"
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setRoleDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->n0(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -751,6 +840,10 @@
 
 .method setBadge(Lcom/google/android/material/badge/BadgeDrawable;)V
     .locals 0
+    .param p1    # Lcom/google/android/material/badge/BadgeDrawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
 
@@ -767,7 +860,7 @@
 .method public setCheckable(Z)V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->refreshDrawableState()V
 
     return-void
 .end method
@@ -775,9 +868,9 @@
 .method public setChecked(Z)V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->refreshDrawableState()V
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->refreshDrawableState()V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/tabbar/TabBarItemView;->setSelected(Z)V
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setSelected(Z)V
 
     return-void
 .end method
@@ -801,31 +894,33 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     const/16 v0, 0x3ea
 
-    invoke-static {p1, v0}, Landroidx/core/view/PointerIconCompat;->getSystemIcon(Landroid/content/Context;I)Landroidx/core/view/PointerIconCompat;
+    invoke-static {p1, v0}, Landroidx/core/view/o;->b(Landroid/content/Context;I)Landroidx/core/view/o;
 
     move-result-object p1
-
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setPointerIcon(Landroid/view/View;Landroidx/core/view/PointerIconCompat;)V
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setPointerIcon(Landroid/view/View;Landroidx/core/view/PointerIconCompat;)V
-
     :goto_0
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Landroidx/core/view/o;)V
+
     return-void
 .end method
 
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->originalIconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -852,7 +947,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -866,7 +961,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_2
     iget-object v0, p0, Lcom/google/android/material/tabbar/TabBarItemView;->icon:Landroid/widget/ImageView;
@@ -911,7 +1006,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     iget-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView;->wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -931,11 +1026,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/tabbar/TabBarItemView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -947,6 +1042,10 @@
 
 .method public setItemBackground(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_0
 
@@ -969,7 +1068,7 @@
     move-result-object p1
 
     :cond_0
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

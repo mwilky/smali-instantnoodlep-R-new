@@ -1,6 +1,6 @@
 .class Landroidx/animation/PathKeyframes;
 .super Ljava/lang/Object;
-.source "PathKeyframes.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes;
@@ -94,7 +94,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p1, p2}, Landroidx/animation/PathUtils;->createKeyFrameData(Landroid/graphics/Path;F)[F
+    invoke-static {p1, p2}, Landroidx/animation/g;->b(Landroid/graphics/Path;F)[F
 
     move-result-object p1
 
@@ -229,11 +229,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/animation/PathKeyframes;->clone()Landroidx/animation/Keyframes;
 
@@ -245,9 +240,9 @@
 .method public createXFloatKeyframes()Landroidx/animation/Keyframes$FloatKeyframes;
     .locals 1
 
-    new-instance v0, Landroidx/animation/PathKeyframes$1;
+    new-instance v0, Landroidx/animation/PathKeyframes$a;
 
-    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$1;-><init>(Landroidx/animation/PathKeyframes;)V
+    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$a;-><init>(Landroidx/animation/PathKeyframes;)V
 
     return-object v0
 .end method
@@ -255,9 +250,9 @@
 .method public createXIntKeyframes()Landroidx/animation/Keyframes$IntKeyframes;
     .locals 1
 
-    new-instance v0, Landroidx/animation/PathKeyframes$3;
+    new-instance v0, Landroidx/animation/PathKeyframes$c;
 
-    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$3;-><init>(Landroidx/animation/PathKeyframes;)V
+    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$c;-><init>(Landroidx/animation/PathKeyframes;)V
 
     return-object v0
 .end method
@@ -265,9 +260,9 @@
 .method public createYFloatKeyframes()Landroidx/animation/Keyframes$FloatKeyframes;
     .locals 1
 
-    new-instance v0, Landroidx/animation/PathKeyframes$2;
+    new-instance v0, Landroidx/animation/PathKeyframes$b;
 
-    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$2;-><init>(Landroidx/animation/PathKeyframes;)V
+    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$b;-><init>(Landroidx/animation/PathKeyframes;)V
 
     return-object v0
 .end method
@@ -275,9 +270,9 @@
 .method public createYIntKeyframes()Landroidx/animation/Keyframes$IntKeyframes;
     .locals 1
 
-    new-instance v0, Landroidx/animation/PathKeyframes$4;
+    new-instance v0, Landroidx/animation/PathKeyframes$d;
 
-    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$4;-><init>(Landroidx/animation/PathKeyframes;)V
+    invoke-direct {v0, p0}, Landroidx/animation/PathKeyframes$d;-><init>(Landroidx/animation/PathKeyframes;)V
 
     return-object v0
 .end method
@@ -369,9 +364,9 @@
     return-object p1
 
     :cond_2
-    if-nez v2, :cond_3
-
     sub-int/2addr v0, v4
+
+    if-nez v2, :cond_3
 
     invoke-direct {p0, v0}, Landroidx/animation/PathKeyframes;->pointForIndex(I)Landroid/graphics/PointF;
 
@@ -380,8 +375,6 @@
     return-object p1
 
     :cond_3
-    sub-int/2addr v0, v4
-
     move v1, v3
 
     :goto_0

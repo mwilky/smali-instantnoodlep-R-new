@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/indicator/draw/data/RtlMode;
 .super Ljava/lang/Enum;
-.source "RtlMode.java"
+.source ""
 
 
 # annotations

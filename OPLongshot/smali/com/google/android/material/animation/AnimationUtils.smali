@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/animation/AnimationUtils;
 .super Ljava/lang/Object;
-.source "AnimationUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -25,21 +33,21 @@
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
+    new-instance v0, La/f/a/a/b;
 
-    invoke-direct {v0}, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;-><init>()V
+    invoke-direct {v0}, La/f/a/a/b;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;
+    new-instance v0, La/f/a/a/a;
 
-    invoke-direct {v0}, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;-><init>()V
+    invoke-direct {v0}, La/f/a/a/a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_LINEAR_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    new-instance v0, La/f/a/a/c;
 
-    invoke-direct {v0}, Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;-><init>()V
+    invoke-direct {v0}, La/f/a/a/c;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 

@@ -1,12 +1,18 @@
 .class Landroidx/core/text/util/FindAddress;
 .super Ljava/lang/Object;
-.source "FindAddress.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/text/util/FindAddress$ZipRange;
+        Landroidx/core/text/util/FindAddress$a;
     }
 .end annotation
 
@@ -46,7 +52,7 @@
 
 .field private static final sStateRe:Ljava/util/regex/Pattern;
 
-.field private static final sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$ZipRange;
+.field private static final sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$a;
 
 .field private static final sSuffixedNumberRe:Ljava/util/regex/Pattern;
 
@@ -61,211 +67,211 @@
 
     const/16 v0, 0x3b
 
-    new-array v0, v0, [Landroidx/core/text/util/FindAddress$ZipRange;
+    new-array v0, v0, [Landroidx/core/text/util/FindAddress$a;
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x63
 
     const/4 v3, -0x1
 
-    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v4, 0x0
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v5, 0x23
 
     const/16 v6, 0x24
 
-    invoke-direct {v1, v5, v6, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v6, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v5, 0x1
 
     aput-object v1, v0, v5
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v6, 0x47
 
     const/16 v7, 0x48
 
-    invoke-direct {v1, v6, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v6, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v6, 0x2
 
     aput-object v1, v0, v6
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v7, 0x60
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v8, 0x3
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v9, 0x55
 
     const/16 v10, 0x56
 
-    invoke-direct {v1, v9, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v9, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v9, 0x4
 
     aput-object v1, v0, v9
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v10, 0x5a
 
-    invoke-direct {v1, v10, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v10, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v10, 0x5
 
     aput-object v1, v0, v10
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v11, 0x50
 
     const/16 v12, 0x51
 
-    invoke-direct {v1, v11, v12, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v11, v12, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v11, 0x6
 
     aput-object v1, v0, v11
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v11, v11, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v11, v11, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/4 v12, 0x7
 
     aput-object v1, v0, v12
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v12, 0x14
 
-    invoke-direct {v1, v12, v12, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v12, v12, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v13, 0x8
 
     aput-object v1, v0, v13
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v13, 0x13
 
-    invoke-direct {v1, v13, v13, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v13, v13, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v14, 0x9
 
     aput-object v1, v0, v14
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v15, 0x20
 
     const/16 v2, 0x22
 
-    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xa
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xb
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x1e
 
     const/16 v15, 0x1f
 
-    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xc
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xd
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xe
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x32
 
     const/16 v15, 0x34
 
-    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0xf
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x53
 
-    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v15, 0x10
 
     aput-object v1, v0, v15
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v15, 0x3c
 
     const/16 v2, 0x3e
 
-    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x11
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x2e
 
     const/16 v15, 0x2f
 
-    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v15, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x12
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x42
 
@@ -273,185 +279,185 @@
 
     const/16 v10, 0x49
 
-    invoke-direct {v1, v2, v15, v10, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v15, v10, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     aput-object v1, v0, v13
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x28
 
     const/16 v10, 0x2a
 
-    invoke-direct {v1, v2, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     aput-object v1, v0, v12
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x46
 
     const/16 v10, 0x47
 
-    invoke-direct {v1, v2, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x15
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v5, v6, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v6, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x15
 
-    invoke-direct {v1, v12, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v12, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x18
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v5, 0x19
 
     aput-object v1, v0, v5
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v5, 0x30
 
     const/16 v10, 0x31
 
-    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v5, 0x1a
 
     aput-object v1, v0, v5
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v5, 0x37
 
     const/16 v10, 0x38
 
-    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v15, 0x1b
 
     aput-object v1, v0, v15
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v15, 0x3f
 
     const/16 v2, 0x41
 
-    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v15, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x1c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x1d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v15, 0x26
 
     const/16 v12, 0x27
 
-    invoke-direct {v1, v15, v12, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v15, v12, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v12, 0x1e
 
     aput-object v1, v0, v12
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v12, 0x1f
 
     aput-object v1, v0, v12
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v12, 0x1b
 
     const/16 v10, 0x1c
 
-    invoke-direct {v1, v12, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v12, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v10, 0x20
 
     aput-object v1, v0, v10
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v10, 0x3a
 
-    invoke-direct {v1, v10, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v10, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v12, 0x21
 
     aput-object v1, v0, v12
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v12, 0x44
 
     const/16 v10, 0x45
 
-    invoke-direct {v1, v12, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v12, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v10, 0x22
 
     aput-object v1, v0, v10
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x23
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/4 v8, 0x7
 
     const/16 v9, 0x8
 
-    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v9, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x24
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0x57
 
@@ -459,131 +465,131 @@
 
     const/16 v10, 0x56
 
-    invoke-direct {v1, v8, v9, v10, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v9, v10, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x25
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0x59
 
-    invoke-direct {v1, v9, v8, v7, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v9, v8, v7, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     aput-object v1, v0, v15
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0xa
 
     const/16 v10, 0xe
 
-    invoke-direct {v1, v8, v10, v4, v11}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v10, v4, v11}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x27
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0x2b
 
     const/16 v10, 0x2d
 
-    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x28
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0x49
 
     const/16 v10, 0x4a
 
-    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x29
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0x61
 
     const/16 v10, 0x61
 
-    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v10, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x2a
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v8, 0xf
 
-    invoke-direct {v1, v8, v13, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v8, v13, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v8, 0x2b
 
     aput-object v1, v0, v8
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v11, v11, v4, v14}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v11, v11, v4, v14}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x2c
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v7, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x2d
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v6, v6, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v6, v6, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x2e
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x2f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x39
 
-    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v2, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x30
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x25
 
-    invoke-direct {v1, v4, v15, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v15, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x31
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x4b
 
@@ -591,25 +597,25 @@
 
     const/16 v8, 0x57
 
-    invoke-direct {v1, v4, v7, v8, v9}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v7, v8, v9}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x32
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x54
 
     const/16 v7, 0x54
 
-    invoke-direct {v1, v4, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x33
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x16
 
@@ -617,75 +623,75 @@
 
     const/16 v8, 0x14
 
-    invoke-direct {v1, v4, v7, v8, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v7, v8, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x34
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
-    invoke-direct {v1, v11, v14, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v11, v14, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x35
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/4 v4, 0x5
 
-    invoke-direct {v1, v4, v4, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v4, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x36
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x62
 
     const/16 v7, 0x63
 
-    invoke-direct {v1, v4, v7, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v7, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     aput-object v1, v0, v5
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x35
 
     const/16 v5, 0x36
 
-    invoke-direct {v1, v4, v5, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v4, v5, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v4, 0x38
 
     aput-object v1, v0, v4
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v4, 0x1a
 
     const/16 v5, 0x18
 
-    invoke-direct {v1, v5, v4, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v5, v4, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     aput-object v1, v0, v2
 
-    new-instance v1, Landroidx/core/text/util/FindAddress$ZipRange;
+    new-instance v1, Landroidx/core/text/util/FindAddress$a;
 
     const/16 v2, 0x52
 
     const/16 v4, 0x53
 
-    invoke-direct {v1, v2, v4, v3, v3}, Landroidx/core/text/util/FindAddress$ZipRange;-><init>(IIII)V
+    invoke-direct {v1, v2, v4, v3, v3}, Landroidx/core/text/util/FindAddress$a;-><init>(IIII)V
 
     const/16 v2, 0x3a
 
     aput-object v1, v0, v2
 
-    sput-object v0, Landroidx/core/text/util/FindAddress;->sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$ZipRange;
+    sput-object v0, Landroidx/core/text/util/FindAddress;->sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$a;
 
     const-string v0, "[^,*\u2022\t \u00a0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\n\u000b\u000c\r\u0085\u2028\u2029]+(?=[,*\u2022\t \u00a0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\n\u000b\u000c\r\u0085\u2028\u2029]|$)"
 
@@ -1256,6 +1262,8 @@
 
 .method public static isValidLocationName(Ljava/lang/String;)Z
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     sget-object v0, Landroidx/core/text/util/FindAddress;->sLocationNameRe:Ljava/util/regex/Pattern;
 
@@ -1272,6 +1280,8 @@
 
 .method public static isValidZipCode(Ljava/lang/String;)Z
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     sget-object v0, Landroidx/core/text/util/FindAddress;->sZipCodeRe:Ljava/util/regex/Pattern;
 
@@ -1288,6 +1298,8 @@
 
 .method public static isValidZipCode(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1350,11 +1362,11 @@
 
     if-eqz p1, :cond_3
 
-    sget-object p1, Landroidx/core/text/util/FindAddress;->sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$ZipRange;
+    sget-object p1, Landroidx/core/text/util/FindAddress;->sStateZipCodeRanges:[Landroidx/core/text/util/FindAddress$a;
 
     aget-object p1, p1, v1
 
-    invoke-virtual {p1, p0}, Landroidx/core/text/util/FindAddress$ZipRange;->matches(Ljava/lang/String;)Z
+    invoke-virtual {p1, p0}, Landroidx/core/text/util/FindAddress$a;->a(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1368,6 +1380,8 @@
 
 .method public static matchHouseNumber(Ljava/lang/String;I)Ljava/util/regex/MatchResult;
     .locals 3
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1436,6 +1450,8 @@
 
 .method public static matchState(Ljava/lang/String;I)Ljava/util/regex/MatchResult;
     .locals 3
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
     const/4 v0, 0x0
 

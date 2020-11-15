@@ -1,12 +1,16 @@
 .class public interface abstract annotation Landroidx/annotation/Px;
 .super Ljava/lang/Object;
-.source "Px.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
+.annotation build Landroidx/annotation/Dimension;
+    unit = 0x1
+.end annotation
+
 .annotation runtime Ljava/lang/annotation/Documented;
 .end annotation
 

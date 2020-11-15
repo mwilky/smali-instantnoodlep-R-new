@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 .super Ljava/lang/Object;
-.source "ArgbEvaluatorCompat.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -44,6 +44,8 @@
 
 .method public static getInstance()Lcom/google/android/material/animation/ArgbEvaluatorCompat;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget-object v0, Lcom/google/android/material/animation/ArgbEvaluatorCompat;->instance:Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 
@@ -54,6 +56,8 @@
 # virtual methods
 .method public evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 11
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -270,6 +274,8 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, Ljava/lang/Integer;
 

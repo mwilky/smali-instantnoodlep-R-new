@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Comparteix amb %s</string>
     <string name="abc_toolbar_collapse_description">Replega</string>
     <string name="about_action_bar_title">Quant a</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versió %s</string>
     <string name="about_privacy_policy">Política de privacitat</string>
     <string name="about_release_note_title">"Registre d'actualització:"</string>
     <string name="about_terms_service">Condicions del servei</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Captures de pantalla</string>
     <string name="oneplus_delete">Suprimeix</string>
     <string name="oneplus_share">Envia</string>
+    <string name="permission_btn_text_denied">Surt</string>
+    <string name="permission_btn_text_grant">"D'ACORD"</string>
+    <string name="permission_dialog_title">Declaració dels permisos</string>
     <string name="preference_copied">"\"%1$s\" s'ha copiat al porta-retalls"</string>
     <string name="quick_share_description1">"Manteniu premuda la miniatura 
 per compartir-la"</string>

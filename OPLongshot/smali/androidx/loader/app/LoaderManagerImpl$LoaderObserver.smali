@@ -1,6 +1,6 @@
 .class Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 .super Ljava/lang/Object;
-.source "LoaderManagerImpl.java"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -30,6 +30,9 @@
 
 # instance fields
 .field private final mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
@@ -41,6 +44,9 @@
 .field private mDeliveredData:Z
 
 .field private final mLoader:Landroidx/loader/content/Loader;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader<",
@@ -53,6 +59,14 @@
 # direct methods
 .method constructor <init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
     .locals 1
+    .param p1    # Landroidx/loader/content/Loader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -104,13 +118,17 @@
 
 .method public onChanged(Ljava/lang/Object;)V
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)V"
         }
     .end annotation
 
-    sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
+    sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->c:Z
 
     if-eqz v0, :cond_0
 
@@ -162,12 +180,14 @@
 
 .method reset()V
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
 
     if-eqz v0, :cond_1
 
-    sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
+    sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->c:Z
 
     if-eqz v0, :cond_0
 

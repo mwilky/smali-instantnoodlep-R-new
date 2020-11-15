@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/TargetAnimator;
 .super Landroid/animation/ValueAnimator;
-.source "TargetAnimator.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -89,9 +89,9 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/anim/TargetAnimator;->mSetEnds:Ljava/util/Map;
 
-    invoke-virtual {p0, p0}, Lcom/oneplus/screenshot/anim/TargetAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {p0, p0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    invoke-virtual {p0, p0}, Lcom/oneplus/screenshot/anim/TargetAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {p0, p0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/oneplus/screenshot/anim/TargetAnimator$TargetProp;->entrySet()Ljava/util/Set;
+    invoke-virtual {p2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p2
 
@@ -178,7 +178,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v3, v2}, Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
@@ -348,7 +348,7 @@
 
     check-cast v0, Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;->entrySet()Ljava/util/Set;
+    invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 

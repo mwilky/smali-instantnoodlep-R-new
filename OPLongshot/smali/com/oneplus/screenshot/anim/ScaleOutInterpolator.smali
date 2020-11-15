@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/ScaleOutInterpolator;
 .super Lcom/oneplus/screenshot/anim/FactorLinearInterpolator;
-.source "ScaleOutInterpolator.java"
+.source ""
 
 
 # static fields

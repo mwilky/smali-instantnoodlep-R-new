@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/WaittingPreviewState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "WaittingPreviewState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
@@ -101,7 +101,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
 
     move-result v4
 
@@ -115,7 +115,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->get(I)Ljava/lang/Object;
+    invoke-virtual {v4, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -223,7 +223,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
@@ -238,7 +238,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->removeLast()Ljava/lang/Object;
+    invoke-virtual {v5}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     add-int/lit8 v1, v1, -0x1
 
@@ -261,7 +261,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v7}, Ljava/util/LinkedList;->size()I
 
     move-result v7
 
@@ -319,7 +319,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->removeLast()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -333,7 +333,7 @@
     :catchall_0
     move-exception v1
 
-    goto :goto_5
+    goto :goto_6
 
     :catch_0
     move-exception v2
@@ -369,9 +369,10 @@
 
     invoke-direct {v4, v0, v1, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v3, v4}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    :goto_4
+    invoke-virtual {v3, v4}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_6
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeBottom()Landroid/graphics/Bitmap;
@@ -396,16 +397,16 @@
 
     invoke-direct {v4, v5, v1, v0}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v3, v4}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->addLast(Ljava/lang/Object;)V
+    goto :goto_4
 
-    :goto_4
+    :goto_5
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    goto :goto_6
+    goto :goto_7
 
-    :goto_5
+    :goto_6
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -422,7 +423,7 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_7
-    :goto_6
+    :goto_7
     const-string v0, "Longshot.WaittingPreviewState"
 
     const-string v1, "checkPage end"
@@ -505,7 +506,7 @@
 
     sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/WaittingPreviewState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     sget-object v2, Lcom/oneplus/screenshot/longshot/state/LongshotState;->MAIN:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

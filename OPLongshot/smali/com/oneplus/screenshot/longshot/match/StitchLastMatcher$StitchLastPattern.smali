@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 .super Ljava/lang/Object;
-.source "StitchLastMatcher.java"
+.source ""
 
 
 # annotations

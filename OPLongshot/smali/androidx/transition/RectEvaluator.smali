@@ -1,6 +1,6 @@
 .class Landroidx/transition/RectEvaluator;
 .super Ljava/lang/Object;
-.source "RectEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -43,15 +43,13 @@
 
 # virtual methods
 .method public evaluate(FLandroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;
-    .locals 5
+    .locals 4
 
     iget v0, p2, Landroid/graphics/Rect;->left:I
 
     iget v1, p3, Landroid/graphics/Rect;->left:I
 
-    iget v2, p2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v1, v2
+    sub-int/2addr v1, v0
 
     int-to-float v1, v1
 
@@ -65,9 +63,7 @@
 
     iget v2, p3, Landroid/graphics/Rect;->top:I
 
-    iget v3, p2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v2, v3
+    sub-int/2addr v2, v1
 
     int-to-float v2, v2
 
@@ -81,9 +77,7 @@
 
     iget v3, p3, Landroid/graphics/Rect;->right:I
 
-    iget v4, p2, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v2
 
     int-to-float v3, v3
 
@@ -93,21 +87,19 @@
 
     add-int/2addr v2, v3
 
-    iget v3, p2, Landroid/graphics/Rect;->bottom:I
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
     iget p3, p3, Landroid/graphics/Rect;->bottom:I
 
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
-
     sub-int/2addr p3, p2
 
-    int-to-float p2, p3
+    int-to-float p3, p3
 
-    mul-float/2addr p2, p1
+    mul-float/2addr p3, p1
 
-    float-to-int p1, p2
+    float-to-int p1, p3
 
-    add-int/2addr v3, p1
+    add-int/2addr p2, p1
 
     iget-object p1, p0, Landroidx/transition/RectEvaluator;->mRect:Landroid/graphics/Rect;
 
@@ -115,12 +107,12 @@
 
     new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {p1, v0, v1, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {p1, v0, v1, v2, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     return-object p1
 
     :cond_0
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {p1, v0, v1, v2, p2}, Landroid/graphics/Rect;->set(IIII)V
 
     iget-object p1, p0, Landroidx/transition/RectEvaluator;->mRect:Landroid/graphics/Rect;
 

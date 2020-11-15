@@ -1,97 +1,55 @@
 .class Landroidx/recyclerview/widget/ViewBoundsCheck;
 .super Ljava/lang/Object;
-.source "ViewBoundsCheck.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;,
-        Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;,
+        Landroidx/recyclerview/widget/ViewBoundsCheck$b;,
+        Landroidx/recyclerview/widget/ViewBoundsCheck$a;,
         Landroidx/recyclerview/widget/ViewBoundsCheck$ViewBounds;
     }
 .end annotation
 
 
-# static fields
-.field static final CVE_PVE_POS:I = 0xc
-
-.field static final CVE_PVS_POS:I = 0x8
-
-.field static final CVS_PVE_POS:I = 0x4
-
-.field static final CVS_PVS_POS:I = 0x0
-
-.field static final EQ:I = 0x2
-
-.field static final FLAG_CVE_EQ_PVE:I = 0x2000
-
-.field static final FLAG_CVE_EQ_PVS:I = 0x200
-
-.field static final FLAG_CVE_GT_PVE:I = 0x1000
-
-.field static final FLAG_CVE_GT_PVS:I = 0x100
-
-.field static final FLAG_CVE_LT_PVE:I = 0x4000
-
-.field static final FLAG_CVE_LT_PVS:I = 0x400
-
-.field static final FLAG_CVS_EQ_PVE:I = 0x20
-
-.field static final FLAG_CVS_EQ_PVS:I = 0x2
-
-.field static final FLAG_CVS_GT_PVE:I = 0x10
-
-.field static final FLAG_CVS_GT_PVS:I = 0x1
-
-.field static final FLAG_CVS_LT_PVE:I = 0x40
-
-.field static final FLAG_CVS_LT_PVS:I = 0x4
-
-.field static final GT:I = 0x1
-
-.field static final LT:I = 0x4
-
-.field static final MASK:I = 0x7
-
-
 # instance fields
-.field mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+.field final a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-.field final mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+.field b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;)V
+.method constructor <init>(Landroidx/recyclerview/widget/ViewBoundsCheck$b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iput-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    new-instance p1, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    new-instance p1, Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-direct {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;-><init>()V
+    invoke-direct {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;-><init>()V
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iput-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method findOneViewWithinBoundFlags(IIII)Landroid/view/View;
+.method a(IIII)Landroid/view/View;
     .locals 8
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v0}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getParentStart()I
+    invoke-interface {v0}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->c()I
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v1}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getParentEnd()I
+    invoke-interface {v1}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->b()I
 
     move-result v1
 
@@ -110,41 +68,41 @@
     :goto_1
     if-eq p1, p2, :cond_3
 
-    iget-object v4, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v4, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v4, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getChildAt(I)Landroid/view/View;
+    invoke-interface {v4, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->a(I)Landroid/view/View;
 
     move-result-object v4
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v5, v4}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getChildStart(Landroid/view/View;)I
+    invoke-interface {v5, v4}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->e(Landroid/view/View;)I
 
     move-result v5
 
-    iget-object v6, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v6, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v6, v4}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getChildEnd(Landroid/view/View;)I
+    invoke-interface {v6, v4}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->d(Landroid/view/View;)I
 
     move-result v6
 
-    iget-object v7, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v7, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v7, v0, v1, v5, v6}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->setBounds(IIII)V
+    invoke-virtual {v7, v0, v1, v5, v6}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->e(IIII)V
 
     if-eqz p3, :cond_1
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->resetFlags()V
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->d()V
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5, p3}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->addFlags(I)V
+    invoke-virtual {v5, p3}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->a(I)V
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->boundsMatch()Z
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->b()Z
 
     move-result v5
 
@@ -155,17 +113,17 @@
     :cond_1
     if-eqz p4, :cond_2
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->resetFlags()V
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->d()V
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5, p4}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->addFlags(I)V
+    invoke-virtual {v5, p4}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->a(I)V
 
-    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v5, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->boundsMatch()Z
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->b()Z
 
     move-result v5
 
@@ -182,50 +140,50 @@
     return-object v3
 .end method
 
-.method isViewWithinBoundFlags(Landroid/view/View;I)Z
+.method b(Landroid/view/View;I)Z
     .locals 5
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v1}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getParentStart()I
+    invoke-interface {v1}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->c()I
 
     move-result v1
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v2, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v2}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getParentEnd()I
+    invoke-interface {v2}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->b()I
 
     move-result v2
 
-    iget-object v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v3, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getChildStart(Landroid/view/View;)I
+    invoke-interface {v3, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->e(Landroid/view/View;)I
 
     move-result v3
 
-    iget-object v4, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mCallback:Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;
+    iget-object v4, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-    invoke-interface {v4, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$Callback;->getChildEnd(Landroid/view/View;)I
+    invoke-interface {v4, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$b;->d(Landroid/view/View;)I
 
     move-result p1
 
-    invoke-virtual {v0, v1, v2, v3, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->setBounds(IIII)V
+    invoke-virtual {v0, v1, v2, v3, p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->e(IIII)V
 
     if-eqz p2, :cond_0
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->resetFlags()V
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->d()V
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->addFlags(I)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->a(I)V
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->mBoundFlags:Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+    iget-object p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->boundsMatch()Z
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->b()Z
 
     move-result p1
 

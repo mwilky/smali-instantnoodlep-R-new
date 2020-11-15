@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/indicator/animation/type/AnimationType;
 .super Ljava/lang/Enum;
-.source "AnimationType.java"
+.source ""
 
 
 # annotations

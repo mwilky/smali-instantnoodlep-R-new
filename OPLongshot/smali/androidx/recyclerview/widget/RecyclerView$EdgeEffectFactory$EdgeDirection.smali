@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory$EdgeDirection;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

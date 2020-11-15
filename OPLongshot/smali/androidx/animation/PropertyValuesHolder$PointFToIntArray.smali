@@ -1,6 +1,6 @@
 .class Landroidx/animation/PropertyValuesHolder$PointFToIntArray;
 .super Landroidx/animation/TypeConverter;
-.source "PropertyValuesHolder.java"
+.source ""
 
 
 # annotations

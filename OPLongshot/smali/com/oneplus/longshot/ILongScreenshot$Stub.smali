@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/ILongScreenshot$Stub;
 .super Landroid/os/Binder;
-.source "ILongScreenshot.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;
@@ -59,7 +59,7 @@
 
     const-string v0, "com.oneplus.longshot.ILongScreenshot"
 
-    invoke-virtual {p0, p0, v0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -137,11 +137,6 @@
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const v0, 0x5f4e5446
 
@@ -162,7 +157,7 @@
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->getConfigValues()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshot;->getConfigValues()Ljava/lang/String;
 
     move-result-object p1
 
@@ -187,7 +182,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
+    invoke-interface {p0, p1, p2}, Lcom/oneplus/longshot/ILongScreenshot;->dumpViewInfo(Ljava/lang/String;Lcom/oneplus/longshot/IViewPropCallback;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -208,7 +203,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p4, p2}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->notifyScrollViewSearchComplete(III)V
+    invoke-interface {p0, p1, p4, p2}, Lcom/oneplus/longshot/ILongScreenshot;->notifyScrollViewSearchComplete(III)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -221,7 +216,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->notifyWindowLayerChange(Landroid/os/IBinder;)V
+    invoke-interface {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot;->notifyWindowLayerChange(Landroid/os/IBinder;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -246,7 +241,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p4, v0, p2}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->notifyLongshotScrollChanged(IIII)V
+    invoke-interface {p0, p1, p4, v0, p2}, Lcom/oneplus/longshot/ILongScreenshot;->notifyLongshotScrollChanged(IIII)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -255,7 +250,7 @@
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->onUnscrollableView()V
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshot;->onUnscrollableView()V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -268,7 +263,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->notifyScrollViewTop(I)V
+    invoke-interface {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot;->notifyScrollViewTop(I)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -281,7 +276,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->stopLongshot(I)V
+    invoke-interface {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot;->stopLongshot(I)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -290,7 +285,7 @@
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->isHandleState()Z
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshot;->isHandleState()Z
 
     move-result p1
 
@@ -303,7 +298,7 @@
     :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->isMoveState()Z
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshot;->isMoveState()Z
 
     move-result p1
 
@@ -330,7 +325,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->notifyScroll(Z)V
+    invoke-interface {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot;->notifyScroll(Z)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -347,7 +342,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot$Stub;->start(Lcom/oneplus/longshot/ILongScreenshotCallback;)V
+    invoke-interface {p0, p1}, Lcom/oneplus/longshot/ILongScreenshot;->start(Lcom/oneplus/longshot/ILongScreenshotCallback;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 

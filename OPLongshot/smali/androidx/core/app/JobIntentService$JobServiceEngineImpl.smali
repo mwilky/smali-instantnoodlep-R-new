@@ -1,12 +1,13 @@
 .class final Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 .super Landroid/app/job/JobServiceEngine;
-.source "JobIntentService.java"
-
-# interfaces
-.implements Landroidx/core/app/JobIntentService$CompatJobEngine;
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/app/JobIntentService;
 .end annotation
@@ -18,7 +19,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;
+        Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;
     }
 .end annotation
 
@@ -59,14 +60,14 @@
 .method public compatGetBinder()Landroid/os/IBinder;
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->getBinder()Landroid/os/IBinder;
+    invoke-virtual {p0}, Landroid/app/job/JobServiceEngine;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public dequeueWork()Landroidx/core/app/JobIntentService$GenericWorkItem;
+.method public dequeueWork()Landroidx/core/app/JobIntentService$a;
     .locals 3
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mLock:Ljava/lang/Object;
@@ -103,15 +104,15 @@
 
     iget-object v2, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mService:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {v2}, Landroidx/core/app/JobIntentService;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v2}, Landroid/app/Service;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
 
-    new-instance v0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;
+    new-instance v0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;
 
-    invoke-direct {v0, p0, v1}, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;-><init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
+    invoke-direct {v0, p0, v1}, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;-><init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
 
     return-object v0
 
@@ -138,7 +139,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/core/app/JobIntentService;->ensureProcessorRunningLocked(Z)V
+    invoke-virtual {p1, v0}, Landroidx/core/app/JobIntentService;->c(Z)V
 
     const/4 p1, 0x1
 
@@ -150,7 +151,7 @@
 
     iget-object p1, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mService:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->doStopCurrentWork()Z
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->b()Z
 
     move-result p1
 

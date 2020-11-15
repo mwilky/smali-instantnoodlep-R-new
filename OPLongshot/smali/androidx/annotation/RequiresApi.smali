@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/annotation/RequiresApi;
 .super Ljava/lang/Object;
-.source "RequiresApi.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -31,7 +31,13 @@
 
 # virtual methods
 .method public abstract api()I
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x1L
+    .end annotation
 .end method
 
 .method public abstract value()I
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x1L
+    .end annotation
 .end method

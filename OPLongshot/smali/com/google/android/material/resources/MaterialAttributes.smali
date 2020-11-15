@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/resources/MaterialAttributes;
 .super Ljava/lang/Object;
-.source "MaterialAttributes.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods
@@ -14,6 +22,16 @@
 
 .method public static resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     new-instance v0, Landroid/util/TypedValue;
 
@@ -41,6 +59,14 @@
 
 .method public static resolveBoolean(Landroid/content/Context;IZ)Z
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
@@ -72,6 +98,18 @@
 
 .method public static resolveBooleanOrThrow(Landroid/content/Context;ILjava/lang/String;)Z
     .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1, p2}, Lcom/google/android/material/resources/MaterialAttributes;->resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
 
@@ -92,6 +130,20 @@
 
 .method public static resolveDimension(Landroid/content/Context;II)I
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DimenRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
@@ -140,10 +192,16 @@
 
 .method public static resolveMinimumAccessibleTouchTarget(Landroid/content/Context;)I
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
-    sget v0, Lcom/google/android/material/R$attr;->minTouchTargetSize:I
+    sget v0, Lb/a/b/a/b;->minTouchTargetSize:I
 
-    sget v1, Lcom/google/android/material/R$dimen;->mtrl_min_touch_target_size:I
+    sget v1, Lb/a/b/a/d;->mtrl_min_touch_target_size:I
 
     invoke-static {p0, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveDimension(Landroid/content/Context;II)I
 
@@ -154,6 +212,18 @@
 
 .method public static resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
     .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
@@ -201,6 +271,14 @@
 
 .method public static resolveOrThrow(Landroid/view/View;I)I
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 

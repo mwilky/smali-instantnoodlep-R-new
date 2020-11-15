@@ -1,12 +1,18 @@
 .class final Landroidx/core/app/ActivityRecreator;
 .super Ljava/lang/Object;
-.source "ActivityRecreator.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;
+        Landroidx/core/app/ActivityRecreator$d;
     }
 .end annotation
 
@@ -400,8 +406,6 @@
 
     if-eq v0, v1, :cond_1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
     const/16 v1, 0x1b
 
     if-ne v0, v1, :cond_0
@@ -446,9 +450,9 @@
 
     sget-object p1, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
-    new-instance v2, Landroidx/core/app/ActivityRecreator$3;
+    new-instance v2, Landroidx/core/app/ActivityRecreator$c;
 
-    invoke-direct {v2, p0, v1}, Landroidx/core/app/ActivityRecreator$3;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v2, p0, v1}, Landroidx/core/app/ActivityRecreator$c;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -472,6 +476,10 @@
 
 .method static recreate(Landroid/app/Activity;)Z
     .locals 9
+    .param p0    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -539,17 +547,17 @@
 
     move-result-object v4
 
-    new-instance v5, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;
+    new-instance v5, Landroidx/core/app/ActivityRecreator$d;
 
-    invoke-direct {v5, p0}, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v5, p0}, Landroidx/core/app/ActivityRecreator$d;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {v4, v5}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     sget-object v6, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
-    new-instance v7, Landroidx/core/app/ActivityRecreator$1;
+    new-instance v7, Landroidx/core/app/ActivityRecreator$a;
 
-    invoke-direct {v7, v5, v0}, Landroidx/core/app/ActivityRecreator$1;-><init>(Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;Ljava/lang/Object;)V
+    invoke-direct {v7, v5, v0}, Landroidx/core/app/ActivityRecreator$a;-><init>(Landroidx/core/app/ActivityRecreator$d;Ljava/lang/Object;)V
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -588,9 +596,7 @@
 
     const/4 v7, 0x4
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v8
+    sget-object v8, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object v8, v6, v7
 
@@ -604,17 +610,13 @@
 
     const/4 v0, 0x7
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
+    sget-object v7, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object v7, v6, v0
 
     const/16 v0, 0x8
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
+    sget-object v7, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object v7, v6, v0
 
@@ -631,9 +633,9 @@
     :try_start_2
     sget-object p0, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
-    new-instance v0, Landroidx/core/app/ActivityRecreator$2;
+    new-instance v0, Landroidx/core/app/ActivityRecreator$b;
 
-    invoke-direct {v0, v4, v5}, Landroidx/core/app/ActivityRecreator$2;-><init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;)V
+    invoke-direct {v0, v4, v5}, Landroidx/core/app/ActivityRecreator$b;-><init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$d;)V
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -644,9 +646,9 @@
 
     sget-object v0, Landroidx/core/app/ActivityRecreator;->mainHandler:Landroid/os/Handler;
 
-    new-instance v1, Landroidx/core/app/ActivityRecreator$2;
+    new-instance v1, Landroidx/core/app/ActivityRecreator$b;
 
-    invoke-direct {v1, v4, v5}, Landroidx/core/app/ActivityRecreator$2;-><init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;)V
+    invoke-direct {v1, v4, v5}, Landroidx/core/app/ActivityRecreator$b;-><init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$d;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

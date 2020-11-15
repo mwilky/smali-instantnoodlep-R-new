@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
 .super Ljava/lang/Object;
-.source "BitmapCache.java"
+.source ""
 
 
 # annotations
@@ -64,8 +64,6 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;->mBitmap:Landroid/graphics/Bitmap;
-
     goto :goto_0
 
     :cond_0
@@ -77,9 +75,9 @@
 
     move-result-object p1
 
+    :goto_0
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;->mBitmap:Landroid/graphics/Bitmap;
 
-    :goto_0
     return-void
 .end method
 

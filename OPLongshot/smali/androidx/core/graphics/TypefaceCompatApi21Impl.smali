@@ -1,6 +1,18 @@
 .class Landroidx/core/graphics/TypefaceCompatApi21Impl;
 .super Landroidx/core/graphics/TypefaceCompatBaseImpl;
-.source "TypefaceCompatApi21Impl.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -170,6 +182,10 @@
 
 .method private getFile(Landroid/os/ParcelFileDescriptor;)Ljava/io/File;
     .locals 3
+    .param p1    # Landroid/os/ParcelFileDescriptor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -389,14 +405,14 @@
 
 
 # virtual methods
-.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
+.method public createFromFontFamilyFilesResourceEntry(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
     .locals 7
 
     invoke-static {}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->newFamily()Ljava/lang/Object;
 
     move-result-object p4
 
-    invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFamilyFilesResourceEntry;->getEntries()[Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;
+    invoke-virtual {p2}, Landroidx/core/content/res/FontResourcesParserCompat$b;->a()[Landroidx/core/content/res/FontResourcesParserCompat$c;
 
     move-result-object p2
 
@@ -421,7 +437,7 @@
 
     :cond_0
     :try_start_0
-    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getResourceId()I
+    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$c;->b()I
 
     move-result v5
 
@@ -444,11 +460,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->getWeight()I
+    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$c;->e()I
 
     move-result v6
 
-    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->isItalic()Z
+    invoke-virtual {v2}, Landroidx/core/content/res/FontResourcesParserCompat$c;->f()Z
 
     move-result v2
 
@@ -459,15 +475,13 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-nez v2, :cond_2
-
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
+
+    if-nez v2, :cond_2
 
     return-object v4
 
     :cond_2
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -492,8 +506,12 @@
     return-object p1
 .end method
 
-.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
+.method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$b;I)Landroid/graphics/Typeface;
     .locals 3
+    .param p3    # [Landroidx/core/provider/FontsContractCompat$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     array-length v0, p3
 
@@ -506,7 +524,7 @@
     return-object v1
 
     :cond_0
-    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroidx/core/provider/FontsContractCompat$FontInfo;
+    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/TypefaceCompatBaseImpl;->findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p3
 
@@ -515,7 +533,7 @@
     move-result-object p4
 
     :try_start_0
-    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {p3}, Landroidx/core/provider/FontsContractCompat$b;->c()Landroid/net/Uri;
 
     move-result-object p3
 

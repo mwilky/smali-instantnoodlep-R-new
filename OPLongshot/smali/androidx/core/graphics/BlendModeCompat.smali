@@ -1,6 +1,6 @@
 .class public final enum Landroidx/core/graphics/BlendModeCompat;
 .super Ljava/lang/Enum;
-.source "BlendModeCompat.java"
+.source ""
 
 
 # annotations
@@ -19,14 +19,30 @@
 .field public static final enum CLEAR:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum COLOR:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum COLOR_BURN:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum COLOR_DODGE:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum DARKEN:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum DIFFERENCE:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum DST:Landroidx/core/graphics/BlendModeCompat;
 
@@ -39,28 +55,56 @@
 .field public static final enum DST_OVER:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum EXCLUSION:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum HARD_LIGHT:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum HUE:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum LIGHTEN:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum LUMINOSITY:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum MODULATE:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum MULTIPLY:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum OVERLAY:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum PLUS:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum SATURATION:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum SCREEN:Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum SOFT_LIGHT:Landroidx/core/graphics/BlendModeCompat;
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+.end field
 
 .field public static final enum SRC:Landroidx/core/graphics/BlendModeCompat;
 

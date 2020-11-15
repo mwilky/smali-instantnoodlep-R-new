@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$3;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -89,7 +89,7 @@
     :cond_1
     const/16 p2, 0x8
 
-    invoke-virtual {p1, p2}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->setVisibility(I)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object p2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$3;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
@@ -133,7 +133,7 @@
 
     invoke-direct {v2, p0, p2}, Lcom/oneplus/screenshot/GlobalScreenshot$3$1;-><init>(Lcom/oneplus/screenshot/GlobalScreenshot$3;Landroid/graphics/Rect;)V
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
 
     :cond_2
     invoke-virtual {p1}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->stopSelection()V

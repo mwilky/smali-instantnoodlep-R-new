@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SearchView.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field isIconified:Z
+.field a:Z
 
 
 # direct methods
@@ -60,7 +60,7 @@
 
     move-result p1
 
-    iput-boolean p1, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/SearchView$SavedState;->a:Z
 
     return-void
 .end method
@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
+    iget-boolean v1, p0, Landroidx/appcompat/widget/SearchView$SavedState;->a:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -120,7 +120,7 @@
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/SearchView$SavedState;->a:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

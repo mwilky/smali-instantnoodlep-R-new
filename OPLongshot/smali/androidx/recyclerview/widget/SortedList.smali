@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/SortedList;
 .super Ljava/lang/Object;
-.source "SortedList.java"
+.source ""
 
 
 # annotations
@@ -77,6 +77,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Landroidx/recyclerview/widget/SortedList$Callback;)V
     .locals 1
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/SortedList$Callback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -96,6 +104,14 @@
 
 .method public constructor <init>(Ljava/lang/Class;Landroidx/recyclerview/widget/SortedList$Callback;I)V
     .locals 0
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/SortedList$Callback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -113,8 +129,6 @@
     invoke-static {p1, p3}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
 
     check-cast p1, [Ljava/lang/Object;
 
@@ -297,8 +311,6 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    check-cast v0, [Ljava/lang/Object;
-
     iget-object v1, p0, Landroidx/recyclerview/widget/SortedList;->mData:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -386,8 +398,6 @@
     invoke-static {v0, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 
@@ -642,8 +652,6 @@
     invoke-static {v4, v3}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v3
-
-    check-cast v3, [Ljava/lang/Object;
 
     check-cast v3, [Ljava/lang/Object;
 
@@ -956,6 +964,10 @@
 
 .method private replaceAllInternal([Ljava/lang/Object;)V
     .locals 7
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -998,8 +1010,6 @@
     invoke-static {v3, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v3
-
-    check-cast v3, [Ljava/lang/Object;
 
     check-cast v3, [Ljava/lang/Object;
 
@@ -1102,6 +1112,7 @@
     :cond_7
     if-lez v5, :cond_8
 
+    :goto_2
     invoke-direct {p0, v4}, Landroidx/recyclerview/widget/SortedList;->replaceAllInsert(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -1117,9 +1128,7 @@
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/SortedList;->replaceAllRemove()V
 
-    invoke-direct {p0, v4}, Landroidx/recyclerview/widget/SortedList;->replaceAllInsert(Ljava/lang/Object;)V
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_9
     iget-object v5, p0, Landroidx/recyclerview/widget/SortedList;->mData:[Ljava/lang/Object;
@@ -1189,6 +1198,10 @@
 
 .method private sortAndDedup([Ljava/lang/Object;)I
     .locals 7
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)I"
@@ -1318,6 +1331,10 @@
 
 .method public addAll(Ljava/util/Collection;)V
     .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1338,8 +1355,6 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    check-cast v0, [Ljava/lang/Object;
-
     invoke-interface {p1, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -1353,6 +1368,10 @@
 
 .method public varargs addAll([Ljava/lang/Object;)V
     .locals 1
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -1368,6 +1387,10 @@
 
 .method public addAll([Ljava/lang/Object;Z)V
     .locals 1
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;Z)V"
@@ -1407,24 +1430,22 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList;->mCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
-    instance-of v0, v0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;
+    instance-of v1, v0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Landroidx/recyclerview/widget/SortedList;->mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
+    iget-object v1, p0, Landroidx/recyclerview/widget/SortedList;->mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    new-instance v0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;
+    new-instance v1, Landroidx/recyclerview/widget/SortedList$BatchedCallback;
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/SortedList;->mCallback:Landroidx/recyclerview/widget/SortedList$Callback;
+    invoke-direct {v1, v0}, Landroidx/recyclerview/widget/SortedList$BatchedCallback;-><init>(Landroidx/recyclerview/widget/SortedList$Callback;)V
 
-    invoke-direct {v0, v1}, Landroidx/recyclerview/widget/SortedList$BatchedCallback;-><init>(Landroidx/recyclerview/widget/SortedList$Callback;)V
-
-    iput-object v0, p0, Landroidx/recyclerview/widget/SortedList;->mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
+    iput-object v1, p0, Landroidx/recyclerview/widget/SortedList;->mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
 
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList;->mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
@@ -1498,12 +1519,6 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IndexOutOfBoundsException;
         }
     .end annotation
 
@@ -1723,6 +1738,10 @@
 
 .method public replaceAll(Ljava/util/Collection;)V
     .locals 2
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1743,8 +1762,6 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    check-cast v0, [Ljava/lang/Object;
-
     invoke-interface {p1, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -1758,6 +1775,10 @@
 
 .method public varargs replaceAll([Ljava/lang/Object;)V
     .locals 1
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -1773,6 +1794,10 @@
 
 .method public replaceAll([Ljava/lang/Object;Z)V
     .locals 0
+    .param p1    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;Z)V"

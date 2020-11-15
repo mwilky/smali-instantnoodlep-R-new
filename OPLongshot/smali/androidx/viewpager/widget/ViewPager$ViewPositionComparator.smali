@@ -1,6 +1,6 @@
 .class Landroidx/viewpager/widget/ViewPager$ViewPositionComparator;
 .super Ljava/lang/Object;
-.source "ViewPager.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -44,23 +44,21 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;
+    check-cast p1, Landroidx/viewpager/widget/ViewPager$e;
 
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
-    check-cast p2, Landroidx/viewpager/widget/ViewPager$LayoutParams;
+    check-cast p2, Landroidx/viewpager/widget/ViewPager$e;
 
-    iget-boolean v0, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v0, p1, Landroidx/viewpager/widget/ViewPager$e;->a:Z
 
-    iget-boolean v1, p2, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v1, p2, Landroidx/viewpager/widget/ViewPager$e;->a:Z
 
     if-eq v0, v1, :cond_1
 
-    iget-boolean p1, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
-
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 p1, 0x1
 
@@ -73,9 +71,9 @@
     return p1
 
     :cond_1
-    iget p1, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->position:I
+    iget p1, p1, Landroidx/viewpager/widget/ViewPager$e;->e:I
 
-    iget p2, p2, Landroidx/viewpager/widget/ViewPager$LayoutParams;->position:I
+    iget p2, p2, Landroidx/viewpager/widget/ViewPager$e;->e:I
 
     sub-int/2addr p1, p2
 

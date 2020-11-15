@@ -1,6 +1,6 @@
 .class Landroidx/coordinatorlayout/widget/CoordinatorLayout$ViewElevationComparator;
 .super Ljava/lang/Object;
-.source "CoordinatorLayout.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -40,11 +40,11 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 1
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->H(Landroid/view/View;)F
 
     move-result p1
 
-    invoke-static {p2}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
+    invoke-static {p2}, Landroidx/core/view/ViewCompat;->H(Landroid/view/View;)F
 
     move-result p2
 

@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/LoadCallback$Failure;
 .super Ljava/lang/Enum;
-.source "LoadCallback.java"
+.source ""
 
 
 # annotations

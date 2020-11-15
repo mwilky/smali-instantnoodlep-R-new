@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">সম্পর্কে</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">সংস্করণ %s</string>
     <string name="about_privacy_policy">গোপনীয়তা নীতি</string>
-    <string name="about_release_note_title">আপডেট লগ:</string>
+    <string name="about_release_note_title">লগ হালনাগাদ করুনঃ</string>
     <string name="about_terms_service">পরিষেবার শর্তাবলী</string>
     <string name="app_name">স্ক্রিনশট</string>
     <string name="got_it">বুঝেছি</string>
@@ -15,6 +15,9 @@
     <string name="notification_channel_screenshot">স্ক্রীনশটস</string>
     <string name="oneplus_delete">মুছুন</string>
     <string name="oneplus_share">পাঠান</string>
+    <string name="permission_btn_text_denied">প্রস্থান করুন</string>
+    <string name="permission_btn_text_grant">ঠিক আছে</string>
+    <string name="permission_dialog_title">অনুমতির বিবৃতি</string>
     <string name="quick_share_description1">"শেয়ার করতে
 থাম্বনেইলটিতে দীর্ঘক্ষণ চাপুন"</string>
     <string name="quick_share_more_text">আরো</string>

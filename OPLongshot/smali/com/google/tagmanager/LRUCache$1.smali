@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/LRUCache$1;
 .super Landroid/util/LruCache;
-.source "LRUCache.java"
+.source ""
 
 
 # annotations

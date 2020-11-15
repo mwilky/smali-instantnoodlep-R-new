@@ -1,6 +1,6 @@
 .class final Landroidx/customview/widget/ExploreByTouchHelper$2;
 .super Ljava/lang/Object;
-.source "ExploreByTouchHelper.java"
+.source ""
 
 # interfaces
 .implements Landroidx/customview/widget/FocusStrategy$CollectionAdapter;
@@ -21,9 +21,9 @@
         "Ljava/lang/Object;",
         "Landroidx/customview/widget/FocusStrategy$CollectionAdapter<",
         "Landroidx/collection/SparseArrayCompat<",
-        "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;",
+        "Landroidx/core/view/accessibility/d;",
         ">;",
-        "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;",
+        "Landroidx/core/view/accessibility/d;",
         ">;"
     }
 .end annotation
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+.method public get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/d;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;",
+            "Landroidx/core/view/accessibility/d;",
             ">;I)",
-            "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;"
+            "Landroidx/core/view/accessibility/d;"
         }
     .end annotation
 
@@ -56,7 +56,7 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+    check-cast p1, Landroidx/core/view/accessibility/d;
 
     return-object p1
 .end method
@@ -66,7 +66,7 @@
 
     check-cast p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;",
+            "Landroidx/core/view/accessibility/d;",
             ">;)I"
         }
     .end annotation

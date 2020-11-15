@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/SaveState$AnimationRunnable;
 .super Ljava/lang/Object;
-.source "SaveState.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

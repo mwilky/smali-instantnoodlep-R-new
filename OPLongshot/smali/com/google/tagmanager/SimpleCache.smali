@@ -1,6 +1,6 @@
 .class Lcom/google/tagmanager/SimpleCache;
 .super Ljava/lang/Object;
-.source "SimpleCache.java"
+.source ""
 
 # interfaces
 .implements Lcom/google/tagmanager/Cache;

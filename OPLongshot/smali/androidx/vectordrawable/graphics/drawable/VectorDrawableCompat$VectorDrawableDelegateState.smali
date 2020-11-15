@@ -1,9 +1,13 @@
 .class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "VectorDrawableCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 .end annotation
@@ -70,7 +74,7 @@
 
     check-cast v1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -90,7 +94,7 @@
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -110,7 +114,7 @@
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method

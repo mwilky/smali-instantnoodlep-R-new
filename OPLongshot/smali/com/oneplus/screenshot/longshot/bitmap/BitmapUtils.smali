@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/bitmap/BitmapUtils;
 .super Ljava/lang/Object;
-.source "BitmapUtils.java"
+.source ""
 
 
 # static fields
@@ -247,7 +247,7 @@
 
     if-nez p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -258,6 +258,7 @@
 
     const-string p1, "navibar is invisiable"
 
+    :goto_0
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -313,12 +314,10 @@
     return-object v0
 
     :cond_3
-    :goto_0
+    :goto_1
     const-string p1, "null bitmap"
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object p0
+    goto :goto_0
 .end method
 
 .method public static drawNavibar(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
@@ -328,7 +327,7 @@
 
     if-nez p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -341,6 +340,7 @@
 
     const-string v0, "navibar is invisiable"
 
+    :goto_0
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -407,14 +407,12 @@
     throw p1
 
     :cond_2
-    :goto_0
+    :goto_1
     const-string p1, "Longshot.BitmapUtils"
 
     const-string v0, "null bitmap"
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object p0
+    goto :goto_0
 .end method
 
 .method public static getImageConfig(Ljava/util/List;)Landroid/graphics/Bitmap$Config;
@@ -629,12 +627,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/OutOfMemoryError;
-        }
-    .end annotation
-
     const/4 v0, 0x0
 
     if-nez p1, :cond_0
@@ -643,6 +635,7 @@
 
     const-string p1, "null bitmaps"
 
+    :goto_0
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -658,9 +651,7 @@
 
     const-string p1, "bitmap size 0"
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v0
+    goto :goto_0
 
     :cond_1
     const/4 v2, 0x1

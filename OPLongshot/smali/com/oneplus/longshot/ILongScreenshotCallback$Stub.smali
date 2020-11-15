@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;
 .super Landroid/os/Binder;
-.source "ILongScreenshotCallback.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshotCallback;
@@ -41,7 +41,7 @@
 
     const-string v0, "com.oneplus.longshot.ILongScreenshotCallback"
 
-    invoke-virtual {p0, p0, v0}, Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -119,11 +119,6 @@
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
@@ -165,7 +160,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;->isTopActivityDisplayCompat(Ljava/lang/String;I)Z
+    invoke-interface {p0, p1, p2}, Lcom/oneplus/longshot/ILongScreenshotCallback;->isTopActivityDisplayCompat(Ljava/lang/String;I)Z
 
     move-result p1
 
@@ -178,8 +173,9 @@
     :cond_2
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;->notifyMove()V
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback;->notifyMove()V
 
+    :goto_0
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v0
@@ -187,9 +183,7 @@
     :cond_3
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;->stop()V
+    invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback;->stop()V
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v0
+    goto :goto_0
 .end method

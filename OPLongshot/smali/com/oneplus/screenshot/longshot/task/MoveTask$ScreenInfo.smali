@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/task/MoveTask$ScreenInfo;
 .super Ljava/lang/Object;
-.source "MoveTask.java"
+.source ""
 
 
 # annotations

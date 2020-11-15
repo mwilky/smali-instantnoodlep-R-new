@@ -1,6 +1,6 @@
 .class public abstract Landroidx/customview/view/AbsSavedState;
 .super Ljava/lang/Object;
-.source "AbsSavedState.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroidx/customview/view/AbsSavedState$1;
+    new-instance v0, Landroidx/customview/view/AbsSavedState$a;
 
-    invoke-direct {v0}, Landroidx/customview/view/AbsSavedState$1;-><init>()V
+    invoke-direct {v0}, Landroidx/customview/view/AbsSavedState$a;-><init>()V
 
     sput-object v0, Landroidx/customview/view/AbsSavedState;->EMPTY_STATE:Landroidx/customview/view/AbsSavedState;
 
@@ -57,6 +57,10 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -67,6 +71,14 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,6 +101,10 @@
 
 .method protected constructor <init>(Landroid/os/Parcelable;)V
     .locals 1
+    .param p1    # Landroid/os/Parcelable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -118,7 +134,7 @@
     throw p1
 .end method
 
-.method synthetic constructor <init>(Landroidx/customview/view/AbsSavedState$1;)V
+.method synthetic constructor <init>(Landroidx/customview/view/AbsSavedState$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/customview/view/AbsSavedState;-><init>()V
@@ -138,6 +154,8 @@
 
 .method public final getSuperState()Landroid/os/Parcelable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Landroidx/customview/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 

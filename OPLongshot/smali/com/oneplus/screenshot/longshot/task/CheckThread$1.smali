@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/task/CheckThread$1;
 .super Ljava/lang/Object;
-.source "CheckThread.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread$1;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f0f00b3
+    const v1, 0x7f1000b6
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

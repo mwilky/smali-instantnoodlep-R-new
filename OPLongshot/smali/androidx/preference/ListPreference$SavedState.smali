@@ -1,6 +1,6 @@
 .class Landroidx/preference/ListPreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
-.source "ListPreference.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field mValue:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/ListPreference$SavedState;->mValue:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/preference/ListPreference$SavedState;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -69,10 +69,14 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-super {p0, p1, p2}, Landroidx/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object p2, p0, Landroidx/preference/ListPreference$SavedState;->mValue:Ljava/lang/String;
+    iget-object p2, p0, Landroidx/preference/ListPreference$SavedState;->a:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

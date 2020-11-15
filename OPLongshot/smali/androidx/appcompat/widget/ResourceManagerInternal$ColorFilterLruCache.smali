@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
 .super Landroidx/collection/LruCache;
-.source "ResourceManagerInternal.java"
+.source ""
 
 
 # annotations
@@ -63,7 +63,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/collection/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, p3}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p3}, Landroidx/collection/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

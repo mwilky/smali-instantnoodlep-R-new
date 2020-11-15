@@ -1,6 +1,6 @@
 .class abstract Landroidx/loader/content/ModernAsyncTask;
 .super Ljava/lang/Object;
-.source "ModernAsyncTask.java"
+.source ""
 
 
 # annotations
@@ -8,7 +8,7 @@
     value = {
         Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;,
         Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;,
-        Landroidx/loader/content/ModernAsyncTask$InternalHandler;,
+        Landroidx/loader/content/ModernAsyncTask$c;,
         Landroidx/loader/content/ModernAsyncTask$Status;
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 .field private static volatile sDefaultExecutor:Ljava/util/concurrent/Executor;
 
-.field private static sHandler:Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+.field private static sHandler:Landroidx/loader/content/ModernAsyncTask$c;
 
 .field private static final sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
@@ -89,9 +89,9 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    new-instance v0, Landroidx/loader/content/ModernAsyncTask$1;
+    new-instance v0, Landroidx/loader/content/ModernAsyncTask$a;
 
-    invoke-direct {v0}, Landroidx/loader/content/ModernAsyncTask$1;-><init>()V
+    invoke-direct {v0}, Landroidx/loader/content/ModernAsyncTask$a;-><init>()V
 
     sput-object v0, Landroidx/loader/content/ModernAsyncTask;->sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
@@ -184,18 +184,18 @@
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+    sget-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$c;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+    new-instance v1, Landroidx/loader/content/ModernAsyncTask$c;
 
-    invoke-direct {v1}, Landroidx/loader/content/ModernAsyncTask$InternalHandler;-><init>()V
+    invoke-direct {v1}, Landroidx/loader/content/ModernAsyncTask$c;-><init>()V
 
-    sput-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+    sput-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$c;
 
     :cond_0
-    sget-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+    sget-object v1, Landroidx/loader/content/ModernAsyncTask;->sHandler:Landroidx/loader/content/ModernAsyncTask$c;
 
     monitor-exit v0
 
@@ -213,6 +213,11 @@
 
 .method public static setDefaultExecutor(Ljava/util/concurrent/Executor;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     sput-object p0, Landroidx/loader/content/ModernAsyncTask;->sDefaultExecutor:Ljava/util/concurrent/Executor;
 
@@ -284,11 +289,11 @@
 
     if-eq v0, v1, :cond_2
 
-    sget-object p1, Landroidx/loader/content/ModernAsyncTask$4;->$SwitchMap$androidx$loader$content$ModernAsyncTask$Status:[I
+    sget-object p1, Landroidx/loader/content/ModernAsyncTask$b;->a:[I
 
     iget-object p2, p0, Landroidx/loader/content/ModernAsyncTask;->mStatus:Landroidx/loader/content/ModernAsyncTask$Status;
 
-    invoke-virtual {p2}, Landroidx/loader/content/ModernAsyncTask$Status;->ordinal()I
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result p2
 
@@ -383,13 +388,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/ExecutionException;
-        }
-    .end annotation
-
     iget-object v0, p0, Landroidx/loader/content/ModernAsyncTask;->mFuture:Ljava/util/concurrent/FutureTask;
 
     invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
@@ -406,14 +404,6 @@
             "(J",
             "Ljava/util/concurrent/TimeUnit;",
             ")TResult;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/ExecutionException;,
-            Ljava/util/concurrent/TimeoutException;
         }
     .end annotation
 

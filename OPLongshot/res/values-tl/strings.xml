@@ -27,9 +27,9 @@
     <string name="abc_shareactionprovider_share_with">Ibahagi sa/kay</string>
     <string name="abc_shareactionprovider_share_with_application">Ibahagi gamit ang %s</string>
     <string name="abc_toolbar_collapse_description">I-collapse</string>
-    <string name="about_action_bar_title">Tungkol sa</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Patakarang Pang-pribado</string>
+    <string name="about_action_bar_title">Tungkol Dito</string>
+    <string name="about_app_version_text">Bersyon %s</string>
+    <string name="about_privacy_policy">Patakaran sa Privacy</string>
     <string name="about_release_note_title">I-update ang log:</string>
     <string name="about_terms_service">Mga Tuntunin ng Serbisyo</string>
     <string name="app_name">Screenshot</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Mga Screenshot</string>
     <string name="oneplus_delete">I-delete</string>
     <string name="oneplus_share">Ipadala</string>
+    <string name="permission_btn_text_denied">Lumabas</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Pahayag ng pahintulot</string>
     <string name="preference_copied">Nakopya sa clipboard ang \"%1$s.\"</string>
     <string name="quick_share_description1">"Pindutin ng matagal ang thumbnail 
 para i-share"</string>

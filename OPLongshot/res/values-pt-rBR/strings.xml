@@ -27,11 +27,11 @@
     <string name="abc_shareactionprovider_share_with">Compartilhar com</string>
     <string name="abc_shareactionprovider_share_with_application">Compartilhar com %s</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
-    <string name="about_action_bar_title">Sobre</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Política de privacidade</string>
+    <string name="about_action_bar_title">Informações</string>
+    <string name="about_app_version_text">Versão %s</string>
+    <string name="about_privacy_policy">Política de Privacidade</string>
     <string name="about_release_note_title">Log de atualização:</string>
-    <string name="about_terms_service">Termos de serviço</string>
+    <string name="about_terms_service">Termos de Serviço</string>
     <string name="copy">Copiar</string>
     <string name="expand_button_title">Avançado</string>
     <string name="got_it">Entendi</string>
@@ -41,6 +41,9 @@
     <string name="not_set">Não definido</string>
     <string name="not_support_longshot">Esta página não permite a captura de tela expandida.</string>
     <string name="notification_channel_screenshot">Capturas de tela</string>
+    <string name="permission_btn_text_denied">Sair</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Declaração de permissão</string>
     <string name="preference_copied">\"%1$s\" copiado para a área de transferência.</string>
     <string name="quick_share_description1">"Pressione e segure a miniatura 
 para compartilhar"</string>

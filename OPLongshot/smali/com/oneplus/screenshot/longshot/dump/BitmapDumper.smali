@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 .super Ljava/lang/Object;
-.source "BitmapDumper.java"
+.source ""
 
 
 # annotations

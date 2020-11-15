@@ -1,6 +1,14 @@
 .class public final Landroidx/core/text/HtmlCompat;
 .super Ljava/lang/Object;
-.source "HtmlCompat.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "InlinedApi"
+    }
+.end annotation
 
 
 # static fields
@@ -38,6 +46,12 @@
 
 .method public static fromHtml(Ljava/lang/String;I)Landroid/text/Spanned;
     .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -61,6 +75,20 @@
 
 .method public static fromHtml(Ljava/lang/String;ILandroid/text/Html$ImageGetter;Landroid/text/Html$TagHandler;)Landroid/text/Spanned;
     .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/text/Html$ImageGetter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/text/Html$TagHandler;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -84,6 +112,12 @@
 
 .method public static toHtml(Landroid/text/Spanned;I)Ljava/lang/String;
     .locals 2
+    .param p0    # Landroid/text/Spanned;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 

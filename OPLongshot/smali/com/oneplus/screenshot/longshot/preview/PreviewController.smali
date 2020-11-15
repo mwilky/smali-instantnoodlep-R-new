@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 .super Ljava/lang/Object;
-.source "PreviewController.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
@@ -70,7 +70,7 @@
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/preview/PreviewController$1;
 
-    invoke-static {}, Lcom/oneplus/compat/os/BackgroundThreadNative;->getHandler()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object v2
 
@@ -362,7 +362,7 @@
     move v2, v1
 
     :goto_0
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v3
 
@@ -372,7 +372,7 @@
 
     if-gt v3, v2, :cond_1
 
-    invoke-virtual {v0, v2}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -408,7 +408,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->size()I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v9
 
@@ -634,7 +634,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -666,8 +666,6 @@
 
     iget-object v1, v1, Lcom/oneplus/screenshot/StitchViewService;->mFirstPreview:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
-
     goto :goto_0
 
     :cond_0
@@ -681,16 +679,16 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/screenshot/longshot/cache/ImageCache;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/graphics/Bitmap;
 
+    :goto_0
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
 
     :cond_1
-    :goto_0
     return-void
 .end method
 
@@ -798,7 +796,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/cache/JoinCache;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 

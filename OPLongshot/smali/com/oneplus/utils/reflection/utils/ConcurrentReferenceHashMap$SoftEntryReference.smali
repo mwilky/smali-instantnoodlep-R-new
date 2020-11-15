@@ -1,6 +1,6 @@
 .class final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;
 .super Ljava/lang/ref/SoftReference;
-.source "ConcurrentReferenceHashMap.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -110,9 +110,9 @@
 .method public release()V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;->enqueue()Z
+    invoke-virtual {p0}, Ljava/lang/ref/SoftReference;->enqueue()Z
 
-    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;->clear()V
+    invoke-virtual {p0}, Ljava/lang/ref/SoftReference;->clear()V
 
     return-void
 .end method

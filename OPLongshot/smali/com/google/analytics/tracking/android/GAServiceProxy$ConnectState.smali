@@ -1,6 +1,6 @@
 .class final enum Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
 .super Ljava/lang/Enum;
-.source "GAServiceProxy.java"
+.source ""
 
 
 # annotations

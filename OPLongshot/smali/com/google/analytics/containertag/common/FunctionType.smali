@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/containertag/common/FunctionType;
 .super Ljava/lang/Enum;
-.source "FunctionType.java"
+.source ""
 
 
 # annotations

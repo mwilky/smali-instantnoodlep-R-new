@@ -1,6 +1,12 @@
 .class Lcom/google/android/material/transition/MaskEvaluator;
 .super Ljava/lang/Object;
-.source "MaskEvaluator.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
@@ -78,10 +84,10 @@
     return-void
 .end method
 
-.method evaluate(FLcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/RectF;Lcom/google/android/material/transition/MaterialContainerTransform$ProgressThresholds;)V
+.method evaluate(FLcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/RectF;Lcom/google/android/material/transition/MaterialContainerTransform$c;)V
     .locals 8
 
-    iget v0, p7, Lcom/google/android/material/transition/MaterialContainerTransform$ProgressThresholds;->start:F
+    iget v0, p7, Lcom/google/android/material/transition/MaterialContainerTransform$c;->a:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -97,7 +103,7 @@
 
     move-result v5
 
-    iget p7, p7, Lcom/google/android/material/transition/MaterialContainerTransform$ProgressThresholds;->end:F
+    iget p7, p7, Lcom/google/android/material/transition/MaterialContainerTransform$c;->b:F
 
     invoke-static {p7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -133,13 +139,13 @@
 
     const/high16 p4, 0x3f800000    # 1.0f
 
-    invoke-virtual {p2, p1, p4, p5, p3}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->calculatePath(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
+    invoke-virtual {p2, p1, p4, p5, p3}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->d(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
 
     iget-object p2, p0, Lcom/google/android/material/transition/MaskEvaluator;->pathProvider:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
 
     iget-object p3, p0, Lcom/google/android/material/transition/MaskEvaluator;->endPath:Landroid/graphics/Path;
 
-    invoke-virtual {p2, p1, p4, p6, p3}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->calculatePath(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
+    invoke-virtual {p2, p1, p4, p6, p3}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->d(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
 
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 

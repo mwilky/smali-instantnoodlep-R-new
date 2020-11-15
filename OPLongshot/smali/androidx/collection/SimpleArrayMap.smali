@@ -1,6 +1,6 @@
 .class public Landroidx/collection/SimpleArrayMap;
 .super Ljava/lang/Object;
-.source "SimpleArrayMap.java"
+.source ""
 
 
 # annotations
@@ -28,10 +28,16 @@
 .field private static final TAG:Ljava/lang/String; = "ArrayMap"
 
 .field static mBaseCache:[Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field static mBaseCacheSize:I
 
 .field static mTwiceBaseCache:[Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field static mTwiceBaseCacheSize:I
 
@@ -50,11 +56,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
+    sget-object v0, Landroidx/collection/a;->a:[I
 
     iput-object v0, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object v0, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
+    sget-object v0, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object v0, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -72,11 +78,11 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -143,13 +149,9 @@
 
     check-cast v4, [Ljava/lang/Object;
 
-    check-cast v4, [Ljava/lang/Object;
-
     sput-object v4, Landroidx/collection/SimpleArrayMap;->mTwiceBaseCache:[Ljava/lang/Object;
 
     aget-object v4, p1, v3
-
-    check-cast v4, [I
 
     check-cast v4, [I
 
@@ -203,13 +205,9 @@
 
     check-cast v4, [Ljava/lang/Object;
 
-    check-cast v4, [Ljava/lang/Object;
-
     sput-object v4, Landroidx/collection/SimpleArrayMap;->mBaseCache:[Ljava/lang/Object;
 
     aget-object v4, p1, v3
-
-    check-cast v4, [I
 
     check-cast v4, [I
 
@@ -262,7 +260,7 @@
     .locals 0
 
     :try_start_0
-    invoke-static {p0, p1, p2}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {p0, p1, p2}, Landroidx/collection/a;->a([III)I
 
     move-result p0
     :try_end_0
@@ -422,11 +420,11 @@
 
     iget-object v2, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
-    sget-object v3, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
+    sget-object v3, Landroidx/collection/a;->a:[I
 
     iput-object v3, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object v3, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
+    sget-object v3, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object v3, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -453,6 +451,10 @@
 
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->indexOfKey(Ljava/lang/Object;)I
 
@@ -707,6 +709,9 @@
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -909,6 +914,10 @@
 
 .method public indexOfKey(Ljava/lang/Object;)I
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p1, :cond_0
 
@@ -1123,6 +1132,9 @@
 
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -1306,6 +1318,10 @@
 
 .method public putAll(Landroidx/collection/SimpleArrayMap;)V
     .locals 4
+    .param p1    # Landroidx/collection/SimpleArrayMap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1373,6 +1389,9 @@
 
 .method public putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -1395,6 +1414,9 @@
 
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1485,11 +1507,11 @@
 
     invoke-static {p1, v0, v3}, Landroidx/collection/SimpleArrayMap;->freeArrays([I[Ljava/lang/Object;I)V
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -1622,6 +1644,9 @@
 
 .method public replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"

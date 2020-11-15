@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/containertag/common/Key;
 .super Ljava/lang/Enum;
-.source "Key.java"
+.source ""
 
 
 # annotations

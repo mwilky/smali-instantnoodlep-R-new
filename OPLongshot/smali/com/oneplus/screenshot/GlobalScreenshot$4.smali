@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$4;
 .super Ljava/lang/Object;
-.source "GlobalScreenshot.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$4;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/ScreenshotSelectorView;->requestFocus()Z
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
     return-void
 .end method

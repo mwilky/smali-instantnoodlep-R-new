@@ -1,6 +1,14 @@
 .class public final Landroid/support/v4/app/RemoteActionCompatParcelizer;
 .super Landroidx/core/app/RemoteActionCompatParcelizer;
-.source "RemoteActionCompatParcelizer.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # direct methods

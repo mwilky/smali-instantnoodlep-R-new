@@ -1,12 +1,18 @@
 .class public interface abstract annotation Landroidx/appcompat/widget/LinearLayoutCompat$OrientationMode;
 .super Ljava/lang/Object;
-.source "LinearLayoutCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/LinearLayoutCompat;
 .end annotation

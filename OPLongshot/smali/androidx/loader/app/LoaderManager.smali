@@ -1,6 +1,6 @@
 .class public abstract Landroidx/loader/app/LoaderManager;
 .super Ljava/lang/Object;
-.source "LoaderManager.java"
+.source ""
 
 
 # annotations
@@ -20,22 +20,21 @@
     return-void
 .end method
 
-.method public static enableDebugLogging(Z)V
-    .locals 0
-
-    sput-boolean p0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
-
-    return-void
-.end method
-
-.method public static getInstance(Landroidx/lifecycle/LifecycleOwner;)Landroidx/loader/app/LoaderManager;
+.method public static b(Landroidx/lifecycle/e;)Landroidx/loader/app/LoaderManager;
     .locals 2
+    .param p0    # Landroidx/lifecycle/e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/lifecycle/LifecycleOwner;",
+            "Landroidx/lifecycle/e;",
             ":",
-            "Landroidx/lifecycle/ViewModelStoreOwner;",
+            "Landroidx/lifecycle/k;",
             ">(TT;)",
             "Landroidx/loader/app/LoaderManager;"
         }
@@ -45,76 +44,23 @@
 
     move-object v1, p0
 
-    check-cast v1, Landroidx/lifecycle/ViewModelStoreOwner;
+    check-cast v1, Landroidx/lifecycle/k;
 
-    invoke-interface {v1}, Landroidx/lifecycle/ViewModelStoreOwner;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
+    invoke-interface {v1}, Landroidx/lifecycle/k;->getViewModelStore()Landroidx/lifecycle/j;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/ViewModelStore;)V
+    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Landroidx/lifecycle/e;Landroidx/lifecycle/j;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract destroyLoader(I)V
-.end method
-
-.method public abstract dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.method public abstract a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
-.method public abstract getLoader(I)Landroidx/loader/content/Loader;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I)",
-            "Landroidx/loader/content/Loader<",
-            "TD;>;"
-        }
-    .end annotation
-.end method
-
-.method public hasRunningLoaders()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract initLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I",
-            "Landroid/os/Bundle;",
-            "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
-            "TD;>;)",
-            "Landroidx/loader/content/Loader<",
-            "TD;>;"
-        }
-    .end annotation
-.end method
-
-.method public abstract markForRedelivery()V
-.end method
-
-.method public abstract restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<D:",
-            "Ljava/lang/Object;",
-            ">(I",
-            "Landroid/os/Bundle;",
-            "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
-            "TD;>;)",
-            "Landroidx/loader/content/Loader<",
-            "TD;>;"
-        }
-    .end annotation
+.method public abstract c()V
 .end method

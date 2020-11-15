@@ -1,13 +1,19 @@
 .class public final Landroidx/savedstate/SavedStateRegistry;
 .super Ljava/lang/Object;
-.source "SavedStateRegistry.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;,
-        Landroidx/savedstate/SavedStateRegistry$AutoRecreated;
+        Landroidx/savedstate/SavedStateRegistry$b;,
+        Landroidx/savedstate/SavedStateRegistry$a;
     }
 .end annotation
 
@@ -24,17 +30,20 @@
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap<",
             "Ljava/lang/String;",
-            "Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;",
+            "Landroidx/savedstate/SavedStateRegistry$b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private mRecreatorProvider:Landroidx/savedstate/Recreator$SavedStateProvider;
+.field private mRecreatorProvider:Landroidx/savedstate/Recreator$a;
 
 .field private mRestored:Z
 
 .field private mRestoredState:Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -60,6 +69,15 @@
 # virtual methods
 .method public consumeRestoredStateForKey(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 3
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRestored:Z
 
@@ -107,6 +125,8 @@
 
 .method public isRestored()Z
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRestored:Z
 
@@ -115,6 +135,16 @@
 
 .method performRestore(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/Lifecycle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRestored:Z
 
@@ -135,7 +165,7 @@
 
     invoke-direct {p2, p0}, Landroidx/savedstate/SavedStateRegistry$1;-><init>(Landroidx/savedstate/SavedStateRegistry;)V
 
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
 
     const/4 p1, 0x1
 
@@ -155,6 +185,12 @@
 
 .method performSave(Landroid/os/Bundle;)V
     .locals 4
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -196,9 +232,9 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
+    check-cast v2, Landroidx/savedstate/SavedStateRegistry$b;
 
-    invoke-interface {v2}, Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;->saveState()Landroid/os/Bundle;
+    invoke-interface {v2}, Landroidx/savedstate/SavedStateRegistry$b;->saveState()Landroid/os/Bundle;
 
     move-result-object v2
 
@@ -214,8 +250,18 @@
     return-void
 .end method
 
-.method public registerSavedStateProvider(Ljava/lang/String;Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;)V
+.method public registerSavedStateProvider(Ljava/lang/String;Landroidx/savedstate/SavedStateRegistry$b;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/savedstate/SavedStateRegistry$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mComponents:Landroidx/arch/core/internal/SafeIterableMap;
 
@@ -223,7 +269,7 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
+    check-cast p1, Landroidx/savedstate/SavedStateRegistry$b;
 
     if-nez p1, :cond_0
 
@@ -241,12 +287,19 @@
 
 .method public runOnNextRecreation(Ljava/lang/Class;)V
     .locals 4
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Landroidx/savedstate/SavedStateRegistry$AutoRecreated;",
+            "Landroidx/savedstate/SavedStateRegistry$a;",
             ">;)V"
         }
     .end annotation
@@ -255,15 +308,15 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$SavedStateProvider;
+    iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroidx/savedstate/Recreator$SavedStateProvider;
+    new-instance v0, Landroidx/savedstate/Recreator$a;
 
-    invoke-direct {v0, p0}, Landroidx/savedstate/Recreator$SavedStateProvider;-><init>(Landroidx/savedstate/SavedStateRegistry;)V
+    invoke-direct {v0, p0}, Landroidx/savedstate/Recreator$a;-><init>(Landroidx/savedstate/SavedStateRegistry;)V
 
-    iput-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$SavedStateProvider;
+    iput-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$a;
 
     :cond_0
     const/4 v0, 0x0
@@ -275,13 +328,13 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$SavedStateProvider;
+    iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$a;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/savedstate/Recreator$SavedStateProvider;->add(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Landroidx/savedstate/Recreator$a;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -328,6 +381,12 @@
 
 .method public unregisterSavedStateProvider(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mComponents:Landroidx/arch/core/internal/SafeIterableMap;
 

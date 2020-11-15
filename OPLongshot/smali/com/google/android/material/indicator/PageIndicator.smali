@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/indicator/PageIndicator;
 .super Landroid/view/ViewGroup;
-.source "PageIndicator.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
 
 
 # static fields
@@ -55,13 +63,13 @@
 
     iput p1, p0, Lcom/google/android/material/indicator/PageIndicator;->mPosition:I
 
-    new-instance p1, Lcom/google/android/material/indicator/PageIndicator$1;
+    new-instance p1, Lcom/google/android/material/indicator/PageIndicator$a;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/indicator/PageIndicator$1;-><init>(Lcom/google/android/material/indicator/PageIndicator;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/indicator/PageIndicator$a;-><init>(Lcom/google/android/material/indicator/PageIndicator;)V
 
     iput-object p1, p0, Lcom/google/android/material/indicator/PageIndicator;->mAnimationDone:Ljava/lang/Runnable;
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -69,7 +77,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$dimen;->qs_page_indicator_width:I
+    sget p2, Lb/a/b/a/d;->qs_page_indicator_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -79,7 +87,7 @@
 
     iput p1, p0, Lcom/google/android/material/indicator/PageIndicator;->mPageIndicatorWidth:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -87,7 +95,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$dimen;->qs_page_indicator_height:I
+    sget p2, Lb/a/b/a/d;->qs_page_indicator_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -109,7 +117,7 @@
 
     iput p1, p0, Lcom/google/android/material/indicator/PageIndicator;->mPageDotWidth:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -117,7 +125,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$integer;->pageIndicator_alpha_material:I
+    sget p2, Lb/a/b/a/g;->pageIndicator_alpha_material:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -232,13 +240,13 @@
     add-int/lit8 v0, v0, 0x1
 
     :cond_3
-    invoke-virtual {p0, p2}, Lcom/google/android/material/indicator/PageIndicator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/indicator/PageIndicator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -329,35 +337,34 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception p1
-
-    invoke-static {v1, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_2
     move-exception p1
 
+    :goto_0
     invoke-static {v1, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_3
     const-string p1, "Could not find method forceAnimationOnUI."
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
@@ -386,24 +393,24 @@
 
     if-eqz p2, :cond_0
 
-    sget p1, Lcom/google/android/material/R$drawable;->op_major_b_a_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_b_a_animation:I
 
     return p1
 
     :cond_0
-    sget p1, Lcom/google/android/material/R$drawable;->op_major_b_c_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_b_c_animation:I
 
     return p1
 
     :cond_1
     if-eqz p2, :cond_2
 
-    sget p1, Lcom/google/android/material/R$drawable;->op_major_a_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_a_b_animation:I
 
     return p1
 
     :cond_2
-    sget p1, Lcom/google/android/material/R$drawable;->op_major_c_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_c_b_animation:I
 
     return p1
 
@@ -412,24 +419,24 @@
 
     if-eqz p2, :cond_4
 
-    sget p1, Lcom/google/android/material/R$drawable;->op_minor_b_c_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_b_c_animation:I
 
     return p1
 
     :cond_4
-    sget p1, Lcom/google/android/material/R$drawable;->op_minor_b_a_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_b_a_animation:I
 
     return p1
 
     :cond_5
     if-eqz p2, :cond_6
 
-    sget p1, Lcom/google/android/material/R$drawable;->op_minor_c_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_c_b_animation:I
 
     return p1
 
     :cond_6
-    sget p1, Lcom/google/android/material/R$drawable;->op_minor_a_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_a_b_animation:I
 
     return p1
 .end method
@@ -437,7 +444,7 @@
 .method private playAnimation(Landroid/widget/ImageView;I)V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -457,7 +464,7 @@
 
     const-wide/16 v0, 0x7d
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/indicator/PageIndicator;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, p1, v0, v1}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
@@ -465,7 +472,7 @@
 .method private setIndex(I)V
     .locals 5
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -476,7 +483,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    invoke-virtual {p0, v2}, Lcom/google/android/material/indicator/PageIndicator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -486,7 +493,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    sget v4, Lcom/google/android/material/R$drawable;->op_major_a_b:I
+    sget v4, Lb/a/b/a/e;->op_major_a_b:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -592,35 +599,34 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception v3
-
-    invoke-static {v1, v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_2
     move-exception v3
 
+    :goto_0
     invoke-static {v1, v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_3
     const-string v0, "Could not find method isVisibleToUser."
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :goto_1
     return v2
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
 
@@ -644,7 +650,7 @@
 
     mul-int/2addr p4, p3
 
-    invoke-virtual {p0, p3}, Lcom/google/android/material/indicator/PageIndicator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p5
 
@@ -667,7 +673,7 @@
 .method protected onMeasure(II)V
     .locals 3
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
@@ -697,7 +703,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/indicator/PageIndicator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -722,7 +728,7 @@
 
     iget p2, p0, Lcom/google/android/material/indicator/PageIndicator;->mPageIndicatorHeight:I
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/indicator/PageIndicator;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     return-void
 .end method
@@ -732,11 +738,11 @@
 
     float-to-int v0, p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$string;->op_accessibility_quick_settings_page:I
+    sget v2, Lb/a/b/a/j;->op_accessibility_quick_settings_page:I
 
     const/4 v3, 0x2
 
@@ -752,7 +758,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
 
@@ -768,7 +774,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/indicator/PageIndicator;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setContentDescription(Ljava/lang/CharSequence;)V
 
     shl-int/lit8 v1, v0, 0x1
 
@@ -854,7 +860,7 @@
     const/4 v2, 0x4
 
     :goto_0
-    invoke-virtual {p0, v2}, Lcom/google/android/material/indicator/PageIndicator;->setVisibility(I)V
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     iget-boolean v2, p0, Lcom/google/android/material/indicator/PageIndicator;->mAnimating:Z
 
@@ -868,24 +874,24 @@
 
     :cond_1
     :goto_1
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
     if-ge p1, v2, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
     sub-int/2addr v2, v1
 
-    invoke-virtual {p0, v2}, Lcom/google/android/material/indicator/PageIndicator;->removeViewAt(I)V
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -906,7 +912,7 @@
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     :goto_2
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
@@ -914,13 +920,13 @@
 
     new-instance v2, Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/google/android/material/indicator/PageIndicator;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lcom/google/android/material/R$drawable;->op_minor_a_b:I
+    sget v3, Lb/a/b/a/e;->op_minor_a_b:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -938,7 +944,7 @@
 
     invoke-direct {v3, v4, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p0, v2, v3}, Lcom/google/android/material/indicator/PageIndicator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_2
 

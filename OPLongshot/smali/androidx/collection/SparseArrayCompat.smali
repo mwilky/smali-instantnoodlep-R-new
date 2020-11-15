@@ -1,6 +1,6 @@
 .class public Landroidx/collection/SparseArrayCompat;
 .super Ljava/lang/Object;
-.source "SparseArrayCompat.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -66,18 +66,18 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
-    sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Landroidx/collection/ContainerHelpers;->idealIntArraySize(I)I
+    invoke-static {p1}, Landroidx/collection/a;->e(I)I
 
     move-result p1
 
@@ -197,7 +197,7 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    invoke-static {v1}, Landroidx/collection/ContainerHelpers;->idealIntArraySize(I)I
+    invoke-static {v1}, Landroidx/collection/a;->e(I)I
 
     move-result v1
 
@@ -322,11 +322,6 @@
 
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->clone()Landroidx/collection/SparseArrayCompat;
 
@@ -392,6 +387,9 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TE;"
@@ -419,7 +417,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 
@@ -459,7 +457,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 
@@ -556,7 +554,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result v0
 
@@ -610,7 +608,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result v0
 
@@ -627,7 +625,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v1}, Landroidx/collection/ContainerHelpers;->idealIntArraySize(I)I
+    invoke-static {v1}, Landroidx/collection/a;->e(I)I
 
     move-result v1
 
@@ -697,6 +695,10 @@
 
 .method public putAll(Landroidx/collection/SparseArrayCompat;)V
     .locals 4
+    .param p1    # Landroidx/collection/SparseArrayCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -734,6 +736,9 @@
 
 .method public putIfAbsent(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITE;)TE;"
@@ -759,7 +764,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 
@@ -866,6 +871,9 @@
 
 .method public replace(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITE;)TE;"

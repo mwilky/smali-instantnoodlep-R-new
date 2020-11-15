@@ -1,9 +1,13 @@
 .class Landroidx/print/PrintHelper$PrintBitmapAdapter;
 .super Landroid/print/PrintDocumentAdapter;
-.source "PrintHelper.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/print/PrintHelper;
 .end annotation
@@ -19,7 +23,7 @@
 
 .field private final mBitmap:Landroid/graphics/Bitmap;
 
-.field private final mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
+.field private final mCallback:Landroidx/print/PrintHelper$a;
 
 .field private final mFittingMode:I
 
@@ -29,7 +33,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/print/PrintHelper;Ljava/lang/String;ILandroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
+.method constructor <init>(Landroidx/print/PrintHelper;Ljava/lang/String;ILandroid/graphics/Bitmap;Landroidx/print/PrintHelper$a;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->this$0:Landroidx/print/PrintHelper;
@@ -42,7 +46,7 @@
 
     iput-object p4, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mBitmap:Landroid/graphics/Bitmap;
 
-    iput-object p5, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
+    iput-object p5, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$a;
 
     return-void
 .end method
@@ -52,11 +56,11 @@
 .method public onFinish()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
+    iget-object v0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Landroidx/print/PrintHelper$OnPrintFinishCallback;->onFinish()V
+    invoke-interface {v0}, Landroidx/print/PrintHelper$a;->a()V
 
     :cond_0
     return-void
@@ -115,7 +119,7 @@
 
     move-object v6, p4
 
-    invoke-virtual/range {v0 .. v6}, Landroidx/print/PrintHelper;->writeBitmap(Landroid/print/PrintAttributes;ILandroid/graphics/Bitmap;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
+    invoke-virtual/range {v0 .. v6}, Landroidx/print/PrintHelper;->e(Landroid/print/PrintAttributes;ILandroid/graphics/Bitmap;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
 
     return-void
 .end method

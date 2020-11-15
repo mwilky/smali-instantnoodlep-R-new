@@ -1,12 +1,24 @@
 .class Landroidx/appcompat/graphics/drawable/StateListDrawable;
 .super Landroidx/appcompat/graphics/drawable/DrawableContainer;
-.source "StateListDrawable.java"
+.source ""
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedAPI"
+    }
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+        Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
     }
 .end annotation
 
@@ -20,7 +32,7 @@
 # instance fields
 .field private mMutated:Z
 
-.field private mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+.field private mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
 
 # direct methods
@@ -29,36 +41,40 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0, v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;Landroid/content/res/Resources;)V
+    invoke-direct {p0, v0, v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroid/content/res/Resources;)V
 
     return-void
 .end method
 
-.method constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;)V
+.method constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;)V
     .locals 0
+    .param p1    # Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;-><init>()V
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+    invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;)V
 
     :cond_0
     return-void
 .end method
 
-.method constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;Landroid/content/res/Resources;)V
+.method constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroid/content/res/Resources;)V
     .locals 1
 
     invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer;-><init>()V
 
-    new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-direct {v0, p1, p0, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
+    invoke-direct {v0, p1, p0, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+    invoke-virtual {p0, v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;)V
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object p1
 
@@ -69,14 +85,8 @@
 
 .method private inflateChildElements(Landroid/content/Context;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
     .locals 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
@@ -129,7 +139,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object v3, Landroidx/appcompat/resources/R$styleable;->StateListDrawableItem:[I
+    sget-object v3, La/a/k/b;->StateListDrawableItem:[I
 
     invoke-static {p2, p5, p4, v3}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -137,7 +147,7 @@
 
     const/4 v4, 0x0
 
-    sget v6, Landroidx/appcompat/resources/R$styleable;->StateListDrawableItem_android_drawable:I
+    sget v6, La/a/k/b;->StateListDrawableItem_android_drawable:I
 
     const/4 v7, -0x1
 
@@ -228,7 +238,7 @@
 
     :cond_8
     :goto_2
-    invoke-virtual {v0, v3, v4}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;)I
+    invoke-virtual {v0, v3, v4}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->B([ILandroid/graphics/drawable/Drawable;)I
 
     goto/16 :goto_0
 
@@ -239,7 +249,7 @@
 .method private updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
     .locals 3
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -247,7 +257,7 @@
 
     if-lt v1, v2, :cond_0
 
-    iget v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mChangingConfigurations:I
+    iget v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->d:I
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getChangingConfigurations()I
 
@@ -255,58 +265,58 @@
 
     or-int/2addr v1, v2
 
-    iput v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mChangingConfigurations:I
+    iput v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->d:I
 
     :cond_0
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_variablePadding:I
+    sget v1, La/a/k/b;->StateListDrawable_android_variablePadding:I
 
-    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mVariablePadding:Z
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    iput-boolean v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mVariablePadding:Z
-
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_constantSize:I
-
-    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mConstantSize:Z
+    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->i:Z
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    iput-boolean v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mConstantSize:Z
+    iput-boolean v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->i:Z
 
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_enterFadeDuration:I
+    sget v1, La/a/k/b;->StateListDrawable_android_constantSize:I
 
-    iget v2, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mEnterFadeDuration:I
+    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->l:Z
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    iput-boolean v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->l:Z
+
+    sget v1, La/a/k/b;->StateListDrawable_android_enterFadeDuration:I
+
+    iget v2, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->A:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
-    iput v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mEnterFadeDuration:I
+    iput v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->A:I
 
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_exitFadeDuration:I
+    sget v1, La/a/k/b;->StateListDrawable_android_exitFadeDuration:I
 
-    iget v2, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mExitFadeDuration:I
+    iget v2, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->B:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
-    iput v1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mExitFadeDuration:I
+    iput v1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->B:I
 
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_dither:I
+    sget v1, La/a/k/b;->StateListDrawable_android_dither:I
 
-    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mDither:Z
+    iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->x:Z
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p1
 
-    iput-boolean p1, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mDither:Z
+    iput-boolean p1, v0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->x:Z
 
     return-void
 .end method
@@ -318,11 +328,11 @@
 
     if-eqz p2, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;)I
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->B([ILandroid/graphics/drawable/Drawable;)I
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object p1
 
@@ -334,10 +344,17 @@
 
 .method public applyTheme(Landroid/content/res/Resources$Theme;)V
     .locals 0
+    .param p1    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
 
     invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object p1
 
@@ -358,26 +375,26 @@
     return-void
 .end method
 
-.method bridge synthetic cloneConstantState()Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;
+.method bridge synthetic cloneConstantState()Landroidx/appcompat/graphics/drawable/DrawableContainer$c;
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->cloneConstantState()Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->cloneConstantState()Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method cloneConstantState()Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+.method cloneConstantState()Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
     .locals 3
 
-    new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p0, v2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
+    invoke-direct {v0, v1, p0, v2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
 
     return-object v0
 .end method
@@ -448,9 +465,9 @@
 .method getStateCount()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->getChildCount()I
+    invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->i()I
 
     move-result v0
 
@@ -460,9 +477,9 @@
 .method getStateDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->getChild(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -472,19 +489,19 @@
 .method getStateDrawableIndex([I)I
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->indexOfStateSet([I)I
+    invoke-virtual {v0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->C([I)I
 
     move-result p1
 
     return p1
 .end method
 
-.method getStateListState()Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+.method getStateListState()Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     return-object v0
 .end method
@@ -492,9 +509,9 @@
 .method getStateSet(I)[I
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    iget-object v0, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mStateSets:[[I
+    iget-object v0, v0, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->J:[[I
 
     aget-object p1, v0, p1
 
@@ -503,20 +520,34 @@
 
 .method public inflate(Landroid/content/Context;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lorg/xmlpull/v1/XmlPullParser;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p5    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    sget-object v0, Landroidx/appcompat/resources/R$styleable;->StateListDrawable:[I
+    sget-object v0, La/a/k/b;->StateListDrawable:[I
 
     invoke-static {p2, p5, p4, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Landroidx/appcompat/resources/R$styleable;->StateListDrawable_android_visible:I
+    sget v1, La/a/k/b;->StateListDrawable_android_visible:I
 
     const/4 v2, 0x1
 
@@ -524,17 +555,17 @@
 
     move-result v1
 
-    invoke-virtual {p0, v1, v2}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->setVisible(ZZ)Z
+    invoke-virtual {p0, v1, v2}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->setVisible(ZZ)Z
 
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
 
-    invoke-virtual {p0, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->updateDensity(Landroid/content/res/Resources;)V
+    invoke-virtual {p0, p2}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->updateDensity(Landroid/content/res/Resources;)V
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     invoke-direct/range {p0 .. p5}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->inflateChildElements(Landroid/content/Context;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->getState()[I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object p1
 
@@ -553,6 +584,8 @@
 
 .method public mutate()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mMutated:Z
 
@@ -564,9 +597,9 @@
 
     if-ne v0, p0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->mutate()V
+    invoke-virtual {v0}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->t()V
 
     const/4 v0, 0x1
 
@@ -583,24 +616,24 @@
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    invoke-virtual {v1, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->indexOfStateSet([I)I
+    invoke-virtual {v1, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->C([I)I
 
     move-result p1
 
     if-gez p1, :cond_0
 
-    iget-object p1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iget-object p1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     sget-object v1, Landroid/util/StateSet;->WILD_CARD:[I
 
-    invoke-virtual {p1, v1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->indexOfStateSet([I)I
+    invoke-virtual {p1, v1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->C([I)I
 
     move-result p1
 
     :cond_0
-    invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable;->selectDrawable(I)Z
+    invoke-virtual {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->selectDrawable(I)Z
 
     move-result p1
 
@@ -623,18 +656,22 @@
     return p1
 .end method
 
-.method setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+.method setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;)V
     .locals 1
+    .param p1    # Landroidx/appcompat/graphics/drawable/DrawableContainer$c;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableContainer;->setConstantState(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;)V
 
-    instance-of v0, p1, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    instance-of v0, p1, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    check-cast p1, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
-    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable;->mStateListState:Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 
     :cond_0
     return-void

@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/internal/FlowLayout;
 .super Landroid/view/ViewGroup;
-.source "FlowLayout.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
@@ -16,6 +24,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -26,6 +38,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -36,6 +56,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -50,6 +78,17 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x15
+    .end annotation
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -88,12 +127,20 @@
 
 .method private loadFromAttributes(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1
 
-    sget-object v0, Lcom/google/android/material/R$styleable;->FlowLayout:[I
+    sget-object v0, Lb/a/b/a/l;->FlowLayout:[I
 
     const/4 v1, 0x0
 
@@ -101,7 +148,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/google/android/material/R$styleable;->FlowLayout_lineSpacing:I
+    sget p2, Lb/a/b/a/l;->FlowLayout_lineSpacing:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -109,7 +156,7 @@
 
     iput p2, p0, Lcom/google/android/material/internal/FlowLayout;->lineSpacing:I
 
-    sget p2, Lcom/google/android/material/R$styleable;->FlowLayout_itemSpacing:I
+    sget p2, Lb/a/b/a/l;->FlowLayout_itemSpacing:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -150,8 +197,12 @@
 
 .method public getRowIndex(Landroid/view/View;)I
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    sget v0, Lcom/google/android/material/R$id;->row_index_key:I
+    sget v0, Lb/a/b/a/f;->row_index_key:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -186,7 +237,7 @@
 .method protected onLayout(ZIIII)V
     .locals 9
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
 
@@ -203,7 +254,7 @@
 
     iput p1, p0, Lcom/google/android/material/internal/FlowLayout;->rowCount:I
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I
 
     move-result p5
 
@@ -219,33 +270,33 @@
     :goto_0
     if-eqz p5, :cond_2
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v0
 
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v0
 
     :goto_1
     if-eqz p5, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v1
 
     goto :goto_2
 
     :cond_3
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v1
 
     :goto_2
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v2
 
@@ -260,13 +311,13 @@
     move p2, v2
 
     :goto_3
-    invoke-virtual {p0}, Lcom/google/android/material/internal/FlowLayout;->getChildCount()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
 
     if-ge v1, v4, :cond_8
 
-    invoke-virtual {p0, v1}, Lcom/google/android/material/internal/FlowLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -278,7 +329,7 @@
 
     if-ne v5, v6, :cond_4
 
-    sget v5, Lcom/google/android/material/R$id;->row_index_key:I
+    sget v5, Lb/a/b/a/f;->row_index_key:I
 
     const/4 v6, -0x1
 
@@ -288,7 +339,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_4
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -301,11 +352,11 @@
 
     check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-static {v5}, Landroidx/core/view/MarginLayoutParamsCompat;->getMarginStart(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/view/d;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v6
 
-    invoke-static {v5}, Landroidx/core/view/MarginLayoutParamsCompat;->getMarginEnd(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/view/d;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v5
 
@@ -344,7 +395,7 @@
     move v3, v0
 
     :cond_6
-    sget v2, Lcom/google/android/material/R$id;->row_index_key:I
+    sget v2, Lb/a/b/a/f;->row_index_key:I
 
     iget v7, p0, Lcom/google/android/material/internal/FlowLayout;->rowCount:I
 
@@ -378,14 +429,9 @@
 
     sub-int/2addr v7, v6
 
-    invoke-virtual {v4, v2, p2, v7, v8}, Landroid/view/View;->layout(IIII)V
-
-    goto :goto_5
-
     :cond_7
     invoke-virtual {v4, v2, p2, v7, v8}, Landroid/view/View;->layout(IIII)V
 
-    :goto_5
     add-int/2addr v6, v5
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
@@ -402,7 +448,7 @@
 
     move v2, v8
 
-    :goto_6
+    :goto_5
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
@@ -452,15 +498,15 @@
     move v5, v1
 
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v6
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v7
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v8
 
@@ -473,13 +519,13 @@
     const/4 v11, 0x0
 
     :goto_2
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v12
 
     if-ge v10, v12, :cond_7
 
-    invoke-virtual {v0, v10}, Lcom/google/android/material/internal/FlowLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v12
 
@@ -504,7 +550,7 @@
 
     move/from16 v14, p2
 
-    invoke-virtual {v0, v12, v13, v14}, Lcom/google/android/material/internal/FlowLayout;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {v0, v12, v13, v14}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -554,7 +600,7 @@
 
     if-nez v6, :cond_4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v6
 
@@ -601,7 +647,7 @@
 
     add-int/2addr v6, v8
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v7
 
@@ -620,13 +666,13 @@
     goto :goto_2
 
     :cond_7
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v5
 
     add-int/2addr v11, v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/internal/FlowLayout;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v5
 
@@ -640,7 +686,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/internal/FlowLayout;->setMeasuredDimension(II)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     return-void
 .end method

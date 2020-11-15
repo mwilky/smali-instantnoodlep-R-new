@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/statistics/EventStatistics;
 .super Ljava/lang/Object;
-.source "EventStatistics.java"
+.source ""
 
 
 # annotations
@@ -14,26 +14,14 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "EventStatistics"
 
 .field private static appBase:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/oneplus/screenshot/statistics/EventStatistics;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->TAG:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    sput v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->appBase:I
+    .locals 0
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/animation/Keyframes$IntKeyframes;
 .super Ljava/lang/Object;
-.source "Keyframes.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes;

@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/picker/NumberPicker$OnScrollListener;
 .super Ljava/lang/Object;
-.source "NumberPicker.java"
+.source ""
 
 
 # annotations
@@ -20,14 +20,6 @@
 .end annotation
 
 
-# static fields
-.field public static final SCROLL_STATE_FLING:I = 0x2
-
-.field public static final SCROLL_STATE_IDLE:I = 0x0
-
-.field public static final SCROLL_STATE_TOUCH_SCROLL:I = 0x1
-
-
 # virtual methods
-.method public abstract onScrollStateChange(Lcom/google/android/material/picker/NumberPicker;I)V
+.method public abstract a(Lcom/google/android/material/picker/NumberPicker;I)V
 .end method

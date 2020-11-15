@@ -1,12 +1,18 @@
 .class Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;
 .super Ljava/lang/Object;
-.source "AppCompatDelegateImpl.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;
 .end annotation

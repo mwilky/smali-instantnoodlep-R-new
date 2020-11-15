@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "BottomActionbar.java"
+.source ""
 
 
 # annotations
@@ -27,9 +27,9 @@
 
 
 # instance fields
-.field fabAlignmentMode:I
+.field a:I
 
-.field fabAttached:Z
+.field b:Z
 
 
 # direct methods
@@ -47,6 +47,10 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
@@ -54,7 +58,7 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAlignmentMode:I
+    iput p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -70,7 +74,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAttached:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->b:Z
 
     return-void
 .end method
@@ -87,14 +91,18 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAlignmentMode:I
+    iget p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-boolean p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->fabAttached:Z
+    iget-boolean p2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;->b:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

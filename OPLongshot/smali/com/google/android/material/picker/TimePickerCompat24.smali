@@ -1,6 +1,12 @@
 .class public final Lcom/google/android/material/picker/TimePickerCompat24;
 .super Ljava/lang/Object;
-.source "TimePickerCompat24.java"
+.source ""
+
+
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x18
+.end annotation
 
 
 # direct methods

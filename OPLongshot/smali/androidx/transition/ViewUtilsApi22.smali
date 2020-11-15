@@ -1,6 +1,12 @@
 .class Landroidx/transition/ViewUtilsApi22;
 .super Landroidx/transition/ViewUtilsApi21;
-.source "ViewUtilsApi22.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x16
+.end annotation
 
 
 # static fields
@@ -26,6 +32,15 @@
 # virtual methods
 .method public setLeftTopRightBottom(Landroid/view/View;IIII)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     sget-boolean v0, Landroidx/transition/ViewUtilsApi22;->sTryHiddenSetLeftTopRightBottom:Z
 

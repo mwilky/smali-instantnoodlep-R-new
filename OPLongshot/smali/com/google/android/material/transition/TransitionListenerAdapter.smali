@@ -1,9 +1,15 @@
 .class abstract Lcom/google/android/material/transition/TransitionListenerAdapter;
 .super Ljava/lang/Object;
-.source "TransitionListenerAdapter.java"
+.source ""
 
 # interfaces
 .implements Landroid/transition/Transition$TransitionListener;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # direct methods

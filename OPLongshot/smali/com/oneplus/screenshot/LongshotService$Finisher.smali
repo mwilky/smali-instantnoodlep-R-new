@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/LongshotService$Finisher;
 .super Ljava/lang/Object;
-.source "LongshotService.java"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;

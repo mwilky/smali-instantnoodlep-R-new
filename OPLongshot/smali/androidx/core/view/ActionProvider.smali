@@ -1,12 +1,12 @@
 .class public abstract Landroidx/core/view/ActionProvider;
 .super Ljava/lang/Object;
-.source "ActionProvider.java"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/view/ActionProvider$VisibilityListener;,
+        Landroidx/core/view/ActionProvider$a;,
         Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
     }
 .end annotation
@@ -21,7 +21,7 @@
 
 .field private mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
-.field private mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+.field private mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
 
 # direct methods
@@ -99,7 +99,7 @@
 .method public refreshVisibility()V
     .locals 2
 
-    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
     if-eqz v0, :cond_0
 
@@ -109,13 +109,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
     invoke-virtual {p0}, Landroidx/core/view/ActionProvider;->isVisible()Z
 
     move-result v1
 
-    invoke-interface {v0, v1}, Landroidx/core/view/ActionProvider$VisibilityListener;->onActionProviderVisibilityChanged(Z)V
+    invoke-interface {v0, v1}, Landroidx/core/view/ActionProvider$a;->onActionProviderVisibilityChanged(Z)V
 
     :cond_0
     return-void
@@ -123,10 +123,15 @@
 
 .method public reset()V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+    iput-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
     iput-object v0, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
@@ -135,16 +140,21 @@
 
 .method public setSubUiVisibilityListener(Landroidx/core/view/ActionProvider$SubUiVisibilityListener;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
     return-void
 .end method
 
-.method public setVisibilityListener(Landroidx/core/view/ActionProvider$VisibilityListener;)V
+.method public setVisibilityListener(Landroidx/core/view/ActionProvider$a;)V
     .locals 2
 
-    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+    iget-object v0, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
     if-eqz v0, :cond_0
 
@@ -181,13 +191,18 @@
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iput-object p1, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$VisibilityListener;
+    iput-object p1, p0, Landroidx/core/view/ActionProvider;->mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
     return-void
 .end method
 
 .method public subUiVisibilityChanged(Z)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     iget-object v0, p0, Landroidx/core/view/ActionProvider;->mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 

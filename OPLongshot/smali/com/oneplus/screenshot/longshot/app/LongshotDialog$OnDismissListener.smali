@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnDismissListener;
 .super Ljava/lang/Object;
-.source "LongshotDialog.java"
+.source ""
 
 
 # annotations

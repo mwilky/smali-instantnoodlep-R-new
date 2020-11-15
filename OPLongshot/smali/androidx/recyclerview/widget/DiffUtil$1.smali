@@ -1,6 +1,6 @@
 .class final Landroidx/recyclerview/widget/DiffUtil$1;
 .super Ljava/lang/Object;
-.source "DiffUtil.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Landroidx/recyclerview/widget/DiffUtil$Snake;",
+        "Landroidx/recyclerview/widget/DiffUtil$e;",
         ">;"
     }
 .end annotation
@@ -37,20 +37,20 @@
 
 
 # virtual methods
-.method public compare(Landroidx/recyclerview/widget/DiffUtil$Snake;Landroidx/recyclerview/widget/DiffUtil$Snake;)I
+.method public compare(Landroidx/recyclerview/widget/DiffUtil$e;Landroidx/recyclerview/widget/DiffUtil$e;)I
     .locals 2
 
-    iget v0, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
+    iget v0, p1, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
 
-    iget v1, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->x:I
+    iget v1, p2, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
 
     sub-int/2addr v0, v1
 
     if-nez v0, :cond_0
 
-    iget p1, p1, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
+    iget p1, p1, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
 
-    iget p2, p2, Landroidx/recyclerview/widget/DiffUtil$Snake;->y:I
+    iget p2, p2, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
 
     sub-int v0, p1, p2
 
@@ -61,11 +61,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Landroidx/recyclerview/widget/DiffUtil$Snake;
+    check-cast p1, Landroidx/recyclerview/widget/DiffUtil$e;
 
-    check-cast p2, Landroidx/recyclerview/widget/DiffUtil$Snake;
+    check-cast p2, Landroidx/recyclerview/widget/DiffUtil$e;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/DiffUtil$1;->compare(Landroidx/recyclerview/widget/DiffUtil$Snake;Landroidx/recyclerview/widget/DiffUtil$Snake;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/DiffUtil$1;->compare(Landroidx/recyclerview/widget/DiffUtil$e;Landroidx/recyclerview/widget/DiffUtil$e;)I
 
     move-result p1
 

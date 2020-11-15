@@ -1,21 +1,12 @@
 .class Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
 .super Ljava/lang/Object;
-.source "AnimateLayoutChangeDetector.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->arePagesLaidOutContiguously()Z
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
@@ -26,14 +17,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
+.field final synthetic this$0:Landroidx/viewpager2/widget/a;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;)V
+.method constructor <init>(Landroidx/viewpager2/widget/a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;->this$0:Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
+    iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;->this$0:Landroidx/viewpager2/widget/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

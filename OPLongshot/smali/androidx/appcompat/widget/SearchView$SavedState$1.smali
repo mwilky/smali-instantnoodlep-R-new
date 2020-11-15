@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/SearchView$SavedState$1;
 .super Ljava/lang/Object;
-.source "SearchView.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

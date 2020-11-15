@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">%s과(와) 공유</string>
     <string name="abc_toolbar_collapse_description">접기</string>
     <string name="about_action_bar_title">정보</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">버전 %s</string>
     <string name="about_privacy_policy">개인 정보 보호 정책</string>
     <string name="about_release_note_title">업데이트 로그:</string>
     <string name="about_terms_service">서비스 약관</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">스크린샷</string>
     <string name="oneplus_delete">삭제</string>
     <string name="oneplus_share">전송</string>
+    <string name="permission_btn_text_denied">끝내기</string>
+    <string name="permission_btn_text_grant">확인</string>
+    <string name="permission_dialog_title">권한 설명</string>
     <string name="preference_copied">"'%1$s'이(가) 클립보드에 복사되었습니다."</string>
     <string name="quick_share_description1">"썸네일을 길게 눌러서
 공유"</string>

@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Поделиться с помощью %s</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
     <string name="about_action_bar_title">Информация</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версия %s</string>
     <string name="about_privacy_policy">Политика конфиденциальности</string>
     <string name="about_release_note_title">Журнал обновлений:</string>
     <string name="about_terms_service">Условия обслуживания</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">Скриншоты</string>
     <string name="oneplus_delete">Удалить</string>
     <string name="oneplus_share">Отправить</string>
+    <string name="permission_btn_text_denied">Выход</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Заявление о разрешении</string>
     <string name="preference_copied">Текст \"%1$s\" скопирован в буфер обмена</string>
     <string name="quick_share_description1">"Чтобы поделиться, используйте
 длинное нажатие эксиза"</string>

@@ -1,6 +1,6 @@
 .class final Landroidx/fragment/app/BackStackState$1;
 .super Ljava/lang/Object;
-.source "BackStackState.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

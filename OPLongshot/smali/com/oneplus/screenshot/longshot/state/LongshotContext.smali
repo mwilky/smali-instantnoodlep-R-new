@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 .super Ljava/lang/Object;
-.source "LongshotContext.java"
+.source ""
 
 
 # virtual methods

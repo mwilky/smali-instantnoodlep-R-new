@@ -1,6 +1,6 @@
 .class abstract Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .super Ljava/lang/Object;
-.source "ViewCompat.java"
+.source ""
 
 
 # annotations
@@ -264,7 +264,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getOrCreateAccessibilityDelegateCompat(Landroid/view/View;)Landroidx/core/view/AccessibilityDelegateCompat;
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->B(Landroid/view/View;)Landroidx/core/view/a;
 
     iget v0, p0, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;->mTagKey:I
 
@@ -272,7 +272,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->notifyViewAccessibilityStateChangedIfNeeded(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->R(Landroid/view/View;I)V
 
     :cond_1
     :goto_0

@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
 .super Ljava/lang/Object;
-.source "PreviewController.java"
+.source ""
 
 
 # annotations

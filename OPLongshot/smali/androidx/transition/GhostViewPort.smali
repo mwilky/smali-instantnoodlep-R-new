@@ -1,13 +1,24 @@
 .class Landroidx/transition/GhostViewPort;
 .super Landroid/view/ViewGroup;
-.source "GhostViewPort.java"
+.source ""
 
 # interfaces
-.implements Landroidx/transition/GhostView;
+.implements Landroidx/transition/f;
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "ViewConstructor"
+    }
+.end annotation
 
 
 # instance fields
 .field private mMatrix:Landroid/graphics/Matrix;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private final mOnPreDrawListener:Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
@@ -30,9 +41,9 @@
 
     invoke-direct {p0, v0}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Landroidx/transition/GhostViewPort$1;
+    new-instance v0, Landroidx/transition/GhostViewPort$a;
 
-    invoke-direct {v0, p0}, Landroidx/transition/GhostViewPort$1;-><init>(Landroidx/transition/GhostViewPort;)V
+    invoke-direct {v0, p0}, Landroidx/transition/GhostViewPort$a;-><init>(Landroidx/transition/GhostViewPort;)V
 
     iput-object v0, p0, Landroidx/transition/GhostViewPort;->mOnPreDrawListener:Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
@@ -40,13 +51,13 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroidx/transition/GhostViewPort;->setWillNotDraw(Z)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
     const/4 p1, 0x2
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Landroidx/transition/GhostViewPort;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->setLayerType(ILandroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -74,7 +85,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Landroidx/transition/GhostViewPort;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
 
@@ -84,7 +95,7 @@
 
     iget v2, v1, Landroidx/transition/GhostViewPort;->mReferences:I
 
-    invoke-virtual {v3, v1}, Landroidx/transition/GhostViewHolder;->removeView(Landroid/view/View;)V
+    invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     const/4 v1, 0x0
 
@@ -164,7 +175,7 @@
 
     invoke-virtual {p2}, Landroid/graphics/Matrix;->reset()V
 
-    invoke-static {p0, p2}, Landroidx/transition/ViewUtils;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p0, p2}, Landroidx/transition/ViewUtils;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getScrollX()I
 
@@ -184,7 +195,7 @@
 
     invoke-virtual {p2, v0, p0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method
@@ -220,7 +231,7 @@
 
     add-int/2addr v3, p0
 
-    invoke-static {p1, v0, v1, v2, v3}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, v1, v2, v3}, Landroidx/transition/ViewUtils;->g(Landroid/view/View;IIII)V
 
     return-void
 .end method
@@ -228,7 +239,7 @@
 .method static getGhostView(Landroid/view/View;)Landroidx/transition/GhostViewPort;
     .locals 1
 
-    sget v0, Landroidx/transition/R$id;->ghost_view:I
+    sget v0, Landroidx/transition/k;->ghost_view:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -256,13 +267,13 @@
 
     if-gtz v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/transition/GhostViewPort;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroidx/transition/GhostViewHolder;
 
-    invoke-virtual {v0, p0}, Landroidx/transition/GhostViewHolder;->removeView(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     :cond_0
     return-void
@@ -270,8 +281,16 @@
 
 .method static setGhostView(Landroid/view/View;Landroidx/transition/GhostViewPort;)V
     .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/transition/GhostViewPort;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    sget v0, Landroidx/transition/R$id;->ghost_view:I
+    sget v0, Landroidx/transition/k;->ghost_view:I
 
     invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -303,7 +322,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->i(Landroid/view/View;I)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
 
@@ -344,7 +363,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->i(Landroid/view/View;I)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
 
@@ -381,7 +400,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Landroidx/transition/CanvasUtils;->enableZ(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v0}, Landroidx/transition/c;->a(Landroid/graphics/Canvas;Z)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mMatrix:Landroid/graphics/Matrix;
 
@@ -391,7 +410,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/transition/ViewUtils;->i(Landroid/view/View;I)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
 
@@ -401,17 +420,17 @@
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Landroidx/transition/ViewUtils;->i(Landroid/view/View;I)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroidx/transition/GhostViewPort;->getDrawingTime()J
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getDrawingTime()J
 
     move-result-wide v2
 
-    invoke-virtual {p0, p1, v0, v2, v3}, Landroidx/transition/GhostViewPort;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
+    invoke-virtual {p0, p1, v0, v2, v3}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
-    invoke-static {p1, v1}, Landroidx/transition/CanvasUtils;->enableZ(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v1}, Landroidx/transition/c;->a(Landroid/graphics/Canvas;Z)V
 
     return-void
 .end method
@@ -434,6 +453,10 @@
 
 .method setMatrix(Landroid/graphics/Matrix;)V
     .locals 0
+    .param p1    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroidx/transition/GhostViewPort;->mMatrix:Landroid/graphics/Matrix;
 
@@ -465,7 +488,7 @@
     :goto_0
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
 
-    invoke-static {v0, p1}, Landroidx/transition/ViewUtils;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-static {v0, p1}, Landroidx/transition/ViewUtils;->i(Landroid/view/View;I)V
 
     :cond_1
     return-void

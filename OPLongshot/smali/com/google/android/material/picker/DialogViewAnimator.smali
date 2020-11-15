@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/picker/DialogViewAnimator;
 .super Landroid/widget/ViewAnimator;
-.source "DialogViewAnimator.java"
+.source ""
 
 
 # instance fields
-.field private final mMatchParentChildren:Ljava/util/ArrayList;
+.field private final a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -16,22 +16,6 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    invoke-direct {p0, p1}, Landroid/widget/ViewAnimator;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object p1, p0, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -43,7 +27,7 @@
 
     invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/google/android/material/picker/DialogViewAnimator;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -87,7 +71,7 @@
     const/4 v12, 0x1
 
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getChildCount()I
 
     move-result v13
 
@@ -104,11 +88,11 @@
 
     if-ge v14, v13, :cond_a
 
-    invoke-virtual {v6, v14}, Lcom/google/android/material/picker/DialogViewAnimator;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v6, v14}, Landroid/widget/ViewAnimator;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getMeasureAllChildren()Z
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getMeasureAllChildren()Z
 
     move-result v1
 
@@ -162,7 +146,7 @@
     if-eqz v17, :cond_6
 
     :cond_5
-    iget-object v0, v6, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v0, v6, Lcom/google/android/material/picker/DialogViewAnimator;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -191,7 +175,7 @@
 
     move/from16 v5, v19
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/picker/DialogViewAnimator;->measureChildWithMargins(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Landroid/widget/ViewAnimator;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     if-eqz v12, :cond_7
 
@@ -273,7 +257,7 @@
     move v5, v2
 
     :goto_6
-    invoke-static {v9, v1}, Lcom/google/android/material/picker/DialogViewAnimator;->combineMeasuredStates(II)I
+    invoke-static {v9, v1}, Landroid/widget/ViewAnimator;->combineMeasuredStates(II)I
 
     move-result v4
 
@@ -289,11 +273,11 @@
 
     move v2, v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingLeft()I
 
     move-result v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingRight()I
 
     move-result v3
 
@@ -301,11 +285,11 @@
 
     add-int/2addr v15, v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingTop()I
 
     move-result v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingBottom()I
 
     move-result v3
 
@@ -313,7 +297,7 @@
 
     add-int v5, v2, v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getSuggestedMinimumHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getSuggestedMinimumHeight()I
 
     move-result v1
 
@@ -321,7 +305,7 @@
 
     move-result v1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getSuggestedMinimumWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getSuggestedMinimumWidth()I
 
     move-result v2
 
@@ -329,7 +313,7 @@
 
     move-result v2
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getForeground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getForeground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -352,19 +336,19 @@
     move-result v2
 
     :cond_b
-    invoke-static {v2, v7, v9}, Lcom/google/android/material/picker/DialogViewAnimator;->resolveSizeAndState(III)I
+    invoke-static {v2, v7, v9}, Landroid/widget/ViewAnimator;->resolveSizeAndState(III)I
 
     move-result v2
 
     shl-int/lit8 v3, v9, 0x10
 
-    invoke-static {v1, v8, v3}, Lcom/google/android/material/picker/DialogViewAnimator;->resolveSizeAndState(III)I
+    invoke-static {v1, v8, v3}, Landroid/widget/ViewAnimator;->resolveSizeAndState(III)I
 
     move-result v1
 
-    invoke-virtual {v6, v2, v1}, Lcom/google/android/material/picker/DialogViewAnimator;->setMeasuredDimension(II)V
+    invoke-virtual {v6, v2, v1}, Landroid/widget/ViewAnimator;->setMeasuredDimension(II)V
 
-    iget-object v1, v6, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v1, v6, Lcom/google/android/material/picker/DialogViewAnimator;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -373,7 +357,7 @@
     :goto_7
     if-ge v11, v1, :cond_e
 
-    iget-object v2, v6, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v2, v6, Lcom/google/android/material/picker/DialogViewAnimator;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -391,17 +375,17 @@
 
     if-ne v4, v0, :cond_c
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getMeasuredWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getMeasuredWidth()I
 
     move-result v4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingLeft()I
 
     move-result v5
 
     sub-int/2addr v4, v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingRight()I
 
     move-result v5
 
@@ -424,11 +408,11 @@
     goto :goto_8
 
     :cond_c
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingLeft()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingLeft()I
 
     move-result v4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingRight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingRight()I
 
     move-result v5
 
@@ -444,7 +428,7 @@
 
     iget v5, v3, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    invoke-static {v7, v4, v5}, Lcom/google/android/material/picker/DialogViewAnimator;->getChildMeasureSpec(III)I
+    invoke-static {v7, v4, v5}, Landroid/widget/ViewAnimator;->getChildMeasureSpec(III)I
 
     move-result v4
 
@@ -453,17 +437,17 @@
 
     if-ne v5, v0, :cond_d
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getMeasuredHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getMeasuredHeight()I
 
     move-result v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingTop()I
 
     move-result v9
 
     sub-int/2addr v5, v9
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingBottom()I
 
     move-result v9
 
@@ -488,11 +472,11 @@
     :cond_d
     const/high16 v9, 0x40000000    # 2.0f
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingTop()I
 
     move-result v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/material/picker/DialogViewAnimator;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/ViewAnimator;->getPaddingBottom()I
 
     move-result v10
 
@@ -508,7 +492,7 @@
 
     iget v3, v3, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {v8, v5, v3}, Lcom/google/android/material/picker/DialogViewAnimator;->getChildMeasureSpec(III)I
+    invoke-static {v8, v5, v3}, Landroid/widget/ViewAnimator;->getChildMeasureSpec(III)I
 
     move-result v3
 
@@ -520,7 +504,7 @@
     goto :goto_7
 
     :cond_e
-    iget-object v0, v6, Lcom/google/android/material/picker/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
+    iget-object v0, v6, Lcom/google/android/material/picker/DialogViewAnimator;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

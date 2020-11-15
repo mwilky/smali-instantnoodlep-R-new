@@ -1,9 +1,17 @@
 .class public Landroidx/appcompat/text/AllCapsTransformationMethod;
 .super Ljava/lang/Object;
-.source "AllCapsTransformationMethod.java"
+.source ""
 
 # interfaces
 .implements Landroid/text/method/TransformationMethod;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields

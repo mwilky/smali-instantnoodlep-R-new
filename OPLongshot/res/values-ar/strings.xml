@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">مشاركة مع %s</string>
     <string name="abc_toolbar_collapse_description">تصغير</string>
     <string name="about_action_bar_title">حول</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">الإصدار %s</string>
     <string name="about_privacy_policy">سياسة الخصوصية</string>
     <string name="about_release_note_title">سجل التحديث:</string>
     <string name="about_terms_service">شروط الخدمة</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">لقطات الشاشة</string>
     <string name="oneplus_delete">حذف</string>
     <string name="oneplus_share">إرسال</string>
+    <string name="permission_btn_text_denied">خروج</string>
+    <string name="permission_btn_text_grant">موافق</string>
+    <string name="permission_dialog_title">بيان الإذن</string>
     <string name="preference_copied">تم نسخ \"%1$s\" إلى الحافظة.</string>
     <string name="quick_share_description1">"ضغطة طويلة على الصورة المصغرة
 للمشاركة"</string>

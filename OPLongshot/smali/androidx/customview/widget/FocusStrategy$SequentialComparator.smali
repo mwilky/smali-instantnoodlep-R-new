@@ -1,21 +1,12 @@
 .class Landroidx/customview/widget/FocusStrategy$SequentialComparator;
 .super Ljava/lang/Object;
-.source "FocusStrategy.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/customview/widget/FocusStrategy;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
-    name = "SequentialComparator"
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -110,10 +101,6 @@
     return v2
 
     :cond_0
-    iget p1, v0, Landroid/graphics/Rect;->top:I
-
-    iget p2, v1, Landroid/graphics/Rect;->top:I
-
     const/4 v3, 0x1
 
     if-le p1, p2, :cond_1
@@ -137,10 +124,6 @@
     return v2
 
     :cond_3
-    iget p1, v0, Landroid/graphics/Rect;->left:I
-
-    iget p2, v1, Landroid/graphics/Rect;->left:I
-
     if-le p1, p2, :cond_5
 
     iget-boolean p1, p0, Landroidx/customview/widget/FocusStrategy$SequentialComparator;->mIsLayoutRtl:Z
@@ -165,10 +148,6 @@
     return v2
 
     :cond_6
-    iget p1, v0, Landroid/graphics/Rect;->bottom:I
-
-    iget p2, v1, Landroid/graphics/Rect;->bottom:I
-
     if-le p1, p2, :cond_7
 
     return v3
@@ -190,10 +169,6 @@
     return v2
 
     :cond_9
-    iget p1, v0, Landroid/graphics/Rect;->right:I
-
-    iget p2, v1, Landroid/graphics/Rect;->right:I
-
     if-le p1, p2, :cond_b
 
     iget-boolean p1, p0, Landroidx/customview/widget/FocusStrategy$SequentialComparator;->mIsLayoutRtl:Z

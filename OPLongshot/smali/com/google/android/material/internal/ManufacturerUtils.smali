@@ -1,6 +1,14 @@
 .class public Lcom/google/android/material/internal/ManufacturerUtils;
 .super Ljava/lang/Object;
-.source "ManufacturerUtils.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields

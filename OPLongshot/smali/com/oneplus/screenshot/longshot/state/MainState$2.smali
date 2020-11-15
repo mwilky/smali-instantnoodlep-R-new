@@ -1,6 +1,6 @@
 .class Lcom/oneplus/screenshot/longshot/state/MainState$2;
 .super Ljava/lang/Object;
-.source "MainState.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
@@ -39,27 +39,23 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState$2;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v1, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/MainState$2;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    iget-object v1, v1, Lcom/oneplus/screenshot/longshot/state/MainState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
-
-    invoke-static {v0, v1}, Lcom/oneplus/screenshot/longshot/bitmap/BitmapUtils;->addBitmaps(Ljava/util/List;Ljava/util/List;)V
+    invoke-static {v1, v0}, Lcom/oneplus/screenshot/longshot/bitmap/BitmapUtils;->addBitmaps(Ljava/util/List;Ljava/util/List;)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState$2;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+    iget-object v1, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/MainState$2;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-    iget-object v1, v1, Lcom/oneplus/screenshot/longshot/state/MainState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
-
-    invoke-static {v0, v1}, Lcom/oneplus/screenshot/longshot/bitmap/BitmapUtils;->pickBitmaps(Ljava/util/List;Ljava/util/List;)V
+    invoke-static {v1, v0}, Lcom/oneplus/screenshot/longshot/bitmap/BitmapUtils;->pickBitmaps(Ljava/util/List;Ljava/util/List;)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState$2;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
 
-    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/MainState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+    iget-object v0, v0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->SAVE:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 

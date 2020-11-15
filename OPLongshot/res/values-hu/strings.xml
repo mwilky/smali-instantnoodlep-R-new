@@ -28,8 +28,8 @@
     <string name="abc_shareactionprovider_share_with_application">Megosztás a következő alkalmazással: %s</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
     <string name="about_action_bar_title">Névjegy</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Adatvédelmi politika</string>
+    <string name="about_app_version_text">%s verzió</string>
+    <string name="about_privacy_policy">Adatvédelmi irányelvek</string>
     <string name="about_release_note_title">Frissítési napló:</string>
     <string name="about_terms_service">Szolgáltatási feltételek</string>
     <string name="app_name">Képernyőfelvétel</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Képernyőképek</string>
     <string name="oneplus_delete">Törlés</string>
     <string name="oneplus_share">Küldés</string>
+    <string name="permission_btn_text_denied">Kilépés</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Jogosultsági nyilatkozat</string>
     <string name="preference_copied">„%1$s” a vágólapra lett másolva.</string>
     <string name="quick_share_description1">"Nyomja meg hosszan a miniatűrt 
 a megosztáshoz"</string>

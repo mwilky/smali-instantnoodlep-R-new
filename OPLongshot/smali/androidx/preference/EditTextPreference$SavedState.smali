@@ -1,6 +1,6 @@
 .class Landroidx/preference/EditTextPreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
-.source "EditTextPreference.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field mText:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/EditTextPreference$SavedState;->mText:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/preference/EditTextPreference$SavedState;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -70,9 +70,9 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object p2, p0, Landroidx/preference/EditTextPreference$SavedState;->mText:Ljava/lang/String;
+    iget-object p2, p0, Landroidx/preference/EditTextPreference$SavedState;->a:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

@@ -1,6 +1,6 @@
 .class Landroidx/loader/content/ModernAsyncTask$3;
 .super Ljava/util/concurrent/FutureTask;
-.source "ModernAsyncTask.java"
+.source ""
 
 
 # annotations
@@ -44,7 +44,7 @@
     const-string v0, "An error occurred while executing doInBackground()"
 
     :try_start_0
-    invoke-virtual {p0}, Landroidx/loader/content/ModernAsyncTask$3;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
     move-result-object v1
 

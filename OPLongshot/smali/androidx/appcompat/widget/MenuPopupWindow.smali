@@ -1,12 +1,18 @@
 .class public Landroidx/appcompat/widget/MenuPopupWindow;
-.super Landroidx/appcompat/widget/ListPopupWindow;
-.source "MenuPopupWindow.java"
+.super Landroidx/appcompat/widget/y;
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/widget/MenuItemHoverListener;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;
@@ -73,16 +79,26 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/ListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/y;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method createDropDownListView(Landroid/content/Context;Z)Landroidx/appcompat/widget/DropDownListView;
+.method createDropDownListView(Landroid/content/Context;Z)Landroidx/appcompat/widget/x;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;
 
@@ -95,6 +111,14 @@
 
 .method public onItemHoverEnter(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V
     .locals 1
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
 
@@ -108,6 +132,14 @@
 
 .method public onItemHoverExit(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V
     .locals 1
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
 
@@ -128,7 +160,7 @@
 
     if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     check-cast p1, Landroid/transition/Transition;
 
@@ -147,7 +179,7 @@
 
     if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     check-cast p1, Landroid/transition/Transition;
 
@@ -179,7 +211,7 @@
     if-eqz v0, :cond_1
 
     :try_start_0
-    iget-object v1, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v1, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     const/4 v2, 0x1
 
@@ -209,7 +241,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/MenuPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setTouchModal(Z)V
 

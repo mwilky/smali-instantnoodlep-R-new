@@ -1,9 +1,13 @@
 .class abstract Lcom/google/android/material/transition/MaterialTransitionSet;
 .super Landroid/transition/TransitionSet;
-.source "MaterialTransitionSet.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -16,8 +20,14 @@
 
 # instance fields
 .field protected context:Landroid/content/Context;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field private primaryTransition:Landroid/transition/Transition;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -26,6 +36,9 @@
 .end field
 
 .field private secondaryTransition:Landroid/transition/Transition;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -40,6 +53,9 @@
 
 # virtual methods
 .method abstract getDefaultPrimaryTransition()Landroid/transition/Transition;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -48,10 +64,15 @@
 .end method
 
 .method abstract getDefaultSecondaryTransition()Landroid/transition/Transition;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public getPrimaryTransition()Landroid/transition/Transition;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -65,6 +86,8 @@
 
 .method public getSecondaryTransition()Landroid/transition/Transition;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/transition/MaterialTransitionSet;->secondaryTransition:Landroid/transition/Transition;
 
@@ -82,7 +105,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/transition/MaterialTransitionSet;->primaryTransition:Landroid/transition/Transition;
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/transition/MaterialTransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+    invoke-virtual {p0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     invoke-virtual {p0}, Lcom/google/android/material/transition/MaterialTransitionSet;->getDefaultSecondaryTransition()Landroid/transition/Transition;
 
@@ -95,6 +118,10 @@
 
 .method public setSecondaryTransition(Landroid/transition/Transition;)V
     .locals 1
+    .param p1    # Landroid/transition/Transition;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Lcom/google/android/material/transition/MaterialTransitionSet;->secondaryTransition:Landroid/transition/Transition;
 

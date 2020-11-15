@@ -1,6 +1,6 @@
 .class final Landroidx/drawerlayout/widget/DrawerLayout$SavedState$1;
 .super Ljava/lang/Object;
-.source "DrawerLayout.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

@@ -1,16 +1,22 @@
 .class public final Landroidx/appcompat/widget/ResourceManagerInternal;
 .super Ljava/lang/Object;
-.source "ResourceManagerInternal.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/widget/ResourceManagerInternal$AsldcInflateDelegate;,
-        Landroidx/appcompat/widget/ResourceManagerInternal$AvdcInflateDelegate;,
-        Landroidx/appcompat/widget/ResourceManagerInternal$VdcInflateDelegate;,
+        Landroidx/appcompat/widget/ResourceManagerInternal$a;,
+        Landroidx/appcompat/widget/ResourceManagerInternal$c;,
         Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;,
-        Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;,
+        Landroidx/appcompat/widget/ResourceManagerInternal$b;,
         Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
     }
 .end annotation
@@ -38,7 +44,7 @@
         value = {
             "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
-            "Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;",
+            "Landroidx/appcompat/widget/ResourceManagerInternal$b;",
             ">;"
         }
     .end annotation
@@ -121,8 +127,16 @@
     return-void
 .end method
 
-.method private addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;)V
+.method private addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$b;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/appcompat/widget/ResourceManagerInternal$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mDelegates:Landroidx/collection/SimpleArrayMap;
 
@@ -144,6 +158,14 @@
 
 .method private declared-synchronized addDrawableToCache(Landroid/content/Context;JLandroid/graphics/drawable/Drawable;)Z
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -183,6 +205,7 @@
 
     const/4 p1, 0x1
 
+    :goto_0
     monitor-exit p0
 
     return p1
@@ -190,9 +213,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    monitor-exit p0
-
-    return p1
+    goto :goto_0
 
     :catchall_0
     move-exception p1
@@ -204,6 +225,18 @@
 
 .method private addTintListToCache(Landroid/content/Context;ILandroid/content/res/ColorStateList;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mTintLists:Ljava/util/WeakHashMap;
 
@@ -271,6 +304,10 @@
 
 .method private checkVectorDrawableSetup(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-boolean v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHasCheckedVectorDrawableSetup:Z
 
@@ -283,7 +320,7 @@
 
     iput-boolean v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHasCheckedVectorDrawableSetup:Z
 
-    sget v0, Landroidx/appcompat/resources/R$drawable;->abc_vector_test:I
+    sget v0, La/a/k/a;->abc_vector_test:I
 
     invoke-virtual {p0, p1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -335,6 +372,14 @@
 
 .method private createDrawableIfNeeded(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 4
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mTypedValue:Landroid/util/TypedValue;
 
@@ -464,6 +509,10 @@
 
 .method private declared-synchronized getCachedDrawable(Landroid/content/Context;J)Landroid/graphics/drawable/Drawable;
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -578,6 +627,14 @@
 
 .method private getTintListFromCache(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mTintLists:Ljava/util/WeakHashMap;
 
@@ -607,6 +664,10 @@
 
 .method private static installDefaultInflateDelegates(Landroidx/appcompat/widget/ResourceManagerInternal;)V
     .locals 2
+    .param p0    # Landroidx/appcompat/widget/ResourceManagerInternal;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -614,21 +675,21 @@
 
     if-ge v0, v1, :cond_0
 
-    new-instance v0, Landroidx/appcompat/widget/ResourceManagerInternal$VdcInflateDelegate;
+    new-instance v0, Landroidx/appcompat/widget/ResourceManagerInternal$c;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/ResourceManagerInternal$VdcInflateDelegate;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ResourceManagerInternal$c;-><init>()V
 
     const-string v1, "vector"
 
-    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;)V
+    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$b;)V
 
-    new-instance v0, Landroidx/appcompat/widget/ResourceManagerInternal$AvdcInflateDelegate;
+    new-instance v0, Landroidx/appcompat/widget/ResourceManagerInternal$a;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/ResourceManagerInternal$AvdcInflateDelegate;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ResourceManagerInternal$a;-><init>()V
 
     const-string v1, "animated-vector"
 
-    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;)V
+    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$b;)V
 
     new-instance v0, Landroidx/appcompat/widget/ResourceManagerInternal$AsldcInflateDelegate;
 
@@ -636,7 +697,7 @@
 
     const-string v1, "animated-selector"
 
-    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;)V
+    invoke-direct {p0, v1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->addDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$b;)V
 
     :cond_0
     return-void
@@ -644,10 +705,16 @@
 
 .method private static isVectorDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
+    .param p0    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     instance-of v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     if-nez v0, :cond_1
+
+    const-string v0, "android.graphics.drawable.VectorDrawable"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -656,8 +723,6 @@
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
-
-    const-string v0, "android.graphics.drawable.VectorDrawable"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -682,6 +747,14 @@
 
 .method private loadDrawableFromDelegates(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 10
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mDelegates:Landroidx/collection/SimpleArrayMap;
 
@@ -772,8 +845,6 @@
 
     if-eqz v7, :cond_8
 
-    iget-object v7, v0, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
-
     invoke-interface {v7}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -825,7 +896,7 @@
 
     move-result-object v3
 
-    check-cast v3, Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
+    check-cast v3, Landroidx/appcompat/widget/ResourceManagerInternal$b;
 
     if-eqz v3, :cond_6
 
@@ -833,7 +904,7 @@
 
     move-result-object v8
 
-    invoke-interface {v3, p1, v1, v7, v8}, Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;->createFromXmlInner(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-interface {v3, p1, v1, v7, v8}, Landroidx/appcompat/widget/ResourceManagerInternal$b;->createFromXmlInner(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -885,8 +956,16 @@
     return-object v1
 .end method
 
-.method private removeDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;)V
+.method private removeDelegate(Ljava/lang/String;Landroidx/appcompat/widget/ResourceManagerInternal$b;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/appcompat/widget/ResourceManagerInternal$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mDelegates:Landroidx/collection/SimpleArrayMap;
 
@@ -908,6 +987,18 @@
 
 .method private tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+    .param p4    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
@@ -926,11 +1017,11 @@
     move-result-object p4
 
     :cond_0
-    invoke-static {p4}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p4}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
-    invoke-static {p4, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p4, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->getTintMode(I)Landroid/graphics/PorterDuff$Mode;
 
@@ -938,7 +1029,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p4, p1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p4, p1}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_0
 
@@ -1059,6 +1150,14 @@
 # virtual methods
 .method public declared-synchronized getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -1085,6 +1184,14 @@
 
 .method declared-synchronized getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -1104,7 +1211,7 @@
     :cond_0
     if-nez v0, :cond_1
 
-    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1137,6 +1244,14 @@
 
 .method declared-synchronized getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -1204,6 +1319,10 @@
 
 .method public declared-synchronized onConfigurationChanged(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -1237,6 +1356,18 @@
 
 .method declared-synchronized onDrawableLoadedFromResources(Landroid/content/Context;Landroidx/appcompat/widget/VectorEnabledTintResources;I)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/appcompat/widget/VectorEnabledTintResources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     monitor-enter p0
 
@@ -1305,6 +1436,18 @@
 
 .method tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHooks:Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
 

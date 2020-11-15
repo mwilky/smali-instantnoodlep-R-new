@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalSave;
 .super Ljava/lang/Object;
-.source "GlobalSave.java"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
@@ -248,7 +248,7 @@
 
     new-array v1, v3, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/service/SaveTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 

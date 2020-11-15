@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/FactorLinearInterpolator;
 .super Lcom/oneplus/screenshot/anim/BaseInterpolator;
-.source "FactorLinearInterpolator.java"
+.source ""
 
 
 # static fields
@@ -21,7 +21,7 @@
 .method public getInterpolation(F)F
     .locals 1
 
-    iget v0, p0, Lcom/oneplus/screenshot/anim/FactorLinearInterpolator;->mFactor:F
+    iget v0, p0, Lcom/oneplus/screenshot/anim/BaseInterpolator;->mFactor:F
 
     mul-float/2addr p1, v0
 

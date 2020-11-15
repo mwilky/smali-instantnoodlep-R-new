@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/SaveTask;
 .super Landroid/os/AsyncTask;
-.source "SaveTask.java"
+.source ""
 
 
 # annotations
@@ -238,8 +238,6 @@
 
     invoke-direct {p1, p3, p2, p4}, Lcom/oneplus/screenshot/util/ImageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
-
     goto :goto_1
 
     :cond_2
@@ -247,9 +245,9 @@
 
     invoke-direct {p1, p3, p2}, Lcom/oneplus/screenshot/util/ImageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_1
     iput-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
-    :goto_1
     sget-object p1, Lcom/oneplus/screenshot/service/SaveTask;->TAG:Ljava/lang/String;
 
     const-string p2, "SaveTask"
@@ -278,7 +276,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0f0087
+    const v1, 0x7f10008a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -476,7 +474,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/util/ImageInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/util/FileInfo;->getUri()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -497,7 +495,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/util/ImageInfo;->getUri()Landroid/net/Uri;
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/util/FileInfo;->getUri()Landroid/net/Uri;
 
     move-result-object v7
 

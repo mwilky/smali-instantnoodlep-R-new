@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/datepicker/CalendarConstraints$1;
 .super Ljava/lang/Object;
-.source "CalendarConstraints.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -39,6 +39,12 @@
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/datepicker/CalendarConstraints;
     .locals 7
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const-class v0, Lcom/google/android/material/datepicker/Month;
 
@@ -82,7 +88,7 @@
 
     check-cast v4, Lcom/google/android/material/datepicker/Month;
 
-    const-class v0, Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
+    const-class v0, Lcom/google/android/material/datepicker/CalendarConstraints$b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -94,7 +100,7 @@
 
     move-object v5, p1
 
-    check-cast v5, Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
+    check-cast v5, Lcom/google/android/material/datepicker/CalendarConstraints$b;
 
     new-instance p1, Lcom/google/android/material/datepicker/CalendarConstraints;
 
@@ -102,13 +108,19 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;Lcom/google/android/material/datepicker/CalendarConstraints$1;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$b;Lcom/google/android/material/datepicker/CalendarConstraints$1;)V
 
     return-object p1
 .end method
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/CalendarConstraints$1;->createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/datepicker/CalendarConstraints;
 
@@ -119,6 +131,8 @@
 
 .method public newArray(I)[Lcom/google/android/material/datepicker/CalendarConstraints;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-array p1, p1, [Lcom/google/android/material/datepicker/CalendarConstraints;
 
@@ -127,6 +141,8 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/CalendarConstraints$1;->newArray(I)[Lcom/google/android/material/datepicker/CalendarConstraints;
 

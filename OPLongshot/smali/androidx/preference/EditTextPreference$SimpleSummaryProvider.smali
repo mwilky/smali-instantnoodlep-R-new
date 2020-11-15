@@ -1,6 +1,6 @@
 .class public final Landroidx/preference/EditTextPreference$SimpleSummaryProvider;
 .super Ljava/lang/Object;
-.source "EditTextPreference.java"
+.source ""
 
 # interfaces
 .implements Landroidx/preference/Preference$SummaryProvider;
@@ -63,7 +63,7 @@
 .method public provideSummary(Landroidx/preference/EditTextPreference;)Ljava/lang/CharSequence;
     .locals 1
 
-    invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->getText()Ljava/lang/String;
+    invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -73,11 +73,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Landroidx/preference/R$string;->not_set:I
+    sget v0, Landroidx/preference/l;->not_set:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -86,7 +86,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->getText()Ljava/lang/String;
+    invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->a()Ljava/lang/String;
 
     move-result-object p1
 

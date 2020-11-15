@@ -1,20 +1,32 @@
 .class public final Lcom/google/android/material/shape/AdjustedCornerSize;
 .super Ljava/lang/Object;
-.source "AdjustedCornerSize.java"
+.source ""
 
 # interfaces
-.implements Lcom/google/android/material/shape/CornerSize;
+.implements Lcom/google/android/material/shape/b;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # instance fields
 .field private final adjustment:F
 
-.field private final other:Lcom/google/android/material/shape/CornerSize;
+.field private final other:Lcom/google/android/material/shape/b;
 
 
 # direct methods
-.method public constructor <init>(FLcom/google/android/material/shape/CornerSize;)V
+.method public constructor <init>(FLcom/google/android/material/shape/b;)V
     .locals 1
+    .param p2    # Lcom/google/android/material/shape/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,7 +37,7 @@
 
     check-cast p2, Lcom/google/android/material/shape/AdjustedCornerSize;
 
-    iget-object p2, p2, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iget-object p2, p2, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
     move-object v0, p2
 
@@ -38,7 +50,7 @@
     goto :goto_0
 
     :cond_0
-    iput-object p2, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iput-object p2, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
     iput p1, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->adjustment:F
 
@@ -68,9 +80,9 @@
     :cond_1
     check-cast p1, Lcom/google/android/material/shape/AdjustedCornerSize;
 
-    iget-object v1, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iget-object v1, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
-    iget-object v3, p1, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iget-object v3, p1, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -97,10 +109,14 @@
 
 .method public getCornerSize(Landroid/graphics/RectF;)F
     .locals 1
+    .param p1    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iget-object v0, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
-    invoke-interface {v0, p1}, Lcom/google/android/material/shape/CornerSize;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result p1
 
@@ -124,7 +140,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/CornerSize;
+    iget-object v1, p0, Lcom/google/android/material/shape/AdjustedCornerSize;->other:Lcom/google/android/material/shape/b;
 
     const/4 v2, 0x0
 

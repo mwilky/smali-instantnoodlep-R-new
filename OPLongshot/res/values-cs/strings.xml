@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Sdílet s aplikací %s</string>
     <string name="abc_toolbar_collapse_description">Sbalit</string>
     <string name="about_action_bar_title">O aplikaci</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verze %s</string>
     <string name="about_privacy_policy">Zásady ochrany osobních údajů</string>
     <string name="about_release_note_title">Protokol aktualizace:</string>
     <string name="about_terms_service">Podmínky služby</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Snímky obrazovek</string>
     <string name="oneplus_delete">Smazat</string>
     <string name="oneplus_share">Odeslat</string>
+    <string name="permission_btn_text_denied">Ukončit</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Prohlášení o oprávnění</string>
     <string name="preference_copied">Položka %1$s byla zkopírována do schránky.</string>
     <string name="quick_share_description1">"Dlouhým stisknutím miniatury 
 nasdílíte"</string>

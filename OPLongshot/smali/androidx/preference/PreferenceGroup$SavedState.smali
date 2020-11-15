@@ -1,6 +1,6 @@
 .class Landroidx/preference/PreferenceGroup$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
-.source "PreferenceGroup.java"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field mInitialExpandedChildrenCount:I
+.field a:I
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     move-result p1
 
-    iput p1, p0, Landroidx/preference/PreferenceGroup$SavedState;->mInitialExpandedChildrenCount:I
+    iput p1, p0, Landroidx/preference/PreferenceGroup$SavedState;->a:I
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     invoke-direct {p0, p1}, Landroidx/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    iput p2, p0, Landroidx/preference/PreferenceGroup$SavedState;->mInitialExpandedChildrenCount:I
+    iput p2, p0, Landroidx/preference/PreferenceGroup$SavedState;->a:I
 
     return-void
 .end method
@@ -72,9 +72,9 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Landroidx/preference/PreferenceGroup$SavedState;->mInitialExpandedChildrenCount:I
+    iget p2, p0, Landroidx/preference/PreferenceGroup$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

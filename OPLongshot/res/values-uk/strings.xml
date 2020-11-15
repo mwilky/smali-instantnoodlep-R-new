@@ -27,8 +27,8 @@
     <string name="abc_shareactionprovider_share_with">Поділитися:</string>
     <string name="abc_shareactionprovider_share_with_application">Поділитися через додаток %s</string>
     <string name="abc_toolbar_collapse_description">Згорнути</string>
-    <string name="about_action_bar_title">Інформація</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_action_bar_title">Відомості</string>
+    <string name="about_app_version_text">Версія %s</string>
     <string name="about_privacy_policy">Політика конфіденційності</string>
     <string name="about_release_note_title">Журнал оновлень:</string>
     <string name="about_terms_service">Умови використання</string>
@@ -45,6 +45,9 @@
     <string name="notification_channel_screenshot">Знімки екрана</string>
     <string name="oneplus_delete">Видалити</string>
     <string name="oneplus_share">Надіслати</string>
+    <string name="permission_btn_text_denied">Вийти</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Заява про дозволи</string>
     <string name="preference_copied">\"%1$s\": скопійовано в буфер обміну.</string>
     <string name="quick_share_description1">"Натисніть і утримуйте мініатюру,
 щоб надіслати"</string>

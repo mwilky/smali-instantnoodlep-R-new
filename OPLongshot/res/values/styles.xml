@@ -1606,7 +1606,7 @@
     </style>
     <style name="DatePicker.Widget.Material.NumberPicker" parent="@style/Widget.Material.NumberPicker">
         <item name="selectionDivider">@drawable/op_number_picker_divider_material</item>
-        <item name="selectionDividerWidth">296.0dip</item>
+        <item name="selectionDividerWidth">320.0dip</item>
         <item name="selectionDividersDistance">70.0dip</item>
         <item name="selectionOtherNumberColor">@color/op_control_text_color_secondary_default</item>
     </style>
@@ -2005,7 +2005,7 @@
         <item name="bottomSheetStyle">@style/OnePlus.Widget.Design.BottomSheet.Modal</item>
     </style>
     <style name="OnePlus.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
-        <item name="android:colorBackground">?onePlusBgColorPopup</item>
+        <item name="android:colorBackground">@color/op_control_bg_color_popup_default</item>
         <item name="android:textColorPrimary">@color/op_control_text_color_primary_default</item>
         <item name="android:windowBackground">@drawable/dialog_background_material</item>
         <item name="android:textColor">@color/op_control_text_color_primary_default</item>
@@ -2260,6 +2260,7 @@
     </style>
     <style name="OnePlus.Widget.MaterialComponents.FloatingActionButton" parent="@style/Widget.MaterialComponents.FloatingActionButton">
         <item name="maxImageSize">@dimen/op_control_icon_size_list</item>
+        <item name="rippleColor">@color/op_control_text_color_primary_dark</item>
     </style>
     <style name="OnePlus.Widget.MaterialComponents.PopupMenu" parent="@style/Widget.MaterialComponents.PopupMenu">
         <item name="android:popupBackground">@drawable/op_popup_background_material</item>
@@ -2294,6 +2295,15 @@
         <item name="itemTextAppearanceInactive">@style/op_control_text_style_descriptions</item>
         <item name="itemTextColor">@color/op_color_bottom_navigation_item_tint</item>
         <item name="labelVisibilityMode">labeled</item>
+    </style>
+    <style name="OnePlusFastScrollerPopupTextStyle">
+        <item name="android:textAppearance">@style/op_control_text_style_h3</item>
+        <item name="android:textColor">@color/op_control_text_color_primary_dark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/op_bg_fast_scroller_popup</item>
+        <item name="android:layout_width">63.0dip</item>
+        <item name="android:layout_height">63.0dip</item>
+        <item name="android:layout_marginEnd">35.0dip</item>
     </style>
     <style name="OnePlusTabBarViewStyle" parent="@style/Widget.Design.TabBarView">
         <item name="android:background">?onePlusAppbarBgColor</item>
@@ -2415,6 +2425,10 @@
     <style name="Oneplus_popup_bottom_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_enter</item>
         <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_exit</item>
+    </style>
+    <style name="Oneplus_popup_bottom_edit_animation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_edittext_enter</item>
+        <item name="android:windowExitAnimation">@anim/op_control_popup_bottom_edittext_edit_exit</item>
     </style>
     <style name="Oneplus_popup_bottom_edittext_animation" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/op_control_popup_bottom_edittext_enter</item>
@@ -4811,7 +4825,7 @@
         <item name="android:textSize">@dimen/op_text_style_dialog_title_size</item>
     </style>
     <style name="tablayout_text_style_unselected" parent="@style/op_control_text_style_base">
-        <item name="android:textSize">12.0sp</item>
-        <item name="android:fontFamily">@font/oneplus_font_text_65md_unselected</item>
+        <item name="android:textSize">@dimen/op_text_size_button</item>
+        <item name="android:fontFamily">@string/op_control_font_text_body1</item>
     </style>
 </resources>

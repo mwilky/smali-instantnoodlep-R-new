@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/ImageView;
 .super Landroid/view/View;
-.source "ImageView.java"
+.source ""
 
 
 # annotations
@@ -102,7 +102,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
@@ -110,7 +110,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->setEnabled(Z)V
+    invoke-virtual {p0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     const/4 v1, 0x1
 
@@ -198,11 +198,11 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getMeasuredWidth()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
 
@@ -311,44 +311,38 @@
 
     if-gez p1, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
-
-    move-result p1
-
     goto :goto_0
 
     :cond_0
     if-le p1, v0, :cond_3
 
-    invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
-
-    move-result p1
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     if-lez p1, :cond_2
 
+    :goto_0
     invoke-direct {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
 
     move-result p1
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
     if-ge p1, v0, :cond_3
 
+    :goto_1
     invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
 
     move-result p1
 
     :cond_3
-    :goto_0
+    :goto_2
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->setOffsetY(I)V
 
-    invoke-virtual {p0, v1, v1, v1, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->onScrollChanged(IIII)V
+    invoke-virtual {p0, v1, v1, v1, v1}, Landroid/view/View;->onScrollChanged(IIII)V
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
 .end method
@@ -424,21 +418,21 @@
 
     if-gez v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
     move-result v2
 
     add-int/2addr v2, v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getRight()I
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result v5
 
@@ -462,11 +456,11 @@
     :cond_1
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mBitmaps:Ljava/util/List;
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v0
 
@@ -497,24 +491,24 @@
 
     if-lez p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p2
 
     if-ge p1, p2, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getMeasuredWidthAndState()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidthAndState()I
 
     move-result p1
 
     iget p2, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mImageHeight:I
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->initDrawMatrix()V
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getMeasuredHeight()I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p1
 
@@ -537,7 +531,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->isEnabled()Z
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -609,7 +603,7 @@
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mImageHeight:I
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     return-void
 .end method
@@ -631,19 +625,19 @@
 
     if-lez p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result p1
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v2
 
@@ -651,7 +645,7 @@
 
     add-int/2addr v2, v3
 
-    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->setPadding(IIII)V
+    invoke-virtual {p0, p1, v0, v1, v2}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_0
     return-void

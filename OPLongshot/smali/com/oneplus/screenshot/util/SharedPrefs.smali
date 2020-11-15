@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/SharedPrefs;
 .super Ljava/lang/Object;
-.source "SharedPrefs.java"
+.source ""
 
 
 # static fields
@@ -8,7 +8,7 @@
 
 .field private static final PREFS_NAME:Ljava/lang/String; = "com.color.screenshot"
 
-.field private static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "SharedPrefs"
 
 
 # instance fields
@@ -17,15 +17,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/oneplus/screenshot/util/SharedPrefs;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/screenshot/util/SharedPrefs;->TAG:Ljava/lang/String;
+    .locals 0
 
     return-void
 .end method

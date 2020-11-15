@@ -1,6 +1,12 @@
 .class public Lcom/google/android/material/transition/Scale;
 .super Landroid/transition/Visibility;
-.source "Scale.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
@@ -140,6 +146,24 @@
 
 .method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-boolean p1, p0, Lcom/google/android/material/transition/Scale;->entering:Z
 
@@ -149,6 +173,7 @@
 
     iget p3, p0, Lcom/google/android/material/transition/Scale;->incomingEndScale:F
 
+    :goto_0
     invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/Scale;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p1
@@ -160,15 +185,29 @@
 
     iget p3, p0, Lcom/google/android/material/transition/Scale;->outgoingStartScale:F
 
-    invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/Scale;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/transition/TransitionValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iget-boolean p1, p0, Lcom/google/android/material/transition/Scale;->entering:Z
 
@@ -178,6 +217,7 @@
 
     iget p3, p0, Lcom/google/android/material/transition/Scale;->outgoingEndScale:F
 
+    :goto_0
     invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/Scale;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p1
@@ -189,11 +229,7 @@
 
     iget p3, p0, Lcom/google/android/material/transition/Scale;->incomingStartScale:F
 
-    invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/Scale;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 .end method
 
 .method public setEntering(Z)V

@@ -1,6 +1,6 @@
 .class Landroidx/transition/FloatArrayEvaluator;
 .super Ljava/lang/Object;
-.source "FloatArrayEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;

@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$4;
 .super Ljava/lang/Object;
-.source "FloatingActionButtonImpl.java"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;

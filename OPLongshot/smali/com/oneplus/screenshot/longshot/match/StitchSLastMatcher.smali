@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;
-.source "StitchSLastMatcher.java"
+.source ""
 
 
 # static fields
@@ -19,7 +19,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->mSize:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_STITCH_SLAST_LAST:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -27,7 +27,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->mOffsetLast:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mOffsetLast:I
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_STITCH_SLAST_CURR:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -35,7 +35,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->mOffsetCurr:I
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mOffsetCurr:I
 
     return-void
 .end method
@@ -53,9 +53,9 @@
 .method protected getCurrPixels(ILcom/oneplus/screenshot/longshot/cache/BitmapCache;)[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
     .locals 5
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-    iget v1, p0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->mOffsetCurr:I
+    iget v1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mOffsetCurr:I
 
     const/4 v2, 0x3
 
@@ -85,7 +85,7 @@
 
     aput-object p2, v2, v3
 
-    invoke-virtual {p0, v0, p1, v1, v2}, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;->getCurr(Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;II[Landroid/graphics/Bitmap;)[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual {p0, v0, p1, v1, v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;->getCurr(Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;II[Landroid/graphics/Bitmap;)[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object p1
 

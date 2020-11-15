@@ -28,7 +28,7 @@
     <string name="abc_shareactionprovider_share_with_application">Delen met %s</string>
     <string name="abc_toolbar_collapse_description">Samenvouwen</string>
     <string name="about_action_bar_title">Over</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versie %s</string>
     <string name="about_privacy_policy">Privacybeleid</string>
     <string name="about_release_note_title">Updatelogboek:</string>
     <string name="about_terms_service">Algemene gebruiksvoorwaarden</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Screenshots</string>
     <string name="oneplus_delete">Verwijderen</string>
     <string name="oneplus_share">Verzenden</string>
+    <string name="permission_btn_text_denied">Afsluiten</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Toestemmingsverklaring</string>
     <string name="preference_copied">"'%1$s' is gekopieerd naar het klembord."</string>
     <string name="quick_share_description1">"Druk lang op de miniatuur 
 om te delen"</string>

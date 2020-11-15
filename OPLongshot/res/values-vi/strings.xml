@@ -28,8 +28,8 @@
     <string name="abc_shareactionprovider_share_with_application">Chia sẻ với %s</string>
     <string name="abc_toolbar_collapse_description">Thu gọn</string>
     <string name="about_action_bar_title">Giới thiệu</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Chính sách Riêng tư</string>
+    <string name="about_app_version_text">Phiên bản %s</string>
+    <string name="about_privacy_policy">Chính sách Quyền riêng tư</string>
     <string name="about_release_note_title">Lịch sử cập nhật:</string>
     <string name="about_terms_service">Điều khoản Dịch vụ</string>
     <string name="app_name">Ảnh chụp màn hình</string>
@@ -44,6 +44,9 @@
     <string name="notification_channel_screenshot">Ảnh chụp màn hình</string>
     <string name="oneplus_delete">Xóa</string>
     <string name="oneplus_share">Gửi</string>
+    <string name="permission_btn_text_denied">Thoát</string>
+    <string name="permission_btn_text_grant">OK</string>
+    <string name="permission_dialog_title">Tuyên bố về quyền</string>
     <string name="preference_copied">Đã sao chép \"%1$s\" vào khay nhớ tạm.</string>
     <string name="quick_share_description1">"Nhấn giữ hình thu nhỏ để
 chia sẻ"</string>

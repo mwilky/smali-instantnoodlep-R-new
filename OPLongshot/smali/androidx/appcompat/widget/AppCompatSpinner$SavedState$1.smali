@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;
 .super Ljava/lang/Object;
-.source "AppCompatSpinner.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

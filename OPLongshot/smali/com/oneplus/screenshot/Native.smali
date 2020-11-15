@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/Native;
 .super Ljava/lang/Object;
-.source "Native.java"
+.source ""
 
 
 # direct methods

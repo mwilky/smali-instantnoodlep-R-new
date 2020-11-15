@@ -1,6 +1,18 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi28Impl;
 .super Landroidx/core/graphics/TypefaceCompatApi26Impl;
-.source "TypefaceCompatApi28Impl.java"
+.source ""
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
@@ -26,7 +38,7 @@
     .locals 5
 
     :try_start_0
-    iget-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi28Impl;->mFontFamily:Ljava/lang/Class;
+    iget-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamily:Ljava/lang/Class;
 
     const/4 v1, 0x1
 
@@ -38,7 +50,7 @@
 
     invoke-static {v0, v2, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object p1, p0, Landroidx/core/graphics/TypefaceCompatApi28Impl;->mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
+    iget-object p1, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x0
 
@@ -108,12 +120,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NoSuchMethodException;
-        }
-    .end annotation
-
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
@@ -143,8 +149,6 @@
     const/4 v3, 0x2
 
     aput-object p1, v2, v3
-
-    sget-object p1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v3, 0x3
 

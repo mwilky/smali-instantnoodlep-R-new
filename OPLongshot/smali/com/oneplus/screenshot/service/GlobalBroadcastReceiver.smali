@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "GlobalBroadcastReceiver.java"
+.source ""
 
 
 # annotations
@@ -103,6 +103,7 @@
 
     const-string v0, "close sysdialog:"
 
+    :goto_0
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -117,7 +118,7 @@
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;->onCloseSystemDialogs()V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
     const-string v0, "android.intent.action.SCREEN_OFF"
@@ -136,7 +137,7 @@
 
     if-eqz v0, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     const-string v0, "android.intent.action.PHONE_STATE"
@@ -195,32 +196,20 @@
 
     invoke-interface {p1}, Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;->onRinging()V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
-    :goto_0
+    :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "dimiss due to screenoff "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p1, p0, Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver;->mListener:Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;
-
-    invoke-interface {p1}, Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;->onCloseSystemDialogs()V
+    goto :goto_0
 
     :cond_3
-    :goto_1
+    :goto_2
     return-void
 .end method
 

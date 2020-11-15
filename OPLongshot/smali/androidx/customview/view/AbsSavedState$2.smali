@@ -1,6 +1,6 @@
 .class final Landroidx/customview/view/AbsSavedState$2;
 .super Ljava/lang/Object;
-.source "AbsSavedState.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

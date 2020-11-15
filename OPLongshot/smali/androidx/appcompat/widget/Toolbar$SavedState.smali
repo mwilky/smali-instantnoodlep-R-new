@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/Toolbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "Toolbar.java"
+.source ""
 
 
 # annotations
@@ -27,9 +27,9 @@
 
 
 # instance fields
-.field expandedMenuItemId:I
+.field a:I
 
-.field isOverflowOpen:Z
+.field b:Z
 
 
 # direct methods
@@ -45,16 +45,6 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/Toolbar$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
@@ -64,7 +54,7 @@
 
     move-result p2
 
-    iput p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
+    iput p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->a:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -80,7 +70,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->isOverflowOpen:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->b:Z
 
     return-void
 .end method
@@ -100,11 +90,11 @@
 
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
+    iget p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->a:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->isOverflowOpen:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->b:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

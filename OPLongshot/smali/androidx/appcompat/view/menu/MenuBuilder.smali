@@ -1,12 +1,18 @@
 .class public Landroidx/appcompat/view/menu/MenuBuilder;
 .super Ljava/lang/Object;
-.source "MenuBuilder.java"
+.source ""
 
 # interfaces
 .implements Landroidx/core/internal/view/SupportMenu;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/view/menu/MenuBuilder$ItemInvoker;,
@@ -714,7 +720,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p3}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -758,7 +764,7 @@
 
     iget-object p1, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
-    sget v1, Landroidx/appcompat/R$bool;->abc_config_showMenuShortcutsWhenKeyboardPresent:I
+    sget v1, La/a/b;->abc_config_showMenuShortcutsWhenKeyboardPresent:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -889,8 +895,6 @@
     goto :goto_2
 
     :cond_2
-    iget v4, p7, Landroid/content/pm/ResolveInfo;->specificIndex:I
-
     aget-object v4, p5, v4
 
     :goto_2
@@ -900,15 +904,13 @@
 
     iget-object v5, p7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v5, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v6, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iget-object v6, p7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v5, v5, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    iget-object v6, v6, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-direct {v4, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v6, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -934,11 +936,9 @@
 
     if-eqz p8, :cond_3
 
-    iget v4, p7, Landroid/content/pm/ResolveInfo;->specificIndex:I
-
-    if-ltz v4, :cond_3
-
     iget p7, p7, Landroid/content/pm/ResolveInfo;->specificIndex:I
+
+    if-ltz p7, :cond_3
 
     aput-object v3, p8, p7
 
@@ -1810,11 +1810,9 @@
 
     iget-object v9, v2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
-    aget-char v9, v9, v5
+    aget-char v10, v9, v5
 
-    if-eq v8, v9, :cond_5
-
-    iget-object v9, v2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
+    if-eq v8, v10, :cond_5
 
     const/4 v10, 0x2
 
@@ -1942,16 +1940,14 @@
 
     iget-object v5, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     goto :goto_2
 
     :cond_3
     iget-object v5, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
+    :goto_2
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
@@ -2101,6 +2097,9 @@
 
 .method public getVisibleItems()Ljava/util/ArrayList;
     .locals 5
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -2352,7 +2351,7 @@
 
     if-nez v1, :cond_0
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_0
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->invoke()Z
@@ -2395,9 +2394,10 @@
 
     if-eqz v1, :cond_8
 
+    :goto_1
     invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_2
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->hasSubMenu()Z
@@ -2408,19 +2408,17 @@
 
     if-eqz v4, :cond_3
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     and-int/lit8 p1, p3, 0x1
 
     if-nez p1, :cond_8
 
-    invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
-    :goto_1
+    :goto_2
     and-int/lit8 p3, p3, 0x4
 
     if-nez p3, :cond_5
@@ -2464,14 +2462,14 @@
 
     if-nez v1, :cond_8
 
-    invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
+    goto :goto_1
 
     :cond_8
-    :goto_2
+    :goto_3
     return v1
 
     :cond_9
-    :goto_3
+    :goto_4
     return v0
 .end method
 
@@ -2687,7 +2685,7 @@
 
     check-cast v3, Landroidx/appcompat/view/menu/SubMenuBuilder;
 
-    invoke-virtual {v3, p1}, Landroidx/appcompat/view/menu/SubMenuBuilder;->restoreActionViewStates(Landroid/os/Bundle;)V
+    invoke-virtual {v3, p1}, Landroidx/appcompat/view/menu/MenuBuilder;->restoreActionViewStates(Landroid/os/Bundle;)V
 
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -2791,7 +2789,7 @@
 
     check-cast v3, Landroidx/appcompat/view/menu/SubMenuBuilder;
 
-    invoke-virtual {v3, p1}, Landroidx/appcompat/view/menu/SubMenuBuilder;->saveActionViewStates(Landroid/os/Bundle;)V
+    invoke-virtual {v3, p1}, Landroidx/appcompat/view/menu/MenuBuilder;->saveActionViewStates(Landroid/os/Bundle;)V
 
     :cond_2
     add-int/lit8 v2, v2, 0x1

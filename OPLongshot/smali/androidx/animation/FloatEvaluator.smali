@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/FloatEvaluator;
 .super Ljava/lang/Object;
-.source "FloatEvaluator.java"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -30,6 +30,16 @@
 # virtual methods
 .method public evaluate(FLjava/lang/Float;Ljava/lang/Float;)Ljava/lang/Float;
     .locals 0
+    .param p2    # Ljava/lang/Float;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Float;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -54,6 +64,16 @@
 
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     check-cast p2, Ljava/lang/Float;
 

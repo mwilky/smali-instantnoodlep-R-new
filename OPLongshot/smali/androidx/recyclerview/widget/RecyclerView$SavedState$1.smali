@@ -1,6 +1,6 @@
 .class final Landroidx/recyclerview/widget/RecyclerView$SavedState$1;
 .super Ljava/lang/Object;
-.source "RecyclerView.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;

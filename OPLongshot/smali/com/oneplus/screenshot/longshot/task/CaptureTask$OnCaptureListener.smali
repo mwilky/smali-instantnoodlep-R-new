@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/task/CaptureTask$OnCaptureListener;
 .super Ljava/lang/Object;
-.source "CaptureTask.java"
+.source ""
 
 
 # annotations

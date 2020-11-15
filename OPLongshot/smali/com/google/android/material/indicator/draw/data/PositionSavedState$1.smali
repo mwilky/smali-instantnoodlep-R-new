@@ -1,6 +1,6 @@
 .class final Lcom/google/android/material/indicator/draw/data/PositionSavedState$1;
 .super Ljava/lang/Object;
-.source "PositionSavedState.java"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

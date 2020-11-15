@@ -1,9 +1,15 @@
 .class public Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;
 .super Landroidx/core/content/pm/ShortcutInfoCompatSaver;
-.source "ShortcutInfoCompatSaver.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/content/pm/ShortcutInfoCompatSaver;
 .end annotation
@@ -49,7 +55,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/ShortcutInfoCompat;",
+            "Ljava/lang/Object;",
             ">;)",
             "Ljava/lang/Void;"
         }

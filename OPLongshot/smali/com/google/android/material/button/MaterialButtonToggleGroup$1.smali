@@ -1,6 +1,6 @@
 .class Lcom/google/android/material/button/MaterialButtonToggleGroup$1;
 .super Ljava/lang/Object;
-.source "MaterialButtonToggleGroup.java"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -71,7 +71,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/google/android/material/button/MaterialButton;->isPressed()Z
+    invoke-virtual {p1}, Landroid/widget/Button;->isPressed()Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/google/android/material/button/MaterialButton;->isPressed()Z
+    invoke-virtual {p2}, Landroid/widget/Button;->isPressed()Z
 
     move-result v1
 
@@ -98,7 +98,7 @@
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$1;->this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->indexOfChild(Landroid/view/View;)I
+    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->indexOfChild(Landroid/view/View;)I
 
     move-result p1
 
@@ -108,7 +108,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$1;->this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
-    invoke-virtual {v0, p2}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->indexOfChild(Landroid/view/View;)I
+    invoke-virtual {v0, p2}, Landroid/widget/LinearLayout;->indexOfChild(Landroid/view/View;)I
 
     move-result p2
 

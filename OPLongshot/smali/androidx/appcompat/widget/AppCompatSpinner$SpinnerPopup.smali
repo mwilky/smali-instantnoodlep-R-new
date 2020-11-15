@@ -1,9 +1,12 @@
 .class interface abstract Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 .super Ljava/lang/Object;
-.source "AppCompatSpinner.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/VisibleForTesting;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/AppCompatSpinner;
 .end annotation

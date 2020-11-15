@@ -1,12 +1,18 @@
 .class final Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 .super Ljava/lang/Object;
-.source "StaticLayoutBuilderCompat.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
+        Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;
     }
 .end annotation
 
@@ -21,6 +27,9 @@
 .field private static final TEXT_DIR_CLASS_RTL:Ljava/lang/String; = "RTL"
 
 .field private static constructor:Ljava/lang/reflect/Constructor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -33,12 +42,18 @@
 .field private static initialized:Z
 
 .field private static textDirection:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # instance fields
 .field private alignment:Landroid/text/Layout$Alignment;
 
 .field private ellipsize:Landroid/text/TextUtils$TruncateAt;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private end:I
 
@@ -100,11 +115,6 @@
 
 .method private createConstructorWithReflection()V
     .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
-        }
-    .end annotation
 
     sget-boolean v0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->initialized:Z
 
@@ -297,15 +307,30 @@
     :catch_0
     move-exception v0
 
-    new-instance v1, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
+    new-instance v1, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;
 
-    invoke-direct {v1, v0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 .end method
 
 .method public static obtain(Ljava/lang/CharSequence;Landroid/text/TextPaint;I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 1
+    .param p0    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/text/TextPaint;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     new-instance v0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 
@@ -318,11 +343,6 @@
 # virtual methods
 .method public build()Landroid/text/StaticLayout;
     .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->source:Ljava/lang/CharSequence;
 
@@ -569,15 +589,21 @@
     :catch_0
     move-exception v0
 
-    new-instance v1, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;
+    new-instance v1, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;
 
-    invoke-direct {v1, v0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, v0}, Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 .end method
 
 .method public setAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .param p1    # Landroid/text/Layout$Alignment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput-object p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->alignment:Landroid/text/Layout$Alignment;
 
@@ -586,6 +612,12 @@
 
 .method public setEllipsize(Landroid/text/TextUtils$TruncateAt;)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .param p1    # Landroid/text/TextUtils$TruncateAt;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput-object p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->ellipsize:Landroid/text/TextUtils$TruncateAt;
 
@@ -594,6 +626,13 @@
 
 .method public setEnd(I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->end:I
 
@@ -602,6 +641,8 @@
 
 .method public setIncludePad(Z)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->includePad:Z
 
@@ -618,6 +659,13 @@
 
 .method public setMaxLines(I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->maxLines:I
 
@@ -626,6 +674,13 @@
 
 .method public setStart(I)Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     iput p1, p0, Lcom/google/android/material/internal/StaticLayoutBuilderCompat;->start:I
 

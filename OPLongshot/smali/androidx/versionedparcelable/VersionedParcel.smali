@@ -1,12 +1,18 @@
 .class public abstract Landroidx/versionedparcelable/VersionedParcel;
 .super Ljava/lang/Object;
-.source "VersionedParcel.java"
+.source ""
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/versionedparcelable/VersionedParcel$ParcelException;
+        Landroidx/versionedparcelable/VersionedParcel$b;
     }
 .end annotation
 
@@ -225,15 +231,9 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Landroidx/versionedparcelable/VersionedParcelable;",
+            "Landroidx/versionedparcelable/a;",
             ">;)",
             "Ljava/lang/Class;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/ClassNotFoundException;
         }
     .end annotation
 
@@ -243,7 +243,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0
@@ -303,19 +303,12 @@
 
 .method private getReadMethod(Ljava/lang/String;)Ljava/lang/reflect/Method;
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/NoSuchMethodException;,
-            Ljava/lang/ClassNotFoundException;
-        }
-    .end annotation
 
     const-class v0, Landroidx/versionedparcelable/VersionedParcel;
 
     iget-object v1, p0, Landroidx/versionedparcelable/VersionedParcel;->mReadCache:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v1, p1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -349,7 +342,7 @@
 
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcel;->mReadCache:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1, v1}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v1
@@ -357,6 +350,12 @@
 
 .method protected static getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 1
+    .param p0    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     :goto_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
@@ -403,7 +402,7 @@
     return p1
 
     :cond_1
-    instance-of v0, p1, Landroidx/versionedparcelable/VersionedParcelable;
+    instance-of v0, p1, Landroidx/versionedparcelable/a;
 
     if-eqz v0, :cond_2
 
@@ -479,13 +478,6 @@
 
 .method private getWriteMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/NoSuchMethodException;,
-            Ljava/lang/ClassNotFoundException;
-        }
-    .end annotation
 
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcel;->mWriteCache:Landroidx/collection/ArrayMap;
 
@@ -493,7 +485,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -533,7 +525,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0
@@ -655,7 +647,7 @@
     :goto_4
     if-lez v0, :cond_7
 
-    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/VersionedParcelable;
+    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/a;
 
     move-result-object v1
 
@@ -894,9 +886,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/versionedparcelable/VersionedParcelable;
+    check-cast v0, Landroidx/versionedparcelable/a;
 
-    invoke-virtual {p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V
+    invoke-virtual {p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/a;)V
 
     goto :goto_6
 
@@ -1011,7 +1003,7 @@
     throw v1
 .end method
 
-.method private writeVersionedParcelableCreator(Landroidx/versionedparcelable/VersionedParcelable;)V
+.method private writeVersionedParcelableCreator(Landroidx/versionedparcelable/a;)V
     .locals 3
 
     :try_start_0
@@ -1199,7 +1191,7 @@
     :goto_4
     if-lez v0, :cond_7
 
-    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/VersionedParcelable;
+    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/a;
 
     move-result-object v1
 
@@ -1652,12 +1644,12 @@
     return-object p1
 .end method
 
-.method protected readFromParcel(Ljava/lang/String;Landroidx/versionedparcelable/VersionedParcel;)Landroidx/versionedparcelable/VersionedParcelable;
+.method protected readFromParcel(Ljava/lang/String;Landroidx/versionedparcelable/VersionedParcel;)Landroidx/versionedparcelable/a;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/versionedparcelable/VersionedParcelable;",
+            "Landroidx/versionedparcelable/a;",
             ">(",
             "Ljava/lang/String;",
             "Landroidx/versionedparcelable/VersionedParcel;",
@@ -1684,7 +1676,7 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/versionedparcelable/VersionedParcelable;
+    check-cast p1, Landroidx/versionedparcelable/a;
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
@@ -2084,9 +2076,9 @@
     invoke-direct {v3, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     :try_start_0
-    new-instance v2, Landroidx/versionedparcelable/VersionedParcel$1;
+    new-instance v2, Landroidx/versionedparcelable/VersionedParcel$a;
 
-    invoke-direct {v2, p0, v3}, Landroidx/versionedparcelable/VersionedParcel$1;-><init>(Landroidx/versionedparcelable/VersionedParcel;Ljava/io/InputStream;)V
+    invoke-direct {v2, p0, v3}, Landroidx/versionedparcelable/VersionedParcel$a;-><init>(Landroidx/versionedparcelable/VersionedParcel;Ljava/io/InputStream;)V
 
     invoke-virtual {v2}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -2188,6 +2180,9 @@
 
 .method public readSize(Landroid/util/Size;I)Landroid/util/Size;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        api = 0x15
+    .end annotation
 
     invoke-virtual {p0, p2}, Landroidx/versionedparcelable/VersionedParcel;->readField(I)Z
 
@@ -2226,6 +2221,9 @@
 
 .method public readSizeF(Landroid/util/SizeF;I)Landroid/util/SizeF;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        api = 0x15
+    .end annotation
 
     invoke-virtual {p0, p2}, Landroidx/versionedparcelable/VersionedParcel;->readField(I)Z
 
@@ -2356,12 +2354,12 @@
     return-object p1
 .end method
 
-.method protected readVersionedParcelable()Landroidx/versionedparcelable/VersionedParcelable;
+.method protected readVersionedParcelable()Landroidx/versionedparcelable/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/versionedparcelable/VersionedParcelable;",
+            "Landroidx/versionedparcelable/a;",
             ">()TT;"
         }
     .end annotation
@@ -2381,19 +2379,19 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->readFromParcel(Ljava/lang/String;Landroidx/versionedparcelable/VersionedParcel;)Landroidx/versionedparcelable/VersionedParcelable;
+    invoke-virtual {p0, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->readFromParcel(Ljava/lang/String;Landroidx/versionedparcelable/VersionedParcel;)Landroidx/versionedparcelable/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public readVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;I)Landroidx/versionedparcelable/VersionedParcelable;
+.method public readVersionedParcelable(Landroidx/versionedparcelable/a;I)Landroidx/versionedparcelable/a;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/versionedparcelable/VersionedParcelable;",
+            "Landroidx/versionedparcelable/a;",
             ">(TT;I)TT;"
         }
     .end annotation
@@ -2407,7 +2405,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/VersionedParcelable;
+    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/a;
 
     move-result-object p1
 
@@ -2542,9 +2540,9 @@
 
     aget-object v2, p1, v1
 
-    check-cast v2, Landroidx/versionedparcelable/VersionedParcelable;
+    check-cast v2, Landroidx/versionedparcelable/a;
 
-    invoke-virtual {p0, v2}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V
+    invoke-virtual {p0, v2}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/a;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -3235,6 +3233,9 @@
 
 .method public writeSize(Landroid/util/Size;I)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        api = 0x15
+    .end annotation
 
     invoke-virtual {p0, p2}, Landroidx/versionedparcelable/VersionedParcel;->setOutputField(I)V
 
@@ -3270,6 +3271,9 @@
 
 .method public writeSizeF(Landroid/util/SizeF;I)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        api = 0x15
+    .end annotation
 
     invoke-virtual {p0, p2}, Landroidx/versionedparcelable/VersionedParcel;->setOutputField(I)V
 
@@ -3387,12 +3391,12 @@
     return-void
 .end method
 
-.method protected writeToParcel(Landroidx/versionedparcelable/VersionedParcelable;Landroidx/versionedparcelable/VersionedParcel;)V
+.method protected writeToParcel(Landroidx/versionedparcelable/a;Landroidx/versionedparcelable/VersionedParcel;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/versionedparcelable/VersionedParcelable;",
+            "Landroidx/versionedparcelable/a;",
             ">(TT;",
             "Landroidx/versionedparcelable/VersionedParcel;",
             ")V"
@@ -3493,7 +3497,7 @@
     throw p2
 .end method
 
-.method protected writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V
+.method protected writeVersionedParcelable(Landroidx/versionedparcelable/a;)V
     .locals 1
 
     if-nez p1, :cond_0
@@ -3505,25 +3509,25 @@
     return-void
 
     :cond_0
-    invoke-direct {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelableCreator(Landroidx/versionedparcelable/VersionedParcelable;)V
+    invoke-direct {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelableCreator(Landroidx/versionedparcelable/a;)V
 
     invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->createSubParcel()Landroidx/versionedparcelable/VersionedParcel;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeToParcel(Landroidx/versionedparcelable/VersionedParcelable;Landroidx/versionedparcelable/VersionedParcel;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeToParcel(Landroidx/versionedparcelable/a;Landroidx/versionedparcelable/VersionedParcel;)V
 
     invoke-virtual {v0}, Landroidx/versionedparcelable/VersionedParcel;->closeField()V
 
     return-void
 .end method
 
-.method public writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;I)V
+.method public writeVersionedParcelable(Landroidx/versionedparcelable/a;I)V
     .locals 0
 
     invoke-virtual {p0, p2}, Landroidx/versionedparcelable/VersionedParcel;->setOutputField(I)V
 
-    invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V
+    invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/a;)V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class Landroidx/lifecycle/LiveData$AlwaysActiveObserver;
-.super Landroidx/lifecycle/LiveData$ObserverWrapper;
-.source "LiveData.java"
+.super Landroidx/lifecycle/LiveData$b;
+.source ""
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/lifecycle/LiveData<",
-        "TT;>.ObserverWrapper;"
+        "TT;>.b;"
     }
 .end annotation
 
@@ -38,7 +38,7 @@
 
     iput-object p1, p0, Landroidx/lifecycle/LiveData$AlwaysActiveObserver;->this$0:Landroidx/lifecycle/LiveData;
 
-    invoke-direct {p0, p1, p2}, Landroidx/lifecycle/LiveData$ObserverWrapper;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
+    invoke-direct {p0, p1, p2}, Landroidx/lifecycle/LiveData$b;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
     return-void
 .end method
