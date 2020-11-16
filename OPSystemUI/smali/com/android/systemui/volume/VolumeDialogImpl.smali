@@ -2025,6 +2025,32 @@
     move-object v9, p0
 
     invoke-direct/range {v9 .. v14}, Lcom/android/systemui/volume/VolumeDialogImpl;->addRow(IIIZZ)V
+    
+    const/4 v10, 0x5
+
+    const-string v11, "ic_volume_notification"
+
+    const-string v12, "drawable"
+
+    invoke-static {v11, v12}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v11
+
+    const-string v5, "ic_volume_notification_mute"
+
+    const-string v12, "drawable"
+
+    invoke-static {v5, v12}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v12
+
+    const/4 v13, 0x1
+
+    const/4 v14, 0x1
+
+    move-object v9, p0
+
+    invoke-direct/range {v9 .. v14}, Lcom/android/systemui/volume/VolumeDialogImpl;->addRow(IIIZZ)V
 
     iget-object v0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl;->mContext:Landroid/content/Context;
 
@@ -4591,6 +4617,17 @@
     if-eq v11, v10, :cond_3
 
     if-eq v11, v9, :cond_3
+    
+    sget-boolean v0, Lcom/android/mwilky/Renovate;->mUnlinkVolume:Z
+
+    if-eqz v0, :cond_mw
+
+    const/4 v0, 0x5
+
+    if-eq v11, v0, :cond_3
+
+    :cond_mw
+    move-object/from16 v0, p0
 
     if-nez v11, :cond_a
 
@@ -4601,6 +4638,8 @@
     if-eqz v11, :cond_a
 
     :cond_3
+    move-object/from16 v0, p0
+
     iget-boolean v11, v0, Lcom/android/systemui/volume/VolumeDialogImpl;->mNeedPlayExpandAnim:Z
 
     if-eqz v11, :cond_9
