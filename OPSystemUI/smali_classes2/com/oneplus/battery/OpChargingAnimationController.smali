@@ -38,3 +38,6 @@
 
 .method public abstract isAnimationStarted()Z
 .end method
+
+.method public abstract onConfigChanged(Landroid/content/res/Configuration;)V
+.end method

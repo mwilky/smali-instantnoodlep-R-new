@@ -50,9 +50,9 @@
     <integer name="doze_small_icon_alpha">222</integer>
     <integer name="fingerprint_animation_post_delay_time">6</integer>
     <integer name="fingerprint_animation_post_delay_time_on_aod">6</integer>
-    <integer name="fingerprint_cust_animation_post_delay_time">0</integer>
-    <integer name="fingerprint_cust_animation_post_delay_time_on_aod">0</integer>
-    <integer name="fingerprint_default_animation_style">0</integer>
+    <integer name="fingerprint_cust_animation_post_delay_time">33</integer>
+    <integer name="fingerprint_cust_animation_post_delay_time_on_aod">35</integer>
+    <integer name="fingerprint_default_animation_style">11</integer>
     <integer name="fingerprint_dialog_text_gravity">8388611</integer>
     <integer name="fod_02_anim_end_frame">0</integer>
     <integer name="fod_02_anim_start_frame">0</integer>
@@ -60,7 +60,7 @@
     <integer name="fod_03_anim_start_frame">0</integer>
     <integer name="fod_04_anim_end_frame">0</integer>
     <integer name="fod_04_anim_start_frame">0</integer>
-    <integer name="fod_cust01_anim_end_frame">0</integer>
+    <integer name="fod_cust01_anim_end_frame">28</integer>
     <integer name="fod_cust01_anim_start_frame">0</integer>
     <integer name="fod_default_down_anim_end_frame">0</integer>
     <integer name="fod_default_down_anim_start_frame">0</integer>

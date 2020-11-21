@@ -26,8 +26,6 @@
 
 .field public static final SUPPORT_CHARGING_ANIM_V2:Z
 
-.field public static final SUPPORT_RED_CHARGING_ANIM:Z
-
 .field public static final SUPPORT_SWARP_CHARGING:Z
 
 .field public static final SUPPORT_WARP_CHARGING:Z
@@ -87,6 +85,10 @@
     .end annotation
 .end field
 
+.field private static final sIsMCLCustomType:Z
+
+.field private static final sIsREDCustomType:Z
+
 .field public static sIsSupportAssistantGesture:Z
 
 .field private static sStatusBarIconsDark:Z
@@ -140,12 +142,6 @@
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_SWARP_CHARGING:Z
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
-
-    move-result v1
-
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
-
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -191,6 +187,30 @@
     sput-object v1, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->sIsMCLCustomType:Z
+
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
 
     const-string v1, "310120"
 
@@ -2546,17 +2566,9 @@
 .end method
 
 .method public static isMCLVersion()Z
-    .locals 2
+    .locals 1
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsMCLCustomType:Z
 
     return v0
 .end method
@@ -3432,19 +3444,22 @@
     return v0
 .end method
 
-.method private static isSupportREDCharging()Z
-    .locals 3
+.method public static isSupportREDCharging()Z
+    .registers 8
 
+    .line 56
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
+    .line 57
+    .local v0, "equals":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3459,11 +3474,93 @@
 
     move-result-object v1
 
-    const-string v2, "OpUtils"
+    const-string v3, "OpUtils"
 
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v0
+    .line 58
+    const-string v1, "oem_special_theme"
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v3}, Lcom/android/wubydax/GearUtils;->getDbIntForKey(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 59
+    .local v1, "specialTheme":I
+    const/4 v4, 0x1
+
+    if-ne v1, v4, :cond_2c
+
+    move v5, v4
+
+    goto :goto_2d
+
+    :cond_2c
+    move v5, v3
+
+    :goto_2d
+    and-int/2addr v5, v0
+
+    const-string v6, "SpecialThemeEnabled:"
+
+    const-string v7, "mwilky"
+
+    if-eqz v5, :cond_52
+
+    .line 60
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "Return: true"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 61
+    return v4
+
+    .line 63
+    :cond_52
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "Return: false"
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 64
+    return v3
 .end method
 
 .method public static isSupportRefreshRateSwitch()Z

@@ -151,7 +151,9 @@
 
     if-nez p1, :cond_5
 
-    sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result p1
 
     if-eqz p1, :cond_1
 

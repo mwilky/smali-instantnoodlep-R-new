@@ -74,7 +74,9 @@
     return-void
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
