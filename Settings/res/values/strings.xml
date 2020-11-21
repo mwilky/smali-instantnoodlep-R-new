@@ -463,7 +463,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_clock_minimalism_1">Minimalism 2</string>
     <string name="aod_clock_none">None</string>
     <string name="aod_clock_parsons">Insight</string>
-    <string name="aod_clock_red" />
+    <string name="aod_clock_red">Signboard</string>
     <string name="aod_clock_select_style_text">Select the clock style</string>
     <string name="aod_clock_text_clock">Text clock</string>
     <string name="aod_horizon_light">Horizon light</string>
@@ -476,7 +476,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_horizon_light_effect_6">Green</string>
     <string name="aod_horizon_light_effect_7">Pink</string>
     <string name="aod_horizon_light_effect_8">Orange</string>
-    <string name="aod_horizon_light_effect_red" />
+    <string name="aod_horizon_light_effect_red">Neon</string>
     <string name="aod_horizon_light_select">SELECT COLOR</string>
     <string name="aod_horizon_light_snake_action">TURN ON</string>
     <string name="aod_horizon_light_snake_tip">This feature will be available when New Notifications is on</string>
@@ -4693,7 +4693,7 @@ Note:
     <string name="oneplus_select_fingerprint_animation_effect_6">Energy</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
     <string name="oneplus_select_fingerprint_animation_effect_none">None</string>
-    <string name="oneplus_select_fingerprint_animation_effect_red" />
+    <string name="oneplus_select_fingerprint_animation_effect_red">Scanning</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Select fingerprint animation effect</string>
     <string name="oneplus_service_messaging_summary">Allow OnePlus to deliver prompt cloud messaging services to you to ensure optimized product experience</string>
     <string name="oneplus_service_messaging_title">OnePlus Service Messaging</string>
@@ -4909,9 +4909,9 @@ Note: Face Unlock may be less secure than fingerprint, PIN or other screen lock 
 ©2020, Onformative."</string>
     <string name="oneplus_wallpaper_attributions_a5010_values">2017, Hampus Olsson.</string>
     <string name="oneplus_wallpaper_attributions_avg_values">©MARVEL.</string>
-    <string name="oneplus_wallpaper_attributions_red_values">"©2020, Hampus Olsson.
-©2020, Onformative.
-©2020, TAVO."</string>
+    <string name="oneplus_wallpaper_attributions_red_values">"
+©2020 Alphabet
+©2020 CD PROJEKT S.A."</string>
     <string name="oneplus_wallpaper_attributions_values">"©2016, Hampus Olsson.
 ©2016, Matthias Heiderich."</string>
     <string name="oneplus_wallpaper_settings_title_desk">@string/wallpaper_settings_title</string>
@@ -5066,7 +5066,7 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_control_accent_color_pink_label">@string/op_primary_vigour_red_label</string>
     <string name="op_control_accent_color_purple_label">@string/op_primary_fashion_pink_label</string>
     <string name="op_control_accent_color_red_label">@string/color_picker_default</string>
-    <string name="op_control_accent_color_red_theme_label" />
+    <string name="op_control_accent_color_red_theme_label">3945 C</string>
     <string name="op_control_accent_color_rose_red_label">@string/op_primary_rose_red_label</string>
     <string name="op_control_accent_color_teal_label">Teal</string>
     <string name="op_control_font_display_h1">oneplus-sans-display-h1</string>
@@ -5186,10 +5186,10 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_primary_vigour_red_label">Pink</string>
     <string name="op_primary_vigour_red_light_label">@string/op_primary_vigour_red_label</string>
     <string name="op_priority_allows">Priority only allows</string>
-    <string name="op_red_theme" />
-    <string name="op_red_theme_accent_color_disable_tips" />
-    <string name="op_red_theme_dark_mode_tips" />
-    <string name="op_red_theme_dialog_title" />
+    <string name="op_red_theme">Cyberpunk 2077</string>
+    <string name="op_red_theme_accent_color_disable_tips">"(The colour settings can't be set in Cyberpunk 2077 theme)"</string>
+    <string name="op_red_theme_dark_mode_tips">"Dark mode can't be disabled in Cyberpunk 2077 theme"</string>
+    <string name="op_red_theme_dialog_title">Theme</string>
     <string name="op_reset">Reset</string>
     <string name="op_reset_options_summary">Factory reset, apps &amp; network reset</string>
     <string name="op_ringtone">@string/incoming_call_volume_title</string>

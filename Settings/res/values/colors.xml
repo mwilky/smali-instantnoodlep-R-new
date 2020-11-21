@@ -527,7 +527,7 @@
     <color name="op_control_accent_color_deeppurple_dark">#ff5a3f96</color>
     <color name="op_control_accent_color_deeppurple_default">@color/op_control_accent_color_deeppurple_light</color>
     <color name="op_control_accent_color_deeppurple_light">#ff6542b4</color>
-    <color name="op_control_accent_color_default_red_theme">#ffc41442</color>
+    <color name="op_control_accent_color_default_red_theme">#fffcee0a</color>
     <color name="op_control_accent_color_gin_dark">#ff7e5f5d</color>
     <color name="op_control_accent_color_gin_default">@color/op_control_accent_color_gin_light</color>
     <color name="op_control_accent_color_gin_light">#ff8c6a67</color>
