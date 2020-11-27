@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/RecyclerView$i;
+.class public Landroidx/recyclerview/widget/RecyclerView$i;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "i"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic a:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$i;->a:Landroidx/recyclerview/widget/RecyclerView;

@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/StaggeredGridLayoutManager$SavedState;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -42,11 +42,11 @@
 
 
 # instance fields
-.field mAnchorLayoutFromEnd:Z
+.field public mAnchorLayoutFromEnd:Z
 
-.field mAnchorPosition:I
+.field public mAnchorPosition:I
 
-.field mFullSpanItems:Ljava/util/List;
+.field public mFullSpanItems:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -56,23 +56,23 @@
     .end annotation
 .end field
 
-.field mLastLayoutRTL:Z
+.field public mLastLayoutRTL:Z
 
-.field mReverseLayout:Z
+.field public mReverseLayout:Z
 
-.field mSpanLookup:[I
+.field public mSpanLookup:[I
 
-.field mSpanLookupSize:I
+.field public mSpanLookupSize:I
 
-.field mSpanOffsets:[I
+.field public mSpanOffsets:[I
 
-.field mSpanOffsetsSize:I
+.field public mSpanOffsetsSize:I
 
-.field mVisibleAnchorPosition:I
+.field public mVisibleAnchorPosition:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$SavedState$1;
@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -259,7 +259,7 @@
     return v0
 .end method
 
-.method invalidateAnchorPositionInfo()V
+.method public invalidateAnchorPositionInfo()V
     .locals 1
 
     const/4 v0, 0x0
@@ -279,7 +279,7 @@
     return-void
 .end method
 
-.method invalidateSpanInfo()V
+.method public invalidateSpanInfo()V
     .locals 2
 
     const/4 v0, 0x0

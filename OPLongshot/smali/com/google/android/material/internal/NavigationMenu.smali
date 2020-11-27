@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/NavigationMenu;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source ""
+.source "SourceFile"
 
 
 # annotations

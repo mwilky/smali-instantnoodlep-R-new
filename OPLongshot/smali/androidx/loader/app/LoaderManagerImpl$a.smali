@@ -1,6 +1,6 @@
-.class Landroidx/loader/app/LoaderManagerImpl$a;
-.super Landroidx/lifecycle/h;
-.source ""
+.class public Landroidx/loader/app/LoaderManagerImpl$a;
+.super Lb/m/h;
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # static fields
-.field private static final c:Landroidx/lifecycle/i$a;
+.field public static final c:Lb/m/i$a;
 
 
 # instance fields
-.field private b:Landroidx/collection/SparseArrayCompat;
+.field public b:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SparseArrayCompat<",
@@ -31,22 +31,22 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/loader/app/LoaderManagerImpl$a$a;
 
     invoke-direct {v0}, Landroidx/loader/app/LoaderManagerImpl$a$a;-><init>()V
 
-    sput-object v0, Landroidx/loader/app/LoaderManagerImpl$a;->c:Landroidx/lifecycle/i$a;
+    sput-object v0, Landroidx/loader/app/LoaderManagerImpl$a;->c:Lb/m/i$a;
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Landroidx/lifecycle/h;-><init>()V
+    invoke-direct {p0}, Lb/m/h;-><init>()V
 
     new-instance v0, Landroidx/collection/SparseArrayCompat;
 
@@ -57,20 +57,20 @@
     return-void
 .end method
 
-.method static e(Landroidx/lifecycle/j;)Landroidx/loader/app/LoaderManagerImpl$a;
+.method public static e(Lb/m/j;)Landroidx/loader/app/LoaderManagerImpl$a;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    new-instance v0, Landroidx/lifecycle/i;
+    new-instance v0, Lb/m/i;
 
-    sget-object v1, Landroidx/loader/app/LoaderManagerImpl$a;->c:Landroidx/lifecycle/i$a;
+    sget-object v1, Landroidx/loader/app/LoaderManagerImpl$a;->c:Lb/m/i$a;
 
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/i;-><init>(Landroidx/lifecycle/j;Landroidx/lifecycle/i$a;)V
+    invoke-direct {v0, p0, v1}, Lb/m/i;-><init>(Lb/m/j;Lb/m/i$a;)V
 
     const-class p0, Landroidx/loader/app/LoaderManagerImpl$a;
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/i;->a(Ljava/lang/Class;)Landroidx/lifecycle/h;
+    invoke-virtual {v0, p0}, Lb/m/i;->a(Ljava/lang/Class;)Lb/m/h;
 
     move-result-object p0
 
@@ -81,10 +81,10 @@
 
 
 # virtual methods
-.method protected c()V
+.method public c()V
     .locals 4
 
-    invoke-super {p0}, Landroidx/lifecycle/h;->c()V
+    invoke-super {p0}, Lb/m/h;->c()V
 
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$a;->b:Landroidx/collection/SparseArrayCompat;
 
@@ -205,7 +205,7 @@
     return-void
 .end method
 
-.method f()V
+.method public f()V
     .locals 3
 
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$a;->b:Landroidx/collection/SparseArrayCompat;

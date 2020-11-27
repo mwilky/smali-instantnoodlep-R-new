@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchOverState;
 .super Lcom/oneplus/screenshot/longshot/state/StitchNextState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.StitchOverState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchOverState"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 4
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/StitchOverTask;
@@ -42,7 +42,7 @@
     return-object v0
 .end method
 
-.method protected getPageText()Ljava/lang/String;
+.method public getPageText()Ljava/lang/String;
     .locals 1
 
     invoke-super {p0}, Lcom/oneplus/screenshot/longshot/state/StitchNextState;->getPageText()Ljava/lang/String;
@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method protected getSuccessText()Ljava/lang/String;
+.method public getSuccessText()Ljava/lang/String;
     .locals 1
 
     invoke-super {p0}, Lcom/oneplus/screenshot/longshot/state/StitchNextState;->getSuccessText()Ljava/lang/String;
@@ -62,7 +62,7 @@
     return-object v0
 .end method
 
-.method protected prepareSuccess()V
+.method public prepareSuccess()V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;

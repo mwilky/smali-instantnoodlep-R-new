@@ -1,6 +1,6 @@
-.class final Landroidx/core/provider/FontsContractCompat$2;
+.class public final Landroidx/core/provider/FontsContractCompat$2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
@@ -8,11 +8,11 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Lb/h/i/a;Lb/h/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field final synthetic val$fontCallback:Landroidx/core/content/res/b$a;
+.field public final synthetic val$fontCallback:Lb/h/e/c/b$a;
 
-.field final synthetic val$handler:Landroid/os/Handler;
+.field public final synthetic val$handler:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/content/res/b$a;Landroid/os/Handler;)V
+.method public constructor <init>(Lb/h/e/c/b$a;Landroid/os/Handler;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Landroidx/core/content/res/b$a;
+    iput-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Lb/h/e/c/b$a;
 
     iput-object p2, p0, Landroidx/core/provider/FontsContractCompat$2;->val$handler:Landroid/os/Handler;
 
@@ -52,38 +52,39 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Landroidx/core/content/res/b$a;
+    iget-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Lb/h/e/c/b$a;
 
     const/4 v0, 0x1
 
-    :goto_0
     iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$handler:Landroid/os/Handler;
 
-    invoke-virtual {p1, v0, v1}, Landroidx/core/content/res/b$a;->a(ILandroid/os/Handler;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/e/c/b$a;->a(ILandroid/os/Handler;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     iget v0, p1, Landroidx/core/provider/FontsContractCompat$c;->b:I
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Landroidx/core/content/res/b$a;
+    iget-object v0, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Lb/h/e/c/b$a;
 
     iget-object p1, p1, Landroidx/core/provider/FontsContractCompat$c;->a:Landroid/graphics/Typeface;
 
     iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$handler:Landroid/os/Handler;
 
-    invoke-virtual {v0, p1, v1}, Landroidx/core/content/res/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Landroidx/core/content/res/b$a;
+    invoke-virtual {v0, p1, v1}, Lb/h/e/c/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     goto :goto_0
 
-    :goto_1
+    :cond_1
+    iget-object p1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$fontCallback:Lb/h/e/c/b$a;
+
+    iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$2;->val$handler:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0, v1}, Lb/h/e/c/b$a;->a(ILandroid/os/Handler;)V
+
+    :goto_0
     return-void
 .end method
 

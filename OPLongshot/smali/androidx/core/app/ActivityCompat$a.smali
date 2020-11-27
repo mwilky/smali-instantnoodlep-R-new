@@ -1,6 +1,6 @@
-.class final Landroidx/core/app/ActivityCompat$a;
+.class public final Landroidx/core/app/ActivityCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -8,25 +8,25 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/app/ActivityCompat;->h(Landroid/app/Activity;[Ljava/lang/String;I)V
+    value = Landroidx/core/app/ActivityCompat;->j(Landroid/app/Activity;[Ljava/lang/String;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:[Ljava/lang/String;
+.field public final synthetic a:[Ljava/lang/String;
 
-.field final synthetic b:Landroid/app/Activity;
+.field public final synthetic b:Landroid/app/Activity;
 
-.field final synthetic c:I
+.field public final synthetic c:I
 
 
 # direct methods
-.method constructor <init>([Ljava/lang/String;Landroid/app/Activity;I)V
+.method public constructor <init>([Ljava/lang/String;Landroid/app/Activity;I)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$a;->a:[Ljava/lang/String;

@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$4;
+.class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$4;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$4;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;

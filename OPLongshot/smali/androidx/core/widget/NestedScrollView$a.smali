@@ -1,6 +1,6 @@
-.class Landroidx/core/widget/NestedScrollView$a;
-.super Landroidx/core/view/a;
-.source ""
+.class public Landroidx/core/widget/NestedScrollView$a;
+.super Lb/h/l/a;
+.source "SourceFile"
 
 
 # annotations
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {p0}, Lb/h/l/a;-><init>()V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     check-cast p1, Landroidx/core/widget/NestedScrollView;
 
@@ -72,21 +72,21 @@
 
     move-result v0
 
-    invoke-static {p2, v0}, Landroidx/core/view/accessibility/e;->a(Landroid/view/accessibility/AccessibilityRecord;I)V
+    invoke-static {p2, v0}, Lb/h/l/y/e;->a(Landroid/view/accessibility/AccessibilityRecord;I)V
 
     invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
 
     move-result p1
 
-    invoke-static {p2, p1}, Landroidx/core/view/accessibility/e;->b(Landroid/view/accessibility/AccessibilityRecord;I)V
+    invoke-static {p2, p1}, Lb/h/l/y/e;->b(Landroid/view/accessibility/AccessibilityRecord;I)V
 
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
     .locals 2
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
 
     check-cast p1, Landroidx/core/widget/NestedScrollView;
 
@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->W(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->W(Ljava/lang/CharSequence;)V
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->isEnabled()Z
 
@@ -112,7 +112,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p2, v1}, Landroidx/core/view/accessibility/d;->p0(Z)V
+    invoke-virtual {p2, v1}, Lb/h/l/y/d;->p0(Z)V
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getScrollY()I
 
@@ -120,13 +120,13 @@
 
     if-lez v1, :cond_0
 
-    sget-object v1, Landroidx/core/view/accessibility/d$a;->g:Landroidx/core/view/accessibility/d$a;
+    sget-object v1, Lb/h/l/y/d$a;->g:Lb/h/l/y/d$a;
 
-    invoke-virtual {p2, v1}, Landroidx/core/view/accessibility/d;->b(Landroidx/core/view/accessibility/d$a;)V
+    invoke-virtual {p2, v1}, Lb/h/l/y/d;->b(Lb/h/l/y/d$a;)V
 
-    sget-object v1, Landroidx/core/view/accessibility/d$a;->k:Landroidx/core/view/accessibility/d$a;
+    sget-object v1, Lb/h/l/y/d$a;->k:Lb/h/l/y/d$a;
 
-    invoke-virtual {p2, v1}, Landroidx/core/view/accessibility/d;->b(Landroidx/core/view/accessibility/d$a;)V
+    invoke-virtual {p2, v1}, Lb/h/l/y/d;->b(Lb/h/l/y/d$a;)V
 
     :cond_0
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getScrollY()I
@@ -135,13 +135,13 @@
 
     if-ge p1, v0, :cond_1
 
-    sget-object p1, Landroidx/core/view/accessibility/d$a;->f:Landroidx/core/view/accessibility/d$a;
+    sget-object p1, Lb/h/l/y/d$a;->f:Lb/h/l/y/d$a;
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->b(Landroidx/core/view/accessibility/d$a;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->b(Lb/h/l/y/d$a;)V
 
-    sget-object p1, Landroidx/core/view/accessibility/d$a;->l:Landroidx/core/view/accessibility/d$a;
+    sget-object p1, Lb/h/l/y/d$a;->l:Lb/h/l/y/d$a;
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->b(Landroidx/core/view/accessibility/d$a;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->b(Lb/h/l/y/d$a;)V
 
     :cond_1
     return-void
@@ -150,7 +150,7 @@
 .method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 2
 
-    invoke-super {p0, p1, p2, p3}, Landroidx/core/view/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-super {p0, p1, p2, p3}, Lb/h/l/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p3
 

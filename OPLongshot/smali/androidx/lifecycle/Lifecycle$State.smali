@@ -1,6 +1,6 @@
 .class public final enum Landroidx/lifecycle/Lifecycle$State;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/lifecycle/Lifecycle$State;
+.field public static final synthetic $VALUES:[Landroidx/lifecycle/Lifecycle$State;
 
 .field public static final enum CREATED:Landroidx/lifecycle/Lifecycle$State;
 
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 8
 
     new-instance v0, Landroidx/lifecycle/Lifecycle$State;
@@ -117,7 +117,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

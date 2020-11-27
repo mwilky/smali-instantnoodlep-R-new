@@ -1,6 +1,6 @@
 .class public Ledu/emory/mathcs/utils/ConcurrencyUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -13,21 +13,21 @@
 
 
 # static fields
-.field private static NTHREADS:I
+.field public static NTHREADS:I
 
-.field private static THREADS_BEGIN_N_1D_FFT_2THREADS:I
+.field public static THREADS_BEGIN_N_1D_FFT_2THREADS:I
 
-.field private static THREADS_BEGIN_N_1D_FFT_4THREADS:I
+.field public static THREADS_BEGIN_N_1D_FFT_4THREADS:I
 
-.field private static THREADS_BEGIN_N_2D:I
+.field public static THREADS_BEGIN_N_2D:I
 
-.field private static THREADS_BEGIN_N_3D:I
+.field public static THREADS_BEGIN_N_3D:I
 
-.field private static final THREAD_POOL:Ljava/util/concurrent/ExecutorService;
+.field public static final THREAD_POOL:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     new-instance v0, Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomThreadFactory;
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

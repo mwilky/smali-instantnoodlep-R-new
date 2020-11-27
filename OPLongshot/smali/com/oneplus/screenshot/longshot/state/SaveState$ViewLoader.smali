@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/state/SaveState$ViewLoader;
+.class public Lcom/oneplus/screenshot/longshot/state/SaveState$ViewLoader;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "ViewLoader"
 .end annotation
 
 
 # instance fields
-.field private mDecor:Landroid/view/View;
+.field public mDecor:Landroid/view/View;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
 
 
 # direct methods

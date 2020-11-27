@@ -1,6 +1,6 @@
-.class Lcom/google/analytics/tracking/android/GAUsage;
+.class public Lcom/google/analytics/tracking/android/GAUsage;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static final d:Lcom/google/analytics/tracking/android/GAUsage;
+.field public static final d:Lcom/google/analytics/tracking/android/GAUsage;
 
 
 # instance fields
-.field private a:Ljava/util/SortedSet;
+.field public a:Ljava/util/SortedSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/SortedSet<",
@@ -26,13 +26,13 @@
     .end annotation
 .end field
 
-.field private b:Ljava/lang/StringBuilder;
+.field public b:Ljava/lang/StringBuilder;
 
-.field private c:Z
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/analytics/tracking/android/GAUsage;
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

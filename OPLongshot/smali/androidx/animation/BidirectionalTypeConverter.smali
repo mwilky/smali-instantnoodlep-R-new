@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/BidirectionalTypeConverter;
 .super Landroidx/animation/TypeConverter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private mInvertedConverter:Landroidx/animation/BidirectionalTypeConverter;
+.field public mInvertedConverter:Landroidx/animation/BidirectionalTypeConverter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/animation/BidirectionalTypeConverter<",

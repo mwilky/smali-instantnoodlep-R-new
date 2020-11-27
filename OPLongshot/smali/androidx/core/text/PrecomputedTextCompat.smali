@@ -1,6 +1,6 @@
 .class public Landroidx/core/text/PrecomputedTextCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/text/Spannable;
@@ -16,30 +16,30 @@
 
 
 # instance fields
-.field private final a:Landroid/text/Spannable;
+.field public final a:Landroid/text/Spannable;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final b:Landroidx/core/text/PrecomputedTextCompat$a;
+.field public final b:Landroidx/core/text/PrecomputedTextCompat$a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final c:Landroid/text/PrecomputedText;
+.field public final c:Landroid/text/PrecomputedText;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/text/PrecomputedText;Landroidx/core/text/PrecomputedTextCompat$a;)V
+.method public constructor <init>(Landroid/text/PrecomputedText;Landroidx/core/text/PrecomputedTextCompat$a;)V
     .locals 1
     .param p1    # Landroid/text/PrecomputedText;
         .annotation build Landroidx/annotation/NonNull;
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/CharSequence;Landroidx/core/text/PrecomputedTextCompat$a;[I)V
+.method public constructor <init>(Ljava/lang/CharSequence;Landroidx/core/text/PrecomputedTextCompat$a;[I)V
     .locals 0
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/NonNull;
@@ -131,7 +131,7 @@
     :try_start_0
     const-string v0, "PrecomputedText"
 
-    invoke-static {v0}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lb/h/h/d;->a(Ljava/lang/String;)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -155,7 +155,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Landroidx/core/os/d;->b()V
+    invoke-static {}, Lb/h/h/d;->b()V
 
     return-object v0
 
@@ -316,14 +316,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {}, Landroidx/core/os/d;->b()V
+    invoke-static {}, Lb/h/h/d;->b()V
 
     return-object v0
 
     :catchall_0
     move-exception p0
 
-    invoke-static {}, Landroidx/core/os/d;->b()V
+    invoke-static {}, Lb/h/h/d;->b()V
 
     throw p0
 .end method

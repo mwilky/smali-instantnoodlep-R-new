@@ -1,6 +1,6 @@
-.class final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;
+.class public final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$WeakEntryReference;
 .super Ljava/lang/ref/WeakReference;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x19
     name = "WeakEntryReference"
 .end annotation
 
@@ -33,9 +33,9 @@
 
 
 # instance fields
-.field private final hash:I
+.field public final hash:I
 
-.field private final nextReference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field public final nextReference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",

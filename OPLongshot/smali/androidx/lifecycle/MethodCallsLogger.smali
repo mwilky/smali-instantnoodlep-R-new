@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/MethodCallsLogger;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private mCalledMethods:Ljava/util/Map;
+.field public mCalledMethods:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",

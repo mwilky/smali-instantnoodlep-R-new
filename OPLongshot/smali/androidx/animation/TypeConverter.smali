@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/TypeConverter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field private final mFromClass:Ljava/lang/Class;
+.field public final mFromClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private final mToClass:Ljava/lang/Class;
+.field public final mToClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -83,7 +83,7 @@
     .end annotation
 .end method
 
-.method getSourceType()Ljava/lang/Class;
+.method public getSourceType()Ljava/lang/Class;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -101,7 +101,7 @@
     return-object v0
 .end method
 
-.method getTargetType()Ljava/lang/Class;
+.method public getTargetType()Ljava/lang/Class;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

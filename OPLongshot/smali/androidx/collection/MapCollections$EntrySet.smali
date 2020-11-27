@@ -1,6 +1,6 @@
-.class final Landroidx/collection/MapCollections$EntrySet;
+.class public final Landroidx/collection/MapCollections$EntrySet;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Set;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "EntrySet"
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/collection/MapCollections;
+.field public final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/MapCollections;)V
+.method public constructor <init>(Landroidx/collection/MapCollections;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/collection/MapCollections$EntrySet;->this$0:Landroidx/collection/MapCollections;
@@ -192,7 +192,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lb/e/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

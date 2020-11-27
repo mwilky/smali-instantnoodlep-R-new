@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/appbar/DecorAppbar;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -142,5 +142,5 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
+.method public abstract setupAnimatorToVisibility(IJ)Lb/h/l/t;
 .end method

@@ -1,6 +1,6 @@
 .class public final Landroidx/preference/EditTextPreference$SimpleSummaryProvider;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/preference/Preference$SummaryProvider;
@@ -27,11 +27,11 @@
 
 
 # static fields
-.field private static sSimpleSummaryProvider:Landroidx/preference/EditTextPreference$SimpleSummaryProvider;
+.field public static sSimpleSummaryProvider:Landroidx/preference/EditTextPreference$SimpleSummaryProvider;
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    sget v0, Landroidx/preference/l;->not_set:I
+    sget v0, Lb/n/l;->not_set:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

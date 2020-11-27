@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimatorSet$b;
-.super Landroidx/animation/c;
-.source ""
+.class public Landroidx/animation/AnimatorSet$b;
+.super Lb/b/c;
+.source "SourceFile"
 
 
 # annotations
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/animation/AnimatorSet;
+.field public final synthetic a:Landroidx/animation/AnimatorSet;
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/AnimatorSet;Landroidx/animation/AnimatorSet;)V
+.method public constructor <init>(Landroidx/animation/AnimatorSet;Landroidx/animation/AnimatorSet;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/animation/AnimatorSet$b;->a:Landroidx/animation/AnimatorSet;
 
-    invoke-direct {p0}, Landroidx/animation/c;-><init>()V
+    invoke-direct {p0}, Lb/b/c;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroidx/animation/b;)V
+.method public b(Lb/b/b;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet$b;->a:Landroidx/animation/AnimatorSet;

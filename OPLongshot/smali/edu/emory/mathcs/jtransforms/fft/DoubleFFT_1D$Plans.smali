@@ -1,6 +1,6 @@
-.class final enum Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
+.class public final enum Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401a
+    accessFlags = 0x4019
     name = "Plans"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
+.field public static final synthetic $VALUES:[Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
 .field public static final enum BLUESTEIN:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 6
 
     new-instance v0, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

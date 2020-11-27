@@ -1,6 +1,6 @@
 .class public final Landroidx/core/content/PermissionChecker;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -38,7 +38,7 @@
     return v0
 
     :cond_0
-    invoke-static {p1}, Landroidx/core/app/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/d/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     :cond_4
     :goto_1
-    invoke-static {p0, p1, p4}, Landroidx/core/app/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1, p4}, Lb/h/d/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 

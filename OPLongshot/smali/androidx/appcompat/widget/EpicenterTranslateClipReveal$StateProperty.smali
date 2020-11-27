@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;
+.class public Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "StateProperty"
 .end annotation
 
@@ -30,11 +30,11 @@
 
 
 # instance fields
-.field private final mTargetDimension:I
+.field public final mTargetDimension:I
 
-.field private final mTempRect:Landroid/graphics/Rect;
+.field public final mTempRect:Landroid/graphics/Rect;
 
-.field private final mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
+.field public final mTempState:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
 
 # direct methods
@@ -122,6 +122,12 @@
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
+    float-to-int p1, p1
+
+    add-int/2addr v0, p1
+
+    iput v0, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
+
     goto :goto_0
 
     :cond_1
@@ -141,13 +147,13 @@
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    :goto_0
     float-to-int p1, p1
 
     add-int/2addr v0, p1
 
     iput v0, v1, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->b:I
 
+    :goto_0
     return-object v1
 .end method
 
@@ -231,15 +237,17 @@
     :cond_1
     iget v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateProperty;->mTargetDimension:I
 
-    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
-
     if-ne v0, v2, :cond_2
+
+    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_1
 
     :cond_2
+    iget p2, p2, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;->c:F
+
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
 
     :goto_1

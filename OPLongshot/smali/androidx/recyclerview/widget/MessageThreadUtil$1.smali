@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil$1;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,27 +26,27 @@
 
 
 # static fields
-.field static final ADD_TILE:I = 0x2
+.field public static final ADD_TILE:I = 0x2
 
-.field static final REMOVE_TILE:I = 0x3
+.field public static final REMOVE_TILE:I = 0x3
 
-.field static final UPDATE_ITEM_COUNT:I = 0x1
+.field public static final UPDATE_ITEM_COUNT:I = 0x1
 
 
 # instance fields
-.field private final mMainThreadHandler:Landroid/os/Handler;
+.field public final mMainThreadHandler:Landroid/os/Handler;
 
-.field private mMainThreadRunnable:Ljava/lang/Runnable;
+.field public mMainThreadRunnable:Ljava/lang/Runnable;
 
-.field final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
+.field public final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/MessageThreadUtil;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/MessageThreadUtil;
 
-.field final synthetic val$callback:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
+.field public final synthetic val$callback:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil;Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil;Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1;->this$0:Landroidx/recyclerview/widget/MessageThreadUtil;

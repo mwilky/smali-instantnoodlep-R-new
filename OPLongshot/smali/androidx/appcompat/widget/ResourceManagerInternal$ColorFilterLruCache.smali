@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
+.class public Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
 .super Landroidx/collection/LruCache;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "ColorFilterLruCache"
 .end annotation
 
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method private static generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
+.method public static generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
     .locals 1
 
     const/16 v0, 0x1f
@@ -52,7 +52,7 @@
 
 
 # virtual methods
-.method get(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+.method public get(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
     .locals 0
 
     invoke-static {p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
@@ -72,7 +72,7 @@
     return-object p1
 .end method
 
-.method put(ILandroid/graphics/PorterDuff$Mode;Landroid/graphics/PorterDuffColorFilter;)Landroid/graphics/PorterDuffColorFilter;
+.method public put(ILandroid/graphics/PorterDuff$Mode;Landroid/graphics/PorterDuffColorFilter;)Landroid/graphics/PorterDuffColorFilter;
     .locals 0
 
     invoke-static {p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I

@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/SupportMenuInflater;
 .super Landroid/view/MenuInflater;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 
 # static fields
-.field static final ACTION_PROVIDER_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
+.field public static final ACTION_PROVIDER_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field static final ACTION_VIEW_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
+.field public static final ACTION_VIEW_CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -39,29 +39,29 @@
     .end annotation
 .end field
 
-.field static final LOG_TAG:Ljava/lang/String; = "SupportMenuInflater"
+.field public static final LOG_TAG:Ljava/lang/String; = "SupportMenuInflater"
 
-.field static final NO_ID:I = 0x0
+.field public static final NO_ID:I = 0x0
 
-.field private static final XML_GROUP:Ljava/lang/String; = "group"
+.field public static final XML_GROUP:Ljava/lang/String; = "group"
 
-.field private static final XML_ITEM:Ljava/lang/String; = "item"
+.field public static final XML_ITEM:Ljava/lang/String; = "item"
 
-.field private static final XML_MENU:Ljava/lang/String; = "menu"
+.field public static final XML_MENU:Ljava/lang/String; = "menu"
 
 
 # instance fields
-.field final mActionProviderConstructorArguments:[Ljava/lang/Object;
+.field public final mActionProviderConstructorArguments:[Ljava/lang/Object;
 
-.field final mActionViewConstructorArguments:[Ljava/lang/Object;
+.field public final mActionViewConstructorArguments:[Ljava/lang/Object;
 
-.field mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mRealOwner:Ljava/lang/Object;
+.field public mRealOwner:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -370,7 +370,7 @@
 
 
 # virtual methods
-.method getRealOwner()Ljava/lang/Object;
+.method public getRealOwner()Ljava/lang/Object;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/view/SupportMenuInflater;->mRealOwner:Ljava/lang/Object;

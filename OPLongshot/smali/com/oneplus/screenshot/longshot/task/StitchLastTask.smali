@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchLastTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.StitchLastTask"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchLastTask"
 
 
 # instance fields
-.field protected mDispH:I
+.field public mDispH:I
 
 
 # direct methods
@@ -155,7 +155,7 @@
 
 
 # virtual methods
-.method protected createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method public createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;
@@ -165,7 +165,7 @@
     return-object v0
 .end method
 
-.method protected onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
+.method public onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
     .locals 8
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->checkMatcher()Z
@@ -180,7 +180,6 @@
 
     const-string p1, "onJoin fail"
 
-    :goto_0
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -266,7 +265,7 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     new-instance v4, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
@@ -281,7 +280,7 @@
 
     invoke-direct {v4, v0, v5, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    :goto_1
+    :goto_0
     invoke-virtual {v4, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -360,7 +359,7 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_2
     new-instance v2, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
@@ -375,7 +374,7 @@
 
     invoke-direct {v2, v0, v1, v4}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    :goto_2
+    :goto_1
     invoke-virtual {v2, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -422,7 +421,7 @@
 
     invoke-virtual {p1, p2}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
     invoke-virtual {p0, v0, p1}, Lcom/oneplus/screenshot/longshot/task/StitchLastTask;->stitchForLast(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
@@ -430,7 +429,7 @@
     invoke-virtual {p0, v0, p2}, Lcom/oneplus/screenshot/longshot/task/StitchLastTask;->stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
 
     :cond_6
-    :goto_3
+    :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -445,10 +444,12 @@
 
     move-result-object p1
 
-    goto/16 :goto_0
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
 .end method
 
-.method protected stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
+.method public stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
     .locals 7
 
     const-string v0, "StitchLastTask.stitchForCurr"
@@ -540,6 +541,12 @@
 
     invoke-direct {v0, p1, v6, v6}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
+    invoke-virtual {v0, v4}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
+
+    iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+
     goto :goto_1
 
     :cond_2
@@ -565,7 +572,6 @@
 
     invoke-direct {v0, p1, v6, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    :goto_1
     invoke-virtual {v0, v4}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setStithComplete(Z)V
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -573,6 +579,7 @@
     invoke-virtual {p1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_3
+    :goto_1
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
@@ -580,7 +587,7 @@
     return-void
 .end method
 
-.method protected stitchForLast(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
+.method public stitchForLast(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
     .locals 3
 
     const-string v0, "StitchLastTask.stitchForLast"

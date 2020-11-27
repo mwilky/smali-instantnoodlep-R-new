@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;
+.class public Lcom/oneplus/screenshot/DeleteImageInBackgroundTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,15 +16,15 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.DeleteImageInBackgroundTask"
+.field public static final TAG:Ljava/lang/String; = "Longshot.DeleteImageInBackgroundTask"
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Landroid/net/Uri;
@@ -48,7 +48,7 @@
     return-object p1
 .end method
 
-.method protected varargs doInBackground([Landroid/net/Uri;)Ljava/lang/Void;
+.method public varargs doInBackground([Landroid/net/Uri;)Ljava/lang/Void;
     .locals 3
 
     array-length v0, p1

@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static final DIR_NAME:Ljava/lang/String; = "Dump"
+.field public static final DIR_NAME:Ljava/lang/String; = "Dump"
 
-.field private static final TAG:Ljava/lang/String; = "BitmapDumper"
+.field public static final TAG:Ljava/lang/String; = "BitmapDumper"
 
 .field public static final TAG_CURR:Ljava/lang/String; = "Curr"
 
@@ -30,17 +30,17 @@
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mIndex:I
+.field public mIndex:I
 
-.field protected mIsNext:Z
+.field public mIsNext:Z
 
-.field protected mTag:Ljava/lang/String;
+.field public mTag:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -423,7 +423,7 @@
     return-void
 .end method
 
-.method protected getTag()Ljava/lang/String;
+.method public getTag()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->mTag:Ljava/lang/String;
@@ -431,7 +431,7 @@
     return-object v0
 .end method
 
-.method protected setTag(Ljava/lang/String;)V
+.method public setTag(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->mTag:Ljava/lang/String;

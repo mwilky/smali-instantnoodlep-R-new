@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/datepicker/MaterialCalendar$a;
+.class public Lcom/google/android/material/datepicker/MaterialCalendar$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:I
+.field public final synthetic a:I
 
-.field final synthetic b:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field public final synthetic b:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;I)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$a;->b:Lcom/google/android/material/datepicker/MaterialCalendar;

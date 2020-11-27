@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimationHandler$FrameCallbackProvider16;
+.class public Landroidx/animation/AnimationHandler$FrameCallbackProvider16;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/AnimationHandler$c;
@@ -17,17 +17,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "FrameCallbackProvider16"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/animation/AnimationHandler;
+.field public final synthetic this$0:Landroidx/animation/AnimationHandler;
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/AnimationHandler;)V
+.method public constructor <init>(Landroidx/animation/AnimationHandler;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/animation/AnimationHandler$FrameCallbackProvider16;->this$0:Landroidx/animation/AnimationHandler;

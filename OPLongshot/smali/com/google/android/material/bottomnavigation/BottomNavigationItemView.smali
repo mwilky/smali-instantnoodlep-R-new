@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
 .super Landroid/widget/FrameLayout;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuView$a;
@@ -15,62 +15,62 @@
 
 
 # static fields
-.field private static final CHECKED_STATE_SET:[I
+.field public static final CHECKED_STATE_SET:[I
 
 .field public static final INVALID_ITEM_POSITION:I = -0x1
 
 
 # instance fields
-.field private badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
+.field public badgeDrawable:Lcom/google/android/material/badge/BadgeDrawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private baselineLayout:Lcom/google/android/material/internal/BaselineLayout;
+.field public baselineLayout:Lcom/google/android/material/internal/BaselineLayout;
 
-.field private final defaultMargin:I
+.field public final defaultMargin:I
 
-.field private icon:Landroid/widget/ImageView;
+.field public icon:Landroid/widget/ImageView;
 
-.field private iconTint:Landroid/content/res/ColorStateList;
+.field public iconTint:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private isShifting:Z
+.field public isShifting:Z
 
-.field private itemData:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field public itemData:Landroidx/appcompat/view/menu/MenuItemImpl;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private itemPosition:I
+.field public itemPosition:I
 
-.field private labelVisibilityMode:I
+.field public labelVisibilityMode:I
 
-.field private final largeLabel:Landroid/widget/TextView;
+.field public final largeLabel:Landroid/widget/TextView;
 
-.field private originalIconDrawable:Landroid/graphics/drawable/Drawable;
+.field public originalIconDrawable:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private scaleDownFactor:F
+.field public scaleDownFactor:F
 
-.field private scaleUpFactor:F
+.field public scaleUpFactor:F
 
-.field private shiftAmount:F
+.field public shiftAmount:F
 
-.field private final smallLabel:Landroid/widget/TextView;
+.field public final smallLabel:Landroid/widget/TextView;
 
-.field private wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
+.field public wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -145,17 +145,17 @@
 
     move-result-object p1
 
-    sget p3, Lb/a/b/a/h;->design_bottom_navigation_item:I
+    sget p3, Lc/b/b/b/h;->design_bottom_navigation_item:I
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, p3, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget p1, Lb/a/b/a/e;->design_bottom_navigation_item_background:I
+    sget p1, Lc/b/b/b/e;->design_bottom_navigation_item_background:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    sget p1, Lb/a/b/a/d;->design_bottom_navigation_margin:I
+    sget p1, Lc/b/b/b/d;->design_bottom_navigation_margin:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -163,7 +163,7 @@
 
     iput p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
 
-    sget p1, Lb/a/b/a/f;->baseline:I
+    sget p1, Lc/b/b/b/f;->baseline:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -173,7 +173,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->baselineLayout:Lcom/google/android/material/internal/BaselineLayout;
 
-    sget p1, Lb/a/b/a/f;->icon:I
+    sget p1, Lc/b/b/b/f;->icon:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -183,7 +183,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
-    sget p1, Lb/a/b/a/f;->smallLabel:I
+    sget p1, Lc/b/b/b/f;->smallLabel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -193,7 +193,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
 
-    sget p1, Lb/a/b/a/f;->largeLabel:I
+    sget p1, Lc/b/b/b/f;->largeLabel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -272,7 +272,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;)Landroid/widget/ImageView;
+.method public static synthetic access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;)Landroid/widget/ImageView;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -280,7 +280,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;Landroid/view/View;)V
+.method public static synthetic access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->tryUpdateBadgeBounds(Landroid/view/View;)V
@@ -496,7 +496,7 @@
 
 
 # virtual methods
-.method getBadge()Lcom/google/android/material/badge/BadgeDrawable;
+.method public getBadge()Lcom/google/android/material/badge/BadgeDrawable;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -707,7 +707,7 @@
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
-    invoke-static {p1}, Landroidx/core/view/accessibility/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/view/accessibility/d;
+    invoke-static {p1}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
 
     move-result-object p1
 
@@ -727,11 +727,11 @@
 
     move-result v5
 
-    invoke-static/range {v0 .. v5}, Landroidx/core/view/accessibility/d$c;->a(IIIIZZ)Landroidx/core/view/accessibility/d$c;
+    invoke-static/range {v0 .. v5}, Lb/h/l/y/d$c;->a(IIIIZZ)Lb/h/l/y/d$c;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/l/y/d;->Z(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->isSelected()Z
 
@@ -741,16 +741,16 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->X(Z)V
+    invoke-virtual {p1, v0}, Lb/h/l/y/d;->X(Z)V
 
-    sget-object v0, Landroidx/core/view/accessibility/d$a;->e:Landroidx/core/view/accessibility/d$a;
+    sget-object v0, Lb/h/l/y/d$a;->e:Lb/h/l/y/d$a;
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->N(Landroidx/core/view/accessibility/d$a;)Z
+    invoke-virtual {p1, v0}, Lb/h/l/y/d;->N(Lb/h/l/y/d$a;)Z
 
     :cond_2
     const-string v0, "Tab"
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->n0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Lb/h/l/y/d;->n0(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -763,7 +763,7 @@
     return v0
 .end method
 
-.method removeBadge()V
+.method public removeBadge()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -773,7 +773,7 @@
     return-void
 .end method
 
-.method setBadge(Lcom/google/android/material/badge/BadgeDrawable;)V
+.method public setBadge(Lcom/google/android/material/badge/BadgeDrawable;)V
     .locals 0
     .param p1    # Lcom/google/android/material/badge/BadgeDrawable;
         .annotation build Landroidx/annotation/NonNull;
@@ -875,7 +875,7 @@
 
     if-eq v0, v2, :cond_0
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -894,12 +894,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_3
+    goto/16 :goto_2
 
     :cond_1
     if-eqz p1, :cond_2
 
-    :goto_0
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
@@ -924,7 +923,7 @@
 
     invoke-direct {p0, v0, v1, v1, v7}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
 
-    goto :goto_3
+    goto/16 :goto_2
 
     :cond_2
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -943,57 +942,125 @@
 
     invoke-direct {p0, v0, v8, v8, v5}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
 
-    goto :goto_3
+    goto/16 :goto_2
 
     :cond_3
+    if-eqz p1, :cond_4
+
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
 
-    if-eqz p1, :cond_4
-
-    :goto_1
     invoke-direct {p0, v0, v1, v6}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v8, v8, v5}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_4
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
+
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
+
     invoke-direct {p0, v0, v1, v3}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v4, v4, v7}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
 
-    :goto_2
+    :goto_0
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
     iget-boolean v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->isShifting:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
+
+    if-eqz p1, :cond_6
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
 
-    if-eqz p1, :cond_4
+    invoke-direct {p0, v0, v1, v6}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
+
+    invoke-direct {p0, v0, v8, v8, v5}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
 
     goto :goto_1
 
     :cond_6
-    if-eqz p1, :cond_2
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
-    goto :goto_0
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
 
-    :goto_3
+    invoke-direct {p0, v0, v1, v3}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
+
+    invoke-direct {p0, v0, v4, v4, v7}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
+
+    :goto_1
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto :goto_2
+
+    :cond_7
+    if-eqz p1, :cond_8
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
+
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->shiftAmount:F
+
+    add-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    invoke-direct {p0, v0, v1, v6}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
+
+    invoke-direct {p0, v0, v8, v8, v5}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
+
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->scaleUpFactor:F
+
+    invoke-direct {p0, v0, v1, v1, v7}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
+
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
+
+    invoke-direct {p0, v0, v1, v6}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewLayoutParams(Landroid/view/View;II)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
+
+    iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->scaleDownFactor:F
+
+    invoke-direct {p0, v0, v1, v1, v7}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
+
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
+
+    invoke-direct {p0, v0, v8, v8, v5}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setViewValues(Landroid/view/View;FFI)V
+
+    :goto_2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->refreshDrawableState()V
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setSelected(Z)V
@@ -1026,18 +1093,20 @@
 
     const/16 v0, 0x3ea
 
-    invoke-static {p1, v0}, Landroidx/core/view/o;->b(Landroid/content/Context;I)Landroidx/core/view/o;
+    invoke-static {p1, v0}, Lb/h/l/o;->b(Landroid/content/Context;I)Lb/h/l/o;
 
     move-result-object p1
+
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/h/l/o;)V
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Landroidx/core/view/o;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/h/l/o;)V
 
+    :goto_0
     return-void
 .end method
 
@@ -1073,7 +1142,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1087,7 +1156,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_2
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -1132,7 +1201,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1156,7 +1225,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lb/h/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

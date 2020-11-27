@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/ArgbEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -18,11 +18,11 @@
 
 
 # static fields
-.field private static final sInstance:Landroidx/animation/ArgbEvaluator;
+.field public static final sInstance:Landroidx/animation/ArgbEvaluator;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/animation/ArgbEvaluator;

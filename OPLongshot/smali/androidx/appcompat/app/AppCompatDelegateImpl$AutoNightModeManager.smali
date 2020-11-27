@@ -1,6 +1,6 @@
-.class abstract Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
+.class public abstract Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,19 +18,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x400
+    accessFlags = 0x401
     name = "AutoNightModeManager"
 .end annotation
 
 
 # instance fields
-.field private mReceiver:Landroid/content/BroadcastReceiver;
+.field public mReceiver:Landroid/content/BroadcastReceiver;
 
-.field final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method cleanup()V
+.method public cleanup()V
     .locals 2
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -67,15 +67,15 @@
     return-void
 .end method
 
-.method abstract createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
+.method public abstract createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
 
-.method abstract getApplyableNightMode()I
+.method public abstract getApplyableNightMode()I
 .end method
 
-.method isListening()Z
+.method public isListening()Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -93,10 +93,10 @@
     return v0
 .end method
 
-.method abstract onChange()V
+.method public abstract onChange()V
 .end method
 
-.method setup()V
+.method public setup()V
     .locals 3
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->cleanup()V

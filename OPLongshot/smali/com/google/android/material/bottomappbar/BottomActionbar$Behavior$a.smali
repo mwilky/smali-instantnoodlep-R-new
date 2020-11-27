@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$a;
+.class public Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+.field public final synthetic a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)V
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$a;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
@@ -116,18 +116,18 @@
 
     move-result-object p6
 
-    invoke-static {p6}, Lb/b/a/c;->b(Landroid/content/Context;)Z
+    invoke-static {p6}, Lc/c/a/c;->b(Landroid/content/Context;)Z
 
     move-result p6
 
     if-eqz p6, :cond_1
 
-    sget p6, Lb/a/b/a/d;->op_control_margin_screen_bottom1:I
+    sget p6, Lc/b/b/b/d;->op_control_margin_screen_bottom1:I
 
     goto :goto_0
 
     :cond_1
-    sget p6, Lb/a/b/a/d;->op_control_margin_screen_bottom3:I
+    sget p6, Lc/b/b/b/d;->op_control_margin_screen_bottom3:I
 
     :goto_0
     invoke-virtual {p4, p6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

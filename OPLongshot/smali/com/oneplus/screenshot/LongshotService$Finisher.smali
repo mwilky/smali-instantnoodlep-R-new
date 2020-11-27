@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/LongshotService$Finisher;
+.class public Lcom/oneplus/screenshot/LongshotService$Finisher;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "Finisher"
 .end annotation
 
 
 # instance fields
-.field private mCallback:Lcom/oneplus/longshot/ILongScreenshotCallback;
+.field public mCallback:Lcom/oneplus/longshot/ILongScreenshotCallback;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/LongshotService;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/LongshotService;
 
 
 # direct methods

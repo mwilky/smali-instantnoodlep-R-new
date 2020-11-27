@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$4;
+.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$4;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field floatEvaluator:Landroid/animation/FloatEvaluator;
+.field public floatEvaluator:Landroid/animation/FloatEvaluator;
 
-.field final synthetic this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+.field public final synthetic this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$4;->this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;

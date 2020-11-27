@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
+.class public Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
 .super Landroid/widget/ArrayAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "CheckedItemAdapter"
 .end annotation
 

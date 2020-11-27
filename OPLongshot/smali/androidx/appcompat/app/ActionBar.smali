@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/app/ActionBar;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -229,7 +229,7 @@
     return-void
 .end method
 
-.method onDestroy()V
+.method public onDestroy()V
     .locals 0
 
     return-void
@@ -287,7 +287,7 @@
     .end annotation
 .end method
 
-.method abstract requestFocus()Z
+.method public abstract requestFocus()Z
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
@@ -489,7 +489,7 @@
 .method public abstract show()V
 .end method
 
-.method public startActionMode(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
+.method public startActionMode(Lb/c/m/a$a;)Lb/c/m/a;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {

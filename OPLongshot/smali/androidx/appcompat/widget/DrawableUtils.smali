@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/DrawableUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,17 +18,17 @@
 
 
 # static fields
-.field private static final CHECKED_STATE_SET:[I
+.field public static final CHECKED_STATE_SET:[I
 
-.field private static final EMPTY_STATE_SET:[I
+.field public static final EMPTY_STATE_SET:[I
 
 .field public static final INSETS_NONE:Landroid/graphics/Rect;
 
-.field private static final TAG:Ljava/lang/String; = "DrawableUtils"
+.field public static final TAG:Ljava/lang/String; = "DrawableUtils"
 
-.field private static final VECTOR_DRAWABLE_CLAZZ_NAME:Ljava/lang/String; = "android.graphics.drawable.VectorDrawable"
+.field public static final VECTOR_DRAWABLE_CLAZZ_NAME:Ljava/lang/String; = "android.graphics.drawable.VectorDrawable"
 
-.field private static sInsetsClazz:Ljava/lang/Class;
+.field public static sInsetsClazz:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -86,7 +86,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -191,7 +191,6 @@
 
     move-result-object p0
 
-    :goto_1
     invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p0
@@ -209,7 +208,11 @@
 
     move-result-object p0
 
-    goto :goto_1
+    invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p0
+
+    return p0
 
     :cond_6
     instance-of v0, p0, Landroid/graphics/drawable/ScaleDrawable;
@@ -222,7 +225,11 @@
 
     move-result-object p0
 
-    goto :goto_1
+    invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p0
+
+    return p0
 
     :cond_7
     const/4 p0, 0x1
@@ -230,7 +237,7 @@
     return p0
 .end method
 
-.method static fixDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public static fixDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
     .param p0    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/NonNull;
@@ -265,7 +272,7 @@
     return-void
 .end method
 
-.method private static fixVectorDrawableTinting(Landroid/graphics/drawable/Drawable;)V
+.method public static fixVectorDrawableTinting(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
@@ -340,7 +347,7 @@
     if-eqz v0, :cond_7
 
     :try_start_0
-    invoke-static {p0}, Landroidx/core/graphics/drawable/a;->q(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Lb/h/f/f/a;->q(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 

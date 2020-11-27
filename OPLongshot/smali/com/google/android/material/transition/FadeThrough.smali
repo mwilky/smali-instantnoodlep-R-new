@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/FadeThrough;
 .super Landroid/transition/Visibility;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,7 +10,7 @@
 
 
 # static fields
-.field static final PROGRESS_THRESHOLD:F = 0.35f
+.field public static final PROGRESS_THRESHOLD:F = 0.35f
 
 
 # direct methods
@@ -22,7 +22,7 @@
     return-void
 .end method
 
-.method private static createFadeThroughAnimator(Landroid/view/View;FFFF)Landroid/animation/Animator;
+.method public static createFadeThroughAnimator(Landroid/view/View;FFFF)Landroid/animation/Animator;
     .locals 8
     .param p3    # F
         .annotation build Landroidx/annotation/FloatRange;

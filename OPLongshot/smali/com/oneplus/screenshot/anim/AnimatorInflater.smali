@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/anim/AnimatorInflater;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final SEQUENTIALLY:I = 0x1
+.field public static final SEQUENTIALLY:I = 0x1
 
-.field private static final TAG:Ljava/lang/String; = "AnimatorInflater"
+.field public static final TAG:Ljava/lang/String; = "AnimatorInflater"
 
-.field private static final TARGET_ANIM_MAP:Ljava/util/Map;
+.field public static final TARGET_ANIM_MAP:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -19,21 +19,21 @@
     .end annotation
 .end field
 
-.field private static final TOGETHER:I = 0x0
+.field public static final TOGETHER:I = 0x0
 
-.field private static final VALUE_TYPE_COLOR:I = 0x4
+.field public static final VALUE_TYPE_COLOR:I = 0x4
 
-.field private static final VALUE_TYPE_CUSTOM:I = 0x5
+.field public static final VALUE_TYPE_CUSTOM:I = 0x5
 
-.field private static final VALUE_TYPE_FLOAT:I = 0x0
+.field public static final VALUE_TYPE_FLOAT:I = 0x0
 
-.field private static final VALUE_TYPE_INT:I = 0x1
+.field public static final VALUE_TYPE_INT:I = 0x1
 
-.field private static final VISIBILITY:Ljava/lang/String; = "visibility"
+.field public static final VISIBILITY:Ljava/lang/String; = "visibility"
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     new-instance v0, Ljava/util/HashMap;
@@ -87,7 +87,7 @@
     return-void
 .end method
 
-.method private static addTarget(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oneplus/screenshot/anim/TargetAnimator;)V
+.method public static addTarget(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oneplus/screenshot/anim/TargetAnimator;)V
     .locals 10
 
     if-nez p2, :cond_0
@@ -248,7 +248,7 @@
     return-void
 .end method
 
-.method private static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Landroid/animation/Animator;
+.method public static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Landroid/animation/Animator;
     .locals 6
 
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
@@ -272,7 +272,7 @@
     return-object p0
 .end method
 
-.method private static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;Landroid/util/AttributeSet;Landroid/animation/AnimatorSet;I)Landroid/animation/Animator;
+.method public static createAnimatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;Landroid/util/AttributeSet;Landroid/animation/AnimatorSet;I)Landroid/animation/Animator;
     .locals 14
 
     move-object v6, p0
@@ -524,7 +524,7 @@
     return-object v0
 .end method
 
-.method private static createTargetAnimator(Landroid/content/Context;Ljava/lang/String;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Lcom/oneplus/screenshot/anim/TargetAnimator;
+.method public static createTargetAnimator(Landroid/content/Context;Ljava/lang/String;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Lcom/oneplus/screenshot/anim/TargetAnimator;
     .locals 1
 
     if-eqz p1, :cond_0
@@ -751,7 +751,7 @@
     throw p0
 .end method
 
-.method private static loadAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+.method public static loadAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 17
 
     move-object/from16 v0, p0
@@ -1168,7 +1168,7 @@
     return-object v10
 .end method
 
-.method private static loadObjectAnimator(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/animation/ObjectAnimator;
+.method public static loadObjectAnimator(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/animation/ObjectAnimator;
     .locals 2
 
     new-instance v0, Landroid/animation/ObjectAnimator;
@@ -1196,7 +1196,7 @@
     return-object v0
 .end method
 
-.method private static loadTargetAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Lcom/oneplus/screenshot/anim/TargetAnimator;
+.method public static loadTargetAnimator(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;)Lcom/oneplus/screenshot/anim/TargetAnimator;
     .locals 2
 
     const/4 v0, 0x0

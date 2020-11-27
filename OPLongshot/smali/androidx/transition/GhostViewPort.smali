@@ -1,9 +1,9 @@
-.class Landroidx/transition/GhostViewPort;
+.class public Landroidx/transition/GhostViewPort;
 .super Landroid/view/ViewGroup;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/transition/f;
+.implements Lb/q/f;
 
 
 # annotations
@@ -15,24 +15,24 @@
 
 
 # instance fields
-.field private mMatrix:Landroid/graphics/Matrix;
+.field public mMatrix:Landroid/graphics/Matrix;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final mOnPreDrawListener:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.field public final mOnPreDrawListener:Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
-.field mReferences:I
+.field public mReferences:I
 
-.field mStartParent:Landroid/view/ViewGroup;
+.field public mStartParent:Landroid/view/ViewGroup;
 
-.field mStartView:Landroid/view/View;
+.field public mStartView:Landroid/view/View;
 
-.field final mView:Landroid/view/View;
+.field public final mView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroidx/transition/GhostViewPort;
+.method public static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroidx/transition/GhostViewPort;
     .locals 4
 
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -164,7 +164,7 @@
     throw p0
 .end method
 
-.method static calculateMatrix(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)V
+.method public static calculateMatrix(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)V
     .locals 1
 
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -200,7 +200,7 @@
     return-void
 .end method
 
-.method static copySize(Landroid/view/View;Landroid/view/View;)V
+.method public static copySize(Landroid/view/View;Landroid/view/View;)V
     .locals 4
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -236,10 +236,10 @@
     return-void
 .end method
 
-.method static getGhostView(Landroid/view/View;)Landroidx/transition/GhostViewPort;
+.method public static getGhostView(Landroid/view/View;)Landroidx/transition/GhostViewPort;
     .locals 1
 
-    sget v0, Landroidx/transition/k;->ghost_view:I
+    sget v0, Lb/q/k;->ghost_view:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -250,7 +250,7 @@
     return-object p0
 .end method
 
-.method static removeGhost(Landroid/view/View;)V
+.method public static removeGhost(Landroid/view/View;)V
     .locals 1
 
     invoke-static {p0}, Landroidx/transition/GhostViewPort;->getGhostView(Landroid/view/View;)Landroidx/transition/GhostViewPort;
@@ -279,7 +279,7 @@
     return-void
 .end method
 
-.method static setGhostView(Landroid/view/View;Landroidx/transition/GhostViewPort;)V
+.method public static setGhostView(Landroid/view/View;Landroidx/transition/GhostViewPort;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -290,7 +290,7 @@
         .end annotation
     .end param
 
-    sget v0, Landroidx/transition/k;->ghost_view:I
+    sget v0, Lb/q/k;->ghost_view:I
 
     invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -299,7 +299,7 @@
 
 
 # virtual methods
-.method protected onAttachedToWindow()V
+.method public onAttachedToWindow()V
     .locals 2
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
@@ -346,7 +346,7 @@
     return-void
 .end method
 
-.method protected onDetachedFromWindow()V
+.method public onDetachedFromWindow()V
     .locals 2
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mView:Landroid/view/View;
@@ -395,12 +395,12 @@
     return-void
 .end method
 
-.method protected onDraw(Landroid/graphics/Canvas;)V
+.method public onDraw(Landroid/graphics/Canvas;)V
     .locals 4
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Landroidx/transition/c;->a(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v0}, Lb/q/c;->a(Landroid/graphics/Canvas;Z)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewPort;->mMatrix:Landroid/graphics/Matrix;
 
@@ -430,12 +430,12 @@
 
     invoke-virtual {p0, p1, v0, v2, v3}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
-    invoke-static {p1, v1}, Landroidx/transition/c;->a(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v1}, Lb/q/c;->a(Landroid/graphics/Canvas;Z)V
 
     return-void
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 0
 
     return-void
@@ -451,7 +451,7 @@
     return-void
 .end method
 
-.method setMatrix(Landroid/graphics/Matrix;)V
+.method public setMatrix(Landroid/graphics/Matrix;)V
     .locals 0
     .param p1    # Landroid/graphics/Matrix;
         .annotation build Landroidx/annotation/NonNull;

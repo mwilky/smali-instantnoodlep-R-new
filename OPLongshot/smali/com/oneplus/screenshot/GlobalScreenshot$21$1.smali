@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$21$1;
+.class public Lcom/oneplus/screenshot/GlobalScreenshot$21$1;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Lcom/oneplus/screenshot/GlobalScreenshot$21;
+.field public final synthetic this$1:Lcom/oneplus/screenshot/GlobalScreenshot$21;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot$21;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot$21;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$21$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$21;
@@ -62,6 +62,20 @@
 
     iget-object p1, p1, Lcom/oneplus/screenshot/GlobalScreenshot$21;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
+    invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$700(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$21$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$21;
+
+    iget-object p1, p1, Lcom/oneplus/screenshot/GlobalScreenshot$21;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
     invoke-static {p1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$800(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/view/WindowManager;
 
     move-result-object p1
@@ -76,6 +90,7 @@
 
     invoke-interface {p1, v1}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
+    :cond_0
     iget-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$21$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$21;
 
     iget-object p1, p1, Lcom/oneplus/screenshot/GlobalScreenshot$21;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;

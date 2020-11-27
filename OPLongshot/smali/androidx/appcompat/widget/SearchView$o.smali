@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/SearchView$o;
+.class public Landroidx/appcompat/widget/SearchView$o;
 .super Landroid/view/TouchDelegate;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "o"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/View;
+.field public final a:Landroid/view/View;
 
-.field private final b:Landroid/graphics/Rect;
+.field public final b:Landroid/graphics/Rect;
 
-.field private final c:Landroid/graphics/Rect;
+.field public final c:Landroid/graphics/Rect;
 
-.field private final d:Landroid/graphics/Rect;
+.field public final d:Landroid/graphics/Rect;
 
-.field private final e:I
+.field public final e:I
 
-.field private f:Z
+.field public f:Z
 
 
 # direct methods
@@ -228,6 +228,10 @@
 
     div-int/2addr v1, v3
 
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
+
     goto :goto_3
 
     :cond_5
@@ -243,11 +247,11 @@
 
     sub-int/2addr v1, v2
 
-    :goto_3
     int-to-float v1, v1
 
     invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
 
+    :goto_3
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$o;->a:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z

@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/button/MaterialButtonToggleGroup$1;
+.class public Lcom/google/android/material/button/MaterialButtonToggleGroup$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+.field public final synthetic this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
+.method public constructor <init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$1;->this$0:Lcom/google/android/material/button/MaterialButtonToggleGroup;

@@ -1,6 +1,6 @@
 .class public Landroidx/core/provider/SelfDestructiveThread;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,39 +18,39 @@
 
 
 # static fields
-.field private static final MSG_DESTRUCTION:I = 0x0
+.field public static final MSG_DESTRUCTION:I = 0x0
 
-.field private static final MSG_INVOKE_RUNNABLE:I = 0x1
+.field public static final MSG_INVOKE_RUNNABLE:I = 0x1
 
 
 # instance fields
-.field private mCallback:Landroid/os/Handler$Callback;
+.field public mCallback:Landroid/os/Handler$Callback;
 
-.field private final mDestructAfterMillisec:I
+.field public final mDestructAfterMillisec:I
 
-.field private mGeneration:I
+.field public mGeneration:I
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
-.field private final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
-.field private final mPriority:I
+.field public final mPriority:I
 
-.field private mThread:Landroid/os/HandlerThread;
+.field public mThread:Landroid/os/HandlerThread;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
-.field private final mThreadName:Ljava/lang/String;
+.field public final mThreadName:Ljava/lang/String;
 
 
 # direct methods
@@ -225,7 +225,7 @@
     throw v1
 .end method
 
-.method onDestruction()V
+.method public onDestruction()V
     .locals 3
 
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
@@ -272,7 +272,7 @@
     throw v1
 .end method
 
-.method onInvokeRunnable(Ljava/lang/Runnable;)V
+.method public onInvokeRunnable(Ljava/lang/Runnable;)V
     .locals 4
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

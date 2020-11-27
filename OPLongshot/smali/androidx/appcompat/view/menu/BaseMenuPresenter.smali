@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/view/menu/BaseMenuPresenter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -15,25 +15,25 @@
 
 
 # instance fields
-.field private mCallback:Landroidx/appcompat/view/menu/MenuPresenter$a;
+.field public mCallback:Landroidx/appcompat/view/menu/MenuPresenter$a;
 
-.field protected mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mId:I
+.field public mId:I
 
-.field protected mInflater:Landroid/view/LayoutInflater;
+.field public mInflater:Landroid/view/LayoutInflater;
 
-.field private mItemLayoutRes:I
+.field public mItemLayoutRes:I
 
-.field protected mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field private mMenuLayoutRes:I
+.field public mMenuLayoutRes:I
 
-.field protected mMenuView:Landroidx/appcompat/view/menu/MenuView;
+.field public mMenuView:Landroidx/appcompat/view/menu/MenuView;
 
-.field protected mSystemContext:Landroid/content/Context;
+.field public mSystemContext:Landroid/content/Context;
 
-.field protected mSystemInflater:Landroid/view/LayoutInflater;
+.field public mSystemInflater:Landroid/view/LayoutInflater;
 
 
 # direct methods
@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method protected addItemView(Landroid/view/View;I)V
+.method public addItemView(Landroid/view/View;I)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -119,7 +119,7 @@
     return p1
 .end method
 
-.method protected filterLeftoverView(Landroid/view/ViewGroup;I)Z
+.method public filterLeftoverView(Landroid/view/ViewGroup;I)Z
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeViewAt(I)V

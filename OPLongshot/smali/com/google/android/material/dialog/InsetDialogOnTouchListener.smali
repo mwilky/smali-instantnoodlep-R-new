@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/dialog/InsetDialogOnTouchListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field private final dialog:Landroid/app/Dialog;
+.field public final dialog:Landroid/app/Dialog;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final leftInset:I
+.field public final leftInset:I
 
-.field private final prePieSlop:I
+.field public final prePieSlop:I
 
-.field private final topInset:I
+.field public final topInset:I
 
 
 # direct methods

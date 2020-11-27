@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/edgeeffect/SpringScrollView2$SEdgeEffectFactory;
+.class public Lcom/google/android/material/edgeeffect/SpringScrollView2$SEdgeEffectFactory;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SEdgeEffectFactory"
 .end annotation
 
@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method protected abstract a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+.method public abstract a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation

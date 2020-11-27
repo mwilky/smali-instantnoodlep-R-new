@@ -1,37 +1,37 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/match/Matcher;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.BaseMatcher"
+.field public static final TAG:Ljava/lang/String; = "Longshot.BaseMatcher"
 
 
 # instance fields
-.field protected mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field protected mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field public mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field protected mIndex:I
+.field public mIndex:I
 
-.field protected mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field public mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field protected mLeftSideOffset:I
+.field public mLeftSideOffset:I
 
-.field protected mOffsetCurr:I
+.field public mOffsetCurr:I
 
-.field protected mOffsetLast:I
+.field public mOffsetLast:I
 
-.field protected mRightSideOffset:I
+.field public mRightSideOffset:I
 
-.field protected mSameDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field public mSameDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field protected mSize:I
+.field public mSize:I
 
-.field protected mStep:I
+.field public mStep:I
 
 
 # direct methods
@@ -141,13 +141,13 @@
 
 
 # virtual methods
-.method protected abstract canDump()Z
+.method public abstract canDump()Z
 .end method
 
-.method protected abstract createDumper()V
+.method public abstract createDumper()V
 .end method
 
-.method protected getCurrTag()Ljava/lang/String;
+.method public getCurrTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "Curr"
@@ -155,7 +155,7 @@
     return-object v0
 .end method
 
-.method protected getLastTag()Ljava/lang/String;
+.method public getLastTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "Last"
@@ -179,7 +179,7 @@
     return v0
 .end method
 
-.method protected getStep()I
+.method public getStep()I
     .locals 1
 
     const/4 v0, 0x1
@@ -187,5 +187,5 @@
     return v0
 .end method
 
-.method protected abstract getTag()Ljava/lang/String;
+.method public abstract getTag()Ljava/lang/String;
 .end method

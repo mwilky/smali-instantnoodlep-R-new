@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/resources/MaterialAttributes;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -199,9 +199,9 @@
     .annotation build Landroidx/annotation/Px;
     .end annotation
 
-    sget v0, Lb/a/b/a/b;->minTouchTargetSize:I
+    sget v0, Lc/b/b/b/b;->minTouchTargetSize:I
 
-    sget v1, Lb/a/b/a/d;->mtrl_min_touch_target_size:I
+    sget v1, Lc/b/b/b/d;->mtrl_min_touch_target_size:I
 
     invoke-static {p0, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveDimension(Landroid/content/Context;II)I
 

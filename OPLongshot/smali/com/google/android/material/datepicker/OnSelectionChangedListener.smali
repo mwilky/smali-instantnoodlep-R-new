@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/android/material/datepicker/OnSelectionChangedListener;
+.class public interface abstract Lcom/google/android/material/datepicker/OnSelectionChangedListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations

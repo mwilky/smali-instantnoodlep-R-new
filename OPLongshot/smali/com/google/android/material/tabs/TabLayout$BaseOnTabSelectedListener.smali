@@ -1,13 +1,13 @@
 .class public interface abstract Lcom/google/android/material/tabs/TabLayout$BaseOnTabSelectedListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/google/android/material/tabs/a;",
+        "Lc/b/b/b/i0/a;",
         ">",
         "Ljava/lang/Object;"
     }
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public abstract onTabReselected(Lcom/google/android/material/tabs/a;)V
+.method public abstract onTabReselected(Lc/b/b/b/i0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -26,7 +26,7 @@
     .end annotation
 .end method
 
-.method public abstract onTabSelected(Lcom/google/android/material/tabs/a;)V
+.method public abstract onTabSelected(Lc/b/b/b/i0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -34,7 +34,7 @@
     .end annotation
 .end method
 
-.method public abstract onTabUnselected(Lcom/google/android/material/tabs/a;)V
+.method public abstract onTabUnselected(Lc/b/b/b/i0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

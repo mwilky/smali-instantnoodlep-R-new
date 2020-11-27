@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/tagmanager/LoadCallback;
+.class public interface abstract Lcom/google/tagmanager/LoadCallback;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations

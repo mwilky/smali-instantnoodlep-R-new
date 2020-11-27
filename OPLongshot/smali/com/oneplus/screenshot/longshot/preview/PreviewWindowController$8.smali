@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;
+.class public Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;

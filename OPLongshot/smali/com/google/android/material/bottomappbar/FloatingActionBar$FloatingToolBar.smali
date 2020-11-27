@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomappbar/FloatingActionBar$FloatingToolBar;
 .super Lcom/google/android/material/bottomappbar/BottomActionbar;
-.source ""
+.source "SourceFile"
 
 
 # direct methods

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/picker/NumericTextView;
 .super Landroid/widget/TextView;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,31 +18,31 @@
 
 
 # static fields
-.field private static final LOG_RADIX:D
+.field public static final LOG_RADIX:D
 
-.field private static final RADIX:I = 0xa
+.field public static final RADIX:I = 0xa
 
 
 # instance fields
-.field private mCount:I
+.field public mCount:I
 
-.field private mListener:Lcom/google/android/material/picker/NumericTextView$a;
+.field public mListener:Lcom/google/android/material/picker/NumericTextView$a;
 
-.field private mMaxCount:I
+.field public mMaxCount:I
 
-.field private mMaxValue:I
+.field public mMaxValue:I
 
-.field private mMinValue:I
+.field public mMinValue:I
 
-.field private mPreviousValue:I
+.field public mPreviousValue:I
 
-.field private mShowLeadingZeroes:Z
+.field public mShowLeadingZeroes:Z
 
-.field private mValue:I
+.field public mValue:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const-wide/high16 v0, 0x4024000000000000L    # 10.0
@@ -105,10 +105,9 @@
 
     sub-int/2addr p1, v1
 
-    :goto_0
     iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     invoke-static {p1}, Lcom/google/android/material/picker/NumericTextView;->isKeyCodeNumeric(I)Z
@@ -143,10 +142,10 @@
 
     add-int/2addr p1, v1
 
-    goto :goto_0
+    iput p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
     :cond_1
-    :goto_1
+    :goto_0
     iget p1, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
     if-lez p1, :cond_2
@@ -185,12 +184,12 @@
 
     move-result-object p1
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_2
     const-string p1, ""
 
-    :goto_2
+    :goto_1
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/NumericTextView;->mListener:Lcom/google/android/material/picker/NumericTextView$a;
@@ -205,12 +204,12 @@
 
     move p1, v1
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_3
     move p1, v0
 
-    :goto_3
+    :goto_2
     iget v2, p0, Lcom/google/android/material/picker/NumericTextView;->mCount:I
 
     iget v3, p0, Lcom/google/android/material/picker/NumericTextView;->mMaxCount:I
@@ -242,7 +241,7 @@
     return v0
 .end method
 
-.method private static isKeyCodeNumeric(I)Z
+.method public static isKeyCodeNumeric(I)Z
     .locals 1
 
     const/4 v0, 0x7
@@ -300,7 +299,7 @@
     return p0
 .end method
 
-.method private static numericKeyCodeToInt(I)I
+.method public static numericKeyCodeToInt(I)I
     .locals 0
 
     add-int/lit8 p0, p0, -0x7
@@ -485,7 +484,7 @@
     return v0
 .end method
 
-.method protected onFocusChanged(ZILandroid/graphics/Rect;)V
+.method public onFocusChanged(ZILandroid/graphics/Rect;)V
     .locals 0
 
     invoke-super {p0, p1, p2, p3}, Landroid/widget/TextView;->onFocusChanged(ZILandroid/graphics/Rect;)V

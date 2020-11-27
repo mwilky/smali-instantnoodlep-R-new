@@ -1,6 +1,6 @@
 .class public abstract Landroidx/loader/app/LoaderManager;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -20,9 +20,9 @@
     return-void
 .end method
 
-.method public static b(Landroidx/lifecycle/e;)Landroidx/loader/app/LoaderManager;
+.method public static b(Lb/m/e;)Landroidx/loader/app/LoaderManager;
     .locals 2
-    .param p0    # Landroidx/lifecycle/e;
+    .param p0    # Lb/m/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -32,9 +32,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/lifecycle/e;",
+            "Lb/m/e;",
             ":",
-            "Landroidx/lifecycle/k;",
+            "Lb/m/k;",
             ">(TT;)",
             "Landroidx/loader/app/LoaderManager;"
         }
@@ -44,13 +44,13 @@
 
     move-object v1, p0
 
-    check-cast v1, Landroidx/lifecycle/k;
+    check-cast v1, Lb/m/k;
 
-    invoke-interface {v1}, Landroidx/lifecycle/k;->getViewModelStore()Landroidx/lifecycle/j;
+    invoke-interface {v1}, Lb/m/k;->getViewModelStore()Lb/m/j;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Landroidx/lifecycle/e;Landroidx/lifecycle/j;)V
+    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Lb/m/e;Lb/m/j;)V
 
     return-object v0
 .end method

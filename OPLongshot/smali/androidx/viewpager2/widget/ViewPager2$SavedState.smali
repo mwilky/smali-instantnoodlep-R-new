@@ -1,6 +1,6 @@
-.class Landroidx/viewpager2/widget/ViewPager2$SavedState;
+.class public Landroidx/viewpager2/widget/ViewPager2$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:Landroid/os/Parcelable;
+.field public c:Landroid/os/Parcelable;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;
@@ -47,19 +47,19 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x18
@@ -67,12 +67,12 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    invoke-direct {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcelable;)V
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
@@ -80,7 +80,9 @@
     return-void
 .end method
 
-.method private b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+# virtual methods
+.method public final b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -104,8 +106,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 

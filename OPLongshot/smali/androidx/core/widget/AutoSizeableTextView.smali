@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/core/widget/AutoSizeableTextView;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

@@ -1,25 +1,25 @@
 .class public Lcom/oneplus/screenshot/util/CrashHandler;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.CrashHandler"
+.field public static final TAG:Ljava/lang/String; = "Longshot.CrashHandler"
 
-.field private static sInstance:Lcom/oneplus/screenshot/util/CrashHandler;
+.field public static sInstance:Lcom/oneplus/screenshot/util/CrashHandler;
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mDefaultHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public mDefaultHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-.field private mFormatter:Ljava/text/DateFormat;
+.field public mFormatter:Ljava/text/DateFormat;
 
-.field private mInfos:Ljava/util/Map;
+.field public mInfos:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -32,13 +32,13 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -303,14 +303,20 @@
 
     invoke-direct {v2, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    :goto_1
     invoke-virtual {p1, v2}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
+    :goto_1
     if-eqz p1, :cond_1
+
+    invoke-virtual {p1, v2}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
 
     goto :goto_1
 

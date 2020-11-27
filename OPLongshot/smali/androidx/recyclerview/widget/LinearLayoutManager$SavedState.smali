@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -42,15 +42,15 @@
 
 
 # instance fields
-.field mAnchorLayoutFromEnd:Z
+.field public mAnchorLayoutFromEnd:Z
 
-.field mAnchorOffset:I
+.field public mAnchorOffset:I
 
-.field mAnchorPosition:I
+.field public mAnchorPosition:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState$1;
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -136,7 +136,7 @@
     return v0
 .end method
 
-.method hasValidAnchor()Z
+.method public hasValidAnchor()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
@@ -154,7 +154,7 @@
     return v0
 .end method
 
-.method invalidateAnchor()V
+.method public invalidateAnchor()V
     .locals 1
 
     const/4 v0, -0x1

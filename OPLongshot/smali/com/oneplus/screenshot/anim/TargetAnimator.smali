@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/TargetAnimator;
 .super Landroid/animation/ValueAnimator;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -21,13 +21,13 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "TargetAnimator"
+.field public static final TAG:Ljava/lang/String; = "TargetAnimator"
 
 
 # instance fields
-.field protected mLoader:Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;
+.field public mLoader:Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;
 
-.field private mSetAnimators:Ljava/util/Map;
+.field public mSetAnimators:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field private mSetEnds:Ljava/util/Map;
+.field public mSetEnds:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -49,7 +49,7 @@
     .end annotation
 .end field
 
-.field private mSetStarts:Ljava/util/Map;
+.field public mSetStarts:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/anim/TargetAnimator;Landroid/view/View;Ljava/lang/reflect/Method;Ljava/lang/Object;)V
+.method public static synthetic access$100(Lcom/oneplus/screenshot/anim/TargetAnimator;Landroid/view/View;Ljava/lang/reflect/Method;Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/screenshot/anim/TargetAnimator;->invoke(Landroid/view/View;Ljava/lang/reflect/Method;Ljava/lang/Object;)V

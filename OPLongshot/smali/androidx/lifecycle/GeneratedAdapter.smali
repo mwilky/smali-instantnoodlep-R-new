@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/lifecycle/GeneratedAdapter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,5 +12,5 @@
 
 
 # virtual methods
-.method public abstract callMethods(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
+.method public abstract callMethods(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 .end method

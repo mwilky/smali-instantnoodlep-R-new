@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ChildrenAlphaProperty;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lcom/google/android/material/animation/ChildrenAlphaProperty;
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     const-class v0, Ljava/lang/Float;
@@ -63,7 +63,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    sget v0, Lb/a/b/a/f;->mtrl_internal_children_alpha_tag:I
+    sget v0, Lc/b/b/b/f;->mtrl_internal_children_alpha_tag:I
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
@@ -118,7 +118,7 @@
 
     move-result p2
 
-    sget v0, Lb/a/b/a/f;->mtrl_internal_children_alpha_tag:I
+    sget v0, Lc/b/b/b/f;->mtrl_internal_children_alpha_tag:I
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 

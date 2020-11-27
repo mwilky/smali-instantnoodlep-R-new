@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringListView2;
 .super Landroid/widget/ListView;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,57 +14,57 @@
 
 
 # static fields
-.field static final w:Ljava/lang/String;
+.field public static final w:Ljava/lang/String;
 
 
 # instance fields
-.field private a:F
+.field public a:F
 
-.field private b:F
+.field public b:F
 
-.field private c:Landroid/view/VelocityTracker;
+.field public c:Landroid/view/VelocityTracker;
 
-.field private d:I
+.field public d:I
 
-.field private e:I
+.field public e:I
 
-.field private f:I
+.field public f:I
 
-.field private g:I
+.field public g:I
 
-.field private h:I
+.field public h:I
 
-.field private i:[I
+.field public i:[I
 
-.field private j:[I
+.field public j:[I
 
-.field k:[I
+.field public k:[I
 
-.field l:F
+.field public l:F
 
-.field m:F
+.field public m:F
 
-.field private n:Landroid/widget/EdgeEffect;
+.field public n:Landroid/widget/EdgeEffect;
 
-.field private o:Landroid/widget/EdgeEffect;
+.field public o:Landroid/widget/EdgeEffect;
 
-.field private p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
+.field public p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
 
-.field private q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
+.field public q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
 
-.field private r:Landroidx/dynamicanimation/animation/SpringAnimation;
+.field public r:Lc/b/b/b/b0/b/a;
 
-.field private s:F
+.field public s:F
 
-.field private t:I
+.field public t:I
 
-.field private u:I
+.field public u:I
 
-.field v:Lcom/google/android/material/edgeeffect/SpringListView2$a;
+.field public v:Lcom/google/android/material/edgeeffect/SpringListView2$a;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const-class v0, Lcom/google/android/material/edgeeffect/SpringListView2;
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/google/android/material/edgeeffect/SpringListView2;)F
+.method public static synthetic a(Lcom/google/android/material/edgeeffect/SpringListView2;)F
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
@@ -92,10 +92,22 @@
     return p0
 .end method
 
-.method private b()V
+.method private setActiveEdge(Lcom/google/android/material/edgeeffect/SpringListView2$b;)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->o()V
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
+
+    iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->o()V
 
     const/4 v0, 0x0
 
@@ -104,7 +116,331 @@
     return-void
 .end method
 
-.method private h(ZI)Z
+.method public c(II)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    if-lez p2, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result p1
+
+    or-int/2addr v0, p1
+
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    if-gez p2, :cond_1
+
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result p1
+
+    or-int/2addr v0, p1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->postInvalidateOnAnimation()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public d(II)V
+    .locals 2
+
+    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getScrollX()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getScrollY()I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1, v0, v1}, Landroid/widget/ListView;->onScrollChanged(IIII)V
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/edgeeffect/SpringListView2;->k(II)V
+
+    iget p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
+
+    return-void
+.end method
+
+.method public draw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v0
+
+    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
+
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-super {p0, p1}, Landroid/widget/ListView;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/ListView;->draw(Landroid/graphics/Canvas;)V
+
+    return-void
+.end method
+
+.method public e()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/google/android/material/edgeeffect/SpringListView2;->w:Ljava/lang/String;
+
+    const-string v1, "setEdgeEffectFactory first, please!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;->a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getClipToPadding()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingLeft()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingRight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingBottom()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public f()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/google/android/material/edgeeffect/SpringListView2;->w:Ljava/lang/String;
+
+    const-string v1, "setEdgeEffectFactory first, please!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;->a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getClipToPadding()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingLeft()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingRight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingBottom()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public g()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
+
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
+
+    return-void
+.end method
+
+.method public getScrollState()I
+    .locals 1
+
+    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->f:I
+
+    return v0
+.end method
+
+.method public final h(ZI)Z
     .locals 3
 
     invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
@@ -219,7 +555,25 @@
     return v0
 .end method
 
-.method private j(Landroid/view/MotionEvent;)V
+.method public i(Landroid/widget/AbsListView$OnScrollListener;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->v:Lcom/google/android/material/edgeeffect/SpringListView2$a;
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public final j(Landroid/view/MotionEvent;)V
     .locals 3
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
@@ -268,7 +622,13 @@
     return-void
 .end method
 
-.method private l(FFFF)V
+.method public k(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final l(FFFF)V
     .locals 5
 
     invoke-virtual {p0}, Landroid/widget/ListView;->getHeight()I
@@ -413,7 +773,7 @@
     return-void
 .end method
 
-.method private m()V
+.method public final m()V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
@@ -456,7 +816,7 @@
     return-void
 .end method
 
-.method private n()V
+.method public final n()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->c:Landroid/view/VelocityTracker;
@@ -468,12 +828,12 @@
     :cond_0
     invoke-virtual {p0}, Landroid/widget/ListView;->stopNestedScroll()V
 
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->m()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->m()V
 
     return-void
 .end method
 
-.method private o()V
+.method public final o()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->c:Landroid/view/VelocityTracker;
@@ -483,363 +843,7 @@
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->m()V
-
-    return-void
-.end method
-
-.method private setActiveEdge(Lcom/google/android/material/edgeeffect/SpringListView2$b;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
-
-    iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method c(II)V
-    .locals 1
-
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    if-lez p2, :cond_0
-
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result p1
-
-    or-int/2addr v0, p1
-
-    :cond_0
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    if-gez p2, :cond_1
-
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result p1
-
-    or-int/2addr v0, p1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->postInvalidateOnAnimation()V
-
-    :cond_2
-    return-void
-.end method
-
-.method d(II)V
-    .locals 2
-
-    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getScrollX()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getScrollY()I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1, v0, v1}, Landroid/widget/ListView;->onScrollChanged(IIII)V
-
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/edgeeffect/SpringListView2;->k(II)V
-
-    iget p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->u:I
-
-    return-void
-.end method
-
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v0
-
-    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
-
-    invoke-super {p0, p1}, Landroid/widget/ListView;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/widget/ListView;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method e()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/google/android/material/edgeeffect/SpringListView2;->w:Ljava/lang/String;
-
-    const-string v1, "setEdgeEffectFactory first, please!"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    if-nez v1, :cond_2
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;->a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getClipToPadding()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingLeft()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingRight()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingBottom()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
-
-    move-result v2
-
-    :goto_0
-    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
-
-    :cond_2
-    return-void
-.end method
-
-.method f()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->p:Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/google/android/material/edgeeffect/SpringListView2;->w:Ljava/lang/String;
-
-    const-string v1, "setEdgeEffectFactory first, please!"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    if-nez v1, :cond_2
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;->a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getClipToPadding()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingLeft()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingRight()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingBottom()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/widget/ListView;->getMeasuredHeight()I
-
-    move-result v2
-
-    :goto_0
-    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
-
-    :cond_2
-    return-void
-.end method
-
-.method g()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->o:Landroid/widget/EdgeEffect;
-
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->n:Landroid/widget/EdgeEffect;
-
-    return-void
-.end method
-
-.method public getScrollState()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->f:I
-
-    return v0
-.end method
-
-.method i(Landroid/widget/AbsListView$OnScrollListener;)Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->v:Lcom/google/android/material/edgeeffect/SpringListView2$a;
-
-    if-eq p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-.end method
-
-.method public k(II)V
-    .locals 0
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->m()V
 
     return-void
 .end method
@@ -899,7 +903,7 @@
     goto/16 :goto_1
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->j(Landroid/view/MotionEvent;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->j(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_1
 
@@ -925,7 +929,7 @@
     goto/16 :goto_1
 
     :cond_3
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->b()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->b()V
 
     goto/16 :goto_1
 
@@ -1029,7 +1033,7 @@
     :goto_0
     xor-int/2addr v0, v5
 
-    invoke-direct {p0, v0, v4}, Lcom/google/android/material/edgeeffect/SpringListView2;->h(ZI)Z
+    invoke-virtual {p0, v0, v4}, Lcom/google/android/material/edgeeffect/SpringListView2;->h(ZI)Z
 
     move-result v0
 
@@ -1164,7 +1168,7 @@
     goto/16 :goto_2
 
     :cond_2
-    invoke-direct {p0, p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->j(Landroid/view/MotionEvent;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/edgeeffect/SpringListView2;->j(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_2
 
@@ -1190,7 +1194,7 @@
     goto/16 :goto_2
 
     :cond_4
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->b()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->b()V
 
     goto/16 :goto_2
 
@@ -1341,7 +1345,7 @@
     invoke-virtual {p0, v3}, Lcom/google/android/material/edgeeffect/SpringListView2;->setScrollState(I)V
 
     :cond_b
-    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->n()V
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringListView2;->n()V
 
     move v3, v4
 
@@ -1405,7 +1409,7 @@
     return p1
 .end method
 
-.method protected overScrollBy(IIIIIIIIZ)Z
+.method public overScrollBy(IIIIIIIIZ)Z
     .locals 10
 
     const/4 v1, 0x0
@@ -1435,7 +1439,7 @@
     return v0
 .end method
 
-.method p(IILandroid/view/MotionEvent;)Z
+.method public p(IILandroid/view/MotionEvent;)Z
     .locals 8
 
     const/4 v0, 0x1
@@ -1452,7 +1456,7 @@
     move v2, v1
 
     :goto_0
-    invoke-direct {p0, v2, p2}, Lcom/google/android/material/edgeeffect/SpringListView2;->h(ZI)Z
+    invoke-virtual {p0, v2, p2}, Lcom/google/android/material/edgeeffect/SpringListView2;->h(ZI)Z
 
     move-result v2
 
@@ -1525,7 +1529,7 @@
 
     int-to-float v5, v5
 
-    invoke-direct {p0, v6, v4, p3, v5}, Lcom/google/android/material/edgeeffect/SpringListView2;->l(FFFF)V
+    invoke-virtual {p0, v6, v4, p3, v5}, Lcom/google/android/material/edgeeffect/SpringListView2;->l(FFFF)V
 
     :cond_3
     invoke-virtual {p0, p1, p2}, Lcom/google/android/material/edgeeffect/SpringListView2;->c(II)V
@@ -1562,7 +1566,7 @@
     return v0
 .end method
 
-.method q(II[I)V
+.method public q(II[I)V
     .locals 0
 
     if-eqz p3, :cond_0
@@ -1582,20 +1586,20 @@
 
     iput p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->b:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Landroidx/dynamicanimation/animation/SpringAnimation;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Lc/b/b/b/b0/b/a;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
+    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->b:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->e(F)Landroidx/dynamicanimation/animation/b;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     return-void
 .end method
 
-.method protected setDampedScrollShift(F)V
+.method public setDampedScrollShift(F)V
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->s:F
@@ -1640,7 +1644,7 @@
     return-void
 .end method
 
-.method setScrollState(I)V
+.method public setScrollState(I)V
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->f:I
@@ -1672,15 +1676,15 @@
 
     iput v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->a:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Landroidx/dynamicanimation/animation/SpringAnimation;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Lc/b/b/b/b0/b/a;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
+    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->a:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->g(F)Landroidx/dynamicanimation/animation/b;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     return-void
 .end method

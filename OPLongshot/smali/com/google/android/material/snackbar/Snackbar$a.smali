@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/snackbar/Snackbar$a;
+.class public Lcom/google/android/material/snackbar/Snackbar$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View$OnClickListener;
+.field public final synthetic a:Landroid/view/View$OnClickListener;
 
-.field final synthetic b:Lcom/google/android/material/snackbar/Snackbar;
+.field public final synthetic b:Lcom/google/android/material/snackbar/Snackbar;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/snackbar/Snackbar;Landroid/view/View$OnClickListener;)V
+.method public constructor <init>(Lcom/google/android/material/snackbar/Snackbar;Landroid/view/View$OnClickListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/Snackbar$a;->b:Lcom/google/android/material/snackbar/Snackbar;

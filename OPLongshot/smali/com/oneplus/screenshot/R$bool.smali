@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/screenshot/R$bool;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -29,11 +29,13 @@
 
 .field public static final mtrl_btn_textappearance_all_caps:I = 0x7f050006
 
-.field public static final preferences_prefer_dual_pane:I = 0x7f050007
+.field public static final oneplus_switch_theme_enable:I = 0x7f050007
+
+.field public static final preferences_prefer_dual_pane:I = 0x7f050008
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

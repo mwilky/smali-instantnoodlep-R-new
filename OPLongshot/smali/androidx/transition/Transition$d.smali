@@ -1,6 +1,6 @@
-.class Landroidx/transition/Transition$d;
+.class public Landroidx/transition/Transition$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:Landroid/view/View;
+.field public a:Landroid/view/View;
 
-.field b:Ljava/lang/String;
+.field public b:Ljava/lang/String;
 
-.field c:Landroidx/transition/q;
+.field public c:Lb/q/q;
 
-.field d:Landroidx/transition/a0;
+.field public d:Lb/q/a0;
 
-.field e:Landroidx/transition/Transition;
+.field public e:Landroidx/transition/Transition;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Landroidx/transition/a0;Landroidx/transition/q;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Lb/q/a0;Lb/q/q;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,9 +36,9 @@
 
     iput-object p2, p0, Landroidx/transition/Transition$d;->b:Ljava/lang/String;
 
-    iput-object p5, p0, Landroidx/transition/Transition$d;->c:Landroidx/transition/q;
+    iput-object p5, p0, Landroidx/transition/Transition$d;->c:Lb/q/q;
 
-    iput-object p4, p0, Landroidx/transition/Transition$d;->d:Landroidx/transition/a0;
+    iput-object p4, p0, Landroidx/transition/Transition$d;->d:Lb/q/a0;
 
     iput-object p3, p0, Landroidx/transition/Transition$d;->e:Landroidx/transition/Transition;
 

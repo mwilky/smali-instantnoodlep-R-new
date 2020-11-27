@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TimePickerClockDelegate$n;
+.class public Lcom/google/android/material/picker/TimePickerClockDelegate$n;
 .super Landroid/view/View$AccessibilityDelegate;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "n"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+.field public final a:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
 
 # direct methods

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/EditView;
 .super Lcom/oneplus/screenshot/longshot/widget/ImageView;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,21 +12,21 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "EditView"
+.field public static final TAG:Ljava/lang/String; = "EditView"
 
-.field private static final TOUCH_MODE_EDIT:I = 0x3
+.field public static final TOUCH_MODE_EDIT:I = 0x3
 
 
 # instance fields
-.field private mCutBottom:I
+.field public mCutBottom:I
 
-.field private mCutPosition:I
+.field public mCutPosition:I
 
-.field private mDimDrawable:Landroid/graphics/drawable/Drawable;
+.field public mDimDrawable:Landroid/graphics/drawable/Drawable;
 
-.field private mDragDrawable:Landroid/graphics/drawable/Drawable;
+.field public mDragDrawable:Landroid/graphics/drawable/Drawable;
 
-.field private mTouchSlop:I
+.field public mTouchSlop:I
 
 
 # direct methods
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/widget/EditView;I)V
+.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/widget/EditView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/EditView;->trackMotionDrag(I)V
@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/widget/EditView;II)Z
+.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/widget/EditView;II)Z
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/widget/EditView;->hitDrag(II)Z
@@ -163,7 +163,7 @@
 
 
 # virtual methods
-.method protected createGestureListener()Landroid/view/GestureDetector$OnGestureListener;
+.method public createGestureListener()Landroid/view/GestureDetector$OnGestureListener;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;
@@ -181,7 +181,7 @@
     return v0
 .end method
 
-.method protected onDraw(Landroid/graphics/Canvas;)V
+.method public onDraw(Landroid/graphics/Canvas;)V
     .locals 9
 
     invoke-super {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
@@ -276,7 +276,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->onMeasure(II)V

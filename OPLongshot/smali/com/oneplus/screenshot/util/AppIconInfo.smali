@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/util/AppIconInfo;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field activityLabel:Ljava/lang/String;
+.field public activityLabel:Ljava/lang/String;
 
-.field appIconDrawable:Landroid/graphics/drawable/Drawable;
+.field public appIconDrawable:Landroid/graphics/drawable/Drawable;
 
-.field appNameToDisplay:Ljava/lang/String;
+.field public appNameToDisplay:Ljava/lang/String;
 
-.field appNameToShare:Ljava/lang/String;
+.field public appNameToShare:Ljava/lang/String;
 
-.field isSelected:Z
+.field public isSelected:Z
 
-.field isShareChooser:Z
+.field public isShareChooser:Z
 
-.field packagName:Ljava/lang/String;
+.field public packagName:Ljava/lang/String;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7f100083
+    const v0, 0x7f10008d
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/util/AppIconInfo;->packagName:Ljava/lang/String;
 
-    const v0, 0x7f080098
+    const v0, 0x7f08009c
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -51,7 +51,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/screenshot/util/AppIconInfo;->isShareChooser:Z
 
-    const v0, 0x7f100084
+    const v0, 0x7f10008e
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

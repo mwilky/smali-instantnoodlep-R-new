@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;
 .super Landroid/view/ViewGroup;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuView;
@@ -15,21 +15,21 @@
 
 
 # static fields
-.field private static final ACTIVE_ANIMATION_DURATION_MS:J = 0x73L
+.field public static final ACTIVE_ANIMATION_DURATION_MS:J = 0x73L
 
-.field private static final CHECKED_STATE_SET:[I
+.field public static final CHECKED_STATE_SET:[I
 
-.field private static final DISABLED_STATE_SET:[I
+.field public static final DISABLED_STATE_SET:[I
 
-.field private static final ITEM_POOL_SIZE:I = 0x5
+.field public static final ITEM_POOL_SIZE:I = 0x5
 
 
 # instance fields
-.field private final activeItemMaxWidth:I
+.field public final activeItemMaxWidth:I
 
-.field private final activeItemMinWidth:I
+.field public final activeItemMinWidth:I
 
-.field private badgeDrawables:Landroid/util/SparseArray;
+.field public badgeDrawables:Landroid/util/SparseArray;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -42,31 +42,31 @@
     .end annotation
 .end field
 
-.field private buttons:[Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
+.field public buttons:[Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final inactiveItemMaxWidth:I
+.field public final inactiveItemMaxWidth:I
 
-.field private final inactiveItemMinWidth:I
+.field public final inactiveItemMinWidth:I
 
-.field private itemBackground:Landroid/graphics/drawable/Drawable;
+.field public itemBackground:Landroid/graphics/drawable/Drawable;
 
-.field private itemBackgroundRes:I
+.field public itemBackgroundRes:I
 
-.field private final itemHeight:I
+.field public final itemHeight:I
 
-.field private itemHorizontalTranslationEnabled:Z
+.field public itemHorizontalTranslationEnabled:Z
 
-.field private itemIconSize:I
+.field public itemIconSize:I
     .annotation build Landroidx/annotation/Dimension;
     .end annotation
 .end field
 
-.field private itemIconTint:Landroid/content/res/ColorStateList;
+.field public itemIconTint:Landroid/content/res/ColorStateList;
 
-.field private final itemPool:Landroidx/core/util/Pools$Pool;
+.field public final itemPool:Landroidx/core/util/Pools$Pool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/core/util/Pools$Pool<",
@@ -76,48 +76,48 @@
     .end annotation
 .end field
 
-.field private itemTextAppearanceActive:I
+.field public itemTextAppearanceActive:I
     .annotation build Landroidx/annotation/StyleRes;
     .end annotation
 .end field
 
-.field private itemTextAppearanceInactive:I
+.field public itemTextAppearanceInactive:I
     .annotation build Landroidx/annotation/StyleRes;
     .end annotation
 .end field
 
-.field private final itemTextColorDefault:Landroid/content/res/ColorStateList;
+.field public final itemTextColorDefault:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private itemTextColorFromUser:Landroid/content/res/ColorStateList;
+.field public itemTextColorFromUser:Landroid/content/res/ColorStateList;
 
-.field private labelVisibilityMode:I
+.field public labelVisibilityMode:I
 
-.field private menu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field private final onClickListener:Landroid/view/View$OnClickListener;
+.field public final onClickListener:Landroid/view/View$OnClickListener;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private presenter:Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
+.field public presenter:Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
 
-.field private selectedItemId:I
+.field public selectedItemId:I
 
-.field private selectedItemPosition:I
+.field public selectedItemPosition:I
 
-.field private final set:Landroidx/transition/p;
+.field public final set:Lb/q/p;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private tempChildWidths:[I
+.field public tempChildWidths:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     const/4 v0, 0x1
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/d;->design_bottom_navigation_item_max_width:I
+    sget v1, Lc/b/b/b/d;->design_bottom_navigation_item_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -190,7 +190,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMaxWidth:I
 
-    sget v1, Lb/a/b/a/d;->design_bottom_navigation_item_min_width:I
+    sget v1, Lc/b/b/b/d;->design_bottom_navigation_item_min_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -198,7 +198,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMinWidth:I
 
-    sget v1, Lb/a/b/a/d;->design_bottom_navigation_active_item_max_width:I
+    sget v1, Lc/b/b/b/d;->design_bottom_navigation_active_item_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -206,7 +206,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->activeItemMaxWidth:I
 
-    sget v1, Lb/a/b/a/d;->design_bottom_navigation_active_item_min_width:I
+    sget v1, Lc/b/b/b/d;->design_bottom_navigation_active_item_min_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -214,7 +214,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->activeItemMinWidth:I
 
-    sget v1, Lb/a/b/a/d;->op_bottom_navigation_height:I
+    sget v1, Lc/b/b/b/d;->op_bottom_navigation_height:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -230,35 +230,35 @@
 
     iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemTextColorDefault:Landroid/content/res/ColorStateList;
 
-    new-instance v0, Landroidx/transition/b;
+    new-instance v0, Lb/q/b;
 
-    invoke-direct {v0}, Landroidx/transition/b;-><init>()V
+    invoke-direct {v0}, Lb/q/b;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Landroidx/transition/p;
+    iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
 
-    invoke-virtual {v0, p1}, Landroidx/transition/p;->q(I)Landroidx/transition/p;
+    invoke-virtual {v0, p1}, Lb/q/p;->q(I)Lb/q/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Landroidx/transition/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
 
     const-wide/16 v0, 0x73
 
-    invoke-virtual {p1, v0, v1}, Landroidx/transition/p;->o(J)Landroidx/transition/p;
+    invoke-virtual {p1, v0, v1}, Lb/q/p;->o(J)Lb/q/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Landroidx/transition/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
 
-    new-instance v0, La/f/a/a/b;
+    new-instance v0, Lb/l/a/a/b;
 
-    invoke-direct {v0}, La/f/a/a/b;-><init>()V
+    invoke-direct {v0}, Lb/l/a/a/b;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroidx/transition/p;->p(Landroid/animation/TimeInterpolator;)Landroidx/transition/p;
+    invoke-virtual {p1, v0}, Lb/q/p;->p(Landroid/animation/TimeInterpolator;)Lb/q/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Landroidx/transition/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
 
     new-instance v0, Lcom/google/android/material/internal/TextScale;
 
     invoke-direct {v0}, Lcom/google/android/material/internal/TextScale;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroidx/transition/p;->f(Landroidx/transition/Transition;)Landroidx/transition/p;
+    invoke-virtual {p1, v0}, Lb/q/p;->f(Landroidx/transition/Transition;)Lb/q/p;
 
     new-instance p1, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView$a;
 
@@ -277,7 +277,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;)Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
+.method public static synthetic access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;)Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->presenter:Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter;
@@ -285,7 +285,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method public static synthetic access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -798,7 +798,7 @@
 
     move-result-object v3
 
-    sget v4, La/a/a;->colorPrimary:I
+    sget v4, Lb/c/a;->colorPrimary:I
 
     invoke-virtual {v3, v4, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -856,7 +856,7 @@
     return-object v3
 .end method
 
-.method findItemView(I)Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
+.method public findItemView(I)Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
     .locals 5
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -898,7 +898,7 @@
     return-object p1
 .end method
 
-.method getBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
+.method public getBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -914,7 +914,7 @@
     return-object p1
 .end method
 
-.method getBadgeDrawables()Landroid/util/SparseArray;
+.method public getBadgeDrawables()Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1025,7 +1025,7 @@
     return v0
 .end method
 
-.method getOrCreateBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
+.method public getOrCreateBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
     .locals 2
 
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->validateMenuItemId(I)V
@@ -1106,7 +1106,7 @@
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {p1}, Landroidx/core/view/accessibility/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/view/accessibility/d;
+    invoke-static {p1}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
 
     move-result-object p1
 
@@ -1124,16 +1124,16 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2, v1}, Landroidx/core/view/accessibility/d$b;->b(IIZI)Landroidx/core/view/accessibility/d$b;
+    invoke-static {v1, v0, v2, v1}, Lb/h/l/y/d$b;->b(IIZI)Lb/h/l/y/d$b;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/core/view/accessibility/d;->Y(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/l/y/d;->Y(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 4
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -1213,7 +1213,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 10
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
@@ -1542,7 +1542,7 @@
     return-void
 .end method
 
-.method removeBadge(I)V
+.method public removeBadge(I)V
     .locals 2
 
     invoke-direct {p0, p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->validateMenuItemId(I)V
@@ -1574,7 +1574,7 @@
     return-void
 .end method
 
-.method setBadgeDrawables(Landroid/util/SparseArray;)V
+.method public setBadgeDrawables(Landroid/util/SparseArray;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1870,7 +1870,7 @@
     return-void
 .end method
 
-.method tryRestoreSelectedItemId(I)V
+.method public tryRestoreSelectedItemId(I)V
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->menu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -1984,9 +1984,9 @@
 
     if-eq v1, v3, :cond_4
 
-    iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Landroidx/transition/p;
+    iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
 
-    invoke-static {p0, v1}, Landroidx/transition/n;->a(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
+    invoke-static {p0, v1}, Lb/q/n;->a(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
 
     :cond_4
     iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->labelVisibilityMode:I

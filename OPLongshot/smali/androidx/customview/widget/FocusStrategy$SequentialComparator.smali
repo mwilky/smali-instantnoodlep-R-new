@@ -1,6 +1,6 @@
-.class Landroidx/customview/widget/FocusStrategy$SequentialComparator;
+.class public Landroidx/customview/widget/FocusStrategy$SequentialComparator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private final mAdapter:Landroidx/customview/widget/FocusStrategy$BoundsAdapter;
+.field public final mAdapter:Landroidx/customview/widget/FocusStrategy$BoundsAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/customview/widget/FocusStrategy$BoundsAdapter<",
@@ -29,15 +29,15 @@
     .end annotation
 .end field
 
-.field private final mIsLayoutRtl:Z
+.field public final mIsLayoutRtl:Z
 
-.field private final mTemp1:Landroid/graphics/Rect;
+.field public final mTemp1:Landroid/graphics/Rect;
 
-.field private final mTemp2:Landroid/graphics/Rect;
+.field public final mTemp2:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>(ZLandroidx/customview/widget/FocusStrategy$BoundsAdapter;)V
+.method public constructor <init>(ZLandroidx/customview/widget/FocusStrategy$BoundsAdapter;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

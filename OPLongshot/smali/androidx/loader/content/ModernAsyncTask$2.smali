@@ -1,6 +1,6 @@
-.class Landroidx/loader/content/ModernAsyncTask$2;
+.class public Landroidx/loader/content/ModernAsyncTask$2;
 .super Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/loader/content/ModernAsyncTask;
+.field public final synthetic this$0:Landroidx/loader/content/ModernAsyncTask;
 
 
 # direct methods
-.method constructor <init>(Landroidx/loader/content/ModernAsyncTask;)V
+.method public constructor <init>(Landroidx/loader/content/ModernAsyncTask;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/loader/content/ModernAsyncTask$2;->this$0:Landroidx/loader/content/ModernAsyncTask;

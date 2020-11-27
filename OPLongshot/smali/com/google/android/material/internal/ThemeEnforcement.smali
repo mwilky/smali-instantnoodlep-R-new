@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/internal/ThemeEnforcement;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,24 +12,24 @@
 
 
 # static fields
-.field private static final APPCOMPAT_CHECK_ATTRS:[I
+.field public static final APPCOMPAT_CHECK_ATTRS:[I
 
-.field private static final APPCOMPAT_THEME_NAME:Ljava/lang/String; = "Theme.AppCompat"
+.field public static final APPCOMPAT_THEME_NAME:Ljava/lang/String; = "Theme.AppCompat"
 
-.field private static final MATERIAL_CHECK_ATTRS:[I
+.field public static final MATERIAL_CHECK_ATTRS:[I
 
-.field private static final MATERIAL_THEME_NAME:Ljava/lang/String; = "Theme.MaterialComponents"
+.field public static final MATERIAL_THEME_NAME:Ljava/lang/String; = "Theme.MaterialComponents"
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     const/4 v0, 0x1
 
     new-array v1, v0, [I
 
-    sget v2, Lb/a/b/a/b;->colorPrimary:I
+    sget v2, Lc/b/b/b/b;->colorPrimary:I
 
     const/4 v3, 0x0
 
@@ -39,7 +39,7 @@
 
     new-array v0, v0, [I
 
-    sget v1, Lb/a/b/a/b;->colorPrimaryVariant:I
+    sget v1, Lc/b/b/b/b;->colorPrimaryVariant:I
 
     aput v1, v0, v3
 
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method private static checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+.method public static checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -87,13 +87,13 @@
         .end annotation
     .end param
 
-    sget-object v0, Lb/a/b/a/l;->ThemeEnforcement:[I
+    sget-object v0, Lc/b/b/b/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/l;->ThemeEnforcement_enforceMaterialTheme:I
+    sget p2, Lc/b/b/b/l;->ThemeEnforcement_enforceMaterialTheme:I
 
     const/4 p3, 0x0
 
@@ -113,7 +113,7 @@
 
     move-result-object p2
 
-    sget p3, Lb/a/b/a/b;->isMaterialTheme:I
+    sget p3, Lc/b/b/b/b;->isMaterialTheme:I
 
     const/4 v0, 0x1
 
@@ -158,7 +158,7 @@
     return-void
 .end method
 
-.method private static varargs checkTextAppearance(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+.method public static varargs checkTextAppearance(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
     .locals 3
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -187,13 +187,13 @@
         .end annotation
     .end param
 
-    sget-object v0, Lb/a/b/a/l;->ThemeEnforcement:[I
+    sget-object v0, Lc/b/b/b/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/l;->ThemeEnforcement_enforceTextAppearance:I
+    sget v1, Lc/b/b/b/l;->ThemeEnforcement_enforceTextAppearance:I
 
     const/4 v2, 0x0
 
@@ -225,7 +225,7 @@
 
     :cond_2
     :goto_0
-    sget p0, Lb/a/b/a/l;->ThemeEnforcement_android_textAppearance:I
+    sget p0, Lc/b/b/b/l;->ThemeEnforcement_android_textAppearance:I
 
     const/4 p1, -0x1
 
@@ -257,7 +257,7 @@
     throw p0
 .end method
 
-.method private static checkTheme(Landroid/content/Context;[ILjava/lang/String;)V
+.method public static checkTheme(Landroid/content/Context;[ILjava/lang/String;)V
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -318,7 +318,7 @@
     return p0
 .end method
 
-.method private static varargs isCustomTextAppearanceValid(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Z
+.method public static varargs isCustomTextAppearanceValid(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Z
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -403,7 +403,7 @@
     return p0
 .end method
 
-.method private static isTheme(Landroid/content/Context;[I)Z
+.method public static isTheme(Landroid/content/Context;[I)Z
     .locals 3
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;

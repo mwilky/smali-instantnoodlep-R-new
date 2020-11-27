@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/EditTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,11 +22,11 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "EditTask"
+.field public static final TAG:Ljava/lang/String; = "EditTask"
 
 
 # instance fields
-.field private mBitmaps:Ljava/util/List;
+.field public mBitmaps:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field private mListener:Lcom/oneplus/screenshot/longshot/task/EditTask$OnEditListener;
+.field public mListener:Lcom/oneplus/screenshot/longshot/task/EditTask$OnEditListener;
 
 
 # direct methods
@@ -69,7 +69,7 @@
 
 
 # virtual methods
-.method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Integer;
+.method public varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 8
 
     invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->setThreadPriority()V
@@ -215,7 +215,7 @@
     throw p1
 .end method
 
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Integer;
@@ -227,13 +227,13 @@
     return-object p1
 .end method
 
-.method protected onCancelled()V
+.method public onCancelled()V
     .locals 0
 
     return-void
 .end method
 
-.method protected onPostExecute(Ljava/lang/Integer;)V
+.method public onPostExecute(Ljava/lang/Integer;)V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/EditTask;->mListener:Lcom/oneplus/screenshot/longshot/task/EditTask$OnEditListener;
@@ -250,7 +250,7 @@
     return-void
 .end method
 
-.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Integer;

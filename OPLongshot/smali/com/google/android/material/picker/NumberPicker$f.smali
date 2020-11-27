@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$f;
+.class public Lcom/google/android/material/picker/NumberPicker$f;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "f"
 .end annotation
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
-.field final synthetic b:Lcom/google/android/material/picker/NumberPicker;
+.field public final synthetic b:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$f;->b:Lcom/google/android/material/picker/NumberPicker;
@@ -34,15 +34,17 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/google/android/material/picker/NumberPicker$f;Z)V
+.method public static synthetic a(Lcom/google/android/material/picker/NumberPicker$f;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker$f;->b(Z)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumberPicker$f;->b(Z)V
 
     return-void
 .end method
 
-.method private b(Z)V
+
+# virtual methods
+.method public final b(Z)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/picker/NumberPicker$f;->a:Z
@@ -50,8 +52,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method public run()V
     .locals 3
 

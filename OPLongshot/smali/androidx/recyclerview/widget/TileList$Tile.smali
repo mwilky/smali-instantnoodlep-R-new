@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/TileList$Tile;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field mNext:Landroidx/recyclerview/widget/TileList$Tile;
+.field public mNext:Landroidx/recyclerview/widget/TileList$Tile;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/TileList$Tile<",
@@ -72,7 +72,7 @@
 
 
 # virtual methods
-.method containsPosition(I)Z
+.method public containsPosition(I)Z
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
@@ -96,7 +96,7 @@
     return p1
 .end method
 
-.method getByPosition(I)Ljava/lang/Object;
+.method public getByPosition(I)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

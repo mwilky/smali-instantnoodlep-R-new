@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$a;
+.class public Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field public final synthetic a:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
+.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroid/view/View;)V
     .locals 0
 
     iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$a;->a:Landroid/view/View;

@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchBgNextTask"
+.field public static final TAG:Ljava/lang/String; = "StitchBgNextTask"
 
 
 # direct methods
@@ -188,7 +188,7 @@
 
 
 # virtual methods
-.method protected createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method public createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/match/StitchBgNextMatcher;
@@ -198,7 +198,7 @@
     return-object v0
 .end method
 
-.method protected onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
+.method public onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
     .locals 4
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/task/JoinTask;->checkMatcher()Z

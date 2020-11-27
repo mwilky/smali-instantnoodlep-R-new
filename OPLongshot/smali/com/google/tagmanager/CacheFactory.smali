@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/CacheFactory;
+.class public Lcom/google/tagmanager/CacheFactory;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final mDefaultSizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
+.field public final mDefaultSizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/tagmanager/CacheFactory$CacheSizeManager<",
@@ -114,7 +114,7 @@
     throw p1
 .end method
 
-.method getSdkVersion()I
+.method public getSdkVersion()I
     .locals 1
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

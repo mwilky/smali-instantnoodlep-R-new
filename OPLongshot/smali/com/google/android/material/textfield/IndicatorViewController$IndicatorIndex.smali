@@ -1,6 +1,6 @@
-.class interface abstract annotation Lcom/google/android/material/textfield/IndicatorViewController$IndicatorIndex;
+.class public interface abstract annotation Lcom/google/android/material/textfield/IndicatorViewController$IndicatorIndex;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x260a
+    accessFlags = 0x2609
     name = "IndicatorIndex"
 .end annotation
 

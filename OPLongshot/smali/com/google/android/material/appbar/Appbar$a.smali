@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/Appbar$a;
 .super Landroidx/appcompat/app/ActionBar$a;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field b:I
+.field public b:I
 
 
 # direct methods
@@ -121,7 +121,7 @@
 
 
 # virtual methods
-.method a(Landroid/view/ViewGroup$MarginLayoutParams;)V
+.method public a(Landroid/view/ViewGroup$MarginLayoutParams;)V
     .locals 1
 
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I

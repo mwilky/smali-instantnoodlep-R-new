@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimatorInflater$PathDataEvaluator;
+.class public Landroidx/animation/AnimatorInflater$PathDataEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -12,18 +12,18 @@
         "Ljava/lang/Object;",
         "Landroidx/animation/TypeEvaluator<",
         "[",
-        "Landroidx/core/graphics/e$b;",
+        "Lb/h/f/e$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private mPathData:[Landroidx/core/graphics/e$b;
+.field public mPathData:[Lb/h/f/e$b;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,40 +36,40 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p2, [Landroidx/core/graphics/e$b;
+    check-cast p2, [Lb/h/f/e$b;
 
-    check-cast p3, [Landroidx/core/graphics/e$b;
+    check-cast p3, [Lb/h/f/e$b;
 
-    invoke-virtual {p0, p1, p2, p3}, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->evaluate(F[Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)[Landroidx/core/graphics/e$b;
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->evaluate(F[Lb/h/f/e$b;[Lb/h/f/e$b;)[Lb/h/f/e$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public evaluate(F[Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)[Landroidx/core/graphics/e$b;
+.method public evaluate(F[Lb/h/f/e$b;[Lb/h/f/e$b;)[Lb/h/f/e$b;
     .locals 1
 
-    iget-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Lb/h/f/e$b;
 
     if-nez v0, :cond_0
 
     array-length v0, p2
 
-    new-array v0, v0, [Landroidx/core/graphics/e$b;
+    new-array v0, v0, [Lb/h/f/e$b;
 
-    iput-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Landroidx/core/graphics/e$b;
+    iput-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Lb/h/f/e$b;
 
     :cond_0
-    iget-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Lb/h/f/e$b;
 
-    invoke-static {v0, p2, p3, p1}, Landroidx/core/graphics/e;->i([Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;F)Z
+    invoke-static {v0, p2, p3, p1}, Lb/h/f/e;->i([Lb/h/f/e$b;[Lb/h/f/e$b;[Lb/h/f/e$b;F)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Landroidx/core/graphics/e$b;
+    iget-object p1, p0, Landroidx/animation/AnimatorInflater$PathDataEvaluator;->mPathData:[Lb/h/f/e$b;
 
     return-object p1
 

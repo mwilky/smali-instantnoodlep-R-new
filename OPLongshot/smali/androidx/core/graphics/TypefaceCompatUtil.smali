@@ -1,6 +1,6 @@
 .class public Landroidx/core/graphics/TypefaceCompatUtil;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field private static final CACHE_FILE_PREFIX:Ljava/lang/String; = ".font"
+.field public static final CACHE_FILE_PREFIX:Ljava/lang/String; = ".font"
 
-.field private static final TAG:Ljava/lang/String; = "TypefaceCompatUtil"
+.field public static final TAG:Ljava/lang/String; = "TypefaceCompatUtil"
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -476,7 +476,7 @@
     return-object v0
 .end method
 
-.method private static mmap(Ljava/io/File;)Ljava/nio/ByteBuffer;
+.method public static mmap(Ljava/io/File;)Ljava/nio/ByteBuffer;
     .locals 7
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

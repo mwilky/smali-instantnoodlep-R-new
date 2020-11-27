@@ -1,35 +1,35 @@
 .class public Lcom/oneplus/screenshot/service/GlobalSave;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
 
 
 # static fields
-.field private static final M_LOCK:Ljava/lang/Object;
+.field public static final M_LOCK:Ljava/lang/Object;
 
-.field private static final NOTIFICATION_ID_REPEAT:I = 0x3e8
+.field public static final NOTIFICATION_ID_REPEAT:I = 0x3e8
 
-.field private static final TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String;
 
 
 # instance fields
-.field private mBundle:Landroid/os/Bundle;
+.field public mBundle:Landroid/os/Bundle;
 
-.field private mCachable:Lcom/oneplus/screenshot/util/Cachable;
+.field public mCachable:Lcom/oneplus/screenshot/util/Cachable;
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mNavibar:Landroid/graphics/Bitmap;
+.field public mNavibar:Landroid/graphics/Bitmap;
 
-.field private mNotificationId:I
+.field public mNotificationId:I
 
-.field private mSaveTask:Lcom/oneplus/screenshot/service/SaveTask;
+.field public mSaveTask:Lcom/oneplus/screenshot/service/SaveTask;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

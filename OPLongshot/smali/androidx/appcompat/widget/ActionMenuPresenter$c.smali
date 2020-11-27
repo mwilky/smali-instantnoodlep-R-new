@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$c;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "c"
 .end annotation
 
 
 # instance fields
-.field private a:Landroidx/appcompat/widget/ActionMenuPresenter$e;
+.field public a:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
-.field final synthetic b:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field public final synthetic b:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods

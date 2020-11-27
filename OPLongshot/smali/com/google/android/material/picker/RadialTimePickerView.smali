@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/picker/RadialTimePickerView;
 .super Landroid/view/View;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,117 +14,117 @@
 
 
 # static fields
-.field private static final V:[I
+.field public static final V:[I
 
-.field private static final W:[I
+.field public static final W:[I
 
-.field private static final a0:[I
+.field public static final a0:[I
 
-.field private static final b0:[I
+.field public static final b0:[I
 
-.field private static final c0:[F
+.field public static final c0:[F
 
-.field private static final d0:[F
+.field public static final d0:[F
 
 
 # instance fields
-.field private A:I
+.field public A:I
 
-.field private B:I
+.field public B:I
 
-.field private C:I
+.field public C:I
 
-.field private D:I
+.field public D:I
 
-.field private E:I
+.field public E:I
 
-.field private F:I
+.field public F:I
 
-.field private G:I
+.field public G:I
 
-.field private H:I
+.field public H:I
 
-.field private I:I
+.field public I:I
 
-.field private J:I
+.field public J:I
 
-.field private K:I
+.field public K:I
 
-.field private L:I
+.field public L:I
 
-.field private M:[Ljava/lang/String;
+.field public M:[Ljava/lang/String;
 
-.field private N:[Ljava/lang/String;
+.field public N:[Ljava/lang/String;
 
-.field private O:[Ljava/lang/String;
+.field public O:[Ljava/lang/String;
 
-.field private P:I
+.field public P:I
 
-.field private Q:F
+.field public Q:F
 
-.field private R:Lcom/google/android/material/picker/RadialTimePickerView$a;
+.field public R:Lcom/google/android/material/picker/RadialTimePickerView$a;
 
-.field private S:Z
+.field public S:Z
 
-.field T:Landroid/graphics/RectF;
+.field public T:Landroid/graphics/RectF;
 
-.field U:Z
+.field public U:Z
 
-.field private a:[J
+.field public a:[J
 
-.field private b:Landroid/os/Vibrator;
+.field public b:Landroid/os/Vibrator;
 
-.field private final c:[Ljava/lang/String;
+.field public final c:[Ljava/lang/String;
 
-.field private final d:[Ljava/lang/String;
+.field public final d:[Ljava/lang/String;
 
-.field private final e:[Ljava/lang/String;
+.field public final e:[Ljava/lang/String;
 
-.field private final f:[Ljava/lang/String;
+.field public final f:[Ljava/lang/String;
 
-.field private final g:[Landroid/graphics/Paint;
+.field public final g:[Landroid/graphics/Paint;
 
-.field private final h:Landroid/graphics/Paint;
+.field public final h:Landroid/graphics/Paint;
 
-.field private final i:[Landroid/graphics/Paint;
+.field public final i:[Landroid/graphics/Paint;
 
-.field private final j:Landroid/graphics/Paint;
+.field public final j:Landroid/graphics/Paint;
 
-.field private final k:Landroid/graphics/Typeface;
+.field public final k:Landroid/graphics/Typeface;
 
-.field private final l:[Landroid/content/res/ColorStateList;
+.field public final l:[Landroid/content/res/ColorStateList;
 
-.field private final m:[I
+.field public final m:[I
 
-.field private final n:[I
+.field public final n:[I
 
-.field private final o:[[F
+.field public final o:[[F
 
-.field private final p:[[F
+.field public final p:[[F
 
-.field private final q:[F
+.field public final q:[F
 
-.field private final r:[F
+.field public final r:[F
 
-.field private final s:[I
+.field public final s:[I
 
-.field private final t:Lcom/google/android/material/picker/RadialTimePickerView$b;
+.field public final t:Lcom/google/android/material/picker/RadialTimePickerView$b;
 
-.field private final u:Landroid/graphics/Path;
+.field public final u:Landroid/graphics/Path;
 
-.field private v:Z
+.field public v:Z
 
-.field private w:Z
+.field public w:Z
 
-.field private x:Landroid/animation/ObjectAnimator;
+.field public x:Landroid/animation/ObjectAnimator;
 
-.field private y:F
+.field public y:F
 
-.field private z:Z
+.field public z:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 7
 
     const/16 v0, 0xc
@@ -253,7 +253,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lb/a/b/a/b;->timePickerStyle:I
+    sget v0, Lc/b/b/b/b;->timePickerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/picker/RadialTimePickerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -521,7 +521,7 @@
 
     move-result-object p2
 
-    sget p3, Lb/a/b/a/d;->timepicker_selector_radius:I
+    sget p3, Lc/b/b/b/d;->timepicker_selector_radius:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -529,7 +529,7 @@
 
     iput p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->A:I
 
-    sget p3, Lb/a/b/a/d;->timepicker_selector_stroke:I
+    sget p3, Lc/b/b/b/d;->timepicker_selector_stroke:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -537,7 +537,7 @@
 
     iput p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->B:I
 
-    sget p3, Lb/a/b/a/d;->timepicker_selector_dot_radius:I
+    sget p3, Lc/b/b/b/d;->timepicker_selector_dot_radius:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -545,7 +545,7 @@
 
     iput p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->C:I
 
-    sget p3, Lb/a/b/a/d;->timepicker_center_dot_radius:I
+    sget p3, Lc/b/b/b/d;->timepicker_center_dot_radius:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -555,7 +555,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_size_normal:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_size_normal:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -565,7 +565,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_size_normal:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_size_normal:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -575,7 +575,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_size_inner:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_size_inner:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -585,7 +585,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_inset_normal:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_inset_normal:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -595,7 +595,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_inset_normal:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_inset_normal:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -605,7 +605,7 @@
 
     iget-object p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
 
-    sget p4, Lb/a/b/a/d;->timepicker_text_inset_inner:I
+    sget p4, Lc/b/b/b/d;->timepicker_text_inset_inner:I
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -629,7 +629,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
 
-    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
+    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/h/l/a;)V
 
     invoke-virtual {p0}, Landroid/view/View;->getImportantForAccessibility()I
 
@@ -640,9 +640,9 @@
     invoke-virtual {p0, v0}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     :cond_0
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->N()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->N()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -662,11 +662,11 @@
 
     move-result p2
 
-    invoke-direct {p0, p3, v3, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
+    invoke-virtual {p0, p3, v3, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
 
-    invoke-direct {p0, p2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
+    invoke-virtual {p0, p2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
 
-    invoke-static {}, Lb/b/a/e;->b()Z
+    invoke-static {}, Lc/c/a/e;->b()Z
 
     move-result p2
 
@@ -700,7 +700,335 @@
     .end array-data
 .end method
 
-.method private A(Landroid/graphics/Canvas;IZ)V
+.method public static Q()V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x8
+
+    move v4, v1
+
+    move v3, v2
+
+    move v2, v0
+
+    :goto_0
+    const/16 v5, 0x169
+
+    if-ge v0, v5, :cond_3
+
+    sget-object v5, Lcom/google/android/material/picker/RadialTimePickerView;->b0:[I
+
+    aput v2, v5, v0
+
+    if-ne v4, v3, :cond_2
+
+    add-int/lit8 v2, v2, 0x6
+
+    const/16 v3, 0x168
+
+    if-ne v2, v3, :cond_0
+
+    const/4 v3, 0x7
+
+    goto :goto_1
+
+    :cond_0
+    rem-int/lit8 v3, v2, 0x1e
+
+    if-nez v3, :cond_1
+
+    const/16 v3, 0xe
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v3, 0x4
+
+    :goto_1
+    move v4, v1
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v4, v4, 0x1
+
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
+.method public static Y(II)I
+    .locals 3
+
+    div-int/lit8 v0, p0, 0x1e
+
+    mul-int/lit8 v0, v0, 0x1e
+
+    add-int/lit8 v1, v0, 0x1e
+
+    const/4 v2, 0x1
+
+    if-ne p1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, -0x1
+
+    if-ne p1, v2, :cond_1
+
+    if-ne p0, v0, :cond_3
+
+    add-int/lit8 v0, v0, -0x1e
+
+    goto :goto_1
+
+    :cond_1
+    sub-int p1, p0, v0
+
+    sub-int p0, v1, p0
+
+    if-ge p1, p0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    move v0, v1
+
+    :cond_3
+    :goto_1
+    return v0
+.end method
+
+.method public static Z(I)I
+    .locals 1
+
+    sget-object v0, Lcom/google/android/material/picker/RadialTimePickerView;->b0:[I
+
+    if-nez v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    aget p0, v0, p0
+
+    return p0
+.end method
+
+.method public static synthetic a(Lcom/google/android/material/picker/RadialTimePickerView;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
+
+    return p0
+.end method
+
+.method public static synthetic b(Lcom/google/android/material/picker/RadialTimePickerView;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
+
+    return p0
+.end method
+
+.method public static synthetic c(Lcom/google/android/material/picker/RadialTimePickerView;)[I
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
+
+    return-object p0
+.end method
+
+.method public static synthetic d(Lcom/google/android/material/picker/RadialTimePickerView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->A:I
+
+    return p0
+.end method
+
+.method public static synthetic e(Lcom/google/android/material/picker/RadialTimePickerView;I)I
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->D(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic f(Lcom/google/android/material/picker/RadialTimePickerView;I)I
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->E(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic g(Lcom/google/android/material/picker/RadialTimePickerView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    return p0
+.end method
+
+.method public static synthetic h(Lcom/google/android/material/picker/RadialTimePickerView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    return p0
+.end method
+
+.method public static synthetic i(Lcom/google/android/material/picker/RadialTimePickerView;FFZ)I
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic j(II)I
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->Y(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic k(Lcom/google/android/material/picker/RadialTimePickerView;FF)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->I(FF)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic l(Lcom/google/android/material/picker/RadialTimePickerView;IZ)I
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->G(IZ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic m(Lcom/google/android/material/picker/RadialTimePickerView;I)I
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->J(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic n(Lcom/google/android/material/picker/RadialTimePickerView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
+
+    return p0
+.end method
+
+.method public static synthetic o(Lcom/google/android/material/picker/RadialTimePickerView;I)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->H(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic p(Lcom/google/android/material/picker/RadialTimePickerView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
+
+    return p0
+.end method
+
+.method public static s(Landroid/graphics/Paint;FFFF[F[F)V
+    .locals 0
+
+    invoke-virtual {p0, p4}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    invoke-virtual {p0}, Landroid/graphics/Paint;->descent()F
+
+    move-result p4
+
+    invoke-virtual {p0}, Landroid/graphics/Paint;->ascent()F
+
+    move-result p0
+
+    add-float/2addr p4, p0
+
+    const/high16 p0, 0x40000000    # 2.0f
+
+    div-float/2addr p4, p0
+
+    sub-float/2addr p3, p4
+
+    const/4 p0, 0x0
+
+    :goto_0
+    const/16 p4, 0xc
+
+    if-ge p0, p4, :cond_0
+
+    sget-object p4, Lcom/google/android/material/picker/RadialTimePickerView;->c0:[F
+
+    aget p4, p4, p0
+
+    mul-float/2addr p4, p1
+
+    sub-float p4, p2, p4
+
+    aput p4, p5, p0
+
+    sget-object p4, Lcom/google/android/material/picker/RadialTimePickerView;->d0:[F
+
+    aget p4, p4, p0
+
+    mul-float/2addr p4, p1
+
+    sub-float p4, p3, p4
+
+    aput p4, p6, p0
+
+    add-int/lit8 p0, p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A(Landroid/graphics/Canvas;IZ)V
     .locals 14
 
     move-object v13, p0
@@ -747,12 +1075,12 @@
 
     move/from16 v12, p3
 
-    invoke-direct/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
+    invoke-virtual/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
 
     return-void
 .end method
 
-.method private B(Landroid/graphics/Canvas;Landroid/graphics/Path;)V
+.method public final B(Landroid/graphics/Canvas;Landroid/graphics/Path;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -837,7 +1165,7 @@
 
     iget v15, v0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
 
-    invoke-static {v4, v10, v15}, Lb/a/b/a/p/a;->e(FFF)F
+    invoke-static {v4, v10, v15}, Lc/b/b/b/a0/a;->e(FFF)F
 
     move-result v4
 
@@ -849,7 +1177,7 @@
 
     iget v10, v0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
 
-    invoke-static {v4, v6, v10}, Lb/a/b/a/p/a;->f(FFF)F
+    invoke-static {v4, v6, v10}, Lc/b/b/b/a0/a;->f(FFF)F
 
     move-result v4
 
@@ -914,7 +1242,7 @@
     :cond_3
     iget v1, v0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
 
-    invoke-static {v2, v5, v1}, Lb/a/b/a/p/a;->e(FFF)F
+    invoke-static {v2, v5, v1}, Lc/b/b/b/a0/a;->e(FFF)F
 
     move-result v1
 
@@ -1067,7 +1395,7 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->E(I)I
+    invoke-virtual {v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->E(I)I
 
     move-result v1
 
@@ -1089,7 +1417,7 @@
     return-void
 .end method
 
-.method private C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
+.method public final C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
     .locals 13
 
     move-object/from16 v0, p8
@@ -1194,7 +1522,7 @@
 
     move/from16 v9, p9
 
-    invoke-direct {p0, v6, v9}, Lcom/google/android/material/picker/RadialTimePickerView;->K(II)I
+    invoke-virtual {p0, v6, v9}, Lcom/google/android/material/picker/RadialTimePickerView;->K(II)I
 
     move-result v6
 
@@ -1221,7 +1549,7 @@
     return-void
 .end method
 
-.method private D(I)I
+.method public final D(I)I
     .locals 2
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
@@ -1248,7 +1576,7 @@
     return p1
 .end method
 
-.method private E(I)I
+.method public final E(I)I
     .locals 0
 
     mul-int/lit8 p1, p1, 0x6
@@ -1256,7 +1584,7 @@
     return p1
 .end method
 
-.method private F(FFZ)I
+.method public final F(FFZ)I
     .locals 8
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
@@ -1367,7 +1695,7 @@
     return p1
 .end method
 
-.method private G(IZ)I
+.method public final G(IZ)I
     .locals 2
 
     div-int/lit8 p1, p1, 0x1e
@@ -1412,7 +1740,7 @@
     return v0
 .end method
 
-.method private H(I)Z
+.method public final H(I)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
@@ -1437,7 +1765,7 @@
     return p1
 .end method
 
-.method private I(FF)Z
+.method public final I(FF)Z
     .locals 4
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
@@ -1490,7 +1818,7 @@
     return v1
 .end method
 
-.method private J(I)I
+.method public final J(I)I
     .locals 0
 
     div-int/lit8 p1, p1, 0x6
@@ -1498,7 +1826,7 @@
     return p1
 .end method
 
-.method private K(II)I
+.method public final K(II)I
     .locals 4
 
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
@@ -1524,16 +1852,16 @@
     return p1
 .end method
 
-.method private L(FFZZ)Z
+.method public final L(FFZZ)Z
     .locals 4
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->I(FF)Z
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->I(FF)Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
+    invoke-virtual {p0, p1, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
 
     move-result p1
 
@@ -1548,7 +1876,7 @@
 
     const-wide/16 v2, 0x3c
 
-    invoke-direct {p0, p2, v2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->q(ZJ)V
+    invoke-virtual {p0, p2, v2, v3}, Lcom/google/android/material/picker/RadialTimePickerView;->q(ZJ)V
 
     iget-boolean p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
 
@@ -1652,16 +1980,16 @@
     :cond_7
     if-nez p2, :cond_8
 
-    if-eqz p3, :cond_b
+    if-eqz p3, :cond_c
 
     :cond_8
-    invoke-static {}, Lb/b/a/e;->b()Z
+    invoke-static {}, Lc/c/a/e;->b()Z
 
     move-result p1
 
     const/4 p2, 0x4
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_a
 
     if-ne v0, v2, :cond_9
 
@@ -1669,11 +1997,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/b/a/j;->b(Landroid/content/Context;)Z
+    invoke-static {p1}, Lc/c/a/k;->b(Landroid/content/Context;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1683,7 +2011,7 @@
 
     const/16 p3, 0x406
 
-    invoke-static {p1, p2, p3}, Lb/b/a/j;->a(Landroid/content/Context;Landroid/os/Vibrator;I)[J
+    invoke-static {p1, p2, p3}, Lc/c/a/k;->a(Landroid/content/Context;Landroid/os/Vibrator;I)[J
 
     move-result-object p1
 
@@ -1691,22 +2019,27 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->b:Landroid/os/Vibrator;
 
-    invoke-static {p1, p2}, Lb/b/a/j;->c([JLandroid/os/Vibrator;)V
+    invoke-static {p1, p2}, Lc/c/a/k;->c([JLandroid/os/Vibrator;)V
 
     goto :goto_5
 
     :cond_9
     invoke-virtual {p0, p2}, Landroid/view/View;->performHapticFeedback(I)Z
 
+    goto :goto_5
+
     :cond_a
+    invoke-virtual {p0, p2}, Landroid/view/View;->performHapticFeedback(I)Z
+
+    :cond_b
     :goto_5
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    :cond_b
+    :cond_c
     return v2
 .end method
 
-.method private M()V
+.method public final M()V
     .locals 1
 
     iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
@@ -1738,7 +2071,7 @@
     return-void
 .end method
 
-.method private N()V
+.method public final N()V
     .locals 8
 
     const/4 v0, 0x0
@@ -1844,7 +2177,28 @@
     return-void
 .end method
 
-.method private P()Z
+.method public O(IIZ)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
+
+    if-eq v0, p3, :cond_0
+
+    iput-boolean p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
+
+    :cond_0
+    const/4 p3, 0x0
+
+    invoke-virtual {p0, p1, p3, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
+
+    invoke-virtual {p0, p2, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
+
+    return-void
+.end method
+
+.method public final P()Z
     .locals 1
 
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
@@ -1862,1007 +2216,6 @@
 
     :goto_0
     return v0
-.end method
-
-.method private static Q()V
-    .locals 6
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0x8
-
-    move v4, v1
-
-    move v3, v2
-
-    move v2, v0
-
-    :goto_0
-    const/16 v5, 0x169
-
-    if-ge v0, v5, :cond_3
-
-    sget-object v5, Lcom/google/android/material/picker/RadialTimePickerView;->b0:[I
-
-    aput v2, v5, v0
-
-    if-ne v4, v3, :cond_2
-
-    add-int/lit8 v2, v2, 0x6
-
-    const/16 v3, 0x168
-
-    if-ne v2, v3, :cond_0
-
-    const/4 v3, 0x7
-
-    goto :goto_1
-
-    :cond_0
-    rem-int/lit8 v3, v2, 0x1e
-
-    if-nez v3, :cond_1
-
-    const/16 v3, 0xe
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v3, 0x4
-
-    :goto_1
-    move v4, v1
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v4, v4, 0x1
-
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
-.method private S(IZZ)V
-    .locals 4
-
-    rem-int/lit8 v0, p1, 0xc
-
-    mul-int/lit8 v0, v0, 0x1e
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
-
-    const/4 v2, 0x0
-
-    aput v0, v1, v2
-
-    if-eqz p1, :cond_1
-
-    rem-int/lit8 v0, p1, 0x18
-
-    const/16 v1, 0xc
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v0, v2
-
-    :goto_1
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->H(I)Z
-
-    move-result v1
-
-    iget v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
-
-    if-ne v3, v0, :cond_2
-
-    iget-boolean v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
-
-    if-eq v3, v1, :cond_3
-
-    :cond_2
-    iput v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
-
-    iput-boolean v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
-
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
-
-    invoke-virtual {v0}, Landroidx/customview/widget/ExploreByTouchHelper;->k()V
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    if-eqz p2, :cond_4
-
-    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->R:Lcom/google/android/material/picker/RadialTimePickerView$a;
-
-    if-eqz p2, :cond_4
-
-    invoke-interface {p2, v2, p1, p3}, Lcom/google/android/material/picker/RadialTimePickerView$a;->a(IIZ)V
-
-    :cond_4
-    return-void
-.end method
-
-.method private U(IZ)V
-    .locals 3
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
-
-    rem-int/lit8 v1, p1, 0x3c
-
-    mul-int/lit8 v1, v1, 0x6
-
-    const/4 v2, 0x1
-
-    aput v1, v0, v2
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->R:Lcom/google/android/material/picker/RadialTimePickerView$a;
-
-    if-eqz p2, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-interface {p2, v2, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$a;->a(IIZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private X(ZZ)V
-    .locals 2
-
-    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
-
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iput-boolean p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
-
-    if-eqz p2, :cond_1
-
-    const-wide/16 v0, 0x1f4
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->q(ZJ)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    if-eqz p2, :cond_2
-
-    invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->isStarted()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->cancel()V
-
-    const/4 p2, 0x0
-
-    iput-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_3
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    :goto_0
-    iput p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
-
-    :goto_1
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
-
-    invoke-virtual {p1}, Landroidx/customview/widget/ExploreByTouchHelper;->k()V
-
-    return-void
-.end method
-
-.method private static Y(II)I
-    .locals 3
-
-    div-int/lit8 v0, p0, 0x1e
-
-    mul-int/lit8 v0, v0, 0x1e
-
-    add-int/lit8 v1, v0, 0x1e
-
-    const/4 v2, 0x1
-
-    if-ne p1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, -0x1
-
-    if-ne p1, v2, :cond_1
-
-    if-ne p0, v0, :cond_3
-
-    add-int/lit8 v0, v0, -0x1e
-
-    goto :goto_1
-
-    :cond_1
-    sub-int p1, p0, v0
-
-    sub-int p0, v1, p0
-
-    if-ge p1, p0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    move v0, v1
-
-    :cond_3
-    :goto_1
-    return v0
-.end method
-
-.method private static Z(I)I
-    .locals 1
-
-    sget-object v0, Lcom/google/android/material/picker/RadialTimePickerView;->b0:[I
-
-    if-nez v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    aget p0, v0, p0
-
-    return p0
-.end method
-
-.method static synthetic a(Lcom/google/android/material/picker/RadialTimePickerView;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
-
-    return p0
-.end method
-
-.method static synthetic b(Lcom/google/android/material/picker/RadialTimePickerView;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
-
-    return p0
-.end method
-
-.method static synthetic c(Lcom/google/android/material/picker/RadialTimePickerView;)[I
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
-
-    return-object p0
-.end method
-
-.method static synthetic d(Lcom/google/android/material/picker/RadialTimePickerView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->A:I
-
-    return p0
-.end method
-
-.method static synthetic e(Lcom/google/android/material/picker/RadialTimePickerView;I)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->D(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic f(Lcom/google/android/material/picker/RadialTimePickerView;I)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->E(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic g(Lcom/google/android/material/picker/RadialTimePickerView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    return p0
-.end method
-
-.method static synthetic h(Lcom/google/android/material/picker/RadialTimePickerView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    return p0
-.end method
-
-.method static synthetic i(Lcom/google/android/material/picker/RadialTimePickerView;FFZ)I
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic j(II)I
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->Y(II)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic k(Lcom/google/android/material/picker/RadialTimePickerView;FF)Z
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->I(FF)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic l(Lcom/google/android/material/picker/RadialTimePickerView;IZ)I
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->G(IZ)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic m(Lcom/google/android/material/picker/RadialTimePickerView;I)I
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->J(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic n(Lcom/google/android/material/picker/RadialTimePickerView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
-
-    return p0
-.end method
-
-.method static synthetic o(Lcom/google/android/material/picker/RadialTimePickerView;I)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->H(I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic p(Lcom/google/android/material/picker/RadialTimePickerView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
-
-    return p0
-.end method
-
-.method private q(ZJ)V
-    .locals 3
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    :goto_0
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
-
-    cmpl-float v1, v0, p1
-
-    if-nez v1, :cond_2
-
-    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isStarted()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    :cond_1
-    return-void
-
-    :cond_2
-    const/4 v1, 0x2
-
-    new-array v1, v1, [F
-
-    const/4 v2, 0x0
-
-    aput v0, v1, v2
-
-    const/4 v0, 0x1
-
-    aput p1, v1, v0
-
-    const-string p1, "HoursToMinutes"
-
-    invoke-static {p0, p1, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
-
-    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1, p2, p3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
-
-    return-void
-.end method
-
-.method private static s(Landroid/graphics/Paint;FFFF[F[F)V
-    .locals 0
-
-    invoke-virtual {p0, p4}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    invoke-virtual {p0}, Landroid/graphics/Paint;->descent()F
-
-    move-result p4
-
-    invoke-virtual {p0}, Landroid/graphics/Paint;->ascent()F
-
-    move-result p0
-
-    add-float/2addr p4, p0
-
-    const/high16 p0, 0x40000000    # 2.0f
-
-    div-float/2addr p4, p0
-
-    sub-float/2addr p3, p4
-
-    const/4 p0, 0x0
-
-    :goto_0
-    const/16 p4, 0xc
-
-    if-ge p0, p4, :cond_0
-
-    sget-object p4, Lcom/google/android/material/picker/RadialTimePickerView;->c0:[F
-
-    aget p4, p4, p0
-
-    mul-float/2addr p4, p1
-
-    sub-float p4, p2, p4
-
-    aput p4, p5, p0
-
-    sget-object p4, Lcom/google/android/material/picker/RadialTimePickerView;->d0:[F
-
-    aget p4, p4, p0
-
-    mul-float/2addr p4, p1
-
-    sub-float p4, p3, p4
-
-    aput p4, p6, p0
-
-    add-int/lit8 p0, p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private t()V
-    .locals 11
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
-
-    const/4 v2, 0x0
-
-    aget v1, v1, v2
-
-    sub-int/2addr v0, v1
-
-    int-to-float v4, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
-
-    aget-object v3, v0, v2
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    int-to-float v5, v0
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    int-to-float v6, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
-
-    aget v0, v0, v2
-
-    int-to-float v7, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
-
-    aget-object v8, v0, v2
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
-
-    aget-object v9, v0, v2
-
-    invoke-static/range {v3 .. v9}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
-
-    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
-
-    const/4 v3, 0x2
-
-    aget v1, v1, v3
-
-    sub-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
-
-    aget-object v4, v1, v2
-
-    int-to-float v5, v0
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    int-to-float v6, v0
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    int-to-float v7, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
-
-    aget v0, v0, v3
-
-    int-to-float v8, v0
-
-    iget-object v9, p0, Lcom/google/android/material/picker/RadialTimePickerView;->q:[F
-
-    iget-object v10, p0, Lcom/google/android/material/picker/RadialTimePickerView;->r:[F
-
-    invoke-static/range {v4 .. v10}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private u()V
-    .locals 10
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
-
-    const/4 v2, 0x1
-
-    aget v1, v1, v2
-
-    sub-int/2addr v0, v1
-
-    int-to-float v4, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
-
-    aget-object v3, v0, v2
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    int-to-float v5, v0
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    int-to-float v6, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
-
-    aget v0, v0, v2
-
-    int-to-float v7, v0
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
-
-    aget-object v8, v0, v2
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
-
-    aget-object v9, v0, v2
-
-    invoke-static/range {v3 .. v9}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
-
-    return-void
-.end method
-
-.method private v(Landroid/graphics/Canvas;F)V
-    .locals 3
-
-    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->h:Landroid/graphics/Paint;
-
-    const/high16 v1, 0x437f0000    # 255.0f
-
-    mul-float/2addr p2, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    add-float/2addr p2, v1
-
-    float-to-int p2, p2
-
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    iget p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    int-to-float p2, p2
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->D:I
-
-    int-to-float v1, v1
-
-    iget-object v2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->h:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2, v0, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method private w(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->j:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method private x(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
-    .locals 2
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    sub-float/2addr v1, v0
-
-    const/high16 v0, 0x437f0000    # 255.0f
-
-    mul-float/2addr v1, v0
-
-    mul-float/2addr v1, p3
-
-    const/high16 p3, 0x3f000000    # 0.5f
-
-    add-float/2addr v1, p3
-
-    float-to-int p3, v1
-
-    if-lez p3, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    sget-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p3, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->y(Landroid/graphics/Canvas;IZ)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p3, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->y(Landroid/graphics/Canvas;IZ)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    :cond_0
-    return-void
-.end method
-
-.method private y(Landroid/graphics/Canvas;IZ)V
-    .locals 16
-
-    move-object/from16 v13, p0
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
-
-    const/4 v14, 0x0
-
-    aget v0, v0, v14
-
-    int-to-float v2, v0
-
-    iget-object v3, v13, Lcom/google/android/material/picker/RadialTimePickerView;->k:Landroid/graphics/Typeface;
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->l:[Landroid/content/res/ColorStateList;
-
-    aget-object v4, v0, v14
-
-    iget-object v5, v13, Lcom/google/android/material/picker/RadialTimePickerView;->M:[Ljava/lang/String;
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
-
-    aget-object v6, v0, v14
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
-
-    aget-object v7, v0, v14
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
-
-    aget-object v8, v0, v14
-
-    const/4 v15, 0x1
-
-    if-eqz p3, :cond_0
-
-    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
-
-    if-nez v0, :cond_0
-
-    move v10, v15
-
-    goto :goto_0
-
-    :cond_0
-    move v10, v14
-
-    :goto_0
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
-
-    aget v11, v0, v14
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move/from16 v9, p2
-
-    move/from16 v12, p3
-
-    invoke-direct/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
-
-    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v5, v13, Lcom/google/android/material/picker/RadialTimePickerView;->N:[Ljava/lang/String;
-
-    if-eqz v5, :cond_2
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
-
-    const/4 v1, 0x2
-
-    aget v0, v0, v1
-
-    int-to-float v2, v0
-
-    iget-object v3, v13, Lcom/google/android/material/picker/RadialTimePickerView;->k:Landroid/graphics/Typeface;
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->l:[Landroid/content/res/ColorStateList;
-
-    aget-object v4, v0, v1
-
-    iget-object v6, v13, Lcom/google/android/material/picker/RadialTimePickerView;->q:[F
-
-    iget-object v7, v13, Lcom/google/android/material/picker/RadialTimePickerView;->r:[F
-
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
-
-    aget-object v8, v0, v14
-
-    if-eqz p3, :cond_1
-
-    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
-
-    if-eqz v0, :cond_1
-
-    move v10, v15
-
-    goto :goto_1
-
-    :cond_1
-    move v10, v14
-
-    :goto_1
-    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
-
-    aget v11, v0, v14
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move/from16 v9, p2
-
-    move/from16 v12, p3
-
-    invoke-direct/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
-
-    :cond_2
-    return-void
-.end method
-
-.method private z(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
-    .locals 2
-
-    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
-
-    const/high16 v1, 0x437f0000    # 255.0f
-
-    mul-float/2addr v0, v1
-
-    mul-float/2addr v0, p3
-
-    const/high16 p3, 0x3f000000    # 0.5f
-
-    add-float/2addr v0, p3
-
-    float-to-int p3, v0
-
-    if-lez p3, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    sget-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p3, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->A(Landroid/graphics/Canvas;IZ)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
-
-    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p3, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->A(Landroid/graphics/Canvas;IZ)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public O(IIZ)V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
-
-    if-eq v0, p3, :cond_0
-
-    iput-boolean p3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
-
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
-
-    :cond_0
-    const/4 p3, 0x0
-
-    invoke-direct {p0, p1, p3, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
-
-    invoke-direct {p0, p2, p3}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
-
-    return-void
 .end method
 
 .method public R(I)Z
@@ -2896,6 +2249,77 @@
     const/4 p1, 0x0
 
     return p1
+.end method
+
+.method public final S(IZZ)V
+    .locals 4
+
+    rem-int/lit8 v0, p1, 0xc
+
+    mul-int/lit8 v0, v0, 0x1e
+
+    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
+
+    const/4 v2, 0x0
+
+    aput v0, v1, v2
+
+    if-eqz p1, :cond_1
+
+    rem-int/lit8 v0, p1, 0x18
+
+    const/16 v1, 0xc
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v2
+
+    :goto_1
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->H(I)Z
+
+    move-result v1
+
+    iget v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
+
+    if-ne v3, v0, :cond_2
+
+    iget-boolean v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
+
+    if-eq v3, v1, :cond_3
+
+    :cond_2
+    iput v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->P:I
+
+    iput-boolean v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
+
+    invoke-virtual {v0}, Landroidx/customview/widget/ExploreByTouchHelper;->k()V
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    if-eqz p2, :cond_4
+
+    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->R:Lcom/google/android/material/picker/RadialTimePickerView$a;
+
+    if-eqz p2, :cond_4
+
+    invoke-interface {p2, v2, p1, p3}, Lcom/google/android/material/picker/RadialTimePickerView$a;->a(IIZ)V
+
+    :cond_4
+    return-void
 .end method
 
 .method public T(IZ)V
@@ -2939,12 +2363,41 @@
     return-void
 .end method
 
+.method public final U(IZ)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
+
+    rem-int/lit8 v1, p1, 0x3c
+
+    mul-int/lit8 v1, v1, 0x6
+
+    const/4 v2, 0x1
+
+    aput v1, v0, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    if-eqz p2, :cond_0
+
+    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->R:Lcom/google/android/material/picker/RadialTimePickerView$a;
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, v2, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$a;->a(IIZ)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public V(Z)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->X(ZZ)V
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->X(ZZ)V
 
     return-void
 .end method
@@ -2954,7 +2407,71 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->X(ZZ)V
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->X(ZZ)V
+
+    return-void
+.end method
+
+.method public final X(ZZ)V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->w:Z
+
+    if-eqz p2, :cond_1
+
+    const-wide/16 v0, 0x1f4
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->q(ZJ)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->isStarted()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    const/4 p2, 0x0
+
+    iput-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_3
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    :goto_0
+    iput p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
+
+    :goto_1
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->M()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
+
+    invoke-virtual {p1}, Landroidx/customview/widget/ExploreByTouchHelper;->k()V
 
     return-void
 .end method
@@ -3001,7 +2518,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
 
-    invoke-direct {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->G(IZ)I
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->G(IZ)I
 
     move-result v0
 
@@ -3027,7 +2544,7 @@
 
     aget v0, v0, v1
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->J(I)I
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->J(I)I
 
     move-result v0
 
@@ -3057,22 +2574,22 @@
     iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->Q:F
 
     :goto_0
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->w(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView;->w(Landroid/graphics/Canvas;)V
 
     iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->u:Landroid/graphics/Path;
 
-    invoke-direct {p0, p1, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->B(Landroid/graphics/Canvas;Landroid/graphics/Path;)V
+    invoke-virtual {p0, p1, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->B(Landroid/graphics/Canvas;Landroid/graphics/Path;)V
 
-    invoke-direct {p0, p1, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->x(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
+    invoke-virtual {p0, p1, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->x(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
 
-    invoke-direct {p0, p1, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->z(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
+    invoke-virtual {p0, p1, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->z(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->v(Landroid/graphics/Canvas;F)V
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->v(Landroid/graphics/Canvas;F)V
 
     return-void
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 1
 
     if-nez p1, :cond_0
@@ -3170,9 +2687,9 @@
 
     iput p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->L:I
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->t()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->t()V
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->u()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->u()V
 
     iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->t:Lcom/google/android/material/picker/RadialTimePickerView$b;
 
@@ -3205,7 +2722,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
+    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/material/picker/RadialTimePickerView;->F(FFZ)I
 
     move-result v0
 
@@ -3242,7 +2759,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    invoke-direct {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->P()Z
+    invoke-virtual {p0}, Lcom/google/android/material/picker/RadialTimePickerView;->P()Z
 
     move-result v0
 
@@ -3318,7 +2835,7 @@
 
     move-result p1
 
-    invoke-direct {p0, v4, p1, v2, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->L(FFZZ)Z
+    invoke-virtual {p0, v4, p1, v2, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->L(FFZZ)Z
 
     move-result p1
 
@@ -3330,7 +2847,81 @@
     return v1
 .end method
 
-.method r(Landroid/util/AttributeSet;II)V
+.method public final q(ZJ)V
+    .locals 3
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    :goto_0
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
+
+    cmpl-float v1, v0, p1
+
+    if-nez v1, :cond_2
+
+    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isStarted()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    :cond_1
+    return-void
+
+    :cond_2
+    const/4 v1, 0x2
+
+    new-array v1, v1, [F
+
+    const/4 v2, 0x0
+
+    aput v0, v1, v2
+
+    const/4 v0, 0x1
+
+    aput p1, v1, v0
+
+    const-string p1, "HoursToMinutes"
+
+    invoke-static {p0, p1, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1, p2, p3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->x:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
+
+    return-void
+.end method
+
+.method public r(Landroid/util/AttributeSet;II)V
     .locals 4
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -3341,19 +2932,19 @@
 
     move-result-object v1
 
-    sget-object v2, Lb/a/b/a/l;->TimePicker:[I
+    sget-object v2, Lc/b/b/b/l;->TimePicker:[I
 
     invoke-virtual {v1, p1, v2, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/l;->TimePicker_numbersTextColor:I
+    sget p2, Lc/b/b/b/l;->TimePicker_numbersTextColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
-    sget p3, Lb/a/b/a/l;->TimePicker_numbersInnerTextColor:I
+    sget p3, Lc/b/b/b/l;->TimePicker_numbersInnerTextColor:I
 
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -3395,7 +2986,7 @@
 
     aput-object v1, p2, p3
 
-    sget p2, Lb/a/b/a/l;->TimePicker_android_numbersSelectorColor:I
+    sget p2, Lc/b/b/b/l;->TimePicker_android_numbersSelectorColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -3436,13 +3027,13 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->j:Landroid/graphics/Paint;
 
-    sget p3, Lb/a/b/a/l;->TimePicker_android_numbersBackgroundColor:I
+    sget p3, Lc/b/b/b/l;->TimePicker_android_numbersBackgroundColor:I
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/c;->timepicker_default_numbers_background_color_material:I
+    sget v1, Lc/b/b/b/c;->timepicker_default_numbers_background_color_material:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -3466,7 +3057,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView;->S(IZZ)V
 
     return-void
 .end method
@@ -3476,7 +3067,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->U(IZ)V
 
     return-void
 .end method
@@ -3506,5 +3097,419 @@
 
     iput-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->R:Lcom/google/android/material/picker/RadialTimePickerView$a;
 
+    return-void
+.end method
+
+.method public final t()V
+    .locals 11
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
+
+    sub-int/2addr v0, v1
+
+    int-to-float v4, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
+
+    aget-object v3, v0, v2
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    int-to-float v5, v0
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    int-to-float v6, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
+
+    aget v0, v0, v2
+
+    int-to-float v7, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
+
+    aget-object v8, v0, v2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
+
+    aget-object v9, v0, v2
+
+    invoke-static/range {v3 .. v9}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
+
+    iget-boolean v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
+
+    const/4 v3, 0x2
+
+    aget v1, v1, v3
+
+    sub-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
+
+    aget-object v4, v1, v2
+
+    int-to-float v5, v0
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    int-to-float v6, v0
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    int-to-float v7, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
+
+    aget v0, v0, v3
+
+    int-to-float v8, v0
+
+    iget-object v9, p0, Lcom/google/android/material/picker/RadialTimePickerView;->q:[F
+
+    iget-object v10, p0, Lcom/google/android/material/picker/RadialTimePickerView;->r:[F
+
+    invoke-static/range {v4 .. v10}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final u()V
+    .locals 10
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
+
+    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->n:[I
+
+    const/4 v2, 0x1
+
+    aget v1, v1, v2
+
+    sub-int/2addr v0, v1
+
+    int-to-float v4, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
+
+    aget-object v3, v0, v2
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    int-to-float v5, v0
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    int-to-float v6, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
+
+    aget v0, v0, v2
+
+    int-to-float v7, v0
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
+
+    aget-object v8, v0, v2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
+
+    aget-object v9, v0, v2
+
+    invoke-static/range {v3 .. v9}, Lcom/google/android/material/picker/RadialTimePickerView;->s(Landroid/graphics/Paint;FFFF[F[F)V
+
+    return-void
+.end method
+
+.method public final v(Landroid/graphics/Canvas;F)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->h:Landroid/graphics/Paint;
+
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    mul-float/2addr p2, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    add-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    iget p2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    int-to-float p2, p2
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->D:I
+
+    int-to-float v1, v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->h:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p2, v0, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final w(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->G:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/google/android/material/picker/RadialTimePickerView;->H:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/google/android/material/picker/RadialTimePickerView;->I:I
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcom/google/android/material/picker/RadialTimePickerView;->j:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final x(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
+    .locals 2
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v1, v0
+
+    const/high16 v0, 0x437f0000    # 255.0f
+
+    mul-float/2addr v1, v0
+
+    mul-float/2addr v1, p3
+
+    const/high16 p3, 0x3f000000    # 0.5f
+
+    add-float/2addr v1, p3
+
+    float-to-int p3, v1
+
+    if-lez p3, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    sget-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, p3, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->y(Landroid/graphics/Canvas;IZ)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p0, p1, p3, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->y(Landroid/graphics/Canvas;IZ)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final y(Landroid/graphics/Canvas;IZ)V
+    .locals 16
+
+    move-object/from16 v13, p0
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
+
+    const/4 v14, 0x0
+
+    aget v0, v0, v14
+
+    int-to-float v2, v0
+
+    iget-object v3, v13, Lcom/google/android/material/picker/RadialTimePickerView;->k:Landroid/graphics/Typeface;
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->l:[Landroid/content/res/ColorStateList;
+
+    aget-object v4, v0, v14
+
+    iget-object v5, v13, Lcom/google/android/material/picker/RadialTimePickerView;->M:[Ljava/lang/String;
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->o:[[F
+
+    aget-object v6, v0, v14
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->p:[[F
+
+    aget-object v7, v0, v14
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
+
+    aget-object v8, v0, v14
+
+    const/4 v15, 0x1
+
+    if-eqz p3, :cond_0
+
+    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
+
+    if-nez v0, :cond_0
+
+    move v10, v15
+
+    goto :goto_0
+
+    :cond_0
+    move v10, v14
+
+    :goto_0
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
+
+    aget v11, v0, v14
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v9, p2
+
+    move/from16 v12, p3
+
+    invoke-virtual/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
+
+    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->v:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v5, v13, Lcom/google/android/material/picker/RadialTimePickerView;->N:[Ljava/lang/String;
+
+    if-eqz v5, :cond_2
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->m:[I
+
+    const/4 v1, 0x2
+
+    aget v0, v0, v1
+
+    int-to-float v2, v0
+
+    iget-object v3, v13, Lcom/google/android/material/picker/RadialTimePickerView;->k:Landroid/graphics/Typeface;
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->l:[Landroid/content/res/ColorStateList;
+
+    aget-object v4, v0, v1
+
+    iget-object v6, v13, Lcom/google/android/material/picker/RadialTimePickerView;->q:[F
+
+    iget-object v7, v13, Lcom/google/android/material/picker/RadialTimePickerView;->r:[F
+
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->g:[Landroid/graphics/Paint;
+
+    aget-object v8, v0, v14
+
+    if-eqz p3, :cond_1
+
+    iget-boolean v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->z:Z
+
+    if-eqz v0, :cond_1
+
+    move v10, v15
+
+    goto :goto_1
+
+    :cond_1
+    move v10, v14
+
+    :goto_1
+    iget-object v0, v13, Lcom/google/android/material/picker/RadialTimePickerView;->s:[I
+
+    aget v11, v0, v14
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v9, p2
+
+    move/from16 v12, p3
+
+    invoke-virtual/range {v0 .. v12}, Lcom/google/android/material/picker/RadialTimePickerView;->C(Landroid/graphics/Canvas;FLandroid/graphics/Typeface;Landroid/content/res/ColorStateList;[Ljava/lang/String;[F[FLandroid/graphics/Paint;IZIZ)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final z(Landroid/graphics/Canvas;Landroid/graphics/Path;F)V
+    .locals 2
+
+    iget v0, p0, Lcom/google/android/material/picker/RadialTimePickerView;->y:F
+
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    mul-float/2addr v0, v1
+
+    mul-float/2addr v0, p3
+
+    const/high16 p3, 0x3f000000    # 0.5f
+
+    add-float/2addr v0, p3
+
+    float-to-int p3, v0
+
+    if-lez p3, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    sget-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, p3, v0}, Lcom/google/android/material/picker/RadialTimePickerView;->A(Landroid/graphics/Canvas;IZ)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p0, p1, p3, p2}, Lcom/google/android/material/picker/RadialTimePickerView;->A(Landroid/graphics/Canvas;IZ)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    :cond_0
     return-void
 .end method

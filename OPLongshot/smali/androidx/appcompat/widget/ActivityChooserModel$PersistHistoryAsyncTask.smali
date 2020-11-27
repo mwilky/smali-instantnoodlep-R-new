@@ -1,6 +1,6 @@
-.class final Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;
+.class public final Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x12
+    accessFlags = 0x11
     name = "PersistHistoryAsyncTask"
 .end annotation
 
@@ -25,11 +25,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserModel;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserModel;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserModel;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserModel;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;->this$0:Landroidx/appcompat/widget/ActivityChooserModel;

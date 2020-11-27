@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AlertController$AlertParams$c;
+.class public Landroidx/appcompat/app/AlertController$AlertParams$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/app/AlertController;
+.field public final synthetic a:Landroidx/appcompat/app/AlertController;
 
-.field final synthetic b:Landroidx/appcompat/app/AlertController$RecycleListView;
+.field public final synthetic b:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-.field final synthetic c:Landroidx/appcompat/app/AlertController$AlertParams;
+.field public final synthetic c:Landroidx/appcompat/app/AlertController$AlertParams;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;Landroidx/appcompat/app/AlertController$RecycleListView;)V
+.method public constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;Landroidx/appcompat/app/AlertController$RecycleListView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$c;->c:Landroidx/appcompat/app/AlertController$AlertParams;
@@ -60,7 +60,7 @@
 
     iget-object p4, p0, Landroidx/appcompat/app/AlertController$AlertParams$c;->a:Landroidx/appcompat/app/AlertController;
 
-    iget-object p4, p4, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object p4, p4, Landroidx/appcompat/app/AlertController;->b:Lb/c/k/d;
 
     invoke-interface {p1, p4, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
@@ -134,7 +134,7 @@
 
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$c;->a:Landroidx/appcompat/app/AlertController;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Lb/c/k/d;
 
     invoke-virtual {p1}, Landroid/app/Dialog;->dismiss()V
 

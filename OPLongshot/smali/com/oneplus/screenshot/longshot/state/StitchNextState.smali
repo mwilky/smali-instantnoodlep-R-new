@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.StitchNextState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchNextState"
 
 
 # instance fields
-.field private mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
+.field public mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 7
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -115,7 +115,7 @@
     return-object v0
 .end method
 
-.method protected getFailedText()Ljava/lang/String;
+.method public getFailedText()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Features;->SHOW_JOIN_ERROR:Lcom/oneplus/screenshot/longshot/util/Features;
@@ -140,7 +140,7 @@
     return-object v0
 .end method
 
-.method protected getPageText()Ljava/lang/String;
+.method public getPageText()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10003e
+    const v1, 0x7f100046
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -176,7 +176,7 @@
     return-object v0
 .end method
 
-.method protected getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 2
 
     const-string v0, "Longshot.StitchNextState"
@@ -225,7 +225,7 @@
     return-object v0
 .end method
 
-.method protected getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
@@ -242,7 +242,7 @@
     return-object v0
 .end method
 
-.method protected getSuccessText()Ljava/lang/String;
+.method public getSuccessText()Ljava/lang/String;
     .locals 1
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/state/StitchNextState;->getPageText()Ljava/lang/String;
@@ -282,7 +282,7 @@
     return-void
 .end method
 
-.method protected updateIndex()V
+.method public updateIndex()V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;

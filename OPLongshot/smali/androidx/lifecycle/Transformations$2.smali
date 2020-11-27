@@ -1,6 +1,6 @@
-.class final Landroidx/lifecycle/Transformations$2;
+.class public final Landroidx/lifecycle/Transformations$2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field mSource:Landroidx/lifecycle/LiveData;
+.field public mSource:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/LiveData<",
@@ -26,13 +26,13 @@
     .end annotation
 .end field
 
-.field final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
+.field public final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
 
-.field final synthetic val$switchMapFunction:Landroidx/arch/core/util/Function;
+.field public final synthetic val$switchMapFunction:Landroidx/arch/core/util/Function;
 
 
 # direct methods
-.method constructor <init>(Landroidx/arch/core/util/Function;Landroidx/lifecycle/MediatorLiveData;)V
+.method public constructor <init>(Landroidx/arch/core/util/Function;Landroidx/lifecycle/MediatorLiveData;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/Transformations$2;->val$switchMapFunction:Landroidx/arch/core/util/Function;

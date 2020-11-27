@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$o;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$o;
 .super Landroidx/appcompat/widget/ContentFrameLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "o"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
@@ -29,7 +29,9 @@
     return-void
 .end method
 
-.method private a(II)Z
+
+# virtual methods
+.method public final a(II)Z
     .locals 1
 
     const/4 v0, -0x5
@@ -69,8 +71,6 @@
     return p1
 .end method
 
-
-# virtual methods
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
@@ -124,7 +124,7 @@
 
     float-to-int v1, v1
 
-    invoke-direct {p0, v0, v1}, Landroidx/appcompat/app/AppCompatDelegateImpl$o;->a(II)Z
+    invoke-virtual {p0, v0, v1}, Landroidx/appcompat/app/AppCompatDelegateImpl$o;->a(II)Z
 
     move-result v0
 

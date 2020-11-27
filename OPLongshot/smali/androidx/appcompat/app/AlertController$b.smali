@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AlertController$b;
+.class public Landroidx/appcompat/app/AlertController$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnApplyWindowInsetsListener;
@@ -8,23 +8,23 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/app/AlertController;->B()V
+    value = Landroidx/appcompat/app/AlertController;->C()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field public final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Landroidx/appcompat/app/AlertController;
+.field public final synthetic b:Landroidx/appcompat/app/AlertController;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$b;->b:Landroidx/appcompat/app/AlertController;
@@ -57,7 +57,7 @@
 
     move-result-object p1
 
-    sget v0, La/a/d;->oneplus_alert_dialog_round_padding:I
+    sget v0, Lb/c/d;->oneplus_alert_dialog_round_padding:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

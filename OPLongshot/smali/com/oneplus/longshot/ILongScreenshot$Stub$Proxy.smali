@@ -1,6 +1,6 @@
-.class Lcom/oneplus/longshot/ILongScreenshot$Stub$Proxy;
+.class public Lcom/oneplus/longshot/ILongScreenshot$Stub$Proxy;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "Proxy"
 .end annotation
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field private mRemote:Landroid/os/IBinder;
+.field public mRemote:Landroid/os/IBinder;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

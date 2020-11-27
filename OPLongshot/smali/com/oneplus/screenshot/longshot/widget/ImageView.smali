@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/ImageView;
 .super Landroid/view/View;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -13,19 +13,19 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.ImageView"
+.field public static final TAG:Ljava/lang/String; = "Longshot.ImageView"
 
-.field private static final TOUCH_MODE_FLING:I = 0x2
+.field public static final TOUCH_MODE_FLING:I = 0x2
 
-.field private static final TOUCH_MODE_IDLE:I = 0x0
+.field public static final TOUCH_MODE_IDLE:I = 0x0
 
-.field private static final TOUCH_MODE_SCROLL:I = 0x1
+.field public static final TOUCH_MODE_SCROLL:I = 0x1
 
 
 # instance fields
-.field private mAnimationDuration:I
+.field public mAnimationDuration:I
 
-.field private mBitmaps:Ljava/util/List;
+.field public mBitmaps:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -35,23 +35,23 @@
     .end annotation
 .end field
 
-.field private mBottomY:I
+.field public mBottomY:I
 
-.field private mDrawPadding:Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;
+.field public mDrawPadding:Lcom/oneplus/screenshot/longshot/bitmap/DrawPadding;
 
-.field private mFlingRunnable:Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
+.field public mFlingRunnable:Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
 
-.field private mGestureDetector:Landroid/view/GestureDetector;
+.field public mGestureDetector:Landroid/view/GestureDetector;
 
-.field private mImageHeight:I
+.field public mImageHeight:I
 
-.field protected mIsFirstScroll:Z
+.field public mIsFirstScroll:Z
 
-.field protected mNavBarHeight:I
+.field public mNavBarHeight:I
 
-.field private mOffsetY:I
+.field public mOffsetY:I
 
-.field protected mTouchMode:I
+.field public mTouchMode:I
 
 
 # direct methods
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/widget/ImageView;)Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
+.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/widget/ImageView;)Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mFlingRunnable:Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
@@ -145,7 +145,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/widget/ImageView;I)V
+.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/widget/ImageView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->trackMotionScroll(I)V
@@ -153,7 +153,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/widget/ImageView;)I
+.method public static synthetic access$300(Lcom/oneplus/screenshot/longshot/widget/ImageView;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/screenshot/longshot/widget/ImageView;->mAnimationDuration:I
@@ -161,7 +161,7 @@
     return p0
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/screenshot/longshot/widget/ImageView;)V
+.method public static synthetic access$400(Lcom/oneplus/screenshot/longshot/widget/ImageView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->scrollIntoSlots()V
@@ -311,33 +311,39 @@
 
     if-gez p1, :cond_0
 
+    invoke-direct {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
+
+    move-result p1
+
     goto :goto_0
 
     :cond_0
     if-le p1, v0, :cond_3
 
-    goto :goto_1
+    invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
+
+    move-result p1
+
+    goto :goto_0
 
     :cond_1
     if-lez p1, :cond_2
 
-    :goto_0
     invoke-direct {p0, v1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
 
     move-result p1
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_2
     if-ge p1, v0, :cond_3
 
-    :goto_1
     invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->endFlingAtEdge(I)I
 
     move-result p1
 
     :cond_3
-    :goto_2
+    :goto_0
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->setOffsetY(I)V
 
     invoke-virtual {p0, v1, v1, v1, v1}, Landroid/view/View;->onScrollChanged(IIII)V
@@ -349,7 +355,7 @@
 
 
 # virtual methods
-.method protected createGestureListener()Landroid/view/GestureDetector$OnGestureListener;
+.method public createGestureListener()Landroid/view/GestureDetector$OnGestureListener;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;
@@ -375,7 +381,7 @@
     return v0
 .end method
 
-.method protected onCancel()V
+.method public onCancel()V
     .locals 0
 
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/widget/ImageView;->onUp()V
@@ -383,7 +389,7 @@
     return-void
 .end method
 
-.method protected onDraw(Landroid/graphics/Canvas;)V
+.method public onDraw(Landroid/graphics/Canvas;)V
     .locals 8
 
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
@@ -482,7 +488,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
@@ -574,7 +580,7 @@
     return p1
 .end method
 
-.method protected onUp()V
+.method public onUp()V
     .locals 1
 
     const/4 v0, 0x0

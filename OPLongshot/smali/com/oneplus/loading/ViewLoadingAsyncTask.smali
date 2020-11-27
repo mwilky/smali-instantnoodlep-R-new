@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/loading/ViewLoadingAsyncTask;
 .super Lcom/oneplus/loading/LoadingAsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private mProgressView:Landroid/view/View;
+.field public mProgressView:Landroid/view/View;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method protected hideProgree(Ljava/lang/Object;)V
+.method public hideProgree(Ljava/lang/Object;)V
     .locals 1
 
     iget-object p1, p0, Lcom/oneplus/loading/ViewLoadingAsyncTask;->mProgressView:Landroid/view/View;
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method protected showProgree()Ljava/lang/Object;
+.method public showProgree()Ljava/lang/Object;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/loading/ViewLoadingAsyncTask;->mProgressView:Landroid/view/View;

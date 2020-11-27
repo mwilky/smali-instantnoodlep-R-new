@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/MoveNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsMoveState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.MoveNextState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.MoveNextState"
 
 
 # direct methods
@@ -126,7 +126,7 @@
 
 
 # virtual methods
-.method protected getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 4
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/state/MoveNextState;->getShotNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;

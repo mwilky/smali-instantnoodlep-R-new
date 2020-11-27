@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,26 +16,26 @@
 
 
 # static fields
-.field protected static final ENTER_ANIMATION_DURATION:I = 0xe1
+.field public static final ENTER_ANIMATION_DURATION:I = 0xe1
 
-.field protected static final EXIT_ANIMATION_DURATION:I = 0xaf
+.field public static final EXIT_ANIMATION_DURATION:I = 0xaf
 
-.field private static final STATE_SCROLLED_DOWN:I = 0x1
+.field public static final STATE_SCROLLED_DOWN:I = 0x1
 
-.field private static final STATE_SCROLLED_UP:I = 0x2
+.field public static final STATE_SCROLLED_UP:I = 0x2
 
 
 # instance fields
-.field private additionalHiddenOffsetY:I
+.field public additionalHiddenOffsetY:I
 
-.field private currentAnimator:Landroid/view/ViewPropertyAnimator;
+.field public currentAnimator:Landroid/view/ViewPropertyAnimator;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private currentState:I
+.field public currentState:I
 
-.field private height:I
+.field public height:I
 
 
 # direct methods
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
+.method public static synthetic access$002(Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;Landroid/view/ViewPropertyAnimator;)Landroid/view/ViewPropertyAnimator;
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->currentAnimator:Landroid/view/ViewPropertyAnimator;

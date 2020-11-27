@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations

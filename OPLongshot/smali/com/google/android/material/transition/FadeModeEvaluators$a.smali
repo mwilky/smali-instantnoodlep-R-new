@@ -1,9 +1,9 @@
-.class final Lcom/google/android/material/transition/FadeModeEvaluators$a;
+.class public final Lcom/google/android/material/transition/FadeModeEvaluators$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Lcom/google/android/material/transition/a;
+.implements Lc/b/b/b/l0/a;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(FFF)Lcom/google/android/material/transition/b;
+.method public a(FFF)Lc/b/b/b/l0/b;
     .locals 2
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     move-result p1
 
-    invoke-static {v1, p1}, Lcom/google/android/material/transition/b;->a(II)Lcom/google/android/material/transition/b;
+    invoke-static {v1, p1}, Lc/b/b/b/l0/b;->a(II)Lc/b/b/b/l0/b;
 
     move-result-object p1
 

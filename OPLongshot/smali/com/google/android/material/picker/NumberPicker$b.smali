@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$b;
+.class public Lcom/google/android/material/picker/NumberPicker$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/NumberPicker;
+.field public final synthetic a:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$b;->a:Lcom/google/android/material/picker/NumberPicker;
@@ -53,7 +53,7 @@
 
     move-result p1
 
-    sget v0, Lb/a/b/a/f;->increment:I
+    sget v0, Lc/b/b/b/f;->increment:I
 
     const/4 v1, 0x1
 

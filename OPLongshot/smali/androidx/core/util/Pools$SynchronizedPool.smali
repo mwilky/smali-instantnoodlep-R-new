@@ -1,6 +1,6 @@
 .class public Landroidx/core/util/Pools$SynchronizedPool;
 .super Landroidx/core/util/Pools$SimplePool;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
 
 # direct methods

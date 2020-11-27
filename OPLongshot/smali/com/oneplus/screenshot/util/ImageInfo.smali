@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/ImageInfo;
 .super Lcom/oneplus/screenshot/util/FileInfo;
-.source ""
+.source "SourceFile"
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method protected getSuffix()Ljava/lang/String;
+.method public getSuffix()Ljava/lang/String;
     .locals 1
 
     const-string v0, ".png"

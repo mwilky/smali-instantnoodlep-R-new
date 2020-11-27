@@ -1,6 +1,6 @@
-.class Landroidx/arch/core/executor/DefaultTaskExecutor$a;
+.class public Landroidx/arch/core/executor/DefaultTaskExecutor$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method constructor <init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
+.method public constructor <init>(Landroidx/arch/core/executor/DefaultTaskExecutor;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

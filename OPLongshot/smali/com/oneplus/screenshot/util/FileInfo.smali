@@ -1,34 +1,34 @@
 .class public abstract Lcom/oneplus/screenshot/util/FileInfo;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "FileInfo"
+.field public static final TAG:Ljava/lang/String; = "FileInfo"
 
-.field private static final TEMPLATE_FILE_NAME:Ljava/lang/String; = "_%s"
+.field public static final TEMPLATE_FILE_NAME:Ljava/lang/String; = "_%s"
 
-.field private static final TEMPLATE_FILE_NAME_2:Ljava/lang/String; = "_%s_%s"
+.field public static final TEMPLATE_FILE_NAME_2:Ljava/lang/String; = "_%s_%s"
 
-.field private static final TEMPLATE_FILE_PATH:Ljava/lang/String; = "%s/%s/%s"
+.field public static final TEMPLATE_FILE_PATH:Ljava/lang/String; = "%s/%s/%s"
 
 
 # instance fields
-.field private mDirName:Ljava/lang/String;
+.field public mDirName:Ljava/lang/String;
 
-.field private mFormatter:Ljava/text/DateFormat;
+.field public mFormatter:Ljava/text/DateFormat;
 
-.field private mName:Ljava/lang/String;
+.field public mName:Ljava/lang/String;
 
-.field private mPath:Ljava/lang/String;
+.field public mPath:Ljava/lang/String;
 
-.field private mTime:J
+.field public mTime:J
 
-.field private mUri:Landroid/net/Uri;
+.field public mUri:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -294,7 +294,7 @@
     return-object v0
 .end method
 
-.method protected abstract getSuffix()Ljava/lang/String;
+.method public abstract getSuffix()Ljava/lang/String;
 .end method
 
 .method public getTime()J

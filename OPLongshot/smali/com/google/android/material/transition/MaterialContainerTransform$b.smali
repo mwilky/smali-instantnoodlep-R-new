@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/transition/MaterialContainerTransform$b;
+.class public Lcom/google/android/material/transition/MaterialContainerTransform$b;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field public final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lcom/google/android/material/transition/MaterialContainerTransform$e;
+.field public final synthetic b:Lcom/google/android/material/transition/MaterialContainerTransform$e;
 
-.field final synthetic c:Landroid/view/View;
+.field public final synthetic c:Landroid/view/View;
 
-.field final synthetic d:Landroid/view/View;
+.field public final synthetic d:Landroid/view/View;
 
-.field final synthetic e:Lcom/google/android/material/transition/MaterialContainerTransform;
+.field public final synthetic e:Lcom/google/android/material/transition/MaterialContainerTransform;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransform;Landroid/view/View;Lcom/google/android/material/transition/MaterialContainerTransform$e;Landroid/view/View;Landroid/view/View;)V
+.method public constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransform;Landroid/view/View;Lcom/google/android/material/transition/MaterialContainerTransform$e;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transition/MaterialContainerTransform$b;->e:Lcom/google/android/material/transition/MaterialContainerTransform;

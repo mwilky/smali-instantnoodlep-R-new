@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -17,15 +17,15 @@
 
 
 # static fields
-.field private static final STATE_COLLAPSED:I = 0x2
+.field public static final STATE_COLLAPSED:I = 0x2
 
-.field private static final STATE_EXPANDED:I = 0x1
+.field public static final STATE_EXPANDED:I = 0x1
 
-.field private static final STATE_UNINITIALIZED:I
+.field public static final STATE_UNINITIALIZED:I
 
 
 # instance fields
-.field private currentState:I
+.field public currentState:I
 
 
 # direct methods
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/transformation/ExpandableBehavior;)I
+.method public static synthetic access$000(Lcom/google/android/material/transformation/ExpandableBehavior;)I
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/transformation/ExpandableBehavior;->currentState:I
@@ -166,7 +166,7 @@
 
 
 # virtual methods
-.method protected findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lb/a/b/a/o/a;
+.method public findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lc/b/b/b/w/a;
     .locals 5
     .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
         .annotation build Landroidx/annotation/NonNull;
@@ -204,7 +204,7 @@
 
     if-eqz v4, :cond_0
 
-    check-cast v3, Lb/a/b/a/o/a;
+    check-cast v3, Lc/b/b/b/w/a;
 
     return-object v3
 
@@ -227,9 +227,9 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
-    check-cast p3, Lb/a/b/a/o/a;
+    check-cast p3, Lc/b/b/b/w/a;
 
-    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
+    invoke-interface {p3}, Lc/b/b/b/w/a;->a()Z
 
     move-result p1
 
@@ -239,7 +239,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
+    invoke-interface {p3}, Lc/b/b/b/w/a;->a()Z
 
     move-result p1
 
@@ -261,7 +261,7 @@
 
     check-cast p1, Landroid/view/View;
 
-    invoke-interface {p3}, Lb/a/b/a/o/a;->a()Z
+    invoke-interface {p3}, Lc/b/b/b/w/a;->a()Z
 
     move-result p3
 
@@ -277,7 +277,7 @@
     return p1
 .end method
 
-.method protected abstract onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
+.method public abstract onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
 .end method
 
 .method public onLayoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
@@ -299,13 +299,13 @@
 
     if-nez p3, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableBehavior;->findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lb/a/b/a/o/a;
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableBehavior;->findExpandableWidget(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Lc/b/b/b/w/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lb/a/b/a/o/a;->a()Z
+    invoke-interface {p1}, Lc/b/b/b/w/a;->a()Z
 
     move-result p3
 
@@ -315,7 +315,7 @@
 
     if-eqz p3, :cond_1
 
-    invoke-interface {p1}, Lb/a/b/a/o/a;->a()Z
+    invoke-interface {p1}, Lc/b/b/b/w/a;->a()Z
 
     move-result p3
 
@@ -337,7 +337,7 @@
 
     new-instance v1, Lcom/google/android/material/transformation/ExpandableBehavior$a;
 
-    invoke-direct {v1, p0, p2, p3, p1}, Lcom/google/android/material/transformation/ExpandableBehavior$a;-><init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILb/a/b/a/o/a;)V
+    invoke-direct {v1, p0, p2, p3, p1}, Lcom/google/android/material/transformation/ExpandableBehavior$a;-><init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILc/b/b/b/w/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 

@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/snackbar/BaseTransientBottomBar$a;
+.class public Lcom/google/android/material/snackbar/BaseTransientBottomBar$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private a:I
+.field public a:I
 
-.field final synthetic b:I
+.field public final synthetic b:I
 
-.field final synthetic c:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+.field public final synthetic c:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
+.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$a;->c:Lcom/google/android/material/snackbar/BaseTransientBottomBar;

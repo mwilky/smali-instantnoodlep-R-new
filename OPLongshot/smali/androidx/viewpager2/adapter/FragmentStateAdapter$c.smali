@@ -1,6 +1,6 @@
-.class Landroidx/viewpager2/adapter/FragmentStateAdapter$c;
+.class public Landroidx/viewpager2/adapter/FragmentStateAdapter$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/viewpager2/adapter/FragmentStateAdapter;
+.field public final synthetic a:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;)V
+.method public constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$c;->a:Landroidx/viewpager2/adapter/FragmentStateAdapter;

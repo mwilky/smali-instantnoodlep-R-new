@@ -1,6 +1,6 @@
-.class Landroidx/animation/PathKeyframes$d;
+.class public Landroidx/animation/PathKeyframes$d;
 .super Landroidx/animation/PathKeyframes$IntKeyframesBase;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/animation/PathKeyframes;
+.field public final synthetic a:Landroidx/animation/PathKeyframes;
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/PathKeyframes;)V
+.method public constructor <init>(Landroidx/animation/PathKeyframes;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/animation/PathKeyframes$d;->a:Landroidx/animation/PathKeyframes;

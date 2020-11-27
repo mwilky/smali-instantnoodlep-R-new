@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$a;
+.class public Lcom/google/android/material/picker/NumberPicker$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/NumberPicker;
+.field public final synthetic a:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$a;->a:Lcom/google/android/material/picker/NumberPicker;
@@ -53,13 +53,15 @@
 
     move-result p1
 
-    sget v0, Lb/a/b/a/f;->increment:I
+    sget v0, Lc/b/b/b/f;->increment:I
 
     if-ne p1, v0, :cond_0
 
     iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$a;->a:Lcom/google/android/material/picker/NumberPicker;
 
     const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/google/android/material/picker/NumberPicker;->o(Lcom/google/android/material/picker/NumberPicker;Z)V
 
     goto :goto_0
 
@@ -68,8 +70,8 @@
 
     const/4 v0, 0x0
 
-    :goto_0
     invoke-static {p1, v0}, Lcom/google/android/material/picker/NumberPicker;->o(Lcom/google/android/material/picker/NumberPicker;Z)V
 
+    :goto_0
     return-void
 .end method

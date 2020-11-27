@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/CacheFactory$1;
+.class public Lcom/google/tagmanager/CacheFactory$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/tagmanager/CacheFactory;
+.field public final synthetic this$0:Lcom/google/tagmanager/CacheFactory;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/tagmanager/CacheFactory;)V
+.method public constructor <init>(Lcom/google/tagmanager/CacheFactory;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/tagmanager/CacheFactory$1;->this$0:Lcom/google/tagmanager/CacheFactory;

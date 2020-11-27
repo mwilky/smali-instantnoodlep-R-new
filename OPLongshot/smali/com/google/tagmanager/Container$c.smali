@@ -1,9 +1,6 @@
-.class Lcom/google/tagmanager/Container$c;
+.class public interface abstract Lcom/google/tagmanager/Container$c;
 .super Ljava/lang/Object;
-.source ""
-
-# interfaces
-.implements Lcom/google/tagmanager/m$a;
+.source "SourceFile"
 
 
 # annotations
@@ -12,24 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x609
     name = "c"
 .end annotation
 
 
-# direct methods
-.method private constructor <init>(Lcom/google/tagmanager/Container;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/google/tagmanager/Container;Lcom/google/tagmanager/j;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/tagmanager/Container$c;-><init>(Lcom/google/tagmanager/Container;)V
-
-    return-void
+# virtual methods
+.method public abstract a(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
 .end method

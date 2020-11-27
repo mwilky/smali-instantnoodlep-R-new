@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$l;
+.class public Lcom/google/android/material/picker/NumberPicker$l;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/picker/NumberPicker$g;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "l"
 .end annotation
 
 
 # instance fields
-.field final a:Ljava/lang/StringBuilder;
+.field public final a:Ljava/lang/StringBuilder;
 
-.field b:Ljava/util/Formatter;
+.field public b:Ljava/util/Formatter;
 
-.field final c:[Ljava/lang/Object;
+.field public final c:[Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,31 +47,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker$l;->c(Ljava/util/Locale;)V
-
-    return-void
-.end method
-
-.method private b(Ljava/util/Locale;)Ljava/util/Formatter;
-    .locals 2
-
-    new-instance v0, Ljava/util/Formatter;
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$l;->a:Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1, p1}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;Ljava/util/Locale;)V
-
-    return-object v0
-.end method
-
-.method private c(Ljava/util/Locale;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/NumberPicker$l;->b(Ljava/util/Locale;)Ljava/util/Formatter;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$l;->b:Ljava/util/Formatter;
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker$l;->c(Ljava/util/Locale;)V
 
     return-void
 .end method
@@ -85,7 +61,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/google/android/material/picker/NumberPicker$l;->c(Ljava/util/Locale;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker$l;->c(Ljava/util/Locale;)V
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$l;->c:[Ljava/lang/Object;
 
@@ -120,4 +96,28 @@
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final b(Ljava/util/Locale;)Ljava/util/Formatter;
+    .locals 2
+
+    new-instance v0, Ljava/util/Formatter;
+
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$l;->a:Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v1, p1}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;Ljava/util/Locale;)V
+
+    return-object v0
+.end method
+
+.method public final c(Ljava/util/Locale;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/NumberPicker$l;->b(Ljava/util/Locale;)Ljava/util/Formatter;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$l;->b:Ljava/util/Formatter;
+
+    return-void
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/ManufacturerUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,15 +12,15 @@
 
 
 # static fields
-.field private static final LGE:Ljava/lang/String; = "lge"
+.field public static final LGE:Ljava/lang/String; = "lge"
 
-.field private static final MEIZU:Ljava/lang/String; = "meizu"
+.field public static final MEIZU:Ljava/lang/String; = "meizu"
 
-.field private static final SAMSUNG:Ljava/lang/String; = "samsung"
+.field public static final SAMSUNG:Ljava/lang/String; = "samsung"
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

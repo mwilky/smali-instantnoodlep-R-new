@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/GridLayoutManager$b;
 .super Landroidx/recyclerview/widget/RecyclerView$l;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
 
 # direct methods

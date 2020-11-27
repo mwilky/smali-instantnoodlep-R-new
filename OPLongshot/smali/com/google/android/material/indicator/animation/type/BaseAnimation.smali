@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/indicator/animation/type/BaseAnimation;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field protected animationDuration:J
+.field public animationDuration:J
 
-.field protected animator:Landroid/animation/Animator;
+.field public animator:Landroid/animation/Animator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -29,13 +29,13 @@
     .end annotation
 .end field
 
-.field protected listener:Lcom/google/android/material/indicator/a/a/a;
+.field public listener:Lc/b/b/b/y/a/a/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/indicator/a/a/a;)V
+.method public constructor <init>(Lc/b/b/b/y/a/a/a;)V
     .locals 2
-    .param p1    # Lcom/google/android/material/indicator/a/a/a;
+    .param p1    # Lc/b/b/b/y/a/a/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -46,7 +46,7 @@
 
     iput-wide v0, p0, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->animationDuration:J
 
-    iput-object p1, p0, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->listener:Lcom/google/android/material/indicator/a/a/a;
+    iput-object p1, p0, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->listener:Lc/b/b/b/y/a/a/a;
 
     invoke-virtual {p0}, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->createAnimator()Landroid/animation/Animator;
 

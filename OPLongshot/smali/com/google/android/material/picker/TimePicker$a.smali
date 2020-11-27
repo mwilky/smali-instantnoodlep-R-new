@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TimePicker$a;
+.class public Lcom/google/android/material/picker/TimePicker$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/picker/TimePicker$b;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TimePicker;
+.field public final synthetic a:Lcom/google/android/material/picker/TimePicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TimePicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TimePicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePicker$a;->a:Lcom/google/android/material/picker/TimePicker;

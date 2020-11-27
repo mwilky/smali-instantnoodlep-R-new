@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/view/menu/SubMenuWrapperICS;
+.class public Landroidx/appcompat/view/menu/SubMenuWrapperICS;
 .super Landroidx/appcompat/view/menu/MenuWrapperICS;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/SubMenu;
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private final mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
+.field public final mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroidx/core/internal/view/SupportSubMenu;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/core/internal/view/SupportSubMenu;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuWrapperICS;-><init>(Landroid/content/Context;Landroidx/core/internal/view/SupportMenu;)V
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/view/menu/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    invoke-virtual {p0, v0}, Lb/c/m/d/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
     move-result-object v0
 

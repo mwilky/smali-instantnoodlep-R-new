@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/task/JoinTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,25 +22,25 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.JoinTask"
+.field public static final TAG:Ljava/lang/String; = "Longshot.JoinTask"
 
 
 # instance fields
-.field protected mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field protected mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field public mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field protected mIndex:I
+.field public mIndex:I
 
-.field protected mIsNext:Z
+.field public mIsNext:Z
 
-.field protected mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+.field public mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-.field protected mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field public mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field protected mListener:Lcom/oneplus/screenshot/longshot/task/JoinTask$OnJoinListener;
+.field public mListener:Lcom/oneplus/screenshot/longshot/task/JoinTask$OnJoinListener;
 
-.field protected mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
+.field public mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
 
 
 # direct methods
@@ -144,7 +144,7 @@
 
     if-nez p2, :cond_0
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
@@ -159,7 +159,7 @@
 
     if-nez v2, :cond_1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
@@ -182,7 +182,6 @@
 
     const-string p1, "join fail 3"
 
-    :goto_0
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -211,21 +210,25 @@
     return p1
 
     :cond_5
-    :goto_1
+    :goto_0
     const-string p1, "join fail 2"
 
-    goto :goto_0
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
 
     :cond_6
-    :goto_2
+    :goto_1
     const-string p1, "join fail 1"
 
-    goto :goto_0
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
 .end method
 
 
 # virtual methods
-.method protected checkMatcher()Z
+.method public checkMatcher()Z
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
@@ -243,10 +246,10 @@
     return v0
 .end method
 
-.method protected abstract createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method public abstract createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
 .end method
 
-.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -340,7 +343,7 @@
     throw v0
 .end method
 
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Void;
@@ -352,13 +355,13 @@
     return-object p1
 .end method
 
-.method protected onCancelled()V
+.method public onCancelled()V
     .locals 0
 
     return-void
 .end method
 
-.method protected onFailed(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
+.method public onFailed(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
     .locals 2
 
     const-string v0, "Longshot.JoinTask"
@@ -402,10 +405,10 @@
     return-void
 .end method
 
-.method protected abstract onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
+.method public abstract onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
 .end method
 
-.method protected onPostExecute(Ljava/lang/Boolean;)V
+.method public onPostExecute(Ljava/lang/Boolean;)V
     .locals 1
 
     const-string v0, "JoinTask.joinend"
@@ -440,7 +443,7 @@
     return-void
 .end method
 
-.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Boolean;

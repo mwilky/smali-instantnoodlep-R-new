@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/button/MaterialButton$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations

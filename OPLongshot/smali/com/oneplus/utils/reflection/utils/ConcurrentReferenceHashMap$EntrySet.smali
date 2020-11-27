@@ -1,6 +1,6 @@
-.class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;
+.class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;
 .super Ljava/util/AbstractSet;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "EntrySet"
 .end annotation
 
@@ -23,11 +23,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
-.method private constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
+.method public constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;)V
+.method public synthetic constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntrySet;-><init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lc/c/h/b/d/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

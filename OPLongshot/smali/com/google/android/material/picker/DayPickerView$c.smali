@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/DayPickerView$c;
+.class public Lcom/google/android/material/picker/DayPickerView$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/DayPickerView;
+.field public final synthetic a:Lcom/google/android/material/picker/DayPickerView;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/DayPickerView;)V
+.method public constructor <init>(Lcom/google/android/material/picker/DayPickerView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/DayPickerView$c;->a:Lcom/google/android/material/picker/DayPickerView;

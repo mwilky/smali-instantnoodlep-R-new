@@ -1,19 +1,19 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/task/BaseThread;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "BaseThread"
+.field public static final TAG:Ljava/lang/String; = "BaseThread"
 
 
 # instance fields
-.field protected mDelay:J
+.field public mDelay:J
 
-.field private volatile mThread:Ljava/lang/Thread;
+.field public volatile mThread:Ljava/lang/Thread;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method protected abstract onRun()V
+.method public abstract onRun()V
 .end method
 
 .method public run()V

@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/longshot/IViewPropCallback;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/IInterface;

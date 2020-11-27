@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/Toolbar$c;
+.class public Landroidx/appcompat/widget/Toolbar$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/Toolbar;
+.field public final synthetic a:Landroidx/appcompat/widget/Toolbar;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
+.method public constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar$c;->a:Landroidx/appcompat/widget/Toolbar;

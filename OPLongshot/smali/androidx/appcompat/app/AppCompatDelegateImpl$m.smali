@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$m;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$m;
 .super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "m"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/os/PowerManager;
+.field public final a:Landroid/os/PowerManager;
 
-.field final synthetic b:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic b:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V
     .locals 0
     .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
         .annotation build Landroidx/annotation/NonNull;
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
+.method public createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

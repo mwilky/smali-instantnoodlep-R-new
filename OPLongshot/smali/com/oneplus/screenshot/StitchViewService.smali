@@ -1,12 +1,12 @@
 .class public Lcom/oneplus/screenshot/StitchViewService;
 .super Landroid/accessibilityservice/AccessibilityService;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field static final TAG:Ljava/lang/String; = "Longshot.StitchViewService"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchViewService"
 
-.field private static mInstance:Lcom/oneplus/screenshot/StitchViewService;
+.field public static mInstance:Lcom/oneplus/screenshot/StitchViewService;
 
 
 # instance fields
@@ -14,7 +14,7 @@
 
 .field public mFirstPreview:Landroid/graphics/Bitmap;
 
-.field mHeight:I
+.field public mHeight:I
 
 .field public mIsItFirstShot:Z
 
@@ -32,15 +32,15 @@
 
 .field public mScrollEndReached:Z
 
-.field mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+.field public mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-.field mScrollSearchPerformed:Z
+.field public mScrollSearchPerformed:Z
 
 .field public mScrollViewHeight:I
 
 .field public mViewPropCallback:Ljava/lang/Object;
 
-.field mWidth:I
+.field public mWidth:I
 
 .field public mWindowId:I
 
@@ -224,21 +224,21 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v3}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v3}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lb/b/b/l/f/b;->a:J
+    sget-wide v6, Lc/c/b/m/f/b;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lb/b/b/l/f/b;->b:I
+    sget v9, Lc/c/b/m/f/b;->b:I
 
     const/4 v10, 0x0
 
-    invoke-static/range {v4 .. v10}, Lb/b/b/l/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v4 .. v10}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v3
 
@@ -321,7 +321,7 @@
     return v0
 .end method
 
-.method declared-synchronized findMatchedChildNodePosition()Landroid/view/accessibility/AccessibilityNodeInfo;
+.method public declared-synchronized findMatchedChildNodePosition()Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 3
 
     monitor-enter p0
@@ -403,7 +403,7 @@
     throw v0
 .end method
 
-.method declared-synchronized findScrollNode(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
+.method public declared-synchronized findScrollNode(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 3
 
     monitor-enter p0
@@ -506,7 +506,7 @@
     throw p1
 .end method
 
-.method getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
+.method public getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 8
 
     :try_start_0
@@ -520,11 +520,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, p2}, Lb/b/b/l/f/b;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
+    invoke-static {p1, p2}, Lc/c/b/m/f/b;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
 
     move-result-wide v3
 
-    invoke-static {v0}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v0}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v1
 
@@ -532,11 +532,11 @@
 
     const/4 v5, 0x1
 
-    sget v6, Lb/b/b/l/f/b;->b:I
+    sget v6, Lc/c/b/m/f/b;->b:I
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lb/b/b/l/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v1 .. v7}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v0
     :try_end_0
@@ -613,7 +613,7 @@
     return-void
 .end method
 
-.method isValidScrollNode(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+.method public isValidScrollNode(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
     .locals 1
 
     if-eqz p1, :cond_0
@@ -678,7 +678,7 @@
     return-void
 .end method
 
-.method protected onServiceConnected()V
+.method public onServiceConnected()V
     .locals 2
 
     const-string v0, "Longshot.StitchViewService"
@@ -783,21 +783,21 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, Lb/b/b/l/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v2}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lb/b/b/l/f/b;->a:J
+    sget-wide v6, Lc/c/b/m/f/b;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lb/b/b/l/f/b;->b:I
+    sget v9, Lc/c/b/m/f/b;->b:I
 
     const/4 v10, 0x0
 
-    invoke-static/range {v4 .. v10}, Lb/b/b/l/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v4 .. v10}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 
@@ -862,7 +862,7 @@
     return-object v0
 .end method
 
-.method declared-synchronized takeScrollNodeContentViewShot()Landroid/graphics/Rect;
+.method public declared-synchronized takeScrollNodeContentViewShot()Landroid/graphics/Rect;
     .locals 9
 
     monitor-enter p0
@@ -886,70 +886,76 @@
 
     invoke-virtual {v2, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    iget-boolean v2, p0, Lcom/oneplus/screenshot/StitchViewService;->DEBUG_NODES:Z
-
-    if-eqz v2, :cond_0
-
-    const-string v2, "Longshot.StitchViewService"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "mLastChildIndex : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " childCount : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " scrollRect : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v2, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-direct {p0, v2}, Lcom/oneplus/screenshot/StitchViewService;->printViewBounds(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    invoke-virtual {v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
 
-    :cond_0
-    iget-object v2, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
+    move-result v2
 
-    const/4 v3, 0x1
+    iget-boolean v3, p0, Lcom/oneplus/screenshot/StitchViewService;->DEBUG_NODES:Z
 
-    if-nez v2, :cond_2
+    if-eqz v3, :cond_0
 
-    new-instance v2, Landroid/graphics/Rect;
+    const-string v3, "Longshot.StitchViewService"
 
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v4, v0}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
+    const-string v5, "mLastChildIndex : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, " childCount : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, " scrollRect : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    if-nez v4, :cond_1
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v3, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-direct {p0, v3}, Lcom/oneplus/screenshot/StitchViewService;->printViewBounds(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    :cond_0
+    iget-object v3, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    const/4 v4, 0x1
+
+    if-nez v3, :cond_3
+
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {p0, v5, v0}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object v5
+
+    if-nez v5, :cond_1
 
     new-instance v1, Landroid/graphics/Rect;
 
@@ -963,36 +969,40 @@
 
     :cond_1
     :try_start_1
-    invoke-virtual {v4, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
-
-    iget-object v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {v5, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
     iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
+    iget v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
 
-    move-result v5
+    if-le v2, v6, :cond_2
 
     iget v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
 
-    sub-int/2addr v5, v6
+    sub-int/2addr v2, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object v4
-
-    iput-object v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move v4, v0
-
-    goto/16 :goto_1
+    goto :goto_0
 
     :cond_2
-    invoke-virtual {p0}, Lcom/oneplus/screenshot/StitchViewService;->findMatchedChildNodePosition()Landroid/view/accessibility/AccessibilityNodeInfo;
+    sub-int/2addr v2, v4
+
+    :goto_0
+    invoke-virtual {p0, v5, v2}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 
-    if-nez v2, :cond_3
+    iput-object v2, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move v6, v0
+
+    goto/16 :goto_3
+
+    :cond_3
+    invoke-virtual {p0}, Lcom/oneplus/screenshot/StitchViewService;->findMatchedChildNodePosition()Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object v3
+
+    if-nez v3, :cond_4
 
     new-instance v1, Landroid/graphics/Rect;
 
@@ -1004,117 +1014,119 @@
 
     return-object v1
 
-    :cond_3
-    :try_start_2
-    new-instance v4, Landroid/graphics/Rect;
-
-    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
-
-    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
-
-    new-instance v2, Landroid/graphics/Rect;
-
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {v5, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
-
-    iget v5, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget v6, v2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v5, v6
-
-    iget v6, v4, Landroid/graphics/Rect;->bottom:I
-
-    iget v7, v4, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v6, v7
-
-    if-eq v5, v6, :cond_5
-
-    const-string v5, "Longshot.StitchViewService"
-
-    const-string v6, "last node incomplete"
-
-    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget v5, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget v6, v2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v5, v6
-
-    iput v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastCropPosition:I
-
-    if-gez v5, :cond_4
-
-    const-string v5, "Longshot.StitchViewService"
-
-    const-string v6, "top bound greater than bottom bound"
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget v5, v4, Landroid/graphics/Rect;->top:I
-
-    iget v6, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget v7, v2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v6, v7
-
-    add-int/2addr v5, v6
-
-    iput v5, v4, Landroid/graphics/Rect;->top:I
-
     :cond_4
-    iget v5, v4, Landroid/graphics/Rect;->top:I
+    :try_start_2
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {v3, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
+
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v6, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
+
+    iget v6, v3, Landroid/graphics/Rect;->bottom:I
+
+    iget v7, v3, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v6, v7
+
+    iget v7, v5, Landroid/graphics/Rect;->bottom:I
+
+    iget v8, v5, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v7, v8
+
+    if-eq v6, v7, :cond_7
+
+    const-string v6, "Longshot.StitchViewService"
+
+    const-string v7, "last node incomplete"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v6, v3, Landroid/graphics/Rect;->bottom:I
+
+    iget v7, v3, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v6, v7
+
+    iput v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastCropPosition:I
+
+    if-gez v6, :cond_5
+
+    const-string v6, "Longshot.StitchViewService"
+
+    const-string v7, "top bound greater than bottom bound"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v6, v5, Landroid/graphics/Rect;->top:I
+
+    iget v7, v3, Landroid/graphics/Rect;->bottom:I
+
+    iget v8, v3, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v7, v8
+
+    add-int/2addr v6, v7
+
+    iput v6, v5, Landroid/graphics/Rect;->top:I
+
+    :cond_5
+    iget v6, v5, Landroid/graphics/Rect;->top:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginTop()I
 
-    move-result v6
+    move-result v7
 
-    if-ge v5, v6, :cond_6
+    if-ge v6, v7, :cond_6
 
-    const-string v5, "Longshot.StitchViewService"
+    const-string v6, "Longshot.StitchViewService"
 
-    const-string v6, "Under title bar, have to stitch incomplete node"
+    const-string v7, "Under title bar, have to stitch incomplete node"
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v5, v4, Landroid/graphics/Rect;->top:I
+    iget v6, v5, Landroid/graphics/Rect;->top:I
 
-    iget v6, v2, Landroid/graphics/Rect;->bottom:I
+    iget v7, v3, Landroid/graphics/Rect;->bottom:I
 
-    iget v7, v2, Landroid/graphics/Rect;->top:I
+    iget v8, v3, Landroid/graphics/Rect;->top:I
 
-    sub-int/2addr v6, v7
+    sub-int/2addr v7, v8
 
-    add-int/2addr v5, v6
+    add-int/2addr v6, v7
 
-    iput v5, v4, Landroid/graphics/Rect;->top:I
+    iput v6, v5, Landroid/graphics/Rect;->top:I
 
     iput v0, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastCropPosition:I
 
-    goto :goto_0
-
-    :cond_5
-    move v3, v0
-
     :cond_6
-    :goto_0
-    iget v5, v2, Landroid/graphics/Rect;->top:I
+    move v6, v4
 
-    iget v6, v1, Landroid/graphics/Rect;->top:I
+    goto :goto_1
 
-    if-ne v5, v6, :cond_7
+    :cond_7
+    move v6, v0
 
-    iget v2, v2, Landroid/graphics/Rect;->bottom:I
+    :goto_1
+    iget v7, v3, Landroid/graphics/Rect;->top:I
 
-    iget v5, v1, Landroid/graphics/Rect;->bottom:I
+    iget v8, v1, Landroid/graphics/Rect;->top:I
 
-    if-ne v2, v5, :cond_7
+    if-ne v7, v8, :cond_8
+
+    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+
+    iget v7, v1, Landroid/graphics/Rect;->bottom:I
+
+    if-ne v3, v7, :cond_8
 
     const-string v1, "Longshot.StitchViewService"
 
@@ -1132,40 +1144,42 @@
 
     return-object v1
 
-    :cond_7
+    :cond_8
     :try_start_3
-    iget-object v2, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iget-object v3, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mScrollNode:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iget v7, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
 
-    invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
+    if-le v2, v7, :cond_9
 
-    move-result v5
+    iget v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
 
-    iget v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChildIndex:I
+    sub-int/2addr v2, v4
 
-    sub-int/2addr v5, v6
+    goto :goto_2
 
-    invoke-virtual {p0, v2, v5}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
+    :cond_9
+    sub-int/2addr v2, v4
+
+    :goto_2
+    invoke-virtual {p0, v3, v2}, Lcom/oneplus/screenshot/StitchViewService;->getChild(Landroid/view/accessibility/AccessibilityNodeInfo;I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    move-object v2, v4
+    move v4, v0
 
-    move v4, v3
+    move-object v3, v5
 
-    move v3, v0
+    :goto_3
+    new-instance v2, Landroid/graphics/Rect;
 
-    :goto_1
-    new-instance v5, Landroid/graphics/Rect;
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    iget-object v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    if-nez v6, :cond_8
+    if-nez v5, :cond_a
 
     new-instance v1, Landroid/graphics/Rect;
 
@@ -1177,19 +1191,19 @@
 
     return-object v1
 
-    :cond_8
+    :cond_a
     :try_start_4
-    iget-object v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iget-object v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mLastChild:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-virtual {v6, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
+    invoke-virtual {v5, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    if-eqz v3, :cond_9
+    if-eqz v4, :cond_b
 
-    new-instance v3, Landroid/graphics/Rect;
+    new-instance v4, Landroid/graphics/Rect;
 
-    iget v4, p0, Lcom/oneplus/screenshot/StitchViewService;->mWidth:I
+    iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWidth:I
 
-    iget v6, v5, Landroid/graphics/Rect;->bottom:I
+    iget v6, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginBottom()I
 
@@ -1197,32 +1211,32 @@
 
     sub-int/2addr v6, v7
 
-    invoke-direct {v3, v0, v0, v4, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v4, v0, v0, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
     const-string v0, "Longshot.StitchViewService"
 
-    const-string v4, "firstShot"
+    const-string v5, "firstShot"
 
-    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_9
-    if-eqz v4, :cond_a
+    :cond_b
+    if-eqz v6, :cond_c
 
-    new-instance v3, Landroid/graphics/Rect;
+    new-instance v4, Landroid/graphics/Rect;
 
-    iget v4, v2, Landroid/graphics/Rect;->top:I
+    iget v5, v3, Landroid/graphics/Rect;->top:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginBottom()I
 
     move-result v6
 
-    sub-int/2addr v4, v6
+    sub-int/2addr v5, v6
 
     iget v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mWidth:I
 
-    iget v7, v5, Landroid/graphics/Rect;->bottom:I
+    iget v7, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginBottom()I
 
@@ -1230,24 +1244,24 @@
 
     sub-int/2addr v7, v8
 
-    invoke-direct {v3, v0, v4, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v4, v0, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_a
-    new-instance v3, Landroid/graphics/Rect;
+    :cond_c
+    new-instance v4, Landroid/graphics/Rect;
 
-    iget v4, v2, Landroid/graphics/Rect;->bottom:I
+    iget v5, v3, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginBottom()I
 
     move-result v6
 
-    sub-int/2addr v4, v6
+    sub-int/2addr v5, v6
 
     iget v6, p0, Lcom/oneplus/screenshot/StitchViewService;->mWidth:I
 
-    iget v7, v5, Landroid/graphics/Rect;->bottom:I
+    iget v7, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMarginBottom()I
 
@@ -1255,22 +1269,40 @@
 
     sub-int/2addr v7, v8
 
-    invoke-direct {v3, v0, v4, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v4, v0, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    :goto_2
+    :goto_4
     const-string v0, "Longshot.StitchViewService"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v6, "first -rect:"
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "Longshot.StitchViewService"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "last -rect:"
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1282,27 +1314,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "last -rect:"
+    const-string v3, "scroll -rect:"
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v0, "Longshot.StitchViewService"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "scroll -rect:"
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1322,7 +1336,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1340,7 +1354,7 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    goto :goto_3
+    goto :goto_5
 
     :catch_0
     move-exception v0
@@ -1350,10 +1364,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    :goto_3
+    :goto_5
     monitor-exit p0
 
-    return-object v3
+    return-object v4
 
     :catchall_0
     move-exception v0
@@ -1363,7 +1377,7 @@
     throw v0
 .end method
 
-.method takeScrollNodeContentViewShotByScrollDistance()Landroid/graphics/Rect;
+.method public takeScrollNodeContentViewShotByScrollDistance()Landroid/graphics/Rect;
     .locals 8
 
     const-string v0, "Longshot.StitchViewService"
@@ -1371,7 +1385,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/screenshot/StitchViewService;->mViewPropCallback:Ljava/lang/Object;
 
-    invoke-static {v1}, Lb/b/b/h/a;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1}, Lc/c/b/h/a;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1379,19 +1393,19 @@
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lb/b/b/h/b;->a:Ljava/lang/String;
+    sget-object v1, Lc/c/b/h/b;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    sget-object v3, Lb/b/b/h/b;->b:Ljava/lang/String;
+    sget-object v3, Lc/c/b/h/b;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    sget-object v4, Lb/b/b/h/b;->c:Ljava/lang/String;
+    sget-object v4, Lc/c/b/h/b;->c:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 

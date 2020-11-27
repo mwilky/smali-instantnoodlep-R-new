@@ -1,6 +1,6 @@
 .class public Landroidx/animation/AnimatorSet$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field private a:Landroidx/animation/AnimatorSet$e;
+.field public a:Landroidx/animation/AnimatorSet$e;
 
-.field final synthetic b:Landroidx/animation/AnimatorSet;
+.field public final synthetic b:Landroidx/animation/AnimatorSet;
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/AnimatorSet;Landroidx/animation/b;)V
+.method public constructor <init>(Landroidx/animation/AnimatorSet;Lb/b/b;)V
     .locals 1
 
     iput-object p1, p0, Landroidx/animation/AnimatorSet$d;->b:Landroidx/animation/AnimatorSet;
@@ -32,7 +32,7 @@
 
     iput-boolean v0, p1, Landroidx/animation/AnimatorSet;->i:Z
 
-    invoke-virtual {p1, p2}, Landroidx/animation/AnimatorSet;->C(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$e;
+    invoke-virtual {p1, p2}, Landroidx/animation/AnimatorSet;->C(Lb/b/b;)Landroidx/animation/AnimatorSet$e;
 
     move-result-object p1
 
@@ -43,9 +43,9 @@
 
 
 # virtual methods
-.method public a(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$d;
+.method public a(Lb/b/b;)Landroidx/animation/AnimatorSet$d;
     .locals 1
-    .param p1    # Landroidx/animation/b;
+    .param p1    # Lb/b/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -54,7 +54,7 @@
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet$d;->b:Landroidx/animation/AnimatorSet;
 
-    invoke-virtual {v0, p1}, Landroidx/animation/AnimatorSet;->C(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$e;
+    invoke-virtual {v0, p1}, Landroidx/animation/AnimatorSet;->C(Lb/b/b;)Landroidx/animation/AnimatorSet$e;
 
     move-result-object p1
 

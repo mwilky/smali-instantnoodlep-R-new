@@ -1,6 +1,6 @@
-.class final Landroidx/appcompat/widget/SuggestionsAdapter$a;
+.class public final Landroidx/appcompat/widget/SuggestionsAdapter$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
@@ -72,7 +72,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/SuggestionsAdapter$a;->d:Landroid/widget/ImageView;
 
-    sget v0, La/a/f;->edit_query:I
+    sget v0, Lb/c/f;->edit_query:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

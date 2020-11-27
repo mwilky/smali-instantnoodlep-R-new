@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TextInputTimePickerView$d;
+.class public Lcom/google/android/material/picker/TextInputTimePickerView$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
+.field public final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView$d;->a:Lcom/google/android/material/picker/TextInputTimePickerView;

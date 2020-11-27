@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 .super Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,20 +23,20 @@
 
 
 # instance fields
-.field private final buttonLayoutListener:Landroid/view/View$OnLayoutChangeListener;
+.field public final buttonLayoutListener:Landroid/view/View$OnLayoutChangeListener;
 
-.field private final fabContentRect:Landroid/graphics/Rect;
+.field public final fabContentRect:Landroid/graphics/Rect;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final fabLayoutListener:Landroid/view/View$OnLayoutChangeListener;
+.field public final fabLayoutListener:Landroid/view/View$OnLayoutChangeListener;
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private originalBottomMargin:I
+.field public originalBottomMargin:I
 
-.field private viewRef:Ljava/lang/ref/WeakReference;
+.field public viewRef:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Ljava/lang/ref/WeakReference;
+.method public static synthetic access$2100(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Ljava/lang/ref/WeakReference;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->viewRef:Ljava/lang/ref/WeakReference;
@@ -112,7 +112,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/graphics/Rect;
+.method public static synthetic access$2200(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/graphics/Rect;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->fabContentRect:Landroid/graphics/Rect;
@@ -120,7 +120,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2300(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)I
+.method public static synthetic access$2300(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)I
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->originalBottomMargin:I
@@ -128,7 +128,7 @@
     return p0
 .end method
 
-.method static synthetic access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
+.method public static synthetic access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->mContext:Landroid/content/Context;

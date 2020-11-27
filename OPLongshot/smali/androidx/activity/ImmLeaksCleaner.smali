@@ -1,9 +1,9 @@
-.class final Landroidx/activity/ImmLeaksCleaner;
+.class public final Landroidx/activity/ImmLeaksCleaner;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/lifecycle/c;
+.implements Lb/m/c;
 
 
 # annotations
@@ -13,33 +13,33 @@
 
 
 # static fields
-.field private static final INIT_FAILED:I = 0x2
+.field public static final INIT_FAILED:I = 0x2
 
-.field private static final INIT_SUCCESS:I = 0x1
+.field public static final INIT_SUCCESS:I = 0x1
 
-.field private static final NOT_INITIALIAZED:I
+.field public static final NOT_INITIALIAZED:I
 
-.field private static sHField:Ljava/lang/reflect/Field;
+.field public static sHField:Ljava/lang/reflect/Field;
 
-.field private static sNextServedViewField:Ljava/lang/reflect/Field;
+.field public static sNextServedViewField:Ljava/lang/reflect/Field;
 
-.field private static sReflectedFieldsInitialized:I
+.field public static sReflectedFieldsInitialized:I
 
-.field private static sServedViewField:Ljava/lang/reflect/Field;
+.field public static sServedViewField:Ljava/lang/reflect/Field;
 
 
 # instance fields
-.field private mActivity:Landroid/app/Activity;
+.field public mActivity:Landroid/app/Activity;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method private static initializeReflectiveFields()V
+.method public static initializeReflectiveFields()V
     .locals 3
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -107,9 +107,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
-    .param p1    # Landroidx/lifecycle/e;
+    .param p1    # Lb/m/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

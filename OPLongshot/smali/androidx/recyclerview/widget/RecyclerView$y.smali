@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$y;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final s:Ljava/util/List;
+.field public static final s:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field b:Ljava/lang/ref/WeakReference;
+.field public b:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -42,23 +42,23 @@
     .end annotation
 .end field
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:J
+.field public e:J
 
-.field f:I
+.field public f:I
 
-.field g:I
+.field public g:I
 
-.field h:Landroidx/recyclerview/widget/RecyclerView$y;
+.field public h:Landroidx/recyclerview/widget/RecyclerView$y;
 
-.field i:Landroidx/recyclerview/widget/RecyclerView$y;
+.field public i:Landroidx/recyclerview/widget/RecyclerView$y;
 
-.field j:I
+.field public j:I
 
-.field k:Ljava/util/List;
+.field public k:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -68,7 +68,7 @@
     .end annotation
 .end field
 
-.field l:Ljava/util/List;
+.field public l:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -78,24 +78,24 @@
     .end annotation
 .end field
 
-.field private m:I
+.field public m:I
 
-.field n:Landroidx/recyclerview/widget/RecyclerView$r;
+.field public n:Landroidx/recyclerview/widget/RecyclerView$r;
 
-.field o:Z
+.field public o:Z
 
-.field private p:I
+.field public p:I
 
-.field q:I
+.field public q:I
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field r:Landroidx/recyclerview/widget/RecyclerView;
+.field public r:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -168,32 +168,9 @@
     throw p1
 .end method
 
-.method private g()V
-    .locals 1
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->l:Ljava/util/List;
-
-    :cond_0
-    return-void
-.end method
-
 
 # virtual methods
-.method A(IZ)V
+.method public A(IZ)V
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->d:I
@@ -255,7 +232,7 @@
     return-void
 .end method
 
-.method B(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public B(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->q:I
@@ -263,6 +240,8 @@
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
+
+    iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->p:I
 
     goto :goto_0
 
@@ -273,9 +252,9 @@
 
     move-result v0
 
-    :goto_0
     iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->p:I
 
+    :goto_0
     const/4 v0, 0x4
 
     invoke-virtual {p1, p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setChildImportantForAccessibilityInternal(Landroidx/recyclerview/widget/RecyclerView$y;I)Z
@@ -283,7 +262,7 @@
     return-void
 .end method
 
-.method C(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public C(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->p:I
@@ -297,7 +276,7 @@
     return-void
 .end method
 
-.method D()V
+.method public D()V
     .locals 4
 
     const/4 v0, 0x0
@@ -335,7 +314,7 @@
     return-void
 .end method
 
-.method E()V
+.method public E()V
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->d:I
@@ -352,7 +331,7 @@
     return-void
 .end method
 
-.method F(II)V
+.method public F(II)V
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -413,7 +392,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_1
     if-nez p1, :cond_2
@@ -424,10 +403,9 @@
 
     or-int/lit8 p1, p1, 0x10
 
-    :goto_1
     iput p1, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_2
     if-eqz p1, :cond_3
@@ -440,14 +418,14 @@
 
     and-int/lit8 p1, p1, -0x11
 
-    goto :goto_1
+    iput p1, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
 
     :cond_3
-    :goto_2
+    :goto_1
     return-void
 .end method
 
-.method H(Landroidx/recyclerview/widget/RecyclerView$r;Z)V
+.method public H(Landroidx/recyclerview/widget/RecyclerView$r;Z)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$y;->n:Landroidx/recyclerview/widget/RecyclerView$r;
@@ -457,7 +435,7 @@
     return-void
 .end method
 
-.method I()Z
+.method public I()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -477,7 +455,7 @@
     return v0
 .end method
 
-.method J()Z
+.method public J()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -497,7 +475,7 @@
     return v0
 .end method
 
-.method K()V
+.method public K()V
     .locals 1
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->n:Landroidx/recyclerview/widget/RecyclerView$r;
@@ -507,7 +485,7 @@
     return-void
 .end method
 
-.method L()Z
+.method public L()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -527,7 +505,7 @@
     return v0
 .end method
 
-.method a(Ljava/lang/Object;)V
+.method public a(Ljava/lang/Object;)V
     .locals 2
 
     const/16 v0, 0x400
@@ -545,7 +523,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$y;->g()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$y;->g()V
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
 
@@ -556,7 +534,7 @@
     return-void
 .end method
 
-.method b(I)V
+.method public b(I)V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -568,7 +546,7 @@
     return-void
 .end method
 
-.method c()V
+.method public c()V
     .locals 1
 
     const/4 v0, -0x1
@@ -580,7 +558,7 @@
     return-void
 .end method
 
-.method d()V
+.method public d()V
     .locals 1
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
@@ -599,7 +577,7 @@
     return-void
 .end method
 
-.method e()V
+.method public e()V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -611,7 +589,7 @@
     return-void
 .end method
 
-.method f()V
+.method public f()V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -623,7 +601,30 @@
     return-void
 .end method
 
-.method h()Z
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->k:Ljava/util/List;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->l:Ljava/util/List;
+
+    :cond_0
+    return-void
+.end method
+
+.method public h()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -651,7 +652,7 @@
     return v0
 .end method
 
-.method i(IIZ)V
+.method public i(IIZ)V
     .locals 1
 
     const/16 v0, 0x8
@@ -723,7 +724,7 @@
     return v0
 .end method
 
-.method o()Ljava/util/List;
+.method public o()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -769,7 +770,7 @@
     return-object v0
 .end method
 
-.method p(I)Z
+.method public p(I)Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -789,7 +790,7 @@
     return p1
 .end method
 
-.method q()Z
+.method public q()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -819,7 +820,7 @@
     return v0
 .end method
 
-.method r()Z
+.method public r()Z
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->a:Landroid/view/View;
@@ -851,7 +852,7 @@
     return v0
 .end method
 
-.method s()Z
+.method public s()Z
     .locals 2
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -871,7 +872,7 @@
     return v1
 .end method
 
-.method t()Z
+.method public t()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -1161,7 +1162,7 @@
     return v0
 .end method
 
-.method v()Z
+.method public v()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -1181,7 +1182,7 @@
     return v0
 .end method
 
-.method w()Z
+.method public w()Z
     .locals 1
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->n:Landroidx/recyclerview/widget/RecyclerView$r;
@@ -1199,7 +1200,7 @@
     return v0
 .end method
 
-.method x()Z
+.method public x()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -1219,7 +1220,7 @@
     return v0
 .end method
 
-.method y()Z
+.method public y()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -1239,7 +1240,7 @@
     return v0
 .end method
 
-.method z()Z
+.method public z()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I

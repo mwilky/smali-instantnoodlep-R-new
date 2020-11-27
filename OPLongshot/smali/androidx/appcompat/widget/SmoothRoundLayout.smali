@@ -1,10 +1,10 @@
 .class public Landroidx/appcompat/widget/SmoothRoundLayout;
 .super Landroid/widget/FrameLayout;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private a:Ljava/util/List;
+.field public a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -14,20 +14,20 @@
     .end annotation
 .end field
 
-.field private b:Landroid/graphics/Paint;
+.field public b:Landroid/graphics/Paint;
 
-.field private c:Landroid/graphics/RectF;
+.field public c:Landroid/graphics/RectF;
 
-.field private d:Landroid/graphics/PorterDuffXfermode;
+.field public d:Landroid/graphics/PorterDuffXfermode;
 
-.field private e:F
+.field public e:F
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, La/a/a;->SmoothRoundStyle:I
+    sget v0, Lb/c/a;->SmoothRoundStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SmoothRoundLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -71,7 +71,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->d:Landroid/graphics/PorterDuffXfermode;
 
-    sget-object v0, La/a/j;->SmoothRoundLayout:[I
+    sget-object v0, Lb/c/j;->SmoothRoundLayout:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -81,7 +81,7 @@
 
     move-result-object p1
 
-    sget p3, La/a/d;->oneplus_smooth_round_radius:I
+    sget p3, Lb/c/d;->oneplus_smooth_round_radius:I
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -89,7 +89,7 @@
 
     int-to-float p1, p1
 
-    sget p3, La/a/j;->SmoothRoundLayout_cornerRadius:I
+    sget p3, Lb/c/j;->SmoothRoundLayout_cornerRadius:I
 
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
@@ -104,7 +104,7 @@
 
 
 # virtual methods
-.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+.method public dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 4
 
     iget-object v0, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->c:Landroid/graphics/RectF;
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
+.method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 5
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
@@ -205,7 +205,7 @@
 
     iget v1, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->e:F
 
-    invoke-static {v0, v1}, Landroidx/appcompat/widget/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
+    invoke-static {v0, v1}, Lb/c/n/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
 
     move-result-object v0
 
@@ -219,7 +219,7 @@
     return p1
 .end method
 
-.method protected onSizeChanged(IIII)V
+.method public onSizeChanged(IIII)V
     .locals 5
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingBottom()I
@@ -258,7 +258,7 @@
 
     iget v1, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->e:F
 
-    invoke-static {v0, v1}, Landroidx/appcompat/widget/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
+    invoke-static {v0, v1}, Lb/c/n/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
 
     iget v0, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->e:F
 
-    invoke-static {p1, v0}, Landroidx/appcompat/widget/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
+    invoke-static {p1, v0}, Lb/c/n/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
 
     move-result-object p1
 
@@ -321,7 +321,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/SmoothRoundLayout;->c:Landroid/graphics/RectF;
 
-    invoke-static {v0, p1}, Landroidx/appcompat/widget/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
+    invoke-static {v0, p1}, Lb/c/n/b0;->a(Landroid/graphics/RectF;F)Ljava/util/List;
 
     move-result-object p1
 

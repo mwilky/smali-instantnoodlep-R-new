@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AlertController$a;
+.class public Landroidx/appcompat/app/AlertController$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private a:J
+.field public a:J
 
-.field final synthetic b:Landroidx/appcompat/app/AlertController;
+.field public final synthetic b:Landroidx/appcompat/app/AlertController;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AlertController;)V
+.method public constructor <init>(Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$a;->b:Landroidx/appcompat/app/AlertController;
@@ -76,12 +76,11 @@
 
     if-eqz v0, :cond_1
 
-    :goto_0
     invoke-static {v0}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
 
     move-result-object p1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$a;->b:Landroidx/appcompat/app/AlertController;
@@ -93,6 +92,10 @@
     iget-object v0, v0, Landroidx/appcompat/app/AlertController;->s:Landroid/os/Message;
 
     if-eqz v0, :cond_2
+
+    invoke-static {v0}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
+
+    move-result-object p1
 
     goto :goto_0
 
@@ -111,12 +114,12 @@
 
     move-result-object p1
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
     const/4 p1, 0x0
 
-    :goto_1
+    :goto_0
     if-eqz p1, :cond_4
 
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$a;->b:Landroidx/appcompat/app/AlertController;
@@ -132,7 +135,7 @@
 
     const/4 v1, 0x1
 
-    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Lb/c/k/d;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 

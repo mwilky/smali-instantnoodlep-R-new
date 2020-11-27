@@ -1,6 +1,6 @@
 .class public Landroidx/arch/core/internal/SafeIterableMap;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Iterable;
@@ -40,7 +40,7 @@
 
 
 # instance fields
-.field private mEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field public mEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -49,7 +49,7 @@
     .end annotation
 .end field
 
-.field private mIterators:Ljava/util/WeakHashMap;
+.field public mIterators:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -61,9 +61,9 @@
     .end annotation
 .end field
 
-.field private mSize:I
+.field public mSize:I
 
-.field mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field public mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -240,7 +240,7 @@
     return v0
 .end method
 
-.method protected get(Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method public get(Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -378,7 +378,7 @@
     return-object v0
 .end method
 
-.method protected put(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method public put(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .locals 1
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
@@ -412,7 +412,6 @@
 
     iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap;->mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    :goto_0
     iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap;->mEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     return-object v0
@@ -422,7 +421,9 @@
 
     iput-object p1, v0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    goto :goto_0
+    iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap;->mEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+
+    return-object v0
 .end method
 
 .method public putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

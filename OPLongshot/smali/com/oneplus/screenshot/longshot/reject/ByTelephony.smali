@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/reject/ByTelephony;
 .super Lcom/oneplus/screenshot/longshot/reject/Reject;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ByTelephony"
+.field public static final TAG:Ljava/lang/String; = "ByTelephony"
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods

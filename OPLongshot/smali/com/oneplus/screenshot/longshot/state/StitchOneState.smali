@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchOneState;
 .super Lcom/oneplus/screenshot/longshot/state/StitchOverState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchOneState"
+.field public static final TAG:Ljava/lang/String; = "StitchOneState"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 4
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/StitchOneTask;

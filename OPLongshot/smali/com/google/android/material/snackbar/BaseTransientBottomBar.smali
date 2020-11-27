@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -26,9 +26,9 @@
 
 
 # static fields
-.field static final ANIMATION_DURATION:I = 0x145
+.field public static final ANIMATION_DURATION:I = 0x145
 
-.field static final ANIMATION_FADE_DURATION:I = 0xb4
+.field public static final ANIMATION_FADE_DURATION:I = 0xb4
 
 .field public static final LENGTH_INDEFINITE:I = -0x2
 
@@ -36,21 +36,21 @@
 
 .field public static final LENGTH_SHORT:I = -0x1
 
-.field static final MSG_DISMISS:I = 0x1
+.field public static final MSG_DISMISS:I = 0x1
 
-.field static final MSG_SHOW:I
+.field public static final MSG_SHOW:I
 
-.field private static final USE_OFFSET_API:Z
+.field public static final USE_OFFSET_API:Z
 
-.field static final sHandler:Landroid/os/Handler;
+.field public static final sHandler:Landroid/os/Handler;
 
 
 # instance fields
-.field private final mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+.field public final mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-.field protected mBottomMargin:I
+.field public mBottomMargin:I
 
-.field private mCallbacks:Ljava/util/List;
+.field public mCallbacks:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -60,21 +60,21 @@
     .end annotation
 .end field
 
-.field private final mContentViewCallback:Lcom/google/android/material/snackbar/a;
+.field public final mContentViewCallback:Lc/b/b/b/h0/a;
 
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field private mDuration:I
+.field public mDuration:I
 
-.field final mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+.field public final mManagerCallback:Lc/b/b/b/h0/b$b;
 
-.field private final mTargetParent:Landroid/view/ViewGroup;
+.field public final mTargetParent:Landroid/view/ViewGroup;
 
-.field final view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
+.field public final view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method protected constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/a;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
     .locals 2
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -124,7 +124,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lcom/google/android/material/snackbar/a;
+    .param p3    # Lc/b/b/b/h0/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -135,7 +135,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
     if-eqz p1, :cond_2
 
@@ -145,7 +145,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mTargetParent:Landroid/view/ViewGroup;
 
-    iput-object p3, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContentViewCallback:Lcom/google/android/material/snackbar/a;
+    iput-object p3, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContentViewCallback:Lc/b/b/b/h0/a;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -157,7 +157,7 @@
 
     move-result-object p1
 
-    sget p3, Lb/a/b/a/h;->design_layout_snackbar:I
+    sget p3, Lc/b/b/b/h;->design_layout_snackbar:I
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mTargetParent:Landroid/view/ViewGroup;
 
@@ -193,7 +193,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$c;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Landroidx/core/view/m;)V
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/h/l/m;)V
 
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContext:Landroid/content/Context;
 
@@ -237,7 +237,7 @@
     throw p1
 .end method
 
-.method static synthetic access$000()Z
+.method public static synthetic access$000()Z
     .locals 1
 
     sget-boolean v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->USE_OFFSET_API:Z
@@ -339,7 +339,7 @@
     return-object p0
 .end method
 
-.method animateViewIn()V
+.method public animateViewIn()V
     .locals 5
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
@@ -419,16 +419,16 @@
     return-void
 .end method
 
-.method dispatchDismiss(I)V
+.method public dispatchDismiss(I)V
     .locals 2
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1, p1}, Lcom/google/android/material/snackbar/b;->b(Lcom/google/android/material/snackbar/b$b;I)V
+    invoke-virtual {v0, v1, p1}, Lc/b/b/b/h0/b;->b(Lc/b/b/b/h0/b$b;I)V
 
     return-void
 .end method
@@ -461,7 +461,7 @@
     return-object v0
 .end method
 
-.method final hideView(I)V
+.method public final hideView(I)V
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->shouldAnimate()Z
@@ -492,13 +492,13 @@
 .method public isShown()Z
     .locals 2
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/b;->e(Lcom/google/android/material/snackbar/b$b;)Z
+    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->e(Lc/b/b/b/h0/b$b;)Z
 
     move-result v0
 
@@ -508,29 +508,29 @@
 .method public isShownOrQueued()Z
     .locals 2
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/b;->f(Lcom/google/android/material/snackbar/b$b;)Z
+    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->f(Lc/b/b/b/h0/b$b;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method onViewHidden(I)V
+.method public onViewHidden(I)V
     .locals 2
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/b;->i(Lcom/google/android/material/snackbar/b$b;)V
+    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->i(Lc/b/b/b/h0/b$b;)V
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mCallbacks:Ljava/util/List;
 
@@ -593,16 +593,16 @@
     return-void
 .end method
 
-.method onViewShown()V
+.method public onViewShown()V
     .locals 2
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/b;->j(Lcom/google/android/material/snackbar/b$b;)V
+    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->j(Lc/b/b/b/h0/b$b;)V
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mCallbacks:Ljava/util/List;
 
@@ -685,7 +685,7 @@
     return-object p0
 .end method
 
-.method shouldAnimate()Z
+.method public shouldAnimate()Z
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -702,20 +702,20 @@
 .method public show()V
     .locals 3
 
-    invoke-static {}, Lcom/google/android/material/snackbar/b;->c()Lcom/google/android/material/snackbar/b;
+    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mDuration:I
 
-    iget-object v2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lcom/google/android/material/snackbar/b$b;
+    iget-object v2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/snackbar/b;->n(ILcom/google/android/material/snackbar/b$b;)V
+    invoke-virtual {v0, v1, v2}, Lc/b/b/b/h0/b;->n(ILc/b/b/b/h0/b$b;)V
 
     return-void
 .end method
 
-.method final showView()V
+.method public final showView()V
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;

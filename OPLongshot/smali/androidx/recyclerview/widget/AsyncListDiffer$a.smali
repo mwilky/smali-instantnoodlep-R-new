@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/AsyncListDiffer$a;
+.class public Landroidx/recyclerview/widget/AsyncListDiffer$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
+.field public final synthetic a:Ljava/util/List;
 
-.field final synthetic b:Ljava/util/List;
+.field public final synthetic b:Ljava/util/List;
 
-.field final synthetic c:I
+.field public final synthetic c:I
 
-.field final synthetic d:Ljava/lang/Runnable;
+.field public final synthetic d:Ljava/lang/Runnable;
 
-.field final synthetic e:Landroidx/recyclerview/widget/AsyncListDiffer;
+.field public final synthetic e:Landroidx/recyclerview/widget/AsyncListDiffer;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer;Ljava/util/List;Ljava/util/List;ILjava/lang/Runnable;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer;Ljava/util/List;Ljava/util/List;ILjava/lang/Runnable;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$a;->e:Landroidx/recyclerview/widget/AsyncListDiffer;

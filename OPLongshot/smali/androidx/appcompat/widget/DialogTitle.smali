@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/DialogTitle;
 .super Landroid/widget/TextView;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 4
 
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
@@ -77,13 +77,13 @@
 
     const/4 v2, 0x0
 
-    sget-object v3, La/a/j;->TextAppearance:[I
+    sget-object v3, Lb/c/j;->TextAppearance:[I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    sget v2, La/a/j;->TextAppearance_android_textSize:I
+    sget v2, Lb/c/j;->TextAppearance_android_textSize:I
 
     invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 

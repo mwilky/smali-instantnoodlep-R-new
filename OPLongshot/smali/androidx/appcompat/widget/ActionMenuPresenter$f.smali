@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$f;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$f;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter$a;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "f"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field public final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$f;->a:Landroidx/appcompat/widget/ActionMenuPresenter;

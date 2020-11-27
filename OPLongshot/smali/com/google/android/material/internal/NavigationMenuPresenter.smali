@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/NavigationMenuPresenter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -31,57 +31,57 @@
 
 
 # static fields
-.field private static final STATE_ADAPTER:Ljava/lang/String; = "android:menu:adapter"
+.field public static final STATE_ADAPTER:Ljava/lang/String; = "android:menu:adapter"
 
-.field private static final STATE_HEADER:Ljava/lang/String; = "android:menu:header"
+.field public static final STATE_HEADER:Ljava/lang/String; = "android:menu:header"
 
-.field private static final STATE_HIERARCHY:Ljava/lang/String; = "android:menu:list"
+.field public static final STATE_HIERARCHY:Ljava/lang/String; = "android:menu:list"
 
 
 # instance fields
-.field adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
+.field public adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 
-.field private callback:Landroidx/appcompat/view/menu/MenuPresenter$a;
+.field public callback:Landroidx/appcompat/view/menu/MenuPresenter$a;
 
-.field hasCustomItemIconSize:Z
+.field public hasCustomItemIconSize:Z
 
-.field headerLayout:Landroid/widget/LinearLayout;
+.field public headerLayout:Landroid/widget/LinearLayout;
 
-.field iconTintList:Landroid/content/res/ColorStateList;
+.field public iconTintList:Landroid/content/res/ColorStateList;
 
-.field private id:I
+.field public id:I
 
-.field isBehindStatusBar:Z
+.field public isBehindStatusBar:Z
 
-.field itemBackground:Landroid/graphics/drawable/Drawable;
+.field public itemBackground:Landroid/graphics/drawable/Drawable;
 
-.field itemHorizontalPadding:I
+.field public itemHorizontalPadding:I
 
-.field itemIconPadding:I
+.field public itemIconPadding:I
 
-.field itemIconSize:I
+.field public itemIconSize:I
 
-.field private itemMaxLines:I
+.field public itemMaxLines:I
 
-.field layoutInflater:Landroid/view/LayoutInflater;
+.field public layoutInflater:Landroid/view/LayoutInflater;
 
-.field menu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field private menuView:Lcom/google/android/material/internal/NavigationMenuView;
+.field public menuView:Lcom/google/android/material/internal/NavigationMenuView;
 
-.field final onClickListener:Landroid/view/View$OnClickListener;
+.field public final onClickListener:Landroid/view/View$OnClickListener;
 
-.field private overScrollMode:I
+.field public overScrollMode:I
 
-.field paddingSeparator:I
+.field public paddingSeparator:I
 
-.field private paddingTopDefault:I
+.field public paddingTopDefault:I
 
-.field textAppearance:I
+.field public textAppearance:I
 
-.field textAppearanceSet:Z
+.field public textAppearanceSet:Z
 
-.field textColor:Landroid/content/res/ColorStateList;
+.field public textColor:Landroid/content/res/ColorStateList;
 
 
 # direct methods
@@ -107,7 +107,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/internal/NavigationMenuPresenter;)I
+.method public static synthetic access$000(Lcom/google/android/material/internal/NavigationMenuPresenter;)I
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->itemMaxLines:I
@@ -185,14 +185,14 @@
     return p1
 .end method
 
-.method public dispatchApplyWindowInsets(Landroidx/core/view/x;)V
+.method public dispatchApplyWindowInsets(Lb/h/l/x;)V
     .locals 4
-    .param p1    # Landroidx/core/view/x;
+    .param p1    # Lb/h/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-virtual {p1}, Landroidx/core/view/x;->e()I
+    invoke-virtual {p1}, Lb/h/l/x;->e()I
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Landroidx/core/view/x;->b()I
+    invoke-virtual {p1}, Lb/h/l/x;->b()I
 
     move-result v2
 
@@ -221,7 +221,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->headerLayout:Landroid/widget/LinearLayout;
 
-    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
 
     return-void
 .end method
@@ -351,7 +351,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    sget v1, Lb/a/b/a/h;->design_navigation_menu:I
+    sget v1, Lc/b/b/b/h;->design_navigation_menu:I
 
     const/4 v2, 0x0
 
@@ -369,7 +369,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/google/android/material/internal/NavigationMenuPresenter$g;-><init>(Lcom/google/android/material/internal/NavigationMenuPresenter;Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Landroidx/recyclerview/widget/m;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Lb/o/d/m;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 
@@ -395,7 +395,7 @@
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    sget v0, Lb/a/b/a/h;->design_navigation_item_header:I
+    sget v0, Lc/b/b/b/h;->design_navigation_item_header:I
 
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->menuView:Lcom/google/android/material/internal/NavigationMenuView;
 
@@ -464,7 +464,7 @@
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/d;->design_navigation_separator_vertical_padding:I
+    sget p2, Lc/b/b/b/d;->design_navigation_separator_vertical_padding:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

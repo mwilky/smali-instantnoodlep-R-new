@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/savedstate/SavedStateRegistry$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/savedstate/b;)V
-    .param p1    # Landroidx/savedstate/b;
+.method public abstract a(Lb/p/b;)V
+    .param p1    # Lb/p/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

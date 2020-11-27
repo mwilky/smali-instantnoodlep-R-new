@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/picker/DialogViewAnimator;
 .super Landroid/widget/ViewAnimator;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private final a:Ljava/util/ArrayList;
+.field public final a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 22
 
     move-object/from16 v6, p0

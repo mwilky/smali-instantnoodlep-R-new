@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/android/material/transition/TransitionUtils$d;
+.class public interface abstract Lcom/google/android/material/transition/TransitionUtils$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,18 +9,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "d"
 .end annotation
 
 
 # virtual methods
-.method public abstract a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
-    .param p1    # Lcom/google/android/material/shape/b;
+.method public abstract a(Lc/b/b/b/f0/b;Lc/b/b/b/f0/b;)Lc/b/b/b/f0/b;
+    .param p1    # Lc/b/b/b/f0/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lcom/google/android/material/shape/b;
+    .param p2    # Lc/b/b/b/f0/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

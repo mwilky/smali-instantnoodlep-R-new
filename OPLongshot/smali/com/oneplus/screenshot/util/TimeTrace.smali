@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/util/TimeTrace;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "TimeTrace"
+.field public static final TAG:Ljava/lang/String; = "TimeTrace"
 
-.field private static mLast:J
+.field public static mLast:J
 
-.field private static mMarkLast:J
+.field public static mMarkLast:J
 
-.field private static mMarkStart:J
+.field public static mMarkStart:J
 
-.field private static mStart:J
+.field public static mStart:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method private static clear()V
+.method public static clear()V
     .locals 2
 
     const-wide/16 v0, 0x0
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method private static log(Ljava/lang/String;Ljava/lang/String;JJ)V
+.method public static log(Ljava/lang/String;Ljava/lang/String;JJ)V
     .locals 0
 
     return-void
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method private static set()V
+.method public static set()V
     .locals 2
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J

@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$9;
+.class public Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$9;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$9;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;

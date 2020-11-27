@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$n;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$n;
 .super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "n"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroidx/appcompat/app/k;
+.field public final a:Lb/c/k/j;
 
-.field final synthetic b:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic b:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/k;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Lb/c/k/j;)V
     .locals 0
     .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
         .annotation build Landroidx/annotation/NonNull;
@@ -32,14 +32,14 @@
 
     invoke-direct {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
 
-    iput-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$n;->a:Landroidx/appcompat/app/k;
+    iput-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$n;->a:Lb/c/k/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
+.method public createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
     .locals 2
 
     new-instance v0, Landroid/content/IntentFilter;
@@ -64,9 +64,9 @@
 .method public getApplyableNightMode()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$n;->a:Landroidx/appcompat/app/k;
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$n;->a:Lb/c/k/j;
 
-    invoke-virtual {v0}, Landroidx/appcompat/app/k;->d()Z
+    invoke-virtual {v0}, Lb/c/k/j;->d()Z
 
     move-result v0
 

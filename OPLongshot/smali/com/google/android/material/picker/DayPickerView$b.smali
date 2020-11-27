@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/DayPickerView$b;
+.class public Lcom/google/android/material/picker/DayPickerView$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$h;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/DayPickerView;
+.field public final synthetic a:Lcom/google/android/material/picker/DayPickerView;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/DayPickerView;)V
+.method public constructor <init>(Lcom/google/android/material/picker/DayPickerView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/DayPickerView$b;->a:Lcom/google/android/material/picker/DayPickerView;
@@ -47,40 +47,51 @@
 
     const/high16 v0, 0x3e800000    # 0.25f
 
-    if-gez p1, :cond_1
+    if-gez p1, :cond_0
 
-    :cond_0
     sub-float/2addr v0, p2
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
 
+    :goto_0
     mul-float/2addr p1, p3
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_0
     cmpl-float p1, p2, v0
 
     const/high16 v0, 0x3f400000    # 0.75f
 
-    if-ltz p1, :cond_0
+    if-ltz p1, :cond_1
 
     cmpg-float p1, p2, v0
 
-    if-gtz p1, :cond_0
+    if-gtz p1, :cond_1
 
     const/4 p1, 0x0
 
-    :goto_0
+    goto :goto_1
+
+    :cond_1
+    sub-float/2addr v0, p2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    goto :goto_0
+
+    :goto_1
     iget-object p2, p0, Lcom/google/android/material/picker/DayPickerView$b;->a:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {p2}, Lcom/google/android/material/picker/DayPickerView;->b(Lcom/google/android/material/picker/DayPickerView;)Lcom/google/android/material/picker/c;
+    invoke-static {p2}, Lcom/google/android/material/picker/DayPickerView;->b(Lcom/google/android/material/picker/DayPickerView;)Lc/b/b/b/c0/c;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/google/android/material/picker/c;->r()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lc/b/b/b/c0/c;->r()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -97,7 +108,7 @@
     move-result-object p2
 
     :cond_2
-    :goto_1
+    :goto_2
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p3
@@ -120,7 +131,7 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/material/picker/SimpleMonthView;->P(I)V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     return-void

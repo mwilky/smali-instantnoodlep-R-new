@@ -1,6 +1,6 @@
-.class Landroidx/transition/Transition$e;
+.class public Landroidx/transition/Transition$e;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "e"
 .end annotation
 
 
 # direct methods
-.method static a(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
+.method public static a(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -48,7 +48,7 @@
     return-object p0
 .end method
 
-.method static b(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
+.method public static b(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

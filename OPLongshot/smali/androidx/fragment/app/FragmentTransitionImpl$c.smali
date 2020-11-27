@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/FragmentTransitionImpl$c;
+.class public Landroidx/fragment/app/FragmentTransitionImpl$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Ljava/util/ArrayList;
+.field public final synthetic a:Ljava/util/ArrayList;
 
-.field final synthetic b:Ljava/util/Map;
+.field public final synthetic b:Ljava/util/Map;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionImpl$c;->a:Ljava/util/ArrayList;

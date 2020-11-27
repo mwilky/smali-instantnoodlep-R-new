@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/MatrixEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final tempEndValues:[F
+.field public final tempEndValues:[F
 
-.field private final tempMatrix:Landroid/graphics/Matrix;
+.field public final tempMatrix:Landroid/graphics/Matrix;
 
-.field private final tempStartValues:[F
+.field public final tempStartValues:[F
 
 
 # direct methods

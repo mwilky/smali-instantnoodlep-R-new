@@ -1,6 +1,6 @@
-.class Landroidx/transition/ViewUtilsApi23;
+.class public Landroidx/transition/ViewUtilsApi23;
 .super Landroidx/transition/ViewUtilsApi22;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,17 +10,17 @@
 
 
 # static fields
-.field private static sTryHiddenSetTransitionVisibility:Z = true
+.field public static sTryHiddenSetTransitionVisibility:Z = true
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/transition/ViewUtilsApi22;-><init>()V
@@ -48,7 +48,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-super {p0, p1, p2}, Landroidx/transition/y;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-super {p0, p1, p2}, Lb/q/y;->setTransitionVisibility(Landroid/view/View;I)V
 
     goto :goto_0
 

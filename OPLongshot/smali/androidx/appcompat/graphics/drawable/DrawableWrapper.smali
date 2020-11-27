@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/graphics/drawable/DrawableWrapper;
 .super Landroid/graphics/drawable/Drawable;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private mDrawable:Landroid/graphics/drawable/Drawable;
+.field public mDrawable:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
@@ -182,7 +182,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Landroidx/core/graphics/drawable/a;->h(Landroid/graphics/drawable/Drawable;)Z
+    invoke-static {v0}, Lb/h/f/f/a;->h(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
@@ -206,12 +206,12 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Landroidx/core/graphics/drawable/a;->i(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lb/h/f/f/a;->i(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method protected onBoundsChange(Landroid/graphics/Rect;)V
+.method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -221,7 +221,7 @@
     return-void
 .end method
 
-.method protected onLevelChange(I)Z
+.method public onLevelChange(I)Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -256,7 +256,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->j(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-static {v0, p1}, Lb/h/f/f/a;->j(Landroid/graphics/drawable/Drawable;Z)V
 
     return-void
 .end method
@@ -306,7 +306,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1, p2}, Landroidx/core/graphics/drawable/a;->k(Landroid/graphics/drawable/Drawable;FF)V
+    invoke-static {v0, p1, p2}, Lb/h/f/f/a;->k(Landroid/graphics/drawable/Drawable;FF)V
 
     return-void
 .end method
@@ -316,7 +316,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1, p2, p3, p4}, Landroidx/core/graphics/drawable/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {v0, p1, p2, p3, p4}, Lb/h/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
 
     return-void
 .end method
@@ -338,7 +338,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->n(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, p1}, Lb/h/f/f/a;->n(Landroid/graphics/drawable/Drawable;I)V
 
     return-void
 .end method
@@ -348,7 +348,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -358,7 +358,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v0, p1}, Lb/h/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
 .end method

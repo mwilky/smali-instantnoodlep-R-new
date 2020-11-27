@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/SimpleCache;
+.class public Lcom/google/tagmanager/SimpleCache;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/tagmanager/Cache;
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private final mHashMap:Ljava/util/Map;
+.field public final mHashMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -31,9 +31,9 @@
     .end annotation
 .end field
 
-.field private final mMaxSize:I
+.field public final mMaxSize:I
 
-.field private final mSizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
+.field public final mSizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/tagmanager/CacheFactory$CacheSizeManager<",
@@ -42,11 +42,11 @@
     .end annotation
 .end field
 
-.field private mTotalSize:I
+.field public mTotalSize:I
 
 
 # direct methods
-.method constructor <init>(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
+.method public constructor <init>(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

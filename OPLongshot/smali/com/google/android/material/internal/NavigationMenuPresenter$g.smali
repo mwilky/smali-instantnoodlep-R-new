@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/NavigationMenuPresenter$g;
-.super Landroidx/recyclerview/widget/m;
-.source ""
+.class public Lcom/google/android/material/internal/NavigationMenuPresenter$g;
+.super Lb/o/d/m;
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "g"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/internal/NavigationMenuPresenter;
+.field public final synthetic a:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/internal/NavigationMenuPresenter;Landroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>(Lcom/google/android/material/internal/NavigationMenuPresenter;Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
     .param p1    # Lcom/google/android/material/internal/NavigationMenuPresenter;
         .annotation build Landroidx/annotation/NonNull;
@@ -28,21 +28,21 @@
 
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$g;->a:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/m;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p0, p2}, Lb/o/d/m;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
     .locals 1
-    .param p2    # Landroidx/core/view/accessibility/d;
+    .param p2    # Lb/h/l/y/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/m;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+    invoke-super {p0, p1, p2}, Lb/o/d/m;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$g;->a:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
@@ -54,11 +54,11 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0}, Landroidx/core/view/accessibility/d$b;->a(IIZ)Landroidx/core/view/accessibility/d$b;
+    invoke-static {p1, v0, v0}, Lb/h/l/y/d$b;->a(IIZ)Lb/h/l/y/d$b;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->Y(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->Y(Ljava/lang/Object;)V
 
     return-void
 .end method

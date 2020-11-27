@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/DiffUtil$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final a:Ljava/util/List;
+.field public final a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,21 +25,21 @@
     .end annotation
 .end field
 
-.field private final b:[I
+.field public final b:[I
 
-.field private final c:[I
+.field public final c:[I
 
-.field private final d:Landroidx/recyclerview/widget/DiffUtil$a;
+.field public final d:Landroidx/recyclerview/widget/DiffUtil$a;
 
-.field private final e:I
+.field public final e:I
 
-.field private final f:I
+.field public final f:I
 
-.field private final g:Z
+.field public final g:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/DiffUtil$a;Ljava/util/List;[I[IZ)V
+.method public constructor <init>(Landroidx/recyclerview/widget/DiffUtil$a;Ljava/util/List;[I[IZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -83,14 +83,102 @@
 
     iput-boolean p5, p0, Landroidx/recyclerview/widget/DiffUtil$b;->g:Z
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$b;->a()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/DiffUtil$b;->a()V
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$b;->h()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/DiffUtil$b;->h()V
 
     return-void
 .end method
 
-.method private a()V
+.method public static j(Ljava/util/List;IZ)Landroidx/recyclerview/widget/DiffUtil$c;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroidx/recyclerview/widget/DiffUtil$c;",
+            ">;IZ)",
+            "Landroidx/recyclerview/widget/DiffUtil$c;"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
+
+    :goto_0
+    if-ltz v0, :cond_3
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/recyclerview/widget/DiffUtil$c;
+
+    iget v3, v2, Landroidx/recyclerview/widget/DiffUtil$c;->a:I
+
+    if-ne v3, p1, :cond_2
+
+    iget-boolean v3, v2, Landroidx/recyclerview/widget/DiffUtil$c;->c:Z
+
+    if-ne v3, p2, :cond_2
+
+    invoke-interface {p0, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    :goto_1
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-ge v0, p1, :cond_1
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/recyclerview/widget/DiffUtil$c;
+
+    iget v3, p1, Landroidx/recyclerview/widget/DiffUtil$c;->b:I
+
+    if-eqz p2, :cond_0
+
+    move v4, v1
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v4, -0x1
+
+    :goto_2
+    add-int/2addr v3, v4
+
+    iput v3, p1, Landroidx/recyclerview/widget/DiffUtil$c;->b:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    return-object v2
+
+    :cond_2
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a()V
     .locals 3
 
     iget-object v0, p0, Landroidx/recyclerview/widget/DiffUtil$b;->a:Ljava/util/List;
@@ -150,7 +238,7 @@
     return-void
 .end method
 
-.method private b(Ljava/util/List;Landroidx/recyclerview/widget/i;III)V
+.method public final b(Ljava/util/List;Lb/o/d/i;III)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -158,7 +246,7 @@
             "Ljava/util/List<",
             "Landroidx/recyclerview/widget/DiffUtil$c;",
             ">;",
-            "Landroidx/recyclerview/widget/i;",
+            "Lb/o/d/i;",
             "III)V"
         }
     .end annotation
@@ -167,7 +255,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/i;->onInserted(II)V
+    invoke-interface {p2, p3, p4}, Lb/o/d/i;->onInserted(II)V
 
     return-void
 
@@ -257,7 +345,7 @@
 
     iget v5, v5, Landroidx/recyclerview/widget/DiffUtil$c;->b:I
 
-    invoke-interface {p2, v5, p3}, Landroidx/recyclerview/widget/i;->onMoved(II)V
+    invoke-interface {p2, v5, p3}, Lb/o/d/i;->onMoved(II)V
 
     if-ne v1, v3, :cond_4
 
@@ -267,12 +355,12 @@
 
     move-result-object v1
 
-    invoke-interface {p2, p3, v0, v1}, Landroidx/recyclerview/widget/i;->onChanged(IILjava/lang/Object;)V
+    invoke-interface {p2, p3, v0, v1}, Lb/o/d/i;->onChanged(IILjava/lang/Object;)V
 
     goto :goto_2
 
     :cond_3
-    invoke-interface {p2, p3, v0}, Landroidx/recyclerview/widget/i;->onInserted(II)V
+    invoke-interface {p2, p3, v0}, Lb/o/d/i;->onInserted(II)V
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -309,7 +397,7 @@
     return-void
 .end method
 
-.method private c(Ljava/util/List;Landroidx/recyclerview/widget/i;III)V
+.method public final c(Ljava/util/List;Lb/o/d/i;III)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -317,7 +405,7 @@
             "Ljava/util/List<",
             "Landroidx/recyclerview/widget/DiffUtil$c;",
             ">;",
-            "Landroidx/recyclerview/widget/i;",
+            "Lb/o/d/i;",
             "III)V"
         }
     .end annotation
@@ -326,7 +414,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/i;->onRemoved(II)V
+    invoke-interface {p2, p3, p4}, Lb/o/d/i;->onRemoved(II)V
 
     return-void
 
@@ -422,7 +510,7 @@
 
     sub-int/2addr v7, v0
 
-    invoke-interface {p2, v6, v7}, Landroidx/recyclerview/widget/i;->onMoved(II)V
+    invoke-interface {p2, v6, v7}, Lb/o/d/i;->onMoved(II)V
 
     if-ne v1, v3, :cond_4
 
@@ -436,14 +524,14 @@
 
     move-result-object v2
 
-    invoke-interface {p2, v1, v0, v2}, Landroidx/recyclerview/widget/i;->onChanged(IILjava/lang/Object;)V
+    invoke-interface {p2, v1, v0, v2}, Lb/o/d/i;->onChanged(IILjava/lang/Object;)V
 
     goto :goto_2
 
     :cond_3
     add-int v1, p3, p4
 
-    invoke-interface {p2, v1, v0}, Landroidx/recyclerview/widget/i;->onRemoved(II)V
+    invoke-interface {p2, v1, v0}, Lb/o/d/i;->onRemoved(II)V
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -480,7 +568,180 @@
     return-void
 .end method
 
-.method private f(III)V
+.method public d(Lb/o/d/i;)V
+    .locals 14
+    .param p1    # Lb/o/d/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    instance-of v0, p1, Lb/o/d/c;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lb/o/d/c;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lb/o/d/c;
+
+    invoke-direct {v0, p1}, Lb/o/d/c;-><init>(Lb/o/d/i;)V
+
+    move-object p1, v0
+
+    :goto_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget v1, p0, Landroidx/recyclerview/widget/DiffUtil$b;->e:I
+
+    iget v2, p0, Landroidx/recyclerview/widget/DiffUtil$b;->f:I
+
+    iget-object v3, p0, Landroidx/recyclerview/widget/DiffUtil$b;->a:Ljava/util/List;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    const/4 v7, 0x1
+
+    sub-int/2addr v3, v7
+
+    move v8, v2
+
+    move v9, v3
+
+    :goto_1
+    if-ltz v9, :cond_5
+
+    iget-object v2, p0, Landroidx/recyclerview/widget/DiffUtil$b;->a:Ljava/util/List;
+
+    invoke-interface {v2, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v10, v2
+
+    check-cast v10, Landroidx/recyclerview/widget/DiffUtil$e;
+
+    iget v11, v10, Landroidx/recyclerview/widget/DiffUtil$e;->c:I
+
+    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
+
+    add-int v12, v2, v11
+
+    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
+
+    add-int v13, v2, v11
+
+    if-ge v12, v1, :cond_1
+
+    sub-int v5, v1, v12
+
+    move-object v1, p0
+
+    move-object v2, v0
+
+    move-object v3, p1
+
+    move v4, v12
+
+    move v6, v12
+
+    invoke-virtual/range {v1 .. v6}, Landroidx/recyclerview/widget/DiffUtil$b;->c(Ljava/util/List;Lb/o/d/i;III)V
+
+    :cond_1
+    if-ge v13, v8, :cond_2
+
+    sub-int v5, v8, v13
+
+    move-object v1, p0
+
+    move-object v2, v0
+
+    move-object v3, p1
+
+    move v4, v12
+
+    move v6, v13
+
+    invoke-virtual/range {v1 .. v6}, Landroidx/recyclerview/widget/DiffUtil$b;->b(Ljava/util/List;Lb/o/d/i;III)V
+
+    :cond_2
+    add-int/lit8 v11, v11, -0x1
+
+    :goto_2
+    if-ltz v11, :cond_4
+
+    iget-object v1, p0, Landroidx/recyclerview/widget/DiffUtil$b;->b:[I
+
+    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
+
+    add-int v3, v2, v11
+
+    aget v1, v1, v3
+
+    and-int/lit8 v1, v1, 0x1f
+
+    const/4 v3, 0x2
+
+    if-ne v1, v3, :cond_3
+
+    add-int v1, v2, v11
+
+    iget-object v3, p0, Landroidx/recyclerview/widget/DiffUtil$b;->d:Landroidx/recyclerview/widget/DiffUtil$a;
+
+    add-int/2addr v2, v11
+
+    iget v4, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
+
+    add-int/2addr v4, v11
+
+    invoke-virtual {v3, v2, v4}, Landroidx/recyclerview/widget/DiffUtil$a;->c(II)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v1, v7, v2}, Lb/o/d/c;->onChanged(IILjava/lang/Object;)V
+
+    :cond_3
+    add-int/lit8 v11, v11, -0x1
+
+    goto :goto_2
+
+    :cond_4
+    iget v1, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
+
+    iget v8, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
+
+    add-int/lit8 v9, v9, -0x1
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {p1}, Lb/o/d/c;->a()V
+
+    return-void
+.end method
+
+.method public e(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    new-instance v0, Lb/o/d/b;
+
+    invoke-direct {v0, p1}, Lb/o/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->d(Lb/o/d/i;)V
+
+    return-void
+.end method
+
+.method public final f(III)V
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/DiffUtil$b;->b:[I
@@ -496,12 +757,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->g(IIIZ)Z
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->g(IIIZ)Z
 
     return-void
 .end method
 
-.method private g(IIIZ)Z
+.method public final g(IIIZ)Z
     .locals 8
 
     if-eqz p4, :cond_0
@@ -666,7 +927,7 @@
     return p1
 .end method
 
-.method private h()V
+.method public final h()V
     .locals 9
 
     iget v0, p0, Landroidx/recyclerview/widget/DiffUtil$b;->e:I
@@ -711,7 +972,7 @@
     :goto_1
     if-le v0, v5, :cond_0
 
-    invoke-direct {p0, v0, v1, v2}, Landroidx/recyclerview/widget/DiffUtil$b;->f(III)V
+    invoke-virtual {p0, v0, v1, v2}, Landroidx/recyclerview/widget/DiffUtil$b;->f(III)V
 
     add-int/lit8 v0, v0, -0x1
 
@@ -721,7 +982,7 @@
     :goto_2
     if-le v1, v7, :cond_1
 
-    invoke-direct {p0, v0, v1, v2}, Landroidx/recyclerview/widget/DiffUtil$b;->i(III)V
+    invoke-virtual {p0, v0, v1, v2}, Landroidx/recyclerview/widget/DiffUtil$b;->i(III)V
 
     add-int/lit8 v1, v1, -0x1
 
@@ -792,7 +1053,7 @@
     return-void
 .end method
 
-.method private i(III)V
+.method public final i(III)V
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/DiffUtil$b;->c:[I
@@ -808,268 +1069,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->g(IIIZ)Z
-
-    return-void
-.end method
-
-.method private static j(Ljava/util/List;IZ)Landroidx/recyclerview/widget/DiffUtil$c;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/recyclerview/widget/DiffUtil$c;",
-            ">;IZ)",
-            "Landroidx/recyclerview/widget/DiffUtil$c;"
-        }
-    .end annotation
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    sub-int/2addr v0, v1
-
-    :goto_0
-    if-ltz v0, :cond_3
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/recyclerview/widget/DiffUtil$c;
-
-    iget v3, v2, Landroidx/recyclerview/widget/DiffUtil$c;->a:I
-
-    if-ne v3, p1, :cond_2
-
-    iget-boolean v3, v2, Landroidx/recyclerview/widget/DiffUtil$c;->c:Z
-
-    if-ne v3, p2, :cond_2
-
-    invoke-interface {p0, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    if-ge v0, p1, :cond_1
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/DiffUtil$c;
-
-    iget v3, p1, Landroidx/recyclerview/widget/DiffUtil$c;->b:I
-
-    if-eqz p2, :cond_0
-
-    move v4, v1
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v4, -0x1
-
-    :goto_2
-    add-int/2addr v3, v4
-
-    iput v3, p1, Landroidx/recyclerview/widget/DiffUtil$c;->b:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v2
-
-    :cond_2
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public d(Landroidx/recyclerview/widget/i;)V
-    .locals 14
-    .param p1    # Landroidx/recyclerview/widget/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    instance-of v0, p1, Landroidx/recyclerview/widget/c;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Landroidx/recyclerview/widget/c;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Landroidx/recyclerview/widget/c;
-
-    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/c;-><init>(Landroidx/recyclerview/widget/i;)V
-
-    move-object p1, v0
-
-    :goto_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget v1, p0, Landroidx/recyclerview/widget/DiffUtil$b;->e:I
-
-    iget v2, p0, Landroidx/recyclerview/widget/DiffUtil$b;->f:I
-
-    iget-object v3, p0, Landroidx/recyclerview/widget/DiffUtil$b;->a:Ljava/util/List;
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    const/4 v7, 0x1
-
-    sub-int/2addr v3, v7
-
-    move v8, v2
-
-    move v9, v3
-
-    :goto_1
-    if-ltz v9, :cond_5
-
-    iget-object v2, p0, Landroidx/recyclerview/widget/DiffUtil$b;->a:Ljava/util/List;
-
-    invoke-interface {v2, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v10, v2
-
-    check-cast v10, Landroidx/recyclerview/widget/DiffUtil$e;
-
-    iget v11, v10, Landroidx/recyclerview/widget/DiffUtil$e;->c:I
-
-    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
-
-    add-int v12, v2, v11
-
-    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
-
-    add-int v13, v2, v11
-
-    if-ge v12, v1, :cond_1
-
-    sub-int v5, v1, v12
-
-    move-object v1, p0
-
-    move-object v2, v0
-
-    move-object v3, p1
-
-    move v4, v12
-
-    move v6, v12
-
-    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/DiffUtil$b;->c(Ljava/util/List;Landroidx/recyclerview/widget/i;III)V
-
-    :cond_1
-    if-ge v13, v8, :cond_2
-
-    sub-int v5, v8, v13
-
-    move-object v1, p0
-
-    move-object v2, v0
-
-    move-object v3, p1
-
-    move v4, v12
-
-    move v6, v13
-
-    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/DiffUtil$b;->b(Ljava/util/List;Landroidx/recyclerview/widget/i;III)V
-
-    :cond_2
-    add-int/lit8 v11, v11, -0x1
-
-    :goto_2
-    if-ltz v11, :cond_4
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/DiffUtil$b;->b:[I
-
-    iget v2, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
-
-    add-int v3, v2, v11
-
-    aget v1, v1, v3
-
-    and-int/lit8 v1, v1, 0x1f
-
-    const/4 v3, 0x2
-
-    if-ne v1, v3, :cond_3
-
-    add-int v1, v2, v11
-
-    iget-object v3, p0, Landroidx/recyclerview/widget/DiffUtil$b;->d:Landroidx/recyclerview/widget/DiffUtil$a;
-
-    add-int/2addr v2, v11
-
-    iget v4, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
-
-    add-int/2addr v4, v11
-
-    invoke-virtual {v3, v2, v4}, Landroidx/recyclerview/widget/DiffUtil$a;->c(II)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v1, v7, v2}, Landroidx/recyclerview/widget/c;->onChanged(IILjava/lang/Object;)V
-
-    :cond_3
-    add-int/lit8 v11, v11, -0x1
-
-    goto :goto_2
-
-    :cond_4
-    iget v1, v10, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
-
-    iget v8, v10, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
-
-    add-int/lit8 v9, v9, -0x1
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/c;->a()V
-
-    return-void
-.end method
-
-.method public e(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
-    .locals 1
-    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    new-instance v0, Landroidx/recyclerview/widget/b;
-
-    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->d(Landroidx/recyclerview/widget/i;)V
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/DiffUtil$b;->g(IIIZ)Z
 
     return-void
 .end method

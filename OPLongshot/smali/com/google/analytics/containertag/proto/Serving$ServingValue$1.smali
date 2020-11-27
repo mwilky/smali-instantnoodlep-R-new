@@ -1,6 +1,6 @@
-.class final Lcom/google/analytics/containertag/proto/Serving$ServingValue$1;
+.class public final Lcom/google/analytics/containertag/proto/Serving$ServingValue$1;
 .super Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;-><init>()V

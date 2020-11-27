@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/lifecycle/OnLifecycleEvent;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

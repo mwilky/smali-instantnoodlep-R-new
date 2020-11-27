@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/StateListAnimator$b;
+.class public Lcom/google/android/material/internal/StateListAnimator$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
 # instance fields
-.field final a:[I
+.field public final a:[I
 
-.field final b:Landroid/animation/ValueAnimator;
+.field public final b:Landroid/animation/ValueAnimator;
 
 
 # direct methods
-.method constructor <init>([ILandroid/animation/ValueAnimator;)V
+.method public constructor <init>([ILandroid/animation/ValueAnimator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/indicator/draw/data/Orientation;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/google/android/material/indicator/draw/data/Orientation;
+.field public static final synthetic $VALUES:[Lcom/google/android/material/indicator/draw/data/Orientation;
 
 .field public static final enum HORIZONTAL:Lcom/google/android/material/indicator/draw/data/Orientation;
 
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lcom/google/android/material/indicator/draw/data/Orientation;
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

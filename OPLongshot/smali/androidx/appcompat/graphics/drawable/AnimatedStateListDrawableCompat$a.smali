@@ -1,6 +1,6 @@
-.class synthetic Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$a;
+.class public synthetic Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation

@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/textfield/TextInputLayout$f;
-.super Landroidx/core/view/a;
-.source ""
+.class public Lcom/google/android/material/textfield/TextInputLayout$f;
+.super Lb/h/l/a;
+.source "SourceFile"
 
 
 # annotations
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "f"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final synthetic a:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$f;->a:Lcom/google/android/material/textfield/TextInputLayout;
 
-    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {p0}, Lb/h/l/a;-><init>()V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     const-class p1, Lcom/google/android/material/textfield/TextInputLayout;
 
@@ -47,10 +47,10 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
 
     const-class p1, Lcom/google/android/material/textfield/TextInputLayout;
 
@@ -58,7 +58,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->W(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->W(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$f;->a:Lcom/google/android/material/textfield/TextInputLayout;
 
@@ -74,7 +74,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->s0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->s0(Ljava/lang/CharSequence;)V
 
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$f;->a:Lcom/google/android/material/textfield/TextInputLayout;
@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->i0(Landroid/view/View;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->i0(Landroid/view/View;)V
 
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$f;->a:Lcom/google/android/material/textfield/TextInputLayout;
@@ -110,9 +110,9 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->b0(Z)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->b0(Z)V
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->d0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->d0(Ljava/lang/CharSequence;)V
 
     :cond_3
     return-void
@@ -121,7 +121,7 @@
 .method public onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$f;->a:Lcom/google/android/material/textfield/TextInputLayout;
 

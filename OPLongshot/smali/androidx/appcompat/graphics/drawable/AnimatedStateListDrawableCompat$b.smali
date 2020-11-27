@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$b;
+.class public Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$b;
 .super Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$g;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/graphics/drawable/Animatable;
+.field public final a:Landroid/graphics/drawable/Animatable;
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/drawable/Animatable;)V
+.method public constructor <init>(Landroid/graphics/drawable/Animatable;)V
     .locals 1
 
     const/4 v0, 0x0

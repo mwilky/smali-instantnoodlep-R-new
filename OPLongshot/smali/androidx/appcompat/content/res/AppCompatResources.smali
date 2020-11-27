@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/content/res/AppCompatResources;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,9 +18,9 @@
 
 
 # static fields
-.field private static final LOG_TAG:Ljava/lang/String; = "AppCompatResources"
+.field public static final LOG_TAG:Ljava/lang/String; = "AppCompatResources"
 
-.field private static final TL_TYPED_VALUE:Ljava/lang/ThreadLocal;
+.field public static final TL_TYPED_VALUE:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -30,9 +30,9 @@
     .end annotation
 .end field
 
-.field private static final sColorStateCacheLock:Ljava/lang/Object;
+.field public static final sColorStateCacheLock:Ljava/lang/Object;
 
-.field private static final sColorStateCaches:Ljava/util/WeakHashMap;
+.field public static final sColorStateCaches:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -46,7 +46,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/lang/ThreadLocal;
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method private static addColorStateListToCache(Landroid/content/Context;ILandroid/content/res/ColorStateList;)V
+.method public static addColorStateListToCache(Landroid/content/Context;ILandroid/content/res/ColorStateList;)V
     .locals 3
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -147,7 +147,7 @@
     throw p0
 .end method
 
-.method private static getCachedColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+.method public static getCachedColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 4
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -275,7 +275,7 @@
     return-object v0
 
     :cond_2
-    invoke-static {p0, p1}, Landroidx/core/content/b;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Lb/h/e/b;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -306,7 +306,7 @@
     return-object p0
 .end method
 
-.method private static getTypedValue()Landroid/util/TypedValue;
+.method public static getTypedValue()Landroid/util/TypedValue;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -333,7 +333,7 @@
     return-object v0
 .end method
 
-.method private static inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+.method public static inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -382,7 +382,7 @@
     return-object v1
 .end method
 
-.method private static isColorInt(Landroid/content/Context;I)Z
+.method public static isColorInt(Landroid/content/Context;I)Z
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;

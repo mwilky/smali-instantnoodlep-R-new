@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/LongshotService$ServiceBinder;
+.class public Lcom/oneplus/screenshot/LongshotService$ServiceBinder;
 .super Lcom/oneplus/longshot/ILongScreenshot$Stub;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "ServiceBinder"
 .end annotation
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mNavBarVisible:Z
+.field public mNavBarVisible:Z
 
-.field private mStatusBarVisible:Z
+.field public mStatusBarVisible:Z
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/LongshotService;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/LongshotService;
 
 
 # direct methods
@@ -59,7 +59,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :try_start_0
-    sget-object v1, Lb/b/b/h/b;->f:Ljava/lang/String;
+    sget-object v1, Lc/c/b/h/b;->f:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -73,13 +73,13 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lb/b/b/h/b;->b:Ljava/lang/String;
+    sget-object v1, Lc/c/b/h/b;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    sget-object v2, Lb/b/b/h/b;->c:Ljava/lang/String;
+    sget-object v2, Lc/c/b/h/b;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
@@ -93,14 +93,14 @@
 
     iput v2, v3, Lcom/oneplus/screenshot/StitchViewService;->mScrollViewHeight:I
 
-    sget-object v1, Lb/b/b/h/b;->g:Ljava/lang/String;
+    sget-object v1, Lc/c/b/h/b;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     :try_start_1
-    sget-object v1, Lb/b/b/h/b;->h:Ljava/lang/String;
+    sget-object v1, Lc/c/b/h/b;->h:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lb/b/b/h/b;->i:Ljava/lang/String;
+    sget-object v2, Lc/c/b/h/b;->i:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
@@ -177,7 +177,7 @@
 
     :goto_2
     :try_start_7
-    sget-object p2, Lb/b/b/h/b;->j:Ljava/lang/String;
+    sget-object p2, Lc/c/b/h/b;->j:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_7
@@ -236,7 +236,7 @@
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
     :try_start_1
     const-string p1, "viewVisibility"
@@ -306,9 +306,31 @@
 
     :try_start_2
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     :cond_2
     :goto_0
+    :try_start_3
+    const-string p1, "findAtleastOneViewVisibilityOnScreenStatus"
+
+    invoke-virtual {v0, p1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    sput-boolean p1, Lcom/oneplus/screenshot/longshot/util/Configs;->blockScreenOnAtleastOneViewVisibleOnScreen:Z
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    :try_start_4
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_1
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isAccessibilityServiceRunning()Z
 
     move-result p1
@@ -317,7 +339,7 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/oneplus/screenshot/LongshotService$ServiceBinder;->assignViewInfo(Lorg/json/JSONObject;Lcom/oneplus/longshot/IViewPropCallback;)V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     const-string p1, "isAccessibilityServiceRunning : false assignment delayed"
@@ -339,17 +361,17 @@
     const-wide/16 v2, 0x19
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    goto :goto_1
+    goto :goto_2
 
-    :catch_1
+    :catch_2
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_1
+    :goto_2
     return-void
 .end method
 

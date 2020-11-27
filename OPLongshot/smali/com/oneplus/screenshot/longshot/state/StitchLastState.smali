@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchLastState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.StitchLastState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchLastState"
 
 
 # instance fields
-.field private mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
+.field public mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 14
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -131,7 +131,7 @@
     return-object v0
 .end method
 
-.method protected getFailedText()Ljava/lang/String;
+.method public getFailedText()Ljava/lang/String;
     .locals 1
 
     const/4 v0, 0x0
@@ -139,7 +139,7 @@
     return-object v0
 .end method
 
-.method protected getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->WAITTING_PREVIEW:Lcom/oneplus/screenshot/longshot/state/LongshotState;
@@ -147,7 +147,7 @@
     return-object v0
 .end method
 
-.method protected getSuccessText()Ljava/lang/String;
+.method public getSuccessText()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -168,7 +168,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10003e
+    const v1, 0x7f100046
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -243,7 +243,7 @@
     return-void
 .end method
 
-.method protected updateIndex()V
+.method public updateIndex()V
     .locals 0
 
     return-void

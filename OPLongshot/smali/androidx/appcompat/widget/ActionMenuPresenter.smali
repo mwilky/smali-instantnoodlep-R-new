@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter;
 .super Landroidx/appcompat/view/menu/BaseMenuPresenter;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
@@ -21,58 +21,58 @@
 
 
 # instance fields
-.field a:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+.field public a:Landroidx/appcompat/widget/ActionMenuPresenter$d;
 
-.field private b:Landroid/graphics/drawable/Drawable;
+.field public b:Landroid/graphics/drawable/Drawable;
 
-.field private c:Z
+.field public c:Z
 
-.field private d:Z
+.field public d:Z
 
-.field private e:Z
+.field public e:Z
 
-.field private f:I
+.field public f:I
 
-.field private g:I
+.field public g:I
 
-.field private h:I
+.field public h:I
 
-.field private i:Z
+.field public i:Z
 
-.field private j:Z
+.field public j:Z
 
-.field private k:Z
+.field public k:Z
 
-.field private l:Z
+.field public l:Z
 
-.field private m:I
+.field public m:I
 
-.field private n:Landroid/view/View;
+.field public n:Landroid/view/View;
 
-.field private final o:Landroid/util/SparseBooleanArray;
+.field public final o:Landroid/util/SparseBooleanArray;
 
-.field p:Landroidx/appcompat/widget/ActionMenuPresenter$e;
+.field public p:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
-.field q:Landroidx/appcompat/widget/ActionMenuPresenter$a;
+.field public q:Landroidx/appcompat/widget/ActionMenuPresenter$a;
 
-.field r:Landroidx/appcompat/widget/ActionMenuPresenter$c;
+.field public r:Landroidx/appcompat/widget/ActionMenuPresenter$c;
 
-.field private s:Landroidx/appcompat/widget/ActionMenuPresenter$b;
+.field public s:Landroidx/appcompat/widget/ActionMenuPresenter$b;
 
-.field final t:Landroidx/appcompat/widget/ActionMenuPresenter$f;
+.field public final t:Landroidx/appcompat/widget/ActionMenuPresenter$f;
 
-.field u:I
+.field public u:I
 
-.field private v:Z
+.field public v:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    sget v0, La/a/g;->abc_action_menu_layout:I
+    sget v0, Lb/c/g;->abc_action_menu_layout:I
 
-    sget v1, La/a/g;->abc_action_menu_item_layout:I
+    sget v1, Lb/c/g;->abc_action_menu_item_layout:I
 
     invoke-direct {p0, p1, v0, v1}, Landroidx/appcompat/view/menu/BaseMenuPresenter;-><init>(Landroid/content/Context;II)V
 
@@ -98,9 +98,9 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 2
 
-    sget v0, La/a/g;->abc_action_menu_layout:I
+    sget v0, Lb/c/g;->abc_action_menu_layout:I
 
-    sget v1, La/a/g;->abc_action_menu_item_layout:I
+    sget v1, Lb/c/g;->abc_action_menu_item_layout:I
 
     invoke-direct {p0, p1, v0, v1}, Landroidx/appcompat/view/menu/BaseMenuPresenter;-><init>(Landroid/content/Context;II)V
 
@@ -125,7 +125,7 @@
     return-void
 .end method
 
-.method static synthetic a(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method public static synthetic a(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -133,7 +133,7 @@
     return-object p0
 .end method
 
-.method static synthetic b(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method public static synthetic b(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -141,7 +141,7 @@
     return-object p0
 .end method
 
-.method static synthetic c(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuView;
+.method public static synthetic c(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuView;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/MenuView;
@@ -149,7 +149,7 @@
     return-object p0
 .end method
 
-.method static synthetic d(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method public static synthetic d(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -157,7 +157,7 @@
     return-object p0
 .end method
 
-.method static synthetic e(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method public static synthetic e(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -165,7 +165,7 @@
     return-object p0
 .end method
 
-.method static synthetic f(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuView;
+.method public static synthetic f(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuView;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/MenuView;
@@ -173,64 +173,12 @@
     return-object p0
 .end method
 
-.method static synthetic g(Landroidx/appcompat/widget/ActionMenuPresenter;)Z
+.method public static synthetic g(Landroidx/appcompat/widget/ActionMenuPresenter;)Z
     .locals 0
 
     iget-boolean p0, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->v:Z
 
     return p0
-.end method
-
-.method private i(Landroid/view/MenuItem;)Landroid/view/View;
-    .locals 6
-
-    iget-object v0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/MenuView;
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_2
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    instance-of v5, v4, Landroidx/appcompat/view/menu/MenuView$a;
-
-    if-eqz v5, :cond_1
-
-    move-object v5, v4
-
-    check-cast v5, Landroidx/appcompat/view/menu/MenuView$a;
-
-    invoke-interface {v5}, Landroidx/appcompat/view/menu/MenuView$a;->getItemData()Landroidx/appcompat/view/menu/MenuItemImpl;
-
-    move-result-object v5
-
-    if-ne v5, p1, :cond_1
-
-    return-object v4
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-object v1
 .end method
 
 
@@ -817,6 +765,58 @@
     return v0
 .end method
 
+.method public final i(Landroid/view/MenuItem;)Landroid/view/View;
+    .locals 6
+
+    iget-object v0, p0, Landroidx/appcompat/view/menu/BaseMenuPresenter;->mMenuView:Landroidx/appcompat/view/menu/MenuView;
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_2
+
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    instance-of v5, v4, Landroidx/appcompat/view/menu/MenuView$a;
+
+    if-eqz v5, :cond_1
+
+    move-object v5, v4
+
+    check-cast v5, Landroidx/appcompat/view/menu/MenuView$a;
+
+    invoke-interface {v5}, Landroidx/appcompat/view/menu/MenuView$a;->getItemData()Landroidx/appcompat/view/menu/MenuItemImpl;
+
+    move-result-object v5
+
+    if-ne v5, p1, :cond_1
+
+    return-object v4
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-object v1
+.end method
+
 .method public initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 4
     .param p1    # Landroid/content/Context;
@@ -899,7 +899,7 @@
 
     iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v2}, Landroidx/appcompat/widget/k;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v2}, Lb/c/n/k;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     iput-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->b:Landroid/graphics/drawable/Drawable;
 
@@ -1193,7 +1193,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->i(Landroid/view/MenuItem;)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->i(Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1359,7 +1359,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lb/c/n/k;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -1583,9 +1583,9 @@
     move p1, v0
 
     :goto_2
-    iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->a:Landroidx/appcompat/widget/ActionMenuPresenter$d;
-
     if-eqz p1, :cond_8
+
+    iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->a:Landroidx/appcompat/widget/ActionMenuPresenter$d;
 
     if-nez v2, :cond_6
 
@@ -1632,6 +1632,8 @@
     goto :goto_3
 
     :cond_8
+    iget-object v2, p0, Landroidx/appcompat/widget/ActionMenuPresenter;->a:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+
     if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;

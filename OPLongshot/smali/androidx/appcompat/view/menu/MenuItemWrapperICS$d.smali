@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$d;
+.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "d"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field public final a:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-.field final synthetic b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
+.field public final synthetic b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnMenuItemClickListener;)V
+.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnMenuItemClickListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$d;->b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
@@ -45,7 +45,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$d;->b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    invoke-virtual {v1, p1}, Lb/c/m/d/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
     move-result-object p1
 

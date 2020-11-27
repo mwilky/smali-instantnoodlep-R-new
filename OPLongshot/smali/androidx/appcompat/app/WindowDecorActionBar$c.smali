@@ -1,9 +1,9 @@
-.class Landroidx/appcompat/app/WindowDecorActionBar$c;
+.class public Landroidx/appcompat/app/WindowDecorActionBar$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/core/view/w;
+.implements Lb/h/l/w;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/app/WindowDecorActionBar;
+.field public final synthetic a:Landroidx/appcompat/app/WindowDecorActionBar;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/WindowDecorActionBar;)V
+.method public constructor <init>(Landroidx/appcompat/app/WindowDecorActionBar;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/WindowDecorActionBar$c;->a:Landroidx/appcompat/app/WindowDecorActionBar;

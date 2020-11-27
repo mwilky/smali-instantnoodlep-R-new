@@ -1,6 +1,6 @@
-.class interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
+.class public interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ResourceManagerHooks"
 .end annotation
 

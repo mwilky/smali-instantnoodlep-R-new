@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/AppCompatImageHelper;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private mImageTint:Landroidx/appcompat/widget/TintInfo;
+.field public mImageTint:Landroidx/appcompat/widget/TintInfo;
 
-.field private mInternalImageTint:Landroidx/appcompat/widget/TintInfo;
+.field public mInternalImageTint:Landroidx/appcompat/widget/TintInfo;
 
-.field private mTmpInfo:Landroidx/appcompat/widget/TintInfo;
+.field public mTmpInfo:Landroidx/appcompat/widget/TintInfo;
 
-.field private final mView:Landroid/widget/ImageView;
+.field public final mView:Landroid/widget/ImageView;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Landroidx/core/widget/d;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Lb/h/m/d;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Landroidx/core/widget/d;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1}, Lb/h/m/d;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v1
 
@@ -153,7 +153,7 @@
 
 
 # virtual methods
-.method applySupportImageTint()V
+.method public applySupportImageTint()V
     .locals 3
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
@@ -216,7 +216,7 @@
     return-void
 .end method
 
-.method getSupportImageTintList()Landroid/content/res/ColorStateList;
+.method public getSupportImageTintList()Landroid/content/res/ColorStateList;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mImageTint:Landroidx/appcompat/widget/TintInfo;
@@ -234,7 +234,7 @@
     return-object v0
 .end method
 
-.method getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
+.method public getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mImageTint:Landroidx/appcompat/widget/TintInfo;
@@ -252,7 +252,7 @@
     return-object v0
 .end method
 
-.method hasOverlappingRendering()Z
+.method public hasOverlappingRendering()Z
     .locals 3
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
@@ -290,7 +290,7 @@
 
     move-result-object v0
 
-    sget-object v1, La/a/j;->AppCompatImageView:[I
+    sget-object v1, Lb/c/j;->AppCompatImageView:[I
 
     const/4 v2, 0x0
 
@@ -310,7 +310,7 @@
 
     move-result-object v4
 
-    sget-object v5, La/a/j;->AppCompatImageView:[I
+    sget-object v5, Lb/c/j;->AppCompatImageView:[I
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/TintTypedArray;->getWrappedTypeArray()Landroid/content/res/TypedArray;
 
@@ -336,7 +336,7 @@
 
     if-nez p1, :cond_1
 
-    sget v1, La/a/j;->AppCompatImageView_srcCompat:I
+    sget v1, Lb/c/j;->AppCompatImageView_srcCompat:I
 
     invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -366,7 +366,7 @@
     invoke-static {p1}, Landroidx/appcompat/widget/DrawableUtils;->fixDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_2
-    sget p1, La/a/j;->AppCompatImageView_tint:I
+    sget p1, Lb/c/j;->AppCompatImageView_tint:I
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
@@ -376,16 +376,16 @@
 
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    sget v1, La/a/j;->AppCompatImageView_tint:I
+    sget v1, Lb/c/j;->AppCompatImageView_tint:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Landroidx/core/widget/d;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1}, Lb/h/m/d;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
 
     :cond_3
-    sget p1, La/a/j;->AppCompatImageView_tintMode:I
+    sget p1, Lb/c/j;->AppCompatImageView_tintMode:I
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
 
@@ -395,7 +395,7 @@
 
     iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    sget v1, La/a/j;->AppCompatImageView_tintMode:I
+    sget v1, Lb/c/j;->AppCompatImageView_tintMode:I
 
     invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getInt(II)I
 
@@ -407,7 +407,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroidx/core/widget/d;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, p2}, Lb/h/m/d;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -463,7 +463,7 @@
     return-void
 .end method
 
-.method setInternalImageTint(Landroid/content/res/ColorStateList;)V
+.method public setInternalImageTint(Landroid/content/res/ColorStateList;)V
     .locals 1
 
     if-eqz p1, :cond_1
@@ -500,7 +500,7 @@
     return-void
 .end method
 
-.method setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+.method public setSupportImageTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mImageTint:Landroidx/appcompat/widget/TintInfo;
@@ -527,7 +527,7 @@
     return-void
 .end method
 
-.method setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+.method public setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mImageTint:Landroidx/appcompat/widget/TintInfo;

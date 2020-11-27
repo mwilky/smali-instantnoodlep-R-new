@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/state/SaveState$AnimationRunnable;
+.class public Lcom/oneplus/screenshot/longshot/state/SaveState$AnimationRunnable;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "AnimationRunnable"
 .end annotation
 
 
 # instance fields
-.field private mAnim:Landroid/animation/Animator;
+.field public mAnim:Landroid/animation/Animator;
 
-.field private mDecor:Landroid/view/View;
+.field public mDecor:Landroid/view/View;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
 
 
 # direct methods

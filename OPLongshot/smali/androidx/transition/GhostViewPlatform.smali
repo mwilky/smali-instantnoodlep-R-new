@@ -1,9 +1,9 @@
-.class Landroidx/transition/GhostViewPlatform;
+.class public Landroidx/transition/GhostViewPlatform;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/transition/f;
+.implements Lb/q/f;
 
 
 # annotations
@@ -13,13 +13,13 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "GhostViewApi21"
+.field public static final TAG:Ljava/lang/String; = "GhostViewApi21"
 
-.field private static sAddGhostMethod:Ljava/lang/reflect/Method;
+.field public static sAddGhostMethod:Ljava/lang/reflect/Method;
 
-.field private static sAddGhostMethodFetched:Z
+.field public static sAddGhostMethodFetched:Z
 
-.field private static sGhostViewClass:Ljava/lang/Class;
+.field public static sGhostViewClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -28,19 +28,19 @@
     .end annotation
 .end field
 
-.field private static sGhostViewClassFetched:Z
+.field public static sGhostViewClassFetched:Z
 
-.field private static sRemoveGhostMethod:Ljava/lang/reflect/Method;
+.field public static sRemoveGhostMethod:Ljava/lang/reflect/Method;
 
-.field private static sRemoveGhostMethodFetched:Z
+.field public static sRemoveGhostMethodFetched:Z
 
 
 # instance fields
-.field private final mGhostView:Landroid/view/View;
+.field public final mGhostView:Landroid/view/View;
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroidx/transition/f;
+.method public static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Lb/q/f;
     .locals 5
 
     invoke-static {}, Landroidx/transition/GhostViewPlatform;->fetchAddGhostMethod()V
@@ -115,7 +115,7 @@
     return-object v1
 .end method
 
-.method private static fetchAddGhostMethod()V
+.method public static fetchAddGhostMethod()V
     .locals 6
 
     sget-boolean v0, Landroidx/transition/GhostViewPlatform;->sAddGhostMethodFetched:Z
@@ -179,7 +179,7 @@
     return-void
 .end method
 
-.method private static fetchGhostViewClass()V
+.method public static fetchGhostViewClass()V
     .locals 3
 
     sget-boolean v0, Landroidx/transition/GhostViewPlatform;->sGhostViewClassFetched:Z
@@ -217,7 +217,7 @@
     return-void
 .end method
 
-.method private static fetchRemoveGhostMethod()V
+.method public static fetchRemoveGhostMethod()V
     .locals 6
 
     sget-boolean v0, Landroidx/transition/GhostViewPlatform;->sRemoveGhostMethodFetched:Z
@@ -269,7 +269,7 @@
     return-void
 .end method
 
-.method static removeGhost(Landroid/view/View;)V
+.method public static removeGhost(Landroid/view/View;)V
     .locals 4
 
     invoke-static {}, Landroidx/transition/GhostViewPlatform;->fetchRemoveGhostMethod()V

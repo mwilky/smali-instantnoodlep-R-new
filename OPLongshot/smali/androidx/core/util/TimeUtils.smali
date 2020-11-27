@@ -1,6 +1,6 @@
 .class public final Landroidx/core/util/TimeUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -20,19 +20,19 @@
     .end annotation
 .end field
 
-.field private static final SECONDS_PER_DAY:I = 0x15180
+.field public static final SECONDS_PER_DAY:I = 0x15180
 
-.field private static final SECONDS_PER_HOUR:I = 0xe10
+.field public static final SECONDS_PER_HOUR:I = 0xe10
 
-.field private static final SECONDS_PER_MINUTE:I = 0x3c
+.field public static final SECONDS_PER_MINUTE:I = 0x3c
 
-.field private static sFormatStr:[C
+.field public static sFormatStr:[C
 
-.field private static final sFormatSync:Ljava/lang/Object;
+.field public static final sFormatSync:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method private static accumField(IIZI)I
+.method public static accumField(IIZI)I
     .locals 2
 
     const/4 v0, 0x3
@@ -240,7 +240,7 @@
     throw p0
 .end method
 
-.method private static formatDurationLocked(JI)I
+.method public static formatDurationLocked(JI)I
     .locals 17
 
     move-wide/from16 v0, p0
@@ -623,7 +623,7 @@
     return v0
 .end method
 
-.method private static printField([CICIZI)I
+.method public static printField([CICIZI)I
     .locals 2
 
     if-nez p4, :cond_0

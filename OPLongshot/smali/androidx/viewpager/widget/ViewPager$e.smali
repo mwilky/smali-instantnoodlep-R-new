@@ -1,6 +1,6 @@
 .class public Landroidx/viewpager/widget/ViewPager$e;
 .super Landroid/view/ViewGroup$LayoutParams;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -19,13 +19,13 @@
 
 .field public b:I
 
-.field c:F
+.field public c:F
 
-.field d:Z
+.field public d:Z
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
 
 # direct methods

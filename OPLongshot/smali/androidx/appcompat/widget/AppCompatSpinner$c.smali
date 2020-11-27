@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/AppCompatSpinner$c;
+.class public Landroidx/appcompat/widget/AppCompatSpinner$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/ListAdapter;
@@ -13,19 +13,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field private a:Landroid/widget/SpinnerAdapter;
+.field public a:Landroid/widget/SpinnerAdapter;
 
-.field private b:Landroid/widget/ListAdapter;
+.field public b:Landroid/widget/ListAdapter;
 
-.field private c:[Landroid/graphics/drawable/Drawable;
+.field public c:[Landroid/graphics/drawable/Drawable;
 
-.field private d:I
+.field public d:I
 
 
 # direct methods
@@ -84,19 +84,19 @@
     goto :goto_0
 
     :cond_1
-    instance-of v0, p1, Landroidx/appcompat/widget/c0;
+    instance-of v0, p1, Lb/c/n/c0;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Landroidx/appcompat/widget/c0;
+    check-cast p1, Lb/c/n/c0;
 
-    invoke-interface {p1}, Landroidx/appcompat/widget/c0;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
+    invoke-interface {p1}, Lb/c/n/c0;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    invoke-interface {p1, p2}, Landroidx/appcompat/widget/c0;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
+    invoke-interface {p1, p2}, Lb/c/n/c0;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
 
     :cond_2
     :goto_0
@@ -193,10 +193,9 @@
 
     aget-object p1, p1, p3
 
-    :goto_0
     invoke-virtual {p2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSpinner$c;->getCount()I
@@ -215,6 +214,8 @@
 
     aget-object p1, p1, p3
 
+    invoke-virtual {p2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
     goto :goto_0
 
     :cond_2
@@ -222,12 +223,14 @@
 
     aget-object p1, p1, v0
 
+    invoke-virtual {p2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
     goto :goto_0
 
     :cond_3
     invoke-virtual {p2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    :goto_1
+    :goto_0
     return-object p2
 .end method
 

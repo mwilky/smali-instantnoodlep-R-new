@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21;
 .super Landroidx/fragment/app/FragmentTransitionImpl;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/fragment/app/FragmentTransitionImpl;-><init>()V
@@ -18,7 +18,7 @@
     return-void
 .end method
 
-.method private static hasSimpleTarget(Landroid/transition/Transition;)Z
+.method public static hasSimpleTarget(Landroid/transition/Transition;)Z
     .locals 1
 
     invoke-virtual {p0}, Landroid/transition/Transition;->getTargetIds()Ljava/util/List;

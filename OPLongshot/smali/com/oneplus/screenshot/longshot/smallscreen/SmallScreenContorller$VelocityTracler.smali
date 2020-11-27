@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
+.class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "VelocityTracler"
 .end annotation
 
 
 # instance fields
-.field endTime:J
+.field public endTime:J
 
-.field mEndPoint:Landroid/graphics/Point;
+.field public mEndPoint:Landroid/graphics/Point;
 
-.field mStartPoint:Landroid/graphics/Point;
+.field public mStartPoint:Landroid/graphics/Point;
 
-.field startTime:J
+.field public startTime:J
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
 
 # direct methods

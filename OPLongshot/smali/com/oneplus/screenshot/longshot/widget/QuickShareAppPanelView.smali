@@ -1,20 +1,20 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;
 .super Landroid/widget/RelativeLayout;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static TAG:Ljava/lang/String;
+.field public static TAG:Ljava/lang/String; = "Longshot.QuickShareAppPanelView"
 
 
 # instance fields
-.field private mIntervalAngel:I
+.field public mIntervalAngel:I
 
-.field private mMaxParts:I
+.field public mMaxParts:I
 
-.field private mPadding:I
+.field public mPadding:I
 
-.field private mQuickShareAppIconRects:Ljava/util/List;
+.field public mQuickShareAppIconRects:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -24,24 +24,16 @@
     .end annotation
 .end field
 
-.field private mRadius:I
+.field public mRadius:I
 
-.field private mStartAngle:I
+.field public mStartAngle:I
 
-.field private statusBarHeight:I
+.field public statusBarHeight:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->TAG:Ljava/lang/String;
+.method public static constructor <clinit>()V
+    .locals 0
 
     return-void
 .end method
@@ -95,13 +87,19 @@
 
     move-result-object p1
 
-    const p2, 0x7f0702d5
+    const p2, 0x7f0702f3
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->mPadding:I
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->mQuickShareAppIconRects:Ljava/util/List;
 
     return-void
 .end method
@@ -355,7 +353,7 @@
     return-object v0
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 0
 
     sget-object p2, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->TAG:Ljava/lang/String;
@@ -378,13 +376,26 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->mQuickShareAppIconRects:Ljava/util/List;
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_0
 
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->mQuickShareAppIconRects:Ljava/util/List;
+
+    sget-object p1, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->TAG:Ljava/lang/String;
+
+    const-string p2, "add mQuickShareAppIconRects"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
@@ -393,7 +404,7 @@
 
     move-result p2
 
-    if-ge p1, p2, :cond_0
+    if-ge p1, p2, :cond_1
 
     iget-object p2, p0, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->mQuickShareAppIconRects:Ljava/util/List;
 
@@ -407,7 +418,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->layoutChildren()V
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->TAG:Ljava/lang/String;
@@ -435,7 +446,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V

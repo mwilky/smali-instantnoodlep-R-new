@@ -1,6 +1,6 @@
 .class public final Landroidx/core/app/TaskStackBuilder;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Iterable;
@@ -24,11 +24,11 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "TaskStackBuilder"
+.field public static final TAG:Ljava/lang/String; = "TaskStackBuilder"
 
 
 # instance fields
-.field private final mIntents:Ljava/util/ArrayList;
+.field public final mIntents:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -38,11 +38,11 @@
     .end annotation
 .end field
 
-.field private final mSourceContext:Landroid/content/Context;
+.field public final mSourceContext:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -169,7 +169,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    invoke-static {p1}, Landroidx/core/app/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-static {p1}, Lb/h/d/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -213,11 +213,11 @@
     :try_start_0
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    :goto_0
-    invoke-static {v1, p1}, Landroidx/core/app/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-static {v1, p1}, Lb/h/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
 
+    :goto_0
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
@@ -227,6 +227,10 @@
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lb/h/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
     :try_end_0
@@ -565,7 +569,7 @@
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    invoke-static {v1, v0, p1}, Landroidx/core/content/b;->d(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
+    invoke-static {v1, v0, p1}, Lb/h/e/b;->f(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p1
 

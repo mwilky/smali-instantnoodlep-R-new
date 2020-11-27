@@ -1,6 +1,6 @@
-.class abstract Landroidx/loader/content/ModernAsyncTask;
+.class public abstract Landroidx/loader/content/ModernAsyncTask;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -28,25 +28,25 @@
 
 
 # static fields
-.field private static final CORE_POOL_SIZE:I = 0x5
+.field public static final CORE_POOL_SIZE:I = 0x5
 
-.field private static final KEEP_ALIVE:I = 0x1
+.field public static final KEEP_ALIVE:I = 0x1
 
-.field private static final LOG_TAG:Ljava/lang/String; = "AsyncTask"
+.field public static final LOG_TAG:Ljava/lang/String; = "AsyncTask"
 
-.field private static final MAXIMUM_POOL_SIZE:I = 0x80
+.field public static final MAXIMUM_POOL_SIZE:I = 0x80
 
-.field private static final MESSAGE_POST_PROGRESS:I = 0x2
+.field public static final MESSAGE_POST_PROGRESS:I = 0x2
 
-.field private static final MESSAGE_POST_RESULT:I = 0x1
+.field public static final MESSAGE_POST_RESULT:I = 0x1
 
 .field public static final THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-.field private static volatile sDefaultExecutor:Ljava/util/concurrent/Executor;
+.field public static volatile sDefaultExecutor:Ljava/util/concurrent/Executor;
 
-.field private static sHandler:Landroidx/loader/content/ModernAsyncTask$c;
+.field public static sHandler:Landroidx/loader/content/ModernAsyncTask$c;
 
-.field private static final sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
+.field public static final sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/BlockingQueue<",
@@ -56,13 +56,13 @@
     .end annotation
 .end field
 
-.field private static final sThreadFactory:Ljava/util/concurrent/ThreadFactory;
+.field public static final sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field final mCancelled:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mCancelled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private final mFuture:Ljava/util/concurrent/FutureTask;
+.field public final mFuture:Ljava/util/concurrent/FutureTask;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/FutureTask<",
@@ -71,11 +71,11 @@
     .end annotation
 .end field
 
-.field private volatile mStatus:Landroidx/loader/content/ModernAsyncTask$Status;
+.field public volatile mStatus:Landroidx/loader/content/ModernAsyncTask$Status;
 
-.field final mTaskInvoked:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mTaskInvoked:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private final mWorker:Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
+.field public final mWorker:Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/ModernAsyncTask$WorkerRunnable<",
@@ -86,7 +86,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 10
 
     new-instance v0, Landroidx/loader/content/ModernAsyncTask$a;
@@ -128,7 +128,7 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -176,7 +176,7 @@
     return-void
 .end method
 
-.method private static getHandler()Landroid/os/Handler;
+.method public static getHandler()Landroid/os/Handler;
     .locals 2
 
     const-class v0, Landroidx/loader/content/ModernAsyncTask;
@@ -244,7 +244,7 @@
     return p1
 .end method
 
-.method protected varargs abstract doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public varargs abstract doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TParams;)TResult;"
@@ -351,7 +351,7 @@
     return-object p0
 .end method
 
-.method finish(Ljava/lang/Object;)V
+.method public finish(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -436,13 +436,13 @@
     return v0
 .end method
 
-.method protected onCancelled()V
+.method public onCancelled()V
     .locals 0
 
     return-void
 .end method
 
-.method protected onCancelled(Ljava/lang/Object;)V
+.method public onCancelled(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -455,7 +455,7 @@
     return-void
 .end method
 
-.method protected onPostExecute(Ljava/lang/Object;)V
+.method public onPostExecute(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -466,13 +466,13 @@
     return-void
 .end method
 
-.method protected onPreExecute()V
+.method public onPreExecute()V
     .locals 0
 
     return-void
 .end method
 
-.method protected varargs onProgressUpdate([Ljava/lang/Object;)V
+.method public varargs onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -483,7 +483,7 @@
     return-void
 .end method
 
-.method postResult(Ljava/lang/Object;)Ljava/lang/Object;
+.method public postResult(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -516,7 +516,7 @@
     return-object p1
 .end method
 
-.method postResultIfNotInvoked(Ljava/lang/Object;)V
+.method public postResultIfNotInvoked(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -538,7 +538,7 @@
     return-void
 .end method
 
-.method protected final varargs publishProgress([Ljava/lang/Object;)V
+.method public final varargs publishProgress([Ljava/lang/Object;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {

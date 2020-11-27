@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x60c
+    accessFlags = 0x609
     name = "Reference"
 .end annotation
 

@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/TintInfo;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method clear()V
+.method public clear()V
     .locals 2
 
     const/4 v0, 0x0

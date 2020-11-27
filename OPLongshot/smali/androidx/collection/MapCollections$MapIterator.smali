@@ -1,6 +1,6 @@
-.class final Landroidx/collection/MapCollections$MapIterator;
+.class public final Landroidx/collection/MapCollections$MapIterator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "MapIterator"
 .end annotation
 
@@ -30,17 +30,17 @@
 
 
 # instance fields
-.field mEnd:I
+.field public mEnd:I
 
-.field mEntryValid:Z
+.field public mEntryValid:Z
 
-.field mIndex:I
+.field public mIndex:I
 
-.field final synthetic this$0:Landroidx/collection/MapCollections;
+.field public final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/MapCollections;)V
+.method public constructor <init>(Landroidx/collection/MapCollections;)V
     .locals 1
 
     iput-object p1, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
@@ -98,7 +98,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lb/e/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -118,7 +118,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroidx/collection/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lb/e/a;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

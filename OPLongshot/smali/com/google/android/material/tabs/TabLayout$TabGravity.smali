@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/material/tabs/TabLayout$TabGravity;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

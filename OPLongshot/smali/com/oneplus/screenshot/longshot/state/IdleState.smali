@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/IdleState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "IdleState"
+.field public static final TAG:Ljava/lang/String; = "IdleState"
 
 
 # direct methods

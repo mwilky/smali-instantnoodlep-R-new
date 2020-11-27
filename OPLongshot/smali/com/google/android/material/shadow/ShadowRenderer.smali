@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/shadow/ShadowRenderer;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,50 +12,50 @@
 
 
 # static fields
-.field private static final COLOR_ALPHA_END:I = 0x0
+.field public static final COLOR_ALPHA_END:I = 0x0
 
-.field private static final COLOR_ALPHA_MIDDLE:I = 0x14
+.field public static final COLOR_ALPHA_MIDDLE:I = 0x14
 
-.field private static final COLOR_ALPHA_START:I = 0x44
+.field public static final COLOR_ALPHA_START:I = 0x44
 
-.field private static final cornerColors:[I
+.field public static final cornerColors:[I
 
-.field private static final cornerPositions:[F
+.field public static final cornerPositions:[F
 
-.field private static final edgeColors:[I
+.field public static final edgeColors:[I
 
-.field private static final edgePositions:[F
+.field public static final edgePositions:[F
 
 
 # instance fields
-.field private final cornerShadowPaint:Landroid/graphics/Paint;
+.field public final cornerShadowPaint:Landroid/graphics/Paint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final edgeShadowPaint:Landroid/graphics/Paint;
+.field public final edgeShadowPaint:Landroid/graphics/Paint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final scratch:Landroid/graphics/Path;
+.field public final scratch:Landroid/graphics/Path;
 
-.field private shadowEndColor:I
+.field public shadowEndColor:I
 
-.field private shadowMiddleColor:I
+.field public shadowMiddleColor:I
 
-.field private final shadowPaint:Landroid/graphics/Paint;
+.field public final shadowPaint:Landroid/graphics/Paint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private shadowStartColor:I
+.field public shadowStartColor:I
 
-.field private transparentPaint:Landroid/graphics/Paint;
+.field public transparentPaint:Landroid/graphics/Paint;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const/4 v0, 0x3
@@ -476,7 +476,7 @@
 
     const/16 v0, 0x44
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
+    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
 
     move-result v0
 
@@ -484,7 +484,7 @@
 
     const/16 v0, 0x14
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
+    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
 
     move-result v0
 
@@ -492,7 +492,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->d(II)I
+    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
 
     move-result p1
 

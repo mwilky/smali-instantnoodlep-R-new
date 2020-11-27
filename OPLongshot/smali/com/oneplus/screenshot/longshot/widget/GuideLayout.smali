@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/GuideLayout;
 .super Landroid/widget/RelativeLayout;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "GuideLayout"
+.field public static final TAG:Ljava/lang/String; = "GuideLayout"
 
 
 # instance fields
-.field private mClickable:Z
+.field public mClickable:Z
 
 
 # direct methods

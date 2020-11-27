@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$u;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,21 +22,21 @@
 
 
 # instance fields
-.field private a:I
+.field public a:I
 
-.field private b:Landroidx/recyclerview/widget/RecyclerView;
+.field public b:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private c:Landroidx/recyclerview/widget/RecyclerView$k;
+.field public c:Landroidx/recyclerview/widget/RecyclerView$k;
 
-.field private d:Z
+.field public d:Z
 
-.field private e:Z
+.field public e:Z
 
-.field private f:Landroid/view/View;
+.field public f:Landroid/view/View;
 
-.field private final g:Landroidx/recyclerview/widget/RecyclerView$u$a;
+.field public final g:Landroidx/recyclerview/widget/RecyclerView$u$a;
 
-.field private h:Z
+.field public h:Z
 
 
 # direct methods
@@ -187,7 +187,7 @@
     return v0
 .end method
 
-.method protected i(Landroid/graphics/PointF;)V
+.method public i(Landroid/graphics/PointF;)V
     .locals 2
     .param p1    # Landroid/graphics/PointF;
         .annotation build Landroidx/annotation/NonNull;
@@ -227,7 +227,7 @@
     return-void
 .end method
 
-.method j(II)V
+.method public j(II)V
     .locals 5
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$u;->b:Landroidx/recyclerview/widget/RecyclerView;
@@ -381,7 +381,7 @@
     return-void
 .end method
 
-.method protected k(Landroid/view/View;)V
+.method public k(Landroid/view/View;)V
     .locals 2
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$u;->d(Landroid/view/View;)I
@@ -400,7 +400,7 @@
     return-void
 .end method
 
-.method protected abstract l(IILandroidx/recyclerview/widget/RecyclerView$v;Landroidx/recyclerview/widget/RecyclerView$u$a;)V
+.method public abstract l(IILandroidx/recyclerview/widget/RecyclerView$v;Landroidx/recyclerview/widget/RecyclerView$u$a;)V
     .param p1    # I
         .annotation build Landroidx/annotation/Px;
         .end annotation
@@ -419,13 +419,13 @@
     .end param
 .end method
 
-.method protected abstract m()V
+.method public abstract m()V
 .end method
 
-.method protected abstract n()V
+.method public abstract n()V
 .end method
 
-.method protected abstract o(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$v;Landroidx/recyclerview/widget/RecyclerView$u$a;)V
+.method public abstract o(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$v;Landroidx/recyclerview/widget/RecyclerView$u$a;)V
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -448,7 +448,7 @@
     return-void
 .end method
 
-.method q(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$k;)V
+.method public q(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$k;)V
     .locals 2
 
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mViewFlinger:Landroidx/recyclerview/widget/RecyclerView$x;
@@ -556,7 +556,7 @@
     throw p1
 .end method
 
-.method protected final r()V
+.method public final r()V
     .locals 3
 
     iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$u;->e:Z

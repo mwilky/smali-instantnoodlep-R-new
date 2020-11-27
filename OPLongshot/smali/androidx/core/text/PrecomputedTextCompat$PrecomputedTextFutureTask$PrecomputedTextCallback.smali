@@ -1,6 +1,6 @@
-.class Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask$PrecomputedTextCallback;
+.class public Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask$PrecomputedTextCallback;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "PrecomputedTextCallback"
 .end annotation
 
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field private mParams:Landroidx/core/text/PrecomputedTextCompat$a;
+.field public mParams:Landroidx/core/text/PrecomputedTextCompat$a;
 
-.field private mText:Ljava/lang/CharSequence;
+.field public mText:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/text/PrecomputedTextCompat$a;Ljava/lang/CharSequence;)V
+.method public constructor <init>(Landroidx/core/text/PrecomputedTextCompat$a;Ljava/lang/CharSequence;)V
     .locals 0
     .param p1    # Landroidx/core/text/PrecomputedTextCompat$a;
         .annotation build Landroidx/annotation/NonNull;

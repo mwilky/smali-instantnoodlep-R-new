@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/resources/MaterialResources;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -272,7 +272,7 @@
     return-object p0
 .end method
 
-.method static getIndexWithValue(Landroid/content/res/TypedArray;II)I
+.method public static getIndexWithValue(Landroid/content/res/TypedArray;II)I
     .locals 0
     .param p0    # Landroid/content/res/TypedArray;
         .annotation build Landroidx/annotation/NonNull;

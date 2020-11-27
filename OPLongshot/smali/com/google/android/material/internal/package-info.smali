@@ -1,6 +1,6 @@
-.class interface abstract synthetic Lcom/google/android/material/internal/package-info;
+.class public interface abstract synthetic Lcom/google/android/material/internal/package-info;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations

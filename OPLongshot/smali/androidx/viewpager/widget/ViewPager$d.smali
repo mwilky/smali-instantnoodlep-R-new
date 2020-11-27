@@ -1,6 +1,6 @@
-.class Landroidx/viewpager/widget/ViewPager$d;
+.class public Landroidx/viewpager/widget/ViewPager$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:Ljava/lang/Object;
+.field public a:Ljava/lang/Object;
 
-.field b:I
+.field public b:I
 
-.field c:Z
+.field public c:Z
 
-.field d:F
+.field public d:F
 
-.field e:F
+.field public e:F
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

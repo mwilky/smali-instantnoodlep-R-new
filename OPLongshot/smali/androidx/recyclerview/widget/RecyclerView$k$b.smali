@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/RecyclerView$k$b;
+.class public Landroidx/recyclerview/widget/RecyclerView$k$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ViewBoundsCheck$b;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/recyclerview/widget/RecyclerView$k;
+.field public final synthetic a:Landroidx/recyclerview/widget/RecyclerView$k;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView$k;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$k;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$k$b;->a:Landroidx/recyclerview/widget/RecyclerView$k;

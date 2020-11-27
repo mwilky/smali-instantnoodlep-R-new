@@ -1,12 +1,12 @@
 .class public Lcom/oneplus/screenshot/longshot/transform/Complex;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private mImag:D
+.field public mImag:D
 
-.field private mReal:D
+.field public mReal:D
 
 
 # direct methods

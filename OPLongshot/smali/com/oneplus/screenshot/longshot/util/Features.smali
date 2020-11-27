@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/longshot/util/Features;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/oneplus/screenshot/longshot/util/Features;
+.field public static final synthetic $VALUES:[Lcom/oneplus/screenshot/longshot/util/Features;
 
 .field public static final enum FULLSCREEN_IMAGE:Lcom/oneplus/screenshot/longshot/util/Features;
 
@@ -30,13 +30,13 @@
 
 
 # instance fields
-.field private mIsDebug:Z
+.field public mIsDebug:Z
 
-.field private mValue:Z
+.field public mValue:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 9
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/util/Features;
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;IZZ)V
+.method public constructor <init>(Ljava/lang/String;IZZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

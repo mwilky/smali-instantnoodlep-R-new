@@ -1,6 +1,6 @@
-.class abstract Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
+.class public abstract Landroidx/loader/content/ModernAsyncTask$WorkerRunnable;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40a
+    accessFlags = 0x409
     name = "WorkerRunnable"
 .end annotation
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field mParams:[Ljava/lang/Object;
+.field public mParams:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TParams;"
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

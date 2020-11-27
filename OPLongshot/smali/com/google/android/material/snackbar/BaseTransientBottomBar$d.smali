@@ -1,9 +1,9 @@
-.class Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;
+.class public Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Lcom/google/android/material/snackbar/b$b;
+.implements Lc/b/b/b/h0/b$b;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+.field public final synthetic a:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
+.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;->a:Lcom/google/android/material/snackbar/BaseTransientBottomBar;

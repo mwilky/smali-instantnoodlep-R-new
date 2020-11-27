@@ -1,6 +1,6 @@
-.class Landroidx/transition/ViewUtilsApi29;
+.class public Landroidx/transition/ViewUtilsApi29;
 .super Landroidx/transition/ViewUtilsApi23;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/transition/ViewUtilsApi23;-><init>()V

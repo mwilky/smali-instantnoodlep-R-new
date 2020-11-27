@@ -1,6 +1,6 @@
 .class public Landroidx/vectordrawable/graphics/drawable/AnimationUtilsCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method private static createInterpolatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
+.method public static createInterpolatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
     .locals 2
 
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
@@ -270,9 +270,9 @@
     if-ne p1, v1, :cond_1
 
     :try_start_0
-    new-instance p0, La/f/a/a/a;
+    new-instance p0, Lb/l/a/a/a;
 
-    invoke-direct {p0}, La/f/a/a/a;-><init>()V
+    invoke-direct {p0}, Lb/l/a/a/a;-><init>()V
 
     return-object p0
 
@@ -296,9 +296,9 @@
 
     if-ne p1, v1, :cond_2
 
-    new-instance p0, La/f/a/a/b;
+    new-instance p0, Lb/l/a/a/b;
 
-    invoke-direct {p0}, La/f/a/a/b;-><init>()V
+    invoke-direct {p0}, Lb/l/a/a/b;-><init>()V
 
     return-object p0
 
@@ -307,9 +307,9 @@
 
     if-ne p1, v1, :cond_3
 
-    new-instance p0, La/f/a/a/c;
+    new-instance p0, Lb/l/a/a/c;
 
-    invoke-direct {p0}, La/f/a/a/c;-><init>()V
+    invoke-direct {p0}, Lb/l/a/a/c;-><init>()V
 
     return-object p0
 

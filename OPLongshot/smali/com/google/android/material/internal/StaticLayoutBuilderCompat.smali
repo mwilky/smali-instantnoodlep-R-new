@@ -1,6 +1,6 @@
-.class final Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
+.class public final Lcom/google/android/material/internal/StaticLayoutBuilderCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,15 +18,15 @@
 
 
 # static fields
-.field private static final TEXT_DIRS_CLASS:Ljava/lang/String; = "android.text.TextDirectionHeuristics"
+.field public static final TEXT_DIRS_CLASS:Ljava/lang/String; = "android.text.TextDirectionHeuristics"
 
-.field private static final TEXT_DIR_CLASS:Ljava/lang/String; = "android.text.TextDirectionHeuristic"
+.field public static final TEXT_DIR_CLASS:Ljava/lang/String; = "android.text.TextDirectionHeuristic"
 
-.field private static final TEXT_DIR_CLASS_LTR:Ljava/lang/String; = "LTR"
+.field public static final TEXT_DIR_CLASS_LTR:Ljava/lang/String; = "LTR"
 
-.field private static final TEXT_DIR_CLASS_RTL:Ljava/lang/String; = "RTL"
+.field public static final TEXT_DIR_CLASS_RTL:Ljava/lang/String; = "RTL"
 
-.field private static constructor:Ljava/lang/reflect/Constructor;
+.field public static constructor:Ljava/lang/reflect/Constructor;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -39,41 +39,41 @@
     .end annotation
 .end field
 
-.field private static initialized:Z
+.field public static initialized:Z
 
-.field private static textDirection:Ljava/lang/Object;
+.field public static textDirection:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # instance fields
-.field private alignment:Landroid/text/Layout$Alignment;
+.field public alignment:Landroid/text/Layout$Alignment;
 
-.field private ellipsize:Landroid/text/TextUtils$TruncateAt;
+.field public ellipsize:Landroid/text/TextUtils$TruncateAt;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private end:I
+.field public end:I
 
-.field private includePad:Z
+.field public includePad:Z
 
-.field private isRtl:Z
+.field public isRtl:Z
 
-.field private maxLines:I
+.field public maxLines:I
 
-.field private final paint:Landroid/text/TextPaint;
+.field public final paint:Landroid/text/TextPaint;
 
-.field private source:Ljava/lang/CharSequence;
+.field public source:Ljava/lang/CharSequence;
 
-.field private start:I
+.field public start:I
 
-.field private final width:I
+.field public final width:I
 
 
 # direct methods
-.method private constructor <init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;I)V
+.method public constructor <init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

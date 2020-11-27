@@ -1,6 +1,6 @@
-.class abstract Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;
+.class public abstract Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;
 .super Lcom/google/android/material/appbar/ViewOffsetBehavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,13 +14,13 @@
 
 
 # instance fields
-.field private overlayTop:I
+.field public overlayTop:I
 
-.field final tempRect1:Landroid/graphics/Rect;
+.field public final tempRect1:Landroid/graphics/Rect;
 
-.field final tempRect2:Landroid/graphics/Rect;
+.field public final tempRect2:Landroid/graphics/Rect;
 
-.field private verticalLayoutGap:I
+.field public verticalLayoutGap:I
 
 
 # direct methods
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method private static resolveGravity(I)I
+.method public static resolveGravity(I)I
     .locals 0
 
     if-nez p0, :cond_0
@@ -85,7 +85,7 @@
 
 
 # virtual methods
-.method abstract findFirstDependency(Ljava/util/List;)Landroid/view/View;
+.method public abstract findFirstDependency(Ljava/util/List;)Landroid/view/View;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -100,7 +100,7 @@
     .end annotation
 .end method
 
-.method final getOverlapPixelsForOffset(Landroid/view/View;)I
+.method public final getOverlapPixelsForOffset(Landroid/view/View;)I
     .locals 3
 
     iget v0, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->overlayTop:I
@@ -124,7 +124,7 @@
 
     float-to-int p1, p1
 
-    invoke-static {p1, v1, v0}, La/d/d/a;->b(III)I
+    invoke-static {p1, v1, v0}, Lb/h/g/a;->b(III)I
 
     move-result v1
 
@@ -132,7 +132,7 @@
     return v1
 .end method
 
-.method getOverlapRatioForOffset(Landroid/view/View;)F
+.method public getOverlapRatioForOffset(Landroid/view/View;)F
     .locals 0
 
     const/high16 p1, 0x3f800000    # 1.0f
@@ -148,7 +148,7 @@
     return v0
 .end method
 
-.method getScrollRange(Landroid/view/View;)I
+.method public getScrollRange(Landroid/view/View;)I
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -162,7 +162,7 @@
     return p1
 .end method
 
-.method final getVerticalLayoutGap()I
+.method public final getVerticalLayoutGap()I
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->verticalLayoutGap:I
@@ -170,7 +170,7 @@
     return v0
 .end method
 
-.method protected layoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+.method public layoutChild(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
     .locals 8
     .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
         .annotation build Landroidx/annotation/NonNull;
@@ -251,7 +251,7 @@
 
     invoke-virtual {v5, v2, v3, v4, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/x;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Lb/h/l/x;
 
     move-result-object v2
 
@@ -271,7 +271,7 @@
 
     iget p1, v5, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Landroidx/core/view/x;->c()I
+    invoke-virtual {v2}, Lb/h/l/x;->c()I
 
     move-result v3
 
@@ -281,7 +281,7 @@
 
     iget p1, v5, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v2}, Landroidx/core/view/x;->d()I
+    invoke-virtual {v2}, Lb/h/l/x;->d()I
 
     move-result v2
 
@@ -310,7 +310,7 @@
 
     move v7, p3
 
-    invoke-static/range {v2 .. v7}, Landroidx/core/view/b;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-static/range {v2 .. v7}, Lb/h/l/b;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->getOverlapPixelsForOffset(Landroid/view/View;)I
 
@@ -338,6 +338,8 @@
 
     sub-int/2addr p1, p2
 
+    iput p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->verticalLayoutGap:I
+
     goto :goto_0
 
     :cond_1
@@ -345,9 +347,9 @@
 
     const/4 p1, 0x0
 
-    :goto_0
     iput p1, p0, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->verticalLayoutGap:I
 
+    :goto_0
     return-void
 .end method
 
@@ -399,17 +401,17 @@
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/view/x;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Lb/h/l/x;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Landroidx/core/view/x;->e()I
+    invoke-virtual {v3}, Lb/h/l/x;->e()I
 
     move-result v4
 
-    invoke-virtual {v3}, Landroidx/core/view/x;->b()I
+    invoke-virtual {v3}, Lb/h/l/x;->b()I
 
     move-result v3
 
@@ -498,7 +500,7 @@
     return-void
 .end method
 
-.method protected shouldHeaderOverlapScrollingChild()Z
+.method public shouldHeaderOverlapScrollingChild()Z
     .locals 1
 
     const/4 v0, 0x0

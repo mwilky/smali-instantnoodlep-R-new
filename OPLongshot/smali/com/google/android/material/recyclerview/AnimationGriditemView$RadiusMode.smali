@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
+.field public static final synthetic $VALUES:[Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
 
 .field public static final enum NONE:Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field final nativeInt:I
+.field public final nativeInt:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lcom/google/android/material/recyclerview/AnimationGriditemView$RadiusMode;
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

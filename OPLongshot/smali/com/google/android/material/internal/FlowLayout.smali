@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/FlowLayout;
 .super Landroid/view/ViewGroup;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private itemSpacing:I
+.field public itemSpacing:I
 
-.field private lineSpacing:I
+.field public lineSpacing:I
 
-.field private rowCount:I
+.field public rowCount:I
 
-.field private singleLine:Z
+.field public singleLine:Z
 
 
 # direct methods
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method private static getMeasuredDimension(III)I
+.method public static getMeasuredDimension(III)I
     .locals 1
 
     const/high16 v0, -0x80000000
@@ -140,7 +140,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lb/a/b/a/l;->FlowLayout:[I
+    sget-object v0, Lc/b/b/b/l;->FlowLayout:[I
 
     const/4 v1, 0x0
 
@@ -148,7 +148,7 @@
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/l;->FlowLayout_lineSpacing:I
+    sget p2, Lc/b/b/b/l;->FlowLayout_lineSpacing:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -156,7 +156,7 @@
 
     iput p2, p0, Lcom/google/android/material/internal/FlowLayout;->lineSpacing:I
 
-    sget p2, Lb/a/b/a/l;->FlowLayout_itemSpacing:I
+    sget p2, Lc/b/b/b/l;->FlowLayout_itemSpacing:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -171,7 +171,7 @@
 
 
 # virtual methods
-.method protected getItemSpacing()I
+.method public getItemSpacing()I
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/internal/FlowLayout;->itemSpacing:I
@@ -179,7 +179,7 @@
     return v0
 .end method
 
-.method protected getLineSpacing()I
+.method public getLineSpacing()I
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/internal/FlowLayout;->lineSpacing:I
@@ -187,7 +187,7 @@
     return v0
 .end method
 
-.method protected getRowCount()I
+.method public getRowCount()I
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/internal/FlowLayout;->rowCount:I
@@ -202,7 +202,7 @@
         .end annotation
     .end param
 
-    sget v0, Lb/a/b/a/f;->row_index_key:I
+    sget v0, Lc/b/b/b/f;->row_index_key:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -234,7 +234,7 @@
     return v0
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 9
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -329,7 +329,7 @@
 
     if-ne v5, v6, :cond_4
 
-    sget v5, Lb/a/b/a/f;->row_index_key:I
+    sget v5, Lc/b/b/b/f;->row_index_key:I
 
     const/4 v6, -0x1
 
@@ -339,7 +339,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_4
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -352,11 +352,11 @@
 
     check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-static {v5}, Landroidx/core/view/d;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Lb/h/l/d;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v6
 
-    invoke-static {v5}, Landroidx/core/view/d;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Lb/h/l/d;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v5
 
@@ -395,7 +395,7 @@
     move v3, v0
 
     :cond_6
-    sget v2, Lb/a/b/a/f;->row_index_key:I
+    sget v2, Lc/b/b/b/f;->row_index_key:I
 
     iget v7, p0, Lcom/google/android/material/internal/FlowLayout;->rowCount:I
 
@@ -429,9 +429,14 @@
 
     sub-int/2addr v7, v6
 
+    invoke-virtual {v4, v2, p2, v7, v8}, Landroid/view/View;->layout(IIII)V
+
+    goto :goto_5
+
     :cond_7
     invoke-virtual {v4, v2, p2, v7, v8}, Landroid/view/View;->layout(IIII)V
 
+    :goto_5
     add-int/2addr v6, v5
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
@@ -448,7 +453,7 @@
 
     move v2, v8
 
-    :goto_5
+    :goto_6
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
@@ -457,7 +462,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 20
 
     move-object/from16 v0, p0
@@ -691,7 +696,7 @@
     return-void
 .end method
 
-.method protected setItemSpacing(I)V
+.method public setItemSpacing(I)V
     .locals 0
 
     iput p1, p0, Lcom/google/android/material/internal/FlowLayout;->itemSpacing:I
@@ -699,7 +704,7 @@
     return-void
 .end method
 
-.method protected setLineSpacing(I)V
+.method public setLineSpacing(I)V
     .locals 0
 
     iput p1, p0, Lcom/google/android/material/internal/FlowLayout;->lineSpacing:I

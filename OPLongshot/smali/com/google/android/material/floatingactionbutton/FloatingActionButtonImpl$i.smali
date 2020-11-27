@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
+.class public interface abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "i"
 .end annotation
 

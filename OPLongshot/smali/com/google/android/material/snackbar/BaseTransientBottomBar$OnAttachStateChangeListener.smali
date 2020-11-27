@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;
+.class public interface abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "OnAttachStateChangeListener"
 .end annotation
 

@@ -1,6 +1,6 @@
-.class Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
-.super Landroidx/core/app/b;
-.source ""
+.class public Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
+.super Lb/h/d/b;
+.source "SourceFile"
 
 
 # annotations
@@ -10,17 +10,17 @@
 
 
 # static fields
-.field private static final NANOS_PER_MS:I = 0xf4240
+.field public static final NANOS_PER_MS:I = 0xf4240
 
-.field private static final NANOS_ROUNDING_VALUE:I = 0x7a120
+.field public static final NANOS_ROUNDING_VALUE:I = 0x7a120
 
-.field private static sHandler:Landroid/os/Handler;
+.field public static sHandler:Landroid/os/Handler;
 
-.field private static sHandlerThread:Landroid/os/HandlerThread;
+.field public static sHandlerThread:Landroid/os/HandlerThread;
 
 
 # instance fields
-.field private mActivities:Ljava/util/ArrayList;
+.field public mActivities:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -31,24 +31,24 @@
     .end annotation
 .end field
 
-.field mListener:Landroid/view/Window$OnFrameMetricsAvailableListener;
+.field public mListener:Landroid/view/Window$OnFrameMetricsAvailableListener;
 
-.field mMetrics:[Landroid/util/SparseIntArray;
+.field public mMetrics:[Landroid/util/SparseIntArray;
 
-.field mTrackingFlags:I
+.field public mTrackingFlags:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 1
 
-    invoke-direct {p0}, Landroidx/core/app/b;-><init>()V
+    invoke-direct {p0}, Lb/h/d/b;-><init>()V
 
     const/16 v0, 0x9
 
@@ -161,7 +161,7 @@
     return-void
 .end method
 
-.method addDurationItem(Landroid/util/SparseIntArray;J)V
+.method public addDurationItem(Landroid/util/SparseIntArray;J)V
     .locals 4
 
     if-eqz p1, :cond_0

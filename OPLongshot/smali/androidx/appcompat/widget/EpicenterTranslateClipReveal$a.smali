@@ -1,6 +1,6 @@
-.class final Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;
+.class public final Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field public final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Landroid/graphics/Rect;
+.field public final synthetic b:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Landroid/graphics/Rect;)V
+.method public constructor <init>(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;->a:Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/viewpager2/widget/ViewPager2$Orientation;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

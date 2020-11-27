@@ -1,6 +1,6 @@
-.class final Landroidx/core/app/JobIntentService$JobWorkEnqueuer;
-.super Landroidx/core/app/JobIntentService$b;
-.source ""
+.class public final Landroidx/core/app/JobIntentService$JobWorkEnqueuer;
+.super Landroidx/core/app/JobIntentService$e;
+.source "SourceFile"
 
 
 # annotations
@@ -13,28 +13,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "JobWorkEnqueuer"
 .end annotation
 
 
 # instance fields
-.field private final mJobInfo:Landroid/app/job/JobInfo;
+.field public final mJobInfo:Landroid/app/job/JobInfo;
 
-.field private final mJobScheduler:Landroid/app/job/JobScheduler;
+.field public final mJobScheduler:Landroid/app/job/JobScheduler;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
     .locals 2
 
-    invoke-direct {p0, p2}, Landroidx/core/app/JobIntentService$b;-><init>(Landroid/content/ComponentName;)V
+    invoke-direct {p0, p2}, Landroidx/core/app/JobIntentService$e;-><init>(Landroid/content/ComponentName;)V
 
-    invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$b;->ensureJobId(I)V
+    invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$e;->ensureJobId(I)V
 
     new-instance p2, Landroid/app/job/JobInfo$Builder;
 
-    iget-object v0, p0, Landroidx/core/app/JobIntentService$b;->mComponentName:Landroid/content/ComponentName;
+    iget-object v0, p0, Landroidx/core/app/JobIntentService$e;->mComponentName:Landroid/content/ComponentName;
 
     invoke-direct {p2, p3, v0}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
@@ -69,7 +69,7 @@
 
 
 # virtual methods
-.method enqueueWork(Landroid/content/Intent;)V
+.method public enqueueWork(Landroid/content/Intent;)V
     .locals 3
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->mJobScheduler:Landroid/app/job/JobScheduler;

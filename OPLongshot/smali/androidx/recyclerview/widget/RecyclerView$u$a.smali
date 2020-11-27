@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$u$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field private a:I
+.field public a:I
 
-.field private b:I
+.field public b:I
 
-.field private c:I
+.field public c:I
 
-.field private d:I
+.field public d:I
 
-.field private e:Landroid/view/animation/Interpolator;
+.field public e:Landroid/view/animation/Interpolator;
 
-.field private f:Z
+.field public f:Z
 
-.field private g:I
+.field public g:I
 
 
 # direct methods
@@ -89,51 +89,9 @@
     return-void
 .end method
 
-.method private e()V
-    .locals 2
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->e:Landroid/view/animation/Interpolator;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->c:I
-
-    if-lt v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "If you provide an interpolator, you must set a positive duration"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->c:I
-
-    if-lt v0, v1, :cond_2
-
-    return-void
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Scroll duration must be a positive number"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
 
 # virtual methods
-.method a()Z
+.method public a()Z
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->d:I
@@ -159,7 +117,7 @@
     return-void
 .end method
 
-.method c(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public c(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 5
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->d:I
@@ -183,7 +141,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$u$a;->e()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$u$a;->e()V
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->mViewFlinger:Landroidx/recyclerview/widget/RecyclerView$x;
 
@@ -253,4 +211,46 @@
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->f:Z
 
     return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->e:Landroid/view/animation/Interpolator;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->c:I
+
+    if-lt v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "If you provide an interpolator, you must set a positive duration"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$u$a;->c:I
+
+    if-lt v0, v1, :cond_2
+
+    return-void
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Scroll duration must be a positive number"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

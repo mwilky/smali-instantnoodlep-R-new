@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotOverState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotNextState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ShotOverState"
+.field public static final TAG:Ljava/lang/String; = "ShotOverState"
 
 
 # direct methods
@@ -21,18 +21,24 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_OVER_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_OVER_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_OVER_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
+
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
+
+    :goto_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_OVER_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
@@ -46,7 +52,7 @@
 
 
 # virtual methods
-.method protected getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->STITCH_OVER:Lcom/oneplus/screenshot/longshot/state/LongshotState;

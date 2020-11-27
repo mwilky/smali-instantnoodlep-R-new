@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/MoveTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,39 +23,39 @@
 
 
 # static fields
-.field private static final M_CHECK_LOCK:Ljava/lang/Object;
+.field public static final M_CHECK_LOCK:Ljava/lang/Object;
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.MoveTask"
+.field public static final TAG:Ljava/lang/String; = "Longshot.MoveTask"
 
-.field private static overscrollCheckPoint:I = 0xa
+.field public static overscrollCheckPoint:I = 0xa
 
 
 # instance fields
-.field inputSource:I
+.field public inputSource:I
 
-.field private mCanRunTask:Z
+.field public mCanRunTask:Z
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mCurrentScreenPart:Landroid/graphics/Bitmap;
+.field public mCurrentScreenPart:Landroid/graphics/Bitmap;
 
-.field private final mDisplayHeight:I
+.field public final mDisplayHeight:I
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field private mInstrumentation:Landroid/app/Instrumentation;
+.field public mInstrumentation:Landroid/app/Instrumentation;
 
-.field private mLastScreenPart:Landroid/graphics/Bitmap;
+.field public mLastScreenPart:Landroid/graphics/Bitmap;
 
-.field private mListener:Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;
+.field public mListener:Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;
 
-.field private mMoveDuration:I
+.field public mMoveDuration:I
 
-.field private mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+.field public mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
-.field private mPartScreenshotMatchTimes:I
+.field public mPartScreenshotMatchTimes:I
 
-.field mScreenInfos:Ljava/util/List;
+.field public mScreenInfos:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -65,11 +65,11 @@
     .end annotation
 .end field
 
-.field private mWindowToken:Landroid/os/IBinder;
+.field public mWindowToken:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -120,7 +120,7 @@
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/MoveTask$1;
 
-    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object v1
 
@@ -157,7 +157,7 @@
     return-void
 .end method
 
-.method static synthetic access$000()Ljava/lang/Object;
+.method public static synthetic access$000()Ljava/lang/Object;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->M_CHECK_LOCK:Ljava/lang/Object;
@@ -165,7 +165,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/task/MoveTask;)Z
+.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/task/MoveTask;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mCanRunTask:Z
@@ -173,7 +173,7 @@
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/task/MoveTask;I)V
+.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/task/MoveTask;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/task/MoveTask;->checkCanScrollInternal(I)V
@@ -421,7 +421,7 @@
     return p1
 .end method
 
-.method private static final getAlpha(FFF)F
+.method public static final getAlpha(FFF)F
     .locals 3
 
     sub-float v0, p1, p0
@@ -457,7 +457,7 @@
     return v2
 .end method
 
-.method private static final getNextY(FFF)F
+.method public static final getNextY(FFF)F
     .locals 0
 
     sub-float/2addr p1, p0
@@ -494,14 +494,14 @@
 
     const/16 v1, 0x12c
 
-    invoke-static {v0, v4, v1, v3}, Lb/b/b/l/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
+    invoke-static {v0, v4, v1, v3}, Lc/c/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private static final getSource(II)I
+.method public static final getSource(II)I
     .locals 0
 
     if-nez p0, :cond_0
@@ -568,7 +568,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/b/b/l/c;->a:I
+    sget v1, Lc/c/b/m/c;->a:I
 
     or-int/2addr v1, p1
 
@@ -577,16 +577,21 @@
     const/4 v1, 0x1
 
     :try_start_0
-    sget v2, Lb/b/b/g/a/a;->a:I
+    sget v2, Lc/c/b/g/a/a;->a:I
 
-    invoke-static {v0, v2}, Lb/b/b/g/a/a;->a(Landroid/view/InputEvent;I)Z
+    invoke-static {v0, v2}, Lc/c/b/g/a/a;->a(Landroid/view/InputEvent;I)Z
     :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
+
+    goto :goto_0
+
+    :catch_1
     sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     :goto_0
@@ -723,7 +728,7 @@
 
     if-nez v0, :cond_1
 
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :cond_1
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
@@ -939,13 +944,12 @@
 
     const-string v0, "Overscroll"
 
-    :goto_6
     invoke-static {v10, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_9
-    :goto_7
+    :goto_6
     move/from16 v11, v18
 
     iget-object v0, v8, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
@@ -960,7 +964,7 @@
 
     const/4 v13, 0x0
 
-    :goto_8
+    :goto_7
     if-ge v13, v15, :cond_a
 
     const/4 v2, 0x2
@@ -991,7 +995,7 @@
 
     move/from16 v4, v16
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_a
     move/from16 v16, v4
@@ -1040,7 +1044,9 @@
 
     move-result-object v0
 
-    goto :goto_6
+    invoke-static {v10, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 .end method
 
 .method private storeImage(Landroid/graphics/Bitmap;Lcom/oneplus/screenshot/util/ImageInfo;)V
@@ -1223,7 +1229,7 @@
     return-void
 .end method
 
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Integer;
@@ -1235,7 +1241,7 @@
     return-object p1
 .end method
 
-.method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Void;
+.method public varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Void;
     .locals 7
 
     const-string v0, "Longshot.MoveTask"
@@ -1377,7 +1383,7 @@
 
     div-int/lit8 v6, v6, 0x2
 
-    invoke-static {v5, v4, v6}, Lb/b/b/h/a;->b(Ljava/lang/Object;II)Z
+    invoke-static {v5, v4, v6}, Lc/c/b/h/a;->b(Ljava/lang/Object;II)Z
 
     move-result v4
     :try_end_0
@@ -1464,7 +1470,7 @@
     return-object v2
 .end method
 
-.method getTraingBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public getTraingBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1521,13 +1527,13 @@
     return-object v0
 .end method
 
-.method protected onCancelled()V
+.method public onCancelled()V
     .locals 0
 
     return-void
 .end method
 
-.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Void;
@@ -1537,7 +1543,7 @@
     return-void
 .end method
 
-.method protected onPostExecute(Ljava/lang/Void;)V
+.method public onPostExecute(Ljava/lang/Void;)V
     .locals 5
 
     invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->shouldDumpForMove()Z

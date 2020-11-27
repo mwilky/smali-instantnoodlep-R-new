@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/LRUCache$1;
+.class public Lcom/google/tagmanager/LRUCache$1;
 .super Landroid/util/LruCache;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -22,13 +22,13 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/tagmanager/LRUCache;
+.field public final synthetic this$0:Lcom/google/tagmanager/LRUCache;
 
-.field final synthetic val$sizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
+.field public final synthetic val$sizeManager:Lcom/google/tagmanager/CacheFactory$CacheSizeManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/tagmanager/LRUCache;ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
+.method public constructor <init>(Lcom/google/tagmanager/LRUCache;ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/tagmanager/LRUCache$1;->this$0:Lcom/google/tagmanager/LRUCache;
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method protected sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

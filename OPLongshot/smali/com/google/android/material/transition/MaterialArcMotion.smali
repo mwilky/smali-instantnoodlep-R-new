@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialArcMotion;
 .super Landroid/transition/PathMotion;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,7 +18,7 @@
     return-void
 .end method
 
-.method private static getControlPoint(FFFF)Landroid/graphics/PointF;
+.method public static getControlPoint(FFFF)Landroid/graphics/PointF;
     .locals 1
 
     cmpl-float v0, p1, p3

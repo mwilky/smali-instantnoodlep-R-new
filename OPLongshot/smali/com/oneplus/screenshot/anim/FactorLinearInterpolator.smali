@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/anim/FactorLinearInterpolator;
 .super Lcom/oneplus/screenshot/anim/BaseInterpolator;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "FactorLinearInterpolator"
+.field public static final TAG:Ljava/lang/String; = "FactorLinearInterpolator"
 
 
 # direct methods

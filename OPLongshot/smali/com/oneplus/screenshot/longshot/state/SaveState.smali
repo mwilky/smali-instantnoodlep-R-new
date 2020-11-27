@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/SaveState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsImageState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,17 +14,17 @@
 
 
 # static fields
-.field private static final SAVE_ANIMATION_DELAY:J = 0x64L
+.field public static final SAVE_ANIMATION_DELAY:J = 0x64L
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.SaveState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.SaveState"
 
 
 # instance fields
-.field private mCachable:Lcom/oneplus/screenshot/util/Cachable;
+.field public mCachable:Lcom/oneplus/screenshot/util/Cachable;
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mNaviBar:Landroid/graphics/Bitmap;
+.field public mNaviBar:Landroid/graphics/Bitmap;
 
 
 # direct methods
@@ -235,7 +235,7 @@
 
     const/4 p2, 0x0
 
-    const v0, 0x7f0d00a7
+    const v0, 0x7f0d00b0
 
     invoke-interface {p1, p2, v0, p0}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->show(IILcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;)V
 

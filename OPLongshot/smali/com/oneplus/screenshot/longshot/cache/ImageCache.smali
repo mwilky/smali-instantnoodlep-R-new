@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 .super Ljava/util/ArrayList;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,11 +14,11 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ImageCache"
+.field public static final TAG:Ljava/lang/String; = "ImageCache"
 
 
 # instance fields
-.field private mCanClear:Z
+.field public mCanClear:Z
 
 
 # direct methods

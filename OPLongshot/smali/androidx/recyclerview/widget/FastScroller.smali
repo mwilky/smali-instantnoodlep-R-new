@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/FastScroller;
+.class public Landroidx/recyclerview/widget/FastScroller;
 .super Landroidx/recyclerview/widget/RecyclerView$j;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$o;
@@ -19,121 +19,121 @@
 
 
 # static fields
-.field private static final ANIMATION_STATE_FADING_IN:I = 0x1
+.field public static final ANIMATION_STATE_FADING_IN:I = 0x1
 
-.field private static final ANIMATION_STATE_FADING_OUT:I = 0x3
+.field public static final ANIMATION_STATE_FADING_OUT:I = 0x3
 
-.field private static final ANIMATION_STATE_IN:I = 0x2
+.field public static final ANIMATION_STATE_IN:I = 0x2
 
-.field private static final ANIMATION_STATE_OUT:I = 0x0
+.field public static final ANIMATION_STATE_OUT:I = 0x0
 
-.field private static final DRAG_NONE:I = 0x0
+.field public static final DRAG_NONE:I = 0x0
 
-.field private static final DRAG_X:I = 0x1
+.field public static final DRAG_X:I = 0x1
 
-.field private static final DRAG_Y:I = 0x2
+.field public static final DRAG_Y:I = 0x2
 
-.field private static final EMPTY_STATE_SET:[I
+.field public static final EMPTY_STATE_SET:[I
 
-.field private static final HIDE_DELAY_AFTER_DRAGGING_MS:I = 0x4b0
+.field public static final HIDE_DELAY_AFTER_DRAGGING_MS:I = 0x4b0
 
-.field private static final HIDE_DELAY_AFTER_VISIBLE_MS:I = 0x5dc
+.field public static final HIDE_DELAY_AFTER_VISIBLE_MS:I = 0x5dc
 
-.field private static final HIDE_DURATION_MS:I = 0x1f4
+.field public static final HIDE_DURATION_MS:I = 0x1f4
 
-.field private static final PRESSED_STATE_SET:[I
+.field public static final PRESSED_STATE_SET:[I
 
-.field private static final SCROLLBAR_FULL_OPAQUE:I = 0xff
+.field public static final SCROLLBAR_FULL_OPAQUE:I = 0xff
 
-.field private static final SHOW_DURATION_MS:I = 0x1f4
+.field public static final SHOW_DURATION_MS:I = 0x1f4
 
-.field private static final STATE_DRAGGING:I = 0x2
+.field public static final STATE_DRAGGING:I = 0x2
 
-.field private static final STATE_HIDDEN:I = 0x0
+.field public static final STATE_HIDDEN:I = 0x0
 
-.field private static final STATE_VISIBLE:I = 0x1
+.field public static final STATE_VISIBLE:I = 0x1
 
 
 # instance fields
-.field mAnimationState:I
+.field public mAnimationState:I
 
-.field private mDragState:I
+.field public mDragState:I
 
-.field private final mHideRunnable:Ljava/lang/Runnable;
+.field public final mHideRunnable:Ljava/lang/Runnable;
 
-.field mHorizontalDragX:F
+.field public mHorizontalDragX:F
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private final mHorizontalRange:[I
+.field public final mHorizontalRange:[I
 
-.field mHorizontalThumbCenterX:I
+.field public mHorizontalThumbCenterX:I
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private final mHorizontalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
+.field public final mHorizontalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
-.field private final mHorizontalThumbHeight:I
+.field public final mHorizontalThumbHeight:I
 
-.field mHorizontalThumbWidth:I
+.field public mHorizontalThumbWidth:I
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private final mHorizontalTrackDrawable:Landroid/graphics/drawable/Drawable;
+.field public final mHorizontalTrackDrawable:Landroid/graphics/drawable/Drawable;
 
-.field private final mHorizontalTrackHeight:I
+.field public final mHorizontalTrackHeight:I
 
-.field private final mMargin:I
+.field public final mMargin:I
 
-.field private mNeedHorizontalScrollbar:Z
+.field public mNeedHorizontalScrollbar:Z
 
-.field private mNeedVerticalScrollbar:Z
+.field public mNeedVerticalScrollbar:Z
 
-.field private final mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
+.field public final mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$p;
 
-.field private mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
+.field public mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private mRecyclerViewHeight:I
+.field public mRecyclerViewHeight:I
 
-.field private mRecyclerViewWidth:I
+.field public mRecyclerViewWidth:I
 
-.field private final mScrollbarMinimumRange:I
+.field public final mScrollbarMinimumRange:I
 
-.field final mShowHideAnimator:Landroid/animation/ValueAnimator;
+.field public final mShowHideAnimator:Landroid/animation/ValueAnimator;
 
-.field private mState:I
+.field public mState:I
 
-.field mVerticalDragY:F
+.field public mVerticalDragY:F
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private final mVerticalRange:[I
+.field public final mVerticalRange:[I
 
-.field mVerticalThumbCenterY:I
+.field public mVerticalThumbCenterY:I
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field final mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
+.field public final mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
-.field mVerticalThumbHeight:I
+.field public mVerticalThumbHeight:I
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field private final mVerticalThumbWidth:I
+.field public final mVerticalThumbWidth:I
 
-.field final mVerticalTrackDrawable:Landroid/graphics/drawable/Drawable;
+.field public final mVerticalTrackDrawable:Landroid/graphics/drawable/Drawable;
 
-.field private final mVerticalTrackWidth:I
+.field public final mVerticalTrackWidth:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -155,7 +155,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;III)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/StateListDrawable;Landroid/graphics/drawable/Drawable;III)V
     .locals 3
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$j;-><init>()V
@@ -456,6 +456,16 @@
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbWidth:I
 
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    neg-int v1, v2
+
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
+
     goto :goto_0
 
     :cond_0
@@ -477,7 +487,6 @@
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/StateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    :goto_0
     neg-int v0, v0
 
     int-to-float v0, v0
@@ -488,6 +497,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
+    :goto_0
     return-void
 .end method
 
@@ -832,7 +842,7 @@
     return-void
 .end method
 
-.method getHorizontalThumbDrawable()Landroid/graphics/drawable/Drawable;
+.method public getHorizontalThumbDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -842,7 +852,7 @@
     return-object v0
 .end method
 
-.method getHorizontalTrackDrawable()Landroid/graphics/drawable/Drawable;
+.method public getHorizontalTrackDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -852,7 +862,7 @@
     return-object v0
 .end method
 
-.method getVerticalThumbDrawable()Landroid/graphics/drawable/Drawable;
+.method public getVerticalThumbDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -862,7 +872,7 @@
     return-object v0
 .end method
 
-.method getVerticalTrackDrawable()Landroid/graphics/drawable/Drawable;
+.method public getVerticalTrackDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -872,7 +882,7 @@
     return-object v0
 .end method
 
-.method hide(I)V
+.method public hide(I)V
     .locals 5
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -957,7 +967,7 @@
     return v0
 .end method
 
-.method isPointInsideHorizontalThumb(FF)Z
+.method public isPointInsideHorizontalThumb(FF)Z
     .locals 2
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -1009,7 +1019,7 @@
     return p1
 .end method
 
-.method isPointInsideVerticalThumb(FF)Z
+.method public isPointInsideVerticalThumb(FF)Z
     .locals 2
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -1081,7 +1091,7 @@
     return p1
 .end method
 
-.method isVisible()Z
+.method public isVisible()Z
     .locals 2
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -1439,7 +1449,7 @@
     return-void
 .end method
 
-.method requestRedraw()V
+.method public requestRedraw()V
     .locals 1
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -1449,7 +1459,7 @@
     return-void
 .end method
 
-.method setState(I)V
+.method public setState(I)V
     .locals 3
 
     const/4 v0, 0x2
@@ -1493,6 +1503,8 @@
 
     const/16 v0, 0x4b0
 
+    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/FastScroller;->resetHideDelay(I)V
+
     goto :goto_1
 
     :cond_2
@@ -1502,10 +1514,10 @@
 
     const/16 v0, 0x5dc
 
-    :goto_1
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/FastScroller;->resetHideDelay(I)V
 
     :cond_3
+    :goto_1
     iput p1, p0, Landroidx/recyclerview/widget/FastScroller;->mState:I
 
     return-void
@@ -1580,7 +1592,7 @@
     return-void
 .end method
 
-.method updateScrollPosition(II)V
+.method public updateScrollPosition(II)V
     .locals 8
 
     iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;

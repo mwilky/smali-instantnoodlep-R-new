@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActivityChooserView$d;
+.class public Landroidx/appcompat/widget/ActivityChooserView$d;
 .super Landroidx/appcompat/widget/ForwardingListener;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
+.field public final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$d;->a:Landroidx/appcompat/widget/ActivityChooserView;
@@ -36,14 +36,14 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$d;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/y;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Lb/c/n/y;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected onForwardingStarted()Z
+.method public onForwardingStarted()Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$d;->a:Landroidx/appcompat/widget/ActivityChooserView;
@@ -55,7 +55,7 @@
     return v0
 .end method
 
-.method protected onForwardingStopped()Z
+.method public onForwardingStopped()Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$d;->a:Landroidx/appcompat/widget/ActivityChooserView;

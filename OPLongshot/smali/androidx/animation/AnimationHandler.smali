@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimationHandler;
+.class public Landroidx/animation/AnimationHandler;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # static fields
-.field private static final b:Ljava/lang/ThreadLocal;
+.field public static final b:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -28,9 +28,9 @@
 
 .field public static c:Landroidx/animation/AnimationHandler;
 
-.field private static d:Landroidx/animation/AnimationHandler;
+.field public static d:Landroidx/animation/AnimationHandler;
 
-.field private static e:Ljava/lang/ThreadLocal;
+.field public static e:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -42,11 +42,11 @@
 
 
 # instance fields
-.field private final a:Landroidx/animation/AnimationHandler$c;
+.field public final a:Landroidx/animation/AnimationHandler$c;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/ThreadLocal;
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroidx/animation/AnimationHandler$c;)V
+.method public constructor <init>(Landroidx/animation/AnimationHandler$c;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,6 +87,8 @@
 
     invoke-direct {p1, p0}, Landroidx/animation/AnimationHandler$FrameCallbackProvider16;-><init>(Landroidx/animation/AnimationHandler;)V
 
+    iput-object p1, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
+
     goto :goto_0
 
     :cond_0
@@ -94,14 +96,18 @@
 
     invoke-direct {p1, p0}, Landroidx/animation/AnimationHandler$d;-><init>(Landroidx/animation/AnimationHandler;)V
 
-    :cond_1
-    :goto_0
     iput-object p1, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
 
+    goto :goto_0
+
+    :cond_1
+    iput-object p1, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
+
+    :goto_0
     return-void
 .end method
 
-.method static synthetic a()Ljava/lang/ThreadLocal;
+.method public static synthetic a()Ljava/lang/ThreadLocal;
     .locals 1
 
     sget-object v0, Landroidx/animation/AnimationHandler;->b:Ljava/lang/ThreadLocal;
@@ -109,16 +115,147 @@
     return-object v0
 .end method
 
-.method private d()V
+.method public static h()Landroidx/animation/AnimationHandler;
     .locals 2
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->j()Z
+    sget-object v0, Landroidx/animation/AnimationHandler;->d:Landroidx/animation/AnimationHandler;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Landroidx/animation/AnimationHandler;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroidx/animation/AnimationHandler;-><init>(Landroidx/animation/AnimationHandler$c;)V
+
+    sput-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
+
+    :cond_1
+    sget-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public b(Landroidx/animation/AnimationHandler$b;)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
+
+    invoke-interface {v0}, Landroidx/animation/AnimationHandler$c;->postFrameCallback()V
+
+    :cond_0
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    iget-object v0, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
+
+    invoke-interface {v0, p1}, Landroidx/animation/AnimationHandler$c;->onNewCallbackAdded(Landroidx/animation/AnimationHandler$b;)V
+
+    return-void
+.end method
+
+.method public c(Lb/b/f;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_0
+    if-ltz v0, :cond_2
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/animation/AnimationHandler$b;
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p1, v1}, Lb/b/f;->c0(Landroidx/animation/AnimationHandler$b;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lb/b/b;
+
+    invoke-virtual {v1}, Lb/b/b;->c()V
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final d()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -131,7 +268,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -141,7 +278,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -155,13 +292,13 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Landroidx/animation/AnimationHandler;->m(Z)V
+    invoke-virtual {p0, v0}, Landroidx/animation/AnimationHandler;->m(Z)V
 
     :cond_2
     return-void
 .end method
 
-.method private e(J)V
+.method public final e(J)V
     .locals 5
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -171,7 +308,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -181,7 +318,7 @@
 
     if-ge v2, v3, :cond_2
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -196,7 +333,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-direct {p0, v3, v0, v1}, Landroidx/animation/AnimationHandler;->i(Landroidx/animation/AnimationHandler$b;J)Z
+    invoke-virtual {p0, v3, v0, v1}, Landroidx/animation/AnimationHandler;->i(Landroidx/animation/AnimationHandler$b;J)Z
 
     move-result v4
 
@@ -211,12 +348,12 @@
     goto :goto_0
 
     :cond_2
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->d()V
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->d()V
 
     return-void
 .end method
 
-.method private f()Ljava/util/ArrayList;
+.method public final f()Ljava/util/ArrayList;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -251,7 +388,7 @@
     return-object v0
 .end method
 
-.method private g()Landroidx/collection/SimpleArrayMap;
+.method public final g()Landroidx/collection/SimpleArrayMap;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -287,38 +424,10 @@
     return-object v0
 .end method
 
-.method public static h()Landroidx/animation/AnimationHandler;
-    .locals 2
-
-    sget-object v0, Landroidx/animation/AnimationHandler;->d:Landroidx/animation/AnimationHandler;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    sget-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Landroidx/animation/AnimationHandler;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Landroidx/animation/AnimationHandler;-><init>(Landroidx/animation/AnimationHandler$c;)V
-
-    sput-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
-
-    :cond_1
-    sget-object v0, Landroidx/animation/AnimationHandler;->c:Landroidx/animation/AnimationHandler;
-
-    return-object v0
-.end method
-
-.method private i(Landroidx/animation/AnimationHandler$b;J)Z
+.method public final i(Landroidx/animation/AnimationHandler$b;J)Z
     .locals 4
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
 
     move-result-object v0
 
@@ -343,7 +452,7 @@
 
     if-gez p2, :cond_1
 
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
 
     move-result-object p2
 
@@ -357,7 +466,7 @@
     return p1
 .end method
 
-.method private j()Z
+.method public final j()Z
     .locals 2
 
     sget-object v0, Landroidx/animation/AnimationHandler;->e:Ljava/lang/ThreadLocal;
@@ -384,7 +493,65 @@
     return v0
 .end method
 
-.method private m(Z)V
+.method public k(J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroidx/animation/AnimationHandler;->e(J)V
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    iget-object p1, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
+
+    invoke-interface {p1}, Landroidx/animation/AnimationHandler$c;->postFrameCallback()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public l(Landroidx/animation/AnimationHandler$b;)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroidx/animation/AnimationHandler;->m(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final m(Z)V
     .locals 2
 
     sget-object v0, Landroidx/animation/AnimationHandler;->e:Ljava/lang/ThreadLocal;
@@ -408,166 +575,5 @@
     :cond_0
     iput-boolean p1, v0, Landroidx/animation/AnimationHandler$a;->c:Z
 
-    return-void
-.end method
-
-
-# virtual methods
-.method b(Landroidx/animation/AnimationHandler$b;)V
-    .locals 1
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
-
-    invoke-interface {v0}, Landroidx/animation/AnimationHandler$c;->postFrameCallback()V
-
-    :cond_0
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    iget-object v0, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
-
-    invoke-interface {v0, p1}, Landroidx/animation/AnimationHandler$c;->onNewCallbackAdded(Landroidx/animation/AnimationHandler$b;)V
-
-    return-void
-.end method
-
-.method c(Landroidx/animation/f;)V
-    .locals 2
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_2
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/animation/AnimationHandler$b;
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1, v1}, Landroidx/animation/f;->c0(Landroidx/animation/AnimationHandler$b;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/animation/b;
-
-    invoke-virtual {v1}, Landroidx/animation/b;->c()V
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-.end method
-
-.method k(J)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroidx/animation/AnimationHandler;->e(J)V
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    iget-object p1, p0, Landroidx/animation/AnimationHandler;->a:Landroidx/animation/AnimationHandler$c;
-
-    invoke-interface {p1}, Landroidx/animation/AnimationHandler$c;->postFrameCallback()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public l(Landroidx/animation/AnimationHandler$b;)V
-    .locals 2
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->g()Landroidx/collection/SimpleArrayMap;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    invoke-direct {p0}, Landroidx/animation/AnimationHandler;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Landroidx/animation/AnimationHandler;->m(Z)V
-
-    :cond_0
     return-void
 .end method

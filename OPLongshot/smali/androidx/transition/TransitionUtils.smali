@@ -1,6 +1,6 @@
-.class Landroidx/transition/TransitionUtils;
+.class public Landroidx/transition/TransitionUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,15 +12,15 @@
 
 
 # static fields
-.field private static final a:Z
+.field public static final a:Z
 
-.field private static final b:Z
+.field public static final b:Z
 
-.field private static final c:Z
+.field public static final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)Landroid/view/View;
+.method public static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)Landroid/view/View;
     .locals 7
 
     new-instance v0, Landroid/graphics/Matrix;
@@ -191,7 +191,7 @@
     return-object v5
 .end method
 
-.method private static b(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
+.method public static b(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/view/ViewGroup;)Landroid/graphics/Bitmap;
     .locals 8
 
     sget-boolean v0, Landroidx/transition/TransitionUtils;->a:Z
@@ -383,7 +383,7 @@
     return-object v4
 .end method
 
-.method static c(Landroid/animation/Animator;Landroid/animation/Animator;)Landroid/animation/Animator;
+.method public static c(Landroid/animation/Animator;Landroid/animation/Animator;)Landroid/animation/Animator;
     .locals 3
 
     if-nez p0, :cond_0

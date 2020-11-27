@@ -1,6 +1,6 @@
-.class Landroidx/transition/GhostViewPort$a;
+.class public Landroidx/transition/GhostViewPort$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/transition/GhostViewPort;
+.field public final synthetic a:Landroidx/transition/GhostViewPort;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/GhostViewPort;)V
+.method public constructor <init>(Landroidx/transition/GhostViewPort;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/transition/GhostViewPort$a;->a:Landroidx/transition/GhostViewPort;

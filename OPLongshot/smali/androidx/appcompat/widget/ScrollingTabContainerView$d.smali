@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ScrollingTabContainerView$d;
+.class public Landroidx/appcompat/widget/ScrollingTabContainerView$d;
 .super Landroid/widget/LinearLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "d"
 .end annotation
 
 
 # instance fields
-.field private final a:[I
+.field public final a:[I
 
-.field private b:Landroidx/appcompat/app/ActionBar$d;
+.field public b:Landroidx/appcompat/app/ActionBar$d;
 
-.field private c:Landroid/widget/TextView;
+.field public c:Landroid/widget/TextView;
 
-.field private d:Landroid/widget/ImageView;
+.field public d:Landroid/widget/ImageView;
 
-.field private e:Landroid/view/View;
+.field public e:Landroid/view/View;
 
-.field final synthetic f:Landroidx/appcompat/widget/ScrollingTabContainerView;
+.field public final synthetic f:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$d;->f:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    sget p1, La/a/a;->actionBarTabStyle:I
+    sget p1, Lb/c/a;->actionBarTabStyle:I
 
     const/4 v0, 0x0
 
@@ -54,7 +54,7 @@
 
     iput-object p3, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$d;->b:Landroidx/appcompat/app/ActionBar$d;
 
-    sget p3, La/a/a;->actionBarTabStyle:I
+    sget p3, Lb/c/a;->actionBarTabStyle:I
 
     invoke-static {p2, v0, p1, p3, v2}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
 
@@ -189,13 +189,13 @@
 
     if-nez v8, :cond_5
 
-    new-instance v8, Landroidx/appcompat/widget/k;
+    new-instance v8, Lb/c/n/k;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v9
 
-    invoke-direct {v8, v9}, Landroidx/appcompat/widget/k;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v9}, Lb/c/n/k;-><init>(Landroid/content/Context;)V
 
     new-instance v9, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -245,15 +245,15 @@
 
     if-nez v2, :cond_8
 
-    new-instance v2, Landroidx/appcompat/widget/u;
+    new-instance v2, Lb/c/n/u;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
-    sget v9, La/a/a;->actionBarTabTextStyle:I
+    sget v9, Lb/c/a;->actionBarTabTextStyle:I
 
-    invoke-direct {v2, v8, v3, v9}, Landroidx/appcompat/widget/u;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {v2, v8, v3, v9}, Lb/c/n/u;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     sget-object v8, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
@@ -316,7 +316,7 @@
     move-result-object v3
 
     :goto_2
-    invoke-static {p0, v3}, Landroidx/appcompat/widget/e0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v3}, Lb/c/n/e0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :cond_d
     :goto_3

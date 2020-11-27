@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/TintContextWrapper;
 .super Landroid/content/ContextWrapper;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static final CACHE_LOCK:Ljava/lang/Object;
+.field public static final CACHE_LOCK:Ljava/lang/Object;
 
-.field private static sCache:Ljava/util/ArrayList;
+.field public static sCache:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field private final mResources:Landroid/content/res/Resources;
+.field public final mResources:Landroid/content/res/Resources;
 
-.field private final mTheme:Landroid/content/res/Resources$Theme;
+.field public final mTheme:Landroid/content/res/Resources$Theme;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -85,13 +85,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Landroidx/appcompat/widget/d0;
+    new-instance v0, Lb/c/n/d0;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/widget/d0;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
+    invoke-direct {v0, p0, p1}, Lb/c/n/d0;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
 
     iput-object v0, p0, Landroidx/appcompat/widget/TintContextWrapper;->mResources:Landroid/content/res/Resources;
 
@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method private static shouldWrap(Landroid/content/Context;)Z
+.method public static shouldWrap(Landroid/content/Context;)Z
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Landroidx/appcompat/widget/d0;
+    instance-of v0, v0, Lb/c/n/d0;
 
     if-nez v0, :cond_2
 

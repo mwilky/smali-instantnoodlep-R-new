@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1c
+    accessFlags = 0x19
     name = "PanelFeatureState"
 .end annotation
 
@@ -21,47 +21,47 @@
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
-.field g:Landroid/view/ViewGroup;
+.field public g:Landroid/view/ViewGroup;
 
-.field h:Landroid/view/View;
+.field public h:Landroid/view/View;
 
-.field i:Landroid/view/View;
+.field public i:Landroid/view/View;
 
-.field j:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public j:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field k:Landroidx/appcompat/view/menu/ListMenuPresenter;
+.field public k:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
-.field l:Landroid/content/Context;
+.field public l:Landroid/content/Context;
 
-.field m:Z
+.field public m:Z
 
-.field n:Z
+.field public n:Z
 
-.field o:Z
+.field public o:Z
 
 .field public p:Z
 
-.field q:Z
+.field public q:Z
 
-.field r:Z
+.field public r:Z
 
-.field s:Landroid/os/Bundle;
+.field public s:Landroid/os/Bundle;
 
 
 # direct methods
-.method constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -77,7 +77,7 @@
 
 
 # virtual methods
-.method a(Landroidx/appcompat/view/menu/MenuPresenter$a;)Landroidx/appcompat/view/menu/MenuView;
+.method public a(Landroidx/appcompat/view/menu/MenuPresenter$a;)Landroidx/appcompat/view/menu/MenuView;
     .locals 3
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->j:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -97,7 +97,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->l:Landroid/content/Context;
 
-    sget v2, La/a/g;->abc_list_menu_item_layout:I
+    sget v2, Lb/c/g;->abc_list_menu_item_layout:I
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/view/menu/ListMenuPresenter;-><init>(Landroid/content/Context;I)V
 
@@ -162,7 +162,7 @@
     return v1
 .end method
 
-.method c(Landroidx/appcompat/view/menu/MenuBuilder;)V
+.method public c(Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 2
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->j:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method d(Landroid/content/Context;)V
+.method public d(Landroid/content/Context;)V
     .locals 4
 
     new-instance v0, Landroid/util/TypedValue;
@@ -214,7 +214,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
 
-    sget v2, La/a/a;->actionBarPopupTheme:I
+    sget v2, Lb/c/a;->actionBarPopupTheme:I
 
     const/4 v3, 0x1
 
@@ -227,7 +227,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
     :cond_0
-    sget v2, La/a/a;->panelMenuListTheme:I
+    sget v2, Lb/c/a;->panelMenuListTheme:I
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -235,21 +235,23 @@
 
     if-eqz v0, :cond_1
 
+    invoke-virtual {v1, v0, v3}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
     goto :goto_0
 
     :cond_1
-    sget v0, La/a/i;->Theme_AppCompat_CompactMenu:I
+    sget v0, Lb/c/i;->Theme_AppCompat_CompactMenu:I
 
-    :goto_0
     invoke-virtual {v1, v0, v3}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
-    new-instance v0, Landroidx/appcompat/view/c;
+    :goto_0
+    new-instance v0, Lb/c/m/c;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v2}, Landroidx/appcompat/view/c;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v2}, Lb/c/m/c;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0}, Landroidx/appcompat/view/c;->getTheme()Landroid/content/res/Resources$Theme;
+    invoke-virtual {v0}, Lb/c/m/c;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1
 
@@ -257,13 +259,13 @@
 
     iput-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->l:Landroid/content/Context;
 
-    sget-object p1, La/a/j;->AppCompatTheme:[I
+    sget-object p1, Lb/c/j;->AppCompatTheme:[I
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget v0, La/a/j;->AppCompatTheme_panelBackground:I
+    sget v0, Lb/c/j;->AppCompatTheme_panelBackground:I
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -271,7 +273,7 @@
 
     iput v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState;->b:I
 
-    sget v0, La/a/j;->AppCompatTheme_android_windowAnimationStyle:I
+    sget v0, Lb/c/j;->AppCompatTheme_android_windowAnimationStyle:I
 
     invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 

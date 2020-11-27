@@ -1,6 +1,6 @@
-.class final Lcom/google/android/material/internal/ViewUtils$b;
+.class public final Lcom/google/android/material/internal/ViewUtils$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/internal/ViewUtils$e;
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Z
+.field public final synthetic a:Z
 
-.field final synthetic b:Z
+.field public final synthetic b:Z
 
-.field final synthetic c:Z
+.field public final synthetic c:Z
 
-.field final synthetic d:Lcom/google/android/material/internal/ViewUtils$e;
+.field public final synthetic d:Lcom/google/android/material/internal/ViewUtils$e;
 
 
 # direct methods
-.method constructor <init>(ZZZLcom/google/android/material/internal/ViewUtils$e;)V
+.method public constructor <init>(ZZZLcom/google/android/material/internal/ViewUtils$e;)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/ViewUtils$b;->a:Z
@@ -46,9 +46,9 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroidx/core/view/x;Lcom/google/android/material/internal/ViewUtils$f;)Landroidx/core/view/x;
+.method public a(Landroid/view/View;Lb/h/l/x;Lcom/google/android/material/internal/ViewUtils$f;)Lb/h/l/x;
     .locals 3
-    .param p2    # Landroidx/core/view/x;
+    .param p2    # Lb/h/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -65,7 +65,7 @@
 
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$f;->d:I
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->b()I
+    invoke-virtual {p2}, Lb/h/l/x;->b()I
 
     move-result v1
 
@@ -86,7 +86,7 @@
 
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$f;->c:I
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->c()I
+    invoke-virtual {p2}, Lb/h/l/x;->c()I
 
     move-result v2
 
@@ -99,7 +99,7 @@
     :cond_1
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$f;->a:I
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->c()I
+    invoke-virtual {p2}, Lb/h/l/x;->c()I
 
     move-result v2
 
@@ -117,7 +117,7 @@
 
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$f;->a:I
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->d()I
+    invoke-virtual {p2}, Lb/h/l/x;->d()I
 
     move-result v1
 
@@ -130,7 +130,7 @@
     :cond_3
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$f;->c:I
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->d()I
+    invoke-virtual {p2}, Lb/h/l/x;->d()I
 
     move-result v1
 
@@ -146,7 +146,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/google/android/material/internal/ViewUtils$e;->a(Landroid/view/View;Landroidx/core/view/x;Lcom/google/android/material/internal/ViewUtils$f;)Landroidx/core/view/x;
+    invoke-interface {v0, p1, p2, p3}, Lcom/google/android/material/internal/ViewUtils$e;->a(Landroid/view/View;Lb/h/l/x;Lcom/google/android/material/internal/ViewUtils$f;)Lb/h/l/x;
 
     move-result-object p2
 

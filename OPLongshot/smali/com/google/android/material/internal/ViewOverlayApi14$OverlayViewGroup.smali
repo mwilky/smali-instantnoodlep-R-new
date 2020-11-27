@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;
+.class public Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;
 .super Landroid/view/ViewGroup;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,19 +16,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "OverlayViewGroup"
 .end annotation
 
 
 # static fields
-.field static invalidateChildInParentFastMethod:Ljava/lang/reflect/Method;
+.field public static invalidateChildInParentFastMethod:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private disposed:Z
+.field public disposed:Z
 
-.field drawables:Ljava/util/ArrayList;
+.field public drawables:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -38,15 +38,15 @@
     .end annotation
 .end field
 
-.field hostView:Landroid/view/ViewGroup;
+.field public hostView:Landroid/view/ViewGroup;
 
-.field requestingView:Landroid/view/View;
+.field public requestingView:Landroid/view/View;
 
-.field viewOverlay:Lcom/google/android/material/internal/ViewOverlayApi14;
+.field public viewOverlay:Lcom/google/android/material/internal/ViewOverlayApi14;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     :try_start_0
@@ -96,7 +96,7 @@
     throw v1
 .end method
 
-.method constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/internal/ViewOverlayApi14;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/internal/ViewOverlayApi14;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
@@ -345,7 +345,7 @@
     return-void
 .end method
 
-.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+.method public dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 5
 
     const/4 v0, 0x2
@@ -498,7 +498,7 @@
     return-object p1
 .end method
 
-.method protected invalidateChildInParentFast(IILandroid/graphics/Rect;)Landroid/view/ViewParent;
+.method public invalidateChildInParentFast(IILandroid/graphics/Rect;)Landroid/view/ViewParent;
     .locals 5
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -589,7 +589,7 @@
     return-void
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 0
 
     return-void
@@ -630,7 +630,7 @@
     return-void
 .end method
 
-.method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+.method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
     .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/NonNull;

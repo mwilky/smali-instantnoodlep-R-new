@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$14;
+.class public Lcom/oneplus/screenshot/GlobalScreenshot$14;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,35 +12,35 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-.field final synthetic val$endScaleCenterX:F
+.field public final synthetic val$endScaleCenterX:F
 
-.field final synthetic val$endScaleCenterY:F
+.field public final synthetic val$endScaleCenterY:F
 
-.field final synthetic val$endScaleX:F
+.field public final synthetic val$endScaleX:F
 
-.field final synthetic val$endScaleY:F
+.field public final synthetic val$endScaleY:F
 
-.field final synthetic val$scaleCenterX:F
+.field public final synthetic val$scaleCenterX:F
 
-.field final synthetic val$scaleCenterY:F
+.field public final synthetic val$scaleCenterY:F
 
-.field final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
+.field public final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
 
-.field final synthetic val$startScaleX:F
+.field public final synthetic val$startScaleX:F
 
-.field final synthetic val$startScaleY:F
+.field public final synthetic val$startScaleY:F
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;FFLandroid/view/animation/Interpolator;FFFFFF)V
+.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;FFLandroid/view/animation/Interpolator;FFFFFF)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$14;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;

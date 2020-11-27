@@ -1,0 +1,27 @@
+.class public Lc/c/b/b/b$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/oneplus/inner/config/ConfigObserverWrapper$ConfigUpdaterWrapper;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lc/c/b/b/b;-><init>(Landroid/content/Context;Landroid/os/Handler;Lc/c/b/b/b$c;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lc/c/b/b/b;Lc/c/b/b/b$c;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

@@ -1,6 +1,6 @@
-.class Landroidx/core/provider/SelfDestructiveThread$a;
+.class public Landroidx/core/provider/SelfDestructiveThread$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/core/provider/SelfDestructiveThread;
+.field public final synthetic a:Landroidx/core/provider/SelfDestructiveThread;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/provider/SelfDestructiveThread;)V
+.method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread$a;->a:Landroidx/core/provider/SelfDestructiveThread;

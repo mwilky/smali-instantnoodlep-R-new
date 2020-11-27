@@ -1,6 +1,6 @@
 .class public Landroidx/core/util/LogWriter;
 .super Ljava/io/Writer;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field private mBuilder:Ljava/lang/StringBuilder;
+.field public mBuilder:Ljava/lang/StringBuilder;
 
-.field private final mTag:Ljava/lang/String;
+.field public final mTag:Ljava/lang/String;
 
 
 # direct methods

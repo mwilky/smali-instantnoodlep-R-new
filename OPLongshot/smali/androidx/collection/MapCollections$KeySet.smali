@@ -1,6 +1,6 @@
-.class final Landroidx/collection/MapCollections$KeySet;
+.class public final Landroidx/collection/MapCollections$KeySet;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Set;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "KeySet"
 .end annotation
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/collection/MapCollections;
+.field public final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/MapCollections;)V
+.method public constructor <init>(Landroidx/collection/MapCollections;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/collection/MapCollections$KeySet;->this$0:Landroidx/collection/MapCollections;

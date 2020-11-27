@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/floatingactionbutton/FabScrollBehavior;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$Behavior;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private a:Ljava/util/ArrayList;
+.field public a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -14,7 +14,7 @@
     .end annotation
 .end field
 
-.field private b:Ljava/util/List;
+.field public b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -24,7 +24,7 @@
     .end annotation
 .end field
 
-.field private c:Ljava/util/ArrayList;
+.field public c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -89,7 +89,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/b/a/f;->a(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p1}, Lc/c/a/f;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p1
 

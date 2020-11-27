@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;
+.class public Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;
 .super Lcom/oneplus/screenshot/service/GlobalNotification$Builder;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "SaveError"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f10008a
+    const v0, 0x7f100095
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -42,7 +42,7 @@
 
     iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f100089
+    const v0, 0x7f100094
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -69,7 +69,7 @@
 
 
 # virtual methods
-.method protected getBigContentViews()Landroid/widget/RemoteViews;
+.method public getBigContentViews()Landroid/widget/RemoteViews;
     .locals 1
 
     const/4 v0, 0x0
@@ -77,7 +77,7 @@
     return-object v0
 .end method
 
-.method protected getContentViews()Landroid/widget/RemoteViews;
+.method public getContentViews()Landroid/widget/RemoteViews;
     .locals 1
 
     const/4 v0, 0x0
@@ -85,20 +85,20 @@
     return-object v0
 .end method
 
-.method protected getSmallIcon()I
+.method public getSmallIcon()I
     .locals 1
 
-    const v0, 0x7f0801c5
+    const v0, 0x7f0801fd
 
     return v0
 .end method
 
-.method protected getTicker()Ljava/lang/String;
+.method public getTicker()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f10008a
+    const v1, 0x7f100095
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

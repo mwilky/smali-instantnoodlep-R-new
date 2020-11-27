@@ -1,6 +1,6 @@
-.class Landroidx/preference/PreferenceGroupAdapter$d;
+.class public Landroidx/preference/PreferenceGroupAdapter$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:Ljava/lang/String;
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroidx/preference/Preference;)V
+.method public constructor <init>(Landroidx/preference/Preference;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/SimpleMonthView$a;
+.class public Lcom/google/android/material/picker/SimpleMonthView$a;
 .super Landroidx/customview/widget/ExploreByTouchHelper;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "a"
 .end annotation
 
 
 # instance fields
-.field private final l:Landroid/graphics/Rect;
+.field public final l:Landroid/graphics/Rect;
 
-.field private final m:Ljava/util/Calendar;
+.field public final m:Ljava/util/Calendar;
 
-.field final synthetic n:Lcom/google/android/material/picker/SimpleMonthView;
+.field public final synthetic n:Lcom/google/android/material/picker/SimpleMonthView;
 
 
 # direct methods
@@ -45,7 +45,9 @@
     return-void
 .end method
 
-.method private B(I)Ljava/lang/CharSequence;
+
+# virtual methods
+.method public final B(I)Ljava/lang/CharSequence;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->n:Lcom/google/android/material/picker/SimpleMonthView;
@@ -92,7 +94,7 @@
     return-object p1
 .end method
 
-.method private C(I)Ljava/lang/CharSequence;
+.method public final C(I)Ljava/lang/CharSequence;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->n:Lcom/google/android/material/picker/SimpleMonthView;
@@ -123,9 +125,7 @@
     return-object p1
 .end method
 
-
-# virtual methods
-.method protected i(FF)I
+.method public i(FF)I
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->n:Lcom/google/android/material/picker/SimpleMonthView;
@@ -156,7 +156,7 @@
     return p1
 .end method
 
-.method protected j(Ljava/util/List;)V
+.method public j(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -192,7 +192,7 @@
     return-void
 .end method
 
-.method protected o(IILandroid/os/Bundle;)Z
+.method public o(IILandroid/os/Bundle;)Z
     .locals 0
 
     const/16 p3, 0x10
@@ -213,10 +213,10 @@
     return p1
 .end method
 
-.method protected q(ILandroid/view/accessibility/AccessibilityEvent;)V
+.method public q(ILandroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->B(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->B(I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -225,9 +225,9 @@
     return-void
 .end method
 
-.method protected s(ILandroidx/core/view/accessibility/d;)V
+.method public s(ILb/h/l/y/d;)V
     .locals 2
-    .param p2    # Landroidx/core/view/accessibility/d;
+    .param p2    # Lb/h/l/y/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -248,34 +248,34 @@
 
     const-string p1, ""
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->a0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->a0(Ljava/lang/CharSequence;)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->l:Landroid/graphics/Rect;
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->R(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->R(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->u0(Z)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->u0(Z)V
 
     return-void
 
     :cond_0
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->C(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->C(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->s0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->s0(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->B(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView$a;->B(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->a0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->a0(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->l:Landroid/graphics/Rect;
 
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->R(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->R(Landroid/graphics/Rect;)V
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->n:Lcom/google/android/material/picker/SimpleMonthView;
 
@@ -287,10 +287,10 @@
 
     const/16 v1, 0x10
 
-    invoke-virtual {p2, v1}, Landroidx/core/view/accessibility/d;->a(I)V
+    invoke-virtual {p2, v1}, Lb/h/l/y/d;->a(I)V
 
     :cond_1
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->c0(Z)V
+    invoke-virtual {p2, v0}, Lb/h/l/y/d;->c0(Z)V
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView$a;->n:Lcom/google/android/material/picker/SimpleMonthView;
 
@@ -302,7 +302,7 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->V(Z)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->V(Z)V
 
     :cond_2
     return-void

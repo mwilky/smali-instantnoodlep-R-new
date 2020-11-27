@@ -1,6 +1,6 @@
-.class Landroidx/transition/ViewUtilsApi19;
-.super Landroidx/transition/y;
-.source ""
+.class public Landroidx/transition/ViewUtilsApi19;
+.super Lb/q/y;
+.source "SourceFile"
 
 
 # annotations
@@ -10,20 +10,20 @@
 
 
 # static fields
-.field private static sTryHiddenTransitionAlpha:Z = true
+.field public static sTryHiddenTransitionAlpha:Z = true
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroidx/transition/y;-><init>()V
+    invoke-direct {p0}, Lb/q/y;-><init>()V
 
     return-void
 .end method

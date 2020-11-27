@@ -1,6 +1,6 @@
 .class public final enum Landroidx/loader/content/ModernAsyncTask$Status;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/loader/content/ModernAsyncTask$Status;
+.field public static final synthetic $VALUES:[Landroidx/loader/content/ModernAsyncTask$Status;
 
 .field public static final enum FINISHED:Landroidx/loader/content/ModernAsyncTask$Status;
 
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 6
 
     new-instance v0, Landroidx/loader/content/ModernAsyncTask$Status;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

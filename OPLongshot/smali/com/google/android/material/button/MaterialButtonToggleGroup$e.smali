@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/button/MaterialButtonToggleGroup$e;
+.class public Lcom/google/android/material/button/MaterialButtonToggleGroup$e;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/button/MaterialButton$b;
@@ -12,6 +12,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "e"
 .end annotation
