@@ -105,7 +105,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)V
+    invoke-virtual {v1, v2}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)I
 
     :cond_1
     monitor-exit v0

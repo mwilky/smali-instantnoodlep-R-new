@@ -44,7 +44,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -109,7 +109,7 @@
 
     invoke-virtual {v1, v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->scheduleProcessEvent(Lcom/oneplus/houston/common/client/Event;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :pswitch_1
     invoke-static {}, Lcom/oem/debug/OPAssertInjector;->hideAssertMessage()V
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->remove(ILjava/lang/String;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -152,7 +152,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->reportActivityDisplayed(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -207,7 +207,7 @@
 
     invoke-virtual {v1, v3}, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->scheduleProcessEvent(Lcom/oneplus/houston/common/client/Event;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -228,7 +228,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->preBindApplication(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;II)V
 
-    goto :goto_1
+    goto :goto_0
 
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -285,7 +285,7 @@
 
     invoke-virtual {v1, v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->updateScreenState(Z)V
 
-    goto :goto_1
+    goto :goto_0
 
     :pswitch_7
     new-instance v0, Lcom/oneplus/config/ConfigObserver;
@@ -314,9 +314,8 @@
 
     invoke-virtual {v0}, Lcom/oneplus/config/ConfigObserver;->register()V
 
-    goto :goto_1
+    goto :goto_0
 
-    :goto_0
     :pswitch_8
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer$MainHandler;->this$0:Lcom/oneplus/houston/apkserver/bridge/HoustonServer;
 
@@ -324,7 +323,7 @@
 
     nop
 
-    :goto_1
+    :goto_0
     return-void
 
     :pswitch_data_0

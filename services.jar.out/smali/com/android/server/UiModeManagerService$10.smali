@@ -81,11 +81,11 @@
 
     move-result v4
 
-    invoke-static {v2, p1, v3, v4}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
+    invoke-static {v2, p1, v3, v4}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
 
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$10;->this$0:Lcom/android/server/UiModeManagerService;
 
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1700(Lcom/android/server/UiModeManagerService;)V
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1600(Lcom/android/server/UiModeManagerService;)V
 
     monitor-exit v1
 

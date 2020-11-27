@@ -10083,7 +10083,7 @@
 
     if-nez p1, :cond_0
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
@@ -19275,13 +19275,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->hasRecordedInterruption()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService;->mAppUsageStats:Landroid/app/usage/UsageStatsManagerInternal;
 
@@ -19314,6 +19314,16 @@
     move-result v3
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/app/usage/UsageStatsManagerInternal;->reportInterruptiveNotification(Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
 
     const-wide/32 v0, 0x80000
 
@@ -19458,12 +19468,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Trace;->traceEnd(J)V
 
-    nop
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/android/server/notification/NotificationRecord;->setRecordedInterruption(Z)V
-
     goto :goto_0
 
     :catchall_0
@@ -19475,6 +19479,11 @@
 
     :cond_0
     :goto_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/android/server/notification/NotificationRecord;->setRecordedInterruption(Z)V
+
+    :cond_1
     return-void
 .end method
 

@@ -287,23 +287,27 @@
 .end method
 
 .method public set(Ljava/lang/String;IJJJILandroid/app/PendingIntent;Landroid/app/IAlarmListener;Ljava/lang/String;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
-    .locals 19
+    .locals 21
 
     move-object/from16 v0, p0
 
     move-object/from16 v15, p1
 
-    move-object/from16 v14, p14
+    move/from16 v14, p2
+
+    move-object/from16 v13, p10
+
+    move-object/from16 v12, p14
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
-    move-result v13
+    move-result v11
 
     iget-object v1, v0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v1, v1, Lcom/android/server/AlarmManagerService;->mAppOps:Landroid/app/AppOpsManager;
 
-    invoke-virtual {v1, v13, v15}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
+    invoke-virtual {v1, v11, v15}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
 
     const-wide/16 v1, 0x0
 
@@ -342,14 +346,14 @@
 
     const-string v6, "AlarmManager.set"
 
-    invoke-virtual {v3, v5, v4, v13, v6}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-virtual {v3, v5, v4, v11, v6}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
     :cond_2
     and-int/lit8 v3, p9, -0xb
 
     const/16 v4, 0x3e8
 
-    if-eq v13, v4, :cond_3
+    if-eq v11, v4, :cond_3
 
     and-int/lit8 v3, v3, -0x11
 
@@ -361,7 +365,7 @@
     or-int/lit8 v3, v3, 0x1
 
     :cond_4
-    if-eqz v14, :cond_5
+    if-eqz v12, :cond_5
 
     or-int/lit8 v3, v3, 0x3
 
@@ -372,13 +376,13 @@
 
     const/16 v1, 0x2710
 
-    if-lt v13, v1, :cond_6
+    if-lt v11, v1, :cond_6
 
     iget-object v1, v0, Lcom/android/server/AlarmManagerService$4;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget v1, v1, Lcom/android/server/AlarmManagerService;->mSystemUiUid:I
 
-    invoke-static {v13, v1}, Landroid/os/UserHandle;->isSameApp(II)Z
+    invoke-static {v11, v1}, Landroid/os/UserHandle;->isSameApp(II)Z
 
     move-result v1
 
@@ -398,7 +402,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v13}, Lcom/android/server/AppStateTracker;->isUidPowerSaveUserWhitelisted(I)Z
+    invoke-virtual {v1, v11}, Lcom/android/server/AppStateTracker;->isUidPowerSaveUserWhitelisted(I)Z
 
     move-result v1
 
@@ -411,7 +415,41 @@
 
     :cond_7
     :goto_1
-    invoke-static {v15, v3, v14}, Lcom/android/server/OpAlarmManagerInjector;->updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;)I
+    const/4 v1, 0x2
+
+    if-eq v14, v1, :cond_9
+
+    if-nez v14, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    const-string v1, "*alarm*:"
+
+    goto :goto_3
+
+    :cond_9
+    :goto_2
+    const-string v1, "*walarm*:"
+
+    :goto_3
+    move-object v10, v1
+
+    if-eqz v13, :cond_a
+
+    invoke-virtual {v13, v10}, Landroid/app/PendingIntent;->getTag(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_4
+
+    :cond_a
+    move-object v1, v10
+
+    :goto_4
+    move-object v9, v1
+
+    invoke-static {v15, v3, v12, v9}, Lcom/android/server/OpAlarmManagerInjector;->updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;Ljava/lang/String;)I
 
     move-result v17
 
@@ -425,21 +463,25 @@
 
     move-wide/from16 v7, p7
 
+    move-object/from16 v18, v9
+
     move-object/from16 v9, p10
 
+    move-object/from16 v19, v10
+
     move-object/from16 v10, p11
+
+    move/from16 v20, v11
 
     move-object/from16 v11, p12
 
     move/from16 v12, v17
 
-    move/from16 v18, v13
-
     move-object/from16 v13, p13
 
     move-object/from16 v14, p14
 
-    move/from16 v15, v18
+    move/from16 v15, v20
 
     move-object/from16 v16, p1
 

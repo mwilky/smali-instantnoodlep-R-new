@@ -509,7 +509,7 @@
     return-void
 .end method
 
-.method public static updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;)I
+.method public static updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;Ljava/lang/String;)I
     .locals 1
 
     sget-object v0, Lcom/android/server/OpAlarmManagerInjector;->opAlarmManager:Lcom/android/server/IOpAlarmManager;
@@ -531,7 +531,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/IOpAlarmManager;->updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;)I
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/server/IOpAlarmManager;->updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;Ljava/lang/String;)I
 
     move-result v0
 

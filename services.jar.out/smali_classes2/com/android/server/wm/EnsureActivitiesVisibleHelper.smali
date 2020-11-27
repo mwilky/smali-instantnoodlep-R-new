@@ -289,7 +289,7 @@
     :goto_3
     move v14, v0
 
-    if-nez v10, :cond_b
+    if-nez v10, :cond_a
 
     if-nez v14, :cond_7
 
@@ -299,28 +299,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     :cond_7
     iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
 
-    if-eqz v0, :cond_b
-
-    iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
-
-    invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isActivityTypeHome()Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
+    if-eqz v0, :cond_a
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->occludesParent()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
-    :cond_8
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityStack;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -331,7 +322,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_8
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -343,7 +334,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     invoke-static {v13}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
@@ -353,18 +344,18 @@
 
     move-result v2
 
-    if-ne v0, v2, :cond_b
+    if-ne v0, v2, :cond_a
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isSleeping()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
-    :cond_9
+    :cond_8
     sget-boolean v0, Lcom/android/server/wm/OpAppLockerInjector;->IS_APP_LOCKER_ENABLED:Z
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     iget-object v0, v7, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -378,16 +369,16 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
-    :cond_a
+    :cond_9
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityStack;->isFocusedStackOnDisplay()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -399,7 +390,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -407,13 +398,13 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     move v0, v8
 
     goto :goto_4
 
-    :cond_b
+    :cond_a
     move v0, v1
 
     :goto_4
@@ -427,9 +418,9 @@
 
     const-string v3, " finishing="
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_b
 
-    if-eqz v15, :cond_c
+    if-eqz v15, :cond_b
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -535,19 +526,19 @@
 
     invoke-static {v11, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_c
+    :cond_b
     const-string v4, " behindFullscreenActivity="
 
-    if-nez v10, :cond_f
+    if-nez v10, :cond_e
 
-    if-eqz v15, :cond_d
+    if-eqz v15, :cond_c
 
     goto :goto_5
 
-    :cond_d
+    :cond_c
     sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_VISIBILITY:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -599,7 +590,7 @@
 
     invoke-static {v11, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_d
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->makeInvisible()V
 
     move-object/from16 v17, v4
@@ -608,18 +599,18 @@
 
     goto/16 :goto_9
 
-    :cond_f
+    :cond_e
     :goto_5
     iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_f
 
     return-void
 
-    :cond_10
+    :cond_f
     sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_VISIBILITY:Z
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_10
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -651,14 +642,14 @@
 
     invoke-static {v11, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_11
+    :cond_10
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
-    if-eq v7, v0, :cond_12
+    if-eq v7, v0, :cond_11
 
     iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_11
 
     iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mPreserveWindows:Z
 
@@ -666,26 +657,26 @@
 
     invoke-virtual {v7, v1, v0, v8}, Lcom/android/server/wm/ActivityRecord;->ensureActivityConfiguration(IZZ)Z
 
-    :cond_12
+    :cond_11
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->attachedToProcess()Z
 
     move-result v0
 
-    if-nez v0, :cond_14
+    if-nez v0, :cond_13
 
     iget-object v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
     iget v2, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mConfigChanges:I
 
-    if-eqz p3, :cond_13
+    if-eqz p3, :cond_12
 
-    if-eqz v9, :cond_13
+    if-eqz v9, :cond_12
 
     move/from16 v16, v8
 
     goto :goto_6
 
-    :cond_13
+    :cond_12
     const/16 v16, 0x0
 
     :goto_6
@@ -705,18 +696,18 @@
 
     goto :goto_8
 
-    :cond_14
+    :cond_13
     move-object/from16 v17, v4
 
     move-object/from16 v18, v5
 
     iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->mVisibleRequested:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_17
 
     sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_VISIBILITY:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_14
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -734,24 +725,24 @@
 
     invoke-static {v11, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_15
-    iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->mClientVisibilityDeferred:Z
-
-    if-eqz v0, :cond_17
-
-    iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
-
-    if-eqz v0, :cond_17
-
+    :cond_14
     iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->mClientVisibilityDeferred:Z
 
     if-eqz v0, :cond_16
+
+    iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
+
+    if-eqz v0, :cond_16
+
+    iget-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->mClientVisibilityDeferred:Z
+
+    if-eqz v0, :cond_15
 
     const/4 v0, 0x0
 
     goto :goto_7
 
-    :cond_16
+    :cond_15
     move-object/from16 v0, p2
 
     :goto_7
@@ -761,12 +752,12 @@
 
     iput-boolean v0, v7, Lcom/android/server/wm/ActivityRecord;->mClientVisibilityDeferred:Z
 
-    :cond_17
+    :cond_16
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->handleAlreadyVisible()V
 
     iget-boolean v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_19
 
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
@@ -774,19 +765,19 @@
 
     goto :goto_8
 
-    :cond_18
-    if-eqz v15, :cond_19
+    :cond_17
+    if-eqz v15, :cond_18
 
     iput-boolean v8, v7, Lcom/android/server/wm/ActivityRecord;->mIsMakeFocusedStackVisible:Z
 
-    :cond_19
+    :cond_18
     iget-object v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mStarting:Lcom/android/server/wm/ActivityRecord;
 
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mNotifyClients:Z
 
     invoke-virtual {v7, v0, v1}, Lcom/android/server/wm/ActivityRecord;->makeVisibleIfNeeded(Lcom/android/server/wm/ActivityRecord;Z)V
 
-    :cond_1a
+    :cond_19
     :goto_8
     iget v0, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mConfigChanges:I
 
@@ -805,7 +796,7 @@
 
     const/4 v1, 0x5
 
-    if-ne v0, v1, :cond_1b
+    if-ne v0, v1, :cond_1a
 
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContainerShouldBeVisible:Z
 
@@ -815,10 +806,10 @@
 
     goto :goto_a
 
-    :cond_1b
+    :cond_1a
     iget-boolean v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mBehindFullscreenActivity:Z
 
-    if-nez v1, :cond_1d
+    if-nez v1, :cond_1c
 
     iget-object v1, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mContiner:Lcom/android/server/wm/ActivityStack;
 
@@ -826,17 +817,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1d
+    if-eqz v1, :cond_1c
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ActivityRecord;->isRootOfTask()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1d
+    if-eqz v1, :cond_1c
 
     sget-boolean v1, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_VISIBILITY:Z
 
-    if-eqz v1, :cond_1c
+    if-eqz v1, :cond_1b
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -872,10 +863,10 @@
 
     invoke-static {v11, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1c
+    :cond_1b
     iput-boolean v8, v6, Lcom/android/server/wm/EnsureActivitiesVisibleHelper;->mBehindFullscreenActivity:Z
 
-    :cond_1d
+    :cond_1c
     :goto_a
     return-void
 .end method

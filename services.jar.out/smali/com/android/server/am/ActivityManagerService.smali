@@ -320,6 +320,8 @@
 
 .field static final sNullHostingRecord:Lcom/android/server/am/HostingRecord;
 
+.field static sPssUpdateThread:Landroid/os/HandlerThread;
+
 .field private static sTheRealBuildSerial:Ljava/lang/String;
 
 .field private static sThreadPriorityBooster:Lcom/android/server/ThreadPriorityBooster;
@@ -1033,6 +1035,16 @@
 
     sput-object v0, Lcom/android/server/am/ActivityManagerService;->sNullHostingRecord:Lcom/android/server/am/HostingRecord;
 
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string/jumbo v1, "pssUpdate"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/server/am/ActivityManagerService;->sPssUpdateThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -1130,6 +1142,8 @@
     sput-object v0, Lcom/android/server/am/ActivityManagerService;->DUMP_MEM_OOM_COMPACT_LABEL:[Ljava/lang/String;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
@@ -1548,11 +1562,9 @@
 
     new-instance v2, Lcom/android/server/am/ActivityManagerService$5;
 
-    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+    sget-object v3, Lcom/android/server/am/ActivityManagerService;->sPssUpdateThread:Landroid/os/HandlerThread;
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v3
 
@@ -2581,11 +2593,9 @@
 
     new-instance v2, Lcom/android/server/am/ActivityManagerService$5;
 
-    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+    sget-object v4, Lcom/android/server/am/ActivityManagerService;->sPssUpdateThread:Landroid/os/HandlerThread;
 
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v4}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v4
 
@@ -20408,7 +20418,7 @@
     invoke-virtual/range {v19 .. v19}, Lcom/android/server/am/ActiveServices$ServiceDumper;->dumpWithClient()V
 
     :cond_a
-    if-nez v14, :cond_c
+    if-nez v14, :cond_b
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
@@ -20419,11 +20429,6 @@
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_b
-    const/16 v0, 0x1770
-
-    invoke-virtual {v9, v8, v0}, Lcom/android/server/am/ActivityManagerService;->dumpBinderProxies(Ljava/io/PrintWriter;I)V
-
-    :cond_c
     monitor-enter p0
 
     :try_start_1
@@ -20431,13 +20436,13 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz v15, :cond_d
+    if-eqz v15, :cond_c
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_d
+    :cond_c
     iget-object v10, v9, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string/jumbo v11, "recents"
@@ -20465,13 +20470,13 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_e
+    if-eqz p5, :cond_d
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_e
+    :cond_d
     iget-object v10, v9, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string/jumbo v11, "lastanr"
@@ -20494,13 +20499,13 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_f
+    if-eqz p5, :cond_e
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_f
+    :cond_e
     iget-object v10, v9, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string/jumbo v11, "starter"
@@ -20521,17 +20526,17 @@
 
     invoke-virtual/range {v10 .. v18}, Lcom/android/server/wm/ActivityTaskManagerInternal;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;IZZLjava/lang/String;)V
 
-    if-nez v7, :cond_11
+    if-nez v7, :cond_10
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_10
+    if-eqz p5, :cond_f
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_10
+    :cond_f
     iget-object v10, v9, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string v11, "containers"
@@ -20552,18 +20557,18 @@
 
     invoke-virtual/range {v10 .. v18}, Lcom/android/server/wm/ActivityTaskManagerInternal;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;IZZLjava/lang/String;)V
 
-    :cond_11
-    if-nez p8, :cond_13
+    :cond_10
+    if-nez p8, :cond_12
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_12
+    if-eqz p5, :cond_11
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v8, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_12
+    :cond_11
     iget-object v10, v9, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
 
     const-string v11, "activities"
@@ -20584,18 +20589,18 @@
 
     invoke-virtual/range {v10 .. v18}, Lcom/android/server/wm/ActivityTaskManagerInternal;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;IZZLjava/lang/String;)V
 
-    :cond_13
+    :cond_12
     iget-object v0, v9, Lcom/android/server/am/ActivityManagerService;->mAssociations:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_15
+    if-lez v0, :cond_14
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_14
+    if-eqz p5, :cond_13
 
     const-string v0, "-------------------------------------------------------------------------------"
 
@@ -20603,7 +20608,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    :cond_14
+    :cond_13
     move-object/from16 v1, p0
 
     move-object/from16 v2, p1
@@ -20629,7 +20634,7 @@
 
     goto :goto_0
 
-    :cond_15
+    :cond_14
     move-object v10, v7
 
     move-object v11, v8
@@ -20637,13 +20642,13 @@
     :goto_0
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_16
+    if-eqz p5, :cond_15
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_16
+    :cond_15
     sget-object v0, Lcom/android/server/am/ActivityManagerServiceInjector;->sRestartWhiteList:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -20656,7 +20661,20 @@
 
     invoke-virtual {v0, v11, v10}, Lcom/android/server/am/AppExitInfoTracker;->dumpHistoryProcessExitInfo(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    if-nez v10, :cond_19
+    if-nez v10, :cond_18
+
+    invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
+
+    if-eqz p5, :cond_16
+
+    const-string v0, "-------------------------------------------------------------------------------"
+
+    invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_16
+    iget-object v0, v9, Lcom/android/server/am/ActivityManagerService;->mOomAdjProfiler:Lcom/android/server/am/OomAdjProfiler;
+
+    invoke-virtual {v0, v11}, Lcom/android/server/am/OomAdjProfiler;->dump(Ljava/io/PrintWriter;)V
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
@@ -20667,31 +20685,18 @@
     invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_17
-    iget-object v0, v9, Lcom/android/server/am/ActivityManagerService;->mOomAdjProfiler:Lcom/android/server/am/OomAdjProfiler;
-
-    invoke-virtual {v0, v11}, Lcom/android/server/am/OomAdjProfiler;->dump(Ljava/io/PrintWriter;)V
-
-    invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
-
-    if-eqz p5, :cond_18
-
-    const-string v0, "-------------------------------------------------------------------------------"
-
-    invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_18
     invoke-virtual {v9, v11}, Lcom/android/server/am/ActivityManagerService;->dumpLmkLocked(Ljava/io/PrintWriter;)Z
 
-    :cond_19
+    :cond_18
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_1a
+    if-eqz p5, :cond_19
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_1a
+    :cond_19
     move-object/from16 v1, p0
 
     move-object/from16 v2, p1
@@ -20712,13 +20717,13 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    if-eqz p5, :cond_1b
+    if-eqz p5, :cond_1a
 
     const-string v0, "-------------------------------------------------------------------------------"
 
     invoke-virtual {v11, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_1b
+    :cond_1a
     invoke-direct {v9, v11}, Lcom/android/server/am/ActivityManagerService;->dumpUsersLocked(Ljava/io/PrintWriter;)V
 
     monitor-exit p0
@@ -28107,7 +28112,7 @@
 
     iget v8, v7, Lcom/android/server/am/ProcessRecord;->setAdj:I
 
-    if-gtz v8, :cond_3
+    if-gez v8, :cond_3
 
     goto :goto_0
 

@@ -89,22 +89,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    sget-object v0, Lcom/oneplus/android/server/location/OpLocationMdmInjector;->mIOpLocationMdm:Lcom/oneplus/android/server/location/IOpLocationMdm;
-
-    invoke-interface {v0}, Lcom/oneplus/android/server/location/IOpLocationMdm;->getProviderFlag()I
-
-    goto :goto_0
-
-    :cond_0
     const-string v0, "OpLocationMdmInjector"
 
     const-string v1, "getProviderFlag(), checkInterface is false"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :cond_0
     const/4 v0, 0x0
 
     return v0

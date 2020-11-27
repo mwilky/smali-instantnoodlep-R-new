@@ -10649,6 +10649,16 @@
 
     if-eq v8, v9, :cond_4
 
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getWindowingMode()I
+
+    move-result v8
+
+    invoke-static {v8}, Landroid/app/WindowConfiguration;->isSplitScreenWindowingMode(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
     :cond_3
     iget-object v8, p0, Lcom/android/server/wm/ActivityRecord;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
@@ -17862,7 +17872,7 @@
 .end method
 
 .method logStartActivity(ILcom/android/server/wm/Task;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -17882,11 +17892,32 @@
     const/4 v1, 0x0
 
     :goto_0
-    const/16 v2, 0x8
+    const/4 v2, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v3, v2, [I
 
-    const/4 v3, 0x0
+    const/16 v4, 0x80
+
+    const/4 v5, 0x0
+
+    aput v4, v3, v5
+
+    invoke-static {v3}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-nez v3, :cond_1
+
+    const-string v1, "dat=xx"
+
+    :cond_1
+    const/16 v3, 0x8
+
+    new-array v3, v3, [Ljava/lang/Object;
 
     iget v4, p0, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
@@ -17894,9 +17925,7 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
+    aput-object v4, v3, v5
 
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
@@ -17906,9 +17935,9 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
     iget v4, p2, Lcom/android/server/wm/Task;->mTaskId:I
 
@@ -17916,15 +17945,15 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord;->shortComponentName:Ljava/lang/String;
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    const/4 v3, 0x4
+    const/4 v2, 0x4
 
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -17932,9 +17961,9 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    const/4 v3, 0x5
+    const/4 v2, 0x5
 
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -17942,13 +17971,13 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    const/4 v3, 0x6
+    const/4 v2, 0x6
 
-    aput-object v1, v2, v3
+    aput-object v1, v3, v2
 
-    const/4 v3, 0x7
+    const/4 v2, 0x7
 
     iget-object v4, p0, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -17960,9 +17989,9 @@
 
     move-result-object v4
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    invoke-static {p1, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p1, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
     return-void
 .end method

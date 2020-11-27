@@ -26909,7 +26909,7 @@
 
     check-cast v2, Lcom/android/server/pm/PreferredIntentResolver;
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     invoke-virtual {v2}, Lcom/android/server/pm/PreferredIntentResolver;->filterSet()Ljava/util/Set;
 
@@ -26924,7 +26924,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -26932,6 +26932,11 @@
 
     check-cast v4, Lcom/android/server/pm/PreferredActivity;
 
+    if-nez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const-string/jumbo v5, "item"
 
     invoke-interface {p1, v0, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
@@ -26942,7 +26947,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void

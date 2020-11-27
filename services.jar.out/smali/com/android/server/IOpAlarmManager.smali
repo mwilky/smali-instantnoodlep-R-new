@@ -51,5 +51,5 @@
 .method public abstract setPkgNetworkAlarmRestriction(Z)V
 .end method
 
-.method public abstract updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;)I
+.method public abstract updateFlag(Ljava/lang/String;ILandroid/app/AlarmManager$AlarmClockInfo;Ljava/lang/String;)I
 .end method

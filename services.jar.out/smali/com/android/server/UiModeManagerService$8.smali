@@ -43,7 +43,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$8;->this$0:Lcom/android/server/UiModeManagerService;
 
-    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$1100(Lcom/android/server/UiModeManagerService;)Z
+    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$1000(Lcom/android/server/UiModeManagerService;)Z
 
     move-result v1
 
@@ -55,7 +55,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$1202(Lcom/android/server/UiModeManagerService;Z)Z
+    invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$1102(Lcom/android/server/UiModeManagerService;Z)Z
 
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$8;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -69,7 +69,7 @@
 
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$8;->this$0:Lcom/android/server/UiModeManagerService;
 
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/database/ContentObserver;
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1200(Lcom/android/server/UiModeManagerService;)Landroid/database/ContentObserver;
 
     move-result-object v2
 
@@ -91,7 +91,7 @@
 
     move-result v4
 
-    invoke-static {v2, v1, v3, v4}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
+    invoke-static {v2, v1, v3, v4}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
 
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$8;->this$0:Lcom/android/server/UiModeManagerService;
 

@@ -1197,6 +1197,17 @@
     invoke-virtual {v0, v3, v1, v2}, Landroid/util/BoostFramework;->perfIOPrefetchStart(ILjava/lang/String;Ljava/lang/String;)I
 
     :cond_3
+    iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mPerfBoost:Landroid/util/BoostFramework;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/android/server/wm/TaskDisplayArea;->mPerfBoost:Landroid/util/BoostFramework;
+
+    invoke-static {v0, v1}, Lcom/android/server/wm/OnePlusPerfManagerInjector;->acquirePerfForStartSpeed(Ljava/lang/String;Landroid/util/BoostFramework;)Z
+
+    :cond_4
     return-void
 .end method
 

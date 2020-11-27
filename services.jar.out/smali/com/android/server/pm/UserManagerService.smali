@@ -192,6 +192,8 @@
 
 .field private final mHandler:Landroid/os/Handler;
 
+.field private final mHandlerThread:Lcom/android/server/ServiceThread;
+
 .field private mIsDeviceManaged:Z
 
 .field private final mIsUserManaged:Landroid/util/SparseBooleanArray;
@@ -223,6 +225,8 @@
 .field private final mRestrictionsLock:Ljava/lang/Object;
 
 .field private final mSystemPackageInstaller:Lcom/android/server/pm/UserSystemPackageInstaller;
+
+.field private final mThreadHandler:Landroid/os/Handler;
 
 .field private final mUserDataPreparer:Lcom/android/server/pm/UserDataPreparer;
 
@@ -477,6 +481,32 @@
     invoke-direct {v1, p0}, Lcom/android/server/pm/UserManagerService$MainHandler;-><init>(Lcom/android/server/pm/UserManagerService;)V
 
     iput-object v1, p0, Lcom/android/server/pm/UserManagerService;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/android/server/ServiceThread;
+
+    const-string v2, "HandlerThread"
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
+
+    iput-object v1, p0, Lcom/android/server/pm/UserManagerService;->mHandlerThread:Lcom/android/server/ServiceThread;
+
+    invoke-virtual {v1}, Lcom/android/server/ServiceThread;->start()V
+
+    new-instance v1, Landroid/os/Handler;
+
+    iget-object v2, p0, Lcom/android/server/pm/UserManagerService;->mHandlerThread:Lcom/android/server/ServiceThread;
+
+    invoke-virtual {v2}, Lcom/android/server/ServiceThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v1, p0, Lcom/android/server/pm/UserManagerService;->mThreadHandler:Landroid/os/Handler;
 
     iput-object p3, p0, Lcom/android/server/pm/UserManagerService;->mUserDataPreparer:Lcom/android/server/pm/UserDataPreparer;
 
@@ -2223,6 +2253,8 @@
     move-result v9
 
     if-nez v9, :cond_e
+
+    if-nez v23, :cond_e
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -5270,7 +5302,7 @@
 
     invoke-direct {v1, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    iget-object v2, p0, Lcom/android/server/pm/UserManagerService;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/server/pm/UserManagerService;->mThreadHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/pm/UserManagerService$3;
 
@@ -8477,7 +8509,7 @@
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/server/pm/UserManagerService;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/server/pm/UserManagerService;->mThreadHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/pm/UserManagerService$2;
 
@@ -9639,6 +9671,8 @@
     move-result v10
 
     sub-int/2addr v10, v8
+
+    sub-int/2addr v10, v9
 
     if-eq v10, v7, :cond_5
 

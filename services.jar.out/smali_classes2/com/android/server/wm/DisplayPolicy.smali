@@ -55,7 +55,7 @@
 
 .field private static isLowRAM:Z
 
-.field static final isSupportLandPadding:Z
+.field private static final isSupportLandPadding:Z
 
 .field private static final sTmpDisplayCutoutSafeExceptMaybeBarsRect:Landroid/graphics/Rect;
 
@@ -3775,7 +3775,7 @@
 .end method
 
 .method private requestTransientBars(Lcom/android/server/wm/WindowState;)V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -3807,7 +3807,7 @@
 
     const/4 v3, 0x0
 
-    if-ne v0, v1, :cond_9
+    if-ne v0, v1, :cond_b
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getControllableInsetProvider()Lcom/android/server/wm/InsetsSourceProvider;
 
@@ -3825,7 +3825,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_a
 
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->getNotificationShade()Lcom/android/server/wm/WindowState;
 
@@ -3833,7 +3833,7 @@
 
     if-ne v1, v4, :cond_3
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_3
     invoke-interface {v1}, Lcom/android/server/wm/InsetsControlTarget;->getRequestedInsetsState()Landroid/view/InsetsState;
@@ -3895,27 +3895,6 @@
     return-void
 
     :cond_6
-    invoke-interface {v1}, Lcom/android/server/wm/InsetsControlTarget;->canShowTransient()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    iget-object v5, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
-
-    invoke-virtual {v5}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
-
-    move-result-object v5
-
-    sget-object v6, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_SWIPE:[I
-
-    invoke-virtual {v5, v6}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)V
-
-    invoke-interface {v1, v2, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
-
-    goto :goto_3
-
-    :cond_7
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
     move-result v5
@@ -3926,16 +3905,77 @@
 
     or-int/2addr v5, v6
 
+    invoke-interface {v1}, Lcom/android/server/wm/InsetsControlTarget;->canShowTransient()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
+
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v6}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
+
+    move-result-object v6
+
+    sget-object v7, Lcom/android/server/wm/DisplayPolicy;->SHOW_TYPES_FOR_SWIPE:[I
+
+    invoke-virtual {v6, v7}, Lcom/android/server/wm/InsetsPolicy;->showTransient([I)I
+
+    move-result v6
+
+    not-int v6, v6
+
+    and-int/2addr v5, v6
+
+    if-eqz v5, :cond_9
+
+    iget-object v6, p0, Lcom/android/server/wm/DisplayPolicy;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v6}, Lcom/android/server/wm/DisplayContent;->getInsetsPolicy()Lcom/android/server/wm/InsetsPolicy;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v3}, Lcom/android/server/wm/InsetsPolicy;->isHidden(I)Z
+
+    move-result v6
+
+    if-nez v6, :cond_7
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+
+    move-result v6
+
+    not-int v6, v6
+
+    and-int/2addr v5, v6
+
+    :cond_7
     invoke-interface {v1, v5, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
 
+    goto :goto_3
+
+    :cond_8
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+
+    move-result v6
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+
+    move-result v7
+
+    or-int/2addr v6, v7
+
+    invoke-interface {v1, v6, v3}, Lcom/android/server/wm/InsetsControlTarget;->showInsets(IZ)V
+
+    :cond_9
     :goto_3
     goto :goto_6
 
-    :cond_8
+    :cond_a
     :goto_4
     return-void
 
-    :cond_9
+    :cond_b
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/StatusBarController;->checkShowTransientBarLw()Z
@@ -3948,7 +3988,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_c
 
     iget v1, p0, Lcom/android/server/wm/DisplayPolicy;->mLastSystemUiFlags:I
 
@@ -3956,47 +3996,47 @@
 
     move-result v1
 
-    if-nez v1, :cond_a
+    if-nez v1, :cond_c
 
     goto :goto_5
 
-    :cond_a
+    :cond_c
     move v2, v3
 
     :goto_5
     move v1, v2
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_d
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_11
 
-    :cond_b
-    if-nez v1, :cond_c
+    :cond_d
+    if-nez v1, :cond_e
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBar:Lcom/android/server/wm/WindowState;
 
-    if-ne p1, v2, :cond_c
+    if-ne p1, v2, :cond_e
 
     return-void
 
-    :cond_c
-    if-eqz v0, :cond_d
+    :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mStatusBarController:Lcom/android/server/wm/StatusBarController;
 
     invoke-virtual {v2}, Lcom/android/server/wm/StatusBarController;->showTransient()V
 
-    :cond_d
-    if-eqz v1, :cond_e
+    :cond_f
+    if-eqz v1, :cond_10
 
     iget-object v2, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarController:Lcom/android/server/wm/BarController;
 
     invoke-virtual {v2}, Lcom/android/server/wm/BarController;->showTransient()V
 
-    :cond_e
+    :cond_10
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayPolicy;->updateSystemUiVisibilityLw()I
 
-    :cond_f
+    :cond_11
     :goto_6
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mImmersiveModeConfirmation:Lcom/android/server/wm/ImmersiveModeConfirmation;
 
@@ -9246,17 +9286,6 @@
 
     iget v0, v0, Landroid/content/res/Configuration;->orientation:I
 
-    sget-boolean v1, Lcom/android/server/wm/DisplayPolicy;->isSupportLandPadding:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
     iget v1, p1, Lcom/android/server/wm/DisplayFrames;->mDisplayWidth:I
 
     iget v2, p1, Lcom/android/server/wm/DisplayFrames;->mDisplayHeight:I
@@ -9281,6 +9310,19 @@
 
     if-eqz v1, :cond_1
 
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isGestureButtonEnabled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
     iget v1, p3, Landroid/graphics/Rect;->bottom:I
 
     iget v2, p1, Lcom/android/server/wm/DisplayFrames;->mRotation:I
@@ -9938,19 +9980,7 @@
     :cond_8
     move/from16 v19, v8
 
-    const/4 v0, 0x1
-
-    new-array v8, v0, [I
-
-    const/16 v0, 0x6b
-
-    const/16 v20, 0x0
-
-    aput v0, v8, v20
-
-    invoke-static {v8}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v0
+    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->isSupportLandPadding:Z
 
     if-eqz v0, :cond_9
 

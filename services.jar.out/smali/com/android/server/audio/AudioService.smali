@@ -15268,7 +15268,7 @@
 
     move-result v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_8
+    .catchall {:try_start_0 .. :try_end_0} :catchall_b
 
     if-eqz v0, :cond_d
 
@@ -15339,7 +15339,7 @@
 
     move/from16 v18, v6
 
-    goto/16 :goto_8
+    goto/16 :goto_c
 
     :cond_d
     move/from16 p2, v6
@@ -15351,7 +15351,7 @@
 
     move-result v0
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_7
+    .catchall {:try_start_3 .. :try_end_3} :catchall_a
 
     const/4 v7, 0x3
 
@@ -15454,7 +15454,7 @@
 
     move-object/from16 v17, v5
 
-    goto/16 :goto_8
+    goto/16 :goto_c
 
     :cond_10
     :goto_5
@@ -15537,7 +15537,7 @@
 
     move-object/from16 v17, v5
 
-    goto/16 :goto_8
+    goto/16 :goto_c
 
     :cond_14
     move v6, v1
@@ -15558,7 +15558,7 @@
 
     new-instance v0, Lcom/android/server/audio/AudioService$StreamVolumeCommand;
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_9
 
     move-object v1, v0
 
@@ -15628,7 +15628,7 @@
 
     move-result v1
     :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_5
+    .catchall {:try_start_7 .. :try_end_7} :catchall_8
 
     move v7, v1
 
@@ -15637,11 +15637,14 @@
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/audio/AudioService;->isEUVersion()Z
 
     move-result v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_7
 
     if-eqz v1, :cond_16
 
     if-ne v13, v0, :cond_16
 
+    :try_start_9
     sget-object v1, Landroid/media/AudioSystem;->DEVICE_OUT_ALL_A2DP_SET:Ljava/util/Set;
 
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -15695,11 +15698,26 @@
     div-int/lit8 v3, v1, 0xa
 
     invoke-virtual {v2, v3}, Lcom/android/server/audio/AudioDeviceBroker;->postSetAvrcpAbsoluteVolumeIndex(I)V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    goto :goto_8
+
+    :catchall_3
+    move-exception v0
+
+    move v2, v7
+
+    move/from16 v1, v19
+
+    goto/16 :goto_c
 
     :cond_16
+    :goto_8
+    :try_start_a
     monitor-exit v17
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_7
 
     iget-object v1, v8, Lcom/android/server/audio/AudioService;->mHdmiClientLock:Ljava/lang/Object;
 
@@ -15711,13 +15729,26 @@
 
     const/4 v0, 0x0
 
-    :try_start_9
+    :try_start_b
     invoke-direct {v8, v0}, Lcom/android/server/audio/AudioService;->maybeSendSystemAudioStatusCommand(Z)V
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
+
+    goto :goto_9
+
+    :catchall_4
+    move-exception v0
+
+    move/from16 v16, v7
+
+    goto/16 :goto_b
 
     :cond_17
+    :goto_9
+    :try_start_c
     monitor-exit v1
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_5
 
     move-object/from16 v1, p0
 
@@ -15733,37 +15764,136 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/audio/AudioService;->sendVolumeUpdate(IIIII)V
 
+    const/4 v0, 0x6
+
+    if-ne v9, v0, :cond_19
+
+    const/16 v0, 0x10
+
+    if-eq v15, v0, :cond_19
+
+    new-instance v0, Ljava/lang/String;
+
+    const-string v1, "com.android.bluetooth"
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_18
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "setStreamVolume update volume:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " of streamType:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " for bt sco device"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "AS.AudioService"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v5, 0x10
+
+    const/4 v0, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p1
+
+    move v3, v7
+
+    move/from16 v4, v19
+
+    move-object/from16 v6, p5
+
+    move/from16 v16, v7
+
+    move v7, v0
+
+    invoke-direct/range {v1 .. v7}, Lcom/android/server/audio/AudioService;->onSetStreamVolume(IIIILjava/lang/String;Z)V
+
+    const/16 v6, 0x10
+
+    move v3, v10
+
+    move/from16 v4, v16
+
+    move/from16 v5, v19
+
+    invoke-virtual/range {v1 .. v6}, Lcom/android/server/audio/AudioService;->sendVolumeUpdate(IIIII)V
+
+    goto :goto_a
+
+    :cond_18
+    move/from16 v16, v7
+
+    goto :goto_a
+
+    :cond_19
+    move/from16 v16, v7
+
+    :goto_a
     return-void
 
-    :catchall_3
+    :catchall_5
     move-exception v0
 
-    :try_start_a
+    move/from16 v16, v7
+
+    :goto_b
+    :try_start_d
     monitor-exit v1
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_6
 
     throw v0
 
-    :catchall_4
+    :catchall_6
     move-exception v0
 
-    move v2, v7
+    goto :goto_b
+
+    :catchall_7
+    move-exception v0
+
+    move/from16 v16, v7
+
+    move/from16 v2, v16
 
     move/from16 v1, v19
 
-    goto :goto_8
+    goto :goto_c
 
-    :catchall_5
+    :catchall_8
     move-exception v0
 
     move/from16 v2, v16
 
     move/from16 v1, v19
 
-    goto :goto_8
+    goto :goto_c
 
-    :catchall_6
+    :catchall_9
     move-exception v0
 
     move/from16 v18, p2
@@ -15778,36 +15908,36 @@
 
     move/from16 v1, v19
 
-    goto :goto_8
+    goto :goto_c
 
-    :catchall_7
+    :catchall_a
     move-exception v0
 
     move/from16 v18, p2
 
     move-object/from16 v17, v5
 
-    goto :goto_8
+    goto :goto_c
 
-    :catchall_8
+    :catchall_b
     move-exception v0
 
     move-object/from16 v17, v5
 
     move/from16 v18, v6
 
-    :goto_8
-    :try_start_b
+    :goto_c
+    :try_start_e
     monitor-exit v17
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_9
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_c
 
     throw v0
 
-    :catchall_9
+    :catchall_c
     move-exception v0
 
-    goto :goto_8
+    goto :goto_c
 .end method
 
 .method private setStreamVolumeInt(IIIZLjava/lang/String;Z)V

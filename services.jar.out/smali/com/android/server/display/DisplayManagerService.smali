@@ -3903,7 +3903,7 @@
 .end method
 
 .method private loadBrightnessConfiguration()V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
@@ -3923,12 +3923,6 @@
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mPersistentDataStore:Lcom/android/server/display/PersistentDataStore;
 
     invoke-virtual {v2, v1}, Lcom/android/server/display/PersistentDataStore;->getBrightnessConfiguration(I)Landroid/hardware/display/BrightnessConfiguration;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
-
-    invoke-virtual {v3, v2}, Lcom/android/server/display/DisplayPowerController;->setBrightnessConfiguration(Landroid/hardware/display/BrightnessConfiguration;)V
 
     monitor-exit v0
 
@@ -5202,6 +5196,14 @@
     iget v2, p0, Lcom/android/server/display/DisplayManagerService;->mCurrentUserId:I
 
     if-ne p2, v2, :cond_0
+
+    const-string v2, "com.google.android.apps.turbo"
+
+    invoke-virtual {p3, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
 
@@ -6760,7 +6762,7 @@
 .end method
 
 .method public onSwitchUser(I)V
-    .locals 4
+    .locals 3
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->getUserManager()Landroid/os/UserManager;
 
@@ -6786,10 +6788,6 @@
     invoke-virtual {v2, v0}, Lcom/android/server/display/PersistentDataStore;->getBrightnessConfiguration(I)Landroid/hardware/display/BrightnessConfiguration;
 
     move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
-
-    invoke-virtual {v3, v2}, Lcom/android/server/display/DisplayPowerController;->setBrightnessConfiguration(Landroid/hardware/display/BrightnessConfiguration;)V
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayManagerService;->handleSettingsChange()V
 

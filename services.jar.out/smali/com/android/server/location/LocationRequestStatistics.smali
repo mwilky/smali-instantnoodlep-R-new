@@ -104,13 +104,6 @@
 
     invoke-static {p1, p3, p4, p5}, Lcom/android/server/am/OpAppRecordInjector;->noteStartGps(Ljava/lang/String;Ljava/lang/String;J)V
 
-    if-nez p6, :cond_1
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, p3, v2}, Lcom/android/server/am/OpAppRecordInjector;->notePauseGps(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    :cond_1
     return-void
 .end method
 

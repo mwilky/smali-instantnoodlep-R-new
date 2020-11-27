@@ -2556,6 +2556,8 @@
 
     if-eqz p2, :cond_2
 
+    if-eqz v0, :cond_2
+
     :try_start_0
     invoke-interface {v0, v1}, Landroid/hardware/soundtrigger/IRecognitionStatusCallback;->onError(I)V
     :try_end_0
