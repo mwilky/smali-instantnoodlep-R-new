@@ -41,6 +41,10 @@
 
 .field private mHideUnlockMsgRunnable:Ljava/lang/Runnable;
 
+.field private mMaxBurnIn:I
+
+.field private mMinBurnIn:I
+
 .field private mPowerManager:Landroid/os/PowerManager;
 
 .field private mTimeLabel:Landroid/widget/TextView;
@@ -600,6 +604,26 @@
 
     iput v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mClockMarginBottom2:I
 
+    iget-object v0, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_aod_parsons_clock_burnin_gap:I
+
+    invoke-static {v0, v1}, Lcom/oneplus/aod/utils/OpAodDimenHelper;->convertDpToFixedPx2(Landroid/content/Context;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMinBurnIn:I
+
+    iget-object v0, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
+
+    sget v1, Lcom/android/systemui/R$dimen;->op_aod_parsons_clock_burnin_max_gap:I
+
+    invoke-static {v0, v1}, Lcom/oneplus/aod/utils/OpAodDimenHelper;->convertDpToFixedPx2(Landroid/content/Context;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMaxBurnIn:I
+
     return-void
 .end method
 
@@ -812,70 +836,212 @@
 
 
 # virtual methods
-.method public alignforBurnIn(I)V
-    .locals 2
+.method public alignforBurnIn2(Landroid/view/ViewGroup;II)V
+    .locals 5
 
-    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {p0, v0, p1}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
+    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-eqz v0, :cond_4
+
+    if-eqz v1, :cond_4
+
+    iget v2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMinBurnIn:I
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    iput p2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    const v2, 0x800003
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-ne p2, v2, :cond_1
+
+    iget-object v2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/views/parsons/OpParsonsBar;->getBarWidth()I
+
+    move-result v2
+
+    mul-int/2addr v2, p3
+
+    int-to-float p3, v2
+
+    mul-float/2addr p3, v3
+
+    iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    int-to-float v2, v2
+
+    add-float/2addr v2, p3
+
+    iget v3, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMaxBurnIn:I
+
+    int-to-float v4, v3
+
+    cmpl-float v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
+    iget v2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMinBurnIn:I
 
-    if-eqz v0, :cond_1
+    int-to-float v2, v2
 
-    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setGravity(I)V
+    add-float/2addr v2, p3
 
-    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
+    float-to-int p3, v2
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iput p3, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    move-result-object v0
+    :goto_0
+    iget p3, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+    iput p3, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0, v0, p1}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
-
-    iget-object v1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    goto :goto_2
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUnlocksMsg:Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
+    const v2, 0x800005
 
-    if-eqz v0, :cond_2
+    if-ne p2, v2, :cond_3
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
 
-    move-result-object v0
+    invoke-virtual {v2}, Lcom/oneplus/aod/views/parsons/OpParsonsBar;->getBarWidth()I
 
-    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+    move-result v2
 
-    if-eqz v0, :cond_2
+    rsub-int/lit8 p3, p3, 0x7
 
-    invoke-direct {p0, v0, p1}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
+    mul-int/2addr v2, p3
+
+    int-to-float p3, v2
+
+    mul-float/2addr p3, v3
+
+    iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    int-to-float v2, v2
+
+    add-float/2addr v2, p3
+
+    iget v3, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMaxBurnIn:I
+
+    int-to-float v4, v3
+
+    cmpl-float v2, v2, v4
+
+    if-lez v2, :cond_2
+
+    iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    goto :goto_1
+
+    :cond_2
+    iget v2, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mMinBurnIn:I
+
+    int-to-float v2, v2
+
+    add-float/2addr v2, p3
+
+    float-to-int p3, v2
+
+    iput p3, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    :goto_1
+    iget p3, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    iput p3, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    :cond_3
+    :goto_2
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_4
+    iget-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    if-eqz p1, :cond_5
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
+
+    iget-object p3, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mBar:Lcom/oneplus/aod/views/parsons/OpParsonsBar;
+
+    invoke-virtual {p3, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_5
+    iget-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    iget-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    if-eqz p1, :cond_6
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
+
+    iget-object p3, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mDateTimeContainer:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p3, p1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_6
+    iget-object p1, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUnlocksMsg:Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
+
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    if-eqz p1, :cond_7
+
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->applyRules(Landroid/widget/RelativeLayout$LayoutParams;I)V
 
     iget-object p0, p0, Lcom/oneplus/aod/views/parsons/OpParsonsClock;->mUnlocksMsg:Lcom/oneplus/aod/views/parsons/OpParsonsUnlockLabel;
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_2
+    :cond_7
     return-void
 .end method
 

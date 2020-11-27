@@ -743,15 +743,15 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mCheckBarModes:Ljava/lang/Runnable;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$9;
-
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$9;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
-
-    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
-
     new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$10;
 
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$10;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+
+    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$11;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$11;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mDemoReceiver:Landroid/content/BroadcastReceiver;
 
@@ -761,21 +761,21 @@
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStopTracing:Ljava/lang/Runnable;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$12;
-
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$12;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
-
-    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
-
     new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$13;
 
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$13;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
+    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
+
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$14;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$14;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mScreenObserver:Lcom/android/systemui/keyguard/ScreenLifecycle$Observer;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$15;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$16;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$15;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$16;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBannerActionBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
@@ -1144,44 +1144,44 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/ShadeController;
+.method static synthetic access$1500(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mShadeController:Lcom/android/systemui/statusbar/phone/ShadeController;
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
 
-.method static synthetic access$1600(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+.method static synthetic access$1600(Lcom/android/systemui/statusbar/phone/StatusBar;Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->onLaunchTransitionTimeout()V
+    invoke-virtual {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->inflateOPAodView(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/bubbles/BubbleController;
+.method static synthetic access$1700(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/widget/RelativeLayout;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBubbleController:Lcom/android/systemui/bubbles/BubbleController;
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOPAodWindow:Landroid/widget/RelativeLayout;
 
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodWindowManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     return-object p0
 .end method
 
-.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/widget/RelativeLayout;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->finishBarAnimations()V
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOPAodWindow:Landroid/widget/RelativeLayout;
 
-    return-void
+    return-object p0
 .end method
 
 .method static synthetic access$200(Lcom/android/systemui/statusbar/phone/StatusBar;)Z
@@ -1192,7 +1192,55 @@
     return p0
 .end method
 
-.method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/qs/QSPanel;
+.method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/ShadeController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mShadeController:Lcom/android/systemui/statusbar/phone/ShadeController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->onLaunchTransitionTimeout()V
+
+    return-void
+.end method
+
+.method static synthetic access$2300(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/bubbles/BubbleController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBubbleController:Lcom/android/systemui/bubbles/BubbleController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2400(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->finishBarAnimations()V
+
+    return-void
+.end method
+
+.method static synthetic access$2600(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/qs/QSPanel;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
@@ -1200,7 +1248,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2100(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+.method static synthetic access$2700(Lcom/android/systemui/statusbar/phone/StatusBar;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->releaseGestureWakeLock()V
@@ -1208,7 +1256,7 @@
     return-void
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/StatusBar;)Z
+.method static synthetic access$2800(Lcom/android/systemui/statusbar/phone/StatusBar;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraWhenFinishedWaking:Z
@@ -1216,7 +1264,7 @@
     return p0
 .end method
 
-.method static synthetic access$2202(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
+.method static synthetic access$2802(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraWhenFinishedWaking:Z
@@ -1224,68 +1272,12 @@
     return p1
 .end method
 
-.method static synthetic access$2302(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
+.method static synthetic access$2902(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakeUpComingFromTouch:Z
 
     return p1
-.end method
-
-.method static synthetic access$2402(Lcom/android/systemui/statusbar/phone/StatusBar;Landroid/graphics/PointF;)Landroid/graphics/PointF;
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakeUpTouchLocation:Landroid/graphics/PointF;
-
-    return-object p1
-.end method
-
-.method static synthetic access$2500(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mVisualStabilityManager:Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2600(Lcom/android/systemui/statusbar/phone/StatusBar;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraOnFinishedGoingToSleep:Z
-
-    return p0
-.end method
-
-.method static synthetic access$2602(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraOnFinishedGoingToSleep:Z
-
-    return p1
-.end method
-
-.method static synthetic access$2700(Lcom/android/systemui/statusbar/phone/StatusBar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->dismissVolumeDialog()V
-
-    return-void
-.end method
-
-.method static synthetic access$2800(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakeUpCoordinator:Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2900(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/interruption/BypassHeadsUpNotifier;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBypassHeadsUpNotifier:Lcom/android/systemui/statusbar/notification/interruption/BypassHeadsUpNotifier;
-
-    return-object p0
 .end method
 
 .method static synthetic access$300(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
@@ -1296,7 +1288,63 @@
     return-object p0
 .end method
 
-.method static synthetic access$3000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+.method static synthetic access$3002(Lcom/android/systemui/statusbar/phone/StatusBar;Landroid/graphics/PointF;)Landroid/graphics/PointF;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakeUpTouchLocation:Landroid/graphics/PointF;
+
+    return-object p1
+.end method
+
+.method static synthetic access$3100(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mVisualStabilityManager:Lcom/android/systemui/statusbar/notification/VisualStabilityManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3200(Lcom/android/systemui/statusbar/phone/StatusBar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraOnFinishedGoingToSleep:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3202(Lcom/android/systemui/statusbar/phone/StatusBar;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLaunchCameraOnFinishedGoingToSleep:Z
+
+    return p1
+.end method
+
+.method static synthetic access$3300(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->dismissVolumeDialog()V
+
+    return-void
+.end method
+
+.method static synthetic access$3400(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mWakeUpCoordinator:Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3500(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/notification/interruption/BypassHeadsUpNotifier;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mBypassHeadsUpNotifier:Lcom/android/systemui/statusbar/notification/interruption/BypassHeadsUpNotifier;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3600(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
@@ -1304,7 +1352,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3100(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
+.method static synthetic access$3700(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
@@ -1312,7 +1360,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3200(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/PulseExpansionHandler;
+.method static synthetic access$3800(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/PulseExpansionHandler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mPulseExpansionHandler:Lcom/android/systemui/statusbar/PulseExpansionHandler;
@@ -1320,60 +1368,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$3300(Lcom/android/systemui/statusbar/phone/StatusBar;)I
+.method static synthetic access$3900(Lcom/android/systemui/statusbar/phone/StatusBar;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mLastCameraLaunchSource:I
 
     return p0
-.end method
-
-.method static synthetic access$3400(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/plugins/FalsingManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3500(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3600(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3700(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3800(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3900(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    return-object p0
 .end method
 
 .method static synthetic access$400(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/ScrimController;
@@ -1384,7 +1384,39 @@
     return-object p0
 .end method
 
-.method static synthetic access$4000(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+.method static synthetic access$4000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/plugins/FalsingManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4100(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4200(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4300(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4400(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -1392,7 +1424,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$4100(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+.method static synthetic access$4500(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4600(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4700(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
@@ -1871,9 +1919,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mGestureView:Landroid/widget/FrameLayout;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$17;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$18;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$17;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$18;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -8967,8 +9015,6 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->inflateStatusBarWindow()V
 
-    invoke-virtual {p0, v7}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->inflateOPAodView(Landroid/content/Context;)V
-
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationShadeWindowViewController:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowViewController;
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowController;
@@ -9317,27 +9363,19 @@
 
     iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOPAodWindow:Landroid/widget/RelativeLayout;
-
-    invoke-direct {p1, v1, v2}, Lcom/oneplus/aod/OpAodWindowManager;-><init>(Landroid/content/Context;Landroid/widget/RelativeLayout;)V
+    invoke-direct {p1, v1}, Lcom/oneplus/aod/OpAodWindowManager;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
 
     new-instance p1, Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    iget-object v9, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    iget-object v10, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOPAodWindow:Landroid/widget/RelativeLayout;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    iget-object v11, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    iget-object v13, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
-
-    move-object v8, p1
-
-    move-object v12, p0
-
-    invoke-direct/range {v8 .. v13}, Lcom/oneplus/aod/OpAodDisplayViewManager;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lcom/android/systemui/doze/DozeHost;Lcom/android/systemui/statusbar/phone/StatusBar;Lcom/android/systemui/statusbar/policy/HeadsUpManager;)V
+    invoke-direct {p1, v1, v2, p0, v3}, Lcom/oneplus/aod/OpAodDisplayViewManager;-><init>(Landroid/content/Context;Lcom/android/systemui/doze/DozeHost;Lcom/android/systemui/statusbar/phone/StatusBar;Lcom/android/systemui/statusbar/policy/HeadsUpManager;)V
 
     iput-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
@@ -9348,6 +9386,18 @@
     move-result-object p1
 
     invoke-virtual {v1, p1}, Lcom/oneplus/systemui/statusbar/phone/OpNotificationIconAreaController;->setAodIconController(Lcom/oneplus/aod/OpAodNotificationIconAreaController;)V
+
+    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodWindowManager:Lcom/oneplus/aod/OpAodWindowManager;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/OpAodWindowManager;->getUIHandler()Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$8;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$8;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationShadeWindowView:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowView;
 
@@ -10381,9 +10431,9 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mHandler:Lcom/android/systemui/statusbar/phone/StatusBar$H;
 
-    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$16;
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBar$17;
 
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$16;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$17;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -13105,9 +13155,9 @@
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
-    new-instance v2, Lcom/android/systemui/statusbar/phone/StatusBar$8;
+    new-instance v2, Lcom/android/systemui/statusbar/phone/StatusBar$9;
 
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$8;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/phone/StatusBar$9;-><init>(Lcom/android/systemui/statusbar/phone/StatusBar;)V
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mDozing:Z
 

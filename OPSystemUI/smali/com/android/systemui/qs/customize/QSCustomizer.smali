@@ -425,8 +425,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/qs/customize/QSCustomizer;->mQs:Lcom/android/systemui/plugins/qs/QS;
 
+    if-eqz p0, :cond_0
+
     invoke-interface {p0}, Lcom/android/systemui/plugins/qs/QS;->notifyCustomizeChanged()V
 
+    :cond_0
     return-void
 .end method
 

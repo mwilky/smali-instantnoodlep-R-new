@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">"L'app %1$s vuole mostrare porzioni dell'app %2$s"</string>
     <string name="abc_toolbar_collapse_description">Comprimi</string>
     <string name="about_action_bar_title">Informazioni</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versione %s</string>
     <string name="about_privacy_policy">Informativa sulla privacy</string>
     <string name="about_release_note_title">Registro aggiornamenti:</string>
     <string name="about_terms_service">Termini di servizio</string>
@@ -723,7 +723,7 @@ Se li riattivi, potrebbero essere applicati costi per l'utilizzo dei dati."</str
     <string name="drag_to_rearrange_tiles">Tieni premuto e trascina per riordinare le icone</string>
     <string name="drag_to_remove_disabled">Occorrono almeno %1$d schede</string>
     <string name="drag_to_remove_tiles">Trascina qui per rimuovere</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"S: %1$s  D: %2$s"</string>
     <string name="edit_mode_hint">Trascina i riquadri per riorganizzarli. Tocca per mostrarli o nasconderli.</string>
     <string name="empty_shade_text">Nessuna notifica</string>
     <string name="enable_adb">Debug USB</string>
@@ -1332,12 +1332,12 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="oneplus_threekey_navigation_vibration">Solo vibrazione</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> sbloccato</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> sbloccati</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Per estendere la durata della batteria, il risparmio batteria:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•disattiva o limita l'attività di sfondo, alcuni effetti visivi e altre caratteristiche come “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Per estendere la durata della batteria, il risparmio batteria:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•disattiva o limita l'attività di sfondo e alcuni effetti visivi"</string>
     <string name="op_earphone_connect">Associazione in corso...</string>
     <string name="op_earphone_connected_fail">Associazione non riuscita. Controllare lo stato degli auricolari e del Bluetooth.</string>
     <string name="op_earphone_connected_success">Associazione riuscita. Tocca per altre impostazioni.</string>
@@ -1367,7 +1367,7 @@ Sei inoltre connesso a una VPN, da cui è possibile monitorare la tua attività 
     <string name="op_notification_channel_summary_low">Notifiche meno importanti senza suono o vibrazione.</string>
     <string name="op_notification_section_header_gentle">Altre notifiche</string>
     <string name="op_notification_silence_title">Altro</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Carica protetta"</string>
     <string name="op_qs_dark_mode_tile_label">Modalità dark</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s usato</string>
     <string name="op_quick_settings_night_display_label">Comodità visiva</string>
@@ -1890,7 +1890,7 @@ essere monitorata"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Condivisione Wi-Fi, fai clic per accedere alle Impostazioni</string>
     <string name="tethered_notification_message">Tocca per configurare.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispositivi connessi</string>
-    <string name="tethered_notification_multi_tether_title">Tethering e Mobile HotSpot attivi</string>
+    <string name="tethered_notification_multi_tether_title">Tethering e hotspot mobile attivi</string>
     <string name="tethered_notification_no_device_message">Nessun dispositivo connesso</string>
     <string name="tethered_notification_one_device_message">%1$s dispositivo connesso</string>
     <string name="tethered_notification_sharing_mobile_multi">Condivisione dati mobili, %1$s dispositivi connessi</string>
@@ -1914,6 +1914,15 @@ Il telefono può surriscaldarsi se:
 \u0009• Lo utilizzi in presenza di alte temperature"</string>
     <string name="thermal_shutdown_message">Ora il telefono funziona normalmente</string>
     <string name="thermal_shutdown_title">Il telefono si è spento perché surriscaldato</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">"Per disattivare l'audio del dispositivo, imposta l'alert slider sulla modalità Vibrazione o Silenziosa."</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Disattiva audio squillo</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">"Per attivare la suoneria, usa l'alert slider per passare alla modalità Suoneria e regolare il volume della suoneria."</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Modalità squillo</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">"L'alert slider è attualmente in modalità Silenziosa. Il dispositivo non squillerà o vibrerà per le chiamate in arrivo. Passa alla modalità Suoneria per essere avvisato tramite suoneria."</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Modalità silenziosa</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">"L'alert slider è attualmente in modalità Vibrazione. Il dispositivo non squillerà per le chiamate in arrivo. Sarai avvisato solo dalla vibrazione. Passa alla modalità Suoneria per essere avvisato tramite suoneria."</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Modalità vibrazione</string>
     <string name="tile_unavailable">Non disponibile</string>
     <string name="time_picker_header_text">Imposta orario</string>
     <string name="time_picker_hour_label">ora</string>
@@ -2151,6 +2160,6 @@ Indirizzo Wi‑Fi (BSSID)
     <string name="zen_silence_introduction">Verranno bloccati TUTTI i suoni e le vibrazioni, anche di sveglie, musica, video e giochi.</string>
     <string name="zen_silence_introduction_voice">Verranno bloccati TUTTI i suoni e le vibrazioni, anche di sveglie, musica, video e giochi. Potrai ancora telefonare.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
-    <string name="zzz_op_global_action_recovery">Ripristino</string>
+    <string name="zzz_op_global_action_recovery">Recovery</string>
     <string name="zzz_op_quick_pay_no_install_message">Installa app di pagamento per usare la funzione Pagamento rapido</string>
 </resources>

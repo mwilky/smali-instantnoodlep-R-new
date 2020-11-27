@@ -55,6 +55,10 @@
 
 .field public view:Landroid/view/View;
 
+.field public viewTouchDownY:F
+
+.field public viewTouchUpY:F
+
 
 # direct methods
 .method public constructor <init>()V

@@ -50,6 +50,8 @@
 
 .field private final mManager:Lcom/android/systemui/fragments/FragmentService;
 
+.field private mOrientation:I
+
 .field private final mPlugins:Lcom/android/systemui/fragments/FragmentHostManager$ExtensionFragmentManager;
 
 .field private final mRootView:Landroid/view/View;
@@ -85,7 +87,7 @@
 
     new-instance v0, Lcom/android/settingslib/applications/InterestingConfigChanges;
 
-    const v1, -0x3ffffcfc    # -2.000184f
+    const v1, -0x3fffdcfc
 
     invoke-direct {v0, v1}, Lcom/android/settingslib/applications/InterestingConfigChanges;-><init>(I)V
 
@@ -100,6 +102,10 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mOrientation:I
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -610,79 +616,99 @@
     if-eqz v5, :cond_4
 
     :goto_3
-    move v2, v3
-
-    :cond_4
-    iget-object v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
-
-    move-result v0
-
-    iget-boolean v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
-
-    if-eq v1, v0, :cond_5
-
-    sget-object v1, Lcom/android/systemui/fragments/FragmentHostManager;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v4, "special theme changed. "
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v4, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, "->"
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+    move v0, v3
 
     goto :goto_4
 
-    :cond_5
-    move v3, v2
+    :cond_4
+    move v0, v2
 
     :goto_4
-    iget-object v0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mConfigChanges:Lcom/android/settingslib/applications/InterestingConfigChanges;
-
     iget-object v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->isSpecialTheme(Landroid/content/Context;)Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settingslib/applications/InterestingConfigChanges;->applyNewConfig(Landroid/content/res/Resources;)Z
+    iget-boolean v4, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
 
-    move-result v0
+    if-eq v4, v1, :cond_5
 
-    if-nez v0, :cond_7
+    sget-object v0, Lcom/android/systemui/fragments/FragmentHostManager;->TAG:Ljava/lang/String;
 
-    if-eqz v3, :cond_6
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "special theme changed. "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, "->"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput-boolean v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mIsSpecialTheme:Z
+
+    move v0, v3
+
+    :cond_5
+    iget v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mOrientation:I
+
+    iget v4, p1, Landroid/content/res/Configuration;->orientation:I
+
+    if-eq v1, v4, :cond_6
+
+    if-nez v6, :cond_6
+
+    iput v4, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mOrientation:I
+
+    move v2, v3
+
+    :cond_6
+    iget-object v1, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mConfigChanges:Lcom/android/settingslib/applications/InterestingConfigChanges;
+
+    iget-object v3, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Lcom/android/settingslib/applications/InterestingConfigChanges;->applyNewConfig(Landroid/content/res/Resources;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    if-eqz v0, :cond_7
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
+    if-eqz v2, :cond_8
+
+    invoke-virtual {p0}, Lcom/android/systemui/fragments/FragmentHostManager;->reloadFragments()V
+
+    :cond_8
     iget-object p0, p0, Lcom/android/systemui/fragments/FragmentHostManager;->mFragments:Landroid/app/FragmentController;
 
     invoke-virtual {p0, p1}, Landroid/app/FragmentController;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V
 
     goto :goto_6
 
-    :cond_7
+    :cond_9
     :goto_5
     iget v0, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 

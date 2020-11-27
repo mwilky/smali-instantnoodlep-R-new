@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s רוצה להציג חלקים מ-%2$s</string>
     <string name="abc_toolbar_collapse_description">כיווץ</string>
     <string name="about_action_bar_title">אודות</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">גרסה %s</string>
     <string name="about_privacy_policy">מדיניות פרטיות</string>
     <string name="about_release_note_title">עדכן יומן:</string>
     <string name="about_terms_service">תנאי שירות</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">יש ללחוץ ולגרור כדי לסדר מחדש את האריחים</string>
     <string name="drag_to_remove_disabled">יש צורך ב-%1$d אריחים לפחות</string>
     <string name="drag_to_remove_tiles">גרור לכאן כדי להסיר</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"שמאל: %1$s  ימין: %2$s"</string>
     <string name="edit_mode_hint">גרור כותרות כדי לארגן אותן מחדש. הקש כדי להציג או להסתיר.</string>
     <string name="empty_shade_text">אין התראות</string>
     <string name="enable_adb">‏ניפוי באגים ב-USB</string>
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">רטט בלבד</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ביטול נעילה</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ביטולי נעילה</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"כדי להאריך את חיי הסוללה, Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•מכבה או מגביל פעילות רקע, מספר אפקטים ויזואליים ומאפיינים אחרים כמו “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"כדי להאריך את חיי הסוללה, Battery Saver:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•מכבה או מגביל פעילות רקע ומספר אפקטים ויזואליים"</string>
     <string name="op_earphone_connect">משייך...</string>
     <string name="op_earphone_connected_fail">השיוך נכשל. באפשרותך לבדוק את מצב האוזניות וה-Bluetooth.</string>
     <string name="op_earphone_connected_success">השיוך בוצע. הקש כדי להגדיר עוד.</string>
@@ -1367,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">הודעות חשובות פחות ללא צליל או רטט.</string>
     <string name="op_notification_section_header_gentle">הודעות אחרות</string>
     <string name="op_notification_silence_title">אחר</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" טעינה מוגנת"</string>
     <string name="op_qs_dark_mode_tile_label">מצב כהה</string>
     <string name="op_qs_data_usage_used">%1$s: ‏שימוש ב-%2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">נוחות ראייה</string>
@@ -1889,10 +1889,10 @@
     <string name="tethered_notification_hybrid_sharing_none">אין רשת זמינה לשיתוף, הקש כדי להיכנס להגדרות</string>
     <string name="tethered_notification_hybrid_sharing_wifi">משתף Wi-Fi, הקש כדי להיכנס להגדרות</string>
     <string name="tethered_notification_message">הקש כדי להגדיר.</string>
-    <string name="tethered_notification_multi_device_message">%1$s התקנים מחוברים</string>
-    <string name="tethered_notification_multi_tether_title">שיוך בין מכשירים והתכונה Mobile HotSpot פעילים</string>
+    <string name="tethered_notification_multi_device_message">%1$s מכשירים מחוברים</string>
+    <string name="tethered_notification_multi_tether_title">שיוך בין התקנים ונקודת גישה פעילים</string>
     <string name="tethered_notification_no_device_message">אין התקן מחובר</string>
-    <string name="tethered_notification_one_device_message">%1$s התקן מחובר</string>
+    <string name="tethered_notification_one_device_message">%1$s מכשיר מחובר</string>
     <string name="tethered_notification_sharing_mobile_multi">משתף נתוני נייד,‏%1$s מכשירים מחוברים</string>
     <string name="tethered_notification_sharing_mobile_no">משתף נתוני נייד, אין מכשיר מחובר</string>
     <string name="tethered_notification_sharing_mobile_single">משתף נתוני נייד,‏%1$s מכשיר מחובר</string>
@@ -1902,7 +1902,7 @@
     <string name="tethered_notification_sharing_wifi_multi">משתף Wi-Fi,‏%1$s מכשירים מחוברים</string>
     <string name="tethered_notification_sharing_wifi_no">משתף Wi-Fi, אין מכשיר מחובר</string>
     <string name="tethered_notification_sharing_wifi_single">משתף Wi-Fi,‏%1$s מכשיר מחובר</string>
-    <string name="tethered_notification_title">שיוך בין מכשירים או התכונה Mobile HotSpot פעילים</string>
+    <string name="tethered_notification_title">שיוך בין התקנים או נקודת גישה פעילים</string>
     <string name="tethering_hardware_offload">שיפור מהירות באמצעות חומרה לצורך שיתוף אינטרנט בין ניידים</string>
     <string name="tethering_hardware_offload_summary">אם השירות זמין, יש להשתמש בשיפור מהירות באמצעות חומרה לצורך שיתוף אינטרנט בין ניידים</string>
     <string name="tethering_settings_not_available">הגדרות עבור שיתוף של חיבור אינטרנט אינן זמינות עבור המשתמש הזה</string>
@@ -1914,6 +1914,15 @@
 \u0009• תשתמש בטלפון בטמפרטורות גבוהות"</string>
     <string name="thermal_shutdown_message">הטלפון פועל כרגיל עכשיו</string>
     <string name="thermal_shutdown_title">הטלפון כבה עקב התחממות</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">כדי להשתיק את המכשיר, הגדר את Alert Slider לרטט או למצב שקט.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">השתק עוצמת צלצול</string>
+    <string name="threekey_volume_guide_dialog_ok">אישור</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">כדי להפעיל צלצול, השתמש ב-Alert Slider כדי להחליף למצב צלצול ולקבוע את עוצמת הצלצול בהתאם להעדפתך.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">מצב צלצול</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider נמצא כרגע במצב שקט; המכשיר לא יצלצל או ירטוט בשיחה נכנסת. עבור למצב צלצול כדי לקבל התראה על-ידי צלצול.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">מצב שקט</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">ה-Alert Slider נמצא כרגע במצב רטט; המכשיר לא יצלצל בשיחה נכנסת. תקבל התראה על-ידי רטט בלבד. עבור למצב צלצול כדי לקבל התראה על-ידי צלצול.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">מצב רטט</string>
     <string name="tile_unavailable">לא זמין</string>
     <string name="time_picker_header_text">הגדר זמן</string>
     <string name="time_picker_hour_label">שעה</string>

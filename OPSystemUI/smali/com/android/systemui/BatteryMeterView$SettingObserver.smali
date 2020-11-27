@@ -38,7 +38,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/BatteryMeterView$SettingObserver;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-static {p1}, Lcom/android/systemui/BatteryMeterView;->access$200(Lcom/android/systemui/BatteryMeterView;)V
+    invoke-static {p1}, Lcom/android/systemui/BatteryMeterView;->access$600(Lcom/android/systemui/BatteryMeterView;)V
 
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
@@ -54,7 +54,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/BatteryMeterView$SettingObserver;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-static {p0}, Lcom/android/systemui/BatteryMeterView;->access$300(Lcom/android/systemui/BatteryMeterView;)V
+    invoke-static {p0}, Lcom/android/systemui/BatteryMeterView;->access$700(Lcom/android/systemui/BatteryMeterView;)V
 
     :cond_0
     return-void

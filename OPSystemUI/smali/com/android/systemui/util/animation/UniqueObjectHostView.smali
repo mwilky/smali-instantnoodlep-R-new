@@ -251,11 +251,13 @@
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p2
+    move-result-object p1
 
-    if-eqz p2, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-static {p2, p1}, Lcom/android/systemui/util/animation/UniqueObjectHostViewKt;->setRequiresRemeasuring(Landroid/view/View;Z)V
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lcom/android/systemui/util/animation/UniqueObjectHostViewKt;->setRequiresRemeasuring(Landroid/view/View;Z)V
 
     :cond_0
     add-int/2addr v3, v0

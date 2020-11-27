@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">Gustong ipakita ng %1$s ang mga slice ng %2$s</string>
     <string name="abc_toolbar_collapse_description">I-collapse</string>
     <string name="about_action_bar_title">Tungkol Dito</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Bersyon %s</string>
     <string name="about_privacy_policy">Patakaran sa Privacy</string>
     <string name="about_release_note_title">I-update ang log:</string>
     <string name="about_terms_service">Mga Tuntunin ng Serbisyo</string>
@@ -723,7 +723,7 @@ Kung magpapatuloy ka, maaaring may mga singil sa paggamit ng data."</string>
     <string name="drag_to_rearrange_tiles">Pindutin nang matagal at i-drag para ayusin ulit ang tile</string>
     <string name="drag_to_remove_disabled">Kailangan mo ng kahit %1$d (na) tile</string>
     <string name="drag_to_remove_tiles">I-drag dito upang alisin</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"K: %1$s  K: %2$s"</string>
     <string name="edit_mode_hint">I-drag ang mga tile para muling isaayos. I-tap para ipakita o itago.</string>
     <string name="empty_shade_text">Walang mga notification</string>
     <string name="enable_adb">Pag-debug ng USB</string>
@@ -1332,12 +1332,12 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="oneplus_threekey_navigation_vibration">Pag-vibrate lang</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>unlock</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>na unlock</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Para patagalin ang buhay ng baterya, Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Isara o pagbawalan aktibidad ng background, ang ilan sa mga visual effect, at iba pang mga feature tulad ng “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Para patagalin ang, Battery Saver:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Isara o pagbawalan ang mga aktibdad ng background, at ilan sa mga visual effect"</string>
     <string name="op_earphone_connect">Pinapares...</string>
     <string name="op_earphone_connected_fail">Hindi napares. Maaari mong tingnan ang status ng headset at Bluetooth.</string>
     <string name="op_earphone_connected_success">Napares na. I-tap para magtakda pa.</string>
@@ -1367,7 +1367,7 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_notification_channel_summary_low">Mga hindi gaanong mahalagang notification na walang anumang tunog o pag-vibrate.</string>
     <string name="op_notification_section_header_gentle">Iba pang notification</string>
     <string name="op_notification_silence_title">Iba pa</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Protektadong pag-charge"</string>
     <string name="op_qs_dark_mode_tile_label">Dark mode</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ang nagamit</string>
     <string name="op_quick_settings_night_display_label">Ginhawa sa paningin</string>
@@ -1886,20 +1886,20 @@ sinusubaybayan ang network"</string>
     <string name="tethered_notification_hybrid_sharing_none">Walang available na network na mase-share, i-click para pumasok sa Mga Setting</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Sine-share ang Wi-Fi, i-click para pumasok sa Mga Setting</string>
     <string name="tethered_notification_message">I-tap para maitakda.</string>
-    <string name="tethered_notification_multi_device_message">%1$s konektadong mga aparato</string>
-    <string name="tethered_notification_multi_tether_title">Aktibo sa Pag-tether at Mobile HotSpot</string>
+    <string name="tethered_notification_multi_device_message">%1$s nakakonektang mga device</string>
+    <string name="tethered_notification_multi_tether_title">Aktibo sa Pag-tether at Mobile Hotspot</string>
     <string name="tethered_notification_no_device_message">Walang nakakonektang device</string>
-    <string name="tethered_notification_one_device_message">%1$s konektadong aparato</string>
-    <string name="tethered_notification_sharing_mobile_multi">Sine-share ang mobile data, %1$s (na) device ang nakakonekta</string>
+    <string name="tethered_notification_one_device_message">%1$s nakakonektang device</string>
+    <string name="tethered_notification_sharing_mobile_multi">Sine-share ang mobile data, %1$s na device ang nakakonekta</string>
     <string name="tethered_notification_sharing_mobile_no">Sine-share ang mobile data, walang device na nakakonekta</string>
     <string name="tethered_notification_sharing_mobile_single">Sine-share ang mobile data, %1$s device ang nakakonekta</string>
-    <string name="tethered_notification_sharing_none_multi">Walang available na network na mase-share, %1$s (na) device ang nakakonekta</string>
+    <string name="tethered_notification_sharing_none_multi">Walang available na network na mase-share, %1$s na device ang nakakonekta</string>
     <string name="tethered_notification_sharing_none_no">Walang available na network na mase-share, walang device na nakakonekta</string>
     <string name="tethered_notification_sharing_none_single">Walang available na network na mase-share, %1$s device ang nakakonekta</string>
-    <string name="tethered_notification_sharing_wifi_multi">Sine-share ang Wi-Fi, %1$s (na) device ang nakakonekta</string>
+    <string name="tethered_notification_sharing_wifi_multi">Sine-share ang Wi-Fi, %1$s na device ang nakakonekta</string>
     <string name="tethered_notification_sharing_wifi_no">Sine-share ang Wi-Fi, walang device na nakakonekta</string>
     <string name="tethered_notification_sharing_wifi_single">Sine-share ang Wi-Fi, %1$s device ang nakakonekta</string>
-    <string name="tethered_notification_title">Aktibo sa Pag-tether o Mobile HotSpot</string>
+    <string name="tethered_notification_title">Aktibo ang Pag-tether o Mobile Hotspot</string>
     <string name="tethering_hardware_offload">Hardware acceleration para sa pag-tether</string>
     <string name="tethering_hardware_offload_summary">Gamitin ang hardware acceleration para sa pag-tether kung available</string>
     <string name="tethering_settings_not_available">Hindi available ang mga setting ng pagte-theter para sa user na ito</string>
@@ -1911,6 +1911,15 @@ Maaaring lubos na uminit ang telepono kapag:
  • Ginamit mo ito sa mainit na lugar"</string>
     <string name="thermal_shutdown_message">Maayos na ngayong gumagana ang iyong telepono</string>
     <string name="thermal_shutdown_title">Na-off ang telepono dahil sa init</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Upang i-mute ang device, itakda ang Alert Slider sa Vibrate o Silent mode.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Volume para sa pag-mute ng ring</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Upang paganahin ang pag-ring, gamitin ang Alert slider upang lumipat sa Ring mode at itakda ang volume ng pag-ring ayon sa iyong kagustuhan.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Mode ng Pag-ring</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Ang Alert Slider ay kasalukuyang nasa Silent mode; hindi magri-ring o magba-vibrate ang device para sa papasok na tawag. Aabisuhan ka lamang sa pamamagitan ng vibration. Mangyaring lumipat sa Ring mode upang maabisuhan sa pamamagitan ng pag-ring.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Silent mode</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Ang Alert Slider ay kasalukuyang nasa Vibrate mode; hindi magri-ring ang device para sa papasok na tawag. Aabisuhan ka lamang sa pamamagitan ng vibration. Mangyaring lumipat sa Ring mode upang maabisuhan sa pamamagitan ng pag-ring.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrate mode</string>
     <string name="tile_unavailable">Hindi available</string>
     <string name="time_picker_header_text">Magtakda ng oras</string>
     <string name="time_picker_hour_label">oras</string>
@@ -2147,6 +2156,6 @@ Address ng Wi‑Fi (BSSID)
     <string name="zen_silence_introduction">Bina-block nito ang LAHAT ng tunog at pag-vibrate, kabilang ang mula sa mga alarm, musika, video at laro.</string>
     <string name="zen_silence_introduction_voice">Bina-block nito ang LAHAT ng tunog at pag-vibrate, kabilang ang mula sa mga alarm, musika, video, at laro. Makakatawag ka pa rin.</string>
     <string name="zzz_op_global_action_bootloader">Bootloader</string>
-    <string name="zzz_op_global_action_recovery">Makabawi</string>
+    <string name="zzz_op_global_action_recovery">Pagbawi</string>
     <string name="zzz_op_quick_pay_no_install_message">Paki-install ang mga app para sa pagbabayad para magamit ang Quick Pay</string>
 </resources>

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onScreenTurnedOff()V
+    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onScreenTurnedOn()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,56 +35,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$5;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/aod/OpClockViewCtrl;->onScreenTurnedOff()V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$5;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper;->isCanvasAodEnabled(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$5;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isAlwaysOnEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$5;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/aod/bg/OpAodCanvas;->recover()V
+    invoke-virtual {p0}, Lcom/oneplus/aod/OpClockViewCtrl;->onScreenTurnedOn()V
 
-    :cond_0
     return-void
 .end method

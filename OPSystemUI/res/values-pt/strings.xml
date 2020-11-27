@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s quer mostrar partes do app %2$s</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
     <string name="about_action_bar_title">Acerca de</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versão %s</string>
     <string name="about_privacy_policy">Política de Privacidade</string>
     <string name="about_release_note_title">Histórico de atualização:</string>
     <string name="about_terms_service">Termos do Serviço</string>
@@ -723,7 +723,7 @@ Se retomar o uso de dados, o serviço poderá ser cobrado."</string>
     <string name="drag_to_rearrange_tiles">Mantenha pressionado e arraste para reorganizar os blocos</string>
     <string name="drag_to_remove_disabled">É preciso haver pelo menos %1$d blocos</string>
     <string name="drag_to_remove_tiles">Arraste aqui para remover</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"E: %1$s  D: %2$s"</string>
     <string name="edit_mode_hint">Arraste as peças para reorganizar. Toque para ocultar ou mostrar.</string>
     <string name="empty_shade_text">Sem notificações</string>
     <string name="enable_adb">Depuração USB</string>
@@ -1332,12 +1332,12 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="oneplus_threekey_navigation_vibration">Apenas vibração</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>desbloqueio</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>desbloqueios</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Para prolongar a vida útil da bateria, a Poupança de Bateria:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•desativa ou restringe a atividade em segundo plano, alguns efeitos visuais e outras funcionalidades, tais como “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Para prolongar a duração da bateria, a Poupança de Bateria:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•desativa ou restringe a atividade em segundo plano e alguns efeitos visuais"</string>
     <string name="op_earphone_connect">A emparelhar...</string>
     <string name="op_earphone_connected_fail">Falha ao emparelhar. Pode verificar o estado dos auriculares e Bluetooth.</string>
     <string name="op_earphone_connected_success">Emparelhado. Tocar para conf. mais.</string>
@@ -1367,13 +1367,13 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="op_notification_channel_summary_low">Notificações menos importantes sem qualquer som ou vibração.</string>
     <string name="op_notification_section_header_gentle">Outras notificações</string>
     <string name="op_notification_silence_title">Outros</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Carregamento protegido"</string>
     <string name="op_qs_dark_mode_tile_label">Modo escuro</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilizado</string>
     <string name="op_quick_settings_night_display_label">Conforto visual</string>
     <string name="op_quick_settings_night_display_summary_off">Modo noturno desativado, toque para ativar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo noturno ativado, toque para desativar</string>
-    <string name="op_read_mode2_dialog_black">Efeito mono</string>
+    <string name="op_read_mode2_dialog_black">Efeito monocromático</string>
     <string name="op_read_mode2_dialog_color">Efeito cromático</string>
     <string name="op_read_mode2_dialog_title">Selecionar efeito</string>
     <string name="op_reverse_charge_notification_btn">PARAR</string>
@@ -1504,9 +1504,9 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="priority_onboarding_show_at_top_text">Aparecem na parte superior da seção de conversa</string>
     <string name="priority_onboarding_show_avatar_text">Mostram a foto do perfil na tela de bloqueio</string>
     <string name="priority_onboarding_title">A conversa foi definida como prioritária</string>
-    <string name="privacy_alert_application_name">Alerta de privacidade</string>
-    <string name="privacy_alert_content_text">Tocar para alterar</string>
-    <string name="privacy_alert_content_title">%1$s está a utilizar a(o) sua/seu %2$s</string>
+    <string name="privacy_alert_application_name">Alerta de Privacidade</string>
+    <string name="privacy_alert_content_text">Toque para alterar</string>
+    <string name="privacy_alert_content_title">%1$s está a utilizar o seu %2$s</string>
     <string name="privacy_type_camera">câmara</string>
     <string name="privacy_type_microphone">microfone</string>
     <string name="private_dns_broken">Não é possível acessar o servidor DNS privado</string>
@@ -1887,7 +1887,7 @@ sob monitoração"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">A partilhar Wi-Fi, clique para aceder às Definições</string>
     <string name="tethered_notification_message">Toque para configurar.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispositivos ligados</string>
-    <string name="tethered_notification_multi_tether_title">Tethering e Ponto de acesso móvel ativos</string>
+    <string name="tethered_notification_multi_tether_title">Partilha de Rede e Ponto de Acesso Móvel Ligados</string>
     <string name="tethered_notification_no_device_message">Nenhum dispositivo conectado</string>
     <string name="tethered_notification_one_device_message">%1$s dispositivo ligado</string>
     <string name="tethered_notification_sharing_mobile_multi">A partilhar dados móveis, %1$s dispositivos ligados</string>
@@ -1899,7 +1899,7 @@ sob monitoração"</string>
     <string name="tethered_notification_sharing_wifi_multi">A partilhar Wi-Fi, %1$s dispositivos ligados</string>
     <string name="tethered_notification_sharing_wifi_no">A partilhar Wi-Fi, nenhum dispositivo ligado</string>
     <string name="tethered_notification_sharing_wifi_single">A partilhar Wi-Fi, %1$s dispositivo ligado</string>
-    <string name="tethered_notification_title">Partilha de rede ou Ponto de acesso móvel ativado</string>
+    <string name="tethered_notification_title">Partilha de Rede ou Ponto de Acesso Móvel Ligado</string>
     <string name="tethering_hardware_offload">Aceleração de hardware de tethering</string>
     <string name="tethering_hardware_offload_summary">Usar aceleração de hardware de tethering quando disponível</string>
     <string name="tethering_settings_not_available">As configurações de tethering não estão disponíveis para este usuário</string>
@@ -1911,6 +1911,15 @@ O smartphone pode ficar quente demais se você:
 \u0009• usar o smartphone em temperaturas altas."</string>
     <string name="thermal_shutdown_message">O smartphone está sendo executado normalmente agora</string>
     <string name="thermal_shutdown_title">O smartphone foi desligado devido ao aquecimento</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Para silenciar o dispositivo, defina o controlo de deslize Alerta para o modo Vibrar ou Silencioso.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Silenciar volume do toque</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Para ativar o toque, utilize o controlo de deslize Alerta para mudar para o Modo de toque e defina o volume do volume de acordo com a sua preferência.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Modo de toque</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">O controlo de deslize Alerta está em Modo silencioso; o dispositivo não vai tocar nem vibrar quando receber chamadas. Mude para o Modo de toque para ser notificado pelo toque.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Modo silencioso</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">O controlo de deslize Alerta está em Modo de vibração; o dispositivo não vai tocar quando receber chamadas. Será notificado apenas pela vibração. Mude para o Modo de toque para ser notificado pelo toque.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Modo de vibração</string>
     <string name="tile_unavailable">Indisponível</string>
     <string name="time_picker_header_text">Definir data e hora</string>
     <string name="time_picker_hour_label">hora</string>

@@ -641,12 +641,24 @@
 .end method
 
 .method public onBiometricAuthenticated()V
-    .locals 0
+    .locals 1
 
     iget-object p0, p0, Lcom/android/systemui/biometrics/AuthController;->mCurrentDialog:Lcom/android/systemui/biometrics/AuthDialog;
 
+    if-eqz p0, :cond_0
+
     invoke-interface {p0}, Lcom/android/systemui/biometrics/AuthDialog;->onAuthenticationSucceeded()V
 
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "BiometricPrompt/AuthController"
+
+    const-string v0, "onBiometricAuthenticated, mCurrentDialog is null"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method
 
@@ -836,8 +848,18 @@
 
     iget-object p0, p0, Lcom/android/systemui/biometrics/AuthController;->mCurrentDialog:Lcom/android/systemui/biometrics/AuthDialog;
 
+    if-eqz p0, :cond_0
+
     invoke-interface {p0, p1}, Lcom/android/systemui/biometrics/AuthDialog;->onHelp(Ljava/lang/String;)V
 
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "onBiometricHelp, mCurrentDialog is null"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">பற்றி</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">பதிப்பு %s</string>
     <string name="about_privacy_policy">தனியுரிமைக் கொள்கை</string>
     <string name="about_release_note_title">புதுப்பிப்பு பதிவு:</string>
     <string name="about_terms_service">சேவை விதிமுறைகள்</string>
@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">திரைப்படம்</string>
     <string name="interruption_level_music">இசை</string>
     <string name="keyguard_fingerprint_unlock">பூட்டுநீக்க கைரேகையைப் பயன்படுத்தவும்</string>
-    <string name="keyguard_indication_charging_time_fast">(முழுமையாவதற்கு %s நேரம் உள்ளது)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s முழுமையாகும் வரை)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp சார்ஜிங்</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp வயர்லெஸ் சார்ஜிங்</string>
     <string name="kg_at_least_four_points">குறைந்தது 4 புள்ளிகளைச் சேர்க்க வரையவும்</string>
@@ -138,12 +138,12 @@
     <string name="oneplus_threekey_navigation_vibration">அதிர்வு மட்டும்</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> திறக்கவும்</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> திறக்கிறது</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"பேட்டரி ஆயுளை நீட்டிக்க, பேட்டரி சேவர்: 
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•பின்னணி செயல்பாடுகள், சில காட்சி விளைவுகள் மற்றும் “Hey Google” போன்ற பிற அம்சங்களின் செயல்பாட்டை ஆஃப் செய்கிறது அல்லது கட்டுப்படுத்துகிறத"</string>
+    <string name="op_battery_saver_description_no_ga">"பேட்டரி ஆயுளை நீட்டிக்க, பேட்டரி சேவர்:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•பின்னணி செயல்பாடுகள் மற்றும் சில காட்சி விளைவுகளை ஆஃப் செய்கிறது அல்லது கட்டுப்படுத்துகிறது"</string>
     <string name="op_earphone_connect">இணைக்கிறது...</string>
     <string name="op_earphone_connected_fail">இணைக்க முடியவில்லை. நீங்கள் ஹெட்செட் மற்றும் ப்ளூடூத் நிலையை சரிபார்க்கலாம்.</string>
     <string name="op_earphone_connected_success">இணைக்கப்பட்டது. மேலும் அமைப்பதற்குத் தட்டவும்.</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">எந்த ஒலி அல்லது அதிர்வு இல்லாத குறைந்த முக்கியத்துவம் கொண்ட அறிவிப்புகள்.</string>
     <string name="op_notification_section_header_gentle">மற்ற அறிவிப்புகள்</string>
     <string name="op_notification_silence_title">மற்றவை</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" பாதுகாக்கப்பட்ட சார்ஜிங்க்"</string>
     <string name="op_qs_dark_mode_tile_label">அடர் முறை</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s பயன்படுத்தப்பட்டது</string>
     <string name="op_quick_settings_night_display_label">விஷன் வசதி</string>
@@ -278,24 +278,33 @@
     <string name="select_minutes">நிமிடத்தைத் தேர்வுசெய்யவும்</string>
     <string name="select_year">வருடத்தைத் தேர்வுசெய்யவும்</string>
     <string name="sim_status_uss_network_roam">ரோமிங்</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">மொபைல் டேட்டாவைப் பகிர்கிறது, அமைப்புகளுக்குள் உள்நுழைய கிளிக் செய்யவும்</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">மொபைல் தரவைப் பகிர்கிறது, அமைப்புகளுக்குள் உள்நுழைய கிளிக் செய்யவும்</string>
     <string name="tethered_notification_hybrid_sharing_none">பகிர்வதற்கு நெட்வொர்க் எதுவுமில்லை, அமைப்புகளுக்குள் உள்நுழைய கிளிக் செய்யவும்</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi ஐப் பகிர்கிறது, அமைப்புகளுக்குள் உள்நுழைய கிளிக் செய்யவும்</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">வைஃபியைப் பகிர்கிறது, அமைப்புகளுக்குள் உள்நுழைய கிளிக் செய்யவும்</string>
     <string name="tethered_notification_message">அமைக்கத் தட்டவும்.</string>
     <string name="tethered_notification_multi_device_message">%1$s இணைக்கப்பட்ட சாதனங்கள்</string>
     <string name="tethered_notification_multi_tether_title">டெதரிங் மற்றும் மொபைல் ஹாட்ஸ்பாட் செயலிலுள்ளது</string>
     <string name="tethered_notification_no_device_message">இணைக்கப்பட்ட சாதனம் ஏதுமில்லை</string>
     <string name="tethered_notification_one_device_message">%1$s இணைக்கப்பட்ட சாதனம்</string>
-    <string name="tethered_notification_sharing_mobile_multi">மொபைல் டேட்டாவைப் பகிர்கிறது, %1$s சாதனங்கள் இணைக்கப்பட்டுள்ளன</string>
-    <string name="tethered_notification_sharing_mobile_no">மொபைல் டேட்டாவைப் பகிர்கிறது, எந்தச் சாதனமும் இணைக்கப்படவில்லை</string>
-    <string name="tethered_notification_sharing_mobile_single">மொபைல் டேட்டாவைப் பகிர்கிறது, %1$s சாதனம் இணைக்கப்பட்டுள்ளது</string>
+    <string name="tethered_notification_sharing_mobile_multi">மொபைல் தரவைப் பகிர்கிறது, %1$s சாதனங்கள் இணைக்கப்பட்டுள்ளன</string>
+    <string name="tethered_notification_sharing_mobile_no">மொபைல் தரவைப் பகிர்கிறது, எந்தச் சாதனமும் இணைக்கப்படவில்லை</string>
+    <string name="tethered_notification_sharing_mobile_single">மொபைல் தரவைப் பகிர்கிறது, %1$s சாதனம் இணைக்கப்பட்டுள்ளது</string>
     <string name="tethered_notification_sharing_none_multi">பகிர்வதற்கு நெட்வொர்க் எதுவுமில்லை, %1$s சாதனங்கள் இணைக்கப்பட்டுள்ளன</string>
     <string name="tethered_notification_sharing_none_no">பகிர்வதற்கு நெட்வொர்க் எதுவுமில்லை, எந்தச் சாதனமும் இணைக்கப்படவில்லை</string>
     <string name="tethered_notification_sharing_none_single">பகிர்வதற்கு நெட்வொர்க் எதுவுமில்லை, %1$s சாதனம் இணைக்கப்பட்டுள்ளது</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi ஐப் பகிர்கிறது, %1$s சாதனங்கள் இணைக்கப்பட்டுள்ளன</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi ஐப் பகிர்கிறது, எந்தச் சாதனமும் இணைக்கப்படவில்லை</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi ஐப் பகிர்கிறது, %1$s சாதனம் இணைக்கப்பட்டுள்ளது</string>
+    <string name="tethered_notification_sharing_wifi_multi">வைஃபியைப் பகிர்கிறது, %1$s சாதனங்கள் இணைக்கப்பட்டுள்ளன</string>
+    <string name="tethered_notification_sharing_wifi_no">வைஃபியைப் பகிர்கிறது, எந்தச் சாதனமும் இணைக்கப்படவில்லை</string>
+    <string name="tethered_notification_sharing_wifi_single">வைஃபியைப் பகிர்கிறது, %1$s சாதனம் இணைக்கப்பட்டுள்ளது</string>
     <string name="tethered_notification_title">டெதரிங் அல்லது மொபைல் ஹாட்ஸ்பாட் செயலிலுள்ளது</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">சாதனத்தை மியூட் செய்ய, Alert Slider ஐ அதிர்வு அல்லது சைலண்ட் மோடுக்கு அமைக்கவும்.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">மியூட் ரிங் வால்யூம்</string>
+    <string name="threekey_volume_guide_dialog_ok">சரி</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">ரிங்கிங்கை இயக்க, Alert slider ஐப் பயன்படுத்தி ரிங் மோடுக்கு மாறி, உங்கள் விருப்பப்படி ரிங் வால்யூமை அமைக்கவும்.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">வாசிப்பு பயன்முறை</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider தற்போது சைலண்ட் மோடில் உள்ளது; உள்வரும் அழைப்பிற்கு சாதனம் ஒலிக்காது அல்லது அதிர்வுறும். ரிங்கிங் மூலம் அறிவிக்க ரிங் மோடுக்கு மாறவும்.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">சைலண்ட் மோட்</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider தற்போது அதிர்வு மோடில் உள்ளது; உள்வரும் அழைப்புக்கு சாதனம் ஒலிக்காது. அதிர்வு மூலம் மட்டுமே உங்களுக்கு அறிவிக்கப்படும். ரிங்கிங் மூலம் அறிவிக்க தயவுசெய்து ரிங் மோடுக்கு மாறவும்.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">அதிர்வு மோட்</string>
     <string name="time_picker_header_text">நேரத்தை அமை</string>
     <string name="time_picker_hour_label">மணிநேரம்</string>
     <string name="time_picker_input_error">சரியான நேரத்தை உள்ளிடவும்</string>

@@ -52,7 +52,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/widget/RelativeLayout;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -86,8 +86,6 @@
     iput-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mRemoveWindow:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
-
-    iput-object p2, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodWindowView:Landroid/widget/RelativeLayout;
 
     const-string v0, "window"
 
@@ -145,31 +143,13 @@
 
     invoke-static {p1, v0}, Lcom/oneplus/aod/OpAodUtils;->init(Landroid/content/Context;I)V
 
-    sget p1, Lcom/android/systemui/R$id;->op_aod_container:I
-
-    invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodContainer:Landroid/view/View;
-
-    sget p1, Lcom/android/systemui/R$id;->op_aod_bg:I
-
-    invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/oneplus/aod/bg/OpAodCanvas;
-
-    iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mAodBg:Lcom/oneplus/aod/bg/OpAodCanvas;
-
     new-instance p1, Landroid/os/HandlerThread;
 
-    const-string p2, "AODUIThread"
+    const-string v0, "AODUIThread"
 
-    const/4 v0, -0x8
+    const/4 v1, -0x8
 
-    invoke-direct {p1, p2, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p1, v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodWindowManager;->mUIHandlerThread:Landroid/os/HandlerThread;
 
@@ -187,15 +167,15 @@
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
-    const-string p2, "com.oneplus.intent.action.mdm_provider_ready"
+    const-string v0, "com.oneplus.intent.action.mdm_provider_ready"
 
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodWindowManager;->mMdmReadyReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p2, p0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v0, p0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
 .end method

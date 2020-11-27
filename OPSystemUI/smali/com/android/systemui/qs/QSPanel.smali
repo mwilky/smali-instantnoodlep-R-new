@@ -877,7 +877,7 @@
 
     iput v0, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    add-int/lit8 v1, v1, 0x2
+    add-int/lit8 v1, v1, 0x3
 
     goto :goto_1
 

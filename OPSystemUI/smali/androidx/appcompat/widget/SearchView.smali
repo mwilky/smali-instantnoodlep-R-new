@@ -2497,10 +2497,6 @@
     goto :goto_0
 
     :cond_5
-    const/16 v0, 0x438
-
-    if-gt p1, v0, :cond_6
-
     invoke-direct {p0}, Landroidx/appcompat/widget/SearchView;->getPreferredWidth()I
 
     move-result v0

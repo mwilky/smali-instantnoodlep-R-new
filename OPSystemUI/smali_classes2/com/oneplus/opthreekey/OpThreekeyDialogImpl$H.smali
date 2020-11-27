@@ -63,7 +63,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$300(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$600(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$200(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$500(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
 
     goto :goto_0
 
@@ -88,7 +88,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$100(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;->access$400(Lcom/oneplus/opthreekey/OpThreekeyDialogImpl;I)V
 
     :goto_0
     return-void

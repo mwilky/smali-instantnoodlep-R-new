@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$5;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
 
     move-result-object p0
 

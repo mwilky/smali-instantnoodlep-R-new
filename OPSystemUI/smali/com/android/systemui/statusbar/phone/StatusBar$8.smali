@@ -3,12 +3,12 @@
 .source "StatusBar.java"
 
 # interfaces
-.implements Lcom/android/systemui/charging/WirelessChargingAnimation$Callback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/statusbar/phone/StatusBar;->showWirelessChargingAnimation(I)V
+    value = Lcom/android/systemui/statusbar/phone/StatusBar;->makeStatusBarView(Lcom/android/internal/statusbar/RegisterStatusBarResult;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,36 +34,44 @@
 
 
 # virtual methods
-.method public onAnimationEnded()V
-    .locals 0
+.method public run()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1500(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1600(Lcom/android/systemui/statusbar/phone/StatusBar;Landroid/content/Context;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1800(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodWindowManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1700(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/widget/RelativeLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/OpAodWindowManager;->updateView(Landroid/widget/RelativeLayout;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$2000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    move-result-object v0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
-
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->getView()Landroid/view/ViewGroup;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1900(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/widget/RelativeLayout;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeIn(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public onAnimationStarting()V
-    .locals 1
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$8;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mNotificationPanelViewController:Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;
-
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->getView()Landroid/view/ViewGroup;
-
-    move-result-object p0
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeOut(Landroid/view/View;F)V
+    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateView(Landroid/view/ViewGroup;)V
 
     return-void
 .end method

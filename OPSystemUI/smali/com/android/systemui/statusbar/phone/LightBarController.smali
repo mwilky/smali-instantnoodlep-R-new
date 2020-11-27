@@ -18,7 +18,11 @@
 
 .field private mDirectReplying:Z
 
+.field private mDockedLight:Z
+
 .field private mForceDarkForScrim:Z
+
+.field private mHasDockedStack:Z
 
 .field private mHasLightNavigationBar:Z
 
@@ -239,54 +243,86 @@
 .end method
 
 .method private updateStatus()V
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mAppearanceRegions:[Lcom/android/internal/view/AppearanceRegion;
 
     array-length v0, v0
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " updateStatus numStacks="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "LightBarController"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 v1, 0x0
 
-    const/4 v2, -0x1
+    const/4 v2, 0x1
 
-    move v3, v1
+    if-eq v0, v2, :cond_0
 
-    move v4, v3
-
-    :goto_0
-    if-ge v3, v0, :cond_1
-
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mAppearanceRegions:[Lcom/android/internal/view/AppearanceRegion;
-
-    aget-object v5, v5, v3
-
-    invoke-virtual {v5}, Lcom/android/internal/view/AppearanceRegion;->getAppearance()I
-
-    move-result v5
-
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarMode:I
-
-    const/16 v7, 0x8
-
-    invoke-static {v5, v6, v7}, Lcom/android/systemui/statusbar/phone/LightBarController;->isLight(III)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    add-int/lit8 v4, v4, 0x1
-
-    move v2, v3
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
+    move v3, v2
 
     goto :goto_0
 
-    :cond_1
-    const/4 v3, 0x1
+    :cond_0
+    move v3, v1
 
-    if-ne v4, v0, :cond_2
+    :goto_0
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mHasDockedStack:Z
+
+    const/4 v3, -0x1
+
+    move v4, v1
+
+    move v5, v4
+
+    :goto_1
+    if-ge v4, v0, :cond_2
+
+    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mAppearanceRegions:[Lcom/android/internal/view/AppearanceRegion;
+
+    aget-object v6, v6, v4
+
+    invoke-virtual {v6}, Lcom/android/internal/view/AppearanceRegion;->getAppearance()I
+
+    move-result v6
+
+    iget v7, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarMode:I
+
+    const/16 v8, 0x8
+
+    invoke-static {v6, v7, v8}, Lcom/android/systemui/statusbar/phone/LightBarController;->isLight(III)Z
+
+    move-result v6
+
+    iput-boolean v6, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mDockedLight:Z
+
+    if-eqz v6, :cond_1
+
+    add-int/lit8 v5, v5, 0x1
+
+    move v3, v4
+
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    if-ne v5, v0, :cond_3
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarIconController:Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher;
 
@@ -304,12 +340,12 @@
 
     move-result p0
 
-    invoke-virtual {v0, v3, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
+    invoke-virtual {v0, v2, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_2
-    if-nez v4, :cond_3
+    :cond_3
+    if-nez v5, :cond_4
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarIconController:Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher;
 
@@ -323,14 +359,14 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarIconController:Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mAppearanceRegions:[Lcom/android/internal/view/AppearanceRegion;
 
-    aget-object v1, v1, v2
+    aget-object v1, v1, v3
 
     invoke-virtual {v1}, Lcom/android/internal/view/AppearanceRegion;->getBounds()Landroid/graphics/Rect;
 
@@ -348,9 +384,9 @@
 
     move-result p0
 
-    invoke-virtual {v0, v3, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
+    invoke-virtual {v0, v2, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
 
-    :goto_1
+    :goto_2
     return-void
 .end method
 
@@ -534,6 +570,22 @@
 
     :cond_2
     return-void
+.end method
+
+.method public getDockedLight()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mDockedLight:Z
+
+    return p0
+.end method
+
+.method public getHasDockedStack()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mHasDockedStack:Z
+
+    return p0
 .end method
 
 .method public synthetic lambda$new$0$LightBarController(I)V

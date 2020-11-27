@@ -90,6 +90,8 @@
 
 .field private mPendingFrameCallback:Ljava/lang/Runnable;
 
+.field private mQSExpend:Z
+
 .field private mScreenBlankingCallbackCalled:Z
 
 .field private mScreenOn:Z
@@ -348,6 +350,22 @@
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mNeedsDrawableColorUpdate:Z
+
+    return p1
+.end method
+
+.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/ScrimController;)Lcom/android/systemui/statusbar/phone/ScrimState;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    return-object p0
+.end method
+
+.method static synthetic access$702(Lcom/android/systemui/statusbar/phone/ScrimController;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mQSExpend:Z
 
     return p1
 .end method
@@ -1065,7 +1083,7 @@
 .end method
 
 .method private synthetic lambda$startScrimAnimation$2(Landroid/view/View;ILandroid/animation/ValueAnimator;)V
-    .locals 4
+    .locals 5
 
     sget v0, Lcom/android/systemui/statusbar/phone/ScrimController;->TAG_START_ALPHA:I
 
@@ -1081,35 +1099,35 @@
 
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object v1
 
-    check-cast p3, Ljava/lang/Float;
+    check-cast v1, Ljava/lang/Float;
 
-    invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
-
-    move-result p3
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimTint(Landroid/view/View;)I
+    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
     move-result v1
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimAlpha(Landroid/view/View;)F
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimTint(Landroid/view/View;)I
 
     move-result v2
 
-    invoke-static {v0, v2, p3}, Landroid/util/MathUtils;->lerp(FFF)F
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimAlpha(Landroid/view/View;)F
+
+    move-result v3
+
+    invoke-static {v0, v3, v1}, Landroid/util/MathUtils;->lerp(FFF)F
 
     move-result v0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v2, v3}, Landroid/util/MathUtils;->constrain(FFF)F
+    invoke-static {v0, v3, v4}, Landroid/util/MathUtils;->constrain(FFF)F
 
     move-result v0
 
-    invoke-static {p2, v1, p3}, Lcom/android/internal/graphics/ColorUtils;->blendARGB(IIF)I
+    invoke-static {p2, v2, v1}, Lcom/android/internal/graphics/ColorUtils;->blendARGB(IIF)I
 
     move-result p2
 
@@ -1117,6 +1135,19 @@
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->dispatchScrimsVisible()V
 
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mQSExpend:Z
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    sget-object p1, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-ne p0, p1, :cond_0
+
+    invoke-virtual {p3}, Landroid/animation/ValueAnimator;->cancel()V
+
+    :cond_0
     return-void
 .end method
 

@@ -7,12 +7,18 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/systemui/statusbar/policy/WorkLifeBalanceController$WorkLifeBalanceControllerCallback;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",
         "Lcom/android/systemui/statusbar/policy/CallbackController<",
-        "Ljava/lang/Object;",
+        "Lcom/android/systemui/statusbar/policy/WorkLifeBalanceController$WorkLifeBalanceControllerCallback;",
         ">;"
     }
 .end annotation

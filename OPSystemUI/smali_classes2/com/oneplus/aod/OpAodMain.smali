@@ -316,14 +316,6 @@
     return-void
 .end method
 
-.method public onDensityOrFontScaleChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodMain;->updateLayout()V
-
-    return-void
-.end method
-
 .method protected onFinishInflate()V
     .locals 1
 

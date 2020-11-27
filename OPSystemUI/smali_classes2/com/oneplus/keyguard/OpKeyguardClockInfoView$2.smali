@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
@@ -54,7 +54,9 @@
 
     const-string v1, "time_12_24"
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v2, -0x2
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

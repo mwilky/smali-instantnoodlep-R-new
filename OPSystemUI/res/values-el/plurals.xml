@@ -61,8 +61,8 @@
         <item quantity="one">%s επιπλέον ειδοποίηση εντός της ομάδας.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">Παραλήφθηκαν %d ειδοποιήσεις.</item>
-        <item quantity="one">Παραλήφθηκε %d ειδοποίηση.</item>
+        <item quantity="other">Έγινε λήψη %d ειδοποιήσεων</item>
+        <item quantity="one">Έγινε λήψη %d ειδοποίησης</item>
     </plurals>
     <plurals name="quick_settings_hotspot_secondary_label_num_devices">
         <item quantity="other">%d συσκευές</item>

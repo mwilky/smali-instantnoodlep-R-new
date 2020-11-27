@@ -10,6 +10,12 @@
     return-void
 .end method
 
+.method public alignforBurnIn2(Landroid/view/ViewGroup;II)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public abstract applyLayoutParams(Lcom/oneplus/aod/utils/OpAodSettings$OpViewInfo;)V
 .end method
 

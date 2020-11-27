@@ -11,7 +11,13 @@
 .end annotation
 
 
+# static fields
+.field private static sInstance:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+
 # instance fields
+.field private mInit:Z
+
 .field private mNonBlockBackGestureList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -32,54 +38,144 @@
     .end annotation
 .end field
 
+.field private mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 7
-
-    const-string v0, "OpGestureOnlineConfig"
+.method private constructor <init>()V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v2, "com.tencent.mm.plugin.recordvideo.activity.MMRecordUI"
+    const-string v1, "com.tencent.mm.plugin.recordvideo.activity.MMRecordUI"
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v1, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mPhotoEditorList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mPhotoEditorList:Ljava/util/ArrayList;
 
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v2, "com.jingdong.app.mall"
+    const-string v1, "com.jingdong.app.mall"
 
-    const-string v3, "com.bilibili.app"
+    const-string v2, "com.bilibili.app"
 
-    const-string v4, "com.bilibili.app.in"
+    const-string v3, "com.bilibili.app.in"
 
-    const-string v5, "tv.danmaku.bili"
+    const-string v4, "tv.danmaku.bili"
 
-    const-string v6, "com.tencent.tmgp.sgame"
+    const-string v5, "com.tencent.tmgp.sgame"
 
-    filled-new-array {v2, v3, v4, v5, v6}, [Ljava/lang/String;
+    filled-new-array {v1, v2, v3, v4, v5}, [Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object v1, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mNonBlockBackGestureList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mNonBlockBackGestureList:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const-string v1, "com.ss.android.ugc.aweme"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mInit:Z
+
+    return-void
+.end method
+
+.method public static declared-synchronized getInstance()Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+    .locals 2
+
+    const-class v0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->sInstance:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    invoke-direct {v1}, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;-><init>()V
+
+    sput-object v1, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->sInstance:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    :cond_0
+    sget-object v1, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->sInstance:Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+
+# virtual methods
+.method public init(Landroid/content/Context;)V
+    .locals 5
+
+    const-class v0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mInit:Z
+
+    if-nez v1, :cond_0
+
+    const-string v1, "OpGestureOnlineConfig"
+
+    const-string v2, "init"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mInit:Z
 
     new-instance v1, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig$OnlineConfigUpdater;
 
@@ -87,7 +183,7 @@
 
     invoke-direct {v1, p0, v2}, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig$OnlineConfigUpdater;-><init>(Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig$1;)V
 
-    new-instance p0, Lcom/oneplus/config/ConfigObserver;
+    new-instance v2, Lcom/oneplus/config/ConfigObserver;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -95,48 +191,78 @@
 
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "opSystemUIGestureOnlineConfig"
+    const-string v4, "opSystemUIGestureOnlineConfig"
 
-    invoke-direct {p0, p1, v2, v1, v3}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/oneplus/config/ConfigObserver;->register()V
-
-    const-string p0, "Register online config observer"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v2, p1, v3, v1, v4}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
     :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v2}, Lcom/oneplus/config/ConfigObserver;->register()V
+
+    const-string p1, "OpGestureOnlineConfig"
+
+    const-string v1, "Register online config observer"
+
+    invoke-static {p1, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    :try_start_2
+    const-string v1, "OpGestureOnlineConfig"
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, "Register online config fail, "
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "Register online config fail, "
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mInit:Z
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "OpGestureOnlineConfig"
+
+    const-string p1, "already init."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p0
 .end method
 
-
-# virtual methods
 .method public isInNonBlockBackGestureList(Ljava/lang/String;)Z
     .locals 0
 
@@ -153,6 +279,18 @@
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mPhotoEditorList:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public isUseNativeOpaqueColor(Ljava/lang/String;)Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -185,7 +323,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_4
+    if-ge v1, v2, :cond_5
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -329,15 +467,67 @@
 
     :try_start_8
     throw p0
+
+    :cond_3
+    const-string v2, "nativeOpaqueColorList"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+
+    monitor-enter v2
     :try_end_8
     .catch Lorg/json/JSONException; {:try_start_8 .. :try_end_8} :catch_1
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
-    :cond_3
+    :try_start_9
+    iget-object v3, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v3, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    monitor-exit v2
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    :try_start_a
+    const-string v2, "OpGestureOnlineConfig"
+
+    const-string v3, "[OnlineConfig] native opaque color list changed"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_a
+    .catch Lorg/json/JSONException; {:try_start_a .. :try_end_a} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception p0
+
+    :try_start_b
+    monitor-exit v2
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
+
+    :try_start_c
+    throw p0
+    :try_end_c
+    .catch Lorg/json/JSONException; {:try_start_c .. :try_end_c} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
+
+    :cond_4
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_0
     move-exception p0
@@ -383,7 +573,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4
+    :cond_5
     :goto_3
     return-void
 .end method

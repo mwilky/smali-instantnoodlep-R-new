@@ -4148,14 +4148,6 @@
     return-void
 .end method
 
-.method public isImeShow()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mImeShow:Z
-
-    return p0
-.end method
-
 .method public isOverviewEnabled()Z
     .locals 1
 

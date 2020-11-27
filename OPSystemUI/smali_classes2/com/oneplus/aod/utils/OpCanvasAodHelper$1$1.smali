@@ -39,7 +39,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1$1;->this$1:Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;
 
@@ -59,9 +59,13 @@
     const/4 v1, 0x0
 
     :goto_0
+    iget-object v2, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1$1;->this$1:Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;
+
+    iget-boolean v2, v2, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;->val$contentChange:Z
+
     iget-object p0, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1$1;->val$data:Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;
 
-    invoke-interface {v0, v1, p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;->onBitmapHandleDone(ZLcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
+    invoke-interface {v0, v1, v2, p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;->onBitmapHandleDone(ZZLcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
 
     :cond_1
     return-void

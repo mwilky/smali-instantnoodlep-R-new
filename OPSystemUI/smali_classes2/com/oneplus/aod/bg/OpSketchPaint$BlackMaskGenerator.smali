@@ -52,7 +52,7 @@
 
     iget-object v2, p0, Lcom/oneplus/aod/bg/OpSketchPaint$BlackMaskGenerator;->mSize:Landroid/graphics/Point;
 
-    invoke-static {}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$700()I
+    invoke-static {}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1300()I
 
     move-result v3
 

@@ -38,7 +38,11 @@
 
 .field private mIgnoreTunerUpdates:Z
 
+.field private mIsDeviceInteractive:Z
+
 .field protected mIsInvalidCharge:I
+
+.field private mIsNeedForceUpdateBattery:Z
 
 .field private mIsOptimizatedCharge:Z
 
@@ -67,6 +71,10 @@
 .field private mUser:I
 
 .field private final mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
+
+.field private mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
+.field private final mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
 
 
 # direct methods
@@ -98,6 +106,12 @@
     iput v2, p0, Lcom/android/systemui/BatteryMeterView;->mDarkIntensity:F
 
     iput v0, p0, Lcom/android/systemui/BatteryMeterView;->mIsInvalidCharge:I
+
+    new-instance v3, Lcom/android/systemui/BatteryMeterView$1;
+
+    invoke-direct {v3, p0}, Lcom/android/systemui/BatteryMeterView$1;-><init>(Lcom/android/systemui/BatteryMeterView;)V
+
+    iput-object v3, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
 
     iput-boolean v0, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentShow:Z
 
@@ -352,9 +366,9 @@
 
     invoke-virtual {p0, p1, v2, p2}, Lcom/android/systemui/BatteryMeterView;->onDarkChanged(Landroid/graphics/Rect;FI)V
 
-    new-instance p1, Lcom/android/systemui/BatteryMeterView$1;
+    new-instance p1, Lcom/android/systemui/BatteryMeterView$2;
 
-    invoke-direct {p1, p0, v3}, Lcom/android/systemui/BatteryMeterView$1;-><init>(Lcom/android/systemui/BatteryMeterView;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+    invoke-direct {p1, p0, v3}, Lcom/android/systemui/BatteryMeterView$2;-><init>(Lcom/android/systemui/BatteryMeterView;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
 
     iput-object p1, p0, Lcom/android/systemui/BatteryMeterView;->mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
 
@@ -378,10 +392,60 @@
     
     invoke-virtual {p0}, Lcom/android/systemui/BatteryMeterView;->readRenovateMods()V
 
+    const-class p1, Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
+    iput-object p1, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/systemui/BatteryMeterView;I)I
+.method static synthetic access$002(Lcom/android/systemui/BatteryMeterView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/BatteryMeterView;->mIsDeviceInteractive:Z
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lcom/android/systemui/BatteryMeterView;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/BatteryMeterView;->mIsNeedForceUpdateBattery:Z
+
+    return p0
+.end method
+
+.method static synthetic access$102(Lcom/android/systemui/BatteryMeterView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/BatteryMeterView;->mIsNeedForceUpdateBattery:Z
+
+    return p1
+.end method
+
+.method static synthetic access$200(Lcom/android/systemui/BatteryMeterView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/BatteryMeterView;->mLevel:I
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/BatteryMeterView;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/BatteryMeterView;->mCharging:Z
+
+    return p0
+.end method
+
+.method static synthetic access$402(Lcom/android/systemui/BatteryMeterView;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/systemui/BatteryMeterView;->mUser:I
@@ -389,7 +453,7 @@
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/systemui/BatteryMeterView;)Lcom/android/systemui/BatteryMeterView$SettingObserver;
+.method static synthetic access$500(Lcom/android/systemui/BatteryMeterView;)Lcom/android/systemui/BatteryMeterView$SettingObserver;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
@@ -397,7 +461,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/BatteryMeterView;)V
+.method static synthetic access$600(Lcom/android/systemui/BatteryMeterView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updateShowPercent()V
@@ -405,7 +469,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/systemui/BatteryMeterView;)V
+.method static synthetic access$700(Lcom/android/systemui/BatteryMeterView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updatePercentText()V
@@ -1432,6 +1496,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
+    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/keyguard/Lifecycle;->addObserver(Ljava/lang/Object;)V
+
     const-class v0, Lcom/android/systemui/statusbar/policy/BatteryController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1546,6 +1616,14 @@
 
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    const-string p3, " / mIsNeedForceUpdateBattery:"
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p3, p0, Lcom/android/systemui/BatteryMeterView;->mIsNeedForceUpdateBattery:Z
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     const-string p3, " / ParentView:"
 
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1565,6 +1643,29 @@
     invoke-static {v0, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-boolean p3, p0, Lcom/android/systemui/BatteryMeterView;->mIsDeviceInteractive:Z
+
+    if-nez p3, :cond_1
+
+    iget p3, p0, Lcom/android/systemui/BatteryMeterView;->mLevel:I
+
+    if-ne p3, p1, :cond_1
+
+    iget-boolean p3, p0, Lcom/android/systemui/BatteryMeterView;->mCharging:Z
+
+    if-ne p3, p2, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/systemui/BatteryMeterView;->mIsNeedForceUpdateBattery:Z
+
+    return-void
+
+    :cond_1
+    const/4 p3, 0x0
+
+    iput-boolean p3, p0, Lcom/android/systemui/BatteryMeterView;->mIsNeedForceUpdateBattery:Z
+
     iget-object p3, p0, Lcom/oneplus/systemui/OpBatteryMeterView;->mDrawable:Lcom/oneplus/battery/OpBatteryMeterDrawable;
 
     invoke-virtual {p3, p2}, Lcom/oneplus/battery/OpBatteryMeterDrawable;->setCharging(Z)V
@@ -1700,6 +1801,12 @@
     const-string v1, "BatteryMeterView"
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+
+    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView;->mWakefulnessObserver:Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/keyguard/Lifecycle;->removeObserver(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/android/systemui/BatteryMeterView;->mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
 

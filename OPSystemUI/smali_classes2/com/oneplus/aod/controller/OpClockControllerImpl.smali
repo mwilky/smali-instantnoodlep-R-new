@@ -576,6 +576,14 @@
     return-object p0
 .end method
 
+.method public getCurrentView()Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mView:Landroid/view/View;
+
+    return-object p0
+.end method
+
 .method public getMovingDistance()I
     .locals 1
 
@@ -734,6 +742,20 @@
     move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    return-void
+.end method
+
+.method public onTimeZoneChanged(Ljava/util/TimeZone;)V
+    .locals 1
+
+    iput-object p1, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mTimeZone:Ljava/util/TimeZone;
+
+    iget-object v0, p0, Lcom/oneplus/aod/controller/OpClockControllerImpl;->mTime:Ljava/util/Calendar;
+
+    invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/controller/OpClockControllerImpl;->onTimeTick()V
 
     return-void
 .end method

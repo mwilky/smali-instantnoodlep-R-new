@@ -4699,6 +4699,10 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
 
+    const-string v1, "keyguardStatusView"
+
+    invoke-virtual {v0, v1}, Landroid/widget/GridLayout;->setTag(Ljava/lang/Object;)V
+
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
     sget v1, Lcom/android/systemui/R$id;->keyguard_clock_container:I
@@ -5694,9 +5698,15 @@
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    const-string v2, "keyguardStatusView"
 
-    invoke-virtual {v2, v1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
+    invoke-virtual {v1, v2}, Landroid/widget/GridLayout;->setTag(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
+
+    invoke-virtual {v1, v2, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBigClockContainer:Landroid/view/ViewGroup;
 
@@ -10989,6 +10999,16 @@
     goto :goto_0
 
     :cond_0
+    return-void
+.end method
+
+.method public setIsImeShow(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setIsImeShow(Z)V
+
     return-void
 .end method
 

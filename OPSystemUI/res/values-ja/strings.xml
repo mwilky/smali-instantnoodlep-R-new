@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s が %2$s のスライスの表示をリクエストしています</string>
     <string name="abc_toolbar_collapse_description">折りたたむ</string>
     <string name="about_action_bar_title">情報</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">バージョン %s</string>
     <string name="about_privacy_policy">プライバシーポリシー</string>
     <string name="about_release_note_title">更新履歴：</string>
     <string name="about_terms_service">サービス利用規約</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">タイルを並べ替えるには長押ししてドラッグ</string>
     <string name="drag_to_remove_disabled">タイルは %1$d 個以上必要です</string>
     <string name="drag_to_remove_tiles">削除するにはここにドラッグ</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"左：%1$s  右：%2$s"</string>
     <string name="edit_mode_hint">配置を変更するには、タイルをドラッグしてください。表示または非表示を切り替えるには、タップしてください。</string>
     <string name="empty_shade_text">通知はありません</string>
     <string name="enable_adb">USB デバッグ</string>
@@ -822,7 +822,7 @@
     <string name="home">設定のホーム</string>
     <string name="hotspot_apm_message">機内モード有効時はモバイルネットワークに接続できません。機能モードを無効にして、もう一度やり直してください。</string>
     <string name="hotspot_operator_dialog_nosim_msg">SIM カードを挿入して、モバイルホットスポットと他のテザリングオプションを使用</string>
-    <string name="hotspot_operator_dialog_nosim_title">SIM カードはありません</string>
+    <string name="hotspot_operator_dialog_nosim_title">SIM カードなし</string>
     <string name="hotspot_operator_dialog_othererror_msg">WiFi テザリングにサブスクライブされていません</string>
     <string name="hotspot_operator_dialog_othererror_title">WiFi テザリングエラー</string>
     <string name="hotspot_tip_message">"モバイルホットスポットでは、他の Wi-Fi 対応デバイスとモバイルデータを共有します。モバイルホットスポットに接続するには：\u0009 
@@ -1332,12 +1332,12 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="oneplus_threekey_navigation_vibration">バイブのみ</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> 個をロック解除</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> 個をロック解除</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"バッテリー寿命を延ばす方法 - バッテリーセーバー：
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•バックグラウンドアクティビティ、一部のビジュアルエフェクト、“OK Google” などの他の機能をオフにするか、制限します"</string>
+    <string name="op_battery_saver_description_no_ga">"バッテリー寿命を延ばす方法 - バッテリーセーバー：
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•バックグラウンドアクティビティや、一部のビジュアルエフェクトをオフにするか、制限します"</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">ペア設定しています...</string>
     <string name="op_earphone_connected_fail">ペア設定に失敗しました。ヘッドセットと Bluetooth のステータスを確認してみてください。</string>
@@ -1368,13 +1368,13 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="op_notification_channel_summary_low">重要性の低い通知は、サウンドまたはバイブを使用しません。</string>
     <string name="op_notification_section_header_gentle">その他の通知</string>
     <string name="op_notification_silence_title">その他</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" 保護された充電"</string>
     <string name="op_qs_dark_mode_tile_label">ダークモード</string>
     <string name="op_qs_data_usage_used">%1$s：%2$s %3$s 使用済み</string>
     <string name="op_quick_settings_night_display_label">ビジョンコンフォート</string>
     <string name="op_quick_settings_night_display_summary_off">おやすみモードがオフになっています。タップしてオンにします。</string>
     <string name="op_quick_settings_night_display_summary_on">おやすみモードがオンになっています。タップしてオフにします。</string>
-    <string name="op_read_mode2_dialog_black">モノクローム効果</string>
+    <string name="op_read_mode2_dialog_black">モノクロ効果</string>
     <string name="op_read_mode2_dialog_color">クロマティック効果</string>
     <string name="op_read_mode2_dialog_title">効果を選択</string>
     <string name="op_reverse_charge_notification_btn">停止</string>
@@ -1507,7 +1507,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="priority_onboarding_title">優先度を高く設定された会話</string>
     <string name="privacy_alert_application_name">プライバシーアラート</string>
     <string name="privacy_alert_content_text">タップして変更</string>
-    <string name="privacy_alert_content_title">%1$s があなたの %2$s を使用しています</string>
+    <string name="privacy_alert_content_title">%1$s がお客様の %2$s を使用しています</string>
     <string name="privacy_type_camera">カメラ</string>
     <string name="privacy_type_microphone">マイク</string>
     <string name="private_dns_broken">プライベート DNS サーバーにアクセスできません</string>
@@ -1890,10 +1890,10 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="tethered_notification_hybrid_sharing_none">共有できるネットワークはありません。[設定] を表示するには、クリックしてください</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi を共有しています。[設定] を表示するには、クリックしてください</string>
     <string name="tethered_notification_message">タップして設定してください。</string>
-    <string name="tethered_notification_multi_device_message">%1$s 個のデバイスが接続されています</string>
+    <string name="tethered_notification_multi_device_message">%1$s 台のデバイスが接続されています</string>
     <string name="tethered_notification_multi_tether_title">テザリングとモバイルホットスポットがアクティブ</string>
     <string name="tethered_notification_no_device_message">接続されているデバイスがありません</string>
-    <string name="tethered_notification_one_device_message">%1$s 個のデバイスが接続されています</string>
+    <string name="tethered_notification_one_device_message">%1$s 台のデバイスが接続されています</string>
     <string name="tethered_notification_sharing_mobile_multi">モバイルデータを共有しています。%1$s 台のデバイスが接続されています</string>
     <string name="tethered_notification_sharing_mobile_no">モバイルデータを共有しています。接続されたデバイスはありません</string>
     <string name="tethered_notification_sharing_mobile_single">モバイルデータを共有しています。%1$s 台のデバイスが接続されています</string>
@@ -1903,7 +1903,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
     <string name="tethered_notification_sharing_wifi_multi">Wi-Fi を共有しています。%1$s 台のデバイスが接続されています</string>
     <string name="tethered_notification_sharing_wifi_no">Wi-Fi を共有しています。接続されたデバイスはありません</string>
     <string name="tethered_notification_sharing_wifi_single">Wi-Fi を共有しています。%1$s 台のデバイスが接続されています</string>
-    <string name="tethered_notification_title">テザリングまたはモバイルホットスポットがアクティブです</string>
+    <string name="tethered_notification_title">テザリングまたはモバイルホットスポットがアクティブ</string>
     <string name="tethering_hardware_offload">テザリング時のハードウェア アクセラレーション</string>
     <string name="tethering_hardware_offload_summary">テザリング時にハードウェア アクセラレーションを使用します（使用可能な場合）</string>
     <string name="tethering_settings_not_available">このユーザーはテザリング設定を利用できません</string>
@@ -1915,6 +1915,15 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
 \u0009• 高温の場所で使用"</string>
     <string name="thermal_shutdown_message">お使いのスマートフォンは現在、正常に動作しています</string>
     <string name="thermal_shutdown_title">高熱で電源が OFF になりました</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">デバイスをミュートにするには、Alert Slider をバイブモードまたはサイレントモードに設定してください。</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">着信音をミュート</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">着信音を有効にするには、Alert Slider を使用して、着信音モードに切り替え、着信音をお好みの音量に設定してください。</string>
+    <string name="threekey_volume_guide_dialog_ring_title">着信音モード</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider は現在、サイレントモードです。着信があっても、デバイスの着信音は鳴らず、バイブは動作しません。着信音で通知するには、着信音モードに切り替えてください。</string>
+    <string name="threekey_volume_guide_dialog_silent_title">サイレントモード</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider は現在、バイブモードです。着信があっても、デバイスの着信音は鳴りません。バイブのみで通知されます。着信音で通知するには、着信音モードに切り替えてください。</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">バイブモード</string>
     <string name="tile_unavailable">使用不可</string>
     <string name="time_picker_header_text">時間の設定</string>
     <string name="time_picker_hour_label">時</string>

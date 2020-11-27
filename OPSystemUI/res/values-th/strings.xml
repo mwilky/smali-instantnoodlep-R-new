@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s ต้องการแสดงส่วนต่างๆ ของ %2$s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
     <string name="about_action_bar_title">เกี่ยวกับ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">เวอร์ชัน %s</string>
     <string name="about_privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="about_release_note_title">ล็อกการอัปเดต:</string>
     <string name="about_terms_service">เงื่อนไขการใช้บริการ</string>
@@ -703,7 +703,7 @@
     <string name="disable_overlays">ปิดใช้งานการวางซ้อน HW</string>
     <string name="disable_overlays_summary">ใช้ GPU ในการจัดวางองค์ประกอบหน้าจอเสมอ</string>
     <string name="disable_tether_notification_message">โปรดติดต่อผู้ดูแลระบบของคุณสำหรับรายละเอียดเพิ่มเติม</string>
-    <string name="disable_tether_notification_title">การปล่อยสัญญาณถูกปิดการใช้งาน</string>
+    <string name="disable_tether_notification_title">การปล่อยสัญญาณถูกปิดใช้งาน</string>
     <string name="disable_vpn">ปิดใช้ VPN</string>
     <string name="disabled">ปิดอยู่</string>
     <string name="disabled_by_admin">ปิดใช้โดยผู้ดูแลระบบ</string>
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">สั่นเท่านั้น</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ปลดล็อก</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ปลดล็อก</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"เพื่อยืดอายุการใช้งานแบตเตอรี่ โหมดประหยัดแบตเตอรี่:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•ปิดหรือจำกัดกิจกรรมเบื้องหลัง, เอฟเฟ็กต์ภาพบางอย่าง, และฟีเจอร์อื่น ๆ เช่น “สวัสดี Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"เพื่อยืดอายุการใช้งานแบตเตอรี่ โหมดประหยัดแบตเตอรี่:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ปิดหรือจำกัดกิจกรรมเบื้องหลังและเอฟเฟ็กต์ภาพบางอย่าง"</string>
     <string name="op_earphone_connect">กำลังจับคู่...</string>
     <string name="op_earphone_connected_fail">ไม่สามารถจับคู่ได้ คุณสามารถตรวจสอบชุดหูฟังและสถานะบลูทูธได้</string>
     <string name="op_earphone_connected_success">จับคู่แล้ว แตะการตั้งค่าเพิ่มเติม</string>
@@ -1367,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">การแจ้งเตือนที่สำคัญน้อยกว่าไม่มีเสียงหรือการสั่น</string>
     <string name="op_notification_section_header_gentle">การแจ้งเตือนอื่นๆ</string>
     <string name="op_notification_silence_title">อื่นๆ</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" ปกป้องการชาร์จ"</string>
     <string name="op_qs_dark_mode_tile_label">โหมดมืด</string>
     <string name="op_qs_data_usage_used">ใช้งานไป %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">การมองเห็นแบบสบายตา</string>
@@ -1504,7 +1504,7 @@
     <string name="priority_onboarding_show_at_top_text">แสดงที่ด้านบนของส่วนการสนทนา</string>
     <string name="priority_onboarding_show_avatar_text">แสดงรูปโปรไฟล์บนหน้าจอล็อก</string>
     <string name="priority_onboarding_title">ตั้งค่าเป็นการสนทนาสำคัญแล้ว</string>
-    <string name="privacy_alert_application_name">Privacy Alert</string>
+    <string name="privacy_alert_application_name">การแจ้งเตือนความเป็นส่วนตัว</string>
     <string name="privacy_alert_content_text">แตะเพื่อเปลี่ยน</string>
     <string name="privacy_alert_content_title">%1$s กำลังใช้ %2$s ของคุณ</string>
     <string name="privacy_type_camera">กล้อง</string>
@@ -1885,23 +1885,23 @@
     <string name="tether_settings_title_usb">ปล่อยสัญญาณผ่าน USB</string>
     <string name="tether_settings_title_usb_bluetooth">การปล่อยสัญญาณ</string>
     <string name="tether_settings_title_wifi">ฮอตสปอตแบบพกพาได้</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">กำลังแบ่งปันข้อมูลมือถือ คลิกเพื่อเข้าสู่การตั้งค่า</string>
-    <string name="tethered_notification_hybrid_sharing_none">ไม่มีเครือข่ายที่จะแบ่งปัน คลิกเพื่อเข้าสู่การตั้งค่า</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">กำลังแบ่งปันดาต้ามือถือ คลิกเพื่อเข้าสู่การตั้งค่า</string>
+    <string name="tethered_notification_hybrid_sharing_none">ไม่มีเครือข่ายเพื่อแบ่งปัน คลิกเพื่อเข้าสู่การตั้งค่า</string>
     <string name="tethered_notification_hybrid_sharing_wifi">กำลังแบ่งปัน Wi-Fi คลิกเพื่อเข้าสู่การตั้งค่า</string>
     <string name="tethered_notification_message">แตะเพื่อตั้งค่า</string>
     <string name="tethered_notification_multi_device_message">%1$s อุปกรณ์ที่เชื่อมต่ออยู่</string>
     <string name="tethered_notification_multi_tether_title">การกระจายสัญญาณและฮอตสปอตมือถือใช้งานอยู่</string>
     <string name="tethered_notification_no_device_message">ไม่มีอุปกรณ์ที่เชื่อมต่ออยู่</string>
     <string name="tethered_notification_one_device_message">%1$s อุปกรณ์ที่เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_mobile_multi">กำลังแบ่งปันข้อมูลมือถือ และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_mobile_no">กำลังแบ่งปันข้อมูลมือถือ ไม่มีอุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_mobile_single">กำลังแบ่งปันข้อมูลมือถือ และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_none_multi">ไม่มีเครือข่ายที่จะแบ่งปัน และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_none_no">ไม่มีเครือข่ายที่จะแบ่งปัน ไม่มีอุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_none_single">ไม่มีเครือข่ายที่จะแบ่งปัน และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_wifi_multi">กำลังแบ่งปัน Wi-Fi และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_mobile_multi">กำลังแบ่งปันดาต้ามือถือ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_mobile_no">กำลังแบ่งปันดาต้ามือถือ ไม่มีอุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_mobile_single">กำลังแบ่งปันดาต้ามือถือ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_none_multi">ไม่มีเครือข่ายเพื่อแบ่งปัน %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_none_no">ไม่มีเครือข่ายเพื่อแบ่งปัน ไม่มีอุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_none_single">ไม่มีเครือข่ายเพื่อแบ่งปัน %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_wifi_multi">กำลังแบ่งปัน Wi-Fi %1$s อุปกรณ์เชื่อมต่ออยู่</string>
     <string name="tethered_notification_sharing_wifi_no">กำลังแบ่งปัน Wi-Fi ไม่มีอุปกรณ์ที่เชื่อมต่ออยู่</string>
-    <string name="tethered_notification_sharing_wifi_single">กำลังแบ่งปัน Wi-Fi และ %1$s อุปกรณ์เชื่อมต่ออยู่</string>
+    <string name="tethered_notification_sharing_wifi_single">กำลังแบ่งปัน Wi-Fi %1$s อุปกรณ์เชื่อมต่ออยู่</string>
     <string name="tethered_notification_title">การกระจายสัญญาณหรือฮอตสปอตมือถือใช้งานอยู่</string>
     <string name="tethering_hardware_offload">การเร่งฮาร์ดแวร์การเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ</string>
     <string name="tethering_hardware_offload_summary">ใช้การเร่งฮาร์ดแวร์การเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ หากมี</string>
@@ -1914,6 +1914,15 @@
 \u0009• ใช้โทรศัพท์ในอุณหภูมิที่สูง"</string>
     <string name="thermal_shutdown_message">ขณะนี้โทรศัพท์ทำงานเป็นปกติ</string>
     <string name="thermal_shutdown_title">โทรศัพท์ปิดไปเพราะร้อนมาก</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">หากต้องการปิดเสียงอุปกรณ์ให้ตั้งค่าแถบ Alert Slider เป็นโหมดสั่นหรือโหมดเงียบ</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">ปิดเสียงเรียกเข้า</string>
+    <string name="threekey_volume_guide_dialog_ok">ตกลง</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">ในการเปิดใช้งานเสียงเรียกเข้าให้ใช้แถบ Alert slider เพื่อเปลี่ยนเป็นโหมดเสียงเรียกเข้าและตั้งค่าระดับเสียงเรียกเข้าตามความต้องการของคุณ</string>
+    <string name="threekey_volume_guide_dialog_ring_title">โหมดเสียงเรียกเข้า</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">ขณะนี้แถบ Alert Slider อยู่ในโหมดเงียบ อุปกรณ์จะไม่ส่งเสียงหรือสั่นเมื่อมีสายเรียกเข้า โปรดเปลี่ยนเป็นโหมดเสียงเรียกเข้าเพื่อรับการแจ้งเตือนด้วยเสียงเรียกเข้า</string>
+    <string name="threekey_volume_guide_dialog_silent_title">โหมดเงียบ</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">ขณะนี้แถบ Alert Slider อยู่ในโหมดสั่น อุปกรณ์จะไม่ส่งเสียงเมื่อมีสายเรียกเข้า คุณจะได้รับการแจ้งเตือนโดยการสั่นเท่านั้น โปรดเปลี่ยนเป็นโหมดเสียงเรียกเข้าเพื่อรับการแจ้งเตือนด้วยเสียงเรียกเข้า</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">โหมดสั่น</string>
     <string name="tile_unavailable">ไม่มี</string>
     <string name="time_picker_header_text">ตั้งเวลา</string>
     <string name="time_picker_hour_label">ชั่วโมง</string>

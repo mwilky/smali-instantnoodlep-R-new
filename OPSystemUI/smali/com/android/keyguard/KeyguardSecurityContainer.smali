@@ -2148,6 +2148,8 @@
     :cond_0
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mEmergencyPanel:Lcom/oneplus/keyguard/OpEmergencyPanel;
 
+    if-eqz p0, :cond_1
+
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V

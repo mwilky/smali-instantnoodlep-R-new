@@ -9,8 +9,6 @@
 # instance fields
 .field private final mAmbientDisplayConfiguration:Landroid/hardware/display/AmbientDisplayConfiguration;
 
-.field private final mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
-
 .field private final mContentResolver:Landroid/content/ContentResolver;
 
 .field private final mDreamManager:Landroid/service/dreams/IDreamManager;
@@ -43,27 +41,25 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/ContentResolver;Landroid/os/PowerManager;Landroid/service/dreams/IDreamManager;Landroid/hardware/display/AmbientDisplayConfiguration;Lcom/android/systemui/statusbar/notification/NotificationFilter;Lcom/android/systemui/statusbar/policy/BatteryController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Landroid/os/Handler;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptStateProvider;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance p6, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p6}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mSuppressors:Ljava/util/List;
+    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mSuppressors:Ljava/util/List;
 
-    const/4 v0, 0x0
+    const/4 p6, 0x0
 
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mUseHeadsUp:Z
+    iput-boolean p6, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mUseHeadsUp:Z
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mContentResolver:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mPowerManager:Landroid/os/PowerManager;
 
     iput-object p3, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mDreamManager:Landroid/service/dreams/IDreamManager;
-
-    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
     iput-object p4, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mAmbientDisplayConfiguration:Landroid/hardware/display/AmbientDisplayConfiguration;
 
@@ -765,42 +761,11 @@
     return v2
 
     :cond_0
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
-
-    invoke-interface {v1}, Lcom/android/systemui/statusbar/policy/BatteryController;->isAodPowerSave()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p1, "No pulsing: disabled by battery saver: "
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v2
-
-    :cond_1
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->canAlertCommon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_1
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -824,12 +789,12 @@
 
     return v2
 
-    :cond_2
+    :cond_1
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->shouldSuppressAmbient()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -853,14 +818,14 @@
 
     return v2
 
-    :cond_3
+    :cond_2
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getImportance()I
 
     move-result v1
 
     const/4 v4, 0x3
 
-    if-ge v1, v4, :cond_4
+    if-ge v1, v4, :cond_3
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -884,14 +849,14 @@
 
     return v2
 
-    :cond_4
+    :cond_3
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
 
     iget-object v1, v1, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -915,7 +880,7 @@
 
     return v2
 
-    :cond_5
+    :cond_4
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -926,7 +891,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_5
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
@@ -938,7 +903,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_5
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
@@ -950,16 +915,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_6
 
-    :cond_6
+    :cond_5
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getImportance()I
 
     move-result v1
 
     const/4 v4, 0x4
 
-    if-ge v1, v4, :cond_7
+    if-ge v1, v4, :cond_6
 
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptStateProvider;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
 
@@ -969,7 +934,7 @@
 
     const/4 v4, 0x2
 
-    if-ne v1, v4, :cond_7
+    if-ne v1, v4, :cond_6
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -993,7 +958,7 @@
 
     return v2
 
-    :cond_7
+    :cond_6
     invoke-super {p0, p1}, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptStateProvider;->shouldPulse(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     move-result p0

@@ -2136,6 +2136,15 @@ Your phone may get too hot if you:
 \u0009• Use your phone in high temperatures"</string>
     <string name="thermal_shutdown_message">Your phone is now running normally</string>
     <string name="thermal_shutdown_title">Phone turned off due to heat</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">To mute the device, set Alert Slider to Vibrate or Silent mode.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Mute ring volume</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">To enable ringing, use the Alert slider to switch to Ring mode and set the ring volume as per your preference.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">The Alert Slider is currently in Silent mode; the device won’t ring or vibrate for an incoming call. Please switch to Ring mode to be notified by ringing.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Silent mode</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">The Alert Slider is currently in Vibrate mode; the device won’t ring for an incoming call. You’ll be notified by the vibration only. Please switch to Ring mode to be notified by ringing.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrate mode</string>
     <string name="tile_unavailable">Unavailable</string>
     <string name="time_picker_header_text">Set time</string>
     <string name="time_picker_hour_label">hour</string>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Teave</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Privaatsuspoliitika</string>
+    <string name="about_app_version_text">Versioon %s</string>
+    <string name="about_privacy_policy">Privaatsuseeskirjad</string>
     <string name="about_release_note_title">Uuenduste logi:</string>
     <string name="about_terms_service">Teenusetingimused</string>
     <string name="accessibility_fingerprint_dialog_help_area">Spikrisõnumi ala</string>
@@ -138,12 +138,12 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="oneplus_threekey_navigation_vibration">Ainult vibratsioon</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>avamine</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>avamist</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Akusäästja lülitab aku tööea pikendamiseks
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•välja või piirab taustategevusi, mõningaid visuaalseid efekte ja muid funktsioone, nagu “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Akusäästja lülitab aku tööea pikendamiseks
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•välja või piirab taustategevusi ja mõningaid visuaalseid efekte"</string>
     <string name="op_earphone_connect">Seon...</string>
     <string name="op_earphone_connected_fail">Sidumine nurjus. Kontrollige peakomplekti ja Bluetoothi olekut.</string>
     <string name="op_earphone_connected_success">Seotud. Seadistamiseks toksake.</string>
@@ -173,7 +173,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="op_notification_channel_summary_low">Vähem olulised teavitused ilma heli või vibratsioonita.</string>
     <string name="op_notification_section_header_gentle">Muud teavitused</string>
     <string name="op_notification_silence_title">Muu</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Kaitstud laadimine"</string>
     <string name="op_qs_dark_mode_tile_label">Tume režiim</string>
     <string name="op_qs_data_usage_used">%1$s: kasutatud %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Nägemismugavus</string>
@@ -181,7 +181,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="op_quick_settings_night_display_summary_on">Öörežiim on sees, välja lülitamiseks toksake</string>
     <string name="op_read_mode2_dialog_black">Monoefekt</string>
     <string name="op_read_mode2_dialog_color">Kromaatiline efekt</string>
-    <string name="op_read_mode2_dialog_title">Vali efekt</string>
+    <string name="op_read_mode2_dialog_title">Valige efekt</string>
     <string name="op_reverse_charge_notification_btn">PEATA</string>
     <string name="op_reverse_charge_notification_discharging">Ühendatud seadme laadimine</string>
     <string name="op_reverse_charge_notification_subtitle">Muude Qi-toega seadmete juhtmeta laadimine</string>
@@ -215,7 +215,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
     <string name="privacy_alert_application_name">Privaatsushoiatus</string>
     <string name="privacy_alert_content_text">Puudutage muutmiseks</string>
-    <string name="privacy_alert_content_title">%1$s kasutab valikut %2$s</string>
+    <string name="privacy_alert_content_title">%1$s kasutab teie %2$s</string>
     <string name="privacy_type_camera">kaamera</string>
     <string name="privacy_type_microphone">mikrofon</string>
     <string name="qr_bubble_hint">Puudutage mulli, et sõnumeid lugeda ja neile vastata</string>
@@ -283,7 +283,7 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi jagamine, klõpsake sätete avamiseks</string>
     <string name="tethered_notification_message">Puudutage seadistamiseks.</string>
     <string name="tethered_notification_multi_device_message">%1$s ühendatud seadet</string>
-    <string name="tethered_notification_multi_tether_title">Sidumine või Mobile HotSpot on aktiivne</string>
+    <string name="tethered_notification_multi_tether_title">Sidumine ja mobiilne pääsupunkt on aktiivne</string>
     <string name="tethered_notification_no_device_message">Ühendatud pole ühtki seadet</string>
     <string name="tethered_notification_one_device_message">%1$s ühendatud seade</string>
     <string name="tethered_notification_sharing_mobile_multi">Mobiilandmeside jagamine, %1$s seadet on ühendatud</string>
@@ -295,7 +295,16 @@ Mobiilse kuupunkti tellimuse tühistamiseks külastage veebisaiti My Verizon võ
     <string name="tethered_notification_sharing_wifi_multi">Wi-Fi jagamine, %1$s seadet on ühendatud</string>
     <string name="tethered_notification_sharing_wifi_no">Wi-Fi jagamine, ükski seade ei ole ühendatud</string>
     <string name="tethered_notification_sharing_wifi_single">Wi-Fi jagamine, %1$s seade on ühendatud</string>
-    <string name="tethered_notification_title">Sidumine või Mobile Hotspot on aktiivne</string>
+    <string name="tethered_notification_title">Sidumine või mobiilne pääsupunkt on aktiivne</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Seadme vaigistamiseks seadke Alert Slider vibratsiooni või hääletusse režiimi.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Vaigista helina helitugevus</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Helina lubamiseks kasutage Alert Sliderit, et lülitada helina režiimile ja määrata sobiv helina helitugevus.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Helina režiim</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider on hetkel hääletus režiimis; seade ei helise ega vibreeri sissetuleva kõne korral. Lülitage helina sisselülitamiseks helina režiimile.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Hääletu režiim</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider on hetkel vibratsiooni režiimis; seade ei helise sissetuleva kõne korral. Teid teavitatakse ainult vibratsiooniga. Lülitage helina sisselülitamiseks helina režiimile.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibratsiooni režiim</string>
     <string name="time_picker_header_text">Määrake kellaaeg</string>
     <string name="time_picker_hour_label">tund</string>
     <string name="time_picker_input_error">Sisestage sobiv kellaaeg</string>

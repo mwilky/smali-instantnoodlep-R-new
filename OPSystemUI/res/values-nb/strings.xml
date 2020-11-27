@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s vil vise %2$s-utsnitt</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
     <string name="about_action_bar_title">Om</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versjon %s</string>
     <string name="about_privacy_policy">Personvernerklæring</string>
     <string name="about_release_note_title">Oppdateringslogg:</string>
     <string name="about_terms_service">Bruksvilkår</string>
@@ -723,7 +723,7 @@ Hvis du fortsetter, kan avgifter for databruk påløpe."</string>
     <string name="drag_to_rearrange_tiles">Hold og dra for å flytte på rutene</string>
     <string name="drag_to_remove_disabled">Du trenger minst %1$d infobrikker</string>
     <string name="drag_to_remove_tiles">Dra hit for å fjerne</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"V: %1$s  H: %2$s"</string>
     <string name="edit_mode_hint">Dra flisene for å endre rekkefølge. Berør for å vise eller skjule.</string>
     <string name="empty_shade_text">Ingen varsler</string>
     <string name="enable_adb">USB-feilsøking</string>
@@ -772,7 +772,7 @@ Hvis du fortsetter, kan avgifter for databruk påløpe."</string>
     <string name="failed_to_open_app_settings_toast">Kunne ikke åpne innstillingene for %1$s</string>
     <string name="fingerprint_dialog_touch_sensor">Trykk på fingeravtrykkssensoren</string>
     <string name="fingerprint_not_found">Prøv på nytt</string>
-    <string name="fnatic_mode_title">Fnatic-modus</string>
+    <string name="fnatic_mode_title">Fnatisk modus</string>
     <string name="force_allow_on_external">Tving frem tillatelse for ekstern lagring av apper</string>
     <string name="force_allow_on_external_summary">Dette gjør at alle apper kan lagres på eksterne lagringsmedier – uavhengig av manifestverdier</string>
     <string name="force_msaa">Tving 4x MSAA</string>
@@ -825,7 +825,7 @@ Telefonen kommer til å kjøre som normalt, når den har kjølt seg ned."</strin
     <string name="hotspot_operator_dialog_nosim_title">Ingen SIM-kort</string>
     <string name="hotspot_operator_dialog_othererror_msg">Du har ikke abonnert på Wi-Fi-tilknytning</string>
     <string name="hotspot_operator_dialog_othererror_title">Wi-Fi-tilknytningsfeil</string>
-    <string name="hotspot_tip_message">"Hotspot deler dine mobildata med andre Wi-Fi-kapable enheter. For å koble til ditt hotspot: \u0009 
+    <string name="hotspot_tip_message">"Hotspot deler dine mobildata med andre Wi-Fi-kapable enheter. For å koble til din hotspot: \u0009 
  1: Skru på Wi-Fi på den andre enheten. 
  2: Velg %1$s fra listen over tilgjengelige Wi-Fi -nettverk. 
  3: Hvis det kreves passord, tast inn %2$s For å spare batteri ha telefonen plugget i når du bruker hotspot. "</string>
@@ -1098,7 +1098,7 @@ Prøv på nytt om %2$d sekunder."</string>
     <string name="left_nav_bar_button_type">Ekstra venstre-knapptype</string>
     <string name="legacy_vpn_name">VPN</string>
     <string name="loading_injected_setting_summary">Laster inn …</string>
-    <string name="loading_text">Laster inn...</string>
+    <string name="loading_text">Laster inn …</string>
     <string name="local_backup_password_summary_change">Trykk for å endre eller fjerne passordet for fullstendige sikkerhetskopier på datamaskinen</string>
     <string name="local_backup_password_summary_none">Fullstendig sikkerhetskopiering på datamaskin er ikke beskyttet</string>
     <string name="local_backup_password_title">Passord for sikkerhetskopiering på datamaskin</string>
@@ -1332,13 +1332,13 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="oneplus_threekey_navigation_vibration">Kun vibrasjon</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>opplåsning</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>opplåsninger</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Slik forlenger du batterilevetiden, Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Slå av eller begrens bakgrunnsaktivitet, noen visuelle effekter og andre funksjoner som “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Slik forlenger du batterilevetiden, Battery Saver:
 
-•Turns off or restricts background activity, and some visual effects"</string>
-    <string name="op_earphone_connect">Sammenkobling...</string>
+•Slå av eller begrens bakgrunnsaktivitet og noen visuelle effekter"</string>
+    <string name="op_earphone_connect">Paring …</string>
     <string name="op_earphone_connected_fail">Ikke sammenkobling. Du kan kontrollere hodesettet og Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Paret. Trykk for å angi flere.</string>
     <string name="op_earphone_device">TRYKK FOR Å PARRE</string>
@@ -1367,7 +1367,7 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_notification_channel_summary_low">Mindre viktige varsler uten noe lyd eller vibrasjon.</string>
     <string name="op_notification_section_header_gentle">Andre varsler</string>
     <string name="op_notification_silence_title">Annet</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Beskyttet lading"</string>
     <string name="op_qs_dark_mode_tile_label">Mørk modus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s brukt</string>
     <string name="op_quick_settings_night_display_label">Synskomfort</string>
@@ -1887,7 +1887,7 @@ være overvåket"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Deler Wi-Fi, klikk for å gå til Innstillinger</string>
     <string name="tethered_notification_message">Trykk for å konfigurere.</string>
     <string name="tethered_notification_multi_device_message">%1$s tilkoblede enheter</string>
-    <string name="tethered_notification_multi_tether_title">Tilknytning og hotspot aktiv</string>
+    <string name="tethered_notification_multi_tether_title">Tilknytning og mobil hotspot aktiv</string>
     <string name="tethered_notification_no_device_message">Ingen tilkoblet enhet</string>
     <string name="tethered_notification_one_device_message">%1$s tilkoblet enhet</string>
     <string name="tethered_notification_sharing_mobile_multi">Deler mobildata, %1$s enheter tilkoblet</string>
@@ -1911,6 +1911,15 @@ Telefonen kan blir for varm hvis du:
 \u0009• bruker telefonen ved høy temperatur"</string>
     <string name="thermal_shutdown_message">Telefonen din kjører nå som normalt</string>
     <string name="thermal_shutdown_title">Telefon ble slått av pga varme</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Angi Alert Slider til vibrasjons- eller stillemodus for å dempe enheten.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Demp ringevolum</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">For å aktivere ringing skal du bruke Alert Slider for å bytte til ringemodus, og angi ringevolumet etter eget ønske.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ringemodus</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider er i øyeblikket i stillemodus. Enheten ringer ikke og vibrerer ikke ved innkommende anrop. Bytt til ringemodus for å varsel om at det ringer.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Stillemodus</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider er i øyeblikket i vibrasjonsmodus. Enheten ringer ikke ved innkommende anrop. Du blir varslet kun med vibrasjon. Bytt til ringemodus for å varsel om at det ringer.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrasjonsmodus</string>
     <string name="tile_unavailable">Utilgjengelig</string>
     <string name="time_picker_header_text">Still inn tid</string>
     <string name="time_picker_hour_label">time</string>

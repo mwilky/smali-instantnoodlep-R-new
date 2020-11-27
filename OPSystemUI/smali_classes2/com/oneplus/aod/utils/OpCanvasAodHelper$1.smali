@@ -17,6 +17,8 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
 
+.field final synthetic val$contentChange:Z
+
 .field final synthetic val$handler:Landroid/os/Handler;
 
 .field final synthetic val$imageUri:Ljava/lang/String;
@@ -27,7 +29,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/aod/utils/OpCanvasAodHelper;Ljava/lang/String;Ljava/lang/String;Landroid/os/Handler;Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;)V
+.method constructor <init>(Lcom/oneplus/aod/utils/OpCanvasAodHelper;Ljava/lang/String;Ljava/lang/String;Landroid/os/Handler;Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;->this$0:Lcom/oneplus/aod/utils/OpCanvasAodHelper;
@@ -39,6 +41,8 @@
     iput-object p4, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;->val$handler:Landroid/os/Handler;
 
     iput-object p5, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;->val$listener:Lcom/oneplus/aod/utils/OpCanvasAodHelper$OnBitmapHandleDoneListener;
+
+    iput-boolean p6, p0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$1;->val$contentChange:Z
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 

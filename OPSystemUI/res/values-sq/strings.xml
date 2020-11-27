@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s dëshiron të shfaqë pjesë të %2$s</string>
     <string name="abc_toolbar_collapse_description">Palos</string>
     <string name="about_action_bar_title">Rreth</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versioni %s</string>
     <string name="about_privacy_policy">Politika për privatësinë</string>
     <string name="about_release_note_title">Regjistri i përditësimit:</string>
     <string name="about_terms_service">Rregullat e shërbimit</string>
@@ -822,7 +822,7 @@ Pasi telefoni të jetë ftohur, ai do të punojë si normalisht."</string>
     <string name="home">Kreu i cilësimeve</string>
     <string name="hotspot_apm_message">Nuk është e mundur të bëhet lidhja me rrjetet celulare ndërkohë që modaliteti aeroplan është i aktivizuar. Çaktivizoni modalitetin aeroplan dhe provoni përsëri.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Vendosni një kartë SIM për të përdorur hotspotin celular dhe opsione të tjera të lidhjes tethering</string>
-    <string name="hotspot_operator_dialog_nosim_title">No SIM card</string>
+    <string name="hotspot_operator_dialog_nosim_title">Nuk ka kartë SIM</string>
     <string name="hotspot_operator_dialog_othererror_msg">Nuk jeni abonuar me një lidhje tethering me Wi-Fi</string>
     <string name="hotspot_operator_dialog_othererror_title">Gabim në lidhjen tethering me Wi-Fi</string>
     <string name="hotspot_tip_message">"Hotspoti celular ndan internetin tuaj celular me pajisje të tjera me Wi-Fi. Për të lidhur hotspotin celular: \u0009 
@@ -1332,12 +1332,12 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="oneplus_threekey_navigation_vibration">Vetëm dridhje</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>zhbllokim</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>zhbllokime</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Për të rritur jetëgjatësinë e baterisë, kursyesi i baterisë:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•çaktivizon ose kufizon aktivitetin në sfond, disa efekte vizuale, dhe veçori të tjera, të tilla si “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Për të rritur jetëgjatësinë e baterisë, kursyesi i baterisë:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•çaktivizon ose kufizon aktivitetin në sfond dhe disa efekte vizuale"</string>
     <string name="op_earphone_connect">Duke çiftuar...</string>
     <string name="op_earphone_connected_fail">Çiftimi dështoi. Mund të kontrolloni kufjet dhe statusin e Bluetooth.</string>
     <string name="op_earphone_connected_success">U çiftua. Shtypni për të vendosur më shumë.</string>
@@ -1363,11 +1363,11 @@ Je i lidhur edhe me një VPN, që mund të monitorojë aktivitetin tënd të rrj
     <string name="op_kg_prompt_reason_timeout_pattern">Shtypni butonin për të përdorur vizatimin</string>
     <string name="op_kg_prompt_reason_timeout_pin">Shtypni butonin për të përdorur PIN</string>
     <string name="op_kg_prompt_reason_timeout_swipe">Për më shumë siguri, lëvizni lart për ta zhbllokuar</string>
-    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_alert_title">Të rëndësishme</string>
     <string name="op_notification_channel_summary_low">Njoftimet më pak të rëndësishme pa tinguj ose dridhje.</string>
     <string name="op_notification_section_header_gentle">Njoftime të tjera</string>
     <string name="op_notification_silence_title">Tjetër</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Karikim i mbrojtur"</string>
     <string name="op_qs_dark_mode_tile_label">Modaliteti i errët</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s të përdorura</string>
     <string name="op_quick_settings_night_display_label">Rehatia e shikimit</string>
@@ -1914,6 +1914,15 @@ Telefoni mund të nxehet së tepërmi nëse ti:
 \u0009• E përdor telefonin në temperatura të larta"</string>
     <string name="thermal_shutdown_message">Telefoni tani punon normalisht</string>
     <string name="thermal_shutdown_title">Telefoni u fik për shkak të nxehtësisë</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Për ta heshtur pajisjen, vendoseni Alert slider në modalitetin e dridhjes ose të heshtjes.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Hesht volumin e ziles</string>
+    <string name="threekey_volume_guide_dialog_ok">Në rregull</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Për të aktivizuar zilen, përdorni Alert slider për të kaluar te modaliteti i ziles dhe vendoseni volumin sipas dëshirës.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert slider është aktualisht në modalitetin e heshtjes; pajisja nuk do të ketë zile ose nuk do të dridhet kur ka telefonata hyrëse. Ju lutemi kaloni në modalitetin e ziles që të njoftoheni me zile.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Modaliteti i heshtjes</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert slider është aktualisht në modalitetin e dridhjes; pajisja nuk bie kur ka telefonata hyrëse. Do të njoftoheni vetëm me dridhje. Ju lutemi kaloni në modalitetin e ziles që të njoftoheni me zile.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Modaliteti i dridhjes</string>
     <string name="tile_unavailable">Nuk ofrohet</string>
     <string name="time_picker_header_text">Vendos orën</string>
     <string name="time_picker_hour_label">orë</string>

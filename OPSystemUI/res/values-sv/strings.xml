@@ -702,7 +702,7 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="disable_carrier_button_text">Inaktivera eSIM</string>
     <string name="disable_overlays">Inaktivera HW-överlagringar</string>
     <string name="disable_overlays_summary">Använd alltid GPU för skärmsammansättning</string>
-    <string name="disable_tether_notification_message">Kontakta administratören för att få mer information</string>
+    <string name="disable_tether_notification_message">Kontakta din administratör för att få mer information</string>
     <string name="disable_tether_notification_title">Internetdelning är inaktiverad</string>
     <string name="disable_vpn">Inaktivera VPN</string>
     <string name="disabled">Inaktiverad</string>
@@ -723,7 +723,7 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma."</string>
     <string name="drag_to_rearrange_tiles">Ordna om rutor genom att trycka och dra</string>
     <string name="drag_to_remove_disabled">Minst %1$d rutor måste finnas kvar</string>
     <string name="drag_to_remove_tiles">Ta bort genom att dra här</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Vänster: %1$s  Höger: %2$s"</string>
     <string name="edit_mode_hint">Dra paneler för att ordna om. Tryck för visa eller dölja.</string>
     <string name="empty_shade_text">Inga aviseringar</string>
     <string name="enable_adb">USB-felsökning</string>
@@ -1332,12 +1332,12 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="oneplus_threekey_navigation_vibration">Endast vibration</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>upplåsning</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>upplåsningar</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Batterisparfunktionen förlänger telefonens batteritid
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•genom att stänga av eller begränsa bakgrundsaktiviteter, vissa visuella effekter och andra funktioner, t.ex. Hey Google"</string>
+    <string name="op_battery_saver_description_no_ga">"Batterisparfunktionen förlänger telefonens batteritid
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•genom att stänga av eller begränsa bakgrundsaktiviteter och vissa visuella effekter"</string>
     <string name="op_earphone_connect">Parar ihop ...</string>
     <string name="op_earphone_connected_fail">Det gick inte att para ihop. Kontrollera status för headset och Bluetooth.</string>
     <string name="op_earphone_connected_success">Ihopparad. Tryck för att ställa in fler.</string>
@@ -1367,7 +1367,7 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="op_notification_channel_summary_low">Mindre viktiga aviseringar utan ljud eller vibration.</string>
     <string name="op_notification_section_header_gentle">Övriga aviseringar</string>
     <string name="op_notification_silence_title">Annan</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Säker laddning"</string>
     <string name="op_qs_dark_mode_tile_label">Mörkt läge</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s använt</string>
     <string name="op_quick_settings_night_display_label">Visningskomfort</string>
@@ -1417,7 +1417,7 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="overview">Översikt</string>
     <string name="permission_btn_text_denied">Avsluta</string>
     <string name="permission_btn_text_grant">OK</string>
-    <string name="permission_dialog_title">Tillåtelseförklaring</string>
+    <string name="permission_dialog_title">Behörighetsvillkor</string>
     <string name="phone_hint">Svep från ikonen och öppna telefonen</string>
     <string name="phone_label">öppna mobilen</string>
     <string name="picture_color_mode">Färgläge för bilder</string>
@@ -1885,24 +1885,24 @@ vara övervakat"</string>
     <string name="tether_settings_title_usb">Internetdelning via USB</string>
     <string name="tether_settings_title_usb_bluetooth">Internetdelning</string>
     <string name="tether_settings_title_wifi">Mobil surfzon</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">Delar mobildata, klicka för att öppna Inställningar</string>
-    <string name="tethered_notification_hybrid_sharing_none">Inget tillgängligt nätverk att dela, klicka för att öppna Inställningar</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Delar Wi-Fi, klicka för att öppna Inställningar</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">Delar mobildata. Klicka för att öppna Inställningar</string>
+    <string name="tethered_notification_hybrid_sharing_none">Inget tillgängligt nätverk att dela. Klicka för att öppna Inställningar</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Delar Wi-Fi. Klicka för att öppna Inställningar</string>
     <string name="tethered_notification_message">Tryck för att konfigurera.</string>
-    <string name="tethered_notification_multi_device_message">%1$s anslutna enheter</string>
-    <string name="tethered_notification_multi_tether_title">Internetdelning och mobil trådlös surfzon aktiva</string>
+    <string name="tethered_notification_multi_device_message">%1$s enheter är anslutna</string>
+    <string name="tethered_notification_multi_tether_title">Internetdelning och trådlös surfzon är aktiva</string>
     <string name="tethered_notification_no_device_message">Ingen enhet är ansluten</string>
-    <string name="tethered_notification_one_device_message">%1$s ansluten enhet</string>
-    <string name="tethered_notification_sharing_mobile_multi">Delar mobildata, %1$s enheter anslutna</string>
-    <string name="tethered_notification_sharing_mobile_no">Delar mobildata, ingen enhet är ansluten</string>
-    <string name="tethered_notification_sharing_mobile_single">Delar mobildata, %1$s enhet ansluten</string>
-    <string name="tethered_notification_sharing_none_multi">Inget tillgängligt nätverk att dela, %1$s devices connected</string>
-    <string name="tethered_notification_sharing_none_no">Inget tillgängligt nätverk att dela, ingen enhet ansluten</string>
-    <string name="tethered_notification_sharing_none_single">Inget tillgängligt nätverk att dela, %1$s enhet ansluten</string>
-    <string name="tethered_notification_sharing_wifi_multi">Delar Wi-Fi, %1$s enheter anslutna</string>
-    <string name="tethered_notification_sharing_wifi_no">Delar Wi-Fi, ingen enhet är ansluten</string>
-    <string name="tethered_notification_sharing_wifi_single">Delar Wi-Fi, %1$s enhet ansluten</string>
-    <string name="tethered_notification_title">Internetdelning eller mobil trådlös surfzon aktivt</string>
+    <string name="tethered_notification_one_device_message">%1$s enhet är ansluten</string>
+    <string name="tethered_notification_sharing_mobile_multi">Delar mobildata. %1$s enheter är anslutna</string>
+    <string name="tethered_notification_sharing_mobile_no">Delar mobildata. Ingen enhet är ansluten</string>
+    <string name="tethered_notification_sharing_mobile_single">Delar mobildata. %1$s enhet är ansluten</string>
+    <string name="tethered_notification_sharing_none_multi">Inget tillgängligt nätverk att dela. %1$s enheter är anslutna</string>
+    <string name="tethered_notification_sharing_none_no">Inget tillgängligt nätverk att dela. Ingen enhet är ansluten</string>
+    <string name="tethered_notification_sharing_none_single">Inget tillgängligt nätverk att dela. %1$s enhet är ansluten</string>
+    <string name="tethered_notification_sharing_wifi_multi">Delar Wi-Fi. %1$s enheter är anslutna</string>
+    <string name="tethered_notification_sharing_wifi_no">Delar Wi-Fi. Ingen enhet är ansluten</string>
+    <string name="tethered_notification_sharing_wifi_single">Delar Wi-Fi. %1$s enhet är ansluten</string>
+    <string name="tethered_notification_title">Internetdelning eller trådlös surfzon är aktiv</string>
     <string name="tethering_hardware_offload">Maskinvaruacceleration för internetdelning</string>
     <string name="tethering_hardware_offload_summary">Använd maskinvaruacceleration för internetdelning om tillgängligt</string>
     <string name="tethering_settings_not_available">Internetdelningsinställningarna är inte tillgängliga för den här användaren</string>
@@ -1914,6 +1914,15 @@ Mobilen kan bli för varm om du
 \u0009• använder mobilen vid höga temperaturer."</string>
     <string name="thermal_shutdown_message">Mobilen fungerar nu som vanligt</string>
     <string name="thermal_shutdown_title">Mobilen stängdes av pga. värme</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Du kan tysta enheten genom att dra växlingsknappen till vibrationsläget eller tyst läge.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Stäng av ringsignalen</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Om du vill att enheten ska ringa vid inkommande samtal drar du växlingsknappen till ringläget och väljer sedan en ringvolym.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ringläge</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Växlingsknappen är inställd på tyst läge. Enheten varken ringer eller vibrerar därför vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tyst läge</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Växlingsknappen är inställd på vibrationsläget. Enheten ringer därför inte utan vibrerar endast vid inkommande samtal. Växla till ringläget om du vill att enheten ska ringa vid inkommande samtal.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrationsläge</string>
     <string name="tile_unavailable">Inte tillgängligt</string>
     <string name="time_picker_header_text">Ställ in tid</string>
     <string name="time_picker_hour_label">timme</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">च्या बद्दल</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">आवृत्ती: %s</string>
     <string name="about_privacy_policy">गोपनीयता धोरण</string>
     <string name="about_release_note_title">लॉग अद्यतनित करा:</string>
     <string name="about_terms_service">सेवेच्या अटी</string>
@@ -48,7 +48,7 @@
     <string name="disable_tether_notification_message">तपशीलांसाठी तुमच्या प्रशासकाशी संपर्क साधा</string>
     <string name="disable_tether_notification_title">टिथरिंग अक्षम केले आहे</string>
     <string name="drag_to_add_tiles">टाइल्स जोडण्यासाठी ड्रॅग करा</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">एल:%1$sआर:%2$s</string>
     <string name="edit_mode_hint">पुनर्रचना करण्यासाठी टाइल्स ओढा. दर्शविण्यास किंवा लपवण्यासाठी टॅप करा.</string>
     <string name="end_call">संपवा</string>
     <string name="face_unlock_camera_error">Face Unlock अयशस्वी, अन्य अॅपद्वारे कॅमेरा वापरला जात आहे</string>
@@ -138,12 +138,12 @@
     <string name="oneplus_threekey_navigation_vibration">फक्‍त कंपन</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> अनलॉक</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> अनलॉक्स</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"बॅटरीचे आयुष्य वाढविण्यासाठी, बॅटरी सेव्हर:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• पार्श्वभूमी ऍक्टिव्हिटी, काही व्हिज्युअल प्रभाव आणि इतर वैशिष्ट्ये जसे “हे गूगल ” बंद किंवा बंद करते"</string>
+    <string name="op_battery_saver_description_no_ga">"बॅटरीचे आयुष्य वाढविण्यासाठी, बॅटरी सेव्हर: 
 
-•Turns off or restricts background activity, and some visual effects"</string>
+• पार्श्वभूमी ऍक्टिव्हिटी आणि काही दृश्य प्रभाव बंद करते किंवा प्रतिबंधित करते"</string>
     <string name="op_earphone_connect">जोडत आहे...</string>
     <string name="op_earphone_connected_fail">जोडणी करण्यास अयशस्वी. आपण हेडसेट आणि ब्ल्यूटूथची स्थिती तपासू शकता.</string>
     <string name="op_earphone_connected_success">जोडणी केली. अधिक सेट करण्यासाठी टॅप करा.</string>
@@ -173,14 +173,14 @@
     <string name="op_notification_channel_summary_low">कोणताही ध्‍वनी किंवा कंपनाशिवाय कमी महत्‍त्‍वाच्‍या सूचना.</string>
     <string name="op_notification_section_header_gentle">इतर सूचना</string>
     <string name="op_notification_silence_title">इतर</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" संरक्षित चार्जीग"</string>
     <string name="op_qs_dark_mode_tile_label">डार्क मोड</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s वापरले</string>
     <string name="op_quick_settings_night_display_label">दृष्टी आराम</string>
     <string name="op_quick_settings_night_display_summary_off">रात्र स्वरूप बंद आहे, चालू करण्यासाठी टॅप करा</string>
     <string name="op_quick_settings_night_display_summary_on">रात्र स्वरूप चालू आहे, बंद करण्यासाठी टॅप करा</string>
     <string name="op_read_mode2_dialog_black">मोनो प्रभाव</string>
-    <string name="op_read_mode2_dialog_color">क्रोमॅटिक प्रभाव</string>
+    <string name="op_read_mode2_dialog_color">क्रोमेटिक प्रभाव</string>
     <string name="op_read_mode2_dialog_title">प्रभाव निवडा</string>
     <string name="op_reverse_charge_notification_btn">थांबवा</string>
     <string name="op_reverse_charge_notification_discharging">कनेक्ट केलेले डिव्हाइस चार्ज करीत आहे</string>
@@ -213,9 +213,9 @@
     <string name="prevent_view_top_tag_cancel2">स्क्रीनवरील वर्तुळांना फॉलो करा आणि पॉकेट मोडमधून सक्तीने बाहेर पडण्यासाठी त्यांच्यावर टॅप करा</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">गोपनीयतेेेेचा इशारा</string>
-    <string name="privacy_alert_content_text">बदल करण्यासाठी टॅप करा</string>
-    <string name="privacy_alert_content_title">%1$s हे आपल्या %2$s चा वापर करत आहे</string>
+    <string name="privacy_alert_application_name">गोपनीयता चेतावनी</string>
+    <string name="privacy_alert_content_text">बदलण्यासाठी टॅप करा</string>
+    <string name="privacy_alert_content_title">%1$s हे तुमच्या %2$s चा वापर करत आहे</string>
     <string name="privacy_type_camera">कॅमेरा</string>
     <string name="privacy_type_microphone">मायक्रोफोन</string>
     <string name="qr_bubble_hint">संदेश वाचण्यासाठी आणि प्रत्युत्तर देण्यासाठी बबल वर टॅप करा</string>
@@ -279,23 +279,32 @@
     <string name="select_year">वर्ष निवडा</string>
     <string name="sim_status_uss_network_roam">रोमिंग</string>
     <string name="tethered_notification_hybrid_sharing_mobile">मोबाइल डेटा सामायिक करत आहे, सेटिंग्ज प्रविष्ट करण्यासाठी क्लिक करा</string>
-    <string name="tethered_notification_hybrid_sharing_none">सामायिक करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही, सेटिंग्ज प्रविष्ट करण्यासाठी क्लिक करा</string>
+    <string name="tethered_notification_hybrid_sharing_none">शेअर करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही, सेटिंग्ज प्रविष्ट करण्यासाठी क्लिक करा</string>
     <string name="tethered_notification_hybrid_sharing_wifi">वाय-फाय सामायिक करत आहे, सेटिंग्ज प्रविष्ट करण्यासाठी क्लिक करा</string>
     <string name="tethered_notification_message">सेट करण्यासाठी टॅप करा.</string>
-    <string name="tethered_notification_multi_device_message">%1$sजोडलेली साधने</string>
-    <string name="tethered_notification_multi_tether_title">टेथरिंग किंवा मोबाईल हॉटस्पॉट सक्रिय</string>
+    <string name="tethered_notification_multi_device_message">%1$sकनेक्ट केलेले डिव्हाइस</string>
+    <string name="tethered_notification_multi_tether_title">टिथरिंग आणि मोबाइल हॉटस्पॉट सक्रिय</string>
     <string name="tethered_notification_no_device_message">जोडलेले साधन नाही</string>
-    <string name="tethered_notification_one_device_message">%1$sजोडलेले साधन</string>
+    <string name="tethered_notification_one_device_message">%1$sकनेक्ट केलेले डिव्हाइस</string>
     <string name="tethered_notification_sharing_mobile_multi">मोबाइल डेटा सामायिक करत आहे,%1$sडिव्हाइस कनेक्ट केलेली आहेत</string>
     <string name="tethered_notification_sharing_mobile_no">मोबाइल डेटा सामायिक करत आहे कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>
     <string name="tethered_notification_sharing_mobile_single">मोबाइल डेटा सामायिक करत आहे, %1$sडिव्हाइस कनेक्ट केलेले आहे</string>
-    <string name="tethered_notification_sharing_none_multi">सामायिक करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही,%1$sडिव्हाइस कनेक्ट केलेली आहेत</string>
-    <string name="tethered_notification_sharing_none_no">सामायिक करण्यासाठी कोणतीही उपलब्ध नेटवर्क नाहीत, कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>
-    <string name="tethered_notification_sharing_none_single">सामायिक करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही, %1$sडिव्हाइस कनेक्ट केले</string>
+    <string name="tethered_notification_sharing_none_multi">शेअर करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही,%1$sडिव्हाइस कनेक्ट केलेली आहेत</string>
+    <string name="tethered_notification_sharing_none_no">शेअर करण्यासाठी कोणतीही उपलब्ध नेटवर्क नाहीत, कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>
+    <string name="tethered_notification_sharing_none_single">शेअर करण्यासाठी कोणतेही नेटवर्क उपलब्ध नाही, %1$sडिव्हाइस कनेक्ट केले</string>
     <string name="tethered_notification_sharing_wifi_multi">वाय-फाय सामायिक करत आहे, %1$sडिव्हाइस कनेक्ट केलेली आहेत</string>
     <string name="tethered_notification_sharing_wifi_no">वाय-फाय सामायिक करत आहे, कोणतेही डिव्हाइस कनेक्ट केलेले नाही</string>
     <string name="tethered_notification_sharing_wifi_single">वाय-फाय सामायिक करत आहे, %1$sडिव्हाइस कनेक्ट केलेले आहे</string>
-    <string name="tethered_notification_title">टेथरिंग किंवा मोबाइल हॉटस्‍पॉट सक्रिय</string>
+    <string name="tethered_notification_title">टिथरिंग किंवा मोबाइल हॉटस्पॉट सक्रिय</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">डिव्हाइस नि: शब्द करण्यासाठी, Alert Sliderला व्हायब्रेट किंवा सायलेंट मोडवर सेट करा.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">रिंग वॉल्यूम म्युट करा</string>
+    <string name="threekey_volume_guide_dialog_ok">ठीक आहे</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">रिंगिंग सक्षम करण्यासाठी, रिंग मोडवर स्विच करण्यासाठी Alert Slider वापरा आणि तुमच्या पसंतीनुसार रिंग व्हॉल्यूम सेट करा.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">रिंग स्वरूप</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider सायलेंट मोडमध्ये आहे; येणार्‍या कॉलसाठी डिव्हाइस वाजणार नाही किंवा कंपन होणार नाही. कृपया रिंग करून सूचित करण्यासाठी रिंग मोडवर स्विच करा.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">सायलेंट मोड</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider सध्या व्हायब्रेट मोडमध्ये आहे; येणार्‍या कॉलसाठी डिव्हाइस वाजणार नाही. तुम्हाला केवळ कंपनेद्वारे सूचित केले जाईल. कृपया रिंग करून सूचित करण्यासाठी रिंग मोडवर स्विच करा.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">व्हायब्रेट मोड</string>
     <string name="time_picker_header_text">वेळ सेट करा</string>
     <string name="time_picker_hour_label">तास</string>
     <string name="time_picker_input_error">योग्य वेळ प्रविष्ट करा</string>

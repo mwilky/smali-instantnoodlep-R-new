@@ -32,6 +32,8 @@
 
     move-result-object p0
 
+    if-eqz p0, :cond_0
+
     invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object p2
@@ -68,5 +70,6 @@
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    :cond_0
     return-void
 .end method

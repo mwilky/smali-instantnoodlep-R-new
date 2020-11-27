@@ -29,11 +29,11 @@
 
     invoke-direct {p0, p2}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;-><init>(Landroid/content/Context;)V
 
-    sget p1, Lcom/android/systemui/R$string;->user_add_user_title:I
+    sget p1, Lcom/android/settingslib/R$string;->user_add_user_title:I
 
     invoke-virtual {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setTitle(I)V
 
-    sget p1, Lcom/android/systemui/R$string;->user_add_user_message_short:I
+    sget p1, Lcom/android/settingslib/R$string;->user_add_user_message_long:I
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s сака да прикажува делови од %2$s</string>
     <string name="abc_toolbar_collapse_description">Собери</string>
     <string name="about_action_bar_title">За</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Верзија %s</string>
     <string name="about_privacy_policy">Политика за приватност</string>
     <string name="about_release_note_title">Дневник на надградувања:</string>
     <string name="about_terms_service">Услови на услуга</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">Задржете и влечете за да ги преуредите плочките</string>
     <string name="drag_to_remove_disabled">Потребни ви се најмалку %1$d плочки</string>
     <string name="drag_to_remove_tiles">Повлечете тука за да се отстрани</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">Лева: %1$s; Десна: %2$s</string>
     <string name="edit_mode_hint">Влечете ги опциите за да се преуредат. Допрете за да се покаже или сокрие.</string>
     <string name="empty_shade_text">Нема известувања</string>
     <string name="enable_adb">Отстранување грешки на USB</string>
@@ -822,7 +822,7 @@
     <string name="home">Почетна страница за поставки</string>
     <string name="hotspot_apm_message">Не е можно поврзување со мобилна мрежа додека е вклучен режимот за патување со авион. Исклучете го и пробајте пак.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Вметнете SIM-картичка за да ја употребувате опцијата Мобилен хотспот и останатите опции за поврзување</string>
-    <string name="hotspot_operator_dialog_nosim_title">No SIM card</string>
+    <string name="hotspot_operator_dialog_nosim_title">Нема SIM-картичка</string>
     <string name="hotspot_operator_dialog_othererror_msg">Не сте претплатени за поврзување преку Wi-Fi</string>
     <string name="hotspot_operator_dialog_othererror_title">Проблем со поврзувањето преку Wi-Fi</string>
     <string name="hotspot_tip_message">"Мобилниот хотспот го споделува вашиот мобилен интернет со други уреди кои имаат Wi-Fi. За да се поврзете на вашиот мобилен хотспот: \u0009 
@@ -1332,12 +1332,12 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="oneplus_threekey_navigation_vibration">Само вибрации</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>отклучување</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>отклучувања</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"За да го продолжите работниот век на батеријата - штедач на батерија:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•ја исклучува или ограничува активноста во позадина, некои визуелни ефекти и други функции како “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"За да го продолжите работниот век на батеријата - штедач на батерија:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ја исклучува или ограничува активноста во позадина и некои визуелни ефекти"</string>
     <string name="op_earphone_connect">Се спарува...</string>
     <string name="op_earphone_connected_fail">Неуспешно спарување. Можете да го проверите статусот на слушалките и Bluetooth.</string>
     <string name="op_earphone_connected_success">Спарено. Допрете за да поставите повеќе.</string>
@@ -1363,17 +1363,17 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="op_kg_prompt_reason_timeout_pattern">Притиснете го копчето за вклучување за да ја исцртате шемата</string>
     <string name="op_kg_prompt_reason_timeout_pin">Притиснете го копчето за вклучување за да внесете PIN</string>
     <string name="op_kg_prompt_reason_timeout_swipe">За дополнителна безбедност, лизгајте нагоре за да отклучите</string>
-    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_alert_title">Важно</string>
     <string name="op_notification_channel_summary_low">Помалку важните известувања без звук или вибрација.</string>
     <string name="op_notification_section_header_gentle">Други известувања</string>
     <string name="op_notification_silence_title">Друго</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Заштитено полнење"</string>
     <string name="op_qs_dark_mode_tile_label">Темен режим</string>
     <string name="op_qs_data_usage_used">Искористено %1$s: %2$s%3$s</string>
     <string name="op_quick_settings_night_display_label">Удобност за видот</string>
     <string name="op_quick_settings_night_display_summary_off">Исклучен е вечерниот режим, допрете за да се вклучи</string>
     <string name="op_quick_settings_night_display_summary_on">Вклучен е вечерниот режим, допрете за да се исклучи</string>
-    <string name="op_read_mode2_dialog_black">Моно ефект</string>
+    <string name="op_read_mode2_dialog_black">Црно-бел ефект</string>
     <string name="op_read_mode2_dialog_color">Хроматски ефект</string>
     <string name="op_read_mode2_dialog_title">Изберете ефект</string>
     <string name="op_reverse_charge_notification_btn">ПРЕКИНИ</string>
@@ -1885,11 +1885,11 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="tether_settings_title_usb">Интернет преку USB</string>
     <string name="tether_settings_title_usb_bluetooth">Врзување</string>
     <string name="tether_settings_title_wifi">Преносл. точка на пристап</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">Се споделува мобилен интернет, кликнете за да влезете во Поставки</string>
-    <string name="tethered_notification_hybrid_sharing_none">Нема достапна мрежа за споделување, кликнете за да влезете во Поставки</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Се споделува Wi-Fi, кликнете за да влезете во Поставки</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">Се споделува мобилен интернет, кликнете за да влезете во „Поставки“</string>
+    <string name="tethered_notification_hybrid_sharing_none">Нема достапна мрежа за споделување, кликнете за да влезете во „Поставки“</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Се споделува Wi-Fi, кликнете за да влезете во „Поставки“</string>
     <string name="tethered_notification_message">Допрете за поставување.</string>
-    <string name="tethered_notification_multi_device_message">%1$s поврзани уреди</string>
+    <string name="tethered_notification_multi_device_message">%1$s поврзани уреда</string>
     <string name="tethered_notification_multi_tether_title">Поврзувањето и мобилниот хотспот се активни</string>
     <string name="tethered_notification_no_device_message">Нема поврзан уред</string>
     <string name="tethered_notification_one_device_message">%1$s поврзан уред</string>
@@ -1902,7 +1902,7 @@ YИсто така, поврзани сте на VPN којашто може д�
     <string name="tethered_notification_sharing_wifi_multi">Се споделува Wi-Fi, поврзани се %1$s уреда</string>
     <string name="tethered_notification_sharing_wifi_no">Се споделува Wi-Fi, нема поврзан уред</string>
     <string name="tethered_notification_sharing_wifi_single">Се споделува Wi-Fi, поврзан е %1$s уред</string>
-    <string name="tethered_notification_title">Активно е поврзување или мобилен хотспот</string>
+    <string name="tethered_notification_title">Поврзувањето и мобилниот хотспот се активни</string>
     <string name="tethering_hardware_offload">Хардверско забрзување за врзување</string>
     <string name="tethering_hardware_offload_summary">Ако е достапно, користи хардверско забрзување за врзување</string>
     <string name="tethering_settings_not_available">Поставките за спојување не се достапни за овој корисник</string>
@@ -1914,6 +1914,15 @@ YИсто така, поврзани сте на VPN којашто може д�
 \u0009•го користите телефонот на високи температури"</string>
     <string name="thermal_shutdown_message">Сега телефонот работи нормално</string>
     <string name="thermal_shutdown_title">Телефонот се исклучи поради загреаност</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">За да се стиши уредот, поставете го Alert slider на вибрации или тивок режим.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Стишување на ѕвонењето</string>
+    <string name="threekey_volume_guide_dialog_ok">ОК</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">За да го овозможите ѕвонењето, користете го Alert slider за да се префрлите на режимот за ѕвонење и поставете ја гласноста на ѕвонењето како што ви одговара.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider е моментално во тивок режим – уредот нема да ѕвони или вибрира за дојдовен повик. Префрлете се на режим за ѕвонење за да бидете известени со ѕвонење.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Тивок режим</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider е моментално во режим за вибрирање – уредот нема да ѕвони за дојдовен повик. Ќе бидете известени само со вибрации. Префрлете се на режим за ѕвонење за да бидете известени со ѕвонење.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Режим за вибрирање</string>
     <string name="tile_unavailable">Недостапно</string>
     <string name="time_picker_header_text">Поставете време</string>
     <string name="time_picker_hour_label">час</string>

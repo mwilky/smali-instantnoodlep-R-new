@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s haluaa näyttää osia sovelluksesta %2$s.</string>
     <string name="abc_toolbar_collapse_description">Tiivistä</string>
     <string name="about_action_bar_title">Tietoja</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versio %s</string>
     <string name="about_privacy_policy">Yksityisyyden suoja</string>
     <string name="about_release_note_title">Päivitysloki:</string>
     <string name="about_terms_service">Palveluehdot</string>
@@ -723,7 +723,7 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja."</string>
     <string name="drag_to_rearrange_tiles">Järjestele koskettamalla pitkään ja vetämällä</string>
     <string name="drag_to_remove_disabled">%1$d kiekkoa on vähimmäismäärä</string>
     <string name="drag_to_remove_tiles">Poista vetämällä tähän.</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"V: %1$s  O: %2$s"</string>
     <string name="edit_mode_hint">Järjestele tiilet uudelleen vetämällä. Näytä tai piilota napauttamalla.</string>
     <string name="empty_shade_text">Ei ilmoituksia</string>
     <string name="enable_adb">USB-vianetsintä</string>
@@ -1332,12 +1332,12 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="oneplus_threekey_navigation_vibration">Vain värinä</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> lukituksen avaus</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> lukituksen avausta</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Virransäästötoiminto pidentää akun käyttöikää
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•ottamalla taustatoiminnot, jotkin visuaaliset tehosteet ja tietyt toiminnot, kuten “Hei Google” -komennon, pois käytöstä tai rajoittamalla niitä"</string>
+    <string name="op_battery_saver_description_no_ga">"Virransäästötoiminto pidentää akun käyttöikää
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ottamalla taustatoiminnot ja jotkin visuaaliset tehosteet pois käytöstä tai rajoittamalla niitä"</string>
     <string name="op_earphone_connect">Muodostetaan laiteparia...</string>
     <string name="op_earphone_connected_fail">Laiteparin muodostus epäonnistui. Voit tarkistaa kuulokkeet ja Bluetoothin tilan.</string>
     <string name="op_earphone_connected_success">Laitepari muodostettu. Määritä enemmän napauttamalla.</string>
@@ -1363,11 +1363,11 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="op_kg_prompt_reason_timeout_pattern">Käytä kuviota painamalla virtapainiketta</string>
     <string name="op_kg_prompt_reason_timeout_pin">Käytä PIN-koodia painamalla virtapainiketta</string>
     <string name="op_kg_prompt_reason_timeout_swipe">Suojauksen parantamiseksi avaa lukitus pyyhkäisemällä ylös</string>
-    <string name="op_notification_alert_title">Tärkeää</string>
+    <string name="op_notification_alert_title">Tärkeä</string>
     <string name="op_notification_channel_summary_low">Vähemmän tärkeät ilmoitukset ilman ääntä tai värinää.</string>
     <string name="op_notification_section_header_gentle">Muut ilmoitukset</string>
     <string name="op_notification_silence_title">Muut</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Suojattu lataus"</string>
     <string name="op_qs_dark_mode_tile_label">Pimeä tila</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s käytetty</string>
     <string name="op_quick_settings_night_display_label">Katselumukavuus</string>
@@ -1506,7 +1506,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="priority_onboarding_title">Tärkeäksi merkitty keskustelu</string>
     <string name="privacy_alert_application_name">Tietosuojavaroitus</string>
     <string name="privacy_alert_content_text">Muuta napauttamalla</string>
-    <string name="privacy_alert_content_title">%1$s käyttää sinun %2$s</string>
+    <string name="privacy_alert_content_title">%1$s käyttää seuraavaa: %2$s</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_microphone">mikrofoni</string>
     <string name="private_dns_broken">Ei pääsyä yksityiselle DNS-palvelimelle</string>
@@ -1885,24 +1885,24 @@ valvoa"</string>
     <string name="tether_settings_title_usb">Jaettu yhteys USB:n kautta</string>
     <string name="tether_settings_title_usb_bluetooth">Jaettu yhteys</string>
     <string name="tether_settings_title_wifi">Kannettava yhteyspiste</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">Jaetaan mobiilidata, siirry asetuksiin napsauttamalla</string>
-    <string name="tethered_notification_hybrid_sharing_none">Ei jaettavaa verkkoa käytettävissä, siirry asetuksiin napsauttamalla</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Jaetaan Wi-Fi, siirry asetuksiin napsauttamalla</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">Jaetaan mobiilidata; siirry asetuksiin napsauttamalla</string>
+    <string name="tethered_notification_hybrid_sharing_none">Ei jaettavaa verkkoa käytettävissä; siirry asetuksiin napsauttamalla</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Jaetaan Wi-Fi; siirry asetuksiin napsauttamalla</string>
     <string name="tethered_notification_message">Aseta napauttamalla.</string>
-    <string name="tethered_notification_multi_device_message">%1$s kytkettyä laitetta</string>
-    <string name="tethered_notification_multi_tether_title">Yhdistäminen ja mobiili-hotspot aktiivinen</string>
+    <string name="tethered_notification_multi_device_message">%1$s yhdistettyä laitetta</string>
+    <string name="tethered_notification_multi_tether_title">Yhteyden jakaminen ja mobiili-hotspot aktiivisia</string>
     <string name="tethered_notification_no_device_message">Ei yhdistettyä laitetta</string>
-    <string name="tethered_notification_one_device_message">%1$s kytketty laite</string>
-    <string name="tethered_notification_sharing_mobile_multi">Jaetaan mobiilidata, %1$s laitetta yhdistetty</string>
-    <string name="tethered_notification_sharing_mobile_no">Jaetaan mobiilidata, ei yhdistettyjä laitteita</string>
-    <string name="tethered_notification_sharing_mobile_single">Jaetaan mobiilidata, %1$s laite yhdistetty</string>
-    <string name="tethered_notification_sharing_none_multi">Ei jaettavaa verkkoa käytettävissä, %1$s laitetta yhdistetty</string>
+    <string name="tethered_notification_one_device_message">%1$s yhdistetty laite</string>
+    <string name="tethered_notification_sharing_mobile_multi">Jaetaan mobiilidata; %1$s laitetta yhdistetty</string>
+    <string name="tethered_notification_sharing_mobile_no">Jaetaan mobiilidata; ei yhdistettyjä laitteita</string>
+    <string name="tethered_notification_sharing_mobile_single">Jaetaan mobiilidata; %1$s laite yhdistetty</string>
+    <string name="tethered_notification_sharing_none_multi">Ei jaettavaa verkkoa käytettävissä; %1$s laitetta yhdistetty</string>
     <string name="tethered_notification_sharing_none_no">Ei jaettavaa verkkoa käytettävissä, ei yhdistettyjä laitteita</string>
-    <string name="tethered_notification_sharing_none_single">Ei jaettavaa verkkoa käytettävissä, %1$s laite yhdistetty</string>
-    <string name="tethered_notification_sharing_wifi_multi">Jaetaan Wi-Fi, %1$s laitetta yhdistetty</string>
-    <string name="tethered_notification_sharing_wifi_no">Jaetaan Wi-Fi, ei yhdistettyjä laitteita</string>
-    <string name="tethered_notification_sharing_wifi_single">Jaetaan Wi-Fi, %1$s laite yhdistetty</string>
-    <string name="tethered_notification_title">Verkkosidonta ja mobiili-hotspot aktiivinen</string>
+    <string name="tethered_notification_sharing_none_single">Ei jaettavaa verkkoa käytettävissä; %1$s laite yhdistetty</string>
+    <string name="tethered_notification_sharing_wifi_multi">Jaetaan Wi-Fi; %1$s laitetta yhdistetty</string>
+    <string name="tethered_notification_sharing_wifi_no">Jaetaan Wi-Fi; ei yhdistettyjä laitteita</string>
+    <string name="tethered_notification_sharing_wifi_single">Jaetaan Wi-Fi; %1$s laite yhdistetty</string>
+    <string name="tethered_notification_title">Yhteyden jakaminen tai mobiili-hotspot aktiivinen</string>
     <string name="tethering_hardware_offload">Laitteistokiihdytyksen yhteyden jakaminen</string>
     <string name="tethering_hardware_offload_summary">Käytä laitteistokiihdytyksen yhteyden jakamista, jos se on käytettävissä.</string>
     <string name="tethering_settings_not_available">Tämä käyttäjä ei voi käyttää yhteyden jakamisasetuksia</string>
@@ -1914,6 +1914,15 @@ Puhelimesi voi kuumentua liikaa, jos
 \u0009• käytät puhelintasi korkeissa lämpötiloissa."</string>
     <string name="thermal_shutdown_message">Puhelimesi toimii nyt normaalisti.</string>
     <string name="thermal_shutdown_title">Puhelin sammui kuumuuden takia</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Mykistä laite asettamalla Alert Slider värinä- tai äänettömään tilaan.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Mykistä soittoääni</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Aseta laite soimaan siirtämällä Alert Slider soittotilaan ja asettamalla soittoäänen voimakkuus haluamallesi tasolle.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Soittotila</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider on äänettömässä tilassa, joten laite ei soi eikä värise puhelujen saapuessa. Jos haluat, että laite soi, siirry soittotilaan.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Äänetön tila</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider on värinätilassa, joten laite ei soi puhelujen saapuessa. Saat vain värinäilmoituksen. Jos haluat, että laite soi, siirry soittotilaan.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Värinätila</string>
     <string name="tile_unavailable">Ei käytettävissä</string>
     <string name="time_picker_header_text">Aseta aika</string>
     <string name="time_picker_hour_label">tunti</string>
@@ -2150,7 +2159,7 @@ Wi-Fin osoite (BSSID)
     <string name="zen_priority_introduction">Äänet ja värinät eivät häiritse sinua, paitsi jos ne ovat hälytyksiä, muistutuksia, tapahtumia tai määrittämiäsi soittajia. Kuulet edelleen kaiken valitsemasi sisällön, kuten musiikin, videot ja pelit.</string>
     <string name="zen_silence_introduction">Tämä estää KAIKKI äänet ja värinät, mukaan lukien hälytysten, musiikin, videoiden ja pelien äänet ja värinät.</string>
     <string name="zen_silence_introduction_voice">Tämä estää kaikki äänet ja värinät, mukaan lukien hälytysten, musiikin, videoiden ja pelien äänet ja värinät. Voit kuitenkin soittaa puheluita.</string>
-    <string name="zzz_op_global_action_bootloader">Bootloader-tila</string>
-    <string name="zzz_op_global_action_recovery">Recovery-tila</string>
+    <string name="zzz_op_global_action_bootloader">Käynnistysohjelma</string>
+    <string name="zzz_op_global_action_recovery">Palautus</string>
     <string name="zzz_op_quick_pay_no_install_message">Asenna maksusovellukset pikamaksujen käyttämiseksi</string>
 </resources>

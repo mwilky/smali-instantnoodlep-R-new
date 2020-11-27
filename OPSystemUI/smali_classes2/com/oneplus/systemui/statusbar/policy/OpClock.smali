@@ -349,6 +349,8 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
+    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setLayoutDirection(I)V
+
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V

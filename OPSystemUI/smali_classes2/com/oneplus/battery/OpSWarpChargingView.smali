@@ -1754,8 +1754,6 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevelPercent:Landroid/widget/TextView;
-
     sget-object v3, Lcom/oneplus/battery/OpSWarpChargingView;->mRes:Landroid/content/res/Resources;
 
     sget v4, Lcom/android/systemui/R$dimen;->op_text_size_px_h5:I
@@ -1806,8 +1804,6 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
-
     sget-object v3, Lcom/oneplus/battery/OpSWarpChargingView;->mRes:Landroid/content/res/Resources;
 
     sget v4, Lcom/android/systemui/R$dimen;->op_swarp_charging_anim_info_battery_level_text_size:I
@@ -1825,8 +1821,6 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
-
     sget-object v3, Lcom/oneplus/battery/OpSWarpChargingView;->mRes:Landroid/content/res/Resources;
 
     sget v4, Lcom/android/systemui/R$dimen;->op_swarp_charging_anim_info_battery_level_text_size:I
@@ -1843,8 +1837,6 @@
     iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevelHundredthBound:Landroid/widget/TextView;
 
     if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
 
     sget-object v3, Lcom/oneplus/battery/OpSWarpChargingView;->mRes:Landroid/content/res/Resources;
 
@@ -2158,7 +2150,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevelPercent:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mBatteryLevelPercentBound:Landroid/widget/TextView;
 
     invoke-direct {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->refreshUI()V
 

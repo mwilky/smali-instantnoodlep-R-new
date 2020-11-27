@@ -101,63 +101,63 @@
     move v6, v5
 
     :goto_2
-    const-string v8, "always_on_time_start"
-
-    invoke-static {v2, v8, v1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v9, "always_on_time_end"
+    const-string v9, "always_on_time_start"
 
     invoke-static {v2, v9, v1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v2
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "updateScheduleAlwaysOn , aodMainSwitchEnabled:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", aodScheduleEnabled:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", aodScheduleAllDayOn:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v10, ", aodScheduleTimeStart:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v10, ", aodScheduleTimeEnd:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
     move-result-object v9
 
-    const-string v10, "AodAlwaysOnReceiver"
+    const-string v10, "always_on_time_end"
 
-    invoke-static {v10, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v10, v1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
-    if-nez v8, :cond_3
+    move-result-object v2
 
-    const-string v8, "08:00"
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "updateScheduleAlwaysOn , aodMainSwitchEnabled:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", aodScheduleEnabled:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", aodScheduleAllDayOn:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v11, ", aodScheduleTimeStart:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, ", aodScheduleTimeEnd:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v11, "AodAlwaysOnReceiver"
+
+    invoke-static {v11, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v9, :cond_3
+
+    const-string v9, "08:00"
 
     :cond_3
     if-nez v2, :cond_4
@@ -165,13 +165,13 @@
     const-string v2, "22:00"
 
     :cond_4
-    const-string v9, "alarm"
+    const-string v10, "alarm"
 
-    invoke-virtual {v0, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v9
+    move-result-object v10
 
-    check-cast v9, Landroid/app/AlarmManager;
+    check-cast v10, Landroid/app/AlarmManager;
 
     if-eqz v3, :cond_5
 
@@ -180,15 +180,15 @@
     :cond_5
     invoke-static {v0, v5, v5}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnReceiver;->createAodSchedulePeningIntent(Landroid/content/Context;IZ)Landroid/app/PendingIntent;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v9, v11}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v12}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     invoke-static {v0, v4, v5}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnReceiver;->createAodSchedulePeningIntent(Landroid/content/Context;IZ)Landroid/app/PendingIntent;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v9, v11}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v12}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     :cond_6
     if-eqz v3, :cond_7
@@ -199,46 +199,130 @@
 
     invoke-static {v0, v5, v5}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnReceiver;->createAodSchedulePeningIntent(Landroid/content/Context;IZ)Landroid/app/PendingIntent;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v9, v11}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v12}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     invoke-static {v0, v4, v5}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnReceiver;->createAodSchedulePeningIntent(Landroid/content/Context;IZ)Landroid/app/PendingIntent;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v9, v11}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v12}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     :cond_7
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_16
 
-    if-eqz v7, :cond_12
+    if-eqz v7, :cond_16
 
-    if-nez v6, :cond_12
+    if-nez v6, :cond_16
 
-    if-eqz v8, :cond_12
+    if-eqz v9, :cond_16
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_16
 
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_16
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_16
 
     const-string v3, ":"
 
-    invoke-virtual {v8, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v9, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    aget-object v7, v6, v5
+    const-string v7, "\\."
+
+    if-eqz v6, :cond_8
+
+    array-length v12, v6
+
+    if-ge v12, v8, :cond_9
+
+    :cond_8
+    invoke-virtual {v9, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    :cond_9
+    aget-object v9, v6, v5
+
+    invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v9
+
+    mul-int/lit8 v9, v9, 0x64
+
+    aget-object v12, v6, v4
+
+    invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v12
+
+    add-int/2addr v9, v12
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_a
+
+    array-length v13, v12
+
+    if-ge v13, v8, :cond_b
+
+    :cond_a
+    invoke-virtual {v2, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v12
+
+    :cond_b
+    aget-object v2, v12, v5
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x64
+
+    aget-object v7, v12, v4
+
+    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v7
+
+    add-int/2addr v2, v7
+
+    new-instance v7, Ljava/text/SimpleDateFormat;
+
+    const-string v8, "HH:mm"
+
+    invoke-direct {v7, v8}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    aget-object v7, v3, v5
 
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -246,112 +330,54 @@
 
     mul-int/lit8 v7, v7, 0x64
 
-    aget-object v8, v6, v4
-
-    invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v8
-
-    add-int/2addr v7, v8
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    aget-object v8, v2, v5
-
-    invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v8
-
-    mul-int/lit8 v8, v8, 0x64
-
-    aget-object v11, v2, v4
-
-    invoke-static {v11}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v11
-
-    add-int/2addr v8, v11
-
-    new-instance v11, Ljava/text/SimpleDateFormat;
-
-    const-string v12, "HH:mm"
-
-    invoke-direct {v11, v12}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v3
-
-    aget-object v11, v3, v5
-
-    invoke-static {v11}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v11
-
-    mul-int/lit8 v11, v11, 0x64
-
     aget-object v3, v3, v4
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
-    add-int/2addr v11, v3
+    add-int/2addr v7, v3
 
-    if-lt v8, v7, :cond_8
+    if-lt v2, v9, :cond_c
 
-    if-lt v11, v7, :cond_8
+    if-lt v7, v9, :cond_c
 
-    if-gt v8, v11, :cond_9
+    if-gt v2, v7, :cond_d
 
-    :cond_8
-    if-lt v7, v8, :cond_a
+    :cond_c
+    if-lt v9, v2, :cond_e
 
-    if-ge v11, v7, :cond_9
+    if-ge v7, v9, :cond_d
 
-    if-ge v11, v8, :cond_a
+    if-ge v7, v2, :cond_e
 
-    :cond_9
+    :cond_d
     move v3, v4
 
     goto :goto_3
 
-    :cond_a
+    :cond_e
     move v3, v5
 
     :goto_3
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v12
+    move-result-object v8
 
     const-string v13, "doze_always_on"
 
-    invoke-static {v12, v13, v5, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v8, v13, v5, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    move-result v12
+    move-result v8
 
-    if-ne v4, v12, :cond_b
+    if-ne v4, v8, :cond_f
 
-    move v12, v4
+    move v8, v4
 
     goto :goto_4
 
-    :cond_b
-    move v12, v5
+    :cond_f
+    move v8, v5
 
     :goto_4
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
@@ -362,15 +388,15 @@
 
     move-result-object v14
 
-    if-nez v14, :cond_c
+    if-nez v14, :cond_10
 
     const-string v0, "can\'t get KeyguardUpdateMonitor object"
 
-    invoke-static {v10, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v11, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    :cond_c
+    :cond_10
     invoke-virtual {v14}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getAodAlwaysOnController()Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
     move-result-object v15
@@ -389,51 +415,51 @@
 
     invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v4, ", end:"
 
     invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v4, ", current:"
+    const-string v2, ", current:"
 
-    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v4, ", alwaysOnEnabled:"
+    const-string v2, ", alwaysOnEnabled:"
 
-    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", lastAlwaysOnEnabled:"
+    const-string v2, ", lastAlwaysOnEnabled:"
 
-    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v4, ", alwaysOnCanEnabled: "
+    const-string v2, ", alwaysOnCanEnabled: "
 
-    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-static {v10, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v11, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-static {v4, v13, v3, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v2, v13, v3, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    if-eq v12, v3, :cond_e
+    if-eq v8, v3, :cond_12
 
     const-class v1, Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -443,72 +469,72 @@
 
     check-cast v1, Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_11
 
-    if-eqz v14, :cond_d
+    if-eqz v14, :cond_11
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
     goto :goto_5
 
-    :cond_d
-    move v4, v5
+    :cond_11
+    move v2, v5
 
     :goto_5
-    invoke-virtual {v1, v4}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onAlwaysOnEnableChanged(Z)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onAlwaysOnEnableChanged(Z)V
 
-    :cond_e
+    :cond_12
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    aget-object v4, v6, v5
+    aget-object v2, v6, v5
 
-    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v2
 
-    const/16 v7, 0xb
+    const/16 v4, 0xb
 
-    invoke-virtual {v1, v7, v4}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v1, v4, v2}, Ljava/util/Calendar;->set(II)V
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    aget-object v8, v6, v4
-
-    invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v8
-
-    const/16 v11, 0xc
-
-    invoke-virtual {v1, v11, v8}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v8, 0xd
-
-    invoke-virtual {v1, v8, v5}, Ljava/util/Calendar;->set(II)V
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v12
-
-    aget-object v13, v2, v5
-
-    invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v13
-
-    invoke-virtual {v12, v7, v13}, Ljava/util/Calendar;->set(II)V
-
-    aget-object v7, v2, v4
+    aget-object v7, v6, v2
 
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v7
 
-    invoke-virtual {v12, v11, v7}, Ljava/util/Calendar;->set(II)V
+    const/16 v8, 0xc
 
-    invoke-virtual {v12, v8, v5}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v1, v8, v7}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v7, 0xd
+
+    invoke-virtual {v1, v7, v5}, Ljava/util/Calendar;->set(II)V
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v9
+
+    aget-object v13, v12, v5
+
+    invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v13
+
+    invoke-virtual {v9, v4, v13}, Ljava/util/Calendar;->set(II)V
+
+    aget-object v4, v12, v2
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-virtual {v9, v8, v4}, Ljava/util/Calendar;->set(II)V
+
+    invoke-virtual {v9, v7, v5}, Ljava/util/Calendar;->set(II)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -518,121 +544,121 @@
 
     move-result-wide v13
 
-    cmp-long v7, v7, v13
+    cmp-long v4, v7, v13
 
-    const/4 v8, 0x6
+    const/4 v7, 0x6
 
-    if-lez v7, :cond_f
+    if-lez v4, :cond_13
 
-    invoke-virtual {v1, v8, v4}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v1, v7, v2}, Ljava/util/Calendar;->add(II)V
 
-    :cond_f
+    :cond_13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v13
 
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v9}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v15
 
-    cmp-long v7, v13, v15
+    cmp-long v4, v13, v15
 
-    if-lez v7, :cond_10
+    if-lez v4, :cond_14
 
-    invoke-virtual {v12, v8, v4}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v9, v7, v2}, Ljava/util/Calendar;->add(II)V
 
-    :cond_10
-    new-instance v7, Ljava/lang/StringBuilder;
+    :cond_14
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "splitTimeStartString:."
+    const-string v7, "splitTimeStartString:."
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v8, v6, v5
+    aget-object v7, v6, v5
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, " / "
+    const-string v7, " / "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v6, v6, v4
+    aget-object v6, v6, v2
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v6, ", splitTimeEndString:"
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v6, v2, v5
+    aget-object v6, v12, v5
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v2, v2, v4
+    aget-object v6, v12, v2
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ", calendarStart.getTimeInMillis():"
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v13
+    move-result-wide v6
 
-    invoke-virtual {v7, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v2, ", Date:"
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v4, Ljava/util/Date;
+    new-instance v6, Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v13
+    move-result-wide v7
 
-    invoke-direct {v4, v13, v14}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v6, v7, v8}, Ljava/util/Date;-><init>(J)V
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, ", calendarEnd.getTimeInMillis():"
+    const-string v6, ", calendarEnd.getTimeInMillis():"
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v9}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v13
+    move-result-wide v6
 
-    invoke-virtual {v7, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/util/Date;
 
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v9}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v13
+    move-result-wide v6
 
-    invoke-direct {v2, v13, v14}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v6, v7}, Ljava/util/Date;-><init>(J)V
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v10, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v11, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {v0, v5, v3}, Lcom/oneplus/aod/alwayson/OpAodAlwaysOnReceiver;->createAodSchedulePeningIntent(Landroid/content/Context;IZ)Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    invoke-virtual {v9, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     const/4 v2, 0x1
 
@@ -640,7 +666,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v9, v4}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-virtual {v10, v4}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -648,11 +674,11 @@
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v10
+    move-result-wide v11
 
-    cmp-long v2, v6, v10
+    cmp-long v2, v6, v11
 
-    if-gez v2, :cond_11
+    if-gez v2, :cond_15
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -662,22 +688,22 @@
 
     move-result-object v4
 
-    invoke-virtual {v9, v5, v1, v2, v4}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
+    invoke-virtual {v10, v5, v1, v2, v4}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
 
-    :cond_11
+    :cond_15
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v9}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v6
 
     cmp-long v1, v1, v6
 
-    if-gez v1, :cond_12
+    if-gez v1, :cond_16
 
-    invoke-virtual {v12}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-virtual {v9}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v1
 
@@ -687,9 +713,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v9, v5, v1, v2, v0}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
+    invoke-virtual {v10, v5, v1, v2, v0}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
 
-    :cond_12
+    :cond_16
     return-void
 .end method
 

@@ -61,7 +61,7 @@
         <item quantity="one">%s notifikasi lainnya di dalam.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">Form: One Menerima %1$d notifikasi Form: Other Menerima %2$d notifikasi</item>
+        <item quantity="other">Menerima %d notifikasi</item>
         <item quantity="one">Received %d notification</item>
     </plurals>
     <plurals name="quick_settings_hotspot_secondary_label_num_devices">

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s에서 %2$s의 슬라이스를 표시하려고 합니다.</string>
     <string name="abc_toolbar_collapse_description">접기</string>
     <string name="about_action_bar_title">정보</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">버전 %s</string>
     <string name="about_privacy_policy">개인 정보 보호 정책</string>
     <string name="about_release_note_title">업데이트 로그:</string>
     <string name="about_terms_service">서비스 약관</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">길게 터치하고 드래그하여 타일 재정렬</string>
     <string name="drag_to_remove_disabled">%1$d개 이상의 타일이 필요합니다.</string>
     <string name="drag_to_remove_tiles">여기로 드래그하여 삭제</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"왼쪽: %1$s  오른쪽: %2$s"</string>
     <string name="edit_mode_hint">타일을 재배치하려면 드래그하세요. 표시하거나 숨기려면 탭하세요.</string>
     <string name="empty_shade_text">알림 없음</string>
     <string name="enable_adb">USB 디버깅</string>
@@ -1332,12 +1332,12 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="oneplus_threekey_navigation_vibration">진동만</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>개 잠금 해제</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>개 잠금 해제</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"배터리 수명을 연장할 수 있는 배터리 세이버:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•백그라운드 활동, 일부 시각 효과 및 “Hey Google”과 같은 기타 기능을 끄거나 제한합니다."</string>
+    <string name="op_battery_saver_description_no_ga">"배터리 수명을 연장할 수 있는 배터리 세이버:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•백그라운드 활동과 일부 시각 효과를 끄거나 제한합니다."</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">연결 중...</string>
     <string name="op_earphone_connected_fail">연결하지 못했습니다. 헤드셋 및 Bluetooth 상태를 확인하세요.</string>
@@ -1368,7 +1368,7 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="op_notification_channel_summary_low">소리 또는 진동이 없는 덜 중요한 알림.</string>
     <string name="op_notification_section_header_gentle">기타 알림</string>
     <string name="op_notification_silence_title">기타</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" 충전 보호"</string>
     <string name="op_qs_dark_mode_tile_label">다크 모드</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s 사용됨</string>
     <string name="op_quick_settings_night_display_label">비전 컴포트</string>
@@ -1611,8 +1611,8 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="quick_settings_footer_audio_output">오디오 출력</string>
     <string name="quick_settings_footer_audio_speaker">휴대폰 스피커</string>
     <string name="quick_settings_game_mode_demo">게임 모드가 켜져 있으면 %s. 컨트롤 센터에서 끄거나 알림을 탭하여 끌 수 있습니다.</string>
-    <string name="quick_settings_game_mode_demo_all">알림이 차단되며 용량 버튼이 잠깁니다</string>
-    <string name="quick_settings_game_mode_demo_button">용량 버튼이 잠깁니다</string>
+    <string name="quick_settings_game_mode_demo_all">알림이 차단되며 정전용량 버튼이 잠깁니다</string>
+    <string name="quick_settings_game_mode_demo_button">정전용량 버튼이 잠깁니다</string>
     <string name="quick_settings_game_mode_demo_notification">알림이 차단됩니다</string>
     <string name="quick_settings_game_mode_label">게임 모드</string>
     <string name="quick_settings_game_mode_summary_off">게임 모드가 꺼졌습니다. 켜려면 탭하세요.</string>
@@ -1890,10 +1890,10 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="tethered_notification_hybrid_sharing_none">공유할 수 있는 네트워크 없음, 클릭하여 설정으로 이동</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi 공유 중, 클릭하여 설정으로 이동</string>
     <string name="tethered_notification_message">탭하여 설정하세요.</string>
-    <string name="tethered_notification_multi_device_message">%1$s 연결된 장치</string>
+    <string name="tethered_notification_multi_device_message">연결된 장치 %1$s개</string>
     <string name="tethered_notification_multi_tether_title">테더링 및 모바일 핫스팟 활성</string>
     <string name="tethered_notification_no_device_message">연결된 장치 없음</string>
-    <string name="tethered_notification_one_device_message">%1$s 연결된 장치</string>
+    <string name="tethered_notification_one_device_message">연결된 장치 %1$s개</string>
     <string name="tethered_notification_sharing_mobile_multi">모바일 데이터 공유 중, %1$s개의 장치 연결됨</string>
     <string name="tethered_notification_sharing_mobile_no">모바일 데이터 공유 중, 연결된 장치 없음</string>
     <string name="tethered_notification_sharing_mobile_single">모바일 데이터 공유 중, %1$s개의 장치 연결됨</string>
@@ -1915,6 +1915,15 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
 \u0009• 온도가 높은 곳에서 휴대폰 사용"</string>
     <string name="thermal_shutdown_message">휴대전화가 정상적으로 실행 중입니다.</string>
     <string name="thermal_shutdown_title">발열로 인해 휴대전화 전원이 종료됨</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">장치를 음소거하려면 Alert Slider를 진동 또는 무음 모드로 설정하세요.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">벨소리 볼륨 음소거</string>
+    <string name="threekey_volume_guide_dialog_ok">확인</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">벨소리를 사용 설정하려면 Alert Slider를 사용하여 벨소리 모드로 전환하고 원하는 대로 벨소리 볼륨을 설정하세요.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">벨소리 모드</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider는 현재 무음 모드입니다. 전화가 걸려도 장치는 울리거나 진동하지 않습니다. 벨소리로 알림을 받으려면 벨소리 모드로 전환하세요.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">무음 모드</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider는 현재 진동 모드입니다. 전화가 걸려도 장치는 울리지 않습니다. 진동으로만 알림을 받습니다. 벨소리로 알림을 받으려면 벨소리 모드로 전환하세요.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">진동 모드</string>
     <string name="tile_unavailable">사용할 수 없음</string>
     <string name="time_picker_header_text">시간 설정</string>
     <string name="time_picker_hour_label">시간</string>

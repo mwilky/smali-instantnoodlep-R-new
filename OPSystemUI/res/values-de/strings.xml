@@ -1332,12 +1332,12 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="oneplus_threekey_navigation_vibration">Nur Vibration</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>Entsperrung</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>Entsperrungen</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Um die Akkulaufzeit zu verlängern, deaktiviert oder beschränkt der Akkusparmodus Folgendes:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Hintergrundaktivitäten, einige visuelle Effekte sowie weitere Funktionen wie “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Um die Akkulaufzeit zu verlängern, deaktiviert oder beschränkt der Akkusparmodus Folgendes:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Hintergrundaktivitäten und einige visuelle Effekte"</string>
     <string name="op_earphone_connect">Kopplung läuft...</string>
     <string name="op_earphone_connected_fail">Koppeln fehlgeschlagen. Sie können den Headset- und Bluetooth-Status überprüfen.</string>
     <string name="op_earphone_connected_success">Gekoppelt. Tippen, um weitere einzustellen.</string>
@@ -1367,7 +1367,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="op_notification_channel_summary_low">Weniger wichtige Benachrichtigungen ohne Ton oder Vibration.</string>
     <string name="op_notification_section_header_gentle">Sonstige Benachrichtigungen</string>
     <string name="op_notification_silence_title">Sonstige</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Geschütztes Aufladen"</string>
     <string name="op_qs_dark_mode_tile_label">Dunkelmodus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s verwendet</string>
     <string name="op_quick_settings_night_display_label">Lesekomfort</string>
@@ -1506,7 +1506,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="priority_onboarding_title">Unterhaltung als vorrangig eingestuft</string>
     <string name="privacy_alert_application_name">Warnung bezüglich Datenschutz</string>
     <string name="privacy_alert_content_text">Zum Ändern tippen</string>
-    <string name="privacy_alert_content_title">%1$s benutzt Ihr %2$s</string>
+    <string name="privacy_alert_content_title">%1$s benutzt dein/e %2$s</string>
     <string name="privacy_type_camera">Kamera</string>
     <string name="privacy_type_microphone">Mikrofon</string>
     <string name="private_dns_broken">Auf den privaten DNS-Server kann nicht zugegriffen werden</string>
@@ -1887,10 +1887,10 @@ eventuell überwacht."</string>
     <string name="tether_settings_title_wifi">Mobiler Hotspot</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Gemeinsame Nutzung mobiler Daten, zum Aufrufen der Einstellungen klicken</string>
     <string name="tethered_notification_hybrid_sharing_none">Kein verfügbares Netzwerk für gemeinsame Nutzung, zum Aufrufen der Einstellungen klicken</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Gemeinsame WLAN-Nutzung, zum Aufrufen der Einstellungen klicken</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Gemeinsame Wi-Fi-Nutzung, zum Aufrufen der Einstellungen klicken</string>
     <string name="tethered_notification_message">Zum Einrichten tippen.</string>
     <string name="tethered_notification_multi_device_message">%1$s angeschlossene Geräte</string>
-    <string name="tethered_notification_multi_tether_title">Tethering und mobiler HotSpot aktiv</string>
+    <string name="tethered_notification_multi_tether_title">Tethering und mobiler Hotspot aktiv</string>
     <string name="tethered_notification_no_device_message">Kein angeschlossenes Gerät</string>
     <string name="tethered_notification_one_device_message">%1$s angeschlossenes Gerät</string>
     <string name="tethered_notification_sharing_mobile_multi">Gemeinsame Nutzung mobiler Daten, %1$s Geräte verbunden</string>
@@ -1899,9 +1899,9 @@ eventuell überwacht."</string>
     <string name="tethered_notification_sharing_none_multi">Kein verfügbares Netzwerk für gemeinsame Nutzung, %1$s Geräte verbunden</string>
     <string name="tethered_notification_sharing_none_no">Kein verfügbares Netzwerk für gemeinsame Nutzung, kein Gerät verbunden</string>
     <string name="tethered_notification_sharing_none_single">Kein verfügbares Netzwerk für gemeinsame Nutzung, %1$s Gerät verbunden</string>
-    <string name="tethered_notification_sharing_wifi_multi">Gemeinsame WLAN-Nutzung, %1$s Geräte verbunden</string>
-    <string name="tethered_notification_sharing_wifi_no">Gemeinsame WLAN-Nutzung, kein Gerät verbunden</string>
-    <string name="tethered_notification_sharing_wifi_single">Gemeinsame WLAN-Nutzung, %1$s Gerät verbunden</string>
+    <string name="tethered_notification_sharing_wifi_multi">Gemeinsame Wi-Fi-Nutzung, %1$s Geräte verbunden</string>
+    <string name="tethered_notification_sharing_wifi_no">Gemeinsame Wi-Fi-Nutzung, kein Gerät verbunden</string>
+    <string name="tethered_notification_sharing_wifi_single">Gemeinsame Wi-Fi-Nutzung, %1$s Gerät verbunden</string>
     <string name="tethered_notification_title">Tethering oder mobiler Hotspot aktiv</string>
     <string name="tethering_hardware_offload">Hardwarebeschleunigung für Tethering</string>
     <string name="tethering_hardware_offload_summary">Falls verfügbar, Hardwarebeschleunigung für Tethering verwenden</string>
@@ -1914,6 +1914,15 @@ Mögliche Ursachen:
 \u0009• Verwendung des Smartphones bei hohen Temperaturen"</string>
     <string name="thermal_shutdown_message">Dein Smartphone funktioniert jetzt wieder normal</string>
     <string name="thermal_shutdown_title">Ausgeschaltet, da zu heiß</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Um das Gerät stummzuschalten, stelle den Alert Slider auf den Vibrations- oder den Stummschalten-Modus.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Klingellautstärke stummschalten</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Um den Klingelton zu aktivieren, wechsle mit dem Alert Slider in den Klingeltonmodus und stelle die Klingellautstärke nach Wunsch ein.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Klingeltonmodus</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Der Alert Slider ist derzeit auf den Stummschalten-Modus eingestellt. Bei einem eingehenden Anruf macht sich das Gerät weder durch einen Klingelton noch durch Vibration bemerkbar. Bitte wechsle in den Klingeltonmodus, um per Klingelton benachrichtigt zu werden.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Stummschalten-Modus</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Der Alert Slider ist derzeit auf den Vibrationsmodus eingestellt. Das Gerät klingelt bei einem eingehenden Anruf nicht. Stattdessen wirst du nur über die Vibration benachrichtigt. Bitte wechsle in den Klingeltonmodus, um per Klingelton benachrichtigt zu werden.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrationsmodus</string>
     <string name="tile_unavailable">Nicht verfügbar</string>
     <string name="time_picker_header_text">Uhrzeit einstellen</string>
     <string name="time_picker_hour_label">Stunde</string>

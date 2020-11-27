@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method static synthetic access$17200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentBuilder;)Lcom/android/systemui/statusbar/phone/NotificationShadeWindowView;
+.method static synthetic access$17400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentBuilder;)Lcom/android/systemui/statusbar/phone/NotificationShadeWindowView;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$StatusBarComponentBuilder;->statusBarWindowView:Lcom/android/systemui/statusbar/phone/NotificationShadeWindowView;

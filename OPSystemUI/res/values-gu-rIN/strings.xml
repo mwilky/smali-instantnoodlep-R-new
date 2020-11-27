@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">વિશે</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">સંસ્કરણ %s</string>
     <string name="about_privacy_policy">ગોપનીયતા નીતિ</string>
-    <string name="about_release_note_title">અપડેટ લૉગ:</string>
+    <string name="about_release_note_title">લૉગ અપડેટ કરો:</string>
     <string name="about_terms_service">સેવાની શરતો</string>
     <string name="accessibility_fingerprint_dialog_help_area">મદદ સંદેશ વિસ્તાર</string>
     <string name="accessibility_hide">છુપાઓ</string>
@@ -65,7 +65,7 @@
     <string name="fnatic_mode_title">Fnatic મોડ</string>
     <string name="hotspot_apm_message">જયારે એરોપ્લેન મોડ સક્ષમ હશે ત્યારે મોબાઇલ નેટવર્ક સાથે જોડવામાં અકસમર્થ રહેશે. એરોપ્લેન મોડ અક્ષમ કરો અને ફરી પ્રયત્ન કરો.</string>
     <string name="hotspot_operator_dialog_nosim_msg">મોબાઇલ હોટસ્પોટ અને અન્ય ટીથરિંગ વિકલ્પોના ઉપયોગ માટે એક SIM કાર્ડ નાખો</string>
-    <string name="hotspot_operator_dialog_nosim_title">કોઇ SIM કાર્ડ નથી</string>
+    <string name="hotspot_operator_dialog_nosim_title">કોઈ SIM કાર્ડ નથી</string>
     <string name="hotspot_operator_dialog_othererror_msg">તમે Wifi ટીથરિંગ માટે સબસ્ક્રાઈબ કર્યું નથી</string>
     <string name="hotspot_operator_dialog_othererror_title">Wifi ટીથરિંગ ભૂલ</string>
     <string name="hotspot_tip_message">"મોબાઇલ હૉટસ્પોટ તમારા મોબાઇલ ડેટાને અન્ય Wi-Fi સક્ષમ ઉપકરણ સાથે શેર કરે છે. તમારા મોબાઇલ હૉટસ્પોટથી કનેક્ટ થવા માટે: \u0009 
@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">ફિલ્મ</string>
     <string name="interruption_level_music">સંગીત</string>
     <string name="keyguard_fingerprint_unlock">અનલૉક કરવા માટે ફિંગરપ્રિન્ટનો ઉપયોગ કરો</string>
-    <string name="keyguard_indication_charging_time_fast">(%s પૂર્ણ થવા સુધી)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s પૂર્ણ થવા સુધીl)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp ચાર્જિંગ</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp વાયરલેસ ચાર્જિંગ</string>
     <string name="kg_at_least_four_points">ઓછામાં ઓછા 4 અંકનો સમાવેશ કરી ડ્રો કરો</string>
@@ -138,12 +138,12 @@
     <string name="oneplus_threekey_navigation_vibration">ફક્ત વાઇબ્રેશન</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>અનલોક</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> અનલોક્સ</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"બેટરી લાઇફ વધારવા માટે, બેટરી સેવર:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•બેકગ્રાઉન્ડ એક્ટિવિટી, કેટલીક વિઝ્યુઅલ ઇફેક્ટ્સ અને “Hey Google” જેવા અન્ય ફીચર્સને બંધ કરે છે અથવા મર્યાદિત કરે છે"</string>
+    <string name="op_battery_saver_description_no_ga">"બેટરી લાઇફને વધારવા માટે, બેટરી સેવર:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•પાશ્વ ભાગની પ્રવૃત્તિ બંધ કરે છે અથવા મર્યાદિત કરે છે, અને કેટલીક દૃશ્ય અસરો"</string>
     <string name="op_earphone_connect">જોડી કરી રહ્યું છે...</string>
     <string name="op_earphone_connected_fail">જોડી કરવામાં નિષ્ફળ. તમે હેડસેટ અને બ્લુટૂથ સ્ટેટસને તપાસી શકો છો.</string>
     <string name="op_earphone_connected_success">જોડી કરી. વધુ સેટ કરવા માટે ટૅપ કરો.</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">ઓછી મહત્વપૂર્ણ સૂચનાઓ કોઈપણ ધ્વનિ અથવા વાઇબ્રેશન વિના.</string>
     <string name="op_notification_section_header_gentle">અન્ય સૂચનાઓ</string>
     <string name="op_notification_silence_title">અન્ય</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" ચાર્જિંગને સુરક્ષિત કર્યું"</string>
     <string name="op_qs_dark_mode_tile_label">અંધકારમય પ્રકારમાં છે</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s વપરાયું</string>
     <string name="op_quick_settings_night_display_label">દ્રષ્ટિ આરામ</string>
@@ -213,9 +213,9 @@
     <string name="prevent_view_top_tag_cancel2">સ્ક્રીન પરનાં વર્તુળોને અનુસરો અને પૉકેટ મોડને છોડી દેવા દબાણ કરવા માટે તેમને ટૅપ કરો</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">ગોપનીયતા ચેતવણીઓ</string>
+    <string name="privacy_alert_application_name">ગોપનીયતા ચેતવણી</string>
     <string name="privacy_alert_content_text">બદલવા માટે ટૅપ કરો</string>
-    <string name="privacy_alert_content_title">%1$s તમારું %2$s નો ઉપયોગ કરી રહ્યા છે</string>
+    <string name="privacy_alert_content_title">%1$s તમારા %2$s નો ઉપયોગ કરી રહ્યા છે</string>
     <string name="privacy_type_camera">કેમેરા</string>
     <string name="privacy_type_microphone">માઇક્રોફોન</string>
     <string name="qr_bubble_hint">સંદેશાને વાંચવા અને જવાબ આપવા માટે પરપોટા પર હળવેથી ટપલી મારો</string>
@@ -278,24 +278,33 @@
     <string name="select_minutes">મિનિટ પસંદ કરો</string>
     <string name="select_year">વર્ષ પસંદ કરો</string>
     <string name="sim_status_uss_network_roam">રોમ</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">મોબાઇલ ડેટા શેર કરવો, સેટિંગમાં દાખલ થવા ક્લિક કરો</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">મોબાઇલ ડેટા શેર કરી રહ્યા છીએ, સેટિંગ્સ દાખલ કરવા માટે ક્લિક કરો</string>
     <string name="tethered_notification_hybrid_sharing_none">શેર કરવા માટે કોઈ ઉપલબ્ધ નેટવર્ક નથી, સેટિંગમાં દાખલ થવા માટે ક્લિક કરો</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi શેર કરવું, સેટિંગમાં દાખલ થવા ક્લિક કરો</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">વાઇ-ફાઇ શેર કરી રહ્યા છીએ, સેટિંગ્સ દાખલ કરવા માટે ક્લિક કરો</string>
     <string name="tethered_notification_message">સેટ કરવા માટે ટેપ કરો.</string>
-    <string name="tethered_notification_multi_device_message">%1$s કનેક્ટેડ ડિવાઈસો</string>
+    <string name="tethered_notification_multi_device_message">%1$s કનેક્ટ થયેલ ઉપકરણો</string>
     <string name="tethered_notification_multi_tether_title">ટીથરિંગ અને મોબાઈલ હોટસ્પોટ સક્રિય</string>
     <string name="tethered_notification_no_device_message">કોઈ ડિવાઈસ કનેક્ટ કરેલ નથી</string>
-    <string name="tethered_notification_one_device_message">%1$s કનેક્ટેડ ડિવાઈસ</string>
-    <string name="tethered_notification_sharing_mobile_multi">મોબાઇલ ડેટા શેર કરવો, %1$s ઉપકરણ કનેક્ટ કરેલા છે</string>
-    <string name="tethered_notification_sharing_mobile_no">મોબાઇલ ડેટા શેર કરવો, કોઈ ઉપકરણ કનેક્ટ કરેલું નથી</string>
-    <string name="tethered_notification_sharing_mobile_single">મોબાઇલ ડેટા શેર કરવો, %1$s ઉપકરણ કનેક્ટ કરેલું છે</string>
-    <string name="tethered_notification_sharing_none_multi">શેર કરવા માટે કોઈ ઉપલબ્ધ નેટવર્ક નથી, %1$s ઉપકરણ કનેક્ટ કરેલા છે</string>
+    <string name="tethered_notification_one_device_message">%1$s કનેક્ટ થયેલ ઉપકરણ</string>
+    <string name="tethered_notification_sharing_mobile_multi">મોબાઇલ ડેટા શેર કરી રહ્યા છીએ, %1$s ઉપકરણો કનેક્ટ કરેલા છે</string>
+    <string name="tethered_notification_sharing_mobile_no">મોબાઇલ ડેટા શેર કરી રહ્યા છીએ, કોઈ ઉપકરણ કનેક્ટ કરેલું નથી</string>
+    <string name="tethered_notification_sharing_mobile_single">મોબાઇલ ડેટા શેર કરી રહ્યા છીએ, %1$s ઉપકરણ કનેક્ટ કરેલું છે</string>
+    <string name="tethered_notification_sharing_none_multi">શેર કરવા માટે કોઈ ઉપલબ્ધ નેટવર્ક નથી, %1$s ઉપકરણો કનેક્ટ કરેલા છે</string>
     <string name="tethered_notification_sharing_none_no">શેર કરવા માટે કોઈ ઉપલબ્ધ નેટવર્ક નથી, કોઈ ઉપકરણ કનેક્ટ કરેલું નથી</string>
     <string name="tethered_notification_sharing_none_single">શેર કરવા માટે કોઈ ઉપલબ્ધ નેટવર્ક નથી, %1$s ઉપકરણ કનેક્ટ કરેલું છે</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi શેર કરવું, %1$s ઉપકરણ કનેક્ટ કરેલા છે</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi શેર કરવું, કોઈ ઉપકરણ કનેક્ટ કરેલું નથી</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi શેર કરવું, %1$s ઉપકરણ કનેક્ટ કરેલું છે</string>
-    <string name="tethered_notification_title">ટેથરિંગ અથવા મોબાઇલ હૉટસ્પોટ સક્રિય</string>
+    <string name="tethered_notification_sharing_wifi_multi">વાઇ-ફાઇ શેર કરી રહ્યા છીએ, %1$s ઉપકરણો કનેક્ટ થયેલા છે</string>
+    <string name="tethered_notification_sharing_wifi_no">વાઇ-ફાઇ શેર કરી રહ્યા છીએ,, કોઈ ઉપકરણ કનેક્ટ કરેલું નથી</string>
+    <string name="tethered_notification_sharing_wifi_single">વાઇ-ફાઇ શેર કરી રહ્યા છીએ, %1$s ઉપકરણ કનેક્ટ થયેલું છે</string>
+    <string name="tethered_notification_title">ટીથરિંગ અથવા મોબાઈલ હોટસ્પોટ સક્રિય</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ઉપકરણને મ્યુટ કરવા માટે, વાઇબ્રેટ અથવા સાઇલન્ટ મોડમાં Alert Slider સુયોજિત કરો.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">રિંગ વોલ્યુમ મ્યૂટ કરો</string>
+    <string name="threekey_volume_guide_dialog_ok">ઓકે</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">રિંગ સક્રિય કરવા માટે, રિંગ મોડમાં જવા માટે Alert Sliderનો ઉપયોગ કરો અને તમારી પસંદગી મુજબ રિંગ વોલ્યુમને સુયોજિત કરો.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">રીંગ મોડ</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider હાલમાં સાઇલન્ટ મોડમાં છે; ઉપકરણ ઇનકમિંગ કોલ માટે રિંગ કે વાઇબ્રેટ નહીં કરે. રિંગ દ્વારા સૂચિત કરવા માટે કૃપા કરીને રિંગ મોડ પર જાવ.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">સાઇલેન્ટ મોડ</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider હાલમાં વાઇબ્રેટ મોડમાં છે; ઉપકરણ ઇનકમિંગ કોલ માટે રિંગ નહીં કરે. તમને માત્ર વાઇબ્રેશન દ્વારા જ સૂચિત કરવામાં આવશે. રિંગ દ્વારા સૂચિત કરવા માટે કૃપા કરીને રિંગ મોડ પર જાવ.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">વાઇબ્રેટ મોડ</string>
     <string name="time_picker_header_text">સમય સેટ કરો</string>
     <string name="time_picker_hour_label">કલાક</string>
     <string name="time_picker_input_error">માન્ય સમય દાખલ કરો</string>

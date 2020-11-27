@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s chce zobrazovať rezy z aplikácie %2$s</string>
     <string name="abc_toolbar_collapse_description">Zbaliť</string>
     <string name="about_action_bar_title">Informácie</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verzia %s</string>
     <string name="about_privacy_policy">Zásady ochrany osobných údajov</string>
     <string name="about_release_note_title">Denník aktualizácie:</string>
     <string name="about_terms_service">Podmienky služby</string>
@@ -723,7 +723,7 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát."</s
     <string name="drag_to_rearrange_tiles">Dlaždice môžete usporiadať pridržaním a presunutím</string>
     <string name="drag_to_remove_disabled">Minimálny počet vyžadovaných dlaždíc: %1$d</string>
     <string name="drag_to_remove_tiles">Presunutím sem odstránite</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Ľ: %1$s  P: %2$s"</string>
     <string name="edit_mode_hint">Pretiahnite dlaždice pre zoradenie. Ťuknite pre zobrazenie alebo pre skrytie.</string>
     <string name="empty_shade_text">Žiadne upozornenia</string>
     <string name="enable_adb">Ladenie cez USB</string>
@@ -1332,12 +1332,12 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="oneplus_threekey_navigation_vibration">Len vibrácie</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> odomknúť</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> odomyká</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Ak chcete predĺžiť životnosť batérie, šetrič batérie:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• vypína alebo obmedzuje aktivity na pozadí, niektoré vizuálne efekty a iné funkcie, napr. “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Ak chcete predĺžiť životnosť batérie, šetrič batérie:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+• vypína alebo obmedzuje aktivity na pozadí, niektoré vizuálne efekty"</string>
     <string name="op_earphone_connect">Párovanie...</string>
     <string name="op_earphone_connected_fail">Spárovanie sa nepodarilo. Skontrolujte stav náhlavnej súpravy a Bluetooth.</string>
     <string name="op_earphone_connected_success">Spárované. Ťuknutím nastavte ďalšie nastavenia.</string>
@@ -1367,7 +1367,7 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="op_notification_channel_summary_low">Menej dôležité oznámenia bez zvuku alebo vibrácie.</string>
     <string name="op_notification_section_header_gentle">Ostatné oznámenia</string>
     <string name="op_notification_silence_title">Ostatné</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Chránené nabíjanie"</string>
     <string name="op_qs_dark_mode_tile_label">Tmavý režim</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s využitých</string>
     <string name="op_quick_settings_night_display_label">Pohodlie pohľadu</string>
@@ -1504,9 +1504,9 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="priority_onboarding_show_at_top_text">sa zobrazujú navrchu sekcie konverzácií</string>
     <string name="priority_onboarding_show_avatar_text">zobrazujú profilovú fotku na uzamknutej obrazovke</string>
     <string name="priority_onboarding_title">Konverzácia je nastavená ako prioritná</string>
-    <string name="privacy_alert_application_name">Výstraha týkajúce sa súkromia</string>
+    <string name="privacy_alert_application_name">Výstraha týkajúca sa súkromia</string>
     <string name="privacy_alert_content_text">Ťuknutím zmeňte</string>
-    <string name="privacy_alert_content_title">Aplikácia %1$s používa: %2$s</string>
+    <string name="privacy_alert_content_title">%1$s používa: %2$s</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_microphone">mikrofón</string>
     <string name="private_dns_broken">K súkromnému serveru DNS sa nepodarilo získať prístup</string>
@@ -1886,22 +1886,22 @@ monitorovaná"</string>
     <string name="tether_settings_title_usb_bluetooth">Zdieľané pripojenie</string>
     <string name="tether_settings_title_wifi">Prenosný prístupový bod</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Zdieľanie mobilných dát, ťuknutím otvorte Nastavenia</string>
-    <string name="tethered_notification_hybrid_sharing_none">Žiadna dostupná sieť na zdieľanie, ťuknutím otvorte Nastavenia</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Zdieľanie siete Wi-Fi, ťuknutím otvorte Nastavenia</string>
+    <string name="tethered_notification_hybrid_sharing_none">Žiadna dostupná sieť na zdieľanie, kliknutím otvorte Nastavenia</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Zdieľanie siete Wi-Fi, kliknutím otvorte Nastavenia</string>
     <string name="tethered_notification_message">Ťuknutím nastavte.</string>
-    <string name="tethered_notification_multi_device_message">%1$s pripojené zariadenia</string>
-    <string name="tethered_notification_multi_tether_title">Aktívne zdieľanie a mobilný hotspot</string>
+    <string name="tethered_notification_multi_device_message">Počet pripojených zariadení: %1$s</string>
+    <string name="tethered_notification_multi_tether_title">Aktívne zdieľanie internetu a mobilný hotspot</string>
     <string name="tethered_notification_no_device_message">Nie je pripojené žiadne zariadenie</string>
-    <string name="tethered_notification_one_device_message">%1$s pripojené zariadenie</string>
-    <string name="tethered_notification_sharing_mobile_multi">Zdieľanie mobilných dát, pripojené zariadenia: %1$s</string>
+    <string name="tethered_notification_one_device_message">Počet pripojených zariadení: %1$s</string>
+    <string name="tethered_notification_sharing_mobile_multi">Zdieľanie mobilných dát, počet pripojených zariadení: %1$s</string>
     <string name="tethered_notification_sharing_mobile_no">Zdieľanie mobilných dát, nie je pripojené žiadne zariadenie</string>
-    <string name="tethered_notification_sharing_mobile_single">Zdieľanie mobilných dát, pripojené zariadenia: %1$s</string>
-    <string name="tethered_notification_sharing_none_multi">Žiadna dostupná sieť na zdieľanie, pripojené zariadenia: %1$s</string>
+    <string name="tethered_notification_sharing_mobile_single">Zdieľanie mobilných dát, počet pripojených zariadení: %1$s</string>
+    <string name="tethered_notification_sharing_none_multi">Žiadna dostupná sieť na zdieľanie, počet pripojených zariadení: %1$s</string>
     <string name="tethered_notification_sharing_none_no">Žiadna dostupná sieť na zdieľanie, nie je pripojené žiadne zariadenie</string>
-    <string name="tethered_notification_sharing_none_single">Žiadna dostupná sieť na zdieľanie, pripojené zariadenia: %1$s</string>
-    <string name="tethered_notification_sharing_wifi_multi">Zdieľanie siete Wi-Fi, pripojené zariadenia: %1$s</string>
+    <string name="tethered_notification_sharing_none_single">Žiadna dostupná sieť na zdieľanie, počet pripojených zariadení: %1$s</string>
+    <string name="tethered_notification_sharing_wifi_multi">Zdieľanie siete Wi-Fi, počet pripojených zariadení: %1$s</string>
     <string name="tethered_notification_sharing_wifi_no">Zdieľanie siete Wi-Fi, nie je pripojené žiadne zariadenie</string>
-    <string name="tethered_notification_sharing_wifi_single">Zdieľanie siete Wi-Fi, pripojené zariadenia: %1$s</string>
+    <string name="tethered_notification_sharing_wifi_single">Zdieľanie siete Wi-Fi, počet pripojených zariadení: %1$s</string>
     <string name="tethered_notification_title">Aktívne zdieľanie internetu alebo mobilný hotspot</string>
     <string name="tethering_hardware_offload">Hardvérová akcelerácia tetheringu</string>
     <string name="tethering_hardware_offload_summary">Ak je k dispozícii hardvérová akcelerácia tetheringu, používať ju</string>
@@ -1914,6 +1914,15 @@ Telefón sa môže príliš zahriať v týchto prípadoch:
 \u0009• používanie telefónu pri vysokých teplotách."</string>
     <string name="thermal_shutdown_message">Teraz telefón funguje ako obvykle</string>
     <string name="thermal_shutdown_title">Telefón sa vypol z dôvodu prehriatia</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Ak chcete stlmiť hlasitosť zariadenia, prepnite Alert Slider do režimu vibrácie alebo do tichého režimu.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Stlmiť hlasitosť zvonenia</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Ak chcete zapnúť zvonenie, použite Alert Slider na prepnutie do režimu zvonenia a nastavte požadovanú hlasitosť zvonenia.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Režim zvonenia</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider je momentálne v tichom režime. Zariadenie nebude pri prichádzajúcom hovore zvoniť ani vibrovať. Ak chcete, aby zariadenie zvonilo, prepnite ho do režimu zvonenia.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tichý režim</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider je momentálne v režime vibrácií. Zariadenie nebude pri prichádzajúcom hovore zvoniť, na hovor vás upozorní iba vibrovanie. Ak chcete, aby zariadenie zvonilo, prepnite ho do režimu zvonenia.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Režim vibrácií</string>
     <string name="tile_unavailable">Nedostupné</string>
     <string name="time_picker_header_text">Nastavenie času</string>
     <string name="time_picker_hour_label">hodina</string>
@@ -2150,7 +2159,7 @@ Adresa Wi‑Fi (BSSID)
     <string name="zen_priority_introduction">Nebudú vás vyrušovať zvuky ani vibrácie, iba budíky, pripomenutia, udalosti a volajúci, ktorých určíte. Budete naďalej počuť všetko, čo sa rozhodnete prehrať, ako napríklad hudbu, videá a hry.</string>
     <string name="zen_silence_introduction">Zablokujú sa tým VŠETKY zvuky a vibrácie vrátane zvukov budíkov, hudby, videí a hier.</string>
     <string name="zen_silence_introduction_voice">Zablokujú sa VŠETKY zvuky a vibrácie vrátane budíkov, hudby, videí a hier. Stále však budete môcť telefonovať.</string>
-    <string name="zzz_op_global_action_bootloader">Bootloader</string>
-    <string name="zzz_op_global_action_recovery">Recovery</string>
+    <string name="zzz_op_global_action_bootloader">Zavádzač</string>
+    <string name="zzz_op_global_action_recovery">Obnovenie</string>
     <string name="zzz_op_quick_pay_no_install_message">Nainštalujte platobné aplikácie pre rýchle platby</string>
 </resources>

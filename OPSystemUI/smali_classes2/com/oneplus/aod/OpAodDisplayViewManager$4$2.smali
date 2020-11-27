@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onUserSwitchComplete(I)V
+    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onTimeZoneChanged(Ljava/util/TimeZone;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
-.field final synthetic val$userId:I
+.field final synthetic val$timeZone:Ljava/util/TimeZone;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;I)V
+.method constructor <init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;Ljava/util/TimeZone;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
-    iput p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$userId:I
+    iput-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$timeZone:Ljava/util/TimeZone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,55 +39,19 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
     iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$userId:I
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$timeZone:Ljava/util/TimeZone;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/aod/slice/OpSliceManager;->onUserSwitchComplete(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$userId:I
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/aod/OpClockViewCtrl;->onUserSwitchComplete(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$userId:I
-
-    invoke-virtual {v0, v1}, Lcom/oneplus/aod/OpAodMain;->onUserSwitchComplete(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
-
-    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
-
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodNotificationIconAreaController;
-
-    move-result-object v0
-
-    iget p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$2;->val$userId:I
-
-    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->onUserSwitchComplete(I)V
+    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpClockViewCtrl;->onTimeZoneChanged(Ljava/util/TimeZone;)V
 
     return-void
 .end method

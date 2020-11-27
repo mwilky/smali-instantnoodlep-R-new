@@ -18,6 +18,12 @@
 
 
 # instance fields
+.field private mRecordNearlyProgress:I
+
+.field private mRecordOverZeroLimitTimes:I
+
+.field private mRecordProgressWhenStartTouch:I
+
 .field private final mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
 .field final synthetic this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
@@ -30,6 +36,16 @@
     iput-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordProgressWhenStartTouch:I
+
+    iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
 
     iput-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
@@ -47,7 +63,7 @@
 
 # virtual methods
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
@@ -147,6 +163,30 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v3, " / mRecordProgressWhenStartTouch:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordProgressWhenStartTouch:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " / mRecordNearlyProgress:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " / mRecordOverZeroLimitTimes:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -180,20 +220,58 @@
 
     iget p3, p3, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    if-ne p3, v0, :cond_5
+    const/4 v2, 0x2
 
-    if-ge p2, v1, :cond_5
+    if-ne p3, v2, :cond_7
 
+    if-ge p2, v1, :cond_7
+
+    if-nez p2, :cond_5
+
+    iget p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
+
+    if-ne p2, v1, :cond_5
+
+    iget p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
+
+    add-int/2addr p2, v0
+
+    iput p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
+
+    :cond_5
+    iget p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
+
+    if-le p2, v2, :cond_6
+
+    iget p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordProgressWhenStartTouch:I
+
+    if-ne p2, v1, :cond_6
+
+    const-class p2, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;
+
+    invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;
+
+    const/4 p3, 0x3
+
+    invoke-interface {p2, p3, v0}, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;->isNeedToShowGuideUi(IZ)I
+
+    :cond_6
     invoke-virtual {p1, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
     goto :goto_0
 
-    :cond_5
+    :cond_7
     move v1, p2
 
     :goto_0
+    iput v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
+
     invoke-static {p1, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4700(Landroid/widget/SeekBar;I)I
 
     move-result p1
@@ -204,32 +282,32 @@
 
     iget p3, p2, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->level:I
 
-    if-ne p3, p1, :cond_6
+    if-ne p3, p1, :cond_8
 
     iget-boolean p2, p2, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->muted:Z
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_9
 
-    if-lez p1, :cond_7
+    if-lez p1, :cond_9
 
-    :cond_6
+    :cond_8
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v3
 
-    iput-wide v1, p2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->userAttempt:J
+    iput-wide v3, p2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->userAttempt:J
 
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
     iget p2, p2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->requestedLevel:I
 
-    if-eq p2, p1, :cond_7
+    if-eq p2, p1, :cond_9
 
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    invoke-static {p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3800(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
+    invoke-static {p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3900(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
 
     move-result-object p2
 
@@ -241,7 +319,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    invoke-static {p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3800(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
+    invoke-static {p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3900(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
 
     move-result-object p2
 
@@ -257,9 +335,9 @@
 
     const/16 p2, 0x9
 
-    new-array p3, v0, [Ljava/lang/Object;
+    new-array p3, v2, [Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     iget p0, p0, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
@@ -267,65 +345,89 @@
 
     move-result-object p0
 
-    aput-object p0, p3, v0
-
-    const/4 p0, 0x1
+    aput-object p0, p3, v1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, p3, p0
+    aput-object p0, p3, v0
 
     invoke-static {p2, p3}, Lcom/android/systemui/volume/Events;->writeEvent(I[Ljava/lang/Object;)V
 
-    :cond_7
+    :cond_9
     return-void
 .end method
 
 .method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 2
+    .locals 3
 
-    sget-boolean p1, Lcom/android/systemui/volume/D;->BUG:Z
+    sget-boolean v0, Lcom/android/systemui/volume/D;->BUG:Z
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     invoke-static {}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$200()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onStartTrackingTouch "
+    const-string v2, "onStartTrackingTouch "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+
+    iget v2, v2, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", seekBar.getProgress:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+
+    invoke-static {v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3900(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
     iget v1, v1, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1}, Lcom/android/systemui/plugins/VolumeDialogController;->setActiveStream(I)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordProgressWhenStartTouch:I
 
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+    invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
-    invoke-static {p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3800(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/plugins/VolumeDialogController;
+    move-result p1
 
-    move-result-object p1
+    iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
 
-    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
+    const/4 p1, 0x0
 
-    iget v0, v0, Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;->stream:I
-
-    invoke-interface {p1, v0}, Lcom/android/systemui/plugins/VolumeDialogController;->setActiveStream(I)V
+    iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordOverZeroLimitTimes:I
 
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;
 
@@ -424,13 +526,13 @@
 
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    invoke-static {p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
+    invoke-static {p1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3500(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    invoke-static {v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3400(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
+    invoke-static {v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$3500(Lcom/android/systemui/volume/VolumeDialogImpl;)Lcom/android/systemui/volume/VolumeDialogImpl$H;
 
     move-result-object v0
 

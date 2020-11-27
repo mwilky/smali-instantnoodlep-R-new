@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s quiere mostrar fragmentos de %2$s</string>
     <string name="abc_toolbar_collapse_description">Ocultar</string>
     <string name="about_action_bar_title">Acerca de</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versión %s</string>
     <string name="about_privacy_policy">Política de privacidad</string>
     <string name="about_release_note_title">Registro de actualización:</string>
     <string name="about_terms_service">Condiciones de servicio</string>
@@ -723,7 +723,7 @@ Si vuelves a activar el uso de datos, es posible que se apliquen cargos."</strin
     <string name="drag_to_rearrange_tiles">Mantén pulsado un icono y arrástralo para reubicarlo</string>
     <string name="drag_to_remove_disabled">Necesitas al menos %1$d iconos</string>
     <string name="drag_to_remove_tiles">Arrastra aquí para quitar una función</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"I: %1$s  D: %2$s"</string>
     <string name="edit_mode_hint">Arrastra los cuadros para reordenarlos. Tócalos para mostrar u ocultar.</string>
     <string name="empty_shade_text">No hay notificaciones</string>
     <string name="enable_adb">Depuración por USB</string>
@@ -822,7 +822,7 @@ Una vez que se haya enfriado, funcionará con normalidad."</string>
     <string name="home">Página principal de ajustes</string>
     <string name="hotspot_apm_message">No se puede conectar a las redes móviles mientras el modo Avión esté habilitado. Deshabilita el modo Avión e inténtalo de nuevo.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Inserta una tarjeta SIM para utilizar el punto de acceso móvil y otras opciones de tethering</string>
-    <string name="hotspot_operator_dialog_nosim_title">No hay tarjeta SIM</string>
+    <string name="hotspot_operator_dialog_nosim_title">Sin tarjeta SIM</string>
     <string name="hotspot_operator_dialog_othererror_msg">No tienes una suscripción de tethering Wi-Fi</string>
     <string name="hotspot_operator_dialog_othererror_title">Error de tethering Wi-Fi</string>
     <string name="hotspot_tip_message">"El punto de acceso móvil comparte tus datps móviles con otros dispositivos compatibles con Wi-Fi. Para conectarte a tu punto de acceso móvil: \u0009 
@@ -1318,7 +1318,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="notification_unblockable_desc">Estas notificaciones no se pueden modificar.</string>
     <string name="oem_unlock_enable">Desbloqueo de OEM</string>
     <string name="oem_unlock_enable_summary">Permitir desbloquear el bootloader</string>
-    <string name="ok">Aceptar</string>
+    <string name="ok">OK</string>
     <string name="okay">Aceptar</string>
     <string name="oneplus_laboratory_added_toast">¡Felicidades! El Laboratorio OnePlus se ha añadido a los ajustes</string>
     <string name="oneplus_not_show">No volver a mostrar</string>
@@ -1332,12 +1332,12 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="oneplus_threekey_navigation_vibration">Solo vibración</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>desbloqueo</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>desbloqueos</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Para alargar la duración de la batería, Ahorro de batería:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Desactiva o restringe la actividad en segundo plano, algunos efectos visuales y otras funciones como “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Para alargar la duración de la batería, Ahorro de batería:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Desactiva o restringe la actividad en segundo plano y algunos efectos visuales"</string>
     <string name="op_earphone_connect">Emparejando...</string>
     <string name="op_earphone_connected_fail">Error al emparejar. Puedes comprobar el estado de los auriculares y del Bluetooth.</string>
     <string name="op_earphone_connected_success">Emparejado. Toca para establecer más ajustes.</string>
@@ -1367,7 +1367,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="op_notification_channel_summary_low">Notificaciones menos importantes sin sonido ni vibración.</string>
     <string name="op_notification_section_header_gentle">Otras notificaciones</string>
     <string name="op_notification_silence_title">Otro</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Carga protegida"</string>
     <string name="op_qs_dark_mode_tile_label">Modo oscuro</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s usado</string>
     <string name="op_quick_settings_night_display_label">Comodidad de visión</string>
@@ -1885,24 +1885,24 @@ puede supervisar"</string>
     <string name="tether_settings_title_usb">Compartir conexión por USB</string>
     <string name="tether_settings_title_usb_bluetooth">Compartir conexión</string>
     <string name="tether_settings_title_wifi">Zona Wi-Fi portátil</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">Compartiendo datos móviles. Haz clic para acceder a Ajustes</string>
-    <string name="tethered_notification_hybrid_sharing_none">No hay ninguna red disponible para compartir. Haz clic para acceder a Ajustes</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Compartiendo Wi-Fi. Haz clic para acceder a Ajustes</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">Compartiendo datos móviles, haz clic para acceder a Ajustes</string>
+    <string name="tethered_notification_hybrid_sharing_none">No hay ninguna red disponible para comaprtir, haz clic para acceder a Ajustes</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Compartiendo Wi-Fi, haz clic para acceder a Ajustes</string>
     <string name="tethered_notification_message">Toca para configurar.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispositivos conectados</string>
-    <string name="tethered_notification_multi_tether_title">Tethering y punto de acceso móvil activos</string>
+    <string name="tethered_notification_multi_tether_title">Tetthering y punto de acceso móvil activos</string>
     <string name="tethered_notification_no_device_message">Ningún dispositivo conectado</string>
     <string name="tethered_notification_one_device_message">%1$s dispositivo conectado</string>
-    <string name="tethered_notification_sharing_mobile_multi">Compartiendo datos móviles. %1$s dispositivos conectados</string>
-    <string name="tethered_notification_sharing_mobile_no">Compartiendo datos móviles. No hay ningún dispositivo conectado</string>
-    <string name="tethered_notification_sharing_mobile_single">Compartiendo datos móviles. %1$s dispositivo conectado</string>
-    <string name="tethered_notification_sharing_none_multi">No hay ninguna red disponible para compartir. %1$s dispositivos conectados</string>
-    <string name="tethered_notification_sharing_none_no">No hay ninguna red disponible para compartir. No hay ningún dispositivo conectado</string>
-    <string name="tethered_notification_sharing_none_single">No hay ninguna red disponible para compartir. %1$s dispositivo conectado</string>
-    <string name="tethered_notification_sharing_wifi_multi">Compartiendo Wi-Fi. %1$s dispositivos conectados</string>
-    <string name="tethered_notification_sharing_wifi_no">Compartiendo Wi-Fi. No hay ningún dispositivo conectado</string>
-    <string name="tethered_notification_sharing_wifi_single">Compartiendo Wi-Fi. %1$s dispositivo conectado</string>
-    <string name="tethered_notification_title">Tethering o punto de acceso móvil activo</string>
+    <string name="tethered_notification_sharing_mobile_multi">Compartiendo datos móviles, %1$s dispositivos conectados</string>
+    <string name="tethered_notification_sharing_mobile_no">Compartiendo datos móviles, no hay ningún dispositivos conectado</string>
+    <string name="tethered_notification_sharing_mobile_single">Compartiendo datos móviles, %1$s dispositivo conectado</string>
+    <string name="tethered_notification_sharing_none_multi">No hay ninguna red disponible para compartir, %1$s dispositivos conectados</string>
+    <string name="tethered_notification_sharing_none_no">No hay ninguna red disponible para compartir, no hay ningún dispositivo conectado</string>
+    <string name="tethered_notification_sharing_none_single">No hay ninguna red disponible para compartir, %1$s dispositivo conectado</string>
+    <string name="tethered_notification_sharing_wifi_multi">Compartiendo Wi-Fi, %1$s dispositivos conectados</string>
+    <string name="tethered_notification_sharing_wifi_no">Compartiendo Wi-Fi, no hay ningún dispositivo conectado</string>
+    <string name="tethered_notification_sharing_wifi_single">Compartiendo Wi-Fi, %1$s dispositivo conectado</string>
+    <string name="tethered_notification_title">Tethering o punto de acceso móvil activos</string>
     <string name="tethering_hardware_offload">Aceleración por hardware para conexión compartida</string>
     <string name="tethering_hardware_offload_summary">Usar la conexión compartida con aceleración por hardware si está disponible</string>
     <string name="tethering_settings_not_available">Los ajustes para compartir conexión no están disponibles para este usuario</string>
@@ -1914,6 +1914,15 @@ Puede calentarse demasiado si:
 \u0009• Lo usas a altas temperaturas"</string>
     <string name="thermal_shutdown_message">El teléfono ahora funciona con normalidad</string>
     <string name="thermal_shutdown_title">Teléfono apagado por calor</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Para silenciar el dispositivo, establece el control deslizante de alerta o el modo silencio.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Silenciar el volumen del tono</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Para activar el tono, usa el control deslizante de alerta para cambiar al modo de tono y establece el volumen del tono como quieras.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Modo de tono</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">El control deslizante de alerta está actualmente en modo silencio; el dispositivo no sonará ni vibrará cuando haya una llamada entrante. Cambia al modo de tono para que suene el teléfono.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Modo silencio</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">El control deslizante de alerta está actualmente en modo vibración; el dispositivo no sonará cuando haya una llamada entrante. Solo se te notificará mediante la vibración. Cambia al modo de tono para que suene el teléfono.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Modo vibración</string>
     <string name="tile_unavailable">No disponible</string>
     <string name="time_picker_header_text">Establecer hora</string>
     <string name="time_picker_hour_label">hora</string>

@@ -571,6 +571,28 @@
 
     iput-wide v0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mCurrentTime:J
 
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lcom/oneplus/aod/bg/IBgPaint;->onAttachedToWindow()V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected onDetachedFromWindow()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    iget-object p0, p0, Lcom/oneplus/aod/bg/OpAodCanvas;->mBgPaint:Lcom/oneplus/aod/bg/IBgPaint;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lcom/oneplus/aod/bg/IBgPaint;->onDetachedFromWindow()V
+
+    :cond_0
     return-void
 .end method
 

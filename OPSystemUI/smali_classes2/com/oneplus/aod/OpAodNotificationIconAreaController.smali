@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Lcom/oneplus/aod/OpClockViewCtrl;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/oneplus/aod/OpClockViewCtrl;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -69,13 +69,11 @@
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mNotificationIconDozeHelper:Lcom/android/systemui/statusbar/notification/NotificationIconDozeHelper;
 
-    iput-object p3, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mOpClockViewCtrl:Lcom/oneplus/aod/OpClockViewCtrl;
+    iput-object p2, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mOpClockViewCtrl:Lcom/oneplus/aod/OpClockViewCtrl;
 
     iput-object p1, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mContext:Landroid/content/Context;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
-
-    invoke-virtual {p0, p2}, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->initViews(Landroid/view/ViewGroup;)V
 
     return-void
 .end method

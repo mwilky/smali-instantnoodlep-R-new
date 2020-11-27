@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">ਇਸ ਬਾਰੇ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">ਸੰਸਕਰਨ %s</string>
     <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
-    <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
+    <string name="about_release_note_title">ਲੌਗ ਨੂੰਅੱਪਡੇਟ ਕਰੋ:</string>
     <string name="about_terms_service">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
     <string name="accessibility_fingerprint_dialog_help_area">ਹੈਲਪ ਮੈਸੇਜ਼ ਏਰੀਆ</string>
     <string name="accessibility_hide">ਲੁਕਾਓ</string>
@@ -46,7 +46,7 @@
     <string name="denoise_notification">ਘੱਟ ਤਰਜੀਹ ਵਾਲੀ ਸੂਚਨਾ</string>
     <string name="dialog_mhs_error">ਕਿਰਪਾ ਕਰਕੇ ਪੁਸ਼ਟੀ ਕੀਤੇ ਜਾਣ ਦੌਰਾਨ ਉਡੀਕ ਕਰੋ..</string>
     <string name="disable_tether_notification_message">ਵੇਰਵਿਆਂ ਲਈ ਆਪਣੇ ਐਡਮਿਨ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</string>
-    <string name="disable_tether_notification_title">ਤੈਥਰਿੰਗ ਬੰਦ ਹੈ</string>
+    <string name="disable_tether_notification_title">ਟੀਥਰਿੰਗ ਅਸਮਰੱਥ ਹੈ</string>
     <string name="drag_to_add_tiles">ਟਾਈਲਾਂ ਜੋੜਣ ਲਈ ਖਿੱਚ੍ਹੋ</string>
     <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
     <string name="edit_mode_hint">ਮੁੜ-ਵਿਵਸਥਿਤ ਕਰਨ ਲਈ ਟਾਈਲਾਂ ਨੂੰ ਡ੍ਰੈਗ ਕਰੋ। ਦਿਖਾਉਣ ਜਾਂ ਲੁਕਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
@@ -138,12 +138,12 @@
     <string name="oneplus_threekey_navigation_vibration">ਸਿਰਫ਼ ਕੰਪਨ</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ਅਨਲਾਕ</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ਅਨਲਾਕਸ</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"ਬੈਟਰੀ ਦੀ ਲਾਈਫ ਨੂੰ ਵਧਾਉਣ ਲਈ, ਬੈਟਰੀ ਸੇਵਰ:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• ਪਿੱਠਵਰਤੀ ਗਤੀਵਿਧੀਆਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ ਜਾਂ ਫਿਰ ਪੑਤੀਬੰਧਿਤ ਕਰ ਦਿੰਦਾ ਹੈ, ਕੁਝ ਦਿੑਸ਼ਟੀਗਤ ਪੑਭਾਵ ਜਾਂ ਹੋਰ ਖਾਸੀਅਤਾਂ ਜਿਵੇਂਕਿ “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"ਬੈਟਰੀ ਦੀ ਲਾਈਫ ਨੂੰ ਵਧਾਉਣ ਲਈ, ਬੈਟਰੀ ਸੇਵਰ:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ਪਿੱਠਵਰਤੀ ਗਤੀਵਿਧੀਆਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ ਜਾਂ ਫਿਰ ਪੑਤੀਬੰਧਿਤ ਕਰ ਦਿੰਦਾ ਹੈ, ਅਤੇ ਕੁਝ ਦਿੑਸ਼ਟੀਗਤ ਪੑਭਾਵਾਂ ਨੂੰ ਵੀ"</string>
     <string name="op_earphone_connect">ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ...</string>
     <string name="op_earphone_connected_fail">ਜੋੜਣਾ ਅਸਫ਼ਲ ਰਿਹਾ। ਤੁਸੀਂ ਹੈੱਡਸੈੱਟ ਅਤੇ ਬਲੂਟੁੱਥ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="op_earphone_connected_success">ਜੋੜਿਆ ਗਿਆ। ਹੋਰ ਸੈੱਟ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ।</string>
@@ -173,7 +173,7 @@
     <string name="op_notification_channel_summary_low">ਬਿਨਾਂ ਕਿਸੇ ਧੁਨੀ ਜਾਂ ਕੰਪਨ ਦੇ ਘੱਟ ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾਵਾਂ।</string>
     <string name="op_notification_section_header_gentle">ਹੋਰ ਸੂਚਨਾਵਾਂ</string>
     <string name="op_notification_silence_title">ਹੋਰ</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" ਪਰੋਟੈਕਟਡ ਚਾਰਜਿੰਗ"</string>
     <string name="op_qs_dark_mode_tile_label">ਹਨੇਰਾ ਮੋਡ</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ਉਪਯੋਗ ਕੀਤੇ ਜਾ ਚੁੱਕੇ ਹਨ</string>
     <string name="op_quick_settings_night_display_label">ਦ੍ਰਿਸ਼ ਆਰਾਮਦਾਇਕਤਾ</string>
@@ -181,7 +181,7 @@
     <string name="op_quick_settings_night_display_summary_on">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਹੈ, ਬੰਦ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_read_mode2_dialog_black">ਮੋਨੋ ਪ੍ਰਭਾਵ</string>
     <string name="op_read_mode2_dialog_color">ਕ੍ਰੋਮੈਟਿਕ ਪ੍ਰਭਾਵ</string>
-    <string name="op_read_mode2_dialog_title">ਪ੍ਰਭਾਵ ਚੁਣੋ</string>
+    <string name="op_read_mode2_dialog_title">ਪੑਭਾਵ ਦੀ ਚੋਣ ਕਰੋ</string>
     <string name="op_reverse_charge_notification_btn">ਰੋਕੋ</string>
     <string name="op_reverse_charge_notification_discharging">ਕਨੈਕਟ ਕੀਤੀ ਡਿਵਾਈਸ ਨੂੰ ਚਾਰਜ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
     <string name="op_reverse_charge_notification_subtitle">ਦੂਜੇ Qi-ਸਮਰੱਥ ਡਿਵਾਈਸਾਂ ਨੂੰ ਵਾਇਰਲੈੱਸ ਤਰੀਕੇ ਨਾਲ ਚਾਰਜ ਕਰਨ ਲਈ</string>
@@ -213,7 +213,7 @@
     <string name="prevent_view_top_tag_cancel2">"ਸਕ੍ਰੀਨ ਉੱਪਰਲੇ ਚੱਕਰਾਂ ਦਾ ਅਨੁਸਰਣ ਕਰੋ ਅਤੇ ਪਾਕੇਟ ਮੋਡ ਨੂੰ ਜਬਰਦਸਤੀ ਬੰਦ ਕਰਨ ਲਈ ਉਹਨਾਂ 'ਤੇ ਟੈਪ ਕਰੋ।"</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">ਨਿਜਤਾ ਚਿਤਾਵਨੀ</string>
+    <string name="privacy_alert_application_name">ਨਿਜਤਾ ਚੇਤਾਵਨੀ</string>
     <string name="privacy_alert_content_text">ਬਦਲਾਵ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="privacy_alert_content_title">%1$s ਤੁਹਾਡਾ %2$s ਪ੍ਰ੍ਯੋਗ ਕਰ ਰਿਹਾ ਹੈ</string>
     <string name="privacy_type_camera">ਕੈਮਰਾ</string>
@@ -278,24 +278,33 @@
     <string name="select_minutes">ਮਿੰਟ ਚੁਣੋ</string>
     <string name="select_year">ਸਾਲ ਚੁਣੋ</string>
     <string name="sim_status_uss_network_roam">ਰੋਮ</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">"ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">"ਮੋਬਾਈਲ ਡੈਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
     <string name="tethered_notification_hybrid_sharing_none">"ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">"Wi-Fi ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
-    <string name="tethered_notification_message">ਸੈਟ ਅੱਪ ਲਈ ਦੱਬੋ।</string>
-    <string name="tethered_notification_multi_device_message">%1$s ਕਨੈਕਟ ਕੀਤੀਆਂ ਡਿਵਾਈਸਾਂ</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">"ਵਾਈ-ਫਾਈ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਸੈਟਿੰਗਾਂ 'ਚ ਦਾਖਲ ਹੋਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"</string>
+    <string name="tethered_notification_message">ਸਥਾਪਿਤ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
+    <string name="tethered_notification_multi_device_message">%1$s ਕਨੈਕਟ ਕੀਤੇ ਗਏ ਯੰਤਰ</string>
     <string name="tethered_notification_multi_tether_title">ਟੀਥਰਿੰਗ ਅਤੇ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਕਿਰਿਆਸ਼ੀਲ ਹਨ</string>
     <string name="tethered_notification_no_device_message">ਕੋਈ ਕਨੈਕਟ ਕੀਤੀ ਡਿਵਾਈਸ ਨਹੀਂ</string>
-    <string name="tethered_notification_one_device_message">%1$s ਕਨੈਕਟ ਕੀਤੀ ਡਿਵਾਈਸ</string>
-    <string name="tethered_notification_sharing_mobile_multi">ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
-    <string name="tethered_notification_sharing_mobile_no">ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਕੋਈ ਡਿਵਾਈਸ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_sharing_mobile_single">ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_sharing_none_multi">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
-    <string name="tethered_notification_sharing_none_no">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, ਕੋਈ ਡਿਵਾਈਸ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_sharing_none_single">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਕੋਈ ਡਿਵਾਈਸ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਡਿਵਾਈਸ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
-    <string name="tethered_notification_title">ਟੀਥਰਿੰਗ ਜਾਂ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਕਿਰਿਆਸ਼ੀਲ ਹੈ</string>
+    <string name="tethered_notification_one_device_message">%1$s ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ ਯੰਤਰ</string>
+    <string name="tethered_notification_sharing_mobile_multi">ਮੋਬਾਈਲ ਡੇਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
+    <string name="tethered_notification_sharing_mobile_no">ਮੋਬਾਈਲ ਡੈਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਕੋਈ ਯੰਤਰ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_sharing_mobile_single">ਮੋਬਾਈਲ ਡੈਟਾ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_sharing_none_multi">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
+    <string name="tethered_notification_sharing_none_no">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, ਕੋਈ ਯੰਤਰ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_sharing_none_single">ਸਾਂਝਾ ਕਰਨ ਲਈ ਕੋਈ ਨੈੱਟਵਰਕ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_sharing_wifi_multi">ਵਾਈ-ਫਾਈ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤੇ ਗਏ</string>
+    <string name="tethered_notification_sharing_wifi_no">ਵਾਈ-ਫਾਈ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, ਕੋਈ ਯੰਤਰ ਕੁਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_sharing_wifi_single">ਵਾਈ-ਫਾਈ ਸਾਂਝਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ, %1$s ਯੰਤਰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="tethered_notification_title">ਟੀਥਰਿੰਗ ਜਾਂ ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਕਿਰਿਆਸ਼ੀਲ ਹਨ</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ਡਿਵਾਈਸ ਨੂੰ ਮਿਊਟ ਕਰਨ ਲਈ, Alert Slider ਨੂੰ ਕੰਪਨ ਜਾਂ ਸਾਇਲੈਂਟ ਮੋਡ ਤੇ ਸੈਟ ਕਰੋ</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">ਰਿੰਗ ਵੌਲਿਊਮ ਮਿਊਟ ਕਰੋ</string>
+    <string name="threekey_volume_guide_dialog_ok">ਠੀਕ ਹੈ</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">ਰਿੰਗਿੰਗ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ, ਰਿੰਗ ਮੋਡ ਤੇ ਜਾਣ ਲਈ Alert Slider ਦੀ ਵਰਤੋਂ ਕਰੋ ਅਤੇ ਆਪਣੀ ਪਸੰਦ ਦੇ ਅਨੁਸਾਰ ਰਿੰਗ ਵਾਲੀਅਮ ਸੈਟ ਕਰੋ |</string>
+    <string name="threekey_volume_guide_dialog_ring_title">ਰਿੰਗ ਮੋਡ</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider ਇਸ ਸਮੇਂ ਕੰਪਨ ਮੋਡ ਵਿੱਚ ਹੈ; ਡਿਵਾਈਸ ਇਨਕਿਮੰਗ ਕਾਲ ਲਈ ਨਾ ਤਾਂ ਵੱਜੇਗੀ ਅਤੇ ਨਾ ਹੀ ਕੰਪਨ ਕਰੇਗੀ। ਰਿੰਗਿੰਗ ਦੁਆਰਾ ਸੂਚਿਤ ਕੀਤੇ ਜਾਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਰਿੰਗ ਮੋਡ ਤੇ ਜਾਓ।</string>
+    <string name="threekey_volume_guide_dialog_silent_title">ਸਾਇਲੈਂਟ ਮੋਡ</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider ਇਸ ਸਮੇਂ ਕੰਪਨ ਮੋਡ ਵਿੱਚ ਹੈ; ਡਿਵਾਈਸ ਇਨਕਿਮੰਗ ਕਾਲ ਲਈ ਨਹੀਂ ਵੱਜੇਗੀ. ਤੁਹਾਨੂੰ ਸਿਰਫ ਕੰਪਨ ਦੁਆਰਾ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਰਿੰਗਿੰਗ ਦੁਆਰਾ ਸੂਚਿਤ ਕੀਤੇ ਜਾਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਰਿੰਗ ਮੋਡ ਤੇ ਜਾਓ।</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">ਕੰਪਨ ਮੋਡ</string>
     <string name="time_picker_header_text">ਸਮਾਂ ਸੈੱਟ ਕਰੋ</string>
     <string name="time_picker_hour_label">ਘੰਟਾ</string>
     <string name="time_picker_input_error">ਵੈਧ ਸਮਾਂ ਦਰਜ ਕਰੋ</string>
