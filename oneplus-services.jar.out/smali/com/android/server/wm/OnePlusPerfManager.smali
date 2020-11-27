@@ -5722,42 +5722,48 @@
 .end method
 
 .method public acquirePerfForStartSpeed(Ljava/lang/String;Landroid/util/BoostFramework;)Z
-    .locals 2
+    .locals 4
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->getPkgPerfLock(Ljava/lang/String;)I
 
-    move-result p2
+    move-result v0
 
-    if-lez p2, :cond_0
+    const/4 v1, 0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-lez v0, :cond_0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, "perfLock : boost "
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "perfLock : boost "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, " "
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " "
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, p2}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/android/server/wm/OnePlusPerfManager;->myLog(Ljava/lang/String;)V
+
+    const/16 v2, 0x1081
+
+    invoke-virtual {p2, v2, p1, v0, v1}, Landroid/util/BoostFramework;->perfHint(ILjava/lang/String;II)I
+
+    sput-boolean v1, Lcom/android/server/wm/TaskDisplayArea;->mPerfSendTapHint:Z
 
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->acquirePerfForStart(Ljava/lang/String;)Z
 
-    const/4 p0, 0x1
-
-    return p0
+    return v1
 .end method
 
 .method public autoAcquireOrRelease(Z)Z

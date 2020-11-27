@@ -2379,7 +2379,7 @@
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_11
+    if-nez v0, :cond_f
 
     const/4 v0, 0x0
 
@@ -2418,13 +2418,13 @@
     return-void
 
     :cond_1
-    iget-boolean v2, p0, Lcom/android/server/wm/obl;->bvj:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/obl;->bvj:Z
 
-    if-nez v2, :cond_10
+    if-nez v0, :cond_e
 
-    if-nez p5, :cond_10
+    if-nez p5, :cond_e
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_e
 
     iget-object p5, p1, Lcom/android/server/wm/ActivityRecord;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
@@ -2481,9 +2481,9 @@
     :cond_4
     invoke-virtual {p5}, Lcom/android/server/wm/Task;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-eqz v2, :cond_5
+    if-eqz v0, :cond_5
 
     invoke-virtual {p5}, Lcom/android/server/wm/Task;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -2491,9 +2491,9 @@
 
     iget p5, p5, Landroid/content/res/Configuration;->orientation:I
 
-    const/4 v2, 0x2
+    const/4 v0, 0x2
 
-    if-ne p5, v2, :cond_5
+    if-ne p5, v0, :cond_5
 
     const-string p0, "this activity is landscape,we don\'t revise starting window flags"
 
@@ -2506,29 +2506,29 @@
 
     invoke-static {p5}, Lcom/android/server/wm/ear/cno;->bio(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v0
 
-    iput-boolean v2, p0, Lcom/android/server/wm/obl;->sis:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/obl;->sis:Z
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "the app is starting from launcher =:"
+    const-string v2, "the app is starting from launcher =:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lcom/android/server/wm/obl;->sis:Z
+    iget-boolean v2, p0, Lcom/android/server/wm/obl;->sis:Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v3, ",callAppPackageName =:"
+    const-string v2, ",callAppPackageName =:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p5
 
@@ -2536,7 +2536,7 @@
 
     iget-boolean p5, p0, Lcom/android/server/wm/obl;->sis:Z
 
-    const/4 v2, 0x1
+    const/4 v0, 0x1
 
     if-nez p5, :cond_6
 
@@ -2544,11 +2544,11 @@
 
     if-eqz p5, :cond_6
 
-    iget-object v3, p1, Lcom/android/server/wm/ActivityRecord;->shortComponentName:Ljava/lang/String;
+    iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->shortComponentName:Ljava/lang/String;
 
-    if-eqz v3, :cond_6
+    if-eqz v2, :cond_6
 
-    invoke-virtual {p5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p5
 
@@ -2558,14 +2558,14 @@
 
     invoke-static {p5}, Lcom/android/server/wm/ear/cno;->ssp(Ljava/lang/String;)V
 
-    iput-boolean v2, p0, Lcom/android/server/wm/obl;->sis:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/obl;->sis:Z
 
     :cond_6
     iput-object v1, p0, Lcom/android/server/wm/obl;->ywr:Ljava/lang/String;
 
     iget-boolean p5, p0, Lcom/android/server/wm/obl;->sis:Z
 
-    if-eqz p5, :cond_10
+    if-eqz p5, :cond_e
 
     iget-object p5, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -2618,12 +2618,12 @@
 
     invoke-static {p3}, Lcom/android/server/wm/ear/cno;->ssp(Ljava/lang/String;)V
 
-    move p3, v2
+    move p3, v0
 
     :cond_a
     if-nez p2, :cond_b
 
-    if-eqz p3, :cond_10
+    if-eqz p3, :cond_e
 
     :cond_b
     iget-object p2, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
@@ -2634,35 +2634,18 @@
 
     move-result p2
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_c
 
     if-eqz p4, :cond_d
 
-    iget-boolean p1, p0, Lcom/android/server/wm/obl;->dma:Z
-
-    if-eqz p1, :cond_c
-
-    const-string p1, "for we chat first start after reboot,we add splash"
-
-    invoke-static {p1}, Lcom/android/server/wm/ear/cno;->ssp(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_c
     const-string p0, "for we chat process running,we don\'t add splash"
 
     invoke-static {p0}, Lcom/android/server/wm/ear/cno;->ssp(Ljava/lang/String;)V
 
     return-void
 
-    :cond_d
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/server/wm/obl;->dma:Z
-
-    goto :goto_1
-
-    :cond_e
-    if-eqz p4, :cond_f
+    :cond_c
+    if-eqz p4, :cond_d
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -2670,7 +2653,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_d
 
     const-string p0, "for special app starting from launcher,if processRunning,we don\'t use splash window"
 
@@ -2678,22 +2661,21 @@
 
     return-void
 
-    :cond_f
-    :goto_1
+    :cond_d
     const-string p1, "OpStartingWindowManager"
 
     const-string p2, "for app starting from launcher,we use splash window to speed up apptransition ready"
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput v2, p0, Lcom/android/server/wm/obl;->zta:I
+    iput v0, p0, Lcom/android/server/wm/obl;->zta:I
 
-    iput-boolean v2, p0, Lcom/android/server/wm/obl;->tsu:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/obl;->tsu:Z
 
-    :cond_10
+    :cond_e
     return-void
 
-    :cond_11
+    :cond_f
     iput-object v1, p0, Lcom/android/server/wm/obl;->ywr:Ljava/lang/String;
 
     return-void

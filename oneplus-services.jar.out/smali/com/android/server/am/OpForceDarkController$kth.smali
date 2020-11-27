@@ -35,13 +35,13 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Lcom/android/server/am/OpForceDarkController$ssp;->gck()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/android/server/am/OpForceDarkController$ssp;->wtn()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/am/OpForceDarkController$kth;->zta:Ljava/lang/String;
 
-    invoke-virtual {p2}, Lcom/android/server/am/OpForceDarkController$ssp;->sis()Lcom/android/server/am/OpForceDarkController$ssp;
+    invoke-virtual {p2}, Lcom/android/server/am/OpForceDarkController$ssp;->you()Lcom/android/server/am/OpForceDarkController$ssp;
 
     move-result-object p1
 
@@ -174,7 +174,7 @@
 
     iget v6, p0, Lcom/android/server/am/OpForceDarkController$kth;->sis:I
 
-    invoke-virtual {v5, v6}, Lcom/android/server/am/OpForceDarkController$ssp;->cno(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Lcom/android/server/am/OpForceDarkController$ssp;->ssp(I)Ljava/lang/String;
 
     move-result-object v5
 

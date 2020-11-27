@@ -737,14 +737,6 @@
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    rsub-int/lit8 p1, p1, 0x64
-
-    int-to-float p1, p1
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    div-float/2addr p1, v2
-
     iget-object v2, p0, Lcom/oneplus/server/hypnus/HypnusService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     if-nez v2, :cond_2
@@ -764,17 +756,30 @@
     :cond_2
     iget-object v2, p0, Lcom/oneplus/server/hypnus/HypnusService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
+
+    if-nez p1, :cond_3
+
+    iget-object p0, p0, Lcom/oneplus/server/hypnus/HypnusService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v2, p1}, Landroid/hardware/display/DisplayManagerInternal;->updateHighTempStatus(ZI)V
+
+    goto :goto_0
+
+    :cond_3
+    rsub-int p1, p1, 0x2710
 
     iget-object p0, p0, Lcom/oneplus/server/hypnus/HypnusService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2, p1}, Landroid/hardware/display/DisplayManagerInternal;->updateHighTempStatus(ZF)V
+    invoke-virtual {p0, v2, p1}, Landroid/hardware/display/DisplayManagerInternal;->updateHighTempStatus(ZI)V
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const-string p0, "DisplayManagerInternal is null"
 
     invoke-static {v3, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I

@@ -198,7 +198,7 @@
     :goto_1
     const/4 v1, 0x1
 
-    const-string v2, "persist.sys.color.adaptivep3"
+    const-string v2, "persist.sys.colormode.nature"
 
     if-ne v1, p1, :cond_0
 

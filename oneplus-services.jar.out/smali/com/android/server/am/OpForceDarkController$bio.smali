@@ -59,14 +59,14 @@
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController$bio;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OpForceDarkController;->access$1500(Lcom/android/server/am/OpForceDarkController;Landroid/os/Message;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OpForceDarkController;->access$1400(Lcom/android/server/am/OpForceDarkController;Landroid/os/Message;)V
 
     goto :goto_0
 
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController$bio;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$1400(Lcom/android/server/am/OpForceDarkController;)V
+    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$1300(Lcom/android/server/am/OpForceDarkController;)V
 
     goto :goto_0
 
@@ -75,11 +75,11 @@
 
     const-string v0, "OnePlusForceDarkConfig"
 
-    invoke-static {p1, v0}, Lcom/android/server/am/OpForceDarkController;->access$1200(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/android/server/am/OpForceDarkController;->access$1100(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/android/server/am/OpForceDarkController$bio;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1300(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1200(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -89,13 +89,13 @@
 
     iget-object p1, p0, Lcom/android/server/am/OpForceDarkController$bio;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1300(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/am/OpForceDarkController;->access$1200(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController$bio;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$1300(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$1200(Lcom/android/server/am/OpForceDarkController;)Landroid/os/Handler;
 
     move-result-object p0
 

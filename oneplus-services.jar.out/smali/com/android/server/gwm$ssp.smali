@@ -814,7 +814,7 @@
 
     iget-object v0, p0, Lcom/android/server/gwm$ssp;->wtn:Landroid/content/Intent;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     invoke-static {}, Lcom/android/server/gwm;->ibl()Z
 
@@ -882,7 +882,7 @@
 
     cmpg-float v0, v0, v3
 
-    if-gez v0, :cond_3
+    if-gez v0, :cond_4
 
     :cond_1
     iget-object v0, p0, Lcom/android/server/gwm$ssp;->ear:Lcom/android/server/gwm;
@@ -977,6 +977,33 @@
     goto :goto_0
 
     :goto_1
+    iget v0, p0, Lcom/android/server/gwm$ssp;->ugm:F
+
+    float-to-double v3, v0
+
+    const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v0, v3, v5
+
+    if-ltz v0, :cond_3
+
+    iget v0, p0, Lcom/android/server/gwm$ssp;->ugm:F
+
+    iget v3, p0, Lcom/android/server/gwm$ssp;->ugm:F
+
+    float-to-double v3, v3
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->floor(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    sub-float/2addr v0, v3
+
+    iput v0, p0, Lcom/android/server/gwm$ssp;->ugm:F
+
+    :cond_3
     iget v0, p0, Lcom/android/server/gwm$ssp;->ywr:F
 
     iget v3, p0, Lcom/android/server/gwm$ssp;->ugm:F
@@ -985,7 +1012,7 @@
 
     iput v0, p0, Lcom/android/server/gwm$ssp;->vdb:F
 
-    :cond_3
+    :cond_4
     :goto_2
     iget v0, p0, Lcom/android/server/gwm$ssp;->vdb:F
 
@@ -1005,7 +1032,7 @@
 
     cmpl-double v0, v3, v5
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_5
 
     const-string v0, "mEstimatedBatteryNext - 0.1f"
 
@@ -1027,20 +1054,20 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     iget v0, p0, Lcom/android/server/gwm$ssp;->ywr:F
 
     const/high16 v3, 0x42c80000    # 100.0f
 
     cmpl-float v0, v0, v3
 
-    if-ltz v0, :cond_5
+    if-ltz v0, :cond_6
 
     iput v3, p0, Lcom/android/server/gwm$ssp;->ywr:F
 
     iput v3, p0, Lcom/android/server/gwm$ssp;->vdb:F
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/android/server/gwm$ssp;->wtn:Landroid/content/Intent;
 
     const-string v4, "estimate_remain"
@@ -1155,7 +1182,7 @@
 
     goto :goto_4
 
-    :cond_6
+    :cond_7
     const-string v0, "no mStashBatteryChangedBroadcast"
 
     invoke-direct {p0, v0}, Lcom/android/server/gwm$ssp;->sis(Ljava/lang/String;)V

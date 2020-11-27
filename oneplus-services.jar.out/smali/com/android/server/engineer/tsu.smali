@@ -1545,286 +1545,299 @@
 
     move-object/from16 v2, p2
 
-    const-string v3, "0"
-
-    const-string v4, ":"
+    const-string v3, ":"
 
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->hashCode()I
 
-    move-result v5
+    move-result v4
 
-    sparse-switch v5, :sswitch_data_0
+    sparse-switch v4, :sswitch_data_0
 
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v5, "--execute_switch_log"
+    const-string v4, "--execute_switch_log"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x11
+    const/16 v4, 0x12
 
     goto/16 :goto_1
 
     :sswitch_1
-    const-string v5, "--execute_start_mmi"
+    const-string v4, "--execute_start_mmi"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     goto/16 :goto_1
 
     :sswitch_2
-    const-string v5, "--execute_show_production_message"
+    const-string v4, "--execute_show_production_message"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x8
+    const/16 v4, 0x8
 
     goto/16 :goto_1
 
     :sswitch_3
-    const-string v5, "--execute_switch_production_mode"
+    const-string v4, "--execute_switch_production_mode"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x6
+    const/4 v4, 0x6
 
     goto/16 :goto_1
 
     :sswitch_4
-    const-string v5, "--execute_wifi_connect"
+    const-string v4, "--execute_wifi_connect"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x13
+    const/16 v4, 0x14
 
     goto/16 :goto_1
 
     :sswitch_5
-    const-string v5, "--execute_engineer_order"
+    const-string v4, "--execute_engineer_order"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x5
+    const/4 v4, 0x5
 
     goto/16 :goto_1
 
     :sswitch_6
-    const-string v5, "--execute_launch_wifi_mmi"
+    const-string v4, "--execute_launch_wifi_mmi"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xa
+    const/16 v4, 0xa
 
     goto/16 :goto_1
 
     :sswitch_7
-    const-string v5, "--execute_check_calibration_status"
+    const-string v4, "--execute_check_calibration_status"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x12
+    const/16 v4, 0x13
 
     goto/16 :goto_1
 
     :sswitch_8
-    const-string v5, "--execute_add_cover_ui"
+    const-string v4, "--execute_add_cover_ui"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xc
+    const/16 v4, 0xd
 
     goto/16 :goto_1
 
     :sswitch_9
-    const-string v5, "--execute_switch_wifi_mmi"
+    const-string v4, "--execute_switch_wifi_mmi"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x9
+    const/16 v4, 0x9
 
     goto/16 :goto_1
 
     :sswitch_a
-    const-string v5, "--execute_power_off"
+    const-string v4, "--execute_power_off"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x3
+    const/4 v4, 0x3
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_b
-    const-string v5, "--execute_model_test"
+    const-string v4, "--execute_model_test"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x4
+    const/4 v4, 0x4
 
     goto :goto_1
 
     :sswitch_c
-    const-string v5, "--execute_stop_mmi"
+    const-string v4, "--execute_stop_mmi"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
     goto :goto_1
 
     :sswitch_d
-    const-string v5, "--execute_remove_cover_ui"
+    const-string v4, "--execute_remove_cover_ui"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xd
+    const/16 v4, 0xe
 
     goto :goto_1
 
     :sswitch_e
-    const-string v5, "--execute_check_key_status"
+    const-string v4, "--execute_check_key_status"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xe
+    const/16 v4, 0xf
 
     goto :goto_1
 
     :sswitch_f
-    const-string v5, "--execute_start_dsocket"
+    const-string v4, "--execute_start_dsocket"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xf
+    const/16 v4, 0x10
 
     goto :goto_1
 
     :sswitch_10
-    const-string v5, "--execute_master_clear"
+    const-string v4, "--execute_master_clear"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x2
+    const/4 v4, 0x2
 
     goto :goto_1
 
     :sswitch_11
-    const-string v5, "--execute_reboot_device"
+    const-string v4, "--execute_reboot_device"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0xb
+    const/16 v4, 0xb
 
     goto :goto_1
 
     :sswitch_12
-    const-string v5, "--execute_detect_ms_result"
+    const-string v4, "--execute_shutdown_device"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/4 v5, 0x7
+    const/16 v4, 0xc
 
     goto :goto_1
 
     :sswitch_13
-    const-string v5, "--execute_stop_dsocket"
+    const-string v4, "--execute_detect_ms_result"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const/16 v5, 0x10
+    const/4 v4, 0x7
+
+    goto :goto_1
+
+    :sswitch_14
+    const-string v4, "--execute_stop_dsocket"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/16 v4, 0x11
 
     goto :goto_1
 
     :cond_0
     :goto_0
-    const/4 v5, -0x1
+    const/4 v4, -0x1
 
     :goto_1
-    const-string v10, "%s_%s"
+    const-string v9, "%s_%s"
 
-    const-string v12, "com.oneplus.factorymode.assistant.SmartCoverUIService"
+    const-string v11, "com.oneplus.factorymode.assistant.SmartCoverUIService"
+
+    const-string v12, "android.intent.extra.KEY_CONFIRM"
 
     const-string v13, "com.oem.autotest.connector.AutoTestServer"
 
@@ -1832,17 +1845,17 @@
 
     const-string v15, "com.oem.engineermode.EngineerModeMain"
 
-    const-string v11, "exception caught : "
+    const-string v10, "exception caught : "
 
-    const-string v6, ""
+    const-string v5, ""
 
     const-wide/16 v16, 0x1f4
 
-    const-string v8, "FAIL:Error"
+    const-string v7, "FAIL:Error"
 
-    const-string v7, "FAIL:ERROR"
+    const-string v6, "FAIL:ERROR"
 
-    const-string v9, "com.oneplus.factorymode"
+    const-string v8, "com.oneplus.factorymode"
 
     move-object/from16 v18, v13
 
@@ -1852,9 +1865,9 @@
 
     const-string v14, "FAIL:System Not Ready"
 
-    packed-switch v5, :pswitch_data_0
+    packed-switch v4, :pswitch_data_0
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :pswitch_0
     sget-object v3, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -1884,35 +1897,35 @@
 
     new-instance v4, Landroid/content/ComponentName;
 
-    const-string v5, "com.oneplus.factorymode.assistant.EngineerWifiHelper"
+    const-string v10, "com.oneplus.factorymode.assistant.EngineerWifiHelper"
 
-    invoke-direct {v4, v9, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v8, v10}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    const-string v5, "com.oneplus.factorymode.assistant.EngineerWifiHelper.connectTargetAP"
+    const-string v8, "com.oneplus.factorymode.assistant.EngineerWifiHelper.connectTargetAP"
 
-    invoke-virtual {v3, v5}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    const/high16 v5, 0x10000000
+    const/high16 v8, 0x10000000
 
-    invoke-virtual {v3, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v3, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const/4 v9, 0x2
+    const/4 v10, 0x2
 
-    new-array v9, v9, [Ljava/lang/Object;
+    new-array v10, v10, [Ljava/lang/Object;
 
     const-string v11, "--"
 
-    invoke-virtual {v1, v11, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v11, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    aput-object v1, v9, v6
+    aput-object v1, v10, v5
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->hashCode()I
 
@@ -1922,11 +1935,11 @@
 
     move-result-object v1
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    aput-object v1, v9, v6
+    aput-object v1, v10, v5
 
-    invoke-static {v5, v10, v9}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v8, v9, v10}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1936,15 +1949,15 @@
 
     sget-object v5, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
 
-    const-string v6, "intent set end"
+    const-string v8, "intent set end"
 
-    invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v5, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
 
-    sget-object v6, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+    sget-object v8, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    invoke-virtual {v5, v3, v6}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    invoke-virtual {v5, v3, v8}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
     move-result-object v3
 
@@ -1973,12 +1986,12 @@
     :goto_2
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_1
-    invoke-virtual {v2, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_2
     const-string v0, "FAIL:Update Wifi State Fail"
@@ -1990,7 +2003,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_0
     move-exception v0
@@ -2001,7 +2014,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_1
     :try_start_1
@@ -2025,27 +2038,27 @@
 
     new-instance v4, Landroid/content/ComponentName;
 
-    const-string v5, "com.oneplus.factorymode.devicecalibrationdata.DeviceDataDetectService"
+    const-string v11, "com.oneplus.factorymode.devicecalibrationdata.DeviceDataDetectService"
 
-    invoke-direct {v4, v9, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v8, v11}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const/4 v9, 0x2
+    const/4 v11, 0x2
 
-    new-array v9, v9, [Ljava/lang/Object;
+    new-array v11, v11, [Ljava/lang/Object;
 
     const-string v12, "--"
 
-    invoke-virtual {v1, v12, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v12, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    aput-object v1, v9, v6
+    aput-object v1, v11, v5
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->hashCode()I
 
@@ -2055,11 +2068,11 @@
 
     move-result-object v1
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    aput-object v1, v9, v6
+    aput-object v1, v11, v5
 
-    invoke-static {v5, v10, v9}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v8, v9, v11}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2069,9 +2082,9 @@
 
     iget-object v5, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
 
-    sget-object v6, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+    sget-object v8, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    invoke-virtual {v5, v3, v6}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    invoke-virtual {v5, v3, v8}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
     move-result-object v3
 
@@ -2100,12 +2113,12 @@
     :goto_3
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_4
-    invoke-virtual {v2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v2, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_5
     const-string v0, "FAIL:Check Calibration Status Fail"
@@ -2117,7 +2130,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_1
     move-exception v0
@@ -2154,11 +2167,11 @@
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    const-string v5, "enable"
+    const-string v4, "enable"
 
-    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2166,7 +2179,7 @@
 
     const-string v1, "1"
 
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2191,7 +2204,9 @@
     goto :goto_4
 
     :cond_7
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "0"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2205,7 +2220,9 @@
 
     const-string v0, "persist.vendor.oem.dump"
 
-    invoke-static {v0, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "0"
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "oemlogkit"
 
@@ -2221,14 +2238,14 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_9
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_2
     move-exception v0
@@ -2239,7 +2256,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_3
     const-string v0, "stopDiagSocket"
@@ -2251,7 +2268,7 @@
     :goto_5
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :pswitch_4
     :try_start_3
@@ -2259,13 +2276,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
@@ -2340,12 +2357,12 @@
     :goto_6
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_b
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_c
     const-string v0, "FAIL:Permission Deined"
@@ -2363,7 +2380,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_5
     iget-object v1, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
@@ -2379,7 +2396,7 @@
     :goto_7
     sget-boolean v0, Lcom/android/server/engineer/tsu;->bio:Z
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_2a
 
     const-wide/16 v0, 0x64
 
@@ -2409,7 +2426,7 @@
 
     new-instance v3, Landroid/content/ComponentName;
 
-    invoke-direct {v3, v9, v12}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v11}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -2428,7 +2445,7 @@
     :goto_8
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_d
     const-string v0, "FAIL:Remove Cover UI Fail"
@@ -2440,7 +2457,7 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_4
     move-exception v0
@@ -2452,9 +2469,9 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     :goto_9
-    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_15
+    goto/16 :goto_16
 
     :pswitch_7
     :try_start_6
@@ -2478,7 +2495,7 @@
 
     new-instance v3, Landroid/content/ComponentName;
 
-    invoke-direct {v3, v9, v12}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v11}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -2501,7 +2518,7 @@
     :goto_a
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_f
     const-string v0, "FAIL:Add Cover UI Fail"
@@ -2513,7 +2530,7 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_5
     move-exception v0
@@ -2524,7 +2541,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_8
     :try_start_7
@@ -2544,23 +2561,21 @@
 
     new-instance v1, Landroid/content/Intent;
 
-    const-string v3, "android.intent.action.REBOOT"
+    const-string v3, "com.android.internal.intent.action.REQUEST_SHUTDOWN"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "android.intent.extra.KEY_CONFIRM"
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-virtual {v1, v12, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    const/high16 v4, 0x10000000
 
-    const/high16 v3, 0x10000000
+    invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    iget-object v4, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
 
-    iget-object v3, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
-
-    invoke-direct {v0, v3, v1, v4}, Lcom/android/server/engineer/tsu;->ire(Landroid/content/Context;Landroid/content/Intent;I)I
+    invoke-direct {v0, v4, v1, v3}, Lcom/android/server/engineer/tsu;->ire(Landroid/content/Context;Landroid/content/Intent;I)I
 
     move-result v0
 
@@ -2570,19 +2585,19 @@
 
     if-eqz v1, :cond_11
 
-    const-string v0, "OK:Reboot Started"
+    const-string v0, "OK:Shutdown Started"
 
     :goto_b
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "FAIL:Reboot Fail, Error Code "
+    const-string v3, "FAIL:Shutdown Fail, Error Code: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2599,7 +2614,7 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_6
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_6
     move-exception v0
@@ -2610,7 +2625,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_9
     :try_start_8
@@ -2628,27 +2643,23 @@
 
     if-eqz v1, :cond_14
 
-    invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
+    new-instance v1, Landroid/content/Intent;
 
-    move-result-object v1
+    const-string v3, "android.intent.action.REBOOT"
 
-    new-instance v3, Landroid/content/ComponentName;
+    invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v4, "com.oneplus.factorymode.wifitest.WifiAdbHelper"
+    const/4 v3, 0x0
 
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v12, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    const/high16 v4, 0x10000000
 
-    const/high16 v3, 0x10000000
+    invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    iget-object v4, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
 
-    iget-object v3, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v1, v4}, Lcom/android/server/engineer/tsu;->ire(Landroid/content/Context;Landroid/content/Intent;I)I
+    invoke-direct {v0, v4, v1, v3}, Lcom/android/server/engineer/tsu;->ire(Landroid/content/Context;Landroid/content/Intent;I)I
 
     move-result v0
 
@@ -2658,19 +2669,19 @@
 
     if-eqz v1, :cond_13
 
-    const-string v0, "OK:Launch Wifi MMI Success"
+    const-string v0, "OK:Reboot Started"
 
     :goto_c
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_13
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "FAIL:Launch Wifi MMI Fail, Error Code "
+    const-string v3, "FAIL:Reboot Fail, Error Code "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2687,7 +2698,7 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_7
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_7
     move-exception v0
@@ -2698,7 +2709,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_a
     :try_start_9
@@ -2722,35 +2733,51 @@
 
     new-instance v3, Landroid/content/ComponentName;
 
-    const-string v4, "com.oneplus.factorymode.assistant.SwitchWifiMMI"
+    const-string v4, "com.oneplus.factorymode.wifitest.WifiAdbHelper"
 
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    iget-object v0, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
+    const/high16 v3, 0x10000000
 
-    sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    iget-object v3, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    invoke-virtual {v3, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v3, v1, v4}, Lcom/android/server/engineer/tsu;->ire(Landroid/content/Context;Landroid/content/Intent;I)I
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    invoke-static {v0}, Landroid/app/ActivityManager;->isStartResultSuccessful(I)Z
 
-    const-string v0, "OK:Switch Wifi MMI Success"
+    move-result v1
+
+    if-eqz v1, :cond_15
+
+    const-string v0, "OK:Launch Wifi MMI Success"
 
     :goto_d
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :cond_15
-    const-string v0, "FAIL:Switch Wifi MMI Fail"
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "FAIL:Launch Wifi MMI Fail, Error Code "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_d
 
@@ -2759,7 +2786,7 @@
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_8
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :catch_8
     move-exception v0
@@ -2770,7 +2797,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     :pswitch_b
     :try_start_a
@@ -2794,9 +2821,81 @@
 
     new-instance v3, Landroid/content/ComponentName;
 
+    const-string v4, "com.oneplus.factorymode.assistant.SwitchWifiMMI"
+
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    iget-object v0, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
+
+    sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_17
+
+    const-string v0, "OK:Switch Wifi MMI Success"
+
+    :goto_e
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_18
+
+    :cond_17
+    const-string v0, "FAIL:Switch Wifi MMI Fail"
+
+    goto :goto_e
+
+    :cond_18
+    invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_9
+
+    goto/16 :goto_18
+
+    :catch_9
+    move-exception v0
+
+    sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    goto/16 :goto_11
+
+    :pswitch_c
+    :try_start_b
+    const-class v1, Landroid/app/ActivityManagerInternal;
+
+    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManagerInternal;
+
+    invoke-virtual {v1}, Landroid/app/ActivityManagerInternal;->isSystemReady()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1a
+
+    invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    new-instance v3, Landroid/content/ComponentName;
+
     const-string v4, "com.oneplus.factorymode.ShowRemoteMessage"
 
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -2816,16 +2915,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_17
+    if-eqz v1, :cond_19
 
     const-string v0, "OK:Show Message Success"
 
-    :goto_e
+    :goto_f
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :cond_17
+    :cond_19
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2840,16 +2939,16 @@
 
     move-result-object v0
 
-    goto :goto_e
+    goto :goto_f
 
-    :cond_18
+    :cond_1a
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_a
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_9
+    :try_end_b
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_a
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :catch_9
+    :catch_a
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -2858,9 +2957,9 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
-    :pswitch_c
+    :pswitch_d
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2873,7 +2972,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1c
+    if-eqz v1, :cond_1e
 
     new-instance v1, Landroid/content/Intent;
 
@@ -2883,7 +2982,7 @@
 
     const-string v4, "com.oneplus.factorymode.DetectMasterClearResult"
 
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -2903,7 +3002,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_1d
 
     invoke-static/range {v16 .. v17}, Landroid/os/SystemClock;->sleep(J)V
 
@@ -2917,25 +3016,25 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_19
+    if-ne v0, v1, :cond_1b
 
     const-string v0, "OK:Detect Success"
 
     goto/16 :goto_5
 
-    :cond_19
-    if-nez v0, :cond_1a
+    :cond_1b
+    if-nez v0, :cond_1c
 
     const-string v0, "FAIL:Detect Failed"
 
     goto/16 :goto_5
 
-    :cond_1a
+    :cond_1c
     const-string v0, "FAIL:Retry"
 
     goto/16 :goto_5
 
-    :cond_1b
+    :cond_1d
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2952,99 +3051,10 @@
 
     goto/16 :goto_5
 
-    :cond_1c
-    invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    goto/16 :goto_17
-
-    :pswitch_d
-    :try_start_b
-    const-class v1, Landroid/app/ActivityManagerInternal;
-
-    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/app/ActivityManagerInternal;
-
-    invoke-virtual {v1}, Landroid/app/ActivityManagerInternal;->isSystemReady()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1e
-
-    invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
-
-    move-result-object v1
-
-    new-instance v3, Landroid/content/ComponentName;
-
-    const-string v4, "com.oneplus.factorymode.assistant.SwitchProductionMode"
-
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    iget-object v0, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
-
-    sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1d
-
-    const-string v0, "OK:Switch Mode Success"
-
-    :goto_f
-    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    goto/16 :goto_17
-
-    :cond_1d
-    const-string v0, "FAIL:Switch Mode Fail"
-
-    goto :goto_f
-
     :cond_1e
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_b
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_a
 
-    goto/16 :goto_17
-
-    :catch_a
-    move-exception v0
-
-    sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    :goto_10
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    goto/16 :goto_17
+    goto/16 :goto_18
 
     :pswitch_e
     :try_start_c
@@ -3060,7 +3070,96 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1f
+    if-eqz v1, :cond_20
+
+    invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    new-instance v3, Landroid/content/ComponentName;
+
+    const-string v4, "com.oneplus.factorymode.assistant.SwitchProductionMode"
+
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    iget-object v0, v0, Lcom/android/server/engineer/tsu;->you:Landroid/content/Context;
+
+    sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1f
+
+    const-string v0, "OK:Switch Mode Success"
+
+    :goto_10
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_18
+
+    :cond_1f
+    const-string v0, "FAIL:Switch Mode Fail"
+
+    goto :goto_10
+
+    :cond_20
+    invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_b
+
+    goto/16 :goto_18
+
+    :catch_b
+    move-exception v0
+
+    sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    :goto_11
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2, v6}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    goto/16 :goto_18
+
+    :pswitch_f
+    :try_start_d
+    const-class v1, Landroid/app/ActivityManagerInternal;
+
+    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManagerInternal;
+
+    invoke-virtual {v1}, Landroid/app/ActivityManagerInternal;->isSystemReady()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_21
 
     invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
 
@@ -3068,7 +3167,7 @@
 
     invoke-virtual {v1, v15}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v1, v9}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1, v8}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v3, 0x1000000
 
@@ -3088,16 +3187,16 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :cond_1f
+    :cond_21
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_c
-    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_b
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_c
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :catch_b
+    :catch_c
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3106,10 +3205,10 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_13
+    goto/16 :goto_14
 
-    :pswitch_f
-    :try_start_d
+    :pswitch_10
+    :try_start_e
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3122,7 +3221,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_22
+    if-eqz v1, :cond_24
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -3132,15 +3231,15 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_22
 
     const-string v3, "modeltest"
 
-    invoke-virtual {v1, v3, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v3, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    :cond_20
+    :cond_22
     new-instance v3, Landroid/content/Intent;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3175,16 +3274,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_21
+    if-eqz v1, :cond_23
 
     const-string v0, "OK:Start ModelTest Success"
 
-    :goto_11
+    :goto_12
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :cond_21
+    :cond_23
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3199,16 +3298,16 @@
 
     move-result-object v0
 
-    goto :goto_11
+    goto :goto_12
 
-    :cond_22
+    :cond_24
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_c
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_d
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :catch_c
+    :catch_d
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3217,10 +3316,10 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_13
+    goto/16 :goto_14
 
-    :pswitch_10
-    :try_start_e
+    :pswitch_11
+    :try_start_f
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3233,7 +3332,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_23
+    if-eqz v1, :cond_25
 
     new-instance v1, Landroid/content/Intent;
 
@@ -3241,7 +3340,7 @@
 
     invoke-virtual {v1, v15}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v1, v9}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1, v8}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v3, 0x1000000
 
@@ -3273,16 +3372,16 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :cond_23
+    :cond_25
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_e
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_d
+    :try_end_f
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_e
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :catch_d
+    :catch_e
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3291,10 +3390,10 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_13
+    goto :goto_14
 
-    :pswitch_11
-    :try_start_f
+    :pswitch_12
+    :try_start_10
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3307,7 +3406,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_25
+    if-eqz v1, :cond_27
 
     invoke-direct {v0, v0}, Lcom/android/server/engineer/tsu;->cjf(Landroid/os/ShellCommand;)Landroid/content/Intent;
 
@@ -3317,7 +3416,7 @@
 
     const-string v4, "com.oneplus.factorymode.manualtest.MasterClear"
 
-    invoke-direct {v3, v9, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v8, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -3341,16 +3440,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_26
 
     const-string v0, "OK:Start Master Clear Success"
 
-    :goto_12
+    :goto_13
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :cond_24
+    :cond_26
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3365,16 +3464,16 @@
 
     move-result-object v0
 
-    goto :goto_12
+    goto :goto_13
 
-    :cond_25
+    :cond_27
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_f
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_e
+    :try_end_10
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_f
 
-    goto/16 :goto_17
+    goto/16 :goto_18
 
-    :catch_e
+    :catch_f
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3383,7 +3482,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_13
+    :goto_14
     invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -3398,10 +3497,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_16
+    goto/16 :goto_17
 
-    :pswitch_12
-    :try_start_10
+    :pswitch_13
+    :try_start_11
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3414,7 +3513,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_26
+    if-eqz v1, :cond_28
 
     new-instance v1, Landroid/content/Intent;
 
@@ -3438,16 +3537,16 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto :goto_17
+    goto :goto_18
 
-    :cond_26
+    :cond_28
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_10
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_f
+    :try_end_11
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_10
 
-    goto :goto_17
+    goto :goto_18
 
-    :catch_f
+    :catch_10
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3458,14 +3557,14 @@
 
     const-string v4, "stop mmi server exception caught : "
 
-    goto :goto_14
+    goto :goto_15
 
-    :pswitch_13
+    :pswitch_14
     move-object/from16 v3, v18
 
     move-object/from16 v4, v19
 
-    :try_start_11
+    :try_start_12
     const-class v1, Landroid/app/ActivityManagerInternal;
 
     invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3478,7 +3577,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_27
+    if-eqz v1, :cond_29
 
     new-instance v1, Landroid/content/Intent;
 
@@ -3498,16 +3597,16 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto :goto_17
+    goto :goto_18
 
-    :cond_27
+    :cond_29
     invoke-virtual {v2, v14}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-    :try_end_11
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_10
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_11
 
-    goto :goto_17
+    goto :goto_18
 
-    :catch_10
+    :catch_11
     move-exception v0
 
     sget-object v1, Lcom/android/server/engineer/tsu;->cno:Ljava/lang/String;
@@ -3518,10 +3617,10 @@
 
     const-string v4, "start mmi server exception caught : "
 
-    :goto_14
+    :goto_15
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_15
+    :goto_16
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -3534,19 +3633,20 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_16
-    invoke-virtual {v2, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_28
     :goto_17
+    invoke-virtual {v2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_2a
+    :goto_18
     return-void
 
     nop
 
     :sswitch_data_0
     .sparse-switch
-        -0x7430403c -> :sswitch_13
-        -0x6f6b949c -> :sswitch_12
+        -0x7430403c -> :sswitch_14
+        -0x6f6b949c -> :sswitch_13
+        -0x6a482e0b -> :sswitch_12
         -0x69f0f8ba -> :sswitch_11
         -0x5c039fa6 -> :sswitch_10
         -0x3d93faf0 -> :sswitch_f
@@ -3569,6 +3669,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_14
         :pswitch_13
         :pswitch_12
         :pswitch_11
@@ -6150,7 +6251,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x29
+    const/16 v7, 0x2a
 
     goto/16 :goto_1
 
@@ -6241,7 +6342,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x37
+    const/16 v7, 0x38
 
     goto/16 :goto_1
 
@@ -6280,7 +6381,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x24
+    const/16 v7, 0x25
 
     goto/16 :goto_1
 
@@ -6319,7 +6420,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2a
+    const/16 v7, 0x2b
 
     goto/16 :goto_1
 
@@ -6384,7 +6485,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2b
+    const/16 v7, 0x2c
 
     goto/16 :goto_1
 
@@ -6449,7 +6550,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x3a
+    const/16 v7, 0x3b
 
     goto/16 :goto_1
 
@@ -6462,7 +6563,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2e
+    const/16 v7, 0x2f
 
     goto/16 :goto_1
 
@@ -6475,7 +6576,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x3d
+    const/16 v7, 0x3e
 
     goto/16 :goto_1
 
@@ -6488,7 +6589,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x3e
+    const/16 v7, 0x3f
 
     goto/16 :goto_1
 
@@ -6501,7 +6602,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x3b
+    const/16 v7, 0x3c
 
     goto/16 :goto_1
 
@@ -6514,7 +6615,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x3c
+    const/16 v7, 0x3d
 
     goto/16 :goto_1
 
@@ -6527,7 +6628,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x32
+    const/16 v7, 0x33
 
     goto/16 :goto_1
 
@@ -6566,7 +6667,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x25
+    const/16 v7, 0x26
 
     goto/16 :goto_1
 
@@ -6605,7 +6706,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x30
+    const/16 v7, 0x31
 
     goto/16 :goto_1
 
@@ -6618,7 +6719,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x38
+    const/16 v7, 0x39
 
     goto/16 :goto_1
 
@@ -6631,7 +6732,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x26
+    const/16 v7, 0x27
 
     goto/16 :goto_1
 
@@ -6657,7 +6758,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2d
+    const/16 v7, 0x2e
 
     goto/16 :goto_1
 
@@ -6670,7 +6771,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2c
+    const/16 v7, 0x2d
 
     goto/16 :goto_1
 
@@ -6709,7 +6810,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x34
+    const/16 v7, 0x35
 
     goto/16 :goto_1
 
@@ -6722,7 +6823,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x33
+    const/16 v7, 0x34
 
     goto/16 :goto_1
 
@@ -6748,7 +6849,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x27
+    const/16 v7, 0x28
 
     goto/16 :goto_1
 
@@ -6813,7 +6914,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x31
+    const/16 v7, 0x32
 
     goto/16 :goto_1
 
@@ -6826,7 +6927,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x2f
+    const/16 v7, 0x30
 
     goto/16 :goto_1
 
@@ -6841,7 +6942,7 @@
 
     const/4 v7, 0x2
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_37
     const-string v7, "--update_serial_number"
@@ -6870,6 +6971,19 @@
     goto :goto_1
 
     :sswitch_39
+    const-string v7, "--execute_shutdown_device"
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    const/16 v7, 0x24
+
+    goto :goto_1
+
+    :sswitch_3a
     const-string v7, "--get_config_params"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6878,11 +6992,11 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x36
+    const/16 v7, 0x37
 
     goto :goto_1
 
-    :sswitch_3a
+    :sswitch_3b
     const-string v7, "--execute_detect_ms_result"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6895,7 +7009,7 @@
 
     goto :goto_1
 
-    :sswitch_3b
+    :sswitch_3c
     const-string v7, "--execute_stop_dsocket"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6904,11 +7018,11 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x28
+    const/16 v7, 0x29
 
     goto :goto_1
 
-    :sswitch_3c
+    :sswitch_3d
     const-string v7, "--query_version"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6921,7 +7035,7 @@
 
     goto :goto_1
 
-    :sswitch_3d
+    :sswitch_3e
     const-string v7, "--start_monitor_wifi_state_change"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6930,11 +7044,11 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x39
+    const/16 v7, 0x3a
 
     goto :goto_1
 
-    :sswitch_3e
+    :sswitch_3f
     const-string v7, "--verify_keybox"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6946,7 +7060,7 @@
 
     if-eqz v7, :cond_2
 
-    const/16 v7, 0x35
+    const/16 v7, 0x36
 
     goto :goto_1
 
@@ -8603,12 +8717,13 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x7c7ee80e -> :sswitch_3e
-        -0x79f812da -> :sswitch_3d
-        -0x779f4d3f -> :sswitch_3c
-        -0x7430403c -> :sswitch_3b
-        -0x6f6b949c -> :sswitch_3a
-        -0x6bc999a6 -> :sswitch_39
+        -0x7c7ee80e -> :sswitch_3f
+        -0x79f812da -> :sswitch_3e
+        -0x779f4d3f -> :sswitch_3d
+        -0x7430403c -> :sswitch_3c
+        -0x6f6b949c -> :sswitch_3b
+        -0x6bc999a6 -> :sswitch_3a
+        -0x6a482e0b -> :sswitch_39
         -0x69f0f8ba -> :sswitch_38
         -0x65299362 -> :sswitch_37
         -0x60f7be46 -> :sswitch_36
@@ -8693,6 +8808,7 @@
         :pswitch_14
         :pswitch_14
         :pswitch_14
+        :pswitch_13
         :pswitch_13
         :pswitch_13
         :pswitch_13

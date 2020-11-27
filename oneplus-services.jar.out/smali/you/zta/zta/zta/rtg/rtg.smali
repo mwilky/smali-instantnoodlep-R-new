@@ -1285,7 +1285,16 @@
 
     iget-object v0, p0, Lyou/zta/zta/zta/rtg/rtg;->gwm:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lyou/zta/zta/zta/rtg/rtg;->gwm:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     iget-object v0, p0, Lyou/zta/zta/zta/rtg/rtg;->ugm:Ljava/util/ArrayList;
 
@@ -1295,7 +1304,20 @@
 
     sput-boolean v0, Lyou/zta/zta/zta/rtg/rtg;->c:Z
 
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+
     :cond_0
+    :goto_0
     new-instance v0, Lyou/zta/zta/zta/rtg/rtg$you;
 
     invoke-direct {v0}, Lyou/zta/zta/zta/rtg/rtg$you;-><init>()V
