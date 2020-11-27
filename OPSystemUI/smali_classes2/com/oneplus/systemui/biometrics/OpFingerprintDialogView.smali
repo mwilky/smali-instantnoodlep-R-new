@@ -1053,7 +1053,9 @@
 
     const/4 v3, -0x1
 
-    invoke-static {v1, v2, v3, v0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    const/4 v4, 0x0
+
+    invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v4
 
@@ -1097,7 +1099,15 @@
 
     invoke-static {v1, v2, p0, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
+    goto :goto_0
+
     :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-static {v1, v2, v4, v0}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 

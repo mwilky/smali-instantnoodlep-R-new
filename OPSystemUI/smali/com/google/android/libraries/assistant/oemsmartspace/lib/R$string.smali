@@ -12,4 +12,4 @@
 
 .field public static final smartspace_hours_mins:I = 0x7f120790
 
-.field public static final weather_description:I = 0x7f1208ab
+.field public static final weather_description:I = 0x7f1208b4

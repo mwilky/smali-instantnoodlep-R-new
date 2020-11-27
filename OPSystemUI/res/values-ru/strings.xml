@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">Приложение \"%1$s\" запрашивает разрешение на показ фрагментов приложения \"%2$s\".</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
     <string name="about_action_bar_title">Информация</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версия %s</string>
     <string name="about_privacy_policy">Политика конфиденциальности</string>
     <string name="about_release_note_title">Журнал обновлений:</string>
     <string name="about_terms_service">Условия обслуживания</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">Чтобы изменить порядок элементов, перетащите их</string>
     <string name="drag_to_remove_disabled">Должно остаться не менее %1$d элементов</string>
     <string name="drag_to_remove_tiles">Чтобы удалить, перетащите сюда</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">Левый — %1$s; правый — %2$s</string>
     <string name="edit_mode_hint">Перетащите плитки, чтобы изменить их порядок. Нажмите, чтобы показать их или скрыть.</string>
     <string name="empty_shade_text">Нет уведомлений</string>
     <string name="enable_adb">Отладка по USB</string>
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">Только вибрация</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> разблокировка</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> разблокировки(-ок)</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Чтобы увеличить время работы от батареи, \"Регулятор потребляемой энергии\":
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•отключит или ограничит фоновые процессы, некоторые визуальные эффекты и другие функции, такие как “Окей, Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Чтобы увеличить время работы от батареи, \"Регулятор потребляемой энергии\":
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•отключит или ограничит фоновые процессы и некоторые визуальные эффекты"</string>
     <string name="op_earphone_connect">Сопряжение...</string>
     <string name="op_earphone_connected_fail">Не удалось выполнить сопряжение. Проверьте состояние гарнитуры и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сопряжено. Нажмите для настройки.</string>
@@ -1367,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">Менее важные уведомления без звука и вибрации.</string>
     <string name="op_notification_section_header_gentle">Другие уведомления</string>
     <string name="op_notification_silence_title">Другое</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Защищенная зарядка"</string>
     <string name="op_qs_dark_mode_tile_label">Темный режим</string>
     <string name="op_qs_data_usage_used">%1$s: использовано %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Комфорт для глаз</string>
@@ -1889,7 +1889,7 @@
     <string name="tethered_notification_hybrid_sharing_none">Нет доступной сети для совместного использования. Нажмите для перехода к настройкам</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Совместное использование сети Wi-Fi. Нажмите для перехода к настройкам</string>
     <string name="tethered_notification_message">Коснитесь для настройки.</string>
-    <string name="tethered_notification_multi_device_message">Подключенных устройств: %1$s</string>
+    <string name="tethered_notification_multi_device_message">%1$s подключенных устройств(а)</string>
     <string name="tethered_notification_multi_tether_title">Активен режим модема и мобильная точка доступа</string>
     <string name="tethered_notification_no_device_message">Нет подключенного устройства</string>
     <string name="tethered_notification_one_device_message">%1$s подключенное устройство</string>
@@ -1902,7 +1902,7 @@
     <string name="tethered_notification_sharing_wifi_multi">Совместное использование сети Wi-Fi. Подключено устройств: %1$s</string>
     <string name="tethered_notification_sharing_wifi_no">Совместное использование сети Wi-Fi. Нет подключенных устройств</string>
     <string name="tethered_notification_sharing_wifi_single">Совместное использование сети Wi-Fi. Подключено %1$s устройство</string>
-    <string name="tethered_notification_title">Активен режим модема и мобильная точка доступа</string>
+    <string name="tethered_notification_title">Активен режим модема или мобильная точка доступа</string>
     <string name="tethering_hardware_offload">Аппаратное ускорение в режиме модема</string>
     <string name="tethering_hardware_offload_summary">Использовать аппаратное ускорение в режиме модема (если доступно)</string>
     <string name="tethering_settings_not_available">Этот пользователь не может изменять настройки режима модема</string>
@@ -1914,6 +1914,15 @@
 \u0009• высокая температура окружающей среды."</string>
     <string name="thermal_shutdown_message">Сейчас телефон работает нормально</string>
     <string name="thermal_shutdown_title">Телефон выключился из-за перегрева</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Чтобы отключить звонок на устройстве, переместите бегунок оповещений в режим вибрации или бесшумный режим.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Отключить звонок</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Чтобы включить звонок, переместите бегунок оповещений в режим звонка и установите комфортную громкость.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Режим звонка</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Бегунок оповещений установлен в бесшумный режим. При входящем вызове устройство не будет ни звонить, ни вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Бесшумный режим</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Бегунок оповещений установлен в режим вибрации. При входящем вызове устройство не будет звонить, а только вибрировать. Переведите устройство в режим звонка, чтобы телефон звонил.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Режим вибрации</string>
     <string name="tile_unavailable">Недоступно</string>
     <string name="time_picker_header_text">Установить время</string>
     <string name="time_picker_hour_label">часы</string>

@@ -1621,13 +1621,13 @@
 
     move-result-object v0
 
-    const-string v2, "keyguardPresentation"
+    const-string v2, "keyguardStatusView"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
 

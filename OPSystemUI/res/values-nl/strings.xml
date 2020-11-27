@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s wil segmenten van %2$s weergeven</string>
     <string name="abc_toolbar_collapse_description">Samenvouwen</string>
     <string name="about_action_bar_title">Over</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versie %s</string>
     <string name="about_privacy_policy">Privacybeleid</string>
     <string name="about_release_note_title">Updatelogboek:</string>
     <string name="about_terms_service">Algemene gebruiksvoorwaarden</string>
@@ -1332,9 +1332,9 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="oneplus_threekey_navigation_vibration">Alleen vibreren</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ontgrendeling</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ontgrendelt</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Batterijbesparing:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+•schakelt achtergrondactiviteit, bepaalde visuele effecten en andere functies uit of beperkt deze om de levensduur van de batterij te verlengen “Hé Google”"</string>
     <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
 
 •Turns off or restricts background activity, and some visual effects"</string>
@@ -1367,7 +1367,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="op_notification_channel_summary_low">Minder belangrijke meldingen zonder geluid of trillingen.</string>
     <string name="op_notification_section_header_gentle">Overige meldingen</string>
     <string name="op_notification_silence_title">Andere</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Beschermd opladen"</string>
     <string name="op_qs_dark_mode_tile_label">Donkere modus</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s gebruikt</string>
     <string name="op_quick_settings_night_display_label">Visie comfort</string>
@@ -1888,9 +1888,9 @@ worden gecontroleerd"</string>
     <string name="tethered_notification_hybrid_sharing_mobile">Mobiele data wordt gedeeld, klik om Instellingen te openen</string>
     <string name="tethered_notification_hybrid_sharing_none">Geen beschikbaar netwerk om te delen, klik om Instellingen te openen</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wifi wordt gedeeld, klik om Instellingen te openen</string>
-    <string name="tethered_notification_message">Tap om in te stellen.</string>
+    <string name="tethered_notification_message">Tik om in te stellen.</string>
     <string name="tethered_notification_multi_device_message">%1$s apparaten verbonden</string>
-    <string name="tethered_notification_multi_tether_title">Tethering en Mobiele HotSpot actief</string>
+    <string name="tethered_notification_multi_tether_title">Tethering en Mobiele hotspot actief</string>
     <string name="tethered_notification_no_device_message">Geen toestel verbonden</string>
     <string name="tethered_notification_one_device_message">%1$s apparaat verbonden</string>
     <string name="tethered_notification_sharing_mobile_multi">Mobiele data wordt gedeeld, %1$s apparaten verbonden</string>
@@ -1902,7 +1902,7 @@ worden gecontroleerd"</string>
     <string name="tethered_notification_sharing_wifi_multi">Wifi wordt gedeeld, %1$s apparaten verbonden</string>
     <string name="tethered_notification_sharing_wifi_no">Wifi wordt gedeeld, geen apparaat verbonden</string>
     <string name="tethered_notification_sharing_wifi_single">Wifi wordt gedeeld, %1$s apparaat verbonden</string>
-    <string name="tethered_notification_title">Tethering of Mobiele HotSpot actief</string>
+    <string name="tethered_notification_title">Tethering of Mobiele hotspot actief</string>
     <string name="tethering_hardware_offload">Hardwareversnelling voor tethering</string>
     <string name="tethering_hardware_offload_summary">Hardwareversnelling voor tethering gebruiken indien beschikbaar</string>
     <string name="tethering_settings_not_available">Instellingen voor tethering zijn niet beschikbaar voor deze gebruiker</string>
@@ -1914,6 +1914,15 @@ Je telefoon kan warm worden als je:
 \u0009• je telefoon gebruikt bij hoge temperaturen."</string>
     <string name="thermal_shutdown_message">Je telefoon presteert nu weer zoals gebruikelijk</string>
     <string name="thermal_shutdown_title">Telefoon uitgezet wegens hitte</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Als u het geluid van het apparaat wilt dempen, gebruikt u de schuifregelaar voor meldingen om de trilmodus of de stille modus in te schakelen.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Belvolume dempen</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Als u de beltoon wilt inschakelen, gebruikt u de schuifregelaar voor meldingen om over te schakelen naar de geluidsmodus en stelt u het gewenste belvolume in.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Geluidsmodus</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">De schuifregelaar voor meldingen staat momenteel op de stille modus. Het apparaat maakt geen geluid en trilt niet bij een inkomende oproep. Schakel de geluidsmodus in om het geluid in te schakelen.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Stille modus</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">De schuifregelaar voor meldingen staat momenteel op de trilmodus. Het apparaat maakt geen geluid bij een inkomende oproep. U wordt alleen gewaarschuwd door een trilling. Schakel de geluidsmodus in om het geluid in te schakelen.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Trilmodus</string>
     <string name="tile_unavailable">Niet beschikbaar</string>
     <string name="time_picker_header_text">Tijd instellen</string>
     <string name="time_picker_hour_label">uur</string>

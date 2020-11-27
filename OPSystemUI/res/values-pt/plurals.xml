@@ -61,7 +61,7 @@
         <item quantity="one">Mais %s notificações no grupo.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">%d notificação recebida</item>
+        <item quantity="other">%d notificações recebidas</item>
         <item quantity="one">%d notificação recebida</item>
     </plurals>
     <plurals name="quick_settings_hotspot_secondary_label_num_devices">

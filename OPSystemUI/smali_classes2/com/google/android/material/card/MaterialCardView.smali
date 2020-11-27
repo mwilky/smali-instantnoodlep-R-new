@@ -280,79 +280,75 @@
 .method public dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 8
 
-    const-string v0, "chenhb"
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->mRectF:Landroid/graphics/RectF;
 
-    const-string v1, "go in dispatchDraw"
+    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;)I
 
-    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mRectF:Landroid/graphics/RectF;
-
-    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;)I
-
-    move-result v1
+    move-result v0
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
 
-    iget-object v3, p0, Lcom/google/android/material/card/MaterialCardView;->mDuffXferMode:Landroid/graphics/PorterDuffXfermode;
+    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mDuffXferMode:Landroid/graphics/PorterDuffXfermode;
 
-    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mCornerPathList:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mCornerPathList:Ljava/util/List;
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mCornerPathList:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mCornerPathList:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v2, Landroid/graphics/Path;
 
-    move-result v3
+    iget-object v3, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
 
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/Path;
-
-    iget-object v4, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mPaint:Landroid/graphics/Paint;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    iget-object v1, p0, Lcom/google/android/material/card/MaterialCardView;->mCardBackgroundMaskPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->mCardBackgroundMaskPaint:Landroid/graphics/Paint;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lcom/google/android/material/card/MaterialCardView;->mIsCardSelected:Z
+    iget-boolean v0, p0, Lcom/google/android/material/card/MaterialCardView;->mIsCardSelected:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
+
+    const-string v0, "chenhb"
 
     const-string v1, "go in mCardBackgroundMaskPaint"
 

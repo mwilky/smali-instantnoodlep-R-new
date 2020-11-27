@@ -270,6 +270,8 @@
 
 .field public static final time_header:I = 0x7f0b0647
 
+.field public static final time_header_layout:I = 0x7f0b0648
+
 .field public static final title:I = 0x7f0b064a
 
 .field public static final toggle_mode:I = 0x7f0b0655

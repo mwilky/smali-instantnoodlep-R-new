@@ -440,7 +440,7 @@
 .end method
 
 .method private drawDays(Landroid/graphics/Canvas;)V
-    .locals 17
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -476,147 +476,194 @@
 
     add-int/2addr v3, v7
 
-    iget v7, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+    iget v7, v0, Lcom/google/android/material/picker/SimpleMonthView;->mWeekStart:I
 
-    const/4 v8, 0x0
+    const/4 v8, 0x2
 
-    const/4 v9, 0x1
+    const/4 v9, 0x0
 
-    if-le v7, v9, :cond_2
+    const/4 v10, 0x1
 
+    if-ne v7, v8, :cond_0
+
+    move v7, v10
+
+    goto :goto_0
+
+    :cond_0
     move v7, v9
 
     :goto_0
-    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+    const/4 v11, 0x7
 
-    sub-int/2addr v10, v9
+    if-eqz v7, :cond_2
 
-    if-gt v7, v10, :cond_2
+    iget v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
 
-    div-int/lit8 v10, v5, 0x2
+    if-ne v12, v10, :cond_1
 
-    add-int/lit8 v11, v7, -0x1
+    iput v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
 
-    mul-int/2addr v11, v5
-
-    add-int/2addr v10, v11
-
-    invoke-static/range {p0 .. p0}, Lcom/google/android/material/internal/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_0
-
-    iget v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mPaddedWidth:I
-
-    sub-int v10, v11, v10
-
-    :cond_0
-    iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mContext:Landroid/content/Context;
-
-    sget v12, Lcom/google/android/material/R$color;->op_control_text_color_disable_default:I
-
-    invoke-virtual {v11, v12}, Landroid/content/Context;->getColor(I)I
-
-    move-result v11
-
-    invoke-virtual {v2, v8}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
-
-    invoke-virtual {v2, v11}, Landroid/text/TextPaint;->setColor(I)V
-
-    iget v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mMonth:I
-
-    if-nez v11, :cond_1
-
-    const/16 v11, 0xb
-
-    iget v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
-
-    sub-int/2addr v12, v9
+    move v12, v10
 
     goto :goto_1
 
     :cond_1
-    add-int/lit8 v11, v11, -0x1
+    sub-int/2addr v12, v10
 
-    iget v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
+    iput v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    :cond_2
+    move v12, v9
 
     :goto_1
-    invoke-static {v11, v12}, Lcom/google/android/material/picker/SimpleMonthView;->getDaysInMonth(II)I
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
 
-    move-result v11
+    if-le v13, v10, :cond_5
 
-    iget v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+    move v13, v10
 
-    sub-int/2addr v11, v12
+    :goto_2
+    iget v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
 
-    add-int/2addr v11, v7
+    sub-int/2addr v14, v10
 
-    add-int/2addr v11, v9
+    if-gt v13, v14, :cond_5
 
-    iget-object v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
+    div-int/lit8 v14, v5, 0x2
 
-    int-to-long v13, v11
+    add-int/lit8 v15, v13, -0x1
 
-    invoke-virtual {v12, v13, v14}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    mul-int/2addr v15, v5
 
-    move-result-object v11
+    add-int/2addr v14, v15
 
-    int-to-float v10, v10
+    invoke-static/range {p0 .. p0}, Lcom/google/android/material/internal/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
+
+    move-result v15
+
+    if-eqz v15, :cond_3
+
+    iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mPaddedWidth:I
+
+    sub-int v14, v15, v14
+
+    :cond_3
+    iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mContext:Landroid/content/Context;
+
+    sget v8, Lcom/google/android/material/R$color;->op_control_text_color_disable_default:I
+
+    invoke-virtual {v15, v8}, Landroid/content/Context;->getColor(I)I
+
+    move-result v8
+
+    invoke-virtual {v2, v9}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+
+    invoke-virtual {v2, v8}, Landroid/text/TextPaint;->setColor(I)V
+
+    iget v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mMonth:I
+
+    if-nez v8, :cond_4
+
+    const/16 v8, 0xb
+
+    iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
+
+    sub-int/2addr v15, v10
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 v8, v8, -0x1
+
+    iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
+
+    :goto_3
+    invoke-static {v8, v15}, Lcom/google/android/material/picker/SimpleMonthView;->getDaysInMonth(II)I
+
+    move-result v8
+
+    iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    sub-int/2addr v8, v15
+
+    add-int/2addr v8, v13
+
+    add-int/2addr v8, v10
+
+    iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
+
+    move/from16 v17, v12
+
+    int-to-long v11, v8
+
+    invoke-virtual {v15, v11, v12}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v8
+
+    int-to-float v11, v14
 
     int-to-float v12, v3
 
     sub-float/2addr v12, v6
 
-    invoke-virtual {v1, v11, v10, v12, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v8, v11, v12, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v13, v13, 0x1
 
-    goto :goto_0
+    move/from16 v12, v17
 
-    :cond_2
-    iget v7, v0, Lcom/google/android/material/picker/SimpleMonthView;->mMonth:I
-
-    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
-
-    invoke-static {v7, v10}, Lcom/google/android/material/picker/SimpleMonthView;->getDaysInMonth(II)I
-
-    move-result v7
-
-    rsub-int/lit8 v7, v7, 0x2a
-
-    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
-
-    sub-int/2addr v7, v10
-
-    add-int/2addr v7, v9
-
-    mul-int/lit8 v10, v4, 0x4
-
-    add-int/2addr v10, v3
+    const/4 v8, 0x2
 
     const/4 v11, 0x7
 
-    if-le v7, v11, :cond_3
-
-    move v12, v8
-
     goto :goto_2
 
-    :cond_3
+    :cond_5
+    move/from16 v17, v12
+
+    iget v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mMonth:I
+
+    iget v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mYear:I
+
+    invoke-static {v8, v11}, Lcom/google/android/material/picker/SimpleMonthView;->getDaysInMonth(II)I
+
+    move-result v8
+
+    rsub-int/lit8 v8, v8, 0x2a
+
+    iget v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    sub-int/2addr v8, v11
+
+    add-int/2addr v8, v10
+
+    mul-int/lit8 v11, v4, 0x4
+
+    add-int/2addr v11, v3
+
+    const/4 v12, 0x7
+
+    if-le v8, v12, :cond_6
+
+    move v12, v9
+
+    goto :goto_4
+
+    :cond_6
     move v12, v4
 
-    :goto_2
-    add-int/2addr v10, v12
+    :goto_4
+    add-int/2addr v11, v12
 
     invoke-direct/range {p0 .. p0}, Lcom/google/android/material/picker/SimpleMonthView;->findEndDayOffset()I
 
     move-result v12
 
-    move v13, v9
+    move v13, v10
 
-    :goto_3
-    if-gt v13, v7, :cond_6
+    :goto_5
+    if-gt v13, v8, :cond_9
 
     div-int/lit8 v14, v5, 0x2
 
@@ -628,167 +675,204 @@
 
     move-result v15
 
-    if-eqz v15, :cond_4
+    if-eqz v15, :cond_7
 
     iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mPaddedWidth:I
 
     sub-int v14, v15, v14
 
-    :cond_4
+    :cond_7
     iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mContext:Landroid/content/Context;
 
-    sget v9, Lcom/google/android/material/R$color;->op_control_text_color_disable_default:I
+    sget v10, Lcom/google/android/material/R$color;->op_control_text_color_disable_default:I
 
-    invoke-virtual {v15, v9}, Landroid/content/Context;->getColor(I)I
+    invoke-virtual {v15, v10}, Landroid/content/Context;->getColor(I)I
 
-    move-result v9
+    move-result v10
 
-    invoke-virtual {v2, v8}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-virtual {v2, v9}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    invoke-virtual {v2, v9}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v2, v10}, Landroid/text/TextPaint;->setColor(I)V
 
-    iget-object v9, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
+    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
 
-    move/from16 v16, v12
+    move/from16 v18, v8
 
-    int-to-long v11, v13
+    int-to-long v8, v13
 
-    invoke-virtual {v9, v11, v12}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v10, v8, v9}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v8
 
-    int-to-float v11, v14
+    int-to-float v9, v14
 
-    int-to-float v12, v10
+    int-to-float v10, v11
 
-    sub-float/2addr v12, v6
+    sub-float/2addr v10, v6
 
-    invoke-virtual {v1, v9, v11, v12, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v8, v9, v10, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    add-int/lit8 v12, v16, 0x1
+    add-int/lit8 v12, v12, 0x1
 
-    const/4 v9, 0x7
+    const/4 v8, 0x7
 
-    if-ne v12, v9, :cond_5
+    if-ne v12, v8, :cond_8
 
-    add-int/2addr v10, v4
+    add-int/2addr v11, v4
 
-    move v12, v8
+    const/4 v12, 0x0
 
-    :cond_5
+    :cond_8
     add-int/lit8 v13, v13, 0x1
 
-    const/4 v9, 0x1
+    move/from16 v8, v18
 
-    const/4 v11, 0x7
+    const/4 v9, 0x0
 
-    goto :goto_3
+    const/4 v10, 0x1
 
-    :cond_6
+    goto :goto_5
+
+    :cond_9
+    const/4 v8, 0x7
+
+    if-eqz v7, :cond_b
+
+    iget v7, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    if-ne v7, v8, :cond_a
+
+    if-eqz v17, :cond_a
+
+    const/4 v7, 0x1
+
+    iput v7, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    goto :goto_6
+
+    :cond_a
+    const/4 v7, 0x1
+
+    iget v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    add-int/2addr v8, v7
+
+    iput v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayOfWeekStart:I
+
+    :cond_b
+    :goto_6
     invoke-direct/range {p0 .. p0}, Lcom/google/android/material/picker/SimpleMonthView;->findDayOffset()I
 
     move-result v7
 
-    const/4 v9, 0x1
+    move v8, v7
 
-    :goto_4
-    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaysInMonth:I
+    const/4 v7, 0x1
 
-    if-gt v9, v10, :cond_11
+    :goto_7
+    iget v9, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaysInMonth:I
 
-    mul-int v10, v5, v7
+    if-gt v7, v9, :cond_16
+
+    mul-int v9, v5, v8
+
+    const/4 v10, 0x2
 
     div-int/lit8 v11, v5, 0x2
 
-    add-int/2addr v10, v11
+    add-int/2addr v9, v11
 
     invoke-static/range {p0 .. p0}, Lcom/google/android/material/internal/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
-    move-result v11
+    move-result v10
 
-    if-eqz v11, :cond_7
+    if-eqz v10, :cond_c
 
-    iget v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mPaddedWidth:I
+    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mPaddedWidth:I
 
-    sub-int v10, v11, v10
+    sub-int v9, v10, v9
 
-    :cond_7
-    invoke-direct {v0, v9}, Lcom/google/android/material/picker/SimpleMonthView;->isDayEnabled(I)Z
+    :cond_c
+    invoke-direct {v0, v7}, Lcom/google/android/material/picker/SimpleMonthView;->isDayEnabled(I)Z
 
-    move-result v11
+    move-result v10
 
-    if-eqz v11, :cond_8
+    if-eqz v10, :cond_d
 
-    const/16 v12, 0x8
-
-    goto :goto_5
-
-    :cond_8
-    move v12, v8
-
-    :goto_5
-    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->mActivatedDay:I
-
-    if-ne v13, v9, :cond_9
-
-    const/4 v13, 0x1
-
-    goto :goto_6
-
-    :cond_9
-    move v13, v8
-
-    :goto_6
-    iget v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->mHighlightedDay:I
-
-    if-ne v14, v9, :cond_a
-
-    const/4 v14, 0x1
-
-    goto :goto_7
-
-    :cond_a
-    move v14, v8
-
-    :goto_7
-    if-eqz v13, :cond_c
-
-    or-int/lit8 v12, v12, 0x20
-
-    if-eqz v14, :cond_b
-
-    iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayHighlightSelectorPaint:Landroid/graphics/Paint;
+    const/16 v11, 0x8
 
     goto :goto_8
 
-    :cond_b
-    iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorPaint:Landroid/graphics/Paint;
+    :cond_d
+    const/4 v11, 0x0
 
     :goto_8
-    int-to-float v14, v10
+    iget v12, v0, Lcom/google/android/material/picker/SimpleMonthView;->mActivatedDay:I
 
-    int-to-float v15, v3
+    if-ne v12, v7, :cond_e
 
-    iget v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorRadius:I
-
-    div-int/lit8 v8, v8, 0x2
-
-    int-to-float v8, v8
-
-    invoke-virtual {v1, v14, v15, v8, v11}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    const/4 v12, 0x1
 
     goto :goto_9
 
-    :cond_c
-    if-eqz v14, :cond_d
+    :cond_e
+    const/4 v12, 0x0
 
-    or-int/lit8 v12, v12, 0x10
+    :goto_9
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->mHighlightedDay:I
 
-    if-eqz v11, :cond_d
+    if-ne v13, v7, :cond_f
 
-    int-to-float v8, v10
+    const/4 v13, 0x1
 
-    int-to-float v11, v3
+    goto :goto_a
+
+    :cond_f
+    const/4 v13, 0x0
+
+    :goto_a
+    if-eqz v12, :cond_11
+
+    or-int/lit8 v11, v11, 0x20
+
+    if-eqz v13, :cond_10
+
+    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayHighlightSelectorPaint:Landroid/graphics/Paint;
+
+    goto :goto_b
+
+    :cond_10
+    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorPaint:Landroid/graphics/Paint;
+
+    :goto_b
+    int-to-float v13, v9
+
+    int-to-float v14, v3
+
+    iget v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorRadius:I
+
+    const/16 v16, 0x2
+
+    div-int/lit8 v15, v15, 0x2
+
+    int-to-float v15, v15
+
+    invoke-virtual {v1, v13, v14, v15, v10}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    goto :goto_c
+
+    :cond_11
+    const/16 v16, 0x2
+
+    if-eqz v13, :cond_12
+
+    or-int/lit8 v11, v11, 0x10
+
+    if-eqz v10, :cond_12
+
+    int-to-float v10, v9
+
+    int-to-float v13, v3
 
     iget v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorRadius:I
 
@@ -798,92 +882,90 @@
 
     iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayHighlightPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {v1, v8, v11, v14, v15}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v10, v13, v14, v15}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    :cond_d
-    :goto_9
-    iget v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mToday:I
+    :cond_12
+    :goto_c
+    iget v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mToday:I
 
-    if-ne v8, v9, :cond_e
+    if-ne v10, v7, :cond_13
 
-    const/4 v8, 0x1
+    const/4 v10, 0x1
 
-    goto :goto_a
+    goto :goto_d
 
-    :cond_e
-    const/4 v8, 0x0
+    :cond_13
+    const/4 v10, 0x0
 
-    :goto_a
-    if-eqz v8, :cond_f
+    :goto_d
+    if-eqz v10, :cond_14
 
-    if-nez v13, :cond_f
+    if-nez v12, :cond_14
 
-    iget-object v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorPaint:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {v8}, Landroid/graphics/Paint;->getColor()I
+    invoke-virtual {v10}, Landroid/graphics/Paint;->getColor()I
 
-    move-result v8
+    move-result v10
 
     const/4 v11, 0x1
 
     const/4 v12, 0x0
 
-    goto :goto_b
+    goto :goto_e
 
-    :cond_f
-    invoke-static {v12}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
+    :cond_14
+    invoke-static {v11}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
 
-    move-result-object v8
+    move-result-object v10
 
     iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayTextColor:Landroid/content/res/ColorStateList;
 
     const/4 v12, 0x0
 
-    invoke-virtual {v11, v8, v12}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+    invoke-virtual {v11, v10, v12}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    move-result v8
+    move-result v10
 
     const/4 v11, 0x1
 
     invoke-virtual {v2, v11}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    :goto_b
-    invoke-virtual {v2, v8}, Landroid/text/TextPaint;->setColor(I)V
+    :goto_e
+    invoke-virtual {v2, v10}, Landroid/text/TextPaint;->setColor(I)V
 
-    iget-object v8, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
+    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
 
-    int-to-long v13, v9
+    int-to-long v13, v7
 
-    invoke-virtual {v8, v13, v14}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v10, v13, v14}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    int-to-float v10, v10
+    int-to-float v9, v9
 
     int-to-float v13, v3
 
     sub-float/2addr v13, v6
 
-    invoke-virtual {v1, v8, v10, v13, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v10, v9, v13, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v8, v8, 0x1
 
-    const/4 v8, 0x7
+    const/4 v9, 0x7
 
-    if-ne v7, v8, :cond_10
+    if-ne v8, v9, :cond_15
 
     add-int/2addr v3, v4
 
-    move v7, v12
-
-    :cond_10
-    add-int/lit8 v9, v9, 0x1
-
     move v8, v12
 
-    goto/16 :goto_4
+    :cond_15
+    add-int/lit8 v7, v7, 0x1
 
-    :cond_11
+    goto/16 :goto_7
+
+    :cond_16
     return-void
 .end method
 

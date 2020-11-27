@@ -32,30 +32,30 @@
 
 .field public static final tap_to_sign_up:I = 0x7f1207cb
 
-.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1208ac
+.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1208b5
 
-.field public static final wifi_check_password_try_again:I = 0x7f1208b0
+.field public static final wifi_check_password_try_again:I = 0x7f1208b9
 
-.field public static final wifi_connected_no_internet:I = 0x7f1208b1
+.field public static final wifi_connected_no_internet:I = 0x7f1208ba
 
-.field public static final wifi_disabled_generic:I = 0x7f1208bb
+.field public static final wifi_disabled_generic:I = 0x7f1208c4
 
-.field public static final wifi_disabled_network_failure:I = 0x7f1208bc
+.field public static final wifi_disabled_network_failure:I = 0x7f1208c5
 
-.field public static final wifi_disabled_password_failure:I = 0x7f1208bd
+.field public static final wifi_disabled_password_failure:I = 0x7f1208c6
 
-.field public static final wifi_disconnected:I = 0x7f1208bf
+.field public static final wifi_disconnected:I = 0x7f1208c8
 
-.field public static final wifi_limited_connection:I = 0x7f1208cb
+.field public static final wifi_limited_connection:I = 0x7f1208d4
 
-.field public static final wifi_metered_label:I = 0x7f1208cc
+.field public static final wifi_metered_label:I = 0x7f1208d5
 
-.field public static final wifi_no_internet:I = 0x7f1208ce
+.field public static final wifi_no_internet:I = 0x7f1208d7
 
-.field public static final wifi_no_internet_no_reconnect:I = 0x7f1208cf
+.field public static final wifi_no_internet_no_reconnect:I = 0x7f1208d8
 
-.field public static final wifi_passpoint_expired:I = 0x7f1208d1
+.field public static final wifi_passpoint_expired:I = 0x7f1208da
 
-.field public static final wifi_remembered:I = 0x7f1208d2
+.field public static final wifi_remembered:I = 0x7f1208db
 
-.field public static final wifi_unmetered_label:I = 0x7f120900
+.field public static final wifi_unmetered_label:I = 0x7f120909

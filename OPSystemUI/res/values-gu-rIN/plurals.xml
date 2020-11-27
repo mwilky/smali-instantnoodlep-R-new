@@ -17,8 +17,8 @@
         <item quantity="one">SIM%1$d PIN કોડ દાખલ કરો, તમારી પાસે %2$d પ્રયાસ બાકી છે, તે પછી તમારે તમારા ઉપકરણને અનલૉક કરવા માટે તમારા કૅરિઅરનો સંપર્ક કરવો આવશ્યક છે.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">%d સુચનાઓ પ્રાપ્ત કરી</item>
-        <item quantity="one">%d સુચના પ્રાપ્ત કરી</item>
+        <item quantity="other">મેળવ્યા %dસૂચનો</item>
+        <item quantity="one">મેળવ્યું%d સૂચન</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
         <item quantity="other">%d મિનિટમાં</item>

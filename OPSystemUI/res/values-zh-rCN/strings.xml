@@ -1839,6 +1839,15 @@
  • 在高温环境下使用手机"</string>
     <string name="thermal_shutdown_message">现在，您的手机已恢复正常运行</string>
     <string name="thermal_shutdown_title">手机因严重发热而自动关机</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">请将三段式开关设为振动或静音模式</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">关闭来电响铃</string>
+    <string name="threekey_volume_guide_dialog_ok">好的</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">请将三段式开关设为响铃模式以恢复来电响铃通知</string>
+    <string name="threekey_volume_guide_dialog_ring_title">开启来电响铃</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">三段式开关已设为静音模式。设备来电时将不会响铃，如要恢复来电响铃通知请切回响铃模式。</string>
+    <string name="threekey_volume_guide_dialog_silent_title">静音模式</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">三段式开关已设为振动模式。设备来电时将会振动提醒，不会响铃。如要恢复来电响铃通知请切回响铃模式。</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">振动模式</string>
     <string name="tile_unavailable">不可用</string>
     <string name="time_picker_header_text">设置时间</string>
     <string name="time_picker_hour_label">时</string>

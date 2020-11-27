@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%2$s സ്ലൈസുകൾ കാണിക്കാൻ %1$s താൽപ്പര്യപ്പെടുന്നു</string>
     <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
     <string name="about_action_bar_title">വിവരം</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">പതിപ്പ് %s</string>
     <string name="about_privacy_policy">സ്വകാര്യതാ നയം</string>
     <string name="about_release_note_title">ലോഗ് അപ്‍ഡേറ്റ് ചെയ്യുക:</string>
     <string name="about_terms_service">സേവന നിബന്ധനകൾ</string>
@@ -723,7 +723,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="drag_to_rearrange_tiles">ടൈലുകൾ പുനഃക്രമീകരിക്കാൻ അമർത്തിപ്പിടിച്ച് വലിച്ചിടുക</string>
     <string name="drag_to_remove_disabled">നിങ്ങൾക്ക് ചുരുങ്ങിയത് %1$d ടൈലുകളെങ്കിലും വേണം</string>
     <string name="drag_to_remove_tiles">നീക്കംചെയ്യുന്നതിന് ഇവിടെ വലിച്ചിടുക</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">L: %1$s R: %2$s</string>
     <string name="edit_mode_hint">പുനക്രമീകരിക്കാൻ ടൈലുകൾ ഇഴയ്ക്കുക. കാണിക്കാനോ മറയ്ക്കാനോ ആയി ടാപ്പുചെയ്യുക.</string>
     <string name="empty_shade_text">അറിയിപ്പുകൾ ഒന്നുമില്ല</string>
     <string name="enable_adb">USB ഡീബഗ്ഗിംഗ്</string>
@@ -822,7 +822,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="home">ക്രമീകരണ ഹോം</string>
     <string name="hotspot_apm_message">എയര്‍പ്ലെയിന്‍ മോഡ് പ്രാപ്തമാക്കിയിരിക്കുമ്പോള്‍ മൊബൈല്‍ നൈറ്റ്‍വര്‍ക്കുകളിലേക്ക് ബന്ധിപ്പിക്കാന്‍ സാധിക്കില്ല. എയര്‍പ്ലെയിന്‍ മോഡ് അപ്രാപ്തമാക്കുകയും വീണ്ടും ശ്രമിക്കുകയും ചെയ്യുക.</string>
     <string name="hotspot_operator_dialog_nosim_msg">മൊബൈൽ ഹോട്ട്‌സ്പോട്ടും മറ്റ് ടെതറിംഗ് ഓപ്ഷനുകളും ഉപയോഗിക്കുന്നതിന് ഒരു SIM കാർഡ് ഇടുക</string>
-    <string name="hotspot_operator_dialog_nosim_title">SIM കാര്‍ഡൊന്നും ഇല്ല</string>
+    <string name="hotspot_operator_dialog_nosim_title">SIM കാര്‍ഡ് ഇല്ല</string>
     <string name="hotspot_operator_dialog_othererror_msg">Wifi ടെതറിംഗ് സബ്‌സ്ക്രൈബ് ചെയ്തിട്ടില്ല</string>
     <string name="hotspot_operator_dialog_othererror_title">Wifi ടെതറിംഗ് പിശക്</string>
     <string name="hotspot_tip_message">"മൊബൈൽ ഹോട്ട്‌സ്പോട്ട് നിങ്ങളുടെ മൊബൈൽ ഡാറ്റ വൈഫൈ ഉപയോഗിക്കാനാകുന്ന മറ്റ് ഉപകരണങ്ങളുമായി പങ്കിടുന്നു. നിങ്ങളുടെ മൊബൈൽ ഹോട്ട്‍സ്‌പോട്ടിലേക്ക് കണക്‌റ്റ് ചെയ്യുന്നതിന്:\u0009
@@ -1332,12 +1332,12 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_threekey_navigation_vibration">വൈബ്രേഷൻ മാത്രം</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ലോക്ക് മാറ്റുക</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ലോക്ക് മാറ്റുന്നു</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"ബാറ്ററി ആയുസ്സ് വർദ്ധിപ്പിക്കുന്നതിന്, ബാറ്ററി സേവർ:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• പശ്ചാത്തല പ്രവർത്തനം, ചില വിഷ്വൽ ഇഫക്റ്റുകൾ,ഹേയ് ഗൂഗിൾ”Hey Google“ മറ്റ് സവിശേഷതകൾ ഓഫുചെയ്യുകയോ നിയന്ത്രിക്കുകയോ ചെയ്യുന്നു"</string>
+    <string name="op_battery_saver_description_no_ga">"ബാറ്ററി ആയുസ്സ് വർദ്ധിപ്പിക്കുന്നതിന്, ബാറ്ററി സേവർ:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+• പശ്ചാത്തല പ്രവർത്തനം ഓഫുചെയ്യുകയോ നിയന്ത്രിക്കുകയോ ചെയ്യുന്നു, കൂടാതെ ചില വിഷ്വൽ ഇഫക്റ്റുകളും"</string>
     <string name="op_earphone_connect">ജോടിയാക്കുന്നു...</string>
     <string name="op_earphone_connected_fail">ജോടിയാക്കുന്നതിൽ പരാജയപ്പെട്ടു. ഹെഡ്‌സെറ്റ്, Bluetooth സ്റ്റാറ്റസ് നിങ്ങൾക്ക് പരിശോധിക്കാം.</string>
     <string name="op_earphone_connected_success">ജോടിയാക്കി. കൂടുതൽ ക്രമീകരിക്കാൻ ടാപ്പുചെയ്യുക.</string>
@@ -1367,7 +1367,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_notification_channel_summary_low">ശബ്ദമോ വൈബ്രേഷനോ ഇല്ലാത്ത പ്രാധാന്യം കുറഞ്ഞ അറിയിപ്പുകൾ.</string>
     <string name="op_notification_section_header_gentle">മറ്റ് അറിയിപ്പുകള്‍</string>
     <string name="op_notification_silence_title">മറ്റുള്ളവ</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" പരിരക്ഷിത ചാർജിങ്"</string>
     <string name="op_qs_dark_mode_tile_label">ഡാർക്ക് മോഡ്</string>
     <string name="op_qs_data_usage_used">%1$s:%2$s%3$s ഉപയോഗിച്ചു</string>
     <string name="op_quick_settings_night_display_label">കാഴ്ചാ സുഖം</string>
@@ -1887,22 +1887,22 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="tether_settings_title_wifi">പോർട്ടബിൾ ഹോട്ട്സ്‌പോട്ട്</string>
     <string name="tethered_notification_hybrid_sharing_mobile">മൊബൈൽ ഡാറ്റ പങ്കിടുന്നു, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകുന്നതിന് ക്ലിക്ക് ചെയ്യുക</string>
     <string name="tethered_notification_hybrid_sharing_none">പങ്കിടാൻ നെറ്റ്‌വർക്കുകളൊന്നും ലഭ്യമല്ല, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകാൻ ക്ലിക്ക് ചെയ്യുക</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi പങ്കിടുന്നു, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകുന്നതിന് ക്ലിക്ക് ചെയ്യുക</string>
-    <string name="tethered_notification_message">സജ്ജമാക്കാന്‍ തട്ടുക.</string>
-    <string name="tethered_notification_multi_device_message">%1$s ബന്ധിപ്പിച്ച ഉപകരണങ്ങള്‍</string>
-    <string name="tethered_notification_multi_tether_title">ടെതറിംഗ്, മൊബൈൽ ഹോട്ട്സ്പോട്ട് എന്നിവ സജീവമാണ്</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">വൈ-ഫൈ പങ്കിടുന്നു, ക്രമീകരണങ്ങളിലേയ്‌ക്ക് പോകുന്നതിന് ക്ലിക്ക് ചെയ്യുക</string>
+    <string name="tethered_notification_message">സജ്ജമാക്കാന്‍ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="tethered_notification_multi_device_message">%1$s കണക്റ്റുചെയ്ത ഉപകരണങ്ങള്‍</string>
+    <string name="tethered_notification_multi_tether_title">ടെതറിംഗും മൊബൈൽ ഹോട്സ്പോട്ടും സജീവമാണ്</string>
     <string name="tethered_notification_no_device_message">ബന്ധിപ്പിച്ച ഉപകരണം ഇല്ല</string>
-    <string name="tethered_notification_one_device_message">%1$s ബന്ധിപ്പിച്ച ഉപകരണം</string>
+    <string name="tethered_notification_one_device_message">%1$s കണക്റ്റുചെയ്ത ഉപകരണം</string>
     <string name="tethered_notification_sharing_mobile_multi">മൊബൈൽ ഡാറ്റ പങ്കിടുന്നു,%1$s ഉപകരണങ്ങൾ കണക്‌റ്റ് ചെയ്‌തു</string>
     <string name="tethered_notification_sharing_mobile_no">മൊബൈൽ ഡാറ്റ പങ്കിടുന്നു, ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തിട്ടില്ല</string>
     <string name="tethered_notification_sharing_mobile_single">മൊബൈൽ ഡാറ്റ പങ്കിടുന്നു,%1$s ഉപകരണം കണക്‌റ്റ് ചെയ്‌തു</string>
     <string name="tethered_notification_sharing_none_multi">പങ്കിടാൻ നെറ്റ്‌വർക്കുകളൊന്നും ലഭ്യമല്ല, %1$s ഉപകരണങ്ങൾ കണക്‌റ്റുചെയ്‌തു</string>
     <string name="tethered_notification_sharing_none_no">പങ്കിടാൻ നെറ്റ്‌വർക്കുകളൊന്നും ലഭ്യമല്ല, ഉപകരണങ്ങളൊന്നും കണക്‌റ്റുചെയ്‌തിട്ടില്ല</string>
     <string name="tethered_notification_sharing_none_single">പങ്കിടാൻ നെറ്റ്‌വർക്കുകളൊന്നും ലഭ്യമല്ല, %1$s ഉപകരണം കണക്‌റ്റുചെയ്‌തു</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi പങ്കിടുന്നു,%1$s ഉപകരണങ്ങൾ കണക്‌റ്റ് ചെയ്‌തു</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi പങ്കിടുന്നു, ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തിട്ടില്ല</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi പങ്കിടുന്നു,%1$s ഉപകരണം കണക്‌റ്റ് ചെയ്‌തു</string>
-    <string name="tethered_notification_title">ടെതറിംഗോ മൊബൈൽ ഹോട്ട്സ്പോട്ടോ സജീവമാണ്</string>
+    <string name="tethered_notification_sharing_wifi_multi">വൈ-ഫൈ പങ്കിടുന്നു,%1$s ഉപകരണങ്ങൾ കണക്‌റ്റ് ചെയ്‌തു</string>
+    <string name="tethered_notification_sharing_wifi_no">വൈ -ഫൈ പങ്കിടുന്നു, ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തിട്ടില്ല</string>
+    <string name="tethered_notification_sharing_wifi_single">വൈ-ഫൈ പങ്കിടുന്നു,%1$s ഉപകരണം കണക്‌റ്റ് ചെയ്‌തു</string>
+    <string name="tethered_notification_title">ടെതറിംഗ് അല്ലെങ്കിൽ മൊബൈൽ ഹോട്ട്‌സ്പോട്ട് സജീവമാണ്</string>
     <string name="tethering_hardware_offload">ടെതറിംഗ് ഹാർഡ്‌വെയർ ത്വരിതപ്പെടുത്തൽ</string>
     <string name="tethering_hardware_offload_summary">"ലഭ്യമാണെങ്കിൽ 'ടെതറിംഗ് ഹാർഡ്‌വെയർ ത്വരിതപ്പെടുത്തൽ' ഉപയോഗിക്കുക"</string>
     <string name="tethering_settings_not_available">ഈ ഉപയോക്താവിനായി ടെതറിംഗ് ക്രമീകരണങ്ങൾ ലഭ്യമല്ല</string>
@@ -1914,6 +1914,15 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
 \u0009• ഉയർന്ന താപനിലയിൽ ഫോൺ ഉപയോഗിക്കുന്നത്"</string>
     <string name="thermal_shutdown_message">ഫോൺ ഇപ്പോൾ സാധാരണഗതിയിൽ പ്രവർത്തിക്കുന്നു</string>
     <string name="thermal_shutdown_title">ചൂട് കൂടിയതിനാൽ ഫോൺ ഓഫാക്കി</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ഉപകരണം നിശബ്ദമാക്കാൻ, Alert Slider വൈബ്രേറ്റ് അല്ലെങ്കിൽ സൈലന്റ് മോഡിലേക്ക് സജ്ജമാക്കുക.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">റിംഗ് വോളിയം നിശബ്ദമാക്കുക</string>
+    <string name="threekey_volume_guide_dialog_ok">ശരി</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">റിംഗിംഗ് പ്രവർത്തനക്ഷമമാക്കുന്നതിന്, റിംഗ് മോഡിലേക്ക് മാറുന്നതിന് Alert Slider ഉപയോഗിച്ച് നിങ്ങളുടെ മുൻഗണന അനുസരിച്ച് റിംഗ് വോളിയം സജ്ജമാക്കുക.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">റിംഗ് മോഡ്</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider നിലവിൽ സൈലന്റ് മോഡിലാണ്; ഇൻകമിംഗ് കോളിനായി ഉപകരണം റിംഗ് ചെയ്യുകയോ വൈബ്രേറ്റുചെയ്യുകയോ ചെയ്യില്ല. റിംഗുചെയ്യുന്നതിലൂടെ അറിയിക്കാനായി റിംഗ് മോഡിലേക്ക് മാറുക.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">നിശ്ശബ്ദമായ മോഡ്</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider നിലവിൽ വൈബ്രേറ്റ് മോഡിലാണ്; ഇൻകമിംഗ് കോളിനായി ഉപകരണം റിംഗ് ചെയ്യില്ല. നിങ്ങളെ വൈബ്രേഷൻ വഴി മാത്രമേ അറിയിക്കുകയുള്ളൂ. റിംഗുചെയ്യുന്നതിലൂടെ അറിയിക്കാനായി റിംഗ് മോഡിലേക്ക് മാറുക.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">വൈബ്രേറ്റ് മോഡ്</string>
     <string name="tile_unavailable">ലഭ്യമല്ല</string>
     <string name="time_picker_header_text">സമയം ക്രമീകരിക്കുക</string>
     <string name="time_picker_hour_label">മണിക്കൂര്‍</string>

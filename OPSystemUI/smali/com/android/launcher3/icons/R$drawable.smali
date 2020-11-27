@@ -6,4 +6,4 @@
 # static fields
 .field public static final adaptive_icon_drawable_wrapper:I = 0x7f0802bd
 
-.field public static final ic_instant_app_badge:I = 0x7f080948
+.field public static final ic_instant_app_badge:I = 0x7f080949

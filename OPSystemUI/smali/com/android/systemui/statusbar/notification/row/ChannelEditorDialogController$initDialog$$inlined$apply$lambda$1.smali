@@ -35,18 +35,35 @@
 
 # virtual methods
 .method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 0
+    .locals 1
 
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->access$getConfigurationController$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)Lcom/android/systemui/statusbar/policy/ConfigurationController;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->access$getMConfigurationListener$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->removeCallback(Ljava/lang/Object;)V
+
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->getOnFinishListener()Lcom/android/systemui/statusbar/notification/row/OnChannelEditorDialogFinishedListener;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     invoke-interface {p0}, Lcom/android/systemui/statusbar/notification/row/OnChannelEditorDialogFinishedListener;->onChannelEditorDialogFinished()V
 
-    :cond_0
+    :cond_1
     return-void
 .end method

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">সম্পর্কে</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">সংস্করণ %s</string>
     <string name="about_privacy_policy">গোপনীয়তা নীতি</string>
-    <string name="about_release_note_title">আপডেট লগ:</string>
+    <string name="about_release_note_title">লগ হালনাগাদ করুনঃ</string>
     <string name="about_terms_service">পরিষেবার শর্তাবলী</string>
     <string name="accessibility_fingerprint_dialog_help_area">সাহায্য বার্তা এলাকা</string>
     <string name="accessibility_hide">লুকান</string>
@@ -48,7 +48,7 @@
     <string name="disable_tether_notification_message">বিস্তারিত জানার জন্য আপনার অ্যাডমিনের সাথে যোগাযোগ করুন</string>
     <string name="disable_tether_notification_title">টিথারিং অক্ষম রয়েছে</string>
     <string name="drag_to_add_tiles">টাইল যোগ করতে টেনে আনুন</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">L: %1$s R:%2$s</string>
     <string name="edit_mode_hint">পুনরায় সাজাতে টাইলগুলি টেনে আনুন। দেখাতে বা লুকাতে আলতো চাপুন।</string>
     <string name="end_call">শেষ</string>
     <string name="face_unlock_camera_error">ফেস আনলক করা গেল না, অন্য অ্যাপ ক্যামেরা ব্যবহার করছে</string>
@@ -65,7 +65,7 @@
     <string name="fnatic_mode_title">Fnatic মোড</string>
     <string name="hotspot_apm_message">বিমান মোড সক্ষম থাকলে মোবাইল নেটওয়ার্কগুলি সংযোগ করা যাবে না। বিমান মোড অক্ষম করে আবার চেষ্টা করুন।</string>
     <string name="hotspot_operator_dialog_nosim_msg">মোবাইল হটস্পট এবং অন্যান্য টেদারিং অপশন ব্যবহার করতে একটি SIM কার্ড লাগান</string>
-    <string name="hotspot_operator_dialog_nosim_title">কোনো SIM কার্ড নেই</string>
+    <string name="hotspot_operator_dialog_nosim_title">কোনও SIM কার্ড নেই</string>
     <string name="hotspot_operator_dialog_othererror_msg">আপনি Wifi টেদারিং এ সাবস্ক্রাইব করেননি</string>
     <string name="hotspot_operator_dialog_othererror_title">Wifi টেদারিং ত্রুটি</string>
     <string name="hotspot_tip_message">"মোবাইল হটস্পট অন্য ওয়াই-ফাই সক্ষমিত ডিভাইসের সাথে আপনার মোবাইল ডেটা শেয়ার করে। আপনার মোবাইল হটস্পটে সংযোগ করতে: \u0009 
@@ -76,7 +76,7 @@
     <string name="interruption_level_movie">মুভি</string>
     <string name="interruption_level_music">সঙ্গীত</string>
     <string name="keyguard_fingerprint_unlock">আনলক করতে আঙ্গুলের ছাপ ব্যবহার করুন</string>
-    <string name="keyguard_indication_charging_time_fast">(সম্পূর্ণ হতে %s)</string>
+    <string name="keyguard_indication_charging_time_fast">(%s পূর্ণ হওয়া পর্যন্ত)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp চার্জিং</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp ওয়্যারলেস চার্জিং</string>
     <string name="kg_at_least_four_points">অন্তত 4 বিন্দু অন্তর্ভুক্ত করতে আঁকুন</string>
@@ -138,12 +138,12 @@
     <string name="oneplus_threekey_navigation_vibration">শুধু কম্পন</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> আনব্লক করুন</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>আনব্লকগুলি</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"ব্যাটারির আয়ু বাড়াতে, ব্যাটারি সেভারঃ 
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• ব্যাকগ্রাউন্ড ক্রিয়াকলাপ, কিছু ভিজুয়্যাল প্রতিক্রিয়া, এবং অন্য বৈশিষ্ট্যগুলি যেমন “Hey Google” বন্ধ করে দেয় অথবা বাধা দেয়"</string>
+    <string name="op_battery_saver_description_no_ga">"ব্যাটারির আয়ু বাড়াতে, ব্যাটারি সেভারঃ
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ব্যাকগ্রাউন্ড ক্রিয়াকলাপ, কিছু ভিজুয়্যাল প্রতিক্রিয়া বন্ধ করে দেয় অথবা বাধা দেয়"</string>
     <string name="op_earphone_connect">জোড়া বাঁধা হচ্ছে...</string>
     <string name="op_earphone_connected_fail">জোড়া বাঁধা গেল না। আপনি হেডসেট এবং ব্লুটুথ স্ট্যাটাস পরীক্ষা করতে পারেন।</string>
     <string name="op_earphone_connected_success">জোড়া বাঁধা হয়েছে। আরও সেট করতে আলতো চাপুন।</string>
@@ -173,15 +173,15 @@
     <string name="op_notification_channel_summary_low">কম গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি কোনও শব্দ বা কম্পন ছাড়া।</string>
     <string name="op_notification_section_header_gentle">অন্যান্য বিজ্ঞপ্তি</string>
     <string name="op_notification_silence_title">অন্যান্য</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">"  সুরক্ষিত চার্জিং"</string>
     <string name="op_qs_dark_mode_tile_label">অন্ধকার মোড</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ব্যবহৃত হয়েছে</string>
     <string name="op_quick_settings_night_display_label">দৃষ্টি স্বস্তি</string>
     <string name="op_quick_settings_night_display_summary_off">নাইট মোড বন্ধ, চালু করতে আলতো চাপুন</string>
     <string name="op_quick_settings_night_display_summary_on">নাইট মোড চালু, বন্ধ করতে আলতো চাপুন</string>
-    <string name="op_read_mode2_dialog_black">মনো ইফেক্ট</string>
-    <string name="op_read_mode2_dialog_color">ক্রোমাটিক ইফেক্ট</string>
-    <string name="op_read_mode2_dialog_title">ইফেক্ট নির্বাচন করুন</string>
+    <string name="op_read_mode2_dialog_black">মনো প্রতিক্রিয়া</string>
+    <string name="op_read_mode2_dialog_color">ক্রোমাটিক প্রতিক্রিয়া</string>
+    <string name="op_read_mode2_dialog_title">প্রতিক্রিয়া নির্বাচন করুন</string>
     <string name="op_reverse_charge_notification_btn">বন্ধ করুন</string>
     <string name="op_reverse_charge_notification_discharging">সংযুক্ত ডিভাইসটি চার্জ করা হচ্ছে</string>
     <string name="op_reverse_charge_notification_subtitle">অন্য Qi-সক্রিয় ডিভাইসগুলি ওয়্যারলেসভাবে চার্জ করতে</string>
@@ -213,7 +213,7 @@
     <string name="prevent_view_top_tag_cancel2">পকেট মোড জোর করে বন্ধ করতে স্ক্রীনের বৃত্তগুলিকে অনুসরণ করে তাদের উপর আলতো চাপুন।</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">গোপনীয়তা অ্যালার্ট</string>
+    <string name="privacy_alert_application_name">গোপনীয়তা সতর্কতা</string>
     <string name="privacy_alert_content_text">পরিবর্তন করতে আলতো চাপুন</string>
     <string name="privacy_alert_content_title">%1$s আপনার %2$s ব্যবহার করছে</string>
     <string name="privacy_type_camera">ক্যামেরা</string>
@@ -279,23 +279,32 @@
     <string name="select_year">বছর বেছে নিন</string>
     <string name="sim_status_uss_network_roam">রোমিং</string>
     <string name="tethered_notification_hybrid_sharing_mobile">মোবাইল ডেটা শেয়ার করার জন্য, সেটিংসে ঢুকতে ক্লিক করুন</string>
-    <string name="tethered_notification_hybrid_sharing_none">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলভ্য নেই, সেটিংসে ঢুকতে ক্লিক করুন</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi-তে শেয়ার করার জন্য, সেটিংসে ঢুকতে ক্লিক করুন</string>
+    <string name="tethered_notification_hybrid_sharing_none">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, সেটিংসে ঢুকতে ক্লিক করুন</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">ওয়াই-ফাই শেয়ার করছি, সেটিংস এ প্রবেশ করতে ক্লিক করুন</string>
     <string name="tethered_notification_message">সেটআপ করতে ট্যাপ করুন।</string>
     <string name="tethered_notification_multi_device_message">%1$sটি ডিভাইস সংযুক্ত</string>
     <string name="tethered_notification_multi_tether_title">টেথারিং এবং মোবাইল হটস্পট সক্রিয় আছে</string>
     <string name="tethered_notification_no_device_message">কোনো সংযুক্ত ডিভাইস নেই</string>
     <string name="tethered_notification_one_device_message">%1$sটি ডিভাইস সংযুক্ত</string>
     <string name="tethered_notification_sharing_mobile_multi">মোবাইল ডেটা শেয়ার করার জন্য, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_sharing_mobile_no">মোবাইল ডেটা শেয়ার করার জন্য কোনও ডিভাইস সংযুক্ত নেই</string>
-    <string name="tethered_notification_sharing_mobile_single">মোবাইল ডেটা শেয়ার করার জন্য, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_sharing_none_multi">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলভ্য নেই, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_sharing_none_no">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলভ্য নেই, কোনও ডিভাইস সংযুক্ত নেই</string>
-    <string name="tethered_notification_sharing_none_single">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলভ্য নেই, %1$sডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi শেয়ার করা, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi-তে শেয়ার করুন, কোনও ডিভাইস সংযুক্ত নেই</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi শেয়ার করা, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
-    <string name="tethered_notification_title">টেদারিং এবং মোবাইল হটস্পট সক্রিয় আছে</string>
+    <string name="tethered_notification_sharing_mobile_no">মোবাইল ডেটা শেয়ার করছি, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_mobile_single">মোবাইল ডেটা শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_sharing_none_multi">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, %1$s ডিভাইস সংযুক্ত হয়েছে</string>
+    <string name="tethered_notification_sharing_none_no">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_none_single">শেয়ার করার জন্য কোনও নেটওয়ার্ক উপলব্ধ নেই, %1$sটি ডিভাইস সংযুক্ত হয়েছে</string>
+    <string name="tethered_notification_sharing_wifi_multi">ওয়াই-ফাই শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_sharing_wifi_no">ওয়াই-ফাই শেয়ার করছি, কোনও ডিভাইস সংযুক্ত নেই</string>
+    <string name="tethered_notification_sharing_wifi_single">ওয়াই-ফাই শেয়ার করছি, %1$s ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="tethered_notification_title">টেথারিং অথবা মোবাইল হটস্পট সক্রিয় আছে</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ডিভাইসটি নীরব করার জন্য, কম্পন অথবা নীরব মোড করতে Alert Slider সেট করুন।</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">রিং ভলিউম নীরব করুন</string>
+    <string name="threekey_volume_guide_dialog_ok">ঠিক আছে</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">রিং হওয়া সক্ষম করতে, রিং মোডে পরিবর্তন করতে Alert Slider টি ব্যবহার করুন এবং আপনার পছন্দ অনুযায়ী রিংয়ের ভলিউম সেট করুন।</string>
+    <string name="threekey_volume_guide_dialog_ring_title">রিং মোড</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider টি বর্তমানে নীরব মোডে রয়েছে; ইনকামিং কল আসলে ডিভাইসটিতে রিং বা কম্পন হবেনা। রিং দ্বারা অবগত হতে অনুগ্রহ করে রিং মোডে যান।</string>
+    <string name="threekey_volume_guide_dialog_silent_title">নীরব মোড</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider টি বর্তমানে কম্পন মোডে রয়েছে; ইনকামিং কল আসলে ডিভাইসটিতে রিং হবেনা। আপনাকে শুধুমাত্র কম্পন দ্বারা অবগত করা হবে। রিং দ্বারা অবগত হওয়ার জন্য অনুগ্রহ করে রিং এ সুইচ করুন।</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">কম্পন মোড</string>
     <string name="time_picker_header_text">সময় সেট করুন</string>
     <string name="time_picker_hour_label">ঘণ্টা</string>
     <string name="time_picker_input_error">সঠিক সময় লিখুন</string>
@@ -324,6 +333,6 @@
     <string name="zen_interruption_level_all">সমস্ত বিজ্ঞপ্তি</string>
     <string name="zen_no_interruptions">নিঃশব্দ করুন</string>
     <string name="zzz_op_global_action_bootloader">বুটলোডার</string>
-    <string name="zzz_op_global_action_recovery">পুনরুদ্ধার করুন</string>
+    <string name="zzz_op_global_action_recovery">পুনরুদ্ধার</string>
     <string name="zzz_op_quick_pay_no_install_message">ক্যুইক পে ব্যবহার করতে অনুগ্রহ করে পেমেন্ট অ্যাপগুলি ইনস্টল করুন</string>
 </resources>

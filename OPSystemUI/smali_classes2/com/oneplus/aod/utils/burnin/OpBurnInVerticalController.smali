@@ -233,10 +233,18 @@
 .method protected handleSetup(Lcom/oneplus/aod/controller/IOpClockController;)V
     .locals 0
 
+    if-eqz p1, :cond_0
+
     invoke-interface {p1}, Lcom/oneplus/aod/controller/IOpClockController;->getMovingDistance()I
 
     move-result p1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
     iput p1, p0, Lcom/oneplus/aod/utils/burnin/OpBurnInVerticalController;->mMovingDistance:I
 
     invoke-virtual {p0}, Lcom/oneplus/aod/utils/burnin/OpBurnInVerticalController;->reset()V

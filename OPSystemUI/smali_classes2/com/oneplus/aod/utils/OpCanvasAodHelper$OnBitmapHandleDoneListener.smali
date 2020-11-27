@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onBitmapHandleDone(ZLcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
+.method public abstract onBitmapHandleDone(ZZLcom/oneplus/aod/utils/OpCanvasAodHelper$Data;)V
 .end method

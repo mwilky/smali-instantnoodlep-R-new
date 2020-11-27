@@ -13,6 +13,10 @@
 .end annotation
 
 
+# static fields
+.field private static final mIsNoCustGoogleView:Z
+
+
 # instance fields
 .field private TAG:Ljava/lang/String;
 
@@ -60,6 +64,22 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "debug.no.smartspace.custgoogleview"
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/android/keyguard/KeyguardAssistantView;->mIsNoCustGoogleView:Z
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/view/View;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 5
 
@@ -229,7 +249,23 @@
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/android/keyguard/KeyguardAssistantView;Z)Z
+.method static synthetic access$1000(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1202(Lcom/android/keyguard/KeyguardAssistantView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mAllowShowNotification:Z
@@ -245,7 +281,23 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/keyguard/KeyguardAssistantView;)Z
+.method static synthetic access$300()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/android/keyguard/KeyguardAssistantView;->mIsNoCustGoogleView:Z
+
+    return v0
+.end method
+
+.method static synthetic access$400(Lcom/android/keyguard/KeyguardAssistantView;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeight()V
+
+    return-void
+.end method
+
+.method static synthetic access$500(Lcom/android/keyguard/KeyguardAssistantView;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/keyguard/KeyguardAssistantView;->setGoogleSmartspaceChildViewHeightInternal()Z
@@ -255,7 +307,7 @@
     return p0
 .end method
 
-.method static synthetic access$400(Lcom/android/keyguard/KeyguardAssistantView;)I
+.method static synthetic access$600(Lcom/android/keyguard/KeyguardAssistantView;)I
     .locals 0
 
     iget p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -263,7 +315,7 @@
     return p0
 .end method
 
-.method static synthetic access$402(Lcom/android/keyguard/KeyguardAssistantView;I)I
+.method static synthetic access$602(Lcom/android/keyguard/KeyguardAssistantView;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -271,7 +323,7 @@
     return p1
 .end method
 
-.method static synthetic access$408(Lcom/android/keyguard/KeyguardAssistantView;)I
+.method static synthetic access$608(Lcom/android/keyguard/KeyguardAssistantView;)I
     .locals 2
 
     iget v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mRetryTimes:I
@@ -283,7 +335,7 @@
     return v0
 .end method
 
-.method static synthetic access$500(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
+.method static synthetic access$700(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
@@ -291,7 +343,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
+.method static synthetic access$800(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
@@ -299,7 +351,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
+.method static synthetic access$900(Lcom/android/keyguard/KeyguardAssistantView;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
@@ -307,28 +359,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$702(Lcom/android/keyguard/KeyguardAssistantView;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$902(Lcom/android/keyguard/KeyguardAssistantView;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
 
     return-object p1
-.end method
-
-.method static synthetic access$800(Lcom/android/keyguard/KeyguardAssistantView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/android/keyguard/KeyguardAssistantView;)Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mSettingObserver:Lcom/android/keyguard/KeyguardAssistantView$SettingObserver;
-
-    return-object p0
 .end method
 
 .method private getTextColor()I
@@ -383,6 +419,48 @@
     goto :goto_0
 
     :cond_1
+    return-void
+.end method
+
+.method private setGoogleSmartspaceChildViewHeight()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setGoogleSmartspaceChildViewHeight, callers= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v2, 0x5
+
+    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method
 
@@ -836,63 +914,6 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mCallbacks:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public setGoogleSmartspaceChildViewHeight()V
-    .locals 3
-
-    const-string v0, "debug.no.smartspace.custgoogleview"
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->setHasHeader(Z)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setGoogleSmartspaceChildViewHeight, callers= "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x5
-
-    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mHandler:Landroid/os/Handler;
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardAssistantView;->mDelayForSetGoogleSmartspaceChildViewHeight:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

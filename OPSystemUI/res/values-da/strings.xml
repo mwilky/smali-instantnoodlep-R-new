@@ -703,7 +703,7 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="disable_overlays">Deaktiver HW-overlejring</string>
     <string name="disable_overlays_summary">Brug altid GPU til skærmsammensætning</string>
     <string name="disable_tether_notification_message">Kontakt din administrator for mere information</string>
-    <string name="disable_tether_notification_title">Sammenkobling er deaktiveret</string>
+    <string name="disable_tether_notification_title">Internetdeling er deaktiveret</string>
     <string name="disable_vpn">Deaktiver VPN</string>
     <string name="disabled">Deaktiveret</string>
     <string name="disabled_by_admin">Deaktiveret af administrator</string>
@@ -723,7 +723,7 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug."
     <string name="drag_to_rearrange_tiles">Flyt rundt på felterne ved at holde dem nede og trække</string>
     <string name="drag_to_remove_disabled">Du skal bruge mindst %1$d felter</string>
     <string name="drag_to_remove_tiles">Træk herhen for at fjerne</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"V: %1$s  H: %2$s"</string>
     <string name="edit_mode_hint">Træk fliser for at flytte rundt på dem. Tryk for at vise eller skjule dem.</string>
     <string name="empty_shade_text">Ingen notifikationer</string>
     <string name="enable_adb">USB-fejlretning</string>
@@ -1332,12 +1332,12 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="oneplus_threekey_navigation_vibration">Kun vibration</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>lås op</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>låser op</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"For at forlænge batterilevetiden, vil Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•slukke eller begrænse baggrundsaktivitet, nogle visuelle effekter og andre funktioner som “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"For at forlænge batterilevetiden, vil Battery Saver:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•slukke eller begrænse baggrundsaktivitet og enkelte visuelle effekter"</string>
     <string name="op_earphone_connect">Danner par ...</string>
     <string name="op_earphone_connected_fail">Kunne ikke danne par. Du kan tjekke status for hovedtelefon og Bluetooth.</string>
     <string name="op_earphone_connected_success">Dannet par. Tryk for flere indstillinger.</string>
@@ -1367,7 +1367,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="op_notification_channel_summary_low">Mindre vigtige meddelelser uden lyd eller vibration.</string>
     <string name="op_notification_section_header_gentle">Andre meddelelser</string>
     <string name="op_notification_silence_title">Andet</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Beskyttet opladning"</string>
     <string name="op_qs_dark_mode_tile_label">Mørk tilstand</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s brugt</string>
     <string name="op_quick_settings_night_display_label">Synskomfort</string>
@@ -1893,15 +1893,15 @@ være overvåget"</string>
     <string name="tethered_notification_multi_tether_title">Internetdeling og mobilt hotspot aktive</string>
     <string name="tethered_notification_no_device_message">Ingen tilsluttet enhed</string>
     <string name="tethered_notification_one_device_message">%1$s tilsluttet enhed</string>
-    <string name="tethered_notification_sharing_mobile_multi">Deler mobildata, %1$s enheder tilknyttet</string>
-    <string name="tethered_notification_sharing_mobile_no">Deler mobildata, ingen enhed tilknyttet</string>
-    <string name="tethered_notification_sharing_mobile_single">Deler mobildata, %1$s enhed tilknyttet</string>
-    <string name="tethered_notification_sharing_none_multi">Ingen tilgængelige netværk kan deles, %1$s enheder tilknyttet</string>
-    <string name="tethered_notification_sharing_none_no">Ingen tilgængelige netværk kan deles, ingen enhed tilknyttet</string>
-    <string name="tethered_notification_sharing_none_single">Ingen tilgængelige netværk kan deles, %1$s enhed tilknyttet</string>
-    <string name="tethered_notification_sharing_wifi_multi">Deler Wi-Fi, %1$s enheder tilknyttet</string>
-    <string name="tethered_notification_sharing_wifi_no">Deler Wi-Fi, ingen enhed tilknyttet</string>
-    <string name="tethered_notification_sharing_wifi_single">Deler Wi-Fi, %1$s enhed tilknyttet</string>
+    <string name="tethered_notification_sharing_mobile_multi">Deler mobildata, %1$s enheder tilsluttet</string>
+    <string name="tethered_notification_sharing_mobile_no">Deler mobildata, ingen enhed tilsluttet</string>
+    <string name="tethered_notification_sharing_mobile_single">Deler mobildata, %1$s enhed tilsluttet</string>
+    <string name="tethered_notification_sharing_none_multi">Ingen tilgængelige netværk kan deles, %1$s enheder tilsluttet</string>
+    <string name="tethered_notification_sharing_none_no">Ingen tilgængelige netværk kan deles, ingen enhed tilsluttet</string>
+    <string name="tethered_notification_sharing_none_single">Ingen tilgængelige netværk kan deles, %1$s enhed tilsluttet</string>
+    <string name="tethered_notification_sharing_wifi_multi">Deler Wi-Fi, %1$s enheder tilsluttet</string>
+    <string name="tethered_notification_sharing_wifi_no">Deler Wi-Fi, ingen enhed tilsluttet</string>
+    <string name="tethered_notification_sharing_wifi_single">Deler Wi-Fi, %1$s enhed tilsluttet</string>
     <string name="tethered_notification_title">Internetdeling eller mobilt hotspot aktivt</string>
     <string name="tethering_hardware_offload">Hardwareacceleration ved netdeling</string>
     <string name="tethering_hardware_offload_summary">Brug hardwareacceleration ved netdeling, hvis det er muligt</string>
@@ -1914,6 +1914,15 @@ Din telefon kan blive for varm, hvis du:
 \u0009• Bruger din telefon i varme omgivelser"</string>
     <string name="thermal_shutdown_message">Din telefon kører nu normalt</string>
     <string name="thermal_shutdown_title">Telefonen slukkede pga. varme</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">For at slå lyden fra på din enhed, skal du sætte Advarselsskyderen til Vibrerings- eller Lydløs tilstand.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Slå ringelyd fra</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">For at slå ringning til, skal du bruge Advarselsskyderen til at skifte til ringetilstand og indstille ringelydstyrken, som du foretrækker den.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ringe-tilstand</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Advarselsskyderen er i øjeblikket i lydløs tilstand; enheden vil ikke ringe ved indkommende opkald. Skift til ringetilstand for at blive notificeret med ringning.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Lydløs tilstand</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Advarselsskyderen er i øjeblikket i vibreringstilstand; enheden vil ikke ringe ved indkommende opkald. Du vil kun blive notificeret vha. vibrering. Skift til ringetilstand for at blive notificeret med en ringetone.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibreringstilstand</string>
     <string name="tile_unavailable">Ikke tilgængelig</string>
     <string name="time_picker_header_text">Indstil tid</string>
     <string name="time_picker_hour_label">time</string>
@@ -2150,7 +2159,7 @@ Wi‑Fi-adresse (BSSID)
     <string name="zen_priority_introduction">Du bliver ikke forstyrret af lyde eller vibrationer, undtagen fra alarmer, påmindelser, begivenheder og opkald fra udvalgte personer, du selv angiver. Du kan stadig høre alt, du vælger at afspille, f.eks. musik, videoer og spil.</string>
     <string name="zen_silence_introduction">Dette blokerer ALLE lyde og vibrationer, bl.a. fra alarmer, musik, videoer og spil.</string>
     <string name="zen_silence_introduction_voice">Dette blokerer ALLE lyde og vibrationer, bl.a. fra alarmer, musik, videoer og spil. Du vil stadig kunne foretage telefonopkald.</string>
-    <string name="zzz_op_global_action_bootloader">Opstartsindlæser</string>
-    <string name="zzz_op_global_action_recovery">Genoprettelse</string>
+    <string name="zzz_op_global_action_bootloader">Bootloader</string>
+    <string name="zzz_op_global_action_recovery">Gendannelse</string>
     <string name="zzz_op_quick_pay_no_install_message">Installer betalings-apps for at bruge Quick Pay</string>
 </resources>

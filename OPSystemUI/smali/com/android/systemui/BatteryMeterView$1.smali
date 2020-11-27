@@ -1,11 +1,14 @@
 .class Lcom/android/systemui/BatteryMeterView$1;
-.super Lcom/android/systemui/settings/CurrentUserTracker;
+.super Ljava/lang/Object;
 .source "BatteryMeterView.java"
+
+# interfaces
+.implements Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/BatteryMeterView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/systemui/BatteryMeterView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,72 +22,131 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/BatteryMeterView;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+.method constructor <init>(Lcom/android/systemui/BatteryMeterView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-direct {p0, p2}, Lcom/android/systemui/settings/CurrentUserTracker;-><init>(Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onUserSwitched(I)V
-    .locals 4
+.method public onFinishedWakingUp()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    invoke-static {v0, p1}, Lcom/android/systemui/BatteryMeterView;->access$002(Lcom/android/systemui/BatteryMeterView;I)I
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    const-string v1, "onFinishedWakingUp, "
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-static {v1}, Lcom/android/systemui/BatteryMeterView;->access$100(Lcom/android/systemui/BatteryMeterView;)Lcom/android/systemui/BatteryMeterView$SettingObserver;
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "BatteryMeterView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/android/systemui/BatteryMeterView;->access$002(Lcom/android/systemui/BatteryMeterView;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/systemui/BatteryMeterView;->access$100(Lcom/android/systemui/BatteryMeterView;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    const-string/jumbo v1, "status_bar_show_battery_percent"
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0, v1}, Lcom/android/systemui/BatteryMeterView;->access$102(Lcom/android/systemui/BatteryMeterView;Z)Z
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+
+    invoke-static {v0}, Lcom/android/systemui/BatteryMeterView;->access$200(Lcom/android/systemui/BatteryMeterView;)I
+
+    move-result v1
 
     iget-object v2, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-static {v2}, Lcom/android/systemui/BatteryMeterView;->access$100(Lcom/android/systemui/BatteryMeterView;)Lcom/android/systemui/BatteryMeterView$SettingObserver;
+    invoke-static {v2}, Lcom/android/systemui/BatteryMeterView;->access$300(Lcom/android/systemui/BatteryMeterView;)Z
 
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3, v2, p1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    move-result v2
 
     iget-object p0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
 
-    invoke-static {p0}, Lcom/android/systemui/BatteryMeterView;->access$200(Lcom/android/systemui/BatteryMeterView;)V
+    invoke-static {p0}, Lcom/android/systemui/BatteryMeterView;->access$300(Lcom/android/systemui/BatteryMeterView;)Z
+
+    move-result p0
+
+    invoke-virtual {v0, v1, v2, p0}, Lcom/android/systemui/BatteryMeterView;->onBatteryLevelChanged(IZZ)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onStartedGoingToSleep()V
+    .locals 2
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onStartedGoingToSleep, "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "BatteryMeterView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/BatteryMeterView$1;->this$0:Lcom/android/systemui/BatteryMeterView;
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/android/systemui/BatteryMeterView;->access$002(Lcom/android/systemui/BatteryMeterView;Z)Z
 
     return-void
 .end method

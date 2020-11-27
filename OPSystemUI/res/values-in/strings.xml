@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s ingin menampilkan potongan %2$s</string>
     <string name="abc_toolbar_collapse_description">Ciutkan</string>
     <string name="about_action_bar_title">Tentang</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versi %s</string>
     <string name="about_privacy_policy">Kebijakan Privasi</string>
     <string name="about_release_note_title">Perbarui log:</string>
     <string name="about_terms_service">Ketentuan Layanan</string>
@@ -723,7 +723,7 @@ Jika Anda melanjutkan, tarif penggunaan data mungkin berlaku."</string>
     <string name="drag_to_rearrange_tiles">Tahan dan tarik untuk mengatur ulang kartu</string>
     <string name="drag_to_remove_disabled">Anda membutuhkan setidaknya %1$d kartu</string>
     <string name="drag_to_remove_tiles">Tarik ke sini untuk menghapus</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Ki: %1$s  Ka: %2$s"</string>
     <string name="edit_mode_hint">Seret petak untuk menata ulang. Ketuk menampilkan atau menyembunyikan.</string>
     <string name="empty_shade_text">Tidak ada notifikasi</string>
     <string name="enable_adb">Debugging USB</string>
@@ -822,7 +822,7 @@ Setelah dingin, ponsel akan berjalan seperti biasa."</string>
     <string name="home">Layar Utama Setelan</string>
     <string name="hotspot_apm_message">Tidak dapat menyambung ke jaringan seluler selama mode Pesawat aktif. Nonaktifkan mode Pesawat dan cobalah lagi.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Pasang kartu SIM untuk menggunakan Hotspot Seluler dan opsi penambatan lainnya</string>
-    <string name="hotspot_operator_dialog_nosim_title">No SIM card</string>
+    <string name="hotspot_operator_dialog_nosim_title">Tidak ada kartu SIM</string>
     <string name="hotspot_operator_dialog_othererror_msg">Anda tidak berlangganan penambatan Wifi</string>
     <string name="hotspot_operator_dialog_othererror_title">Kesalahan penambatan wifi</string>
     <string name="hotspot_tip_message">"Hotspot Seluler akan membagikan data seluler Anda dengan perangkat yang mampu mengakses Wi-Fi lainnya. Untuk terhubung dengan Hotspot Seluler Anda: \u0009 
@@ -1318,7 +1318,7 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="notification_unblockable_desc">Notifikasi ini tidak dapat diubah.</string>
     <string name="oem_unlock_enable">Buka kunci OEM</string>
     <string name="oem_unlock_enable_summary">Izinkan bootloader dibuka kuncinya</string>
-    <string name="ok">OKE</string>
+    <string name="ok">OK</string>
     <string name="okay">Oke</string>
     <string name="oneplus_laboratory_added_toast">Selamat! OnePlus laboratory telah ditambahkan ke Pengaturan</string>
     <string name="oneplus_not_show">Jangan tampilkan lagi</string>
@@ -1332,12 +1332,12 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="oneplus_threekey_navigation_vibration">Getar saja</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>dibuka</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> membuka</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Untuk memperpanjang masa pakai baterai, Penghemat Baterai:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Matikan atau batasi aktivitas di latar belakang, sebagian efek visual, dan fitur lain seperti “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Untuk memperpanjang masa pakai baterai, Penghemat Baterai:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Matikan atau batasi aktivitas di latar belakang, sebagian efek visual"</string>
     <string name="op_earphone_connect">Memasangkan...</string>
     <string name="op_earphone_connected_fail">Gagal Memasangkan. Anda dapat memeriksa status headset dan Bluetooth.</string>
     <string name="op_earphone_connected_success">Dipasangkan. Ketuk untuk mengatur selengkapnya.</string>
@@ -1363,11 +1363,11 @@ Anda juga tersambung ke VPN, yang dapat memantau aktivitas jaringan."</string>
     <string name="op_kg_prompt_reason_timeout_pattern">Tekan tombol daya untuk menggunakan pola</string>
     <string name="op_kg_prompt_reason_timeout_pin">Tekan tombol daya untuk menggunakan PIN</string>
     <string name="op_kg_prompt_reason_timeout_swipe">Untuk keamanan tambahan, geser ke atas untuk membuka kunci</string>
-    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_alert_title">Penting</string>
     <string name="op_notification_channel_summary_low">Notifikasi yang kurang penting tanpa suara atau getar.</string>
     <string name="op_notification_section_header_gentle">Notifikasi lainnya</string>
     <string name="op_notification_silence_title">Lainnya</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Pengisian terlindungi"</string>
     <string name="op_qs_dark_mode_tile_label">Mode gelap</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s digunakan</string>
     <string name="op_quick_settings_night_display_label">Kenyamanan penglihatan</string>
@@ -1887,7 +1887,7 @@ diawasi"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Berbagi Wi-Fi, klik untuk memasuki Pengaturan</string>
     <string name="tethered_notification_message">Ketuk untuk menyiapkan.</string>
     <string name="tethered_notification_multi_device_message">%1$s perangkat tersambung</string>
-    <string name="tethered_notification_multi_tether_title">Penambatan dan HotSpot Seluler aktif</string>
+    <string name="tethered_notification_multi_tether_title">Penambatan dan Hotspot Portabel Aktif</string>
     <string name="tethered_notification_no_device_message">Tidak ada perangkat tersambung</string>
     <string name="tethered_notification_one_device_message">%1$s perangkat tersambung</string>
     <string name="tethered_notification_sharing_mobile_multi">Berbagi data seluler, %1$s perangkat tersambung</string>
@@ -1899,7 +1899,7 @@ diawasi"</string>
     <string name="tethered_notification_sharing_wifi_multi">Berbagi Wi-Fi, %1$s perangkat tersambung</string>
     <string name="tethered_notification_sharing_wifi_no">Berbagi Wi-Fi, tidak ada perangkat tersambung</string>
     <string name="tethered_notification_sharing_wifi_single">Berbagi Wi-Fi, %1$s perangkat tersambung</string>
-    <string name="tethered_notification_title">Penambatan atau HotSpot Seluler aktif</string>
+    <string name="tethered_notification_title">Penambatan atau Hotspot Portabel Aktif</string>
     <string name="tethering_hardware_offload">Akselerasi hardware tethering</string>
     <string name="tethering_hardware_offload_summary">Gunakan akselerasi hardware tethering jika tersedia</string>
     <string name="tethering_settings_not_available">Setelan Penambatan tidak tersedia untuk pengguna ini</string>
@@ -1911,6 +1911,15 @@ Ponsel dapat menjadi terlalu panas jika Anda:
 \u0009• Menggunakan ponsel dalam suhu tinggi"</string>
     <string name="thermal_shutdown_message">Ponsel kini berfungsi normal</string>
     <string name="thermal_shutdown_title">Ponsel dimatikan karena panas</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Untuk membisukan perangkat, setel Alert Slider ke mode Getar atau Hening.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Bisukan volume dering</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Untuk mengaktifkan dering, gunakan Alert slider untuk beralih ke Mode dering dan menyetel volume dering sesuai keinginan Anda.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider sedang berada dalam Mode hening; perangkat tidak akan berdering atau bergetar saat ada panggilan masuk. Harap beralih ke Mode dering untuk mendapat notifikasi dering.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Mode hening</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider sedang berada dalam Mode getar; perangkat tidak akan berdering saat ada panggilan masuk. Anda akan mendapat notifikasi berupa getaran saja. Harap beralih ke Mode dering untuk mendapat notifikasi dering.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Mode getar</string>
     <string name="tile_unavailable">Tidak tersedia</string>
     <string name="time_picker_header_text">Tetapkan waktu</string>
     <string name="time_picker_hour_label">jam</string>

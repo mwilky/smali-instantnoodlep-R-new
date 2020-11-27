@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionLayout\n*L\n1#1,363:1\n*E\n"
+    value = "SMAP\nTransitionLayout.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TransitionLayout.kt\ncom/android/systemui/util/animation/TransitionLayout\n*L\n1#1,368:1\n*E\n"
 .end annotation
 
 
@@ -272,6 +272,12 @@
     move-object v7, v5
 
     check-cast v7, Landroid/widget/TextView;
+
+    invoke-virtual {v7}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_1
 
     invoke-virtual {v7}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 

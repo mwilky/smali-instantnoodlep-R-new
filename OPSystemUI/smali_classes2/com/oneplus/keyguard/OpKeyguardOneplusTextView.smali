@@ -266,66 +266,6 @@
 
 
 # virtual methods
-.method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->isREDVersion()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeWidth:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v1, v1, v2
-
-    if-lez v1, :cond_0
-
-    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget v1, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeWidth:F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeColor:I
-
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
-
-    iget p1, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowRadius:F
-
-    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowDx:F
-
-    iget v1, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowDy:F
-
-    iget v2, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeColor:I
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->clearShadowLayer()V
-
-    invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
-
-    :goto_0
-    return-void
-.end method
-
 .method protected onFinishInflate()V
     .locals 0
 
@@ -351,13 +291,47 @@
 .end method
 
 .method public setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
-    .locals 0
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p2
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->isREDVersion()Z
 
-    move-result p2
+    move-result v0
 
-    if-eqz p2, :cond_0
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeWidth:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_0
+
+    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeWidth:F
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget p2, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeColor:I
+
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget p2, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowRadius:F
+
+    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowDx:F
+
+    iget v1, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mShadowDy:F
+
+    iget v2, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mStrokeColor:I
+
+    invoke-virtual {p0, p2, v0, v1, v2}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
     sget-object p2, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
@@ -366,6 +340,12 @@
     goto :goto_0
 
     :cond_0
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    invoke-virtual {p2}, Landroid/graphics/Paint;->clearShadowLayer()V
+
     iget-boolean p2, p0, Lcom/oneplus/keyguard/OpKeyguardOneplusTextView;->mIsTimeLineTwo:Z
 
     if-eqz p2, :cond_1

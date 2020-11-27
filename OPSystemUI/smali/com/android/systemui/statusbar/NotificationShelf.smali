@@ -60,6 +60,8 @@
 
 .field private mPaddingBetweenElements:I
 
+.field private mPaddingBottom:I
+
 .field private mRelativeOffset:I
 
 .field private mScrollFastThreshold:I
@@ -1635,6 +1637,10 @@
 
     iget v9, v0, Lcom/android/systemui/statusbar/NotificationShelf;->mMaxLayoutHeight:I
 
+    iget v10, v0, Lcom/android/systemui/statusbar/NotificationShelf;->mPaddingBottom:I
+
+    sub-int/2addr v9, v10
+
     int-to-float v9, v9
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getTranslationY()F
@@ -2712,6 +2718,14 @@
     return-void
 .end method
 
+.method public setPaddingBottom(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mPaddingBottom:I
+
+    return-void
+.end method
+
 .method protected shouldHideBackground()Z
     .locals 1
 
@@ -2771,6 +2785,10 @@
     iput v10, v7, Lcom/android/systemui/statusbar/NotificationShelf;->mNotGoneIndex:I
 
     iget v0, v7, Lcom/android/systemui/statusbar/NotificationShelf;->mMaxLayoutHeight:I
+
+    iget v1, v7, Lcom/android/systemui/statusbar/NotificationShelf;->mPaddingBottom:I
+
+    sub-int/2addr v0, v1
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getIntrinsicHeight()I
 

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s želi prikazivati isječke aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Sažmi</string>
     <string name="about_action_bar_title">Informacije</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verzija %s</string>
     <string name="about_privacy_policy">Pravilnik o zaštiti privatnosti</string>
     <string name="about_release_note_title">Zapisnik ažuriranja:</string>
     <string name="about_terms_service">Uvjeti usluge</string>
@@ -723,7 +723,7 @@ Ako nastavite, moguća je naplata za potrošeni podatkovni promet."</string>
     <string name="drag_to_rearrange_tiles">Zadržite i povucite da biste premjestili pločice</string>
     <string name="drag_to_remove_disabled">Potrebno je barem %1$d pločica</string>
     <string name="drag_to_remove_tiles">Povucite ovdje za uklanjanje</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">L: %1$s; D: %2$s</string>
     <string name="edit_mode_hint">Povucite pločice za preuređivanje. Dodirnite ih za skrivanje ili prikaz.</string>
     <string name="empty_shade_text">Nema obavijesti</string>
     <string name="enable_adb">Otklanjanje pogrešaka putem USB-a</string>
@@ -822,7 +822,7 @@ Kad se ohladi, radit će normalno."</string>
     <string name="home">Početni zaslon postavki</string>
     <string name="hotspot_apm_message">Nije moguće povezivanje s mobilnim mrežama dok je omogućen način rada u zrakoplovu. Onemogućite način rada u zrakoplovu i pokušajte ponovno.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Umetnite SIM karticu za korištenje mobilne žarišne točke i mogućnosti dijeljenja internetske veze</string>
-    <string name="hotspot_operator_dialog_nosim_title">Nema SIM kartice</string>
+    <string name="hotspot_operator_dialog_nosim_title">Bez SIM kartice</string>
     <string name="hotspot_operator_dialog_othererror_msg">Niste pretplaćeni na dijeljenje Wi-Fi veze</string>
     <string name="hotspot_operator_dialog_othererror_title">Pogreška dijeljenja Wi-Fi veze</string>
     <string name="hotspot_tip_message">"Mobilna pristupna točka dijeli vaše mobilne podatke s drugim uređajima koji se mogu povezati na Wi-Fi. Za povezivanje na vašu mobilnu pristupnu točku: \u0009 
@@ -1332,12 +1332,12 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="oneplus_threekey_navigation_vibration">Samo vibracija</string>
     <string name="op_aod_parsons_unlock_one">Otključava <annotation id="unlockNum">^1</annotation></string>
     <string name="op_aod_parsons_unlock_other">Otključava <annotation id="unlockNum">^1</annotation></string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Da bi se produljilo trajanje baterije, funkcija štednje baterije:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•isključuje ili ograničava aktivnosti u pozadini, neke vizualne efekte i druge značajke, kao što su “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Da bi se produljilo trajanje baterije, funkcija štednje baterije:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•isključuje ili ograničava aktivnosti u pozadini i neke vizualne efekte"</string>
     <string name="op_earphone_connect">Uparivanje...</string>
     <string name="op_earphone_connected_fail">Uparivanje nije uspjelo. Provjerite status slušalica i Bluetootha.</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za više postavki.</string>
@@ -1367,7 +1367,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_notification_channel_summary_low">Manje važne obavijesti bez zvuka ili vibracija.</string>
     <string name="op_notification_section_header_gentle">Druge obavijesti</string>
     <string name="op_notification_silence_title">Drugo</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Zaštićeno punjenje"</string>
     <string name="op_qs_dark_mode_tile_label">Tamni način</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s iskorišteno</string>
     <string name="op_quick_settings_night_display_label">Ugodnost gledanja</string>
@@ -1375,7 +1375,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_quick_settings_night_display_summary_on">Noćni način rada uključen, dodirnite kako biste ga isključili</string>
     <string name="op_read_mode2_dialog_black">Crno-bijeli efekt</string>
     <string name="op_read_mode2_dialog_color">Kromatski efekt</string>
-    <string name="op_read_mode2_dialog_title">Odaberite efekt</string>
+    <string name="op_read_mode2_dialog_title">Odabir efekta</string>
     <string name="op_reverse_charge_notification_btn">ZAUSTAVI</string>
     <string name="op_reverse_charge_notification_discharging">Punjenje povezanog uređaja</string>
     <string name="op_reverse_charge_notification_subtitle">Za bežično punjenje drugih uređaja sa značajkom Qi</string>
@@ -1417,7 +1417,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="overview">Pregled</string>
     <string name="permission_btn_text_denied">Izađi</string>
     <string name="permission_btn_text_grant">U redu</string>
-    <string name="permission_dialog_title">Izjava o dozvolama</string>
+    <string name="permission_dialog_title">Izjava o dozvoli</string>
     <string name="phone_hint">Prijeđite prstom od ikone za telefon</string>
     <string name="phone_label">otvaranje telefona</string>
     <string name="picture_color_mode">Način boje slike</string>
@@ -1889,8 +1889,8 @@ možda prati"</string>
     <string name="tethered_notification_hybrid_sharing_none">Nema dostupne mreže za dijeljenje, kliknite za otvaranje Postavki</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Dijeljenje Wi-Fi veze, kliknite za otvaranje Postavki</string>
     <string name="tethered_notification_message">Dodirnite za postavljanje.</string>
-    <string name="tethered_notification_multi_device_message">%1$s povezanih uređaja</string>
-    <string name="tethered_notification_multi_tether_title">Aktivno je dijeljenje mobilnog interneta i mobilna žarišna točka</string>
+    <string name="tethered_notification_multi_device_message">Povezanih uređaja: %1$s</string>
+    <string name="tethered_notification_multi_tether_title">Aktivno je dijeljenje mobilnog interneta i mobilna pristupna točka</string>
     <string name="tethered_notification_no_device_message">Nema povezanih uređaja</string>
     <string name="tethered_notification_one_device_message">%1$s povezani uređaj</string>
     <string name="tethered_notification_sharing_mobile_multi">Dijeljenje mobilnih podataka, povezano %1$s uređaja</string>
@@ -1899,10 +1899,10 @@ možda prati"</string>
     <string name="tethered_notification_sharing_none_multi">Nema dostupne mreže za dijeljenje, povezano %1$s uređaja</string>
     <string name="tethered_notification_sharing_none_no">Nema dostupne mreže za dijeljenje, nisu povezani uređaji</string>
     <string name="tethered_notification_sharing_none_single">Nema dostupne mreže za dijeljenje, povezan %1$s uređaj</string>
-    <string name="tethered_notification_sharing_wifi_multi">Dijeljenje Wi-Fi veze, povezano %1$s uređaja</string>
+    <string name="tethered_notification_sharing_wifi_multi">Dijeljenje Wi-Fi veze, povezano uređaja: %1$s</string>
     <string name="tethered_notification_sharing_wifi_no">Dijeljenje Wi-Fi veze, nema povezanih uređaja</string>
     <string name="tethered_notification_sharing_wifi_single">Dijeljenje Wi-Fi veze, povezan %1$s uređaj</string>
-    <string name="tethered_notification_title">Aktivno je dijeljenje mobilnog interneta i mobilna žarišna točka</string>
+    <string name="tethered_notification_title">Aktivno je dijeljenje mobilnog interneta ili mobilna pristupna točka</string>
     <string name="tethering_hardware_offload">Hardversko ubrzanje za modemsko povezivanje</string>
     <string name="tethering_hardware_offload_summary">Upotreba hardverskog ubrzanja za modemsko povezivanje ako je dostupno</string>
     <string name="tethering_settings_not_available">Postavke dijeljenja veze nisu dostupne ovom korisniku</string>
@@ -1914,6 +1914,15 @@ Telefon se može pregrijati ako:
 \u0009• upotrebljavate telefon na visokim temperaturama."</string>
     <string name="thermal_shutdown_message">Telefon sada radi normalno</string>
     <string name="thermal_shutdown_title">Telefon se isključio zbog vrućine</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Da biste stišali uređaj, postavite Alert Slider na način vibriranja ili tihi način rada.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Isključiti zvuk zvona</string>
+    <string name="threekey_volume_guide_dialog_ok">U redu</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Kako biste omogućili zvonjenje, upotrijebite Alert Slider za promjenu na način zvona i postavite glasnoću zvona po želji.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Način zvona</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider trenutačno je u tihom načinu rada; uređaj neće ni zvoniti ni vibrirati za dolazne pozive. Promijenite na način zvona ako želite biti obaviješteni zvonjenjem.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tihi način rada</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider trenutačno je u načinu vibracije; uređaj neće zvoniti za dolazne pozive. Obavijestit će vas samo vibracijom. Promijenite na način zvona ako želite biti obaviješteni zvonjenjem.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Način vibracije</string>
     <string name="tile_unavailable">Nedostupno</string>
     <string name="time_picker_header_text">Postavite vrijeme</string>
     <string name="time_picker_hour_label">h</string>

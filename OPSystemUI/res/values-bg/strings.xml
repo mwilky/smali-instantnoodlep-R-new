@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s иска да показва части от %2$s</string>
     <string name="abc_toolbar_collapse_description">Свиване</string>
     <string name="about_action_bar_title">Относно</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версия %s</string>
     <string name="about_privacy_policy">Правила за поверителност</string>
     <string name="about_release_note_title">Регистър на актуализации:</string>
     <string name="about_terms_service">Условия на услугата</string>
@@ -114,7 +114,7 @@
     <string name="accessibility_ethernet_disconnected">Връзката с Ethernet е прекратена.</string>
     <string name="accessibility_face_dialog_face_icon">Икона на лице</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Икона за отпечатък</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Зона за съобщения за помощ</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Област за съобщения за помощ</string>
     <string name="accessibility_gps_acquiring">GPS се придобива.</string>
     <string name="accessibility_gps_enabled">GPS е активиран.</string>
     <string name="accessibility_hide">Скриване</string>
@@ -213,8 +213,8 @@
     <string name="accessibility_quick_settings_open_details">Отвaряне на страницата с подробности.</string>
     <string name="accessibility_quick_settings_open_settings">Отваряне на настройките за %s.</string>
     <string name="accessibility_quick_settings_page">Страница %1$d от %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">Режимът на функцията за пестене на батерия е изключен.</string>
-    <string name="accessibility_quick_settings_power_saving_changed_on">Режимът на функцията за пестене на батерия е включен.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">Режимът на функцията за пестене на батерия е изкл.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">Режимът за естене на батерия е вкл.</string>
     <string name="accessibility_quick_settings_rotation">Автоматично завъртане на екрана</string>
     <string name="accessibility_quick_settings_rotation_value">Ориентация: %s</string>
     <string name="accessibility_quick_settings_sensor_privacy_changed_off">Настройката Sensor Privacy е изключена.</string>
@@ -373,7 +373,7 @@
     <string name="battery_low_percent_format_hybrid_short">Остава/т %1$s – още около %2$s</string>
     <string name="battery_low_percent_format_saver_started">Остава/т %s. Режимът за запазване на батерията е включен.</string>
     <string name="battery_low_title">Батерията може скоро да се изтощи</string>
-    <string name="battery_low_warning">Остават %s, включете функцията за икономия на батерия, за да удължите употребата</string>
+    <string name="battery_low_warning">Остават %s, включете функцията за пестене на батерията, за да удължите употребата</string>
     <string name="battery_low_why">Настройки</string>
     <string name="battery_panel_title">Ползв. на батерията</string>
     <string name="battery_saver_confirmation_ok">Включване</string>
@@ -383,7 +383,7 @@
     <string name="battery_saver_notification_text">Намалява ефективността и данните на заден план</string>
     <string name="battery_saver_notification_title">Режимът за запазване на батерията е включен</string>
     <string name="battery_saver_start_action">Включване на режима за запазване на батерията</string>
-    <string name="battery_usage_extanded">Функцията за икономия на батерията може да удължи употребата с около %s въз основа на вашата употреба</string>
+    <string name="battery_usage_extanded">Функцията за пестене на батерията може да удължи употребата с около %s въз основа на употребата</string>
     <string name="battery_usage_remaining_time">Остават %s</string>
     <string name="biometric_dialog_authenticated">Удостоверено</string>
     <string name="biometric_dialog_confirm">Потвърждаване</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">Задръжте и плъзнете, за да пренаредите плочките</string>
     <string name="drag_to_remove_disabled">Трябва да останат поне %1$d плочки</string>
     <string name="drag_to_remove_tiles">Преместете тук с плъзгане за премахване</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Л: %1$s  Д: %2$s"</string>
     <string name="edit_mode_hint">Плъзнете плочките за пренареждане. Докоснете за показване или скриване.</string>
     <string name="empty_shade_text">Няма известия</string>
     <string name="enable_adb">През USB</string>
@@ -772,7 +772,7 @@
     <string name="failed_to_open_app_settings_toast">Отварянето на настройките за %1$s не бе успешно</string>
     <string name="fingerprint_dialog_touch_sensor">Докоснете сензора за отпечатъци</string>
     <string name="fingerprint_not_found">Опитайте отново</string>
-    <string name="fnatic_mode_title">Fnatic mode</string>
+    <string name="fnatic_mode_title">Режим Fnatic</string>
     <string name="force_allow_on_external">Външно хран.: принуд. разрешаване на приложенията</string>
     <string name="force_allow_on_external_summary">Всички приложения ще отговарят на условията да бъдат записвани във външното хранилище независимо от стойностите в манифеста</string>
     <string name="force_msaa">Задаване на 4x MSAA</string>
@@ -1146,7 +1146,7 @@
     <string name="mobile_data_disable_message">Няма да можете да използвате данни или интернет чрез %s. Ще имате достъп до интернет само през Wi-Fi.</string>
     <string name="mobile_data_disable_message_default_carrier">оператора си</string>
     <string name="mobile_data_disable_title">Да се изключат ли мобилните данни?</string>
-    <string name="mobile_data_off_alert">"Ако не използвате Wi-Fi, няма да можете да използвате интернет, имейл или други приложения, които изискват връзка за данни.
+    <string name="mobile_data_off_alert">"Освен ако не използвате Wi-Fi, няма да можете да използвате интернет, имейл или други приложения, които изискват връзка за данни.
 
 Изключване на връзката за мобилни данни?"</string>
     <string name="mobile_data_off_alert_support_volte_no_wfc">"Функцията за видео обаждания на вашия телефон няма да работи, когато мобилните данни са изключени. Също така няма да можете да използвате интернет, имейл или други приложения, които се нуждаят от връзка за данни, освен ако не използвате Wi-Fi.
@@ -1322,24 +1322,24 @@
     <string name="okay">ОK</string>
     <string name="oneplus_laboratory_added_toast">Поздравления! Лабораторията на OnePlus е добавена към „Настройки“</string>
     <string name="oneplus_not_show">Не показвай това отново</string>
-    <string name="oneplus_screen_features_not_available_toast">Когато са включени, функции, като например калибриране на екрана, няма да бъдат налични</string>
+    <string name="oneplus_screen_features_not_available_toast">Когато са включени, функции, като например калибриране на екрана, няма да бъдат достъпни</string>
     <string name="oneplus_threekey_navigation_disturb_changed">Режим „Не безпокой“ е променен!</string>
     <string name="oneplus_threekey_navigation_next">НАПРЕД</string>
     <string name="oneplus_threekey_navigation_silence">Пълна тишина</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Плъзгачът за предупреждения е променен!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider е променен!</string>
     <string name="oneplus_threekey_navigation_sound">Всички звуци са разрешени</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Може да се включи от превключвателя по-горе</string>
     <string name="oneplus_threekey_navigation_vibration">Само вибрация</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>отключване</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>отключвания</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"С цел удължаване на живота на батерията функцията за икономия на батерията:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•изключва или ограничава дейността във фонов режим, някои визуални ефекти и други функции, като “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"С цел удължаване на живота на батерията функцията за икономия на батерията:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•изключва или ограничава дейността във фонов режим и някои визуални ефекти"</string>
     <string name="op_earphone_connect">Сдвояване...</string>
-    <string name="op_earphone_connected_fail">Неуспешно сдвояване. Можете да проверите състоянието на слушалката и Bluetooth.</string>
+    <string name="op_earphone_connected_fail">Неуспешно сдвояване. Можете да проверите състоянието на слушалките и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сдвоено. Докоснете, за да зададете още.</string>
     <string name="op_earphone_device">ДОКОСНЕТЕ ЗА СДВОЯВАНЕ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
@@ -1367,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">По-маловажните известия без звук или вибрация.</string>
     <string name="op_notification_section_header_gentle">Други известия</string>
     <string name="op_notification_silence_title">Друго</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Защитено зареждане"</string>
     <string name="op_qs_dark_mode_tile_label">Тъмен режим</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s използвани</string>
     <string name="op_quick_settings_night_display_label">Зрителен комфорт</string>
@@ -1417,7 +1417,7 @@
     <string name="overview">Общ преглед</string>
     <string name="permission_btn_text_denied">Изход</string>
     <string name="permission_btn_text_grant">OK</string>
-    <string name="permission_dialog_title">Permission statement</string>
+    <string name="permission_dialog_title">Декларация за разрешение</string>
     <string name="phone_hint">Плъзнете с пръст от иконата, за да използвате телефона</string>
     <string name="phone_label">отваряне на телефона</string>
     <string name="picture_color_mode">Цветови режим за снимките</string>
@@ -1519,7 +1519,7 @@
     <string name="profile_connect_timeout_subtext">При свързването възникна проблем. Изключете устройството и го включете отново</string>
     <string name="profile_info_settings_title">Инф. за потр. профил</string>
     <string name="profile_owned_footer">Възможно е потребителският профил да се наблюдава</string>
-    <string name="qr_bubble_hint">Докоснете балончето за прочитане и отговор на съобщения</string>
+    <string name="qr_bubble_hint">Докоснете балончето за прочитане и отговорете на съобщения</string>
     <string name="qr_portrait_hint">Бързият отговор е изключен в портретен режим</string>
     <string name="qr_portrait_turn_on">ВКЛЮЧВАНЕ</string>
     <string name="qs_dnd_keep">Запазване</string>
@@ -1606,7 +1606,7 @@
     <string name="quick_settings_done">Готово</string>
     <string name="quick_settings_flashlight_camera_in_use">Камерата се използва</string>
     <string name="quick_settings_flashlight_label">Фенерче</string>
-    <string name="quick_settings_footer_audio_headset">Слушалка</string>
+    <string name="quick_settings_footer_audio_headset">Слушалки</string>
     <string name="quick_settings_footer_audio_output">Аудио източник</string>
     <string name="quick_settings_footer_audio_speaker">Говорител на телефона</string>
     <string name="quick_settings_game_mode_demo">Когато игралният режим е включен, %s, можете да го изключите от контролния център или като докоснете известието.</string>
@@ -1642,7 +1642,7 @@
     <string name="quick_settings_op_car_mode_dnd_label">Не безпокой</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">„Не безпокой“ на автомобилния режим е изключен. Докоснете, за да го включите</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">„Не безпокой“ на автомобилния режим е включен. Докоснете, за да го изключите</string>
-    <string name="quick_settings_power_saving_label">Функцията за икономия на енергия</string>
+    <string name="quick_settings_power_saving_label">Функцията за пестене на енергия</string>
     <string name="quick_settings_read_mode_label">Режим на четене</string>
     <string name="quick_settings_read_mode_summary_off">Режимът на четене е изключен. Докоснете, за да го включите</string>
     <string name="quick_settings_read_mode_summary_on">Режимът на четене е включен. Докоснете, за да го изключите</string>
@@ -1677,7 +1677,7 @@
     <string name="quick_settings_work_mode_label">Служебен потребителски профил</string>
     <string name="quick_step_accessibility_toggle_overview">Превключване на общия преглед</string>
     <string name="recents_deep_clean_button_text">Дълбоко изчистване</string>
-    <string name="recents_deep_clean_description">Изчистване на фоновите процеси може да доведе до неочаквани резултати. Възможно е някои приложения да спрат да работят и може да не получават известия, докато не ги рестартирате.</string>
+    <string name="recents_deep_clean_description">Изчистването на фоновите процеси може да доведе до неочаквани резултати. Възможно е някои приложения да спрат да работят и може да не получават известия, докато не ги рестартирате.</string>
     <string name="recents_deep_clean_dialog_checkbox_text">Не показвай отново</string>
     <string name="recents_deep_clean_dialog_message">Дълбокото изчистване ще изчисти всички фонови процеси, което може да доведе до неочаквани резултати. Възможно е някои приложения да спрат да работят и може да не получават известия, докато не ги рестартирате. Потвърдете.</string>
     <string name="recents_deep_clean_dialog_title">Внимание</string>
@@ -1914,6 +1914,15 @@
 \u0009• използвате устройството си при високи температури."</string>
     <string name="thermal_shutdown_message">Телефонът ви вече работи нормално</string>
     <string name="thermal_shutdown_title">Тел. се изкл. поради загряване</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">За да заглушите устройството, задайте плъзгача за предупреждение в режим на вибрация или тих режим.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Заглушаване на силата на звънене</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">За да активирате звъненето, използвайте плъзгача за предупреждение, за да превключите в режим на звънене и да зададете силата на звука при звънене според предпочитанията си.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Плъзгачът за предупреждение в момента е в тих режим; устройството няма да звъни или да вибрира за входящо повикване. Превключете в режим на звънене, за да бъдете уведомени чрез позвъняване.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Тих режим</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Плъзгачът за предупреждение в момента е в режим на вибриране; устройството няма да звъни за входящо повикване. Ще бъдете уведомени само от вибрацията. Превключете на режим на звънене, за да бъдете уведомени чрез позвъняване.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Режим на вибриране</string>
     <string name="tile_unavailable">Не е налице</string>
     <string name="time_picker_header_text">Задаване на час</string>
     <string name="time_picker_hour_label">час</string>

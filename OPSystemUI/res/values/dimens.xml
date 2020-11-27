@@ -989,6 +989,8 @@
     <item type="dimen" name="material_emphasis_high_type">0.87</item>
     <item type="dimen" name="material_emphasis_medium">0.6</item>
     <dimen name="max_avatar_size">48.0dip</dimen>
+    <dimen name="max_bottomappbar_width">130.0dip</dimen>
+    <dimen name="max_bottomappbar_width_normal">178.0dip</dimen>
     <dimen name="max_notification_fadeout_height">100.0dip</dimen>
     <dimen name="max_v">1000.0dip</dimen>
     <dimen name="max_window_blur_radius">150.0px</dimen>
@@ -1517,6 +1519,7 @@
     <dimen name="oneplus_control_tick_seekbar_radius">3.0dip</dimen>
     <dimen name="oneplus_dialog_button_height">48.0dip</dimen>
     <dimen name="oneplus_dialog_image_panel_height">166.0dip</dimen>
+    <dimen name="oneplus_dialog_landscape_width">480.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_multiline">56.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_noline">21.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_singleline">75.0px</dimen>
@@ -1544,6 +1547,7 @@
     <dimen name="op_aod_parsons_clock_bar_margin_bottom1">70.0dip</dimen>
     <dimen name="op_aod_parsons_clock_bar_margin_bottom2">27.0dip</dimen>
     <dimen name="op_aod_parsons_clock_burnin_gap">51.0dip</dimen>
+    <dimen name="op_aod_parsons_clock_burnin_max_gap">125.0dip</dimen>
     <dimen name="op_aod_parsons_clock_systeminfo_bottom">30.0dip</dimen>
     <dimen name="op_aod_parsons_clock_top1">60.0dip</dimen>
     <dimen name="op_aod_parsons_clock_top2">80.0dip</dimen>
@@ -1837,6 +1841,8 @@
     <dimen name="op_notification_info_importance_button_padding_vertical">12.0dip</dimen>
     <dimen name="op_notification_info_importance_button_stroke">0.39999998dip</dimen>
     <dimen name="op_notification_panel_min_side_margin">48.0dip</dimen>
+    <dimen name="op_notification_scroller_landscape_padding_bottom_offset">20.0px</dimen>
+    <dimen name="op_notification_scroller_padding_bottom_offset">5.0dip</dimen>
     <dimen name="op_notification_section_header_height">37.0dip</dimen>
     <dimen name="op_notification_section_header_padding_end">6.0dip</dimen>
     <item type="dimen" name="op_notification_section_header_padding_start">@dimen/op_control_margin_space3</item>
@@ -2076,7 +2082,7 @@
     <dimen name="qs_brightness_view_margin_top">8.0dip</dimen>
     <dimen name="qs_carrier_margin_width">4.0dip</dimen>
     <dimen name="qs_carrier_text_padding">16.0dip</dimen>
-    <dimen name="qs_center_guideline_padding">30.0px</dimen>
+    <dimen name="qs_center_guideline_padding">42.0px</dimen>
     <dimen name="qs_customize_header_min_height">46.0dip</dimen>
     <dimen name="qs_data_usage_text_size">14.0sp</dimen>
     <dimen name="qs_data_usage_usage_text_size">36.0sp</dimen>
@@ -2139,12 +2145,12 @@
     <dimen name="qs_header_tooltip_height">20.0dip</dimen>
     <dimen name="qs_header_top_padding">14.0dip</dimen>
     <dimen name="qs_lower_pager_height">155.0dip</dimen>
-    <dimen name="qs_media_album_size">156.0px</dimen>
+    <dimen name="qs_media_album_size">126.0px</dimen>
     <dimen name="qs_media_disabled_seekbar_height">3.0px</dimen>
-    <dimen name="qs_media_enabled_seekbar_height">9.0px</dimen>
-    <dimen name="qs_media_icon_size">48.0px</dimen>
+    <dimen name="qs_media_enabled_seekbar_height">12.0px</dimen>
+    <dimen name="qs_media_icon_size">42.0px</dimen>
     <dimen name="qs_media_padding">42.0px</dimen>
-    <dimen name="qs_media_panel_outer_padding">48.0px</dimen>
+    <dimen name="qs_media_panel_outer_padding">42.0px</dimen>
     <dimen name="qs_media_width">1050.0px</dimen>
     <dimen name="qs_notif_collapsed_space">64.0dip</dimen>
     <dimen name="qs_notification_padding">6.0dip</dimen>
@@ -2153,7 +2159,7 @@
     <dimen name="qs_paged_tile_layout_padding_bottom">15.0dip</dimen>
     <dimen name="qs_panel_padding">16.0dip</dimen>
     <dimen name="qs_panel_padding_bottom">0.0dip</dimen>
-    <item type="dimen" name="qs_panel_padding_top">@dimen/op_control_margin_space4</item>
+    <dimen name="qs_panel_padding_top">10.0dip</dimen>
     <item type="dimen" name="qs_panel_width">@dimen/notification_panel_width</item>
     <dimen name="qs_peek_height">0.0dip</dimen>
     <dimen name="qs_quick_header_panel_height">156.0dip</dimen>
@@ -2169,7 +2175,7 @@
     <dimen name="qs_tile_detail_padding">3.0dip</dimen>
     <dimen name="qs_tile_divider_height">1.0dip</dimen>
     <dimen name="qs_tile_height">96.0dip</dimen>
-    <dimen name="qs_tile_icon_size">20.0dip</dimen>
+    <dimen name="qs_tile_icon_size">19.0dip</dimen>
     <dimen name="qs_tile_layout_margin_side">9.0dip</dimen>
     <dimen name="qs_tile_margin_horizontal">6.0dip</dimen>
     <dimen name="qs_tile_margin_horizontal_two_line">2.0dip</dimen>
@@ -2383,6 +2389,8 @@
     <item type="dimen" name="three_key_up_dialog_position_deep">@dimen/fix_three_key_down_dialog_padding_edge</item>
     <item type="dimen" name="three_key_up_dialog_position_deep_land">@dimen/fix_three_key_down_dialog_padding_edge</item>
     <dimen name="three_key_up_dialog_position_l">270.375px</dimen>
+    <dimen name="threekey_volume_guide_cust_commoncontrol_imageview_land_height">150.0px</dimen>
+    <dimen name="threekey_volume_guide_cust_commoncontrol_imageview_port_height">500.0px</dimen>
     <dimen name="timepicker_am_top_padding">4.0dip</dimen>
     <dimen name="timepicker_ampm_horizontal_padding">16.0dip</dimen>
     <dimen name="timepicker_ampm_label_size">16.0dip</dimen>

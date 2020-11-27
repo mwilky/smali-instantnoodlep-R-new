@@ -89,7 +89,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
 
     move-result-object v2
 
@@ -129,7 +129,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory$ContextHolder;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory$ContextHolder;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/content/res/Resources;
+    invoke-static {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/content/res/Resources;
 
     move-result-object p0
 
@@ -347,7 +347,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v1
 
@@ -361,13 +361,13 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
 
     move-result-object v18
 
     iget-object v0, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v0
 
@@ -421,7 +421,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$FragmentCreatorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$14100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v0
 

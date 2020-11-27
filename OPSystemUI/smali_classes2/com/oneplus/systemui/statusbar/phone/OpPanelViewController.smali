@@ -967,32 +967,37 @@
 
     const/4 v4, 0x1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
-    if-eq p1, v4, :cond_2
+    if-eq p1, v4, :cond_3
 
     const/4 v0, 0x2
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_2
 
     const/4 v0, 0x3
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_1
 
     goto/16 :goto_1
 
     :cond_1
+    iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
+
+    goto/16 :goto_1
+
+    :cond_2
     invoke-direct {p0, v3, v1}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->shouldHightHintIntercept(FF)Z
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     sget-object p1, Lcom/android/systemui/statusbar/phone/PanelViewController;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1043,13 +1048,13 @@
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     invoke-direct {p0, v3, v1}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->shouldHightHintIntercept(FF)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -1061,7 +1066,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -1075,32 +1080,32 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->launchHighlightHintAp()V
 
-    :cond_4
+    :cond_5
     :goto_0
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     invoke-direct {p0, v3, v1}, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->shouldHightHintIntercept(FF)Z
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     iput-boolean v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     iput-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPanelViewController;->mHightHintIntercepting:Z
 
-    :cond_7
+    :cond_8
     :goto_1
     return v2
 .end method

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">A(z) %1$s alkalmazás részleteket szeretne megjeleníteni a(z) %2$s alkalmazásból</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
     <string name="about_action_bar_title">Névjegy</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">%s verzió</string>
     <string name="about_privacy_policy">Adatvédelmi irányelvek</string>
     <string name="about_release_note_title">Frissítési napló:</string>
     <string name="about_terms_service">Szolgáltatási feltételek</string>
@@ -703,7 +703,7 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
     <string name="disable_overlays">HW fedvények letiltása</string>
     <string name="disable_overlays_summary">Mindig a GPU használata képernyő-feldolgozáshoz</string>
     <string name="disable_tether_notification_message">A részletekért forduljon a rendszergazdához</string>
-    <string name="disable_tether_notification_title">Az internetmegosztás le van tiltva</string>
+    <string name="disable_tether_notification_title">Az internetmegosztás ki van kapcsolva</string>
     <string name="disable_vpn">VPN letiltása</string>
     <string name="disabled">Letiltva</string>
     <string name="disabled_by_admin">A rendszergazda kikapcsolta</string>
@@ -1332,12 +1332,12 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="oneplus_threekey_navigation_vibration">Csak rezgés</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>feloldás</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>feloldás</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Az akkumulátoros üzemidő hosszabbítása érdekében a Battery Saver a következőt teszi:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Leállítja vagy korlátozza a háttértevékenységeket, egyes vizuális effektusokat és más funkciókat, például a “Google Segédet”"</string>
+    <string name="op_battery_saver_description_no_ga">"Az akkumulátoros üzemidő hosszabbítása érdekében a Battery Saver a következőt teszi:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Leállítja vagy korlátozza a háttértevékenységeket és egyes vizuális effektusokat"</string>
     <string name="op_earphone_connect">Párosítás...</string>
     <string name="op_earphone_connected_fail">Sikertelen párosítás. Ellenőrizze a fejhallgatót és a Bluetooth-állapotát.</string>
     <string name="op_earphone_connected_success">Párosítva. Koppintson a további beállításokért.</string>
@@ -1367,7 +1367,7 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="op_notification_channel_summary_low">Kevésbé fontos értesítések hang és rezgés nélkül.</string>
     <string name="op_notification_section_header_gentle">Egyéb értesítések</string>
     <string name="op_notification_silence_title">Egyéb</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Töltésvédelem"</string>
     <string name="op_qs_dark_mode_tile_label">Sötét mód</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s használatban</string>
     <string name="op_quick_settings_night_display_label">Szemkímélés</string>
@@ -1889,20 +1889,20 @@ hálózat felügyelt"</string>
     <string name="tethered_notification_hybrid_sharing_none">Nincs megosztható hálózat, kattintson a Beállítások megnyitásához</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi megosztva, kattintson a Beállítások megnyitásához</string>
     <string name="tethered_notification_message">Koppintson a beállításhoz.</string>
-    <string name="tethered_notification_multi_device_message">%1$s csatlakoztatott eszközök</string>
-    <string name="tethered_notification_multi_tether_title">Pányvázás és Mobil Hotspot aktív</string>
+    <string name="tethered_notification_multi_device_message">%1$s csatlakoztatott készülék</string>
+    <string name="tethered_notification_multi_tether_title">Internetmegosztás és mobil hotspot bekapcsolva</string>
     <string name="tethered_notification_no_device_message">Nincs csatlakoztatott eszköz</string>
-    <string name="tethered_notification_one_device_message">%1$s csatlakoztatott eszköz</string>
-    <string name="tethered_notification_sharing_mobile_multi">Mobiladat-kapcsolat megosztva, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_sharing_mobile_no">Mobiladat-kapcsolat megosztva, nincs csatlakoztatott eszköz</string>
-    <string name="tethered_notification_sharing_mobile_single">Mobiladat-kapcsolat megosztva, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_sharing_none_multi">Nincs megosztható hálózat, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_sharing_none_no">Nincs megosztható hálózat, nincs csatlakoztatott eszköz</string>
-    <string name="tethered_notification_sharing_none_single">Nincs megosztható hálózat, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi megosztva, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi megosztva, nincs csatlakoztatott eszköz</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi megosztva, %1$s eszköz csatlakoztatva</string>
-    <string name="tethered_notification_title">Internetmegosztás és Mobil Hotspot aktív</string>
+    <string name="tethered_notification_one_device_message">%1$s csatlakoztatott készülék</string>
+    <string name="tethered_notification_sharing_mobile_multi">Mobiladat-kapcsolat megosztva, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_sharing_mobile_no">Mobiladat-kapcsolat megosztva, nincs csatlakoztatott készülék</string>
+    <string name="tethered_notification_sharing_mobile_single">Mobiladat-kapcsolat megosztva, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_sharing_none_multi">Nincs megosztható hálózat, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_sharing_none_no">Nincs megosztható hálózat, nincs csatlakoztatott készülék</string>
+    <string name="tethered_notification_sharing_none_single">Nincs megosztható hálózat, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi megosztva, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_sharing_wifi_no">Wi-Fi megosztva, nincs csatlakoztatott készülék</string>
+    <string name="tethered_notification_sharing_wifi_single">Wi-Fi megosztva, %1$s készülék csatlakoztatva</string>
+    <string name="tethered_notification_title">Internetmegosztás vagy mobil hotspot bekapcsolva</string>
     <string name="tethering_hardware_offload">Internetmegosztás hardveres gyorsítása</string>
     <string name="tethering_hardware_offload_summary">Az internetmegosztás hardveres gyorsításának használata, amikor lehetséges</string>
     <string name="tethering_settings_not_available">Az internetmegosztási beállítások nem érhetők el ennél a felhasználónál</string>
@@ -1914,6 +1914,15 @@ A telefon akkor melegedhet túl, ha Ön:
 \u0009• Melegben használja a telefonját"</string>
     <string name="thermal_shutdown_message">A telefon most már megfelelően működik</string>
     <string name="thermal_shutdown_title">A meleg miatt kikapcsolt</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">A készülék némításához állítsa az Alert Slider funkciót Rezgő vagy Néma üzemmódra.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Csengés elnémítása</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">A csengés bekapcsolásához váltson Csengő üzemmódra az Alert slider funkcióval, és tetszés szerint beállíthatja a csengés hangerejét.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Csengési mód</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Az Alert Slider jelenleg Néma üzemmódban van; a készülék bejövő hívások esetén nem fog kicsengeni, sem rezegni. A csengéses hívásjelzéshez váltson Csengő üzemmódra.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Néma üzemmód</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Az Alert Slider jelenleg Rezgő üzemmódban van; a készülék bejövő hívások esetén csak rezegni fog, nem cseng ki. A csengéses hívásjelzéshez váltson Csengő üzemmódra.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Rezgő üzemmód</string>
     <string name="tile_unavailable">Nem használható</string>
     <string name="time_picker_header_text">Idő beállítása</string>
     <string name="time_picker_hour_label">óra</string>

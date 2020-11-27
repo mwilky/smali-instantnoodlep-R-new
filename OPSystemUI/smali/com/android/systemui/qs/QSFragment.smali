@@ -269,6 +269,58 @@
     return v0
 .end method
 
+.method private getSecurityViewHeight()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mQSPanel:Lcom/android/systemui/qs/QSPanel;
+
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QSPanel;->getSecurityFooter()Lcom/android/systemui/qs/QSSecurityFooter;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/systemui/qs/QSSecurityFooter;->getView()Landroid/view/View;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v0, p0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v1, "QS"
+
+    const-string v2, "getSecurityViewHeight: exception caught. exit quietly."
+
+    invoke-static {v1, v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return v0
+.end method
+
 .method private getTotalBottomMargin(Landroid/view/View;)F
     .locals 3
 
@@ -1253,9 +1305,17 @@
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mQSDetail:Lcom/android/systemui/qs/QSDetail;
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFragment;->mQSDetail:Lcom/android/systemui/qs/QSDetail;
 
-    invoke-virtual {p0}, Lcom/android/systemui/qs/QSDetail;->isShowingDetail()Z
+    invoke-virtual {v0}, Lcom/android/systemui/qs/QSDetail;->isShowingDetail()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mQSCustomizer:Lcom/android/systemui/qs/customize/QSCustomizer;
+
+    invoke-virtual {p0}, Lcom/android/systemui/qs/customize/QSCustomizer;->isShown()Z
 
     move-result p0
 
@@ -2080,6 +2140,12 @@
     move-result v9
 
     add-int/2addr v8, v9
+
+    sub-int/2addr v8, v7
+
+    invoke-direct {p0}, Lcom/android/systemui/qs/QSFragment;->getSecurityViewHeight()I
+
+    move-result v7
 
     sub-int/2addr v8, v7
 

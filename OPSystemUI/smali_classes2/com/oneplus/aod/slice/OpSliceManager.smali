@@ -74,6 +74,8 @@
 
 .field private mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
 
+.field private mViewInit:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -99,8 +101,8 @@
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;Landroid/os/Handler;)V
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -160,13 +162,13 @@
 
     iput p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
 
-    iput-object p3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUiHandler:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUiHandler:Landroid/os/Handler;
 
     new-instance p1, Lcom/oneplus/aod/slice/OpSliceManager$Callback;
 
     invoke-direct {p1, p0, p0}, Lcom/oneplus/aod/slice/OpSliceManager$Callback;-><init>(Lcom/oneplus/aod/slice/OpSliceManager;Lcom/oneplus/aod/slice/OpSliceManager;)V
 
-    iget-object p3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
+    iget-object p2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
 
     const/4 v1, 0x2
 
@@ -180,9 +182,9 @@
 
     invoke-direct {v2, v3, p1}, Lcom/oneplus/aod/slice/OpMusicSlice;-><init>(Landroid/content/Context;Lcom/oneplus/aod/slice/OpSliceManager$Callback;)V
 
-    invoke-virtual {p3, v1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
+    iget-object p2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
 
     const/4 v1, 0x3
 
@@ -196,9 +198,9 @@
 
     invoke-direct {v2, v3, p1}, Lcom/oneplus/aod/slice/OpWeatherSlice;-><init>(Landroid/content/Context;Lcom/oneplus/aod/slice/OpSliceManager$Callback;)V
 
-    invoke-virtual {p3, v1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
+    iget-object p2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -210,9 +212,7 @@
 
     invoke-direct {v1, v2, p1}, Lcom/oneplus/aod/slice/OpCalendarSlice;-><init>(Landroid/content/Context;Lcom/oneplus/aod/slice/OpSliceManager$Callback;)V
 
-    invoke-virtual {p3, v0, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p2}, Lcom/oneplus/aod/slice/OpSliceManager;->initViews(Landroid/view/View;)V
+    invoke-virtual {p2, v0, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance p1, Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;
 
@@ -221,30 +221,6 @@
     invoke-direct {p1, p0, p2}, Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;-><init>(Lcom/oneplus/aod/slice/OpSliceManager;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSettingsObserver:Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;
-
-    invoke-virtual {p1}, Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;->observe()V
-
-    new-instance v3, Landroid/content/IntentFilter;
-
-    const-string p1, "net.oneplus.powercontroller.intent.SLEEP_CHANGED"
-
-    invoke-direct {v3, p1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    const-string p1, "com.android.systemui.intent.SLEEP_CHANGED"
-
-    invoke-virtual {v3, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSleepStateReceiver:Landroid/content/BroadcastReceiver;
-
-    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
 .end method
@@ -397,13 +373,27 @@
 
     const/4 v3, 0x0
 
-    if-nez v1, :cond_4
+    if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mAllowShowSensitiveData:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto/16 :goto_2
+    const-string v1, "getActiveSlice return TYPE_NONE, mAllowShowSensitiveData:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mAllowShowSensitiveData:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
 
     :cond_0
     array-length v1, v0
@@ -517,28 +507,6 @@
     goto :goto_0
 
     :cond_3
-    return v3
-
-    :cond_4
-    :goto_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "getActiveSlice return TYPE_NONE, mAllowShowSensitiveData:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mAllowShowSensitiveData:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     return v3
 .end method
 
@@ -802,94 +770,105 @@
 .end method
 
 .method private refreshInternal()V
-    .locals 8
+    .locals 9
 
+    iget-boolean v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewInit:Z
+
+    const-string v1, "OpSliceManager"
+
+    if-nez v0, :cond_0
+
+    const-string p0, "view has not init yet."
+
+    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->getActiveSlice()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
+    iget-object v2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Lcom/oneplus/aod/slice/OpSlice;
 
-    move-result-object v1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    check-cast v1, Lcom/oneplus/aod/slice/OpSlice;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v4, "slice count: "
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "slice count: "
+    iget-object v4, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/util/LinkedHashMap;->size()I
 
-    iget-object v3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSlices:Ljava/util/LinkedHashMap;
+    move-result v4
 
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->size()I
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string v4, ", refresh to "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, ", refresh to "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v0}, Lcom/oneplus/aod/slice/OpSliceManager;->getSliceName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "OpSliceManager"
-
-    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->isKeyguardAssistantViewActiveInSlice()Z
 
     move-result v0
 
-    const/16 v2, 0x8
+    const/16 v1, 0x8
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mPrimary:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSecondary:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->shouldSliceContainerBeVisible()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto/16 :goto_2
 
-    :cond_0
-    if-eqz v1, :cond_3
+    :cond_1
+    if-eqz v2, :cond_4
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
 
@@ -899,7 +878,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
 
@@ -917,7 +896,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
 
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getIcon()I
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getIcon()I
 
     move-result v4
 
@@ -925,7 +904,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mPrimary:Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getPrimaryString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getPrimaryString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -933,17 +912,17 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSecondary:Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getSecondaryString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getSecondaryString()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getRemark()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getRemark()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -953,14 +932,14 @@
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_2
 
     goto :goto_0
 
-    :cond_1
-    iget-object v2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
+    :cond_2
+    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
 
@@ -968,25 +947,25 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_0
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->shouldSliceContainerBeVisible()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_2
 
-    :cond_3
-    if-eqz v1, :cond_4
+    :cond_4
+    if-eqz v2, :cond_5
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
 
@@ -996,88 +975,27 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mPrimary:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSecondary:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
-
-    iget v2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
-
-    invoke-static {v0, v2}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
-
-    move-result v0
-
     if-eqz v0, :cond_5
 
-    iget-object v2, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mOpKeyguardClockInfoView:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
-
-    if-eqz v2, :cond_5
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getIcon()I
-
-    move-result v4
-
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getPrimaryString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getSecondaryString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v1}, Lcom/oneplus/aod/slice/OpSlice;->getRemark()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual/range {v2 .. v7}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceView(ZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mPrimary:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSecondary:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    :cond_5
-    :goto_2
-    if-nez v1, :cond_6
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
 
@@ -1089,9 +1007,70 @@
 
     if-eqz v0, :cond_6
 
+    iget-object v3, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mOpKeyguardClockInfoView:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
+
+    if-eqz v3, :cond_6
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getIcon()I
+
+    move-result v5
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getPrimaryString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getSecondaryString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v2}, Lcom/oneplus/aod/slice/OpSlice;->getRemark()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual/range {v3 .. v8}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceView(ZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_5
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mPrimary:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSecondary:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mRemark:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewContainer:Lcom/oneplus/aod/slice/OpSliceContainer;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    :cond_6
+    :goto_2
+    if-nez v2, :cond_7
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
+
+    iget v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mUserId:I
+
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodUtils;->isDefaultAodClockStyle(Landroid/content/Context;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
     iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mOpKeyguardClockInfoView:Lcom/oneplus/keyguard/OpKeyguardClockInfoView;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     const/4 v2, 0x0
 
@@ -1105,7 +1084,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateSliceView(ZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_6
+    :cond_7
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->updateAssistantView()V
 
     return-void
@@ -1305,7 +1284,7 @@
 .end method
 
 .method public initViews(Landroid/view/View;)V
-    .locals 2
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1401,6 +1380,41 @@
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpSliceManager;->clearAssistantViewIfPossible()V
 
     :goto_0
+    iget-boolean p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewInit:Z
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSettingsObserver:Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;
+
+    invoke-virtual {p1}, Lcom/oneplus/aod/slice/OpSliceManager$SettingsObserver;->observe()V
+
+    new-instance v3, Landroid/content/IntentFilter;
+
+    const-string p1, "net.oneplus.powercontroller.intent.SLEEP_CHANGED"
+
+    invoke-direct {v3, p1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    const-string p1, "com.android.systemui.intent.SLEEP_CHANGED"
+
+    invoke-virtual {v3, p1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mContext:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mSleepStateReceiver:Landroid/content/BroadcastReceiver;
+
+    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/oneplus/aod/slice/OpSliceManager;->mViewInit:Z
+
+    :cond_1
     return-void
 .end method
 
@@ -1483,7 +1497,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/oneplus/aod/controller/IOpClockController;->getClockView()Landroid/view/View;
+    invoke-interface {p1}, Lcom/oneplus/aod/controller/IOpClockController;->getCurrentView()Landroid/view/View;
 
     move-result-object p1
 

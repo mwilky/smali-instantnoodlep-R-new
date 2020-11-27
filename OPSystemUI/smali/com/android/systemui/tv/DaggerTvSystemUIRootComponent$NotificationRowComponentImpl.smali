@@ -75,7 +75,7 @@
 .method private initialize(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentBuilder;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentBuilder;->access$18900(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
+    invoke-static {p1}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentBuilder;->access$19100(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentBuilder;)Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
 
     move-result-object p1
 
@@ -99,7 +99,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {v3}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$16400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {v3}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$16600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object v3
 
@@ -111,7 +111,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent$NotificationRowComponentImpl;->this$0:Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;
 
-    invoke-static {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$15400(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {p0}, Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;->access$15600(Lcom/android/systemui/tv/DaggerTvSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object p0
 

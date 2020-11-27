@@ -1334,7 +1334,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>unlocks</string>
     <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
+•Turns off or restricts background activity, some visual effects and other features like “Hey Google”"</string>
     <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
 
 •Turns off or restricts background activity, and some visual effects"</string>
@@ -1889,10 +1889,10 @@ be monitored"</string>
     <string name="tethered_notification_hybrid_sharing_none">No available network to share, click to enter Settings</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Sharing Wi-Fi, click to enter Settings</string>
     <string name="tethered_notification_message">Tap to set up.</string>
-    <string name="tethered_notification_multi_device_message">%1$s devices connected</string>
-    <string name="tethered_notification_multi_tether_title">Tethering and Mobile Hotspot active</string>
+    <string name="tethered_notification_multi_device_message">%1$s connected devices</string>
+    <string name="tethered_notification_multi_tether_title">Tethering and Mobile Hotspot Active</string>
     <string name="tethered_notification_no_device_message">No connected device</string>
-    <string name="tethered_notification_one_device_message">%1$s device connected</string>
+    <string name="tethered_notification_one_device_message">%1$s connected device</string>
     <string name="tethered_notification_sharing_mobile_multi">Sharing mobile data, %1$s devices connected</string>
     <string name="tethered_notification_sharing_mobile_no">Sharing mobile data, no device connected</string>
     <string name="tethered_notification_sharing_mobile_single">Sharing mobile data, %1$s device connected</string>
@@ -1902,7 +1902,7 @@ be monitored"</string>
     <string name="tethered_notification_sharing_wifi_multi">Sharing Wi-Fi, %1$s devices connected</string>
     <string name="tethered_notification_sharing_wifi_no">Sharing Wi-Fi, no device connected</string>
     <string name="tethered_notification_sharing_wifi_single">Sharing Wi-Fi, %1$s device connected</string>
-    <string name="tethered_notification_title">Tethering or Mobile Hotspot active</string>
+    <string name="tethered_notification_title">Tethering or Mobile Hotspot Active</string>
     <string name="tethering_hardware_offload">Tethering hardware acceleration</string>
     <string name="tethering_hardware_offload_summary">Use tethering hardware acceleration if available</string>
     <string name="tethering_settings_not_available">Tethering settings are not available for this user</string>
@@ -1914,6 +1914,15 @@ Your phone may get too hot if you:
 \u0009• Use your phone in high temperatures"</string>
     <string name="thermal_shutdown_message">Your phone is now running normally</string>
     <string name="thermal_shutdown_title">Phone turned off due to heat</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">To mute the device, set Alert Slider to Vibrate or Silent mode.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Mute ring volume</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">To enable ringing, use the Alert slider to switch to Ring mode and set the ring volume as per your preference.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">The Alert Slider is currently in Silent mode; the device won’t ring or vibrate for an incoming call. Please switch to Ring mode to be notified by ringing.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Silent mode</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">The Alert Slider is currently in Vibrate mode; the device won’t ring for an incoming call. You’ll be notified by the vibration only. Please switch to Ring mode to be notified by ringing.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrate mode</string>
     <string name="tile_unavailable">Unavailable</string>
     <string name="time_picker_header_text">Set time</string>
     <string name="time_picker_hour_label">hour</string>

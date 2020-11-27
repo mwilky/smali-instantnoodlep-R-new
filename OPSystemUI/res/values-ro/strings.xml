@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s vrea să afișeze porțiuni din %2$s</string>
     <string name="abc_toolbar_collapse_description">Restrângeți</string>
     <string name="about_action_bar_title">Despre</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versiunea %s</string>
     <string name="about_privacy_policy">Politica de confidențialitate</string>
     <string name="about_release_note_title">Jurnal de actualizări:</string>
     <string name="about_terms_service">Termenii serviciului</string>
@@ -723,7 +723,7 @@ Dacă reluați, este posibil să se aplice taxe pentru utilizarea datelor."</str
     <string name="drag_to_rearrange_tiles">Țineți apăsat și trageți pentru a rearanja piesele</string>
     <string name="drag_to_remove_disabled">Aveți nevoie de cel puțin %1$d carduri</string>
     <string name="drag_to_remove_tiles">Trageți aici pentru a elimina</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Stânga: %1$s  Dreapta: %2$s"</string>
     <string name="edit_mode_hint">Trageți panouri pentru a le rearanja. Atingeți pentru a le afișa sau ascunde.</string>
     <string name="empty_shade_text">Nicio notificare</string>
     <string name="enable_adb">Remedierea erorilor prin USB</string>
@@ -1332,12 +1332,12 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="oneplus_threekey_navigation_vibration">Doar vibrații</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>deblocare</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>deblocări</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Pentru a prelungi autonomia bateriei, Battery Saver:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Oprește sau restricționează activitățile în fundal, unele efecte vizuale și alte funcții, ca “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Pentru a prelungi autonomia bateriei, Battery Saver:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Oprește sau restricționează activitățile în fundal și unele efecte vizuale"</string>
     <string name="op_earphone_connect">Se asociază...</string>
     <string name="op_earphone_connected_fail">Asocierea nu a reușit. Puteți verifica starea căștilor și a Bluetooth.</string>
     <string name="op_earphone_connected_success">Asociat. Apăsați pentru a seta mai multe.</string>
@@ -1367,7 +1367,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="op_notification_channel_summary_low">Notificările mai puțin importante fără sunet sau vibrații.</string>
     <string name="op_notification_section_header_gentle">Alte notificări</string>
     <string name="op_notification_silence_title">Altele</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Încărcare cu protecție"</string>
     <string name="op_qs_dark_mode_tile_label">Mod întunecat</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s consumat</string>
     <string name="op_quick_settings_night_display_label">Confort vizual</string>
@@ -1890,19 +1890,19 @@ fi monitorizată"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Se partajează Wi-Fi, faceți clic pentru a accesa Setările</string>
     <string name="tethered_notification_message">Atingeți pentru a configura.</string>
     <string name="tethered_notification_multi_device_message">%1$s dispozitive conectate</string>
-    <string name="tethered_notification_multi_tether_title">Punct de acces mobil și conexiune prin mobil active</string>
+    <string name="tethered_notification_multi_tether_title">Sunt active funcțiile Punct de acces mobil și Partajare de conexiune</string>
     <string name="tethered_notification_no_device_message">Niciun dispozitiv conectat</string>
     <string name="tethered_notification_one_device_message">%1$s dispozitiv conectat</string>
     <string name="tethered_notification_sharing_mobile_multi">Se partajează conexiunea de date mobile, %1$s dispozitive conectate</string>
     <string name="tethered_notification_sharing_mobile_no">Se partajează conexiunea de date mobile, niciun dispozitiv conectat</string>
-    <string name="tethered_notification_sharing_mobile_single">Se partajează conexiunea de date mobile, %1$s dispozitiv conectat</string>
+    <string name="tethered_notification_sharing_mobile_single">Se partajează conexiunea de date mobile, %1$s dispozitive conectate</string>
     <string name="tethered_notification_sharing_none_multi">Nu există rețele disponibile pentru partajare, %1$s dispozitive conectate</string>
     <string name="tethered_notification_sharing_none_no">Nu există rețele disponibile pentru partajare, niciun dispozitiv conectat</string>
     <string name="tethered_notification_sharing_none_single">Nu există rețele disponibile pentru partajare, %1$s dispozitiv conectat</string>
     <string name="tethered_notification_sharing_wifi_multi">Se partajează Wi-Fi, %1$s dispozitive conectate</string>
     <string name="tethered_notification_sharing_wifi_no">Se partajează Wi-Fi, niciun dispozitiv conectat</string>
     <string name="tethered_notification_sharing_wifi_single">Se partajează Wi-Fi, %1$s dispozitiv conectat</string>
-    <string name="tethered_notification_title">Punct de acces sau conexiune prin mobil active</string>
+    <string name="tethered_notification_title">Este activă funcția Punct de acces mobil sau Partajare de conexiune</string>
     <string name="tethering_hardware_offload">Accelerare hardware pentru tethering</string>
     <string name="tethering_hardware_offload_summary">Folosiți accelerarea hardware pentru tethering, dacă este disponibilă</string>
     <string name="tethering_settings_not_available">Setările pentru tethering nu sunt disponibile pentru acest utilizator</string>
@@ -1914,6 +1914,15 @@ Telefonul s-ar putea încălzi prea mult dacă:
 \u0009• folosiți telefonul la temperaturi ridicate."</string>
     <string name="thermal_shutdown_message">Acum telefonul funcționează normal</string>
     <string name="thermal_shutdown_title">Telefonul s-a oprit din cauza încălzirii</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Pentru a dezactiva sunetul dispozitivului, setați Alert Slider la Modul vibrații sau la Modul silențios.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Oprire volum ton de apel</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Pentru ca dispozitivul să sune la primirea apelurilor, utilizați Alert Slider pentru a trece în Modul ton de apel și setați volumul în funcție de preferințe.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Mod ton de apel</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">În acest moment Alert Slider este în Modul silențios; dispozitivul nu va suna și nu va vibra la primirea apelurilor. Dacă doriți ca dispozitivul să sune, treceți în Modul ton de apel.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Mod silențios</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">În acest moment Alert Slider este în Modul vibrații; dispozitivul nu va suna la primirea apelurilor. Singura notificare pe care o veți primi vor fi vibrațiile. Dacă doriți ca dispozitivul să sune, treceți în Modul ton de apel.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Mod vibrații</string>
     <string name="tile_unavailable">Indisponibil</string>
     <string name="time_picker_header_text">Setați ora</string>
     <string name="time_picker_hour_label">oră</string>

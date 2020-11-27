@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMediaCarouselController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaCarouselController.kt\ncom/android/systemui/media/MediaCarouselController\n*L\n1#1,494:1\n*E\n"
+    value = "SMAP\nMediaCarouselController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaCarouselController.kt\ncom/android/systemui/media/MediaCarouselController\n*L\n1#1,497:1\n*E\n"
 .end annotation
 
 
@@ -295,6 +295,20 @@
     check-cast v2, Lcom/android/systemui/qs/PageIndicator;
 
     iput-object v2, v0, Lcom/android/systemui/media/MediaCarouselController;->pageIndicator:Lcom/android/systemui/qs/PageIndicator;
+
+    iget-object v3, v0, Lcom/android/systemui/media/MediaCarouselController;->context:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/android/systemui/R$color;->op_control_text_color_primary_dark:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lcom/android/systemui/qs/PageIndicator;->setColor(I)V
 
     new-instance v2, Lcom/android/systemui/media/MediaCarouselScrollHandler;
 

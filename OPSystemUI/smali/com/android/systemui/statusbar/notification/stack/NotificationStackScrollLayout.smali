@@ -320,6 +320,8 @@
 
 .field private mIsExpansionChanging:Z
 
+.field private mIsImeShow:Z
+
 .field private final mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
 .field private final mKeyguardMediaController:Lcom/android/systemui/media/KeyguardMediaController;
@@ -411,6 +413,12 @@
 .field private mOwnScrollY:I
 
 .field private mPaddingBetweenElements:I
+
+.field private mPaddingBottom:I
+
+.field private mPaddingBottomLandscapeOffset:I
+
+.field private mPaddingBottomOffset:I
 
 .field private mPanelTracking:Z
 
@@ -4575,9 +4583,18 @@
 
     float-to-int p0, p0
 
+    add-int v1, v2, v0
+
+    if-ge v1, p0, :cond_6
+
+    move v2, v1
+
+    goto :goto_4
+
+    :cond_6
     sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4595,28 +4612,22 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v3, " maxAppearPosition "
+    const-string v0, " maxAppearPosition "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    const-string v3, "StackScroller"
+    const-string v0, "StackScroller"
 
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_6
-    add-int/2addr v0, v2
-
-    if-ge v0, p0, :cond_7
-
-    move v2, v0
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
+    :goto_4
     int-to-float p0, v2
 
     return p0
@@ -5292,6 +5303,24 @@
     return p0
 .end method
 
+.method private getNavigaitonBarMode()I
+    .locals 1
+
+    iget-object p0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v0, 0x10e008d
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private getRubberBandFactor(Z)F
     .locals 1
 
@@ -5368,15 +5397,21 @@
     add-int/2addr v0, v1
 
     :cond_0
-    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mMaxLayoutHeight:I
-
-    sub-int v1, v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updatePaddingBottom()I
 
     move-result v1
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mMaxLayoutHeight:I
+
+    sub-int v2, v0, v2
+
+    add-int/2addr v2, v1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->getImeInset()I
 
@@ -5390,7 +5425,7 @@
 
     sub-int/2addr v0, p0
 
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
@@ -5398,9 +5433,9 @@
 
     move-result p0
 
-    add-int/2addr v1, p0
+    add-int/2addr v2, p0
 
-    return v1
+    return v2
 .end method
 
 .method private getTopHeadsUpPinnedHeight()I
@@ -6065,6 +6100,50 @@
     add-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mHeadsUpInset:I
+
+    iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_notification_scroller_padding_bottom_offset:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomOffset:I
+
+    iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_notification_scroller_landscape_padding_bottom_offset:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomLandscapeOffset:I
+
+    iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v0, 0x10501af
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updatePaddingBottom()I
 
     return-void
 .end method
@@ -7456,6 +7535,10 @@
     if-eqz v2, :cond_9
 
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mScrolledToTopOnFirstDown:Z
+
+    if-eqz v2, :cond_9
+
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsExpanded:Z
 
     if-eqz v2, :cond_9
 
@@ -8961,6 +9044,12 @@
 
     if-eqz v0, :cond_2
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStackScrollAlgorithm:Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->setIsExpanded(Z)V
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updatePaddingBottom()I
+
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mWillExpand:Z
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsExpanded:Z
@@ -9027,6 +9116,10 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mShelf:Lcom/android/systemui/statusbar/NotificationShelf;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/NotificationShelf;->setMaxLayoutHeight(I)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAmbientState:Lcom/android/systemui/statusbar/notification/stack/AmbientState;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->setMaxLayoutHeight(I)V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateAlgorithmHeightAndPadding()V
 
@@ -11481,6 +11574,97 @@
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationZ(F)V
 
     return-void
+.end method
+
+.method private updatePaddingBottom()I
+    .locals 4
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->getNavigaitonBarMode()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStatusBarState:I
+
+    if-eqz v3, :cond_1
+
+    if-eq v3, v2, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    if-eqz v0, :cond_3
+
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomOffset:I
+
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsImeShow:Z
+
+    if-eqz v2, :cond_2
+
+    const/16 v2, 0xa
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v2, 0x3
+
+    :goto_1
+    mul-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    goto :goto_2
+
+    :cond_3
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomOffset:I
+
+    mul-int/2addr v1, v2
+
+    sub-int/2addr v0, v1
+
+    :goto_2
+    int-to-float v0, v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mQsExpansionFraction:F
+
+    sub-float/2addr v1, v2
+
+    mul-float/2addr v0, v1
+
+    float-to-int v1, v0
+
+    :goto_3
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAmbientState:Lcom/android/systemui/statusbar/notification/stack/AmbientState;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->setPaddingBottom(I)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mShelf:Lcom/android/systemui/statusbar/NotificationShelf;
+
+    if-eqz p0, :cond_4
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/NotificationShelf;->setPaddingBottom(I)V
+
+    :cond_4
+    return v1
 .end method
 
 .method private updateScrollPositionOnExpandInBottom(Lcom/android/systemui/statusbar/notification/row/ExpandableView;)V
@@ -15460,7 +15644,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 4
+    .locals 5
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
 
@@ -15488,23 +15672,40 @@
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iget v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iget v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    :cond_0
     iget-object v0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string v1, "oneplus_wlb_activated_mode"
+    const-string v2, "oneplus_wlb_activated_mode"
 
-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSettingsObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSettingsObserver:Landroid/database/ContentObserver;
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     iget-object v0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
@@ -15512,15 +15713,15 @@
 
     move-result-object v0
 
-    const-string v1, "oneplus_wlb_break_mode_activated"
+    const-string v2, "oneplus_wlb_break_mode_activated"
 
-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSettingsObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSettingsObserver:Landroid/database/ContentObserver;
 
-    invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     const-string v0, "StackScroller"
 
@@ -15605,6 +15806,22 @@
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->initView(Landroid/content/Context;)V
+
+    iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v0, 0x10501af
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updatePaddingBottom()I
 
     return-void
 .end method
@@ -16342,7 +16559,65 @@
 .end method
 
 .method protected onMeasure(II)V
-    .locals 3
+    .locals 5
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    if-ne v0, v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    :goto_0
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->getNavigaitonBarMode()I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v3
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    if-eqz v1, :cond_2
+
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomLandscapeOffset:I
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v3
+
+    :goto_2
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottomOffset:I
+
+    mul-int/lit8 v1, v1, 0x4
+
+    add-int/2addr v1, v0
+
+    add-int/2addr p2, v1
 
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->onMeasure(II)V
 
@@ -16352,7 +16627,7 @@
 
     iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSidePaddings:I
 
-    mul-int/lit8 v1, v1, 0x2
+    mul-int/2addr v1, v2
 
     sub-int/2addr v0, v1
 
@@ -16368,30 +16643,28 @@
 
     move-result p2
 
-    const/4 v0, 0x0
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-static {p2, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result v1
+    move-result v0
 
-    :goto_0
-    if-ge v0, v1, :cond_0
+    :goto_3
+    if-ge v3, v0, :cond_3
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p0, v2, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v1, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v3, v3, 0x1
 
-    goto :goto_0
+    goto :goto_3
 
-    :cond_0
+    :cond_3
     return-void
 .end method
 
@@ -16972,7 +17245,7 @@
 
     move-result p1
 
-    iget v2, p0, Landroid/view/ViewGroup;->mPaddingBottom:I
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
 
     sub-int/2addr p1, v2
 
@@ -17282,6 +17555,18 @@
     invoke-direct {p0, p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->clearTemporaryViewsInGroup(Landroid/view/ViewGroup;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public setBarState(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStatusBarState:I
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAmbientState:Lcom/android/systemui/statusbar/notification/stack/AmbientState;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->setStatusBarState(I)V
+
     return-void
 .end method
 
@@ -17937,6 +18222,14 @@
     return-void
 .end method
 
+.method public setIsImeShow(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsImeShow:Z
+
+    return-void
+.end method
+
 .method public setLongPressListener(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$LongPressListener;)V
     .locals 0
 
@@ -18196,9 +18489,27 @@
 .end method
 
 .method public setQsExpansionFraction(F)V
-    .locals 0
+    .locals 1
 
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mQsExpansionFraction:F
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStackScrollAlgorithm:Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float p1, p1, v0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->setQsFullyExpanded(Z)V
 
     return-void
 .end method
@@ -18257,6 +18568,12 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStateAnimator:Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;->setShelf(Lcom/android/systemui/statusbar/NotificationShelf;)V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mShelf:Lcom/android/systemui/statusbar/NotificationShelf;
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPaddingBottom:I
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/NotificationShelf;->setPaddingBottom(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAmbientState:Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 

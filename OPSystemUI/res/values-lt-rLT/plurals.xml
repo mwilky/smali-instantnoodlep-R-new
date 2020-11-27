@@ -17,7 +17,7 @@
         <item quantity="one">Klaidingas SIM%1$d PIN kodas, dar turite %2$d likusį bandymą. Paskui reikės susisiekti su savo operatoriumi, kad įrenginį atrakintų.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">Gauta %d pranešimų (-ai)</item>
+        <item quantity="other">Gauti (-a) %d pranešimai (-ai)</item>
         <item quantity="one">Gautas %d pranešimas</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">

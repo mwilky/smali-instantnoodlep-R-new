@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:height="@dimen/op_control_icon_size_button" android:width="@dimen/op_control_icon_size_button" android:viewportWidth="24.0" android:viewportHeight="24.0"
+<vector android:height="19.0dip" android:width="19.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#ff000000" android:pathData="M10.7401,0.98V3.98H12.5401V0.98H10.7401Z" />
     <path android:fillColor="#ff000000" android:pathData="M5.7401,11.9801C5.7401,8.7216 8.3816,6.0801 11.6401,6.0801C14.8986,6.0801 17.5401,8.7216 17.5401,11.9801C17.5401,15.2386 14.8986,17.8801 11.6401,17.8801C8.3816,17.8801 5.7401,15.2386 5.7401,11.9801Z" android:fillType="evenOdd" />

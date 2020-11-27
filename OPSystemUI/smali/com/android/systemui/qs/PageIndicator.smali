@@ -8,7 +8,7 @@
 
 .field private final mAnimationDone:Ljava/lang/Runnable;
 
-.field private final mColor:I
+.field private mColor:I
 
 .field private final mPageDotWidth:I
 
@@ -551,6 +551,14 @@
     iget p2, p0, Lcom/android/systemui/qs/PageIndicator;->mPageIndicatorHeight:I
 
     invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public setColor(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/qs/PageIndicator;->mColor:I
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s uygulaması, %2$s dilimlerini göstermek istiyor</string>
     <string name="abc_toolbar_collapse_description">Daralt</string>
     <string name="about_action_bar_title">Hakkında</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Sürüm %s</string>
     <string name="about_privacy_policy">Gizlilik Politikası</string>
     <string name="about_release_note_title">Güncelleme kaydı:</string>
     <string name="about_terms_service">Hizmet Koşulları</string>
@@ -723,7 +723,7 @@ Devam ettirirseniz veri kullanımı için sizden ödeme alınabilir."</string>
     <string name="drag_to_rearrange_tiles">Blokları yeniden düzenlemek için basılı tutun ve sürükleyin</string>
     <string name="drag_to_remove_disabled">En az %1$d blok gerekiyor</string>
     <string name="drag_to_remove_tiles">Kaldırmak için buraya sürükleyin</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Sol: %1$s  Sağ: %2$s"</string>
     <string name="edit_mode_hint">Kutucukları yeniden düzenlemek için sürükleyin. Göstermek veya gizlemek için dokunun.</string>
     <string name="empty_shade_text">Bildirim yok</string>
     <string name="enable_adb">USB hata ayıklaması</string>
@@ -1332,12 +1332,12 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
     <string name="oneplus_threekey_navigation_vibration">Sadece titreşim</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>kilit açma</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>kilit açma</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Pil ömrünü uzatmak için, Pil Tasarruf modu:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Arka plan etkinliklerini, bazı görsel efektleri ve “Hey Google” gibi diğer özellikleri kapatır veya kısıtlar"</string>
+    <string name="op_battery_saver_description_no_ga">"Pil ömrünü uzatmak için, Pil Tasarruf modu:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Arka plan etkinliklerini ve bazı görsel efektleri kapatır veya kısıtlar"</string>
     <string name="op_earphone_connect">Eşleştiriliyor...</string>
     <string name="op_earphone_connected_fail">Eşleştirme başarısız. Kulaklık ve Bluetooth durumunu kontrol edebilirsiniz.</string>
     <string name="op_earphone_connected_success">Eşleştirildi. Daha fazla ayar için dokunun.</string>
@@ -1367,7 +1367,7 @@ Ayrıca, ağ etkinliğinizi izleyebilen bir VPN'ye de bağlısınız."</string>
     <string name="op_notification_channel_summary_low">Ses veya titreşim vermeyen daha az önemli bildirimler.</string>
     <string name="op_notification_section_header_gentle">Diğer bildirimler</string>
     <string name="op_notification_silence_title">Diğer</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Korumalı şarj"</string>
     <string name="op_qs_dark_mode_tile_label">Koyu mod</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s kullanıldı</string>
     <string name="op_quick_settings_night_display_label">Görüş rahatlığı</string>
@@ -1890,7 +1890,7 @@ olabilir"</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi paylaşılıyor, Ayarlara girmek için tıklayın</string>
     <string name="tethered_notification_message">Ayarlamak için dokunun.</string>
     <string name="tethered_notification_multi_device_message">%1$s bağlı cihaz</string>
-    <string name="tethered_notification_multi_tether_title">İnternet paylaşımı ve Mobil Etkin Nokta etkin</string>
+    <string name="tethered_notification_multi_tether_title">İnternet paylaşımı ve Mobil Ortak Erişim Noktası Etkin</string>
     <string name="tethered_notification_no_device_message">Bağlı cihaz yok</string>
     <string name="tethered_notification_one_device_message">%1$s bağlı cihaz</string>
     <string name="tethered_notification_sharing_mobile_multi">Mobil veri paylaşılıyor, %1$s cihaz bağlı</string>
@@ -1902,7 +1902,7 @@ olabilir"</string>
     <string name="tethered_notification_sharing_wifi_multi">Wi-Fi paylaşılıyor, %1$s cihaz bağlı</string>
     <string name="tethered_notification_sharing_wifi_no">Wi-Fi paylaşılıyor, bağlı cihaz yok</string>
     <string name="tethered_notification_sharing_wifi_single">Wi-Fi paylaşılıyor, %1$s cihaz bağlı</string>
-    <string name="tethered_notification_title">İnternet paylaşımı veya Mobil Ortak Erişim Noktası etkin</string>
+    <string name="tethered_notification_title">İnternet paylaşımı veya Mobil Ortak Erişim Noktası Etkin</string>
     <string name="tethering_hardware_offload">Tethering donanım hızlandırıcısı</string>
     <string name="tethering_hardware_offload_summary">Mevcutsa, tethering donanım hızlandırıcısını kullan</string>
     <string name="tethering_settings_not_available">Tethering ayarları bu kullanıcı için kullanılamıyor</string>
@@ -1914,6 +1914,15 @@ Telefon şu koşullarda çok ısınabilir:
 \u0009• Telefonu sıcak yerlerde kullanma"</string>
     <string name="thermal_shutdown_message">Telefonunuz şu anda normal bir şekilde çalışıyor</string>
     <string name="thermal_shutdown_title">Telefon ısındığından kapatıldı</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">"Cihazın sesini kapatmak için, Alert Slider'ı Titreşim moduna veya Sessiz moda ayarlayın."</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Zil sesini kapat</string>
+    <string name="threekey_volume_guide_dialog_ok">Tamam</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">"Zil çalmayı etkinleştirmek için, Alert Slider'ı kullanarak Zil moduna geçiş yapın ve zil sesini tercihinize göre ayarlayın."</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Zil sesi modu</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider şu anda Sessiz modda; cihaz gelen aramayı bildirmek için zil çalmaz veya titremez. Zil çalmayla bildirim almak için lütfen Zil moduna geçiş yapın.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Sessiz mod</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider şu anda Titreşim modunda; cihaz gelen aramayı bildirmek için zil çalmaz. Yalnızca titreşimle bildirim alırsınız. Zil çalmayla bildirim almak için lütfen Zil moduna geçiş yapın.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Titreşim modu</string>
     <string name="tile_unavailable">Kullanılamıyor</string>
     <string name="time_picker_header_text">Saati ayarla</string>
     <string name="time_picker_hour_label">saat</string>
@@ -2051,7 +2060,7 @@ Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncel
     <string name="volume_dialog_title">%s ses denetimleri</string>
     <string name="volume_dnd_silent">Ses düğmeleri kısayolu</string>
     <string name="volume_footer_no_disturb">Rahatsız etmeyin</string>
-    <string name="volume_footer_ring">Zil sesi</string>
+    <string name="volume_footer_ring">Zil</string>
     <string name="volume_footer_slient">Sessiz</string>
     <string name="volume_footer_vibrate">Sessiz (Titreşim)</string>
     <string name="volume_odi_captions_content_description">Altyazı yer paylaşımı</string>
@@ -2151,6 +2160,6 @@ Kablosuz Adresi (BSSID)
     <string name="zen_silence_introduction">Bu seçenek TÜM sesleri ve titreşimleri engeller. Buna alarmlar, müzik, videolar ve oyunlar dahildir.</string>
     <string name="zen_silence_introduction_voice">Bu seçenek TÜM sesleri ve titreşimleri engeller. Buna alarmlar, müzik, videolar ve oyunlar dahildir. Telefon aramaları yapmaya devam edebilirsiniz.</string>
     <string name="zzz_op_global_action_bootloader">Önyükleyici</string>
-    <string name="zzz_op_global_action_recovery">Kurtarma Modu</string>
+    <string name="zzz_op_global_action_recovery">Kurtarma</string>
     <string name="zzz_op_quick_pay_no_install_message">Hızlı Ödemeyi kullanmak için lütfen ödeme uygulamalarını yükleyin</string>
 </resources>

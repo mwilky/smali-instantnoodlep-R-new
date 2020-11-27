@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">Aplikacija %1$s želi da prikazuje isečke iz aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Skupi</string>
     <string name="about_action_bar_title">Osnovni podaci</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verzija %s</string>
     <string name="about_privacy_policy">Izjava o privatnosti</string>
     <string name="about_release_note_title">Evidencija ažuriranja:</string>
     <string name="about_terms_service">Uslovi korišćenja usluge</string>
@@ -723,7 +723,7 @@ Ako nastavite, možda će važiti tarife za potrošnju podataka."</string>
     <string name="drag_to_rearrange_tiles">Zadržite i prevucite da biste promenili raspored pločica</string>
     <string name="drag_to_remove_disabled">Minimalan broj pločica je %1$d</string>
     <string name="drag_to_remove_tiles">Prevucite ovde da biste uklonili</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"L: %1$s  D: %2$s"</string>
     <string name="edit_mode_hint">Prevucite datoteke kako biste ih preuredili. Dodirnite da ih prikažete ili sakrijete.</string>
     <string name="empty_shade_text">Nema obaveštenja</string>
     <string name="enable_adb">Otklanjanje USB grešaka</string>
@@ -772,7 +772,7 @@ Ako nastavite, možda će važiti tarife za potrošnju podataka."</string>
     <string name="failed_to_open_app_settings_toast">Otvaranje podešavanja za aplikaciju %1$s nije uspelo</string>
     <string name="fingerprint_dialog_touch_sensor">Dodirnite senzor za otisak prsta</string>
     <string name="fingerprint_not_found">Pokušaj ponovo</string>
-    <string name="fnatic_mode_title">Fnatic mode</string>
+    <string name="fnatic_mode_title">Režim Fnatic</string>
     <string name="force_allow_on_external">Prinudno dozvoli aplikacije u spoljnoj</string>
     <string name="force_allow_on_external_summary">Omogućava upisivanje svih aplikacija u spoljnu memoriju, bez obzira na vrednosti manifesta</string>
     <string name="force_msaa">Nametni 4x MSAA</string>
@@ -1332,12 +1332,12 @@ Povezani ste i sa VPN-om, koji može da prati aktivnosti na mreži."</string>
     <string name="oneplus_threekey_navigation_vibration">Samo vibracija</string>
     <string name="op_aod_parsons_unlock_one">Otključano <annotation id="unlockNum">^1</annotation>put</string>
     <string name="op_aod_parsons_unlock_other">Otključano <annotation id="unlockNum">^1</annotation>puta</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Da bi produžila trajanje baterije, funkcija uštede energije:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•isključiće ili ograničiti neke aktivnosti u pozadini, vizuelne efekte i druge funkcije, npr. “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Da bi produžila trajanje baterije, funkcija uštede energije:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•isključiće ili ograničiti neke aktivnosti u pozadini i vizuelne efekte"</string>
     <string name="op_earphone_connect">Uparuje se...</string>
     <string name="op_earphone_connected_fail">Uparivanje nije uspelo. Možete da proverite slušalice i status Bluetooth veze.</string>
     <string name="op_earphone_connected_success">Upareno. Dodirnite za dodatno podešavanje.</string>
@@ -1367,7 +1367,7 @@ Povezani ste i sa VPN-om, koji može da prati aktivnosti na mreži."</string>
     <string name="op_notification_channel_summary_low">Manje važna obaveštenja bez ikakvog zvuka ili vibracija.</string>
     <string name="op_notification_section_header_gentle">Druga obaveštenja</string>
     <string name="op_notification_silence_title">Drugo</string>
-    <string name="op_protect_charging">" Protect charging"</string>
+    <string name="op_protect_charging">" Zaštićeni režim punjenja"</string>
     <string name="op_qs_dark_mode_tile_label">Tamni režim</string>
     <string name="op_qs_data_usage_used">Iskorišteno %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Vizuelna udobnost</string>
@@ -1417,7 +1417,7 @@ Povezani ste i sa VPN-om, koji može da prati aktivnosti na mreži."</string>
     <string name="overview">Pregled</string>
     <string name="permission_btn_text_denied">Izlaz</string>
     <string name="permission_btn_text_grant">U redu</string>
-    <string name="permission_dialog_title">Permission statement</string>
+    <string name="permission_dialog_title">Izjava o dozvoli</string>
     <string name="phone_hint">Prevucite od ikone za telefon</string>
     <string name="phone_label">otvori telefon</string>
     <string name="picture_color_mode">Režim boja slika</string>
@@ -1911,6 +1911,15 @@ Telefon može previše da se ugreje ako:
 \u0009• Koristite telefon na visokoj temperaturi"</string>
     <string name="thermal_shutdown_message">Telefon sada normalno radi</string>
     <string name="thermal_shutdown_title">Telefon se isključio zbog toplote</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Da biste utišali uređaj, postavite klizač za upozorenja na Tihi režim.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Utišaj ton zvona</string>
+    <string name="threekey_volume_guide_dialog_ok">U redu</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Da biste omogućili zvonjenje, prevucite klizač za upozorenja na Režim zvonjenja i podesite jačinu zvona po želji.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Ring mode</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Klizač za upozorenja je trenutno na Tihom režimu, uređaj neće ni zvoniti ni vibrirati pri dolaznom pozivu. Prebacite se na Režim zvonjenja da biste čuli zvono.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tihi režim</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Klizač za upozorenja je trenutno na Režimu vibracije; uređaj neće zvoniti pri dolaznom pozivu. Bićete obavešteni samo vibracijom. Prebacite se na Režim zvonjenja da biste čuli zvono.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Režim vibracije</string>
     <string name="tile_unavailable">Nedostupno</string>
     <string name="time_picker_header_text">Podesite vreme</string>
     <string name="time_picker_hour_label">sat</string>

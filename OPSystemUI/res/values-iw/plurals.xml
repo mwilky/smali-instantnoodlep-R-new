@@ -88,7 +88,7 @@
     </plurals>
     <plurals name="notification_hidden_content">
         <item quantity="other">התקבלו %d הודעות</item>
-        <item quantity="one">התקבלה הודעה %d</item>
+        <item quantity="one">התקבלה %d הודעה</item>
     </plurals>
     <plurals name="quick_settings_hotspot_secondary_label_num_devices">
         <item quantity="other">‏%d מכשירים</item>

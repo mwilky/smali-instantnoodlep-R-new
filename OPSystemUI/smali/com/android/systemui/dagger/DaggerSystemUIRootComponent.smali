@@ -1662,6 +1662,16 @@
     .end annotation
 .end field
 
+.field private opThreekeyVolumeGuideControllerImplProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideControllerImpl;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private opZenModeControllerImplProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -3452,6 +3462,16 @@
     .end annotation
 .end field
 
+.field private workLifeBalanceControllerImplProvider:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider<",
+            "Lcom/android/systemui/statusbar/policy/WorkLifeBalanceControllerImpl;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private workLifeBalanceTileProvider:Lcom/android/systemui/qs/tiles/WorkLifeBalanceTile_Factory;
 
 .field private workLockActivityProvider:Lcom/android/systemui/keyguard/WorkLockActivity_Factory;
@@ -3757,7 +3777,7 @@
 .method static synthetic access$12700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->wLBSwitchControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->workLifeBalanceControllerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3765,7 +3785,7 @@
 .method static synthetic access$12800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->oPWLBHelperProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->wLBSwitchControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3773,7 +3793,7 @@
 .method static synthetic access$12900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opNotificationControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->oPWLBHelperProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3789,7 +3809,7 @@
 .method static synthetic access$13000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opHighlightHintControllerImplProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opNotificationControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3797,12 +3817,28 @@
 .method static synthetic access$13100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opHighlightHintControllerImplProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$13200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideExecutorProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
 
-.method static synthetic access$13200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory$ContextHolder;
+.method static synthetic access$13300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opThreekeyVolumeGuideControllerImplProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$13400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory$ContextHolder;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->contextHolder:Lcom/android/systemui/SystemUIFactory$ContextHolder;
@@ -3810,7 +3846,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$13300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/content/res/Resources;
+.method static synthetic access$13500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/content/res/Resources;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getMainResources()Landroid/content/res/Resources;
@@ -3820,7 +3856,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$13400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
+.method static synthetic access$13600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getBackgroundHandler()Landroid/os/Handler;
@@ -3830,7 +3866,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$13500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$13700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->systemActionsProvider:Ljavax/inject/Provider;
@@ -3838,7 +3874,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$13600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
+.method static synthetic access$13800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Landroid/os/Handler;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getMainHandler()Landroid/os/Handler;
@@ -3848,26 +3884,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$13700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideUiEventLoggerProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
-.method static synthetic access$13800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->injectionInflationControllerProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
 .method static synthetic access$13900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->qSTileHostProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideUiEventLoggerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3880,7 +3900,23 @@
     return-object p0
 .end method
 
+.method static synthetic access$14000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->injectionInflationControllerProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
 .method static synthetic access$14100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->qSTileHostProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$14300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->peopleHubViewAdapterImplProvider:Ljavax/inject/Provider;
@@ -3888,7 +3924,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->keyguardMediaControllerProvider:Ljavax/inject/Provider;
@@ -3896,7 +3932,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
+.method static synthetic access$14500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getNotificationSectionsFeatureManager()Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
@@ -3906,7 +3942,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationSectionsLoggerProvider:Ljavax/inject/Provider;
@@ -3914,7 +3950,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljava/util/concurrent/Executor;
+.method static synthetic access$14700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljava/util/concurrent/Executor;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getMainExecutor()Ljava/util/concurrent/Executor;
@@ -3924,7 +3960,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$14600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$14800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideBackgroundExecutorProvider:Ljavax/inject/Provider;
@@ -3932,26 +3968,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$14700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->ringerModeTrackerImplProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
-.method static synthetic access$14800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideAllowNotificationLongPressProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
 .method static synthetic access$14900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationRoundnessManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->ringerModeTrackerImplProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3967,7 +3987,7 @@
 .method static synthetic access$15000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->dynamicPrivacyControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideAllowNotificationLongPressProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3975,7 +3995,7 @@
 .method static synthetic access$15100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideHeadsUpManagerPhoneProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationRoundnessManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3983,7 +4003,7 @@
 .method static synthetic access$15200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->keyguardBypassControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->dynamicPrivacyControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3991,7 +4011,7 @@
 .method static synthetic access$15300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->falsingManagerProxyProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideHeadsUpManagerPhoneProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -3999,7 +4019,7 @@
 .method static synthetic access$15400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->foregroundServiceSectionControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->keyguardBypassControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4007,7 +4027,7 @@
 .method static synthetic access$15500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->foregroundServiceDismissalFeatureControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->falsingManagerProxyProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4015,7 +4035,7 @@
 .method static synthetic access$15600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->featureFlagsProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->foregroundServiceSectionControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4023,7 +4043,7 @@
 .method static synthetic access$15700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifPipelineProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->foregroundServiceDismissalFeatureControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4031,17 +4051,15 @@
 .method static synthetic access$15800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifCollectionProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->featureFlagsProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
 
-.method static synthetic access$15900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/qs/logging/QSLogger;
+.method static synthetic access$15900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getQSLogger()Lcom/android/systemui/qs/logging/QSLogger;
-
-    move-result-object p0
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifPipelineProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4054,7 +4072,25 @@
     return-object p0
 .end method
 
-.method static synthetic access$16000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/media/MediaHost;
+.method static synthetic access$16000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notifCollectionProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$16100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/qs/logging/QSLogger;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getQSLogger()Lcom/android/systemui/qs/logging/QSLogger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$16200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/media/MediaHost;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->getMediaHost()Lcom/android/systemui/media/MediaHost;
@@ -4064,7 +4100,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$16300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$16500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideAccessibilityManagerProvider:Ljavax/inject/Provider;
@@ -4072,18 +4108,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$16500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
+.method static synthetic access$16700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
-
-    return-object p0
-.end method
-
-.method static synthetic access$16900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->bindSystemClockProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4096,7 +4124,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$17000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$17100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->bindSystemClockProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$17200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->peopleNotificationIdentifierImplProvider:Ljavax/inject/Provider;
@@ -4104,7 +4140,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$17300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$17500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationWakeUpCoordinatorProvider:Ljavax/inject/Provider;
@@ -4112,7 +4148,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$17400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$17600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->pulseExpansionHandlerProvider:Ljavax/inject/Provider;
@@ -4120,7 +4156,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$17500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$17700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->dozeLogProvider:Ljavax/inject/Provider;
@@ -4128,7 +4164,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$17600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$17800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideLatencyTrackerProvider:Ljavax/inject/Provider;
@@ -4136,26 +4172,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$17700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providePowerManagerProvider:Ljavax/inject/Provider;
-
-    return-object p0
-.end method
-
-.method static synthetic access$17800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/dagger/SystemServicesModule_ProvideDisplayIdFactory;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideDisplayIdProvider:Lcom/android/systemui/dagger/SystemServicesModule_ProvideDisplayIdFactory;
-
-    return-object p0
-.end method
-
 .method static synthetic access$17900(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideActivityManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->providePowerManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4168,10 +4188,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$18000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+.method static synthetic access$18000(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Lcom/android/systemui/dagger/SystemServicesModule_ProvideDisplayIdFactory;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarTouchableRegionManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideDisplayIdProvider:Lcom/android/systemui/dagger/SystemServicesModule_ProvideDisplayIdFactory;
 
     return-object p0
 .end method
@@ -4179,7 +4199,7 @@
 .method static synthetic access$18100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->conversationNotificationManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideActivityManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4187,7 +4207,7 @@
 .method static synthetic access$18200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarTouchableRegionManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4195,7 +4215,7 @@
 .method static synthetic access$18300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->biometricUnlockControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->conversationNotificationManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4203,7 +4223,7 @@
 .method static synthetic access$18400(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->mediaHierarchyManagerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
@@ -4211,12 +4231,28 @@
 .method static synthetic access$18500(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->biometricUnlockControllerProvider:Ljavax/inject/Provider;
 
     return-object p0
 .end method
 
 .method static synthetic access$18600(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$18700(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$18800(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->superStatusBarViewFactoryProvider:Ljavax/inject/Provider;
@@ -11495,6 +11531,18 @@
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
 
+    invoke-static {v1}, Lcom/android/systemui/statusbar/policy/WorkLifeBalanceControllerImpl_Factory;->create(Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/policy/WorkLifeBalanceControllerImpl_Factory;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->workLifeBalanceControllerImplProvider:Ljavax/inject/Provider;
+
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
+
     invoke-static {v1}, Lcom/android/systemui/statusbar/phone/WLBSwitchController_Factory;->create(Ljavax/inject/Provider;)Lcom/android/systemui/statusbar/phone/WLBSwitchController_Factory;
 
     move-result-object v1
@@ -11538,6 +11586,18 @@
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opHighlightHintControllerImplProvider:Ljavax/inject/Provider;
+
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->provideContextProvider:Lcom/android/systemui/SystemUIFactory_ContextHolder_ProvideContextFactory;
+
+    invoke-static {v1}, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideControllerImpl_Factory;->create(Ljavax/inject/Provider;)Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideControllerImpl_Factory;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ldagger/internal/DoubleCheck;->provider(Ljavax/inject/Provider;)Ljavax/inject/Provider;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->opThreekeyVolumeGuideControllerImplProvider:Ljavax/inject/Provider;
 
     new-instance v1, Ldagger/internal/DelegateFactory;
 
@@ -11615,6 +11675,14 @@
 
     iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->airplaneModeTileProvider:Lcom/android/systemui/qs/tiles/AirplaneModeTile_Factory;
 
+    return-void
+.end method
+
+.method private initialize5(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$Builder;)V
+    .locals 32
+
+    move-object/from16 v0, p0
+
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->qSTileHostProvider:Ljavax/inject/Provider;
 
     iget-object v2, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->managedProfileControllerImplProvider:Ljavax/inject/Provider;
@@ -11634,14 +11702,6 @@
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->rotationLockTileProvider:Lcom/android/systemui/qs/tiles/RotationLockTile_Factory;
-
-    return-void
-.end method
-
-.method private initialize5(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$Builder;)V
-    .locals 32
-
-    move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->qSTileHostProvider:Ljavax/inject/Provider;
 

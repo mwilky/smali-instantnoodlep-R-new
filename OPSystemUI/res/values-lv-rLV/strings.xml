@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">Par ierīci</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_action_bar_title">Par</string>
+    <string name="about_app_version_text">Versija %s</string>
     <string name="about_privacy_policy">Konfidencialitātes politika</string>
     <string name="about_release_note_title">Atjauninājumu žurnāls:</string>
     <string name="about_terms_service">Pakalpojuma lietošanas noteikumi</string>
@@ -48,7 +48,7 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="disable_tether_notification_message">Sazinieties ar administratoru, lai saņemtu sīkāku informāciju</string>
     <string name="disable_tether_notification_title">Piesaiste ir atspējota</string>
     <string name="drag_to_add_tiles">Velciet, lai pievienotu elementus</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Kreisā: %1$s  Labā: %2$s"</string>
     <string name="edit_mode_hint">Velciet elementus, lai mainītu to izkārtojumu. Pieskarieties, lai parādītu vai slēptu tos.</string>
     <string name="end_call">Beigt</string>
     <string name="face_unlock_camera_error">Atbloķēšana ar seju neizdevās, kameru izmanto citas lietotnes</string>
@@ -76,7 +76,7 @@ Ieslēgt Lidojuma režīmu?"</string>
     <string name="interruption_level_movie">Filmas</string>
     <string name="interruption_level_music">Mūzika</string>
     <string name="keyguard_fingerprint_unlock">Izmantojiet pirkstu nospiedumu, lai atbloķētu</string>
-    <string name="keyguard_indication_charging_time_fast">(līdz pilnai uzlādei atlikušas %s)</string>
+    <string name="keyguard_indication_charging_time_fast">(Līdz pilnai uzlādei atlikušas %s)</string>
     <string name="keyguard_plugged_in_charging_warp">%s • Warp Charging</string>
     <string name="keyguard_plugged_in_wireless_warp">%s • Warp bezvadu uzlāde</string>
     <string name="kg_at_least_four_points">Zīmējiet tā, lai ietvertu vismaz 4 punktus</string>
@@ -138,12 +138,12 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="oneplus_threekey_navigation_vibration">Tikai vibrēt</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>atbloķēšanas reize</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>atbloķēšanas reizes</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Lai pagarinātu akumulatora darbības laiku, enerģijas taupīšanas režīms:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•tiek izslēgts vai ierobežo darbības fonā, noteiktus vizuālos efektus un citas funkcijas, piemēram, “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Lai pagarinātu akumulatora darbības laiku, enerģijas taupīšanas režīms:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•tiek izslēgts vai ierobežo darbības fonā un noteiktus vizuālos efektus"</string>
     <string name="op_earphone_connect">Veido savienojumu pārī...</string>
     <string name="op_earphone_connected_fail">Savienošana parī neizdevās. Jūs varat pārbaudīt austiņas ar mikrofonu un Bluetooth statusu.</string>
     <string name="op_earphone_connected_success">Izveidots savienojums pārī. Pieskarieties, lai iestatītu vēl citus.</string>
@@ -173,7 +173,7 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="op_notification_channel_summary_low">Mazāk svarīgiem paziņojumiem netiek lietota ne skaņa, ne vibrācija.</string>
     <string name="op_notification_section_header_gentle">Citi paziņojumi</string>
     <string name="op_notification_silence_title">Cits</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Aizsargāta uzlāde"</string>
     <string name="op_qs_dark_mode_tile_label">Tumšais režīms</string>
     <string name="op_qs_data_usage_used">Izmantotais apjoms: %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Redzes komforts</string>
@@ -282,20 +282,29 @@ Lai abonētu mobilo tīklāju, apmeklējiet My Verizon vai zvaniet klientu apkal
     <string name="tethered_notification_hybrid_sharing_none">Nav kopīgošanai pieejama tīkla, noklikšķiniet, lai atvērtu sadaļu Iestatījumi</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Notiek Wi-Fi kopīgošana, noklikšķiniet, lai atvērtu sadaļu Iestatījumi</string>
     <string name="tethered_notification_message">Pieskarieties, lai iestatītu.</string>
-    <string name="tethered_notification_multi_device_message">Pievienotas %1$s ierīces</string>
-    <string name="tethered_notification_multi_tether_title">Sasaiste un mobilais tīklājs ir aktivizēti</string>
+    <string name="tethered_notification_multi_device_message">Savienotas %1$s ierīces</string>
+    <string name="tethered_notification_multi_tether_title">Sasaiste un mobilais tīklājs ir aktīvs</string>
     <string name="tethered_notification_no_device_message">Nav savienota neviena ierīce</string>
-    <string name="tethered_notification_one_device_message">Pievienota %1$s ierīce</string>
-    <string name="tethered_notification_sharing_mobile_multi">Notiek mobilo datu kopīgošana, %1$s ierīces savienotas</string>
+    <string name="tethered_notification_one_device_message">Savienota %1$s ierīce</string>
+    <string name="tethered_notification_sharing_mobile_multi">Notiek mobilo datu kopīgošana, savienotas %1$s ierīces</string>
     <string name="tethered_notification_sharing_mobile_no">Notiek mobilo datu kopīgošana, nav savienota neviena ierīce</string>
-    <string name="tethered_notification_sharing_mobile_single">Notiek mobilo datu kopīgošana, %1$s ierīce savienota</string>
-    <string name="tethered_notification_sharing_none_multi">Nav kopīgošanai pieejama tīkla, %1$s ierīces savienotas</string>
-    <string name="tethered_notification_sharing_none_no">Nav kopīgošanai pieejama tīkla, nav savienota neviena ierīce</string>
-    <string name="tethered_notification_sharing_none_single">Nav kopīgošanai pieejama tīkla, %1$s ierīce savienota</string>
-    <string name="tethered_notification_sharing_wifi_multi">Notiek Wi-Fi kopīgošana, %1$s ierīces savienotas</string>
-    <string name="tethered_notification_sharing_wifi_no">Notiek Wi-Fi kopīgošana, neviena ierīce nav savienota</string>
-    <string name="tethered_notification_sharing_wifi_single">Notiek Wi-Fi kopīgošana, %1$s ierīce savienota</string>
-    <string name="tethered_notification_title">Aktivizēta sasaiste vai mobilais tīklājs</string>
+    <string name="tethered_notification_sharing_mobile_single">Notiek mobilo datu kopīgošana, savienota %1$s ierīce</string>
+    <string name="tethered_notification_sharing_none_multi">Nav kopīgošanai pieejama tīkla, savienotas %1$s ierīces</string>
+    <string name="tethered_notification_sharing_none_no">Nav kopīgošanai pieejama tīkla, neviena ierīce nav savienota</string>
+    <string name="tethered_notification_sharing_none_single">Nav kopīgošanai pieejama tīkla, savienota %1$s ierīce</string>
+    <string name="tethered_notification_sharing_wifi_multi">Notiek Wi-Fi kopīgošana, savienotas %1$s ierīces</string>
+    <string name="tethered_notification_sharing_wifi_no">Notiek Wi-Fi kopīgošana, nav savienota neviena ierīce</string>
+    <string name="tethered_notification_sharing_wifi_single">Notiek Wi-Fi kopīgošana, savienota %1$s ierīce</string>
+    <string name="tethered_notification_title">Sasaiste vai mobilais tīklājs ir aktīvs</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Lai izslēgtu ierīces skaņu, iestatiet Alert Slider vibrācijas vai klusajā režīmā.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Izslēgt zvana skaņu</string>
+    <string name="threekey_volume_guide_dialog_ok">Labi</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Zvana iespējšanai izmantojiet Alert Slider, lai pārslēgtos uz signāla režīmu un iestatītu zvana skaļumu atbilstoši savām vēlmēm.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Signāla režīms</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider pašlaik atrodas klusajā režīmā; ierīce ienākošā zvana laikā nezvanīs un nevibrēs. Lūdzu, pārslēdzieties uz signāla režīmu, lai paziņojumu saņemtu zvana veidā.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Klusais režīms</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider pašlaik atrodas vibrācijas režīmā; ierīce ienākošā zvana laikā nezvanīs. Jūs saņemsiet paziņojumu tikai vibrācijas veidā. Lūdzu, pārslēdzieties uz signāla režīmu, lai paziņojumu saņemtu zvana veidā.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Vibrācijas režīms</string>
     <string name="time_picker_header_text">Iestatīt laiku</string>
     <string name="time_picker_hour_label">stunda</string>
     <string name="time_picker_input_error">Ievadīt derīgu laiku</string>

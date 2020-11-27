@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nChannelEditorDialogController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorDialogController.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorDialogController\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,394:1\n1591#2,2:395\n*E\n*S KotlinDebug\n*F\n+ 1 ChannelEditorDialogController.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorDialogController\n*L\n138#1,2:395\n*E\n"
+    value = "SMAP\nChannelEditorDialogController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelEditorDialogController.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorDialogController\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,431:1\n1591#2,2:432\n*E\n*S KotlinDebug\n*F\n+ 1 ChannelEditorDialogController.kt\ncom/android/systemui/statusbar/notification/row/ChannelEditorDialogController\n*L\n151#1,2:432\n*E\n"
 .end annotation
 
 
@@ -29,6 +29,8 @@
         }
     .end annotation
 .end field
+
+.field private configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
 .field private final context:Landroid/content/Context;
     .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -63,6 +65,10 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
+
+.field private mConfigurationListener:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+
+.field private mOrientation:I
 
 .field private final noMan:Landroid/app/INotificationManager;
 
@@ -185,6 +191,12 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->wmFlags:I
 
+    new-instance p1, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+
+    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->mConfigurationListener:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+
     return-void
 .end method
 
@@ -196,12 +208,44 @@
     return-void
 .end method
 
+.method public static final synthetic access$getConfigurationController$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getMConfigurationListener$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->mConfigurationListener:Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$mConfigurationListener$1;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getMOrientation$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->mOrientation:I
+
+    return p0
+.end method
+
 .method public static final synthetic access$getProvidedChannels$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)Ljava/util/List;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->providedChannels:Ljava/util/List;
 
     return-object p0
+.end method
+
+.method public static final synthetic access$setMOrientation$p(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->mOrientation:I
+
+    return-void
 .end method
 
 .method private final applyAppNotificationsOn(Z)V
@@ -650,7 +694,7 @@
     :cond_1
     new-instance v2, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$2;
 
-    invoke-direct {v2, v1, p0}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$2;-><init>(Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)V
+    invoke-direct {v2, v0, v1, p0}, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController$initDialog$$inlined$apply$lambda$2;-><init>(Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialog;Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;)V
 
     invoke-virtual {v0, v2}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
@@ -1240,7 +1284,7 @@
     return-void
 .end method
 
-.method public final prepareDialogForApp(Ljava/lang/String;Ljava/lang/String;ILjava/util/Set;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/statusbar/notification/row/NotificationInfo$OnSettingsClickListener;)V
+.method public final prepareDialogForApp(Ljava/lang/String;Ljava/lang/String;ILjava/util/Set;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/statusbar/notification/row/NotificationInfo$OnSettingsClickListener;Lcom/android/systemui/statusbar/policy/ConfigurationController;)V
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -1262,6 +1306,10 @@
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
+    .param p7    # Lcom/android/systemui/statusbar/policy/ConfigurationController;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1273,6 +1321,7 @@
             ">;",
             "Landroid/graphics/drawable/Drawable;",
             "Lcom/android/systemui/statusbar/notification/row/NotificationInfo$OnSettingsClickListener;",
+            "Lcom/android/systemui/statusbar/policy/ConfigurationController;",
             ")V"
         }
     .end annotation
@@ -1312,6 +1361,8 @@
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->appNotificationsEnabled:Z
 
     iput-object p6, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationInfo$OnSettingsClickListener;
+
+    iput-object p7, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

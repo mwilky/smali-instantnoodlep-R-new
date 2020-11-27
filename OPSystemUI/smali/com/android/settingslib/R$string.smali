@@ -132,54 +132,58 @@
 
 .field public static final tap_to_sign_up:I = 0x7f1207cb
 
-.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1208ac
+.field public static final user_add_user_message_long:I = 0x7f120861
 
-.field public static final wifi_check_password_try_again:I = 0x7f1208b0
+.field public static final user_add_user_title:I = 0x7f120863
 
-.field public static final wifi_connected_no_internet:I = 0x7f1208b1
+.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f1208b5
 
-.field public static final wifi_disabled_generic:I = 0x7f1208bb
+.field public static final wifi_check_password_try_again:I = 0x7f1208b9
 
-.field public static final wifi_disabled_network_failure:I = 0x7f1208bc
+.field public static final wifi_connected_no_internet:I = 0x7f1208ba
 
-.field public static final wifi_disabled_password_failure:I = 0x7f1208bd
+.field public static final wifi_disabled_generic:I = 0x7f1208c4
 
-.field public static final wifi_disconnected:I = 0x7f1208bf
+.field public static final wifi_disabled_network_failure:I = 0x7f1208c5
 
-.field public static final wifi_fail_to_scan:I = 0x7f1208c6
+.field public static final wifi_disabled_password_failure:I = 0x7f1208c6
 
-.field public static final wifi_limited_connection:I = 0x7f1208cb
+.field public static final wifi_disconnected:I = 0x7f1208c8
 
-.field public static final wifi_metered_label:I = 0x7f1208cc
+.field public static final wifi_fail_to_scan:I = 0x7f1208cf
 
-.field public static final wifi_no_internet:I = 0x7f1208ce
+.field public static final wifi_limited_connection:I = 0x7f1208d4
 
-.field public static final wifi_no_internet_no_reconnect:I = 0x7f1208cf
+.field public static final wifi_metered_label:I = 0x7f1208d5
 
-.field public static final wifi_not_in_range:I = 0x7f1208d0
+.field public static final wifi_no_internet:I = 0x7f1208d7
 
-.field public static final wifi_passpoint_expired:I = 0x7f1208d1
+.field public static final wifi_no_internet_no_reconnect:I = 0x7f1208d8
 
-.field public static final wifi_remembered:I = 0x7f1208d2
+.field public static final wifi_not_in_range:I = 0x7f1208d9
 
-.field public static final wifi_status_no_internet:I = 0x7f1208fe
+.field public static final wifi_passpoint_expired:I = 0x7f1208da
 
-.field public static final wifi_status_sign_in_required:I = 0x7f1208ff
+.field public static final wifi_remembered:I = 0x7f1208db
 
-.field public static final wifi_unmetered_label:I = 0x7f120900
+.field public static final wifi_status_no_internet:I = 0x7f120907
 
-.field public static final zen_alarm_warning:I = 0x7f120916
+.field public static final wifi_status_sign_in_required:I = 0x7f120908
 
-.field public static final zen_alarm_warning_indef:I = 0x7f120917
+.field public static final wifi_unmetered_label:I = 0x7f120909
 
-.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f12091f
+.field public static final zen_alarm_warning:I = 0x7f12091f
 
-.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f120922
+.field public static final zen_alarm_warning_indef:I = 0x7f120920
 
-.field public static final zzz_input_dialog_alert_title:I = 0x7f120928
+.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f120928
 
-.field public static final zzz_op_direct_boot_inputmethod_unaware_dialog_message:I = 0x7f120929
+.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f12092b
 
-.field public static final zzz_op_ime_security_warning:I = 0x7f12092c
+.field public static final zzz_input_dialog_alert_title:I = 0x7f120931
 
-.field public static final zzz_op_ime_warning_confirm:I = 0x7f12092d
+.field public static final zzz_op_direct_boot_inputmethod_unaware_dialog_message:I = 0x7f120932
+
+.field public static final zzz_op_ime_security_warning:I = 0x7f120935
+
+.field public static final zzz_op_ime_warning_confirm:I = 0x7f120936

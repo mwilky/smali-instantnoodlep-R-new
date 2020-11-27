@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">Aplikacja %1$s chce pokazywać wycinki z aplikacji %2$s</string>
     <string name="abc_toolbar_collapse_description">Zwiń</string>
     <string name="about_action_bar_title">Informacje</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Wersja %s</string>
     <string name="about_privacy_policy">Polityka prywatności</string>
     <string name="about_release_note_title">Dziennik aktualizacji:</string>
     <string name="about_terms_service">Regulamin</string>
@@ -723,7 +723,7 @@ Jeśli włączysz ją ponownie, może zostać naliczona opłata za użycie danyc
     <string name="drag_to_rearrange_tiles">Przytrzymaj i przeciągnij, by przestawić kafelki</string>
     <string name="drag_to_remove_disabled">Minimalna liczba kafelków to %1$d</string>
     <string name="drag_to_remove_tiles">Przeciągnij tutaj, by usunąć</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"L: %1$s  P: %2$s"</string>
     <string name="edit_mode_hint">Przeciągnij kafelki, aby je przestawić. Stuknij, aby je pokazać lub ukryć.</string>
     <string name="empty_shade_text">Brak powiadomień</string>
     <string name="enable_adb">Debugowanie USB</string>
@@ -1332,12 +1332,12 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="oneplus_threekey_navigation_vibration">Tylko wibracje</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>odblokowanie</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>odblokowania</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Aby wydłużyć żywotność baterii, Oszczędzacz baterii:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Wyłącza lub ogranicza aktywność w tle, niektóre efekty wizualne i inne funkcje, takie jak “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"W celu wydłużenia żywotności baterii Oszczędzacz Baterii:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Wyłącza lub ogranicza aktywność w tle i niektóre efekty wizualne"</string>
     <string name="op_earphone_connect">Parowanie...</string>
     <string name="op_earphone_connected_fail">Nie udało się sparować. Możesz sprawdzić status słuchawek i Bluetooth.</string>
     <string name="op_earphone_connected_success">Sparowano. Dotknij, aby ustawić więcej.</string>
@@ -1363,11 +1363,11 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="op_kg_prompt_reason_timeout_pattern">Naciśnij przycisk zasilania, aby użyć wzoru</string>
     <string name="op_kg_prompt_reason_timeout_pin">Naciśnij przycisk zasilania, aby użyć kodu PIN</string>
     <string name="op_kg_prompt_reason_timeout_swipe">Dla bezpieczeństwa przesuń w górę, aby odblokować</string>
-    <string name="op_notification_alert_title">Ważne</string>
+    <string name="op_notification_alert_title">Ważna</string>
     <string name="op_notification_channel_summary_low">Mniej ważne powiadomienia bez jakiegokolwiek dźwięku lub wibracji.</string>
     <string name="op_notification_section_header_gentle">Inne powiadomienia</string>
     <string name="op_notification_silence_title">Inne</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Zabezpieczone ładowanie"</string>
     <string name="op_qs_dark_mode_tile_label">Ciemny tryb</string>
     <string name="op_qs_data_usage_used">%1$s: użyto %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Komfort oglądania</string>
@@ -1889,8 +1889,8 @@ monitorowana"</string>
     <string name="tethered_notification_hybrid_sharing_none">Brak dostępnej sieci do udostępnienia, kliknij, aby przejść do obszaru Ustawienia</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Udostępnianie sieci Wi-Fi, kliknij, aby przejść do obszaru Ustawienia</string>
     <string name="tethered_notification_message">Stuknij, aby skonfigurować.</string>
-    <string name="tethered_notification_multi_device_message">%1$s podłączonych urządzeń</string>
-    <string name="tethered_notification_multi_tether_title">Aktywne połączenie przez USB lub mobilny hotspot</string>
+    <string name="tethered_notification_multi_device_message">%1$s podłączone urządzenia</string>
+    <string name="tethered_notification_multi_tether_title">Aktywne Połączenie oraz Mobilny Hotspot</string>
     <string name="tethered_notification_no_device_message">Brak podłączonych urządzeń</string>
     <string name="tethered_notification_one_device_message">%1$s podłączone urządzenie</string>
     <string name="tethered_notification_sharing_mobile_multi">Udostępnianie danych mobilnych, podłączone urządzenia: %1$s</string>
@@ -1902,7 +1902,7 @@ monitorowana"</string>
     <string name="tethered_notification_sharing_wifi_multi">Udostępnianie sieci Wi-Fi, podłączone urządzenia: %1$s</string>
     <string name="tethered_notification_sharing_wifi_no">Udostępnianie sieci Wi-Fi, brak podłączonych urządzeń</string>
     <string name="tethered_notification_sharing_wifi_single">Udostępnianie sieci Wi-Fi, podłączone urządzenia: %1$s</string>
-    <string name="tethered_notification_title">Aktywne połączenie lub mobilny hotspot</string>
+    <string name="tethered_notification_title">Aktywne Połączenie lub Mobilny Hotspot</string>
     <string name="tethering_hardware_offload">Akceleracja sprzętowa tetheringu</string>
     <string name="tethering_hardware_offload_summary">Użyj akceleracji sprzętowej tetheringu, jeśli jest dostępna</string>
     <string name="tethering_settings_not_available">Ustawienia tetheringu są niedostępne dla tego użytkownika</string>
@@ -1914,6 +1914,15 @@ Telefon może się przegrzać, gdy:
 \u0009• Używasz telefonu w wysokiej temperaturze"</string>
     <string name="thermal_shutdown_message">Telefon działa teraz normalnie</string>
     <string name="thermal_shutdown_title">Telefon wyłączony: przegrzanie</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Aby wyciszyć urządzenie, ustaw suwak powiadomień na tryb Wibracji lub Cichy.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Wycisz głośność dzwonka</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Aby włączyć dzwonienie, użyj suwaka powiadomień, aby przełączyć się na tryb dzwonka i ustawić głośność dzwonka zgodnie z własnymi preferencjami.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Tryb dzwonka</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Suwak powiadomień jest obecnie w trybie cichym; urządzenie nie będzie dzwonić ani wibrować w przypadku połączenia przychodzącego. Przełącz się na tryb dzwonka, aby otrzymać powiadomienie poprzez dzwonienie.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tryb cichy</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Suwak powiadomień jest obecnie w trybie wibracji; urządzenie nie będzie dzwonić przy połączeniu przychodzącym. Pojawi się jedynie wibracja. Przełącz się na tryb dzwonka, aby otrzymać powiadomienie poprzez dzwonienie.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Tryb wibracji</string>
     <string name="tile_unavailable">Niedostępne</string>
     <string name="time_picker_header_text">Ustaw czas</string>
     <string name="time_picker_hour_label">godzina</string>

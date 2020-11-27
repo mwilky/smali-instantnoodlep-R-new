@@ -166,9 +166,25 @@
 
     new-instance v2, Lcom/oneplus/aod/utils/burnin/OpBurnInAlignController;
 
+    iget-object v3, p0, Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;->mContext:Landroid/content/Context;
+
+    invoke-direct {v2, v3}, Lcom/oneplus/aod/utils/burnin/OpBurnInAlignController;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;->mBurnInProtections:Ljava/util/HashMap;
+
+    const-class v1, Lcom/oneplus/aod/utils/burnin/OpParsonsBurnInController;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/oneplus/aod/utils/burnin/OpParsonsBurnInController;
+
     iget-object p0, p0, Lcom/oneplus/aod/utils/OpAodBurnInProtectionHelper;->mContext:Landroid/content/Context;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/aod/utils/burnin/OpBurnInAlignController;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/aod/utils/burnin/OpParsonsBurnInController;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

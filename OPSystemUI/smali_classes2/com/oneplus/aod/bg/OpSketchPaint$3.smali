@@ -39,6 +39,14 @@
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
     move-result-object p1
 
     check-cast p1, Ljava/lang/Float;
@@ -47,13 +55,17 @@
 
     move-result p1
 
+    goto :goto_0
+
+    :cond_0
+    move p1, v1
+
+    :goto_0
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$400(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1000(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Paint;
 
     move-result-object v0
-
-    const/4 v1, 0x0
 
     invoke-static {p1, v1, v1, v1}, Landroid/graphics/Color;->argb(FFFF)I
 
@@ -63,7 +75,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$3;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$500(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
+    invoke-static {p0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1100(Lcom/oneplus/aod/bg/OpSketchPaint;)[Landroid/graphics/Paint;
 
     move-result-object p0
 
@@ -71,8 +83,8 @@
 
     const/4 v2, 0x0
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    :goto_1
+    if-ge v2, v0, :cond_1
 
     aget-object v3, p0, v2
 
@@ -84,8 +96,8 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_1
     return-void
 .end method

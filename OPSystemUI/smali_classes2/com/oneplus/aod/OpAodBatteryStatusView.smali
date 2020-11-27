@@ -499,6 +499,10 @@
     if-eq p3, p2, :cond_4
 
     :cond_3
+    iput p1, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mLevel:I
+
+    iput p2, p0, Lcom/oneplus/aod/OpAodBatteryStatusView;->mChargeState:I
+
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodBatteryStatusView;->updateViewState()V
 
     :cond_4

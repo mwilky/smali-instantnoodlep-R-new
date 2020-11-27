@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">Aplikacija %1$s želi prikazati izreze iz aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Strnitev</string>
     <string name="about_action_bar_title">Več</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Različica %s</string>
     <string name="about_privacy_policy">Pravilnik o zasebnosti</string>
     <string name="about_release_note_title">Dnevnik posodobitev:</string>
     <string name="about_terms_service">Pogoji storitve</string>
@@ -1332,12 +1332,12 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="oneplus_threekey_navigation_vibration">Samo vibriranje</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>odkleni</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>odklene</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Za daljše delovanje akumulatorja funkcija varčevanja z akumulatorjem:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•izklopi ali omeji delovanje aplikacij v ozadju, nekatere vizualne učinke in druge funkcije, kot je “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Za daljše delovanje akumulatorja funkcija varčevanja z akumulatorjem:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•izklopi ali omeji delovanje aplikacij v ozadju in nekatere vizualne učinke"</string>
     <string name="op_earphone_connect">Seznanjanje ...</string>
     <string name="op_earphone_connected_fail">Sezanitev ni uspela. Preverite lahko slušalke in status Bluetooth.</string>
     <string name="op_earphone_connected_success">Seznanjeno. Tapnite za več nastavitev.</string>
@@ -1367,7 +1367,7 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_notification_channel_summary_low">Manj pomembna obvestila brez zvoka ali vibriranja.</string>
     <string name="op_notification_section_header_gentle">Druga obvestila</string>
     <string name="op_notification_silence_title">Drugo</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Varno polnjenje"</string>
     <string name="op_qs_dark_mode_tile_label">Zatemnjeni način</string>
     <string name="op_qs_data_usage_used">Uporabljeno %1$s: %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">Udobno gledanje</string>
@@ -1889,20 +1889,20 @@ lahko spremljano"</string>
     <string name="tethered_notification_hybrid_sharing_none">Za skupno rabo ni na voljo nobeno omrežje, kliknite, da odprete Nastavitve</string>
     <string name="tethered_notification_hybrid_sharing_wifi">Skupna raba prek Wi-Fi, kliknite, da odprete Nastavitve</string>
     <string name="tethered_notification_message">Dotaknite se za nastavitev.</string>
-    <string name="tethered_notification_multi_device_message">%1$s prikjučene naprave</string>
-    <string name="tethered_notification_multi_tether_title">Skupna raba intrneta in mobilna dostopna točka sta aktivni</string>
+    <string name="tethered_notification_multi_device_message">Št. povezanih naprav: %1$s</string>
+    <string name="tethered_notification_multi_tether_title">Skupna raba interneta in mobilna dostopna točka sta aktivni</string>
     <string name="tethered_notification_no_device_message">Ni priključenih naprav</string>
-    <string name="tethered_notification_one_device_message">%1$s priključena naprava</string>
+    <string name="tethered_notification_one_device_message">%1$s povezana naprava</string>
     <string name="tethered_notification_sharing_mobile_multi">Skupna raba prek podatkovne povezave, število povezanih naprav: %1$s</string>
     <string name="tethered_notification_sharing_mobile_no">Skupna raba prek podatkovne povezave, ni povezane naprave</string>
-    <string name="tethered_notification_sharing_mobile_single">Skupna raba prek podatkovne povezave, število povezanih naprav: %1$s</string>
+    <string name="tethered_notification_sharing_mobile_single">Skupna raba prek podatkovne povezave, %1$s povezana naprava</string>
     <string name="tethered_notification_sharing_none_multi">Za skupno rabo ni na voljo nobeno omrežje, število povezanih naprav: %1$s</string>
     <string name="tethered_notification_sharing_none_no">Za skupno rabo ni na voljo nobeno omrežje, ni povezanih naprav</string>
-    <string name="tethered_notification_sharing_none_single">Za skupno rabo ni na voljo nobeno omrežje, število povezanih naprav: %1$s</string>
+    <string name="tethered_notification_sharing_none_single">Za skupno rabo ni na voljo nobeno omrežje, %1$s povezana naprava</string>
     <string name="tethered_notification_sharing_wifi_multi">Skupna raba prek Wi-Fi, število povezanih naprav: %1$s</string>
     <string name="tethered_notification_sharing_wifi_no">Skupna raba prek Wi-Fi, ni povezane naprave</string>
-    <string name="tethered_notification_sharing_wifi_single">Skupna raba prek Wi-Fi, število povezanih naprav: %1$s</string>
-    <string name="tethered_notification_title">Skupna raba interneta in mobilna dostopna točka sta aktivni</string>
+    <string name="tethered_notification_sharing_wifi_single">Skupna raba prek Wi-Fi, %1$s povezana naprava</string>
+    <string name="tethered_notification_title">Skupna raba interneta ali mobilna dostopna točka je aktivna</string>
     <string name="tethering_hardware_offload">Strojno pospeševanje za internetno povezavo prek mobilnega telefona</string>
     <string name="tethering_hardware_offload_summary">Uporabi strojno pospeševanje za internetno povezavo prek mobilnega telefona, če je na voljo</string>
     <string name="tethering_settings_not_available">Nastavitve za povezavo z internetom prek mobilne naprave niso na voljo za tega uporabnika</string>
@@ -1914,6 +1914,15 @@ Telefon lahko postane prevroč ob:
 \u0009• uporabi telefona pri visokih temp."</string>
     <string name="thermal_shutdown_message">Zdaj telefon normalno deluje</string>
     <string name="thermal_shutdown_title">Tel. izklopljen zaradi vročine</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Za izklop zvokov naprave nastavite drsnik za opozorila v način vibriranja ali tihi način.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Utišanje zvokov zvonjenja</string>
+    <string name="threekey_volume_guide_dialog_ok">V redu</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Če želite omogočiti zvonjenje, uporabite drsnik za opozorila, da preklopite v način zvonjenja in nastavite glasnost zvonjenja po svojih željah.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Način zvonjenja</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Drsnik za opozorila je trenutno v tihem načinu; naprava ne bo zvonila ali vibrirala za dohodni klic. Preklopite v način zvonjenja, če želite biti obveščeni z zvonjenjem.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Tihi način</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Drsnik za opozorila je trenutno v načinu vibriranja; naprava ne bo zvonila za dohodni klic, ampak boste obveščeni samo z vibriranjem. Preklopite v način zvonjenja, če želite biti obveščeni z zvonjenjem.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Način vibriranja</string>
     <string name="tile_unavailable">Ni na voljo</string>
     <string name="time_picker_header_text">Nastavite čas</string>
     <string name="time_picker_hour_label">ura</string>

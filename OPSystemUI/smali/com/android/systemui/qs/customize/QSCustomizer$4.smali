@@ -57,8 +57,17 @@
 
     const/4 v0, 0x0
 
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/qs/customize/QSCustomizer$4;->this$0:Lcom/android/systemui/qs/customize/QSCustomizer;
+
+    invoke-static {p1}, Lcom/android/systemui/qs/customize/QSCustomizer;->access$400(Lcom/android/systemui/qs/customize/QSCustomizer;)Lcom/android/systemui/statusbar/phone/NotificationsQuickSettingsContainer;
+
+    move-result-object p1
+
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationsQuickSettingsContainer;->setCustomizerAnimating(Z)V
 
+    :cond_1
     iget-object p0, p0, Lcom/android/systemui/qs/customize/QSCustomizer$4;->this$0:Lcom/android/systemui/qs/customize/QSCustomizer;
 
     invoke-static {p0, v0}, Lcom/android/systemui/qs/customize/QSCustomizer;->access$300(Lcom/android/systemui/qs/customize/QSCustomizer;Z)V
@@ -92,8 +101,17 @@
 
     const/4 v0, 0x0
 
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/qs/customize/QSCustomizer$4;->this$0:Lcom/android/systemui/qs/customize/QSCustomizer;
+
+    invoke-static {p1}, Lcom/android/systemui/qs/customize/QSCustomizer;->access$400(Lcom/android/systemui/qs/customize/QSCustomizer;)Lcom/android/systemui/statusbar/phone/NotificationsQuickSettingsContainer;
+
+    move-result-object p1
+
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/phone/NotificationsQuickSettingsContainer;->setCustomizerAnimating(Z)V
 
+    :cond_1
     iget-object p0, p0, Lcom/android/systemui/qs/customize/QSCustomizer$4;->this$0:Lcom/android/systemui/qs/customize/QSCustomizer;
 
     invoke-static {p0, v0}, Lcom/android/systemui/qs/customize/QSCustomizer;->access$300(Lcom/android/systemui/qs/customize/QSCustomizer;Z)V

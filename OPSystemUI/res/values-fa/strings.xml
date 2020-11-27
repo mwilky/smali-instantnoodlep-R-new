@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s می‌خواهد تکه‌های %2$s را نشان دهد</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
     <string name="about_action_bar_title">درباره</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">نسخه %s</string>
     <string name="about_privacy_policy">سیاست حفظ حریم خصوصی</string>
     <string name="about_release_note_title">گزارش به‌روزرسانی:</string>
     <string name="about_terms_service">شرایط استفاده از خدمات</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">برای تغییر دادن ترتیب کاشی‌ها، آن‌ها را نگه دارید و بکشید</string>
     <string name="drag_to_remove_disabled">حداقل به %1$d کاشی نیاز دارید</string>
     <string name="drag_to_remove_tiles">برای حذف، به اینجا بکشید</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"چپ: %1$s  راست: %2$s"</string>
     <string name="edit_mode_hint">برای تغییر چیدمان، نماهای کوچک را بکشید. برای نمایش یا پنهان کردن، ضربه بزنید.</string>
     <string name="empty_shade_text">اعلانی موجود نیست</string>
     <string name="enable_adb">‏اشکال‌زدایی USB</string>
@@ -822,7 +822,7 @@
     <string name="home">صفحه اصلی تنظیمات</string>
     <string name="hotspot_apm_message">وقتی حالت هواپیما فعال است، اتصال به شبکه‌های تلفن همراه مقدور نیست. ابتدا حالت هواپیما را غیرفعال و سپس دوباره تلاش کنید.</string>
     <string name="hotspot_operator_dialog_nosim_msg">برای استفاده از «نقطۀ اتصال همراه» و دیگر گزینه‌های اشتراک‌گذاری اینترنت، یک سیم‌کارت وارد کنید</string>
-    <string name="hotspot_operator_dialog_nosim_title">بدون سیم‌کارت</string>
+    <string name="hotspot_operator_dialog_nosim_title">سیم‌کارت وجود ندارد</string>
     <string name="hotspot_operator_dialog_othererror_msg">شما مشترک قابلیت اشتراک‌گذاری WiFi نیستید</string>
     <string name="hotspot_operator_dialog_othererror_title">خطا در اشتراک‌گذاری WiFi</string>
     <string name="hotspot_tip_message">"نقطۀ اتصال همراه دادۀ تلفن همراه شما را با سایر دستگاه‌های مجهز به Wi-Fi به اشتراک می‌گذارد. برای اتصال به نقطۀ اتصال همراه خود: \u0009 
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">تنها لرزش</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>قفل‌گشایی</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>قفل‌گشایی می‌کند</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"برای افزایش عمر باتری، ذخیره‌کنندۀ باتری:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+• فعالیت پس‌زمینه، برخی از جلوه‌های تصویری و سایر قابلیت‌ها مانند “Hey Google” را خاموش یا محدود می‌کند"</string>
+    <string name="op_battery_saver_description_no_ga">"برای افزایش عمر باتری، ذخیره‌کنندۀ باتری:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+• فعالیت پس‌زمینه و برخی از جلوه‌های تصویری را خاموش یا محدود می‌کند"</string>
     <string name="op_earphone_connect">در حال جفت‌سازی...</string>
     <string name="op_earphone_connected_fail">جفت نشد. می‌توانید وضعیت هدست و بلوتوث را بررسی کنید.</string>
     <string name="op_earphone_connected_success">جفت شد. برای تنظیم بیشتر، ضربه بزنید.</string>
@@ -1367,14 +1367,14 @@
     <string name="op_notification_channel_summary_low">اعلان‌های کم‌اهمیت‌تر بدون صدا یا لرزش خواهد بود.</string>
     <string name="op_notification_section_header_gentle">سایر اعلان‌ها</string>
     <string name="op_notification_silence_title">سایر موارد</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" شارژ محافظت‌شده"</string>
     <string name="op_qs_dark_mode_tile_label">حالت تاریک</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s%3$s استفاده شده</string>
     <string name="op_quick_settings_night_display_label">راحتی دید</string>
     <string name="op_quick_settings_night_display_summary_off">حالت شب خاموش است؛ برای روشن کردن، ضربه بزنید</string>
     <string name="op_quick_settings_night_display_summary_on">حالت شب روشن است؛ برای خاموش کردن، ضربه بزنید</string>
-    <string name="op_read_mode2_dialog_black">جلوۀ تک‌رنگ</string>
-    <string name="op_read_mode2_dialog_color">جلوۀ چندرنگ</string>
+    <string name="op_read_mode2_dialog_black">جلوه تک‌رنگ</string>
+    <string name="op_read_mode2_dialog_color">جلوه چند رنگ</string>
     <string name="op_read_mode2_dialog_title">انتخاب جلوه</string>
     <string name="op_reverse_charge_notification_btn">توقف</string>
     <string name="op_reverse_charge_notification_discharging">در حال شارژ دستگاه متصل</string>
@@ -1417,7 +1417,7 @@
     <string name="overview">نمای کلی</string>
     <string name="permission_btn_text_denied">خروج</string>
     <string name="permission_btn_text_grant">تأیید</string>
-    <string name="permission_dialog_title">بیانیۀ مجوز</string>
+    <string name="permission_dialog_title">بیانیه مجوز</string>
     <string name="phone_hint">انگشتتان را از نماد تلفن تند بکشید</string>
     <string name="phone_label">باز کردن تلفن</string>
     <string name="picture_color_mode">حالت رنگ عکس</string>
@@ -1504,7 +1504,7 @@
     <string name="priority_onboarding_show_at_top_text">نمایش در بالای بخش مکالمه</string>
     <string name="priority_onboarding_show_avatar_text">تصویر نمایه را در صفحه قفل نمایش می‌دهد</string>
     <string name="priority_onboarding_title">مکالمه روی اولویت تنظیم شده است</string>
-    <string name="privacy_alert_application_name">هشدار حریم خصوصی</string>
+    <string name="privacy_alert_application_name">اخطار حریم خصوصی</string>
     <string name="privacy_alert_content_text">برای تغییر، ضربه بزنید</string>
     <string name="privacy_alert_content_title">%1$s از %2$s شما استفاده می‌کند</string>
     <string name="privacy_type_camera">دوربین</string>
@@ -1885,23 +1885,23 @@
     <string name="tether_settings_title_usb">‏اشتراک‌گذاری اینترنت با USB</string>
     <string name="tether_settings_title_usb_bluetooth">اشتراک‌گذاری اینترنت</string>
     <string name="tether_settings_title_wifi">نقطه اتصال قابل حمل</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">در حال اشتراک‌گذاری دادۀ تلفن همراه؛ برای ورود به «تنظیمات»، کلیک کنید</string>
-    <string name="tethered_notification_hybrid_sharing_none">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست؛ برای ورود به «تنظیمات»، کلیک کنید</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">در حال اشتراک‌گذاری Wi-Fi؛ برای ورود به «تنظیمات»، کلیک کنید</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">در حال اشتراک‌گذاری دادۀ تلفن همراه، برای ورود به «تنظیمات»، کلیک کنید</string>
+    <string name="tethered_notification_hybrid_sharing_none">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست، برای ورود به «تنظیمات»، کلیک کنید</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">در حال اشتراک‌گذاری Wi-Fi، برای ورود به «تنظیمات»، کلیک کنید</string>
     <string name="tethered_notification_message">برای تنظیم، ضربه بزنید.</string>
-    <string name="tethered_notification_multi_device_message">%1$s دستگاه متصل</string>
-    <string name="tethered_notification_multi_tether_title">«اشتراک‌گذاری اینترنت» و «نقطه اتصال همراه» فعال است</string>
+    <string name="tethered_notification_multi_device_message">%1$s دستگاه متصل است</string>
+    <string name="tethered_notification_multi_tether_title">«اشتراک‌گذاری اینترنت» یا «نقطۀ اتصال همراه» فعال است</string>
     <string name="tethered_notification_no_device_message">هیچ دستگاهی متصل نیست</string>
-    <string name="tethered_notification_one_device_message">%1$s دستگاه متصل</string>
-    <string name="tethered_notification_sharing_mobile_multi">در حال اشتراک‌گذاری دادۀ تلفن همراه؛‏ %1$s دستگاه متصل شده است</string>
-    <string name="tethered_notification_sharing_mobile_no">در حال اشتراک‌گذاری دادۀ تلفن همراه؛ هیچ دستگاهی متصل نیست</string>
-    <string name="tethered_notification_sharing_mobile_single">در حال اشتراک‌گذاری دادۀ تلفن همراه؛‏ %1$s دستگاه متصل شده است</string>
-    <string name="tethered_notification_sharing_none_multi">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست؛‏ %1$s دستگاه متصل شده است</string>
-    <string name="tethered_notification_sharing_none_no">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست؛ هیچ دستگاهی متصل نشده است</string>
-    <string name="tethered_notification_sharing_none_single">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست؛‏ %1$s دستگاه متصل شده است</string>
-    <string name="tethered_notification_sharing_wifi_multi">در حال اشتراک‌گذاری Wi-Fi؛‏ %1$s دستگاه متصل شده است</string>
-    <string name="tethered_notification_sharing_wifi_no">در حال اشتراک‌گذاری Wi-Fi؛ هیچ دستگاهی متصل نیست</string>
-    <string name="tethered_notification_sharing_wifi_single">در حال اشتراک‌گذاری Wi-Fi؛‏ %1$s دستگاه متصل شده است</string>
+    <string name="tethered_notification_one_device_message">%1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_mobile_multi">در حال اشتراک‌گذاری دادۀ تلفن همراه، %1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_mobile_no">در حال اشتراک‌گذاری دادۀ تلفن همراه، هیچ دستگاهی متصل نیست</string>
+    <string name="tethered_notification_sharing_mobile_single">در حال اشتراک‌گذاری دادۀ تلفن همراه، %1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_none_multi">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست، %1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_none_no">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست، هیچ دستگاهی متصل نیست</string>
+    <string name="tethered_notification_sharing_none_single">شبکه‌ای برای اشتراک‌گذاری در دسترس نیست، %1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_wifi_multi">در حال اشتراک‌گذاری Wi-Fi، %1$s دستگاه متصل است</string>
+    <string name="tethered_notification_sharing_wifi_no">در حال اشتراک‌گذاری Wi-Fi، هیچ دستگاهی متصل نیست</string>
+    <string name="tethered_notification_sharing_wifi_single">در حال اشتراک‌گذاری Wi-Fi، %1$s دستگاه متصل است</string>
     <string name="tethered_notification_title">«اشتراک‌گذاری اینترنت» یا «نقطۀ اتصال همراه» فعال است</string>
     <string name="tethering_hardware_offload">شتاب سخت‌افزاری اشتراک‌گذاری اینترنت</string>
     <string name="tethering_hardware_offload_summary">استفاده از شتاب سخت‌افزاری اشتراک‌گذاری اینترنت درصورت دردسترس بودن</string>
@@ -1914,6 +1914,15 @@
 \u0009• در دماهای بالا از تلفنتان استفاده کنید"</string>
     <string name="thermal_shutdown_message">اکنون تلفنتان عملکرد معمولش را دارد</string>
     <string name="thermal_shutdown_title">تلفن به علت گرم شدن خاموش شد</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">برای بی‌صدا کردن دستگاه، Alert Slider را روی حالت لرزش یا بی‌صدا تنظیم کنید.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">بی‌صدا کردن میزان صدای زنگ</string>
+    <string name="threekey_volume_guide_dialog_ok">تأیید</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">برای فعال کردن زنگ خوردن، از Alert Slider برای جابجایی به حالت زنگ خوردن استفاده کنید و میزان صدای زنگ را مطابق ترجیحات خود تنظیم کنید.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">حالت زنگ</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">در حال حاضر Alert Slider در حالت بی‌صدا است؛ دستگاه برای تماس ورودی زنگ نمی‌خورد یا نمی‌لرزد. لطفاً به حالت زنگ خوردن جابجایی شوید تا با زنگ خوردن به شما اطلاع داده شود.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">حالت بی‌صدا</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">در حال حاضر Alert Slider در حالت لرزش است؛ دستگاه برای تماس ورودی زنگ نمی‌خورد. فقط با لرزش به شما اطلاع داده خواهد شد. لطفاً به حالت زنگ خوردن جابجایی شوید تا با زنگ خوردن به شما اطلاع داده شود.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">حالت لرزش</string>
     <string name="tile_unavailable">در دسترس نیست</string>
     <string name="time_picker_header_text">زمان را تنظیم کنید</string>
     <string name="time_picker_hour_label">ساعت</string>
@@ -2150,7 +2159,7 @@
     <string name="zen_priority_introduction">به‌جز هشدارها، یادآوری‌ها، رویدادها و تماس‌گیرندگانی که خودتان مشخص می‌کنید، هیچ صدا و لرزشی نخواهید داشت. همچنان صدای مواردی را که پخش می‌کنید می‌شنوید (ازجمله صدای موسیقی، ویدیو و بازی).</string>
     <string name="zen_silence_introduction">این کار «همه» صداها و لرزش‌ها از جمله هشدارها، موسیقی، ویدئوها و بازی‌ها را مسدود می‌کند.</string>
     <string name="zen_silence_introduction_voice">این کار «همه» صداها و لرزش‌ها (شامل هشدار، موسیقی، ویدیو و بازی) را مسدود می‌کند. همچنان می‌توانید تماس تلفنی برقرار کنید.</string>
-    <string name="zzz_op_global_action_bootloader">راه‌انداز</string>
+    <string name="zzz_op_global_action_bootloader">بوت لودر</string>
     <string name="zzz_op_global_action_recovery">بازیابی</string>
     <string name="zzz_op_quick_pay_no_install_message">لطفاً برنامه‌های پرداخت را برای استفاده از «پرداخت سریع» نصب کنید</string>
 </resources>

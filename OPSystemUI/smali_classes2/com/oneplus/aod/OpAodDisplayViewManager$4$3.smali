@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onUserInfoChanged(I)V
+    value = Lcom/oneplus/aod/OpAodDisplayViewManager$4;->onUserSwitchComplete(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,19 +39,55 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
 
     iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->val$userId:I
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/slice/OpSliceManager;->onUserSwitchComplete(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->val$userId:I
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/OpClockViewCtrl;->onUserSwitchComplete(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->val$userId:I
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/aod/OpAodMain;->onUserSwitchComplete(I)V
+
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->this$1:Lcom/oneplus/aod/OpAodDisplayViewManager$4;
+
+    iget-object v0, v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1100(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodNotificationIconAreaController;
 
     move-result-object v0
 
     iget p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$3;->val$userId:I
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodMain;->onUserInfoChanged(I)V
+    invoke-virtual {v0, p0}, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->onUserSwitchComplete(I)V
 
     return-void
 .end method

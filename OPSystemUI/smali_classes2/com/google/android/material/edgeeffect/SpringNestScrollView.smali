@@ -46,6 +46,8 @@
 
 .field private mGlowingTop:Z
 
+.field private mIsEmpty:Z
+
 .field private mLastTouchY:I
 
 .field private mLastX:F
@@ -136,6 +138,8 @@
     iput-boolean p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mDisableEffectTop:Z
 
     iput-boolean p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mDisableEffectBottom:Z
+
+    iput-boolean p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mIsEmpty:Z
 
     invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->init()V
 
@@ -1051,6 +1055,30 @@
     invoke-virtual {v0, v1, p0}, Landroid/widget/EdgeEffect;->setSize(II)V
 
     :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public fling(I)V
+    .locals 1
+
+    const/16 v0, 0x2710
+
+    if-le p1, v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->mIsEmpty:Z
+
+    if-eqz v0, :cond_0
+
+    const/16 p1, 0x4b0
+
+    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->fling(I)V
+
     :goto_0
     return-void
 .end method

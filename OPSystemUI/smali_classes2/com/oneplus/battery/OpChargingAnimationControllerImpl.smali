@@ -210,6 +210,34 @@
 
     iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    const-string v3, "audio"
+
+    invoke-virtual {p1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/AudioManager;
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mAudioManager:Landroid/media/AudioManager;
+
+    new-instance p1, Landroid/media/SoundPool;
+
+    invoke-direct {p1, v2, v2, v0}, Landroid/media/SoundPool;-><init>(III)V
+
+    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSound:Landroid/media/SoundPool;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
+
+    sget v3, Lcom/android/systemui/R$raw;->charging:I
+
+    invoke-virtual {p1, v0, v3, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSoundId:I
+
     sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_WARP_CHARGING:Z
 
     if-eqz p1, :cond_0
@@ -234,34 +262,6 @@
     invoke-direct {p1, p0, v1}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;-><init>(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpChargingAnimationControllerImpl$1;)V
 
     iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mKeyguardStateCallback:Lcom/oneplus/battery/OpChargingAnimationControllerImpl$KeyguardStateCallback;
-
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
-
-    const-string v1, "audio"
-
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/media/AudioManager;
-
-    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mAudioManager:Landroid/media/AudioManager;
-
-    new-instance p1, Landroid/media/SoundPool;
-
-    invoke-direct {p1, v2, v2, v0}, Landroid/media/SoundPool;-><init>(III)V
-
-    iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSound:Landroid/media/SoundPool;
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/systemui/R$raw;->charging:I
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mChargingSoundId:I
 
     invoke-virtual {p0, v2}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->registerDockOnWirelessObserver(Z)V
 
@@ -809,9 +809,13 @@
 
     iput-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWrapChargingLayout:Landroid/widget/FrameLayout;
 
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
 
-    if-eqz v1, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWrapChargingLayout:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpCBWarpChargingView:Lcom/oneplus/battery/OpCBWarpChargingView;
 
@@ -824,9 +828,11 @@
     goto :goto_0
 
     :cond_0
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWrapChargingLayout:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
@@ -839,9 +845,11 @@
     goto :goto_0
 
     :cond_1
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V1:Z
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V1:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWrapChargingLayout:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpNewWarpChargingView:Lcom/oneplus/battery/OpNewWarpChargingView;
 
@@ -854,6 +862,8 @@
     goto :goto_0
 
     :cond_2
+    iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWrapChargingLayout:Landroid/widget/FrameLayout;
+
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
@@ -1230,7 +1240,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
@@ -1398,7 +1410,9 @@
 
     if-eq v0, v1, :cond_3
 
-    sget-boolean v0, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
@@ -1541,7 +1555,9 @@
     :cond_2
     invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->updateScrim()V
 
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
+
+    move-result v1
 
     const/4 v2, 0x3
 

@@ -421,6 +421,29 @@
 
     invoke-interface {p0, p2, p1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
 
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "com.oneplus.intent.ACTION_LAUNCH_WLB"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "qt_mode_change_menu"
+
+    const-string p1, "qt_menu_settings"
+
+    const-string p2, "1"
+
+    const-string p3, "C22AG9UUDL"
+
+    invoke-static {p0, p1, p2, p3}, Lcom/oneplus/systemui/util/OpMdmLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method
 

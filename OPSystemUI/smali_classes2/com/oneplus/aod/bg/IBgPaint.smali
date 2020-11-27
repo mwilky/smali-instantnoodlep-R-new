@@ -24,6 +24,18 @@
     .end annotation
 .end method
 
+.method public onAttachedToWindow()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDetachedFromWindow()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public abstract onSizeChanged(II)V
 .end method
 

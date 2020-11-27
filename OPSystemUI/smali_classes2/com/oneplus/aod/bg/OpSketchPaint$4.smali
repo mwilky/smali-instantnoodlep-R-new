@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$600(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$600(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$600(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1200(Lcom/oneplus/aod/bg/OpSketchPaint;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/aod/bg/OpSketchPaint$4;->this$0:Lcom/oneplus/aod/bg/OpSketchPaint;
 
-    invoke-static {p0, p1}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$602(Lcom/oneplus/aod/bg/OpSketchPaint;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p0, p1}, Lcom/oneplus/aod/bg/OpSketchPaint;->access$1202(Lcom/oneplus/aod/bg/OpSketchPaint;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     return-void
 .end method

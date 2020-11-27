@@ -67,6 +67,9 @@
 .method public abstract getClockView()Landroid/view/View;
 .end method
 
+.method public abstract getCurrentView()Landroid/view/View;
+.end method
+
 .method public getMovingDistance()I
     .locals 0
 
@@ -97,6 +100,12 @@
 .end method
 
 .method public onTimeTick()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onTimeZoneChanged(Ljava/util/TimeZone;)V
     .locals 0
 
     return-void

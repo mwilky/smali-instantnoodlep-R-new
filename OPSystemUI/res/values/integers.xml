@@ -132,7 +132,7 @@
     <integer name="oneplus_config_system_icon_ratio">1</integer>
     <integer name="oneplus_config_threekey_type">0</integer>
     <integer name="oneplus_selector_button_frame_druation">18</integer>
-    <integer name="op_button_text_font_weight">500</integer>
+    <integer name="op_button_text_font_weight">600</integer>
     <integer name="op_control_spin_180">180</integer>
     <integer name="op_control_spin_360">360</integer>
     <integer name="op_control_spin_45">45</integer>

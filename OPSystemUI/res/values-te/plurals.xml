@@ -61,8 +61,8 @@
         <item quantity="one">లోపల మరో %s నోటిఫికేషన్ ఉంది.</item>
     </plurals>
     <plurals name="notification_hidden_content">
-        <item quantity="other">%d నోటిఫికేషన్‌లు అందుకుంది</item>
-        <item quantity="one">%d నోటిఫికేషన్ అందుకుంది</item>
+        <item quantity="other">%d నోటిఫికేషన్‌లు అందుకున్నారు</item>
+        <item quantity="one">%d నోటిఫికేషన్ అందుకున్నారు</item>
     </plurals>
     <plurals name="quick_settings_hotspot_secondary_label_num_devices">
         <item quantity="other">%d పరికరాలు</item>

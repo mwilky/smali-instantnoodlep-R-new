@@ -26,8 +26,6 @@
 
 .field public static final SUPPORT_CHARGING_ANIM_V2:Z
 
-.field public static final SUPPORT_RED_CHARGING_ANIM:Z
-
 .field public static final SUPPORT_SWARP_CHARGING:Z
 
 .field public static final SUPPORT_WARP_CHARGING:Z
@@ -87,6 +85,10 @@
     .end annotation
 .end field
 
+.field private static final sIsMCLCustomType:Z
+
+.field private static final sIsREDCustomType:Z
+
 .field public static sIsSupportAssistantGesture:Z
 
 .field private static sStatusBarIconsDark:Z
@@ -140,12 +142,6 @@
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_SWARP_CHARGING:Z
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
-
-    move-result v1
-
-    sput-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_RED_CHARGING_ANIM:Z
-
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -191,6 +187,30 @@
     sput-object v1, Lcom/oneplus/util/OpUtils;->mPackageName:Ljava/lang/String;
 
     sput-boolean v2, Lcom/oneplus/util/OpUtils;->sIsSupportAssistantGesture:Z
+
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->sIsMCLCustomType:Z
+
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
 
     const-string v1, "310120"
 
@@ -2055,6 +2075,22 @@
     return p0
 .end method
 
+.method public static isCMCC()Z
+    .locals 2
+
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->C88:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isCTS()Z
     .locals 1
 
@@ -2546,17 +2582,9 @@
 .end method
 
 .method public static isMCLVersion()Z
-    .locals 2
+    .locals 1
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsMCLCustomType:Z
 
     return v0
 .end method
@@ -2799,13 +2827,13 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    if-eq v0, v2, :cond_0
+    if-eq v0, v1, :cond_0
 
-    return v1
+    return v2
 
     :cond_0
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->isSpecialTheme()Z
@@ -2814,20 +2842,29 @@
 
     if-nez v0, :cond_1
 
-    return v1
+    return v2
 
     :cond_1
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    if-nez v0, :cond_3
 
-    move-result-object v1
+    const-string v0, "persist.test.red"
 
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
+    :goto_0
+    return v1
 .end method
 
 .method public static isReallyHasOneSim()Z
@@ -3432,36 +3469,30 @@
     return v0
 .end method
 
-.method private static isSupportREDCharging()Z
-    .locals 3
+.method public static isSupportREDCharging()Z
+    .locals 2
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    const-string v1, "isSupportREDCharging:"
 
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v2, "isSupportREDCharging:"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "OpUtils"
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpUtils"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    sget-boolean v0, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
 
     return v0
 .end method
@@ -4102,43 +4133,11 @@
 .end method
 
 .method public static needLargeQSClock(Landroid/content/Context;)Z
-    .locals 2
+    .locals 0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x1
 
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    new-instance v1, Landroid/util/DisplayMetrics;
-
-    invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
-
-    iget p0, v1, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    int-to-float p0, p0
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    div-float/2addr p0, v1
-
-    const v1, 0x442c8000    # 690.0f
-
-    cmpl-float p0, p0, v1
-
-    if-lez p0, :cond_1
-
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
+    return p0
 .end method
 
 .method public static notifyStatusBarIconsDark(Z)V

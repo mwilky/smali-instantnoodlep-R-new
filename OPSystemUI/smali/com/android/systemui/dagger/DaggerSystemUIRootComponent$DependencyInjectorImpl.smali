@@ -1455,7 +1455,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMWLBSwitchController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMWorkLifeBalanceController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
@@ -1467,7 +1467,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOPWLBHelper(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMWLBSwitchController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
@@ -1479,7 +1479,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOpNotificationController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOPWLBHelper(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
 
     iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
@@ -1491,11 +1491,35 @@
 
     move-result-object v0
 
+    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOpNotificationController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
+
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
+
+    move-result-object v0
+
     invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOpHighlightHintController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+
+    iget-object v0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
+
+    invoke-static {v0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13200(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMExecutor(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
 
     iget-object p0, p0, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent$DependencyInjectorImpl;->this$0:Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;
 
-    invoke-static {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13100(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
+    invoke-static {p0}, Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;->access$13300(Lcom/android/systemui/dagger/DaggerSystemUIRootComponent;)Ljavax/inject/Provider;
 
     move-result-object p0
 
@@ -1503,7 +1527,7 @@
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMExecutor(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    invoke-static {p1, p0}, Lcom/android/systemui/Dependency_MembersInjector;->injectMOpThreekeyVolumeGuideController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
 
     return-object p1
 .end method

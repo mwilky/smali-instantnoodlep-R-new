@@ -723,7 +723,7 @@ Si vous réactivez les données, des frais peuvent s'appliquer."</string>
     <string name="drag_to_rearrange_tiles">Sélectionnez et faites glisser les icônes pour réorganiser</string>
     <string name="drag_to_remove_disabled">Au minimum %1$d tuiles sont nécessaires</string>
     <string name="drag_to_remove_tiles">Faites glisser les tuiles ici pour les supprimer.</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"G : %1$s  D : %2$s"</string>
     <string name="edit_mode_hint">Faites glisser les tuiles pour les réorganiser. Appuyez pour afficher ou masquer.</string>
     <string name="empty_shade_text">Aucune notification</string>
     <string name="enable_adb">Débogage USB</string>
@@ -1332,12 +1332,12 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="oneplus_threekey_navigation_vibration">Vibrations uniquement</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>déverrouillage</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> déverrouillages</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Pour prolonger la durée de vie de la batterie, l'économiseur de batterie :
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•désactive ou limite l'activité en arrière-plan, certains effets visuels et d'autres fonctions comme “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Pour prolonger la durée de vie de la batterie, l'économiseur de batterie :
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•désactive ou limite l'activité en arrière-plan et certains effets visuels"</string>
     <string name="op_earphone_connect">Association en cours…</string>
     <string name="op_earphone_connected_fail">"Association échouée. Vous pouvez vérifier le casque et l'état de la connexion Bluetooth."</string>
     <string name="op_earphone_connected_success">"Associé. Appuyer pour d'autres paramètres."</string>
@@ -1367,7 +1367,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="op_notification_channel_summary_low">Des notifications moins importantes sans aucun son ni vibration.</string>
     <string name="op_notification_section_header_gentle">Autres notifications</string>
     <string name="op_notification_silence_title">Autre</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Charge protégée"</string>
     <string name="op_qs_dark_mode_tile_label">Mode Sombre</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilisé</string>
     <string name="op_quick_settings_night_display_label">Confort de vision</string>
@@ -1505,7 +1505,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="priority_onboarding_show_avatar_text">"Afficheront la photo de profil sur l'écran de verrouillage"</string>
     <string name="priority_onboarding_title">Conversation définie comme prioritaire</string>
     <string name="privacy_alert_application_name">Alerte de confidentialité</string>
-    <string name="privacy_alert_content_text">Appuyez pour changer</string>
+    <string name="privacy_alert_content_text">Tapoter pour changer</string>
     <string name="privacy_alert_content_title">%1$s utilise votre %2$s</string>
     <string name="privacy_type_camera">appareil photo</string>
     <string name="privacy_type_microphone">microphone</string>
@@ -1890,7 +1890,7 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="tethered_notification_hybrid_sharing_wifi">Partage en cours du Wi-Fi, appuyez pour entrer dans les Paramètres</string>
     <string name="tethered_notification_message">Appuyez pour configurer.</string>
     <string name="tethered_notification_multi_device_message">%1$s appareils connectés</string>
-    <string name="tethered_notification_multi_tether_title">"Partage de connexion USB et point d'accès mobile actifs"</string>
+    <string name="tethered_notification_multi_tether_title">"Partage de connexion et point d'accès mobile actifs"</string>
     <string name="tethered_notification_no_device_message">Aucun appareil connecté</string>
     <string name="tethered_notification_one_device_message">%1$s appareil connecté</string>
     <string name="tethered_notification_sharing_mobile_multi">Partage en cours des données mobiles, %1$s appareils connectés</string>
@@ -1900,9 +1900,9 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="tethered_notification_sharing_none_no">Aucun réseau disponible pour le partage, aucun appareil connecté</string>
     <string name="tethered_notification_sharing_none_single">Aucun réseau disponible pour le partage, %1$s appareil connecté</string>
     <string name="tethered_notification_sharing_wifi_multi">Partage en cours du Wi-Fi, %1$s appareils connectés</string>
-    <string name="tethered_notification_sharing_wifi_no">"Partage en cours du Wi-Fi, aucun appareil n'est connecté"</string>
+    <string name="tethered_notification_sharing_wifi_no">Partage en cours du Wi-Fi, aucun appareil connecté</string>
     <string name="tethered_notification_sharing_wifi_single">Partage en cours du Wi-Fi, %1$s appareil connecté</string>
-    <string name="tethered_notification_title">"Partage de connexion USB ou point d'accès mobile actifs"</string>
+    <string name="tethered_notification_title">"Partage de connexion ou point d'accès mobile actif"</string>
     <string name="tethering_hardware_offload">Accélération matérielle pour le partage de connexion</string>
     <string name="tethering_hardware_offload_summary">"Utiliser l'accélération matérielle pour le partage de connexion, si disponible"</string>
     <string name="tethering_settings_not_available">Les paramètres de partage de connexion ne sont pas disponibles pour cet utilisateur.</string>
@@ -1914,6 +1914,15 @@ Il peut surchauffer si vous :
 \u0009• utilisez téléphone à des températures élevées."</string>
     <string name="thermal_shutdown_message">À présent, votre téléphone fonctionne normalement</string>
     <string name="thermal_shutdown_title">Tél. éteint car il surchauffait</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">"Pour mettre l'appareil en sourdine, réglez le Curseur d'alerte sur le mode Vibreur ou Silencieux."</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Mettre la sonnerie en sourdine</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">"Pour activer la sonnerie, utilisez le Curseur d'alerte pour commuter sur le mode Sonnerie et réglez le volume."</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Mode sonnerie</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">"Le Curseur d'alerte est actuellement en mode Silencieux ; l'appareil ne sonnera pas en cas d'appel entrant. Commutez sur le mode Sonnerie pour être alerté(e) par une sonnerie."</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Mode Silencieux</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">"Le Curseur d'alerte est actuellement en mode Vibreur ; l'appareil ne sonnera pas en cas d'appel entrant. Vous serez alerté(e) uniquement par vibration. Commutez sur le mode Sonnerie pour être alerté(e) par une sonnerie."</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Mode Vibreur</string>
     <string name="tile_unavailable">Indisponible</string>
     <string name="time_picker_header_text">Définir une durée</string>
     <string name="time_picker_hour_label">heure</string>

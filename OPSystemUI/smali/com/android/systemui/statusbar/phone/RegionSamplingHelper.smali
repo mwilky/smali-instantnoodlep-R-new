@@ -281,27 +281,18 @@
 
     cmpl-float v0, v0, v1
 
-    if-gtz v0, :cond_1
+    if-gtz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mSampledView:Landroid/view/View;
 
-    instance-of v1, v0, Lcom/android/systemui/statusbar/phone/NavigationBarView;
+    instance-of v0, v0, Lcom/android/systemui/statusbar/phone/NavigationBarView;
 
-    if-eqz v1, :cond_3
-
-    check-cast v0, Lcom/android/systemui/statusbar/phone/NavigationBarView;
-
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->isImeShow()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_2
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mByPassThreshold:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-virtual {v0}, Lcom/android/systemui/recents/OverviewProxyService;->getNavBarMode()I
@@ -312,22 +303,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mCallback:Lcom/android/systemui/statusbar/phone/RegionSamplingHelper$SamplingCallback;
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mLuminanceThreshold:F
 
     cmpg-float v1, p1, v1
 
-    if-gez v1, :cond_2
+    if-gez v1, :cond_1
 
     const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     const/4 v1, 0x0
 
     :goto_0
@@ -335,7 +326,7 @@
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/RegionSamplingHelper;->mLastMedianLuma:F
 
-    :cond_3
+    :cond_2
     return-void
 .end method
 

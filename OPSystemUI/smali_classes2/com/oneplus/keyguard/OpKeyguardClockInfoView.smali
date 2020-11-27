@@ -2099,7 +2099,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .locals 7
+    .locals 8
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
@@ -2181,7 +2181,9 @@
 
     iget-object v5, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContentObserver:Landroid/database/ContentObserver;
 
-    invoke-virtual {v0, v4, v2, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    const/4 v6, -0x2
+
+    invoke-virtual {v0, v4, v2, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
 
@@ -2195,9 +2197,9 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
+    iget-object v7, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
 
-    invoke-virtual {v0, v5, v2, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    invoke-virtual {v0, v5, v2, v7, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContext:Landroid/content/Context;
 
@@ -2205,7 +2207,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v4, v6}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2223,9 +2225,7 @@
 
     move-result-object v0
 
-    const/4 v4, -0x2
-
-    invoke-static {v0, v3, v2, v4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v0, v3, v2, v6}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 

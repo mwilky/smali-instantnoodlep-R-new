@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s %2$s స్లైస్‌లను చూపించాలనుకుంటోంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
     <string name="about_action_bar_title">పరిచయం</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">వర్షన్ %s</string>
     <string name="about_privacy_policy">గోప్యతా విధానం</string>
     <string name="about_release_note_title">అప్‌డేట్ లాగ్:</string>
     <string name="about_terms_service">సేవా నిబంధనలు</string>
@@ -702,7 +702,7 @@
     <string name="disable_carrier_button_text">eSIMని నిలిపివేయండి</string>
     <string name="disable_overlays">HW ప్రదర్శనలను నిలిపివేయి</string>
     <string name="disable_overlays_summary">స్క్రీన్ కంపాజిటింగ్‌కు ఎల్లప్పుడూ GPUని ఉపయోగించు</string>
-    <string name="disable_tether_notification_message">వివరాల కోసం మీ నిర్వాహకుడిని సంప్రదించండి</string>
+    <string name="disable_tether_notification_message">వివరాల కొరకు మీ అడ్మిన్ ని సంప్రదించండి</string>
     <string name="disable_tether_notification_title">టీథరింగ్ నిలిపివేయబడింది</string>
     <string name="disable_vpn">VPNని నిలిపివేయి</string>
     <string name="disabled">నిలిపివేయబడింది</string>
@@ -1318,7 +1318,7 @@
     <string name="notification_unblockable_desc">ఈ నోటిఫికేషన్‌లను సవరించడం వీలుపడదు.</string>
     <string name="oem_unlock_enable">OEM అన్‌లాకింగ్</string>
     <string name="oem_unlock_enable_summary">బూట్‌లోడర్ అన్‌లాక్ కావడానికి అనుమతించు</string>
-    <string name="ok">సరే</string>
+    <string name="ok">ఓకే</string>
     <string name="okay">సరే</string>
     <string name="oneplus_laboratory_added_toast">అభినందనలు! సెట్టింగ్‌లకు OnePlus లేబరేటరీ జోడించబడింది</string>
     <string name="oneplus_not_show">దీనిని మళ్లీ చూపించవద్దు</string>
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">వైబ్రేషన్ మాత్రమే</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> ఆన్‌లాక్</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> ఆన్‌లాక్స్</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"బ్యాటరీ లైఫ్ ను పొడిగించడానికి, బ్యాటరీ సేవర్:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•ఆపుతుంది లేదాబ్యాక్ గ్రౌండ్ కార్యకలాపాలను, కొన్ని దృశ్య ప్రభావాలు, మరియు “హే గూగుల్” వంటి ఫీచర్లను పరిమితం చేస్తుంది."</string>
+    <string name="op_battery_saver_description_no_ga">"బ్యాటరీ లైఫ్ ను పొడిగించడానికి, బ్యాటరీ సేవర్:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+• ఆపుతుంది లేదా బ్యాక్ గ్రౌండ్ కార్యకలాపము, మరియు కొన్ని దృశ్య ప్రభావాలను పరిమితం చేస్తుంది."</string>
     <string name="op_earphone_connect">జత చేస్తోంది...</string>
     <string name="op_earphone_connected_fail">జత చేయడం విఫలమైంది. మీరు హెడ్‌సెట్ మరియు బ్లూటూత్ స్థితిని తనిఖీ చేయండి.</string>
     <string name="op_earphone_connected_success">జత చేయబడింది. మరిన్ని సెట్ చేయడానికి ట్యాప్ చేయండి.</string>
@@ -1367,7 +1367,7 @@
     <string name="op_notification_channel_summary_low">అంతగా ప్రాముఖ్యత లేని నోటిఫికేషన్‌లను ధ్వని లేదా వైబ్రేషన్ లేకుండా.</string>
     <string name="op_notification_section_header_gentle">ఇతర నోటిఫికేషన్‌లు</string>
     <string name="op_notification_silence_title">ఇతరం</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" ఛార్జింగ్ ను రక్షిస్తుంది"</string>
     <string name="op_qs_dark_mode_tile_label">డార్క్ మోడ్</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ఉపయోగించిన</string>
     <string name="op_quick_settings_night_display_label">విజన్ కంఫర్ట్</string>
@@ -1505,7 +1505,7 @@
     <string name="priority_onboarding_show_avatar_text">లాక్ స్క్రీన్ మీద ప్రొఫైల్ ఫోటో చూపబడుతుంది</string>
     <string name="priority_onboarding_title">సంభాషణ ప్రధానమైనదిగా సెట్ చేయబడింది</string>
     <string name="privacy_alert_application_name">గోప్యతా హెచ్చరిక</string>
-    <string name="privacy_alert_content_text">మార్చడానికి నొక్కండి</string>
+    <string name="privacy_alert_content_text">మార్చడానికి ట్యాప్ చేయండి</string>
     <string name="privacy_alert_content_title">%1$s మీ %2$sని ఉపయోగిస్తుంది</string>
     <string name="privacy_type_camera">కెమెరా</string>
     <string name="privacy_type_microphone">మైక్రోఫోన్</string>
@@ -1887,21 +1887,21 @@
     <string name="tether_settings_title_wifi">పోర్టబుల్ హాట్‌స్పాట్</string>
     <string name="tethered_notification_hybrid_sharing_mobile">మొబైల్ డేటాను షేర్ చేస్తోంది, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
     <string name="tethered_notification_hybrid_sharing_none">షేర్ చేయడానికి నెట్‌వర్క్ ఏదీ అందుబాటులో లేదు, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fiని షేర్ చేస్తోంది, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">వై-ఫై ని షేర్ చేస్తోంది, సెట్టింగ్‌లలోకి ప్రవేశించడానికి క్లిక్ చేయండి</string>
     <string name="tethered_notification_message">సెటప్ చేయడానికి టాప్ చేయండి.</string>
-    <string name="tethered_notification_multi_device_message">%1$s కనెక్ట్ చేయబడ్డ పరికరాలు</string>
-    <string name="tethered_notification_multi_tether_title">టెథరింగ్ మరియు మొబైల్ HotSpot యాక్టివ్‌లో ఉంది</string>
+    <string name="tethered_notification_multi_device_message">%1$s పరికరాలు కనెక్ట్ చేయబడ్డాయి</string>
+    <string name="tethered_notification_multi_tether_title">టీథరింగ్ లేదా మొబైల్ హాట్‌స్పాట్ యాక్టివ్‌గా ఉంది</string>
     <string name="tethered_notification_no_device_message">కనెక్ట్ చేయబడ్డ పరికరాలు ఏవీ లేవు</string>
-    <string name="tethered_notification_one_device_message">%1$s కనెక్ట్ చేయబడ్డ పరికరం</string>
+    <string name="tethered_notification_one_device_message">%1$s పరికరం కనెక్ట్ చేయబడింది</string>
     <string name="tethered_notification_sharing_mobile_multi">మొబైల్ డేటాను షేర్ చేస్తోంది, %1$s పరికరాలు కనెక్ట్ చేయబడ్డాయి</string>
     <string name="tethered_notification_sharing_mobile_no">మొబైల్ డేటాను షేర్ చేస్తోంది, ఎలాంటి పరికరం కనెక్ట్ చేయబడలేదు</string>
-    <string name="tethered_notification_sharing_mobile_single">మొబైల్ డేటాను షేర్ చేస్తోంది, %1$s పరకరం కనెక్ట్ చేయబడింది</string>
+    <string name="tethered_notification_sharing_mobile_single">మొబైల్ డేటాను షేర్ చేస్తోంది, %1$s పరికరం కనెక్ట్ చేయబడింది</string>
     <string name="tethered_notification_sharing_none_multi">షేర్ చేయడానికి నెట్‌వర్క్ ఏదీ అందుబాటులో లేదు, %1$s పరికరాలు కనెక్ట్ చేయబడ్డాయి</string>
     <string name="tethered_notification_sharing_none_no">షేర్ చేయడానికి నెట్‌వర్క్ ఏదీ అందుబాటులో లేదు, ఎలాంటి పరికరం కనెక్ట్ చేయబడలేదు</string>
     <string name="tethered_notification_sharing_none_single">షేర్ చేయడానికి నెట్‌వర్క్ ఏదీ అందుబాటులో లేదు, %1$s పరికరం కనెక్ట్ చేయబడింది</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fiని షేర్ చేస్తోంది, %1$s పరికరాలు కనెక్ట్ చేయబడ్డాయి</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fiని షేర్ చేస్తోంది, ఎలాంటి పరికరం కనెక్ట్ చేయబడలేదు</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fiని షేర్ చేస్తోంది, %1$s పరికరం కనెక్ట్ చేయబడింది</string>
+    <string name="tethered_notification_sharing_wifi_multi">వై-ఫై ని షేర్ చేస్తోంది, %1$s పరికరాలు కనెక్ట్ చేయబడ్డాయి</string>
+    <string name="tethered_notification_sharing_wifi_no">వై-ఫై ని షేర్ చేస్తోంది, ఎలాంటి పరికరం కనెక్ట్ చేయబడలేదు</string>
+    <string name="tethered_notification_sharing_wifi_single">వై-ఫై ని షేర్ చేస్తోంది, %1$s పరికరం కనెక్ట్ చేయబడింది</string>
     <string name="tethered_notification_title">టీథరింగ్ లేదా మొబైల్ హాట్‌స్పాట్ యాక్టివ్‌గా ఉంది</string>
     <string name="tethering_hardware_offload">టెథెరింగ్ హార్డ్‌వేర్ వేగవృద్ధి</string>
     <string name="tethering_hardware_offload_summary">అందుబాటులో ఉంటే టెథెరింగ్ హార్డ్‌వేర్ వేగవృద్ధిని ఉపయోగించండి</string>
@@ -1914,6 +1914,15 @@
 \u0009• అధిక ఉష్ణోగ్రతలలో మీ ఫోన్‌ని ఉపయోగించడం"</string>
     <string name="thermal_shutdown_message">మీ ఫోన్ ఇప్పుడు సాధారణంగా పని చేస్తుంది</string>
     <string name="thermal_shutdown_title">వేడెక్కినందుకు ఫోన్ ఆఫ్ చేయబడింది</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">పరికరాన్ని మ్యూట్ చేయడానికి, Alert Slider ని వైబ్రేట్ లేదా సైలెంట్ మోడ్ కి సెట్ చేయండి.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">మీడియా వాల్యూమ్ మ్యూట్ చేయి</string>
+    <string name="threekey_volume_guide_dialog_ok">ఓకే</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">రింగింగ్ ప్రారంభించడానికి, రింగ్ మోడ్ కి స్విచ్ కావడానికి Alert Slider ను ఉపయోగించండి మరియు మీ ప్రాధాన్యత ప్రకారము రింగ్ వాల్యూమ్ ని సెట్ చేయండి.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">రింగ్ మోడ్</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider ప్రస్తుతము సైలెంట్ మోడ్ లో ఉంది, ఇన్కమింగ్ కాల్ కొరకు పరికరము రింగ్ లేదా వైబ్రేట్ కాదు. మీకు రింగింగ్ ద్వారా తెలుపడానికి దయచేసి రింగ్ మోడ్ కి స్విచ్ అవ్వండి.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">సైలెంట్ మోడ్</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider ప్రస్తుతము వైబ్రెట్ మోడ్ లో ఉంది, ఇన్కమింగ్ కాల్ కొరకు పరికరము రింగ్ కాదు. మీకు వైబ్రేషన్ ద్వారా మాత్రమే తెలుపబడుతుంది. రింగింగ్ ద్వారా తెలుపడానికి దయచేసి రింగ్ మోడ్ కి స్విచ్ అవ్వండి.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">వైబ్రేట్ మోడ్</string>
     <string name="tile_unavailable">అందుబాటులో లేదు</string>
     <string name="time_picker_header_text">సమయాన్ని సెట్ చేయండి</string>
     <string name="time_picker_hour_label">గంట</string>

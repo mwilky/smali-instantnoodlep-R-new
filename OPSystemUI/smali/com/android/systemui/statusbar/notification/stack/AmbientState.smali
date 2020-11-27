@@ -56,6 +56,8 @@
 
 .field private mLayoutHeight:I
 
+.field private mLayoutMaxHeight:I
+
 .field private mLayoutMinHeight:I
 
 .field private mMaxHeadsUpTranslation:F
@@ -67,6 +69,8 @@
 .field private mOverScrollBottomAmount:F
 
 .field private mOverScrollTopAmount:F
+
+.field private mPaddingBottom:I
 
 .field private mPanelFullWidth:Z
 
@@ -314,21 +318,35 @@
     return p0
 
     :cond_0
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutMinHeight:I
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutHeight:I
 
-    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutHeight:I
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mMaxLayoutHeight:I
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mMaxLayoutHeight:I
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+    move-result v0
 
-    move-result v1
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mTopPadding:I
+
+    sub-int/2addr v0, v1
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutMinHeight:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutMaxHeight:I
 
     iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mTopPadding:I
 
     sub-int/2addr v1, v2
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mPaddingBottom:I
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
@@ -1072,6 +1090,14 @@
     return-void
 .end method
 
+.method public setMaxLayoutHeight(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLayoutMaxHeight:I
+
+    return-void
+.end method
+
 .method public setOnPulseHeightChangedListener(Ljava/lang/Runnable;)V
     .locals 0
 
@@ -1132,6 +1158,14 @@
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mOverScrollBottomAmount:F
 
     :goto_0
+    return-void
+.end method
+
+.method public setPaddingBottom(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mPaddingBottom:I
+
     return-void
 .end method
 

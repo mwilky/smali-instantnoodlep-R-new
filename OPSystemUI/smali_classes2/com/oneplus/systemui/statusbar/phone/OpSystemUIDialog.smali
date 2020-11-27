@@ -19,24 +19,10 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+    .locals 1
 
-    invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
+    sget v0, Lcom/android/systemui/R$style;->OnePlus_ThemeOverlay_AppCompat_Dialog_Alert:I
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    sget v0, Lcom/android/systemui/R$style;->Oneplus_Theme_Material_Dark_Dialog_Alert:I
-
-    goto :goto_0
-
-    :cond_0
-    sget v0, Lcom/android/systemui/R$style;->Oneplus_Theme_Material_Light_Dialog_Alert:I
-
-    :goto_0
     invoke-direct {p0, p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;-><init>(Landroid/content/Context;I)V
 
     return-void

@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%1$s хоче показати фрагменти додатка %2$s</string>
     <string name="abc_toolbar_collapse_description">Згорнути</string>
     <string name="about_action_bar_title">Відомості</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версія %s</string>
     <string name="about_privacy_policy">Політика конфіденційності</string>
     <string name="about_release_note_title">Журнал оновлень:</string>
     <string name="about_terms_service">Умови використання</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">Щоб змінити порядок елементів, перетягуйте їх</string>
     <string name="drag_to_remove_disabled">Мінімальна кількість фрагментів: %1$d</string>
     <string name="drag_to_remove_tiles">Перетягніть сюди, щоб видалити</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Л: %1$s  П: %2$s"</string>
     <string name="edit_mode_hint">Перетягуйте плитки, щоб змінювати порядок їх розташування. Торкайтеся, щоб показати або приховати їх.</string>
     <string name="empty_shade_text">Сповіщень немає</string>
     <string name="enable_adb">Налагодження USB</string>
@@ -822,7 +822,7 @@
     <string name="home">Головний екран налаштувань</string>
     <string name="hotspot_apm_message">"Увімкнений режим польоту блокує можливість встановлення з'єднання з мобільними мережами. Вимкніть режим польоту та повторіть спробу."</string>
     <string name="hotspot_operator_dialog_nosim_msg">Вставте SIM-карту, щоб скористатися мобільною точкою доступу та іншими функціями модема</string>
-    <string name="hotspot_operator_dialog_nosim_title">Відсутня SIM-картка</string>
+    <string name="hotspot_operator_dialog_nosim_title">Немає SIM-карти</string>
     <string name="hotspot_operator_dialog_othererror_msg">Ви не оформили передплату на послугу модема через Wi-Fi</string>
     <string name="hotspot_operator_dialog_othererror_title">Помилка послуги модема через Wi-Fi</string>
     <string name="hotspot_tip_message">"Через мобільну точку доступу інші пристрої з підтримкою Wi-Fi можуть використовувати ваші мобільні дані. Щоб підключитися до мобільної точки доступу, виконайте такі дії. \u0009 
@@ -1332,12 +1332,12 @@ IT-адміністратор може відстежувати й контро�
     <string name="oneplus_threekey_navigation_vibration">Лише вібрація</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>розблокування</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>розблокувань</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Щоб подовжити час роботи від акумулятора, у режимі економії заряду:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•вимикаються або обмежуються фонові процеси, деякі візуальні ефекти й інші функції, як-от “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Щоб подовжити час роботи від акумулятора, у режимі економії заряду:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•вимикаються або обмежуються фонові процеси та деякі візуальні ефекти"</string>
     <string name="op_earphone_connect">Створення пари…</string>
     <string name="op_earphone_connected_fail">Не вдалося створити пару. Перевірте гарнітуру та статус Bluetooth.</string>
     <string name="op_earphone_connected_success">Пару створено. Торкніться, щоб виконати інші налаштування.</string>
@@ -1367,7 +1367,7 @@ IT-адміністратор може відстежувати й контро�
     <string name="op_notification_channel_summary_low">Менш важливі сповіщення без звуку й вібрації</string>
     <string name="op_notification_section_header_gentle">Інші сповіщення</string>
     <string name="op_notification_silence_title">Інше</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Захищене заряждання"</string>
     <string name="op_qs_dark_mode_tile_label">Темний режим</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s використано</string>
     <string name="op_quick_settings_night_display_label">Зоровий комфорт</string>
@@ -1504,7 +1504,7 @@ IT-адміністратор може відстежувати й контро�
     <string name="priority_onboarding_show_at_top_text">"З'являються вгорі розділу розмов"</string>
     <string name="priority_onboarding_show_avatar_text">Показують фото профілю на заблокованому екрані</string>
     <string name="priority_onboarding_title">Розмову призначено важливою</string>
-    <string name="privacy_alert_application_name">Оповіщення про конфіденційність</string>
+    <string name="privacy_alert_application_name">Сповіщення про конфіденційність</string>
     <string name="privacy_alert_content_text">Торкніться, щоб змінити</string>
     <string name="privacy_alert_content_title">Додаток %1$s використовує %2$s</string>
     <string name="privacy_type_camera">камера</string>
@@ -1885,23 +1885,23 @@ IT-адміністратор може відстежувати й контро�
     <string name="tether_settings_title_usb">USB-модем</string>
     <string name="tether_settings_title_usb_bluetooth">"Прив'язка"</string>
     <string name="tether_settings_title_wifi">Порт. точка дост.</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">Спільне використання мобільних даних; натисніть, щоб перейти до налаштувань</string>
-    <string name="tethered_notification_hybrid_sharing_none">Немає доступної мережі для спільного використання; натисніть, щоб перейти до налаштувань</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Спільне використання мережі Wi-Fi; натисніть, щоб перейти до налаштувань</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">Спільне використання мережі мобільних даних. Натисніть, щоб перейти до Налаштувань</string>
+    <string name="tethered_notification_hybrid_sharing_none">Немає доступної мережі для спільного використання. Натисніть, щоб перейти до Налаштувань</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">Спільне використання мережі Wi-Fi. Натисніть, щоб перейти до Налаштувань</string>
     <string name="tethered_notification_message">Торкніться, щоб налаштувати.</string>
-    <string name="tethered_notification_multi_device_message">"%1$s під'єднаних пристроїв(-ї)"</string>
+    <string name="tethered_notification_multi_device_message">Підключених пристроїв: %1$s</string>
     <string name="tethered_notification_multi_tether_title">Режим модема та мобільну точку доступу ввімкнено</string>
     <string name="tethered_notification_no_device_message">Немає підключених пристроїв</string>
-    <string name="tethered_notification_one_device_message">"%1$s під'єднаний пристрій"</string>
-    <string name="tethered_notification_sharing_mobile_multi">Спільне використання мобільних даних; підключено пристроїв: %1$s</string>
-    <string name="tethered_notification_sharing_mobile_no">Спільне використання мобільних даних; підключених пристроїв немає</string>
-    <string name="tethered_notification_sharing_mobile_single">Спільне використання мобільних даних; підключено %1$s пристрій</string>
-    <string name="tethered_notification_sharing_none_multi">Немає доступної мережі для спільного використання; підключено пристроїв: %1$s</string>
-    <string name="tethered_notification_sharing_none_no">Немає доступної мережі для спільного використання; підключені пристрої відсутні</string>
-    <string name="tethered_notification_sharing_none_single">Немає доступної мережі для спільного використання; підключено %1$s пристрій</string>
-    <string name="tethered_notification_sharing_wifi_multi">Спільне використання мережі Wi-Fi; підключено пристроїв: %1$s</string>
-    <string name="tethered_notification_sharing_wifi_no">Спільне використання мережі Wi-Fi; підключених пристроїв немає</string>
-    <string name="tethered_notification_sharing_wifi_single">Спільне використання мережі Wi-Fi; підключено %1$s пристрій</string>
+    <string name="tethered_notification_one_device_message">%1$s підключений пристрій</string>
+    <string name="tethered_notification_sharing_mobile_multi">Спільне використання мережі мобільних даних. Підключено пристроїв: %1$s</string>
+    <string name="tethered_notification_sharing_mobile_no">Спільне використання мережі мобільних даних. Немає підключених пристроїв</string>
+    <string name="tethered_notification_sharing_mobile_single">Спільне використання мережі мобільних даних. Підключено %1$s пристрій</string>
+    <string name="tethered_notification_sharing_none_multi">Немає доступної мережі для спільного використання. Підключено пристроїв: %1$s</string>
+    <string name="tethered_notification_sharing_none_no">Немає доступної мережі для спільного використання. Немає підключених пристроїв</string>
+    <string name="tethered_notification_sharing_none_single">Немає доступної мережі для спільного використання. Підключено %1$s пристрій</string>
+    <string name="tethered_notification_sharing_wifi_multi">Спільне використання мережі Wi-Fi. Підключено пристроїв: %1$s</string>
+    <string name="tethered_notification_sharing_wifi_no">Спільне використання мережі Wi-Fi. Немає підключених пристроїв</string>
+    <string name="tethered_notification_sharing_wifi_single">Спільне використання мережі Wi-Fi. Підключено %1$s пристрій</string>
     <string name="tethered_notification_title">Режим модема чи мобільну точку доступу ввімкнено</string>
     <string name="tethering_hardware_offload">Апаратне прискорення під час використання телефона в режимі модема</string>
     <string name="tethering_hardware_offload_summary">Якщо доступно, вмикати апаратне прискорення під час використання телефона в режимі модема</string>
@@ -1914,6 +1914,15 @@ IT-адміністратор може відстежувати й контро�
 \u0009• використовуєте телефон за високої температури"</string>
     <string name="thermal_shutdown_message">Зараз телефон працює, як зазвичай</string>
     <string name="thermal_shutdown_title">Телефон перегрівся й вимкнувся</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Щоб вимкнути дзвінок на пристрої, установіть для перемикача сповіщень режим вібрації або беззвучний режим.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Вимкнути дзвінок</string>
+    <string name="threekey_volume_guide_dialog_ok">OK</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">Щоб увімкнути дзвінок, перемістіть перемикач сповіщень у режим дзвінка й налаштуйте бажану гучність.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Режим дзвінка</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Перемикач сповіщень установлено в беззвучному режимі. Під час вхідного виклику пристрій не дзвонитиме й не вібруватиме. Щоб телефон дзвонив, перейдіть у режим дзвінка.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Беззвучний режим</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Перемикач сповіщень установлено в режимі вібрації. Під час вхідного виклику пристрій не дзвонитиме, а лише вібруватиме. Щоб телефон дзвонив, перейдіть у режим дзвінка.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Режим вібрації</string>
     <string name="tile_unavailable">Недоступно</string>
     <string name="time_picker_header_text">Установлення часу</string>
     <string name="time_picker_hour_label">год.</string>

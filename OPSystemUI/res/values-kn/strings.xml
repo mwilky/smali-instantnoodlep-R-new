@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">%2$s ಸ್ಲೈಸ್‌ಗಳನ್ನು %1$s ತೋರಿಸಲು ಬಯಸಿದೆ</string>
     <string name="abc_toolbar_collapse_description">ಕುಗ್ಗಿಸಿ</string>
     <string name="about_action_bar_title">ಬಗ್ಗೆ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">ಆವೃತ್ತಿ %s</string>
     <string name="about_privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
     <string name="about_release_note_title">ಪರಿಷ್ಕರಣೆ ಲಾಗ್:</string>
     <string name="about_terms_service">ಸೇವೆಯ ನಿಯಮಗಳು</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">ಟೈಲ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಲು ಹೋಲ್ಡ್‌ ಮಾಡಿ ಮತ್ತು ಡ್ರ್ಯಾಗ್‌ ಮಾಡಿ</string>
     <string name="drag_to_remove_disabled">ನಿಮಗೆ ಕನಿಷ್ಠ %1$d ಟೈಲ್‌ಗಳ ಅಗತ್ಯವಿದೆ</string>
     <string name="drag_to_remove_tiles">ತೆಗೆದುಹಾಕಲು ಇಲ್ಲಿ ಡ್ರ್ಯಾಗ್‌ ಮಾಡಿ</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">L: %1$s R: %2$s</string>
     <string name="edit_mode_hint">ಮರುಜೋಡಿಸಲು ಟೈಲ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ. ತೋರಿಸಲು ಅಥವಾ ಅಡಗಿಸಿಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="empty_shade_text">ಯಾವುದೇ ಅಧಿಸೂಚನೆಗಳಿಲ್ಲ</string>
     <string name="enable_adb">USB ಡೀಬಗ್ ಮಾಡುವಿಕೆ</string>
@@ -822,7 +822,7 @@
     <string name="home">ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಮುಖಪುಟ</string>
     <string name="hotspot_apm_message">ಏರ್‌ಪ್ಲೇನ್ ಮೋಡ್ ಸಕ್ರಿಯವಾಗಿರುವಾಗ ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ. ಏರ್‌ಪ್ಲೇನ್ ಮೋಡ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="hotspot_operator_dialog_nosim_msg">ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಮತ್ತು ಇತರೆ ಟೆಥರಿಂಗ್ ಆಯ್ಕೆಗಳನ್ನು ಬಳಸಲು SIM ಕಾರ್ಡ್ ಸೇರ್ಪಡಿಸಿ</string>
-    <string name="hotspot_operator_dialog_nosim_title">ಯಾವುದೇ SIM ಕಾರ್ಡ್ ಇಲ್ಲ</string>
+    <string name="hotspot_operator_dialog_nosim_title">SIM ಕಾರ್ಡ್ ಇಲ್ಲ</string>
     <string name="hotspot_operator_dialog_othererror_msg">ನೀವು Wifi ಟೆಥರಿಂಗ್‌ಗೆ ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಿಲ್ಲ</string>
     <string name="hotspot_operator_dialog_othererror_title">Wifi ಟೆಥರಿಂಗ್ ದೋಷ</string>
     <string name="hotspot_tip_message">"ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ನಿಮ್ಮ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಇತರ Wi-Fi ಸಾಮರ್ಥ್ಯದ ಸಾಧನಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ. ನಿಮ್ಮ ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು: \u0009 
@@ -1330,12 +1330,13 @@
     <string name="oneplus_threekey_navigation_vibration">ಕಂಪನ ಮಾತ್ರ</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation>ಅನ್‌ಲಾಕ್‌</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation>ಅನ್‌ಲಾಕ್‌ಗಳು</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"ಬ್ಯಾಟರಿ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು, ಬ್ಯಾಟರಿ ಉಳಿಕೆಗಾಗಿ:
+•ಹಿನ್ನೆಲೆ ಚಟುವಟಿಕೆ, ಕೆಲವು ದೃಶ್ಯ ಪರಿಣಾಮಗಳು ಮತ್ತು 
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+“Hey Google‌”ನಂತಹ ಇತರ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಆಫ್‌ ಮಾಡುತ್ತದೆ ಮತ್ತು ನಿರ್ಬಂಧಿಸುತ್ತದೆ"</string>
+    <string name="op_battery_saver_description_no_ga">"ಬ್ಯಾಟರಿ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು, ಬ್ಯಾಟರಿ ಉಳಿಕೆಗಾಗಿ:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•ಹಿನ್ನೆಲೆ ಚಟುವಟಿಕೆ ಮತ್ತು ಕೆಲವು ದೃಶ್ಯ ಪರಿಣಾಮಗಳನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ ಅಥವಾ ನಿರ್ಬಂಧಿಸುತ್ತದೆ"</string>
     <string name="op_earphone_connect">ಜೋಡಿ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
     <string name="op_earphone_connected_fail">ಜೋಡಿ ಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ. ನೀವು ಹೆಡ್‌ಸೆಟ್ ಮತ್ತು ಬ್ಲೂಟೂತ್ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸಬಹುದು.</string>
     <string name="op_earphone_connected_success">ಜೋಡಿ ಮಾಡಲಾಗಿದೆ. ಇನ್ನಷ್ಟು ಸೆಟ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
@@ -1365,15 +1366,15 @@
     <string name="op_notification_channel_summary_low">ಯಾವುದೇ ಶಬ್ಧ ಅಥವಾ ಕಂಪನವಿಲ್ಲದೆಯೇ ಕಡಿಮೆ ಪ್ರಾಮುಖ್ಯತೆಯುಳ್ಳ ಅಧಿಸೂಚನೆಗಳು.</string>
     <string name="op_notification_section_header_gentle">ಇತರೆ ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="op_notification_silence_title">ಇತರೆ</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" ರಕ್ಷಿತ ಚಾರ್ಜಿಂಗ್"</string>
     <string name="op_qs_dark_mode_tile_label">ಡಾರ್ಕ್ ಮೋಡ್</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s ಬಳಸಲಾಗಿದೆ</string>
     <string name="op_quick_settings_night_display_label">ದೃಷ್ಟಿ ಆರಾಮ</string>
     <string name="op_quick_settings_night_display_summary_off">ನೈಟ್ ಮೋಡ್ ಆಫ್ ಆಗಿದೆ. ಟರ್ನ್ ಆನ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="op_quick_settings_night_display_summary_on">ನೈಟ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ. ಟರ್ನ್ ಆಫ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
-    <string name="op_read_mode2_dialog_black">ಮೋನೋ ಎಫೆಕ್ಟ್</string>
-    <string name="op_read_mode2_dialog_color">ಕ್ರೋಮಾಟಿಕ್ ಎಫೆಕ್ಟ್</string>
-    <string name="op_read_mode2_dialog_title">ಎಫೆಕ್ಟ್ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="op_read_mode2_dialog_black">ಮೋನೋ ಎಫೆಕ್ಟ್‌</string>
+    <string name="op_read_mode2_dialog_color">ಕ್ರೊಮಾಟಿಕ್‌ ಎಫೆಕ್ಟ್‌</string>
+    <string name="op_read_mode2_dialog_title">ಎಫೆಕ್ಟ್‌ ಅನ್ನು ಆರಿಸಿ</string>
     <string name="op_reverse_charge_notification_btn">ನಿಲ್ಲಿಸಿ</string>
     <string name="op_reverse_charge_notification_discharging">ಸಂಪರ್ಕಿತ ಸಾಧನವನ್ನು ಚಾರ್ಜ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="op_reverse_charge_notification_subtitle">ಇತರೆ Qi ಸಕ್ರಿಯಗೊಳಿಸಿದ ಸಾಧನಗಳನ್ನು ವೈರ್‌ಲೆಸ್ ಆಗಿ ಚಾರ್ಜ್ ಮಾಡಲು</string>
@@ -1502,8 +1503,8 @@
     <string name="priority_onboarding_show_at_top_text">ಸಂಭಾಷಣೆ ವಿಭಾಗದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಿ</string>
     <string name="priority_onboarding_show_avatar_text">ಲಾಕ್ ಸ್ಕ್ರೀನ್‌ ಮೇಲೆ ಪ್ರೊಫೈಲ್ ಚಿತ್ರವನ್ನು ತೋರಿಸಿ</string>
     <string name="priority_onboarding_title">ಸಂವಾದವನ್ನು ಆದ್ಯತೆಯಾಗಿ ಹೊಂದಿಸಲಾಗಿದೆ</string>
-    <string name="privacy_alert_application_name">ಗೌಪ್ಯತೆ ಎಚ್ಚರಿಕೆ</string>
-    <string name="privacy_alert_content_text">ಬದಲಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="privacy_alert_application_name">ಗೌಪ್ಯತಾ ಎಚ್ಚರಿಕೆ</string>
+    <string name="privacy_alert_content_text">ಬದಲಾಯಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="privacy_alert_content_title">%1$s ನಿಮ್ಮ %2$s ಅನ್ನು ಬಳಸುತ್ತಿದೆ</string>
     <string name="privacy_type_camera">ಕ್ಯಾಮೆರಾ</string>
     <string name="privacy_type_microphone">ಮೈಕ್ರೋಫೋನ್‌</string>
@@ -1883,24 +1884,24 @@
     <string name="tether_settings_title_usb">USB ಟೆಥರಿಂಗ್</string>
     <string name="tether_settings_title_usb_bluetooth">ಟೆಥರಿಂಗ್‌</string>
     <string name="tether_settings_title_wifi">ಪೋರ್ಟಬಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
-    <string name="tethered_notification_hybrid_sharing_none">ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿಲ್ಲ, ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">Wi-Fi ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಮೂದಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="tethered_notification_hybrid_sharing_none">ಹಂಚಿಕೊಳ್ಳಲು ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ, ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಮೂದಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">ವೈ-ಫೈ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಮೂದಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ</string>
     <string name="tethered_notification_message">ಹೊಂದಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="tethered_notification_multi_device_message">%1$s ಸಂಪರ್ಕಿತ ಸಾಧನಗಳು</string>
-    <string name="tethered_notification_multi_tether_title">ಟೆಥರಿಂಗ್ ಮತ್ತು ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಸಕ್ರಿಯಗೊಂಡಿದೆ</string>
+    <string name="tethered_notification_multi_tether_title">ಟೆಥರಿಂಗ್ ಮತ್ತು ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಸಕ್ರಿಯ</string>
     <string name="tethered_notification_no_device_message">ಯಾವುದೇ ಸಂಪರ್ಕಿತ ಸಾಧನವಿಲ್ಲ</string>
     <string name="tethered_notification_one_device_message">%1$s ಸಂಪರ್ಕಿತ ಸಾಧನ</string>
-    <string name="tethered_notification_sharing_mobile_multi">Wi-Fi ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಗಳಿಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_sharing_mobile_no">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಪಡಿಸಲಾಗಿಲ್ಲ</string>
-    <string name="tethered_notification_sharing_mobile_single">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_sharing_none_multi">ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿಲ್ಲ, %1$s ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_sharing_none_no">ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿಲ್ಲ, ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿಲ್ಲ</string>
-    <string name="tethered_notification_sharing_none_single">ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್ ಲಭ್ಯವಿಲ್ಲ, %1$s ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_sharing_wifi_multi">Wi-Fi ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_sharing_wifi_no">Wi-Fi ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿಲ್ಲ</string>
-    <string name="tethered_notification_sharing_wifi_single">Wi-Fi ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ</string>
-    <string name="tethered_notification_title">ಟೆಥರಿಂಗ್ ಮತ್ತು ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಸಕ್ರಿಯಗೊಂಡಿದೆ</string>
+    <string name="tethered_notification_sharing_mobile_multi">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿದೆ</string>
+    <string name="tethered_notification_sharing_mobile_no">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="tethered_notification_sharing_mobile_single">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="tethered_notification_sharing_none_multi">ಹಂಚಿಕೊಳ್ಳಲು ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ, %1$s ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿದೆ</string>
+    <string name="tethered_notification_sharing_none_no">ಹಂಚಿಕೊಳ್ಳಲು ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ, ಯಾವುದೇ ಸಾಧನ ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ</string>
+    <string name="tethered_notification_sharing_none_single">ಹಂಚಿಕೊಳ್ಳಲು ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್ ಇಲ್ಲ, %1$s ಸಾಧನ ಸಂಪರ್ಕಗೊಂಡಿದೆ</string>
+    <string name="tethered_notification_sharing_wifi_multi">ವೈ-ಫೈ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿದೆ</string>
+    <string name="tethered_notification_sharing_wifi_no">ವೈ-ಫೈ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, ಯಾವುದೇ ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="tethered_notification_sharing_wifi_single">ವೈ-ಫೈ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ, %1$s ಸಾಧನವನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಿದೆ</string>
+    <string name="tethered_notification_title">ಟೆಥರಿಂಗ್ ಅಥವಾ ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಸಕ್ರಿಯ</string>
     <string name="tethering_hardware_offload">ಟೆಥರಿಂಗ್‍‍ಗಾಗಿ ಹಾರ್ಡ್‍ವೇರ್ ವೇಗವರ್ಧನೆ</string>
     <string name="tethering_hardware_offload_summary">ಹಾರ್ಡ್‌ವೇರ್‌ನ ವೇಗವರ್ಧನೆ ಟೆಥರಿಂಗ್ ಲಭ್ಯವಿದ್ದರೆ ಅದನ್ನು ಬಳಸಿ</string>
     <string name="tethering_settings_not_available">ಟೆಥರಿಂಗ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಈ ಬಳಕೆದಾರರಿಗೆ ಲಭ್ಯವಿಲ್ಲ</string>
@@ -1912,6 +1913,15 @@
 \u0009• ಅಧಿಕ ಉಷ್ಣಾಂಶದಲ್ಲಿ ಫೋನಿನ ಬಳಕೆ"</string>
     <string name="thermal_shutdown_message">ಈಗ ನಿಮ್ಮ ಫೋನ್ ಎಂದಿನಂತೆ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ</string>
     <string name="thermal_shutdown_title">ಫೋನ್ ಬಿಸಿಯಾಗಿದ್ದರಿಂದ ಆಫ್ ಆಗಿದೆ</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">ಸಾಧನವನ್ನು ಮ್ಯೂಟ್ ಮಾಡಲು, Alert Slider ಅನ್ನು ವೈಬ್ರೇಟ್ ಅಥವಾ ಸೈಲೆಂಟ್ ಮೋಡ್‌ಗೆ ಹೊಂದಿಸಿ.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">ರಿಂಗ್ ವಾಲ್ಯೂಂ ಅನ್ನು ಮ್ಯೂಟ್ ಮಾಡಿ</string>
+    <string name="threekey_volume_guide_dialog_ok">ಸರಿ</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">ರಿಂಗಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು, ರಿಂಗ್ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಲು Alert slider ಬಳಸಿ ಮತ್ತು ನಿಮ್ಮ ಆದ್ಯತೆಗೆ ಅನುಗುಣವಾಗಿ ರಿಂಗ್ ವಾಲ್ಯೂಂ ಹೊಂದಿಸಿ.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">ರಿಂಗ್ ಮೋಡ್</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider ಪ್ರಸ್ತುತ ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದೆ; ಒಳಬರುವ ಕರೆಗಾಗಿ ಸಾಧನವು ರಿಂಗ್‌ ಆಗುವುದಿಲ್ಲ ಅಥವಾ ವೈಬ್ರೇಟ್‌ ಆಗುವುದಿಲ್ಲ. ರಿಂಗಿಂಗ್ ಮೂಲಕ ತಿಳಿಸಲು ದಯವಿಟ್ಟು ರಿಂಗ್ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಿ.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">ಸೈಲೆಂಟ್‌ ಮೋಡ್‌</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider ಪ್ರಸ್ತುತ ವೈಬ್ರೇಟ್ ಮೋಡ್‌ನಲ್ಲಿದೆ; ಒಳಬರುವ ಕರೆಗಾಗಿ ಸಾಧನವು ರಿಂಗ್‌ ಆಗುವುದಿಲ್ಲ. ವೈಬ್ರೇಟ್‌ನಿಂದ ಮಾತ್ರ ನಿಮಗೆ ಸೂಚಿಸಲಾಗುತ್ತದೆ. ರಿಂಗಿಂಗ್ ಮೂಲಕ ತಿಳಿಸಲು ದಯವಿಟ್ಟು ರಿಂಗ್ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಿ.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">ವೈಬ್ರೇಟ್ ಮೋಡ್</string>
     <string name="tile_unavailable">ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="time_picker_header_text">ಸಮಯ ನಿಗದಿಪಡಿಸಿ</string>
     <string name="time_picker_hour_label">ಗಂಟೆ</string>
@@ -2148,7 +2158,7 @@
     <string name="zen_priority_introduction">ಅಲಾರಾಂಗಳು, ಜ್ಞಾಪನೆಗಳು, ಈವೆಂಟ್‌ಗಳು ಹಾಗೂ ನೀವು ಸೂಚಿಸಿರುವ ಕರೆದಾರರನ್ನು ಹೊರತುಪಡಿಸಿ ಬೇರಾವುದೇ ಸದ್ದುಗಳು ಅಥವಾ ವೈಬ್ರೇಶನ್‌ಗಳು ನಿಮಗೆ ತೊಂದರೆ ನೀಡುವುದಿಲ್ಲ. ಹಾಗಿದ್ದರೂ, ನೀವು ಪ್ಲೇ ಮಾಡುವ ಸಂಗೀತ, ವೀಡಿಯೊಗಳು ಮತ್ತು ಆಟಗಳ ಆಡಿಯೊವನ್ನು ನೀವು ಕೇಳಿಸಿಕೊಳ್ಳುತ್ತೀರಿ.</string>
     <string name="zen_silence_introduction">ಇದು ಅಲಾರಮ್‌ಗಳು, ಸಂಗೀತ, ವೀಡಿಯೊಗಳು, ಮತ್ತು ಗೇಮ್‌ಗಳು ಸೇರಿದಂತೆ ಎಲ್ಲಾ ಧ್ವನಿಗಳು ಮತ್ತು ವೈಬ್ರೇಶನ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ.</string>
     <string name="zen_silence_introduction_voice">ಇದು ಅಲಾರಮ್‌ಗಳು, ಸಂಗೀತ, ವೀಡಿಯೊಗಳು, ಮತ್ತು ಗೇಮ್‌ಗಳು ಸೇರಿದಂತೆ ಎಲ್ಲಾ ಧ್ವನಿಗಳು ಮತ್ತು ವೈಬ್ರೇಶನ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ. ನಿಮಗೆ ಈಗಲೂ ಫೋನ್ ಕರೆಗಳನ್ನು ಮಾಡಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.</string>
-    <string name="zzz_op_global_action_bootloader">ಬೂಟ್‌ಲೋಡರ್</string>
+    <string name="zzz_op_global_action_bootloader">ಬೂಟ್‌ಲೋಡರ್‌</string>
     <string name="zzz_op_global_action_recovery">ರಿಕವರಿ</string>
     <string name="zzz_op_quick_pay_no_install_message">ತ್ವರಿತ ಪಾವತಿ ಬಳಸಲು ದಯವಿಟ್ಟು ಪಾವತಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಿ</string>
 </resources>

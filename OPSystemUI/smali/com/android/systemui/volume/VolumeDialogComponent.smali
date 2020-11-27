@@ -7,6 +7,8 @@
 .implements Lcom/android/systemui/tuner/TunerService$Tunable;
 .implements Lcom/android/systemui/volume/VolumeDialogControllerImpl$UserActivityListener;
 .implements Lcom/oneplus/opthreekey/OpThreekeyDialog$UserActivityListener;
+.implements Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController$IOpThreekeyVolumeGuideControllerCallBack;
+.implements Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController$UserActivityListener;
 
 
 # instance fields
@@ -128,6 +130,18 @@
     move-result-object p2
 
     invoke-virtual {p1, p0, p2}, Lcom/android/systemui/tuner/TunerService;->addTunable(Lcom/android/systemui/tuner/TunerService$Tunable;[Ljava/lang/String;)V
+
+    const-class p1, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;
+
+    const/16 p2, 0x7e4
+
+    invoke-interface {p1, p2, p0}, Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;->init(ILcom/oneplus/opthreekey/OpThreekeyVolumeGuideController$UserActivityListener;)V
 
     return-void
 .end method

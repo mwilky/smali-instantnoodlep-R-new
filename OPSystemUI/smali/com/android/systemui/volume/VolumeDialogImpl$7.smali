@@ -1,11 +1,11 @@
 .class Lcom/android/systemui/volume/VolumeDialogImpl$7;
-.super Lcom/android/systemui/volume/SafetyWarningDialog;
+.super Landroid/view/View$AccessibilityDelegate;
 .source "VolumeDialogImpl.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/volume/VolumeDialogImpl;->showSafetyWarningH(I)V
+    value = Lcom/android/systemui/volume/VolumeDialogImpl;->addAccessibilityDescription(Landroid/view/View;ILjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,57 +15,36 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+.field final synthetic val$hintLabel:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/volume/VolumeDialogImpl;Landroid/content/Context;Landroid/media/AudioManager;)V
+.method constructor <init>(Lcom/android/systemui/volume/VolumeDialogImpl;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+    iput-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->val$hintLabel:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p3}, Lcom/android/systemui/volume/SafetyWarningDialog;-><init>(Landroid/content/Context;Landroid/media/AudioManager;)V
+    invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected cleanUp()V
-    .locals 3
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$2100(Lcom/android/systemui/volume/VolumeDialogImpl;)Ljava/lang/Object;
+    new-instance p1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    move-result-object v0
+    iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->val$hintLabel:Ljava/lang/String;
 
-    monitor-enter v0
+    const/16 v0, 0x10
 
-    :try_start_0
-    iget-object v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+    invoke-direct {p1, v0, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$2202(Lcom/android/systemui/volume/VolumeDialogImpl;Lcom/android/systemui/volume/SafetyWarningDialog;)Lcom/android/systemui/volume/SafetyWarningDialog;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
-
-    invoke-static {p0, v2}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$2300(Lcom/android/systemui/volume/VolumeDialogImpl;Lcom/oneplus/volume/OpVolumeDialogImpl$VolumeRow;)V
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
 .end method

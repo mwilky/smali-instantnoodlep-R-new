@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">يريد تطبيق %1$s عرض شرائح تطبيق %2$s.</string>
     <string name="abc_toolbar_collapse_description">تصغير</string>
     <string name="about_action_bar_title">حول</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">الإصدار %s</string>
     <string name="about_privacy_policy">سياسة الخصوصية</string>
     <string name="about_release_note_title">سجل التحديث:</string>
     <string name="about_terms_service">شروط الخدمة</string>
@@ -723,7 +723,7 @@
     <string name="drag_to_rearrange_tiles">اضغط باستمرار مع السحب لإعادة ترتيب الميزات.</string>
     <string name="drag_to_remove_disabled">الحدّ الأدنى من عدد المربعات الذي تحتاج إليه هو %1$d</string>
     <string name="drag_to_remove_tiles">اسحب هنا للإزالة</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">اليسرى:%1$s اليمنى:%2$s</string>
     <string name="edit_mode_hint">اسحب البلاط للترتيب. المس للإظهار أو الإخفاء.</string>
     <string name="empty_shade_text">ليس هناك أي اشعارات</string>
     <string name="enable_adb">‏تصحيح أخطاء USB</string>
@@ -1332,12 +1332,12 @@
     <string name="oneplus_threekey_navigation_vibration">اهتزاز فقط</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> إلغاء قفل</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> من إلغاءات القفل</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"لإطالة عمر البطارية وموفر طاقة البطارية:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•يقوم بإيقاف تشغيل نشاط الخلفية وبعض التأثيرات المرئية وميزات أخرى أو تقييدهم مثل “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"لإطالة عمر البطارية وموفر طاقة البطارية:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•يقوم بإيقاف تشغيل نشاط الخلفية وبعض التأثيرات المرئية أو تقييدهم"</string>
     <string name="op_earphone_connect">جارِ الاقتران...</string>
     <string name="op_earphone_connected_fail">فشل الاقتران. يمكنك التحقق من حالة سماعة الرأس والبلوتوث.</string>
     <string name="op_earphone_connected_success">مقترن. اضغط لتعيين المزيد.</string>
@@ -1367,15 +1367,15 @@
     <string name="op_notification_channel_summary_low">الإشعارات الأقل أهمية دون إصدار صوت أو اهتزاز.</string>
     <string name="op_notification_section_header_gentle">إشعارات أخرى</string>
     <string name="op_notification_silence_title">أخرى</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" الشحن المحمي"</string>
     <string name="op_qs_dark_mode_tile_label">الوضع الليلي</string>
     <string name="op_qs_data_usage_used">%1$s: تم استخدام %2$s %3$s</string>
     <string name="op_quick_settings_night_display_label">حماية الرؤية</string>
     <string name="op_quick_settings_night_display_summary_off">الوضع الليلي قيد إيقاف التشغيل، المس للتشغيل</string>
     <string name="op_quick_settings_night_display_summary_on">الوضع الليلي قيد التشغيل، المس لإيقاف التشغيل</string>
     <string name="op_read_mode2_dialog_black">تأثير أحادي</string>
-    <string name="op_read_mode2_dialog_color">زيغ لوني</string>
-    <string name="op_read_mode2_dialog_title">حدد التأثير</string>
+    <string name="op_read_mode2_dialog_color">تأثير الزيغ اللوني</string>
+    <string name="op_read_mode2_dialog_title">تحديد التأثير</string>
     <string name="op_reverse_charge_notification_btn">إيقاف</string>
     <string name="op_reverse_charge_notification_discharging">شحن الجهاز المتصل</string>
     <string name="op_reverse_charge_notification_subtitle">لشحن الأجهزة الأخرى الممكن عليها Qi لاسلكيًا</string>
@@ -1889,8 +1889,8 @@
     <string name="tethered_notification_hybrid_sharing_none">لا توجد شبكة متاحة للمشاركة، انقر للدخول إلى الإعدادات</string>
     <string name="tethered_notification_hybrid_sharing_wifi">مشاركة شبكة Wi-Fi، انقر للدخول إلى الإعدادات</string>
     <string name="tethered_notification_message">انقر للإعداد.</string>
-    <string name="tethered_notification_multi_device_message">%1$s أجهزة متصلة</string>
-    <string name="tethered_notification_multi_tether_title">الاتصال والنقطة الفعالة للهاتف نشيطان</string>
+    <string name="tethered_notification_multi_device_message">%1$s من الأجهزة المتصلة</string>
+    <string name="tethered_notification_multi_tether_title">الربط ونقطة اتصال الجوال في وضع نشط</string>
     <string name="tethered_notification_no_device_message">لا يوجد أجهزة متصلة</string>
     <string name="tethered_notification_one_device_message">%1$s جهاز متصل</string>
     <string name="tethered_notification_sharing_mobile_multi">مشاركة بيانات الجوال، تم الاتصال بعدد %1$s من الأجهزة</string>
@@ -1914,6 +1914,15 @@
 \u0009• استخدمت هاتفك وسط أجواء مرتفعة الحرارة"</string>
     <string name="thermal_shutdown_message">يعمل هاتفك الآن بشكل طبيعي</string>
     <string name="thermal_shutdown_title">تم إيقاف الهاتف بسبب الحرارة</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">لكتم صوت الجهاز، قم بتعيين Alert Slider على وضع الاهتزاز أو الوضع الصامت.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">كتم صوت مستوى صوت النغمة</string>
+    <string name="threekey_volume_guide_dialog_ok">موافق</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">لتمكين الرنين، استخدم Alert slider للتبديل إلى وضع الرنين وتعيين مستوى صوت النغمة التي تفضلها.</string>
+    <string name="threekey_volume_guide_dialog_ring_title">وضع الرنين</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">Alert Slider في وضع الاهتزاز حاليًا؛ لن يرن الجهاز أو يهتز عند المكالمة الواردة بل سيتم إخطارك بالاهتزاز فقط. يُرجى التبديل إلى وضع الرنين ليتم إخطارك عن طريق الرنين.</string>
+    <string name="threekey_volume_guide_dialog_silent_title">الوضع الصامت</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">Alert Slider في وضع الاهتزاز حاليًا؛ لن يرن الجهاز عند المكالمة الواردة بل سيتم إخطارك بالاهتزاز فقط. يُرجى التبديل إلى وضع الرنين ليتم إخطارك عن طريق الرنين.</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">وضع الاهتزاز</string>
     <string name="tile_unavailable">غير متوفّر</string>
     <string name="time_picker_header_text">تعيين الوقت</string>
     <string name="time_picker_hour_label">ساعة</string>
@@ -2151,6 +2160,6 @@
     <string name="zen_silence_introduction">سيؤدي هذا إلى حظر جميع الأصوات والاهتزازات، بما في ذلك ما يرد من التنبيهات والموسيقى والفيديو والألعاب.</string>
     <string name="zen_silence_introduction_voice">سيؤدي هذا إلى منع صدور جميع الأصوات والاهتزازات، بما في ذلك المُنبِّهات والموسيقى والفيديوهات والألعاب. وسيظل بإمكانك إجراء مكالمات هاتفية.</string>
     <string name="zzz_op_global_action_bootloader">محمل الإقلاع</string>
-    <string name="zzz_op_global_action_recovery">استرداد</string>
+    <string name="zzz_op_global_action_recovery">الاسترداد</string>
     <string name="zzz_op_quick_pay_no_install_message">يُرجى تثبيت تطبيقات الدفع لاستخدام \"الدفع السريع\"</string>
 </resources>

@@ -27,6 +27,8 @@
 
 .field private mIsExpanded:Z
 
+.field private mIsQsFullyExpanded:Z
+
 .field private mPaddingBetweenElements:I
 
 .field private mPinnedZTranslationExtra:I
@@ -908,7 +910,7 @@
     move v4, v3
 
     :goto_1
-    if-ge v4, p2, :cond_9
+    if-ge v4, p2, :cond_a
 
     iget-object v6, p1, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->visibleChildren:Ljava/util/ArrayList;
 
@@ -922,22 +924,31 @@
 
     move-result-object v7
 
+    instance-of v8, v6, Lcom/android/systemui/statusbar/notification/row/FooterView;
+
+    if-eqz v8, :cond_1
+
+    iput v3, v7, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->clipTopAmount:I
+
+    goto :goto_5
+
+    :cond_1
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mustStayOnScreen()Z
 
     move-result v8
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_2
 
     iget-boolean v8, v7, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->headsUpIsVisible:Z
 
-    if-eqz v8, :cond_2
+    if-eqz v8, :cond_3
 
-    :cond_1
+    :cond_2
     invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
 
     move-result v1
 
-    :cond_2
+    :cond_3
     iget v8, v7, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
     iget v9, v7, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->height:I
@@ -948,7 +959,7 @@
 
     instance-of v10, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    if-eqz v10, :cond_3
+    if-eqz v10, :cond_4
 
     move-object v10, v6
 
@@ -958,32 +969,32 @@
 
     move-result v10
 
-    if-eqz v10, :cond_3
+    if-eqz v10, :cond_4
 
     move v10, v2
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     move v10, v3
 
     :goto_2
     iget-boolean v11, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mClipNotificationScrollToTop:Z
 
-    if-eqz v11, :cond_5
+    if-eqz v11, :cond_6
 
     iget-boolean v11, v7, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->inShelf:Z
 
-    if-eqz v11, :cond_4
+    if-eqz v11, :cond_5
 
-    if-eqz v10, :cond_5
+    if-eqz v10, :cond_6
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_6
 
-    :cond_4
+    :cond_5
     cmpg-float v11, v8, v1
 
-    if-gez v11, :cond_5
+    if-gez v11, :cond_6
 
     sub-float v11, v1, v8
 
@@ -993,26 +1004,26 @@
 
     goto :goto_3
 
-    :cond_5
+    :cond_6
     iput v3, v7, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->clipTopAmount:I
 
     :goto_3
-    if-eqz v10, :cond_6
+    if-eqz v10, :cond_7
 
     move v5, v3
 
-    :cond_6
+    :cond_7
     invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->isTransparent()Z
 
     move-result v6
 
-    if-nez v6, :cond_8
+    if-nez v6, :cond_9
 
-    if-eqz v10, :cond_7
+    if-eqz v10, :cond_8
 
     goto :goto_4
 
-    :cond_7
+    :cond_8
     move v8, v9
 
     :goto_4
@@ -1020,12 +1031,13 @@
 
     move-result v1
 
-    :cond_8
+    :cond_9
+    :goto_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    :cond_9
+    :cond_a
     return-void
 .end method
 
@@ -1733,10 +1745,18 @@
     return-void
 .end method
 
-.method protected updateChild(ILcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;Lcom/android/systemui/statusbar/notification/stack/AmbientState;FZ)F
-    .locals 15
+.method public setQsFullyExpanded(Z)V
+    .locals 0
 
-    move-object v6, p0
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsQsFullyExpanded:Z
+
+    return-void
+.end method
+
+.method protected updateChild(ILcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;Lcom/android/systemui/statusbar/notification/stack/AmbientState;FZ)F
+    .locals 17
+
+    move-object/from16 v6, p0
 
     move/from16 v7, p1
 
@@ -1778,7 +1798,7 @@
 
     iget v2, v8, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->anchorViewIndex:I
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
     move/from16 v3, p1
 
@@ -1812,11 +1832,11 @@
     move/from16 v3, p4
 
     :goto_1
-    invoke-virtual {p0, v8, v9}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->getPaddingAfterChild(Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;Lcom/android/systemui/statusbar/notification/row/ExpandableView;)I
+    invoke-virtual {v6, v8, v9}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->getPaddingAfterChild(Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;Lcom/android/systemui/statusbar/notification/row/ExpandableView;)I
 
     move-result v4
 
-    invoke-virtual {p0, v9}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->getMaxAllowedChildHeight(Landroid/view/View;)I
+    invoke-virtual {v6, v9}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->getMaxAllowedChildHeight(Landroid/view/View;)I
 
     move-result v5
 
@@ -1834,9 +1854,9 @@
 
     iput v12, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    cmpg-float v3, v3, v11
+    cmpg-float v12, v3, v11
 
-    if-gtz v3, :cond_3
+    if-gtz v12, :cond_3
 
     iput v10, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->location:I
 
@@ -1847,23 +1867,23 @@
 
     :cond_3
     :goto_2
-    instance-of v3, v9, Lcom/android/systemui/statusbar/notification/row/FooterView;
+    instance-of v12, v9, Lcom/android/systemui/statusbar/notification/row/FooterView;
 
-    instance-of v12, v9, Lcom/android/systemui/statusbar/EmptyShadeView;
+    instance-of v13, v9, Lcom/android/systemui/statusbar/EmptyShadeView;
 
-    const/4 v13, 0x4
+    const/4 v14, 0x4
 
-    iput v13, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->location:I
+    iput v14, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->location:I
 
     invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getTopPadding()F
 
-    move-result v13
+    move-result v14
 
     invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getStackTranslation()F
 
-    move-result v14
+    move-result v15
 
-    add-float/2addr v13, v14
+    add-float/2addr v14, v15
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->getIndexOfExpandingNotification()I
 
@@ -1877,65 +1897,111 @@
 
     int-to-float v8, v8
 
-    add-float/2addr v13, v8
+    add-float/2addr v14, v8
 
     :cond_4
     invoke-virtual {v9}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mustStayOnScreen()Z
 
     move-result v8
 
+    const/4 v15, 0x1
+
     if-eqz v8, :cond_6
 
     iget v8, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    cmpl-float v14, v8, v11
+    cmpl-float v16, v8, v11
 
-    if-ltz v14, :cond_6
+    if-ltz v16, :cond_6
 
-    iget v14, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->height:I
+    iget v2, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->height:I
 
-    int-to-float v14, v14
+    int-to-float v2, v2
+
+    add-float/2addr v8, v2
 
     add-float/2addr v8, v14
 
-    add-float/2addr v8, v13
-
     invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getMaxHeadsUpTranslation()F
-
-    move-result v14
-
-    cmpg-float v8, v8, v14
-
-    if-gez v8, :cond_5
-
-    const/4 v2, 0x1
-
-    :cond_5
-    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->headsUpIsVisible:Z
-
-    :cond_6
-    if-eqz v3, :cond_7
-
-    iget v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
-
-    invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getInnerHeight()I
-
-    move-result v3
-
-    sub-int/2addr v3, v5
-
-    int-to-float v3, v3
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
-    iput v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
+    cmpg-float v2, v8, v2
+
+    if-gez v2, :cond_5
+
+    move v2, v15
 
     goto :goto_3
 
+    :cond_5
+    const/4 v2, 0x0
+
+    :goto_3
+    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->headsUpIsVisible:Z
+
+    :cond_6
+    if-eqz v12, :cond_a
+
+    iget-boolean v2, v6, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsExpanded:Z
+
+    if-eqz v2, :cond_7
+
+    iget-boolean v2, v6, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsQsFullyExpanded:Z
+
+    if-nez v2, :cond_7
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    goto :goto_4
+
     :cond_7
-    if-eqz v12, :cond_8
+    move v2, v11
+
+    :goto_4
+    iput v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->alpha:F
+
+    iget-boolean v2, v6, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsExpanded:Z
+
+    if-eqz v2, :cond_8
+
+    iget-boolean v2, v6, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsQsFullyExpanded:Z
+
+    if-nez v2, :cond_8
+
+    const/4 v2, 0x0
+
+    goto :goto_5
+
+    :cond_8
+    move v2, v15
+
+    :goto_5
+    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->hidden:Z
+
+    invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getInnerHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    cmpl-float v2, v3, v2
+
+    if-lez v2, :cond_9
+
+    invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getInnerHeight()I
+
+    move-result v2
+
+    int-to-float v3, v2
+
+    :cond_9
+    iput v3, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
+
+    goto :goto_6
+
+    :cond_a
+    if-eqz v13, :cond_b
 
     invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getInnerHeight()I
 
@@ -1957,26 +2023,26 @@
 
     iput v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    goto :goto_3
+    goto :goto_6
 
-    :cond_8
+    :cond_b
     invoke-virtual/range {p3 .. p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getTrackedHeadsUpRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     move-result-object v2
 
-    if-eq v9, v2, :cond_9
+    if-eq v9, v2, :cond_c
 
     move-object/from16 v2, p3
 
-    invoke-direct {p0, v9, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->clampPositionToShelf(Lcom/android/systemui/statusbar/notification/row/ExpandableView;Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;Lcom/android/systemui/statusbar/notification/stack/AmbientState;)V
+    invoke-direct {v6, v9, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->clampPositionToShelf(Lcom/android/systemui/statusbar/notification/row/ExpandableView;Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;Lcom/android/systemui/statusbar/notification/stack/AmbientState;)V
 
-    :cond_9
-    :goto_3
-    if-eqz p5, :cond_a
+    :cond_c
+    :goto_6
+    if-eqz p5, :cond_d
 
     iget v2, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_e
 
     iget v0, v6, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mGapHeight:I
 
@@ -1984,9 +2050,9 @@
 
     sub-float/2addr v2, v0
 
-    goto :goto_4
+    goto :goto_7
 
-    :cond_a
+    :cond_d
     iget v0, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
     int-to-float v2, v5
@@ -1999,15 +2065,15 @@
 
     cmpg-float v0, v2, v11
 
-    if-gtz v0, :cond_b
+    if-gtz v0, :cond_e
 
     iput v10, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->location:I
 
-    :cond_b
-    :goto_4
+    :cond_e
+    :goto_7
     iget v0, v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->location:I
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2027,10 +2093,10 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_c
+    :cond_f
     iget v0, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    add-float/2addr v0, v13
+    add-float/2addr v0, v14
 
     iput v0, v1, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 

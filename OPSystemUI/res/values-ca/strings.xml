@@ -40,7 +40,7 @@
     <string name="abc_slices_permission_request">"%1$s vol mostrar porcions de l'aplicació %2$s"</string>
     <string name="abc_toolbar_collapse_description">Replega</string>
     <string name="about_action_bar_title">Quant a</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versió %s</string>
     <string name="about_privacy_policy">Política de privacitat</string>
     <string name="about_release_note_title">"Registre d'actualització:"</string>
     <string name="about_terms_service">Condicions del servei</string>
@@ -723,7 +723,7 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs."</string>
     <string name="drag_to_rearrange_tiles">Mantén premut i arrossega per reorganitzar els mosaics</string>
     <string name="drag_to_remove_disabled">Necessites com a mínim %1$d mosaics</string>
     <string name="drag_to_remove_tiles">Arrossega aquí per suprimir</string>
-    <string name="earphone_support_battery_info">"L: %1$s  R: %2$s"</string>
+    <string name="earphone_support_battery_info">"Esquerre: %1$s  Dret: %2$s"</string>
     <string name="edit_mode_hint">Arrossegueu els títols per reorganitzar-los. Toqueu-los per mostrar-los o ocultar-los.</string>
     <string name="empty_shade_text">Cap notificació</string>
     <string name="enable_adb">Depuració per USB</string>
@@ -1318,7 +1318,7 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="notification_unblockable_desc">Aquestes notificacions no es poden modificar.</string>
     <string name="oem_unlock_enable">"Desbloqueig d'OEM"</string>
     <string name="oem_unlock_enable_summary">Permet desbloquejar el bootloader</string>
-    <string name="ok">"D'ACORD"</string>
+    <string name="ok">"D'acord"</string>
     <string name="okay">"D'acord"</string>
     <string name="oneplus_laboratory_added_toast">"L'enhorabona! El Laboratori OnePlus s'ha afegit als paràmetres"</string>
     <string name="oneplus_not_show">"No m'ho tornis a mostrar"</string>
@@ -1332,12 +1332,12 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="oneplus_threekey_navigation_vibration">Només vibració</string>
     <string name="op_aod_parsons_unlock_one"><annotation id="unlockNum">^1</annotation> desbloqueig</string>
     <string name="op_aod_parsons_unlock_other"><annotation id="unlockNum">^1</annotation> desbloqueigs</string>
-    <string name="op_battery_saver_description">"To extend battery life, Battery Saver:
+    <string name="op_battery_saver_description">"Per allargar la vida útil de la bateria, l'estalviador de bateria realitza les següents tasques:
 
-•Turns off or restricts background activity, some visual effects, and other features like “Hey Google”"</string>
-    <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
+•Desactiva o restringeix l'activitat en segon pla, alguns efectes visuals i altres funcions com ara “Hey Google”"</string>
+    <string name="op_battery_saver_description_no_ga">"Per allargar la vida útil de la bateria, l'estalviador de bateria realitza les següents tasques:
 
-•Turns off or restricts background activity, and some visual effects"</string>
+•Desactiva o restringeix l'activitat en segon pla i alguns efectes visuals"</string>
     <string name="op_earphone_connect">"S'estan aparellant..."</string>
     <string name="op_earphone_connected_fail">"No s'han pogut aparellar. Podeu comprovar l'estat dels auriculars i del Bluetooth."</string>
     <string name="op_earphone_connected_success">"S'han aparellat. Toqueu per seguir configurant."</string>
@@ -1367,7 +1367,7 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="op_notification_channel_summary_low">Notificacions menys importants sense so o vibració.</string>
     <string name="op_notification_section_header_gentle">Altres notificacions</string>
     <string name="op_notification_silence_title">Altres</string>
-    <string name="op_protect_charging">" Protected charging"</string>
+    <string name="op_protect_charging">" Càrrega protegida"</string>
     <string name="op_qs_dark_mode_tile_label">Mode fosc</string>
     <string name="op_qs_data_usage_used">%1$s: %2$s %3$s utilitzat</string>
     <string name="op_quick_settings_night_display_label">Visualització de confort</string>
@@ -1885,14 +1885,14 @@ estigui controlada"</string>
     <string name="tether_settings_title_usb">Compartició de xarxa per USB</string>
     <string name="tether_settings_title_usb_bluetooth">Compartició de xarxa</string>
     <string name="tether_settings_title_wifi">"Punt d'accés Wi-Fi"</string>
-    <string name="tethered_notification_hybrid_sharing_mobile">"S'estan compartint les dades mòbils, feu clic per entrar en Configuració"</string>
-    <string name="tethered_notification_hybrid_sharing_none">No hi ha cap xarxa disponible per compartir, feu clic per entrar en Configuració</string>
-    <string name="tethered_notification_hybrid_sharing_wifi">"S'està compartint la Wi-Fi, feu clic per entrar en Configuració"</string>
+    <string name="tethered_notification_hybrid_sharing_mobile">"S'estan compartint les dades mòbils, feu clic per entrar a Configuració"</string>
+    <string name="tethered_notification_hybrid_sharing_none">No hi ha cap xarxa disponible per compartir, feu clic per entrar a Configuració</string>
+    <string name="tethered_notification_hybrid_sharing_wifi">"S'està compartint la Wi-Fi, feu clic per entrar a Configuració"</string>
     <string name="tethered_notification_message">Toqueu per configurar.</string>
-    <string name="tethered_notification_multi_device_message">%1$sdispositius connectats</string>
+    <string name="tethered_notification_multi_device_message">%1$s dispositius connectats</string>
     <string name="tethered_notification_multi_tether_title">Compartició de xarxa i zona Wi-Fi mòbil actives</string>
     <string name="tethered_notification_no_device_message">Cap dispositiu connectat</string>
-    <string name="tethered_notification_one_device_message">%1$sdispositiu connectat</string>
+    <string name="tethered_notification_one_device_message">%1$s dispositiu connectat</string>
     <string name="tethered_notification_sharing_mobile_multi">"S'estan compartint les dades mòbils, %1$s dispositius connectats"</string>
     <string name="tethered_notification_sharing_mobile_no">"S'estan compartint les dades mòbils, no hi ha cap dispositiu connectat"</string>
     <string name="tethered_notification_sharing_mobile_single">"S'estan compartint les dades mòbils, %1$s dispositiu connectat"</string>
@@ -1914,6 +1914,15 @@ Es pot sobreescalfar si:
 \u0009• l'utilitzes amb temperatures altes."</string>
     <string name="thermal_shutdown_message">Ara el telèfon funciona de manera normal</string>
     <string name="thermal_shutdown_title">Telèfon apagat per la calor</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">Per silenciar el dispositiu, establiu el control lliscant en mode vibració o silenci.</string>
+    <string name="threekey_volume_guide_dialog_mutering_title">Silencia el volum del to</string>
+    <string name="threekey_volume_guide_dialog_ok">"D'acord"</string>
+    <string name="threekey_volume_guide_dialog_ring_msg">"Per activar el so de trucada, utilitzeu el control lliscant d'alerta per canviar al mode to i ajusteu el volum del to segons les vostres preferències."</string>
+    <string name="threekey_volume_guide_dialog_ring_title">Mode to</string>
+    <string name="threekey_volume_guide_dialog_silent_msg">"El control lliscant d'alerta està en mode silenci actualment; el dispositiu no sonarà ni vibrarà quan rebeu una trucada entrant. Canvieu al mode to si voleu que soni el dispositiu."</string>
+    <string name="threekey_volume_guide_dialog_silent_title">Mode silenci</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">"El control lliscant d'alerta està en mode vibració actualment; el dispositiu no sonarà quan rebeu una trucada entrant. Només se us notificarà per la vibració. Canvieu al mode to si voleu que soni el dispositiu."</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">Mode vibració</string>
     <string name="tile_unavailable">No disponible</string>
     <string name="time_picker_header_text">"Configureu l'hora"</string>
     <string name="time_picker_hour_label">hora</string>
@@ -2150,7 +2159,7 @@ Adreça Wi‑Fi (BSSID)
     <string name="zen_priority_introduction">"No t'interromprà cap so ni cap vibració, tret dels de les alarmes, recordatoris, esdeveniments i trucades de les persones que especifiquis. Continuaràs sentint tot allò que decideixis reproduir, com ara música, vídeos i jocs."</string>
     <string name="zen_silence_introduction">Es bloquejaran TOTS els sons i totes les vibracions, inclosos els de vídeos, jocs, alarmes i música.</string>
     <string name="zen_silence_introduction_voice">Es bloquejaran TOTS els sons i totes les vibracions, inclosos els de vídeos, jocs, alarmes i música. Encara podràs fer trucades.</string>
-    <string name="zzz_op_global_action_bootloader">Mode Bootloader</string>
-    <string name="zzz_op_global_action_recovery">Mode recuperació</string>
+    <string name="zzz_op_global_action_bootloader">"Carregador d'arrencada"</string>
+    <string name="zzz_op_global_action_recovery">Recuperació</string>
     <string name="zzz_op_quick_pay_no_install_message">Instal·leu aplicacions de pagament per fer servir Quick Pay</string>
 </resources>

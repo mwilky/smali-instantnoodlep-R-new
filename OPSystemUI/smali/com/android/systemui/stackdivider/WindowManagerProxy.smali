@@ -855,7 +855,7 @@
 .end method
 
 .method applyEnterSplit(Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;Lcom/android/systemui/stackdivider/SplitDisplayLayout;)Z
-    .locals 9
+    .locals 8
 
     iget-object v0, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
@@ -892,93 +892,72 @@
 
     sub-int/2addr v1, v4
 
-    move-object v5, v0
-
     :goto_0
-    if-ltz v1, :cond_4
+    if-ltz v1, :cond_3
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v5
 
-    check-cast v6, Landroid/app/ActivityManager$RunningTaskInfo;
+    check-cast v5, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-boolean v7, v6, Landroid/app/ActivityManager$RunningTaskInfo;->isResizeable:Z
+    iget-boolean v6, v5, Landroid/app/ActivityManager$RunningTaskInfo;->isResizeable:Z
 
-    if-nez v7, :cond_1
+    if-nez v6, :cond_1
 
-    iget v7, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
+    iget v6, v5, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    const/4 v8, 0x2
+    const/4 v7, 0x2
 
-    if-eq v7, v8, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    iget-object v7, v6, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
-
-    iget-object v7, v7, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
-
-    invoke-virtual {v7}, Landroid/app/WindowConfiguration;->getWindowingMode()I
-
-    move-result v7
-
-    if-eq v7, v4, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {v6}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->isHomeOrRecentTask(Landroid/app/ActivityManager$RunningTaskInfo;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    move-object v5, v6
+    if-eq v6, v7, :cond_1
 
     goto :goto_1
 
-    :cond_3
-    move-object v5, v0
+    :cond_1
+    iget-object v6, v5, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
-    :goto_1
+    iget-object v6, v6, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {v6}, Landroid/app/WindowConfiguration;->getWindowingMode()I
+
+    move-result v6
+
+    if-eq v6, v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v5}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->isHomeOrRecentTask(Landroid/app/ActivityManager$RunningTaskInfo;)Z
+
+    move-result v6
+
+    iget-object v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    iget-object v6, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+
     iget-object v6, v6, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    iget-object v7, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+    invoke-virtual {v3, v5, v6, v4}, Landroid/window/WindowContainerTransaction;->reparent(Landroid/window/WindowContainerToken;Landroid/window/WindowContainerToken;Z)Landroid/window/WindowContainerTransaction;
 
-    iget-object v7, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    invoke-virtual {v3, v6, v7, v4}, Landroid/window/WindowContainerTransaction;->reparent(Landroid/window/WindowContainerToken;Landroid/window/WindowContainerToken;Z)Landroid/window/WindowContainerTransaction;
-
-    :goto_2
+    :goto_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_4
-    iget-object v1, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
+    :cond_3
+    iget-object p1, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mSecondary:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    invoke-virtual {v3, v1, v4}, Landroid/window/WindowContainerTransaction;->reorder(Landroid/window/WindowContainerToken;Z)Landroid/window/WindowContainerTransaction;
+    invoke-virtual {v3, p1, v4}, Landroid/window/WindowContainerTransaction;->reorder(Landroid/window/WindowContainerToken;Z)Landroid/window/WindowContainerTransaction;
 
     invoke-static {p2, v0, v3}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->applyHomeTasksMinimized(Lcom/android/systemui/stackdivider/SplitDisplayLayout;Landroid/window/WindowContainerToken;Landroid/window/WindowContainerTransaction;)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz v5, :cond_5
-
-    iget-object v0, v5, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    iget-object p1, p1, Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;->mHomeBounds:Landroid/graphics/Rect;
-
-    invoke-virtual {v3, v0, p1}, Landroid/window/WindowContainerTransaction;->setBoundsChangeTransaction(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
-
-    :cond_5
     invoke-virtual {p0, v3}, Lcom/android/systemui/stackdivider/WindowManagerProxy;->applySyncTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    return p2
+    return p1
 .end method
 
 .method applySyncTransaction(Landroid/window/WindowContainerTransaction;)V

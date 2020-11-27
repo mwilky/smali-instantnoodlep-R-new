@@ -1434,6 +1434,23 @@
     return-void
 .end method
 
+.method public static injectMOpThreekeyVolumeGuideController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/Dependency;",
+            "Ldagger/Lazy<",
+            "Lcom/oneplus/opthreekey/OpThreekeyVolumeGuideController;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/android/systemui/Dependency;->mOpThreekeyVolumeGuideController:Ldagger/Lazy;
+
+    return-void
+.end method
+
 .method public static injectMOpZenModeController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -2059,6 +2076,23 @@
     .end annotation
 
     iput-object p1, p0, Lcom/android/systemui/Dependency;->mWarningsUI:Ldagger/Lazy;
+
+    return-void
+.end method
+
+.method public static injectMWorkLifeBalanceController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/Dependency;",
+            "Ldagger/Lazy<",
+            "Lcom/android/systemui/statusbar/policy/WorkLifeBalanceController;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/android/systemui/Dependency;->mWorkLifeBalanceController:Ldagger/Lazy;
 
     return-void
 .end method

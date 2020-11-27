@@ -178,7 +178,7 @@
 .end method
 
 .method private static getBitmapFromUri(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 2
+    .locals 3
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -186,11 +186,15 @@
 
     const-string v1, "OpCanvasAodHelper:Data"
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     invoke-static {p0}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -207,45 +211,41 @@
     :try_start_0
     invoke-static {p1}, Landroid/graphics/ImageDecoder;->decodeBitmap(Landroid/graphics/ImageDecoder$Source;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object v2
+
+    invoke-static {p0, v2}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;->cacheCanvasAodBitmap(Landroid/content/Context;Landroid/graphics/Bitmap;)V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :try_start_1
-    invoke-static {p0, p1}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;->cacheCanvasAodBitmap(Landroid/content/Context;Landroid/graphics/Bitmap;)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception p0
 
+    const-string p1, "getBitmapFromUri occur error"
+
+    invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     goto :goto_0
 
-    :catch_1
-    move-exception p0
-
-    const/4 p1, 0x0
-
-    :goto_0
-    const-string v0, "getBitmapFromUri occur error"
-
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-
     :cond_0
+    const-string p0, "getBitmapFromUri: context is null!"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
     const-string p1, "getBitmapFromUri uri is empty try to use cache"
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-static {p0}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;->loadBitmapFromCache(Landroid/content/Context;)Landroid/graphics/Bitmap;
 
-    move-result-object p1
+    move-result-object v2
 
-    :goto_1
-    return-object p1
+    :goto_0
+    return-object v2
 .end method
 
 .method private static getJsonFromFile(Ljava/io/FileReader;)Ljava/lang/String;
@@ -505,7 +505,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     iput-object p1, v0, Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;->mBitmap:Landroid/graphics/Bitmap;
 
@@ -517,7 +517,7 @@
 
     const-string v2, "OpCanvasAodHelper:Data"
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -527,6 +527,8 @@
     invoke-static {p0}, Lcom/android/systemui/shared/system/OpContextWrapper;->getCurrentUserContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p2
+
+    if-eqz p2, :cond_2
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -644,9 +646,9 @@
     :catch_2
     :cond_0
     :goto_2
-    if-eqz p1, :cond_2
+    move-object v1, p1
 
-    goto :goto_5
+    goto :goto_4
 
     :catchall_1
     move-exception v1
@@ -671,7 +673,7 @@
     :catch_4
     move-exception v1
 
-    goto :goto_4
+    goto :goto_5
 
     :catch_5
     move-exception p2
@@ -682,12 +684,33 @@
 
     move-object p2, v7
 
-    goto :goto_4
+    goto :goto_5
+
+    :cond_2
+    :try_start_9
+    const-string p1, "parse: context is null!"
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_6
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    move-object p2, v1
+
+    :goto_4
+    if-eqz v1, :cond_3
+
+    :try_start_a
+    invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
+
+    goto :goto_6
 
     :catchall_2
     move-exception p0
 
-    goto :goto_6
+    goto :goto_7
 
     :catch_6
     move-exception p1
@@ -698,56 +721,56 @@
 
     move-object p1, p2
 
-    :goto_4
-    :try_start_9
+    :goto_5
+    :try_start_b
     const-string v3, "parse: retrieveFileFromUri occur error"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    :goto_5
-    :try_start_a
+    :try_start_c
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_a
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_7
 
     :catch_7
-    :cond_2
+    :cond_3
+    :goto_6
     move-object v1, p2
 
-    goto :goto_7
+    goto :goto_8
 
     :catchall_3
     move-exception p0
 
     move-object v1, p1
 
-    :goto_6
-    if-eqz v1, :cond_3
+    :goto_7
+    if-eqz v1, :cond_4
 
-    :try_start_b
+    :try_start_d
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_b
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_8
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_8
 
     :catch_8
-    :cond_3
+    :cond_4
     throw p0
 
-    :cond_4
+    :cond_5
     const-string p1, "file is empty"
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_7
+    :goto_8
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     const-string p1, "json string is empty, try to use cache"
 
@@ -757,18 +780,18 @@
 
     move-result-object v1
 
-    :cond_5
+    :cond_6
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
-    if-nez p0, :cond_6
+    if-nez p0, :cond_7
 
     invoke-static {v0, v1}, Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;->parseJsonObjet(Lcom/oneplus/aod/utils/OpCanvasAodHelper$Data;Ljava/lang/String;)V
 
     return-object v0
 
-    :cond_6
+    :cond_7
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "json is empty"
@@ -777,7 +800,7 @@
 
     throw p0
 
-    :cond_7
+    :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "bitmap is empty"
