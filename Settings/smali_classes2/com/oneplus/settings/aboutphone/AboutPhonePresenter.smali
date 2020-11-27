@@ -910,7 +910,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLemonadevMode()Z
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLDEV()Z
 
     move-result v1
 
@@ -1015,7 +1015,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLemonadevMode()Z
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLDEV()Z
 
     move-result v2
 
@@ -1111,7 +1111,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_4
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1126,13 +1126,41 @@
     goto :goto_1
 
     :cond_1
-    const-string v1, "15"
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLDEV()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const/16 v3, 0x15
+
+    if-ne v2, v3, :cond_2
+
+    const-string v1, "22"
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
     :cond_2
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLDEV()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_3
+    const-string v1, "15"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_4
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/CharSequence;)V
 
     :goto_1
@@ -2940,7 +2968,7 @@
     if-eqz v0, :cond_9
 
     :cond_7
-    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLemonadevMode()Z
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isLDEV()Z
 
     move-result v0
 

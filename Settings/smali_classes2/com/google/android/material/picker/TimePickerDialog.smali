@@ -276,6 +276,14 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v0, v2}, Landroid/view/Window;->setSoftInputMode(I)V
+
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

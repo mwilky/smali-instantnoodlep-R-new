@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s quer mostrar partes do app %2$s</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
     <string name="about_action_bar_title">Acerca de</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versão %s</string>
     <string name="about_phone_device_name_warning">O nome do seu dispositivo está visível para os apps no seu smartphone. Ele também pode ser visto por outras pessoas quando você se conecta a dispositivos Bluetooth ou configura um ponto de acesso Wi-Fi.</string>
     <string name="about_privacy_policy">Política de Privacidade</string>
     <string name="about_release_note_title">Histórico de atualização:</string>

@@ -75,7 +75,7 @@
     <integer name="mtrl_chip_anim_duration">100</integer>
     <integer name="mtrl_tab_indicator_anim_duration_ms">250</integer>
     <integer name="oneplus_selector_button_frame_druation">18</integer>
-    <integer name="op_button_text_font_weight">500</integer>
+    <integer name="op_button_text_font_weight">600</integer>
     <integer name="op_control_spin_180">180</integer>
     <integer name="op_control_spin_360">360</integer>
     <integer name="op_control_spin_45">45</integer>

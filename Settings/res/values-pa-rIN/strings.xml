@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">ਇਸ ਬਾਰੇ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">ਸੰਸਕਰਨ %s</string>
     <string name="about_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
-    <string name="about_release_note_title">ਅੱਪਡੇਟ ਲੌਗ:</string>
+    <string name="about_release_note_title">ਲੌਗ ਨੂੰਅੱਪਡੇਟ ਕਰੋ:</string>
     <string name="about_terms_service">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
     <string name="access_permissions">ਪਹੁੰਚ ਇਜਾਜ਼ਤਾਂ</string>
     <string name="activate_one_handed_mode">ਤੁਰੰਤ ਪਹੁੰਚ</string>

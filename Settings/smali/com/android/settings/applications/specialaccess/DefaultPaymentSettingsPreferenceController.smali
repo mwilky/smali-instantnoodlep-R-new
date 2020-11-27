@@ -147,7 +147,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -159,47 +159,28 @@
 
     if-nez v0, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mUserManager:Landroid/os/UserManager;
+    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mUserManager:Landroid/os/UserManager;
 
-    invoke-virtual {v0}, Landroid/os/UserManager;->isAdminUser()Z
+    invoke-virtual {p0}, Landroid/os/UserManager;->isAdminUser()Z
 
-    move-result v0
+    move-result p0
 
-    if-nez v0, :cond_1
+    if-nez p0, :cond_1
 
     const/4 p0, 0x4
 
     return p0
 
     :cond_1
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mNfcAdapter:Landroid/nfc/NfcAdapter;
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0}, Landroid/nfc/NfcAdapter;->isEnabled()Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
     const/4 p0, 0x0
 
     return p0
 
-    :cond_3
+    :cond_2
     :goto_0
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_4
-    :goto_1
     const/4 p0, 0x3
 
     return p0
@@ -374,11 +355,36 @@
     :goto_0
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_5
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/nfc/NfcAdapter;->isEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 p0, 0x0
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    sget p0, Lcom/android/settings/R$string;->nfc_and_payment_settings_payment_off_nfc_off_summary:I
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
     return-void
 
-    :cond_2
+    :cond_3
+    iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
+
     invoke-virtual {v0}, Lcom/android/settings/nfc/PaymentBackend;->refresh()V
 
     iget-object v0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
@@ -397,7 +403,7 @@
 
     invoke-static {p0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object p0, v0, Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;->label:Ljava/lang/CharSequence;
 
@@ -405,18 +411,18 @@
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     sget p0, Lcom/android/settings/R$string;->app_list_preference_none:I
 
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(I)V
 
-    :cond_4
+    :cond_5
     :goto_1
     return-void
 .end method

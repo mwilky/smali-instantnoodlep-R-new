@@ -114,6 +114,23 @@
 .method protected onSkipOrClearButtonClick(Landroid/view/View;)V
     .locals 8
 
+    :try_start_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/password/SetupChooseLockPassword;->access$000(Landroid/app/Activity;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     iget-boolean v0, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mLeftButtonIsSkip:Z
 
     if-eqz v0, :cond_0

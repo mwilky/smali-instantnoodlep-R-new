@@ -304,6 +304,73 @@
     return-object p0
 .end method
 
+.method protected onAttachedToWindow()V
+    .locals 4
+
+    invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lcom/google/android/material/listview/ListItemView;->mCustomViewLayout:Landroid/widget/LinearLayout;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getPaddingTop()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingRight()I
+
+    move-result v3
+
+    iget-object p0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result p0
+
+    invoke-virtual {v0, v1, v2, v3, p0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    :cond_1
+    return-void
+.end method
+
 .method protected onLayout(ZIIII)V
     .locals 6
 
@@ -439,58 +506,113 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    const/4 v1, 0x1
 
+    if-nez v0, :cond_d
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    move v1, v2
+
+    :goto_4
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    instance-of v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-eqz v1, :cond_a
+    if-eqz v3, :cond_b
 
-    move-object v1, v0
+    move-object v3, v0
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_a
+    :cond_b
+    if-eqz v1, :cond_c
+
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingTop()I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result v3
+
+    invoke-virtual {v0, v2, v1, v2, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    goto/16 :goto_7
+
+    :cond_c
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingTop()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+    move-result-object v4
+
+    sget v5, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    iget-object v5, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    goto/16 :goto_4
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getPaddingBottom()I
 
-    :cond_b
+    move-result v5
+
+    invoke-virtual {v0, v1, v3, v4, v5}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    goto/16 :goto_7
+
+    :cond_d
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_e
+
+    goto :goto_5
+
+    :cond_e
+    move v1, v2
+
+    :goto_5
+    if-nez v1, :cond_f
+
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
@@ -521,6 +643,42 @@
 
     invoke-virtual {v0, v1, v3, v4, v5}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
+    goto :goto_6
+
+    :cond_f
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingTop()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getPaddingRight()I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result v5
+
+    invoke-virtual {v0, v1, v3, v4, v5}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    :goto_6
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListSummaryView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -531,7 +689,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_10
 
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListSummaryView:Landroid/widget/TextView;
 
@@ -545,7 +703,7 @@
 
     const/16 v1, 0x1e
 
-    if-le v0, v1, :cond_c
+    if-le v0, v1, :cond_10
 
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
@@ -573,7 +731,7 @@
 
     instance-of v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_10
 
     move-object v1, v0
 
@@ -593,7 +751,7 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_c
+    :cond_10
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -604,7 +762,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_11
 
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
 
@@ -624,7 +782,7 @@
 
     add-int/lit16 v1, v1, -0x190
 
-    if-le v0, v1, :cond_d
+    if-le v0, v1, :cond_11
 
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
@@ -652,7 +810,7 @@
 
     instance-of v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_11
 
     move-object v1, v0
 
@@ -660,27 +818,27 @@
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_screen_right2:I
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_screen_right2:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_d
-    :goto_4
+    :cond_11
+    :goto_7
     sget v0, Lcom/google/android/material/R$id;->text_layout:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_13
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -688,71 +846,122 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_13
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_13
 
     invoke-direct {p0}, Lcom/google/android/material/listview/ListItemView;->isSummaryEmpty()Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_e
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_list_top2:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    if-nez v3, :cond_12
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_list_bottom2:I
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_list_top2:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    goto :goto_5
-
-    :cond_e
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_list_top4:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget v3, Lcom/google/android/material/R$dimen;->op_control_margin_list_bottom4:I
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_list_bottom2:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    :goto_5
+    goto :goto_8
+
+    :cond_12
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_list_top4:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_list_bottom4:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    :goto_8
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_f
+    :cond_13
+    iget-object v1, p0, Lcom/google/android/material/listview/ListItemView;->mImageFrame:Landroid/widget/LinearLayout;
+
+    if-eqz v1, :cond_15
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v0, :cond_15
+
+    if-eqz v1, :cond_15
+
+    invoke-direct {p0}, Lcom/google/android/material/listview/ListItemView;->isSummaryEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    const v0, 0x800033
+
+    iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v2, Lcom/google/android/material/R$dimen;->op_control_margin_list_top3:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    goto :goto_9
+
+    :cond_14
+    const/16 v0, 0x10
+
+    iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    :goto_9
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mImageFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_15
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
     return-void

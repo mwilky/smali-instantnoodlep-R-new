@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">Приложение \"%1$s\" запрашивает разрешение на показ фрагментов приложения \"%2$s\".</string>
     <string name="abc_toolbar_collapse_description">Свернуть</string>
     <string name="about_action_bar_title">Информация</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версия %s</string>
     <string name="about_phone_device_name_warning">У приложений на телефоне есть доступ к названию устройства. Его могут видеть другие пользователи, когда вы подключаетесь к устройствам по Bluetooth или настраиваете точку доступа Wi-Fi.</string>
     <string name="about_privacy_policy">Политика конфиденциальности</string>
     <string name="about_release_note_title">Журнал обновлений:</string>

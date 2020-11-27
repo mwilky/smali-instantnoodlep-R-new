@@ -3102,14 +3102,6 @@
     return-void
 .end method
 
-.method public setVibrateSceneId(I)V
-    .locals 0
-
-    iput p1, p0, Landroidx/appcompat/widget/SwitchCompat;->mVibratorSceneId:I
-
-    return-void
-.end method
-
 .method public toggle()V
     .locals 1
 

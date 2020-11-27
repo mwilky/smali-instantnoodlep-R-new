@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s želi prikazivati isječke aplikacije %2$s</string>
     <string name="abc_toolbar_collapse_description">Sažmi</string>
     <string name="about_action_bar_title">Informacije</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Verzija %s</string>
     <string name="about_phone_device_name_warning">Naziv vašeg uređaja vidljiv je aplikacijama na vašem telefonu. Mogu ga vidjeti i drugi ljudi kada se povežete s Bluetooth uređajima ili postavite Wi-Fi žarišnu točku.</string>
     <string name="about_privacy_policy">Pravilnik o zaštiti privatnosti</string>
     <string name="about_release_note_title">Zapisnik ažuriranja:</string>
@@ -4550,7 +4550,7 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="permission_bar_chart_title">Upotreba dopuštenja u posljednja 24 sata</string>
     <string name="permission_btn_text_denied">Izađi</string>
     <string name="permission_btn_text_grant">U redu</string>
-    <string name="permission_dialog_title">Izjava o dozvolama</string>
+    <string name="permission_dialog_title">Izjava o dozvoli</string>
     <string name="permissions_label">Dozvole</string>
     <string name="permit_draw_overlay">Dopusti prikaz iznad drugih aplikacija</string>
     <string name="permit_manage_external_storage">Dopustite pristup za upravljanje svim datot.</string>

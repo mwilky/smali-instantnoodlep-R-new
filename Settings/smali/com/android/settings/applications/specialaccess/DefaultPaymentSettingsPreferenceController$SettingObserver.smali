@@ -47,10 +47,18 @@
     return-void
 .end method
 
+.method static synthetic access$100(Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;)Landroidx/preference/Preference;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
+
+    return-object p0
+.end method
+
 
 # virtual methods
 .method public onChange(ZLandroid/net/Uri;)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
@@ -59,6 +67,10 @@
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
 
     if-eqz p1, :cond_2
 
@@ -94,16 +106,34 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
+    iget-object p1, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
 
-    invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+
+    new-instance p2, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver$1;
+
+    invoke-direct {p2, p0}, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver$1;-><init>(Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;)V
+
+    const-wide/16 v0, 0x3e8
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_1
 
     :cond_1
+    iget-object p1, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
+
+    sget p2, Lcom/android/settings/R$string;->nfc_and_payment_settings_payment_off_nfc_off_summary:I
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setSummary(I)V
+
     iget-object p0, p0, Lcom/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceController$SettingObserver;->mPreference:Landroidx/preference/Preference;
 
-    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
     :cond_2
     :goto_1

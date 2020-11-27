@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Teave</string>
-    <string name="about_app_version_text">Version %s</string>
-    <string name="about_privacy_policy">Privaatsuspoliitika</string>
+    <string name="about_app_version_text">Versioon %s</string>
+    <string name="about_privacy_policy">Privaatsuseeskirjad</string>
     <string name="about_release_note_title">Uuenduste logi:</string>
     <string name="about_terms_service">Teenusetingimused</string>
     <string name="access_permissions">Ligipääsuõigused</string>

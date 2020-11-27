@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">সম্পর্কে</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">সংস্করণ %s</string>
     <string name="about_privacy_policy">গোপনীয়তা নীতি</string>
-    <string name="about_release_note_title">আপডেট লগ:</string>
+    <string name="about_release_note_title">লগ হালনাগাদ করুনঃ</string>
     <string name="about_terms_service">পরিষেবার শর্তাবলী</string>
     <string name="access_permissions">অ্যাক্সেসের অনুমতি</string>
     <string name="activate_one_handed_mode">দ্রুত অ্যাক্সেস</string>

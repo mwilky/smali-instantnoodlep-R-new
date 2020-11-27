@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s ต้องการแสดงส่วนต่างๆ ของ %2$s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
     <string name="about_action_bar_title">เกี่ยวกับ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">เวอร์ชัน %s</string>
     <string name="about_phone_device_name_warning">แอปในโทรศัพท์จะเห็นชื่อของอุปกรณ์ และคนอื่นก็อาจเห็นเช่นกันหากคุณเชื่อมต่อกับอุปกรณ์บลูทูธหรือตั้งค่าฮอตสปอต Wi-Fi</string>
     <string name="about_privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="about_release_note_title">ล็อกการอัปเดต:</string>

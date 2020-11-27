@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s wil segmenten van %2$s weergeven</string>
     <string name="abc_toolbar_collapse_description">Samenvouwen</string>
     <string name="about_action_bar_title">Over</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versie %s</string>
     <string name="about_phone_device_name_warning">De naam van je apparaat is zichtbaar voor apps op je telefoon. De apparaatnaam kan ook door andere mensen worden gezien wanneer je verbinding maakt met Bluetooth-apparaten of een wifi-hotspot instelt.</string>
     <string name="about_privacy_policy">Privacybeleid</string>
     <string name="about_release_note_title">Updatelogboek:</string>

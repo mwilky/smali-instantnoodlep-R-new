@@ -146,7 +146,17 @@
 .end method
 
 .method public keyBoardShow(I)V
-    .locals 6
+    .locals 1
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    const/16 v0, 0x10
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setSoftInputMode(I)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
@@ -168,91 +178,17 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Landroid/graphics/Rect;
-
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
-
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float p1, p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
-
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$100(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const/16 v1, 0x162
-
-    invoke-static {v0, v1}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
-
-    move-result v0
-
-    sub-float/2addr p1, v0
-
-    float-to-int v3, p1
-
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerDialog;->access$200(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerDialog;->access$000(Lcom/google/android/material/picker/TimePickerDialog;)Lcom/google/android/material/picker/TimePicker;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Lcom/google/android/material/picker/TimePickerDialog$1$1;
 
-    move-result-object p1
+    invoke-direct {v0, p0}, Lcom/google/android/material/picker/TimePickerDialog$1$1;-><init>(Lcom/google/android/material/picker/TimePickerDialog$1;)V
 
-    sget v0, Lcom/google/android/material/R$drawable;->op_picker_dialog_material_background_bottom:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    new-instance p1, Landroid/graphics/drawable/InsetDrawable;
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p1
-
-    invoke-direct/range {v0 .. v5}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
-
-    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
-
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$300(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/InsetDrawable;->setTint(I)V
-
-    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
     return-void

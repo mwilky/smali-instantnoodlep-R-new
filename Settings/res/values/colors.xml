@@ -334,7 +334,8 @@
     <color name="oneplus__text_color_hint_light">#2d000000</color>
     <color name="oneplus__text_color_primary_dark">#ffffffff</color>
     <color name="oneplus__text_color_primary_light">#e5000000</color>
-    <color name="oneplus_accent_button_text_color">#d8000000</color>
+    <color name="oneplus_accent_active_color">#d8ffffff</color>
+    <color name="oneplus_accent_button_text_color">#ffffffff</color>
     <color name="oneplus_accent_color">#ffc41442</color>
     <color name="oneplus_accent_text_color">#ffc41442</color>
     <color name="oneplus_accent_theme_2">#fffbc02d</color>

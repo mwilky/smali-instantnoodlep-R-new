@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s uygulaması, %2$s dilimlerini göstermek istiyor</string>
     <string name="abc_toolbar_collapse_description">Daralt</string>
     <string name="about_action_bar_title">Hakkında</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Sürüm %s</string>
     <string name="about_phone_device_name_warning">Telefonunuzdaki uygulamalar cihazınızın adını görür. Bluetooth cihazlarına bağlandığınızda veya bir kablosuz hotspot ayarladığınızda başka kişiler de bu adı görebilir.</string>
     <string name="about_privacy_policy">Gizlilik Politikası</string>
     <string name="about_release_note_title">Güncelleme kaydı:</string>

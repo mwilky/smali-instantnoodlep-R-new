@@ -269,6 +269,14 @@
 
     move-result-object v0
 
+    const/16 v1, 0x10
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
     sget v1, Landroidx/appcompat/R$id;->parentPanel:I
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;

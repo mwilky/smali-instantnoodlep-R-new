@@ -90,7 +90,7 @@
 .end method
 
 .method private closeAutoDarkMode()V
-    .locals 2
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
@@ -137,6 +137,24 @@
     const/4 v0, 0x0
 
     :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "closeAutoDarkMode active = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "OPThemeRedSwitchPreferenceController"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-eqz v0, :cond_2
 
     const/4 v1, 0x2
@@ -203,30 +221,33 @@
 .end method
 
 .method private isCurrentDarkMode()Z
-    .locals 2
+    .locals 0
 
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const-string v0, "oem_black_mode"
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    iget p0, p0, Landroid/content/res/Configuration;->uiMode:I
 
-    move-result p0
+    and-int/lit8 p0, p0, 0x20
 
-    const/4 v0, 0x1
+    if-eqz p0, :cond_0
 
-    if-ne p0, v0, :cond_0
+    const/4 p0, 0x1
 
-    move v1, v0
+    goto :goto_0
 
     :cond_0
-    return v1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method private switchTheme(Z)V
@@ -505,6 +526,12 @@
 .method public enableDarkMode()V
     .locals 6
 
+    const-string v0, "OPThemeRedSwitchPreferenceController"
+
+    const-string v1, "enableDarkMode"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -564,11 +591,14 @@
 
     invoke-static {v3, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
+    if-nez v2, :cond_2
+
+    const/4 v1, 0x2
+
+    :cond_2
     iget-object p0, p0, Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
-    xor-int/lit8 v0, v2, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/app/UiModeManager;->setNightModeActivated(Z)Z
+    invoke-virtual {p0, v1}, Landroid/app/UiModeManager;->setNightMode(I)V
 
     return-void
 .end method

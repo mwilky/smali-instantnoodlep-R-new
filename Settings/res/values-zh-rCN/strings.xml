@@ -4599,7 +4599,7 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="op_starwar_mode_title">Star Wars 主题</string>
     <string name="op_storage">存储和内存</string>
     <string name="op_switch_record_info">%1$s，使用一加搬家迁移数据至 %2$s 手机</string>
-    <string name="op_switch_record_none">暂无纪录</string>
+    <string name="op_switch_record_none">暂无记录</string>
     <string name="op_switch_record_title">数据迁移记录</string>
     <string name="op_system">系统</string>
     <string name="op_system_dashboard_summary">语言、时间、重置、更新</string>

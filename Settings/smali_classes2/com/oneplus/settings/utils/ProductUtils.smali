@@ -4,18 +4,20 @@
 
 
 # direct methods
-.method public static isLemonadevMode()Z
-    .locals 2
+.method public static isLDEV()Z
+    .locals 3
 
-    const-string v0, "ro.boot.project_codename"
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    const-string v1, "lemonadev"
+    const/16 v2, 0x150
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    aput v2, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
 

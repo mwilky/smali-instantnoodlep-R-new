@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s ingin menampilkan potongan %2$s</string>
     <string name="abc_toolbar_collapse_description">Ciutkan</string>
     <string name="about_action_bar_title">Tentang</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versi %s</string>
     <string name="about_phone_device_name_warning">Nama perangkat terlihat oleh aplikasi di ponsel, dan juga mungkin dilihat oleh orang lain saat Anda menghubungkan ke perangkat Bluetooth atau menyiapkan hotspot Wi-Fi.</string>
     <string name="about_privacy_policy">Kebijakan Privasi</string>
     <string name="about_release_note_title">Perbarui log:</string>

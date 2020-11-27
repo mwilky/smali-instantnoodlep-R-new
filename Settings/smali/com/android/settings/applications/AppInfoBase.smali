@@ -82,37 +82,19 @@
 
     move-result p0
 
-    if-nez p0, :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
-    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+    move-result v0
 
-    sget p1, Lcom/android/settings/R$string;->smart_control_title:I
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/app/Application;->getString(I)Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result p1
 
-    :cond_0
-    const/4 p1, 0x2
-
-    if-ne p0, p1, :cond_1
-
-    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
-
-    sget p1, Lcom/android/settings/R$string;->ignore_optimizations_off:I
-
-    invoke-virtual {p0, p1}, Landroid/app/Application;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 p1, 0x1
-
-    if-ne p0, p1, :cond_2
+    if-eqz p1, :cond_0
 
     sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
@@ -124,7 +106,50 @@
 
     return-object p0
 
+    :cond_0
+    if-nez p0, :cond_1
+
+    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+
+    sget p1, Lcom/android/settings/R$string;->smart_control_title:I
+
+    invoke-virtual {p0, p1}, Landroid/app/Application;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    const/4 p1, 0x2
+
+    if-ne p0, p1, :cond_2
+
+    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+
+    sget p1, Lcom/android/settings/R$string;->ignore_optimizations_off:I
+
+    invoke-virtual {p0, p1}, Landroid/app/Application;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
     :cond_2
+    const/4 p1, 0x1
+
+    if-ne p0, p1, :cond_3
+
+    sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+
+    sget p1, Lcom/android/settings/R$string;->ignore_optimizations_on:I
+
+    invoke-virtual {p0, p1}, Landroid/app/Application;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
     sget-object p0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
     sget p1, Lcom/android/settings/R$string;->ignore_optimizations_on:I

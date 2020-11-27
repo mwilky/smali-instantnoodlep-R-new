@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">Η εφαρμογή %1$s θέλει να εμφανίζει τμήματα της εφαρμογής %2$s</string>
     <string name="abc_toolbar_collapse_description">Σύμπτυξη</string>
     <string name="about_action_bar_title">Πληροφορίες</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Έκδοση %s</string>
     <string name="about_phone_device_name_warning">Το όνομα της συσκευής σας είναι ορατό σε εφαρμογές στο τηλέφωνό σας. Ενδέχεται επίσης να είναι ορατό και σε άλλα άτομα, όταν συνδέεστε σε συσκευές Bluetooth ή ρυθμίζετε ένα σημείο πρόσβασης Wi-Fi.</string>
     <string name="about_privacy_policy">Πολιτική απορρήτου</string>
     <string name="about_release_note_title">Αρχείο καταγραφής ενημέρωσης:</string>

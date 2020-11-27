@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">يريد تطبيق %1$s عرض شرائح تطبيق %2$s.</string>
     <string name="abc_toolbar_collapse_description">تصغير</string>
     <string name="about_action_bar_title">حول</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">الإصدار %s</string>
     <string name="about_phone_device_name_warning">‏اسم جهازك مرئي للتطبيقات على هاتفك. ويمكن أيضًا أن يراه أشخاص آخرون عند الاتصال بأجهزة بلوتوث أو إعداد نقطة اتصال Wi-Fi.</string>
     <string name="about_privacy_policy">سياسة الخصوصية</string>
     <string name="about_release_note_title">سجل التحديث:</string>

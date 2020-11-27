@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s می‌خواهد تکه‌های %2$s را نشان دهد</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
     <string name="about_action_bar_title">درباره</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">نسخه %s</string>
     <string name="about_phone_device_name_warning">‏نام دستگاه شما برای برنامه‌های موجود در تلفنتان قابل‌مشاهده است. ممکن است وقتی به دستگاه‌های بلوتوث متصل می‌شوید یا نقطه اتصال Wi-Fi راه‌اندازی می‌کنید، برای سایر افراد نیز قابل‌مشاهده باشد.</string>
     <string name="about_privacy_policy">سیاست حفظ حریم خصوصی</string>
     <string name="about_release_note_title">گزارش به‌روزرسانی:</string>
@@ -4548,7 +4548,7 @@
     <string name="permission_bar_chart_title">پراستفاده‌ترین مجوز در ۲۴ ساعت گذشته</string>
     <string name="permission_btn_text_denied">خروج</string>
     <string name="permission_btn_text_grant">تأیید</string>
-    <string name="permission_dialog_title">بیانیۀ مجوز</string>
+    <string name="permission_dialog_title">بیانیه مجوز</string>
     <string name="permissions_label">مجوزها</string>
     <string name="permit_draw_overlay">مجاز کردن نمایش روی سایر برنامه‌ها</string>
     <string name="permit_manage_external_storage">دسترسی دادن برای مدیریت همه فایل‌ها</string>

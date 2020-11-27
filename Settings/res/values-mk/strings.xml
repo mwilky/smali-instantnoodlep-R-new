@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s сака да прикажува делови од %2$s</string>
     <string name="abc_toolbar_collapse_description">Собери</string>
     <string name="about_action_bar_title">За</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Верзија %s</string>
     <string name="about_phone_device_name_warning">Името на уредот е видливо за апликациите на телефонот. Може да го видат и други луѓе кога ќе се поврзете со уреди со Bluetooth или кога ќе поставите Wi-Fi точка на пристап.</string>
     <string name="about_privacy_policy">Политика за приватност</string>
     <string name="about_release_note_title">Дневник на надградувања:</string>

@@ -41,6 +41,12 @@
 .method public run()V
     .locals 2
 
+    const-string v0, "OPThemeRedSwitchPreferenceController"
+
+    const-string v1, "switchToRedTheme"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController$1;->this$0:Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController;
 
     invoke-static {v0}, Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController;->access$000(Lcom/oneplus/settings/controllers/OPThemeRedSwitchPreferenceController;)V
