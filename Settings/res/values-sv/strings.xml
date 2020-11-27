@@ -4550,7 +4550,7 @@ Funktionen för upplåsning med fingeravtryck fungerar kanske inte om du använd
     <string name="permission_bar_chart_title">Behörighetsanvändning under de senaste 24 timmarna</string>
     <string name="permission_btn_text_denied">Avsluta</string>
     <string name="permission_btn_text_grant">OK</string>
-    <string name="permission_dialog_title">Tillåtelseförklaring</string>
+    <string name="permission_dialog_title">Behörighetsvillkor</string>
     <string name="permissions_label">Behörigheter</string>
     <string name="permit_draw_overlay">Tillåt visning ovanpå andra appar</string>
     <string name="permit_manage_external_storage">Tillåt hanteringsåtkomst för alla filer</string>

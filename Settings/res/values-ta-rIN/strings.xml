@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">பற்றி</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">பதிப்பு %s</string>
     <string name="about_privacy_policy">தனியுரிமைக் கொள்கை</string>
     <string name="about_release_note_title">புதுப்பிப்பு பதிவு:</string>
     <string name="about_terms_service">சேவை விதிமுறைகள்</string>

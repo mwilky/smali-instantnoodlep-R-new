@@ -20,6 +20,40 @@
     return-void
 .end method
 
+.method static synthetic access$000(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/android/settings/password/SetupChooseLockPassword;->hideSoftKeyboard(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method private static hideSoftKeyboard(Landroid/app/Activity;)V
+    .locals 2
+
+    const-string v0, "input_method"
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    return-void
+.end method
+
 .method public static modifyIntentForSetup(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
     .locals 1
 

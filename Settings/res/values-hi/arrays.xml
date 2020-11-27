@@ -306,7 +306,6 @@
     </string-array>
     <string-array name="bluetooth_max_connected_audio_devices">
         <item>सिस्टम की डिफ़ॉल्ट सेटिंग का इस्तेमाल करें: %1$d</item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>

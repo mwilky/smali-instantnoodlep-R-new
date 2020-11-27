@@ -898,6 +898,14 @@
     return-object p0
 .end method
 
+.method public getMinuteView()Landroid/widget/EditText;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TextInputTimePickerView;->mMinuteEditText:Landroid/widget/EditText;
+
+    return-object p0
+.end method
+
 .method public setAmPmAtStart(Z)V
     .locals 4
 

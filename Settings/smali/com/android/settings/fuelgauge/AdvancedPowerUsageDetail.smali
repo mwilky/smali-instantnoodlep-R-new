@@ -633,7 +633,7 @@
 .end method
 
 .method private updateUI()V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -651,41 +651,65 @@
 
     move-result v0
 
-    const/4 v1, 0x1
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
-    if-nez v0, :cond_0
+    move-result v1
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    const/4 v3, 0x1
 
-    invoke-virtual {v3, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    if-eqz v1, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    sget-object v1, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
 
-    invoke-virtual {v3, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mPackageName:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    invoke-virtual {v1, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
 
     :cond_0
-    if-ne v0, v1, :cond_1
+    move v1, v2
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    :goto_0
+    if-nez v0, :cond_1
 
-    invoke-virtual {v3, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    invoke-virtual {v4, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    invoke-virtual {v3, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    invoke-virtual {v3, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :cond_1
-    const/4 v3, 0x2
-
     if-ne v0, v3, :cond_2
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_2
+    const/4 v4, 0x2
+
+    if-ne v0, v4, :cond_3
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
@@ -693,13 +717,40 @@
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
-    invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {v0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_3
+    if-eqz v1, :cond_4
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     iget-object p0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
-    invoke-virtual {p0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+    invoke-virtual {p0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_2
+    :cond_4
     return-void
 .end method
 

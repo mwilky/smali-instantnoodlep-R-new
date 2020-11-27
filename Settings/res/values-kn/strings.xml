@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%2$s ಸ್ಲೈಸ್‌ಗಳನ್ನು %1$s ತೋರಿಸಲು ಬಯಸಿದೆ</string>
     <string name="abc_toolbar_collapse_description">ಕುಗ್ಗಿಸಿ</string>
     <string name="about_action_bar_title">ಬಗ್ಗೆ</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">ಆವೃತ್ತಿ %s</string>
     <string name="about_phone_device_name_warning">ನಿಮ್ಮ ಸಾಧನದ ಹೆಸರು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಲ್ಲಿ ಗೋಚರಿಸುತ್ತದೆ. ನೀವು ಬ್ಲೂಟೂತ್ ಸಾಧನಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದಾಗ ಅಥವಾ ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಹೊಂದಿಸಿದಾಗ ಇತರ ಜನರು ಸಹ ಅದನ್ನು ನೋಡಬಹುದು.</string>
     <string name="about_privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
     <string name="about_release_note_title">ಪರಿಷ್ಕರಣೆ ಲಾಗ್:</string>

@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s が %2$s のスライスの表示をリクエストしています</string>
     <string name="abc_toolbar_collapse_description">折りたたむ</string>
     <string name="about_action_bar_title">情報</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">バージョン %s</string>
     <string name="about_phone_device_name_warning">デバイス名がスマートフォンのアプリに表示されます。また、Bluetooth デバイスに接続したり Wi-Fi アクセス ポイントを設定したりすると、他のユーザーもデバイス名を確認できるようになります。</string>
     <string name="about_privacy_policy">プライバシーポリシー</string>
     <string name="about_release_note_title">更新履歴：</string>

@@ -10,4 +10,4 @@
 
 .field public static final dashboard_tile_foreground_image_inset:I = 0x7f070102
 
-.field public static final settings_bar_view_max_height:I = 0x7f0705c5
+.field public static final settings_bar_view_max_height:I = 0x7f0705c8

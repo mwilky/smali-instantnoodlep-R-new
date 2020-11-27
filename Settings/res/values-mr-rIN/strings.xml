@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">च्या बद्दल</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">आवृत्ती: %s</string>
     <string name="about_privacy_policy">गोपनीयता धोरण</string>
     <string name="about_release_note_title">लॉग अद्यतनित करा:</string>
     <string name="about_terms_service">सेवेच्या अटी</string>

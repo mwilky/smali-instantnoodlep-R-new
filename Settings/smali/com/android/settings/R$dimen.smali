@@ -74,78 +74,78 @@
 
 .field public static final margin_top2:I = 0x7f07029d
 
-.field public static final message_bubble_arrow_width:I = 0x7f0702a8
+.field public static final message_bubble_arrow_width:I = 0x7f0702aa
 
-.field public static final message_metadata_top_padding:I = 0x7f0702a9
+.field public static final message_metadata_top_padding:I = 0x7f0702ab
 
-.field public static final message_padding_default:I = 0x7f0702aa
+.field public static final message_padding_default:I = 0x7f0702ac
 
-.field public static final message_text_bottom_padding:I = 0x7f0702ab
+.field public static final message_text_bottom_padding:I = 0x7f0702ad
 
-.field public static final message_text_left_right_padding:I = 0x7f0702ac
+.field public static final message_text_left_right_padding:I = 0x7f0702ae
 
-.field public static final message_text_top_padding:I = 0x7f0702ad
+.field public static final message_text_top_padding:I = 0x7f0702af
 
-.field public static final oneplus_contorl_avatar_standard:I = 0x7f0703aa
+.field public static final oneplus_contorl_avatar_standard:I = 0x7f0703ac
 
-.field public static final oneplus_security_layout_margin_top1:I = 0x7f070493
+.field public static final oneplus_security_layout_margin_top1:I = 0x7f070496
 
-.field public static final oneplus_settings_layout_margin_left2:I = 0x7f07049d
+.field public static final oneplus_settings_layout_margin_left2:I = 0x7f0704a0
 
-.field public static final op_control_margin_space4:I = 0x7f070516
+.field public static final op_control_margin_space4:I = 0x7f070519
 
-.field public static final op_control_margin_space8:I = 0x7f07051a
+.field public static final op_control_margin_space8:I = 0x7f07051d
 
-.field public static final op_custom_shape_item_space:I = 0x7f07053d
+.field public static final op_custom_shape_item_space:I = 0x7f070540
 
-.field public static final output_switcher_panel_icon_corner_radius:I = 0x7f07056c
+.field public static final output_switcher_panel_icon_corner_radius:I = 0x7f07056f
 
-.field public static final output_switcher_panel_icon_size:I = 0x7f07056d
+.field public static final output_switcher_panel_icon_size:I = 0x7f070570
 
-.field public static final output_switcher_slice_max_height:I = 0x7f07056e
+.field public static final output_switcher_slice_max_height:I = 0x7f070571
 
-.field public static final output_switcher_slice_padding_top:I = 0x7f07056f
+.field public static final output_switcher_slice_padding_top:I = 0x7f070572
 
-.field public static final panel_view_width:I = 0x7f070574
+.field public static final panel_view_width:I = 0x7f070577
 
-.field public static final picker_preview_item_height:I = 0x7f07057f
+.field public static final picker_preview_item_height:I = 0x7f070582
 
-.field public static final picker_preview_item_width:I = 0x7f070580
+.field public static final picker_preview_item_width:I = 0x7f070583
 
-.field public static final qrcode_size:I = 0x7f070590
+.field public static final qrcode_size:I = 0x7f070593
 
-.field public static final sat_val_panel_height:I = 0x7f0705a5
+.field public static final sat_val_panel_height:I = 0x7f0705a8
 
-.field public static final search_bar_height:I = 0x7f0705b8
+.field public static final search_bar_height:I = 0x7f0705bb
 
-.field public static final search_bar_margin:I = 0x7f0705b9
+.field public static final search_bar_margin:I = 0x7f0705bc
 
-.field public static final shortcut_size:I = 0x7f0705c7
+.field public static final shortcut_size:I = 0x7f0705ca
 
-.field public static final shortcut_size_maskable:I = 0x7f0705c8
+.field public static final shortcut_size_maskable:I = 0x7f0705cb
 
-.field public static final signal_strength_icon_size:I = 0x7f0705ca
+.field public static final signal_strength_icon_size:I = 0x7f0705cd
 
-.field public static final storage_donut_thickness:I = 0x7f0705d2
+.field public static final storage_donut_thickness:I = 0x7f0705d5
 
-.field public static final storage_donut_view_percent_sign_size:I = 0x7f0705d4
+.field public static final storage_donut_view_percent_sign_size:I = 0x7f0705d7
 
-.field public static final storage_donut_view_percent_text_size:I = 0x7f0705d5
+.field public static final storage_donut_view_percent_text_size:I = 0x7f0705d8
 
-.field public static final storage_donut_view_shrunken_label_text_size:I = 0x7f0705d6
+.field public static final storage_donut_view_shrunken_label_text_size:I = 0x7f0705d9
 
-.field public static final sud_items_glif_text_divider_inset:I = 0x7f070618
+.field public static final sud_items_glif_text_divider_inset:I = 0x7f07061b
 
-.field public static final system_navigation_illustration_height:I = 0x7f07063c
+.field public static final system_navigation_illustration_height:I = 0x7f07063f
 
-.field public static final update_user_photo_popup_min_width:I = 0x7f070666
+.field public static final update_user_photo_popup_min_width:I = 0x7f070669
 
-.field public static final usage_number_text_size:I = 0x7f070670
+.field public static final usage_number_text_size:I = 0x7f070673
 
-.field public static final wifi_detail_page_header_image_size:I = 0x7f070684
+.field public static final wifi_detail_page_header_image_size:I = 0x7f070687
 
-.field public static final zen_conversations_icon_offset:I = 0x7f070688
+.field public static final zen_conversations_icon_offset:I = 0x7f07068b
 
-.field public static final zen_conversations_icon_size:I = 0x7f070689
+.field public static final zen_conversations_icon_size:I = 0x7f07068c
 
-.field public static final zen_schedule_day_margin:I = 0x7f070692
+.field public static final zen_schedule_day_margin:I = 0x7f070695

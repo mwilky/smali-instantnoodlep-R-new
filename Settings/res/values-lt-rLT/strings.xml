@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_action_bar_title">Apie</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versija %s</string>
     <string name="about_privacy_policy">Privatumo politika</string>
     <string name="about_release_note_title">Naujinimo žurnalas:</string>
     <string name="about_terms_service">Paslaugos teikimo sąlygos</string>
@@ -1544,7 +1544,7 @@ Atrakinimas piršto atspaudu gali būti nesuderinamas su trečiųjų šalių ekr
     <string name="oxygen_version">OxygenOS versija</string>
     <string name="oxygen_version_default">Nežinoma</string>
     <string name="permission_btn_text_denied">Išeiti</string>
-    <string name="permission_btn_text_grant">GERAI</string>
+    <string name="permission_btn_text_grant">Gerai</string>
     <string name="permission_dialog_title">Leidimų pranešimas</string>
     <string name="please_type_passphrase">Belaidžio ryšio slaptažodis</string>
     <string name="power_menu">Maitinimo meniu</string>

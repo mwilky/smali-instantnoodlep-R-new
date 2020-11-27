@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s иска да показва части от %2$s</string>
     <string name="abc_toolbar_collapse_description">Свиване</string>
     <string name="about_action_bar_title">Относно</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Версия %s</string>
     <string name="about_phone_device_name_warning">Името на устройството ви е видимо за приложенията на телефона ви. То може да се вижда и от други хора, когато се свържете с устройства с Bluetooth или настроите точка за достъп до Wi-Fi.</string>
     <string name="about_privacy_policy">Правила за поверителност</string>
     <string name="about_release_note_title">Регистър на актуализации:</string>
@@ -4549,7 +4549,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="permission_bar_chart_title">Използвани разрешения през последните 24 часа</string>
     <string name="permission_btn_text_denied">Изход</string>
     <string name="permission_btn_text_grant">OK</string>
-    <string name="permission_dialog_title">Permission statement</string>
+    <string name="permission_dialog_title">Декларация за разрешение</string>
     <string name="permissions_label">Разрешения</string>
     <string name="permit_draw_overlay">Разрешаване на показв. върху други приложения</string>
     <string name="permit_manage_external_storage">Разрешете достъп за управл. на всички файлове</string>

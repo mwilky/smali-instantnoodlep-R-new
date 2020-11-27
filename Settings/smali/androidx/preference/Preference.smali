@@ -1661,9 +1661,9 @@
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/16 v3, 0x8
 
-    const/16 v4, 0x8
+    const/4 v4, 0x0
 
     if-eqz v1, :cond_1
 
@@ -1679,7 +1679,7 @@
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getCurrentTextColor()I
 
@@ -1692,7 +1692,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_1
     move-object v1, v2
@@ -1720,7 +1720,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v5, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-boolean v6, p0, Landroidx/preference/Preference;->mHasSingleLineTitleAttr:Z
 
@@ -1754,7 +1754,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v5, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_4
     :goto_1
@@ -1803,12 +1803,12 @@
 
     if-eqz v5, :cond_8
 
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_2
 
     :cond_8
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_9
     :goto_2
@@ -1839,12 +1839,12 @@
 
     if-eqz v5, :cond_b
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_3
 
     :cond_b
-    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     :cond_c
     :goto_3
@@ -1860,6 +1860,14 @@
 
     move-result-object v3
 
+    instance-of v3, v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v3, :cond_e
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
     check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
 
     if-eqz v1, :cond_e
@@ -1868,76 +1876,139 @@
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->isSummaryEmpty()Z
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_d
+    if-nez v5, :cond_d
 
-    iget-object v4, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v5
 
-    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_top2:I
+    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_top2:I
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    iget-object v4, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v5
 
-    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_bottom2:I
+    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_bottom2:I
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     goto :goto_4
 
     :cond_d
-    iget-object v4, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v5
 
-    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_top4:I
+    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_top4:I
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    iget-object v4, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v5
 
-    sget v5, Landroidx/preference/R$dimen;->op_control_margin_list_bottom4:I
+    sget v6, Landroidx/preference/R$dimen;->op_control_margin_list_bottom4:I
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     :goto_4
     invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_e
+    iget-object v3, p0, Landroidx/preference/Preference;->mImageFrame:Landroid/view/View;
+
+    if-eqz v3, :cond_10
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    instance-of v3, v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v3, :cond_10
+
+    iget-object v3, p0, Landroidx/preference/Preference;->mImageFrame:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v1, :cond_10
+
+    if-eqz v3, :cond_10
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->isSummaryEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_f
+
+    const v1, 0x800033
+
+    iput v1, v3, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    iget-object v1, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v4, Landroidx/preference/R$dimen;->op_control_margin_list_top3:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iput v1, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    goto :goto_5
+
+    :cond_f
+    const/16 v1, 0x10
+
+    iput v1, v3, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    :goto_5
+    iget-object v1, p0, Landroidx/preference/Preference;->mImageFrame:Landroid/view/View;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_10
     iget-boolean v1, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_11
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->isEnabled()Z
 
@@ -1945,14 +2016,14 @@
 
     invoke-direct {p0, v0, v1}, Landroidx/preference/Preference;->setEnabledStateOnViews(Landroid/view/View;Z)V
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_f
+    :cond_11
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Landroidx/preference/Preference;->setEnabledStateOnViews(Landroid/view/View;Z)V
 
-    :goto_5
+    :goto_6
     invoke-virtual {p0}, Landroidx/preference/Preference;->isSelectable()Z
 
     move-result v1
@@ -1973,11 +2044,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_12
 
     iget-object v3, p0, Landroidx/preference/Preference;->mOnCopyListener:Landroidx/preference/Preference$OnPreferenceCopyListener;
 
-    if-nez v3, :cond_10
+    if-nez v3, :cond_12
 
     new-instance v3, Landroidx/preference/Preference$OnPreferenceCopyListener;
 
@@ -1985,28 +2056,28 @@
 
     iput-object v3, p0, Landroidx/preference/Preference;->mOnCopyListener:Landroidx/preference/Preference$OnPreferenceCopyListener;
 
-    :cond_10
-    if-eqz p1, :cond_11
+    :cond_12
+    if-eqz p1, :cond_13
 
     iget-object p0, p0, Landroidx/preference/Preference;->mOnCopyListener:Landroidx/preference/Preference$OnPreferenceCopyListener;
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_11
+    :cond_13
     move-object p0, v2
 
-    :goto_6
+    :goto_7
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setLongClickable(Z)V
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_14
 
-    if-nez v1, :cond_12
+    if-nez v1, :cond_14
 
     invoke-static {v0, v2}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
-    :cond_12
+    :cond_14
     return-void
 .end method
 

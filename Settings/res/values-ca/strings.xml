@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">"%1$s vol mostrar porcions de l'aplicació %2$s"</string>
     <string name="abc_toolbar_collapse_description">Replega</string>
     <string name="about_action_bar_title">Quant a</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versió %s</string>
     <string name="about_phone_device_name_warning">"El nom del dispositiu és visible per a les aplicacions del telèfon. També el poden veure altres persones si el connectes a un dispositiu Bluetooth o si configures un punt d'accés Wi-Fi."</string>
     <string name="about_privacy_policy">Política de privacitat</string>
     <string name="about_release_note_title">"Registre d'actualització:"</string>

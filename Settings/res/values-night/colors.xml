@@ -15,6 +15,7 @@
     <color name="notification_importance_button_unselected">#ff5f6368</color>
     <color name="notification_importance_selection_bg">@android:color/material_grey_800</color>
     <color name="oneplus_ActionbarLineColor">#ff090909</color>
+    <color name="oneplus_accent_button_text_color">#d8000000</color>
     <color name="oneplus_accent_text_color">#fff0648a</color>
     <color name="oneplus_actionbar_icon_tint_color">@color/op_control_icon_color_active_dark</color>
     <color name="oneplus_brightness_icon_color">#3fffffff</color>

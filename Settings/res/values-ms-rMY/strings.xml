@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">Tentang</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_action_bar_title">Perihal</string>
+    <string name="about_app_version_text">Versi %s</string>
     <string name="about_privacy_policy">Dasar Privasi</string>
     <string name="about_release_note_title">Log kemas kini:</string>
     <string name="about_terms_service">Terma Perkhidmatan</string>

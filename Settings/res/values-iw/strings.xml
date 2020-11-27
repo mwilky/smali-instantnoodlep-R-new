@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s רוצה להציג חלקים מ-%2$s</string>
     <string name="abc_toolbar_collapse_description">כיווץ</string>
     <string name="about_action_bar_title">אודות</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">גרסה %s</string>
     <string name="about_phone_device_name_warning">‏שם המכשיר שלך גלוי לאפליקציות בטלפון שלך. כמו כן, ייתכן שאנשים אחרים יראו אותו בהתחברות למכשירי Bluetooth או כשמגדירים נקודת Wi-Fi לשיתוף אינטרנט.</string>
     <string name="about_privacy_policy">מדיניות פרטיות</string>
     <string name="about_release_note_title">עדכן יומן:</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_action_bar_title">Par ierīci</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_action_bar_title">Par</string>
+    <string name="about_app_version_text">Versija %s</string>
     <string name="about_privacy_policy">Konfidencialitātes politika</string>
     <string name="about_release_note_title">Atjauninājumu žurnāls:</string>
     <string name="about_terms_service">Pakalpojuma lietošanas noteikumi</string>

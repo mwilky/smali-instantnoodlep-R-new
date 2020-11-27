@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s dëshiron të shfaqë pjesë të %2$s</string>
     <string name="abc_toolbar_collapse_description">Palos</string>
     <string name="about_action_bar_title">Rreth</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versioni %s</string>
     <string name="about_phone_device_name_warning">Emri i pajisjes sate është i dukshëm për aplikacionet në telefonin tënd. Ai mund të shikohet po ashtu nga persona të tjerë kur lidhesh me pajisje me Bluetooth ose kur konfiguron një zonë të qasjes për internet me Wi-Fi.</string>
     <string name="about_privacy_policy">Politika për privatësinë</string>
     <string name="about_release_note_title">Regjistri i përditësimit:</string>

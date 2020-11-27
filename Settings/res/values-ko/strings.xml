@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s에서 %2$s의 슬라이스를 표시하려고 합니다.</string>
     <string name="abc_toolbar_collapse_description">접기</string>
     <string name="about_action_bar_title">정보</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">버전 %s</string>
     <string name="about_phone_device_name_warning">휴대전화에 설치된 앱에 기기 이름이 표시됩니다. 기기 이름은 블루투스 기기에 연결하거나 Wi-Fi 핫스팟을 설정할 때 다른 사용자에게 표시될 수도 있습니다.</string>
     <string name="about_privacy_policy">개인 정보 보호 정책</string>
     <string name="about_release_note_title">업데이트 로그:</string>

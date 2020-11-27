@@ -4496,7 +4496,7 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="op_zen_mode_automation_settings_title">Automatisch einschalten</string>
     <string name="op_zen_mode_behavior_settings_title">Ausnahmen</string>
     <string name="op_zen_mode_restrict_notifications_title">Benachrichtigungen einschränken</string>
-    <string name="opcustom_tone_dark_tile_text">Modus Dunkel</string>
+    <string name="opcustom_tone_dark_tile_text">Dunkelmodus</string>
     <string name="open_hotspot_warning_message">"Bei offener Sicherheit können Geräte Ihren mobilen Hotspot ohne Passworteingabe nutzen. Wählen Sie stattdessen WPA2-Sicherheit, wenn Sie ein Passwort benötigen. "</string>
     <string name="open_supported_links_footer">App gibt an, die folgenden Links zu verarbeiten:</string>
     <string name="openid_dialog_reset">ZURÜCKSETZEN</string>

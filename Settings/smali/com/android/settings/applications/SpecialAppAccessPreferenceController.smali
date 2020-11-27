@@ -69,13 +69,19 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/SpecialAppAccessPreferenceController;->mPreference:Landroidx/preference/Preference;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/android/settings/applications/SpecialAppAccessPreferenceController;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+
+    if-eqz v0, :cond_4
+
+    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    if-nez v1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/applications/SpecialAppAccessPreferenceController;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
-
     invoke-virtual {v0}, Lcom/android/settingslib/applications/ApplicationsState$Session;->getAllApps()Ljava/util/ArrayList;
 
     move-result-object v0

@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s, %2$s के हिस्से (स्लाइस) दिखाना चाहता है</string>
     <string name="abc_toolbar_collapse_description">छोटा करें</string>
     <string name="about_action_bar_title">इसके बारे में</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">संस्करण %s</string>
     <string name="about_phone_device_name_warning">आपके फ़ोन पर मौजूद ऐप्लिकेशन, आपके डिवाइस का नाम जान सकते हैं. ब्लूटूथ डिवाइस जोड़ते समय या वाई-फ़ाई हॉटस्पॉट सेटअप करते समय, इसे दूसरे लोग भी देख सकते हैं.</string>
     <string name="about_privacy_policy">गोपनीयता नीति</string>
     <string name="about_release_note_title">अपडेट लॉग:</string>

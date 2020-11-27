@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">A(z) %1$s alkalmazás részleteket szeretne megjeleníteni a(z) %2$s alkalmazásból</string>
     <string name="abc_toolbar_collapse_description">Összecsukás</string>
     <string name="about_action_bar_title">Névjegy</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">%s verzió</string>
     <string name="about_phone_device_name_warning">Eszköze neve látható a telefonján lévő alkalmazások számára. Mások is láthatják, ha csatlakoztatja telefonját más Bluetooth-eszközökhöz, vagy ha Wi-Fi-hotspotot állít be.</string>
     <string name="about_privacy_policy">Adatvédelmi irányelvek</string>
     <string name="about_release_note_title">Frissítési napló:</string>

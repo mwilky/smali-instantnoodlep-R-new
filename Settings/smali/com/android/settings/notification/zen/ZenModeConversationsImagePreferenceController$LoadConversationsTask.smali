@@ -70,6 +70,12 @@
 .method protected varargs doInBackground([Ljava/lang/Object;)Ljava/lang/Void;
     .locals 9
 
+    const-string p1, "ZenModeConversationsImagePreferenceController"
+
+    const-string v0, "doInBackground"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object p1, p0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController$LoadConversationsTask;->mDrawables:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V

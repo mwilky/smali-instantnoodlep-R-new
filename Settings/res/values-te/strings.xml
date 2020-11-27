@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s %2$s స్లైస్‌లను చూపించాలనుకుంటోంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
     <string name="about_action_bar_title">పరిచయం</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">వర్షన్ %s</string>
     <string name="about_phone_device_name_warning">మీ ఫోన్‌లోని యాప్‌లకు మీ పరికరం పేరు కనిపిస్తుంది. మీరు బ్లూటూత్ పరికరాలకు కనెక్ట్ చేసినప్పుడు లేదా Wi-Fi హాట్‌స్పాట్‌ని సెటప్ చేసినప్పుడు ఇతర వ్యక్తులకు కూడా ఇది కనిపించవచ్చు.</string>
     <string name="about_privacy_policy">గోప్యతా విధానం</string>
     <string name="about_release_note_title">అప్‌డేట్ లాగ్:</string>

@@ -1540,23 +1540,60 @@
 .end method
 
 .method private updateImsRegistrationState()V
-    .locals 2
-
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->isImsRegistrationStateShowUp()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
+    .locals 3
 
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
     move-result v0
 
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    iget-object v1, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/telephony/TelephonyManager;->isImsRegistered(I)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mDialog:Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogFragment;
+
+    sget v2, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->IMS_REGISTRATION_STATE_VALUE_ID:I
+
+    iget-object p0, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mRes:Landroid/content/res/Resources;
+
     if-eqz v0, :cond_0
+
+    sget v0, Lcom/android/settings/R$string;->ims_reg_status_registered:I
 
     goto :goto_0
 
     :cond_0
+    sget v0, Lcom/android/settings/R$string;->ims_reg_status_not_registered:I
+
+    :goto_0
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, v2, p0}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogFragment;->setText(ILjava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-direct {p0}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->isImsRegistrationStateShowUp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    return-void
+
+    :cond_2
     iget-object v0, p0, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->mDialog:Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogFragment;
 
     sget v1, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogController;->IMS_REGISTRATION_STATE_LABEL_ID:I
@@ -1569,8 +1606,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/simstatus/SimStatusDialogFragment;->removeSettingFromScreen(I)V
 
-    :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method
 

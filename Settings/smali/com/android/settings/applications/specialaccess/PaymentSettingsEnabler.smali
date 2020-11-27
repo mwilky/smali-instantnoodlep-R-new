@@ -56,12 +56,6 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->mPreference:Landroidx/preference/Preference;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
     iget-object p0, p0, Lcom/android/settings/applications/specialaccess/PaymentSettingsEnabler;->mPreference:Landroidx/preference/Preference;
 
     invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V

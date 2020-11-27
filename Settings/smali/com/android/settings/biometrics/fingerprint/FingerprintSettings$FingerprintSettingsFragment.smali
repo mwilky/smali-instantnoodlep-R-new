@@ -29,6 +29,8 @@
 # instance fields
 .field private mAuthenticateSidecar:Lcom/android/settings/biometrics/fingerprint/FingerprintAuthenticateSidecar;
 
+.field private mCurrentUser:I
+
 .field private final mFingerprintLockoutReset:Ljava/lang/Runnable;
 
 .field private mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
@@ -342,6 +344,10 @@
     move-result v0
 
     if-eqz v0, :cond_3
+
+    iget v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->mCurrentUser:I
+
+    if-nez v0, :cond_3
 
     invoke-direct {p0, p1}, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->addCustomAnimationPickPage(Landroidx/preference/PreferenceGroup;)V
 
@@ -1184,6 +1190,10 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    move-result v2
+
+    iput v2, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment;->mCurrentUser:I
 
     invoke-static {v0}, Lcom/android/settings/Utils;->getFingerprintManagerOrNull(Landroid/content/Context;)Landroid/hardware/fingerprint/FingerprintManager;
 

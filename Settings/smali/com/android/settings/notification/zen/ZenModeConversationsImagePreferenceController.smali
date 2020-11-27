@@ -204,7 +204,11 @@
 .method public updateState(Landroidx/preference/Preference;)V
     .locals 7
 
-    invoke-direct {p0}, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;->loadConversations()V
+    const-string p1, "ZenModeConversationsImagePreferenceController"
+
+    const-string/jumbo v0, "updateState"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p1, p0, Lcom/android/settings/notification/zen/ZenModeConversationsImagePreferenceController;->mViewGroup:Landroid/view/ViewGroup;
 

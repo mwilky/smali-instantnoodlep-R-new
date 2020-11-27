@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">"L'app %1$s vuole mostrare porzioni dell'app %2$s"</string>
     <string name="abc_toolbar_collapse_description">Comprimi</string>
     <string name="about_action_bar_title">Informazioni</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versione %s</string>
     <string name="about_phone_device_name_warning">Il nome del tuo dispositivo è visibile alle app installate sul telefono. Potrebbe essere visibile anche ad altre persone se ti connetti a dispositivi Bluetooth o configuri un hotspot Wi-Fi.</string>
     <string name="about_privacy_policy">Informativa sulla privacy</string>
     <string name="about_release_note_title">Registro aggiornamenti:</string>

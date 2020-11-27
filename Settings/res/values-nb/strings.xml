@@ -41,7 +41,7 @@
     <string name="abc_slices_permission_request">%1$s vil vise %2$s-utsnitt</string>
     <string name="abc_toolbar_collapse_description">Skjul</string>
     <string name="about_action_bar_title">Om</string>
-    <string name="about_app_version_text">Version %s</string>
+    <string name="about_app_version_text">Versjon %s</string>
     <string name="about_phone_device_name_warning">Enhetsnavnet ditt er synlig for apper på telefonen. Det kan også ses av andre personer når du kobler til Bluetooth-enheter eller konfigurerer en Wi-Fi-sone.</string>
     <string name="about_privacy_policy">Personvernerklæring</string>
     <string name="about_release_note_title">Oppdateringslogg:</string>
@@ -2573,7 +2573,7 @@ Hvis du skrur mobildata på igjen kan operatøren din fakturere deg for databruk
     <string name="load_networks_progress">Søker …</string>
     <string name="loading_injected_setting_summary">Laster inn …</string>
     <string name="loading_notification_apps">Laster inn apper …</string>
-    <string name="loading_text">Laster inn...</string>
+    <string name="loading_text">Laster inn …</string>
     <string name="local_backup_password_summary_change">Trykk for å endre eller fjerne passordet for fullstendige sikkerhetskopier på datamaskinen</string>
     <string name="local_backup_password_summary_none">Fullstendig sikkerhetskopiering på datamaskin er ikke beskyttet</string>
     <string name="local_backup_password_title">Passord for sikkerhetskopiering på datamaskin</string>
