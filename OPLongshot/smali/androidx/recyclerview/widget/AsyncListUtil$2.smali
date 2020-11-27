@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/AsyncListUtil$2;
+.class public Landroidx/recyclerview/widget/AsyncListUtil$2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,17 +26,17 @@
 
 
 # instance fields
-.field private mFirstRequiredTileStart:I
+.field public mFirstRequiredTileStart:I
 
-.field private mGeneration:I
+.field public mGeneration:I
 
-.field private mItemCount:I
+.field public mItemCount:I
 
-.field private mLastRequiredTileStart:I
+.field public mLastRequiredTileStart:I
 
-.field final mLoadedTiles:Landroid/util/SparseBooleanArray;
+.field public final mLoadedTiles:Landroid/util/SparseBooleanArray;
 
-.field private mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
+.field public mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/TileList$Tile<",
@@ -45,11 +45,11 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/AsyncListUtil;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/AsyncListUtil;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;

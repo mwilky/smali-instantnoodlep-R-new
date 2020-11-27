@@ -1604,11 +1604,39 @@
     <style name="CardView.Light" parent="@style/CardView">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
+    <style name="ColorSwitchStyle">
+        <item name="barCheckedColor">@color/greenTintControlNormal</item>
+        <item name="barHeight">@dimen/bar_height</item>
+        <item name="barUncheckedColor">@color/switch_unchecked_bar_color</item>
+        <item name="barUncheckedDisabledColor">@color/switch_unchecked_bar_disabled_color</item>
+        <item name="barWidth">@dimen/bar_width</item>
+        <item name="circlePadding">@dimen/circle_padding</item>
+        <item name="innerCircleColor">@color/switch_unchecked_bar_color</item>
+        <item name="innerCircleUncheckedDisabledColor">@color/switch_unchecked_bar_disabled_color</item>
+        <item name="innerCircleWidth">@dimen/inner_circle_width</item>
+        <item name="loadingDrawable">@drawable/switch_loading</item>
+        <item name="outerCircleCheckedDisabledColor">@color/switch_outer_circle_disable_color</item>
+        <item name="outerCircleColor">@color/switch_outer_circle_color</item>
+        <item name="outerCircleStrokeWidth">@dimen/outer_circle_stroke_width</item>
+        <item name="outerCircleUncheckedDisabledColor">@color/switch_outer_circle_disable_color</item>
+        <item name="outerCircleWidth">@dimen/outer_circle_width</item>
+        <item name="themedCheckedDrawable">@drawable/switch_themed_checked_drawable</item>
+        <item name="themedLoadingCheckedBackground">@drawable/switch_themed_loading_checked_background</item>
+        <item name="themedLoadingDrawable">@drawable/switch_loading</item>
+        <item name="themedLoadingUncheckedBackground">@drawable/switch_themed_loading_unchecked_background</item>
+        <item name="themedUncheckedDrawable">@drawable/switch_themed_unchecked_drawable</item>
+    </style>
     <style name="DatePicker.Widget.Material.NumberPicker" parent="@style/Widget.Material.NumberPicker">
         <item name="selectionDivider">@drawable/op_number_picker_divider_material</item>
         <item name="selectionDividerWidth">320.0dip</item>
         <item name="selectionDividersDistance">70.0dip</item>
         <item name="selectionOtherNumberColor">@color/op_control_text_color_secondary_default</item>
+    </style>
+    <style name="DefaultSpring">
+        <item name="dampingRatio">0.5</item>
+        <item name="springPropertyName">SpringProperty</item>
+        <item name="springSceneName">SpringScene</item>
+        <item name="stiffness">600.0</item>
     </style>
     <style name="DialogTheme" parent="@android:style/Theme.Holo.Dialog" />
     <style name="DialogWindowTitle">
@@ -2134,6 +2162,12 @@
         <item name="android:radius">@dimen/op_ripple_radius</item>
         <item name="buttonCompat">@drawable/op_btn_checkbox_material_anim</item>
     </style>
+    <style name="OnePlus.Widget.AppCompat.CompoundButton.CheckBox.DayNight" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/control_background_40dp_material_day_night</item>
+        <item name="android:button">@drawable/op_btn_checkbox_material_anim_day_night</item>
+        <item name="android:radius">@dimen/op_ripple_radius</item>
+        <item name="buttonCompat">@drawable/op_btn_checkbox_material_anim_day_night</item>
+    </style>
     <style name="OnePlus.Widget.AppCompat.CompoundButton.RadioButton" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:button">@drawable/op_btn_radio_material_anim</item>
     </style>
@@ -2305,6 +2339,21 @@
         <item name="android:layout_height">63.0dip</item>
         <item name="android:layout_marginEnd">35.0dip</item>
     </style>
+    <style name="OnePlusSeekBarStyle">
+        <item name="oneplusSeekBarBackgroundColor">@color/oneplus_seekbar_background_selector</item>
+        <item name="oneplusSeekBarBackgroundHighlightColor">@color/oneplus_seekbar_background_highlight_color</item>
+        <item name="oneplusSeekBarBackgroundRadius">1.0dip</item>
+        <item name="oneplusSeekBarProgressColor">@color/oneplus_seekbar_progress_selector</item>
+        <item name="oneplusSeekBarProgressRadius">1.0dip</item>
+        <item name="oneplusSeekBarProgressScaleRadius">2.0dip</item>
+        <item name="oneplusSeekBarThumbColor">@color/oneplus_seekbar_thumb_color</item>
+        <item name="oneplusSeekBarThumbInRadius">4.0dip</item>
+        <item name="oneplusSeekBarThumbInScaleRadius">3.669983dip</item>
+        <item name="oneplusSeekBarThumbOutRadius">6.0dip</item>
+        <item name="oneplusSeekBarThumbOutScaleRadius">7.0dip</item>
+        <item name="oneplusSeekBarThumbShadowColor">@color/oneplus_seekbar_thumb_shadow_color</item>
+        <item name="oneplusSeekBarThumbShadowRadius">14.0dip</item>
+    </style>
     <style name="OnePlusTabBarViewStyle" parent="@style/Widget.Design.TabBarView">
         <item name="android:background">?onePlusAppbarBgColor</item>
         <item name="itemIconSize">@dimen/design_tab_bar_icon_size</item>
@@ -2372,7 +2421,7 @@
         <item name="android:weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.DayOfWeek</item>
         <item name="android:dateTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Day</item>
         <item name="dateTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Day</item>
-        <item name="daySelectorColor">?pickerColorActivated</item>
+        <item name="daySelectorColor">?colorAccent</item>
         <item name="monthTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Month</item>
         <item name="weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.DayOfWeek</item>
     </style>
@@ -2389,7 +2438,7 @@
         <item name="android:weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.DayOfWeek</item>
         <item name="android:dateTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Day</item>
         <item name="dateTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Day</item>
-        <item name="daySelectorColor">?pickerColorActivated</item>
+        <item name="daySelectorColor">?colorAccent</item>
         <item name="monthTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Month</item>
         <item name="weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.DayOfWeek</item>
     </style>
@@ -2402,7 +2451,7 @@
         <item name="android:headerBackground">?colorAccent</item>
         <item name="android:numbersTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
         <item name="android:numbersBackgroundColor">@color/op_time_picker_numbers_background_color_light</item>
-        <item name="android:numbersSelectorColor">?pickerColorActivated</item>
+        <item name="android:numbersSelectorColor">?colorAccent</item>
         <item name="android:amPmTextColor">@color/op_time_picker_am_pm_label_text_color_light</item>
         <item name="android:numbersInnerTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
         <item name="headerTextColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
@@ -2414,7 +2463,7 @@
     <style name="Oneplus.Widget.Material.TimePicker" parent="@android:style/Widget.Material.TimePicker">
         <item name="android:headerBackground">?colorAccent</item>
         <item name="android:numbersBackgroundColor">@color/op_time_picker_numbers_background_color_dark</item>
-        <item name="android:numbersSelectorColor">?pickerColorActivated</item>
+        <item name="android:numbersSelectorColor">?colorAccent</item>
         <item name="android:amPmTextColor">@color/op_time_picker_am_pm_label_text_color_dark</item>
         <item name="headerTextColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
         <item name="internalLayout">@layout/op_time_picker_material</item>
@@ -3416,7 +3465,7 @@
         <item name="onePlusButtonDisableColor">@color/op_button_material_disable_dark</item>
         <item name="onePlusCardColorBorder">@color/op_control_card_color_border_dark</item>
         <item name="onePlusCheckBoxBgColor">@color/op_control_checkout_layout_bg_dark</item>
-        <item name="onePlusCheckBoxCheckedColor">#fffafafa</item>
+        <item name="onePlusCheckBoxCheckedColor">@color/oneplus_accent_active_color</item>
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_dark</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_dark</item>
@@ -3689,7 +3738,7 @@
         <item name="onePlusButtonDisableColor">@color/op_button_material_disable_light</item>
         <item name="onePlusCardColorBorder">@color/op_control_card_color_border_light</item>
         <item name="onePlusCheckBoxBgColor">@color/op_control_checkout_layout_bg_light</item>
-        <item name="onePlusCheckBoxCheckedColor">#fffafafa</item>
+        <item name="onePlusCheckBoxCheckedColor">@color/oneplus_accent_active_color</item>
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_light</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_light</item>
@@ -4346,7 +4395,7 @@
     </style>
     <style name="Widget.MaterialComponents.CardView" parent="@style/CardView">
         <item name="android:stateListAnimator">@animator/mtrl_card_state_list_anim</item>
-        <item name="cardBackgroundColor">@color/opcardview_light_background_light</item>
+        <item name="cardBackgroundColor">@color/op_control_bg_color_card_default</item>
         <item name="cardBackgroundColorMask">@color/opcardview_light_background_mask_light</item>
         <item name="cardCornerRadius">@null</item>
         <item name="cardElevation">@dimen/mtrl_card_elevation</item>

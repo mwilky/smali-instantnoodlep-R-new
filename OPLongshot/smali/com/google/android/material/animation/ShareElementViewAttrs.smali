@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ShareElementViewAttrs;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/animation/ShareElementViewAttrs$1;
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method protected constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/task/CheckThread$1;
+.class public Lcom/oneplus/screenshot/longshot/task/CheckThread$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/task/CheckThread;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/task/CheckThread;
 
-.field final synthetic val$context:Landroid/content/Context;
+.field public final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/task/CheckThread;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/task/CheckThread;Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread$1;->this$0:Lcom/oneplus/screenshot/longshot/task/CheckThread;
@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread$1;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f1000b6
+    const v1, 0x7f1000cd
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -90,6 +90,13 @@
     <item type="dimen" name="android_navigation_bar_height">@android:dimen/min_xlarge_screen_width</item>
     <item type="dimen" name="android_status_bar_height">@android:dimen/select_dialog_drawable_padding_start_material</item>
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
+    <dimen name="bar_height">22.0dip</dimen>
+    <dimen name="bar_width">36.0dip</dimen>
+    <dimen name="bezier_controls_text_size">10.0sp</dimen>
+    <dimen name="bezier_point_radius">6.0dip</dimen>
+    <dimen name="bezier_view_base_line_width">0.33000004dip</dimen>
+    <dimen name="bezier_view_cubic_line_width">1.0dip</dimen>
+    <dimen name="bezier_view_padding">10.0dip</dimen>
     <dimen name="border_width">4.0dip</dimen>
     <dimen name="btn_float_first_padding_drawable">2.0dip</dimen>
     <dimen name="btn_float_first_padding_top">14.0dip</dimen>
@@ -109,6 +116,7 @@
     <dimen name="cardview_default_elevation">2.0dip</dimen>
     <dimen name="cardview_default_radius">2.0dip</dimen>
     <dimen name="cardview_margin">8.0dip</dimen>
+    <dimen name="circle_padding">4.299988dip</dimen>
     <dimen name="compat_button_inset_horizontal_material">4.0dip</dimen>
     <dimen name="compat_button_inset_vertical_material">6.0dip</dimen>
     <dimen name="compat_button_padding_horizontal_material">8.0dip</dimen>
@@ -325,6 +333,7 @@
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
+    <dimen name="fps_view_radius">32.0dip</dimen>
     <dimen name="global_screenshot_bg_padding">20.0dip</dimen>
     <dimen name="gridview_margin">8.0dip</dimen>
     <dimen name="guide_edit_margin_bottom">40.0dip</dimen>
@@ -347,7 +356,9 @@
     <item type="dimen" name="hint_alpha_material_light">0.38</item>
     <item type="dimen" name="hint_pressed_alpha_material_dark">0.7</item>
     <item type="dimen" name="hint_pressed_alpha_material_light">0.54</item>
+    <dimen name="horizontal_panel_width">360.0dip</dimen>
     <dimen name="image_padding">12.0dip</dimen>
+    <dimen name="inner_circle_width">7.899994dip</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
@@ -367,7 +378,14 @@
     <item type="dimen" name="material_emphasis_disabled">0.38</item>
     <item type="dimen" name="material_emphasis_high_type">0.87</item>
     <item type="dimen" name="material_emphasis_medium">0.6</item>
+    <dimen name="max_bottomappbar_width">130.0dip</dimen>
+    <dimen name="max_bottomappbar_width_normal">178.0dip</dimen>
     <dimen name="max_expandable_button_size">9.0sp</dimen>
+    <dimen name="monitor_text_size">12.0sp</dimen>
+    <dimen name="monitor_view_height">150.0dip</dimen>
+    <dimen name="monitor_view_line_width">2.0dip</dimen>
+    <dimen name="monitor_view_margin">15.0dip</dimen>
+    <dimen name="monitor_view_width">150.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24.0dip</dimen>
@@ -568,6 +586,7 @@
     <dimen name="oneplus_control_tick_seekbar_radius">3.0dip</dimen>
     <dimen name="oneplus_dialog_button_height">48.0dip</dimen>
     <dimen name="oneplus_dialog_image_panel_height">166.0dip</dimen>
+    <dimen name="oneplus_dialog_landscape_width">480.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_multiline">56.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_noline">21.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_singleline">75.0px</dimen>
@@ -579,6 +598,7 @@
     <dimen name="oneplus_search_view_close_btn_margin">10.0dip</dimen>
     <dimen name="oneplus_search_view_preferred_width">370.0dip</dimen>
     <dimen name="oneplus_smooth_round_radius">6.0dip</dimen>
+    <dimen name="oneplus_switch_padding">0.0dip</dimen>
     <dimen name="op_abc_config_prefDialogWidth">270.0dip</dimen>
     <dimen name="op_app_bar_collapsed_text_size">42.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_margin">16.0px</dimen>
@@ -691,6 +711,9 @@
     <dimen name="op_hint_search_view_icon_src_size_right">30.0dip</dimen>
     <item type="dimen" name="op_line_space_multiplier_h2">0.8</item>
     <dimen name="op_list_item_min_height">64.0dip</dimen>
+    <dimen name="op_page_indicator_dot_size">6.0dip</dimen>
+    <dimen name="op_page_indicator_dot_spacing">3.0dip</dimen>
+    <dimen name="op_page_indicator_dot_stroke_width">1.0px</dimen>
     <dimen name="op_progress_dialog_right_padding">0.0dip</dimen>
     <dimen name="op_reduce_padding_space2">-9.0dip</dimen>
     <dimen name="op_ripple_radius">22.599976dip</dimen>
@@ -711,6 +734,13 @@
     <dimen name="op_text_style_dialog_body1_size">24.0px</dimen>
     <dimen name="op_text_style_dialog_title_size">32.0px</dimen>
     <dimen name="op_toolbar_navigation_max_button_height">42.0dip</dimen>
+    <dimen name="outer_circle_stroke_width">2.6999817dip</dimen>
+    <dimen name="outer_circle_width">13.299988dip</dimen>
+    <dimen name="panel_background_radius">16.0dip</dimen>
+    <dimen name="panel_content_padding">12.0dip</dimen>
+    <dimen name="panel_start_x">23.0dip</dimen>
+    <dimen name="panel_start_y">23.0dip</dimen>
+    <dimen name="panel_width">314.0dip</dimen>
     <dimen name="picker_bottom_margin">16.0dip</dimen>
     <dimen name="picker_top_margin">16.0dip</dimen>
     <dimen name="preference_dropdown_padding_start">72.0dip</dimen>
@@ -737,6 +767,16 @@
     <dimen name="search_view_preferred_height">48.0dip</dimen>
     <dimen name="search_view_preferred_width">320.0dip</dimen>
     <dimen name="search_view_text_min_width">160.0dip</dimen>
+    <dimen name="seekbar_item_margin">10.0dip</dimen>
+    <dimen name="seekbar_item_min_height">50.0dip</dimen>
+    <dimen name="seekbar_item_progress_padding">2.0dip</dimen>
+    <dimen name="seekbar_item_seekbar_max_width">2.0dip</dimen>
+    <dimen name="seekbar_item_seekbar_width">190.0dip</dimen>
+    <dimen name="seekbar_item_text_size">11.0sp</dimen>
+    <dimen name="seekbar_thumb_circle_width">2.0dip</dimen>
+    <dimen name="seekbar_thumb_inner_diameter">8.0dip</dimen>
+    <dimen name="seekbar_thumb_outer_diameter">12.0dip</dimen>
+    <dimen name="simultaneous_container_height">50.0dip</dimen>
     <dimen name="small_longshot_height">179.84dip</dimen>
     <dimen name="small_longshot_layout_height">160.0dip</dimen>
     <item type="dimen" name="small_longshot_layout_width">@dimen/op_control_icon_size_display3</item>
@@ -746,7 +786,13 @@
     <dimen name="smallscreenshot_margin_bottom">14.0dip</dimen>
     <dimen name="smallscreenshotlayout_bottom_shadow">17.5dip</dimen>
     <dimen name="smallscreenshotlayout_right_shadow">12.969971dip</dimen>
+    <dimen name="smart_scroller_height">200.0dip</dimen>
     <dimen name="snackbar_control_item_half_width">168.0dip</dimen>
+    <dimen name="spinner_dropdown_offset">30.0dip</dimen>
+    <dimen name="spinner_dropdown_radius">5.0dip</dimen>
+    <dimen name="spinner_dropdown_width">146.0dip</dimen>
+    <dimen name="spinner_padding_start">16.0dip</dimen>
+    <dimen name="spinner_text_size">14.0sp</dimen>
     <dimen name="status_bar_height_default">24.0dip</dimen>
     <item type="dimen" name="tabs_padding_end">@dimen/op_control_margin_space4</item>
     <item type="dimen" name="tabs_padding_start">@dimen/op_control_margin_space4</item>

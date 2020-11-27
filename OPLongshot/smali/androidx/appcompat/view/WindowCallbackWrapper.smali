@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/WindowCallbackWrapper;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/Window$Callback;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final mWrapped:Landroid/view/Window$Callback;
+.field public final mWrapped:Landroid/view/Window$Callback;
 
 
 # direct methods

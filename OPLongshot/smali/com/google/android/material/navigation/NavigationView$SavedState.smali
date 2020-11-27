@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/navigation/NavigationView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/navigation/NavigationView$SavedState$1;

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/GlobalScreenshot$TargetChosenReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -40,7 +40,7 @@
 
     const-string v2, "Click"
 
-    invoke-static {p1, v0, v1, v2, p2}, Lb/b/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1, v2, p2}, Lc/c/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "notification"
 
@@ -50,7 +50,7 @@
 
     check-cast p1, Landroid/app/NotificationManager;
 
-    sget p2, Lb/b/b/i/a/a;->a:I
+    sget p2, Lc/c/b/i/a/a;->a:I
 
     invoke-virtual {p1, p2}, Landroid/app/NotificationManager;->cancel(I)V
 

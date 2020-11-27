@@ -1,6 +1,6 @@
-.class synthetic Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;
+.class public synthetic Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation

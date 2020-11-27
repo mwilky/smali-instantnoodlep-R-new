@@ -1,19 +1,19 @@
 .class public Lcom/google/android/material/checkbox/SelectedAvatarView;
 .super Landroid/widget/ImageView;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/Checkable;
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
-.field private b:Lcom/google/android/material/checkbox/a;
+.field public b:Lc/b/b/b/q/a;
 
-.field private c:I
+.field public c:I
 
-.field private d:I
+.field public d:I
 
 
 # direct methods
@@ -30,15 +30,17 @@
 
     iput-boolean p2, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->a:Z
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/checkbox/SelectedAvatarView;->b(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/checkbox/SelectedAvatarView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method private a(Z)V
+
+# virtual methods
+.method public final a(Z)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     if-eqz v0, :cond_0
 
@@ -46,26 +48,26 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/b/c/a;->d(Z)V
+    invoke-virtual {v0, v1}, Lc/c/d/a;->d(Z)V
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
-    invoke-virtual {p1}, Lcom/google/android/material/checkbox/a;->f()V
+    invoke-virtual {p1}, Lc/b/b/b/q/a;->f()V
 
     :cond_0
     return-void
 .end method
 
-.method private b(Landroid/content/Context;)V
+.method public final b(Landroid/content/Context;)V
     .locals 2
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/c;->op_avatar_checked_background:I
+    sget v1, Lc/b/b/b/c;->op_avatar_checked_background:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -77,7 +79,7 @@
 
     move-result-object p1
 
-    sget v0, Lb/a/b/a/c;->op_avatar_checked_marker:I
+    sget v0, Lc/b/b/b/c;->op_avatar_checked_marker:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -88,8 +90,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method public c(ZZ)V
     .locals 1
 
@@ -102,7 +102,7 @@
     :cond_0
     iput-boolean p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->a:Z
 
-    invoke-direct {p0, p2}, Lcom/google/android/material/checkbox/SelectedAvatarView;->a(Z)V
+    invoke-virtual {p0, p2}, Lcom/google/android/material/checkbox/SelectedAvatarView;->a(Z)V
 
     return-void
 .end method
@@ -120,11 +120,11 @@
 
     iput p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->c:I
 
-    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/checkbox/a;->g(I)V
+    invoke-virtual {v0, p1}, Lc/b/b/b/q/a;->g(I)V
 
     :cond_0
     return-void
@@ -135,11 +135,11 @@
 
     iput p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->d:I
 
-    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/checkbox/a;->h(I)V
+    invoke-virtual {v0, p1}, Lc/b/b/b/q/a;->h(I)V
 
     :cond_0
     return-void
@@ -160,11 +160,11 @@
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/material/checkbox/a;
+    new-instance v0, Lc/b/b/b/q/a;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
@@ -180,21 +180,21 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/checkbox/a;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;III)V
+    invoke-direct/range {v1 .. v6}, Lc/b/b/b/q/a;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;III)V
 
-    iput-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iput-object v0, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/checkbox/SelectedAvatarView;->a(Z)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/checkbox/SelectedAvatarView;->a(Z)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/google/android/material/checkbox/a;->i(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lc/b/b/b/q/a;->i(Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
-    iget-object p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lcom/google/android/material/checkbox/a;
+    iget-object p1, p0, Lcom/google/android/material/checkbox/SelectedAvatarView;->b:Lc/b/b/b/q/a;
 
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V

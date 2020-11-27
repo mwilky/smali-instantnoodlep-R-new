@@ -1,6 +1,6 @@
 .class public final Landroidx/core/text/PrecomputedTextCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,21 +21,21 @@
 
 
 # instance fields
-.field private final a:Landroid/text/TextPaint;
+.field public final a:Landroid/text/TextPaint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final b:Landroid/text/TextDirectionHeuristic;
+.field public final b:Landroid/text/TextDirectionHeuristic;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final c:I
+.field public final c:I
 
-.field private final d:I
+.field public final d:I
 
-.field final e:Landroid/text/PrecomputedText$Params;
+.field public final e:Landroid/text/PrecomputedText$Params;
 
 
 # direct methods
@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
+.method public constructor <init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
     .locals 2
     .param p1    # Landroid/text/TextPaint;
         .annotation build Landroidx/annotation/NonNull;
@@ -136,14 +136,16 @@
 
     move-result-object v0
 
+    iput-object v0, p0, Landroidx/core/text/PrecomputedTextCompat$a;->e:Landroid/text/PrecomputedText$Params;
+
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    :goto_0
     iput-object v0, p0, Landroidx/core/text/PrecomputedTextCompat$a;->e:Landroid/text/PrecomputedText$Params;
 
+    :goto_0
     iput-object p1, p0, Landroidx/core/text/PrecomputedTextCompat$a;->a:Landroid/text/TextPaint;
 
     iput-object p2, p0, Landroidx/core/text/PrecomputedTextCompat$a;->b:Landroid/text/TextDirectionHeuristic;
@@ -679,7 +681,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Landroidx/core/util/a;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Lb/h/k/a;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -800,7 +802,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Landroidx/core/util/a;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Lb/h/k/a;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -897,7 +899,7 @@
 
     aput-object v1, v0, v4
 
-    invoke-static {v0}, Landroidx/core/util/a;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Lb/h/k/a;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -994,7 +996,7 @@
 
     aput-object v1, v0, v4
 
-    invoke-static {v0}, Landroidx/core/util/a;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Lb/h/k/a;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -1079,7 +1081,7 @@
 
     aput-object v1, v0, v5
 
-    invoke-static {v0}, Landroidx/core/util/a;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Lb/h/k/a;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -1232,7 +1234,6 @@
 
     move-result-object v2
 
-    :goto_0
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1241,7 +1242,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     const/16 v2, 0x11
@@ -1260,10 +1261,16 @@
 
     move-result-object v2
 
-    goto :goto_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_2
-    :goto_1
+    :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

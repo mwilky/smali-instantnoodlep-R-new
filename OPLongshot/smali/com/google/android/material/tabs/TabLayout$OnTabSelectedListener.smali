@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/tabs/TabLayout$OnTabSelectedListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/tabs/TabLayout$BaseOnTabSelectedListener;
@@ -11,7 +11,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/android/material/tabs/TabLayout$BaseOnTabSelectedListener<",
-        "Lcom/google/android/material/tabs/a;",
+        "Lc/b/b/b/i0/a;",
         ">;"
     }
 .end annotation

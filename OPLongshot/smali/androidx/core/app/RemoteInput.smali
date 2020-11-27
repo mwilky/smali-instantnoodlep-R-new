@@ -1,6 +1,6 @@
 .class public final Landroidx/core/app/RemoteInput;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -13,19 +13,19 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
-.field private final b:Ljava/lang/CharSequence;
+.field public final b:Ljava/lang/CharSequence;
 
-.field private final c:[Ljava/lang/CharSequence;
+.field public final c:[Ljava/lang/CharSequence;
 
-.field private final d:Z
+.field public final d:Z
 
-.field private final e:I
+.field public final e:I
 
-.field private final f:Landroid/os/Bundle;
+.field public final f:Landroid/os/Bundle;
 
-.field private final g:Ljava/util/Set;
+.field public final g:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/Set;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method static a(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
+.method public static a(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
     .locals 3
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x14
@@ -166,7 +166,7 @@
     return-object p0
 .end method
 
-.method static b([Landroidx/core/app/RemoteInput;)[Landroid/app/RemoteInput;
+.method public static b([Landroidx/core/app/RemoteInput;)[Landroid/app/RemoteInput;
     .locals 3
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x14

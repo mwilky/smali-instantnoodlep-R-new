@@ -1,6 +1,6 @@
-.class abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;
+.class public abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x402
+    accessFlags = 0x401
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
-.method private constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
+.method public constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;)V
+.method public synthetic constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;-><init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V

@@ -1,6 +1,6 @@
-.class Landroidx/versionedparcelable/VersionedParcelStream;
+.class public Landroidx/versionedparcelable/VersionedParcelStream;
 .super Landroidx/versionedparcelable/VersionedParcel;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,61 +18,61 @@
 
 
 # static fields
-.field private static final TYPE_BOOLEAN:I = 0x5
+.field public static final TYPE_BOOLEAN:I = 0x5
 
-.field private static final TYPE_BOOLEAN_ARRAY:I = 0x6
+.field public static final TYPE_BOOLEAN_ARRAY:I = 0x6
 
-.field private static final TYPE_DOUBLE:I = 0x7
+.field public static final TYPE_DOUBLE:I = 0x7
 
-.field private static final TYPE_DOUBLE_ARRAY:I = 0x8
+.field public static final TYPE_DOUBLE_ARRAY:I = 0x8
 
-.field private static final TYPE_FLOAT:I = 0xd
+.field public static final TYPE_FLOAT:I = 0xd
 
-.field private static final TYPE_FLOAT_ARRAY:I = 0xe
+.field public static final TYPE_FLOAT_ARRAY:I = 0xe
 
-.field private static final TYPE_INT:I = 0x9
+.field public static final TYPE_INT:I = 0x9
 
-.field private static final TYPE_INT_ARRAY:I = 0xa
+.field public static final TYPE_INT_ARRAY:I = 0xa
 
-.field private static final TYPE_LONG:I = 0xb
+.field public static final TYPE_LONG:I = 0xb
 
-.field private static final TYPE_LONG_ARRAY:I = 0xc
+.field public static final TYPE_LONG_ARRAY:I = 0xc
 
-.field private static final TYPE_NULL:I = 0x0
+.field public static final TYPE_NULL:I = 0x0
 
-.field private static final TYPE_STRING:I = 0x3
+.field public static final TYPE_STRING:I = 0x3
 
-.field private static final TYPE_STRING_ARRAY:I = 0x4
+.field public static final TYPE_STRING_ARRAY:I = 0x4
 
-.field private static final TYPE_SUB_BUNDLE:I = 0x1
+.field public static final TYPE_SUB_BUNDLE:I = 0x1
 
-.field private static final TYPE_SUB_PERSISTABLE_BUNDLE:I = 0x2
+.field public static final TYPE_SUB_PERSISTABLE_BUNDLE:I = 0x2
 
-.field private static final UTF_16:Ljava/nio/charset/Charset;
+.field public static final UTF_16:Ljava/nio/charset/Charset;
 
 
 # instance fields
-.field mCount:I
+.field public mCount:I
 
-.field private mCurrentInput:Ljava/io/DataInputStream;
+.field public mCurrentInput:Ljava/io/DataInputStream;
 
-.field private mCurrentOutput:Ljava/io/DataOutputStream;
+.field public mCurrentOutput:Ljava/io/DataOutputStream;
 
-.field private mFieldBuffer:Landroidx/versionedparcelable/VersionedParcelStream$b;
+.field public mFieldBuffer:Landroidx/versionedparcelable/VersionedParcelStream$b;
 
-.field private mFieldId:I
+.field public mFieldId:I
 
-.field mFieldSize:I
+.field public mFieldSize:I
 
-.field private mIgnoreParcelables:Z
+.field public mIgnoreParcelables:Z
 
-.field private final mMasterInput:Ljava/io/DataInputStream;
+.field public final mMasterInput:Ljava/io/DataInputStream;
 
-.field private final mMasterOutput:Ljava/io/DataOutputStream;
+.field public final mMasterOutput:Ljava/io/DataOutputStream;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "UTF-16"
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
+.method public constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -225,7 +225,7 @@
 
     invoke-virtual {p3, p2, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_2
     invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcel;->readLongArray()[J
@@ -333,6 +333,15 @@
     goto :goto_0
 
     :pswitch_d
+    invoke-virtual {p0}, Landroidx/versionedparcelable/VersionedParcelStream;->readBundle()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p2, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    :pswitch_e
     const/4 p1, 0x0
 
     invoke-virtual {p3, p2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
@@ -340,12 +349,10 @@
     :goto_0
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_e
         :pswitch_d
-        :pswitch_c
         :pswitch_c
         :pswitch_b
         :pswitch_a
@@ -369,10 +376,9 @@
 
     const/4 p1, 0x0
 
-    :goto_0
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeInt(I)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_0
     instance-of v0, p1, Landroid/os/Bundle;
@@ -387,7 +393,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeBundle(Landroid/os/Bundle;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_1
     instance-of v0, p1, Ljava/lang/String;
@@ -402,7 +408,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeString(Ljava/lang/String;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_2
     instance-of v0, p1, [Ljava/lang/String;
@@ -417,7 +423,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeArray([Ljava/lang/Object;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_3
     instance-of v0, p1, Ljava/lang/Boolean;
@@ -436,7 +442,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeBoolean(Z)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_4
     instance-of v0, p1, [Z
@@ -451,7 +457,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeBooleanArray([Z)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_5
     instance-of v0, p1, Ljava/lang/Double;
@@ -470,7 +476,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeDouble(D)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_6
     instance-of v0, p1, [D
@@ -485,7 +491,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeDoubleArray([D)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_7
     instance-of v0, p1, Ljava/lang/Integer;
@@ -502,7 +508,9 @@
 
     move-result p1
 
-    goto/16 :goto_0
+    invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeInt(I)V
+
+    goto :goto_0
 
     :cond_8
     instance-of v0, p1, [I
@@ -517,7 +525,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeIntArray([I)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_9
     instance-of v0, p1, Ljava/lang/Long;
@@ -536,7 +544,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeLong(J)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_a
     instance-of v0, p1, [J
@@ -551,7 +559,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeLongArray([J)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_b
     instance-of v0, p1, Ljava/lang/Float;
@@ -570,7 +578,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcelStream;->writeFloat(F)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_c
     instance-of v0, p1, [F
@@ -585,7 +593,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeFloatArray([F)V
 
-    :goto_1
+    :goto_0
     return-void
 
     :cond_d
@@ -659,7 +667,7 @@
     return-void
 .end method
 
-.method protected createSubParcel()Landroidx/versionedparcelable/VersionedParcel;
+.method public createSubParcel()Landroidx/versionedparcelable/VersionedParcel;
     .locals 7
 
     new-instance v6, Landroidx/versionedparcelable/VersionedParcelStream;
@@ -791,7 +799,7 @@
     throw v1
 .end method
 
-.method protected readCharSequence()Ljava/lang/CharSequence;
+.method public readCharSequence()Ljava/lang/CharSequence;
     .locals 1
 
     const/4 v0, 0x0
@@ -1262,7 +1270,7 @@
     throw p2
 .end method
 
-.method protected writeCharSequence(Ljava/lang/CharSequence;)V
+.method public writeCharSequence(Ljava/lang/CharSequence;)V
     .locals 1
 
     iget-boolean p1, p0, Landroidx/versionedparcelable/VersionedParcelStream;->mIgnoreParcelables:Z

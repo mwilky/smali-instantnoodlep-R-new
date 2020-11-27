@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotFirstState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.ShotFirstState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.ShotFirstState"
 
 
 # direct methods
@@ -34,7 +34,7 @@
     return v0
 .end method
 
-.method protected onCaptureSuccess(Landroid/graphics/Bitmap;)V
+.method public onCaptureSuccess(Landroid/graphics/Bitmap;)V
     .locals 2
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldStitchByView()Z
@@ -97,7 +97,7 @@
     throw p1
 .end method
 
-.method protected onStatusbarCaptureSuccess(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+.method public onStatusbarCaptureSuccess(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
@@ -119,7 +119,7 @@
     return-void
 .end method
 
-.method protected updateState()V
+.method public updateState()V
     .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;

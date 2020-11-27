@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/Container$2;
+.class public Lcom/google/tagmanager/Container$2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/tagmanager/LoadCallback;
@@ -11,25 +11,25 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/tagmanager/LoadCallback<",
-        "Lcom/google/tagmanager/c1/a;",
+        "Lc/b/c/s2/a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/tagmanager/Container;
+.field public final synthetic this$0:Lcom/google/tagmanager/Container;
 
-.field final synthetic val$clock:Lcom/google/tagmanager/h;
+.field public final synthetic val$clock:Lc/b/c/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/tagmanager/Container;Lcom/google/tagmanager/h;)V
+.method public constructor <init>(Lcom/google/tagmanager/Container;Lc/b/c/l;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    iput-object p2, p0, Lcom/google/tagmanager/Container$2;->val$clock:Lcom/google/tagmanager/h;
+    iput-object p2, p0, Lcom/google/tagmanager/Container$2;->val$clock:Lc/b/c/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -96,161 +96,155 @@
 
     iget-object p1, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-virtual {p1}, Lcom/google/tagmanager/Container;->u()Z
+    invoke-virtual {p1}, Lcom/google/tagmanager/Container;->y()Z
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_0
 
-    return-void
-
-    :cond_0
     iget-object p1, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
     const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lcom/google/tagmanager/Container;->v(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/google/tagmanager/Container;->A(J)V
 
-    const/4 p1, 0x0
-
-    throw p1
+    :cond_0
+    return-void
 .end method
 
-.method public onSuccess(Lcom/google/tagmanager/c1/a;)V
-    .locals 10
+.method public onSuccess(Lc/b/c/s2/a;)V
+    .locals 8
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-virtual {v0}, Lcom/google/tagmanager/Container;->u()Z
+    invoke-virtual {v0}, Lcom/google/tagmanager/Container;->y()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p1, Lcom/google/tagmanager/c1/a;->e:Lcom/google/analytics/containertag/proto/i;
-
-    const/4 v1, 0x0
+    iget-object v0, p1, Lc/b/c/s2/a;->e:Lc/b/a/a/a/i;
 
     if-eqz v0, :cond_0
 
-    iget-object v2, v0, Lcom/google/analytics/containertag/proto/i;->d:Lcom/google/analytics/containertag/proto/f;
+    iget-object v1, v0, Lc/b/a/a/a/i;->d:Lc/b/a/a/a/f;
 
-    iget-object v3, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
+    iget-object v2, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v3, v0}, Lcom/google/tagmanager/Container;->c(Lcom/google/tagmanager/Container;Lcom/google/analytics/containertag/proto/i;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v2, v0}, Lcom/google/tagmanager/Container;->c(Lcom/google/tagmanager/Container;Lc/b/a/a/a/i;)Lc/b/a/a/a/i;
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p1, Lcom/google/tagmanager/c1/a;->d:Lcom/google/analytics/containertag/proto/f;
+    iget-object v1, p1, Lc/b/c/s2/a;->d:Lc/b/a/a/a/f;
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lc/b/a/a/a/i;
 
     move-result-object v0
 
-    iput-object v2, v0, Lcom/google/analytics/containertag/proto/i;->d:Lcom/google/analytics/containertag/proto/f;
+    iput-object v1, v0, Lc/b/a/a/a/i;->d:Lc/b/a/a/a/f;
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lc/b/a/a/a/i;
 
     move-result-object v0
 
-    iput-object v1, v0, Lcom/google/analytics/containertag/proto/i;->c:[Lcom/google/analytics/containertag/proto/h;
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lc/b/a/a/a/i;->c:[Lc/b/a/a/a/h;
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lc/b/a/a/a/i;
 
     move-result-object v0
 
-    iget-object v3, v2, Lcom/google/analytics/containertag/proto/f;->n:Ljava/lang/String;
+    iget-object v2, v1, Lc/b/a/a/a/f;->n:Ljava/lang/String;
 
-    iput-object v3, v0, Lcom/google/analytics/containertag/proto/i;->e:Ljava/lang/String;
+    iput-object v2, v0, Lc/b/a/a/a/i;->e:Ljava/lang/String;
 
     :goto_0
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0, v2}, Lcom/google/tagmanager/Container;->d(Lcom/google/tagmanager/Container;Lcom/google/analytics/containertag/proto/f;)V
+    invoke-static {v0, v1}, Lcom/google/tagmanager/Container;->d(Lcom/google/tagmanager/Container;Lc/b/a/a/a/f;)V
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lc/b/a/a/a/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/analytics/containertag/proto/i;->c:[Lcom/google/analytics/containertag/proto/h;
+    iget-object v0, v0, Lc/b/a/a/a/i;->c:[Lc/b/a/a/a/h;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lcom/google/analytics/containertag/proto/i;
+    invoke-static {v0}, Lcom/google/tagmanager/Container;->b(Lcom/google/tagmanager/Container;)Lc/b/a/a/a/i;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v2, v2, Lcom/google/analytics/containertag/proto/i;->c:[Lcom/google/analytics/containertag/proto/h;
+    iget-object v1, v1, Lc/b/a/a/a/i;->c:[Lc/b/a/a/a/h;
 
-    invoke-static {v0, v2}, Lcom/google/tagmanager/Container;->e(Lcom/google/tagmanager/Container;[Lcom/google/analytics/containertag/proto/h;)V
+    invoke-static {v0, v1}, Lcom/google/tagmanager/Container;->e(Lcom/google/tagmanager/Container;[Lc/b/a/a/a/h;)V
 
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "setting refresh time to saved time: "
+    const-string v1, "setting refresh time to saved time: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p1, Lcom/google/tagmanager/c1/a;->c:J
+    iget-wide v1, p1, Lc/b/c/s2/a;->c:J
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/tagmanager/i0;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lc/b/c/z0;->e(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    iget-wide v2, p1, Lcom/google/tagmanager/c1/a;->c:J
+    iget-wide v1, p1, Lc/b/c/s2/a;->c:J
 
-    invoke-static {v0, v2, v3}, Lcom/google/tagmanager/Container;->g(Lcom/google/tagmanager/Container;J)J
+    invoke-static {v0, v1, v2}, Lcom/google/tagmanager/Container;->g(Lcom/google/tagmanager/Container;J)J
 
     iget-object p1, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v0, 0x0
 
     invoke-static {p1}, Lcom/google/tagmanager/Container;->f(Lcom/google/tagmanager/Container;)J
 
-    move-result-wide v4
+    move-result-wide v2
 
-    const-wide/32 v6, 0x2932e00
+    const-wide/32 v4, 0x2932e00
 
-    add-long/2addr v4, v6
+    add-long/2addr v2, v4
 
-    iget-object v0, p0, Lcom/google/tagmanager/Container$2;->val$clock:Lcom/google/tagmanager/h;
+    iget-object v6, p0, Lcom/google/tagmanager/Container$2;->val$clock:Lc/b/c/l;
 
-    invoke-interface {v0}, Lcom/google/tagmanager/h;->a()J
+    invoke-interface {v6}, Lc/b/c/l;->a()J
 
-    move-result-wide v8
+    move-result-wide v6
 
-    sub-long/2addr v4, v8
+    sub-long/2addr v2, v6
 
-    invoke-static {v6, v7, v4, v5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v4
-
-    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v2
 
-    invoke-virtual {p1, v2, v3}, Lcom/google/tagmanager/Container;->v(J)V
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
-    throw v1
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/tagmanager/Container;->A(J)V
 
     :cond_2
     iget-object p1, p0, Lcom/google/tagmanager/Container$2;->this$0:Lcom/google/tagmanager/Container;
@@ -265,9 +259,9 @@
 .method public bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/google/tagmanager/c1/a;
+    check-cast p1, Lc/b/c/s2/a;
 
-    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Container$2;->onSuccess(Lcom/google/tagmanager/c1/a;)V
+    invoke-virtual {p0, p1}, Lcom/google/tagmanager/Container$2;->onSuccess(Lc/b/c/s2/a;)V
 
     return-void
 .end method

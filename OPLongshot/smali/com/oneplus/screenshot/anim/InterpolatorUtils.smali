@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/anim/InterpolatorUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "InterpolatorUtils"
+.field public static final TAG:Ljava/lang/String; = "InterpolatorUtils"
 
 
 # direct methods
@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method private static createInterpolatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
+.method public static createInterpolatorFromXml(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)Landroid/view/animation/Interpolator;
     .locals 5
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I

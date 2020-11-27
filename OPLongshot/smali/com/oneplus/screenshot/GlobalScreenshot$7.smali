@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$7;
+.class public Lcom/oneplus/screenshot/GlobalScreenshot$7;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$7;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
@@ -49,7 +49,6 @@
 
     const-string v0, "mScreenBitmap is null"
 
-    :goto_0
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -65,7 +64,9 @@
 
     const-string v0, "longshot is interrupted"
 
-    goto :goto_0
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 
     :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$7;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;

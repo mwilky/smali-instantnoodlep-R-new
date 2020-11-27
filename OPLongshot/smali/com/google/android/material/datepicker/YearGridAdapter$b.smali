@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/datepicker/YearGridAdapter$b;
 .super Landroidx/recyclerview/widget/RecyclerView$y;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final t:Landroid/widget/TextView;
+.field public final t:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>(Landroid/widget/TextView;)V
+.method public constructor <init>(Landroid/widget/TextView;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$y;-><init>(Landroid/view/View;)V

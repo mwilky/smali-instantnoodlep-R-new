@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableTransformationBehavior;
 .super Lcom/google/android/material/transformation/ExpandableBehavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private a:Landroid/animation/AnimatorSet;
+.field public a:Landroid/animation/AnimatorSet;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/google/android/material/transformation/ExpandableTransformationBehavior;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+.method public static synthetic a(Lcom/google/android/material/transformation/ExpandableTransformationBehavior;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;->a:Landroid/animation/AnimatorSet;
@@ -42,12 +42,12 @@
 
 
 # virtual methods
-.method protected abstract b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+.method public abstract b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method protected onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
+.method public onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
     .locals 3
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation

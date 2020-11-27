@@ -1,6 +1,6 @@
-.class Landroidx/viewpager/widget/ViewPager$j;
+.class public Landroidx/viewpager/widget/ViewPager$j;
 .super Landroid/database/DataSetObserver;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "j"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/viewpager/widget/ViewPager;
+.field public final synthetic a:Landroidx/viewpager/widget/ViewPager;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager/widget/ViewPager;)V
+.method public constructor <init>(Landroidx/viewpager/widget/ViewPager;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/viewpager/widget/ViewPager$j;->a:Landroidx/viewpager/widget/ViewPager;

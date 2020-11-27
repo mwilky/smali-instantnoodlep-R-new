@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchSLastTask;
 .super Lcom/oneplus/screenshot/longshot/task/StitchLastTask;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchSLastTask"
+.field public static final TAG:Ljava/lang/String; = "StitchSLastTask"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method protected createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method public createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;
@@ -28,7 +28,7 @@
     return-object v0
 .end method
 
-.method protected stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
+.method public stitchForCurr(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
     .locals 7
 
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
@@ -112,10 +112,9 @@
 
     invoke-direct {v1, p1, v5, v5}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    :goto_0
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     if-lt p1, v1, :cond_3
@@ -155,6 +154,8 @@
 
     invoke-direct {v1, p1, v5, v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+
     goto :goto_0
 
     :cond_3
@@ -193,10 +194,10 @@
 
     invoke-direct {v1, v2, p1, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
     :cond_5
-    :goto_1
+    :goto_0
     invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
 
     return-void

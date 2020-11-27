@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$18;
+.class public Lcom/oneplus/screenshot/GlobalScreenshot$18;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-.field final synthetic val$finalPos:Landroid/graphics/PointF;
+.field public final synthetic val$finalPos:Landroid/graphics/PointF;
 
-.field final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
+.field public final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;Landroid/view/animation/Interpolator;Landroid/graphics/PointF;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;Landroid/view/animation/Interpolator;Landroid/graphics/PointF;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$18;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;

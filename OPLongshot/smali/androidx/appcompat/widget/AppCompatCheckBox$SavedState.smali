@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;
+.class public Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
-.field b:Z
+.field public b:Z
 
-.field c:Z
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState$1;
@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$a;)V
+.method public synthetic constructor <init>(Landroid/os/Parcel;Landroidx/appcompat/widget/AppCompatCheckBox$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatCheckBox$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcelable;)V
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V

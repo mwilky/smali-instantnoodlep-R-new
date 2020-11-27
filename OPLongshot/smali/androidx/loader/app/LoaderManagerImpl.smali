@@ -1,6 +1,6 @@
-.class Landroidx/loader/app/LoaderManagerImpl;
+.class public Landroidx/loader/app/LoaderManagerImpl;
 .super Landroidx/loader/app/LoaderManager;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,44 +14,44 @@
 
 
 # static fields
-.field static c:Z = false
+.field public static c:Z = false
 
 
 # instance fields
-.field private final a:Landroidx/lifecycle/e;
+.field public final a:Lb/m/e;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field private final b:Landroidx/loader/app/LoaderManagerImpl$a;
+.field public final b:Landroidx/loader/app/LoaderManagerImpl$a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>(Landroidx/lifecycle/e;Landroidx/lifecycle/j;)V
+.method public constructor <init>(Lb/m/e;Lb/m/j;)V
     .locals 0
-    .param p1    # Landroidx/lifecycle/e;
+    .param p1    # Lb/m/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/lifecycle/j;
+    .param p2    # Lb/m/j;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     invoke-direct {p0}, Landroidx/loader/app/LoaderManager;-><init>()V
 
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Landroidx/lifecycle/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/m/e;
 
-    invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$a;->e(Landroidx/lifecycle/j;)Landroidx/loader/app/LoaderManagerImpl$a;
+    invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$a;->e(Lb/m/j;)Landroidx/loader/app/LoaderManagerImpl$a;
 
     move-result-object p1
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Landroidx/lifecycle/e;
+    iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/m/e;
 
     invoke-static {v1, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 

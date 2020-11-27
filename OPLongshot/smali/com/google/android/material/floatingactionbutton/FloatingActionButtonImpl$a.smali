@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$a;
+.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
-.field final synthetic b:Z
+.field public final synthetic b:Z
 
-.field final synthetic c:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
+.field public final synthetic c:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
 
-.field final synthetic d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+.field public final synthetic d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;ZLcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;ZLcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$a;->d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;

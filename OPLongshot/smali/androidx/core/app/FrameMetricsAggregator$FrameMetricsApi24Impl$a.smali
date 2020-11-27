@@ -1,6 +1,6 @@
-.class Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$a;
+.class public Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/Window$OnFrameMetricsAvailableListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
+.field public final synthetic a:Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;)V
+.method public constructor <init>(Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl$a;->a:Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;

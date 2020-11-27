@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/ResourceManagerInternal;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,23 +23,23 @@
 
 
 # static fields
-.field private static final COLOR_FILTER_CACHE:Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
+.field public static final COLOR_FILTER_CACHE:Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
 
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
-.field private static final DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
+.field public static final DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
 
-.field private static INSTANCE:Landroidx/appcompat/widget/ResourceManagerInternal; = null
+.field public static INSTANCE:Landroidx/appcompat/widget/ResourceManagerInternal; = null
 
-.field private static final PLATFORM_VD_CLAZZ:Ljava/lang/String; = "android.graphics.drawable.VectorDrawable"
+.field public static final PLATFORM_VD_CLAZZ:Ljava/lang/String; = "android.graphics.drawable.VectorDrawable"
 
-.field private static final SKIP_DRAWABLE_TAG:Ljava/lang/String; = "appcompat_skip_skip"
+.field public static final SKIP_DRAWABLE_TAG:Ljava/lang/String; = "appcompat_skip_skip"
 
-.field private static final TAG:Ljava/lang/String; = "ResourceManagerInternal"
+.field public static final TAG:Ljava/lang/String; = "ResourceManagerInternal"
 
 
 # instance fields
-.field private mDelegates:Landroidx/collection/SimpleArrayMap;
+.field public mDelegates:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
@@ -50,7 +50,7 @@
     .end annotation
 .end field
 
-.field private final mDrawableCaches:Ljava/util/WeakHashMap;
+.field public final mDrawableCaches:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -63,11 +63,11 @@
     .end annotation
 .end field
 
-.field private mHasCheckedVectorDrawableSetup:Z
+.field public mHasCheckedVectorDrawableSetup:Z
 
-.field private mHooks:Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
+.field public mHooks:Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
 
-.field private mKnownDrawableIdTags:Landroidx/collection/SparseArrayCompat;
+.field public mKnownDrawableIdTags:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SparseArrayCompat<",
@@ -77,7 +77,7 @@
     .end annotation
 .end field
 
-.field private mTintLists:Ljava/util/WeakHashMap;
+.field public mTintLists:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -89,11 +89,11 @@
     .end annotation
 .end field
 
-.field private mTypedValue:Landroid/util/TypedValue;
+.field public mTypedValue:Landroid/util/TypedValue;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -205,7 +205,6 @@
 
     const/4 p1, 0x1
 
-    :goto_0
     monitor-exit p0
 
     return p1
@@ -213,7 +212,9 @@
     :cond_1
     const/4 p1, 0x0
 
-    goto :goto_0
+    monitor-exit p0
+
+    return p1
 
     :catchall_0
     move-exception p1
@@ -273,7 +274,7 @@
     return-void
 .end method
 
-.method private static arrayContains([II)Z
+.method public static arrayContains([II)Z
     .locals 4
 
     array-length v0, p0
@@ -320,7 +321,7 @@
 
     iput-boolean v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHasCheckedVectorDrawableSetup:Z
 
-    sget v0, La/a/k/a;->abc_vector_test:I
+    sget v0, Lb/c/l/a;->abc_vector_test:I
 
     invoke-virtual {p0, p1, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -350,7 +351,7 @@
     throw p1
 .end method
 
-.method private static createCacheKey(Landroid/util/TypedValue;)J
+.method public static createCacheKey(Landroid/util/TypedValue;)J
     .locals 4
 
     iget v0, p0, Landroid/util/TypedValue;->assetCookie:I
@@ -441,7 +442,7 @@
     return-object p2
 .end method
 
-.method private static createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;[I)Landroid/graphics/PorterDuffColorFilter;
+.method public static createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;[I)Landroid/graphics/PorterDuffColorFilter;
     .locals 1
 
     if-eqz p0, :cond_1
@@ -662,7 +663,7 @@
     return-object v1
 .end method
 
-.method private static installDefaultInflateDelegates(Landroidx/appcompat/widget/ResourceManagerInternal;)V
+.method public static installDefaultInflateDelegates(Landroidx/appcompat/widget/ResourceManagerInternal;)V
     .locals 2
     .param p0    # Landroidx/appcompat/widget/ResourceManagerInternal;
         .annotation build Landroidx/annotation/NonNull;
@@ -703,7 +704,7 @@
     return-void
 .end method
 
-.method private static isVectorDrawable(Landroid/graphics/drawable/Drawable;)Z
+.method public static isVectorDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
     .param p0    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/NonNull;
@@ -1017,11 +1018,11 @@
     move-result-object p4
 
     :cond_0
-    invoke-static {p4}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p4}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
-    invoke-static {p4, v0}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p4, v0}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->getTintMode(I)Landroid/graphics/PorterDuff$Mode;
 
@@ -1029,7 +1030,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p4, p1}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p4, p1}, Lb/h/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_0
 
@@ -1062,7 +1063,7 @@
     return-object p4
 .end method
 
-.method static tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
+.method public static tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
     .locals 2
 
     invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
@@ -1182,7 +1183,7 @@
     throw p1
 .end method
 
-.method declared-synchronized getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
+.method public declared-synchronized getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -1211,7 +1212,7 @@
     :cond_0
     if-nez v0, :cond_1
 
-    invoke-static {p1, p2}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2}, Lb/h/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1242,7 +1243,7 @@
     throw p1
 .end method
 
-.method declared-synchronized getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+.method public declared-synchronized getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -1297,7 +1298,7 @@
     throw p1
 .end method
 
-.method getTintMode(I)Landroid/graphics/PorterDuff$Mode;
+.method public getTintMode(I)Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHooks:Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
@@ -1354,7 +1355,7 @@
     throw p1
 .end method
 
-.method declared-synchronized onDrawableLoadedFromResources(Landroid/content/Context;Landroidx/appcompat/widget/VectorEnabledTintResources;I)Landroid/graphics/drawable/Drawable;
+.method public declared-synchronized onDrawableLoadedFromResources(Landroid/content/Context;Landroidx/appcompat/widget/VectorEnabledTintResources;I)Landroid/graphics/drawable/Drawable;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -1434,7 +1435,7 @@
     throw p1
 .end method
 
-.method tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
+.method public tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;

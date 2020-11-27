@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/ScreenshotServiceErrorReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source ""
+.source "SourceFile"
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     check-cast p2, Landroid/app/NotificationManager;
 
-    const v0, 0x7f10008d
+    const v0, 0x7f100098
 
     invoke-static {p1, p2, v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->notifyScreenshotError(Landroid/content/Context;Landroid/app/NotificationManager;I)V
 

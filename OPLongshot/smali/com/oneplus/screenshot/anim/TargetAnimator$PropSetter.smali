@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;
+.class public Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;
 .super Ljava/util/HashMap;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "PropSetter"
 .end annotation
 
@@ -24,11 +24,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/anim/TargetAnimator;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/anim/TargetAnimator;
 
 
 # direct methods
-.method private constructor <init>(Lcom/oneplus/screenshot/anim/TargetAnimator;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/anim/TargetAnimator;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;->this$0:Lcom/oneplus/screenshot/anim/TargetAnimator;
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/oneplus/screenshot/anim/TargetAnimator;Lcom/oneplus/screenshot/anim/TargetAnimator$1;)V
+.method public synthetic constructor <init>(Lcom/oneplus/screenshot/anim/TargetAnimator;Lcom/oneplus/screenshot/anim/TargetAnimator$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/anim/TargetAnimator$PropSetter;-><init>(Lcom/oneplus/screenshot/anim/TargetAnimator;)V

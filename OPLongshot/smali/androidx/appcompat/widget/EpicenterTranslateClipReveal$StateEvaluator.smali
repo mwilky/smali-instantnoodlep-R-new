@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;
+.class public Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "StateEvaluator"
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field private final mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
+.field public final mTemp:Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;)V
+.method public synthetic constructor <init>(Landroidx/appcompat/widget/EpicenterTranslateClipReveal$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;-><init>()V

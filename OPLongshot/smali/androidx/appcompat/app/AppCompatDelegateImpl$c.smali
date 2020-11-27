@@ -1,9 +1,9 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$c;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/core/view/m;
+.implements Lb/h/l/m;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$c;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -34,10 +34,10 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+.method public a(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
     .locals 4
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->e()I
+    invoke-virtual {p2}, Lb/h/l/x;->e()I
 
     move-result v0
 
@@ -49,24 +49,24 @@
 
     if-eq v0, v1, :cond_0
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->c()I
+    invoke-virtual {p2}, Lb/h/l/x;->c()I
 
     move-result v0
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->d()I
+    invoke-virtual {p2}, Lb/h/l/x;->d()I
 
     move-result v2
 
-    invoke-virtual {p2}, Landroidx/core/view/x;->b()I
+    invoke-virtual {p2}, Lb/h/l/x;->b()I
 
     move-result v3
 
-    invoke-virtual {p2, v0, v1, v2, v3}, Landroidx/core/view/x;->h(IIII)Landroidx/core/view/x;
+    invoke-virtual {p2, v0, v1, v2, v3}, Lb/h/l/x;->h(IIII)Lb/h/l/x;
 
     move-result-object p2
 
     :cond_0
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->U(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->U(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
 
     move-result-object p1
 

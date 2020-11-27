@@ -1,6 +1,6 @@
-.class abstract Landroidx/lifecycle/LiveData$b;
+.class public abstract Landroidx/lifecycle/LiveData$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x402
+    accessFlags = 0x401
     name = "b"
 .end annotation
 
 
 # instance fields
-.field mActive:Z
+.field public mActive:Z
 
-.field mLastVersion:I
+.field public mLastVersion:I
 
-.field final mObserver:Landroidx/lifecycle/Observer;
+.field public final mObserver:Landroidx/lifecycle/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/Observer<",
@@ -28,11 +28,11 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Landroidx/lifecycle/LiveData;
+.field public final synthetic this$0:Landroidx/lifecycle/LiveData;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
+.method public constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method activeStateChanged(Z)V
+.method public activeStateChanged(Z)V
     .locals 4
 
     iget-boolean v0, p0, Landroidx/lifecycle/LiveData$b;->mActive:Z
@@ -139,13 +139,13 @@
     return-void
 .end method
 
-.method detachObserver()V
+.method public detachObserver()V
     .locals 0
 
     return-void
 .end method
 
-.method isAttachedTo(Landroidx/lifecycle/e;)Z
+.method public isAttachedTo(Lb/m/e;)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -153,5 +153,5 @@
     return p1
 .end method
 
-.method abstract shouldBeActive()Z
+.method public abstract shouldBeActive()Z
 .end method

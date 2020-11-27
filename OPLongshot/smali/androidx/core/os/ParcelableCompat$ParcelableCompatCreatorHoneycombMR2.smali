@@ -1,6 +1,6 @@
-.class Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
+.class public Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private final mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
+.field public final mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/core/os/ParcelableCompatCreatorCallbacks<",
@@ -31,7 +31,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/os/ParcelableCompatCreatorCallbacks;)V
+.method public constructor <init>(Landroidx/core/os/ParcelableCompatCreatorCallbacks;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

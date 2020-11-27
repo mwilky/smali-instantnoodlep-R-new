@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/SaveTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,31 +22,31 @@
 
 
 # static fields
-.field private static final INTENT_EXTRAS_LOAD_MEDIA_SET:Ljava/lang/String; = "load_media_set"
+.field public static final INTENT_EXTRAS_LOAD_MEDIA_SET:Ljava/lang/String; = "load_media_set"
 
-.field private static final INTENT_EXTRAS_NOT_READ_ONLY:Ljava/lang/String; = "isReadOnly"
+.field public static final INTENT_EXTRAS_NOT_READ_ONLY:Ljava/lang/String; = "isReadOnly"
 
-.field private static final INTENT_EXTRAS_SIMPLEMODE:Ljava/lang/String; = "simplemode"
+.field public static final INTENT_EXTRAS_SIMPLEMODE:Ljava/lang/String; = "simplemode"
 
-.field private static final LONGSHOT_DIR_NAME:Ljava/lang/String; = "Screenshots"
+.field public static final LONGSHOT_DIR_NAME:Ljava/lang/String; = "Screenshots"
 
-.field private static final LONGSHOT_FILE_NAME:Ljava/lang/String; = "Screenshot"
+.field public static final LONGSHOT_FILE_NAME:Ljava/lang/String; = "Screenshot"
 
-.field private static final OP_GALLERY_EDITOR_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery.PhotoEditorActivity"
+.field public static final OP_GALLERY_EDITOR_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery.PhotoEditorActivity"
 
-.field private static final OP_GALLERY_NEW_EDITOR_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery2.PhotoEditorActivity"
+.field public static final OP_GALLERY_NEW_EDITOR_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery2.PhotoEditorActivity"
 
-.field private static final OP_GALLERY_PACKAGE_NAME:Ljava/lang/String; = "com.oneplus.gallery"
+.field public static final OP_GALLERY_PACKAGE_NAME:Ljava/lang/String; = "com.oneplus.gallery"
 
-.field private static final OP_GALLERY_VIEWER_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery.PhotoViewerActivity"
+.field public static final OP_GALLERY_VIEWER_ACTIVITY:Ljava/lang/String; = "com.oneplus.gallery.PhotoViewerActivity"
 
-.field private static final TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String;
 
 
 # instance fields
-.field private final GAME_MODE_STATUS:Ljava/lang/String;
+.field public final GAME_MODE_STATUS:Ljava/lang/String;
 
-.field private mBitmaps:Ljava/util/List;
+.field public mBitmaps:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -56,23 +56,23 @@
     .end annotation
 .end field
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
+.field public mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
-.field private mListener:Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
+.field public mListener:Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
 
-.field private mNavibar:Landroid/graphics/Bitmap;
+.field public mNavibar:Landroid/graphics/Bitmap;
 
-.field private mNotification:Lcom/oneplus/screenshot/service/GlobalNotification;
+.field public mNotification:Lcom/oneplus/screenshot/service/GlobalNotification;
 
-.field private mNotificationId:I
+.field public mNotificationId:I
 
-.field private mPreview:Landroid/graphics/Bitmap;
+.field public mPreview:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -238,6 +238,8 @@
 
     invoke-direct {p1, p3, p2, p4}, Lcom/oneplus/screenshot/util/ImageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    iput-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
+
     goto :goto_1
 
     :cond_2
@@ -245,9 +247,9 @@
 
     invoke-direct {p1, p3, p2}, Lcom/oneplus/screenshot/util/ImageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_1
     iput-object p1, p0, Lcom/oneplus/screenshot/service/SaveTask;->mImageInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
+    :goto_1
     sget-object p1, Lcom/oneplus/screenshot/service/SaveTask;->TAG:Ljava/lang/String;
 
     const-string p2, "SaveTask"
@@ -276,7 +278,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10008a
+    const v1, 0x7f100095
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -293,7 +295,7 @@
 
 
 # virtual methods
-.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
     sget-object p1, Lcom/oneplus/screenshot/service/SaveTask;->TAG:Ljava/lang/String;
@@ -387,7 +389,7 @@
     return-object p1
 .end method
 
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Void;
@@ -399,7 +401,7 @@
     return-object p1
 .end method
 
-.method protected onCancelled()V
+.method public onCancelled()V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/SaveTask;->mListener:Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
@@ -412,7 +414,7 @@
     return-void
 .end method
 
-.method protected onPostExecute(Ljava/lang/Boolean;)V
+.method public onPostExecute(Ljava/lang/Boolean;)V
     .locals 12
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -520,7 +522,7 @@
     return-void
 .end method
 
-.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Boolean;

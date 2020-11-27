@@ -1,6 +1,6 @@
-.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;
+.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,47 +9,47 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "g"
 .end annotation
 
 
 # static fields
-.field private static final q:Landroid/graphics/Matrix;
+.field public static final q:Landroid/graphics/Matrix;
 
 
 # instance fields
-.field private final a:Landroid/graphics/Path;
+.field public final a:Landroid/graphics/Path;
 
-.field private final b:Landroid/graphics/Path;
+.field public final b:Landroid/graphics/Path;
 
-.field private final c:Landroid/graphics/Matrix;
+.field public final c:Landroid/graphics/Matrix;
 
-.field d:Landroid/graphics/Paint;
+.field public d:Landroid/graphics/Paint;
 
-.field e:Landroid/graphics/Paint;
+.field public e:Landroid/graphics/Paint;
 
-.field private f:Landroid/graphics/PathMeasure;
+.field public f:Landroid/graphics/PathMeasure;
 
-.field private g:I
+.field public g:I
 
-.field final h:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
+.field public final h:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
 
-.field i:F
+.field public i:F
 
-.field j:F
+.field public j:F
 
-.field k:F
+.field public k:F
 
-.field l:F
+.field public l:F
 
-.field m:I
+.field public m:I
 
-.field n:Ljava/lang/String;
+.field public n:Ljava/lang/String;
 
-.field o:Ljava/lang/Boolean;
+.field public o:Ljava/lang/Boolean;
 
-.field final p:Landroidx/collection/ArrayMap;
+.field public final p:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArrayMap<",
@@ -62,7 +62,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroid/graphics/Matrix;
@@ -237,7 +237,7 @@
     return-void
 .end method
 
-.method private static a(FFFF)F
+.method public static a(FFFF)F
     .locals 0
 
     mul-float/2addr p0, p3
@@ -249,7 +249,31 @@
     return p0
 .end method
 
-.method private c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+
+# virtual methods
+.method public b(Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+    .locals 7
+
+    iget-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->h:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
+
+    sget-object v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->q:Landroid/graphics/Matrix;
+
+    move-object v0, p0
+
+    move-object v3, p1
+
+    move v4, p2
+
+    move v5, p3
+
+    move-object v6, p4
+
+    invoke-virtual/range {v0 .. v6}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+
+    return-void
+.end method
+
+.method public final c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
     .locals 9
 
     iget-object v0, p1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->a:Landroid/graphics/Matrix;
@@ -303,7 +327,7 @@
 
     move-object v8, p6
 
-    invoke-direct/range {v2 .. v8}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+    invoke-virtual/range {v2 .. v8}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
 
     goto :goto_1
 
@@ -328,7 +352,7 @@
 
     move-object v8, p6
 
-    invoke-direct/range {v2 .. v8}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->d(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+    invoke-virtual/range {v2 .. v8}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->d(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
 
     :cond_1
     :goto_1
@@ -342,7 +366,7 @@
     return-void
 .end method
 
-.method private d(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
+.method public final d(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
     .locals 7
 
     int-to-float p4, p4
@@ -371,7 +395,7 @@
 
     invoke-virtual {v1, p4, p5}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    invoke-direct {p0, p1}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->e(Landroid/graphics/Matrix;)F
+    invoke-virtual {p0, p1}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->e(Landroid/graphics/Matrix;)F
 
     move-result p1
 
@@ -734,7 +758,7 @@
     return-void
 .end method
 
-.method private e(Landroid/graphics/Matrix;)F
+.method public final e(Landroid/graphics/Matrix;)F
     .locals 9
 
     const/4 v0, 0x4
@@ -821,30 +845,6 @@
         0x3f800000    # 1.0f
         0x0
     .end array-data
-.end method
-
-
-# virtual methods
-.method public b(Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
-    .locals 7
-
-    iget-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->h:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
-
-    sget-object v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->q:Landroid/graphics/Matrix;
-
-    move-object v0, p0
-
-    move-object v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v0 .. v6}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;->c(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;Landroid/graphics/Matrix;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V
-
-    return-void
 .end method
 
 .method public f()Z

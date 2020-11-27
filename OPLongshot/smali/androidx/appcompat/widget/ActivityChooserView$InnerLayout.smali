@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;
 .super Landroid/widget/LinearLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,11 +21,11 @@
 
 
 # static fields
-.field private static final TINT_ATTRS:[I
+.field public static final TINT_ATTRS:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1

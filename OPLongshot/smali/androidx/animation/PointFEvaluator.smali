@@ -1,6 +1,6 @@
 .class public Landroidx/animation/PointFEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private mPoint:Landroid/graphics/PointF;
+.field public mPoint:Landroid/graphics/PointF;
 
 
 # direct methods

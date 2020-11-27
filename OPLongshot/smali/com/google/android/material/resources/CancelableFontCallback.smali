@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/resources/CancelableFontCallback;
 .super Lcom/google/android/material/resources/TextAppearanceFontCallback;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final applyFont:Lcom/google/android/material/resources/CancelableFontCallback$a;
+.field public final applyFont:Lcom/google/android/material/resources/CancelableFontCallback$a;
 
-.field private cancelled:Z
+.field public cancelled:Z
 
-.field private final fallbackFont:Landroid/graphics/Typeface;
+.field public final fallbackFont:Landroid/graphics/Typeface;
 
 
 # direct methods

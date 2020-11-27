@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/view/menu/MenuItemImpl$a;
+.class public Landroidx/appcompat/view/menu/MenuItemImpl$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/core/view/ActionProvider$a;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field public final synthetic a:Landroidx/appcompat/view/menu/MenuItemImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl$a;->a:Landroidx/appcompat/view/menu/MenuItemImpl;

@@ -1,10 +1,10 @@
 .class public Landroidx/appcompat/app/OneplusApplication;
 .super Landroid/app/Application;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
-.implements Landroidx/appcompat/app/f$a;
+.implements Lb/c/k/e$a;
 
 
 # annotations
@@ -18,28 +18,28 @@
 # static fields
 .field public static final NAV_BAR_MODE_GESTURAL:I = 0x2
 
-.field private static final TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String;
 
-.field private static final TAG_GESTURE:Ljava/lang/String; = "GestureBarAdapterPolicy"
+.field public static final TAG_GESTURE:Ljava/lang/String; = "GestureBarAdapterPolicy"
 
-.field private static instance:Landroidx/appcompat/app/OneplusApplication;
+.field public static instance:Landroidx/appcompat/app/OneplusApplication;
 
 
 # instance fields
-.field private mGestureButtonEnabled:Z
+.field public mGestureButtonEnabled:Z
 
-.field private mGesturePolicyMap:Ljava/util/concurrent/ConcurrentHashMap;
+.field public mGesturePolicyMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/Integer;",
-            "Landroidx/appcompat/app/f;",
+            "Lb/c/k/e;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private mNavigationBarColor:Ljava/util/concurrent/ConcurrentHashMap;
+.field public mNavigationBarColor:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
@@ -52,7 +52,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-class v0, Landroidx/appcompat/app/OneplusApplication;
@@ -99,15 +99,15 @@
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
-    new-instance p2, Landroidx/appcompat/app/f;
+    new-instance p2, Lb/c/k/e;
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p2, v0, p0, p0}, Landroidx/appcompat/app/f;-><init>(Landroid/os/Handler;Landroid/content/Context;Landroidx/appcompat/app/f$a;)V
+    invoke-direct {p2, v0, p0, p0}, Lb/c/k/e;-><init>(Landroid/os/Handler;Landroid/content/Context;Lb/c/k/e$a;)V
 
-    invoke-virtual {p2, p1}, Landroidx/appcompat/app/f;->a(Landroid/app/Activity;)V
+    invoke-virtual {p2, p1}, Lb/c/k/e;->a(Landroid/app/Activity;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -142,7 +142,7 @@
     invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    invoke-static {p0}, Lb/b/a/b;->b(Landroid/content/Context;)Z
+    invoke-static {p0}, Lc/c/a/b;->b(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -196,11 +196,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/appcompat/app/f;
+    check-cast v1, Lb/c/k/e;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p1}, Landroidx/appcompat/app/f;->d(Landroid/app/Activity;)V
+    invoke-virtual {v1, p1}, Lb/c/k/e;->d(Landroid/app/Activity;)V
 
     iget-object v1, p0, Landroidx/appcompat/app/OneplusApplication;->mGesturePolicyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -363,6 +363,8 @@
 
     const/4 v0, 0x0
 
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setNavigationBarColor(I)V
+
     goto :goto_0
 
     :cond_0
@@ -422,10 +424,10 @@
 
     move-result v0
 
-    :goto_0
     invoke-virtual {p1, v0}, Landroid/view/Window;->setNavigationBarColor(I)V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -454,23 +456,23 @@
 
     sput-object p0, Landroidx/appcompat/app/OneplusApplication;->instance:Landroidx/appcompat/app/OneplusApplication;
 
-    invoke-static {p0}, Lb/b/a/b;->g(Landroid/content/Context;)Z
+    invoke-static {p0}, Lc/c/a/b;->g(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lb/b/a/b;->d(Landroid/content/Context;)I
+    invoke-static {p0}, Lc/c/a/b;->d(Landroid/content/Context;)I
 
     move-result v0
 
-    invoke-static {p0}, Lb/b/a/b;->c(Landroid/content/Context;)I
+    invoke-static {p0}, Lc/c/a/b;->c(Landroid/content/Context;)I
 
     move-result v1
 
     invoke-virtual {p0, v0, v1}, Landroidx/appcompat/app/OneplusApplication;->onVersionChanged(II)V
 
-    invoke-static {p0}, Lb/b/a/b;->f(Landroid/content/Context;)V
+    invoke-static {p0}, Lc/c/a/b;->f(Landroid/content/Context;)V
 
     :cond_0
     invoke-virtual {p0, p0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
@@ -514,7 +516,7 @@
     return-void
 .end method
 
-.method protected onVersionChanged(II)V
+.method public onVersionChanged(II)V
     .locals 3
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation

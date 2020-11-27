@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/AlertController$AlertParams$a;
+.class public Landroidx/appcompat/app/AlertController$AlertParams$a;
 .super Landroid/widget/CursorAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private final a:I
+.field public final a:I
 
-.field private final b:I
+.field public final b:I
 
-.field final synthetic c:Landroidx/appcompat/app/AlertController$RecycleListView;
+.field public final synthetic c:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-.field final synthetic d:Landroidx/appcompat/app/AlertController;
+.field public final synthetic d:Landroidx/appcompat/app/AlertController;
 
-.field final synthetic e:Landroidx/appcompat/app/AlertController$AlertParams;
+.field public final synthetic e:Landroidx/appcompat/app/AlertController$AlertParams;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroid/content/Context;Landroid/database/Cursor;ZLandroidx/appcompat/app/AlertController$RecycleListView;Landroidx/appcompat/app/AlertController;)V
+.method public constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroid/content/Context;Landroid/database/Cursor;ZLandroidx/appcompat/app/AlertController$RecycleListView;Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$a;->e:Landroidx/appcompat/app/AlertController$AlertParams;

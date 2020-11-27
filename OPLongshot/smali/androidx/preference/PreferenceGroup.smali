@@ -1,6 +1,6 @@
 .class public abstract Landroidx/preference/PreferenceGroup;
 .super Landroidx/preference/Preference;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private a:Ljava/util/List;
+.field public a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -23,9 +23,9 @@
     .end annotation
 .end field
 
-.field private b:I
+.field public b:I
 
-.field private c:Landroidx/preference/PreferenceGroup$OnExpandButtonClickListener;
+.field public c:Landroidx/preference/PreferenceGroup$OnExpandButtonClickListener;
 
 
 # virtual methods
@@ -79,7 +79,7 @@
     return v0
 .end method
 
-.method protected dispatchRestoreInstanceState(Landroid/os/Bundle;)V
+.method public dispatchRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->dispatchRestoreInstanceState(Landroid/os/Bundle;)V
@@ -107,7 +107,7 @@
     return-void
 .end method
 
-.method protected dispatchSaveInstanceState(Landroid/os/Bundle;)V
+.method public dispatchSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->dispatchSaveInstanceState(Landroid/os/Bundle;)V
@@ -135,7 +135,7 @@
     return-void
 .end method
 
-.method protected e()Z
+.method public e()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -188,7 +188,7 @@
     return-void
 .end method
 
-.method g()V
+.method public g()V
     .locals 1
 
     monitor-enter p0
@@ -296,7 +296,7 @@
     return-void
 .end method
 
-.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
     if-eqz p1, :cond_1
@@ -337,7 +337,7 @@
     return-void
 .end method
 
-.method protected onSaveInstanceState()Landroid/os/Parcelable;
+.method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 3
 
     invoke-super {p0}, Landroidx/preference/Preference;->onSaveInstanceState()Landroid/os/Parcelable;

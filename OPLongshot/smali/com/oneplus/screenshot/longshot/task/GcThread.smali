@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/task/GcThread;
 .super Lcom/oneplus/screenshot/longshot/task/BaseThread;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final GC_DELAY:J = 0x32L
+.field public static final GC_DELAY:J = 0x32L
 
 .field public static final TAG:Ljava/lang/String; = "GcThread"
 
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method protected onRun()V
+.method public onRun()V
     .locals 0
 
     invoke-static {}, Ljava/lang/System;->gc()V

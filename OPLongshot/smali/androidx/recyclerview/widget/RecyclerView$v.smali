@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$v;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field private b:Landroid/util/SparseArray;
+.field public b:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -27,35 +27,35 @@
     .end annotation
 .end field
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
-.field g:Z
+.field public g:Z
 
-.field h:Z
+.field public h:Z
 
-.field i:Z
+.field public i:Z
 
-.field j:Z
+.field public j:Z
 
-.field k:Z
+.field public k:Z
 
-.field l:Z
+.field public l:Z
 
-.field m:I
+.field public m:I
 
-.field n:J
+.field public n:J
 
-.field o:I
+.field public o:I
 
-.field p:I
+.field public p:I
 
-.field q:I
+.field public q:I
 
 
 # direct methods
@@ -97,7 +97,7 @@
 
 
 # virtual methods
-.method a(I)V
+.method public a(I)V
     .locals 3
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$v;->e:I
@@ -204,7 +204,7 @@
     return v0
 .end method
 
-.method f(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method public f(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 1
 
     const/4 v0, 0x1

@@ -1,6 +1,6 @@
-.class Landroidx/transition/Visibility$c;
+.class public Landroidx/transition/Visibility$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,27 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
-.field b:Z
+.field public b:Z
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:Landroid/view/ViewGroup;
+.field public e:Landroid/view/ViewGroup;
 
-.field f:Landroid/view/ViewGroup;
+.field public f:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

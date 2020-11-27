@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/Fragment$d;
+.class public Landroidx/fragment/app/Fragment$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,53 +9,53 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:Landroid/view/View;
+.field public a:Landroid/view/View;
 
-.field b:Landroid/animation/Animator;
+.field public b:Landroid/animation/Animator;
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
-.field g:Ljava/lang/Object;
+.field public g:Ljava/lang/Object;
 
-.field h:Ljava/lang/Object;
+.field public h:Ljava/lang/Object;
 
-.field i:Ljava/lang/Object;
+.field public i:Ljava/lang/Object;
 
-.field j:Ljava/lang/Object;
+.field public j:Ljava/lang/Object;
 
-.field k:Ljava/lang/Object;
+.field public k:Ljava/lang/Object;
 
-.field l:Ljava/lang/Object;
+.field public l:Ljava/lang/Object;
 
-.field m:Ljava/lang/Boolean;
+.field public m:Ljava/lang/Boolean;
 
-.field n:Ljava/lang/Boolean;
+.field public n:Ljava/lang/Boolean;
 
-.field o:Landroidx/core/app/d;
+.field public o:Lb/h/d/d;
 
-.field p:Landroidx/core/app/d;
+.field public p:Lb/h/d/d;
 
-.field q:Z
+.field public q:Z
 
-.field r:Landroidx/fragment/app/Fragment$f;
+.field public r:Landroidx/fragment/app/Fragment$f;
 
-.field s:Z
+.field public s:Z
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -76,9 +76,9 @@
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$d;->l:Ljava/lang/Object;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Landroidx/core/app/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Lb/h/d/d;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Landroidx/core/app/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Lb/h/d/d;
 
     return-void
 .end method

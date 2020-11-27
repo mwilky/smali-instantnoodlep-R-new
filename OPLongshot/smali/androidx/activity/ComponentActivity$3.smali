@@ -1,9 +1,9 @@
-.class Landroidx/activity/ComponentActivity$3;
+.class public Landroidx/activity/ComponentActivity$3;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/lifecycle/c;
+.implements Lb/m/c;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/activity/ComponentActivity;
+.field public final synthetic a:Landroidx/activity/ComponentActivity;
 
 
 # direct methods
-.method constructor <init>(Landroidx/activity/ComponentActivity;)V
+.method public constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/activity/ComponentActivity$3;->a:Landroidx/activity/ComponentActivity;
@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
-    .param p1    # Landroidx/lifecycle/e;
+    .param p1    # Lb/m/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -59,11 +59,11 @@
 
     iget-object p1, p0, Landroidx/activity/ComponentActivity$3;->a:Landroidx/activity/ComponentActivity;
 
-    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle/j;
+    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/m/j;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/lifecycle/j;->a()V
+    invoke-virtual {p1}, Lb/m/j;->a()V
 
     :cond_0
     return-void

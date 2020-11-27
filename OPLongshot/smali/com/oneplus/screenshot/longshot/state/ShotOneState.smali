@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotOneState;
 .super Lcom/oneplus/screenshot/longshot/state/ShotNextState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ShotOneState"
+.field public static final TAG:Ljava/lang/String; = "ShotOneState"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method protected getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method public getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->STITCH_ONE:Lcom/oneplus/screenshot/longshot/state/LongshotState;

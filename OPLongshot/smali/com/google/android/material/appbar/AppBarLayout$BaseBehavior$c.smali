@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$c;
+.class public Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field final synthetic b:Lcom/google/android/material/appbar/AppBarLayout;
+.field public final synthetic b:Lcom/google/android/material/appbar/AppBarLayout;
 
-.field final synthetic c:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+.field public final synthetic c:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
+.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$c;->c:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;

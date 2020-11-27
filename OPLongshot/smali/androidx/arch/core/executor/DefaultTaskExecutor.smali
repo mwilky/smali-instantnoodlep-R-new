@@ -1,6 +1,6 @@
 .class public Landroidx/arch/core/executor/DefaultTaskExecutor;
 .super Landroidx/arch/core/executor/TaskExecutor;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private final mDiskIO:Ljava/util/concurrent/ExecutorService;
+.field public final mDiskIO:Ljava/util/concurrent/ExecutorService;
 
-.field private final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
-.field private volatile mMainHandler:Landroid/os/Handler;
+.field public volatile mMainHandler:Landroid/os/Handler;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field

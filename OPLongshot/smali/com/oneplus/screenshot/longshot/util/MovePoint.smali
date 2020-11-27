@@ -1,20 +1,20 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/util/MovePoint;
 .super Landroid/graphics/Point;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "MovePoint"
+.field public static final TAG:Ljava/lang/String; = "MovePoint"
 
 
 # instance fields
-.field private mDistance:I
+.field public mDistance:I
 
-.field private mDownTime:J
+.field public mDownTime:J
 
-.field private mEnd:Landroid/graphics/Point;
+.field public mEnd:Landroid/graphics/Point;
 
-.field private mStart:Landroid/graphics/Point;
+.field public mStart:Landroid/graphics/Point;
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil;
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
-.class interface abstract Lcom/google/android/material/button/MaterialButton$b;
+.class public interface abstract Lcom/google/android/material/button/MaterialButton$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "b"
 .end annotation
 

@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/anim/ScaleInInterpolator;
 .super Lcom/oneplus/screenshot/anim/DropInterpolator;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ScaleInInterpolator"
+.field public static final TAG:Ljava/lang/String; = "ScaleInInterpolator"
 
 
 # direct methods

@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/ReportFragment;
 .super Landroid/app/Fragment;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # static fields
-.field private static final REPORT_FRAGMENT_TAG:Ljava/lang/String; = "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
+.field public static final REPORT_FRAGMENT_TAG:Ljava/lang/String; = "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
 
 
 # instance fields
-.field private mProcessListener:Landroidx/lifecycle/ReportFragment$a;
+.field public mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
 
 # direct methods
@@ -41,38 +41,38 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/lifecycle/g;
+    instance-of v1, v0, Lb/m/g;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroidx/lifecycle/g;
+    check-cast v0, Lb/m/g;
 
-    invoke-interface {v0}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/f;
+    invoke-interface {v0}, Lb/m/g;->getLifecycle()Lb/m/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Lb/m/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 
     :cond_0
-    instance-of v1, v0, Landroidx/lifecycle/e;
+    instance-of v1, v0, Lb/m/e;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Landroidx/lifecycle/e;
+    check-cast v0, Lb/m/e;
 
-    invoke-interface {v0}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/lifecycle/f;
+    instance-of v1, v0, Lb/m/f;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Landroidx/lifecycle/f;
+    check-cast v0, Lb/m/f;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Lb/m/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     return-void
@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->a()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->onCreate()V
 
     :cond_0
     return-void
@@ -94,7 +94,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->b()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->a()V
 
     :cond_0
     return-void
@@ -105,13 +105,13 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->c()V
+    invoke-interface {p1}, Landroidx/lifecycle/ReportFragment$a;->b()V
 
     :cond_0
     return-void
 .end method
 
-.method static get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
+.method public static get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
     .locals 1
 
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method setProcessListener(Landroidx/lifecycle/ReportFragment$a;)V
+.method public setProcessListener(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;

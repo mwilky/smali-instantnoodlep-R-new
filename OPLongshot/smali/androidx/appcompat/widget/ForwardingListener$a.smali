@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ForwardingListener$a;
+.class public Landroidx/appcompat/widget/ForwardingListener$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/ForwardingListener;
+.field public final synthetic a:Landroidx/appcompat/widget/ForwardingListener;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ForwardingListener;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ForwardingListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ForwardingListener$a;->a:Landroidx/appcompat/widget/ForwardingListener;

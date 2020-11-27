@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/SearchView$SavedState;
+.class public Landroidx/appcompat/widget/SearchView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/widget/SearchView$SavedState$1;
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcelable;)V
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V

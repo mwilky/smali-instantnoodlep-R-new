@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/view/menu/CascadingMenuPopup$c$a;
+.class public Landroidx/appcompat/view/menu/CascadingMenuPopup$c$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/view/menu/CascadingMenuPopup$d;
+.field public final synthetic a:Landroidx/appcompat/view/menu/CascadingMenuPopup$d;
 
-.field final synthetic b:Landroid/view/MenuItem;
+.field public final synthetic b:Landroid/view/MenuItem;
 
-.field final synthetic c:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public final synthetic c:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field final synthetic d:Landroidx/appcompat/view/menu/CascadingMenuPopup$c;
+.field public final synthetic d:Landroidx/appcompat/view/menu/CascadingMenuPopup$c;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/view/menu/CascadingMenuPopup$c;Landroidx/appcompat/view/menu/CascadingMenuPopup$d;Landroid/view/MenuItem;Landroidx/appcompat/view/menu/MenuBuilder;)V
+.method public constructor <init>(Landroidx/appcompat/view/menu/CascadingMenuPopup$c;Landroidx/appcompat/view/menu/CascadingMenuPopup$d;Landroid/view/MenuItem;Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$c$a;->d:Landroidx/appcompat/view/menu/CascadingMenuPopup$c;

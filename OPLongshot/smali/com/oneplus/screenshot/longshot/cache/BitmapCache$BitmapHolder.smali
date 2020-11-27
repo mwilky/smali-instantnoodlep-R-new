@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
+.class public Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "BitmapHolder"
 .end annotation
 
 
 # instance fields
-.field private mBitmap:Landroid/graphics/Bitmap;
+.field public mBitmap:Landroid/graphics/Bitmap;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 
 
 # direct methods
@@ -64,6 +64,8 @@
 
     move-result-object p1
 
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;->mBitmap:Landroid/graphics/Bitmap;
+
     goto :goto_0
 
     :cond_0
@@ -75,9 +77,9 @@
 
     move-result-object p1
 
-    :goto_0
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;->mBitmap:Landroid/graphics/Bitmap;
 
+    :goto_0
     return-void
 .end method
 

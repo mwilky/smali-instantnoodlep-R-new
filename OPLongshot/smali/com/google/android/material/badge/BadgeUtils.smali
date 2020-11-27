@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/badge/BadgeUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
-.class abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$k;
+.class public abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$k;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x402
+    accessFlags = 0x401
     name = "k"
 .end annotation
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
-.field private b:F
+.field public b:F
 
-.field private c:F
+.field public c:F
 
-.field final synthetic d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+.field public final synthetic d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
 
 # direct methods
-.method private constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$k;->d:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$a;)V
+.method public synthetic constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$k;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method protected abstract a()F
+.method public abstract a()F
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V

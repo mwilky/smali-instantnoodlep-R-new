@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/indicator/animation/type/WormAnimation;
 .super Lcom/google/android/material/indicator/animation/type/BaseAnimation;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -20,44 +20,44 @@
 
 
 # instance fields
-.field private coordinateEnd:I
+.field public coordinateEnd:I
 
-.field private coordinateStart:I
+.field public coordinateStart:I
 
-.field private isRightSide:Z
+.field public isRightSide:Z
 
-.field private radius:I
+.field public radius:I
 
-.field private rectLeftEdge:I
+.field public rectLeftEdge:I
 
-.field private rectRightEdge:I
+.field public rectRightEdge:I
 
-.field private value:Lcom/google/android/material/indicator/a/b/b;
+.field public value:Lc/b/b/b/y/a/b/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/indicator/a/a/a;)V
+.method public constructor <init>(Lc/b/b/b/y/a/a/a;)V
     .locals 0
-    .param p1    # Lcom/google/android/material/indicator/a/a/a;
+    .param p1    # Lc/b/b/b/y/a/a/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/indicator/animation/type/BaseAnimation;-><init>(Lcom/google/android/material/indicator/a/a/a;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/indicator/animation/type/BaseAnimation;-><init>(Lc/b/b/b/y/a/a/a;)V
 
-    new-instance p1, Lcom/google/android/material/indicator/a/b/b;
+    new-instance p1, Lc/b/b/b/y/a/b/b;
 
-    invoke-direct {p1}, Lcom/google/android/material/indicator/a/b/b;-><init>()V
+    invoke-direct {p1}, Lc/b/b/b/y/a/b/b;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lcom/google/android/material/indicator/a/b/b;
+    iput-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lc/b/b/b/y/a/b/b;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lcom/google/android/material/indicator/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
+.method public static synthetic access$000(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/b/b/b/y/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->onAnimateUpdated(Lcom/google/android/material/indicator/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
+    invoke-direct/range {p0 .. p5}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->onAnimateUpdated(Lc/b/b/b/y/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
     return-object v0
 .end method
 
-.method private createWormAnimator(IIZLcom/google/android/material/indicator/a/b/b;ZI)Landroid/animation/ValueAnimator;
+.method private createWormAnimator(IIZLc/b/b/b/y/a/b/b;ZI)Landroid/animation/ValueAnimator;
     .locals 8
 
     const/4 v0, 0x2
@@ -135,14 +135,16 @@
 
     const-wide/16 v0, 0xe1
 
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
     goto :goto_0
 
     :cond_0
     const-wide/16 v0, 0x7d
 
-    :goto_0
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    :goto_0
     new-instance p2, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;
 
     move-object v2, p2
@@ -157,7 +159,7 @@
 
     move v7, p6
 
-    invoke-direct/range {v2 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;-><init>(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lcom/google/android/material/indicator/a/b/b;ZZI)V
+    invoke-direct/range {v2 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;-><init>(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/b/b/b/y/a/b/b;ZZI)V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -202,9 +204,9 @@
     return p1
 .end method
 
-.method private onAnimateUpdated(Lcom/google/android/material/indicator/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
+.method private onAnimateUpdated(Lc/b/b/b/y/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
     .locals 5
-    .param p1    # Lcom/google/android/material/indicator/a/b/b;
+    .param p1    # Lc/b/b/b/y/a/b/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -235,20 +237,130 @@
 
     const v4, 0x3f19999a    # 0.6f
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    if-nez p3, :cond_3
+    if-nez p3, :cond_4
 
     if-nez p4, :cond_0
 
-    goto/16 :goto_4
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto/16 :goto_1
 
     :cond_0
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
 
     move-result p3
 
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
+
+    move-result p4
+
+    sub-int/2addr p3, p4
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
+
+    move-result p3
+
+    iget p4, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->radius:I
+
+    mul-int/lit8 p4, p4, 0x2
+
+    add-int/lit8 p4, p4, 0xa
+
+    if-le p3, p4, :cond_3
+
+    cmpg-float p3, p2, v4
+
+    if-gez p3, :cond_1
+
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
+
+    move-result p3
+
+    sub-int/2addr p3, v0
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
+
+    move-result p3
+
+    add-int/2addr p2, p3
+
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto/16 :goto_1
+
+    :cond_1
+    cmpg-float p3, p2, v3
+
+    if-gez p3, :cond_2
+
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
+
+    move-result p3
+
+    sub-int/2addr p3, v0
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
+
+    move-result p3
+
+    div-int/lit8 p3, p3, 0x2
+
+    add-int/2addr p2, p3
+
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto/16 :goto_1
+
+    :cond_2
+    cmpg-float p2, p2, v2
+
+    if-gtz p2, :cond_c
+
+    invoke-virtual {p1, p5}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto/16 :goto_1
+
+    :cond_3
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    goto :goto_1
+
+    :cond_5
+    if-nez p3, :cond_b
+
+    if-nez p4, :cond_6
+
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
+
+    move-result p3
+
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
 
     move-result p4
 
@@ -268,110 +380,13 @@
 
     cmpg-float p3, p2, v4
 
-    if-gez p3, :cond_1
-
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
-
-    move-result p3
-
-    sub-int/2addr p3, v0
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    :goto_0
-    add-int/2addr p2, p3
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
-
-    goto/16 :goto_4
-
-    :cond_1
-    cmpg-float p3, p2, v3
-
-    if-gez p3, :cond_2
-
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
-
-    move-result p3
-
-    sub-int/2addr p3, v0
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    div-int/lit8 p3, p3, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    cmpg-float p2, p2, v2
-
-    if-gtz p2, :cond_a
-
-    invoke-virtual {p1, p5}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
-
-    goto :goto_4
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p1, v0}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
-
-    goto :goto_5
-
-    :cond_4
-    if-nez p3, :cond_9
-
-    if-nez p4, :cond_6
-
-    :cond_5
-    :goto_2
-    invoke-virtual {p1, v0}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
-
-    move-result p3
-
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
-
-    move-result p4
-
-    sub-int/2addr p3, p4
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    iget p4, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->radius:I
-
-    mul-int/lit8 p4, p4, 0x2
-
-    add-int/lit8 p4, p4, 0xa
-
-    if-le p3, p4, :cond_5
-
-    cmpg-float p3, p2, v4
-
     if-gez p3, :cond_7
 
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
 
     move-result p3
 
@@ -381,23 +396,24 @@
 
     move-result p3
 
-    :goto_3
     sub-int/2addr p2, p3
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/indicator/a/b/b;->c(I)V
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->c(I)V
 
-    goto :goto_2
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    goto :goto_0
 
     :cond_7
     cmpg-float p3, p2, v3
 
     if-gez p3, :cond_8
 
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->a()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p1}, Lcom/google/android/material/indicator/a/b/b;->b()I
+    invoke-virtual {p1}, Lc/b/b/b/y/a/b/b;->b()I
 
     move-result p3
 
@@ -409,32 +425,46 @@
 
     mul-int/lit8 p3, p3, 0x2
 
-    goto :goto_3
+    sub-int/2addr p2, p3
+
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    goto :goto_0
 
     :cond_8
     cmpg-float p2, p2, v2
 
-    if-gtz p2, :cond_3
+    if-gtz p2, :cond_a
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
 
-    invoke-virtual {p1, p5}, Lcom/google/android/material/indicator/a/b/b;->c(I)V
+    invoke-virtual {p1, p5}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    goto :goto_0
+
+    :cond_9
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
+
+    :cond_a
+    :goto_0
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->d(I)V
 
     goto :goto_1
 
-    :cond_9
-    :goto_4
-    invoke-virtual {p1, v0}, Lcom/google/android/material/indicator/a/b/b;->c(I)V
-
-    :cond_a
-    :goto_5
-    iget-object p2, p0, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->listener:Lcom/google/android/material/indicator/a/a/a;
-
-    if-eqz p2, :cond_b
-
-    invoke-interface {p2, p1}, Lcom/google/android/material/indicator/a/a/a;->a(Lcom/google/android/material/indicator/a/b/a;)V
-
     :cond_b
+    invoke-virtual {p1, v0}, Lc/b/b/b/y/a/b/b;->c(I)V
+
+    :cond_c
+    :goto_1
+    iget-object p2, p0, Lcom/google/android/material/indicator/animation/type/BaseAnimation;->listener:Lc/b/b/b/y/a/a/a;
+
+    if-eqz p2, :cond_d
+
+    invoke-interface {p2, p1}, Lc/b/b/b/y/a/a/a;->a(Lc/b/b/b/y/a/b/a;)V
+
+    :cond_d
     return-void
 .end method
 
@@ -596,15 +626,15 @@
 
     iput p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->rectRightEdge:I
 
-    iget-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lcom/google/android/material/indicator/a/b/b;
+    iget-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lc/b/b/b/y/a/b/b;
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/indicator/a/b/b;->d(I)V
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->d(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lcom/google/android/material/indicator/a/b/b;
+    iget-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lc/b/b/b/y/a/b/b;
 
     iget p2, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->rectRightEdge:I
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/indicator/a/b/b;->c(I)V
+    invoke-virtual {p1, p2}, Lc/b/b/b/y/a/b/b;->c(I)V
 
     invoke-direct {p0, p4}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->createRectValues(Z)Lcom/google/android/material/indicator/animation/type/WormAnimation$b;
 
@@ -642,7 +672,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lcom/google/android/material/indicator/a/b/b;
+    iget-object v5, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lc/b/b/b/y/a/b/b;
 
     iget v7, p1, Lcom/google/android/material/indicator/animation/type/WormAnimation$b;->d:I
 
@@ -650,7 +680,7 @@
 
     move v6, p2
 
-    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLcom/google/android/material/indicator/a/b/b;ZI)Landroid/animation/ValueAnimator;
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLc/b/b/b/y/a/b/b;ZI)Landroid/animation/ValueAnimator;
 
     move-result-object p3
 
@@ -660,11 +690,11 @@
 
     const/4 v4, 0x1
 
-    iget-object v5, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lcom/google/android/material/indicator/a/b/b;
+    iget-object v5, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation;->value:Lc/b/b/b/y/a/b/b;
 
     move v3, v7
 
-    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLcom/google/android/material/indicator/a/b/b;ZI)Landroid/animation/ValueAnimator;
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLc/b/b/b/y/a/b/b;ZI)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 

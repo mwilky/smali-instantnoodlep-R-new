@@ -1,6 +1,6 @@
-.class final Lcom/google/android/material/transition/TransitionUtils$a;
+.class public final Lcom/google/android/material/transition/TransitionUtils$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/graphics/RectF;
+.field public final synthetic a:Landroid/graphics/RectF;
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/RectF;)V
+.method public constructor <init>(Landroid/graphics/RectF;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transition/TransitionUtils$a;->a:Landroid/graphics/RectF;
@@ -34,27 +34,27 @@
 
 
 # virtual methods
-.method public apply(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
+.method public apply(Lc/b/b/b/f0/b;)Lc/b/b/b/f0/b;
     .locals 2
-    .param p1    # Lcom/google/android/material/shape/b;
+    .param p1    # Lc/b/b/b/f0/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    instance-of v0, p1, Lcom/google/android/material/shape/g;
+    instance-of v0, p1, Lc/b/b/b/f0/g;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/google/android/material/shape/g;
+    new-instance v0, Lc/b/b/b/f0/g;
 
     iget-object v1, p0, Lcom/google/android/material/transition/TransitionUtils$a;->a:Landroid/graphics/RectF;
 
-    invoke-interface {p1, v1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {p1, v1}, Lc/b/b/b/f0/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result p1
 
@@ -66,7 +66,7 @@
 
     div-float/2addr p1, v1
 
-    invoke-direct {v0, p1}, Lcom/google/android/material/shape/g;-><init>(F)V
+    invoke-direct {v0, p1}, Lc/b/b/b/f0/g;-><init>(F)V
 
     move-object p1, v0
 

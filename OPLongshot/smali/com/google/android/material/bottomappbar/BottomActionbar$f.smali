@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/bottomappbar/BottomActionbar$f;
+.class public Lcom/google/android/material/bottomappbar/BottomActionbar$f;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -17,17 +17,17 @@
 # instance fields
 .field public a:Z
 
-.field final synthetic b:Landroidx/appcompat/widget/ActionMenuView;
+.field public final synthetic b:Landroidx/appcompat/widget/ActionMenuView;
 
-.field final synthetic c:I
+.field public final synthetic c:I
 
-.field final synthetic d:Z
+.field public final synthetic d:Z
 
-.field final synthetic e:Lcom/google/android/material/bottomappbar/BottomActionbar;
+.field public final synthetic e:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$f;->e:Lcom/google/android/material/bottomappbar/BottomActionbar;

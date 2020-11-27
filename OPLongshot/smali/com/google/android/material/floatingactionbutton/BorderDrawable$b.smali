@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/floatingactionbutton/BorderDrawable$b;
+.class public Lcom/google/android/material/floatingactionbutton/BorderDrawable$b;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "b"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
+.field public final synthetic a:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
 
 
 # direct methods
-.method private constructor <init>(Lcom/google/android/material/floatingactionbutton/BorderDrawable;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/BorderDrawable;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable$b;->a:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/material/floatingactionbutton/BorderDrawable;Lcom/google/android/material/floatingactionbutton/BorderDrawable$a;)V
+.method public synthetic constructor <init>(Lcom/google/android/material/floatingactionbutton/BorderDrawable;Lcom/google/android/material/floatingactionbutton/BorderDrawable$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/BorderDrawable$b;-><init>(Lcom/google/android/material/floatingactionbutton/BorderDrawable;)V

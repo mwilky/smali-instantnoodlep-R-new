@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TimePickerClockDelegate$j;
+.class public Lcom/google/android/material/picker/TimePickerClockDelegate$j;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$j;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/d;->op_control_margin_space3:I
+    sget v1, Lc/b/b/b/d;->op_control_margin_space3:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -143,7 +143,7 @@
 
     move-result-object p1
 
-    sget v0, Lb/a/b/a/e;->op_dialog_material_background_bottom:I
+    sget v0, Lc/b/b/b/e;->op_dialog_material_background_bottom:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -157,7 +157,7 @@
 
     iget-object p1, p1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->b:Landroid/content/Context;
 
-    sget v2, Lb/a/b/a/c;->op_control_bg_color_popup_default:I
+    sget v2, Lc/b/b/b/c;->op_control_bg_color_popup_default:I
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
 

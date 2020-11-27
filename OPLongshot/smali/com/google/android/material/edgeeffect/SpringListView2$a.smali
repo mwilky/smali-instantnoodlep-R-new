@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/edgeeffect/SpringListView2$a;
+.class public Lcom/google/android/material/edgeeffect/SpringListView2$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/AbsListView$OnScrollListener;
@@ -12,6 +12,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "a"
 .end annotation

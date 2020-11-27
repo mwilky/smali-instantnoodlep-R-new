@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/CheckableImageButton$SavedState;
+.class public Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/internal/CheckableImageButton$SavedState$1;
@@ -52,7 +52,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->b(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->b(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -65,7 +65,9 @@
     return-void
 .end method
 
-.method private b(Landroid/os/Parcel;)V
+
+# virtual methods
+.method public final b(Landroid/os/Parcel;)V
     .locals 1
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
@@ -91,8 +93,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
     .param p1    # Landroid/os/Parcel;

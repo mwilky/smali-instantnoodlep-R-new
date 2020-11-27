@@ -1,19 +1,19 @@
 .class public Lcom/oneplus/screenshot/longshot/state/WaittingPreviewState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.WaittingPreviewState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.WaittingPreviewState"
 
 
 # instance fields
-.field private mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field public mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-.field private mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
+.field public mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 
 
 # direct methods
@@ -333,7 +333,7 @@
     :catchall_0
     move-exception v1
 
-    goto :goto_6
+    goto :goto_5
 
     :catch_0
     move-exception v2
@@ -369,10 +369,9 @@
 
     invoke-direct {v4, v0, v1, v1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    :goto_4
     invoke-virtual {v3, v4}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_6
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->removeBottom()Landroid/graphics/Bitmap;
@@ -397,16 +396,16 @@
 
     invoke-direct {v4, v5, v1, v0}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    goto :goto_4
+    invoke-virtual {v3, v4}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    :goto_5
+    :goto_4
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->recycle()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    goto :goto_7
+    goto :goto_6
 
-    :goto_6
+    :goto_5
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -423,7 +422,7 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_7
-    :goto_7
+    :goto_6
     const-string v0, "Longshot.WaittingPreviewState"
 
     const-string v1, "checkPage end"

@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimatorSet$c;
+.class public Landroidx/animation/AnimatorSet$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field final a:Landroidx/animation/AnimatorSet$e;
+.field public final a:Landroidx/animation/AnimatorSet$e;
 
-.field final b:I
+.field public final b:I
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/AnimatorSet$e;I)V
+.method public constructor <init>(Landroidx/animation/AnimatorSet$e;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method a()J
+.method public a()J
     .locals 6
 
     iget v0, p0, Landroidx/animation/AnimatorSet$c;->b:I
@@ -66,9 +66,9 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, v0, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
+    iget-object v0, v0, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
 
-    invoke-virtual {v0}, Landroidx/animation/b;->g()J
+    invoke-virtual {v0}, Lb/b/b;->g()J
 
     move-result-wide v3
 
@@ -121,7 +121,7 @@
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v0, v0, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
+    iget-object v0, v0, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 

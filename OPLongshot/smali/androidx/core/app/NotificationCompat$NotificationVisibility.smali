@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/core/app/NotificationCompat$NotificationVisibility;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

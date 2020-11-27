@@ -1,6 +1,6 @@
 .class public abstract Landroidx/lifecycle/ComputableLiveData;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,18 +21,18 @@
 
 
 # instance fields
-.field final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mExecutor:Ljava/util/concurrent/Executor;
+.field public final mExecutor:Ljava/util/concurrent/Executor;
 
-.field final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mInvalidationRunnable:Ljava/lang/Runnable;
+.field public final mInvalidationRunnable:Ljava/lang/Runnable;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field final mLiveData:Landroidx/lifecycle/LiveData;
+.field public final mLiveData:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/LiveData<",
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field final mRefreshRunnable:Ljava/lang/Runnable;
+.field public final mRefreshRunnable:Ljava/lang/Runnable;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -110,7 +110,7 @@
 
 
 # virtual methods
-.method protected abstract compute()Ljava/lang/Object;
+.method public abstract compute()Ljava/lang/Object;
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 

@@ -1,6 +1,6 @@
-.class Landroidx/animation/AnimationHandler$d;
+.class public Landroidx/animation/AnimationHandler$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/AnimationHandler$c;
@@ -13,21 +13,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "d"
 .end annotation
 
 
 # instance fields
-.field private a:J
+.field public a:J
 
-.field private b:J
+.field public b:J
 
-.field final synthetic c:Landroidx/animation/AnimationHandler;
+.field public final synthetic c:Landroidx/animation/AnimationHandler;
 
 
 # direct methods
-.method constructor <init>(Landroidx/animation/AnimationHandler;)V
+.method public constructor <init>(Landroidx/animation/AnimationHandler;)V
     .locals 2
 
     iput-object p1, p0, Landroidx/animation/AnimationHandler$d;->c:Landroidx/animation/AnimationHandler;
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method a()Landroid/os/Handler;
+.method public a()Landroid/os/Handler;
     .locals 3
 
     invoke-static {}, Landroidx/animation/AnimationHandler;->a()Ljava/lang/ThreadLocal;

@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/Fragment$c;
-.super Landroidx/fragment/app/c;
-.source ""
+.class public Landroidx/fragment/app/Fragment$c;
+.super Lb/k/a/c;
+.source "SourceFile"
 
 
 # annotations
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/fragment/app/Fragment;
+.field public final synthetic a:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/Fragment;)V
+.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/Fragment;
 
-    invoke-direct {p0}, Landroidx/fragment/app/c;-><init>()V
+    invoke-direct {p0}, Lb/k/a/c;-><init>()V
 
     return-void
 .end method

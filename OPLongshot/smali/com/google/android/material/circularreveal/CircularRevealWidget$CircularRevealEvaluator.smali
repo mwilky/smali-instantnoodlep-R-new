@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -39,11 +39,11 @@
 
 
 # instance fields
-.field private final revealInfo:Lcom/google/android/material/circularreveal/CircularRevealWidget$b;
+.field public final revealInfo:Lcom/google/android/material/circularreveal/CircularRevealWidget$b;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealEvaluator;
@@ -92,7 +92,7 @@
 
     iget v2, p3, Lcom/google/android/material/circularreveal/CircularRevealWidget$b;->a:F
 
-    invoke-static {v1, v2, p1}, Lb/a/b/a/p/a;->e(FFF)F
+    invoke-static {v1, v2, p1}, Lc/b/b/b/a0/a;->e(FFF)F
 
     move-result v1
 
@@ -100,7 +100,7 @@
 
     iget v3, p3, Lcom/google/android/material/circularreveal/CircularRevealWidget$b;->b:F
 
-    invoke-static {v2, v3, p1}, Lb/a/b/a/p/a;->e(FFF)F
+    invoke-static {v2, v3, p1}, Lc/b/b/b/a0/a;->e(FFF)F
 
     move-result v2
 
@@ -108,7 +108,7 @@
 
     iget p3, p3, Lcom/google/android/material/circularreveal/CircularRevealWidget$b;->c:F
 
-    invoke-static {p2, p3, p1}, Lb/a/b/a/p/a;->e(FFF)F
+    invoke-static {p2, p3, p1}, Lc/b/b/b/a0/a;->e(FFF)F
 
     move-result p1
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;
 .super Lcom/oneplus/screenshot/longshot/widget/ImageView$ImageOnGestureListener;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4
+    accessFlags = 0x1
     name = "EditOnGestureListener"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
 
 
 # direct methods
-.method protected constructor <init>(Lcom/oneplus/screenshot/longshot/widget/EditView;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/widget/EditView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method protected getTouchMode(Landroid/view/MotionEvent;)I
+.method public getTouchMode(Landroid/view/MotionEvent;)I
     .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/widget/EditView$EditOnGestureListener;->this$0:Lcom/oneplus/screenshot/longshot/widget/EditView;

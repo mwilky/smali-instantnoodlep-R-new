@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;
 .super Landroid/widget/LinearLayout$LayoutParams;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,9 +21,9 @@
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:Landroid/view/animation/Interpolator;
+.field public b:Landroid/view/animation/Interpolator;
 
 
 # direct methods
@@ -48,13 +48,13 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I
 
-    sget-object v0, Lb/a/b/a/l;->AppBarLayout_Layout:[I
+    sget-object v0, Lc/b/b/b/l;->AppBarLayout_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v0, Lb/a/b/a/l;->AppBarLayout_Layout_layout_scrollFlags:I
+    sget v0, Lc/b/b/b/l;->AppBarLayout_Layout_layout_scrollFlags:I
 
     const/4 v1, 0x0
 
@@ -64,7 +64,7 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I
 
-    sget v0, Lb/a/b/a/l;->AppBarLayout_Layout_layout_scrollInterpolator:I
+    sget v0, Lc/b/b/b/l;->AppBarLayout_Layout_layout_scrollInterpolator:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lb/a/b/a/l;->AppBarLayout_Layout_layout_scrollInterpolator:I
+    sget v0, Lc/b/b/b/l;->AppBarLayout_Layout_layout_scrollInterpolator:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -147,7 +147,7 @@
     return-object v0
 .end method
 
-.method c()Z
+.method public c()Z
     .locals 3
 
     iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout$LayoutParams;->a:I

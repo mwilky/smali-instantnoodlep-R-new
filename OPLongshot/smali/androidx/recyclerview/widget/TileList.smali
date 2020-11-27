@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/TileList;
+.class public Landroidx/recyclerview/widget/TileList;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field mLastAccessedTile:Landroidx/recyclerview/widget/TileList$Tile;
+.field public mLastAccessedTile:Landroidx/recyclerview/widget/TileList$Tile;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/TileList$Tile<",
@@ -30,9 +30,9 @@
     .end annotation
 .end field
 
-.field final mTileSize:I
+.field public final mTileSize:I
 
-.field private final mTiles:Landroid/util/SparseArray;
+.field public final mTiles:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",

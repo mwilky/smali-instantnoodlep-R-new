@@ -1,6 +1,6 @@
-.class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;
+.class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;
 .super Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -22,15 +22,15 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
-.field final synthetic val$overwriteExisting:Z
+.field public final synthetic val$overwriteExisting:Z
 
-.field final synthetic val$value:Ljava/lang/Object;
+.field public final synthetic val$value:Ljava/lang/Object;
 
 
 # direct methods
-.method varargs constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;ZLjava/lang/Object;)V
+.method public varargs constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;ZLjava/lang/Object;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$1;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
+.method public execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

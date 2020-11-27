@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/containertag/common/FunctionType;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/google/analytics/containertag/common/FunctionType;
+.field public static final synthetic $VALUES:[Lcom/google/analytics/containertag/common/FunctionType;
 
 .field public static final enum ADROLL_SMART_PIXEL:Lcom/google/analytics/containertag/common/FunctionType;
 
@@ -180,11 +180,11 @@
 
 
 # instance fields
-.field private final name:Ljava/lang/String;
+.field public final name:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 16
 
     new-instance v0, Lcom/google/analytics/containertag/common/FunctionType;
@@ -1628,7 +1628,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

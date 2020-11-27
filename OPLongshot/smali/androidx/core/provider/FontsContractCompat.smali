@@ -1,6 +1,6 @@
 .class public Landroidx/core/provider/FontsContractCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final a:Landroidx/collection/LruCache;
+.field public static final a:Landroidx/collection/LruCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/LruCache<",
@@ -25,11 +25,11 @@
     .end annotation
 .end field
 
-.field private static final b:Landroidx/core/provider/SelfDestructiveThread;
+.field public static final b:Landroidx/core/provider/SelfDestructiveThread;
 
-.field static final c:Ljava/lang/Object;
+.field public static final c:Ljava/lang/Object;
 
-.field static final d:Landroidx/collection/SimpleArrayMap;
+.field public static final d:Landroidx/collection/SimpleArrayMap;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "sLock"
     .end annotation
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field private static final e:Ljava/util/Comparator;
+.field public static final e:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -57,7 +57,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     new-instance v0, Landroidx/collection/LruCache;
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method private static a([Landroid/content/pm/Signature;)Ljava/util/List;
+.method public static a([Landroid/content/pm/Signature;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -140,7 +140,7 @@
     return-object v0
 .end method
 
-.method private static b(Ljava/util/List;Ljava/util/List;)Z
+.method public static b(Ljava/util/List;Ljava/util/List;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -207,7 +207,7 @@
     return p0
 .end method
 
-.method public static c(Landroid/content/Context;Landroid/os/CancellationSignal;Landroidx/core/provider/a;)Landroidx/core/provider/FontsContractCompat$a;
+.method public static c(Landroid/content/Context;Landroid/os/CancellationSignal;Lb/h/i/a;)Landroidx/core/provider/FontsContractCompat$a;
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -217,7 +217,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Landroidx/core/provider/a;
+    .param p2    # Lb/h/i/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -232,7 +232,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, p2, v1}, Landroidx/core/provider/FontsContractCompat;->h(Landroid/content/pm/PackageManager;Landroidx/core/provider/a;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
+    invoke-static {v0, p2, v1}, Landroidx/core/provider/FontsContractCompat;->h(Landroid/content/pm/PackageManager;Lb/h/i/a;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
@@ -251,7 +251,7 @@
     :cond_0
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    invoke-static {p0, p2, v0, p1}, Landroidx/core/provider/FontsContractCompat;->e(Landroid/content/Context;Landroidx/core/provider/a;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$b;
+    invoke-static {p0, p2, v0, p1}, Landroidx/core/provider/FontsContractCompat;->e(Landroid/content/Context;Lb/h/i/a;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p0
 
@@ -264,12 +264,12 @@
     return-object p1
 .end method
 
-.method private static d(Landroidx/core/provider/a;Landroid/content/res/Resources;)Ljava/util/List;
+.method public static d(Lb/h/i/a;Landroid/content/res/Resources;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/core/provider/a;",
+            "Lb/h/i/a;",
             "Landroid/content/res/Resources;",
             ")",
             "Ljava/util/List<",
@@ -278,20 +278,20 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Landroidx/core/provider/a;->a()Ljava/util/List;
+    invoke-virtual {p0}, Lb/h/i/a;->a()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/core/provider/a;->a()Ljava/util/List;
+    invoke-virtual {p0}, Lb/h/i/a;->a()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/core/provider/a;->b()I
+    invoke-virtual {p0}, Lb/h/i/a;->b()I
 
     move-result p0
 
@@ -302,7 +302,7 @@
     return-object p0
 .end method
 
-.method static e(Landroid/content/Context;Landroidx/core/provider/a;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$b;
+.method public static e(Landroid/content/Context;Lb/h/i/a;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$b;
     .locals 20
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -395,7 +395,7 @@
 
     new-array v8, v11, [Ljava/lang/String;
 
-    invoke-virtual/range {p1 .. p1}, Landroidx/core/provider/a;->f()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lb/h/i/a;->f()Ljava/lang/String;
 
     move-result-object v5
 
@@ -440,7 +440,7 @@
 
     new-array v8, v11, [Ljava/lang/String;
 
-    invoke-virtual/range {p1 .. p1}, Landroidx/core/provider/a;->f()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lb/h/i/a;->f()Ljava/lang/String;
 
     move-result-object v5
 
@@ -636,7 +636,7 @@
     throw v0
 .end method
 
-.method static f(Landroid/content/Context;Landroidx/core/provider/a;I)Landroidx/core/provider/FontsContractCompat$c;
+.method public static f(Landroid/content/Context;Lb/h/i/a;I)Landroidx/core/provider/FontsContractCompat$c;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -644,7 +644,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {p0, v0, p1}, Landroidx/core/provider/FontsContractCompat;->c(Landroid/content/Context;Landroid/os/CancellationSignal;Landroidx/core/provider/a;)Landroidx/core/provider/FontsContractCompat$a;
+    invoke-static {p0, v0, p1}, Landroidx/core/provider/FontsContractCompat;->c(Landroid/content/Context;Landroid/os/CancellationSignal;Lb/h/i/a;)Landroidx/core/provider/FontsContractCompat$a;
 
     move-result-object p1
     :try_end_0
@@ -705,9 +705,9 @@
     return-object p0
 .end method
 
-.method public static g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+.method public static g(Landroid/content/Context;Lb/h/i/a;Lb/h/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
     .locals 2
-    .param p2    # Landroidx/core/content/res/b$a;
+    .param p2    # Lb/h/e/c/b$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -725,7 +725,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Landroidx/core/provider/a;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lb/h/i/a;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -753,7 +753,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2, v1}, Landroidx/core/content/res/b$a;->d(Landroid/graphics/Typeface;)V
+    invoke-virtual {p2, v1}, Lb/h/e/c/b$a;->d(Landroid/graphics/Typeface;)V
 
     :cond_0
     return-object v1
@@ -765,7 +765,7 @@
 
     if-ne p5, v1, :cond_4
 
-    invoke-static {p0, p1, p6}, Landroidx/core/provider/FontsContractCompat;->f(Landroid/content/Context;Landroidx/core/provider/a;I)Landroidx/core/provider/FontsContractCompat$c;
+    invoke-static {p0, p1, p6}, Landroidx/core/provider/FontsContractCompat;->f(Landroid/content/Context;Lb/h/i/a;I)Landroidx/core/provider/FontsContractCompat$c;
 
     move-result-object p0
 
@@ -777,12 +777,12 @@
 
     iget-object p1, p0, Landroidx/core/provider/FontsContractCompat$c;->a:Landroid/graphics/Typeface;
 
-    invoke-virtual {p2, p1, p3}, Landroidx/core/content/res/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
+    invoke-virtual {p2, p1, p3}, Lb/h/e/c/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p2, p1, p3}, Landroidx/core/content/res/b$a;->a(ILandroid/os/Handler;)V
+    invoke-virtual {p2, p1, p3}, Lb/h/e/c/b$a;->a(ILandroid/os/Handler;)V
 
     :cond_3
     :goto_0
@@ -793,7 +793,7 @@
     :cond_4
     new-instance v1, Landroidx/core/provider/FontsContractCompat$1;
 
-    invoke-direct {v1, p0, p1, p6, v0}, Landroidx/core/provider/FontsContractCompat$1;-><init>(Landroid/content/Context;Landroidx/core/provider/a;ILjava/lang/String;)V
+    invoke-direct {v1, p0, p1, p6, v0}, Landroidx/core/provider/FontsContractCompat$1;-><init>(Landroid/content/Context;Lb/h/i/a;ILjava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -825,7 +825,7 @@
     :cond_6
     new-instance p1, Landroidx/core/provider/FontsContractCompat$2;
 
-    invoke-direct {p1, p2, p3}, Landroidx/core/provider/FontsContractCompat$2;-><init>(Landroidx/core/content/res/b$a;Landroid/os/Handler;)V
+    invoke-direct {p1, p2, p3}, Landroidx/core/provider/FontsContractCompat$2;-><init>(Lb/h/e/c/b$a;Landroid/os/Handler;)V
 
     :goto_1
     sget-object p2, Landroidx/core/provider/FontsContractCompat;->c:Ljava/lang/Object;
@@ -891,13 +891,13 @@
     throw p0
 .end method
 
-.method public static h(Landroid/content/pm/PackageManager;Landroidx/core/provider/a;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
+.method public static h(Landroid/content/pm/PackageManager;Lb/h/i/a;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
     .locals 5
     .param p0    # Landroid/content/pm/PackageManager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/provider/a;
+    .param p1    # Lb/h/i/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -917,7 +917,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
-    invoke-virtual {p1}, Landroidx/core/provider/a;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lb/h/i/a;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -931,7 +931,7 @@
 
     iget-object v3, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroidx/core/provider/a;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lb/h/i/a;->e()Ljava/lang/String;
 
     move-result-object v4
 
@@ -959,7 +959,7 @@
 
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    invoke-static {p1, p2}, Landroidx/core/provider/FontsContractCompat;->d(Landroidx/core/provider/a;Landroid/content/res/Resources;)Ljava/util/List;
+    invoke-static {p1, p2}, Landroidx/core/provider/FontsContractCompat;->d(Lb/h/i/a;Landroid/content/res/Resources;)Ljava/util/List;
 
     move-result-object p1
 
@@ -1019,7 +1019,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Landroidx/core/provider/a;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lb/h/i/a;->e()Ljava/lang/String;
 
     move-result-object p1
 

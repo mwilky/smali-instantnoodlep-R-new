@@ -1,6 +1,6 @@
-.class final Lcom/google/android/material/ripple/RippleDrawableCompat$b;
+.class public final Lcom/google/android/material/ripple/RippleDrawableCompat$b;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,18 +9,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "b"
 .end annotation
 
 
 # instance fields
-.field a:Lcom/google/android/material/shape/MaterialShapeDrawable;
+.field public a:Lcom/google/android/material/shape/MaterialShapeDrawable;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field b:Z
+.field public b:Z
 
 
 # direct methods

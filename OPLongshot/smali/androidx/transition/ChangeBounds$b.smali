@@ -1,27 +1,27 @@
-.class Landroidx/transition/ChangeBounds$b;
+.class public Landroidx/transition/ChangeBounds$b;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Landroidx/transition/q;Landroidx/transition/q;)Landroid/animation/Animator;
+    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lb/q/q;Lb/q/q;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/transition/ChangeBounds$e;
+.field public final synthetic a:Landroidx/transition/ChangeBounds$e;
 
-.field private mViewBounds:Landroidx/transition/ChangeBounds$e;
+.field public mViewBounds:Landroidx/transition/ChangeBounds$e;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/ChangeBounds;Landroidx/transition/ChangeBounds$e;)V
+.method public constructor <init>(Landroidx/transition/ChangeBounds;Landroidx/transition/ChangeBounds$e;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/transition/ChangeBounds$b;->a:Landroidx/transition/ChangeBounds$e;

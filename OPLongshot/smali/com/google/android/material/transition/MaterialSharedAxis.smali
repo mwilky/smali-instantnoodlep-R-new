@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialSharedAxis;
 .super Lcom/google/android/material/transition/MaterialVisibility;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -17,7 +17,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/google/android/material/transition/MaterialVisibility<",
-        "Lcom/google/android/material/transition/e;",
+        "Lc/b/b/b/l0/e;",
         ">;"
     }
 .end annotation
@@ -32,15 +32,15 @@
 
 
 # instance fields
-.field private final axis:I
+.field public final axis:I
 
-.field private final context:Landroid/content/Context;
+.field public final context:Landroid/content/Context;
 
-.field private final forward:Z
+.field public final forward:Z
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;IZ)V
+.method public constructor <init>(Landroid/content/Context;IZ)V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/android/material/transition/MaterialVisibility;-><init>()V
@@ -86,7 +86,7 @@
     return v0
 .end method
 
-.method getDefaultPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
+.method public getDefaultPrimaryAnimatorProvider()Lc/b/b/b/l0/e;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -177,7 +177,7 @@
     return-object v0
 .end method
 
-.method public getDefaultSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
+.method public getDefaultSecondaryAnimatorProvider()Lc/b/b/b/l0/e;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -189,24 +189,24 @@
     return-object v0
 .end method
 
-.method public bridge synthetic getPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
+.method public bridge synthetic getPrimaryAnimatorProvider()Lc/b/b/b/l0/e;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-super {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getPrimaryAnimatorProvider()Lcom/google/android/material/transition/e;
+    invoke-super {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getPrimaryAnimatorProvider()Lc/b/b/b/l0/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic getSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
+.method public bridge synthetic getSecondaryAnimatorProvider()Lc/b/b/b/l0/e;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-super {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getSecondaryAnimatorProvider()Lcom/google/android/material/transition/e;
+    invoke-super {p0}, Lcom/google/android/material/transition/MaterialVisibility;->getSecondaryAnimatorProvider()Lc/b/b/b/l0/e;
 
     move-result-object v0
 
@@ -241,14 +241,14 @@
     return-object p1
 .end method
 
-.method public bridge synthetic setSecondaryAnimatorProvider(Lcom/google/android/material/transition/e;)V
+.method public bridge synthetic setSecondaryAnimatorProvider(Lc/b/b/b/l0/e;)V
     .locals 0
-    .param p1    # Lcom/google/android/material/transition/e;
+    .param p1    # Lc/b/b/b/l0/e;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    invoke-super {p0, p1}, Lcom/google/android/material/transition/MaterialVisibility;->setSecondaryAnimatorProvider(Lcom/google/android/material/transition/e;)V
+    invoke-super {p0, p1}, Lcom/google/android/material/transition/MaterialVisibility;->setSecondaryAnimatorProvider(Lc/b/b/b/l0/e;)V
 
     return-void
 .end method

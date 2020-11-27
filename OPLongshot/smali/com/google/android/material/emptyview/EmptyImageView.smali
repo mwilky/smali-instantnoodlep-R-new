@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/emptyview/EmptyImageView;
 .super Landroid/widget/ImageView;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
 
 # direct methods

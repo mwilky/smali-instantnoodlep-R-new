@@ -1,17 +1,17 @@
-.class Landroidx/lifecycle/CompositeGeneratedAdaptersObserver;
+.class public Landroidx/lifecycle/CompositeGeneratedAdaptersObserver;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/lifecycle/c;
+.implements Lb/m/c;
 
 
 # instance fields
-.field private final a:[Landroidx/lifecycle/GeneratedAdapter;
+.field public final a:[Landroidx/lifecycle/GeneratedAdapter;
 
 
 # direct methods
-.method constructor <init>([Landroidx/lifecycle/GeneratedAdapter;)V
+.method public constructor <init>([Landroidx/lifecycle/GeneratedAdapter;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 6
 
     new-instance v0, Landroidx/lifecycle/MethodCallsLogger;
@@ -43,7 +43,7 @@
 
     aget-object v5, v1, v4
 
-    invoke-interface {v5, p1, p2, v3, v0}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
+    invoke-interface {v5, p1, p2, v3, v0}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 
     add-int/lit8 v4, v4, 0x1
 
@@ -61,7 +61,7 @@
 
     const/4 v5, 0x1
 
-    invoke-interface {v4, p1, p2, v5, v0}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
+    invoke-interface {v4, p1, p2, v5, v0}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 
     add-int/lit8 v3, v3, 0x1
 

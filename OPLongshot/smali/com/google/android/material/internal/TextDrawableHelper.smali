@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/TextDrawableHelper;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private delegate:Ljava/lang/ref/WeakReference;
+.field public delegate:Ljava/lang/ref/WeakReference;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -31,18 +31,18 @@
     .end annotation
 .end field
 
-.field private final fontCallback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
+.field public final fontCallback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-.field private textAppearance:Lcom/google/android/material/resources/TextAppearance;
+.field public textAppearance:Lcom/google/android/material/resources/TextAppearance;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final textPaint:Landroid/text/TextPaint;
+.field public final textPaint:Landroid/text/TextPaint;
 
-.field private textWidth:F
+.field public textWidth:F
 
-.field private textWidthDirty:Z
+.field public textWidthDirty:Z
 
 
 # direct methods
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/google/android/material/internal/TextDrawableHelper;Z)Z
+.method public static synthetic access$002(Lcom/google/android/material/internal/TextDrawableHelper;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/TextDrawableHelper;->textWidthDirty:Z
@@ -92,7 +92,7 @@
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/google/android/material/internal/TextDrawableHelper;)Ljava/lang/ref/WeakReference;
+.method public static synthetic access$100(Lcom/google/android/material/internal/TextDrawableHelper;)Ljava/lang/ref/WeakReference;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/internal/TextDrawableHelper;->delegate:Ljava/lang/ref/WeakReference;

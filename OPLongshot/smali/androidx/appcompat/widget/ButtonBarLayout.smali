@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ButtonBarLayout;
 .super Landroid/widget/LinearLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,15 +12,15 @@
 
 
 # static fields
-.field private static final PEEK_BUTTON_DP:I = 0x10
+.field public static final PEEK_BUTTON_DP:I = 0x10
 
 
 # instance fields
-.field private mAllowStacking:Z
+.field public mAllowStacking:Z
 
-.field private mLastWidthSize:I
+.field public mLastWidthSize:I
 
-.field private mMinimumHeight:I
+.field public mMinimumHeight:I
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->mMinimumHeight:I
 
-    sget-object v0, La/a/j;->ButtonBarLayout:[I
+    sget-object v0, Lb/c/j;->ButtonBarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -57,7 +57,7 @@
 
     if-lt v1, v2, :cond_0
 
-    sget-object v3, La/a/j;->ButtonBarLayout:[I
+    sget-object v3, Lb/c/j;->ButtonBarLayout:[I
 
     const/4 v6, 0x0
 
@@ -74,7 +74,7 @@
     invoke-virtual/range {v1 .. v7}, Landroid/widget/LinearLayout;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     :cond_0
-    sget p1, La/a/j;->ButtonBarLayout_allowStacking:I
+    sget p1, Lb/c/j;->ButtonBarLayout_allowStacking:I
 
     const/4 p2, 0x1
 
@@ -159,7 +159,7 @@
     :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    sget p1, La/a/f;->spacer:I
+    sget p1, Lb/c/f;->spacer:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -193,7 +193,7 @@
     return v0
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 5
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I

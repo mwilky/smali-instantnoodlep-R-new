@@ -1,6 +1,6 @@
-.class Landroidx/animation/PropertyValuesHolder$a;
+.class public Landroidx/animation/PropertyValuesHolder$a;
 .super Landroidx/animation/PropertyValuesHolder;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # instance fields
-.field private r:Landroidx/animation/FloatProperty;
+.field public r:Landroidx/animation/FloatProperty;
 
-.field s:Landroidx/animation/Keyframes$FloatKeyframes;
+.field public s:Landroidx/animation/Keyframes$FloatKeyframes;
 
-.field t:F
+.field public t:F
 
 
 # direct methods
-.method varargs constructor <init>(Landroid/util/Property;[F)V
+.method public varargs constructor <init>(Landroid/util/Property;[F)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/animation/PropertyValuesHolder;-><init>(Landroid/util/Property;)V
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method varargs constructor <init>(Ljava/lang/String;[F)V
+.method public varargs constructor <init>(Ljava/lang/String;[F)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/animation/PropertyValuesHolder;-><init>(Ljava/lang/String;)V
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method a(F)V
+.method public a(F)V
     .locals 1
 
     iget-object v0, p0, Landroidx/animation/PropertyValuesHolder$a;->s:Landroidx/animation/Keyframes$FloatKeyframes;
@@ -90,7 +90,7 @@
     return-object v0
 .end method
 
-.method d()Ljava/lang/Object;
+.method public d()Ljava/lang/Object;
     .locals 1
 
     iget v0, p0, Landroidx/animation/PropertyValuesHolder$a;->t:F
@@ -102,7 +102,7 @@
     return-object v0
 .end method
 
-.method k(Ljava/lang/Object;)V
+.method public k(Ljava/lang/Object;)V
     .locals 4
 
     const-string v0, "PropertyValuesHolder"
@@ -159,7 +159,7 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception p1
@@ -167,6 +167,8 @@
     invoke-virtual {p1}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -177,11 +179,10 @@
 
     move-result-object p1
 
-    :goto_0
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    :goto_1
+    :goto_0
     return-void
 .end method
 

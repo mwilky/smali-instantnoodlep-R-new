@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 .super Landroid/widget/RelativeLayout;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "PreviewWindow:"
+.field public static final TAG:Ljava/lang/String; = "PreviewWindow:"
 
 
 # instance fields
-.field private mPreviewWindowController:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field public mPreviewWindowController:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
 
 # direct methods

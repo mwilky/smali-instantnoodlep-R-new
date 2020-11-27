@@ -1,6 +1,6 @@
 .class public Landroidx/vectordrawable/graphics/drawable/PathInterpolatorCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
@@ -19,13 +19,13 @@
 
 .field public static final MAX_NUM_POINTS:I = 0xbb8
 
-.field private static final PRECISION:F = 0.002f
+.field public static final PRECISION:F = 0.002f
 
 
 # instance fields
-.field private mX:[F
+.field public mX:[F
 
-.field private mY:[F
+.field public mY:[F
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->l:[I
+    sget-object v0, Lb/r/a/a/a;->l:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -420,7 +420,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/graphics/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p1}, Lb/h/f/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p2
 

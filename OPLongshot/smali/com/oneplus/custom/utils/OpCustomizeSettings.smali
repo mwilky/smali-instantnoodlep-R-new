@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/custom/utils/OpCustomizeSettings;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,18 +14,18 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String;
+.field public static final a:Ljava/lang/String;
 
-.field private static b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+.field public static b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "ro.boot.project_name"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     return-object v0
 .end method
 
-.method private static c()Lcom/oneplus/custom/utils/OpCustomizeSettings;
+.method public static c()Lcom/oneplus/custom/utils/OpCustomizeSettings;
     .locals 2
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
@@ -81,7 +81,7 @@
 
     const-string v1, "OpCustomizeSettings"
 
-    invoke-static {v1, v0}, Lcom/oneplus/custom/utils/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lc/c/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->a:Ljava/lang/String;
 
@@ -129,9 +129,11 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcom/oneplus/custom/utils/c;
+    new-instance v0, Lc/c/c/a/c;
 
-    invoke-direct {v0}, Lcom/oneplus/custom/utils/c;-><init>()V
+    invoke-direct {v0}, Lc/c/c/a/c;-><init>()V
+
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     goto :goto_2
 
@@ -141,18 +143,20 @@
 
     invoke-direct {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;-><init>()V
 
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+
     goto :goto_2
 
     :cond_3
     :goto_1
-    new-instance v0, Lcom/oneplus/custom/utils/b;
+    new-instance v0, Lc/c/c/a/b;
 
-    invoke-direct {v0}, Lcom/oneplus/custom/utils/b;-><init>()V
+    invoke-direct {v0}, Lc/c/c/a/b;-><init>()V
 
-    :goto_2
     sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     :cond_4
+    :goto_2
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     return-object v0
@@ -160,7 +164,7 @@
 
 
 # virtual methods
-.method protected b()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+.method public b()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
     .locals 1
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->NONE:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;

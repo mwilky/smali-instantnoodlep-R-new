@@ -1,6 +1,6 @@
-.class Landroidx/core/provider/SelfDestructiveThread$c;
+.class public Landroidx/core/provider/SelfDestructiveThread$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field final synthetic b:Ljava/util/concurrent/Callable;
+.field public final synthetic b:Ljava/util/concurrent/Callable;
 
-.field final synthetic c:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final synthetic c:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field final synthetic d:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final synthetic e:Ljava/util/concurrent/locks/Condition;
+.field public final synthetic e:Ljava/util/concurrent/locks/Condition;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
+.method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/core/provider/SelfDestructiveThread$c;->a:Ljava/util/concurrent/atomic/AtomicReference;

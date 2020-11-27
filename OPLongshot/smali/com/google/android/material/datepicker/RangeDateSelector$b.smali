@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/datepicker/RangeDateSelector$b;
-.super Lcom/google/android/material/datepicker/c;
-.source ""
+.class public Lcom/google/android/material/datepicker/RangeDateSelector$b;
+.super Lc/b/b/b/t/c;
+.source "SourceFile"
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic f:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final synthetic f:Lcom/google/android/material/textfield/TextInputLayout;
 
-.field final synthetic g:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final synthetic g:Lcom/google/android/material/textfield/TextInputLayout;
 
-.field final synthetic h:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
+.field public final synthetic h:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
 
-.field final synthetic i:Lcom/google/android/material/datepicker/RangeDateSelector;
+.field public final synthetic i:Lcom/google/android/material/datepicker/RangeDateSelector;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/datepicker/RangeDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/RangeDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/RangeDateSelector$b;->i:Lcom/google/android/material/datepicker/RangeDateSelector;
@@ -36,14 +36,14 @@
 
     iput-object p8, p0, Lcom/google/android/material/datepicker/RangeDateSelector$b;->h:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Lcom/google/android/material/datepicker/c;-><init>(Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;)V
+    invoke-direct {p0, p2, p3, p4, p5}, Lc/b/b/b/t/c;-><init>(Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method a()V
+.method public a()V
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/RangeDateSelector$b;->i:Lcom/google/android/material/datepicker/RangeDateSelector;
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method b(Ljava/lang/Long;)V
+.method public b(Ljava/lang/Long;)V
     .locals 3
     .param p1    # Ljava/lang/Long;
         .annotation build Landroidx/annotation/Nullable;

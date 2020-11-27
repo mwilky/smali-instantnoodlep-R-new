@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/DrawableAlphaProperty;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field private final alphaCache:Ljava/util/WeakHashMap;
+.field public final alphaCache:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/animation/DrawableAlphaProperty;
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
     const-class v0, Ljava/lang/Integer;

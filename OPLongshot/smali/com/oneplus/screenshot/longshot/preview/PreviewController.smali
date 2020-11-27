@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
@@ -15,33 +15,33 @@
 
 
 # static fields
-.field private static final MSG_BG_CREATE_PREVIEW:I = 0x3e8
+.field public static final MSG_BG_CREATE_PREVIEW:I = 0x3e8
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.PreviewController"
+.field public static final TAG:Ljava/lang/String; = "Longshot.PreviewController"
 
 
 # instance fields
-.field private isPreviewStop:Z
+.field public isPreviewStop:Z
 
-.field private isStarted:Z
+.field public isStarted:Z
 
-.field private mBackgroundHandler:Landroid/os/Handler;
+.field public mBackgroundHandler:Landroid/os/Handler;
 
-.field private mCallback:Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
+.field public mCallback:Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
 
-.field private mCurrentBitmapCacheIndex:I
+.field public mCurrentBitmapCacheIndex:I
 
-.field private mCurrentpage:I
+.field public mCurrentpage:I
 
-.field private mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field public mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-.field private mMoveDistance:I
+.field public mMoveDistance:I
 
-.field private mPageHeight:I
+.field public mPageHeight:I
 
-.field private mPreviewWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field public mPreviewWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-.field private mRedyToPreviewCacheCount:I
+.field public mRedyToPreviewCacheCount:I
 
 
 # direct methods
@@ -70,7 +70,7 @@
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/preview/PreviewController$1;
 
-    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object v2
 
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
+.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->addBitmap(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Z)V
+.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->updateBitmapFinish(Z)V
@@ -666,6 +666,8 @@
 
     iget-object v1, v1, Lcom/oneplus/screenshot/StitchViewService;->mFirstPreview:Landroid/graphics/Bitmap;
 
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
+
     goto :goto_0
 
     :cond_0
@@ -685,15 +687,15 @@
 
     check-cast v1, Landroid/graphics/Bitmap;
 
-    :goto_0
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
 .method public onStop()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -715,19 +717,66 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onStop Configs.isCloseSystemDialogs="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->isCloseSystemDialogs:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " Configs.isPhoneStateChanged="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->isPhoneStateChanged:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " Configs.isActivityChangedDuringLongshot= "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->isActivityChangedDuringLongshot:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-boolean v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->isStarted:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isCloseSystemDialogs:Z
+
+    if-nez v0, :cond_0
+
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isPhoneStateChanged:Z
+
+    if-nez v0, :cond_0
+
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isActivityChangedDuringLongshot:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->isStarted:Z
 
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->mPreviewWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->onStop()V
 
-    :cond_0
     const-string v0, " onStop:"
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I

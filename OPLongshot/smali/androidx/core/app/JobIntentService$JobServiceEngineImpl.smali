@@ -1,6 +1,9 @@
-.class final Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
+.class public final Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 .super Landroid/app/job/JobServiceEngine;
-.source ""
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/core/app/JobIntentService$a;
 
 
 # annotations
@@ -13,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "JobServiceEngineImpl"
 .end annotation
 
@@ -25,21 +28,21 @@
 
 
 # static fields
-.field static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
-.field static final TAG:Ljava/lang/String; = "JobServiceEngineImpl"
+.field public static final TAG:Ljava/lang/String; = "JobServiceEngineImpl"
 
 
 # instance fields
-.field final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
-.field mParams:Landroid/app/job/JobParameters;
+.field public mParams:Landroid/app/job/JobParameters;
 
-.field final mService:Landroidx/core/app/JobIntentService;
+.field public final mService:Landroidx/core/app/JobIntentService;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/app/JobIntentService;)V
+.method public constructor <init>(Landroidx/core/app/JobIntentService;)V
     .locals 1
 
     invoke-direct {p0, p1}, Landroid/app/job/JobServiceEngine;-><init>(Landroid/app/Service;)V
@@ -67,7 +70,7 @@
     return-object v0
 .end method
 
-.method public dequeueWork()Landroidx/core/app/JobIntentService$a;
+.method public dequeueWork()Landroidx/core/app/JobIntentService$d;
     .locals 3
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mLock:Ljava/lang/Object;

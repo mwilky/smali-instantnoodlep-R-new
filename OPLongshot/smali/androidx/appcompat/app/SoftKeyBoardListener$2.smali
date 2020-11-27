@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/app/SoftKeyBoardListener$2;
+.class public Landroidx/appcompat/app/SoftKeyBoardListener$2;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/app/SoftKeyBoardListener;
+.field public final synthetic a:Landroidx/appcompat/app/SoftKeyBoardListener;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
+.method public constructor <init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener$2;->a:Landroidx/appcompat/app/SoftKeyBoardListener;
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;

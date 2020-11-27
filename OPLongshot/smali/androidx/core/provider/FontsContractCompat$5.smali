@@ -1,6 +1,6 @@
-.class final Landroidx/core/provider/FontsContractCompat$5;
+.class public final Landroidx/core/provider/FontsContractCompat$5;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -26,7 +26,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

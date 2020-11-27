@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/text/AllCapsTransformationMethod;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/text/method/TransformationMethod;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private mLocale:Ljava/util/Locale;
+.field public mLocale:Ljava/util/Locale;
 
 
 # direct methods

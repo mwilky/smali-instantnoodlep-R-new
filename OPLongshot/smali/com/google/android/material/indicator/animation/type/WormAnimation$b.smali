@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/indicator/animation/type/WormAnimation$b;
+.class public Lcom/google/android/material/indicator/animation/type/WormAnimation$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
 # instance fields
-.field final a:I
+.field public final a:I
 
-.field final b:I
+.field public final b:I
 
-.field final c:I
+.field public final c:I
 
-.field final d:I
+.field public final d:I
 
 
 # direct methods
-.method constructor <init>(IIII)V
+.method public constructor <init>(IIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

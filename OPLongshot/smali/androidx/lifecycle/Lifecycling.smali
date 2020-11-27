@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/Lifecycling;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static final GENERATED_CALLBACK:I = 0x2
+.field public static final GENERATED_CALLBACK:I = 0x2
 
-.field private static final REFLECTIVE_CALLBACK:I = 0x1
+.field public static final REFLECTIVE_CALLBACK:I = 0x1
 
-.field private static sCallbackCache:Ljava/util/Map;
+.field public static sCallbackCache:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -27,7 +27,7 @@
     .end annotation
 .end field
 
-.field private static sClassToAdapters:Ljava/util/Map;
+.field public static sClassToAdapters:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -43,7 +43,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/util/HashMap;
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method private static createGeneratedAdapter(Ljava/lang/reflect/Constructor;Ljava/lang/Object;)Landroidx/lifecycle/GeneratedAdapter;
+.method public static createGeneratedAdapter(Ljava/lang/reflect/Constructor;Ljava/lang/Object;)Landroidx/lifecycle/GeneratedAdapter;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -133,7 +133,7 @@
     throw p1
 .end method
 
-.method private static generatedConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+.method public static generatedConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     .locals 4
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -294,7 +294,7 @@
     return-object p0
 .end method
 
-.method static getCallback(Ljava/lang/Object;)Landroidx/lifecycle/GenericLifecycleObserver;
+.method public static getCallback(Ljava/lang/Object;)Landroidx/lifecycle/GenericLifecycleObserver;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -302,18 +302,18 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/c;
+    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Lb/m/c;
 
     move-result-object p0
 
     new-instance v0, Landroidx/lifecycle/Lifecycling$1;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Landroidx/lifecycle/c;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Lb/m/c;)V
 
     return-object v0
 .end method
 
-.method private static getObserverConstructorType(Ljava/lang/Class;)I
+.method public static getObserverConstructorType(Ljava/lang/Class;)I
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -355,7 +355,7 @@
     return v0
 .end method
 
-.method private static isLifecycleParent(Ljava/lang/Class;)Z
+.method public static isLifecycleParent(Ljava/lang/Class;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -367,7 +367,7 @@
 
     if-eqz p0, :cond_0
 
-    const-class v0, Landroidx/lifecycle/d;
+    const-class v0, Lb/m/d;
 
     invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -386,14 +386,14 @@
     return p0
 .end method
 
-.method static lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/c;
+.method public static lifecycleEventObserver(Ljava/lang/Object;)Lb/m/c;
     .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    instance-of v0, p0, Landroidx/lifecycle/c;
+    instance-of v0, p0, Lb/m/c;
 
-    instance-of v1, p0, Landroidx/lifecycle/b;
+    instance-of v1, p0, Lb/m/b;
 
     if-eqz v0, :cond_0
 
@@ -403,11 +403,11 @@
 
     move-object v1, p0
 
-    check-cast v1, Landroidx/lifecycle/b;
+    check-cast v1, Lb/m/b;
 
-    check-cast p0, Landroidx/lifecycle/c;
+    check-cast p0, Lb/m/c;
 
-    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/b;Landroidx/lifecycle/c;)V
+    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/m/b;Lb/m/c;)V
 
     return-object v0
 
@@ -416,18 +416,18 @@
 
     new-instance v0, Landroidx/lifecycle/FullLifecycleObserverAdapter;
 
-    check-cast p0, Landroidx/lifecycle/b;
+    check-cast p0, Lb/m/b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Landroidx/lifecycle/b;Landroidx/lifecycle/c;)V
+    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/m/b;Lb/m/c;)V
 
     return-object v0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    check-cast p0, Landroidx/lifecycle/c;
+    check-cast p0, Lb/m/c;
 
     return-object p0
 
@@ -523,7 +523,7 @@
     return-object v0
 .end method
 
-.method private static resolveObserverCallbackType(Ljava/lang/Class;)I
+.method public static resolveObserverCallbackType(Ljava/lang/Class;)I
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -563,9 +563,9 @@
     return v2
 
     :cond_1
-    sget-object v0, Landroidx/lifecycle/a;->c:Landroidx/lifecycle/a;
+    sget-object v0, Lb/m/a;->c:Lb/m/a;
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/a;->d(Ljava/lang/Class;)Z
+    invoke-virtual {v0, p0}, Lb/m/a;->d(Ljava/lang/Class;)Z
 
     move-result v0
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/Utils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
@@ -8,15 +8,15 @@
 
 .field public static final DEBUG:Z = true
 
-.field private static final KEY_SECRET:Ljava/lang/String; = "o3eavE9mRvE6NvwEhZb+PTbDx0MnvwMTVKCxwM0ccpo="
+.field public static final KEY_SECRET:Ljava/lang/String; = "o3eavE9mRvE6NvwEhZb+PTbDx0MnvwMTVKCxwM0ccpo="
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.Utils"
+.field public static final TAG:Ljava/lang/String; = "Longshot.Utils"
 
-.field private static sWATERMARK:Landroid/graphics/Bitmap;
+.field public static sWATERMARK:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -200,7 +200,7 @@
 
     const-string v0, "persist.test.move"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     const-string v0, "persist.test.moveduration"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
 
     const-string v0, "persist.test.movekeep"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -344,7 +344,7 @@
 
     const-string v0, "persist.test.pixel.match.threshold"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -392,7 +392,7 @@
 
     const-string v0, "persist.test.stitch.next.match.threshold"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -478,7 +478,7 @@
 
     move-result-object p0
 
-    invoke-static {v1}, Lb/b/b/c/a/a;->a(I)Z
+    invoke-static {v1}, Lc/c/b/c/a/a;->a(I)Z
 
     move-result v2
 
@@ -567,7 +567,7 @@
 
     const-string v0, "persist.tracing.move_e"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -580,7 +580,7 @@
     return v0
 .end method
 
-.method private static genWaterMark(II)Landroid/graphics/Bitmap;
+.method public static genWaterMark(II)Landroid/graphics/Bitmap;
     .locals 12
 
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
@@ -1107,7 +1107,7 @@
     return-object v0
 .end method
 
-.method private static getIMEI(Landroid/content/Context;)Ljava/lang/String;
+.method public static getIMEI(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
     const-string v0, "Longshot.Utils"
@@ -1248,7 +1248,7 @@
 
     const-string v0, "persist.tracing.move"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1344,16 +1344,20 @@
 
     const-string p0, "persist.tracing.stitchlast_l"
 
+    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     goto :goto_0
 
     :cond_0
     const-string p0, "persist.tracing.stitchlast_c"
 
-    :goto_0
-    invoke-static {p0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    :goto_0
     return-object p0
 .end method
 
@@ -1362,7 +1366,7 @@
 
     const-string v0, "persist.tracing.stitchlast_f"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1376,16 +1380,20 @@
 
     const-string p0, "persist.tracing.stitchnext_l"
 
+    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     goto :goto_0
 
     :cond_0
     const-string p0, "persist.tracing.stitchnext_c"
 
-    :goto_0
-    invoke-static {p0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    :goto_0
     return-object p0
 .end method
 
@@ -1394,7 +1402,7 @@
 
     const-string v0, "persist.tracing.stitchnext_f"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1481,7 +1489,7 @@
 
     const-string v0, "persist.test.dumppreview"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1517,7 +1525,7 @@
 
     const-string v0, "persist.test.debugpreview"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1553,7 +1561,7 @@
 
     const-string v0, "persist.tracing.stitchlast_e"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1571,7 +1579,7 @@
 
     const-string v0, "persist.tracing.stitchnext_e"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1629,7 +1637,7 @@
 
     const-string v0, "persist.test.trace.stitch"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1701,7 +1709,7 @@
 
     check-cast v1, Landroid/app/NotificationManager;
 
-    sget v3, Lb/b/b/i/a/a;->a:I
+    sget v3, Lc/c/b/i/a/a;->a:I
 
     invoke-virtual {v1, v3}, Landroid/app/NotificationManager;->cancel(I)V
 
@@ -1740,7 +1748,7 @@
     if-eqz p2, :cond_1
 
     :try_start_1
-    invoke-static {}, Lb/b/b/l/b;->a()V
+    invoke-static {}, Lc/c/b/m/b;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1877,7 +1885,6 @@
 
     const-string v0, "null bitmap"
 
-    :goto_0
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v6
@@ -2033,7 +2040,7 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    goto :goto_1
+    goto :goto_0
 
     :catchall_0
     move-exception v0
@@ -2042,7 +2049,7 @@
 
     const/4 v13, 0x0
 
-    goto/16 :goto_f
+    goto/16 :goto_e
 
     :catch_0
     move-exception v0
@@ -2051,10 +2058,10 @@
 
     const/4 v13, 0x0
 
-    goto/16 :goto_b
+    goto/16 :goto_a
 
     :cond_1
-    :goto_1
+    :goto_0
     :try_start_4
     invoke-virtual {v10, v13, v11}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
@@ -2097,7 +2104,7 @@
 
     move v9, v0
 
-    goto :goto_3
+    goto :goto_2
 
     :catchall_1
     move-exception v0
@@ -2106,17 +2113,17 @@
 
     move-object v13, v9
 
-    goto/16 :goto_f
+    goto/16 :goto_e
 
     :catch_1
     move-exception v0
 
     move-object v13, v9
 
-    :goto_2
+    :goto_1
     const/4 v6, 0x0
 
-    goto/16 :goto_b
+    goto/16 :goto_a
 
     :cond_2
     :try_start_7
@@ -2131,7 +2138,7 @@
 
     const/4 v12, 0x0
 
-    :goto_3
+    :goto_2
     if-eqz v18, :cond_4
 
     :try_start_8
@@ -2196,7 +2203,7 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_2
     move-exception v0
@@ -2205,7 +2212,7 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3
-    :goto_4
+    :goto_3
     const-string v0, " delete file e"
 
     invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -2275,34 +2282,34 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_3
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    goto :goto_6
+    goto :goto_5
 
     :catch_3
     move-exception v0
 
-    goto :goto_5
+    goto :goto_4
 
     :catchall_2
     move-exception v0
 
     move-object/from16 p2, v12
 
-    goto :goto_8
+    goto :goto_7
 
     :catch_4
     move-exception v0
 
     move-object/from16 p2, v12
 
-    :goto_5
+    :goto_4
     move-object/from16 v13, p2
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_4
     move-object/from16 p2, v12
 
-    :goto_6
+    :goto_5
     :try_start_c
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2361,7 +2368,7 @@
 
     const/4 v6, 0x0
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_5
     const/4 v1, 0x1
@@ -2388,7 +2395,7 @@
 
     move v6, v1
 
-    :goto_7
+    :goto_6
     if-eqz p2, :cond_6
 
     :try_start_f
@@ -2396,14 +2403,14 @@
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_5
 
-    goto :goto_d
+    goto :goto_c
 
     :catch_5
     move-exception v0
 
     move-object v1, v0
 
-    goto :goto_c
+    goto :goto_b
 
     :catch_6
     move-exception v0
@@ -2412,15 +2419,15 @@
 
     move v6, v1
 
-    goto :goto_b
+    goto :goto_a
 
     :catchall_3
     move-exception v0
 
-    :goto_8
+    :goto_7
     move-object/from16 v13, p2
 
-    goto :goto_e
+    goto :goto_d
 
     :catch_7
     move-exception v0
@@ -2431,26 +2438,26 @@
 
     move v6, v2
 
-    goto :goto_b
+    goto :goto_a
 
     :catch_8
     move-exception v0
 
-    goto :goto_9
+    goto :goto_8
 
     :catch_9
     move-exception v0
 
     move-wide/from16 v20, v8
 
-    :goto_9
+    :goto_8
     const/4 v2, 0x0
 
     const/4 v4, 0x0
 
     move v6, v2
 
-    goto :goto_a
+    goto :goto_9
 
     :catchall_4
     move-exception v0
@@ -2461,7 +2468,7 @@
 
     move-object v13, v4
 
-    goto :goto_f
+    goto :goto_e
 
     :catch_a
     move-exception v0
@@ -2472,10 +2479,10 @@
 
     const/4 v4, 0x0
 
-    :goto_a
+    :goto_9
     move-object v13, v4
 
-    :goto_b
+    :goto_a
     :try_start_10
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_10
@@ -2488,18 +2495,18 @@
     :try_end_11
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_b
 
-    goto :goto_d
+    goto :goto_c
 
     :catch_b
     move-exception v0
 
     move-object v1, v0
 
-    :goto_c
+    :goto_b
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_6
-    :goto_d
+    :goto_c
     invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2522,15 +2529,17 @@
 
     move-result-object v0
 
-    goto/16 :goto_0
+    invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v6
 
     :catchall_5
     move-exception v0
 
-    :goto_e
+    :goto_d
     move-object v1, v0
 
-    :goto_f
+    :goto_e
     if-eqz v13, :cond_7
 
     :try_start_12
@@ -2538,7 +2547,7 @@
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_c
 
-    goto :goto_10
+    goto :goto_f
 
     :catch_c
     move-exception v0
@@ -2548,7 +2557,7 @@
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_7
-    :goto_10
+    :goto_f
     invoke-virtual {v11}, Landroid/content/ContentValues;->clear()V
 
     throw v1
@@ -2571,7 +2580,7 @@
 
     const-string v0, "persist.test.dumplongshotMove"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2589,7 +2598,7 @@
 
     const-string v0, "persist.test.dumplongshot"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2607,7 +2616,7 @@
 
     const-string v0, "persist.test.dumplongshotNext"
 
-    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,6 +1,6 @@
-.class synthetic Lcom/google/android/material/ripple/RippleDrawableCompat$a;
+.class public synthetic Lcom/google/android/material/ripple/RippleDrawableCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation

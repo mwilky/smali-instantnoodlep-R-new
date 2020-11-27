@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/transition/FadeModeEvaluators;
+.class public Lcom/google/android/material/transition/FadeModeEvaluators;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,47 +10,47 @@
 
 
 # static fields
-.field private static final CROSS:Lcom/google/android/material/transition/a;
+.field public static final CROSS:Lc/b/b/b/l0/a;
 
-.field private static final IN:Lcom/google/android/material/transition/a;
+.field public static final IN:Lc/b/b/b/l0/a;
 
-.field private static final OUT:Lcom/google/android/material/transition/a;
+.field public static final OUT:Lc/b/b/b/l0/a;
 
-.field private static final THROUGH:Lcom/google/android/material/transition/a;
+.field public static final THROUGH:Lc/b/b/b/l0/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/transition/FadeModeEvaluators$a;
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FadeModeEvaluators$a;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lcom/google/android/material/transition/a;
+    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lc/b/b/b/l0/a;
 
     new-instance v0, Lcom/google/android/material/transition/FadeModeEvaluators$b;
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FadeModeEvaluators$b;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lcom/google/android/material/transition/a;
+    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lc/b/b/b/l0/a;
 
     new-instance v0, Lcom/google/android/material/transition/FadeModeEvaluators$c;
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FadeModeEvaluators$c;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->CROSS:Lcom/google/android/material/transition/a;
+    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->CROSS:Lc/b/b/b/l0/a;
 
     new-instance v0, Lcom/google/android/material/transition/FadeModeEvaluators$d;
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FadeModeEvaluators$d;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->THROUGH:Lcom/google/android/material/transition/a;
+    sput-object v0, Lcom/google/android/material/transition/FadeModeEvaluators;->THROUGH:Lc/b/b/b/l0/a;
 
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method static get(IZ)Lcom/google/android/material/transition/a;
+.method public static get(IZ)Lc/b/b/b/l0/a;
     .locals 2
 
     if-eqz p0, :cond_4
@@ -75,7 +75,7 @@
 
     if-ne p0, p1, :cond_0
 
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->THROUGH:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->THROUGH:Lc/b/b/b/l0/a;
 
     return-object p0
 
@@ -101,19 +101,19 @@
     throw p1
 
     :cond_1
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->CROSS:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->CROSS:Lc/b/b/b/l0/a;
 
     return-object p0
 
     :cond_2
     if-eqz p1, :cond_3
 
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lc/b/b/b/l0/a;
 
     goto :goto_0
 
     :cond_3
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lc/b/b/b/l0/a;
 
     :goto_0
     return-object p0
@@ -121,12 +121,12 @@
     :cond_4
     if-eqz p1, :cond_5
 
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->IN:Lc/b/b/b/l0/a;
 
     goto :goto_1
 
     :cond_5
-    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lcom/google/android/material/transition/a;
+    sget-object p0, Lcom/google/android/material/transition/FadeModeEvaluators;->OUT:Lc/b/b/b/l0/a;
 
     :goto_1
     return-object p0

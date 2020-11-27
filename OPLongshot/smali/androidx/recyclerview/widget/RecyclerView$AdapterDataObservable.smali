@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
+.class public Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 .super Landroid/database/Observable;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AdapterDataObservable"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroid/database/Observable;-><init>()V

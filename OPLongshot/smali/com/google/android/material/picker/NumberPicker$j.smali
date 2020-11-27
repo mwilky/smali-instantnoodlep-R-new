@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$j;
+.class public Lcom/google/android/material/picker/NumberPicker$j;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "j"
 .end annotation
 
 
 # instance fields
-.field private a:I
+.field public a:I
 
-.field private b:I
+.field public b:I
 
-.field final synthetic c:Lcom/google/android/material/picker/NumberPicker;
+.field public final synthetic c:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
@@ -171,7 +171,7 @@
 
     if-eq v0, v1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
     :cond_0
     iget v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->a:I
@@ -180,7 +180,7 @@
 
     if-eq v0, v1, :cond_1
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
@@ -212,7 +212,6 @@
 
     invoke-static {v0, v1}, Lcom/google/android/material/picker/NumberPicker;->i(Lcom/google/android/material/picker/NumberPicker;Z)Z
 
-    :goto_0
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
@@ -227,7 +226,7 @@
 
     invoke-virtual {v0, v2, v2, v1, v3}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_3
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
@@ -259,7 +258,6 @@
 
     invoke-static {v0, v1}, Lcom/google/android/material/picker/NumberPicker;->f(Lcom/google/android/material/picker/NumberPicker;Z)Z
 
-    :goto_1
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
@@ -280,7 +278,7 @@
 
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_5
     iget v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->a:I
@@ -289,12 +287,26 @@
 
     if-eq v0, v1, :cond_6
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_6
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
 
     invoke-static {v0, v3}, Lcom/google/android/material/picker/NumberPicker;->i(Lcom/google/android/material/picker/NumberPicker;Z)Z
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v3}, Lcom/google/android/material/picker/NumberPicker;->j(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v3
+
+    invoke-virtual {v0, v2, v2, v1, v3}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
     goto :goto_0
 
@@ -303,8 +315,26 @@
 
     invoke-static {v0, v3}, Lcom/google/android/material/picker/NumberPicker;->f(Lcom/google/android/material/picker/NumberPicker;Z)Z
 
-    goto :goto_1
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
 
-    :goto_2
+    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker$j;->c:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getBottom()I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v1, v3, v4}, Landroid/widget/LinearLayout;->invalidate(IIII)V
+
+    :goto_0
     return-void
 .end method

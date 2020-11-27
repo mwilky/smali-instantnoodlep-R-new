@@ -1,9 +1,9 @@
-.class Lcom/google/android/material/behavior/SwipeDismissBehavior$b;
+.class public Lcom/google/android/material/behavior/SwipeDismissBehavior$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/core/view/accessibility/f;
+.implements Lb/h/l/y/f;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+.field public final synthetic a:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;)V
+.method public constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$b;->a:Lcom/google/android/material/behavior/SwipeDismissBehavior;
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroidx/core/view/accessibility/f$a;)Z
+.method public a(Landroid/view/View;Lb/h/l/y/f$a;)Z
     .locals 3
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/core/view/accessibility/f$a;
+    .param p2    # Lb/h/l/y/f$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

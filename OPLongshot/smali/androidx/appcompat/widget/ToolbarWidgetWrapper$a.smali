@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ToolbarWidgetWrapper$a;
+.class public Landroidx/appcompat/widget/ToolbarWidgetWrapper$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final a:Landroidx/appcompat/view/menu/ActionMenuItem;
+.field public final a:Landroidx/appcompat/view/menu/ActionMenuItem;
 
-.field final synthetic b:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
+.field public final synthetic b:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;)V
     .locals 7
 
     iput-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$a;->b:Landroidx/appcompat/widget/ToolbarWidgetWrapper;

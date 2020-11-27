@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/longshot/ILongScreenshot$Default;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;

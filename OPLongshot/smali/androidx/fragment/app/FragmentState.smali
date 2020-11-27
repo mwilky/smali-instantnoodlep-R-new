@@ -1,6 +1,6 @@
-.class final Landroidx/fragment/app/FragmentState;
+.class public final Landroidx/fragment/app/FragmentState;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -27,37 +27,37 @@
 
 
 # instance fields
-.field final mArguments:Landroid/os/Bundle;
+.field public final mArguments:Landroid/os/Bundle;
 
-.field final mClassName:Ljava/lang/String;
+.field public final mClassName:Ljava/lang/String;
 
-.field final mContainerId:I
+.field public final mContainerId:I
 
-.field final mDetached:Z
+.field public final mDetached:Z
 
-.field final mFragmentId:I
+.field public final mFragmentId:I
 
-.field final mFromLayout:Z
+.field public final mFromLayout:Z
 
-.field final mHidden:Z
+.field public final mHidden:Z
 
-.field mInstance:Landroidx/fragment/app/Fragment;
+.field public mInstance:Landroidx/fragment/app/Fragment;
 
-.field final mMaxLifecycleState:I
+.field public final mMaxLifecycleState:I
 
-.field final mRemoving:Z
+.field public final mRemoving:Z
 
-.field final mRetainInstance:Z
+.field public final mRetainInstance:Z
 
-.field mSavedFragmentState:Landroid/os/Bundle;
+.field public mSavedFragmentState:Landroid/os/Bundle;
 
-.field final mTag:Ljava/lang/String;
+.field public final mTag:Ljava/lang/String;
 
-.field final mWho:Ljava/lang/String;
+.field public final mWho:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/fragment/app/FragmentState$1;
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -207,7 +207,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroidx/fragment/app/Fragment;)V
+.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -283,13 +283,13 @@
     return v0
 .end method
 
-.method public instantiate(Ljava/lang/ClassLoader;Landroidx/fragment/app/e;)Landroidx/fragment/app/Fragment;
+.method public instantiate(Ljava/lang/ClassLoader;Lb/k/a/e;)Landroidx/fragment/app/Fragment;
     .locals 1
     .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/fragment/app/e;
+    .param p2    # Lb/k/a/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -307,7 +307,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentState;->mClassName:Ljava/lang/String;
 
-    invoke-virtual {p2, p1, v0}, Landroidx/fragment/app/e;->a(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {p2, p1, v0}, Lb/k/a/e;->a(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p2
 
@@ -327,6 +327,8 @@
 
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mSavedFragmentState:Landroid/os/Bundle;
 
+    iput-object p2, p1, Landroidx/fragment/app/Fragment;->mSavedFragmentState:Landroid/os/Bundle;
+
     goto :goto_0
 
     :cond_1
@@ -336,9 +338,9 @@
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    :goto_0
     iput-object p2, p1, Landroidx/fragment/app/Fragment;->mSavedFragmentState:Landroid/os/Bundle;
 
+    :goto_0
     iget-object p1, p0, Landroidx/fragment/app/FragmentState;->mInstance:Landroidx/fragment/app/Fragment;
 
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mWho:Ljava/lang/String;
@@ -391,7 +393,7 @@
 
     iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    sget-boolean p1, Landroidx/fragment/app/g;->H:Z
+    sget-boolean p1, Lb/k/a/g;->H:Z
 
     if-eqz p1, :cond_2
 

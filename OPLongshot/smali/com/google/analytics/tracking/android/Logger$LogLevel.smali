@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/tracking/android/Logger$LogLevel;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/Logger$LogLevel;
+.field public static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/Logger$LogLevel;
 
 .field public static final enum ERROR:Lcom/google/analytics/tracking/android/Logger$LogLevel;
 
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 7
 
     new-instance v0, Lcom/google/analytics/tracking/android/Logger$LogLevel;
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

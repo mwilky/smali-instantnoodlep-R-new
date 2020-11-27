@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/ViewBoundsCheck$a;
+.class public Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method a(I)V
+.method public a(I)V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->a:I
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method b()Z
+.method public b()Z
     .locals 4
 
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->a:I
@@ -155,7 +155,7 @@
     return v0
 .end method
 
-.method c(II)I
+.method public c(II)I
     .locals 0
 
     if-le p1, p2, :cond_0
@@ -177,7 +177,7 @@
     return p1
 .end method
 
-.method d()V
+.method public d()V
     .locals 1
 
     const/4 v0, 0x0
@@ -187,7 +187,7 @@
     return-void
 .end method
 
-.method e(IIII)V
+.method public e(IIII)V
     .locals 0
 
     iput p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$a;->b:I

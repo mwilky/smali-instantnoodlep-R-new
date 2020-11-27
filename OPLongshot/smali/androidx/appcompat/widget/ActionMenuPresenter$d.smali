@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$d;
-.super Landroidx/appcompat/widget/k;
-.source ""
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$d;
+.super Lb/c/n/k;
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/widget/ActionMenuView$ActionMenuChildView;
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "d"
 .end annotation
 
 
 # instance fields
-.field final synthetic c:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field public final synthetic c:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods
@@ -27,11 +27,11 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$d;->c:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    sget v0, La/a/a;->actionOverflowButtonStyle:I
+    sget v0, Lb/c/a;->actionOverflowButtonStyle:I
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p2, v1, v0}, Landroidx/appcompat/widget/k;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p2, v1, v0}, Lb/c/n/k;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 v0, 0x1
 
@@ -47,7 +47,7 @@
 
     const/16 v0, 0xa
 
-    invoke-static {p2, v0}, Lb/b/a/b;->a(Landroid/content/Context;I)F
+    invoke-static {p2, v0}, Lc/c/a/b;->a(Landroid/content/Context;I)F
 
     move-result p2
 
@@ -71,7 +71,7 @@
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Landroidx/appcompat/widget/e0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p2}, Lb/c/n/e0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     new-instance p2, Landroidx/appcompat/widget/ActionMenuPresenter$d$a;
 
@@ -125,7 +125,7 @@
     return v1
 .end method
 
-.method protected setFrame(IIII)Z
+.method public setFrame(IIII)Z
     .locals 4
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->setFrame(IIII)Z
@@ -194,7 +194,7 @@
 
     add-int/2addr p4, v0
 
-    invoke-static {p3, v1, v2, p2, p4}, Landroidx/core/graphics/drawable/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {p3, v1, v2, p2, p4}, Lb/h/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_0
     return p1

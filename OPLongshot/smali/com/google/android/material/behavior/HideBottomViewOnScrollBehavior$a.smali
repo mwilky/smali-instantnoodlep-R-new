@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$a;
+.class public Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
+.field public final synthetic a:Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;)V
+.method public constructor <init>(Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior$a;->a:Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;

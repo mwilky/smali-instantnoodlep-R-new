@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/FastScroller$a;
+.class public Landroidx/recyclerview/widget/FastScroller$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/recyclerview/widget/FastScroller;
+.field public final synthetic a:Landroidx/recyclerview/widget/FastScroller;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/FastScroller$a;->a:Landroidx/recyclerview/widget/FastScroller;

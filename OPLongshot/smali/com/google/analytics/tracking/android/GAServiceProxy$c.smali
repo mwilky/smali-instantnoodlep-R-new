@@ -1,6 +1,6 @@
-.class synthetic Lcom/google/analytics/tracking/android/GAServiceProxy$c;
+.class public synthetic Lcom/google/analytics/tracking/android/GAServiceProxy$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation
 
 
 # static fields
-.field static final synthetic a:[I
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     invoke-static {}, Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;->values()[Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;

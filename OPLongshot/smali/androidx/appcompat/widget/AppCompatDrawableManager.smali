@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/AppCompatDrawableManager;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,21 +12,21 @@
 
 
 # static fields
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
-.field private static final DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
+.field public static final DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
 
-.field private static INSTANCE:Landroidx/appcompat/widget/AppCompatDrawableManager; = null
+.field public static INSTANCE:Landroidx/appcompat/widget/AppCompatDrawableManager; = null
 
-.field private static final TAG:Ljava/lang/String; = "AppCompatDrawableManag"
+.field public static final TAG:Ljava/lang/String; = "AppCompatDrawableManag"
 
 
 # instance fields
-.field private mResourceManager:Landroidx/appcompat/widget/ResourceManagerInternal;
+.field public mResourceManager:Landroidx/appcompat/widget/ResourceManagerInternal;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method static synthetic access$000()Landroid/graphics/PorterDuff$Mode;
+.method public static synthetic access$000()Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
     sget-object v0, Landroidx/appcompat/widget/AppCompatDrawableManager;->DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
@@ -158,7 +158,7 @@
     throw v1
 .end method
 
-.method static tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
+.method public static tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
     .locals 0
 
     invoke-static {p0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
@@ -202,7 +202,7 @@
     throw p1
 .end method
 
-.method declared-synchronized getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
+.method public declared-synchronized getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -236,7 +236,7 @@
     throw p1
 .end method
 
-.method declared-synchronized getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+.method public declared-synchronized getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -298,7 +298,7 @@
     throw p1
 .end method
 
-.method declared-synchronized onDrawableLoadedFromResources(Landroid/content/Context;Landroidx/appcompat/widget/VectorEnabledTintResources;I)Landroid/graphics/drawable/Drawable;
+.method public declared-synchronized onDrawableLoadedFromResources(Landroid/content/Context;Landroidx/appcompat/widget/VectorEnabledTintResources;I)Landroid/graphics/drawable/Drawable;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -336,7 +336,7 @@
     throw p1
 .end method
 
-.method tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
+.method public tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;

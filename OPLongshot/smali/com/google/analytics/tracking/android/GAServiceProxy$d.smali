@@ -1,6 +1,6 @@
-.class Lcom/google/analytics/tracking/android/GAServiceProxy$d;
+.class public Lcom/google/analytics/tracking/android/GAServiceProxy$d;
 .super Ljava/util/TimerTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "d"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
+.field public final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
 
 # direct methods
-.method private constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
+.method public constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$d;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;Lcom/google/analytics/tracking/android/GAServiceProxy$a;)V
+.method public synthetic constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;Lcom/google/analytics/tracking/android/GAServiceProxy$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/analytics/tracking/android/GAServiceProxy$d;-><init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
@@ -80,11 +80,11 @@
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$d;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
-    invoke-static {v2}, Lcom/google/analytics/tracking/android/GAServiceProxy;->i(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lcom/google/analytics/tracking/android/h;
+    invoke-static {v2}, Lcom/google/analytics/tracking/android/GAServiceProxy;->i(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lc/b/a/c/a/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/google/analytics/tracking/android/h;->a()J
+    invoke-interface {v2}, Lc/b/a/c/a/h;->a()J
 
     move-result-wide v2
 
@@ -94,7 +94,7 @@
 
     const-string v0, "Disconnecting due to inactivity"
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/s;->e(Ljava/lang/String;)V
+    invoke-static {v0}, Lc/b/a/c/a/s;->e(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$d;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 

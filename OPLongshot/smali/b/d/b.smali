@@ -1,0 +1,11 @@
+.class public final Lb/d/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final cardview_compat_inset_shadow:I = 0x7f070070
+
+.field public static final cardview_default_elevation:I = 0x7f070071
+
+.field public static final cardview_default_radius:I = 0x7f070072

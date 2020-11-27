@@ -1,12 +1,12 @@
 .class public Landroidx/activity/ComponentActivity;
 .super Landroidx/core/app/ComponentActivity;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/lifecycle/e;
-.implements Landroidx/lifecycle/k;
-.implements Landroidx/savedstate/b;
-.implements Landroidx/activity/c;
+.implements Lb/m/e;
+.implements Lb/m/k;
+.implements Lb/p/b;
+.implements Lb/a/c;
 
 
 # annotations
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field private final a:Landroidx/lifecycle/f;
+.field public final a:Lb/m/f;
 
-.field private final b:Landroidx/savedstate/a;
+.field public final b:Lb/p/a;
 
-.field private c:Landroidx/lifecycle/j;
+.field public c:Lb/m/j;
 
-.field private final d:Landroidx/activity/OnBackPressedDispatcher;
+.field public final d:Landroidx/activity/OnBackPressedDispatcher;
 
-.field private e:I
+.field public e:I
     .annotation build Landroidx/annotation/LayoutRes;
     .end annotation
 .end field
@@ -38,17 +38,17 @@
 
     invoke-direct {p0}, Landroidx/core/app/ComponentActivity;-><init>()V
 
-    new-instance v0, Landroidx/lifecycle/f;
+    new-instance v0, Lb/m/f;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/f;-><init>(Landroidx/lifecycle/e;)V
+    invoke-direct {v0, p0}, Lb/m/f;-><init>(Lb/m/e;)V
 
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->a:Landroidx/lifecycle/f;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->a:Lb/m/f;
 
-    invoke-static {p0}, Landroidx/savedstate/a;->a(Landroidx/savedstate/b;)Landroidx/savedstate/a;
+    invoke-static {p0}, Lb/p/a;->a(Lb/p/b;)Lb/p/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->b:Landroidx/savedstate/a;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->b:Lb/p/a;
 
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher;
 
@@ -80,7 +80,7 @@
 
     invoke-direct {v2, p0}, Landroidx/activity/ComponentActivity$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
-    invoke-virtual {v0, v2}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
+    invoke-virtual {v0, v2}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
 
     :cond_0
     invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
@@ -91,7 +91,7 @@
 
     invoke-direct {v2, p0}, Landroidx/activity/ComponentActivity$3;-><init>(Landroidx/activity/ComponentActivity;)V
 
-    invoke-virtual {v0, v2}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
+    invoke-virtual {v0, v2}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -109,7 +109,7 @@
 
     invoke-direct {v1, p0}, Landroidx/activity/ImmLeaksCleaner;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
 
     :cond_1
     return-void
@@ -124,7 +124,7 @@
     throw v0
 .end method
 
-.method static synthetic e(Landroidx/activity/ComponentActivity;)V
+.method public static synthetic e(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
@@ -152,7 +152,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->a:Landroidx/lifecycle/f;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->a:Lb/m/f;
 
     return-object v0
 .end method
@@ -172,16 +172,16 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Landroidx/savedstate/a;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Lb/p/a;
 
-    invoke-virtual {v0}, Landroidx/savedstate/a;->b()Landroidx/savedstate/SavedStateRegistry;
+    invoke-virtual {v0}, Lb/p/a;->b()Landroidx/savedstate/SavedStateRegistry;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getViewModelStore()Landroidx/lifecycle/j;
+.method public getViewModelStore()Lb/m/j;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -192,7 +192,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     if-nez v0, :cond_1
 
@@ -204,23 +204,23 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Landroidx/activity/ComponentActivity$b;->a:Landroidx/lifecycle/j;
+    iget-object v0, v0, Landroidx/activity/ComponentActivity$b;->a:Lb/m/j;
 
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     :cond_0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Landroidx/lifecycle/j;
+    new-instance v0, Lb/m/j;
 
-    invoke-direct {v0}, Landroidx/lifecycle/j;-><init>()V
+    invoke-direct {v0}, Lb/m/j;-><init>()V
 
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     :cond_1
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     return-object v0
 
@@ -246,7 +246,7 @@
     return-void
 .end method
 
-.method protected onCreate(Landroid/os/Bundle;)V
+.method public onCreate(Landroid/os/Bundle;)V
     .locals 1
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
@@ -255,9 +255,9 @@
 
     invoke-super {p0, p1}, Landroidx/core/app/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Landroidx/savedstate/a;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Lb/p/a;
 
-    invoke-virtual {v0, p1}, Landroidx/savedstate/a;->c(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lb/p/a;->c(Landroid/os/Bundle;)V
 
     invoke-static {p0}, Landroidx/lifecycle/ReportFragment;->injectIfNeededIn(Landroid/app/Activity;)V
 
@@ -280,7 +280,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->c:Landroidx/lifecycle/j;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->c:Lb/m/j;
 
     if-nez v1, :cond_0
 
@@ -292,7 +292,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v1, v2, Landroidx/activity/ComponentActivity$b;->a:Landroidx/lifecycle/j;
+    iget-object v1, v2, Landroidx/activity/ComponentActivity$b;->a:Lb/m/j;
 
     :cond_0
     if-nez v1, :cond_1
@@ -308,12 +308,12 @@
 
     invoke-direct {v0}, Landroidx/activity/ComponentActivity$b;-><init>()V
 
-    iput-object v1, v0, Landroidx/activity/ComponentActivity$b;->a:Landroidx/lifecycle/j;
+    iput-object v1, v0, Landroidx/activity/ComponentActivity$b;->a:Lb/m/j;
 
     return-object v0
 .end method
 
-.method protected onSaveInstanceState(Landroid/os/Bundle;)V
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/NonNull;
@@ -326,22 +326,22 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/lifecycle/f;
+    instance-of v1, v0, Lb/m/f;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroidx/lifecycle/f;
+    check-cast v0, Lb/m/f;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/f;->p(Landroidx/lifecycle/Lifecycle$State;)V
+    invoke-virtual {v0, v1}, Lb/m/f;->p(Landroidx/lifecycle/Lifecycle$State;)V
 
     :cond_0
     invoke-super {p0, p1}, Landroidx/core/app/ComponentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Landroidx/savedstate/a;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->b:Lb/p/a;
 
-    invoke-virtual {v0, p1}, Landroidx/savedstate/a;->d(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lb/p/a;->d(Landroid/os/Bundle;)V
 
     return-void
 .end method

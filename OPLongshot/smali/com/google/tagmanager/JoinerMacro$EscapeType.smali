@@ -1,6 +1,6 @@
-.class final enum Lcom/google/tagmanager/JoinerMacro$EscapeType;
+.class public final enum Lcom/google/tagmanager/JoinerMacro$EscapeType;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401a
+    accessFlags = 0x4019
     name = "EscapeType"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/google/tagmanager/JoinerMacro$EscapeType;
+.field public static final synthetic $VALUES:[Lcom/google/tagmanager/JoinerMacro$EscapeType;
 
 .field public static final enum BACKSLASH:Lcom/google/tagmanager/JoinerMacro$EscapeType;
 
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 6
 
     new-instance v0, Lcom/google/tagmanager/JoinerMacro$EscapeType;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

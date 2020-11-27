@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchOverMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchOverMatcher"
+.field public static final TAG:Ljava/lang/String; = "StitchOverMatcher"
 
 
 # direct methods
@@ -53,6 +53,12 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->EXTEND_STITCH_OVER_CURR_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;->mExtendCurr:I
+
     goto :goto_0
 
     :cond_0
@@ -66,19 +72,19 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->EXTEND_STITCH_OVER_CURR_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;->mExtendCurr:I
 
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method protected canDump()Z
+.method public canDump()Z
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;->OVER:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
@@ -90,7 +96,7 @@
     return v0
 .end method
 
-.method protected getStep()I
+.method public getStep()I
     .locals 2
 
     sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
@@ -101,7 +107,6 @@
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_OVER_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    :goto_0
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result v0
@@ -111,10 +116,14 @@
     :cond_0
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_OVER_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method protected getTag()Ljava/lang/String;
+.method public getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "StitchOver"

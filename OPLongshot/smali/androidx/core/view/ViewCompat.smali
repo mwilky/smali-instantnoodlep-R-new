@@ -1,6 +1,6 @@
 .class public Landroidx/core/view/ViewCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,17 +21,17 @@
 
 
 # static fields
-.field private static final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private static b:Ljava/lang/reflect/Field;
+.field public static b:Ljava/lang/reflect/Field;
 
-.field private static c:Z
+.field public static c:Z
 
-.field private static d:Ljava/lang/reflect/Field;
+.field public static d:Ljava/lang/reflect/Field;
 
-.field private static e:Z
+.field public static e:Z
 
-.field private static f:Ljava/util/WeakHashMap;
+.field public static f:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -42,22 +42,22 @@
     .end annotation
 .end field
 
-.field private static g:Ljava/util/WeakHashMap;
+.field public static g:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
             "Landroid/view/View;",
-            "Landroidx/core/view/t;",
+            "Lb/h/l/t;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static h:Ljava/lang/reflect/Field;
+.field public static h:Ljava/lang/reflect/Field;
 
-.field private static i:Z
+.field public static i:Z
 
-.field private static j:Ljava/lang/ThreadLocal;
+.field public static j:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -69,7 +69,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
@@ -166,25 +166,25 @@
     return p0
 .end method
 
-.method static B(Landroid/view/View;)Landroidx/core/view/a;
+.method public static B(Landroid/view/View;)Lb/h/l/a;
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->j(Landroid/view/View;)Landroidx/core/view/a;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->j(Landroid/view/View;)Lb/h/l/a;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroidx/core/view/a;
+    new-instance v0, Lb/h/l/a;
 
-    invoke-direct {v0}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {v0}, Lb/h/l/a;-><init>()V
 
     :cond_0
-    invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
+    invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/h/l/a;)V
 
     return-object v0
 .end method
@@ -567,13 +567,13 @@
     return p0
 
     :cond_0
-    instance-of v0, p0, Landroidx/core/view/g;
+    instance-of v0, p0, Lb/h/l/g;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/core/view/g;
+    check-cast p0, Lb/h/l/g;
 
-    invoke-interface {p0}, Landroidx/core/view/g;->isNestedScrollingEnabled()Z
+    invoke-interface {p0}, Lb/h/l/g;->isNestedScrollingEnabled()Z
 
     move-result p0
 
@@ -640,7 +640,7 @@
     return p0
 .end method
 
-.method static R(Landroid/view/View;I)V
+.method public static R(Landroid/view/View;I)V
     .locals 2
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x13
@@ -1019,7 +1019,7 @@
     return-void
 .end method
 
-.method public static U(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+.method public static U(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1032,7 +1032,7 @@
 
     if-lt v0, v1, :cond_1
 
-    invoke-virtual {p1}, Landroidx/core/view/x;->i()Landroid/view/WindowInsets;
+    invoke-virtual {p1}, Lb/h/l/x;->i()Landroid/view/WindowInsets;
 
     move-result-object p1
 
@@ -1051,7 +1051,7 @@
     invoke-direct {p1, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
     :cond_0
-    invoke-static {p1}, Landroidx/core/view/x;->j(Landroid/view/WindowInsets;)Landroidx/core/view/x;
+    invoke-static {p1}, Lb/h/l/x;->j(Landroid/view/WindowInsets;)Lb/h/l/x;
 
     move-result-object p0
 
@@ -1061,14 +1061,14 @@
     return-object p1
 .end method
 
-.method public static V(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+.method public static V(Landroid/view/View;Lb/h/l/y/d;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-virtual {p1}, Landroidx/core/view/accessibility/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {p1}, Lb/h/l/y/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
 
@@ -1077,7 +1077,7 @@
     return-void
 .end method
 
-.method private static W()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
+.method public static W()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1090,7 +1090,7 @@
 
     new-instance v0, Landroidx/core/view/ViewCompat$4;
 
-    sget v1, La/d/b;->tag_accessibility_pane_title:I
+    sget v1, Lb/h/b;->tag_accessibility_pane_title:I
 
     const-class v2, Ljava/lang/CharSequence;
 
@@ -1180,7 +1180,7 @@
     return-void
 .end method
 
-.method private static a()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
+.method public static a()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1193,7 +1193,7 @@
 
     new-instance v0, Landroidx/core/view/ViewCompat$5;
 
-    sget v1, La/d/b;->tag_accessibility_heading:I
+    sget v1, Lb/h/b;->tag_accessibility_heading:I
 
     const-class v2, Ljava/lang/Boolean;
 
@@ -1234,13 +1234,13 @@
     return-void
 .end method
 
-.method private static b(Landroid/view/View;Landroidx/core/view/accessibility/d$a;)V
+.method public static b(Landroid/view/View;Lb/h/l/y/d$a;)V
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/view/accessibility/d$a;
+    .param p1    # Lb/h/l/y/d$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1251,9 +1251,9 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->B(Landroid/view/View;)Landroidx/core/view/a;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->B(Landroid/view/View;)Lb/h/l/a;
 
-    invoke-virtual {p1}, Landroidx/core/view/accessibility/d$a;->b()I
+    invoke-virtual {p1}, Lb/h/l/y/d$a;->b()I
 
     move-result v0
 
@@ -1296,7 +1296,7 @@
     return-void
 .end method
 
-.method public static c(Landroid/view/View;)Landroidx/core/view/t;
+.method public static c(Landroid/view/View;)Lb/h/l/t;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1322,13 +1322,13 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/core/view/t;
+    check-cast v0, Lb/h/l/t;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Landroidx/core/view/t;
+    new-instance v0, Lb/h/l/t;
 
-    invoke-direct {v0, p0}, Landroidx/core/view/t;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0}, Lb/h/l/t;-><init>(Landroid/view/View;)V
 
     sget-object v1, Landroidx/core/view/ViewCompat;->g:Ljava/util/WeakHashMap;
 
@@ -1338,7 +1338,7 @@
     return-object v0
 .end method
 
-.method private static c0(ILandroid/view/View;)V
+.method public static c0(ILandroid/view/View;)V
     .locals 2
 
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->o(Landroid/view/View;)Ljava/util/List;
@@ -1358,9 +1358,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/view/accessibility/d$a;
+    check-cast v1, Lb/h/l/y/d$a;
 
-    invoke-virtual {v1}, Landroidx/core/view/accessibility/d$a;->b()I
+    invoke-virtual {v1}, Lb/h/l/y/d$a;->b()I
 
     move-result v1
 
@@ -1380,7 +1380,7 @@
     return-void
 .end method
 
-.method private static d(Landroid/view/View;I)V
+.method public static d(Landroid/view/View;I)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/view/View;->offsetLeftAndRight(I)V
@@ -1409,13 +1409,13 @@
     return-void
 .end method
 
-.method public static d0(Landroid/view/View;Landroidx/core/view/accessibility/d$a;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/f;)V
+.method public static d0(Landroid/view/View;Lb/h/l/y/d$a;Ljava/lang/CharSequence;Lb/h/l/y/f;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/view/accessibility/d$a;
+    .param p1    # Lb/h/l/y/d$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1423,7 +1423,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Landroidx/core/view/accessibility/f;
+    .param p3    # Lb/h/l/y/f;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -1432,7 +1432,7 @@
 
     if-nez p2, :cond_0
 
-    invoke-virtual {p1}, Landroidx/core/view/accessibility/d$a;->b()I
+    invoke-virtual {p1}, Lb/h/l/y/d$a;->b()I
 
     move-result p1
 
@@ -1441,17 +1441,17 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, p2, p3}, Landroidx/core/view/accessibility/d$a;->a(Ljava/lang/CharSequence;Landroidx/core/view/accessibility/f;)Landroidx/core/view/accessibility/d$a;
+    invoke-virtual {p1, p2, p3}, Lb/h/l/y/d$a;->a(Ljava/lang/CharSequence;Lb/h/l/y/f;)Lb/h/l/y/d$a;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->b(Landroid/view/View;Landroidx/core/view/accessibility/d$a;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->b(Landroid/view/View;Lb/h/l/y/d$a;)V
 
     :goto_0
     return-void
 .end method
 
-.method private static e(Landroid/view/View;I)V
+.method public static e(Landroid/view/View;I)V
     .locals 0
 
     invoke-virtual {p0, p1}, Landroid/view/View;->offsetTopAndBottom(I)V
@@ -1509,7 +1509,7 @@
     return-void
 .end method
 
-.method public static f(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+.method public static f(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1522,7 +1522,7 @@
 
     if-lt v0, v1, :cond_1
 
-    invoke-virtual {p1}, Landroidx/core/view/x;->i()Landroid/view/WindowInsets;
+    invoke-virtual {p1}, Lb/h/l/x;->i()Landroid/view/WindowInsets;
 
     move-result-object p1
 
@@ -1541,7 +1541,7 @@
     invoke-direct {p1, p0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
 
     :cond_0
-    invoke-static {p1}, Landroidx/core/view/x;->j(Landroid/view/WindowInsets;)Landroidx/core/view/x;
+    invoke-static {p1}, Lb/h/l/x;->j(Landroid/view/WindowInsets;)Lb/h/l/x;
 
     move-result-object p0
 
@@ -1551,7 +1551,7 @@
     return-object p1
 .end method
 
-.method private static f0()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
+.method public static f0()Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1564,7 +1564,7 @@
 
     new-instance v0, Landroidx/core/view/ViewCompat$3;
 
-    sget v1, La/d/b;->tag_screen_reader_focusable:I
+    sget v1, Lb/h/b;->tag_screen_reader_focusable:I
 
     const-class v2, Ljava/lang/Boolean;
 
@@ -1575,7 +1575,7 @@
     return-object v0
 .end method
 
-.method static g(Landroid/view/View;Landroid/view/KeyEvent;)Z
+.method public static g(Landroid/view/View;Landroid/view/KeyEvent;)Z
     .locals 2
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
@@ -1602,7 +1602,7 @@
     return p0
 .end method
 
-.method public static g0(Landroid/view/View;Landroidx/core/view/a;)V
+.method public static g0(Landroid/view/View;Lb/h/l/a;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1615,13 +1615,13 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Landroidx/core/view/a$a;
+    instance-of v0, v0, Lb/h/l/a$a;
 
     if-eqz v0, :cond_0
 
-    new-instance p1, Landroidx/core/view/a;
+    new-instance p1, Lb/h/l/a;
 
-    invoke-direct {p1}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {p1}, Lb/h/l/a;-><init>()V
 
     :cond_0
     if-nez p1, :cond_1
@@ -1631,7 +1631,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1}, Landroidx/core/view/a;->getBridge()Landroid/view/View$AccessibilityDelegate;
+    invoke-virtual {p1}, Lb/h/l/a;->getBridge()Landroid/view/View$AccessibilityDelegate;
 
     move-result-object p1
 
@@ -1641,7 +1641,7 @@
     return-void
 .end method
 
-.method static h(Landroid/view/View;Landroid/view/KeyEvent;)Z
+.method public static h(Landroid/view/View;Landroid/view/KeyEvent;)Z
     .locals 2
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
@@ -1747,7 +1747,7 @@
     return-void
 .end method
 
-.method public static j(Landroid/view/View;)Landroidx/core/view/a;
+.method public static j(Landroid/view/View;)Lb/h/l/a;
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1767,20 +1767,20 @@
     return-object p0
 
     :cond_0
-    instance-of v0, p0, Landroidx/core/view/a$a;
+    instance-of v0, p0, Lb/h/l/a$a;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/core/view/a$a;
+    check-cast p0, Lb/h/l/a$a;
 
-    iget-object p0, p0, Landroidx/core/view/a$a;->a:Landroidx/core/view/a;
+    iget-object p0, p0, Lb/h/l/a$a;->a:Lb/h/l/a;
 
     return-object p0
 
     :cond_1
-    new-instance v0, Landroidx/core/view/a;
+    new-instance v0, Lb/h/l/a;
 
-    invoke-direct {v0, p0}, Landroidx/core/view/a;-><init>(Landroid/view/View$AccessibilityDelegate;)V
+    invoke-direct {v0, p0}, Lb/h/l/a;-><init>(Landroid/view/View$AccessibilityDelegate;)V
 
     return-object v0
 .end method
@@ -1813,7 +1813,7 @@
     return-void
 .end method
 
-.method private static k(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
+.method public static k(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1911,20 +1911,20 @@
     goto :goto_2
 
     :cond_3
-    instance-of v0, p0, Landroidx/core/view/p;
+    instance-of v0, p0, Lb/h/l/p;
 
     if-eqz v0, :cond_4
 
-    check-cast p0, Landroidx/core/view/p;
+    check-cast p0, Lb/h/l/p;
 
-    invoke-interface {p0, p1}, Landroidx/core/view/p;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p0, p1}, Lb/h/l/p;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_4
     :goto_2
     return-void
 .end method
 
-.method private static l(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
+.method public static l(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
     .locals 4
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2067,13 +2067,13 @@
     goto :goto_2
 
     :cond_3
-    instance-of v0, p0, Landroidx/core/view/p;
+    instance-of v0, p0, Lb/h/l/p;
 
     if-eqz v0, :cond_4
 
-    check-cast p0, Landroidx/core/view/p;
+    check-cast p0, Lb/h/l/p;
 
-    invoke-interface {p0, p1}, Landroidx/core/view/p;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p0, p1}, Lb/h/l/p;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_4
     :goto_2
@@ -2161,7 +2161,7 @@
     return-void
 .end method
 
-.method private static o(Landroid/view/View;)Ljava/util/List;
+.method public static o(Landroid/view/View;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2169,12 +2169,12 @@
             "Landroid/view/View;",
             ")",
             "Ljava/util/List<",
-            "Landroidx/core/view/accessibility/d$a;",
+            "Lb/h/l/y/d$a;",
             ">;"
         }
     .end annotation
 
-    sget v0, La/d/b;->tag_accessibility_actions:I
+    sget v0, Lb/h/b;->tag_accessibility_actions:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -2188,7 +2188,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sget v1, La/d/b;->tag_accessibility_actions:I
+    sget v1, Lb/h/b;->tag_accessibility_actions:I
 
     invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -2226,13 +2226,13 @@
     return-object p0
 
     :cond_0
-    instance-of v0, p0, Landroidx/core/view/p;
+    instance-of v0, p0, Lb/h/l/p;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/core/view/p;
+    check-cast p0, Lb/h/l/p;
 
-    invoke-interface {p0}, Landroidx/core/view/p;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    invoke-interface {p0}, Lb/h/l/p;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -2284,13 +2284,13 @@
     return-object p0
 
     :cond_0
-    instance-of v0, p0, Landroidx/core/view/p;
+    instance-of v0, p0, Lb/h/l/p;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/core/view/p;
+    check-cast p0, Lb/h/l/p;
 
-    invoke-interface {p0}, Landroidx/core/view/p;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-interface {p0}, Lb/h/l/p;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
 
@@ -2314,29 +2314,28 @@
 
     const/16 v1, 0x13
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_0
 
-    :cond_0
-    :goto_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_2
 
     const/4 v0, 0x4
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v0, :cond_1
 
     const/4 p1, 0x2
 
-    goto :goto_0
+    :cond_1
+    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     :cond_2
-    :goto_1
+    :goto_0
     return-void
 .end method
 
@@ -2438,7 +2437,7 @@
     return-object p0
 .end method
 
-.method public static s0(Landroid/view/View;Landroidx/core/view/m;)V
+.method public static s0(Landroid/view/View;Lb/h/l/m;)V
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2462,7 +2461,7 @@
     :cond_0
     new-instance v0, Landroidx/core/view/ViewCompat$a;
 
-    invoke-direct {v0, p1}, Landroidx/core/view/ViewCompat$a;-><init>(Landroidx/core/view/m;)V
+    invoke-direct {v0, p1}, Landroidx/core/view/ViewCompat$a;-><init>(Lb/h/l/m;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
 
@@ -2535,7 +2534,7 @@
     return-void
 .end method
 
-.method private static u()Landroid/graphics/Rect;
+.method public static u()Landroid/graphics/Rect;
     .locals 2
 
     sget-object v0, Landroidx/core/view/ViewCompat;->j:Ljava/lang/ThreadLocal;
@@ -2573,7 +2572,7 @@
     return-object v0
 .end method
 
-.method public static u0(Landroid/view/View;Landroidx/core/view/o;)V
+.method public static u0(Landroid/view/View;Lb/h/l/o;)V
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2588,7 +2587,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Landroidx/core/view/o;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lb/h/l/o;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2804,13 +2803,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Landroidx/core/view/g;
+    instance-of v0, p0, Lb/h/l/g;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Landroidx/core/view/g;
+    check-cast p0, Lb/h/l/g;
 
-    invoke-interface {p0}, Landroidx/core/view/g;->stopNestedScroll()V
+    invoke-interface {p0}, Lb/h/l/g;->stopNestedScroll()V
 
     :cond_1
     :goto_0
@@ -2888,7 +2887,7 @@
     return p0
 .end method
 
-.method private static z0(Landroid/view/View;)V
+.method public static z0(Landroid/view/View;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F

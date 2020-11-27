@@ -1,6 +1,6 @@
-.class final Landroidx/lifecycle/Transformations$1;
+.class public final Landroidx/lifecycle/Transformations$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -17,13 +17,13 @@
 
 
 # instance fields
-.field final synthetic val$mapFunction:Landroidx/arch/core/util/Function;
+.field public final synthetic val$mapFunction:Landroidx/arch/core/util/Function;
 
-.field final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
+.field public final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
+.method public constructor <init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/Transformations$1;->val$result:Landroidx/lifecycle/MediatorLiveData;

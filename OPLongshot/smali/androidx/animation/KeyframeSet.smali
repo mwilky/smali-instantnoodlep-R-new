@@ -1,6 +1,6 @@
-.class Landroidx/animation/KeyframeSet;
+.class public Landroidx/animation/KeyframeSet;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/Keyframes;
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field mEvaluator:Landroidx/animation/TypeEvaluator;
+.field public mEvaluator:Landroidx/animation/TypeEvaluator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/animation/TypeEvaluator<",
@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field mFirstKeyframe:Landroidx/animation/Keyframe;
+.field public mFirstKeyframe:Landroidx/animation/Keyframe;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/animation/Keyframe<",
@@ -38,9 +38,9 @@
     .end annotation
 .end field
 
-.field mInterpolator:Landroidx/animation/d;
+.field public mInterpolator:Lb/b/d;
 
-.field mKeyframes:Ljava/util/List;
+.field public mKeyframes:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -50,7 +50,7 @@
     .end annotation
 .end field
 
-.field mLastKeyframe:Landroidx/animation/Keyframe;
+.field public mLastKeyframe:Landroidx/animation/Keyframe;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/animation/Keyframe<",
@@ -59,11 +59,11 @@
     .end annotation
 .end field
 
-.field mNumKeyframes:I
+.field public mNumKeyframes:I
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -106,16 +106,16 @@
 
     iput-object p1, p0, Landroidx/animation/KeyframeSet;->mLastKeyframe:Landroidx/animation/Keyframe;
 
-    invoke-virtual {p1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
+    invoke-virtual {p1}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Landroidx/animation/d;
+    iput-object p1, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Lb/b/d;
 
     return-void
 .end method
 
-.method varargs constructor <init>([Landroidx/animation/Keyframe;)V
+.method public varargs constructor <init>([Landroidx/animation/Keyframe;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -154,16 +154,16 @@
 
     iput-object p1, p0, Landroidx/animation/KeyframeSet;->mLastKeyframe:Landroidx/animation/Keyframe;
 
-    invoke-virtual {p1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
+    invoke-virtual {p1}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Landroidx/animation/d;
+    iput-object p1, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Lb/b/d;
 
     return-void
 .end method
 
-.method static varargs ofFloat([F)Landroidx/animation/KeyframeSet;
+.method public static varargs ofFloat([F)Landroidx/animation/KeyframeSet;
     .locals 7
 
     array-length v0, p0
@@ -275,7 +275,7 @@
     return-object p0
 .end method
 
-.method static varargs ofInt([I)Landroidx/animation/KeyframeSet;
+.method public static varargs ofInt([I)Landroidx/animation/KeyframeSet;
     .locals 6
 
     array-length v0, p0
@@ -698,11 +698,11 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Landroidx/animation/d;
+    iget-object v0, p0, Landroidx/animation/KeyframeSet;->mInterpolator:Lb/b/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Landroidx/animation/d;->getInterpolation(F)F
+    invoke-interface {v0, p1}, Lb/b/d;->getInterpolation(F)F
 
     move-result p1
 
@@ -744,13 +744,13 @@
 
     check-cast v0, Landroidx/animation/Keyframe;
 
-    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
+    invoke-virtual {v0}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-interface {v1, p1}, Landroidx/animation/d;->getInterpolation(F)F
+    invoke-interface {v1, p1}, Lb/b/d;->getInterpolation(F)F
 
     move-result p1
 
@@ -808,13 +808,13 @@
 
     iget-object v1, p0, Landroidx/animation/KeyframeSet;->mLastKeyframe:Landroidx/animation/Keyframe;
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
-    invoke-interface {v1, p1}, Landroidx/animation/d;->getInterpolation(F)F
+    invoke-interface {v1, p1}, Lb/b/d;->getInterpolation(F)F
 
     move-result p1
 
@@ -877,7 +877,7 @@
 
     if-gez v2, :cond_7
 
-    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
+    invoke-virtual {v1}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
 
     move-result-object v2
 
@@ -897,7 +897,7 @@
 
     if-eqz v2, :cond_6
 
-    invoke-interface {v2, p1}, Landroidx/animation/d;->getInterpolation(F)F
+    invoke-interface {v2, p1}, Lb/b/d;->getInterpolation(F)F
 
     move-result p1
 

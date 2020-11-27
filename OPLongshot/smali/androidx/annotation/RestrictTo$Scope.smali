@@ -1,6 +1,6 @@
 .class public final enum Landroidx/annotation/RestrictTo$Scope;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/annotation/RestrictTo$Scope;
+.field public static final synthetic $VALUES:[Landroidx/annotation/RestrictTo$Scope;
 
 .field public static final enum GROUP_ID:Landroidx/annotation/RestrictTo$Scope;
     .annotation runtime Ljava/lang/Deprecated;
@@ -42,7 +42,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 9
 
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
@@ -136,7 +136,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

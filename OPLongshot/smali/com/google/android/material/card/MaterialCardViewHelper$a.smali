@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/card/MaterialCardViewHelper$a;
+.class public Lcom/google/android/material/card/MaterialCardViewHelper$a;
 .super Landroid/graphics/drawable/InsetDrawable;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/card/MaterialCardViewHelper;Landroid/graphics/drawable/Drawable;IIII)V
+.method public constructor <init>(Lcom/google/android/material/card/MaterialCardViewHelper;Landroid/graphics/drawable/Drawable;IIII)V
     .locals 6
 
     move-object v0, p0

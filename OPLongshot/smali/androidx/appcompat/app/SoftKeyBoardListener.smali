@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/app/SoftKeyBoardListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,19 +12,19 @@
 
 
 # instance fields
-.field private a:Landroid/view/View;
+.field public a:Landroid/view/View;
 
-.field private b:I
+.field public b:I
 
-.field private c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
+.field public c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
 
-.field d:Z
+.field public d:Z
 
-.field private e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.field public e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # direct methods
-.method private constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -106,7 +106,7 @@
     return-void
 .end method
 
-.method static synthetic a(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/View;
+.method public static synthetic a(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->a:Landroid/view/View;
@@ -114,7 +114,7 @@
     return-object p0
 .end method
 
-.method static synthetic b(Landroidx/appcompat/app/SoftKeyBoardListener;)I
+.method public static synthetic b(Landroidx/appcompat/app/SoftKeyBoardListener;)I
     .locals 0
 
     iget p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->b:I
@@ -122,7 +122,7 @@
     return p0
 .end method
 
-.method static synthetic c(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroidx/appcompat/app/SoftKeyBoardListener$b;
+.method public static synthetic c(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroidx/appcompat/app/SoftKeyBoardListener$b;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
@@ -130,7 +130,7 @@
     return-object p0
 .end method
 
-.method static synthetic d(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.method public static synthetic d(Landroidx/appcompat/app/SoftKeyBoardListener;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
     .locals 0
 
     iget-object p0, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->e:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -145,15 +145,7 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener;-><init>(Landroid/app/Activity;)V
 
-    invoke-direct {v0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
-
-    return-void
-.end method
-
-.method private g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
-    .locals 0
-
-    iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
+    invoke-virtual {v0, p1}, Landroidx/appcompat/app/SoftKeyBoardListener;->g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
 
     return-void
 .end method
@@ -163,13 +155,13 @@
 .method public e(Landroid/app/Activity;)V
     .locals 1
 
-    instance-of v0, p1, Landroidx/lifecycle/e;
+    instance-of v0, p1, Lb/m/e;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroidx/lifecycle/e;
+    check-cast p1, Lb/m/e;
 
-    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
@@ -177,8 +169,16 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/SoftKeyBoardListener$2;-><init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final g(Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener;->c:Landroidx/appcompat/app/SoftKeyBoardListener$b;
+
     return-void
 .end method

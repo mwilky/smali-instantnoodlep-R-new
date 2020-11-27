@@ -1,6 +1,6 @@
-.class Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomExceptionHandler;
+.class public Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomExceptionHandler;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "CustomExceptionHandler"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +26,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ledu/emory/mathcs/utils/ConcurrencyUtils$1;)V
+.method public synthetic constructor <init>(Ledu/emory/mathcs/utils/ConcurrencyUtils$1;)V
     .locals 0
 
     invoke-direct {p0}, Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomExceptionHandler;-><init>()V

@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/MediatorLiveData;
 .super Landroidx/lifecycle/MutableLiveData;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private mSources:Landroidx/arch/core/internal/SafeIterableMap;
+.field public mSources:Landroidx/arch/core/internal/SafeIterableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap<",
@@ -125,7 +125,7 @@
     return-void
 .end method
 
-.method protected onActive()V
+.method public onActive()V
     .locals 2
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
@@ -163,7 +163,7 @@
     return-void
 .end method
 
-.method protected onInactive()V
+.method public onInactive()V
     .locals 2
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation

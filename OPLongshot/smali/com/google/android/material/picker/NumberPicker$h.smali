@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/NumberPicker$h;
+.class public Lcom/google/android/material/picker/NumberPicker$h;
 .super Landroid/text/method/NumberKeyListener;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "h"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/NumberPicker;
+.field public final synthetic a:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$h;->a:Lcom/google/android/material/picker/NumberPicker;
@@ -266,7 +266,7 @@
     return-object v2
 .end method
 
-.method protected getAcceptedChars()[C
+.method public getAcceptedChars()[C
     .locals 1
 
     invoke-static {}, Lcom/google/android/material/picker/NumberPicker;->u()[C

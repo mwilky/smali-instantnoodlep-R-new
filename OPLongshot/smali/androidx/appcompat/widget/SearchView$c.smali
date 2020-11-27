@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/SearchView$c;
+.class public Landroidx/appcompat/widget/SearchView$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/SearchView;
+.field public final synthetic a:Landroidx/appcompat/widget/SearchView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
+.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$c;->a:Landroidx/appcompat/widget/SearchView;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$c;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->D:La/e/a/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
 
     instance-of v1, v0, Landroidx/appcompat/widget/SuggestionsAdapter;
 
@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, La/e/a/a;->changeCursor(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lb/i/a/a;->changeCursor(Landroid/database/Cursor;)V
 
     :cond_0
     return-void

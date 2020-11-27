@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/core/net/ConnectivityManagerCompat$RestrictBackgroundStatus;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

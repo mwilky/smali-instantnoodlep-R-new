@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/task/MoveTask$ScreenInfo;
+.class public Lcom/oneplus/screenshot/longshot/task/MoveTask$ScreenInfo;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "ScreenInfo"
 .end annotation
 
@@ -19,7 +19,7 @@
 
 .field public mInfo:Lcom/oneplus/screenshot/util/ImageInfo;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/task/MoveTask;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/task/MoveTask;
 
 
 # direct methods

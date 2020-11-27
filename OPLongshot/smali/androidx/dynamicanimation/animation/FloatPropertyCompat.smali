@@ -1,6 +1,6 @@
 .class public abstract Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final mPropertyName:Ljava/lang/String;
+.field public final mPropertyName:Ljava/lang/String;
 
 
 # direct methods

@@ -1,12 +1,12 @@
-.class Landroidx/transition/ViewUtils;
+.class public Landroidx/transition/ViewUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final a:Landroidx/transition/y;
+.field public static final a:Lb/q/y;
 
-.field static final b:Landroid/util/Property;
+.field public static final b:Landroid/util/Property;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Property<",
@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -32,10 +32,9 @@
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi29;-><init>()V
 
-    :goto_0
-    sput-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     const/16 v1, 0x17
@@ -45,6 +44,8 @@
     new-instance v0, Landroidx/transition/ViewUtilsApi23;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi23;-><init>()V
+
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
     goto :goto_0
 
@@ -57,6 +58,8 @@
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi22;-><init>()V
 
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
+
     goto :goto_0
 
     :cond_2
@@ -67,6 +70,8 @@
     new-instance v0, Landroidx/transition/ViewUtilsApi21;
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi21;-><init>()V
+
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
     goto :goto_0
 
@@ -79,16 +84,18 @@
 
     invoke-direct {v0}, Landroidx/transition/ViewUtilsApi19;-><init>()V
 
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
+
     goto :goto_0
 
     :cond_4
-    new-instance v0, Landroidx/transition/y;
+    new-instance v0, Lb/q/y;
 
-    invoke-direct {v0}, Landroidx/transition/y;-><init>()V
+    invoke-direct {v0}, Lb/q/y;-><init>()V
 
-    goto :goto_0
+    sput-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    :goto_1
+    :goto_0
     new-instance v0, Landroidx/transition/ViewUtils$1;
 
     const-class v1, Ljava/lang/Float;
@@ -110,21 +117,21 @@
     return-void
 .end method
 
-.method static a(Landroid/view/View;)V
+.method public static a(Landroid/view/View;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0}, Landroidx/transition/y;->clearNonTransitionAlpha(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Lb/q/y;->clearNonTransitionAlpha(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method static b(Landroid/view/View;)Landroidx/transition/x;
+.method public static b(Landroid/view/View;)Lb/q/x;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -144,30 +151,30 @@
     return-object v0
 
     :cond_0
-    invoke-static {p0}, Landroidx/transition/w;->a(Landroid/view/View;)Landroidx/transition/w;
+    invoke-static {p0}, Lb/q/w;->a(Landroid/view/View;)Lb/q/w;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method static c(Landroid/view/View;)F
+.method public static c(Landroid/view/View;)F
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0}, Landroidx/transition/y;->getTransitionAlpha(Landroid/view/View;)F
+    invoke-virtual {v0, p0}, Lb/q/y;->getTransitionAlpha(Landroid/view/View;)F
 
     move-result p0
 
     return p0
 .end method
 
-.method static d(Landroid/view/View;)Landroidx/transition/a0;
+.method public static d(Landroid/view/View;)Lb/q/a0;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -187,32 +194,32 @@
     return-object v0
 
     :cond_0
-    new-instance v0, Landroidx/transition/z;
+    new-instance v0, Lb/q/z;
 
     invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Landroidx/transition/z;-><init>(Landroid/os/IBinder;)V
+    invoke-direct {v0, p0}, Lb/q/z;-><init>(Landroid/os/IBinder;)V
 
     return-object v0
 .end method
 
-.method static e(Landroid/view/View;)V
+.method public static e(Landroid/view/View;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0}, Landroidx/transition/y;->saveNonTransitionAlpha(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Lb/q/y;->saveNonTransitionAlpha(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method static f(Landroid/view/View;Landroid/graphics/Matrix;)V
+.method public static f(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -223,21 +230,21 @@
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0, p1}, Landroidx/transition/y;->setAnimationMatrix(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p0, p1}, Lb/q/y;->setAnimationMatrix(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method
 
-.method static g(Landroid/view/View;IIII)V
+.method public static g(Landroid/view/View;IIII)V
     .locals 6
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
     move-object v1, p0
 
@@ -249,58 +256,40 @@
 
     move v5, p4
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/transition/y;->setLeftTopRightBottom(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Lb/q/y;->setLeftTopRightBottom(Landroid/view/View;IIII)V
 
     return-void
 .end method
 
-.method static h(Landroid/view/View;F)V
+.method public static h(Landroid/view/View;F)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0, p1}, Landroidx/transition/y;->setTransitionAlpha(Landroid/view/View;F)V
+    invoke-virtual {v0, p0, p1}, Lb/q/y;->setTransitionAlpha(Landroid/view/View;F)V
 
     return-void
 .end method
 
-.method static i(Landroid/view/View;I)V
+.method public static i(Landroid/view/View;I)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0, p1}, Landroidx/transition/y;->setTransitionVisibility(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method static j(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 1
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/graphics/Matrix;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
-
-    invoke-virtual {v0, p0, p1}, Landroidx/transition/y;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p0, p1}, Lb/q/y;->setTransitionVisibility(Landroid/view/View;I)V
 
     return-void
 .end method
 
-.method static k(Landroid/view/View;Landroid/graphics/Matrix;)V
+.method public static j(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -311,9 +300,27 @@
         .end annotation
     .end param
 
-    sget-object v0, Landroidx/transition/ViewUtils;->a:Landroidx/transition/y;
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
 
-    invoke-virtual {v0, p0, p1}, Landroidx/transition/y;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p0, p1}, Lb/q/y;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public static k(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget-object v0, Landroidx/transition/ViewUtils;->a:Lb/q/y;
+
+    invoke-virtual {v0, p0, p1}, Lb/q/y;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

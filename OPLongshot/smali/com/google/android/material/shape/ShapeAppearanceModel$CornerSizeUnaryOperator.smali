@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,8 +21,8 @@
 
 
 # virtual methods
-.method public abstract apply(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
-    .param p1    # Lcom/google/android/material/shape/b;
+.method public abstract apply(Lc/b/b/b/f0/b;)Lc/b/b/b/f0/b;
+    .param p1    # Lc/b/b/b/f0/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

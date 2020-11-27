@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$ExtendedFloatingActionButtonBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xc
+    accessFlags = 0x9
     name = "ExtendedFloatingActionButtonBehavior"
 .end annotation
 
@@ -25,27 +25,27 @@
 
 
 # static fields
-.field private static final AUTO_HIDE_DEFAULT:Z = false
+.field public static final AUTO_HIDE_DEFAULT:Z = false
 
-.field private static final AUTO_SHRINK_DEFAULT:Z = true
+.field public static final AUTO_SHRINK_DEFAULT:Z = true
 
 
 # instance fields
-.field private autoHideEnabled:Z
+.field public autoHideEnabled:Z
 
-.field private autoShrinkEnabled:Z
+.field public autoShrinkEnabled:Z
 
-.field private internalAutoHideCallback:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
+.field public internalAutoHideCallback:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private internalAutoShrinkCallback:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
+.field public internalAutoShrinkCallback:Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private tmpRect:Landroid/graphics/Rect;
+.field public tmpRect:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -78,13 +78,13 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lb/a/b/a/l;->ExtendedFloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x0
 
@@ -94,7 +94,7 @@
 
     iput-boolean p2, p0, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$ExtendedFloatingActionButtonBehavior;->autoHideEnabled:Z
 
-    sget p2, Lb/a/b/a/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink:I
+    sget p2, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink:I
 
     const/4 v0, 0x1
 
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method private static isBottomSheet(Landroid/view/View;)Z
+.method public static isBottomSheet(Landroid/view/View;)Z
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -305,7 +305,7 @@
 
 
 # virtual methods
-.method protected extendOrShow(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)V
+.method public extendOrShow(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)V
     .locals 2
     .param p1    # Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;
         .annotation build Landroidx/annotation/NonNull;
@@ -328,19 +328,19 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->l(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lcom/google/android/material/floatingactionbutton/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->l(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
 
     move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->m(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lcom/google/android/material/floatingactionbutton/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->m(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
 
     move-result-object v1
 
     :goto_1
-    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lcom/google/android/material/floatingactionbutton/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/b/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
 
     return-void
 .end method
@@ -584,7 +584,7 @@
     return-void
 .end method
 
-.method setInternalAutoHideCallback(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+.method public setInternalAutoHideCallback(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
     .locals 0
     .param p1    # Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
         .annotation build Landroidx/annotation/Nullable;
@@ -598,7 +598,7 @@
     return-void
 .end method
 
-.method setInternalAutoShrinkCallback(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+.method public setInternalAutoShrinkCallback(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
     .locals 0
     .param p1    # Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;
         .annotation build Landroidx/annotation/Nullable;
@@ -612,7 +612,7 @@
     return-void
 .end method
 
-.method protected shrinkOrHide(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)V
+.method public shrinkOrHide(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)V
     .locals 2
     .param p1    # Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;
         .annotation build Landroidx/annotation/NonNull;
@@ -635,19 +635,19 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->i(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lcom/google/android/material/floatingactionbutton/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->i(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
 
     move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->j(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lcom/google/android/material/floatingactionbutton/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->j(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
 
     move-result-object v1
 
     :goto_1
-    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lcom/google/android/material/floatingactionbutton/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/b/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
 
     return-void
 .end method

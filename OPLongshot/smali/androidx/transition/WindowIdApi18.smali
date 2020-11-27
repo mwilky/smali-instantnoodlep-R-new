@@ -1,9 +1,9 @@
-.class Landroidx/transition/WindowIdApi18;
+.class public Landroidx/transition/WindowIdApi18;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/transition/a0;
+.implements Lb/q/a0;
 
 
 # annotations
@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field private final mWindowId:Landroid/view/WindowId;
+.field public final mWindowId:Landroid/view/WindowId;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;

@@ -1,6 +1,6 @@
-.class final enum Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
+.class public final enum Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401a
+    accessFlags = 0x4019
     name = "Base"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
+.field public static final synthetic $VALUES:[Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
 
 .field public static final enum ACTION:Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
 
@@ -31,11 +31,11 @@
 
 
 # instance fields
-.field private mValue:I
+.field public mValue:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lcom/oneplus/screenshot/statistics/EventStatistics$Base;
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

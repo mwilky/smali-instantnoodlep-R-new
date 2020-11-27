@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop$a;
+.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop$a;
 .super Lcom/google/android/material/shape/MaterialShapeDrawable;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+.method public constructor <init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V

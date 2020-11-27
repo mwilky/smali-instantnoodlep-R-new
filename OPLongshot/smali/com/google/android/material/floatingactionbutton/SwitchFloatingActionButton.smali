@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;
 .super Landroid/widget/RelativeLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -10,29 +10,29 @@
 
 
 # static fields
-.field private static final FOCUSED_ENABLED_STATE_SET:[I
+.field public static final FOCUSED_ENABLED_STATE_SET:[I
 
 .field public static final SWITCH_DURATION:I = 0x7d
 
 .field public static final SWITCH_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
-.field private static final TAG:Ljava/lang/String; = "SwitchFAB"
+.field public static final TAG:Ljava/lang/String; = "SwitchFAB"
 
 
 # instance fields
-.field mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
+.field public mCardViewOutlineProvider:Landroid/view/ViewOutlineProvider;
 
-.field private mIsDisappear1:Z
+.field public mIsDisappear1:Z
 
-.field private mIsSwitchState:Z
+.field public mIsSwitchState:Z
 
-.field private mNormalImageView:Landroid/widget/ImageView;
+.field public mNormalImageView:Landroid/widget/ImageView;
 
-.field private mSwitchImageView:Landroid/widget/ImageView;
+.field public mSwitchImageView:Landroid/widget/ImageView;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
@@ -77,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lb/a/b/a/b;->switchFloatingActionButtonStyle:I
+    sget v0, Lc/b/b/b/b;->switchFloatingActionButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -101,9 +101,9 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mIsSwitchState:Z
 
-    sget-object v0, Lb/a/b/a/l;->switchFloatingActionButton:[I
+    sget-object v0, Lc/b/b/b/l;->switchFloatingActionButton:[I
 
-    sget v1, Lb/a/b/a/k;->Widget_Design_SwitchFloatingActionButton:I
+    sget v1, Lc/b/b/b/k;->Widget_Design_SwitchFloatingActionButton:I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -113,13 +113,13 @@
 
     move-result-object p3
 
-    sget v0, Lb/a/b/a/d;->op_float_action_button_shadow_z8:I
+    sget v0, Lc/b/b/b/d;->op_float_action_button_shadow_z8:I
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p3
 
-    sget v0, Lb/a/b/a/l;->switchFloatingActionButton_tintColor:I
+    sget v0, Lc/b/b/b/l;->switchFloatingActionButton_tintColor:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/a/b/a/e;->switch_floating_action_button:I
+    sget v2, Lc/b/b/b/e;->switch_floating_action_button:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -177,11 +177,11 @@
 
     check-cast p1, Landroid/view/LayoutInflater;
 
-    sget p3, Lb/a/b/a/h;->float_switch_button:I
+    sget p3, Lc/b/b/b/h;->float_switch_button:I
 
     invoke-virtual {p1, p3, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget p1, Lb/a/b/a/f;->normal_imageview:I
+    sget p1, Lc/b/b/b/f;->normal_imageview:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mNormalImageView:Landroid/widget/ImageView;
 
-    sget p1, Lb/a/b/a/l;->switchFloatingActionButton_image:I
+    sget p1, Lc/b/b/b/l;->switchFloatingActionButton_image:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget p1, Lb/a/b/a/f;->switch_imageview:I
+    sget p1, Lc/b/b/b/f;->switch_imageview:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -942,7 +942,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/e;->switch_floating_action_button:I
+    sget v1, Lc/b/b/b/e;->switch_floating_action_button:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -986,28 +986,60 @@
 
     packed-switch p1, :pswitch_data_0
 
-    goto :goto_7
+    goto/16 :goto_0
 
     :pswitch_0
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    goto :goto_0
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto/16 :goto_0
 
     :pswitch_1
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    goto :goto_1
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_2
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
 
     move-result p1
 
-    goto :goto_2
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_3
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
@@ -1016,12 +1048,19 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    :goto_0
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    goto :goto_3
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_4
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
@@ -1030,12 +1069,21 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    :goto_1
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    goto :goto_4
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_5
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
@@ -1044,47 +1092,48 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    :goto_2
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    goto :goto_6
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_6
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    :goto_3
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
 
     move-result p1
 
-    goto :goto_5
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
+
+    goto :goto_0
 
     :pswitch_7
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    :goto_4
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getWidth()I
 
     move-result p1
 
     div-int/lit8 p1, p1, 0x2
 
-    :goto_5
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setPivotX(F)V
 
-    goto :goto_7
+    goto :goto_0
 
     :pswitch_8
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotY(F)V
 
-    :goto_6
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setPivotX(F)V
 
-    :goto_7
+    :goto_0
     return-void
 
     :pswitch_data_0

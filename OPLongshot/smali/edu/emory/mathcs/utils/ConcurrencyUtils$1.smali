@@ -1,6 +1,6 @@
-.class synthetic Ledu/emory/mathcs/utils/ConcurrencyUtils$1;
+.class public synthetic Ledu/emory/mathcs/utils/ConcurrencyUtils$1;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation

@@ -1,6 +1,6 @@
-.class Landroidx/versionedparcelable/VersionedParcelParcel;
+.class public Landroidx/versionedparcelable/VersionedParcelParcel;
 .super Landroidx/versionedparcelable/VersionedParcel;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,31 +12,31 @@
 
 
 # static fields
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
-.field private static final TAG:Ljava/lang/String; = "VersionedParcelParcel"
+.field public static final TAG:Ljava/lang/String; = "VersionedParcelParcel"
 
 
 # instance fields
-.field private mCurrentField:I
+.field public mCurrentField:I
 
-.field private final mEnd:I
+.field public final mEnd:I
 
-.field private mFieldId:I
+.field public mFieldId:I
 
-.field private mNextRead:I
+.field public mNextRead:I
 
-.field private final mOffset:I
+.field public final mOffset:I
 
-.field private final mParcel:Landroid/os/Parcel;
+.field public final mParcel:Landroid/os/Parcel;
 
-.field private final mPositionLookup:Landroid/util/SparseIntArray;
+.field public final mPositionLookup:Landroid/util/SparseIntArray;
 
-.field private final mPrefix:Ljava/lang/String;
+.field public final mPrefix:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 8
 
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;IILjava/lang/String;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
+.method public constructor <init>(Landroid/os/Parcel;IILjava/lang/String;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -163,7 +163,7 @@
     return-void
 .end method
 
-.method protected createSubParcel()Landroidx/versionedparcelable/VersionedParcel;
+.method public createSubParcel()Landroidx/versionedparcelable/VersionedParcel;
     .locals 9
 
     new-instance v8, Landroidx/versionedparcelable/VersionedParcelParcel;
@@ -279,7 +279,7 @@
     return-object v0
 .end method
 
-.method protected readCharSequence()Ljava/lang/CharSequence;
+.method public readCharSequence()Ljava/lang/CharSequence;
     .locals 2
 
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -574,7 +574,7 @@
     return-void
 .end method
 
-.method protected writeCharSequence(Ljava/lang/CharSequence;)V
+.method public writeCharSequence(Ljava/lang/CharSequence;)V
     .locals 2
 
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;

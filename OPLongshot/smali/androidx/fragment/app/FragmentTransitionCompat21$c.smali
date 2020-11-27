@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21$c;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/transition/Transition$TransitionListener;
@@ -12,29 +12,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/Object;
+.field public final synthetic a:Ljava/lang/Object;
 
-.field final synthetic b:Ljava/util/ArrayList;
+.field public final synthetic b:Ljava/util/ArrayList;
 
-.field final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:Ljava/lang/Object;
 
-.field final synthetic d:Ljava/util/ArrayList;
+.field public final synthetic d:Ljava/util/ArrayList;
 
-.field final synthetic e:Ljava/lang/Object;
+.field public final synthetic e:Ljava/lang/Object;
 
-.field final synthetic f:Ljava/util/ArrayList;
+.field public final synthetic f:Ljava/util/ArrayList;
 
-.field final synthetic g:Landroidx/fragment/app/FragmentTransitionCompat21;
+.field public final synthetic g:Landroidx/fragment/app/FragmentTransitionCompat21;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$c;->g:Landroidx/fragment/app/FragmentTransitionCompat21;

@@ -1,6 +1,6 @@
 .class public Landroidx/core/content/res/TypedArrayUtils;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static final NAMESPACE:Ljava/lang/String; = "http://schemas.android.com/apk/res/android"
+.field public static final NAMESPACE:Ljava/lang/String; = "http://schemas.android.com/apk/res/android"
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -319,7 +319,7 @@
     return-object p0
 .end method
 
-.method private static getNamedColorStateListFromInt(Landroid/util/TypedValue;)Landroid/content/res/ColorStateList;
+.method public static getNamedColorStateListFromInt(Landroid/util/TypedValue;)Landroid/content/res/ColorStateList;
     .locals 0
     .param p0    # Landroid/util/TypedValue;
         .annotation build Landroidx/annotation/NonNull;

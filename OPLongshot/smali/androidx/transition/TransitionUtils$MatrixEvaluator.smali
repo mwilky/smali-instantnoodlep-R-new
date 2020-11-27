@@ -1,6 +1,6 @@
-.class Landroidx/transition/TransitionUtils$MatrixEvaluator;
+.class public Landroidx/transition/TransitionUtils$MatrixEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MatrixEvaluator"
 .end annotation
 
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field final mTempEndValues:[F
+.field public final mTempEndValues:[F
 
-.field final mTempMatrix:Landroid/graphics/Matrix;
+.field public final mTempMatrix:Landroid/graphics/Matrix;
 
-.field final mTempStartValues:[F
+.field public final mTempStartValues:[F
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

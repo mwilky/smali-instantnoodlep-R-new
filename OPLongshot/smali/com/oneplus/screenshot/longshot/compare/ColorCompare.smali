@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/compare/ColorCompare;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ColorCompare"
+.field public static final TAG:Ljava/lang/String; = "ColorCompare"
 
 
 # direct methods
@@ -29,16 +29,20 @@
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->PIXEL_ERROR_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
+
+    move-result v0
+
     goto :goto_0
 
     :cond_0
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->PIXEL_ERROR_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    :goto_0
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result v0
 
+    :goto_0
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v1

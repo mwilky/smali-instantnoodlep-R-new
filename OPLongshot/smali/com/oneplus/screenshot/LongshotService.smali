@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/LongshotService;
 .super Landroid/app/Service;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -13,15 +13,17 @@
 
 
 # static fields
+.field public static final JSON_PARAM_FIND_ATLEAST_ONE_VIEW_VISIBILITY_ONSCREEN_STATUS:Ljava/lang/String; = "findAtleastOneViewVisibilityOnScreenStatus"
+
 .field public static final JSON_PARAM_VIEW_VISIBILITY:Ljava/lang/String; = "viewVisibility"
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.LongshotService"
+.field public static final TAG:Ljava/lang/String; = "Longshot.LongshotService"
 
 
 # instance fields
-.field private mLongshotMode:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+.field public mLongshotMode:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
-.field private mTargetViewTop:I
+.field public mTargetViewTop:I
 
 
 # direct methods
@@ -41,7 +43,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+.method public static synthetic access$000(Lcom/oneplus/screenshot/LongshotService;)Lcom/oneplus/screenshot/longshot/state/LongshotMode;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/LongshotService;->mLongshotMode:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
@@ -49,7 +51,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$102(Lcom/oneplus/screenshot/LongshotService;I)I
+.method public static synthetic access$102(Lcom/oneplus/screenshot/LongshotService;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/screenshot/LongshotService;->mTargetViewTop:I
@@ -68,7 +70,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object v0, Lb/b/b/a/a;->a:Ljava/lang/String;
+    sget-object v0, Lc/c/b/a/a;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -76,7 +78,7 @@
 
     move-result v0
 
-    sget-object v2, Lb/b/b/a/a;->b:Ljava/lang/String;
+    sget-object v2, Lc/c/b/a/a;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 

@@ -55,6 +55,7 @@
     <item type="id" name="actionbar_divider" />
     <item type="id" name="actions" />
     <item type="id" name="activity_chooser_view_content" />
+    <item type="id" name="adjust_area_layout" />
     <item type="id" name="alertTitle" />
     <item type="id" name="amPm" />
     <item type="id" name="am_label" />
@@ -74,6 +75,7 @@
     <item type="id" name="banner_title" />
     <item type="id" name="banner_vertical_button_layout" />
     <item type="id" name="baseline" />
+    <item type="id" name="bezier_view" />
     <item type="id" name="body" />
     <item type="id" name="breadcrumb_section" />
     <item type="id" name="bubble_image" />
@@ -81,6 +83,7 @@
     <item type="id" name="button2" />
     <item type="id" name="buttonPanel" />
     <item type="id" name="button_bar" />
+    <item type="id" name="button_layout" />
     <item type="id" name="button_space" />
     <item type="id" name="cacheview" />
     <item type="id" name="calendar_view" />
@@ -108,6 +111,7 @@
     <item type="id" name="content_view" />
     <item type="id" name="control_empty_space1" />
     <item type="id" name="coordinator" />
+    <item type="id" name="current_develop_type" />
     <item type="id" name="customPanel" />
     <item type="id" name="datePicker" />
     <item type="id" name="date_picker_actions" />
@@ -133,19 +137,29 @@
     <item type="id" name="design_navigation_view" />
     <item type="id" name="dialog_button" />
     <item type="id" name="divider" />
+    <item type="id" name="duration" />
     <item type="id" name="edit_big" />
+    <item type="id" name="edit_layout" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text" />
+    <item type="id" name="edit_x1" />
+    <item type="id" name="edit_x2" />
+    <item type="id" name="edit_y1" />
+    <item type="id" name="edit_y2" />
     <item type="id" name="empty_base" />
     <item type="id" name="empty_bottom_text" />
     <item type="id" name="empty_content" />
     <item type="id" name="empty_image" />
     <item type="id" name="empty_middle_text" />
     <item type="id" name="empty_temp" />
+    <item type="id" name="empty_text" />
     <item type="id" name="empty_text_body" />
     <item type="id" name="empty_text_title" />
     <item type="id" name="empty_top_text" />
     <item type="id" name="expand_activities_button" />
+    <item type="id" name="expand_img" />
+    <item type="id" name="expand_layout" />
+    <item type="id" name="expand_tv" />
     <item type="id" name="expanded_menu" />
     <item type="id" name="floatType" />
     <item type="id" name="floating_action_tool_button" />
@@ -237,6 +251,11 @@
     <item type="id" name="min" />
     <item type="id" name="minute" />
     <item type="id" name="minutes" />
+    <item type="id" name="monitor_bezier" />
+    <item type="id" name="monitor_container" />
+    <item type="id" name="monitor_property" />
+    <item type="id" name="monitor_view" />
+    <item type="id" name="monitor_viewpager" />
     <item type="id" name="month" />
     <item type="id" name="month_grid" />
     <item type="id" name="month_navigation_bar" />
@@ -282,10 +301,14 @@
     <item type="id" name="notify_hint" />
     <item type="id" name="numberPicker" />
     <item type="id" name="numberpicker_input" />
+    <item type="id" name="object_chooser" />
     <item type="id" name="off" />
     <item type="id" name="on" />
+    <item type="id" name="oneplus_page_indicator_dot" />
     <item type="id" name="op_text_input_counter" />
     <item type="id" name="op_text_input_error" />
+    <item type="id" name="page_indicator" />
+    <item type="id" name="painter_scroll_container" />
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="pathType" />
@@ -307,6 +330,7 @@
     <item type="id" name="progress_horizontal" />
     <item type="id" name="progress_number" />
     <item type="id" name="progress_percent" />
+    <item type="id" name="property" />
     <item type="id" name="quickshare_app_panel_view" />
     <item type="id" name="quickshare_app_title" />
     <item type="id" name="quickshare_guider_navbar_placeholder" />
@@ -334,6 +358,8 @@
     <item type="id" name="scrollIndicatorDown" />
     <item type="id" name="scrollIndicatorUp" />
     <item type="id" name="scrollView" />
+    <item type="id" name="scroll_divider_line" />
+    <item type="id" name="scroller_top_divider" />
     <item type="id" name="search_badge" />
     <item type="id" name="search_bar" />
     <item type="id" name="search_button" />
@@ -345,6 +371,7 @@
     <item type="id" name="search_src_text" />
     <item type="id" name="search_voice_btn" />
     <item type="id" name="seekbar" />
+    <item type="id" name="seekbar_area_layout" />
     <item type="id" name="seekbar_value" />
     <item type="id" name="select_background" />
     <item type="id" name="select_dialog_listview" />
@@ -353,6 +380,8 @@
     <item type="id" name="sequentially" />
     <item type="id" name="shared_big" />
     <item type="id" name="shortcut" />
+    <item type="id" name="simultaneous_container" />
+    <item type="id" name="simultaneous_switch" />
     <item type="id" name="single_action_button" />
     <item type="id" name="singlechoice_subtitle" />
     <item type="id" name="skip_button" />
@@ -391,6 +420,10 @@
     <item type="id" name="text_input_password_toggle" />
     <item type="id" name="text_input_start_icon" />
     <item type="id" name="text_layout" />
+    <item type="id" name="text_x1" />
+    <item type="id" name="text_x2" />
+    <item type="id" name="text_y1" />
+    <item type="id" name="text_y2" />
     <item type="id" name="textinput_counter" />
     <item type="id" name="textinput_error" />
     <item type="id" name="textinput_helper_text" />
@@ -420,6 +453,8 @@
     <item type="id" name="transition_scene_layoutid_cache" />
     <item type="id" name="transition_transform" />
     <item type="id" name="transitionview" />
+    <item type="id" name="tv_label" />
+    <item type="id" name="tv_progress" />
     <item type="id" name="unchecked" />
     <item type="id" name="up" />
     <item type="id" name="view_offset_helper" />

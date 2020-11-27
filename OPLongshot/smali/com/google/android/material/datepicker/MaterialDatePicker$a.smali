@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/datepicker/MaterialDatePicker$a;
+.class public Lcom/google/android/material/datepicker/MaterialDatePicker$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/datepicker/MaterialDatePicker;
+.field public final synthetic a:Lcom/google/android/material/datepicker/MaterialDatePicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/datepicker/MaterialDatePicker;)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialDatePicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$a;->a:Lcom/google/android/material/datepicker/MaterialDatePicker;
@@ -73,7 +73,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$a;->a:Lcom/google/android/material/datepicker/MaterialDatePicker;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/b;->dismiss()V
+    invoke-virtual {p1}, Lb/k/a/b;->dismiss()V
 
     return-void
 .end method

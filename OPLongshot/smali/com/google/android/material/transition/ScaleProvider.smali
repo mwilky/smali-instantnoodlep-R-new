@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/transition/ScaleProvider;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Lcom/google/android/material/transition/e;
+.implements Lc/b/b/b/l0/e;
 
 
 # annotations
@@ -13,15 +13,15 @@
 
 
 # instance fields
-.field private entering:Z
+.field public entering:Z
 
-.field private incomingEndScale:F
+.field public incomingEndScale:F
 
-.field private incomingStartScale:F
+.field public incomingStartScale:F
 
-.field private outgoingEndScale:F
+.field public outgoingEndScale:F
 
-.field private outgoingStartScale:F
+.field public outgoingStartScale:F
 
 
 # direct methods
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method private static createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
+.method public static createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
     .locals 6
 
     const/4 v0, 0x2
@@ -136,7 +136,6 @@
 
     iget p3, p0, Lcom/google/android/material/transition/ScaleProvider;->incomingEndScale:F
 
-    :goto_0
     invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/ScaleProvider;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p1
@@ -148,7 +147,11 @@
 
     iget p3, p0, Lcom/google/android/material/transition/ScaleProvider;->outgoingStartScale:F
 
-    goto :goto_0
+    invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/ScaleProvider;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public createDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
@@ -180,7 +183,6 @@
 
     iget p3, p0, Lcom/google/android/material/transition/ScaleProvider;->outgoingEndScale:F
 
-    :goto_0
     invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/ScaleProvider;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p1
@@ -192,7 +194,11 @@
 
     iget p3, p0, Lcom/google/android/material/transition/ScaleProvider;->incomingStartScale:F
 
-    goto :goto_0
+    invoke-static {p2, p1, p3}, Lcom/google/android/material/transition/ScaleProvider;->createScaleAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public getIncomingEndScale()F

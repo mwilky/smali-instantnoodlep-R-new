@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TimePickerClockDelegate$c;
+.class public Lcom/google/android/material/picker/TimePickerClockDelegate$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnFocusChangeListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$c;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -43,7 +43,7 @@
 
     move-result p1
 
-    sget p2, Lb/a/b/a/f;->am_label:I
+    sget p2, Lc/b/b/b/f;->am_label:I
 
     const/4 v0, 0x0
 
@@ -56,7 +56,7 @@
     goto :goto_0
 
     :cond_0
-    sget p2, Lb/a/b/a/f;->pm_label:I
+    sget p2, Lc/b/b/b/f;->pm_label:I
 
     const/4 v1, 0x1
 
@@ -69,7 +69,7 @@
     goto :goto_0
 
     :cond_1
-    sget p2, Lb/a/b/a/f;->hours:I
+    sget p2, Lc/b/b/b/f;->hours:I
 
     if-ne p1, p2, :cond_2
 
@@ -80,7 +80,7 @@
     goto :goto_0
 
     :cond_2
-    sget p2, Lb/a/b/a/f;->minutes:I
+    sget p2, Lc/b/b/b/f;->minutes:I
 
     if-ne p1, p2, :cond_3
 

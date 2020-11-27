@@ -1,31 +1,31 @@
-.class Landroidx/transition/Visibility$a;
-.super Landroidx/transition/m;
-.source ""
+.class public Landroidx/transition/Visibility$a;
+.super Lb/q/m;
+.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/Visibility;->e(Landroid/view/ViewGroup;Landroidx/transition/q;ILandroidx/transition/q;I)Landroid/animation/Animator;
+    value = Landroidx/transition/Visibility;->e(Landroid/view/ViewGroup;Lb/q/q;ILb/q/q;I)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/ViewGroup;
+.field public final synthetic a:Landroid/view/ViewGroup;
 
-.field final synthetic b:Landroid/view/View;
+.field public final synthetic b:Landroid/view/View;
 
-.field final synthetic c:Landroid/view/View;
+.field public final synthetic c:Landroid/view/View;
 
-.field final synthetic d:Landroidx/transition/Visibility;
+.field public final synthetic d:Landroidx/transition/Visibility;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/Visibility;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/transition/Visibility;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/transition/Visibility$a;->d:Landroidx/transition/Visibility;
@@ -36,7 +36,7 @@
 
     iput-object p4, p0, Landroidx/transition/Visibility$a;->c:Landroid/view/View;
 
-    invoke-direct {p0}, Landroidx/transition/m;-><init>()V
+    invoke-direct {p0}, Lb/q/m;-><init>()V
 
     return-void
 .end method
@@ -52,13 +52,13 @@
 
     iget-object p1, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
+    invoke-static {p1}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {p1, v0}, Landroidx/transition/t;->remove(Landroid/view/View;)V
+    invoke-interface {p1, v0}, Lb/q/t;->remove(Landroid/view/View;)V
 
     return-void
 .end method
@@ -80,13 +80,13 @@
 
     iget-object p1, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
+    invoke-static {p1}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {p1, v0}, Landroidx/transition/t;->add(Landroid/view/View;)V
+    invoke-interface {p1, v0}, Lb/q/t;->add(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -108,7 +108,7 @@
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->c:Landroid/view/View;
 
-    sget v1, Landroidx/transition/k;->save_overlay_view:I
+    sget v1, Lb/q/k;->save_overlay_view:I
 
     const/4 v2, 0x0
 
@@ -116,13 +116,13 @@
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
+    invoke-static {v0}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {v0, v1}, Landroidx/transition/t;->remove(Landroid/view/View;)V
+    invoke-interface {v0, v1}, Lb/q/t;->remove(Landroid/view/View;)V
 
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$g;)Landroidx/transition/Transition;
 

@@ -1,12 +1,18 @@
 .class public Lcom/oneplus/screenshot/longshot/util/ServerConfigs;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # static fields
+.field public static final JSON_PARAM_FIND_ATLEAST_ONE_VIEW_VISIBILITY_ON_SCREEN:Ljava/lang/String; = "findAtleastOneViewVisibilityOnScreen"
+
 .field public static final JSON_PARAM_GET_VIEW_VISIBILITY:Ljava/lang/String; = "getViewVisibility"
 
 .field public static final JSON_PARAM_PRINT_VIEW_IDS:Ljava/lang/String; = "printViewIds"
+
+.field public static final JSON_PARAM_REMOVE_OVERSCROLL_BY_CLASS_NAME:Ljava/lang/String; = "removeOverscrollEffectByClassName"
+
+.field public static final JSON_PARAM_REMOVE_OVERSCROLL_BY_VIEW_ID:Ljava/lang/String; = "removeOverscrollEffectByViewId"
 
 
 # direct methods
@@ -64,7 +70,7 @@
 
     const/16 v3, 0x9
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_1
     const-string v4, "ComponentInfo{com.taobao.idlefish/com.taobao.fleamarket.home.activity.MainActivity}"
@@ -171,6 +177,19 @@
     goto :goto_0
 
     :sswitch_9
+    const-string v4, "ComponentInfo{com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity}"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 v3, 0xa
+
+    goto :goto_0
+
+    :sswitch_a
     const-string v4, "ComponentInfo{com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -189,29 +208,51 @@
 
     packed-switch v3, :pswitch_data_0
 
-    goto :goto_2
+    goto/16 :goto_1
 
     :pswitch_0
     :try_start_1
-    const-string v2, "empty_view"
+    const-string p1, "speed_dial_empty_view"
 
-    :goto_1
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    const-string p1, "calllog_empty_view"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    const-string p1, "contacts_empty_view"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    const-string p1, "findAtleastOneViewVisibilityOnScreen"
+
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_1
-    const-string v2, "player_top_controls"
+    const-string v2, "empty_view"
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_2
-    const-string v2, "b54"
+    const-string v2, "player_top_controls"
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_3
-    sget-object v2, Lb/b/b/h/b;->e:Ljava/lang/String;
+    const-string v2, "b54"
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_4
+    sget-object v2, Lc/c/b/h/b;->e:Ljava/lang/String;
 
     const-string v3, "url_bar"
 
@@ -219,63 +260,75 @@
 
     const-string v2, "tab_switcher_toolbar"
 
-    goto :goto_1
-
-    :pswitch_4
-    const-string p1, "scroll_2_top_btn"
-
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_5
-    const-string p1, "chathistory_scroll_to_bottom_button"
+    const-string p1, "scroll_2_top_btn"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_6
-    const-string p1, "scroll_bottom"
+    const-string p1, "chathistory_scroll_to_bottom_button"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_7
-    const-string p1, "bottom_nav_bar"
+    const-string p1, "scroll_bottom"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_8
-    const-string p1, "fab_layout"
+    const-string p1, "bottom_nav_bar"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_9
+    const-string p1, "fab_layout"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_a
     const-string p1, "composer_write"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lb/b/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
 
-    goto :goto_1
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :goto_2
+    :goto_1
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -295,7 +348,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0x1242b13d -> :sswitch_9
+        -0x1242b13d -> :sswitch_a
+        -0xdc13683 -> :sswitch_9
         -0x44d25f7 -> :sswitch_8
         0x24e8feb -> :sswitch_7
         0x3618373 -> :sswitch_6
@@ -309,6 +363,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_a
         :pswitch_9
         :pswitch_8
         :pswitch_7

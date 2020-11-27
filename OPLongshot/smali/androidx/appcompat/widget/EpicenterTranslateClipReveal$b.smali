@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
+.class public Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:F
+.field public c:F
 
 
 # direct methods

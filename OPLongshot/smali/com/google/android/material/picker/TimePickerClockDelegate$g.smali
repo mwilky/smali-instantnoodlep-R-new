@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TimePickerClockDelegate$g;
+.class public Lcom/google/android/material/picker/TimePickerClockDelegate$g;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$g;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;

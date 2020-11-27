@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;
+.class public Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;
 .super Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field K:Landroidx/collection/LongSparseArray;
+.field public K:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/LongSparseArray<",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field L:Landroidx/collection/SparseArrayCompat;
+.field public L:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SparseArrayCompat<",
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;Landroid/content/res/Resources;)V
+.method public constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;Landroid/content/res/Resources;)V
     .locals 0
     .param p1    # Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;
         .annotation build Landroidx/annotation/Nullable;
@@ -62,6 +62,8 @@
 
     iget-object p1, p1, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->L:Landroidx/collection/SparseArrayCompat;
 
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->L:Landroidx/collection/SparseArrayCompat;
+
     goto :goto_0
 
     :cond_0
@@ -75,13 +77,13 @@
 
     invoke-direct {p1}, Landroidx/collection/SparseArrayCompat;-><init>()V
 
-    :goto_0
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->L:Landroidx/collection/SparseArrayCompat;
 
+    :goto_0
     return-void
 .end method
 
-.method private static F(II)J
+.method public static F(II)J
     .locals 2
 
     int-to-long v0, p0
@@ -99,7 +101,7 @@
 
 
 # virtual methods
-.method D([ILandroid/graphics/drawable/Drawable;I)I
+.method public D([ILandroid/graphics/drawable/Drawable;I)I
     .locals 0
     .param p1    # [I
         .annotation build Landroidx/annotation/NonNull;
@@ -125,7 +127,7 @@
     return p1
 .end method
 
-.method E(IILandroid/graphics/drawable/Drawable;Z)I
+.method public E(IILandroid/graphics/drawable/Drawable;Z)I
     .locals 9
     .param p3    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/NonNull;
@@ -186,7 +188,7 @@
     return p3
 .end method
 
-.method G(I)I
+.method public G(I)I
     .locals 2
 
     const/4 v0, 0x0
@@ -216,7 +218,7 @@
     return v0
 .end method
 
-.method H([I)I
+.method public H([I)I
     .locals 0
     .param p1    # [I
         .annotation build Landroidx/annotation/NonNull;
@@ -241,7 +243,7 @@
     return p1
 .end method
 
-.method I(II)I
+.method public I(II)I
     .locals 3
 
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->F(II)J
@@ -271,7 +273,7 @@
     return p1
 .end method
 
-.method J(II)Z
+.method public J(II)Z
     .locals 3
 
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->F(II)J
@@ -317,7 +319,7 @@
     return p1
 .end method
 
-.method K(II)Z
+.method public K(II)Z
     .locals 3
 
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->F(II)J
@@ -389,7 +391,7 @@
     return-object v0
 .end method
 
-.method t()V
+.method public t()V
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$c;->K:Landroidx/collection/LongSparseArray;

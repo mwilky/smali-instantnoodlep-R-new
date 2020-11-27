@@ -1,6 +1,6 @@
-.class Landroidx/transition/FragmentTransitionSupport$d;
+.class public Landroidx/transition/FragmentTransitionSupport$d;
 .super Landroidx/transition/Transition$f;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/graphics/Rect;
+.field public final synthetic a:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
+.method public constructor <init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/transition/FragmentTransitionSupport$d;->a:Landroid/graphics/Rect;

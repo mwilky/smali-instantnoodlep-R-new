@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchSLastMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchSLastMatcher"
+.field public static final TAG:Ljava/lang/String; = "StitchSLastMatcher"
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method protected getCurrOffset(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)I
+.method public getCurrOffset(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)I
     .locals 0
 
     const/4 p1, 0x0
@@ -50,7 +50,7 @@
     return p1
 .end method
 
-.method protected getCurrPixels(ILcom/oneplus/screenshot/longshot/cache/BitmapCache;)[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+.method public getCurrPixels(ILcom/oneplus/screenshot/longshot/cache/BitmapCache;)[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
     .locals 5
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
@@ -92,7 +92,7 @@
     return-object p1
 .end method
 
-.method protected getStep()I
+.method public getStep()I
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_SLAST:Lcom/oneplus/screenshot/longshot/util/Configs;
@@ -104,7 +104,7 @@
     return v0
 .end method
 
-.method protected getTag()Ljava/lang/String;
+.method public getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "StitchSLast"

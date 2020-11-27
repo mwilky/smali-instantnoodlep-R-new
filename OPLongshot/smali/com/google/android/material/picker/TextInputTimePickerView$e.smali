@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/picker/TextInputTimePickerView$e;
+.class public Lcom/google/android/material/picker/TextInputTimePickerView$e;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
+.field public final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
+.method public constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView$e;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
@@ -41,7 +41,7 @@
 
     move-result p1
 
-    sget v0, Lb/a/b/a/f;->am_label2:I
+    sget v0, Lc/b/b/b/f;->am_label2:I
 
     const/4 v1, 0x0
 
@@ -66,7 +66,7 @@
     goto :goto_0
 
     :cond_0
-    sget v0, Lb/a/b/a/f;->pm_label2:I
+    sget v0, Lc/b/b/b/f;->pm_label2:I
 
     if-ne p1, v0, :cond_1
 

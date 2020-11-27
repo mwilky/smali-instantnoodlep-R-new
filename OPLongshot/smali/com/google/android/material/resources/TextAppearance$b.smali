@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/resources/TextAppearance$b;
+.class public Lcom/google/android/material/resources/TextAppearance$b;
 .super Lcom/google/android/material/resources/TextAppearanceFontCallback;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/text/TextPaint;
+.field public final synthetic a:Landroid/text/TextPaint;
 
-.field final synthetic b:Lcom/google/android/material/resources/TextAppearanceFontCallback;
+.field public final synthetic b:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-.field final synthetic c:Lcom/google/android/material/resources/TextAppearance;
+.field public final synthetic c:Lcom/google/android/material/resources/TextAppearance;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/resources/TextAppearance;Landroid/text/TextPaint;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
+.method public constructor <init>(Lcom/google/android/material/resources/TextAppearance;Landroid/text/TextPaint;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/resources/TextAppearance$b;->c:Lcom/google/android/material/resources/TextAppearance;

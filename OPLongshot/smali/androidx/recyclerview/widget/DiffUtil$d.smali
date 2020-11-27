@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/DiffUtil$d;
+.class public Landroidx/recyclerview/widget/DiffUtil$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:I
+.field public a:I
 
-.field b:I
+.field public b:I
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
 
 # direct methods

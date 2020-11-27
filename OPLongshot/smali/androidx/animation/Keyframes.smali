@@ -1,6 +1,6 @@
-.class interface abstract Landroidx/animation/Keyframes;
+.class public interface abstract Landroidx/animation/Keyframes;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Cloneable;

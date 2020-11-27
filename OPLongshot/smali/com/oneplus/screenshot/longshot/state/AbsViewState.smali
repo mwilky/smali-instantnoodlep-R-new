@@ -1,13 +1,13 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsViewState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "AbsViewState"
+.field public static final TAG:Ljava/lang/String; = "AbsViewState"
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method protected clearContentBackground(Landroid/widget/FrameLayout;)V
+.method public clearContentBackground(Landroid/widget/FrameLayout;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -31,7 +31,7 @@
     return-void
 .end method
 
-.method protected clearDecorForeground(Landroid/widget/FrameLayout;)V
+.method public clearDecorForeground(Landroid/widget/FrameLayout;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method protected initContent(Landroid/widget/FrameLayout;)V
+.method public initContent(Landroid/widget/FrameLayout;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsViewState;->clearContentBackground(Landroid/widget/FrameLayout;)V
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method protected initDecor(Landroid/widget/FrameLayout;)V
+.method public initDecor(Landroid/widget/FrameLayout;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsViewState;->clearDecorForeground(Landroid/widget/FrameLayout;)V
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method protected abstract initViews(Landroid/widget/FrameLayout;)V
+.method public abstract initViews(Landroid/widget/FrameLayout;)V
 .end method
 
 .method public onShow(Lcom/oneplus/screenshot/longshot/app/LongshotDialog;)V

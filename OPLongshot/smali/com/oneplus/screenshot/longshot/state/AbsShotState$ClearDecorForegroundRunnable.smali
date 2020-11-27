@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/state/AbsShotState$ClearDecorForegroundRunnable;
+.class public Lcom/oneplus/screenshot/longshot/state/AbsShotState$ClearDecorForegroundRunnable;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "ClearDecorForegroundRunnable"
 .end annotation
 
 
 # instance fields
-.field private mDecor:Landroid/widget/FrameLayout;
+.field public mDecor:Landroid/widget/FrameLayout;
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/ViewBoundsCheck;
+.class public Landroidx/recyclerview/widget/ViewBoundsCheck;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,13 +14,13 @@
 
 
 # instance fields
-.field final a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
+.field public final a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
 
-.field b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
+.field public b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/ViewBoundsCheck$b;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/ViewBoundsCheck$b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method a(IIII)Landroid/view/View;
+.method public a(IIII)Landroid/view/View;
     .locals 8
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->a:Landroidx/recyclerview/widget/ViewBoundsCheck$b;
@@ -140,7 +140,7 @@
     return-object v3
 .end method
 
-.method b(Landroid/view/View;I)Z
+.method public b(Landroid/view/View;I)Z
     .locals 5
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck;->b:Landroidx/recyclerview/widget/ViewBoundsCheck$a;

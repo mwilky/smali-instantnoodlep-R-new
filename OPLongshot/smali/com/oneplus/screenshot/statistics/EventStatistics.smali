@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/statistics/EventStatistics;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,13 +14,13 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "EventStatistics"
+.field public static final TAG:Ljava/lang/String; = "EventStatistics"
 
-.field private static appBase:I
+.field public static appBase:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method static synthetic access$000()I
+.method public static synthetic access$000()I
     .locals 1
 
     sget v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->appBase:I
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method private static isDebuggable(Landroid/content/Context;)Z
+.method public static isDebuggable(Landroid/content/Context;)Z
     .locals 0
 
     invoke-static {p0}, Lcom/oneplus/screenshot/util/Utils;->isDebuggable(Landroid/content/Context;)Z

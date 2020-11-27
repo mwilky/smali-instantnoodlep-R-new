@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/RecyclerView$t;
+.class public Landroidx/recyclerview/widget/RecyclerView$t;
 .super Landroidx/recyclerview/widget/RecyclerView$g;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "t"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic a:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
@@ -52,9 +52,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->p()Z
+    invoke-virtual {v0}, Lb/o/d/a;->p()Z
 
     move-result v0
 
@@ -79,9 +79,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/a;->r(IILjava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lb/o/d/a;->r(IILjava/lang/Object;)Z
 
     move-result p1
 
@@ -104,9 +104,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/a;->s(II)Z
+    invoke-virtual {v0, p1, p2}, Lb/o/d/a;->s(II)Z
 
     move-result p1
 
@@ -129,9 +129,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/a;->t(III)Z
+    invoke-virtual {v0, p1, p2, p3}, Lb/o/d/a;->t(III)Z
 
     move-result p1
 
@@ -154,9 +154,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/a;->u(II)Z
+    invoke-virtual {v0, p1, p2}, Lb/o/d/a;->u(II)Z
 
     move-result p1
 
@@ -168,7 +168,7 @@
     return-void
 .end method
 
-.method g()V
+.method public g()V
     .locals 2
 
     sget-boolean v0, Landroidx/recyclerview/widget/RecyclerView;->POST_UPDATES_ON_ANIMATION:Z

@@ -1,32 +1,32 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final MSG_UPDATE_PREVIEW:I = 0xbb8
+.field public static final MSG_UPDATE_PREVIEW:I = 0xbb8
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.PictureDrawable"
+.field public static final TAG:Ljava/lang/String; = "Longshot.PictureDrawable"
 
 
 # instance fields
-.field private mBitmapList:Ljava/util/List;
+.field public mBitmapList:Ljava/util/List;
 
-.field private mBitmapPaint:Landroid/graphics/Paint;
+.field public mBitmapPaint:Landroid/graphics/Paint;
 
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field private mHeight:I
+.field public mHeight:I
 
-.field private final mInvalidate:Ljava/lang/Runnable;
+.field public final mInvalidate:Ljava/lang/Runnable;
 
-.field private mMeasureHeight:I
+.field public mMeasureHeight:I
 
-.field private mWidth:I
+.field public mWidth:I
 
-.field private pictureCount:I
+.field public pictureCount:I
 
 
 # direct methods
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Ljava/util/List;
+.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Ljava/util/List;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->mBitmapList:Ljava/util/List;
@@ -80,7 +80,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)I
+.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->mMeasureHeight:I
@@ -88,7 +88,7 @@
     return p0
 .end method
 
-.method static synthetic access$102(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;I)I
+.method public static synthetic access$102(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->mMeasureHeight:I
@@ -96,7 +96,7 @@
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Ljava/lang/Runnable;
+.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->mInvalidate:Ljava/lang/Runnable;
@@ -104,7 +104,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Landroid/os/Handler;
+.method public static synthetic access$300(Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->mHandler:Landroid/os/Handler;

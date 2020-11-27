@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/AlertDialogLayout;
 .super Landroidx/appcompat/widget/LinearLayoutCompat;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -115,7 +115,7 @@
     return-void
 .end method
 
-.method private static resolveMinimumHeight(Landroid/view/View;)I
+.method public static resolveMinimumHeight(Landroid/view/View;)I
     .locals 3
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->z(Landroid/view/View;)I
@@ -214,7 +214,7 @@
 
     move-result v9
 
-    sget v11, La/a/f;->topPanel:I
+    sget v11, Lb/c/f;->topPanel:I
 
     if-ne v9, v11, :cond_1
 
@@ -223,7 +223,7 @@
     goto :goto_2
 
     :cond_1
-    sget v11, La/a/f;->buttonPanel:I
+    sget v11, Lb/c/f;->buttonPanel:I
 
     if-ne v9, v11, :cond_2
 
@@ -232,11 +232,11 @@
     goto :goto_2
 
     :cond_2
-    sget v11, La/a/f;->contentPanel:I
+    sget v11, Lb/c/f;->contentPanel:I
 
     if-eq v9, v11, :cond_4
 
-    sget v11, La/a/f;->customPanel:I
+    sget v11, Lb/c/f;->customPanel:I
 
     if-ne v9, v11, :cond_3
 
@@ -516,7 +516,7 @@
 
 
 # virtual methods
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 17
 
     move-object/from16 v6, p0
@@ -666,7 +666,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Landroidx/core/view/b;->b(II)I
+    invoke-static {v2, v3}, Lb/h/l/b;->b(II)I
 
     move-result v2
 
@@ -689,6 +689,8 @@
     :cond_4
     sub-int v2, v8, v4
 
+    iget v3, v15, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
     goto :goto_3
 
     :cond_5
@@ -702,9 +704,9 @@
 
     add-int/2addr v2, v3
 
-    :goto_3
     iget v3, v15, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    :goto_3
     sub-int/2addr v2, v3
 
     :goto_4
@@ -746,7 +748,7 @@
     return-void
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 1
 
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AlertDialogLayout;->tryOnMeasure(II)Z

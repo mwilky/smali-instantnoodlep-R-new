@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/NavigationMenuItemView$a;
-.super Landroidx/core/view/a;
-.source ""
+.class public Lcom/google/android/material/internal/NavigationMenuItemView$a;
+.super Lb/h/l/a;
+.source "SourceFile"
 
 
 # annotations
@@ -9,42 +9,42 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/internal/NavigationMenuItemView;
+.field public final synthetic a:Lcom/google/android/material/internal/NavigationMenuItemView;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/internal/NavigationMenuItemView;)V
+.method public constructor <init>(Lcom/google/android/material/internal/NavigationMenuItemView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView$a;->a:Lcom/google/android/material/internal/NavigationMenuItemView;
 
-    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {p0}, Lb/h/l/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
     .locals 0
-    .param p2    # Landroidx/core/view/accessibility/d;
+    .param p2    # Lb/h/l/y/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
+    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView$a;->a:Lcom/google/android/material/internal/NavigationMenuItemView;
 
     iget-boolean p1, p1, Lcom/google/android/material/internal/NavigationMenuItemView;->checkable:Z
 
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->U(Z)V
+    invoke-virtual {p2, p1}, Lb/h/l/y/d;->U(Z)V
 
     return-void
 .end method

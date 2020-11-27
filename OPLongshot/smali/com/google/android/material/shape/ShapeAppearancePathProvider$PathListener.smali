@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,8 +21,8 @@
 
 
 # virtual methods
-.method public abstract onCornerPathCreated(Lcom/google/android/material/shape/i;Landroid/graphics/Matrix;I)V
+.method public abstract onCornerPathCreated(Lc/b/b/b/f0/i;Landroid/graphics/Matrix;I)V
 .end method
 
-.method public abstract onEdgePathCreated(Lcom/google/android/material/shape/i;Landroid/graphics/Matrix;I)V
+.method public abstract onEdgePathCreated(Lc/b/b/b/f0/i;Landroid/graphics/Matrix;I)V
 .end method

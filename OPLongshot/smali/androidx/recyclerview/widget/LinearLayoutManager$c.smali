@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/LinearLayoutManager$c;
+.class public Landroidx/recyclerview/widget/LinearLayoutManager$c;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,35 +9,35 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
-.field b:I
+.field public b:I
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field public f:I
 
-.field g:I
+.field public g:I
 
-.field h:I
+.field public h:I
 
-.field i:I
+.field public i:I
 
-.field j:Z
+.field public j:Z
 
-.field k:I
+.field public k:I
 
-.field l:Ljava/util/List;
+.field public l:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -47,11 +47,11 @@
     .end annotation
 .end field
 
-.field m:Z
+.field public m:Z
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -73,7 +73,106 @@
     return-void
 .end method
 
-.method private e()Landroid/view/View;
+
+# virtual methods
+.method public a()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->b(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public b(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->f(Landroid/view/View;)Landroid/view/View;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView$l;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$l;->a()I
+
+    move-result p1
+
+    iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    :goto_0
+    return-void
+.end method
+
+.method public c(Landroidx/recyclerview/widget/RecyclerView$v;)Z
+    .locals 1
+
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    if-ltz v0, :cond_0
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$v;->b()I
+
+    move-result p1
+
+    if-ge v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public d(Landroidx/recyclerview/widget/RecyclerView$r;)Landroid/view/View;
+    .locals 2
+
+    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->l:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->e()Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$r;->o(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    iget v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->e:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
+
+    return-object p1
+.end method
+
+.method public final e()Landroid/view/View;
     .locals 5
 
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->l:Ljava/util/List;
@@ -134,103 +233,6 @@
     const/4 v0, 0x0
 
     return-object v0
-.end method
-
-
-# virtual methods
-.method public a()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->b(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public b(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->f(Landroid/view/View;)Landroid/view/View;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView$l;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$l;->a()I
-
-    move-result p1
-
-    :goto_0
-    iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
-
-    return-void
-.end method
-
-.method c(Landroidx/recyclerview/widget/RecyclerView$v;)Z
-    .locals 1
-
-    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
-
-    if-ltz v0, :cond_0
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$v;->b()I
-
-    move-result p1
-
-    if-ge v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-.end method
-
-.method d(Landroidx/recyclerview/widget/RecyclerView$r;)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->l:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Landroidx/recyclerview/widget/LinearLayoutManager$c;->e()Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
-
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$r;->o(I)Landroid/view/View;
-
-    move-result-object p1
-
-    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
-
-    iget v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->e:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$c;->d:I
-
-    return-object p1
 .end method
 
 .method public f(Landroid/view/View;)Landroid/view/View;

@@ -1,6 +1,6 @@
-.class final Landroidx/core/app/ActivityRecreator$d;
+.class public final Landroidx/core/app/ActivityRecreator$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x19
     name = "d"
 .end annotation
 
 
 # instance fields
-.field a:Ljava/lang/Object;
+.field public a:Ljava/lang/Object;
 
-.field private b:Landroid/app/Activity;
+.field public b:Landroid/app/Activity;
 
-.field private c:Z
+.field public c:Z
 
-.field private d:Z
+.field public d:Z
 
-.field private e:Z
+.field public e:Z
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
     .param p1    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;

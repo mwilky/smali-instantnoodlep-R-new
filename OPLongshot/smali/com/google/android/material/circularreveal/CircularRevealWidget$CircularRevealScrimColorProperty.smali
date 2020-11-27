@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealScrimColorProperty;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lcom/google/android/material/circularreveal/CircularRevealWidget$CircularRevealScrimColorProperty;
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     const-class v0, Ljava/lang/Integer;

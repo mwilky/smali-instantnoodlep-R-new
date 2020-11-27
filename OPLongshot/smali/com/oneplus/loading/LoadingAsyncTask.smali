@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/loading/LoadingAsyncTask;
 .super Landroid/os/AsyncTask;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private mProgressHelper:Lcom/oneplus/loading/a;
+.field public mProgressHelper:Lc/c/e/a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/loading/LoadingAsyncTask$a;-><init>(Lcom/oneplus/loading/LoadingAsyncTask;)V
 
-    iput-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lcom/oneplus/loading/a;
+    iput-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
 
     return-void
 .end method
@@ -46,23 +46,23 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lcom/oneplus/loading/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
 
     new-instance v1, Lcom/oneplus/loading/LoadingAsyncTask$b;
 
     invoke-direct {v1, p0, p1}, Lcom/oneplus/loading/LoadingAsyncTask$b;-><init>(Lcom/oneplus/loading/LoadingAsyncTask;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/loading/a;->h(Lcom/oneplus/loading/a$d;)V
+    invoke-virtual {v0, v1}, Lc/c/e/a;->h(Lc/c/e/a$d;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected abstract hideProgree(Ljava/lang/Object;)V
+.method public abstract hideProgree(Ljava/lang/Object;)V
 .end method
 
-.method protected final onCancelled()V
+.method public final onCancelled()V
     .locals 0
 
     invoke-super {p0}, Landroid/os/AsyncTask;->onCancelled()V
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method protected final onCancelled(Ljava/lang/Object;)V
+.method public final onCancelled(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method protected onCancelledExtend(Ljava/lang/Object;)V
+.method public onCancelledExtend(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method protected final onPostExecute(Ljava/lang/Object;)V
+.method public final onPostExecute(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method protected onPostExecuteExtend(Ljava/lang/Object;)V
+.method public onPostExecuteExtend(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -120,19 +120,19 @@
     return-void
 .end method
 
-.method protected final onPreExecute()V
+.method public final onPreExecute()V
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lcom/oneplus/loading/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
 
-    invoke-virtual {v0}, Lcom/oneplus/loading/a;->f()V
+    invoke-virtual {v0}, Lc/c/e/a;->f()V
 
     invoke-virtual {p0}, Lcom/oneplus/loading/LoadingAsyncTask;->onPreExecuteExtend()V
 
     return-void
 .end method
 
-.method protected onPreExecuteExtend()V
+.method public onPreExecuteExtend()V
     .locals 0
 
     return-void
@@ -148,9 +148,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lcom/oneplus/loading/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/oneplus/loading/a;->j(J)Lcom/oneplus/loading/a;
+    invoke-virtual {v0, p1, p2}, Lc/c/e/a;->j(J)Lc/c/e/a;
 
     return-object p0
 .end method
@@ -165,12 +165,12 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lcom/oneplus/loading/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/oneplus/loading/a;->k(J)Lcom/oneplus/loading/a;
+    invoke-virtual {v0, p1, p2}, Lc/c/e/a;->k(J)Lc/c/e/a;
 
     return-object p0
 .end method
 
-.method protected abstract showProgree()Ljava/lang/Object;
+.method public abstract showProgree()Ljava/lang/Object;
 .end method

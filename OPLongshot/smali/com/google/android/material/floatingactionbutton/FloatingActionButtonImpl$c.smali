@@ -1,25 +1,25 @@
-.class Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$c;
+.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$c;
 .super Lcom/google/android/material/animation/MatrixEvaluator;
-.source ""
+.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lcom/google/android/material/animation/a;FFF)Landroid/animation/AnimatorSet;
+    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/b/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+.field public final synthetic a:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$c;->a:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;

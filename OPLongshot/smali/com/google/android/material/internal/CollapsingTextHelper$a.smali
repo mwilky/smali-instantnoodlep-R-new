@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/CollapsingTextHelper$a;
+.class public Lcom/google/android/material/internal/CollapsingTextHelper$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/android/material/resources/CancelableFontCallback$a;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/material/internal/CollapsingTextHelper;
+.field public final synthetic a:Lcom/google/android/material/internal/CollapsingTextHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/material/internal/CollapsingTextHelper;)V
+.method public constructor <init>(Lcom/google/android/material/internal/CollapsingTextHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper$a;->a:Lcom/google/android/material/internal/CollapsingTextHelper;

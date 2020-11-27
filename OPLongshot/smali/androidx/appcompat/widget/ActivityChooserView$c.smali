@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActivityChooserView$c;
+.class public Landroidx/appcompat/widget/ActivityChooserView$c;
 .super Landroid/view/View$AccessibilityDelegate;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
@@ -30,13 +30,13 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {p2}, Landroidx/core/view/accessibility/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/view/accessibility/d;
+    invoke-static {p2}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Landroidx/core/view/accessibility/d;->T(Z)V
+    invoke-virtual {p1, p2}, Lb/h/l/y/d;->T(Z)V
 
     return-void
 .end method

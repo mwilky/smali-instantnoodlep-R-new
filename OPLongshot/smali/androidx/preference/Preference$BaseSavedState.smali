@@ -1,6 +1,6 @@
 .class public Landroidx/preference/Preference$BaseSavedState;
 .super Landroid/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/preference/Preference$BaseSavedState$1;

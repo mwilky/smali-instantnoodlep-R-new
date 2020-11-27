@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/TooltipCompatHandler;
+.class public Landroidx/appcompat/widget/TooltipCompatHandler;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -17,41 +17,41 @@
 
 
 # static fields
-.field private static final HOVER_HIDE_TIMEOUT_MS:J = 0x3a98L
+.field public static final HOVER_HIDE_TIMEOUT_MS:J = 0x3a98L
 
-.field private static final HOVER_HIDE_TIMEOUT_SHORT_MS:J = 0xbb8L
+.field public static final HOVER_HIDE_TIMEOUT_SHORT_MS:J = 0xbb8L
 
-.field private static final LONG_CLICK_HIDE_TIMEOUT_MS:J = 0x9c4L
+.field public static final LONG_CLICK_HIDE_TIMEOUT_MS:J = 0x9c4L
 
-.field private static final TAG:Ljava/lang/String; = "TooltipCompatHandler"
+.field public static final TAG:Ljava/lang/String; = "TooltipCompatHandler"
 
-.field private static sActiveHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
+.field public static sActiveHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
 
-.field private static sPendingHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
+.field public static sPendingHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
 
 
 # instance fields
-.field private final mAnchor:Landroid/view/View;
+.field public final mAnchor:Landroid/view/View;
 
-.field private mAnchorX:I
+.field public mAnchorX:I
 
-.field private mAnchorY:I
+.field public mAnchorY:I
 
-.field private mFromTouch:Z
+.field public mFromTouch:Z
 
-.field private final mHideRunnable:Ljava/lang/Runnable;
+.field public final mHideRunnable:Ljava/lang/Runnable;
 
-.field private final mHoverSlop:I
+.field public final mHoverSlop:I
 
-.field private mPopup:Landroidx/appcompat/widget/TooltipPopup;
+.field public mPopup:Landroidx/appcompat/widget/TooltipPopup;
 
-.field private final mShowRunnable:Ljava/lang/Runnable;
+.field public final mShowRunnable:Ljava/lang/Runnable;
 
-.field private final mTooltipText:Ljava/lang/CharSequence;
+.field public final mTooltipText:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;Ljava/lang/CharSequence;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/view/q;->c(Landroid/view/ViewConfiguration;)I
+    invoke-static {p1}, Lb/h/l/q;->c(Landroid/view/ViewConfiguration;)I
 
     move-result p1
 
@@ -141,7 +141,7 @@
     return-void
 .end method
 
-.method private static setPendingHandler(Landroidx/appcompat/widget/TooltipCompatHandler;)V
+.method public static setPendingHandler(Landroidx/appcompat/widget/TooltipCompatHandler;)V
     .locals 1
 
     sget-object v0, Landroidx/appcompat/widget/TooltipCompatHandler;->sPendingHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
@@ -268,7 +268,7 @@
 
 
 # virtual methods
-.method hide()V
+.method public hide()V
     .locals 3
 
     sget-object v0, Landroidx/appcompat/widget/TooltipCompatHandler;->sActiveHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
@@ -452,7 +452,7 @@
     return-void
 .end method
 
-.method show(Z)V
+.method public show(Z)V
     .locals 7
 
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipCompatHandler;->mAnchor:Landroid/view/View;
@@ -532,16 +532,20 @@
 
     const-wide/16 v0, 0xbb8
 
+    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
+
+    move-result p1
+
     goto :goto_0
 
     :cond_3
     const-wide/16 v0, 0x3a98
 
-    :goto_0
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p1
 
+    :goto_0
     int-to-long v2, p1
 
     sub-long/2addr v0, v2

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/bottomnavigation/BottomNavigationMenu;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method protected addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+.method public addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 3
 
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->size()I

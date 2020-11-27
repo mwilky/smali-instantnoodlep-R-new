@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
+.class public Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 .super Landroid/widget/FrameLayout;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,19 +15,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SnackbarBaseLayout"
 .end annotation
 
 
 # instance fields
-.field private mOnAttachStateChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;
+.field public mOnAttachStateChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;
 
-.field private mOnLayoutChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;
+.field public mOnLayoutChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -37,18 +37,18 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lb/a/b/a/l;->SnackbarLayout:[I
+    sget-object v0, Lc/b/b/b/l;->SnackbarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/a/b/a/l;->SnackbarLayout_elevation:I
+    sget p2, Lc/b/b/b/l;->SnackbarLayout_elevation:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -56,7 +56,7 @@
 
     if-eqz p2, :cond_0
 
-    sget p2, Lb/a/b/a/l;->SnackbarLayout_elevation:I
+    sget p2, Lc/b/b/b/l;->SnackbarLayout_elevation:I
 
     const/4 v0, 0x0
 
@@ -80,7 +80,7 @@
 
 
 # virtual methods
-.method protected onAttachedToWindow()V
+.method public onAttachedToWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method protected onDetachedFromWindow()V
+.method public onDetachedFromWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method protected onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 6
 
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method setOnAttachStateChangeListener(Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;)V
+.method public setOnAttachStateChangeListener(Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->mOnAttachStateChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnAttachStateChangeListener;
@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method setOnLayoutChangeListener(Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;)V
+.method public setOnLayoutChangeListener(Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->mOnLayoutChangeListener:Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;

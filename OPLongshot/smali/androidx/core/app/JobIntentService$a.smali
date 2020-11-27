@@ -1,6 +1,6 @@
-.class interface abstract Landroidx/core/app/JobIntentService$a;
+.class public interface abstract Landroidx/core/app/JobIntentService$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,14 +9,14 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
 
 # virtual methods
-.method public abstract a()V
+.method public abstract compatGetBinder()Landroid/os/IBinder;
 .end method
 
-.method public abstract getIntent()Landroid/content/Intent;
+.method public abstract dequeueWork()Landroidx/core/app/JobIntentService$d;
 .end method

@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/ripple/RippleDrawableCompat;
 .super Landroid/graphics/drawable/Drawable;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Lcom/google/android/material/shape/j;
+.implements Lc/b/b/b/f0/j;
 .implements Landroidx/core/graphics/drawable/TintAwareDrawable;
 
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field private drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$b;
+.field public drawableState:Lcom/google/android/material/ripple/RippleDrawableCompat$b;
 
 
 # direct methods
-.method private constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$b;)V
+.method public constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$b;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$b;Lcom/google/android/material/ripple/RippleDrawableCompat$a;)V
+.method public synthetic constructor <init>(Lcom/google/android/material/ripple/RippleDrawableCompat$b;Lcom/google/android/material/ripple/RippleDrawableCompat$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/ripple/RippleDrawableCompat;-><init>(Lcom/google/android/material/ripple/RippleDrawableCompat$b;)V
@@ -155,7 +155,7 @@
     return-object p0
 .end method
 
-.method protected onBoundsChange(Landroid/graphics/Rect;)V
+.method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
     .param p1    # Landroid/graphics/Rect;
         .annotation build Landroidx/annotation/NonNull;
@@ -173,7 +173,7 @@
     return-void
 .end method
 
-.method protected onStateChange([I)Z
+.method public onStateChange([I)Z
     .locals 4
     .param p1    # [I
         .annotation build Landroidx/annotation/NonNull;

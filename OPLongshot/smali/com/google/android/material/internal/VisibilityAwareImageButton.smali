@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/VisibilityAwareImageButton;
 .super Landroid/widget/ImageButton;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private userSetVisibility:I
+.field public userSetVisibility:I
 
 
 # direct methods

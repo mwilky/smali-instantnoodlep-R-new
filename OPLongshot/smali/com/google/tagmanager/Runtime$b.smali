@@ -1,240 +1,89 @@
-.class Lcom/google/tagmanager/Runtime$b;
+.class public Lcom/google/tagmanager/Runtime$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/tagmanager/Runtime$c;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/tagmanager/Runtime;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/tagmanager/Runtime;->g(Ljava/util/Set;Lc/b/c/b2;)Lcom/google/tagmanager/ObjectAndStatic;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
-    name = "b"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
-# instance fields
-.field private final a:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/tagmanager/s0$f;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/s0$f;",
-            "Ljava/util/List<",
-            "Lcom/google/tagmanager/s0$b;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private final c:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/s0$f;",
-            "Ljava/util/List<",
-            "Lcom/google/tagmanager/s0$b;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private final d:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/s0$f;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private final e:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/tagmanager/s0$f;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/tagmanager/Runtime;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime$b;->a:Ljava/util/Set;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime$b;->b:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime$b;->d:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime$b;->c:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/tagmanager/Runtime$b;->e:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/google/tagmanager/s0$f;Lcom/google/tagmanager/s0$b;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$b;->b:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime$b;->b:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public b(Lcom/google/tagmanager/s0$f;Ljava/lang/String;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$b;->d:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime$b;->d:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public c(Lcom/google/tagmanager/s0$f;Lcom/google/tagmanager/s0$b;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$b;->c:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime$b;->c:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public d(Lcom/google/tagmanager/s0$f;Ljava/lang/String;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$b;->e:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime$b;->e:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public e(Lcom/google/tagmanager/s0$f;)V
+.method public a(Lc/b/c/a2$f;Ljava/util/Set;Ljava/util/Set;Lc/b/c/z1;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lc/b/c/a2$f;",
+            "Ljava/util/Set<",
+            "Lc/b/c/a2$b;",
+            ">;",
+            "Ljava/util/Set<",
+            "Lc/b/c/a2$b;",
+            ">;",
+            "Lc/b/c/z1;",
+            ")V"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$b;->a:Ljava/util/Set;
+    invoke-virtual {p1}, Lc/b/c/a2$f;->d()Ljava/util/List;
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-interface {p2, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-.method public f(Lcom/google/tagmanager/s0$b;)V
-    .locals 0
+    invoke-virtual {p1}, Lc/b/c/a2$f;->j()Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-interface {p3, p2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    invoke-interface {p4}, Lc/b/c/z1;->e()Lc/b/c/x1;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Lc/b/c/a2$f;->d()Ljava/util/List;
+
+    move-result-object p3
+
+    invoke-virtual {p1}, Lc/b/c/a2$f;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {p2, p3, v0}, Lc/b/c/x1;->a(Ljava/util/List;Ljava/util/List;)V
+
+    invoke-interface {p4}, Lc/b/c/z1;->b()Lc/b/c/x1;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Lc/b/c/a2$f;->j()Ljava/util/List;
+
+    move-result-object p3
+
+    invoke-virtual {p1}, Lc/b/c/a2$f;->i()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p2, p3, p1}, Lc/b/c/x1;->a(Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method

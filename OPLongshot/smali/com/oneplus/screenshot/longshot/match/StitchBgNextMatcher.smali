@@ -1,20 +1,20 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchBgNextMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "StitchBgNextMatcher"
+.field public static final TAG:Ljava/lang/String; = "StitchBgNextMatcher"
 
 
 # instance fields
-.field private mDensity:F
+.field public mDensity:F
 
-.field private mExtend:I
+.field public mExtend:I
 
-.field private mPeak:D
+.field public mPeak:D
 
-.field private mPos:Landroid/graphics/Point;
+.field public mPos:Landroid/graphics/Point;
 
 
 # direct methods
@@ -620,7 +620,7 @@
 
 
 # virtual methods
-.method protected canDump()Z
+.method public canDump()Z
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;->NEXT:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
@@ -632,7 +632,7 @@
     return v0
 .end method
 
-.method protected createDumper()V
+.method public createDumper()V
     .locals 5
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/dump/NextDumper;
@@ -684,7 +684,7 @@
     return-void
 .end method
 
-.method protected getTag()Ljava/lang/String;
+.method public getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "StitchBgNext"

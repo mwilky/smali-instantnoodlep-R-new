@@ -1,6 +1,6 @@
 .class public Landroidx/preference/PreferenceGroupAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/preference/Preference$b;
@@ -22,7 +22,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Landroidx/preference/f;",
+        "Lb/n/f;",
         ">;",
         "Landroidx/preference/Preference$b;",
         "Ljava/lang/Object;"
@@ -31,11 +31,11 @@
 
 
 # instance fields
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field private mPreferenceGroup:Landroidx/preference/PreferenceGroup;
+.field public mPreferenceGroup:Landroidx/preference/PreferenceGroup;
 
-.field private mPreferenceResourceDescriptors:Ljava/util/List;
+.field public mPreferenceResourceDescriptors:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field private mPreferences:Ljava/util/List;
+.field public mPreferences:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -55,9 +55,9 @@
     .end annotation
 .end field
 
-.field private mSyncRunnable:Ljava/lang/Runnable;
+.field public mSyncRunnable:Ljava/lang/Runnable;
 
-.field private mVisiblePreferences:Ljava/util/List;
+.field public mVisiblePreferences:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -112,30 +112,32 @@
 
     iget-object p1, p0, Landroidx/preference/PreferenceGroupAdapter;->mPreferenceGroup:Landroidx/preference/PreferenceGroup;
 
-    instance-of v0, p1, Landroidx/preference/e;
+    instance-of v0, p1, Lb/n/e;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroidx/preference/e;
+    check-cast p1, Lb/n/e;
 
-    invoke-virtual {p1}, Landroidx/preference/e;->h()Z
+    invoke-virtual {p1}, Lb/n/e;->h()Z
 
     move-result p1
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x1
 
-    :goto_0
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
+    :goto_0
     invoke-virtual {p0}, Landroidx/preference/PreferenceGroupAdapter;->updatePreferences()V
 
     return-void
 .end method
 
-.method private createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Landroidx/preference/b;
+.method private createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Lb/n/b;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -144,11 +146,11 @@
             "Ljava/util/List<",
             "Landroidx/preference/Preference;",
             ">;)",
-            "Landroidx/preference/b;"
+            "Lb/n/b;"
         }
     .end annotation
 
-    new-instance v0, Landroidx/preference/b;
+    new-instance v0, Lb/n/b;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -158,7 +160,7 @@
 
     move-result-wide v2
 
-    invoke-direct {v0, v1, p2, v2, v3}, Landroidx/preference/b;-><init>(Landroid/content/Context;Ljava/util/List;J)V
+    invoke-direct {v0, v1, p2, v2, v3}, Lb/n/b;-><init>(Landroid/content/Context;Ljava/util/List;J)V
 
     new-instance p2, Landroidx/preference/PreferenceGroupAdapter$c;
 
@@ -351,7 +353,7 @@
 
     if-le v4, v2, :cond_b
 
-    invoke-direct {p0, p1, v1}, Landroidx/preference/PreferenceGroupAdapter;->createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Landroidx/preference/b;
+    invoke-direct {p0, p1, v1}, Landroidx/preference/PreferenceGroupAdapter;->createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Lb/n/b;
 
     move-result-object p1
 
@@ -652,9 +654,23 @@
     return p1
 .end method
 
-.method public onBindViewHolder(Landroidx/preference/f;I)V
+.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
     .locals 0
-    .param p1    # Landroidx/preference/f;
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    check-cast p1, Lb/n/f;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onBindViewHolder(Lb/n/f;I)V
+
+    return-void
+.end method
+
+.method public onBindViewHolder(Lb/n/f;I)V
+    .locals 0
+    .param p1    # Lb/n/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -663,26 +679,28 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/f;)V
+    invoke-virtual {p2, p1}, Landroidx/preference/Preference;->onBindViewHolder(Lb/n/f;)V
 
     return-void
 .end method
 
-.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$y;I)V
+.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
     .locals 0
-    .param p1    # Landroidx/recyclerview/widget/RecyclerView$y;
+    .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    check-cast p1, Landroidx/preference/f;
+    invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lb/n/f;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onBindViewHolder(Landroidx/preference/f;I)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/preference/f;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lb/n/f;
     .locals 4
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -711,7 +729,7 @@
 
     move-result-object v1
 
-    sget-object v2, Landroidx/preference/m;->BackgroundStyle:[I
+    sget-object v2, Lb/n/m;->BackgroundStyle:[I
 
     const/4 v3, 0x0
 
@@ -719,7 +737,7 @@
 
     move-result-object v1
 
-    sget v2, Landroidx/preference/m;->BackgroundStyle_android_selectableItemBackground:I
+    sget v2, Lb/n/m;->BackgroundStyle_android_selectableItemBackground:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -782,27 +800,11 @@
 
     :cond_3
     :goto_0
-    new-instance p2, Landroidx/preference/f;
+    new-instance p2, Lb/n/f;
 
-    invoke-direct {p2, p1}, Landroidx/preference/f;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lb/n/f;-><init>(Landroid/view/View;)V
 
     return-object p2
-.end method
-
-.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
-    .locals 0
-    .param p1    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/preference/f;
-
-    move-result-object p1
-
-    return-object p1
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;)V
@@ -850,7 +852,7 @@
     return-void
 .end method
 
-.method updatePreferences()V
+.method public updatePreferences()V
     .locals 4
 
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mPreferences:Ljava/util/List;
@@ -907,25 +909,25 @@
 
     iget-object v2, p0, Landroidx/preference/PreferenceGroupAdapter;->mPreferenceGroup:Landroidx/preference/PreferenceGroup;
 
-    invoke-virtual {v2}, Landroidx/preference/Preference;->getPreferenceManager()Landroidx/preference/d;
+    invoke-virtual {v2}, Landroidx/preference/Preference;->getPreferenceManager()Lb/n/d;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Landroidx/preference/d;->f()Landroidx/preference/d$c;
+    invoke-virtual {v2}, Lb/n/d;->f()Lb/n/d$c;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v2}, Landroidx/preference/d;->f()Landroidx/preference/d$c;
+    invoke-virtual {v2}, Lb/n/d;->f()Lb/n/d$c;
 
     move-result-object v2
 
     new-instance v3, Landroidx/preference/PreferenceGroupAdapter$b;
 
-    invoke-direct {v3, p0, v0, v1, v2}, Landroidx/preference/PreferenceGroupAdapter$b;-><init>(Landroidx/preference/PreferenceGroupAdapter;Ljava/util/List;Ljava/util/List;Landroidx/preference/d$c;)V
+    invoke-direct {v3, p0, v0, v1, v2}, Landroidx/preference/PreferenceGroupAdapter$b;-><init>(Landroidx/preference/PreferenceGroupAdapter;Ljava/util/List;Ljava/util/List;Lb/n/d$c;)V
 
     invoke-static {v3}, Landroidx/recyclerview/widget/DiffUtil;->a(Landroidx/recyclerview/widget/DiffUtil$a;)Landroidx/recyclerview/widget/DiffUtil$b;
 

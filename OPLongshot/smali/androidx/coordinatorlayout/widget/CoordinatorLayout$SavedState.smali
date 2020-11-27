@@ -1,6 +1,6 @@
 .class public Landroidx/coordinatorlayout/widget/CoordinatorLayout$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xc
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field a:Landroid/util/SparseArray;
+.field public a:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$SavedState$1;

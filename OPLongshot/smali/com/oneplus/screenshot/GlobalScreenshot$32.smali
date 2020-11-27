@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$32;
+.class public Lcom/oneplus/screenshot/GlobalScreenshot$32;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$32;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
@@ -451,6 +451,8 @@
 
     const-wide/16 v0, 0x320
 
+    invoke-virtual {p2, p1, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
     goto :goto_1
 
     :cond_7
@@ -464,9 +466,9 @@
 
     const-wide/16 v0, 0xfa0
 
-    :goto_1
     invoke-virtual {p2, p1, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    :goto_1
     sget-boolean p1, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
 
     if-nez p1, :cond_9

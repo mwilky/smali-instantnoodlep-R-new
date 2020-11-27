@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/TakeScreenshotService;
 .super Landroid/app/Service;
-.source ""
+.source "SourceFile"
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.TakeScreenshotService"
+.field public static final TAG:Ljava/lang/String; = "Longshot.TakeScreenshotService"
 
-.field private static final VOICE_SCREENSHOT:I = 0x64
+.field public static final VOICE_SCREENSHOT:I = 0x64
 
-.field private static mScreenshot:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field public static mScreenshot:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 
 # instance fields
-.field private final TAKE_SCREENSHOT_FULLSCREEN:I
+.field public final TAKE_SCREENSHOT_FULLSCREEN:I
 
-.field private final TAKE_SCREENSHOT_SELECTED_REGION:I
+.field public final TAKE_SCREENSHOT_SELECTED_REGION:I
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
 
 # direct methods
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method static synthetic access$000()Lcom/oneplus/screenshot/GlobalScreenshot;
+.method public static synthetic access$000()Lcom/oneplus/screenshot/GlobalScreenshot;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/TakeScreenshotService;->mScreenshot:Lcom/oneplus/screenshot/GlobalScreenshot;
@@ -50,7 +50,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/GlobalScreenshot;
+.method public static synthetic access$002(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/GlobalScreenshot;
     .locals 0
 
     sput-object p0, Lcom/oneplus/screenshot/TakeScreenshotService;->mScreenshot:Lcom/oneplus/screenshot/GlobalScreenshot;

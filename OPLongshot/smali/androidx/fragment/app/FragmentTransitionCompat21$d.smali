@@ -1,6 +1,6 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21$d;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21$d;
 .super Landroid/transition/Transition$EpicenterCallback;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/graphics/Rect;
+.field public final synthetic a:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$d;->a:Landroid/graphics/Rect;

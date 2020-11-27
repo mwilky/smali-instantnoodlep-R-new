@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/VectorEnabledTintResources;
 .super Landroid/content/res/Resources;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -14,11 +14,11 @@
 # static fields
 .field public static final MAX_SDK_WHERE_REQUIRED:I = 0x14
 
-.field private static sCompatVectorFromResourcesEnabled:Z = false
+.field public static sCompatVectorFromResourcesEnabled:Z = false
 
 
 # instance fields
-.field private final mContextRef:Ljava/lang/ref/WeakReference;
+.field public final mContextRef:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -145,7 +145,7 @@
     return-object p1
 .end method
 
-.method final superGetDrawable(I)Landroid/graphics/drawable/Drawable;
+.method public final superGetDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 0
 
     invoke-super {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

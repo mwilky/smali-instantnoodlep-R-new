@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/appbar/Appbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field a:Z
+.field public a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/appbar/Appbar$SavedState$1;

@@ -1,6 +1,6 @@
-.class abstract Lcom/google/android/material/internal/NavigationMenuPresenter$k;
+.class public abstract Lcom/google/android/material/internal/NavigationMenuPresenter$k;
 .super Landroidx/recyclerview/widget/RecyclerView$y;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40a
+    accessFlags = 0x409
     name = "k"
 .end annotation
 

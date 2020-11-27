@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/snackbar/Snackbar;
 .super Lcom/google/android/material/snackbar/BaseTransientBottomBar;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -21,18 +21,18 @@
 
 
 # static fields
-.field private static final SNACKBAR_BUTTON_STYLE_ATTR:[I
+.field public static final SNACKBAR_BUTTON_STYLE_ATTR:[I
 
-.field private static final SNACKBAR_CONTENT_STYLE_ATTRS:[I
+.field public static final SNACKBAR_CONTENT_STYLE_ATTRS:[I
 
 
 # instance fields
-.field private final accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+.field public final accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private callback:Lcom/google/android/material/snackbar/BaseTransientBottomBar$BaseCallback;
+.field public callback:Lcom/google/android/material/snackbar/BaseTransientBottomBar$BaseCallback;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -45,18 +45,18 @@
     .end annotation
 .end field
 
-.field private hasAction:Z
+.field public hasAction:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     const/4 v0, 0x1
 
     new-array v1, v0, [I
 
-    sget v2, Lb/a/b/a/b;->snackbarButtonStyle:I
+    sget v2, Lc/b/b/b/b;->snackbarButtonStyle:I
 
     const/4 v3, 0x0
 
@@ -70,7 +70,7 @@
 
     aput v2, v1, v3
 
-    sget v2, Lb/a/b/a/b;->snackbarTextViewStyle:I
+    sget v2, Lc/b/b/b/b;->snackbarTextViewStyle:I
 
     aput v2, v1, v0
 
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/a;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
     .locals 0
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -89,12 +89,12 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lcom/google/android/material/snackbar/a;
+    .param p3    # Lc/b/b/b/h0/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -113,7 +113,7 @@
     return-void
 .end method
 
-.method private static findSuitableParent(Landroid/view/View;)Landroid/view/ViewGroup;
+.method public static findSuitableParent(Landroid/view/View;)Landroid/view/ViewGroup;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -233,7 +233,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/a/b/a/h;->design_layout_snackbar_include:I
+    sget v1, Lc/b/b/b/h;->design_layout_snackbar_include:I
 
     const/4 v2, 0x0
 
@@ -245,7 +245,7 @@
 
     const-string v1, "OP_FEATURE_HOLE_PUNCH_FRONT_CAM"
 
-    invoke-static {v1}, Lb/b/a/h;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lc/c/a/i;->b(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -277,7 +277,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/a/b/a/d;->design_snackbar_padding_vertical_2lines:I
+    sget v2, Lc/b/b/b/d;->design_snackbar_padding_vertical_2lines:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -338,7 +338,7 @@
     :goto_0
     new-instance v1, Lcom/google/android/material/snackbar/Snackbar;
 
-    invoke-direct {v1, p0, v0, v0}, Lcom/google/android/material/snackbar/Snackbar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/a;)V
+    invoke-direct {v1, p0, v0, v0}, Lcom/google/android/material/snackbar/Snackbar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
 
     invoke-virtual {v1, p1}, Lcom/google/android/material/snackbar/Snackbar;->setText(Ljava/lang/CharSequence;)Lcom/google/android/material/snackbar/Snackbar;
 

@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/slider/Slider$SliderState;
+.class public Lcom/google/android/material/slider/Slider$SliderState;
 .super Landroid/view/View$BaseSavedState;
-.source ""
+.source "SourceFile"
 
 
 # static fields
@@ -16,21 +16,21 @@
 
 
 # instance fields
-.field a:F
+.field public a:F
 
-.field b:F
+.field public b:F
 
-.field c:F
+.field public c:F
 
-.field d:F
+.field public d:F
 
-.field e:[F
+.field public e:[F
 
-.field f:Z
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/slider/Slider$SliderState$1;
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/slider/a;)V
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lc/b/b/b/g0/a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/slider/Slider$SliderState;-><init>(Landroid/os/Parcel;)V

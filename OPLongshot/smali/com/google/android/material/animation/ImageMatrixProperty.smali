@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ImageMatrixProperty;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final matrix:Landroid/graphics/Matrix;
+.field public final matrix:Landroid/graphics/Matrix;
 
 
 # direct methods

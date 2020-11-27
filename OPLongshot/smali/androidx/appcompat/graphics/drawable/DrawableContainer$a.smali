@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/graphics/drawable/DrawableContainer$a;
+.class public Landroidx/appcompat/graphics/drawable/DrawableContainer$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
+.field public final synthetic a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/graphics/drawable/DrawableContainer;)V
+.method public constructor <init>(Landroidx/appcompat/graphics/drawable/DrawableContainer;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$a;->a:Landroidx/appcompat/graphics/drawable/DrawableContainer;

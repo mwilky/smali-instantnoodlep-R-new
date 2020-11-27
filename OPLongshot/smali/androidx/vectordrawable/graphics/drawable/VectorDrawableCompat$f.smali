@@ -1,6 +1,6 @@
-.class abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;
+.class public abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;
 .super Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40a
+    accessFlags = 0x409
     name = "f"
 .end annotation
 
 
 # instance fields
-.field protected a:[Landroidx/core/graphics/e$b;
+.field public a:[Lb/h/f/e$b;
 
-.field b:Ljava/lang/String;
+.field public b:Ljava/lang/String;
 
-.field c:I
+.field public c:I
 
-.field d:I
+.field public d:I
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     invoke-direct {p0, v0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;-><init>(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;)V
 
-    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     const/4 v0, 0x0
 
@@ -48,7 +48,7 @@
 
     invoke-direct {p0, v0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;-><init>(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;)V
 
-    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     const/4 v0, 0x0
 
@@ -62,13 +62,13 @@
 
     iput v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->d:I
 
-    iget-object p1, p1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iget-object p1, p1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
-    invoke-static {p1}, Landroidx/core/graphics/e;->f([Landroidx/core/graphics/e$b;)[Landroidx/core/graphics/e$b;
+    invoke-static {p1}, Lb/h/f/e;->f([Lb/h/f/e$b;)[Lb/h/f/e$b;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     return-void
 .end method
@@ -88,20 +88,20 @@
 
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
-    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/e$b;->e([Landroidx/core/graphics/e$b;Landroid/graphics/Path;)V
+    invoke-static {v0, p1}, Lb/h/f/e$b;->e([Lb/h/f/e$b;Landroid/graphics/Path;)V
 
     :cond_0
     return-void
 .end method
 
-.method public getPathData()[Landroidx/core/graphics/e$b;
+.method public getPathData()[Lb/h/f/e$b;
     .locals 1
 
-    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     return-object v0
 .end method
@@ -114,29 +114,29 @@
     return-object v0
 .end method
 
-.method public setPathData([Landroidx/core/graphics/e$b;)V
+.method public setPathData([Lb/h/f/e$b;)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/e;->b([Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)Z
+    invoke-static {v0, p1}, Lb/h/f/e;->b([Lb/h/f/e$b;[Lb/h/f/e$b;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Landroidx/core/graphics/e;->f([Landroidx/core/graphics/e$b;)[Landroidx/core/graphics/e$b;
+    invoke-static {p1}, Lb/h/f/e;->f([Lb/h/f/e$b;)[Lb/h/f/e$b;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Landroidx/core/graphics/e$b;
+    iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
 
-    invoke-static {v0, p1}, Landroidx/core/graphics/e;->k([Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)V
+    invoke-static {v0, p1}, Lb/h/f/e;->k([Lb/h/f/e$b;[Lb/h/f/e$b;)V
 
     :goto_0
     return-void

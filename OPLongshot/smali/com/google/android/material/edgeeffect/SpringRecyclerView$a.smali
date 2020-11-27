@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
+.class public Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
 .super Landroid/widget/EdgeEffect;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "a"
 .end annotation

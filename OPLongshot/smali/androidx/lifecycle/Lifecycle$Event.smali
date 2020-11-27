@@ -1,6 +1,6 @@
 .class public final enum Landroidx/lifecycle/Lifecycle$Event;
 .super Ljava/lang/Enum;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/lifecycle/Lifecycle$Event;
+.field public static final synthetic $VALUES:[Landroidx/lifecycle/Lifecycle$Event;
 
 .field public static final enum ON_ANY:Landroidx/lifecycle/Lifecycle$Event;
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 10
 
     new-instance v0, Landroidx/lifecycle/Lifecycle$Event;
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

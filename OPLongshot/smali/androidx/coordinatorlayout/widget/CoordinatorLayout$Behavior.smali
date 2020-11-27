@@ -1,6 +1,6 @@
 .class public abstract Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -235,7 +235,7 @@
     return p1
 .end method
 
-.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
+.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
     .locals 0
     .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
         .annotation build Landroidx/annotation/NonNull;
@@ -245,7 +245,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/core/view/x;
+    .param p3    # Lb/h/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -257,9 +257,9 @@
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
             "TV;",
-            "Landroidx/core/view/x;",
+            "Lb/h/l/x;",
             ")",
-            "Landroidx/core/view/x;"
+            "Lb/h/l/x;"
         }
     .end annotation
 

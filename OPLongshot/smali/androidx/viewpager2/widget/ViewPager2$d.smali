@@ -1,51 +1,74 @@
-.class Landroidx/viewpager2/widget/ViewPager2$d;
+.class public Landroidx/viewpager2/widget/ViewPager2$d;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/recyclerview/widget/RecyclerView$m;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/viewpager2/widget/ViewPager2;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/viewpager2/widget/ViewPager2;->a()Landroidx/recyclerview/widget/RecyclerView$m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
-    name = "d"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
-# instance fields
-.field private final a:I
-
-.field private final b:Landroidx/recyclerview/widget/RecyclerView;
-
-
 # direct methods
-.method constructor <init>(ILandroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Landroidx/viewpager2/widget/ViewPager2$d;->a:I
-
-    iput-object p2, p0, Landroidx/viewpager2/widget/ViewPager2$d;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public a(Landroid/view/View;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$d;->b:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget v1, p0, Landroidx/viewpager2/widget/ViewPager2$d;->a:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->smoothScrollToPosition(I)V
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView$l;
+
+    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    if-ne p1, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Pages must fill the whole ViewPager2 (use match_parent)"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b(Landroid/view/View;)V
+    .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method

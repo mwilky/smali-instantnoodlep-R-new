@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/recyclerview/widget/ViewBoundsCheck$ViewBounds;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -1,6 +1,6 @@
-.class final Landroidx/core/view/ViewCompat$3;
+.class public final Landroidx/core/view/ViewCompat$3;
 .super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method constructor <init>(ILjava/lang/Class;I)V
+.method public constructor <init>(ILjava/lang/Class;I)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;-><init>(ILjava/lang/Class;I)V
@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
+.method public frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x1c
@@ -50,7 +50,7 @@
     return-object p1
 .end method
 
-.method bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
+.method public bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x1c
@@ -63,7 +63,7 @@
     return-object p1
 .end method
 
-.method frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
+.method public frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x1c
@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
+.method public bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x1c
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+.method public shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;->booleanNullToFalseEquals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
@@ -103,7 +103,7 @@
     return p1
 .end method
 
-.method bridge synthetic shouldUpdate(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public bridge synthetic shouldUpdate(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
     check-cast p1, Ljava/lang/Boolean;

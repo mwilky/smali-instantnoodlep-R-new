@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/appcompat/app/GestureBarAdapter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

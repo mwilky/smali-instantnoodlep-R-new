@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Comparable;

@@ -1,6 +1,6 @@
-.class Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;
+.class public Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;
 .super Landroid/os/Handler;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Landroid/os/Looper;)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Landroid/os/Looper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
@@ -50,7 +50,7 @@
 
     if-eq v0, p1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
@@ -83,10 +83,9 @@
 
     const/4 v0, 0x4
 
-    :goto_0
     invoke-virtual {p1, v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->onScrollStop(I)V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
@@ -97,12 +96,12 @@
 
     if-ne p1, v3, :cond_2
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
     move v3, v4
 
-    :goto_1
+    :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,7 +269,7 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
     if-eqz v3, :cond_5
@@ -299,9 +298,9 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$1;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    goto/16 :goto_0
+    invoke-virtual {p1, v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->onScrollStop(I)V
 
     :cond_5
-    :goto_2
+    :goto_1
     return-void
 .end method

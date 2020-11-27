@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/internal/StateListAnimator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field private final animationListener:Landroid/animation/Animator$AnimatorListener;
+.field public final animationListener:Landroid/animation/Animator$AnimatorListener;
 
-.field private lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
+.field public lastMatch:Lcom/google/android/material/internal/StateListAnimator$b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field runningAnimator:Landroid/animation/ValueAnimator;
+.field public runningAnimator:Landroid/animation/ValueAnimator;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final tuples:Ljava/util/ArrayList;
+.field public final tuples:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",

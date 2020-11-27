@@ -1,20 +1,20 @@
-.class final Landroidx/transition/ChangeTransform$1;
+.class public final Landroidx/transition/ChangeTransform$1;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/util/Property<",
-        "Landroidx/transition/d;",
+        "Lb/q/d;",
         "[F>;"
     }
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
@@ -27,16 +27,16 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Landroidx/transition/d;
+    check-cast p1, Lb/q/d;
 
-    invoke-virtual {p0, p1}, Landroidx/transition/ChangeTransform$1;->get(Landroidx/transition/d;)[F
+    invoke-virtual {p0, p1}, Landroidx/transition/ChangeTransform$1;->get(Lb/q/d;)[F
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public get(Landroidx/transition/d;)[F
+.method public get(Lb/q/d;)[F
     .locals 0
 
     const/4 p1, 0x0
@@ -44,10 +44,10 @@
     return-object p1
 .end method
 
-.method public set(Landroidx/transition/d;[F)V
+.method public set(Lb/q/d;[F)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Landroidx/transition/d;->c([F)V
+    invoke-virtual {p1, p2}, Lb/q/d;->c([F)V
 
     return-void
 .end method
@@ -55,11 +55,11 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Landroidx/transition/d;
+    check-cast p1, Lb/q/d;
 
     check-cast p2, [F
 
-    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeTransform$1;->set(Landroidx/transition/d;[F)V
+    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeTransform$1;->set(Lb/q/d;[F)V
 
     return-void
 .end method

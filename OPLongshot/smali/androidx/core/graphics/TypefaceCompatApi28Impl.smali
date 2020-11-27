@@ -1,6 +1,6 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi28Impl;
 .super Landroidx/core/graphics/TypefaceCompatApi26Impl;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,11 +16,11 @@
 
 
 # static fields
-.field private static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
+.field public static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
 
-.field private static final DEFAULT_FAMILY:Ljava/lang/String; = "sans-serif"
+.field public static final DEFAULT_FAMILY:Ljava/lang/String; = "sans-serif"
 
-.field private static final RESOLVE_BY_FONT_TABLE:I = -0x1
+.field public static final RESOLVE_BY_FONT_TABLE:I = -0x1
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method protected createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
+.method public createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 5
 
     :try_start_0
@@ -109,7 +109,7 @@
     throw v0
 .end method
 
-.method protected obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method public obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {

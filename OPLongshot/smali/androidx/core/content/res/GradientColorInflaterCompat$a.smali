@@ -1,6 +1,6 @@
-.class final Landroidx/core/content/res/GradientColorInflaterCompat$a;
+.class public final Landroidx/core/content/res/GradientColorInflaterCompat$a;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final a:[I
+.field public final a:[I
 
-.field final b:[F
+.field public final b:[F
 
 
 # direct methods
-.method constructor <init>(II)V
+.method public constructor <init>(II)V
     .locals 3
     .param p1    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -63,7 +63,7 @@
     .end array-data
 .end method
 
-.method constructor <init>(III)V
+.method public constructor <init>(III)V
     .locals 3
     .param p1    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -116,7 +116,7 @@
     .end array-data
 .end method
 
-.method constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
     .locals 4
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;

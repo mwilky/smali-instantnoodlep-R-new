@@ -1,6 +1,6 @@
-.class Lcom/google/android/material/internal/NavigationMenuPresenter$j;
+.class public Lcom/google/android/material/internal/NavigationMenuPresenter$j;
 .super Lcom/google/android/material/internal/NavigationMenuPresenter$k;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "j"
 .end annotation
 
@@ -22,7 +22,7 @@
         .end annotation
     .end param
 
-    sget v0, Lb/a/b/a/h;->design_navigation_item_subheader:I
+    sget v0, Lc/b/b/b/h;->design_navigation_item_subheader:I
 
     const/4 v1, 0x0
 

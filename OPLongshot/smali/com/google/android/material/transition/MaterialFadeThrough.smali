@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialFadeThrough;
 .super Lcom/google/android/material/transition/MaterialTransitionSet;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # static fields
-.field private static final DEFAULT_START_SCALE:F = 0.92f
+.field public static final DEFAULT_START_SCALE:F = 0.92f
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Lcom/google/android/material/transition/MaterialTransitionSet;-><init>()V
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method bridge synthetic getDefaultPrimaryTransition()Landroid/transition/Transition;
+.method public bridge synthetic getDefaultPrimaryTransition()Landroid/transition/Transition;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -66,7 +66,7 @@
     return-object v0
 .end method
 
-.method getDefaultPrimaryTransition()Lcom/google/android/material/transition/FadeThrough;
+.method public getDefaultPrimaryTransition()Lcom/google/android/material/transition/FadeThrough;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -78,7 +78,7 @@
     return-object v0
 .end method
 
-.method getDefaultSecondaryTransition()Landroid/transition/Transition;
+.method public getDefaultSecondaryTransition()Landroid/transition/Transition;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field private a:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;
+.field public a:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;
 
-.field private b:Ljava/util/ArrayList;
+.field public b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -36,13 +36,13 @@
     .end annotation
 .end field
 
-.field private c:J
+.field public c:J
 
-.field private d:J
+.field public d:J
 
-.field private e:J
+.field public e:J
 
-.field private f:J
+.field public f:J
 
 
 # direct methods
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method static e(Landroidx/recyclerview/widget/RecyclerView$y;)I
+.method public static e(Landroidx/recyclerview/widget/RecyclerView$y;)I
     .locals 3
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$y;->j:I
@@ -406,7 +406,7 @@
 .method public abstract u()V
 .end method
 
-.method v(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;)V
+.method public v(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->a:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$b;

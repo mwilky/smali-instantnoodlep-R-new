@@ -1,6 +1,6 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil$b;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
 # static fields
-.field private static i:Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.field public static i:Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
-.field private static final j:Ljava/lang/Object;
+.field public static final j:Ljava/lang/Object;
 
 
 # instance fields
-.field a:Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.field public a:Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
 .field public b:I
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method static a(III)Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.method public static a(III)Landroidx/recyclerview/widget/MessageThreadUtil$b;
     .locals 7
 
     const/4 v3, 0x0
@@ -83,7 +83,7 @@
     return-object p0
 .end method
 
-.method static b(IIIIIILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.method public static b(IIIIIILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
     .locals 3
 
     sget-object v0, Landroidx/recyclerview/widget/MessageThreadUtil$b;->j:Ljava/lang/Object;
@@ -143,7 +143,7 @@
     throw p0
 .end method
 
-.method static c(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.method public static c(IILjava/lang/Object;)Landroidx/recyclerview/widget/MessageThreadUtil$b;
     .locals 7
 
     const/4 v2, 0x0
@@ -169,7 +169,7 @@
 
 
 # virtual methods
-.method d()V
+.method public d()V
     .locals 2
 
     const/4 v0, 0x0

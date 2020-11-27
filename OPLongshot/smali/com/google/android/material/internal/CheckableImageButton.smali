@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/CheckableImageButton;
-.super Landroidx/appcompat/widget/j;
-.source ""
+.super Lb/c/n/j;
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/Checkable;
@@ -21,19 +21,19 @@
 
 
 # static fields
-.field private static final DRAWABLE_STATE_CHECKED:[I
+.field public static final DRAWABLE_STATE_CHECKED:[I
 
 
 # instance fields
-.field private checkable:Z
+.field public checkable:Z
 
-.field private checked:Z
+.field public checked:Z
 
-.field private pressable:Z
+.field public pressable:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -64,7 +64,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, La/a/a;->imageButtonStyle:I
+    sget v0, Lb/c/a;->imageButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/internal/CheckableImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -74,7 +74,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/j;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lb/c/n/j;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x1
 
@@ -86,7 +86,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/internal/CheckableImageButton$a;-><init>(Lcom/google/android/material/internal/CheckableImageButton;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/h/l/a;)V
 
     return-void
 .end method
@@ -150,7 +150,7 @@
     return-object p1
 .end method
 
-.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
     instance-of v0, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;
@@ -177,7 +177,7 @@
     return-void
 .end method
 
-.method protected onSaveInstanceState()Landroid/os/Parcelable;
+.method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

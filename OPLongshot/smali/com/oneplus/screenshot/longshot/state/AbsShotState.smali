@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsShotState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsViewState;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/task/CaptureTask$OnCaptureListener;
@@ -15,33 +15,33 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "Longshot.AbsShotState"
+.field public static final TAG:Ljava/lang/String; = "Longshot.AbsShotState"
 
 
 # instance fields
-.field protected mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field public mBarCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field protected mCaptureDelay:I
+.field public mCaptureDelay:I
 
-.field protected mCaptureRunnable:Ljava/lang/Runnable;
+.field public mCaptureRunnable:Ljava/lang/Runnable;
 
-.field protected mCaptureTask:Lcom/oneplus/screenshot/longshot/task/CaptureTask;
+.field public mCaptureTask:Lcom/oneplus/screenshot/longshot/task/CaptureTask;
 
-.field protected mEffectDelay:I
+.field public mEffectDelay:I
 
-.field protected mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field public mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field protected mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field protected mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field public mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field protected mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+.field public mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-.field protected mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+.field public mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
-.field protected mOffset:I
+.field public mOffset:I
 
-.field protected mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
+.field public mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 
 
 # direct methods
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method protected firstToCache()V
+.method public firstToCache()V
     .locals 5
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
@@ -309,7 +309,7 @@
     throw v1
 .end method
 
-.method protected initDecor(Landroid/widget/FrameLayout;)V
+.method public initDecor(Landroid/widget/FrameLayout;)V
     .locals 4
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Features;->SHOW_SHOT_EFFECT:Lcom/oneplus/screenshot/longshot/util/Features;
@@ -328,7 +328,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080060
+    const v1, 0x7f080061
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -366,7 +366,7 @@
     return v0
 .end method
 
-.method protected onCaptureError()V
+.method public onCaptureError()V
     .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
@@ -393,7 +393,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    const v1, 0x7f10003d
+    const v1, 0x7f100045
 
     const v2, 0x7f0d003e
 
@@ -438,7 +438,7 @@
     return-void
 .end method
 
-.method protected onCaptureSuccess(Landroid/graphics/Bitmap;)V
+.method public onCaptureSuccess(Landroid/graphics/Bitmap;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->recycleBitmap(Landroid/graphics/Bitmap;)V
@@ -446,7 +446,7 @@
     return-void
 .end method
 
-.method protected onEnter()V
+.method public onEnter()V
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
@@ -458,7 +458,7 @@
     return-void
 .end method
 
-.method protected onStatusbarCaptureSuccess(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+.method public onStatusbarCaptureSuccess(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->recycleBitmap(Landroid/graphics/Bitmap;)V
@@ -468,7 +468,7 @@
     return-void
 .end method
 
-.method protected recycleBitmap(Landroid/graphics/Bitmap;)V
+.method public recycleBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -479,7 +479,7 @@
     return-void
 .end method
 
-.method protected startCapture()V
+.method public startCapture()V
     .locals 2
 
     const-string v0, "Longshot.AbsShotState"

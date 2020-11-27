@@ -1,17 +1,17 @@
 .class public Lcom/oneplus/screenshot/ScreenshotApplication;
 .super Landroid/app/Application;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/oneplus/screenshot/util/Cachable;
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String;
 
 
 # instance fields
-.field private mCache:Ljava/util/List;
+.field public mCache:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -21,11 +21,11 @@
     .end annotation
 .end field
 
-.field private mNaviBar:Landroid/graphics/Bitmap;
+.field public mNaviBar:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

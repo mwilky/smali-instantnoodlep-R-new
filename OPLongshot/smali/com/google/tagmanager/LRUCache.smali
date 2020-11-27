@@ -1,6 +1,6 @@
-.class Lcom/google/tagmanager/LRUCache;
+.class public Lcom/google/tagmanager/LRUCache;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/tagmanager/Cache;
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field private lruCache:Landroid/util/LruCache;
+.field public lruCache:Landroid/util/LruCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/LruCache<",
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method constructor <init>(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
+.method public constructor <init>(ILcom/google/tagmanager/CacheFactory$CacheSizeManager;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,6 +1,6 @@
 .class public Landroidx/animation/RectEvaluator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private mRect:Landroid/graphics/Rect;
+.field public mRect:Landroid/graphics/Rect;
 
 
 # direct methods

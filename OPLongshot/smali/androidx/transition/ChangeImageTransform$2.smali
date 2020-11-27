@@ -1,6 +1,6 @@
-.class final Landroidx/transition/ChangeImageTransform$2;
+.class public final Landroidx/transition/ChangeImageTransform$2;
 .super Landroid/util/Property;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
@@ -48,7 +48,7 @@
 .method public set(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
     .locals 0
 
-    invoke-static {p1, p2}, Landroidx/transition/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Lb/q/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

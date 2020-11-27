@@ -1,6 +1,6 @@
-.class abstract Landroidx/animation/PathKeyframes$SimpleKeyframes;
+.class public abstract Landroidx/animation/PathKeyframes$SimpleKeyframes;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/animation/Keyframes;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40a
+    accessFlags = 0x409
     name = "SimpleKeyframes"
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field private final mEmptyFrames:Ljava/util/ArrayList;
+.field public final mEmptyFrames:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/animation/PathKeyframes$a;)V
+.method public synthetic constructor <init>(Landroidx/animation/PathKeyframes$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/animation/PathKeyframes$SimpleKeyframes;-><init>()V

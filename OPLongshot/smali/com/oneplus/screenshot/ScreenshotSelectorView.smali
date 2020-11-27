@@ -1,16 +1,16 @@
 .class public Lcom/oneplus/screenshot/ScreenshotSelectorView;
 .super Landroid/view/View;
-.source ""
+.source "SourceFile"
 
 
 # instance fields
-.field private final mPaintBackground:Landroid/graphics/Paint;
+.field public final mPaintBackground:Landroid/graphics/Paint;
 
-.field private final mPaintSelection:Landroid/graphics/Paint;
+.field public final mPaintSelection:Landroid/graphics/Paint;
 
-.field private mSelectionRect:Landroid/graphics/Rect;
+.field public mSelectionRect:Landroid/graphics/Rect;
 
-.field private mStartPoint:Landroid/graphics/Point;
+.field public mStartPoint:Landroid/graphics/Point;
 
 
 # direct methods

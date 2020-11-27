@@ -1,6 +1,6 @@
 .class public Landroidx/collection/ArrayMap;
 .super Landroidx/collection/SimpleArrayMap;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Map;
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field mCollections:Landroidx/collection/MapCollections;
+.field public mCollections:Landroidx/collection/MapCollections;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 

@@ -1,6 +1,6 @@
-.class final Landroidx/core/app/ActivityRecreator;
+.class public final Landroidx/core/app/ActivityRecreator;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,9 +18,9 @@
 
 
 # static fields
-.field private static final LOG_TAG:Ljava/lang/String; = "ActivityRecreator"
+.field public static final LOG_TAG:Ljava/lang/String; = "ActivityRecreator"
 
-.field protected static final activityThreadClass:Ljava/lang/Class;
+.field public static final activityThreadClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -29,21 +29,21 @@
     .end annotation
 .end field
 
-.field private static final mainHandler:Landroid/os/Handler;
+.field public static final mainHandler:Landroid/os/Handler;
 
-.field protected static final mainThreadField:Ljava/lang/reflect/Field;
+.field public static final mainThreadField:Ljava/lang/reflect/Field;
 
-.field protected static final performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
+.field public static final performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
 
-.field protected static final performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
+.field public static final performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
 
-.field protected static final requestRelaunchActivityMethod:Ljava/lang/reflect/Method;
+.field public static final requestRelaunchActivityMethod:Ljava/lang/reflect/Method;
 
-.field protected static final tokenField:Ljava/lang/reflect/Field;
+.field public static final tokenField:Ljava/lang/reflect/Field;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Landroid/os/Handler;
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method private static getActivityThreadClass()Ljava/lang/Class;
+.method public static getActivityThreadClass()Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -136,7 +136,7 @@
     return-object v0
 .end method
 
-.method private static getMainThreadField()Ljava/lang/reflect/Field;
+.method public static getMainThreadField()Ljava/lang/reflect/Field;
     .locals 2
 
     :try_start_0
@@ -162,7 +162,7 @@
     return-object v0
 .end method
 
-.method private static getPerformStopActivity2Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method public static getPerformStopActivity2Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -213,7 +213,7 @@
     return-object v0
 .end method
 
-.method private static getPerformStopActivity3Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method public static getPerformStopActivity3Params(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -270,7 +270,7 @@
     return-object v0
 .end method
 
-.method private static getRequestRelaunchActivityMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method public static getRequestRelaunchActivityMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -371,7 +371,7 @@
     return-object v1
 .end method
 
-.method private static getTokenField()Ljava/lang/reflect/Field;
+.method public static getTokenField()Ljava/lang/reflect/Field;
     .locals 2
 
     :try_start_0
@@ -397,7 +397,7 @@
     return-object v0
 .end method
 
-.method private static needsRelaunchCall()Z
+.method public static needsRelaunchCall()Z
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -425,7 +425,7 @@
     return v0
 .end method
 
-.method protected static queueOnStopIfNecessary(Ljava/lang/Object;Landroid/app/Activity;)Z
+.method public static queueOnStopIfNecessary(Ljava/lang/Object;Landroid/app/Activity;)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -474,7 +474,7 @@
     return v0
 .end method
 
-.method static recreate(Landroid/app/Activity;)Z
+.method public static recreate(Landroid/app/Activity;)Z
     .locals 9
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;

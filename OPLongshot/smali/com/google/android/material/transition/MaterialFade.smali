@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialFade;
 .super Lcom/google/android/material/transition/MaterialTransitionSet;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -18,17 +18,17 @@
 
 
 # static fields
-.field private static final DEFAULT_DURATION_ENTER:J = 0x96L
+.field public static final DEFAULT_DURATION_ENTER:J = 0x96L
 
-.field private static final DEFAULT_DURATION_ENTER_FADE:J = 0x2dL
+.field public static final DEFAULT_DURATION_ENTER_FADE:J = 0x2dL
 
-.field private static final DEFAULT_DURATION_RETURN:J = 0x4bL
+.field public static final DEFAULT_DURATION_RETURN:J = 0x4bL
 
-.field private static final DEFAULT_START_SCALE:F = 0.8f
+.field public static final DEFAULT_START_SCALE:F = 0.8f
 
 
 # direct methods
-.method private constructor <init>(Z)V
+.method public constructor <init>(Z)V
     .locals 2
 
     invoke-direct {p0}, Lcom/google/android/material/transition/MaterialTransitionSet;-><init>()V
@@ -103,7 +103,7 @@
 
 
 # virtual methods
-.method getDefaultPrimaryTransition()Landroid/transition/Fade;
+.method public getDefaultPrimaryTransition()Landroid/transition/Fade;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -115,7 +115,7 @@
     return-object v0
 .end method
 
-.method bridge synthetic getDefaultPrimaryTransition()Landroid/transition/Transition;
+.method public bridge synthetic getDefaultPrimaryTransition()Landroid/transition/Transition;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -127,7 +127,7 @@
     return-object v0
 .end method
 
-.method getDefaultSecondaryTransition()Landroid/transition/Transition;
+.method public getDefaultSecondaryTransition()Landroid/transition/Transition;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

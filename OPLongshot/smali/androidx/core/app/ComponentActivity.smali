@@ -1,9 +1,9 @@
 .class public Landroidx/core/app/ComponentActivity;
 .super Landroid/app/Activity;
-.source ""
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/lifecycle/e;
+.implements Lb/m/e;
 .implements Landroidx/core/view/KeyEventDispatcher$a;
 
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private mExtraDataMap:Landroidx/collection/SimpleArrayMap;
+.field public mExtraDataMap:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field private mLifecycleRegistry:Landroidx/lifecycle/f;
+.field public mLifecycleRegistry:Lb/m/f;
 
 
 # direct methods
@@ -51,11 +51,11 @@
 
     iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mExtraDataMap:Landroidx/collection/SimpleArrayMap;
 
-    new-instance v0, Landroidx/lifecycle/f;
+    new-instance v0, Lb/m/f;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/f;-><init>(Landroidx/lifecycle/e;)V
+    invoke-direct {v0, p0}, Lb/m/f;-><init>(Lb/m/e;)V
 
-    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Landroidx/lifecycle/f;
+    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
 
     return-void
 .end method
@@ -161,12 +161,12 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Landroidx/lifecycle/f;
+    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
 
     return-object v0
 .end method
 
-.method protected onCreate(Landroid/os/Bundle;)V
+.method public onCreate(Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
@@ -185,7 +185,7 @@
     return-void
 .end method
 
-.method protected onSaveInstanceState(Landroid/os/Bundle;)V
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/NonNull;
@@ -194,11 +194,11 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Landroidx/lifecycle/f;
+    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/f;->k(Landroidx/lifecycle/Lifecycle$State;)V
+    invoke-virtual {v0, v1}, Lb/m/f;->k(Landroidx/lifecycle/Lifecycle$State;)V
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 

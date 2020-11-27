@@ -1,6 +1,6 @@
-.class Landroidx/core/graphics/TypefaceCompatApi21Impl;
+.class public Landroidx/core/graphics/TypefaceCompatApi21Impl;
 .super Landroidx/core/graphics/TypefaceCompatBaseImpl;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -16,19 +16,19 @@
 
 
 # static fields
-.field private static final ADD_FONT_WEIGHT_STYLE_METHOD:Ljava/lang/String; = "addFontWeightStyle"
+.field public static final ADD_FONT_WEIGHT_STYLE_METHOD:Ljava/lang/String; = "addFontWeightStyle"
 
-.field private static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
+.field public static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
 
-.field private static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
+.field public static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
 
-.field private static final TAG:Ljava/lang/String; = "TypefaceCompatApi21Impl"
+.field public static final TAG:Ljava/lang/String; = "TypefaceCompatApi21Impl"
 
-.field private static sAddFontWeightStyle:Ljava/lang/reflect/Method; = null
+.field public static sAddFontWeightStyle:Ljava/lang/reflect/Method; = null
 
-.field private static sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method; = null
+.field public static sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method; = null
 
-.field private static sFontFamily:Ljava/lang/Class; = null
+.field public static sFontFamily:Ljava/lang/Class; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field private static sFontFamilyCtor:Ljava/lang/reflect/Constructor; = null
+.field public static sFontFamilyCtor:Ljava/lang/reflect/Constructor; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -46,17 +46,17 @@
     .end annotation
 .end field
 
-.field private static sHasInitBeenCalled:Z = false
+.field public static sHasInitBeenCalled:Z = false
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatBaseImpl;-><init>()V
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method private static addFontWeightStyle(Ljava/lang/Object;Ljava/lang/String;IZ)Z
+.method public static addFontWeightStyle(Ljava/lang/Object;Ljava/lang/String;IZ)Z
     .locals 3
 
     invoke-static {}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->init()V
@@ -127,7 +127,7 @@
     throw p1
 .end method
 
-.method private static createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
+.method public static createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 4
 
     invoke-static {}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->init()V
@@ -237,7 +237,7 @@
     return-object v0
 .end method
 
-.method private static init()V
+.method public static init()V
     .locals 9
 
     sget-boolean v0, Landroidx/core/graphics/TypefaceCompatApi21Impl;->sHasInitBeenCalled:Z
@@ -360,7 +360,7 @@
     return-void
 .end method
 
-.method private static newFamily()Ljava/lang/Object;
+.method public static newFamily()Ljava/lang/Object;
     .locals 2
 
     invoke-static {}, Landroidx/core/graphics/TypefaceCompatApi21Impl;->init()V
@@ -475,13 +475,15 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-
     if-nez v2, :cond_2
+
+    invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     return-object v4
 
     :cond_2
+    invoke-virtual {v3}, Ljava/io/File;->delete()Z
+
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

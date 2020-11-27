@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionBarOverlayLayout$a;
+.class public Landroidx/appcompat/widget/ActionBarOverlayLayout$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source ""
+.source "SourceFile"
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+.field public final synthetic a:Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActionBarOverlayLayout;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActionBarOverlayLayout;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout$a;->a:Landroidx/appcompat/widget/ActionBarOverlayLayout;

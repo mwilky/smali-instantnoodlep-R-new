@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/menu/ListMenuPresenter;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -22,31 +22,31 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ListMenuPresenter"
+.field public static final TAG:Ljava/lang/String; = "ListMenuPresenter"
 
 .field public static final VIEWS_TAG:Ljava/lang/String; = "android:menu:list"
 
 
 # instance fields
-.field mAdapter:Landroidx/appcompat/view/menu/ListMenuPresenter$a;
+.field public mAdapter:Landroidx/appcompat/view/menu/ListMenuPresenter$a;
 
-.field private mCallback:Landroidx/appcompat/view/menu/MenuPresenter$a;
+.field public mCallback:Landroidx/appcompat/view/menu/MenuPresenter$a;
 
-.field mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field private mId:I
+.field public mId:I
 
-.field mInflater:Landroid/view/LayoutInflater;
+.field public mInflater:Landroid/view/LayoutInflater;
 
-.field mItemIndexOffset:I
+.field public mItemIndexOffset:I
 
-.field mItemLayoutRes:I
+.field public mItemLayoutRes:I
 
-.field mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field public mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field mMenuView:Landroidx/appcompat/view/menu/ExpandedMenuView;
+.field public mMenuView:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-.field mThemeRes:I
+.field public mThemeRes:I
 
 
 # direct methods
@@ -133,7 +133,7 @@
     return v0
 .end method
 
-.method getItemIndexOffset()I
+.method public getItemIndexOffset()I
     .locals 1
 
     iget v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mItemIndexOffset:I
@@ -150,7 +150,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
 
-    sget v1, La/a/g;->abc_expanded_menu_layout:I
+    sget v1, Lb/c/g;->abc_expanded_menu_layout:I
 
     const/4 v2, 0x0
 
@@ -208,10 +208,9 @@
 
     move-result-object p1
 
-    :goto_0
     iput-object p1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mContext:Landroid/content/Context;
@@ -228,10 +227,10 @@
 
     move-result-object p1
 
-    goto :goto_0
+    iput-object p1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
 
     :cond_1
-    :goto_1
+    :goto_0
     iput-object p2, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     iget-object p1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mAdapter:Landroidx/appcompat/view/menu/ListMenuPresenter$a;
@@ -329,13 +328,13 @@
     return p1
 
     :cond_0
-    new-instance v0, Landroidx/appcompat/view/menu/b;
+    new-instance v0, Lb/c/m/d/b;
 
-    invoke-direct {v0, p1}, Landroidx/appcompat/view/menu/b;-><init>(Landroidx/appcompat/view/menu/MenuBuilder;)V
+    invoke-direct {v0, p1}, Lb/c/m/d/b;-><init>(Landroidx/appcompat/view/menu/MenuBuilder;)V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/b;->c(Landroid/os/IBinder;)V
+    invoke-virtual {v0, v1}, Lb/c/m/d/b;->c(Landroid/os/IBinder;)V
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mCallback:Landroidx/appcompat/view/menu/MenuPresenter$a;
 

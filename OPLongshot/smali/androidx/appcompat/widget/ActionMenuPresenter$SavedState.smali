@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;
 .super Ljava/lang/Object;
-.source ""
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -40,7 +40,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/widget/ActionMenuPresenter$SavedState$1;
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
