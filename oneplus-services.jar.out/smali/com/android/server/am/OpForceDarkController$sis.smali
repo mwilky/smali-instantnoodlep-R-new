@@ -53,7 +53,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p1, p2, v1}, Lcom/android/server/am/OpForceDarkController;->access$800(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;Z)Lcom/android/server/am/OpForceDarkController$ssp;
+    invoke-static {p1, p2, v1}, Lcom/android/server/am/OpForceDarkController;->access$700(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;Z)Lcom/android/server/am/OpForceDarkController$ssp;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/OpForceDarkController$sis;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {v2}, Lcom/android/server/am/OpForceDarkController;->access$900(Lcom/android/server/am/OpForceDarkController;)Landroid/app/AppOpsManager;
+    invoke-static {v2}, Lcom/android/server/am/OpForceDarkController;->access$800(Lcom/android/server/am/OpForceDarkController;)Landroid/app/AppOpsManager;
 
     move-result-object v2
 
@@ -81,11 +81,11 @@
 
     move-result v2
 
-    invoke-virtual {p1, v2, v1}, Lcom/android/server/am/OpForceDarkController$ssp;->bvj(II)V
+    invoke-virtual {p1, v2, v1}, Lcom/android/server/am/OpForceDarkController$ssp;->oif(II)V
 
     iget-object v1, p0, Lcom/android/server/am/OpForceDarkController$sis;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {v1, p2}, Lcom/android/server/am/OpForceDarkController;->access$1000(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;)Z
+    invoke-static {v1, p2}, Lcom/android/server/am/OpForceDarkController;->access$900(Lcom/android/server/am/OpForceDarkController;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -121,7 +121,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OpForceDarkController$sis;->zta:Lcom/android/server/am/OpForceDarkController;
 
-    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$900(Lcom/android/server/am/OpForceDarkController;)Landroid/app/AppOpsManager;
+    invoke-static {p0}, Lcom/android/server/am/OpForceDarkController;->access$800(Lcom/android/server/am/OpForceDarkController;)Landroid/app/AppOpsManager;
 
     move-result-object p0
 
@@ -129,7 +129,7 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0, v1}, Lcom/android/server/am/OpForceDarkController$ssp;->bvj(II)V
+    invoke-virtual {p1, p0, v1}, Lcom/android/server/am/OpForceDarkController$ssp;->oif(II)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

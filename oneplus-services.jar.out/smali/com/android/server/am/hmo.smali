@@ -3153,15 +3153,13 @@
 
     iput-object v4, v12, Lcom/android/server/am/StartAppRecorder$zta;->tsu:Ljava/lang/String;
 
-    move/from16 v10, p2
+    iget-object v4, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {v0, v2, v10}, Lcom/android/server/am/hmo;->veq(Ljava/lang/String;I)I
+    iget v14, v4, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    move-result v14
+    const/4 v10, -0x1
 
-    const/4 v15, -0x1
-
-    if-ne v14, v15, :cond_1
+    if-ne v14, v10, :cond_1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3235,7 +3233,7 @@
 
     move-result v5
 
-    if-eq v5, v15, :cond_3
+    if-eq v5, v10, :cond_3
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
@@ -4711,98 +4709,98 @@
 
     move-object/from16 v0, p0
 
-    move/from16 v4, p2
-
     move-object/from16 v1, p4
 
     iget-boolean v2, v0, Lcom/android/server/am/hmo;->zta:Z
 
-    const/4 v8, 0x1
+    const/4 v3, 0x1
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_10
 
     iget-boolean v2, v0, Lcom/android/server/am/hmo;->dma:Z
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_10
 
     iget-boolean v2, v0, Lcom/android/server/am/hmo;->you:Z
 
     if-nez v2, :cond_0
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :cond_0
     if-nez p1, :cond_1
 
     iget-object v2, v0, Lcom/android/server/am/hmo;->igw:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-virtual {v2, v4}, Lcom/android/server/am/AppRecordManagerService;->getPackageNameFromUid(I)Ljava/lang/String;
+    move/from16 v7, p2
+
+    invoke-virtual {v2, v7}, Lcom/android/server/am/AppRecordManagerService;->getPackageNameFromUid(I)Ljava/lang/String;
 
     move-result-object v2
-
-    move-object v15, v2
 
     goto :goto_0
 
     :cond_1
-    move-object/from16 v15, p1
+    move/from16 v7, p2
+
+    move-object/from16 v2, p1
 
     :goto_0
-    iget-object v2, v1, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v7, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v14, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
+    iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->name:Landroid/content/ComponentName;
 
-    invoke-virtual {v1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v15
 
-    new-instance v5, Lcom/android/server/am/StartAppRecorder$zta;
+    new-instance v6, Lcom/android/server/am/StartAppRecorder$zta;
 
-    invoke-direct {v5}, Lcom/android/server/am/StartAppRecorder$zta;-><init>()V
+    invoke-direct {v6}, Lcom/android/server/am/StartAppRecorder$zta;-><init>()V
 
-    iput-object v15, v5, Lcom/android/server/am/StartAppRecorder$zta;->rtg:Ljava/lang/String;
+    iput-object v2, v6, Lcom/android/server/am/StartAppRecorder$zta;->rtg:Ljava/lang/String;
 
-    iput-object v7, v5, Lcom/android/server/am/StartAppRecorder$zta;->ssp:Ljava/lang/String;
+    iput-object v14, v6, Lcom/android/server/am/StartAppRecorder$zta;->ssp:Ljava/lang/String;
 
-    sget-object v1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    sget-object v4, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    iput-object v1, v5, Lcom/android/server/am/StartAppRecorder$zta;->sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    iput-object v4, v6, Lcom/android/server/am/StartAppRecorder$zta;->sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    iput-object v6, v5, Lcom/android/server/am/StartAppRecorder$zta;->cno:Ljava/lang/String;
+    iput-object v15, v6, Lcom/android/server/am/StartAppRecorder$zta;->cno:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Provider: auth="
+    const-string v5, "Provider: auth="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v2, p3
+    move-object/from16 v5, p3
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "; "
+    const-string v8, "; "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    iput-object v1, v5, Lcom/android/server/am/StartAppRecorder$zta;->tsu:Ljava/lang/String;
+    iput-object v4, v6, Lcom/android/server/am/StartAppRecorder$zta;->tsu:Ljava/lang/String;
 
-    invoke-virtual {v0, v7, v4}, Lcom/android/server/am/hmo;->veq(Ljava/lang/String;I)I
+    iget-object v1, v1, Lcom/android/server/am/ContentProviderRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    move-result v3
+    iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    const/4 v1, -0x1
+    const/4 v4, -0x1
 
-    if-ne v3, v1, :cond_3
+    if-ne v1, v4, :cond_3
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4812,283 +4810,274 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v5, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
+    iput-object v1, v6, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
     :cond_2
     :goto_1
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
-    invoke-virtual {v0, v5}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual {v0, v6}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    return v8
+    return v3
 
     :cond_3
-    invoke-virtual {v0, v7}, Lcom/android/server/am/hmo;->a(Ljava/lang/String;)Z
+    invoke-virtual {v0, v14}, Lcom/android/server/am/hmo;->a(Ljava/lang/String;)Z
 
-    move-result v9
+    move-result v8
 
-    if-eqz v9, :cond_4
+    if-eqz v8, :cond_4
 
-    sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
+    sget-object v2, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    iput-object v1, v5, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+    iput-object v2, v6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const-string v1, "StartAppControl: callee is a system app"
+    const-string v2, "StartAppControl: callee is a system app"
 
-    iput-object v1, v5, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
+    iput-object v2, v6, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Lcom/android/server/am/hmo;->c(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
-
-    invoke-static {v3}, Landroid/os/UserHandle;->getAppId(I)I
+    invoke-virtual {v0, v1}, Lcom/android/server/am/hmo;->c(I)Z
 
     move-result v2
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v2, :cond_2
 
-    move-result-object v2
+    iget-object v2, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_4
-    iget-object v9, v0, Lcom/android/server/am/hmo;->qbh:Lcom/android/server/am/StartAppConfigManager;
+    iget-object v8, v0, Lcom/android/server/am/hmo;->qbh:Lcom/android/server/am/StartAppConfigManager;
 
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    move-object v10, v15
+    move-object v9, v2
 
-    move-object v11, v7
+    move-object v10, v14
 
-    move-object v12, v6
+    move-object v11, v15
 
-    move-object/from16 v14, p3
+    move-object/from16 v13, p3
 
-    invoke-virtual/range {v9 .. v14}, Lcom/android/server/am/StartAppConfigManager;->rtg(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual/range {v8 .. v13}, Lcom/android/server/am/StartAppConfigManager;->rtg(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result-object v9
+    move-result-object v11
 
-    const/4 v10, -0x2
+    const/4 v12, -0x2
 
-    if-eqz v9, :cond_5
+    if-eqz v11, :cond_5
 
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v5
 
-    if-eq v2, v1, :cond_5
+    if-eq v5, v4, :cond_5
 
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v5
 
-    if-eq v2, v10, :cond_5
+    if-eq v5, v12, :cond_5
 
-    invoke-direct {v0, v9, v3, v5}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
+    invoke-direct {v0, v11, v1, v6}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v5
 
-    if-eqz v2, :cond_5
+    if-eqz v5, :cond_5
 
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     return v0
 
     :cond_5
-    iget-object v2, v0, Lcom/android/server/am/hmo;->oif:Lcom/android/server/am/StartAppSpecialUidsPolicy;
+    iget-object v5, v0, Lcom/android/server/am/hmo;->oif:Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
-    sget-object v11, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+    sget-object v9, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->tsu:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    move v12, v1
+    move v13, v4
 
-    move-object v1, v2
+    move-object v4, v5
 
-    move-object v2, v15
+    move-object v5, v2
 
-    move v14, v3
+    move-object v10, v6
 
-    move-object v3, v7
+    move-object v6, v14
 
-    move/from16 v4, p2
+    move/from16 v7, p2
 
-    move-object v13, v5
+    move v8, v1
 
-    move v5, v14
+    move-object/from16 p1, v10
 
-    move-object/from16 v16, v6
+    invoke-virtual/range {v4 .. v10}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->cno(Ljava/lang/String;Ljava/lang/String;IILcom/android/server/am/StartAppSpecialUidsPolicy$StartType;Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    move-object v6, v11
+    sget-object v4, Lcom/android/server/am/hmo$tsu;->zta:[I
 
-    move-object v11, v7
+    iget-object v5, v10, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    move-object v7, v13
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual/range {v1 .. v7}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->cno(Ljava/lang/String;Ljava/lang/String;IILcom/android/server/am/StartAppSpecialUidsPolicy$StartType;Lcom/android/server/am/StartAppRecorder$zta;)V
+    move-result v5
 
-    sget-object v1, Lcom/android/server/am/hmo$tsu;->zta:[I
+    aget v4, v4, v5
 
-    iget-object v2, v13, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+    const/16 v16, 0x0
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+    if-eq v4, v3, :cond_d
 
-    move-result v2
+    const/4 v9, 0x2
 
-    aget v1, v1, v2
+    if-eq v4, v9, :cond_8
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v14, v1, v10}, Lcom/android/server/am/hmo;->vdb(Ljava/lang/String;ILcom/android/server/am/StartAppRecorder$zta;)V
 
-    if-eq v1, v8, :cond_e
+    sget-object v4, Lcom/android/server/am/hmo$tsu;->zta:[I
 
-    const/4 v3, 0x2
+    iget-object v5, v10, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    if-eq v1, v3, :cond_b
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-direct {v0, v11, v14, v13}, Lcom/android/server/am/hmo;->vdb(Ljava/lang/String;ILcom/android/server/am/StartAppRecorder$zta;)V
+    move-result v5
 
-    sget-object v1, Lcom/android/server/am/hmo$tsu;->zta:[I
+    aget v4, v4, v5
 
-    iget-object v4, v13, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+    if-eq v4, v3, :cond_b
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    if-eq v4, v9, :cond_8
+
+    if-eqz v11, :cond_7
+
+    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
-    aget v1, v1, v4
+    if-ne v4, v13, :cond_6
 
-    if-eq v1, v8, :cond_c
+    sget-object v4, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->zta:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
 
-    if-eq v1, v3, :cond_b
+    iget v4, v4, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->policy:I
 
-    if-eqz v9, :cond_7
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+    move-result-object v4
 
-    move-result v1
+    invoke-direct {v0, v4, v1, v10}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
 
-    if-ne v1, v12, :cond_6
+    move-result-object v4
 
-    sget-object v1, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->zta:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
+    if-eqz v4, :cond_7
 
-    iget v1, v1, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->policy:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v14, v13}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     return v0
 
     :cond_6
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result v4
 
-    if-ne v1, v10, :cond_7
+    if-ne v4, v12, :cond_7
 
-    sget-object v1, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->tsu:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
+    sget-object v4, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->tsu:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
 
-    iget v1, v1, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->policy:I
+    iget v4, v4, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->policy:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-direct {v0, v1, v14, v13}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
+    invoke-direct {v0, v4, v1, v10}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v4
 
-    if-eqz v1, :cond_7
+    if-eqz v4, :cond_7
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     return v0
 
     :cond_7
-    iget-object v9, v0, Lcom/android/server/am/hmo;->bvj:Lcom/android/server/am/j;
+    iget-object v4, v0, Lcom/android/server/am/hmo;->bvj:Lcom/android/server/am/j;
 
-    move-object v10, v15
+    move-object v5, v2
 
-    move-object/from16 v12, v16
+    move-object v6, v14
 
-    move-object v1, v13
+    move-object v7, v15
 
-    move v13, v14
+    move v8, v1
 
-    move v4, v14
+    move v2, v9
 
-    move-object v14, v1
+    move-object v9, v10
 
-    invoke-virtual/range {v9 .. v14}, Lcom/android/server/am/j;->ssp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual/range {v4 .. v9}, Lcom/android/server/am/j;->ssp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/android/server/am/StartAppRecorder$zta;)V
 
-    sget-object v5, Lcom/android/server/am/hmo$tsu;->zta:[I
+    sget-object v4, Lcom/android/server/am/hmo$tsu;->zta:[I
 
-    iget-object v6, v1, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+    iget-object v5, v10, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v6
+    move-result v5
 
-    aget v5, v5, v6
+    aget v4, v4, v5
 
-    if-eq v5, v8, :cond_9
+    if-eq v4, v3, :cond_9
 
-    if-eq v5, v3, :cond_8
+    if-eq v4, v2, :cond_8
 
-    sget-object v3, Lcom/android/server/am/StartAppRecorder$CanStart;->sis:Lcom/android/server/am/StartAppRecorder$CanStart;
+    sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->sis:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    iput-object v3, v1, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+    iput-object v1, v10, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const-string v3, "StartAppControl: default block"
+    const-string v1, "StartAppControl: default block"
 
-    iput-object v3, v1, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
+    iput-object v1, v10, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
     :cond_8
-    :goto_2
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual {v0, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    return v2
+    return v16
 
     :cond_9
     iget-object v2, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual {v2, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    invoke-virtual {v0, v4}, Lcom/android/server/am/hmo;->c(I)Z
+    invoke-virtual {v0, v1}, Lcom/android/server/am/hmo;->c(I)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_a
+    if-eqz v2, :cond_a
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+    invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1
 
@@ -5099,31 +5088,22 @@
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :cond_a
-    return v8
+    return v3
 
     :cond_b
-    move-object v1, v13
-
-    goto :goto_2
-
-    :cond_c
-    move-object v1, v13
-
-    move v4, v14
-
     iget-object v2, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual {v2, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    invoke-virtual {v0, v4}, Lcom/android/server/am/hmo;->c(I)Z
+    invoke-virtual {v0, v1}, Lcom/android/server/am/hmo;->c(I)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_d
+    if-eqz v2, :cond_c
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+    invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1
 
@@ -5133,57 +5113,53 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    :cond_c
+    return v3
+
     :cond_d
-    return v8
+    iget-object v2, v10, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
+
+    const-string v4, "SpecialUidsPolicy: caller is a system app"
+
+    if-eq v2, v4, :cond_e
+
+    const-string v4, "SpecialUidsPolicy: callee has same uid as caller\'s"
+
+    if-eq v2, v4, :cond_e
+
+    move/from16 v16, v3
 
     :cond_e
-    move-object v1, v13
+    invoke-virtual {v0, v1}, Lcom/android/server/am/hmo;->c(I)Z
 
-    move v4, v14
+    move-result v2
 
-    iget-object v3, v1, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
-
-    const-string v5, "SpecialUidsPolicy: caller is a system app"
-
-    if-eq v3, v5, :cond_f
-
-    const-string v5, "SpecialUidsPolicy: callee has same uid as caller\'s"
-
-    if-eq v3, v5, :cond_f
-
-    move v2, v8
-
-    :cond_f
-    invoke-virtual {v0, v4}, Lcom/android/server/am/hmo;->c(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_10
+    if-eqz v2, :cond_f
 
     iget-object v2, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
-    invoke-static {v4}, Landroid/os/UserHandle;->getAppId(I)I
+    invoke-static {v1}, Landroid/os/UserHandle;->getAppId(I)I
 
-    move-result v3
+    move-result v1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    move v2, v8
+    move/from16 v16, v3
 
-    :cond_10
-    if-eqz v2, :cond_11
+    :cond_f
+    if-eqz v16, :cond_10
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
+    invoke-virtual {v0, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    :cond_11
-    :goto_3
-    return v8
+    :cond_10
+    :goto_2
+    return v3
 .end method
 
 .method public canReceiverGo(Lcom/android/server/am/BroadcastRecord;Lcom/android/server/am/ProcessRecord;)Z
@@ -5199,13 +5175,13 @@
 
     const/4 v9, 0x1
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_13
 
     iget-boolean v2, v0, Lcom/android/server/am/hmo;->dma:Z
 
     if-nez v2, :cond_0
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_0
     iget-object v2, v1, Lcom/android/server/am/BroadcastRecord;->curComponent:Landroid/content/ComponentName;
@@ -5289,13 +5265,25 @@
 
     iput-object v2, v8, Lcom/android/server/am/StartAppRecorder$zta;->tsu:Ljava/lang/String;
 
+    if-eqz v5, :cond_3
+
+    iget-object v2, v5, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
+
+    goto :goto_1
+
+    :cond_3
     invoke-virtual {v0, v3}, Lcom/android/server/am/hmo;->lqr(Ljava/lang/String;)I
 
-    move-result v7
+    move-result v2
+
+    :goto_1
+    move v7, v2
 
     const/4 v2, -0x1
 
-    if-ne v7, v2, :cond_4
+    if-ne v7, v2, :cond_5
 
     sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -5317,20 +5305,20 @@
 
     iput-object v1, v8, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
-    :cond_3
-    :goto_1
+    :cond_4
+    :goto_2
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
     invoke-virtual {v0, v8}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
     return v9
 
-    :cond_4
+    :cond_5
     invoke-virtual {v0, v3}, Lcom/android/server/am/hmo;->a(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_5
+    if-eqz v6, :cond_6
 
     sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -5344,7 +5332,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
@@ -5358,9 +5346,9 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_5
+    :cond_6
     iget-object v10, v0, Lcom/android/server/am/hmo;->qbh:Lcom/android/server/am/StartAppConfigManager;
 
     iget-object v11, v1, Lcom/android/server/am/BroadcastRecord;->callerPackage:Ljava/lang/String;
@@ -5383,25 +5371,25 @@
 
     const/4 v15, -0x2
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_7
 
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
 
-    if-eq v10, v2, :cond_6
+    if-eq v10, v2, :cond_7
 
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
 
-    if-eq v10, v15, :cond_6
+    if-eq v10, v15, :cond_7
 
     invoke-direct {v0, v6, v7, v8}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
 
     move-result-object v10
 
-    if-eqz v10, :cond_6
+    if-eqz v10, :cond_7
 
     invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -5409,7 +5397,7 @@
 
     return v0
 
-    :cond_6
+    :cond_7
     iget-object v10, v0, Lcom/android/server/am/hmo;->oif:Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
     iget-object v11, v1, Lcom/android/server/am/BroadcastRecord;->callerPackage:Ljava/lang/String;
@@ -5440,11 +5428,11 @@
 
     const/4 v11, 0x0
 
-    if-eq v10, v9, :cond_f
+    if-eq v10, v9, :cond_10
 
     const/4 v12, 0x2
 
-    if-eq v10, v12, :cond_c
+    if-eq v10, v12, :cond_d
 
     invoke-direct {v0, v3, v7, v8}, Lcom/android/server/am/hmo;->vdb(Ljava/lang/String;ILcom/android/server/am/StartAppRecorder$zta;)V
 
@@ -5458,17 +5446,17 @@
 
     aget v10, v10, v13
 
-    if-eq v10, v9, :cond_d
+    if-eq v10, v9, :cond_e
 
-    if-eq v10, v12, :cond_c
+    if-eq v10, v12, :cond_d
 
-    if-eqz v6, :cond_8
+    if-eqz v6, :cond_9
 
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
 
-    if-ne v10, v2, :cond_7
+    if-ne v10, v2, :cond_8
 
     sget-object v2, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->zta:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
 
@@ -5482,7 +5470,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -5490,14 +5478,14 @@
 
     return v0
 
-    :cond_7
+    :cond_8
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
     const/4 v6, -0x2
 
-    if-ne v2, v6, :cond_8
+    if-ne v2, v6, :cond_9
 
     sget-object v2, Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;->tsu:Lcom/android/server/am/StartAppConfigManager$ConfigPolicy;
 
@@ -5511,7 +5499,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -5519,7 +5507,7 @@
 
     return v0
 
-    :cond_8
+    :cond_9
     iget-object v2, v0, Lcom/android/server/am/hmo;->bvj:Lcom/android/server/am/j;
 
     iget-object v6, v1, Lcom/android/server/am/BroadcastRecord;->callerPackage:Ljava/lang/String;
@@ -5556,9 +5544,9 @@
 
     aget v1, v1, v2
 
-    if-eq v1, v9, :cond_a
+    if-eq v1, v9, :cond_b
 
-    if-eq v1, v12, :cond_9
+    if-eq v1, v12, :cond_a
 
     sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->sis:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -5568,15 +5556,15 @@
 
     iput-object v1, v10, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
-    :cond_9
-    :goto_2
+    :cond_a
+    :goto_3
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
     invoke-virtual {v0, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
     return v11
 
-    :cond_a
+    :cond_b
     iget-object v1, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
     invoke-virtual {v1, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
@@ -5585,7 +5573,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_c
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
@@ -5599,15 +5587,15 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_b
+    :cond_c
     return v9
 
-    :cond_c
+    :cond_d
     move-object v10, v8
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_d
+    :cond_e
     move v13, v7
 
     move-object v10, v8
@@ -5620,7 +5608,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
@@ -5634,10 +5622,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_e
+    :cond_f
     return v9
 
-    :cond_f
+    :cond_10
     move v13, v7
 
     move-object v10, v8
@@ -5646,20 +5634,20 @@
 
     const-string v2, "SpecialUidsPolicy: caller is a system app"
 
-    if-eq v1, v2, :cond_10
+    if-eq v1, v2, :cond_11
 
     const-string v2, "SpecialUidsPolicy: callee has same uid as caller\'s"
 
-    if-eq v1, v2, :cond_10
+    if-eq v1, v2, :cond_11
 
     move v11, v9
 
-    :cond_10
+    :cond_11
     invoke-virtual {v0, v13}, Lcom/android/server/am/hmo;->c(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_12
 
     iget-object v1, v0, Lcom/android/server/am/hmo;->oxb:Ljava/util/Set;
 
@@ -5675,15 +5663,15 @@
 
     move v11, v9
 
-    :cond_11
-    if-eqz v11, :cond_12
+    :cond_12
+    if-eqz v11, :cond_13
 
     iget-object v0, v0, Lcom/android/server/am/hmo;->ywr:Lcom/android/server/am/StartAppRecorder;
 
     invoke-virtual {v0, v10}, Lcom/android/server/am/StartAppRecorder;->you(Lcom/android/server/am/StartAppRecorder$zta;)V
 
-    :cond_12
-    :goto_3
+    :cond_13
+    :goto_4
     return v9
 .end method
 
@@ -5927,15 +5915,13 @@
 
     iput-object v1, v13, Lcom/android/server/am/StartAppRecorder$zta;->tsu:Ljava/lang/String;
 
-    move/from16 v8, p2
+    iget-object v1, v9, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {v0, v11, v8}, Lcom/android/server/am/hmo;->veq(Ljava/lang/String;I)I
+    iget v15, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    move-result v15
+    const/4 v8, -0x1
 
-    const/4 v1, -0x1
-
-    if-ne v15, v1, :cond_2
+    if-ne v15, v8, :cond_2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5964,9 +5950,9 @@
     :cond_2
     invoke-virtual {v0, v11}, Lcom/android/server/am/hmo;->a(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
     sget-object v1, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -6021,44 +6007,38 @@
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v1
 
-    if-eq v2, v1, :cond_4
+    if-eq v1, v8, :cond_4
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v1
 
-    if-eq v2, v6, :cond_4
+    if-eq v1, v6, :cond_4
 
     invoke-direct {v0, v7, v15, v13}, Lcom/android/server/am/hmo;->cgv(Ljava/lang/Integer;ILcom/android/server/am/StartAppRecorder$zta;)Ljava/lang/Boolean;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     return v0
 
     :cond_4
-    iget-object v2, v0, Lcom/android/server/am/hmo;->oif:Lcom/android/server/am/StartAppSpecialUidsPolicy;
+    iget-object v1, v0, Lcom/android/server/am/hmo;->oif:Lcom/android/server/am/StartAppSpecialUidsPolicy;
 
     sget-object v16, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->you:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
-
-    move v5, v1
-
-    move-object v1, v2
 
     move-object/from16 v2, p1
 
     move-object v3, v11
 
     move/from16 v4, p2
-
-    move v8, v5
 
     move v5, v15
 

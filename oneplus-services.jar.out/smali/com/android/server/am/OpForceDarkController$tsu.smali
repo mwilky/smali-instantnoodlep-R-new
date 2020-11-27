@@ -47,7 +47,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OpForceDarkController;->access$1100(Lcom/android/server/am/OpForceDarkController;Z)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OpForceDarkController;->access$1000(Lcom/android/server/am/OpForceDarkController;Z)V
 
     return-void
 .end method
