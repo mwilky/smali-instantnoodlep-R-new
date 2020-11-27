@@ -39,7 +39,7 @@
 
     const-string v0, "Installer"
 
-    const-string v1, "installd died; reconnecting"
+    const-string/jumbo v1, "installd died; reconnecting"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 

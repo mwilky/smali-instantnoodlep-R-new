@@ -22,7 +22,7 @@
 
 .field private static final LOG:Z = false
 
-.field private static final OP_LOG:Z
+.field private static final OP_LOG:Z = true
 
 .field private static final SYSTEM_PROPERTY_DEVICE_THEME:Ljava/lang/String; = "persist.sys.theme"
 
@@ -167,10 +167,6 @@
     move-result-object v0
 
     sput-object v0, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    sput-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
 
     return-void
 .end method
@@ -379,15 +375,7 @@
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/android/server/UiModeManagerService;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mVrHeadset:Z
-
-    return p1
-.end method
-
-.method static synthetic access$1100(Lcom/android/server/UiModeManagerService;)Z
+.method static synthetic access$1000(Lcom/android/server/UiModeManagerService;)Z
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->setupWizardCompleteForCurrentUser()Z
@@ -397,7 +385,7 @@
     return v0
 .end method
 
-.method static synthetic access$1202(Lcom/android/server/UiModeManagerService;Z)Z
+.method static synthetic access$1102(Lcom/android/server/UiModeManagerService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mSetupWizardComplete:Z
@@ -405,7 +393,7 @@
     return p1
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/UiModeManagerService;)Landroid/database/ContentObserver;
+.method static synthetic access$1200(Lcom/android/server/UiModeManagerService;)Landroid/database/ContentObserver;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mSetupWizardObserver:Landroid/database/ContentObserver;
@@ -413,7 +401,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
+.method static synthetic access$1300(Lcom/android/server/UiModeManagerService;Landroid/content/Context;Landroid/content/res/Resources;I)Z
     .locals 1
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/UiModeManagerService;->updateNightModeFromSettingsLocked(Landroid/content/Context;Landroid/content/res/Resources;I)Z
@@ -423,7 +411,7 @@
     return v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$1400(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->updateSystemProperties()V
@@ -431,7 +419,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$1600(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->updateConfigurationLocked()V
@@ -439,7 +427,7 @@
     return-void
 .end method
 
-.method static synthetic access$1800()Ljava/lang/String;
+.method static synthetic access$1700()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/server/UiModeManagerService;->TAG:Ljava/lang/String;
@@ -447,7 +435,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1900(Lcom/android/server/UiModeManagerService;)Ljava/util/Map;
+.method static synthetic access$1800(Lcom/android/server/UiModeManagerService;)Ljava/util/Map;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mCarModePackagePriority:Ljava/util/Map;
@@ -455,10 +443,18 @@
     return-object v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$1900(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->cancelCustomAlarm()V
+
+    return-void
+.end method
+
+.method static synthetic access$2000(Lcom/android/server/UiModeManagerService;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService;->persistNightMode(I)V
 
     return-void
 .end method
@@ -471,15 +467,7 @@
     return p1
 .end method
 
-.method static synthetic access$2100(Lcom/android/server/UiModeManagerService;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService;->persistNightMode(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$2202(Lcom/android/server/UiModeManagerService;Z)Z
+.method static synthetic access$2102(Lcom/android/server/UiModeManagerService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mOpForceDarkAllow:Z
@@ -487,7 +475,7 @@
     return p1
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/UiModeManagerService;)Z
+.method static synthetic access$2200(Lcom/android/server/UiModeManagerService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/UiModeManagerService;->mOpInForceDarkMode:Z
@@ -495,7 +483,7 @@
     return v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/UiModeManagerService;)Z
+.method static synthetic access$2300(Lcom/android/server/UiModeManagerService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/UiModeManagerService;->mUiModeLocked:Z
@@ -503,7 +491,7 @@
     return v0
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/UiModeManagerService;)Z
+.method static synthetic access$2400(Lcom/android/server/UiModeManagerService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/UiModeManagerService;->mNightModeLocked:Z
@@ -511,7 +499,7 @@
     return v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/UiModeManagerService;)Landroid/app/IUiModeManager$Stub;
+.method static synthetic access$2500(Lcom/android/server/UiModeManagerService;)Landroid/app/IUiModeManager$Stub;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mService:Landroid/app/IUiModeManager$Stub;
@@ -519,7 +507,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2702(Lcom/android/server/UiModeManagerService;Z)Z
+.method static synthetic access$2602(Lcom/android/server/UiModeManagerService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mOverrideNightModeOff:Z
@@ -527,7 +515,7 @@
     return p1
 .end method
 
-.method static synthetic access$2802(Lcom/android/server/UiModeManagerService;Z)Z
+.method static synthetic access$2702(Lcom/android/server/UiModeManagerService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mOverrideNightModeOn:Z
@@ -535,12 +523,20 @@
     return p1
 .end method
 
-.method static synthetic access$2902(Lcom/android/server/UiModeManagerService;I)I
+.method static synthetic access$2802(Lcom/android/server/UiModeManagerService;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/UiModeManagerService;->mOverrideNightModeUser:I
 
     return p1
+.end method
+
+.method static synthetic access$2900(Lcom/android/server/UiModeManagerService;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService;->persistNightModeOverrides(I)V
+
+    return-void
 .end method
 
 .method static synthetic access$300(Lcom/android/server/UiModeManagerService;)I
@@ -551,10 +547,10 @@
     return v0
 .end method
 
-.method static synthetic access$3000(Lcom/android/server/UiModeManagerService;I)V
+.method static synthetic access$3000(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService;->persistNightModeOverrides(I)V
+    invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->applyConfigurationExternallyLocked()V
 
     return-void
 .end method
@@ -567,15 +563,7 @@
     return p1
 .end method
 
-.method static synthetic access$3100(Lcom/android/server/UiModeManagerService;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->applyConfigurationExternallyLocked()V
-
-    return-void
-.end method
-
-.method static synthetic access$3200(Lcom/android/server/UiModeManagerService;)Ljava/time/LocalTime;
+.method static synthetic access$3100(Lcom/android/server/UiModeManagerService;)Ljava/time/LocalTime;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mCustomAutoNightModeStartMilliseconds:Ljava/time/LocalTime;
@@ -583,7 +571,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3202(Lcom/android/server/UiModeManagerService;Ljava/time/LocalTime;)Ljava/time/LocalTime;
+.method static synthetic access$3102(Lcom/android/server/UiModeManagerService;Ljava/time/LocalTime;)Ljava/time/LocalTime;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/UiModeManagerService;->mCustomAutoNightModeStartMilliseconds:Ljava/time/LocalTime;
@@ -591,7 +579,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3300(Lcom/android/server/UiModeManagerService;I)V
+.method static synthetic access$3200(Lcom/android/server/UiModeManagerService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService;->onCustomTimeUpdated(I)V
@@ -599,7 +587,7 @@
     return-void
 .end method
 
-.method static synthetic access$3400(Lcom/android/server/UiModeManagerService;)Ljava/time/LocalTime;
+.method static synthetic access$3300(Lcom/android/server/UiModeManagerService;)Ljava/time/LocalTime;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mCustomAutoNightModeEndMilliseconds:Ljava/time/LocalTime;
@@ -607,7 +595,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3402(Lcom/android/server/UiModeManagerService;Ljava/time/LocalTime;)Ljava/time/LocalTime;
+.method static synthetic access$3302(Lcom/android/server/UiModeManagerService;Ljava/time/LocalTime;)Ljava/time/LocalTime;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/UiModeManagerService;->mCustomAutoNightModeEndMilliseconds:Ljava/time/LocalTime;
@@ -615,7 +603,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3600(Ljava/time/LocalTime;)J
+.method static synthetic access$3500(Ljava/time/LocalTime;)J
     .locals 2
 
     invoke-static {p0}, Lcom/android/server/UiModeManagerService;->toMilliSeconds(Ljava/time/LocalTime;)J
@@ -625,7 +613,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$3700(J)Ljava/time/LocalTime;
+.method static synthetic access$3600(J)Ljava/time/LocalTime;
     .locals 1
 
     invoke-static {p0, p1}, Lcom/android/server/UiModeManagerService;->fromMilliseconds(J)Ljava/time/LocalTime;
@@ -635,7 +623,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3800(Lcom/android/server/UiModeManagerService;)Landroid/content/res/Configuration;
+.method static synthetic access$3700(Lcom/android/server/UiModeManagerService;)Landroid/content/res/Configuration;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
@@ -653,15 +641,7 @@
     return v0
 .end method
 
-.method static synthetic access$500()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    return v0
-.end method
-
-.method static synthetic access$600(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$500(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->registerScreenOffEventLocked()V
@@ -669,7 +649,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$600(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->unregisterScreenOffEventLocked()V
@@ -677,7 +657,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/UiModeManagerService;)Z
+.method static synthetic access$700(Lcom/android/server/UiModeManagerService;)Z
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->resetNightModeOverrideLocked()Z
@@ -687,12 +667,20 @@
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/UiModeManagerService;)V
+.method static synthetic access$800(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->updateCustomTimeLocked()V
 
     return-void
+.end method
+
+.method static synthetic access$902(Lcom/android/server/UiModeManagerService;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/UiModeManagerService;->mVrHeadset:Z
+
+    return p1
 .end method
 
 .method private adjustStatusBarCarModeLocked()V
@@ -882,7 +870,7 @@
 
     iget v1, v1, Landroid/content/res/Configuration;->uiMode:I
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -900,10 +888,6 @@
     const/4 v0, 0x0
 
     :goto_0
-    sget-boolean v1, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    if-eqz v1, :cond_1
-
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -932,7 +916,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -983,7 +966,7 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_2
+    :cond_1
     :goto_1
     return-void
 .end method
@@ -1532,17 +1515,12 @@
 
     const-string v1, "OpUiMode"
 
-    if-eqz v0, :cond_2
-
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
     if-eqz v0, :cond_1
 
     const-string/jumbo v0, "onCustomTimeUpdated updateLocked Immediately"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->unregisterScreenOffEventLocked()V
 
     const/4 v0, 0x0
@@ -1551,16 +1529,11 @@
 
     goto :goto_0
 
-    :cond_2
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    if-eqz v0, :cond_3
-
+    :cond_1
     const-string/jumbo v0, "onCustomTimeUpdated updateLocked Next Screen Off"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->registerScreenOffEventLocked()V
 
     :goto_0
@@ -1885,10 +1858,6 @@
 
     invoke-virtual/range {v4 .. v10}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
 
-    sget-boolean v3, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    if-eqz v3, :cond_1
-
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1921,7 +1890,6 @@
 
     invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
     return-void
 .end method
 
@@ -2643,10 +2611,6 @@
 
     const-string v1, "OpUiMode"
 
-    if-eqz v0, :cond_2
-
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
     if-eqz v0, :cond_1
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2673,18 +2637,13 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, v0}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
     goto :goto_0
 
-    :cond_2
-    sget-boolean v0, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    if-eqz v0, :cond_3
-
+    :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2709,7 +2668,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->registerScreenOffEventLocked()V
 
     :goto_0
@@ -3048,7 +3006,7 @@
 
     iget v1, p0, Lcom/android/server/UiModeManagerService;->mNightMode:I
 
-    invoke-static {v1}, Lcom/android/server/UiModeManagerService$Shell;->access$3500(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/server/UiModeManagerService$Shell;->access$3400(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3343,10 +3301,6 @@
     monitor-enter v0
 
     :try_start_0
-    sget-boolean v1, Lcom/android/server/UiModeManagerService;->OP_LOG:Z
-
-    if-eqz v1, :cond_0
-
     const-string v1, "OpUiMode"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3373,7 +3327,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->resetNightModeOverrideLocked()Z
 
     invoke-direct {p0}, Lcom/android/server/UiModeManagerService;->updateCustomTimeLocked()V

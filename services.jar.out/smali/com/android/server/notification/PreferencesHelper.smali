@@ -8753,7 +8753,7 @@
 .end method
 
 .method public updateNotificationChannel(Ljava/lang/String;ILandroid/app/NotificationChannel;Z)V
-    .locals 10
+    .locals 11
 
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -8772,7 +8772,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_c
 
     iget-object v2, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
 
@@ -8786,13 +8786,13 @@
 
     check-cast v2, Landroid/app/NotificationChannel;
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     invoke-virtual {v2}, Landroid/app/NotificationChannel;->isDeleted()Z
 
     move-result v3
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_b
 
     invoke-virtual {p3}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
 
@@ -8833,162 +8833,177 @@
 
     invoke-virtual {p3, v3}, Landroid/app/NotificationChannel;->setImportanceLockedByOEM(Z)V
 
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->isImportanceLockedByOEM()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v2}, Landroid/app/NotificationChannel;->getImportance()I
-
-    move-result v3
-
-    invoke-virtual {p3, v3}, Landroid/app/NotificationChannel;->setImportance(I)V
-
-    :cond_2
-    iget-boolean v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->defaultAppLockedImportance:Z
-
-    invoke-virtual {p3, v3}, Landroid/app/NotificationChannel;->setImportanceLockedByCriticalDeviceFunction(Z)V
-
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->isImportanceLockedByCriticalDeviceFunction()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
     invoke-virtual {p3}, Landroid/app/NotificationChannel;->getImportance()I
 
     move-result v3
 
-    if-nez v3, :cond_3
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->isImportanceLockedByOEM()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
 
     invoke-virtual {v2}, Landroid/app/NotificationChannel;->getImportance()I
 
-    move-result v3
+    move-result v5
+
+    invoke-virtual {p3, v5}, Landroid/app/NotificationChannel;->setImportance(I)V
+
+    :cond_2
+    const-string v5, "com.oneplus.mms"
+
+    invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
 
     invoke-virtual {p3, v3}, Landroid/app/NotificationChannel;->setImportance(I)V
 
     :cond_3
-    iget-object v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
+    iget-boolean v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->defaultAppLockedImportance:Z
 
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
+    invoke-virtual {p3, v5}, Landroid/app/NotificationChannel;->setImportanceLockedByCriticalDeviceFunction(Z)V
 
-    move-result-object v5
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->isImportanceLockedByCriticalDeviceFunction()Z
 
-    invoke-virtual {v3, v5, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v5
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/PreferencesHelper;->onlyHasDefaultChannel(Ljava/lang/String;I)Z
-
-    move-result v3
-
-    const/4 v5, 0x0
-
-    if-eqz v3, :cond_5
+    if-eqz v5, :cond_4
 
     invoke-virtual {p3}, Landroid/app/NotificationChannel;->getImportance()I
 
-    move-result v3
+    move-result v5
 
-    iput v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->importance:I
-
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canBypassDnd()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const/4 v3, 0x2
-
-    goto :goto_1
-
-    :cond_4
-    move v3, v5
-
-    :goto_1
-    iput v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->priority:I
-
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
-
-    move-result v3
-
-    iput v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->visibility:I
-
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canShowBadge()Z
-
-    move-result v3
-
-    iput-boolean v3, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->showBadge:Z
-
-    :cond_5
-    invoke-virtual {v2, p3}, Landroid/app/NotificationChannel;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_7
-
-    invoke-direct {p0, p3, p1}, Lcom/android/server/notification/PreferencesHelper;->getChannelLog(Landroid/app/NotificationChannel;Ljava/lang/String;)Landroid/metrics/LogMaker;
-
-    move-result-object v3
-
-    if-eqz p4, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move v4, v5
-
-    :goto_2
-    invoke-virtual {v3, v4}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/metrics/LogMaker;)V
-
-    iget-object v4, p0, Lcom/android/server/notification/PreferencesHelper;->mNotificationChannelLogger:Lcom/android/server/notification/NotificationChannelLogger;
-
-    invoke-static {v2}, Lcom/android/server/notification/NotificationChannelLogger;->getLoggingImportance(Landroid/app/NotificationChannel;)I
-
-    move-result v8
-
-    move-object v5, p3
-
-    move v6, p2
-
-    move-object v7, p1
-
-    move v9, p4
-
-    invoke-interface/range {v4 .. v9}, Lcom/android/server/notification/NotificationChannelLogger;->logNotificationChannelModified(Landroid/app/NotificationChannel;ILjava/lang/String;IZ)V
-
-    :cond_7
-    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canBypassDnd()Z
-
-    move-result v3
-
-    iget-boolean v4, p0, Lcom/android/server/notification/PreferencesHelper;->mAreChannelsBypassingDnd:Z
-
-    if-ne v3, v4, :cond_8
+    if-nez v5, :cond_4
 
     invoke-virtual {v2}, Landroid/app/NotificationChannel;->getImportance()I
 
-    move-result v3
+    move-result v5
+
+    invoke-virtual {p3, v5}, Landroid/app/NotificationChannel;->setImportance(I)V
+
+    :cond_4
+    iget-object v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->channels:Landroid/util/ArrayMap;
+
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/notification/PreferencesHelper;->onlyHasDefaultChannel(Ljava/lang/String;I)Z
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    if-eqz v5, :cond_6
 
     invoke-virtual {p3}, Landroid/app/NotificationChannel;->getImportance()I
 
-    move-result v4
+    move-result v5
 
-    if-eq v3, v4, :cond_9
+    iput v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->importance:I
+
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canBypassDnd()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    const/4 v5, 0x2
+
+    goto :goto_1
+
+    :cond_5
+    move v5, v6
+
+    :goto_1
+    iput v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->priority:I
+
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
+
+    move-result v5
+
+    iput v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->visibility:I
+
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canShowBadge()Z
+
+    move-result v5
+
+    iput-boolean v5, v1, Lcom/android/server/notification/PreferencesHelper$PackagePreferences;->showBadge:Z
+
+    :cond_6
+    invoke-virtual {v2, p3}, Landroid/app/NotificationChannel;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    invoke-direct {p0, p3, p1}, Lcom/android/server/notification/PreferencesHelper;->getChannelLog(Landroid/app/NotificationChannel;Ljava/lang/String;)Landroid/metrics/LogMaker;
+
+    move-result-object v5
+
+    if-eqz p4, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    move v4, v6
+
+    :goto_2
+    invoke-virtual {v5, v4}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/metrics/LogMaker;)V
+
+    iget-object v5, p0, Lcom/android/server/notification/PreferencesHelper;->mNotificationChannelLogger:Lcom/android/server/notification/NotificationChannelLogger;
+
+    invoke-static {v2}, Lcom/android/server/notification/NotificationChannelLogger;->getLoggingImportance(Landroid/app/NotificationChannel;)I
+
+    move-result v9
+
+    move-object v6, p3
+
+    move v7, p2
+
+    move-object v8, p1
+
+    move v10, p4
+
+    invoke-interface/range {v5 .. v10}, Lcom/android/server/notification/NotificationChannelLogger;->logNotificationChannelModified(Landroid/app/NotificationChannel;ILjava/lang/String;IZ)V
 
     :cond_8
-    iget-object v3, p0, Lcom/android/server/notification/PreferencesHelper;->mContext:Landroid/content/Context;
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->canBypassDnd()Z
 
-    invoke-virtual {v3}, Landroid/content/Context;->getUserId()I
+    move-result v4
 
-    move-result v3
+    iget-boolean v5, p0, Lcom/android/server/notification/PreferencesHelper;->mAreChannelsBypassingDnd:Z
 
-    invoke-direct {p0, v3}, Lcom/android/server/notification/PreferencesHelper;->updateChannelsBypassingDnd(I)V
+    if-ne v4, v5, :cond_9
+
+    invoke-virtual {v2}, Landroid/app/NotificationChannel;->getImportance()I
+
+    move-result v4
+
+    invoke-virtual {p3}, Landroid/app/NotificationChannel;->getImportance()I
+
+    move-result v5
+
+    if-eq v4, v5, :cond_a
 
     :cond_9
+    iget-object v4, p0, Lcom/android/server/notification/PreferencesHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getUserId()I
+
+    move-result v4
+
+    invoke-direct {p0, v4}, Lcom/android/server/notification/PreferencesHelper;->updateChannelsBypassingDnd(I)V
+
+    :cond_a
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -8997,7 +9012,7 @@
 
     return-void
 
-    :cond_a
+    :cond_b
     :try_start_1
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -9007,7 +9022,7 @@
 
     throw v3
 
-    :cond_b
+    :cond_c
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Invalid package"

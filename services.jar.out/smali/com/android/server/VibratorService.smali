@@ -5925,7 +5925,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_12
 
     if-nez v14, :cond_0
 
@@ -6378,26 +6378,58 @@
 
     move-result v0
 
-    if-le v0, v2, :cond_f
+    if-le v0, v2, :cond_11
 
     invoke-virtual {v1}, Lcom/android/server/VibratorService$Vibration;->isNotification()Z
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_11
 
     invoke-virtual {v1}, Lcom/android/server/VibratorService$Vibration;->isRingtone()Z
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_11
 
     invoke-virtual {v1}, Lcom/android/server/VibratorService$Vibration;->isAlarm()Z
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_11
 
+    const-string v0, "com.tencent.mm"
+
+    invoke-virtual {v0, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    invoke-virtual {v5}, Landroid/os/VibrationAttributes;->getUsage()I
+
+    move-result v0
+
+    const/16 v2, 0x41
+
+    if-eq v0, v2, :cond_11
+
+    :cond_f
+    const-string v0, "com.tencent.mobileqq"
+
+    invoke-virtual {v0, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    invoke-virtual {v5}, Landroid/os/VibrationAttributes;->getUsage()I
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    :cond_10
     const-string v0, "VibratorService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6432,7 +6464,7 @@
 
     return-void
 
-    :cond_f
+    :cond_11
     :try_start_d
     invoke-direct {v10, v1}, Lcom/android/server/VibratorService;->linkVibration(Lcom/android/server/VibratorService$Vibration;)V
 
@@ -6535,7 +6567,7 @@
 
     goto :goto_3
 
-    :cond_10
+    :cond_12
     move-object/from16 v2, p4
 
     move-wide/from16 v19, v8

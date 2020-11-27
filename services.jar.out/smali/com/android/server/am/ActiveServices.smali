@@ -19188,6 +19188,8 @@
 
     check-cast v3, Lcom/android/server/am/ServiceRecord;
 
+    if-eqz v3, :cond_3
+
     iget-object v4, v3, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v4, v4, Landroid/content/pm/ApplicationInfo;->uid:I

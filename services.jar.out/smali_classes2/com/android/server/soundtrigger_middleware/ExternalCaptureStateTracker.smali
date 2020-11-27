@@ -99,8 +99,9 @@
 .end method
 
 .method private setCaptureState(Z)V
-    .locals 2
+    .locals 3
 
+    :try_start_0
     iget-object v0, p0, Lcom/android/server/soundtrigger_middleware/ExternalCaptureStateTracker;->mListener:Ljava/util/function/Consumer;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -108,6 +109,20 @@
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "CaptureStateTracker"
+
+    const-string v2, "Exception caught while setting capture state"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
     return-void
 .end method

@@ -241,7 +241,7 @@
 .method private connect()V
     .locals 5
 
-    const-string v0, "installd"
+    const-string/jumbo v0, "installd"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -293,7 +293,7 @@
     :cond_1
     const-string v1, "Installer"
 
-    const-string v2, "installd not found; trying again"
+    const-string/jumbo v2, "installd not found; trying again"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 

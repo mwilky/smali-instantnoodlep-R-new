@@ -1352,10 +1352,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    if-eqz p1, :cond_0
+
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
-    nop
-
+    :cond_0
     return-void
 
     :catchall_0
@@ -1376,8 +1377,11 @@
     :catchall_1
     move-exception v0
 
+    if-eqz p1, :cond_1
+
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
+    :cond_1
     throw v0
 .end method
 
@@ -1793,13 +1797,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/android/server/policy/WindowManagerPolicy$ScreenOffListener;->onScreenOff()V
 
+    :cond_0
     return-void
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/server/wm/TaskSnapshotController;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/wm/-$$Lambda$TaskSnapshotController$Tj7bQvjfkzsOjJOdJXBpqCZnW1Q;

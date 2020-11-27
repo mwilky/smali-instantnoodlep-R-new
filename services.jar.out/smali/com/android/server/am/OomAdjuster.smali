@@ -9144,12 +9144,17 @@
     sub-int/2addr v1, v2
 
     :goto_0
-    if-ltz v1, :cond_e
+    if-ltz v1, :cond_f
 
     invoke-virtual {p1, v1}, Lcom/android/server/am/ActiveUids;->valueAt(I)Lcom/android/server/am/UidRecord;
 
     move-result-object v3
 
+    if-nez v3, :cond_1
+
+    goto/16 :goto_4
+
+    :cond_1
     const/4 v4, 0x0
 
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
@@ -9158,7 +9163,7 @@
 
     const/16 v6, 0x14
 
-    if-eq v5, v6, :cond_d
+    if-eq v5, v6, :cond_e
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
@@ -9166,24 +9171,24 @@
 
     move-result v7
 
-    if-ne v5, v7, :cond_1
+    if-ne v5, v7, :cond_2
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setCapability:I
 
     iget v7, v3, Lcom/android/server/am/UidRecord;->curCapability:I
 
-    if-ne v5, v7, :cond_1
+    if-ne v5, v7, :cond_2
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
 
     iget-boolean v7, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
 
-    if-eq v5, v7, :cond_d
+    if-eq v5, v7, :cond_e
 
-    :cond_1
+    :cond_2
     sget-boolean v5, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_UID_OBSERVERS:Z
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_3
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -9249,7 +9254,7 @@
 
     invoke-static {v7, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
+    :cond_3
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
     move-result v5
@@ -9260,11 +9265,11 @@
 
     const/4 v7, 0x0
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_6
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
@@ -9272,13 +9277,13 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
-    :cond_3
+    :cond_4
     iput-wide p2, v3, Lcom/android/server/am/UidRecord;->lastBackgroundTime:J
 
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -9291,7 +9296,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_4
+    if-nez v5, :cond_5
 
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -9303,14 +9308,14 @@
 
     invoke-virtual {v5, v8, v9, v10}, Lcom/android/server/am/ActivityManagerService$MainHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    :cond_4
+    :cond_5
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setIdle:Z
 
-    if-nez v5, :cond_7
+    if-nez v5, :cond_8
 
     const/4 v4, 0x2
 
@@ -9318,10 +9323,10 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_7
 
     const/4 v4, 0x4
 
@@ -9331,24 +9336,24 @@
 
     iput-boolean v7, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    :cond_6
+    :cond_7
     const-wide/16 v8, 0x0
 
     iput-wide v8, v3, Lcom/android/server/am/UidRecord;->lastBackgroundTime:J
 
-    :cond_7
+    :cond_8
     :goto_1
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
     const/16 v8, 0xb
 
-    if-le v5, v8, :cond_8
+    if-le v5, v8, :cond_9
 
     move v5, v2
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     move v5, v7
 
     :goto_2
@@ -9356,31 +9361,31 @@
 
     move-result v9
 
-    if-le v9, v8, :cond_9
+    if-le v9, v8, :cond_a
 
     move v7, v2
 
-    :cond_9
-    if-ne v5, v7, :cond_a
+    :cond_a
+    if-ne v5, v7, :cond_b
 
     iget v8, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
-    if-ne v8, v6, :cond_c
+    if-ne v8, v6, :cond_d
 
-    :cond_a
-    if-eqz v7, :cond_b
+    :cond_b
+    if-eqz v7, :cond_c
 
     const/16 v6, 0x8
 
     goto :goto_3
 
-    :cond_b
+    :cond_c
     const/16 v6, 0x10
 
     :goto_3
     or-int/2addr v4, v6
 
-    :cond_c
+    :cond_d
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
     move-result v6
@@ -9429,7 +9434,7 @@
 
     iget-boolean v6, v3, Lcom/android/server/am/UidRecord;->foregroundServices:Z
 
-    if-eqz v6, :cond_d
+    if-eqz v6, :cond_e
 
     iget-object v6, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -9437,7 +9442,7 @@
 
     invoke-virtual {v6, v3}, Lcom/android/server/am/ActiveServices;->foregroundServiceProcStateChangedLocked(Lcom/android/server/am/UidRecord;)V
 
-    :cond_d
+    :cond_e
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v5, v5, Lcom/android/server/am/ActivityManagerService;->mInternal:Landroid/app/ActivityManagerInternal;
@@ -9450,24 +9455,25 @@
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_f
+    :goto_4
     iget-object v1, p0, Lcom/android/server/am/OomAdjuster;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
     invoke-virtual {v1}, Landroid/os/PowerManagerInternal;->finishUidChanges()V
 
-    :cond_f
+    :cond_10
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_10
+    if-lez v1, :cond_11
 
     add-int/lit8 v2, v1, -0x1
 
-    :goto_4
-    if-ltz v2, :cond_10
+    :goto_5
+    if-ltz v2, :cond_11
 
     iget-object v3, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -9485,9 +9491,9 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_10
+    :cond_11
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     invoke-static {}, Lcom/android/server/am/OpBGFrozenInjector;->updateLastImportantUidsIfNeeded()V

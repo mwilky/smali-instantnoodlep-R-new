@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method static synthetic access$3500(I)Ljava/lang/String;
+.method static synthetic access$3400(I)Ljava/lang/String;
     .locals 1
 
     invoke-static {p0}, Lcom/android/server/UiModeManagerService$Shell;->nightModeToStr(I)Ljava/lang/String;
@@ -146,7 +146,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$3600(Ljava/time/LocalTime;)J
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$3500(Ljava/time/LocalTime;)J
 
     move-result-wide v4
 
@@ -165,7 +165,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$3600(Ljava/time/LocalTime;)J
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$3500(Ljava/time/LocalTime;)J
 
     move-result-wide v4
 
@@ -332,7 +332,7 @@
 
     move-result-wide v2
 
-    invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->access$3700(J)Ljava/time/LocalTime;
+    invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->access$3600(J)Ljava/time/LocalTime;
 
     move-result-object v2
 
@@ -366,7 +366,7 @@
 
     move-result-wide v2
 
-    invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->access$3700(J)Ljava/time/LocalTime;
+    invoke-static {v2, v3}, Lcom/android/server/UiModeManagerService;->access$3600(J)Ljava/time/LocalTime;
 
     move-result-object v2
 

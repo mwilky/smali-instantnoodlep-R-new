@@ -26,17 +26,17 @@
 
 .field private static OTG_HOST_INSERTED:I = 0x0
 
-.field private static final OTG_HOST_MATCH_FOR_845:Ljava/lang/String; = "DEVPATH=/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
-
 .field private static final OTG_HOST_MATCH_FOR_8996:Ljava/lang/String; = "DEVPATH=/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
 
 .field private static final OTG_HOST_MATCH_FOR_8998:Ljava/lang/String; = "DEVPATH=/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
 
-.field private static final OTG_HOST_PATH_FOR_845:Ljava/lang/String; = "/sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
+.field private static final OTG_HOST_MATCH_FOR_DEF:Ljava/lang/String; = "DEVPATH=/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
 
 .field private static final OTG_HOST_PATH_FOR_8996:Ljava/lang/String; = "/sys/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
 
 .field private static final OTG_HOST_PATH_FOR_8998:Ljava/lang/String; = "/sys/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
+
+.field private static final OTG_HOST_PATH_FOR_DEF:Ljava/lang/String; = "/sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
 
 .field private static final TAG:Ljava/lang/String; = "UsbHostManagerInjector"
 
@@ -262,11 +262,11 @@
 
 # virtual methods
 .method public UsbHostManagerInjector()V
-    .locals 5
+    .locals 8
 
     sget-boolean v0, Lcom/android/server/usb/UsbHostManagerInjector;->OTG_AUTO_SHUTDOWN_ENABLE:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     sget-object v0, Lcom/android/server/usb/UsbHostManagerInjector;->mContext:Landroid/content/Context;
 
@@ -304,110 +304,118 @@
 
     new-instance v1, Landroid/os/HandlerThread;
 
-    const-string v2, "OtgAutoShutDown"
+    const-string v4, "OtgAutoShutDown"
 
-    invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    new-instance v2, Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;
+    new-instance v4, Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;
 
-    new-instance v3, Landroid/os/Handler;
+    new-instance v5, Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-direct {v4, p0, v5}, Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;-><init>(Lcom/android/server/usb/UsbHostManagerInjector;Landroid/os/Handler;)V
+
+    iput-object v4, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOtgAutoShutDownObserver:Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;
+
+    const-string v4, "ro.board.platform"
+
+    const-string v5, "none"
+
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v4
 
-    invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    const/4 v5, -0x1
 
-    invoke-direct {v2, p0, v3}, Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;-><init>(Lcom/android/server/usb/UsbHostManagerInjector;Landroid/os/Handler;)V
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
-    iput-object v2, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOtgAutoShutDownObserver:Lcom/android/server/usb/UsbHostManagerInjector$OtgAutoShutDownObserver;
+    move-result v6
 
-    const-string v2, "ro.board.platform"
+    const v7, 0x505edde5
 
-    const-string v3, "none"
+    if-eq v6, v7, :cond_2
 
-    invoke-static {v2, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const v7, 0x505edde7
 
-    move-result-object v2
+    if-eq v6, v7, :cond_1
 
-    const-string v3, "msm8998"
+    :cond_0
+    goto :goto_0
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    const-string v6, "msm8998"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    goto :goto_1
+
+    :cond_2
+    const-string v3, "msm8996"
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
+    move v3, v2
 
-    const-string v4, "DEVPATH=/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
+    goto :goto_1
 
-    invoke-virtual {v3, v4}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
+    :goto_0
+    move v3, v5
 
-    goto :goto_0
+    :goto_1
+    if-eqz v3, :cond_4
 
-    :cond_0
-    const-string v3, "msm8996"
+    if-eq v3, v2, :cond_3
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v2, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
 
-    move-result v3
+    const-string v3, "DEVPATH=/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v2, v3}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
-
-    const-string v4, "DEVPATH=/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
-
-    invoke-virtual {v3, v4}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string v3, "sdm845"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    const-string v3, "msmnile"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    const-string v3, "kona"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    :cond_2
-    iget-object v3, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
-
-    const-string v4, "DEVPATH=/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
-
-    invoke-virtual {v3, v4}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
+    goto :goto_2
 
     :cond_3
-    :goto_0
+    iget-object v2, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
+
+    const-string v3, "DEVPATH=/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
+
+    invoke-virtual {v2, v3}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v2, p0, Lcom/android/server/usb/UsbHostManagerInjector;->mOTGUEventObserver:Landroid/os/UEventObserver;
+
+    const-string v3, "DEVPATH=/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
+
+    invoke-virtual {v2, v3}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
+
+    :cond_5
+    :goto_2
     return-void
 .end method
 
 .method public UsbHostManagerSystemReadyInjector()V
-    .locals 6
+    .locals 8
 
     sget-boolean v0, Lcom/android/server/usb/UsbHostManagerInjector;->OTG_AUTO_SHUTDOWN_ENABLE:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     sget-object v0, Lcom/android/server/usb/UsbHostManagerInjector;->mContext:Landroid/content/Context;
 
@@ -415,127 +423,130 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const-string v1, "oneplus_otg_auto_disable"
 
-    const-string v2, "oneplus_otg_auto_disable"
+    const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_5
+    if-ne v0, v1, :cond_6
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-string v3, "ro.board.platform"
+    const-string v4, "ro.board.platform"
 
-    const-string v4, "none"
+    const-string v5, "none"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "msm8998"
+    const/4 v5, -0x1
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
-    move-result v4
+    move-result v6
 
-    if-eqz v4, :cond_0
+    const v7, 0x505edde5
 
-    new-instance v4, Ljava/io/File;
+    if-eq v6, v7, :cond_2
 
-    const-string v5, "/sys/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
+    const v7, 0x505edde7
 
-    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    move-object v2, v4
-
-    goto :goto_0
+    if-eq v6, v7, :cond_1
 
     :cond_0
-    const-string v4, "msm8996"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    new-instance v4, Ljava/io/File;
-
-    const-string v5, "/sys/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
-
-    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    move-object v2, v4
-
     goto :goto_0
 
     :cond_1
-    const-string v4, "sdm845"
+    const-string v6, "msm8998"
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v6
 
-    if-nez v4, :cond_2
-
-    const-string v4, "msmnile"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "kona"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    :cond_2
-    new-instance v4, Ljava/io/File;
-
-    const-string v5, "/sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
-
-    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    move-object v2, v4
-
-    :cond_3
-    :goto_0
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
-
-    move-result v4
-
-    const-string v5, "UsbHostManagerInjector"
-
-    if-eqz v4, :cond_4
-
-    const-string v4, "System ready and otg host inserted..."
-
-    invoke-static {v5, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sput v1, Lcom/android/server/usb/UsbHostManagerInjector;->OTG_HOST_INSERTED:I
+    if-eqz v6, :cond_0
 
     goto :goto_1
 
+    :cond_2
+    const-string v2, "msm8996"
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v2, v1
+
+    goto :goto_1
+
+    :goto_0
+    move v2, v5
+
+    :goto_1
+    if-eqz v2, :cond_4
+
+    if-eq v2, v1, :cond_3
+
+    new-instance v2, Ljava/io/File;
+
+    const-string v5, "/sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto/usb2"
+
+    invoke-direct {v2, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v2, Ljava/io/File;
+
+    const-string v5, "/sys/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb2"
+
+    invoke-direct {v2, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    goto :goto_2
+
     :cond_4
+    new-instance v2, Ljava/io/File;
+
+    const-string v5, "/sys/devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2"
+
+    invoke-direct {v2, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    nop
+
+    :goto_2
+    nop
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    const-string v5, "UsbHostManagerInjector"
+
+    if-eqz v3, :cond_5
+
+    const-string v3, "System ready and otg host inserted..."
+
+    invoke-static {v5, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sput v1, Lcom/android/server/usb/UsbHostManagerInjector;->OTG_HOST_INSERTED:I
+
+    goto :goto_3
+
+    :cond_5
     const-string v1, "System ready and otg turn on, resetAlarmTrigger..."
 
     invoke-static {v5, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0}, Lcom/android/server/usb/UsbHostManagerInjector;->resetAlarmTrigger()V
 
-    :cond_5
-    :goto_1
+    :cond_6
+    :goto_3
     return-void
 .end method

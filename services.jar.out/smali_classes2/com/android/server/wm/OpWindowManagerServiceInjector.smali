@@ -55,7 +55,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 40
+    .locals 42
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -187,7 +187,11 @@
 
     const-string v39, "com.microsoft.teams"
 
-    filled-new-array/range {v2 .. v39}, [Ljava/lang/String;
+    const-string v40, "com.qiyi.video"
+
+    const-string v41, "com.iqiyi.i18n"
+
+    filled-new-array/range {v2 .. v41}, [Ljava/lang/String;
 
     move-result-object v1
 

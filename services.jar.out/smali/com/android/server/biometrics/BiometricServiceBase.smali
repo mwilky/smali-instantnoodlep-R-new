@@ -1998,9 +1998,11 @@
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/BiometricServiceBase;->removeClient(Lcom/android/server/biometrics/ClientMonitor;)V
 
     :cond_1
-    if-eqz v1, :cond_2
-
     iget-object v3, p0, Lcom/android/server/biometrics/BiometricServiceBase;->mPerformanceStats:Lcom/android/server/biometrics/BiometricServiceBase$PerformanceStats;
+
+    if-eqz v3, :cond_3
+
+    if-eqz v1, :cond_2
 
     iget v4, v3, Lcom/android/server/biometrics/BiometricServiceBase$PerformanceStats;->accept:I
 
@@ -2011,14 +2013,13 @@
     goto :goto_1
 
     :cond_2
-    iget-object v3, p0, Lcom/android/server/biometrics/BiometricServiceBase;->mPerformanceStats:Lcom/android/server/biometrics/BiometricServiceBase$PerformanceStats;
-
     iget v4, v3, Lcom/android/server/biometrics/BiometricServiceBase$PerformanceStats;->reject:I
 
     add-int/2addr v4, v2
 
     iput v4, v3, Lcom/android/server/biometrics/BiometricServiceBase$PerformanceStats;->reject:I
 
+    :cond_3
     :goto_1
     return-void
 .end method

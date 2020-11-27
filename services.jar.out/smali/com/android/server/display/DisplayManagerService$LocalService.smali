@@ -666,7 +666,7 @@
     throw v0
 .end method
 
-.method public updateHighTempStatus(ZF)V
+.method public updateHighTempStatus(ZI)V
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -675,7 +675,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/server/display/DisplayPowerController;->updateHighTempStatus(ZF)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/display/DisplayPowerController;->updateHighTempStatus(ZI)V
 
     return-void
 .end method
