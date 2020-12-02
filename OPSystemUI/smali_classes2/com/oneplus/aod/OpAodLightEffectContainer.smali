@@ -1457,6 +1457,8 @@
     .line 568
     :cond_1c
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->loadResources()V
+    
+    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
 
     .line 569
     invoke-direct {p0, p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->animateNotification(Z)V
@@ -1470,6 +1472,8 @@
     :cond_23
     :goto_23
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->prepareResources()V
+    
+    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
 
     .line 557
     iget v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimateIndex:I
@@ -1491,6 +1495,8 @@
     .line 559
     :cond_30
     :goto_30
+    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
+
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
