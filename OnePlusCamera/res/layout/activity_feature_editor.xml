@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/op_control_margin_screen_left1" android:layout_marginEnd="@dimen/op_control_margin_screen_right1">
+        <EditText android:id="@id/filter_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter filter here" android:singleLine="true" android:maxLength="35" />
+        <ImageView android:id="@id/filter_clear" android:padding="6.0dip" android:layout_width="@dimen/op_control_icon_size_display1" android:layout_height="@dimen/op_control_icon_size_display1" android:src="@drawable/icon_clear_filter" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/features" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hour">
+        <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="other">%d 秒钟</item>
+    </plurals>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:height="?zoomSwitcherBackgroundHeight" android:top="?zoomSwitcherMargin" android:bottom="?zoomSwitcherMargin">
+        <shape android:shape="rectangle">
+            <stroke android:width="?zoomSwitcherBackgroundBorderWidth" android:color="@color/zoom_switcher_background_border" />
+            <solid android:color="@color/zoom_switcher_background_solid" />
+            <corners android:radius="?zoomSwitcherBackgroundBorderRadius" />
+        </shape>
+    </item>
+</layer-list>

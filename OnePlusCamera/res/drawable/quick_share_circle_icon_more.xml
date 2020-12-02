@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:dither="true" android:shape="oval">
+            <solid android:color="@android:color/white" />
+            <size android:height="?quickSharingAppIconSize" android:width="?quickSharingAppIconSize" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="?quickSharingMoreIconSize" android:width="?quickSharingMoreIconSize" android:drawable="@drawable/quick_share_icon_more" />
+</layer-list>

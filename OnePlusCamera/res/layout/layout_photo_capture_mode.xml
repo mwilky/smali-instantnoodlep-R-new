@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oneplus.camera.widget.ZoomSwitcher android:id="@id/zoom_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?captureBarSize" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.oneplus.camera.widget.ZoomSwitcher android:id="@id/quick_video_zoom_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?captureBarSize" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.oneplus.camera.widget.ZoomSwitcher android:id="@id/front_zoom_switcher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?captureBarSize" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

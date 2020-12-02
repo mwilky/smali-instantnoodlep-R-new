@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.oneplus.camera" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.oneplus.camera.CAMERA_SERVICE"/>
+    <uses-permission android:name="com.oneplus.camera.permission.PICTURE_PROCESSING"/>
+    <permission android:name="com.oneplus.camera.AUTO_TEST" android:protectionLevel="normal"/>
+    <permission android:name="com.oneplus.camera.permission.SEND_COMMAND" android:protectionLevel="development|signature"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.oneplus.camera.CameraApplication" android:resizeableActivity="false" android:supportsRtl="true">
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oneplus.camera.CameraEntry" android:screenOrientation="portrait" android:taskAffinity=".OPCameraEntry" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="launch_animation" android:value="false"/>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.VOICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.VOICE"/>
+            </intent-filter>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oneplus.camera.CameraActivity" android:screenOrientation="portrait" android:taskAffinity=".CameraActivity" android:theme="@style/Theme.CameraActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity-alias android:name="com.oneplus.camera.OPCameraActivity" android:targetActivity="com.oneplus.camera.CameraActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_BOKEH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_FULL_SIZE_PHOTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_MANUAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_NIGHT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_SELFIE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_VIDEO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_ULTRA_WIDE_LENS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_ULTRA_WIDE_LENS_SELFIE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.LAUNCH_IN_BEST_OPTICAL_ZOOM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="launch_animation" android:value="false"/>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:label="@string/app_name" android:name="com.oneplus.camera.ServiceCameraActivity" android:screenOrientation="portrait" android:theme="@style/Theme.CameraActivity" android:visibleToInstantApps="true" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.IMAGE_CAPTURE_ADVANCED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.oneplus.camera.BUSINESS_CARD_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:label="@string/app_name_video" android:name="com.oneplus.camera.VideoServiceCameraActivity" android:targetActivity="com.oneplus.camera.ServiceCameraActivity">
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oneplus.camera.SecureCameraEntry" android:screenOrientation="portrait" android:showOnLockScreen="true" android:showWhenLocked="true" android:taskAffinity=".SecureCameraEntry" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustNothing">
+            <meta-data android:name="launch_animation" android:value="false"/>
+        </activity>
+        <activity-alias android:name="com.oneplus.camera.OPSecureCameraActivity" android:targetActivity="com.oneplus.camera.SecureCameraEntry"/>
+        <activity-alias android:name="com.oneplus.camera.MainActivity" android:targetActivity="com.oneplus.camera.SecureCameraEntry">
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="launch_animation" android:value="false"/>
+        </activity-alias>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oneplus.camera.SecureCameraActivity" android:screenOrientation="portrait" android:showOnLockScreen="true" android:showWhenLocked="true" android:taskAffinity=".SecureCameraActivity" android:theme="@style/Theme.CameraActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.CustomModesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.OtherCustomModesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.VideoResolutionSelectorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.WatermarkActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.AboutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.AgreementActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.LogSwitchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.FeatureEditorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
+        <receiver android:exported="false" android:name="com.oneplus.camera.ui.QuickShareIntentSenderReceiver"/>
+        <receiver android:name="com.oneplus.camera.ExternalCommandReceiver" android:permission="com.oneplus.camera.permission.SEND_COMMAND">
+            <intent-filter>
+                <action android:name="com.oneplus.camera.action.SEND_COMMAND"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.oneplus.camera.previewprocessing.PreviewProcessingService"/>
+        <service android:exported="true" android:name="com.oneplus.camera.autotest.AutoTestService" android:permission="com.oneplus.camera.AUTO_TEST"/>
+        <service android:exported="false" android:name="com.oneplus.camera.RestartingService" android:process=":service"/>
+    </application>
+</manifest>

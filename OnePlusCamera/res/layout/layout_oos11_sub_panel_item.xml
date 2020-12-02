@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="?oos11SubPanelItemIconContainerWidthHeight" android:layout_height="?oos11SubPanelItemIconContainerWidthHeight" android:layout_marginStart="?oos11SubPanelItemIconMarginStartEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/background" android:background="@drawable/oos11_sub_panel_item_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@android:id/icon" android:padding="?oos11SubPanelItemPadding" android:clipToPadding="false" android:layout_width="?oos11SubPanelItemIconContainerWidthHeight" android:layout_height="?oos11SubPanelItemIconContainerWidthHeight" android:scaleType="fitXY" android:layout_centerInParent="true" />
+</RelativeLayout>

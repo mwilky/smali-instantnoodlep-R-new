@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="?zoomKnobIconSize" android:width="?zoomKnobIconSize">
+        <vector android:height="@dimen/op_control_icon_size_button" android:width="@dimen/op_control_icon_size_button" android:viewportWidth="24.0" android:viewportHeight="24.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <path android:fillColor="@color/zoom_switcher_item_icon" android:pathData="M13.2949,18.3495L13.2949,22.3297L10.9249,22.3297L10.9249,18.3495L6.185,18.3495C5.5305,18.3495 5,17.8189 5,17.1645C5,17.0141 5.0286,16.8651 5.0843,16.7254L11.1193,1.597C11.3133,1.1107 11.8648,0.8737 12.3511,1.0677C12.5926,1.1641 12.784,1.3554 12.8804,1.597L18.9153,16.7254C19.1578,17.3333 18.8616,18.0226 18.2538,18.2651C18.1141,18.3208 17.9651,18.3495 17.8147,18.3495L13.2949,18.3495Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+        </vector>
+    </item>
+</layer-list>

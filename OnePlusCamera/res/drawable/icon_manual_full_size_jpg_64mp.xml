@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/icon_manual_full_size_jpg_64mp_disabled" />
+    <item android:state_selected="true" android:drawable="@drawable/icon_manual_full_size_jpg_64mp_selected" />
+    <item android:drawable="@drawable/icon_manual_full_size_jpg_64mp_enabled" />
+</selector>

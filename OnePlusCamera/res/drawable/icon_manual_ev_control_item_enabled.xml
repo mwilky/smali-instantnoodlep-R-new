@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="?manualCaptureControlItemIconSize" android:width="?manualCaptureControlItemIconSize">
+        <vector android:height="24.0px" android:width="24.0px" android:viewportWidth="24.0" android:viewportHeight="24.0">
+            <path android:fillColor="@color/manual_capture_control_items_icon_enabled" android:pathData="M3.9001,20.1V20.0999L20.0708,3.9292L20.0708,3.9293C20.0896,3.948 20.1001,3.9734 20.1001,4V20C20.1001,20.0265 20.0896,20.0519 20.0708,20.0707C20.0521,20.0894 20.0266,20.1 20.0001,20.1H3.9001ZM2.6566,2.6565C3.0129,2.3001 3.4962,2.1 4.0001,2.1H20.0001C20.504,2.1 20.9873,2.3001 21.3436,2.6565C21.6999,3.0128 21.9001,3.4961 21.9001,4V20C21.9001,20.5039 21.6999,20.9872 21.3436,21.3435C20.9873,21.6998 20.504,21.9 20.0001,21.9H2.1001V4C2.1001,3.4961 2.3003,3.0128 2.6566,2.6565ZM8.9,8.9V11H7.1V8.9H5V7.1H7.1V5H8.9V7.1H11V8.9H8.9ZM12,16.9H18V15.1H12V16.9Z" android:fillType="evenOdd" />
+        </vector>
+    </item>
+</layer-list>

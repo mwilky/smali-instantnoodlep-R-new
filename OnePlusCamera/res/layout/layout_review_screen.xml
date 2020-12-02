@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <ImageView android:id="@id/image" android:layout_width="0.0px" android:layout_height="0.0px" android:scaleType="fitXY" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/review_action_panel" android:background="@color/capture_bar_background" android:layout_width="fill_parent" android:layout_height="?captureBarSize" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/cancel_container" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/cancel" android:background="@drawable/ripple" android:layout_width="@dimen/op_control_icon_size_display3" android:layout_height="@dimen/op_control_icon_size_display3" android:src="@drawable/review_cancel" android:scaleType="center" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/commit_container" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/commit" android:background="@drawable/ripple" android:layout_width="@dimen/op_control_icon_size_display3" android:layout_height="@dimen/op_control_icon_size_display3" android:src="@drawable/review_commit" android:scaleType="center" android:layout_centerInParent="true" android:contentDescription="Done" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/cancel_and_exit_container" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/cancel_and_exit" android:background="@drawable/ripple" android:layout_width="@dimen/op_control_icon_size_display3" android:layout_height="@dimen/op_control_icon_size_display3" android:src="@drawable/review_cancel_and_exit" android:scaleType="center" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

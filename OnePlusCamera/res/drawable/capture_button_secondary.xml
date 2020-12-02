@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <shape android:shape="oval" android:useLevel="false"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#29000000" />
+            <stroke android:width="?captureBarSecondaryButtonBorderSize" android:color="#ffffffff" />
+            <size android:height="?captureBarSecondaryButtonSize" android:width="?captureBarSecondaryButtonSize" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <shape android:shape="oval" android:useLevel="false"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#ffffffff" />
+            <size android:height="?captureBarSecondaryButtonInnerSize" android:width="?captureBarSecondaryButtonInnerSize" />
+        </shape>
+    </item>
+</layer-list>

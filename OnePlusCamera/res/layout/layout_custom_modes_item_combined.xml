@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="start|center" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/op_list_item_min_height" android:text="@string/capture_mode_video" android:paddingStart="@dimen/op_control_margin_screen_left3" style="@style/CustomModesItemText" />
+    <LinearLayout android:orientation="horizontal" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/op_list_item_min_height" android:paddingStart="@dimen/op_control_margin_screen_left3">
+        <TextView android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/capture_mode_photo" android:layout_marginEnd="@dimen/op_control_margin_screen_right1" style="@style/CustomModesItemText" />
+        <TextView android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/settings_custom_modes_default_mode" android:layout_marginEnd="@dimen/op_control_margin_screen_right2" style="@style/CustomModesDefaultModesDescription" />
+    </LinearLayout>
+</LinearLayout>

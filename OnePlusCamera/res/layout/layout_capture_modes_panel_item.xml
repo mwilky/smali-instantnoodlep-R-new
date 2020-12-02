@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="?captureModesPanelItemWidth" android:layout_height="?captureModesPanelItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/name" android:layout_centerHorizontal="true">
+        <RelativeLayout android:tag="icon_background" android:background="@drawable/capture_modes_panel_icon_background" android:layout_width="?captureModesPanelIconBackgroundSize" android:layout_height="?captureModesPanelIconBackgroundSize">
+            <ImageView android:id="@id/icon" android:layout_width="?captureModesPanelIconSize" android:layout_height="?captureModesPanelIconSize" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="?captureModesPanelDisplayNameSize" android:textColor="@color/capture_modes_panel_item_name" android:ellipsize="end" android:gravity="center" android:id="@id/name" android:paddingTop="?captureModesPanelDisplayNameMargin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?captureModesPanelItemTextMarginBottom" android:minWidth="?captureModesPanelIconBackgroundSize" android:maxLines="1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAllCaps="true" />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/capture_ui_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shutter_animation" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <include layout="@layout/layout_touch_3a_control" />
+    <View android:id="@id/camera_preview_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <FrameLayout android:id="@id/camera_preview_overlay_adjusted_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/panorama_ui" android:layout="@layout/layout_panorama_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/layout_hint_panels_container" />
+    <FrameLayout android:id="@id/camera_preview_cover_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <ViewStub android:id="@id/count_down_timer_container" android:layout="@layout/layout_count_down_timer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <ViewStub android:id="@id/visual_debug_view" android:layout="@layout/layout_visual_debug_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/photo_capture_mode" android:layout="@layout/layout_photo_capture_mode" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/video_capture_mode" android:layout="@layout/layout_video_capture_mode" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/manual_capture_control_ui" android:layout="@layout/layout_manual_capture_control_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/timelapse_capture_mode" android:layout="@layout/layout_timelapse_capture_mode" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/primary_action_panel" android:layout="@layout/layout_primary_action_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ViewStub android:id="@id/zoom_control" android:layout="@layout/layout_zoom_control" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/bokeh" android:layout="@layout/layout_bokeh_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/night_capture_control_ui" android:layout="@layout/layout_night_capture_control_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/capture_modes_panel_view_stub" android:layout="@layout/layout_capture_modes_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/floating_button_ui" android:layout="@layout/layout_floating_button_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/layout_capture_bar" />
+    <include layout="@layout/layout_quick_video_lock" />
+    <include layout="@layout/layout_capture_mode_indicator" />
+    <ViewStub android:id="@id/filter_panel_container" android:layout="@layout/layout_filter_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/layout_thumbnail_icon" />
+    <ViewStub android:id="@id/manual_custom_saving_icon" android:layout="@layout/layout_manual_custom_saving_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/primary_action_drawer" android:layout="@layout/layout_primary_action_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/oos11_primary_action_panel" android:layout="@layout/layout_oos11_primary_action_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/tutorial_ui_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <com.oneplus.camera.widget.ThumbnailImageTransitionView android:id="@id/filmstrip_in_out_animation" android:background="@color/filmstrip_in_out_animation_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/quick_sharing_container" android:layout="@layout/layout_quick_sharing" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/processing_dialog_container" android:layout="@layout/layout_processing_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

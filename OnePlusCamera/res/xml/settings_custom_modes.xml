@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/layout_settings_custom_modes_hint" android:key="CustomModes" />
+    <PreferenceCategory android:key="PreferredModes">
+        <com.oneplus.camera.settings.RecyclerViewPreference android:layout="@layout/layout_settings_custom_modes_recycler" android:key="CustomModesRecycler" />
+    </PreferenceCategory>
+</PreferenceScreen>

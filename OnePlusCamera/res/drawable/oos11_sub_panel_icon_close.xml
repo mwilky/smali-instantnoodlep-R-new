@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_15" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_14" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_13" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_12" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_11" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_10" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_09" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_08" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_07" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_06" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_05" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_04" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_03" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_02" />
+    <item android:duration="10" android:drawable="@drawable/oos11_sub_panel_icon_01" />
+</animation-list>

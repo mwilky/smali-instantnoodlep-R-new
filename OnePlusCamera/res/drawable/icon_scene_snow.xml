@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M11.1,23V1H12.9V23H11.1Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M11.3734,6.6364L8.3734,3.6364L9.6461,2.3636L12.0099,4.7273L14.3655,2.3725L15.638,3.6455L12.646,6.6365C12.2946,6.9879 11.7248,6.9878 11.3734,6.6364Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M11.9901,17.3441C12.2288,17.3441 12.4577,17.4389 12.6265,17.6077L15.3826,20.3637L14.1098,21.6365L11.9903,19.517L9.8797,21.6284L8.6066,20.3559L11.3536,17.6079C11.5224,17.439 11.7513,17.3442 11.9901,17.3441Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M1.9481,16.5452L21.1851,5.8712L22.0584,7.4452L2.8214,18.1192L1.9481,16.5452Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M16.3896,8.8456L17.5566,4.7666L19.2872,5.2617L18.3677,8.4756L21.5686,9.3919L21.0732,11.1224L17.0072,9.9584C16.5294,9.8216 16.2529,9.3234 16.3896,8.8456Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M3.0511,13.0806L6.7861,14.1506C7.2638,14.2875 7.5402,14.7856 7.4035,15.2634L6.3315,19.0094L4.6009,18.5142L5.4254,15.6332L2.5554,14.811L3.0511,13.0806Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M21.1851,18.1192L1.9481,7.4452L2.8214,5.8712L22.0584,16.5452L21.1851,18.1192Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M5.639,8.4756L4.7188,5.2619L6.4493,4.7664L7.6173,8.8454C7.683,9.0749 7.6548,9.3211 7.539,9.5298C7.4232,9.7386 7.2292,9.8927 6.9997,9.9584L2.9327,11.1224L2.4374,9.3919L5.639,8.4756Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon" android:pathData="M18.5808,15.6331L21.4506,14.811L20.9549,13.0806L17.2199,14.1506C16.7421,14.2875 16.4657,14.7858 16.6026,15.2636L17.6756,19.0096L19.406,18.514L18.5808,15.6331Z" android:fillType="evenOdd" />
+        </vector>
+    </item>
+    <item>
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M11.1,23V1H12.9V23H11.1Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M11.3734,6.6364L8.3734,3.6364L9.6461,2.3636L12.0099,4.7273L14.3655,2.3725L15.638,3.6455L12.646,6.6365C12.2946,6.9879 11.7248,6.9878 11.3734,6.6364Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M11.9901,17.3441C12.2288,17.3441 12.4577,17.4389 12.6265,17.6077L15.3826,20.3637L14.1098,21.6365L11.9903,19.517L9.8797,21.6284L8.6066,20.3559L11.3536,17.6079C11.5224,17.439 11.7513,17.3442 11.9901,17.3441Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M1.9481,16.5452L21.1851,5.8712L22.0584,7.4452L2.8214,18.1192L1.9481,16.5452Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M16.3896,8.8456L17.5566,4.7666L19.2872,5.2617L18.3677,8.4756L21.5686,9.3919L21.0732,11.1224L17.0072,9.9584C16.5294,9.8216 16.2529,9.3234 16.3896,8.8456Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M3.0511,13.0806L6.7861,14.1506C7.2638,14.2875 7.5402,14.7856 7.4035,15.2634L6.3315,19.0094L4.6009,18.5142L5.4254,15.6332L2.5554,14.811L3.0511,13.0806Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M21.1851,18.1192L1.9481,7.4452L2.8214,5.8712L22.0584,16.5452L21.1851,18.1192Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M5.639,8.4756L4.7188,5.2619L6.4493,4.7664L7.6173,8.8454C7.683,9.0749 7.6548,9.3211 7.539,9.5298C7.4232,9.7386 7.2292,9.8927 6.9997,9.9584L2.9327,11.1224L2.4374,9.3919L5.639,8.4756Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/floating_button_scene_icon_dark" android:pathData="M18.5808,15.6331L21.4506,14.811L20.9549,13.0806L17.2199,14.1506C16.7421,14.2875 16.4657,14.7858 16.6026,15.2636L17.6756,19.0096L19.406,18.514L18.5808,15.6331Z" android:fillType="evenOdd" />
+        </vector>
+    </item>
+</selector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fffae3c0" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/screen_flash_icon" android:layout_width="?screenFlashIconSize" android:layout_height="?screenFlashIconSize" android:src="@drawable/screen_flash" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    <View android:id="@id/cutout_area" android:background="#ff000000" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+</RelativeLayout>

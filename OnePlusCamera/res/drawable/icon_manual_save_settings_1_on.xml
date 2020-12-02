@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="?manualCustomSettingsButtonSize" android:width="?manualCustomSettingsButtonSize">
+        <shape android:shape="oval" android:useLevel="false">
+            <solid android:color="@color/manual_capture_control_items_background_selected" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="?manualCustomSettingsButtonIconSize" android:width="?manualCustomSettingsButtonIconSize">
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <path android:fillColor="@color/manual_capture_control_items_icon_enabled" android:pathData="M21.3,6.1L17.9,2.7C17.5,2.3 17.1,2.2 16.6,2.1H4C3,2.1 2.1,3 2.1,4V21.9H20C21,21.9 21.9,21 21.9,20V7.4C21.9,6.9 21.7,6.4 21.3,6.1ZM7.9,3.9H14.1V7.1H7.9V3.9ZM20.1,20C20.1,20.1 20.1,20.1 20.1,20L3.9,20.1V4C3.9,3.9 3.9,3.9 4,3.9H6.1V8.9H15.9V3.9H16.7L20.1,7.4V20V20ZM12,11.1C10.1,11.1 8.6,12.6 8.6,14.5C8.6,16.4 10.1,17.9 12,17.9C13.9,17.9 15.4,16.4 15.4,14.5C15.4,12.6 13.9,11.1 12,11.1ZM12,16.1C11.1,16.1 10.4,15.4 10.4,14.5C10.4,13.6 11.1,12.9 12,12.9C12.9,12.9 13.6,13.6 13.6,14.5C13.6,15.4 12.9,16.1 12,16.1Z" />
+        </vector>
+    </item>
+</layer-list>

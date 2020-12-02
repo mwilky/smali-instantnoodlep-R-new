@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oneplus.camera.widget.GestureRelativeLayout android:id="@id/capture_modes_panel_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/capture_modes_panel_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:translationY="-10000.0px">
+        <FrameLayout android:id="@id/capture_modes_panel" android:background="@drawable/capture_modes_panel_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?captureModesPanelMarginTop">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/capture_modes_panel_arrow" android:background="@drawable/capture_mode_indicator_arrow_background" android:visibility="invisible" android:layout_width="?captureModesIndicatorArrowWidth" android:layout_height="?captureModesIndicatorArrowHeight" android:layout_marginTop="?captureModesIndicatorArrowMarginTop" android:alpha="0.0" />
+            <GridLayout android:orientation="horizontal" android:id="@id/capture_modes_panel_grid" android:paddingLeft="?captureModesPanelGridPaddingLeftRight" android:paddingTop="?captureModesPanelGridPaddingTop" android:paddingRight="?captureModesPanelGridPaddingLeftRight" android:paddingBottom="?captureModesPanelGridPaddingBottom" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?captureBarSize" android:alpha="0.0" android:columnCount="3" />
+        </FrameLayout>
+    </LinearLayout>
+</com.oneplus.camera.widget.GestureRelativeLayout>

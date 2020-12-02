@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_video_resolution_fps_restriction_no_video_hdr_no_his" style="@style/SettingsVideoResolutionHintText"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

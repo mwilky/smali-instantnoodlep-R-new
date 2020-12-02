@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="?manualCaptureControlIndicatorTextBorderWidth" android:color="@color/manual_capture_control_indicator_border" />
+    <solid android:color="@color/manual_capture_control_indicator_background" />
+</shape>

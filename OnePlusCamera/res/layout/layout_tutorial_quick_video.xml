@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/tutorial_dim" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/tutorial_touch_receiver" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tutorial_quick_video_container" android:background="@drawable/tutorial_container_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?tutorialQuickVideoMarginBottom" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:translationY="?tutorialInfraredContainerTranslationY" android:layout_marginStart="@dimen/common_control_margin_left2" android:layout_marginEnd="@dimen/common_control_margin_right2">
+        <TextView android:gravity="start" android:id="@id/tutorial_quick_video_text" android:paddingTop="@dimen/common_control_margin_top2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tutorial_long_press_quick_video" android:paddingStart="@dimen/common_control_margin_left2" android:paddingEnd="@dimen/common_control_margin_right2" style="@style/TutorialTextSummary" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/tutorial_inner_touch_receiver" android:layout_width="?tutorialEnterCustomModeInnerEmptyViewWidth" android:layout_height="?tutorialConfirmTextHeight" />
+            <TextView android:gravity="center" android:layout_gravity="end" android:id="@id/tutorial_confirm_text" android:background="?android:selectableItemBackground" android:layout_width="?tutorialConfirmTextWidth" android:layout_height="?tutorialConfirmTextHeight" android:text="@string/tutorial_long_press_quick_video_great_text" android:layout_marginEnd="?tutorialConfirmTextMarginEndBottom" style="@style/TutorialConfirmText" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/tutorial_quick_video_arrow" android:background="@drawable/icon_triangle" android:layout_width="?tutorialTriangleWidth" android:layout_height="?tutorialTriangleHeight" android:layout_marginBottom="?tutorialQuickVideoArrowMarginBottom" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:translationY="?tutorialInfraredContainerTranslationY" android:layout_marginStart="?tutorialSaveCustomModeArrowMarginStart" />
+</RelativeLayout>

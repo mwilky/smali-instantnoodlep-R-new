@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hour">
+        <item quantity="other">%d de ore</item>
+        <item quantity="one">%d oră</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="other">%d de minute</item>
+        <item quantity="one">%d minut</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="other">%d de secunde</item>
+        <item quantity="one">%d secundă</item>
+    </plurals>
+</resources>

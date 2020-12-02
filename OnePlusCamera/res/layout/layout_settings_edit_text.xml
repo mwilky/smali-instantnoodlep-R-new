@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/settings_control_margin" android:layout_marginEnd="@dimen/settings_control_margin" style="@style/op_control_text_style_body1" />
+    <EditText android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/settings_control_margin" android:layout_marginEnd="@dimen/settings_control_margin" style="@style/op_control_text_style_h6" />
+</LinearLayout>

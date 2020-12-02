@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/touch_3a_control_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/touch_3a_control_touch_receiver" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/exposure_indicator_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/exposure_indicator" android:layout_width="?exposureIndicatorWidth" android:layout_height="?exposureIndicatorHeight" android:src="@drawable/exposure_indicator" android:scaleType="fitXY" />
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/exposure_indicator_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?focusIndicatorTextMarginTop" android:text="@string/touch_3a_exposure_indicator_text" style="@style/FocusExposureIndicatorText" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/tracking_indicator" android:visibility="invisible" android:layout_width="?exposureIndicatorWidth" android:layout_height="?exposureIndicatorHeight" android:src="@drawable/tracking_indicator" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:id="@id/focus_indicator_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/focus_indicator" android:layout_width="?focusIndicatorWidth" android:layout_height="?focusIndicatorHeight" android:src="@drawable/focus_indicator" android:scaleType="center" />
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/focus_indicator_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?focusIndicatorTextMarginTop" android:text="@string/touch_3a_focus_indicator_text" style="@style/FocusExposureIndicatorText" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/exposure_bar_container" android:visibility="invisible" android:layout_width="?exposureBarContainerWidth" android:layout_height="?exposureBarContainerHeight" android:layout_alignParentTop="true" android:layoutDirection="ltr" android:layout_alignParentStart="true">
+        <ImageView android:id="@id/ae_af_toggle" android:padding="?exposureBarTogglePadding" android:layout_width="?exposureBarToggleSize" android:layout_height="?exposureBarToggleSize" android:src="@drawable/ae_af_lock_icon" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+        <com.oneplus.widget.VerticalSeekBar android:id="@id/exposure_bar" android:paddingTop="?exposureBarSeekBarPaddingTopBottom" android:paddingBottom="?exposureBarSeekBarPaddingTopBottom" android:layout_width="?exposureBarSeekBarWidth" android:layout_height="?exposureBarSeekBarHeight" android:thumb="@drawable/exposure_bar_icon" android:thumbOffset="0.0px" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

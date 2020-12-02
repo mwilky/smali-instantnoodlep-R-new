@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rotatable_container" android:layout_width="?zoomSwitcherWidth" android:layout_height="?zoomSwitcherHeight" android:layout_marginTop="?zoomSwitcherMargin" android:layout_marginBottom="?zoomSwitcherMargin">
+        <LinearLayout android:gravity="center" android:id="@id/zoom_text_container" android:background="@drawable/zoom_switcher_text_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0">
+            <TextView android:gravity="center" android:id="@id/zoom" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" style="@style/ZoomText" />
+            <TextView android:gravity="center" android:id="@id/x_text" android:paddingTop="?zoomSwitcherTextPaddingTop" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/zoom_x_text" android:maxLines="1" style="@style/ZoomText" />
+        </LinearLayout>
+        <ImageView android:id="@id/icon_selected" android:background="@drawable/zoom_switcher_text_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:alpha="0.0" />
+        <ImageView android:id="@id/icon" android:padding="?zoomSwitcherPadding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/zoom_switcher_item_default_icon" />
+    </RelativeLayout>
+</RelativeLayout>

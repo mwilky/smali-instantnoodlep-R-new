@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_action_panel_setting_background" />
+            <corners android:radius="?primaryActionPanelSettingRadius" />
+            <stroke android:width="?primaryActionPanelSettingBorder" android:color="@color/primary_action_panel_setting_border" />
+        </shape>
+    </item>
+</ripple>
