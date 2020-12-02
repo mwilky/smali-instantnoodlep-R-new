@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:background="@color/processing_dialog_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/touch" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.oneplus.widget.RotateRelativeLayout android:id="@id/rotated_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/text" android:layout_width="?processingDialogTextWidth" android:layout_height="wrap_content" android:layout_marginTop="?processingDialogTextMarginTop" style="@style/ProcessingDialogText" />
+        </LinearLayout>
+    </com.oneplus.widget.RotateRelativeLayout>
+</RelativeLayout>

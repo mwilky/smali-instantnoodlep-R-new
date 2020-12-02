@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="?primaryActionDrawerSubItemIconSize" android:layout_height="?primaryActionDrawerSubItemIconSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@android:id/background" android:background="@drawable/primary_action_drawer_sub_icon_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="?primaryActionDrawerSubItemIconBackgroundMargin" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@android:id/icon" android:padding="?primaryActionDrawerSubItemIconPadding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_centerInParent="true" />
+</RelativeLayout>

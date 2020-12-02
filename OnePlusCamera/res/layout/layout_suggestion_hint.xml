@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?hintHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:padding="?smartHintIconPadding" android:layout_width="?smartHintHeight" android:layout_height="?smartHintHeight" android:layout_marginLeft="?smartHintIconMarginLeft" android:layout_marginRight="?smartHintIconMarginRight" android:scaleType="fitCenter" android:tint="@color/smart_hint_toast_icon" />
+    <TextView android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?smartHintTextPadding" style="@style/SmartHintToastText" />
+    <ImageView android:id="@id/close_icon" android:padding="?smartHintCloseIconPadding" android:layout_width="?smartHintHeight" android:layout_height="?smartHintHeight" android:layout_marginLeft="?smartHintCloseIconMarginLeft" android:layout_marginRight="?smartHintCloseIconMarginRight" android:scaleType="fitCenter" android:tint="@color/smart_hint_toast_close" />
+</LinearLayout>

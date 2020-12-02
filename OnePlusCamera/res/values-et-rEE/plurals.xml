@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hour">
+        <item quantity="other">%d tundi</item>
+        <item quantity="one">%d tund</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="other">%d minutit</item>
+        <item quantity="one">%d minut</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="other">%d sekundit</item>
+        <item quantity="one">%d sekund</item>
+    </plurals>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="oneplus_lunar_day_translate">
+        <item>初一</item>
+        <item>初二</item>
+        <item>初三</item>
+        <item>初四</item>
+        <item>初五</item>
+        <item>初六</item>
+        <item>初七</item>
+        <item>初八</item>
+        <item>初九</item>
+        <item>初十</item>
+        <item>十一</item>
+        <item>十二</item>
+        <item>十三</item>
+        <item>十四</item>
+        <item>十五</item>
+        <item>十六</item>
+        <item>十七</item>
+        <item>十八</item>
+        <item>十九</item>
+        <item>二十</item>
+        <item>廿一</item>
+        <item>廿二</item>
+        <item>廿三</item>
+        <item>廿四</item>
+        <item>廿五</item>
+        <item>廿六</item>
+        <item>廿七</item>
+        <item>廿八</item>
+        <item>廿九</item>
+        <item>三十</item>
+    </string-array>
+    <string-array name="oneplus_lunar_month_translate">
+        <item>正月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>腊月</item>
+    </string-array>
+    <string-array name="oneplus_lunar_year_translate">
+        <item>〇</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+    </string-array>
+    <string-array name="settings_capture_button_long_press_behavior_entries">
+        <item>@string/settings_action_item_short_video</item>
+        <item>@string/settings_action_item_burst</item>
+    </string-array>
+    <string-array name="settings_capture_button_long_press_behavior_entry_values">
+        <item>QUICK_VIDEO</item>
+        <item>BURST_PHOTO</item>
+    </string-array>
+    <string-array name="settings_grid_list_preference">
+        <item>@string/settings_grid_none</item>
+        <item>@string/settings_grid_uniform_3x3</item>
+        <item>@string/settings_grid_uniform_4x4</item>
+        <item>@string/settings_grid_golden_ratio</item>
+    </string-array>
+    <string-array name="settings_grid_list_preference_values">
+        <item>NONE</item>
+        <item>UNIFORM_3x3</item>
+        <item>UNIFORM_4x4</item>
+        <item>GOLDEN_RATIO</item>
+    </string-array>
+    <string-array name="settings_photo_aspect_ratio">
+        <item>@string/action_item_aspect_ratio_4x3</item>
+        <item>@string/action_item_aspect_ratio_full</item>
+        <item>@string/action_item_aspect_ratio_1x1</item>
+    </string-array>
+    <string-array name="settings_photo_aspect_ratio_values">
+        <item>NORMAL</item>
+        <item>FULL_SCREEN</item>
+        <item>SQUARE</item>
+    </string-array>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/op_control_icon_size_button" android:width="@dimen/op_control_icon_size_button" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/op_control_icon_color_active_default" android:pathData="M11.1001,17V12.9H7.0001V11.1H11.1001V7H12.9001V11.1H17.0001V12.9H12.9001V17H11.1001Z" />
+    <path android:fillColor="@color/op_control_icon_color_active_default" android:pathData="M12.0001,1.1C5.9802,1.1 1.1001,5.9801 1.1001,12C1.1001,18.0199 5.9802,22.9 12.0001,22.9C18.02,22.9 22.9001,18.0199 22.9001,12C22.9001,5.9801 18.02,1.1 12.0001,1.1ZM2.9001,12C2.9001,6.9742 6.9743,2.9 12.0001,2.9C17.0259,2.9 21.1001,6.9742 21.1001,12C21.1001,17.0258 17.0259,21.1 12.0001,21.1C6.9743,21.1 2.9001,17.0258 2.9001,12Z" android:fillType="evenOdd" />
+</vector>

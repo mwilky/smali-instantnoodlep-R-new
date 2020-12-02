@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oneplus.camera.settings.WatermarkPreviewImagePreference android:layout="@layout/layout_settings_preview_image" android:key="WatermarkPreviewImage" />
+    <SwitchPreference android:title="@string/settings_watermark" android:key="@string/settings_key_watermark_is_enabled" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/settings_watermark_name" android:key="@string/settings_key_watermark_is_brand_text_enabled" android:defaultValue="false" />
+    <com.oneplus.camera.settings.WatermarkEditTextPreference android:layout="@layout/layout_settings_edit_text" android:key="@string/settings_key_watermark_brand_text" />
+</PreferenceScreen>

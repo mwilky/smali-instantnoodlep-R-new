@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hour">
+        <item quantity="other">%d घंटे</item>
+        <item quantity="one">%d घंटा</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="other">%d मिनट</item>
+        <item quantity="one">%d मिनट</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="other">%d सेकंड</item>
+        <item quantity="one">%d सेकंड</item>
+    </plurals>
+</resources>

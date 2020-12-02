@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/capture_mode_photo" android:key="Photo">
+        <SwitchPreference android:title="@string/settings_hdr_title" android:key="@string/settings_key_is_hdr_enabled" android:summary="@string/settings_hdr_summary" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_smart_scene_recognition_title" android:key="IsSmartSceneRecognitionEnabled" android:summary="@string/settings_smart_scene_recognition_description" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_picture_mirror" android:key="IsPictureMirrorEnabled" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_auto_macro" android:key="IsAutoMacroEnabled" android:summary="@string/settings_auto_macro_summary" android:defaultValue="true" />
+        <ListPreference android:description="@string/settings_capture_button_long_press_behavior_description" android:entries="@array/settings_capture_button_long_press_behavior_entries" android:title="@string/settings_capture_button_long_press_behavior_title" android:key="@string/settings_key_capture_button_long_press_behavior" android:summary="%s" android:defaultValue="QUICK_VIDEO" android:entryValues="@array/settings_capture_button_long_press_behavior_entry_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/capture_mode_video" android:key="Video">
+        <SwitchPreference android:title="@string/settings_video_object_tracking_title" android:key="@string/settings_key_is_video_object_tracking_enabled" android:summary="@string/settings_video_object_tracking_summary" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_hevc_title" android:key="@string/settings_key_is_hevc_enabled" android:summary="@string/settings_hevc_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_pro" android:key="Pro">
+        <SwitchPreference android:title="@string/settings_histogram" android:key="IsHistogramEnabled" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_horizontal_reference_line" android:key="IsHorizontalReferenceLineEnabled" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_general" android:key="General">
+        <Preference android:title="@string/settings_custom_modes_title" android:key="CustomModes" android:summary="@string/settings_custom_modes_summary" />
+        <SwitchPreference android:title="@string/settings_wide_lens_distortion_correction" android:key="IsDistortionCorrectionEnabled" android:defaultValue="true" />
+        <ListPreference android:entries="@array/settings_grid_list_preference" android:title="@string/settings_grid" android:key="@string/settings_key_grid" android:summary="%s" android:defaultValue="NONE" android:entryValues="@array/settings_grid_list_preference_values" />
+        <PreferenceScreen android:title="@string/settings_watermark_title" android:key="WatermarkPreferenceScreen">
+            <intent android:targetPackage="com.oneplus.camera" android:targetClass="com.oneplus.camera.settings.WatermarkActivity" />
+        </PreferenceScreen>
+        <SwitchPreference android:title="@string/settings_fingerprint_long_press_to_take_photo_title" android:key="@string/settings_key_fingerprint_long_press_to_take_photo" android:summary="@string/settings_fingerprint_long_press_to_take_photo_summary" android:defaultValue="false" />
+        <SwitchPreference android:title="@string/settings_shutter_sound" android:key="@string/settings_key_shutter_sound" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/settings_save_location" android:key="@string/settings_key_save_location" android:defaultValue="false" />
+        <SwitchPreference android:title="@string/settings_camera_storage" android:key="@string/settings_key_save_media_to_sd_card" android:defaultValue="false" />
+        <PreferenceScreen android:title="@string/settings_about" android:key="AboutPreferenceScreen">
+            <intent android:targetPackage="com.oneplus.camera" android:targetClass="com.oneplus.camera.settings.AboutActivity" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Debug" android:key="Debug">
+        <PreferenceScreen android:title="Log switch" android:summary="Turn on/off pre-defined logs">
+            <intent android:targetPackage="com.oneplus.camera" android:targetClass="com.oneplus.camera.settings.LogSwitchActivity" />
+        </PreferenceScreen>
+        <Preference android:title="Features" android:key="EditFeatures" android:summary="View and modify all created features" />
+        <PreferenceScreen android:title="Features (Picture processing service)" android:summary="View and modify all created features">
+            <intent android:targetPackage="com.oneplus.camera.pictureprocessing" android:targetClass="com.oneplus.camera.pictureprocessing.FeatureEditorActivity" />
+        </PreferenceScreen>
+        <Preference android:title="Restart" android:key="Restart" android:summary="Finish and restart current Camera instance" />
+        <Preference android:title="Restart process" android:key="RestartProcess" android:summary="Kill and restart Camera process" />
+    </PreferenceCategory>
+</PreferenceScreen>

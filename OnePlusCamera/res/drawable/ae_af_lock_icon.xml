@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="20" android:drawable="@drawable/lockicon_031" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_032" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_033" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_034" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_035" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_036" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_037" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_038" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_039" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_040" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_041" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_042" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_043" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_044" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_045" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_046" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_047" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_048" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_049" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_050" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_051" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_052" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_053" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_054" />
+    <item android:duration="20" android:drawable="@drawable/lockicon_055" />
+</animation-list>

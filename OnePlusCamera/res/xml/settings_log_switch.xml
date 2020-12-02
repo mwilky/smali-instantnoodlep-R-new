@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Camera" android:key="Camera">
+        <SwitchPreference android:title="Camera characteristics" android:key="Dump.Camera2Core.CameraCharacteristics" android:summary="Static metadata" />
+        <SwitchPreference android:title="Camera characteristics (native)" android:key="Dump.Camera2Core.NativeCameraCharacteristics" android:summary="Static metadata (native)" />
+        <SwitchPreference android:title="First preview capture result" android:key="Dump.Camera2Core.FirstPreviewCaptureResult" android:summary="Metadata" />
+        <SwitchPreference android:title="First preview capture result (native)" android:key="Dump.Camera2Core.FirstNativePreviewCaptureResult" android:summary="Metadata (native)" />
+        <SwitchPreference android:title="Vendor tag map" android:key="Dump.OPCamera2Core.VendorTagMap" />
+    </PreferenceCategory>
+</PreferenceScreen>

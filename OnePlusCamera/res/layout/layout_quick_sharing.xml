@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="?captureBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oneplus.camera.widget.ThumbnailImageTransitionView android:id="@id/quick_sharing_preview_transition_view" android:background="@color/quick_sharing_preview_transition_view_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:id="@id/quick_sharing_image_progress_bar" android:visibility="gone" android:layout_width="?quickSharingImageProgressBarWidth" android:layout_height="?quickSharingImageProgressBarWidth" android:indeterminate="true" android:layout_centerHorizontal="true" android:alpha="0.0" android:indeterminateTint="@color/op_control_icon_color_active_dark" />
+    <RelativeLayout android:id="@id/quick_sharing_app_icon_panel" android:background="@drawable/quick_sharing_app_icon_panel_background" android:layout_width="?quickSharingAppIconPanelSize" android:layout_height="?quickSharingAppIconPanelSize" android:alpha="0.0" android:layout_alignParentStart="true">
+        <View android:id="@id/quick_sharing_thumb__icon" android:background="@drawable/quick_sharing_thumb_icon_background" android:layout_width="?thumbnailIconWidth" android:layout_height="?thumbnailIconHeight" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <com.oneplus.widget.RotateRelativeLayout android:id="@id/quick_sharing_message_container" android:layout_width="?quickSharingMessageWidth" android:layout_height="?quickSharingMessageWidth" android:layout_alignParentBottom="true" android:layout_marginStart="?quickSharingMessageMarginStart" android:layout_alignParentStart="true">
+        <RelativeLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="?quickSharingMessageNormalTextSize" android:textColor="@color/quick_sharing_message_normal_text_color" android:ellipsize="end" android:id="@id/quick_sharing_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick_share_instruction" android:maxLines="2" android:alpha="0.0" />
+            <TextView android:textSize="?quickSharingDescriptionTextSize" android:textColor="@color/quick_sharing_description_text_color" android:ellipsize="end" android:id="@id/quick_sharing_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0px" android:maxLines="1" android:layout_below="@id/quick_sharing_message" android:alpha="0.0" />
+        </RelativeLayout>
+    </com.oneplus.widget.RotateRelativeLayout>
+</RelativeLayout>

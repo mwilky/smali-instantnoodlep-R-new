@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oneplus.camera.widget.GestureRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/primary_action_drawer_background" android:background="@color/primary_action_drawer_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/touch_receiver" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_alignParentTop="true" />
+    <RelativeLayout android:paddingTop="?primaryActionDrawerVerticalPadding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="?primaryActionDrawerHorizontalPadding" android:paddingEnd="?primaryActionDrawerHorizontalPadding">
+        <LinearLayout android:gravity="end|bottom|center" android:orientation="horizontal" android:id="@id/primary_action_drawer_top_container" android:paddingBottom="?primaryActionDrawerTopContainerVerticalPadding" android:layout_width="fill_parent" android:layout_height="?primaryActionDrawerTopContainerHeight">
+            <LinearLayout android:orientation="horizontal" android:id="@id/fixed_items_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="?primaryActionDrawerFixedItemsContainerMarginEnd" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/dynamic_items_container" android:background="@drawable/primary_action_drawer_dynamic_items_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/primary_action_drawer_anchor_icon" android:layout_width="?primaryActionDrawerIconSize" android:layout_height="?primaryActionDrawerIconSize" android:src="@drawable/primary_action_drawer_icon_arrow" android:paddingHorizontal="?primaryActionDrawerDynamicItemHorizontalPadding" android:paddingVertical="?primaryActionDrawerDynamicItemVerticalPadding" />
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:id="@id/primary_action_drawer_sub_items_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/primary_action_drawer_top_container" android:paddingStart="?primaryActionDrawerSubItemsPanelHorizontalPadding" android:paddingEnd="?primaryActionDrawerSubItemsPanelHorizontalPadding">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/sub_items_panel_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?primaryActionDrawerSubItemsPanelTitleTextMarginTop" android:text="@string/primary_action_panel_advanced_settings" style="@style/op_control_text_style_subtitle" />
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/sub_items_panel_settings_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?primaryActionDrawerSubItemsPanelSettingsContainerMarginTop" android:layout_below="@id/sub_items_panel_title_text">
+                    <ImageView android:id="@id/sub_items_panel_settings_icon" android:padding="?primaryActionDrawerSettingsIconPadding" android:layout_width="?primaryActionDrawerSettingsIconSize" android:layout_height="?primaryActionDrawerSettingsIconSize" android:src="@drawable/primary_action_drawer_icon_settings" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/sub_items_panel_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?primaryActionDrawerSubItemsContainerMarginTop" android:layout_below="@id/sub_items_panel_settings_container" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</com.oneplus.camera.widget.GestureRelativeLayout>

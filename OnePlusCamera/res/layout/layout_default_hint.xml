@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/background" android:paddingTop="?hintVerticalPadding" android:paddingBottom="?hintVerticalPadding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?hintHeight" android:paddingStart="?hintHorizontalPadding" android:paddingEnd="?hintHorizontalPadding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="?hintIconSize" android:layout_height="?hintIconSize" android:layout_marginEnd="?hintIconTextMargin" />
+    <TextView android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/HintText" />
+</LinearLayout>

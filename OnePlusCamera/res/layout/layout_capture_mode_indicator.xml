@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/capture_mode_indicator_base" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/capture_mode_indicator_panel" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="?captureBarSize" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/capture_mode_indicator_background" android:layout_width="wrap_content" android:layout_height="?captureModesIndicatorItemTextHeight" android:layout_marginTop="?captureModesIndicatorItemContainerPaddingTop" android:src="@drawable/capture_mode_indicator_background" android:layout_alignTop="@id/capture_mode_indicator_items_container" android:layout_centerHorizontal="true" />
+        <com.oneplus.camera.widget.GestureLinearLayout android:gravity="top" android:orientation="horizontal" android:id="@id/capture_mode_indicator_items_container" android:paddingTop="?captureModesIndicatorItemContainerPaddingTop" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="-4000.0dip" />
+        <View android:id="@id/capture_mode_indicator_bar" android:background="@drawable/capture_mode_indicator_arrow_background" android:layout_width="?captureModesIndicatorArrowWidth" android:layout_height="?captureModesIndicatorArrowHeight" android:layout_marginTop="?captureModesIndicatorArrowMarginTop" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

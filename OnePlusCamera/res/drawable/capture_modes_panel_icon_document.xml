@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0">
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M15.0001,10.9H9.0001V9.1H15.0001V10.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M13.0001,14.9H9.0001V13.1H13.0001V14.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M5.6566,5.6565C6.0129,5.3001 6.4962,5.1 7.0001,5.1H17.0001C17.504,5.1 17.9873,5.3001 18.3436,5.6565C18.6999,6.0128 18.9001,6.4961 18.9001,7V17C18.9001,17.5039 18.6999,17.9872 18.3436,18.3435C17.9873,18.6998 17.504,18.9 17.0001,18.9H5.1001V7C5.1001,6.4961 5.3003,6.0128 5.6566,5.6565ZM7.0001,6.9C6.9736,6.9 6.9481,6.9105 6.9294,6.9293C6.9106,6.948 6.9001,6.9735 6.9001,7V17.1H17.0001C17.0266,17.1 17.0521,17.0894 17.0708,17.0707C17.0896,17.0519 17.1001,17.0265 17.1001,17V7C17.1001,6.9735 17.0896,6.948 17.0708,6.9293C17.0521,6.9105 17.0266,6.9 17.0001,6.9H7.0001Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M2.1001,2.1H7.0001V3.9H3.9001V7H2.1001V2.1Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M20.1001,3.9H17.0001V2.1H21.9001V7H20.1001V3.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M20.1001,20.1V17H21.9001V21.9H17.0001V20.1H20.1001Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon_selected" android:pathData="M3.9001,20.1V17H2.1001V21.9H7.0001V20.1H3.9001Z" android:fillType="evenOdd" />
+        </vector>
+    </item>
+    <item>
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0">
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M15.0001,10.9H9.0001V9.1H15.0001V10.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M13.0001,14.9H9.0001V13.1H13.0001V14.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M5.6566,5.6565C6.0129,5.3001 6.4962,5.1 7.0001,5.1H17.0001C17.504,5.1 17.9873,5.3001 18.3436,5.6565C18.6999,6.0128 18.9001,6.4961 18.9001,7V17C18.9001,17.5039 18.6999,17.9872 18.3436,18.3435C17.9873,18.6998 17.504,18.9 17.0001,18.9H5.1001V7C5.1001,6.4961 5.3003,6.0128 5.6566,5.6565ZM7.0001,6.9C6.9736,6.9 6.9481,6.9105 6.9294,6.9293C6.9106,6.948 6.9001,6.9735 6.9001,7V17.1H17.0001C17.0266,17.1 17.0521,17.0894 17.0708,17.0707C17.0896,17.0519 17.1001,17.0265 17.1001,17V7C17.1001,6.9735 17.0896,6.948 17.0708,6.9293C17.0521,6.9105 17.0266,6.9 17.0001,6.9H7.0001Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M2.1001,2.1H7.0001V3.9H3.9001V7H2.1001V2.1Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M20.1001,3.9H17.0001V2.1H21.9001V7H20.1001V3.9Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M20.1001,20.1V17H21.9001V21.9H17.0001V20.1H20.1001Z" android:fillType="evenOdd" />
+            <path android:fillColor="@color/capture_modes_panel_icon" android:pathData="M3.9001,20.1V17H2.1001V21.9H7.0001V20.1H3.9001Z" android:fillType="evenOdd" />
+        </vector>
+    </item>
+</selector>

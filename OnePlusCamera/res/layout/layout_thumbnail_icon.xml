@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oneplus.camera.widget.GestureRelativeLayout android:id="@id/thumbnail_icon_base" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="?captureBarSize" android:layout_alignParentBottom="true" android:paddingStart="?thumbnailIconContainerMarginEnd" android:paddingEnd="?thumbnailIconContainerMarginEnd" android:layout_alignParentEnd="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/thumbnail_icon_container" android:layout_width="?thumbnailIconContainerWidth" android:layout_height="?thumbnailIconContainerHeight" android:layout_marginBottom="?captureBarPrimaryButtonMarginBottom" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/thumbnail_icon_ripple_one" android:layout_width="?thumbnailIconBackgroundWidth" android:layout_height="?thumbnailIconBackgroundHeight" android:src="@drawable/thumbnail_ripple" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/thumbnail_icon_ripple_two" android:layout_width="?thumbnailIconBackgroundWidth" android:layout_height="?thumbnailIconBackgroundHeight" android:src="@drawable/thumbnail_ripple" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/thumbnail_icon_background" android:background="@color/empty_thumb" android:focusable="false" android:layout_width="?thumbnailIconBackgroundWidth" android:layout_height="?thumbnailIconBackgroundHeight" android:layout_centerInParent="true" android:elevation="?thumbnailIconElevation" />
+        <ImageView android:id="@id/thumbnail_icon" android:layout_width="?thumbnailIconWidth" android:layout_height="?thumbnailIconHeight" android:foreground="@drawable/ripple" android:scaleType="centerCrop" android:layout_centerInParent="true" android:contentDescription="@string/content_description_gallery" android:elevation="?thumbnailIconElevation" />
+    </RelativeLayout>
+</com.oneplus.camera.widget.GestureRelativeLayout>

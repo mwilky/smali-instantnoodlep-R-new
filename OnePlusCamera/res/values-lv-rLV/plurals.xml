@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_hour">
+        <item quantity="other">%d stundas</item>
+        <item quantity="one">%d stunda</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="other">%d minūtes</item>
+        <item quantity="one">%d minūte</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="other">%d sekundes</item>
+        <item quantity="one">%d sekunde</item>
+    </plurals>
+</resources>

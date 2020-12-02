@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="?primaryActionPanelSecondContainerSize" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/background" android:background="@drawable/primary_action_second_panel_item_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?primaryActionPanelSecondSize" android:layout_marginTop="?primaryActionPanelSecondMarginTop" android:layout_marginBottom="?primaryActionPanelSecondMarginBottom" android:layout_marginStart="?primaryActionPanelSecondTextBackgroundMarginStart" android:layout_marginEnd="?primaryActionPanelSecondTextBackgroundMarginStart" />
+    <ImageView android:id="@android:id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:layout_marginStart="?primaryActionPanelSecondTextBackgroundMarginStart" android:layout_marginEnd="?primaryActionPanelSecondTextBackgroundMarginStart" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/shortcut_bokeh" android:enabled="true" android:shortcutId="portrait" android:shortcutShortLabel="@string/shortcut_bokeh_short" android:shortcutLongLabel="@string/shortcut_bokeh">
+        <intent android:targetPackage="com.oneplus.camera" android:action="com.oneplus.camera.action.LAUNCH_IN_BOKEH" android:targetClass="com.oneplus.camera.CameraEntry" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_manual" android:enabled="true" android:shortcutId="pro" android:shortcutShortLabel="@string/shortcut_manual_short" android:shortcutLongLabel="@string/shortcut_manual">
+        <intent android:targetPackage="com.oneplus.camera" android:action="com.oneplus.camera.action.LAUNCH_IN_MANUAL" android:targetClass="com.oneplus.camera.CameraEntry" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_video" android:enabled="true" android:shortcutId="video" android:shortcutShortLabel="@string/shortcut_video_short" android:shortcutLongLabel="@string/shortcut_video">
+        <intent android:targetPackage="com.oneplus.camera" android:action="com.oneplus.camera.action.LAUNCH_IN_VIDEO" android:targetClass="com.oneplus.camera.CameraEntry" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_selfie" android:enabled="true" android:shortcutId="selfie" android:shortcutShortLabel="@string/shortcut_selfie_short" android:shortcutLongLabel="@string/shortcut_selfie">
+        <intent android:targetPackage="com.oneplus.camera" android:action="com.oneplus.camera.action.LAUNCH_IN_SELFIE" android:targetClass="com.oneplus.camera.CameraEntry" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

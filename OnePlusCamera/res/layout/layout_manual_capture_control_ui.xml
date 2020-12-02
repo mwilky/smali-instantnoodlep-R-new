@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oneplus.widget.RotateRelativeLayout android:id="@id/manual_histogram_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.oneplus.camera.widget.HistogramView android:id="@id/manual_histogram" android:background="@drawable/histogram_background" android:layout_width="?manualPreviewHistogramWidth" android:layout_height="?manualPreviewHistogramHeight" android:layout_marginTop="?manualPreviewHistogramMarginTopPort" app:histogramFramePadding="?manualPreviewHistogramPadding" />
+    </com.oneplus.widget.RotateRelativeLayout>
+    <com.oneplus.camera.widget.LevelView android:id="@id/manual_level" android:layout_width="?manualLevelViewSize" android:layout_height="?manualLevelViewSize" />
+    <com.oneplus.camera.ui.ManualCaptureControlPanel android:id="@id/manual_capture_control_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</RelativeLayout>
