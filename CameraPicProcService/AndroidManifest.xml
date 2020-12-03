@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.oneplus.camera.pictureprocessing" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <permission android:name="com.oneplus.camera.permission.PICTURE_PROCESSING" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:largeHeap="true">
+        <service android:exported="true" android:name="com.oneplus.camera.pictureprocessing.PictureProcessingService" android:permission="com.oneplus.camera.permission.PICTURE_PROCESSING"/>
+        <activity android:exported="true" android:name="com.oneplus.camera.pictureprocessing.FeatureEditorActivity" android:permission="com.oneplus.camera.permission.PICTURE_PROCESSING" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
+    </application>
+</manifest>
