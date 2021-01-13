@@ -53,7 +53,7 @@
 
     move-result p1
 
-    sget v0, Lc/b/b/b/f;->increment:I
+    sget v0, Lc/a/b/b/f;->increment:I
 
     if-ne p1, v0, :cond_0
 

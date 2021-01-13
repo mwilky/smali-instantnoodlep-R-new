@@ -19,7 +19,7 @@
 # instance fields
 .field public final a:Landroid/content/Context;
 
-.field public final b:Lc/b/c/r;
+.field public final b:Lc/a/c/r;
 
 .field public volatile c:Lcom/google/tagmanager/TagManager$RefreshMode;
 
@@ -36,7 +36,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/google/tagmanager/TagManager$d;Lc/b/c/r;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/tagmanager/TagManager$d;Lc/a/c/r;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,23 +59,23 @@
 
     iput-object p1, p0, Lcom/google/tagmanager/TagManager;->d:Ljava/util/concurrent/ConcurrentMap;
 
-    iput-object p3, p0, Lcom/google/tagmanager/TagManager;->b:Lc/b/c/r;
+    iput-object p3, p0, Lcom/google/tagmanager/TagManager;->b:Lc/a/c/r;
 
     new-instance p1, Lcom/google/tagmanager/TagManager$a;
 
     invoke-direct {p1, p0}, Lcom/google/tagmanager/TagManager$a;-><init>(Lcom/google/tagmanager/TagManager;)V
 
-    invoke-virtual {p3, p1}, Lc/b/c/r;->u(Lc/b/c/r$c;)V
+    invoke-virtual {p3, p1}, Lc/a/c/r;->u(Lc/a/c/r$c;)V
 
-    iget-object p1, p0, Lcom/google/tagmanager/TagManager;->b:Lc/b/c/r;
+    iget-object p1, p0, Lcom/google/tagmanager/TagManager;->b:Lc/a/c/r;
 
-    new-instance p2, Lc/b/c/c;
+    new-instance p2, Lc/a/c/c;
 
     iget-object p3, p0, Lcom/google/tagmanager/TagManager;->a:Landroid/content/Context;
 
-    invoke-direct {p2, p3}, Lc/b/c/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lc/a/c/c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p1, p2}, Lc/b/c/r;->u(Lc/b/c/r$c;)V
+    invoke-virtual {p1, p2}, Lc/a/c/r;->u(Lc/a/c/r$c;)V
 
     return-void
 
@@ -115,17 +115,17 @@
 
     invoke-direct {v1}, Lcom/google/tagmanager/TagManager$b;-><init>()V
 
-    new-instance v2, Lc/b/c/u;
+    new-instance v2, Lc/a/c/u;
 
-    invoke-direct {v2, p0}, Lc/b/c/u;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lc/a/c/u;-><init>(Landroid/content/Context;)V
 
     new-instance v3, Lcom/google/tagmanager/TagManager;
 
-    new-instance v4, Lc/b/c/r;
+    new-instance v4, Lc/a/c/r;
 
-    invoke-direct {v4, v2}, Lc/b/c/r;-><init>(Lc/b/c/r$d;)V
+    invoke-direct {v4, v2}, Lc/a/c/r;-><init>(Lc/a/c/r$d;)V
 
-    invoke-direct {v3, p0, v1, v4}, Lcom/google/tagmanager/TagManager;-><init>(Landroid/content/Context;Lcom/google/tagmanager/TagManager$d;Lc/b/c/r;)V
+    invoke-direct {v3, p0, v1, v4}, Lcom/google/tagmanager/TagManager;-><init>(Landroid/content/Context;Lcom/google/tagmanager/TagManager$d;Lc/a/c/r;)V
 
     sput-object v3, Lcom/google/tagmanager/TagManager;->e:Lcom/google/tagmanager/TagManager;
 
@@ -134,7 +134,7 @@
     :cond_0
     const-string p0, "TagManager.getInstance requires non-null context."
 
-    invoke-static {p0}, Lc/b/c/z0;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Lc/a/c/z0;->a(Ljava/lang/String;)V
 
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -162,10 +162,10 @@
 
 
 # virtual methods
-.method public b()Lc/b/c/r;
+.method public b()Lc/a/c/r;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/tagmanager/TagManager;->b:Lc/b/c/r;
+    iget-object v0, p0, Lcom/google/tagmanager/TagManager;->b:Lc/a/c/r;
 
     return-object v0
 .end method

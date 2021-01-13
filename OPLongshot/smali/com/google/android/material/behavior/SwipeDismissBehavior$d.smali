@@ -47,13 +47,13 @@
 
     iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$d;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lb/j/a/a;
+    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lb/i/a/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/j/a/a;->k(Z)Z
+    invoke-virtual {v0, v1}, Lb/i/a/a;->k(Z)Z
 
     move-result v0
 

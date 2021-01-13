@@ -87,11 +87,11 @@
     :goto_1
     iget-object p2, p0, Lcom/google/android/material/picker/DayPickerView$b;->a:Lcom/google/android/material/picker/DayPickerView;
 
-    invoke-static {p2}, Lcom/google/android/material/picker/DayPickerView;->b(Lcom/google/android/material/picker/DayPickerView;)Lc/b/b/b/c0/c;
+    invoke-static {p2}, Lcom/google/android/material/picker/DayPickerView;->b(Lcom/google/android/material/picker/DayPickerView;)Lc/a/b/b/b0/c;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lc/b/b/b/c0/c;->r()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lc/a/b/b/b0/c;->r()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -129,7 +129,7 @@
 
     float-to-int v0, v0
 
-    invoke-virtual {p3, v0}, Lcom/google/android/material/picker/SimpleMonthView;->P(I)V
+    invoke-virtual {p3, v0}, Lcom/google/android/material/picker/SimpleMonthView;->Q(I)V
 
     goto :goto_2
 

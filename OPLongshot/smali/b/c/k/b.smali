@@ -139,24 +139,72 @@
 .end method
 
 .method public onAttachedToWindow()V
-    .locals 2
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
+    iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->isInMultiWindowMode()Z
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
+    const/16 v1, 0x640
+
+    if-ge v0, v1, :cond_0
+
+    iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    if-ge v0, v1, :cond_3
+
+    iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_3
+
+    :cond_1
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -171,51 +219,95 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    :cond_0
+    iget-object v0, p0, Lb/c/k/b;->c:Landroidx/appcompat/app/AlertController;
+
+    iget-boolean v0, v0, Landroidx/appcompat/app/AlertController;->D:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Lb/c/e;->op_dialog_material_background_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    sget v1, Lb/c/e;->dialog_background_material:I
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    const/4 v1, -0x2
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    :cond_3
     invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_4
 
     iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
 
     instance-of v0, v0, Landroid/app/Activity;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_6
 
-    :cond_1
+    :cond_4
     iget-object v0, p0, Lb/c/k/b;->c:Landroidx/appcompat/app/AlertController;
 
     iget-boolean v0, v0, Landroidx/appcompat/app/AlertController;->D:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_6
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_5
 
     iget-object v0, p0, Lb/c/k/b;->d:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_5
     invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    :goto_0
+    :goto_1
     new-instance v1, Lb/c/k/b$a;
 
     invoke-direct {v1, p0}, Lb/c/k/b$a;-><init>(Lb/c/k/b;)V
 
     invoke-static {v0, v1}, Landroidx/appcompat/app/SoftKeyBoardListener;->f(Landroid/app/Activity;Landroidx/appcompat/app/SoftKeyBoardListener$b;)V
 
-    :cond_3
+    :cond_6
     return-void
 .end method
 

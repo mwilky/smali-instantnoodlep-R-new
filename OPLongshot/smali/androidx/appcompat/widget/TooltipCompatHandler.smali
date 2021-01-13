@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/l/q;->c(Landroid/view/ViewConfiguration;)I
+    invoke-static {p1}, Lb/g/l/q;->c(Landroid/view/ViewConfiguration;)I
 
     move-result p1
 

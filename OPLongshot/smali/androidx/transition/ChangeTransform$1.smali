@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/util/Property<",
-        "Lb/q/d;",
+        "Lb/p/d;",
         "[F>;"
     }
 .end annotation
@@ -27,16 +27,16 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lb/q/d;
+    check-cast p1, Lb/p/d;
 
-    invoke-virtual {p0, p1}, Landroidx/transition/ChangeTransform$1;->get(Lb/q/d;)[F
+    invoke-virtual {p0, p1}, Landroidx/transition/ChangeTransform$1;->get(Lb/p/d;)[F
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public get(Lb/q/d;)[F
+.method public get(Lb/p/d;)[F
     .locals 0
 
     const/4 p1, 0x0
@@ -44,10 +44,10 @@
     return-object p1
 .end method
 
-.method public set(Lb/q/d;[F)V
+.method public set(Lb/p/d;[F)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Lb/q/d;->c([F)V
+    invoke-virtual {p1, p2}, Lb/p/d;->c([F)V
 
     return-void
 .end method
@@ -55,11 +55,11 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lb/q/d;
+    check-cast p1, Lb/p/d;
 
     check-cast p2, [F
 
-    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeTransform$1;->set(Lb/q/d;[F)V
+    invoke-virtual {p0, p1, p2}, Landroidx/transition/ChangeTransform$1;->set(Lb/p/d;[F)V
 
     return-void
 .end method

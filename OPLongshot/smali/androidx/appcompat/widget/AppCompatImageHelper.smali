@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Lb/h/m/d;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Lb/g/m/d;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -78,7 +78,7 @@
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/widget/AppCompatImageHelper;->mView:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Lb/h/m/d;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1}, Lb/g/m/d;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v1
 
@@ -382,7 +382,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lb/h/m/d;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1}, Lb/g/m/d;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
 
     :cond_3
     sget p1, Lb/c/j;->AppCompatImageView_tintMode:I
@@ -407,7 +407,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lb/h/m/d;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, p2}, Lb/g/m/d;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

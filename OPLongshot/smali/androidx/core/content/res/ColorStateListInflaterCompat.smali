@@ -264,7 +264,7 @@
     goto/16 :goto_4
 
     :cond_1
-    sget-object v7, Lb/h/c;->ColorStateListItem:[I
+    sget-object v7, Lb/g/c;->ColorStateListItem:[I
 
     move-object/from16 v8, p0
 
@@ -274,7 +274,7 @@
 
     move-result-object v7
 
-    sget v10, Lb/h/c;->ColorStateListItem_android_color:I
+    sget v10, Lb/g/c;->ColorStateListItem_android_color:I
 
     const v11, -0xff01
 
@@ -284,7 +284,7 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    sget v12, Lb/h/c;->ColorStateListItem_android_alpha:I
+    sget v12, Lb/g/c;->ColorStateListItem_android_alpha:I
 
     invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -292,7 +292,7 @@
 
     if-eqz v12, :cond_2
 
-    sget v12, Lb/h/c;->ColorStateListItem_android_alpha:I
+    sget v12, Lb/g/c;->ColorStateListItem_android_alpha:I
 
     invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -301,7 +301,7 @@
     goto :goto_1
 
     :cond_2
-    sget v12, Lb/h/c;->ColorStateListItem_alpha:I
+    sget v12, Lb/g/c;->ColorStateListItem_alpha:I
 
     invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -309,7 +309,7 @@
 
     if-eqz v12, :cond_3
 
-    sget v12, Lb/h/c;->ColorStateListItem_alpha:I
+    sget v12, Lb/g/c;->ColorStateListItem_alpha:I
 
     invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -344,7 +344,7 @@
 
     if-eq v15, v2, :cond_5
 
-    sget v2, Lb/h/a;->alpha:I
+    sget v2, Lb/g/a;->alpha:I
 
     if-eq v15, v2, :cond_5
 
@@ -382,11 +382,11 @@
 
     move-result v7
 
-    invoke-static {v3, v6, v7}, Lb/h/e/c/a;->a([III)[I
+    invoke-static {v3, v6, v7}, Lb/g/e/c/a;->a([III)[I
 
     move-result-object v3
 
-    invoke-static {v4, v6, v2}, Lb/h/e/c/a;->b([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v4, v6, v2}, Lb/g/e/c/a;->b([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
 

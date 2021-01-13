@@ -70,7 +70,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object v0, Lc/c/b/a/a;->a:Ljava/lang/String;
+    sget-object v0, Lc/b/b/a/a;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -78,7 +78,7 @@
 
     move-result v0
 
-    sget-object v2, Lc/c/b/a/a;->b:Ljava/lang/String;
+    sget-object v2, Lc/b/b/a/a;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 

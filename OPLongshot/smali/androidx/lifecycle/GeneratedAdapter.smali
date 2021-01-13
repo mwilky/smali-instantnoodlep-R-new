@@ -12,5 +12,5 @@
 
 
 # virtual methods
-.method public abstract callMethods(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
+.method public abstract callMethods(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 .end method

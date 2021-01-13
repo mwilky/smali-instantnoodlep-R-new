@@ -52,7 +52,7 @@
 
 .field public q:Lcom/google/android/material/edgeeffect/SpringListView2$b;
 
-.field public r:Lc/b/b/b/b0/b/a;
+.field public r:Landroidx/dynamicanimation/animation/SpringAnimation;
 
 .field public s:F
 
@@ -1586,9 +1586,9 @@
 
     iput p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->b:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
@@ -1676,9 +1676,9 @@
 
     iput v0, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->a:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringListView2;->r:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 

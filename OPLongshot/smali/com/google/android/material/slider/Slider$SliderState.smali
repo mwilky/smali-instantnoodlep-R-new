@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Parcel;Lc/b/b/b/g0/a;)V
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lc/a/b/b/f0/a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/slider/Slider$SliderState;-><init>(Landroid/os/Parcel;)V

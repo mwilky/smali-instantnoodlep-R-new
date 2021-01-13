@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior$c;
-.super Lb/j/a/a$c;
+.super Lb/i/a/a$c;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$c;->a:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    invoke-direct {p0}, Lb/j/a/a$c;-><init>()V
+    invoke-direct {p0}, Lb/i/a/a$c;-><init>()V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     iget p3, p3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->collapsedOffset:I
 
     :goto_0
-    invoke-static {p2, p1, p3}, Lb/h/g/a;->b(III)I
+    invoke-static {p2, p1, p3}, Lb/g/g/a;->b(III)I
 
     move-result p1
 

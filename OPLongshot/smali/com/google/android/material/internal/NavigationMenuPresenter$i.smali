@@ -22,7 +22,7 @@
         .end annotation
     .end param
 
-    sget v0, Lc/b/b/b/h;->design_navigation_item_separator:I
+    sget v0, Lc/a/b/b/h;->design_navigation_item_separator:I
 
     const/4 v1, 0x0
 

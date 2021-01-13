@@ -43,7 +43,7 @@
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f10009e
+    const p1, 0x7f100093
 
     :goto_0
     if-lez p1, :cond_2

@@ -47,7 +47,7 @@
 
     const/16 v0, 0xa
 
-    invoke-static {p2, v0}, Lc/c/a/b;->a(Landroid/content/Context;I)F
+    invoke-static {p2, v0}, Lc/b/a/b;->a(Landroid/content/Context;I)F
 
     move-result p2
 
@@ -194,7 +194,7 @@
 
     add-int/2addr p4, v0
 
-    invoke-static {p3, v1, v2, p2, p4}, Lb/h/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {p3, v1, v2, p2, p4}, Lb/g/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_0
     return p1

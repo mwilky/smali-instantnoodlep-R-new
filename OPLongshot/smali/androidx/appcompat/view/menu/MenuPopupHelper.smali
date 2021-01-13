@@ -347,7 +347,7 @@
 
     move-result p4
 
-    invoke-static {p3, p4}, Lb/h/l/b;->b(II)I
+    invoke-static {p3, p4}, Lb/g/l/b;->b(II)I
 
     move-result p3
 

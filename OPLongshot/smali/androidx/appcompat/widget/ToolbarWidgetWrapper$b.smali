@@ -1,11 +1,11 @@
 .class public Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;
-.super Lb/h/l/v;
+.super Lb/g/l/v;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/h/l/t;
+    value = Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;->b:I
 
-    invoke-direct {p0}, Lb/h/l/v;-><init>()V
+    invoke-direct {p0}, Lb/g/l/v;-><init>()V
 
     const/4 p1, 0x0
 

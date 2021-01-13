@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/q/f;
+.implements Lb/p/f;
 
 
 # annotations
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Lb/q/f;
+.method public static addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Lb/p/f;
     .locals 5
 
     invoke-static {}, Landroidx/transition/GhostViewPlatform;->fetchAddGhostMethod()V

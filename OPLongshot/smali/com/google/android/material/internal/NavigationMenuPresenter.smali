@@ -185,14 +185,14 @@
     return p1
 .end method
 
-.method public dispatchApplyWindowInsets(Lb/h/l/x;)V
+.method public dispatchApplyWindowInsets(Lb/g/l/x;)V
     .locals 4
-    .param p1    # Lb/h/l/x;
+    .param p1    # Lb/g/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-virtual {p1}, Lb/h/l/x;->e()I
+    invoke-virtual {p1}, Lb/g/l/x;->e()I
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Lb/h/l/x;->b()I
+    invoke-virtual {p1}, Lb/g/l/x;->b()I
 
     move-result v2
 
@@ -221,7 +221,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->headerLayout:Landroid/widget/LinearLayout;
 
-    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
 
     return-void
 .end method
@@ -351,7 +351,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    sget v1, Lc/b/b/b/h;->design_navigation_menu:I
+    sget v1, Lc/a/b/b/h;->design_navigation_menu:I
 
     const/4 v2, 0x0
 
@@ -369,7 +369,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/google/android/material/internal/NavigationMenuPresenter$g;-><init>(Lcom/google/android/material/internal/NavigationMenuPresenter;Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Lb/o/d/m;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Lb/n/d/m;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 
@@ -395,7 +395,7 @@
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->layoutInflater:Landroid/view/LayoutInflater;
 
-    sget v0, Lc/b/b/b/h;->design_navigation_item_header:I
+    sget v0, Lc/a/b/b/h;->design_navigation_item_header:I
 
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->menuView:Lcom/google/android/material/internal/NavigationMenuView;
 
@@ -464,7 +464,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->design_navigation_separator_vertical_padding:I
+    sget p2, Lc/a/b/b/d;->design_navigation_separator_vertical_padding:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

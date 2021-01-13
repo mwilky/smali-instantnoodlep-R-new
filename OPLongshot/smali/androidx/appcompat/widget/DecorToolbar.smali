@@ -193,7 +193,7 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract setupAnimatorToVisibility(IJ)Lb/h/l/t;
+.method public abstract setupAnimatorToVisibility(IJ)Lb/g/l/t;
 .end method
 
 .method public abstract showOverflowMenu()Z

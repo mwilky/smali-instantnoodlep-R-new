@@ -585,13 +585,13 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-virtual {p0, p1, v0, v1}, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/h/l/t;
+    invoke-virtual {p0, p1, v0, v1}, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lb/h/l/t;->j()V
+    invoke-virtual {p1}, Lb/g/l/t;->j()V
 
     :cond_0
     return-void
@@ -1635,12 +1635,12 @@
     return-void
 .end method
 
-.method public setupAnimatorToVisibility(IJ)Lb/h/l/t;
+.method public setupAnimatorToVisibility(IJ)Lb/g/l/t;
     .locals 2
 
     iget-object v0, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/h/l/t;
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/g/l/t;
 
     move-result-object v0
 
@@ -1654,15 +1654,15 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Lb/h/l/t;->a(F)Lb/h/l/t;
+    invoke-virtual {v0, v1}, Lb/g/l/t;->a(F)Lb/g/l/t;
 
-    invoke-virtual {v0, p2, p3}, Lb/h/l/t;->d(J)Lb/h/l/t;
+    invoke-virtual {v0, p2, p3}, Lb/g/l/t;->d(J)Lb/g/l/t;
 
     new-instance p2, Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;
 
     invoke-direct {p2, p0, p1}, Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;-><init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;I)V
 
-    invoke-virtual {v0, p2}, Lb/h/l/t;->f(Lb/h/l/u;)Lb/h/l/t;
+    invoke-virtual {v0, p2}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
 
     return-object v0
 .end method

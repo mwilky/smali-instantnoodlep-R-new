@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/c;
+.implements Lb/l/c;
 
 
 # annotations
@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -59,11 +59,11 @@
 
     iget-object p1, p0, Landroidx/activity/ComponentActivity$3;->a:Landroidx/activity/ComponentActivity;
 
-    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/m/j;
+    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/l/j;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/m/j;->a()V
+    invoke-virtual {p1}, Lb/l/j;->a()V
 
     :cond_0
     return-void

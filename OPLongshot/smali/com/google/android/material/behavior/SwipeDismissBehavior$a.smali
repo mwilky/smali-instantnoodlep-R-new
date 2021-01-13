@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/behavior/SwipeDismissBehavior$a;
-.super Lb/j/a/a$c;
+.super Lb/i/a/a$c;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$a;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    invoke-direct {p0}, Lb/j/a/a$c;-><init>()V
+    invoke-direct {p0}, Lb/i/a/a$c;-><init>()V
 
     const/4 p1, -0x1
 
@@ -349,13 +349,13 @@
     :goto_1
     iget-object p3, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$a;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget-object p3, p3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lb/j/a/a;
+    iget-object p3, p3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lb/i/a/a;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    invoke-virtual {p3, v0, v1}, Lb/j/a/a;->G(II)Z
+    invoke-virtual {p3, v0, v1}, Lb/i/a/a;->G(II)Z
 
     move-result p3
 

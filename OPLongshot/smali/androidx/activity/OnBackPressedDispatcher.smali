@@ -52,9 +52,9 @@
 
 
 # virtual methods
-.method public a(Lb/m/e;Lb/a/b;)V
+.method public a(Lb/l/e;Lb/a/b;)V
     .locals 2
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -65,7 +65,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
-    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 

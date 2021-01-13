@@ -273,31 +273,31 @@
 
     move-result-object v0
 
-    sget-object v1, Lb/h/c;->FontFamily:[I
+    sget-object v1, Lb/g/c;->FontFamily:[I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lb/h/c;->FontFamily_fontProviderAuthority:I
+    sget v1, Lb/g/c;->FontFamily_fontProviderAuthority:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    sget v2, Lb/h/c;->FontFamily_fontProviderPackage:I
+    sget v2, Lb/g/c;->FontFamily_fontProviderPackage:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget v3, Lb/h/c;->FontFamily_fontProviderQuery:I
+    sget v3, Lb/g/c;->FontFamily_fontProviderQuery:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget v4, Lb/h/c;->FontFamily_fontProviderCerts:I
+    sget v4, Lb/g/c;->FontFamily_fontProviderCerts:I
 
     const/4 v5, 0x0
 
@@ -305,7 +305,7 @@
 
     move-result v4
 
-    sget v5, Lb/h/c;->FontFamily_fontProviderFetchStrategy:I
+    sget v5, Lb/g/c;->FontFamily_fontProviderFetchStrategy:I
 
     const/4 v6, 0x1
 
@@ -313,7 +313,7 @@
 
     move-result v5
 
-    sget v6, Lb/h/c;->FontFamily_fontProviderFetchTimeout:I
+    sget v6, Lb/g/c;->FontFamily_fontProviderFetchTimeout:I
 
     const/16 v7, 0x1f4
 
@@ -349,11 +349,11 @@
 
     new-instance p1, Landroidx/core/content/res/FontResourcesParserCompat$d;
 
-    new-instance v0, Lb/h/i/a;
+    new-instance v0, Lb/g/i/a;
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lb/h/i/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v1, v2, v3, p0}, Lb/g/i/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
-    invoke-direct {p1, v0, v5, v6}, Landroidx/core/content/res/FontResourcesParserCompat$d;-><init>(Lb/h/i/a;II)V
+    invoke-direct {p1, v0, v5, v6}, Landroidx/core/content/res/FontResourcesParserCompat$d;-><init>(Lb/g/i/a;II)V
 
     return-object p1
 
@@ -443,13 +443,13 @@
 
     move-result-object v0
 
-    sget-object v1, Lb/h/c;->FontFamilyFont:[I
+    sget-object v1, Lb/g/c;->FontFamilyFont:[I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget v0, Lb/h/c;->FontFamilyFont_fontWeight:I
+    sget v0, Lb/g/c;->FontFamilyFont_fontWeight:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -457,12 +457,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lb/h/c;->FontFamilyFont_fontWeight:I
+    sget v0, Lb/g/c;->FontFamilyFont_fontWeight:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lb/h/c;->FontFamilyFont_android_fontWeight:I
+    sget v0, Lb/g/c;->FontFamilyFont_android_fontWeight:I
 
     :goto_0
     const/16 v1, 0x190
@@ -471,7 +471,7 @@
 
     move-result v4
 
-    sget v0, Lb/h/c;->FontFamilyFont_fontStyle:I
+    sget v0, Lb/g/c;->FontFamilyFont_fontStyle:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -479,12 +479,12 @@
 
     if-eqz v0, :cond_1
 
-    sget v0, Lb/h/c;->FontFamilyFont_fontStyle:I
+    sget v0, Lb/g/c;->FontFamilyFont_fontStyle:I
 
     goto :goto_1
 
     :cond_1
-    sget v0, Lb/h/c;->FontFamilyFont_android_fontStyle:I
+    sget v0, Lb/g/c;->FontFamilyFont_android_fontStyle:I
 
     :goto_1
     const/4 v1, 0x0
@@ -505,7 +505,7 @@
     move v5, v1
 
     :goto_2
-    sget v0, Lb/h/c;->FontFamilyFont_ttcIndex:I
+    sget v0, Lb/g/c;->FontFamilyFont_ttcIndex:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -513,15 +513,15 @@
 
     if-eqz v0, :cond_3
 
-    sget v0, Lb/h/c;->FontFamilyFont_ttcIndex:I
+    sget v0, Lb/g/c;->FontFamilyFont_ttcIndex:I
 
     goto :goto_3
 
     :cond_3
-    sget v0, Lb/h/c;->FontFamilyFont_android_ttcIndex:I
+    sget v0, Lb/g/c;->FontFamilyFont_android_ttcIndex:I
 
     :goto_3
-    sget v2, Lb/h/c;->FontFamilyFont_fontVariationSettings:I
+    sget v2, Lb/g/c;->FontFamilyFont_fontVariationSettings:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -529,12 +529,12 @@
 
     if-eqz v2, :cond_4
 
-    sget v2, Lb/h/c;->FontFamilyFont_fontVariationSettings:I
+    sget v2, Lb/g/c;->FontFamilyFont_fontVariationSettings:I
 
     goto :goto_4
 
     :cond_4
-    sget v2, Lb/h/c;->FontFamilyFont_android_fontVariationSettings:I
+    sget v2, Lb/g/c;->FontFamilyFont_android_fontVariationSettings:I
 
     :goto_4
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -545,7 +545,7 @@
 
     move-result v7
 
-    sget v0, Lb/h/c;->FontFamilyFont_font:I
+    sget v0, Lb/g/c;->FontFamilyFont_font:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -553,12 +553,12 @@
 
     if-eqz v0, :cond_5
 
-    sget v0, Lb/h/c;->FontFamilyFont_font:I
+    sget v0, Lb/g/c;->FontFamilyFont_font:I
 
     goto :goto_5
 
     :cond_5
-    sget v0, Lb/h/c;->FontFamilyFont_android_font:I
+    sget v0, Lb/g/c;->FontFamilyFont_android_font:I
 
     :goto_5
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I

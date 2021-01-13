@@ -61,7 +61,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/TextInputTimePickerView$a;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
-    sget v2, Lc/b/b/b/k;->OPTextAppearance_Material_TimePicker_InputField:I
+    sget v2, Lc/a/b/b/k;->OPTextAppearance_Material_TimePicker_InputField:I
 
     invoke-static {p2}, Lcom/google/android/material/picker/TextInputTimePickerView;->a(Lcom/google/android/material/picker/TextInputTimePickerView;)Landroid/widget/EditText;
 
@@ -71,7 +71,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/TextInputTimePickerView$a;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
-    sget v2, Lc/b/b/b/k;->OPTextAppearance_Material_TimePicker_InputFieldUnActive:I
+    sget v2, Lc/a/b/b/k;->OPTextAppearance_Material_TimePicker_InputFieldUnActive:I
 
     invoke-static {p2}, Lcom/google/android/material/picker/TextInputTimePickerView;->b(Lcom/google/android/material/picker/TextInputTimePickerView;)Landroid/widget/EditText;
 

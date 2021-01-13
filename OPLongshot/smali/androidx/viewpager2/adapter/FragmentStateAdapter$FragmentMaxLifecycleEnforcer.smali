@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public a:Landroidx/viewpager2/widget/ViewPager2$i;
+.field public a:Landroidx/viewpager2/widget/ViewPager2$b;
 
 .field public b:Landroidx/recyclerview/widget/RecyclerView$g;
 
-.field public c:Lb/m/c;
+.field public c:Lb/l/c;
 
 .field public d:Landroidx/viewpager2/widget/ViewPager2;
 
@@ -105,11 +105,11 @@
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer$a;-><init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;)V
 
-    iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->a:Landroidx/viewpager2/widget/ViewPager2$i;
+    iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->a:Landroidx/viewpager2/widget/ViewPager2$b;
 
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->d:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2;->g(Landroidx/viewpager2/widget/ViewPager2$i;)V
+    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2;->c(Landroidx/viewpager2/widget/ViewPager2$b;)V
 
     new-instance p1, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer$b;
 
@@ -125,13 +125,13 @@
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3;-><init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;)V
 
-    iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->c:Lb/m/c;
+    iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->c:Lb/l/c;
 
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->f:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iget-object v0, v0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/Lifecycle;->a(Lb/l/d;)V
 
     return-void
 .end method
@@ -147,9 +147,9 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->a:Landroidx/viewpager2/widget/ViewPager2$i;
+    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->a:Landroidx/viewpager2/widget/ViewPager2$b;
 
-    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->n(Landroidx/viewpager2/widget/ViewPager2$i;)V
+    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->i(Landroidx/viewpager2/widget/ViewPager2$b;)V
 
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->f:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
@@ -161,9 +161,9 @@
 
     iget-object p1, p1, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->c:Lb/m/c;
+    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->c:Lb/l/c;
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->c(Lb/m/d;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->c(Lb/l/d;)V
 
     const/4 p1, 0x0
 
@@ -277,9 +277,9 @@
 
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;->f:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
-    iget-object p1, p1, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Lb/k/a/f;
+    iget-object p1, p1, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Lb/j/a/f;
 
-    invoke-virtual {p1}, Lb/k/a/f;->a()Lb/k/a/j;
+    invoke-virtual {p1}, Lb/j/a/f;->a()Lb/j/a/j;
 
     move-result-object p1
 
@@ -335,7 +335,7 @@
 
     sget-object v6, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v5, v6}, Lb/k/a/j;->q(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Lb/k/a/j;
+    invoke-virtual {p1, v5, v6}, Lb/j/a/j;->q(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Lb/j/a/j;
 
     goto :goto_1
 
@@ -369,16 +369,16 @@
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v0, v1}, Lb/k/a/j;->q(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Lb/k/a/j;
+    invoke-virtual {p1, v0, v1}, Lb/j/a/j;->q(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Lb/j/a/j;
 
     :cond_a
-    invoke-virtual {p1}, Lb/k/a/j;->m()Z
+    invoke-virtual {p1}, Lb/j/a/j;->m()Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
-    invoke-virtual {p1}, Lb/k/a/j;->h()V
+    invoke-virtual {p1}, Lb/j/a/j;->h()V
 
     :cond_b
     :goto_4

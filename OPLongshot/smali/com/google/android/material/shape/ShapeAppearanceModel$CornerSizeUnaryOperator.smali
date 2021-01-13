@@ -21,8 +21,8 @@
 
 
 # virtual methods
-.method public abstract apply(Lc/b/b/b/f0/b;)Lc/b/b/b/f0/b;
-    .param p1    # Lc/b/b/b/f0/b;
+.method public abstract apply(Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+    .param p1    # Lc/a/b/b/e0/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

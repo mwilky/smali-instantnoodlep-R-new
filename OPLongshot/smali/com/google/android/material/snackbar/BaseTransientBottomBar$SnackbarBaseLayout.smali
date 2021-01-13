@@ -42,13 +42,13 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lc/b/b/b/l;->SnackbarLayout:[I
+    sget-object v0, Lc/a/b/b/l;->SnackbarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->SnackbarLayout_elevation:I
+    sget p2, Lc/a/b/b/l;->SnackbarLayout_elevation:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -56,7 +56,7 @@
 
     if-eqz p2, :cond_0
 
-    sget p2, Lc/b/b/b/l;->SnackbarLayout_elevation:I
+    sget p2, Lc/a/b/b/l;->SnackbarLayout_elevation:I
 
     const/4 v0, 0x0
 

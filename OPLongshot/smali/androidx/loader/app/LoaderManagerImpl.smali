@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final a:Lb/m/e;
+.field public final a:Lb/l/e;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -36,22 +36,22 @@
     return-void
 .end method
 
-.method public constructor <init>(Lb/m/e;Lb/m/j;)V
+.method public constructor <init>(Lb/l/e;Lb/l/j;)V
     .locals 0
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/m/j;
+    .param p2    # Lb/l/j;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     invoke-direct {p0}, Landroidx/loader/app/LoaderManager;-><init>()V
 
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/m/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/l/e;
 
-    invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$a;->e(Lb/m/j;)Landroidx/loader/app/LoaderManagerImpl$a;
+    invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$a;->e(Lb/l/j;)Landroidx/loader/app/LoaderManagerImpl$a;
 
     move-result-object p1
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/m/e;
+    iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl;->a:Lb/l/e;
 
     invoke-static {v1, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 

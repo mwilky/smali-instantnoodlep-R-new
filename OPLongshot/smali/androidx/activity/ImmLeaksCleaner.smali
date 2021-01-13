@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/c;
+.implements Lb/l/c;
 
 
 # annotations
@@ -107,9 +107,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

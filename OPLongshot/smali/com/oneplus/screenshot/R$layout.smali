@@ -297,113 +297,95 @@
 
 .field public static final op_year_label_text_view:I = 0x7f0d008c
 
-.field public static final painter_anim_bezier_layout:I = 0x7f0d008d
+.field public static final preference:I = 0x7f0d008d
 
-.field public static final painter_anim_color_page_indicator_dot_layout:I = 0x7f0d008e
+.field public static final preference_category:I = 0x7f0d008e
 
-.field public static final painter_anim_monitor_item:I = 0x7f0d008f
+.field public static final preference_category_material:I = 0x7f0d008f
 
-.field public static final painter_anim_panel_layout:I = 0x7f0d0090
+.field public static final preference_category_samll_top_material:I = 0x7f0d0090
 
-.field public static final painter_anim_path_interpolator_edit_item:I = 0x7f0d0091
+.field public static final preference_dialog_edittext:I = 0x7f0d0091
 
-.field public static final painter_anim_seekbar_item:I = 0x7f0d0092
+.field public static final preference_divider:I = 0x7f0d0092
 
-.field public static final painter_anim_seekbar_item_title:I = 0x7f0d0093
+.field public static final preference_dropdown:I = 0x7f0d0093
 
-.field public static final painter_anim_spinner_item:I = 0x7f0d0094
+.field public static final preference_dropdown_material:I = 0x7f0d0094
 
-.field public static final painter_anim_spinner_item_dropdown:I = 0x7f0d0095
+.field public static final preference_header_item:I = 0x7f0d0095
 
-.field public static final preference:I = 0x7f0d0096
+.field public static final preference_header_item_material:I = 0x7f0d0096
 
-.field public static final preference_category:I = 0x7f0d0097
+.field public static final preference_information:I = 0x7f0d0097
 
-.field public static final preference_category_material:I = 0x7f0d0098
+.field public static final preference_information_material:I = 0x7f0d0098
 
-.field public static final preference_category_samll_top_material:I = 0x7f0d0099
+.field public static final preference_list_content:I = 0x7f0d0099
 
-.field public static final preference_dialog_edittext:I = 0x7f0d009a
+.field public static final preference_list_content_material:I = 0x7f0d009a
 
-.field public static final preference_divider:I = 0x7f0d009b
+.field public static final preference_list_content_single:I = 0x7f0d009b
 
-.field public static final preference_dropdown:I = 0x7f0d009c
+.field public static final preference_list_fragment:I = 0x7f0d009c
 
-.field public static final preference_dropdown_material:I = 0x7f0d009d
+.field public static final preference_material:I = 0x7f0d009d
 
-.field public static final preference_header_item:I = 0x7f0d009e
+.field public static final preference_recyclerview:I = 0x7f0d009e
 
-.field public static final preference_header_item_material:I = 0x7f0d009f
+.field public static final preference_widget_checkbox:I = 0x7f0d009f
 
-.field public static final preference_information:I = 0x7f0d00a0
+.field public static final preference_widget_divider_switch:I = 0x7f0d00a0
 
-.field public static final preference_information_material:I = 0x7f0d00a1
+.field public static final preference_widget_radiobutton:I = 0x7f0d00a1
 
-.field public static final preference_list_content:I = 0x7f0d00a2
+.field public static final preference_widget_seekbar:I = 0x7f0d00a2
 
-.field public static final preference_list_content_material:I = 0x7f0d00a3
+.field public static final preference_widget_seekbar_material:I = 0x7f0d00a3
 
-.field public static final preference_list_content_single:I = 0x7f0d00a4
+.field public static final preference_widget_switch:I = 0x7f0d00a4
 
-.field public static final preference_list_fragment:I = 0x7f0d00a5
+.field public static final preference_widget_switch_compat:I = 0x7f0d00a5
 
-.field public static final preference_material:I = 0x7f0d00a6
+.field public static final preview:I = 0x7f0d00a6
 
-.field public static final preference_recyclerview:I = 0x7f0d00a7
+.field public static final save:I = 0x7f0d00a7
 
-.field public static final preference_widget_checkbox:I = 0x7f0d00a8
+.field public static final screen_content_include:I = 0x7f0d00a8
 
-.field public static final preference_widget_divider_switch:I = 0x7f0d00a9
+.field public static final screen_simple:I = 0x7f0d00a9
 
-.field public static final preference_widget_radiobutton:I = 0x7f0d00aa
+.field public static final screen_simple_overlay_action_mode:I = 0x7f0d00aa
 
-.field public static final preference_widget_seekbar:I = 0x7f0d00ab
+.field public static final screen_toolbar:I = 0x7f0d00ab
 
-.field public static final preference_widget_seekbar_material:I = 0x7f0d00ac
+.field public static final select_dialog_item_with_subtitle_material:I = 0x7f0d00ac
 
-.field public static final preference_widget_switch:I = 0x7f0d00ad
+.field public static final select_dialog_multichoice_with_subtitle_material:I = 0x7f0d00ad
 
-.field public static final preference_widget_switch_compat:I = 0x7f0d00ae
+.field public static final select_dialog_singlechoice_with_subtitle_material:I = 0x7f0d00ae
 
-.field public static final preview:I = 0x7f0d00af
+.field public static final share_intent_conversation_list_view:I = 0x7f0d00af
 
-.field public static final save:I = 0x7f0d00b0
+.field public static final simple_spinner_dropdown_item:I = 0x7f0d00b0
 
-.field public static final screen_content_include:I = 0x7f0d00b1
+.field public static final simple_spinner_item:I = 0x7f0d00b1
 
-.field public static final screen_simple:I = 0x7f0d00b2
+.field public static final small_screenshot:I = 0x7f0d00b2
 
-.field public static final screen_simple_overlay_action_mode:I = 0x7f0d00b3
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d00b3
 
-.field public static final screen_toolbar:I = 0x7f0d00b4
+.field public static final switch_preference_material:I = 0x7f0d00b4
 
-.field public static final select_dialog_item_with_subtitle_material:I = 0x7f0d00b5
+.field public static final time_picker_text_input_material:I = 0x7f0d00b5
 
-.field public static final select_dialog_multichoice_with_subtitle_material:I = 0x7f0d00b6
+.field public static final transient_notification:I = 0x7f0d00b6
 
-.field public static final select_dialog_singlechoice_with_subtitle_material:I = 0x7f0d00b7
+.field public static final transient_notification_light:I = 0x7f0d00b7
 
-.field public static final share_intent_conversation_list_view:I = 0x7f0d00b8
+.field public static final web_browser_activity_layout:I = 0x7f0d00b8
 
-.field public static final simple_spinner_dropdown_item:I = 0x7f0d00b9
-
-.field public static final simple_spinner_item:I = 0x7f0d00ba
-
-.field public static final small_screenshot:I = 0x7f0d00bb
-
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d00bc
-
-.field public static final switch_preference_material:I = 0x7f0d00bd
-
-.field public static final time_picker_text_input_material:I = 0x7f0d00be
-
-.field public static final transient_notification:I = 0x7f0d00bf
-
-.field public static final transient_notification_light:I = 0x7f0d00c0
-
-.field public static final web_browser_activity_layout:I = 0x7f0d00c1
-
-.field public static final web_loading_view:I = 0x7f0d00c2
+.field public static final web_loading_view:I = 0x7f0d00b9
 
 
 # direct methods

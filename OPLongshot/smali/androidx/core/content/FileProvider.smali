@@ -436,7 +436,7 @@
 
     if-eqz v6, :cond_5
 
-    invoke-static {p0, v3}, Lb/h/e/b;->e(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
+    invoke-static {p0, v3}, Lb/g/e/b;->e(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v1
 
@@ -457,7 +457,7 @@
 
     if-eqz v6, :cond_6
 
-    invoke-static {p0}, Lb/h/e/b;->d(Landroid/content/Context;)[Ljava/io/File;
+    invoke-static {p0}, Lb/g/e/b;->d(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object v1
 

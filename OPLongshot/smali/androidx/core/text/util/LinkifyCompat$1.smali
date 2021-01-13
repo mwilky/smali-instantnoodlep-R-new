@@ -11,7 +11,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Lb/h/j/e/a;",
+        "Lb/g/j/e/a;",
         ">;"
     }
 .end annotation
@@ -28,12 +28,12 @@
 
 
 # virtual methods
-.method public compare(Lb/h/j/e/a;Lb/h/j/e/a;)I
+.method public compare(Lb/g/j/e/a;Lb/g/j/e/a;)I
     .locals 4
 
-    iget v0, p1, Lb/h/j/e/a;->a:I
+    iget v0, p1, Lb/g/j/e/a;->a:I
 
-    iget v1, p2, Lb/h/j/e/a;->a:I
+    iget v1, p2, Lb/g/j/e/a;->a:I
 
     const/4 v2, -0x1
 
@@ -49,9 +49,9 @@
     return v3
 
     :cond_1
-    iget p1, p1, Lb/h/j/e/a;->b:I
+    iget p1, p1, Lb/g/j/e/a;->b:I
 
-    iget p2, p2, Lb/h/j/e/a;->b:I
+    iget p2, p2, Lb/g/j/e/a;->b:I
 
     if-ge p1, p2, :cond_2
 
@@ -71,11 +71,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lb/h/j/e/a;
+    check-cast p1, Lb/g/j/e/a;
 
-    check-cast p2, Lb/h/j/e/a;
+    check-cast p2, Lb/g/j/e/a;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Lb/h/j/e/a;Lb/h/j/e/a;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Lb/g/j/e/a;Lb/g/j/e/a;)I
 
     move-result p1
 

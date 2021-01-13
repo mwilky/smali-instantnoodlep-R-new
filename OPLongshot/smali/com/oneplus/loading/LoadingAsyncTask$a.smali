@@ -1,5 +1,5 @@
 .class public Lcom/oneplus/loading/LoadingAsyncTask$a;
-.super Lc/c/e/a;
+.super Lc/b/e/a;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Lcom/oneplus/loading/LoadingAsyncTask$a;->g:Lcom/oneplus/loading/LoadingAsyncTask;
 
-    invoke-direct {p0}, Lc/c/e/a;-><init>()V
+    invoke-direct {p0}, Lc/b/e/a;-><init>()V
 
     return-void
 .end method

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lc/b/b/b/i0/a;",
+        "Lc/a/b/b/h0/a;",
         ">",
         "Ljava/lang/Object;"
     }
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public abstract onTabReselected(Lc/b/b/b/i0/a;)V
+.method public abstract onTabReselected(Lc/a/b/b/h0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -26,7 +26,7 @@
     .end annotation
 .end method
 
-.method public abstract onTabSelected(Lc/b/b/b/i0/a;)V
+.method public abstract onTabSelected(Lc/a/b/b/h0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -34,7 +34,7 @@
     .end annotation
 .end method
 
-.method public abstract onTabUnselected(Lc/b/b/b/i0/a;)V
+.method public abstract onTabUnselected(Lc/a/b/b/h0/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

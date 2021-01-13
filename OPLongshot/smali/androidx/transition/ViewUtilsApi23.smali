@@ -48,7 +48,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-super {p0, p1, p2}, Lb/q/y;->setTransitionVisibility(Landroid/view/View;I)V
+    invoke-super {p0, p1, p2}, Lb/p/y;->setTransitionVisibility(Landroid/view/View;I)V
 
     goto :goto_0
 

@@ -41,7 +41,7 @@
 
     move-result p1
 
-    sget v0, Lc/b/b/b/f;->am_label:I
+    sget v0, Lc/a/b/b/f;->am_label:I
 
     const/4 v1, 0x0
 
@@ -54,7 +54,7 @@
     goto :goto_0
 
     :cond_0
-    sget v0, Lc/b/b/b/f;->pm_label:I
+    sget v0, Lc/a/b/b/f;->pm_label:I
 
     const/4 v2, 0x1
 
@@ -67,7 +67,7 @@
     goto :goto_0
 
     :cond_1
-    sget v0, Lc/b/b/b/f;->hours:I
+    sget v0, Lc/a/b/b/f;->hours:I
 
     if-ne p1, v0, :cond_2
 
@@ -78,7 +78,7 @@
     goto :goto_0
 
     :cond_2
-    sget v0, Lc/b/b/b/f;->minutes:I
+    sget v0, Lc/a/b/b/f;->minutes:I
 
     if-ne p1, v0, :cond_3
 

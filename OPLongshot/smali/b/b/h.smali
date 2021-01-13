@@ -841,7 +841,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1994,7 +1994,7 @@
     :cond_4
     iput-boolean v1, p0, Lb/b/h;->i:Z
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     return-void
 .end method

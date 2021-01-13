@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/h/b;
+.implements Lb/g/h/b;
 
 
 # annotations
@@ -34,9 +34,9 @@
 
     iget-object v0, p0, Landroidx/core/os/LocaleListPlatformWrapper;->mLocaleList:Landroid/os/LocaleList;
 
-    check-cast p1, Lb/h/h/b;
+    check-cast p1, Lb/g/h/b;
 
-    invoke-interface {p1}, Lb/h/h/b;->getLocaleList()Ljava/lang/Object;
+    invoke-interface {p1}, Lb/g/h/b;->getLocaleList()Ljava/lang/Object;
 
     move-result-object p1
 

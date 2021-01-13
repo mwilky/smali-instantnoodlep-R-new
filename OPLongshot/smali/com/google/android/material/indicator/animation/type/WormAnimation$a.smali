@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLc/b/b/b/y/a/b/b;ZI)Landroid/animation/ValueAnimator;
+    value = Lcom/google/android/material/indicator/animation/type/WormAnimation;->createWormAnimator(IIZLc/a/b/b/y/a/b/b;ZI)Landroid/animation/ValueAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final synthetic a:Lc/b/b/b/y/a/b/b;
+.field public final synthetic a:Lc/a/b/b/y/a/b/b;
 
 .field public final synthetic b:Z
 
@@ -30,12 +30,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/b/b/b/y/a/b/b;ZZI)V
+.method public constructor <init>(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/a/b/b/y/a/b/b;ZZI)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->e:Lcom/google/android/material/indicator/animation/type/WormAnimation;
 
-    iput-object p2, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->a:Lc/b/b/b/y/a/b/b;
+    iput-object p2, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->a:Lc/a/b/b/y/a/b/b;
 
     iput-boolean p3, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->b:Z
 
@@ -55,7 +55,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->e:Lcom/google/android/material/indicator/animation/type/WormAnimation;
 
-    iget-object v1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->a:Lc/b/b/b/y/a/b/b;
+    iget-object v1, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->a:Lc/a/b/b/y/a/b/b;
 
     iget-boolean v3, p0, Lcom/google/android/material/indicator/animation/type/WormAnimation$a;->b:Z
 
@@ -65,7 +65,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->access$000(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/b/b/b/y/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/indicator/animation/type/WormAnimation;->access$000(Lcom/google/android/material/indicator/animation/type/WormAnimation;Lc/a/b/b/y/a/b/b;Landroid/animation/ValueAnimator;ZZI)V
 
     return-void
 .end method

@@ -98,7 +98,7 @@
 
     iput-boolean v1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z
 
-    sget-object v4, Lc/b/b/b/l;->ForegroundLinearLayout:[I
+    sget-object v4, Lc/a/b/b/l;->ForegroundLinearLayout:[I
 
     new-array v7, v1, [I
 
@@ -114,7 +114,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->ForegroundLinearLayout_android_foregroundGravity:I
+    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_android_foregroundGravity:I
 
     iget p3, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
@@ -124,7 +124,7 @@
 
     iput p2, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
-    sget p2, Lc/b/b/b/l;->ForegroundLinearLayout_android_foreground:I
+    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_android_foreground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -135,7 +135,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/internal/ForegroundLinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    sget p2, Lc/b/b/b/l;->ForegroundLinearLayout_foregroundInsidePadding:I
+    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_foregroundInsidePadding:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 

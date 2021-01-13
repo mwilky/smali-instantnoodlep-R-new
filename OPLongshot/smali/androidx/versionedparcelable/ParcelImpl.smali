@@ -33,7 +33,7 @@
 
 
 # instance fields
-.field public final mParcel:Lb/s/a;
+.field public final mParcel:Lb/r/a;
 
 
 # direct methods
@@ -58,21 +58,21 @@
 
     invoke-direct {v0, p1}, Landroidx/versionedparcelable/VersionedParcelParcel;-><init>(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Lb/s/a;
+    invoke-virtual {v0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Lb/r/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/s/a;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/r/a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lb/s/a;)V
+.method public constructor <init>(Lb/r/a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/s/a;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/r/a;
 
     return-void
 .end method
@@ -87,17 +87,17 @@
     return v0
 .end method
 
-.method public getVersionedParcel()Lb/s/a;
+.method public getVersionedParcel()Lb/r/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Lb/s/a;",
+            "Lb/r/a;",
             ">()TT;"
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/s/a;
+    iget-object v0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/r/a;
 
     return-object v0
 .end method
@@ -109,9 +109,9 @@
 
     invoke-direct {p2, p1}, Landroidx/versionedparcelable/VersionedParcelParcel;-><init>(Landroid/os/Parcel;)V
 
-    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/s/a;
+    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Lb/r/a;
 
-    invoke-virtual {p2, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Lb/s/a;)V
+    invoke-virtual {p2, p1}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Lb/r/a;)V
 
     return-void
 .end method

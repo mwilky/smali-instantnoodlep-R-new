@@ -60,13 +60,13 @@
     .end annotation
 .end field
 
-.field public final mContentViewCallback:Lc/b/b/b/h0/a;
+.field public final mContentViewCallback:Lc/a/b/b/g0/a;
 
 .field public final mContext:Landroid/content/Context;
 
 .field public mDuration:I
 
-.field public final mManagerCallback:Lc/b/b/b/h0/b$b;
+.field public final mManagerCallback:Lc/a/b/b/g0/b$b;
 
 .field public final mTargetParent:Landroid/view/ViewGroup;
 
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/a/b/b/g0/a;)V
     .locals 2
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -124,7 +124,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lc/b/b/b/h0/a;
+    .param p3    # Lc/a/b/b/g0/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -135,7 +135,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
     if-eqz p1, :cond_2
 
@@ -145,7 +145,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mTargetParent:Landroid/view/ViewGroup;
 
-    iput-object p3, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContentViewCallback:Lc/b/b/b/h0/a;
+    iput-object p3, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContentViewCallback:Lc/a/b/b/g0/a;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -157,7 +157,7 @@
 
     move-result-object p1
 
-    sget p3, Lc/b/b/b/h;->design_layout_snackbar:I
+    sget p3, Lc/a/b/b/h;->design_layout_snackbar:I
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mTargetParent:Landroid/view/ViewGroup;
 
@@ -193,7 +193,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$c;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/h/l/m;)V
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/g/l/m;)V
 
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mContext:Landroid/content/Context;
 
@@ -422,13 +422,13 @@
 .method public dispatchDismiss(I)V
     .locals 2
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1, p1}, Lc/b/b/b/h0/b;->b(Lc/b/b/b/h0/b$b;I)V
+    invoke-virtual {v0, v1, p1}, Lc/a/b/b/g0/b;->b(Lc/a/b/b/g0/b$b;I)V
 
     return-void
 .end method
@@ -492,13 +492,13 @@
 .method public isShown()Z
     .locals 2
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->e(Lc/b/b/b/h0/b$b;)Z
+    invoke-virtual {v0, v1}, Lc/a/b/b/g0/b;->e(Lc/a/b/b/g0/b$b;)Z
 
     move-result v0
 
@@ -508,13 +508,13 @@
 .method public isShownOrQueued()Z
     .locals 2
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->f(Lc/b/b/b/h0/b$b;)Z
+    invoke-virtual {v0, v1}, Lc/a/b/b/g0/b;->f(Lc/a/b/b/g0/b$b;)Z
 
     move-result v0
 
@@ -524,13 +524,13 @@
 .method public onViewHidden(I)V
     .locals 2
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->i(Lc/b/b/b/h0/b$b;)V
+    invoke-virtual {v0, v1}, Lc/a/b/b/g0/b;->i(Lc/a/b/b/g0/b$b;)V
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mCallbacks:Ljava/util/List;
 
@@ -596,13 +596,13 @@
 .method public onViewShown()V
     .locals 2
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1}, Lc/b/b/b/h0/b;->j(Lc/b/b/b/h0/b$b;)V
+    invoke-virtual {v0, v1}, Lc/a/b/b/g0/b;->j(Lc/a/b/b/g0/b$b;)V
 
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mCallbacks:Ljava/util/List;
 
@@ -702,15 +702,15 @@
 .method public show()V
     .locals 3
 
-    invoke-static {}, Lc/b/b/b/h0/b;->c()Lc/b/b/b/h0/b;
+    invoke-static {}, Lc/a/b/b/g0/b;->c()Lc/a/b/b/g0/b;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mDuration:I
 
-    iget-object v2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/b/b/b/h0/b$b;
+    iget-object v2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->mManagerCallback:Lc/a/b/b/g0/b$b;
 
-    invoke-virtual {v0, v1, v2}, Lc/b/b/b/h0/b;->n(ILc/b/b/b/h0/b$b;)V
+    invoke-virtual {v0, v1, v2}, Lc/a/b/b/g0/b;->n(ILc/a/b/b/g0/b$b;)V
 
     return-void
 .end method

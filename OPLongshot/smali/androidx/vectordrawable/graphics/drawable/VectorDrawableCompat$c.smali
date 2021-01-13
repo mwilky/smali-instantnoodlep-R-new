@@ -286,7 +286,7 @@
 .method public g(Landroid/content/res/Resources;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 1
 
-    sget-object v0, Lb/r/a/a/a;->c:[I
+    sget-object v0, Lb/q/a/a/a;->c:[I
 
     invoke-static {p1, p3, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -412,11 +412,11 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lb/h/f/e;->d(Ljava/lang/String;)[Lb/h/f/e$b;
+    invoke-static {v0}, Lb/g/f/e;->d(Ljava/lang/String;)[Lb/g/f/e$b;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
+    iput-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/g/f/e$b;
 
     :cond_2
     const/4 v5, 0x1

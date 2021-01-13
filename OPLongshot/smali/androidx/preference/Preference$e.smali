@@ -63,7 +63,7 @@
     :cond_0
     invoke-interface {p1, p2}, Landroid/view/ContextMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
-    sget p2, Lb/n/l;->copy:I
+    sget p2, Lb/m/l;->copy:I
 
     const/4 p3, 0x0
 
@@ -121,7 +121,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/n/l;->preference_copied:I
+    sget v2, Lb/m/l;->preference_copied:I
 
     const/4 v3, 0x1
 

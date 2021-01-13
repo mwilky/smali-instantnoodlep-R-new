@@ -1,0 +1,18 @@
+.class public final Lb/t/b/d;
+.super Landroidx/viewpager2/widget/ViewPager2$b;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract a()Landroidx/viewpager2/widget/ViewPager2$c;
+.end method
+
+.method public abstract b(IFI)V
+.end method
+
+.method public abstract c(Landroidx/viewpager2/widget/ViewPager2$c;)V
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method

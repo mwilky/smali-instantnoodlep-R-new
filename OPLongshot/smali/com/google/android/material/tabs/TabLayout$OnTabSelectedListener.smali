@@ -11,7 +11,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/android/material/tabs/TabLayout$BaseOnTabSelectedListener<",
-        "Lc/b/b/b/i0/a;",
+        "Lc/a/b/b/h0/a;",
         ">;"
     }
 .end annotation

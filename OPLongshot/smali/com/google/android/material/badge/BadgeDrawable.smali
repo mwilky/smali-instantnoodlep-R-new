@@ -110,11 +110,11 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lc/b/b/b/k;->Widget_MaterialComponents_Badge:I
+    sget v0, Lc/a/b/b/k;->Widget_MaterialComponents_Badge:I
 
     sput v0, Lcom/google/android/material/badge/BadgeDrawable;->q:I
 
-    sget v0, Lc/b/b/b/b;->badgeStyle:I
+    sget v0, Lc/a/b/b/b;->badgeStyle:I
 
     sput v0, Lcom/google/android/material/badge/BadgeDrawable;->r:I
 
@@ -154,7 +154,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/badge/BadgeDrawable;->b:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    sget v1, Lc/b/b/b/d;->mtrl_badge_radius:I
+    sget v1, Lc/a/b/b/d;->mtrl_badge_radius:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -164,7 +164,7 @@
 
     iput v1, p0, Lcom/google/android/material/badge/BadgeDrawable;->e:F
 
-    sget v1, Lc/b/b/b/d;->mtrl_badge_long_text_horizontal_padding:I
+    sget v1, Lc/a/b/b/d;->mtrl_badge_long_text_horizontal_padding:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -174,7 +174,7 @@
 
     iput v1, p0, Lcom/google/android/material/badge/BadgeDrawable;->g:F
 
-    sget v1, Lc/b/b/b/d;->mtrl_badge_with_text_radius:I
+    sget v1, Lc/a/b/b/d;->mtrl_badge_with_text_radius:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -204,7 +204,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/badge/BadgeDrawable;->h:Lcom/google/android/material/badge/BadgeDrawable$SavedState;
 
-    sget p1, Lc/b/b/b/k;->TextAppearance_MaterialComponents_Badge:I
+    sget p1, Lc/a/b/b/k;->TextAppearance_MaterialComponents_Badge:I
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/badge/BadgeDrawable;->w(I)V
 
@@ -475,12 +475,12 @@
 
     if-eqz v0, :cond_3
 
-    sget v0, Lc/b/b/b/d;->mtrl_badge_text_horizontal_edge_offset:I
+    sget v0, Lc/a/b/b/d;->mtrl_badge_text_horizontal_edge_offset:I
 
     goto :goto_3
 
     :cond_3
-    sget v0, Lc/b/b/b/d;->mtrl_badge_horizontal_edge_offset:I
+    sget v0, Lc/a/b/b/d;->mtrl_badge_horizontal_edge_offset:I
 
     :goto_3
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -756,7 +756,7 @@
     return-object v0
 
     :cond_1
-    sget v1, Lc/b/b/b/j;->mtrl_exceed_max_badge_number_suffix:I
+    sget v1, Lc/a/b/b/j;->mtrl_exceed_max_badge_number_suffix:I
 
     const/4 v2, 0x2
 
@@ -1009,7 +1009,7 @@
         .end annotation
     .end param
 
-    sget-object v2, Lc/b/b/b/l;->Badge:[I
+    sget-object v2, Lc/a/b/b/l;->Badge:[I
 
     const/4 v6, 0x0
 
@@ -1027,7 +1027,7 @@
 
     move-result-object p2
 
-    sget p3, Lc/b/b/b/l;->Badge_maxCharacterCount:I
+    sget p3, Lc/a/b/b/l;->Badge_maxCharacterCount:I
 
     const/4 p4, 0x4
 
@@ -1037,7 +1037,7 @@
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/badge/BadgeDrawable;->t(I)V
 
-    sget p3, Lc/b/b/b/l;->Badge_number:I
+    sget p3, Lc/a/b/b/l;->Badge_number:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -1045,7 +1045,7 @@
 
     if-eqz p3, :cond_0
 
-    sget p3, Lc/b/b/b/l;->Badge_number:I
+    sget p3, Lc/a/b/b/l;->Badge_number:I
 
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -1054,7 +1054,7 @@
     invoke-virtual {p0, p3}, Lcom/google/android/material/badge/BadgeDrawable;->u(I)V
 
     :cond_0
-    sget p3, Lc/b/b/b/l;->Badge_badgeBackgroundColor:I
+    sget p3, Lc/a/b/b/l;->Badge_badgeBackgroundColor:I
 
     invoke-static {p1, p2, p3}, Lcom/google/android/material/badge/BadgeDrawable;->n(Landroid/content/Context;Landroid/content/res/TypedArray;I)I
 
@@ -1062,7 +1062,7 @@
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/badge/BadgeDrawable;->p(I)V
 
-    sget p3, Lc/b/b/b/l;->Badge_badgeTextColor:I
+    sget p3, Lc/a/b/b/l;->Badge_badgeTextColor:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -1070,7 +1070,7 @@
 
     if-eqz p3, :cond_1
 
-    sget p3, Lc/b/b/b/l;->Badge_badgeTextColor:I
+    sget p3, Lc/a/b/b/l;->Badge_badgeTextColor:I
 
     invoke-static {p1, p2, p3}, Lcom/google/android/material/badge/BadgeDrawable;->n(Landroid/content/Context;Landroid/content/res/TypedArray;I)I
 
@@ -1079,7 +1079,7 @@
     invoke-virtual {p0, p1}, Lcom/google/android/material/badge/BadgeDrawable;->r(I)V
 
     :cond_1
-    sget p1, Lc/b/b/b/l;->Badge_badgeGravity:I
+    sget p1, Lc/a/b/b/l;->Badge_badgeGravity:I
 
     const p3, 0x800035
 
@@ -1089,7 +1089,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/badge/BadgeDrawable;->q(I)V
 
-    sget p1, Lc/b/b/b/l;->Badge_horizontalOffset:I
+    sget p1, Lc/a/b/b/l;->Badge_horizontalOffset:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -1097,7 +1097,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/badge/BadgeDrawable;->s(I)V
 
-    sget p1, Lc/b/b/b/l;->Badge_verticalOffset:I
+    sget p1, Lc/a/b/b/l;->Badge_verticalOffset:I
 
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 

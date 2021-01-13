@@ -116,18 +116,18 @@
 
     move-result-object p6
 
-    invoke-static {p6}, Lc/c/a/c;->b(Landroid/content/Context;)Z
+    invoke-static {p6}, Lc/b/a/d;->b(Landroid/content/Context;)Z
 
     move-result p6
 
     if-eqz p6, :cond_1
 
-    sget p6, Lc/b/b/b/d;->op_control_margin_screen_bottom1:I
+    sget p6, Lc/a/b/b/d;->op_control_margin_screen_bottom1:I
 
     goto :goto_0
 
     :cond_1
-    sget p6, Lc/b/b/b/d;->op_control_margin_screen_bottom3:I
+    sget p6, Lc/a/b/b/d;->op_control_margin_screen_bottom3:I
 
     :goto_0
     invoke-virtual {p4, p6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

@@ -47,17 +47,17 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "smallscreen width="
+    const-string v1, "smallscreenContainer onAnimEnd width="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/RelativeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getMeasuredWidth()I
+    invoke-virtual {v1}, Landroid/widget/RelativeLayout;->getMeasuredWidth()I
 
     move-result v1
 
@@ -69,11 +69,11 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/RelativeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getMeasuredHeight()I
+    invoke-virtual {v1}, Landroid/widget/RelativeLayout;->getMeasuredHeight()I
 
     move-result v1
 
@@ -178,17 +178,17 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "smallscreen width="
+    const-string v2, "smallscreenContainer onAnimStart width="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+    invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/RelativeLayout;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getMeasuredWidth()I
+    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getMeasuredWidth()I
 
     move-result v2
 
@@ -200,11 +200,11 @@
 
     iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$2900(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/ImageView;
+    invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5300(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/RelativeLayout;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getMeasuredHeight()I
+    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getMeasuredHeight()I
 
     move-result v2
 
@@ -226,7 +226,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {p1, v1, v0, v2, v3}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5300(Lcom/oneplus/screenshot/GlobalScreenshot;Ljava/lang/Runnable;ZLjava/lang/Runnable;Z)V
+    invoke-static {p1, v1, v0, v2, v3}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5400(Lcom/oneplus/screenshot/GlobalScreenshot;Ljava/lang/Runnable;ZLjava/lang/Runnable;Z)V
 
     return-void
 .end method

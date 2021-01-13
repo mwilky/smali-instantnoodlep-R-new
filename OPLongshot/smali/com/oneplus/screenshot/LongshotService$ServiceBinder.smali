@@ -59,7 +59,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :try_start_0
-    sget-object v1, Lc/c/b/h/b;->f:Ljava/lang/String;
+    sget-object v1, Lc/b/b/h/b;->f:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -73,13 +73,13 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lc/c/b/h/b;->b:Ljava/lang/String;
+    sget-object v1, Lc/b/b/h/b;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    sget-object v2, Lc/c/b/h/b;->c:Ljava/lang/String;
+    sget-object v2, Lc/b/b/h/b;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
@@ -93,14 +93,14 @@
 
     iput v2, v3, Lcom/oneplus/screenshot/StitchViewService;->mScrollViewHeight:I
 
-    sget-object v1, Lc/c/b/h/b;->g:Ljava/lang/String;
+    sget-object v1, Lc/b/b/h/b;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     :try_start_1
-    sget-object v1, Lc/c/b/h/b;->h:Ljava/lang/String;
+    sget-object v1, Lc/b/b/h/b;->h:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lc/c/b/h/b;->i:Ljava/lang/String;
+    sget-object v2, Lc/b/b/h/b;->i:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
@@ -177,7 +177,7 @@
 
     :goto_2
     :try_start_7
-    sget-object p2, Lc/c/b/h/b;->j:Ljava/lang/String;
+    sget-object p2, Lc/b/b/h/b;->j:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_7
@@ -273,6 +273,8 @@
 
     sput p1, Lcom/oneplus/screenshot/longshot/util/Configs;->blockScreenViewVisibility:I
 
+    sput p1, Lcom/oneplus/screenshot/longshot/util/Configs;->applyStitchByViewAlgoByViewVisibility:I
+
     goto :goto_0
 
     :cond_0
@@ -296,6 +298,8 @@
     const/4 p1, 0x0
 
     sput p1, Lcom/oneplus/screenshot/longshot/util/Configs;->blockScreenViewVisibility:I
+
+    sput p1, Lcom/oneplus/screenshot/longshot/util/Configs;->applyStitchByViewAlgoByViewVisibility:I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

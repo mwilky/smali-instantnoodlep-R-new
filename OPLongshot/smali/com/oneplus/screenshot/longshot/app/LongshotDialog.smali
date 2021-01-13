@@ -78,7 +78,7 @@
 
     new-instance v8, Landroid/view/WindowManager$LayoutParams;
 
-    sget v5, Lc/c/b/m/e;->a:I
+    sget v5, Lc/b/b/m/e;->a:I
 
     const/4 v1, -0x1
 

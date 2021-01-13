@@ -20,9 +20,9 @@
     return-void
 .end method
 
-.method public static b(Lb/m/e;)Landroidx/loader/app/LoaderManager;
+.method public static b(Lb/l/e;)Landroidx/loader/app/LoaderManager;
     .locals 2
-    .param p0    # Lb/m/e;
+    .param p0    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -32,9 +32,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Lb/m/e;",
+            "Lb/l/e;",
             ":",
-            "Lb/m/k;",
+            "Lb/l/k;",
             ">(TT;)",
             "Landroidx/loader/app/LoaderManager;"
         }
@@ -44,13 +44,13 @@
 
     move-object v1, p0
 
-    check-cast v1, Lb/m/k;
+    check-cast v1, Lb/l/k;
 
-    invoke-interface {v1}, Lb/m/k;->getViewModelStore()Lb/m/j;
+    invoke-interface {v1}, Lb/l/k;->getViewModelStore()Lb/l/j;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Lb/m/e;Lb/m/j;)V
+    invoke-direct {v0, p0, v1}, Landroidx/loader/app/LoaderManagerImpl;-><init>(Lb/l/e;Lb/l/j;)V
 
     return-object v0
 .end method

@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field public final accessibilityDelegate:Lb/h/l/a;
+.field public final accessibilityDelegate:Lb/g/l/a;
 
 .field public actionArea:Landroid/widget/FrameLayout;
 
@@ -108,7 +108,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/internal/NavigationMenuItemView$a;-><init>(Lcom/google/android/material/internal/NavigationMenuItemView;)V
 
-    iput-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/h/l/a;
+    iput-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/g/l/a;
 
     const/4 p2, 0x0
 
@@ -118,7 +118,7 @@
 
     move-result-object p2
 
-    sget p3, Lc/b/b/b/h;->design_navigation_menu_item:I
+    sget p3, Lc/a/b/b/h;->design_navigation_menu_item:I
 
     const/4 v0, 0x1
 
@@ -128,7 +128,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->design_navigation_icon_size:I
+    sget p2, Lc/a/b/b/d;->design_navigation_icon_size:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -136,7 +136,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/NavigationMenuItemView;->setIconSize(I)V
 
-    sget p1, Lc/b/b/b/f;->design_menu_item_text:I
+    sget p1, Lc/a/b/b/f;->design_menu_item_text:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -150,9 +150,9 @@
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->textView:Landroid/widget/CheckedTextView;
 
-    iget-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/h/l/a;
+    iget-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/g/l/a;
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/h/l/a;)V
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/g/l/a;)V
 
     return-void
 .end method
@@ -294,7 +294,7 @@
 
     if-nez v0, :cond_0
 
-    sget v0, Lc/b/b/b/f;->design_menu_item_action_area_stub:I
+    sget v0, Lc/a/b/b/f;->design_menu_item_action_area_stub:I
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -548,13 +548,13 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->checkable:Z
 
-    iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/h/l/a;
+    iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Lb/g/l/a;
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->textView:Landroid/widget/CheckedTextView;
 
     const/16 v1, 0x800
 
-    invoke-virtual {p1, v0, v1}, Lb/h/l/a;->sendAccessibilityEvent(Landroid/view/View;I)V
+    invoke-virtual {p1, v0, v1}, Lb/g/l/a;->sendAccessibilityEvent(Landroid/view/View;I)V
 
     :cond_0
     return-void
@@ -611,7 +611,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lb/g/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -621,7 +621,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->iconTintList:Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget v1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->iconSize:I
@@ -643,7 +643,7 @@
 
     move-result-object p1
 
-    sget v1, Lc/b/b/b/e;->navigation_empty_icon:I
+    sget v1, Lc/a/b/b/e;->navigation_empty_icon:I
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -653,7 +653,7 @@
 
     move-result-object v2
 
-    invoke-static {p1, v1, v2}, Lb/h/e/c/b;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1, v2}, Lb/g/e/c/b;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

@@ -56,9 +56,9 @@
 .method public constructor <init>(Lcom/google/android/material/appbar/Appbar;Z)V
     .locals 2
 
-    sget v0, Lc/b/b/b/j;->abc_action_bar_up_description:I
+    sget v0, Lc/a/b/b/j;->abc_action_bar_up_description:I
 
-    sget v1, Lc/b/b/b/e;->ic_title_bar_back:I
+    sget v1, Lc/a/b/b/e;->ic_title_bar_back:I
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;-><init>(Lcom/google/android/material/appbar/Appbar;ZII)V
 
@@ -116,9 +116,9 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lc/b/b/b/l;->ActionBar:[I
+    sget-object v2, Lc/a/b/b/l;->ActionBar:[I
 
-    sget v3, Lc/b/b/b/b;->actionBarStyle:I
+    sget v3, Lc/a/b/b/b;->actionBarStyle:I
 
     invoke-static {p1, v1, v2, v3, v0}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
 
@@ -136,7 +136,7 @@
 
     if-eqz p2, :cond_7
 
-    sget p2, Lc/b/b/b/l;->ActionBar_title:I
+    sget p2, Lc/a/b/b/l;->ActionBar_title:I
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
 
@@ -151,7 +151,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setTitle(Ljava/lang/CharSequence;)V
 
     :cond_1
-    sget p2, Lc/b/b/b/l;->ActionBar_subtitle:I
+    sget p2, Lc/a/b/b/l;->ActionBar_subtitle:I
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
 
@@ -177,7 +177,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     :cond_3
-    sget p2, Lc/b/b/b/l;->ActionBar_displayOptions:I
+    sget p2, Lc/a/b/b/l;->ActionBar_displayOptions:I
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/TintTypedArray;->getInt(II)I
 
@@ -185,7 +185,7 @@
 
     invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setDisplayOptions(I)V
 
-    sget p2, Lc/b/b/b/l;->ActionBar_customNavigationLayout:I
+    sget p2, Lc/a/b/b/l;->ActionBar_customNavigationLayout:I
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -218,7 +218,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setDisplayOptions(I)V
 
     :cond_4
-    sget p2, Lc/b/b/b/l;->ActionBar_height:I
+    sget p2, Lc/a/b/b/l;->ActionBar_height:I
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/TintTypedArray;->getLayoutDimension(II)I
 
@@ -239,7 +239,7 @@
     invoke-virtual {p2, p4}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_5
-    sget p2, Lc/b/b/b/l;->ActionBar_titleTextStyle:I
+    sget p2, Lc/a/b/b/l;->ActionBar_titleTextStyle:I
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -256,7 +256,7 @@
     invoke-virtual {p4, v1, p2}, Lcom/google/android/material/appbar/Appbar;->w(Landroid/content/Context;I)V
 
     :cond_6
-    sget p2, Lc/b/b/b/l;->ActionBar_subtitleTextStyle:I
+    sget p2, Lc/a/b/b/l;->ActionBar_subtitleTextStyle:I
 
     invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/TintTypedArray;->getResourceId(II)I
 
@@ -343,7 +343,7 @@
 
     const/4 v2, 0x0
 
-    sget v3, Lc/b/b/b/b;->actionDropDownStyle:I
+    sget v3, Lc/a/b/b/b;->actionDropDownStyle:I
 
     invoke-direct {v0, v1, v2, v3}, Landroidx/appcompat/widget/AppCompatSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -464,13 +464,13 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/h/l/t;
+    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lb/h/l/t;->j()V
+    invoke-virtual {p1}, Lb/g/l/t;->j()V
 
     :cond_0
     return-void
@@ -1252,12 +1252,12 @@
     return-void
 .end method
 
-.method public setupAnimatorToVisibility(IJ)Lb/h/l/t;
+.method public setupAnimatorToVisibility(IJ)Lb/g/l/t;
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/appbar/AppbarWidgetWrapper;->mAppbar:Lcom/google/android/material/appbar/Appbar;
 
-    invoke-static {v0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/h/l/t;
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/g/l/t;
 
     move-result-object v0
 
@@ -1271,15 +1271,15 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Lb/h/l/t;->a(F)Lb/h/l/t;
+    invoke-virtual {v0, v1}, Lb/g/l/t;->a(F)Lb/g/l/t;
 
-    invoke-virtual {v0, p2, p3}, Lb/h/l/t;->d(J)Lb/h/l/t;
+    invoke-virtual {v0, p2, p3}, Lb/g/l/t;->d(J)Lb/g/l/t;
 
     new-instance p2, Lcom/google/android/material/appbar/AppbarWidgetWrapper$a;
 
     invoke-direct {p2, p0, p1}, Lcom/google/android/material/appbar/AppbarWidgetWrapper$a;-><init>(Lcom/google/android/material/appbar/AppbarWidgetWrapper;I)V
 
-    invoke-virtual {v0, p2}, Lb/h/l/t;->f(Lb/h/l/u;)Lb/h/l/t;
+    invoke-virtual {v0, p2}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
 
     return-object v0
 .end method

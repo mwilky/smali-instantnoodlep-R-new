@@ -200,7 +200,7 @@
 
     const-string v0, "persist.test.move"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     const-string v0, "persist.test.moveduration"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
 
     const-string v0, "persist.test.movekeep"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -344,7 +344,7 @@
 
     const-string v0, "persist.test.pixel.match.threshold"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -392,7 +392,7 @@
 
     const-string v0, "persist.test.stitch.next.match.threshold"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -478,7 +478,7 @@
 
     move-result-object p0
 
-    invoke-static {v1}, Lc/c/b/c/a/a;->a(I)Z
+    invoke-static {v1}, Lc/b/b/c/a/a;->a(I)Z
 
     move-result v2
 
@@ -567,7 +567,7 @@
 
     const-string v0, "persist.tracing.move_e"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1248,7 +1248,7 @@
 
     const-string v0, "persist.tracing.move"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1309,32 +1309,83 @@
     return p0
 .end method
 
+.method public static getPartScreenShotLeft()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->canScrollCheckLimitLeft:I
+
+    if-eqz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static getPartScreenShotRight()I
+    .locals 1
+
+    const/16 v0, 0x438
+
+    return v0
+.end method
+
 .method public static getPartScreenshotBottom(I)I
     .locals 1
 
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isCanScrollCheckLimitTop()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     int-to-float p0, p0
 
-    const v0, 0x3ec28f5c    # 0.38f
+    const v0, 0x3f0f5c29    # 0.56f
 
+    :goto_0
     mul-float/2addr p0, v0
 
     float-to-int p0, p0
 
     return p0
+
+    :cond_0
+    int-to-float p0, p0
+
+    const v0, 0x3ec28f5c    # 0.38f
+
+    goto :goto_0
 .end method
 
 .method public static getPartScreenshotTop(I)I
     .locals 1
 
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isCanScrollCheckLimitTop()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     int-to-float p0, p0
 
-    const v0, 0x3e75c28f    # 0.24f
+    const v0, 0x3ed70a3d    # 0.42f
 
+    :goto_0
     mul-float/2addr p0, v0
 
     float-to-int p0, p0
 
     return p0
+
+    :cond_0
+    int-to-float p0, p0
+
+    const v0, 0x3e75c28f    # 0.24f
+
+    goto :goto_0
 .end method
 
 .method public static getStitchLastTraceBitmap(Z)Ljava/lang/String;
@@ -1344,7 +1395,7 @@
 
     const-string p0, "persist.tracing.stitchlast_l"
 
-    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1353,7 +1404,7 @@
     :cond_0
     const-string p0, "persist.tracing.stitchlast_c"
 
-    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1366,7 +1417,7 @@
 
     const-string v0, "persist.tracing.stitchlast_f"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1380,7 +1431,7 @@
 
     const-string p0, "persist.tracing.stitchnext_l"
 
-    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1389,7 +1440,7 @@
     :cond_0
     const-string p0, "persist.tracing.stitchnext_c"
 
-    invoke-static {p0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1402,7 +1453,7 @@
 
     const-string v0, "persist.tracing.stitchnext_f"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1489,7 +1540,7 @@
 
     const-string v0, "persist.test.dumppreview"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1525,7 +1576,7 @@
 
     const-string v0, "persist.test.debugpreview"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1561,7 +1612,7 @@
 
     const-string v0, "persist.tracing.stitchlast_e"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1579,7 +1630,7 @@
 
     const-string v0, "persist.tracing.stitchnext_e"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1637,7 +1688,7 @@
 
     const-string v0, "persist.test.trace.stitch"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1709,7 +1760,7 @@
 
     check-cast v1, Landroid/app/NotificationManager;
 
-    sget v3, Lc/c/b/i/a/a;->a:I
+    sget v3, Lc/b/b/i/a/a;->a:I
 
     invoke-virtual {v1, v3}, Landroid/app/NotificationManager;->cancel(I)V
 
@@ -1748,7 +1799,7 @@
     if-eqz p2, :cond_1
 
     :try_start_1
-    invoke-static {}, Lc/c/b/m/b;->a()V
+    invoke-static {}, Lc/b/b/m/b;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -2580,7 +2631,7 @@
 
     const-string v0, "persist.test.dumplongshotMove"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2598,7 +2649,7 @@
 
     const-string v0, "persist.test.dumplongshot"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2616,7 +2667,7 @@
 
     const-string v0, "persist.test.dumplongshotNext"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

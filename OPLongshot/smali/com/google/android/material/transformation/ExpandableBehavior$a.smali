@@ -22,13 +22,13 @@
 
 .field public final synthetic b:I
 
-.field public final synthetic c:Lc/b/b/b/w/a;
+.field public final synthetic c:Lc/a/b/b/w/a;
 
 .field public final synthetic d:Lcom/google/android/material/transformation/ExpandableBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILc/b/b/b/w/a;)V
+.method public constructor <init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILc/a/b/b/w/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->d:Lcom/google/android/material/transformation/ExpandableBehavior;
@@ -37,7 +37,7 @@
 
     iput p3, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->b:I
 
-    iput-object p4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/b/b/b/w/a;
+    iput-object p4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/a/b/b/w/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->d:Lcom/google/android/material/transformation/ExpandableBehavior;
 
-    iget-object v1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/b/b/b/w/a;
+    iget-object v1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/a/b/b/w/a;
 
     move-object v3, v1
 
@@ -79,7 +79,7 @@
 
     iget-object v4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->a:Landroid/view/View;
 
-    invoke-interface {v1}, Lc/b/b/b/w/a;->a()Z
+    invoke-interface {v1}, Lc/a/b/b/w/a;->a()Z
 
     move-result v1
 

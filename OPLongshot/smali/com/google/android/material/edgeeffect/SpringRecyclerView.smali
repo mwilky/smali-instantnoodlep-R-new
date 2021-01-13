@@ -53,7 +53,7 @@
 
 .field public r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
 
-.field public s:Lc/b/b/b/b0/b/a;
+.field public s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
 .field public t:F
 
@@ -155,19 +155,19 @@
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0, p1}, Lc/b/b/b/b0/b/a;->n(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->t:F
 
-    invoke-virtual {p1, v0}, Lc/b/b/b/b0/b/a;->m(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->start()V
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
     return-void
 
@@ -355,9 +355,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0}, Lc/b/b/b/b0/b/a;->isRunning()Z
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->isRunning()Z
 
     move-result v0
 
@@ -1760,9 +1760,9 @@
 
     iput p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->b:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
@@ -1868,9 +1868,9 @@
 
     iput v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->a:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 

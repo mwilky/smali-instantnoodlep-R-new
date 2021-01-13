@@ -30,7 +30,7 @@
 
 .field public final c:Landroid/util/SparseBooleanArray;
 
-.field public final d:Lc/b/b/b/b0/b/a;
+.field public final d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
 .field public e:F
 
@@ -65,69 +65,53 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const p2, 0x44138000    # 590.0f
+    const p1, 0x44138000    # 590.0f
 
-    iput p2, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->a:F
+    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->a:F
 
-    const/high16 p3, 0x3f000000    # 0.5f
+    const/high16 p2, 0x3f000000    # 0.5f
 
-    iput p3, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->b:F
+    iput p2, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->b:F
 
-    new-instance v0, Landroid/util/SparseBooleanArray;
+    new-instance p3, Landroid/util/SparseBooleanArray;
 
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+    invoke-direct {p3}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->c:Landroid/util/SparseBooleanArray;
+    iput-object p3, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->c:Landroid/util/SparseBooleanArray;
+
+    const/4 p3, 0x0
+
+    iput p3, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->e:F
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->e:F
+    iput-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->g:Z
 
-    const/4 v1, 0x0
+    new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    iput-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->g:Z
+    sget-object v1, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->h:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
-    new-instance v1, Lc/b/b/b/b0/b/a;
+    invoke-direct {v0, p0, v1, p3}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
 
-    sget-object v2, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->h:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-direct {v1, p0, v2, v0}, Lc/b/b/b/b0/b/a;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
+    new-instance v1, Landroidx/dynamicanimation/animation/SpringForce;
 
-    iput-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Lc/b/b/b/b0/b/a;
+    invoke-direct {v1, p3}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V
 
-    new-instance v2, Landroidx/dynamicanimation/animation/SpringForce;
-
-    invoke-direct {v2, v0}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V
-
-    invoke-virtual {v2, p2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p3}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    move-result-object p2
-
-    invoke-virtual {v1, p2}, Lc/b/b/b/b0/b/a;->l(Landroidx/dynamicanimation/animation/SpringForce;)Lc/b/b/b/b0/b/a;
-
-    iget-object p2, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Lc/b/b/b/b0/b/a;
-
-    sget p3, Lc/b/b/b/j;->notification_animator_test_pull_from_top:I
-
-    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p3
-
-    sget v0, Lc/b/b/b/j;->notification_animator_test_pull_from_top_attr:I
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
-    invoke-virtual {p2, p3, p1}, Lc/b/b/b/b0/b/a;->o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
 .end method
@@ -268,9 +252,9 @@
 
     iput p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->b:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
@@ -343,9 +327,9 @@
 
     iput v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->a:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 

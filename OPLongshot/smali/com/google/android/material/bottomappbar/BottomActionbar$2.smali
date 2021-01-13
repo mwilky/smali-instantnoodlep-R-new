@@ -118,11 +118,11 @@
 
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-static {v1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/b/b/b/o/a;
+    invoke-static {v1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/a/b/b/o/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lc/b/b/b/o/a;->g()F
+    invoke-virtual {v1}, Lc/a/b/b/o/a;->g()F
 
     move-result v1
 
@@ -132,11 +132,11 @@
 
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-static {v1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/b/b/b/o/a;
+    invoke-static {v1}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/a/b/b/o/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lc/b/b/b/o/a;->l(F)V
+    invoke-virtual {v1, v0}, Lc/a/b/b/o/a;->l(F)V
 
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
@@ -161,11 +161,11 @@
 
     iget-object v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-static {v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/b/b/b/o/a;
+    invoke-static {v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/a/b/b/o/a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lc/b/b/b/o/a;->c()F
+    invoke-virtual {v2}, Lc/a/b/b/o/a;->c()F
 
     move-result v2
 
@@ -175,11 +175,11 @@
 
     iget-object v2, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-static {v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/b/b/b/o/a;
+    invoke-static {v2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->n0(Lcom/google/android/material/bottomappbar/BottomActionbar;)Lc/a/b/b/o/a;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lc/b/b/b/o/a;->h(F)V
+    invoke-virtual {v2, v0}, Lc/a/b/b/o/a;->h(F)V
 
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar;
 

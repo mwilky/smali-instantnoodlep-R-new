@@ -284,13 +284,13 @@
     return p1
 .end method
 
-.method public getFont(IILb/h/e/c/b$a;)Landroid/graphics/Typeface;
+.method public getFont(IILb/g/e/c/b$a;)Landroid/graphics/Typeface;
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/StyleableRes;
         .end annotation
     .end param
-    .param p3    # Lb/h/e/c/b$a;
+    .param p3    # Lb/g/e/c/b$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -327,7 +327,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/TintTypedArray;->mTypedValue:Landroid/util/TypedValue;
 
-    invoke-static {v0, p1, v1, p2, p3}, Lb/h/e/c/b;->c(Landroid/content/Context;ILandroid/util/TypedValue;ILb/h/e/c/b$a;)Landroid/graphics/Typeface;
+    invoke-static {v0, p1, v1, p2, p3}, Lb/g/e/c/b;->c(Landroid/content/Context;ILandroid/util/TypedValue;ILb/g/e/c/b$a;)Landroid/graphics/Typeface;
 
     move-result-object p1
 

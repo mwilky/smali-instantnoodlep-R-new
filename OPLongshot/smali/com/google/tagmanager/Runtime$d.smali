@@ -19,25 +19,25 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lc/b/a/b/a/a/a;",
+            "Lc/a/a/b/a/a/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public b:Lc/b/a/b/a/a/a;
+.field public b:Lc/a/a/b/a/a/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/tagmanager/ObjectAndStatic;Lc/b/a/b/a/a/a;)V
+.method public constructor <init>(Lcom/google/tagmanager/ObjectAndStatic;Lc/a/a/b/a/a/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lc/b/a/b/a/a/a;",
+            "Lc/a/a/b/a/a/a;",
             ">;",
-            "Lc/b/a/b/a/a/a;",
+            "Lc/a/a/b/a/a/a;",
             ")V"
         }
     .end annotation
@@ -46,7 +46,7 @@
 
     iput-object p1, p0, Lcom/google/tagmanager/Runtime$d;->a:Lcom/google/tagmanager/ObjectAndStatic;
 
-    iput-object p2, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/b/a/b/a/a/a;
+    iput-object p2, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/a/a/b/a/a/a;
 
     return-void
 .end method
@@ -59,7 +59,7 @@
         value = {
             "()",
             "Lcom/google/tagmanager/ObjectAndStatic<",
-            "Lc/b/a/b/a/a/a;",
+            "Lc/a/a/b/a/a/a;",
             ">;"
         }
     .end annotation
@@ -69,10 +69,10 @@
     return-object v0
 .end method
 
-.method public b()Lc/b/a/b/a/a/a;
+.method public b()Lc/a/a/b/a/a/a;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/b/a/b/a/a/a;
+    iget-object v0, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/a/a/b/a/a/a;
 
     return-object v0
 .end method
@@ -86,13 +86,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lc/b/a/b/a/a/a;
+    check-cast v0, Lc/a/a/b/a/a/a;
 
-    invoke-virtual {v0}, Lc/b/c/t2/a/e;->a()I
+    invoke-virtual {v0}, Lc/a/c/t2/a/e;->a()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/b/a/b/a/a/a;
+    iget-object v1, p0, Lcom/google/tagmanager/Runtime$d;->b:Lc/a/a/b/a/a/a;
 
     if-nez v1, :cond_0
 
@@ -101,7 +101,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Lc/b/c/t2/a/e;->a()I
+    invoke-virtual {v1}, Lc/a/c/t2/a/e;->a()I
 
     move-result v1
 

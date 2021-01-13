@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/m/h;
-.implements Lb/h/l/p;
+.implements Lb/g/m/h;
+.implements Lb/g/l/p;
 
 
 # annotations

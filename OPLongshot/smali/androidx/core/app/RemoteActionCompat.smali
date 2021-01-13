@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/s/a;
+.implements Lb/r/a;
 
 
 # instance fields

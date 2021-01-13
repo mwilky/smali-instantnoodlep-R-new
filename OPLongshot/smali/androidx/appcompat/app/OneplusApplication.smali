@@ -142,7 +142,7 @@
     invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    invoke-static {p0}, Lc/c/a/b;->b(Landroid/content/Context;)Z
+    invoke-static {p0}, Lc/b/a/b;->b(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -456,23 +456,23 @@
 
     sput-object p0, Landroidx/appcompat/app/OneplusApplication;->instance:Landroidx/appcompat/app/OneplusApplication;
 
-    invoke-static {p0}, Lc/c/a/b;->g(Landroid/content/Context;)Z
+    invoke-static {p0}, Lc/b/a/b;->g(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lc/c/a/b;->d(Landroid/content/Context;)I
+    invoke-static {p0}, Lc/b/a/b;->d(Landroid/content/Context;)I
 
     move-result v0
 
-    invoke-static {p0}, Lc/c/a/b;->c(Landroid/content/Context;)I
+    invoke-static {p0}, Lc/b/a/b;->c(Landroid/content/Context;)I
 
     move-result v1
 
     invoke-virtual {p0, v0, v1}, Landroidx/appcompat/app/OneplusApplication;->onVersionChanged(II)V
 
-    invoke-static {p0}, Lc/c/a/b;->f(Landroid/content/Context;)V
+    invoke-static {p0}, Lc/b/a/b;->f(Landroid/content/Context;)V
 
     :cond_0
     invoke-virtual {p0, p0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V

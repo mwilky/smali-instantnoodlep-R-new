@@ -152,6 +152,24 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SwitchCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 15
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -170,7 +188,7 @@
 
     move/from16 v10, p3
 
-    invoke-direct/range {p0 .. p3}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct/range {p0 .. p4}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v11, 0x0
 
@@ -238,7 +256,9 @@
 
     sget-object v0, Lb/c/j;->SwitchCompat:[I
 
-    invoke-static {v8, v9, v0, v10, v12}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
+    move/from16 v6, p4
+
+    invoke-static {v8, v9, v0, v10, v6}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
 
     move-result-object v14
 
@@ -254,8 +274,6 @@
 
     move-result-object v4
 
-    const/4 v6, 0x0
-
     move-object v0, p0
 
     move-object/from16 v1, p1
@@ -263,6 +281,8 @@
     move-object/from16 v3, p2
 
     move/from16 v5, p3
+
+    move/from16 v6, p4
 
     invoke-virtual/range {v0 .. v6}, Landroid/widget/CompoundButton;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
@@ -492,7 +512,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
-    invoke-static {}, Lc/c/a/e;->b()Z
+    invoke-static {}, Lc/b/a/f;->b()Z
 
     move-result v0
 
@@ -767,7 +787,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lb/g/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -783,7 +803,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->b:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget-boolean v0, p0, Landroidx/appcompat/widget/SwitchCompat;->e:Z
@@ -794,7 +814,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->c:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v0, v1}, Lb/h/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v0, v1}, Lb/g/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->a:Landroid/graphics/drawable/Drawable;
@@ -835,7 +855,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->f:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lb/g/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -851,7 +871,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->g:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget-boolean v0, p0, Landroidx/appcompat/widget/SwitchCompat;->j:Z
@@ -862,7 +882,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->h:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v0, v1}, Lb/h/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v0, v1}, Lb/g/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->f:Landroid/graphics/drawable/Drawable;
@@ -1031,7 +1051,7 @@
 
     if-eqz v0, :cond_7
 
-    invoke-static {v0, v1, v2, v5, v4}, Lb/h/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {v0, v1, v2, v5, v4}, Lb/g/f/f/a;->l(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_7
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->draw(Landroid/graphics/Canvas;)V
@@ -1055,14 +1075,14 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0, p1, p2}, Lb/h/f/f/a;->k(Landroid/graphics/drawable/Drawable;FF)V
+    invoke-static {v0, p1, p2}, Lb/g/f/f/a;->k(Landroid/graphics/drawable/Drawable;FF)V
 
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->f:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0, p1, p2}, Lb/h/f/f/a;->k(Landroid/graphics/drawable/Drawable;FF)V
+    invoke-static {v0, p1, p2}, Lb/g/f/f/a;->k(Landroid/graphics/drawable/Drawable;FF)V
 
     :cond_2
     return-void
@@ -2760,7 +2780,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/c/a/k;->b(Landroid/content/Context;)Z
+    invoke-static {v0}, Lc/b/a/p;->b(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -2774,7 +2794,7 @@
 
     iget v2, p0, Landroidx/appcompat/widget/SwitchCompat;->P:I
 
-    invoke-static {v0, v1, v2}, Lc/c/a/k;->a(Landroid/content/Context;Landroid/os/Vibrator;I)[J
+    invoke-static {v0, v1, v2}, Lc/b/a/p;->a(Landroid/content/Context;Landroid/os/Vibrator;I)[J
 
     move-result-object v0
 
@@ -2782,7 +2802,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->O:Landroid/os/Vibrator;
 
-    invoke-static {v0, v1}, Lc/c/a/k;->c([JLandroid/os/Vibrator;)V
+    invoke-static {v0, v1}, Lc/b/a/p;->c([JLandroid/os/Vibrator;)V
 
     :cond_0
     invoke-super {p0}, Landroid/widget/CompoundButton;->performClick()Z

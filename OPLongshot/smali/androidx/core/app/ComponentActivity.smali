@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/e;
+.implements Lb/l/e;
 .implements Landroidx/core/view/KeyEventDispatcher$a;
 
 
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field public mLifecycleRegistry:Lb/m/f;
+.field public mLifecycleRegistry:Lb/l/f;
 
 
 # direct methods
@@ -51,11 +51,11 @@
 
     iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mExtraDataMap:Landroidx/collection/SimpleArrayMap;
 
-    new-instance v0, Lb/m/f;
+    new-instance v0, Lb/l/f;
 
-    invoke-direct {v0, p0}, Lb/m/f;-><init>(Lb/m/e;)V
+    invoke-direct {v0, p0}, Lb/l/f;-><init>(Lb/l/e;)V
 
-    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
+    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/l/f;
 
     return-void
 .end method
@@ -161,7 +161,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
+    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/l/f;
 
     return-object v0
 .end method
@@ -194,11 +194,11 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/m/f;
+    iget-object v0, p0, Landroidx/core/app/ComponentActivity;->mLifecycleRegistry:Lb/l/f;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v0, v1}, Lb/m/f;->k(Landroidx/lifecycle/Lifecycle$State;)V
+    invoke-virtual {v0, v1}, Lb/l/f;->k(Landroidx/lifecycle/Lifecycle$State;)V
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 

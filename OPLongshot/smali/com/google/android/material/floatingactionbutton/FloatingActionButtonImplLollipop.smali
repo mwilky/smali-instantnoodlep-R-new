@@ -16,10 +16,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/b/b/b/e0/a;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/a/b/b/d0/a;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/b/b/b/e0/a;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/a/b/b/d0/a;)V
 
     return-void
 .end method
@@ -111,27 +111,27 @@
 
     invoke-direct {v1, v2}, Lcom/google/android/material/floatingactionbutton/BorderDrawable;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
-    sget v2, Lc/b/b/b/c;->design_fab_stroke_top_outer_color:I
+    sget v2, Lc/a/b/b/c;->design_fab_stroke_top_outer_color:I
 
-    invoke-static {v0, v2}, Lb/h/e/b;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lb/g/e/b;->a(Landroid/content/Context;I)I
 
     move-result v2
 
-    sget v3, Lc/b/b/b/c;->design_fab_stroke_top_inner_color:I
+    sget v3, Lc/a/b/b/c;->design_fab_stroke_top_inner_color:I
 
-    invoke-static {v0, v3}, Lb/h/e/b;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v3}, Lb/g/e/b;->a(Landroid/content/Context;I)I
 
     move-result v3
 
-    sget v4, Lc/b/b/b/c;->design_fab_stroke_end_inner_color:I
+    sget v4, Lc/a/b/b/c;->design_fab_stroke_end_inner_color:I
 
-    invoke-static {v0, v4}, Lb/h/e/b;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Lb/g/e/b;->a(Landroid/content/Context;I)I
 
     move-result v4
 
-    sget v5, Lc/b/b/b/c;->design_fab_stroke_end_outer_color:I
+    sget v5, Lc/a/b/b/c;->design_fab_stroke_end_outer_color:I
 
-    invoke-static {v0, v5}, Lb/h/e/b;->a(Landroid/content/Context;I)I
+    invoke-static {v0, v5}, Lb/g/e/b;->a(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -185,9 +185,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
-    invoke-interface {v0}, Lc/b/b/b/e0/a;->b()Z
+    invoke-interface {v0}, Lc/a/b/b/d0/a;->b()Z
 
     move-result v0
 
@@ -654,9 +654,9 @@
 .method public shouldAddPadding()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
-    invoke-interface {v0}, Lc/b/b/b/e0/a;->b()Z
+    invoke-interface {v0}, Lc/a/b/b/d0/a;->b()Z
 
     move-result v0
 

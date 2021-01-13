@@ -73,7 +73,7 @@
     .end annotation
 .end field
 
-.field public final mUpdateCallback:Lb/o/d/i;
+.field public final mUpdateCallback:Lb/n/d/i;
 
 
 # direct methods
@@ -108,9 +108,9 @@
         }
     .end annotation
 
-    new-instance v0, Lb/o/d/b;
+    new-instance v0, Lb/n/d/b;
 
-    invoke-direct {v0, p1}, Lb/o/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v0, p1}, Lb/n/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     new-instance p1, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
@@ -120,14 +120,14 @@
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/o/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+    invoke-direct {p0, v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lb/o/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+.method public constructor <init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
     .locals 1
-    .param p1    # Lb/o/d/i;
+    .param p1    # Lb/n/d/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -138,7 +138,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/o/d/i;",
+            "Lb/n/d/i;",
             "Landroidx/recyclerview/widget/AsyncDifferConfig<",
             "TT;>;)V"
         }
@@ -158,7 +158,7 @@
 
     iput-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/o/d/i;
+    iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/n/d/i;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mConfig:Landroidx/recyclerview/widget/AsyncDifferConfig;
 
@@ -315,9 +315,9 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
-    iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/o/d/i;
+    iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/n/d/i;
 
-    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/DiffUtil$b;->d(Lb/o/d/i;)V
+    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/DiffUtil$b;->d(Lb/n/d/i;)V
 
     invoke-direct {p0, v0, p3}, Landroidx/recyclerview/widget/AsyncListDiffer;->onCurrentListChanged(Ljava/util/List;Ljava/lang/Runnable;)V
 
@@ -424,9 +424,9 @@
 
     iput-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/o/d/i;
+    iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/n/d/i;
 
-    invoke-interface {v2, v1, p1}, Lb/o/d/i;->onRemoved(II)V
+    invoke-interface {v2, v1, p1}, Lb/n/d/i;->onRemoved(II)V
 
     invoke-direct {p0, v0, p2}, Landroidx/recyclerview/widget/AsyncListDiffer;->onCurrentListChanged(Ljava/util/List;Ljava/lang/Runnable;)V
 
@@ -443,13 +443,13 @@
 
     iput-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/o/d/i;
+    iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Lb/n/d/i;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
 
-    invoke-interface {v2, v1, p1}, Lb/o/d/i;->onInserted(II)V
+    invoke-interface {v2, v1, p1}, Lb/n/d/i;->onInserted(II)V
 
     invoke-direct {p0, v0, p2}, Landroidx/recyclerview/widget/AsyncListDiffer;->onCurrentListChanged(Ljava/util/List;Ljava/lang/Runnable;)V
 

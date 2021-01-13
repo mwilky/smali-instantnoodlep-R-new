@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/l/m;
+.implements Lb/g/l/m;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/b/b/b/h0/a;)V
+    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/a/b/b/g0/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+.method public a(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
     .locals 4
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
@@ -43,7 +43,7 @@
 
     move-result v2
 
-    invoke-virtual {p2}, Lb/h/l/x;->b()I
+    invoke-virtual {p2}, Lb/g/l/x;->b()I
 
     move-result v3
 

@@ -44,7 +44,7 @@
 
     iget-wide v0, v0, Lcom/google/android/material/datepicker/Month;->timeInMillis:J
 
-    invoke-static {v0, v1}, Lc/b/b/b/t/h;->a(J)J
+    invoke-static {v0, v1}, Lc/a/b/b/t/h;->a(J)J
 
     move-result-wide v0
 
@@ -60,7 +60,7 @@
 
     iget-wide v0, v0, Lcom/google/android/material/datepicker/Month;->timeInMillis:J
 
-    invoke-static {v0, v1}, Lc/b/b/b/t/h;->a(J)J
+    invoke-static {v0, v1}, Lc/a/b/b/t/h;->a(J)J
 
     move-result-wide v0
 

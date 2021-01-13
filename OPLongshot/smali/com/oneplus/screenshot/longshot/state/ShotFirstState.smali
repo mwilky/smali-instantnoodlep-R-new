@@ -68,7 +68,14 @@
 
     move-result-object p1
 
+    goto :goto_0
+
     :cond_1
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isFirstShotByOldAlgo:Z
+
+    :goto_0
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
     monitor-enter v0

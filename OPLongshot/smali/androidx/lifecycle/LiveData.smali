@@ -366,9 +366,9 @@
     return v0
 .end method
 
-.method public observe(Lb/m/e;Landroidx/lifecycle/Observer;)V
+.method public observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
     .locals 2
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -382,7 +382,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/m/e;",
+            "Lb/l/e;",
             "Landroidx/lifecycle/Observer<",
             "-TT;>;)V"
         }
@@ -392,7 +392,7 @@
 
     invoke-static {v0}, Landroidx/lifecycle/LiveData;->assertMainThread(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
@@ -409,7 +409,7 @@
     :cond_0
     new-instance v0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;-><init>(Landroidx/lifecycle/LiveData;Lb/m/e;Landroidx/lifecycle/Observer;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;-><init>(Landroidx/lifecycle/LiveData;Lb/l/e;Landroidx/lifecycle/Observer;)V
 
     iget-object v1, p0, Landroidx/lifecycle/LiveData;->mObservers:Landroidx/arch/core/internal/SafeIterableMap;
 
@@ -421,7 +421,7 @@
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/m/e;)Z
+    invoke-virtual {p2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/l/e;)Z
 
     move-result v1
 
@@ -445,11 +445,11 @@
     return-void
 
     :cond_3
-    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Lb/l/d;)V
 
     return-void
 .end method
@@ -632,9 +632,9 @@
     return-void
 .end method
 
-.method public removeObservers(Lb/m/e;)V
+.method public removeObservers(Lb/l/e;)V
     .locals 3
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -671,7 +671,7 @@
 
     check-cast v2, Landroidx/lifecycle/LiveData$b;
 
-    invoke-virtual {v2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/m/e;)Z
+    invoke-virtual {v2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/l/e;)Z
 
     move-result v2
 

@@ -31,23 +31,23 @@
 
 
 # virtual methods
-.method public a(I)Lb/h/l/y/d;
+.method public a(I)Lb/g/l/y/d;
     .locals 1
 
     iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper$a;->b:Landroidx/customview/widget/ExploreByTouchHelper;
 
-    invoke-virtual {v0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Lb/h/l/y/d;
+    invoke-virtual {v0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Lb/g/l/y/d;
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/l/y/d;->K(Lb/h/l/y/d;)Lb/h/l/y/d;
+    invoke-static {p1}, Lb/g/l/y/d;->K(Lb/g/l/y/d;)Lb/g/l/y/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public c(I)Lb/h/l/y/d;
+.method public c(I)Lb/g/l/y/d;
     .locals 1
 
     const/4 v0, 0x2
@@ -75,7 +75,7 @@
     return-object p1
 
     :cond_1
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper$a;->a(I)Lb/h/l/y/d;
+    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper$a;->a(I)Lb/g/l/y/d;
 
     move-result-object p1
 

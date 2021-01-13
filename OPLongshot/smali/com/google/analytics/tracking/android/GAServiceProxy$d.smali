@@ -80,11 +80,11 @@
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$d;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
-    invoke-static {v2}, Lcom/google/analytics/tracking/android/GAServiceProxy;->i(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lc/b/a/c/a/h;
+    invoke-static {v2}, Lcom/google/analytics/tracking/android/GAServiceProxy;->i(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lc/a/a/c/a/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lc/b/a/c/a/h;->a()J
+    invoke-interface {v2}, Lc/a/a/c/a/h;->a()J
 
     move-result-wide v2
 
@@ -94,7 +94,7 @@
 
     const-string v0, "Disconnecting due to inactivity"
 
-    invoke-static {v0}, Lc/b/a/c/a/s;->e(Ljava/lang/String;)V
+    invoke-static {v0}, Lc/a/a/c/a/s;->e(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$d;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 

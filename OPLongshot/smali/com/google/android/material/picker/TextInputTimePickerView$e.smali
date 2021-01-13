@@ -41,7 +41,7 @@
 
     move-result p1
 
-    sget v0, Lc/b/b/b/f;->am_label2:I
+    sget v0, Lc/a/b/b/f;->am_label2:I
 
     const/4 v1, 0x0
 
@@ -66,7 +66,7 @@
     goto :goto_0
 
     :cond_0
-    sget v0, Lc/b/b/b/f;->pm_label2:I
+    sget v0, Lc/a/b/b/f;->pm_label2:I
 
     if-ne p1, v0, :cond_1
 

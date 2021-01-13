@@ -40,7 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lc/b/b/b/k;->MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner:I
+    sget v0, Lc/a/b/b/k;->MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner:I
 
     sput v0, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;->DEF_STYLE_RES:I
 
@@ -108,7 +108,7 @@
 
     move-result-object p2
 
-    sget p3, Lc/b/b/b/b;->colorSurface:I
+    sget p3, Lc/a/b/b/b;->colorSurface:I
 
     const-class p4, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;
 

@@ -33,7 +33,7 @@
 
     new-instance p1, Landroid/os/Handler;
 
-    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object p2
 

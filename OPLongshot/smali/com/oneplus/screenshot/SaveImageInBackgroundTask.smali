@@ -449,7 +449,7 @@
 
     invoke-direct {v3}, Landroid/app/Notification$BigPictureStyle;-><init>()V
 
-    invoke-static/range {v17 .. v17}, Lc/c/b/f/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static/range {v17 .. v17}, Lc/b/b/f/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
@@ -465,7 +465,7 @@
 
     invoke-direct {v3, v8, v4}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v5, 0x7f10009d
+    const v5, 0x7f100092
 
     invoke-virtual {v11, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -475,7 +475,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f10009b
+    const v6, 0x7f100090
 
     invoke-virtual {v11, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -485,7 +485,7 @@
 
     move-result-object v3
 
-    const v9, 0x7f0801fe
+    const v9, 0x7f0801f2
 
     invoke-virtual {v3, v9}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -505,7 +505,7 @@
 
     move-result-object v3
 
-    const v10, 0x7f06020b
+    const v10, 0x7f0602fb
 
     invoke-virtual {v11, v10}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -525,7 +525,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v8, 0x7f10009c
+    const v8, 0x7f100091
 
     invoke-virtual {v11, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -611,11 +611,11 @@
 
     const/16 v2, 0x20
 
-    invoke-static {v1, v2, v12}, Lc/c/b/a/b;->a(Landroid/app/Notification$Builder;IZ)Landroid/app/Notification$Builder;
+    invoke-static {v1, v2, v12}, Lc/b/b/a/b;->a(Landroid/app/Notification$Builder;IZ)Landroid/app/Notification$Builder;
 
     iget-object v1, v7, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationManager:Landroid/app/NotificationManager;
 
-    sget v2, Lc/c/b/i/a/a;->a:I
+    sget v2, Lc/b/b/i/a/a;->a:I
 
     iget-object v3, v7, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationBuilder:Landroid/app/Notification$Builder;
 
@@ -627,7 +627,7 @@
 
     iget-object v1, v7, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationBuilder:Landroid/app/Notification$Builder;
 
-    invoke-static {v0}, Lc/c/b/f/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lc/b/b/f/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1302,9 +1302,9 @@
 
     new-instance v5, Landroid/app/Notification$Action$Builder;
 
-    const v6, 0x7f0800b2
+    const v6, 0x7f0800b0
 
-    const v9, 0x7f100075
+    const v9, 0x7f10006b
 
     move-object/from16 v10, v16
 
@@ -1346,9 +1346,9 @@
 
     new-instance v3, Landroid/app/Notification$Action$Builder;
 
-    const v4, 0x7f0800b1
+    const v4, 0x7f0800af
 
-    const v5, 0x7f100072
+    const v5, 0x7f100068
 
     invoke-virtual {v10, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1413,7 +1413,7 @@
 
     iget-object v2, v1, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mParams:Lcom/oneplus/screenshot/SaveImageInBackgroundData;
 
-    const v3, 0x7f100097
+    const v3, 0x7f10008c
 
     iput v3, v2, Lcom/oneplus/screenshot/SaveImageInBackgroundData;->errorMsgResId:I
 
@@ -1547,7 +1547,7 @@
 
     iget-object p1, p0, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationManager:Landroid/app/NotificationManager;
 
-    sget v0, Lc/c/b/i/a/a;->a:I
+    sget v0, Lc/b/b/i/a/a;->a:I
 
     invoke-virtual {p1, v0}, Landroid/app/NotificationManager;->cancel(I)V
 
@@ -1650,7 +1650,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mPublicNotificationBuilder:Landroid/app/Notification$Builder;
 
-    const v7, 0x7f10009a
+    const v7, 0x7f10008f
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1660,7 +1660,7 @@
 
     move-result-object v3
 
-    const v8, 0x7f100099
+    const v8, 0x7f10008e
 
     invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1692,7 +1692,7 @@
 
     move-result-object v3
 
-    const v9, 0x7f06020b
+    const v9, 0x7f0602fb
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getColor(I)I
 
@@ -1758,11 +1758,11 @@
 
     const/16 v1, 0x20
 
-    invoke-static {p1, v1, v10}, Lc/c/b/a/b;->a(Landroid/app/Notification$Builder;IZ)Landroid/app/Notification$Builder;
+    invoke-static {p1, v1, v10}, Lc/b/b/a/b;->a(Landroid/app/Notification$Builder;IZ)Landroid/app/Notification$Builder;
 
     iget-object p1, p0, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationManager:Landroid/app/NotificationManager;
 
-    sget v1, Lc/c/b/i/a/a;->a:I
+    sget v1, Lc/b/b/i/a/a;->a:I
 
     iget-object v2, p0, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mNotificationBuilder:Landroid/app/Notification$Builder;
 

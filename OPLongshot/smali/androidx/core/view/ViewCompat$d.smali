@@ -96,7 +96,7 @@
 .method public static a(Landroid/view/View;)Landroidx/core/view/ViewCompat$d;
     .locals 2
 
-    sget v0, Lb/h/b;->tag_unhandled_key_event_manager:I
+    sget v0, Lb/g/b;->tag_unhandled_key_event_manager:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -110,7 +110,7 @@
 
     invoke-direct {v0}, Landroidx/core/view/ViewCompat$d;-><init>()V
 
-    sget v1, Lb/h/b;->tag_unhandled_key_event_manager:I
+    sget v1, Lb/g/b;->tag_unhandled_key_event_manager:I
 
     invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -285,7 +285,7 @@
         .end annotation
     .end param
 
-    sget v0, Lb/h/b;->tag_unhandled_key_listeners:I
+    sget v0, Lb/g/b;->tag_unhandled_key_listeners:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

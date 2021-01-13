@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/SuggestionsAdapter;
-.super Lb/i/a/c;
+.super Lb/h/a/c;
 .source "SourceFile"
 
 # interfaces
@@ -101,7 +101,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lb/i/a/c;-><init>(Landroid/content/Context;ILandroid/database/Cursor;Z)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lb/h/a/c;-><init>(Landroid/content/Context;ILandroid/database/Cursor;Z)V
 
     const/4 v0, 0x0
 
@@ -123,7 +123,7 @@
 
     iput v0, p0, Landroidx/appcompat/widget/SuggestionsAdapter;->mFlagsCol:I
 
-    iget-object v0, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     const-string v1, "search"
 
@@ -188,7 +188,7 @@
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    iget-object v1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    iget-object v1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -253,7 +253,7 @@
 
     const-string v0, "SuggestionsAdapter"
 
-    iget-object v1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -431,7 +431,7 @@
     return-object p1
 
     :cond_0
-    iget-object p1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -704,7 +704,7 @@
     :cond_1
     iget-object v3, p0, Landroidx/appcompat/widget/SuggestionsAdapter;->mProviderContext:Landroid/content/Context;
 
-    invoke-static {v3, v1}, Lb/h/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v3, v1}, Lb/g/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -1152,7 +1152,7 @@
 
     :cond_1
     :try_start_0
-    invoke-super {p0, p1}, Lb/i/a/a;->changeCursor(Landroid/database/Cursor;)V
+    invoke-super {p0, p1}, Lb/h/a/a;->changeCursor(Landroid/database/Cursor;)V
 
     if-eqz p1, :cond_2
 
@@ -1310,7 +1310,7 @@
     if-nez v1, :cond_4
 
     :try_start_0
-    iget-object v1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1514,7 +1514,7 @@
     .locals 1
 
     :try_start_0
-    invoke-super {p0, p1, p2, p3}, Lb/i/a/a;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lb/h/a/a;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
     :try_end_0
@@ -1531,11 +1531,11 @@
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    iget-object p2, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object p2, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
-    iget-object v0, p0, Lb/i/a/a;->mCursor:Landroid/database/Cursor;
+    iget-object v0, p0, Lb/h/a/a;->mCursor:Landroid/database/Cursor;
 
-    invoke-virtual {p0, p2, v0, p3}, Lb/i/a/c;->newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p0, p2, v0, p3}, Lb/h/a/c;->newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1660,7 +1660,7 @@
 
     move-result-object v4
 
-    iget-object p1, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object p1, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1681,7 +1681,7 @@
     .locals 1
 
     :try_start_0
-    invoke-super {p0, p1, p2, p3}, Lb/i/a/a;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lb/h/a/a;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
     :try_end_0
@@ -1698,9 +1698,9 @@
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    iget-object p2, p0, Lb/i/a/a;->mContext:Landroid/content/Context;
+    iget-object p2, p0, Lb/h/a/a;->mContext:Landroid/content/Context;
 
-    iget-object v0, p0, Lb/i/a/a;->mCursor:Landroid/database/Cursor;
+    iget-object v0, p0, Lb/h/a/a;->mCursor:Landroid/database/Cursor;
 
     invoke-virtual {p0, p2, v0, p3}, Landroidx/appcompat/widget/SuggestionsAdapter;->newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -1737,7 +1737,7 @@
 .method public newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lb/i/a/c;->newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lb/h/a/c;->newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -1767,7 +1767,7 @@
 
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    invoke-virtual {p0}, Lb/i/a/a;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {p0}, Lb/h/a/a;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -1781,7 +1781,7 @@
 
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
 
-    invoke-virtual {p0}, Lb/i/a/a;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {p0}, Lb/h/a/a;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 

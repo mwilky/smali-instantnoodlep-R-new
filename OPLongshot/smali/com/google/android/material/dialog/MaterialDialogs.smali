@@ -33,7 +33,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    sget-object v2, Lc/b/b/b/l;->MaterialAlertDialog:[I
+    sget-object v2, Lc/a/b/b/l;->MaterialAlertDialog:[I
 
     const/4 v0, 0x0
 
@@ -51,13 +51,13 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->MaterialAlertDialog_backgroundInsetStart:I
+    sget p2, Lc/a/b/b/l;->MaterialAlertDialog_backgroundInsetStart:I
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/d;->mtrl_alert_dialog_background_inset_start:I
+    sget v1, Lc/a/b/b/d;->mtrl_alert_dialog_background_inset_start:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -67,13 +67,13 @@
 
     move-result p2
 
-    sget v0, Lc/b/b/b/l;->MaterialAlertDialog_backgroundInsetTop:I
+    sget v0, Lc/a/b/b/l;->MaterialAlertDialog_backgroundInsetTop:I
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lc/b/b/b/d;->mtrl_alert_dialog_background_inset_top:I
+    sget v2, Lc/a/b/b/d;->mtrl_alert_dialog_background_inset_top:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -83,13 +83,13 @@
 
     move-result v0
 
-    sget v1, Lc/b/b/b/l;->MaterialAlertDialog_backgroundInsetEnd:I
+    sget v1, Lc/a/b/b/l;->MaterialAlertDialog_backgroundInsetEnd:I
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Lc/b/b/b/d;->mtrl_alert_dialog_background_inset_end:I
+    sget v3, Lc/a/b/b/d;->mtrl_alert_dialog_background_inset_end:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -99,13 +99,13 @@
 
     move-result v1
 
-    sget v2, Lc/b/b/b/l;->MaterialAlertDialog_backgroundInsetBottom:I
+    sget v2, Lc/a/b/b/l;->MaterialAlertDialog_backgroundInsetBottom:I
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sget v4, Lc/b/b/b/d;->mtrl_alert_dialog_background_inset_bottom:I
+    sget v4, Lc/a/b/b/d;->mtrl_alert_dialog_background_inset_bottom:I
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

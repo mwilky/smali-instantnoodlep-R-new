@@ -87,7 +87,7 @@
 
     move-result-object p1
 
-    sget v0, Lc/b/b/b/d;->design_textinput_caption_translate_y:I
+    sget v0, Lc/a/b/b/d;->design_textinput_caption_translate_y:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -713,7 +713,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->o:Landroid/widget/TextView;
 
-    sget v2, Lc/b/b/b/f;->textinput_helper_text:I
+    sget v2, Lc/a/b/b/f;->textinput_helper_text:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setId(I)V
 

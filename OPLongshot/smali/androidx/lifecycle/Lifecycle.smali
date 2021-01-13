@@ -27,8 +27,8 @@
 
 
 # virtual methods
-.method public abstract a(Lb/m/d;)V
-    .param p1    # Lb/m/d;
+.method public abstract a(Lb/l/d;)V
+    .param p1    # Lb/l/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -44,8 +44,8 @@
     .end annotation
 .end method
 
-.method public abstract c(Lb/m/d;)V
-    .param p1    # Lb/m/d;
+.method public abstract c(Lb/l/d;)V
+    .param p1    # Lb/l/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

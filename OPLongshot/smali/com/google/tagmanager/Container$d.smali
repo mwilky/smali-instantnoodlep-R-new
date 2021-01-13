@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc/b/c/q$a;
+.implements Lc/a/c/q$a;
 
 
 # annotations
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/google/tagmanager/Container;Lc/b/c/n;)V
+.method public synthetic constructor <init>(Lcom/google/tagmanager/Container;Lc/a/c/n;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/tagmanager/Container$d;-><init>(Lcom/google/tagmanager/Container;)V

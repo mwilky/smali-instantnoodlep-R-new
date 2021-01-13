@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "StitchBgNextTask"
+.field public static final TAG:Ljava/lang/String; = "Longshot.StitchBgNextTask"
 
 
 # direct methods
@@ -212,6 +212,41 @@
     return v1
 
     :cond_0
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    if-lez v0, :cond_4
+
+    invoke-virtual {p2}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mMatcher:Lcom/oneplus/screenshot/longshot/match/Matcher;
 
     invoke-interface {v0, p1, p2}, Lcom/oneplus/screenshot/longshot/match/Matcher;->run(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Lcom/oneplus/screenshot/longshot/match/MatchData;
@@ -224,12 +259,12 @@
 
     const/4 v3, 0x1
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_2
 
     move v1, v3
 
-    :cond_1
-    if-eqz v1, :cond_2
+    :cond_2
+    if-eqz v1, :cond_3
 
     invoke-direct {p0, v0, p1}, Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;->stitchForLast(Lcom/oneplus/screenshot/longshot/match/MatchData;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V
 
@@ -245,7 +280,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/task/JoinTask;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
@@ -257,6 +292,16 @@
 
     invoke-virtual {p1, v3}, Lcom/oneplus/screenshot/longshot/cache/BitmapCache;->setLastCache(Z)V
 
-    :cond_2
+    :cond_3
+    return v1
+
+    :cond_4
+    :goto_0
+    const-string p1, "Longshot.StitchBgNextTask"
+
+    const-string p2, "zero height bitmap"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 .end method

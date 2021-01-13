@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/l/p;
-.implements Lb/h/m/i;
+.implements Lb/g/l/p;
+.implements Lb/g/m/i;
 .implements Landroidx/core/widget/AutoSizeableTextView;
 
 

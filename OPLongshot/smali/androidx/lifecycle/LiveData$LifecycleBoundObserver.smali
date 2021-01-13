@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field public final mOwner:Lb/m/e;
+.field public final mOwner:Lb/l/e;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/LiveData;Lb/m/e;Landroidx/lifecycle/Observer;)V
+.method public constructor <init>(Landroidx/lifecycle/LiveData;Lb/l/e;Landroidx/lifecycle/Observer;)V
     .locals 0
     .param p1    # Landroidx/lifecycle/LiveData;
         .annotation build Landroidx/annotation/NonNull;
@@ -44,7 +44,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/m/e;",
+            "Lb/l/e;",
             "Landroidx/lifecycle/Observer<",
             "-TT;>;)V"
         }
@@ -54,7 +54,7 @@
 
     invoke-direct {p0, p1, p3}, Landroidx/lifecycle/LiveData$b;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
-    iput-object p2, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/m/e;
+    iput-object p2, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/l/e;
 
     return-void
 .end method
@@ -64,21 +64,21 @@
 .method public detachObserver()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/m/e;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/l/e;
 
-    invoke-interface {v0}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->c(Lb/m/d;)V
+    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->c(Lb/l/d;)V
 
     return-void
 .end method
 
-.method public isAttachedTo(Lb/m/e;)Z
+.method public isAttachedTo(Lb/l/e;)Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/m/e;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/l/e;
 
     if-ne v0, p1, :cond_0
 
@@ -93,12 +93,12 @@
     return p1
 .end method
 
-.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
-    iget-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/m/e;
+    iget-object p1, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/l/e;
 
-    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
@@ -131,9 +131,9 @@
 .method public shouldBeActive()Z
     .locals 2
 
-    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/m/e;
+    iget-object v0, p0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;->mOwner:Lb/l/e;
 
-    invoke-interface {v0}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 

@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/h/l/x;Lcom/google/android/material/internal/ViewUtils$f;)Lb/h/l/x;
+.method public a(Landroid/view/View;Lb/g/l/x;Lcom/google/android/material/internal/ViewUtils$f;)Lb/g/l/x;
     .locals 3
-    .param p2    # Lb/h/l/x;
+    .param p2    # Lb/g/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -57,7 +57,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-virtual {p2}, Lb/h/l/x;->b()I
+    invoke-virtual {p2}, Lb/g/l/x;->b()I
 
     move-result p3
 
@@ -82,7 +82,7 @@
 
     move-result p1
 
-    invoke-virtual {p2}, Lb/h/l/x;->c()I
+    invoke-virtual {p2}, Lb/g/l/x;->c()I
 
     move-result v1
 
@@ -98,7 +98,7 @@
     :goto_0
     iget-object v1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-virtual {p2}, Lb/h/l/x;->c()I
+    invoke-virtual {p2}, Lb/g/l/x;->c()I
 
     move-result v2
 
@@ -124,7 +124,7 @@
 
     move-result v1
 
-    invoke-virtual {p2}, Lb/h/l/x;->d()I
+    invoke-virtual {p2}, Lb/g/l/x;->d()I
 
     move-result v2
 
@@ -138,7 +138,7 @@
     :goto_2
     iget-object v0, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    invoke-virtual {p2}, Lb/h/l/x;->d()I
+    invoke-virtual {p2}, Lb/g/l/x;->d()I
 
     move-result v1
 

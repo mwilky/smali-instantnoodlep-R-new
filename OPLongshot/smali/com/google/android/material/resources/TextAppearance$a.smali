@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/resources/TextAppearance$a;
-.super Lb/h/e/c/b$a;
+.super Lb/g/e/c/b$a;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/resources/TextAppearance$a;->a:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-    invoke-direct {p0}, Lb/h/e/c/b$a;-><init>()V
+    invoke-direct {p0}, Lb/g/e/c/b$a;-><init>()V
 
     return-void
 .end method

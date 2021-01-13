@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method public isAttachedTo(Lb/m/e;)Z
+.method public isAttachedTo(Lb/l/e;)Z
     .locals 0
 
     const/4 p1, 0x0

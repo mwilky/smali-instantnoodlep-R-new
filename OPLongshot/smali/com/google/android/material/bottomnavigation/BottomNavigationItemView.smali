@@ -145,17 +145,17 @@
 
     move-result-object p1
 
-    sget p3, Lc/b/b/b/h;->design_bottom_navigation_item:I
+    sget p3, Lc/a/b/b/h;->design_bottom_navigation_item:I
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, p3, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget p1, Lc/b/b/b/e;->design_bottom_navigation_item_background:I
+    sget p1, Lc/a/b/b/e;->design_bottom_navigation_item_background:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    sget p1, Lc/b/b/b/d;->design_bottom_navigation_margin:I
+    sget p1, Lc/a/b/b/d;->design_bottom_navigation_margin:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -163,7 +163,7 @@
 
     iput p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->defaultMargin:I
 
-    sget p1, Lc/b/b/b/f;->baseline:I
+    sget p1, Lc/a/b/b/f;->baseline:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -173,7 +173,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->baselineLayout:Lcom/google/android/material/internal/BaselineLayout;
 
-    sget p1, Lc/b/b/b/f;->icon:I
+    sget p1, Lc/a/b/b/f;->icon:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -183,7 +183,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
 
-    sget p1, Lc/b/b/b/f;->smallLabel:I
+    sget p1, Lc/a/b/b/f;->smallLabel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -193,7 +193,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->smallLabel:Landroid/widget/TextView;
 
-    sget p1, Lc/b/b/b/f;->largeLabel:I
+    sget p1, Lc/a/b/b/f;->largeLabel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -707,7 +707,7 @@
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_1
-    invoke-static {p1}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
+    invoke-static {p1}, Lb/g/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/g/l/y/d;
 
     move-result-object p1
 
@@ -727,11 +727,11 @@
 
     move-result v5
 
-    invoke-static/range {v0 .. v5}, Lb/h/l/y/d$c;->a(IIIIZZ)Lb/h/l/y/d$c;
+    invoke-static/range {v0 .. v5}, Lb/g/l/y/d$c;->a(IIIIZZ)Lb/g/l/y/d$c;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/l/y/d;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/g/l/y/d;->Z(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->isSelected()Z
 
@@ -741,16 +741,16 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lb/h/l/y/d;->X(Z)V
+    invoke-virtual {p1, v0}, Lb/g/l/y/d;->X(Z)V
 
-    sget-object v0, Lb/h/l/y/d$a;->e:Lb/h/l/y/d$a;
+    sget-object v0, Lb/g/l/y/d$a;->e:Lb/g/l/y/d$a;
 
-    invoke-virtual {p1, v0}, Lb/h/l/y/d;->N(Lb/h/l/y/d$a;)Z
+    invoke-virtual {p1, v0}, Lb/g/l/y/d;->N(Lb/g/l/y/d$a;)Z
 
     :cond_2
     const-string v0, "Tab"
 
-    invoke-virtual {p1, v0}, Lb/h/l/y/d;->n0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Lb/g/l/y/d;->n0(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -1093,18 +1093,18 @@
 
     const/16 v0, 0x3ea
 
-    invoke-static {p1, v0}, Lb/h/l/o;->b(Landroid/content/Context;I)Lb/h/l/o;
+    invoke-static {p1, v0}, Lb/g/l/o;->b(Landroid/content/Context;I)Lb/g/l/o;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/h/l/o;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/g/l/o;)V
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/h/l/o;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->u0(Landroid/view/View;Lb/g/l/o;)V
 
     :goto_0
     return-void
@@ -1142,7 +1142,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Lb/h/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lb/g/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1156,7 +1156,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1, v0}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_2
     iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->icon:Landroid/widget/ImageView;
@@ -1201,7 +1201,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->wrappedIconDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1225,7 +1225,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lb/h/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lb/g/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

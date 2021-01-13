@@ -173,11 +173,11 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lb/h/l/y/d$a;->f:Lb/h/l/y/d$a;
+    sget-object v0, Lb/g/l/y/d$a;->f:Lb/g/l/y/d$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/h/l/y/d$a;Z)V
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/g/l/y/d$a;Z)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->getTopBottomOffsetForScrollingSibling()I
@@ -202,7 +202,7 @@
 
     if-eqz v6, :cond_2
 
-    sget-object v0, Lb/h/l/y/d$a;->g:Lb/h/l/y/d$a;
+    sget-object v0, Lb/g/l/y/d$a;->g:Lb/g/l/y/d$a;
 
     const/4 v7, 0x0
 
@@ -220,27 +220,27 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;-><init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
 
-    invoke-static {p1, v0, v7, v8}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Lb/h/l/y/d$a;Ljava/lang/CharSequence;Lb/h/l/y/f;)V
+    invoke-static {p1, v0, v7, v8}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Lb/g/l/y/d$a;Ljava/lang/CharSequence;Lb/g/l/y/f;)V
 
     goto :goto_0
 
     :cond_1
-    sget-object p3, Lb/h/l/y/d$a;->g:Lb/h/l/y/d$a;
+    sget-object p3, Lb/g/l/y/d$a;->g:Lb/g/l/y/d$a;
 
-    invoke-direct {p0, p1, p2, p3, v2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/h/l/y/d$a;Z)V
+    invoke-direct {p0, p1, p2, p3, v2}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/g/l/y/d$a;Z)V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method private addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/h/l/y/d$a;Z)V
+.method private addActionToExpand(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Lb/g/l/y/d$a;Z)V
     .locals 1
     .param p2    # Lcom/google/android/material/appbar/AppBarLayout;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lb/h/l/y/d$a;
+    .param p3    # Lb/g/l/y/d$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -249,7 +249,7 @@
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
             "TT;",
-            "Lb/h/l/y/d$a;",
+            "Lb/g/l/y/d$a;",
             "Z)V"
         }
     .end annotation
@@ -260,7 +260,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Lb/h/l/y/d$a;Ljava/lang/CharSequence;Lb/h/l/y/f;)V
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/view/ViewCompat;->d0(Landroid/view/View;Lb/g/l/y/d$a;Ljava/lang/CharSequence;Lb/g/l/y/f;)V
 
     return-void
 .end method
@@ -413,7 +413,7 @@
 
     invoke-virtual {p1, p2, p2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    invoke-static {p1}, Lb/h/l/z/b;->b(Landroid/graphics/Path;)Landroid/view/animation/Interpolator;
+    invoke-static {p1}, Lb/g/l/z/b;->b(Landroid/graphics/Path;)Landroid/view/animation/Interpolator;
 
     move-result-object p1
 
@@ -593,7 +593,7 @@
 
     move-result-object v2
 
-    instance-of v3, v2, Lb/h/l/g;
+    instance-of v3, v2, Lb/g/l/g;
 
     if-nez v3, :cond_1
 
@@ -1124,7 +1124,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v5, v0, v1}, Lb/h/g/a;->b(III)I
+    invoke-static {v5, v0, v1}, Lb/g/g/a;->b(III)I
 
     move-result v9
 
@@ -1158,17 +1158,17 @@
         }
     .end annotation
 
-    sget-object v0, Lb/h/l/y/d$a;->f:Lb/h/l/y/d$a;
+    sget-object v0, Lb/g/l/y/d$a;->f:Lb/g/l/y/d$a;
 
-    invoke-virtual {v0}, Lb/h/l/y/d$a;->b()I
+    invoke-virtual {v0}, Lb/g/l/y/d$a;->b()I
 
     move-result v0
 
     invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->b0(Landroid/view/View;I)V
 
-    sget-object v0, Lb/h/l/y/d$a;->g:Lb/h/l/y/d$a;
+    sget-object v0, Lb/g/l/y/d$a;->g:Lb/g/l/y/d$a;
 
-    invoke-virtual {v0}, Lb/h/l/y/d$a;->b()I
+    invoke-virtual {v0}, Lb/g/l/y/d$a;->b()I
 
     move-result v0
 
@@ -1830,7 +1830,7 @@
 
     neg-int v1, v1
 
-    invoke-static {v0, v1, v2}, Lb/h/g/a;->b(III)I
+    invoke-static {v0, v1, v2}, Lb/g/g/a;->b(III)I
 
     move-result v0
 
@@ -2074,7 +2074,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lc/c/a/f;->a(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p3}, Lc/b/a/h;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p3
 
@@ -2544,7 +2544,7 @@
 
     move-result-object p4
 
-    invoke-static {p4}, Lc/c/a/f;->a(Landroid/view/View;)Ljava/util/List;
+    invoke-static {p4}, Lc/b/a/h;->a(Landroid/view/View;)Ljava/util/List;
 
     move-result-object p4
 
@@ -2566,11 +2566,11 @@
 
     check-cast v0, Landroid/view/View;
 
-    instance-of v1, v0, Lc/b/b/b/n/a;
+    instance-of v1, v0, Lc/a/b/b/n/a;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lc/b/b/b/n/a;
+    check-cast v0, Lc/a/b/b/n/a;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
@@ -2771,7 +2771,7 @@
 
     if-gt v0, p5, :cond_3
 
-    invoke-static {p3, p4, p5}, Lb/h/g/a;->b(III)I
+    invoke-static {p3, p4, p5}, Lb/g/g/a;->b(III)I
 
     move-result v5
 

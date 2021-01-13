@@ -71,13 +71,13 @@
     goto :goto_0
 
     :cond_1
-    new-instance v1, Lc/b/b/b/z/b;
+    new-instance v1, Lc/a/b/b/z/b;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0, p0}, Lc/b/b/b/z/b;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;)V
+    invoke-direct {v1, v2, v0, p0}, Lc/a/b/b/z/b;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;)V
 
     return-object v1
 

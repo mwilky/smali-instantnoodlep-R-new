@@ -120,7 +120,7 @@
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/MoveTask$1;
 
-    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object v1
 
@@ -472,7 +472,9 @@
 .method private getPartScreenshot()Landroid/graphics/Bitmap;
     .locals 5
 
-    new-instance v0, Landroid/graphics/Rect;
+    invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->getPartScreenShotLeft()I
+
+    move-result v0
 
     iget v1, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mDisplayHeight:I
 
@@ -480,21 +482,27 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mDisplayHeight:I
-
-    invoke-static {v2}, Lcom/oneplus/screenshot/util/Utils;->getPartScreenshotBottom(I)I
+    invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->getPartScreenShotRight()I
 
     move-result v2
 
-    const/4 v3, 0x0
+    iget v3, p0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mDisplayHeight:I
 
-    const/16 v4, 0x438
+    invoke-static {v3}, Lcom/oneplus/screenshot/util/Utils;->getPartScreenshotBottom(I)I
 
-    invoke-direct {v0, v3, v1, v4, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+    move-result v3
+
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4, v0, v1, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    const/16 v0, 0x438
 
     const/16 v1, 0x12c
 
-    invoke-static {v0, v4, v1, v3}, Lc/c/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
+    const/4 v2, 0x0
+
+    invoke-static {v4, v0, v1, v2}, Lc/b/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -568,7 +576,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/c/b/m/c;->a:I
+    sget v1, Lc/b/b/m/c;->a:I
 
     or-int/2addr v1, p1
 
@@ -577,9 +585,9 @@
     const/4 v1, 0x1
 
     :try_start_0
-    sget v2, Lc/c/b/g/a/a;->a:I
+    sget v2, Lc/b/b/g/a/a;->a:I
 
-    invoke-static {v0, v2}, Lc/c/b/g/a/a;->a(Landroid/view/InputEvent;I)Z
+    invoke-static {v0, v2}, Lc/b/b/g/a/a;->a(Landroid/view/InputEvent;I)Z
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1383,7 +1391,7 @@
 
     div-int/lit8 v6, v6, 0x2
 
-    invoke-static {v5, v4, v6}, Lc/c/b/h/a;->b(Ljava/lang/Object;II)Z
+    invoke-static {v5, v4, v6}, Lc/b/b/h/a;->b(Ljava/lang/Object;II)Z
 
     move-result v4
     :try_end_0

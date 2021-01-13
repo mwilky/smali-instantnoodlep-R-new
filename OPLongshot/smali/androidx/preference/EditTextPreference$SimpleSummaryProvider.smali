@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    sget v0, Lb/n/l;->not_set:I
+    sget v0, Lb/m/l;->not_set:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

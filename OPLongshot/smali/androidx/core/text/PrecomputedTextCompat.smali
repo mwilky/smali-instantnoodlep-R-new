@@ -131,7 +131,7 @@
     :try_start_0
     const-string v0, "PrecomputedText"
 
-    invoke-static {v0}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -155,7 +155,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     return-object v0
 
@@ -316,14 +316,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     return-object v0
 
     :catchall_0
     move-exception p0
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     throw p0
 .end method

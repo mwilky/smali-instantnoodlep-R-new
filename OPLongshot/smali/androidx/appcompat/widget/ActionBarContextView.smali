@@ -1336,10 +1336,10 @@
     return-void
 .end method
 
-.method public bridge synthetic setupAnimatorToVisibility(IJ)Lb/h/l/t;
+.method public bridge synthetic setupAnimatorToVisibility(IJ)Lb/g/l/t;
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lb/c/n/a;->setupAnimatorToVisibility(IJ)Lb/h/l/t;
+    invoke-super {p0, p1, p2, p3}, Lb/c/n/a;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
 
     move-result-object p1
 

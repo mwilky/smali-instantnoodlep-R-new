@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/tagmanager/Runtime;-><init>(Landroid/content/Context;Lc/b/c/a2$d;Lc/b/c/r;Lc/b/c/q$a;Lc/b/c/q$a;Lc/b/c/f0;)V
+    value = Lcom/google/tagmanager/Runtime;-><init>(Landroid/content/Context;Lc/a/c/a2$d;Lc/a/c/r;Lc/a/c/q$a;Lc/a/c/q$a;Lc/a/c/f0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

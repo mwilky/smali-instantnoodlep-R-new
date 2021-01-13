@@ -199,9 +199,9 @@
     .annotation build Landroidx/annotation/Px;
     .end annotation
 
-    sget v0, Lc/b/b/b/b;->minTouchTargetSize:I
+    sget v0, Lc/a/b/b/b;->minTouchTargetSize:I
 
-    sget v1, Lc/b/b/b/d;->mtrl_min_touch_target_size:I
+    sget v1, Lc/a/b/b/d;->mtrl_min_touch_target_size:I
 
     invoke-static {p0, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveDimension(Landroid/content/Context;II)I
 

@@ -85,7 +85,7 @@
 
     move-result-object p1
     :try_end_0
-    .catch Lb/h/h/c; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lb/g/h/c; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
 

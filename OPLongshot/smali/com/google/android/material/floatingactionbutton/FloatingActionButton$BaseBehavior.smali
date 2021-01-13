@@ -54,13 +54,13 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lc/b/b/b/l;->FloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lc/a/b/b/l;->FloatingActionButton_Behavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lc/a/b/b/l;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x1
 

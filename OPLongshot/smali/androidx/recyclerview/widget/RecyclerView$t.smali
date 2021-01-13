@@ -52,9 +52,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v0}, Lb/o/d/a;->p()Z
+    invoke-virtual {v0}, Lb/n/d/a;->p()Z
 
     move-result v0
 
@@ -79,9 +79,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lb/o/d/a;->r(IILjava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lb/n/d/a;->r(IILjava/lang/Object;)Z
 
     move-result p1
 
@@ -104,9 +104,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v0, p1, p2}, Lb/o/d/a;->s(II)Z
+    invoke-virtual {v0, p1, p2}, Lb/n/d/a;->s(II)Z
 
     move-result p1
 
@@ -129,9 +129,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lb/o/d/a;->t(III)Z
+    invoke-virtual {v0, p1, p2, p3}, Lb/n/d/a;->t(III)Z
 
     move-result p1
 
@@ -154,9 +154,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$t;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v0, p1, p2}, Lb/o/d/a;->u(II)Z
+    invoke-virtual {v0, p1, p2}, Lb/n/d/a;->u(II)Z
 
     move-result p1
 

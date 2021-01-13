@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/l/m;
+.implements Lb/g/l/m;
 
 
 # annotations
@@ -42,14 +42,14 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+.method public a(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
     .locals 5
 
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->U(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->U(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/l/x;->g()Z
+    invoke-virtual {p1}, Lb/g/l/x;->g()Z
 
     move-result p2
 
@@ -60,25 +60,25 @@
     :cond_0
     iget-object p2, p0, Landroidx/viewpager/widget/ViewPager$c;->a:Landroid/graphics/Rect;
 
-    invoke-virtual {p1}, Lb/h/l/x;->c()I
+    invoke-virtual {p1}, Lb/g/l/x;->c()I
 
     move-result v0
 
     iput v0, p2, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {p1}, Lb/h/l/x;->e()I
+    invoke-virtual {p1}, Lb/g/l/x;->e()I
 
     move-result v0
 
     iput v0, p2, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {p1}, Lb/h/l/x;->d()I
+    invoke-virtual {p1}, Lb/g/l/x;->d()I
 
     move-result v0
 
     iput v0, p2, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {p1}, Lb/h/l/x;->b()I
+    invoke-virtual {p1}, Lb/g/l/x;->b()I
 
     move-result v0
 
@@ -101,11 +101,11 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+    invoke-static {v2, p1}, Landroidx/core/view/ViewCompat;->f(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/l/x;->c()I
+    invoke-virtual {v2}, Lb/g/l/x;->c()I
 
     move-result v3
 
@@ -117,7 +117,7 @@
 
     iput v3, p2, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Lb/h/l/x;->e()I
+    invoke-virtual {v2}, Lb/g/l/x;->e()I
 
     move-result v3
 
@@ -129,7 +129,7 @@
 
     iput v3, p2, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {v2}, Lb/h/l/x;->d()I
+    invoke-virtual {v2}, Lb/g/l/x;->d()I
 
     move-result v3
 
@@ -141,7 +141,7 @@
 
     iput v3, p2, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v2}, Lb/h/l/x;->b()I
+    invoke-virtual {v2}, Lb/g/l/x;->b()I
 
     move-result v2
 
@@ -166,7 +166,7 @@
 
     iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {p1, v0, v1, v2, p2}, Lb/h/l/x;->h(IIII)Lb/h/l/x;
+    invoke-virtual {p1, v0, v1, v2, p2}, Lb/g/l/x;->h(IIII)Lb/g/l/x;
 
     move-result-object p1
 

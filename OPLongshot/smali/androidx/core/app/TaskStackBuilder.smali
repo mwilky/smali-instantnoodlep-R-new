@@ -169,7 +169,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    invoke-static {p1}, Lb/h/d/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-static {p1}, Lb/g/d/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -213,7 +213,7 @@
     :try_start_0
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    invoke-static {v1, p1}, Lb/h/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-static {v1, p1}, Lb/g/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
 
@@ -230,7 +230,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lb/h/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-static {v1, p1}, Lb/g/d/c;->b(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p1
     :try_end_0
@@ -569,7 +569,7 @@
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
-    invoke-static {v1, v0, p1}, Lb/h/e/b;->f(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
+    invoke-static {v1, v0, p1}, Lb/g/e/b;->f(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p1
 

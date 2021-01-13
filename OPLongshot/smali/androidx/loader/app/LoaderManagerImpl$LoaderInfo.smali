@@ -37,7 +37,7 @@
 
 .field public final mId:I
 
-.field public mLifecycleOwner:Lb/m/e;
+.field public mLifecycleOwner:Lb/l/e;
 
 .field public final mLoader:Landroidx/loader/content/Loader;
     .annotation build Landroidx/annotation/NonNull;
@@ -364,7 +364,7 @@
 .method public markForRedelivery()V
     .locals 2
 
-    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/m/e;
+    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
 
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
@@ -374,7 +374,7 @@
 
     invoke-super {p0, v1}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
 
-    invoke-virtual {p0, v0, v1}, Landroidx/lifecycle/LiveData;->observe(Lb/m/e;Landroidx/lifecycle/Observer;)V
+    invoke-virtual {p0, v0, v1}, Landroidx/lifecycle/LiveData;->observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
 
     :cond_0
     return-void
@@ -535,16 +535,16 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/m/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
 
     iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
     return-void
 .end method
 
-.method public setCallback(Lb/m/e;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
+.method public setCallback(Lb/l/e;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
     .locals 2
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -561,7 +561,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/m/e;",
+            "Lb/l/e;",
             "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
             "TD;>;)",
             "Landroidx/loader/content/Loader<",
@@ -575,7 +575,7 @@
 
     invoke-direct {v0, v1, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;-><init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
 
-    invoke-virtual {p0, p1, v0}, Landroidx/lifecycle/LiveData;->observe(Lb/m/e;Landroidx/lifecycle/Observer;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/lifecycle/LiveData;->observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
 
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
@@ -584,7 +584,7 @@
     invoke-virtual {p0, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->removeObserver(Landroidx/lifecycle/Observer;)V
 
     :cond_0
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/m/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
 
     iput-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 

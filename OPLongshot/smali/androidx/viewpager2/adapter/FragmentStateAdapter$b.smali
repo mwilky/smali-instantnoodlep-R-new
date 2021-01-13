@@ -1,5 +1,5 @@
 .class public Landroidx/viewpager2/adapter/FragmentStateAdapter$b;
-.super Lb/k/a/f$a;
+.super Lb/j/a/f$a;
 .source "SourceFile"
 
 
@@ -32,16 +32,16 @@
 
     iput-object p3, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$b;->b:Landroid/widget/FrameLayout;
 
-    invoke-direct {p0}, Lb/k/a/f$a;-><init>()V
+    invoke-direct {p0}, Lb/j/a/f$a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public m(Lb/k/a/f;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
+.method public m(Lb/j/a/f;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
-    .param p1    # Lb/k/a/f;
+    .param p1    # Lb/j/a/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -62,7 +62,7 @@
 
     if-ne p2, p4, :cond_0
 
-    invoke-virtual {p1, p0}, Lb/k/a/f;->o(Lb/k/a/f$a;)V
+    invoke-virtual {p1, p0}, Lb/j/a/f;->o(Lb/j/a/f$a;)V
 
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$b;->c:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 

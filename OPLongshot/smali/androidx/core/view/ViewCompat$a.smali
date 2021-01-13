@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/h/l/m;)V
+    value = Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/g/l/m;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field public final synthetic a:Lb/h/l/m;
+.field public final synthetic a:Lb/g/l/m;
 
 
 # direct methods
-.method public constructor <init>(Lb/h/l/m;)V
+.method public constructor <init>(Lb/g/l/m;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/core/view/ViewCompat$a;->a:Lb/h/l/m;
+    iput-object p1, p0, Landroidx/core/view/ViewCompat$a;->a:Lb/g/l/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,17 +37,17 @@
 .method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 1
 
-    invoke-static {p2}, Lb/h/l/x;->j(Landroid/view/WindowInsets;)Lb/h/l/x;
+    invoke-static {p2}, Lb/g/l/x;->j(Landroid/view/WindowInsets;)Lb/g/l/x;
 
     move-result-object p2
 
-    iget-object v0, p0, Landroidx/core/view/ViewCompat$a;->a:Lb/h/l/m;
+    iget-object v0, p0, Landroidx/core/view/ViewCompat$a;->a:Lb/g/l/m;
 
-    invoke-interface {v0, p1, p2}, Lb/h/l/m;->a(Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+    invoke-interface {v0, p1, p2}, Lb/g/l/m;->a(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/l/x;->i()Landroid/view/WindowInsets;
+    invoke-virtual {p1}, Lb/g/l/x;->i()Landroid/view/WindowInsets;
 
     move-result-object p1
 
