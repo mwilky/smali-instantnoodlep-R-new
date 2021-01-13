@@ -78,13 +78,13 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lc/a/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lc/a/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x0
 
@@ -94,7 +94,7 @@
 
     iput-boolean p2, p0, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$ExtendedFloatingActionButtonBehavior;->autoHideEnabled:Z
 
-    sget p2, Lc/b/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink:I
+    sget p2, Lc/a/b/b/l;->ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink:I
 
     const/4 v0, 0x1
 
@@ -328,19 +328,19 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->l(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->l(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/a/b/b/x/a;
 
     move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->m(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->m(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/a/b/b/x/a;
 
     move-result-object v1
 
     :goto_1
-    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/b/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/a/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
 
     return-void
 .end method
@@ -635,19 +635,19 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->i(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->i(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/a/b/b/x/a;
 
     move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->j(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/b/b/b/x/a;
+    invoke-static {p1}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->j(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;)Lc/a/b/b/x/a;
 
     move-result-object v1
 
     :goto_1
-    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/b/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
+    invoke-static {p1, v1, v0}, Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;->k(Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton;Lc/a/b/b/x/a;Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$b;)V
 
     return-void
 .end method

@@ -30,7 +30,7 @@
 
 .field public final mVisAnimListener:Lb/c/n/a$b;
 
-.field public mVisibilityAnim:Lb/h/l/t;
+.field public mVisibilityAnim:Lb/g/l/t;
 
 
 # direct methods
@@ -163,11 +163,11 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-virtual {p0, p1, v0, v1}, Lb/c/n/a;->setupAnimatorToVisibility(IJ)Lb/h/l/t;
+    invoke-virtual {p0, p1, v0, v1}, Lb/c/n/a;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/l/t;->j()V
+    invoke-virtual {p1}, Lb/g/l/t;->j()V
 
     return-void
 .end method
@@ -214,7 +214,7 @@
 .method public getAnimatedVisibility()I
     .locals 1
 
-    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/h/l/t;
+    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/g/l/t;
 
     if-eqz v0, :cond_0
 
@@ -517,11 +517,11 @@
 
     if-eq p1, v0, :cond_1
 
-    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/h/l/t;
+    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/g/l/t;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lb/h/l/t;->b()V
+    invoke-virtual {v0}, Lb/g/l/t;->b()V
 
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
@@ -530,14 +530,14 @@
     return-void
 .end method
 
-.method public setupAnimatorToVisibility(IJ)Lb/h/l/t;
+.method public setupAnimatorToVisibility(IJ)Lb/g/l/t;
     .locals 2
 
-    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/h/l/t;
+    iget-object v0, p0, Lb/c/n/a;->mVisibilityAnim:Lb/g/l/t;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lb/h/l/t;->b()V
+    invoke-virtual {v0}, Lb/g/l/t;->b()V
 
     :cond_0
     const/4 v0, 0x0
@@ -553,38 +553,38 @@
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     :cond_1
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/h/l/t;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/g/l/t;
 
     move-result-object v0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Lb/h/l/t;->a(F)Lb/h/l/t;
+    invoke-virtual {v0, v1}, Lb/g/l/t;->a(F)Lb/g/l/t;
 
-    invoke-virtual {v0, p2, p3}, Lb/h/l/t;->d(J)Lb/h/l/t;
+    invoke-virtual {v0, p2, p3}, Lb/g/l/t;->d(J)Lb/g/l/t;
 
     iget-object p2, p0, Lb/c/n/a;->mVisAnimListener:Lb/c/n/a$b;
 
-    invoke-virtual {p2, v0, p1}, Lb/c/n/a$b;->d(Lb/h/l/t;I)Lb/c/n/a$b;
+    invoke-virtual {p2, v0, p1}, Lb/c/n/a$b;->d(Lb/g/l/t;I)Lb/c/n/a$b;
 
-    invoke-virtual {v0, p2}, Lb/h/l/t;->f(Lb/h/l/u;)Lb/h/l/t;
+    invoke-virtual {v0, p2}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
 
     return-object v0
 
     :cond_2
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/h/l/t;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/g/l/t;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lb/h/l/t;->a(F)Lb/h/l/t;
+    invoke-virtual {v1, v0}, Lb/g/l/t;->a(F)Lb/g/l/t;
 
-    invoke-virtual {v1, p2, p3}, Lb/h/l/t;->d(J)Lb/h/l/t;
+    invoke-virtual {v1, p2, p3}, Lb/g/l/t;->d(J)Lb/g/l/t;
 
     iget-object p2, p0, Lb/c/n/a;->mVisAnimListener:Lb/c/n/a$b;
 
-    invoke-virtual {p2, v1, p1}, Lb/c/n/a$b;->d(Lb/h/l/t;I)Lb/c/n/a$b;
+    invoke-virtual {p2, v1, p1}, Lb/c/n/a$b;->d(Lb/g/l/t;I)Lb/c/n/a$b;
 
-    invoke-virtual {v1, p2}, Lb/h/l/t;->f(Lb/h/l/u;)Lb/h/l/t;
+    invoke-virtual {v1, p2}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
 
     return-object v1
 .end method

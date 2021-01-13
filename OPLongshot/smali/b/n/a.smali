@@ -1,42 +1,49 @@
-.class public abstract Lb/n/a;
-.super Landroidx/preference/Preference;
+.class public final Lb/n/a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final alpha:I = 0x7f040032
 
+.field public static final fastScrollEnabled:I = 0x7f040169
 
-# virtual methods
-.method public onClick()V
-    .locals 6
+.field public static final fastScrollHorizontalThumbDrawable:I = 0x7f04016a
 
-    invoke-static {}, Landroid/icu/util/Calendar;->getInstance()Landroid/icu/util/Calendar;
+.field public static final fastScrollHorizontalTrackDrawable:I = 0x7f04016b
 
-    move-result-object v0
+.field public static final fastScrollVerticalThumbDrawable:I = 0x7f04016c
 
-    invoke-virtual {v0}, Landroid/icu/util/Calendar;->getTimeInMillis()J
+.field public static final fastScrollVerticalTrackDrawable:I = 0x7f04016d
 
-    move-result-wide v0
+.field public static final font:I = 0x7f040170
 
-    iget-wide v2, p0, Lb/n/a;->a:J
+.field public static final fontProviderAuthority:I = 0x7f040172
 
-    sub-long v2, v0, v2
+.field public static final fontProviderCerts:I = 0x7f040173
 
-    const-wide/16 v4, 0x1f4
+.field public static final fontProviderFetchStrategy:I = 0x7f040174
 
-    cmp-long v2, v2, v4
+.field public static final fontProviderFetchTimeout:I = 0x7f040175
 
-    if-lez v2, :cond_0
+.field public static final fontProviderPackage:I = 0x7f040176
 
-    iput-wide v0, p0, Lb/n/a;->a:J
+.field public static final fontProviderQuery:I = 0x7f040177
 
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getPreferenceManager()Lb/n/d;
+.field public static final fontStyle:I = 0x7f040178
 
-    move-result-object v0
+.field public static final fontVariationSettings:I = 0x7f040179
 
-    invoke-virtual {v0, p0}, Lb/n/d;->k(Landroidx/preference/Preference;)V
+.field public static final fontWeight:I = 0x7f04017a
 
-    :cond_0
-    return-void
-.end method
+.field public static final layoutManager:I = 0x7f0401dd
+
+.field public static final recyclerViewStyle:I = 0x7f04029c
+
+.field public static final reverseLayout:I = 0x7f04029d
+
+.field public static final spanCount:I = 0x7f0402d0
+
+.field public static final stackFromEnd:I = 0x7f0402d6
+
+.field public static final ttcIndex:I = 0x7f04036d

@@ -31,7 +31,7 @@
 
 .field public C:Z
 
-.field public D:Lb/i/a/a;
+.field public D:Lb/h/a/a;
 
 .field public E:Z
 
@@ -982,9 +982,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
-    invoke-virtual {v1}, Lb/i/a/a;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {v1}, Lb/h/a/a;->getCursor()Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -999,9 +999,9 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
-    invoke-virtual {p1, v1}, Lb/i/a/a;->convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v1}, Lb/h/a/a;->convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1338,13 +1338,13 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/AutoCompleteTextView;->setInputType(I)V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lb/i/a/a;->changeCursor(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lb/h/a/a;->changeCursor(Landroid/database/Cursor;)V
 
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->O:Landroid/app/SearchableInfo;
@@ -1367,13 +1367,13 @@
 
     invoke-direct {v0, v1, p0, v3, v4}, Landroidx/appcompat/widget/SuggestionsAdapter;-><init>(Landroid/content/Context;Landroidx/appcompat/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iput-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     iget-object v1, p0, Landroidx/appcompat/widget/SearchView;->a:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v1, v0}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     check-cast v0, Landroidx/appcompat/widget/SuggestionsAdapter;
 
@@ -2330,10 +2330,10 @@
     return v0
 .end method
 
-.method public getSuggestionsAdapter()Lb/i/a/a;
+.method public getSuggestionsAdapter()Lb/h/a/a;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     return-object v0
 .end method
@@ -2930,9 +2930,9 @@
 .method public final r(IILjava/lang/String;)Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
-    invoke-virtual {v0}, Lb/i/a/a;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {v0}, Lb/h/a/a;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -3345,7 +3345,7 @@
 
     iput-boolean p1, p0, Landroidx/appcompat/widget/SearchView;->G:Z
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     instance-of v1, v0, Landroidx/appcompat/widget/SuggestionsAdapter;
 
@@ -3419,10 +3419,10 @@
     return-void
 .end method
 
-.method public setSuggestionsAdapter(Lb/i/a/a;)V
+.method public setSuggestionsAdapter(Lb/h/a/a;)V
     .locals 1
 
-    iput-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iput-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->a:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
@@ -3601,7 +3601,7 @@
     return v0
 
     :cond_0
-    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     if-nez p1, :cond_1
 

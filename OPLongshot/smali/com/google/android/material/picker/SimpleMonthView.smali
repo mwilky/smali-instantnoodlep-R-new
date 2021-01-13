@@ -44,6 +44,10 @@
 
 .field public N:I
 
+.field public O:Landroid/graphics/Paint;
+
+.field public P:I
+
 .field public final a:Landroid/text/TextPaint;
 
 .field public final b:Landroid/text/TextPaint;
@@ -195,7 +199,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->date_picker_month_height:I
+    sget p2, Lc/a/b/b/d;->date_picker_month_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -203,7 +207,7 @@
 
     iput p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->l:I
 
-    sget p2, Lc/b/b/b/d;->date_picker_day_of_week_height:I
+    sget p2, Lc/a/b/b/d;->date_picker_day_of_week_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -211,7 +215,7 @@
 
     iput p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->m:I
 
-    sget p2, Lc/b/b/b/d;->date_picker_day_height:I
+    sget p2, Lc/a/b/b/d;->date_picker_day_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -219,7 +223,7 @@
 
     iput p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->n:I
 
-    sget p2, Lc/b/b/b/d;->date_picker_day_width:I
+    sget p2, Lc/a/b/b/d;->date_picker_day_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -227,7 +231,7 @@
 
     iput p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->o:I
 
-    sget p2, Lc/b/b/b/d;->date_picker_day_selector_radius:I
+    sget p2, Lc/a/b/b/d;->date_picker_day_selector_radius:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -241,7 +245,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->j:Lcom/google/android/material/picker/SimpleMonthView$a;
 
-    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/h/l/a;)V
+    invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/g/l/a;)V
 
     invoke-virtual {p0, p3}, Landroid/view/View;->setImportantForAccessibility(I)V
 
@@ -267,16 +271,18 @@
 
     iput-object p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->k:Ljava/text/NumberFormat;
 
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->W()V
+
     invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->V()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->U()V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->y(Landroid/content/res/Resources;)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->x(Landroid/content/res/Resources;)V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->x()V
 
     return-void
 .end method
 
-.method public static C(I)Z
+.method public static D(I)Z
     .locals 2
 
     const/4 v0, 0x1
@@ -296,7 +302,7 @@
     return v0
 .end method
 
-.method public static D(I)Z
+.method public static E(I)Z
     .locals 1
 
     if-ltz p0, :cond_0
@@ -337,7 +343,7 @@
 .method public static synthetic c(Lcom/google/android/material/picker/SimpleMonthView;I)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->y(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->z(I)Z
 
     move-result p0
 
@@ -355,7 +361,7 @@
 .method public static synthetic e(Lcom/google/android/material/picker/SimpleMonthView;I)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->F(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->G(I)Z
 
     move-result p0
 
@@ -365,7 +371,7 @@
 .method public static synthetic f(Lcom/google/android/material/picker/SimpleMonthView;I)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->B(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->C(I)Z
 
     move-result p0
 
@@ -464,6 +470,32 @@
 
     add-int/2addr v0, p1
 
+    const/4 p1, 0x1
+
+    sub-int/2addr v0, p1
+
+    rem-int/lit8 v0, v0, 0x7
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public final B(I)Z
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->q()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
     rem-int/lit8 v0, v0, 0x7
 
     if-nez v0, :cond_0
@@ -479,7 +511,7 @@
     return p1
 .end method
 
-.method public final B(I)Z
+.method public final C(I)Z
     .locals 2
 
     const/4 v0, 0x1
@@ -499,7 +531,7 @@
     return v0
 .end method
 
-.method public final E(Z)Z
+.method public final F(Z)Z
     .locals 2
 
     invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->n()V
@@ -510,7 +542,7 @@
 
     iget p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->J:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->A(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->B(I)Z
 
     move-result p1
 
@@ -531,7 +563,7 @@
     :cond_0
     iget p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->J:I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->z(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->A(I)Z
 
     move-result p1
 
@@ -554,7 +586,7 @@
     return v0
 .end method
 
-.method public final F(I)Z
+.method public final G(I)Z
     .locals 6
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->H:Lcom/google/android/material/picker/SimpleMonthView$b;
@@ -700,7 +732,7 @@
     return v1
 .end method
 
-.method public final G(ILjava/util/Calendar;)Z
+.method public final H(ILjava/util/Calendar;)Z
     .locals 3
 
     iget v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->s:I
@@ -740,7 +772,7 @@
     return v1
 .end method
 
-.method public H(Landroid/content/res/ColorStateList;)V
+.method public I(Landroid/content/res/ColorStateList;)V
     .locals 2
 
     const/16 v0, 0x18
@@ -764,7 +796,7 @@
     return-void
 .end method
 
-.method public I(I)V
+.method public J(I)V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->b:Landroid/text/TextPaint;
@@ -776,7 +808,7 @@
     return-void
 .end method
 
-.method public J(Landroid/content/res/ColorStateList;)V
+.method public K(Landroid/content/res/ColorStateList;)V
     .locals 2
 
     sget-object v0, Landroid/view/View;->ENABLED_STATE_SET:[I
@@ -796,7 +828,7 @@
     return-void
 .end method
 
-.method public K(Landroid/content/res/ColorStateList;)V
+.method public L(Landroid/content/res/ColorStateList;)V
     .locals 2
 
     const/16 v0, 0x28
@@ -836,7 +868,7 @@
     return-void
 .end method
 
-.method public L(I)V
+.method public M(I)V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->c:Landroid/text/TextPaint;
@@ -855,7 +887,7 @@
     return-void
 .end method
 
-.method public M(Landroid/content/res/ColorStateList;)V
+.method public N(Landroid/content/res/ColorStateList;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->I:Landroid/content/res/ColorStateList;
@@ -865,10 +897,10 @@
     return-void
 .end method
 
-.method public N(I)V
+.method public O(I)V
     .locals 1
 
-    invoke-static {p1}, Lcom/google/android/material/picker/SimpleMonthView;->C(I)Z
+    invoke-static {p1}, Lcom/google/android/material/picker/SimpleMonthView;->D(I)Z
 
     move-result v0
 
@@ -888,7 +920,7 @@
     iput p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->C:I
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->U()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->V()V
 
     iget-object p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->j:Lcom/google/android/material/picker/SimpleMonthView$a;
 
@@ -899,12 +931,12 @@
     return-void
 .end method
 
-.method public O(IIIIII)V
+.method public P(IIIIII)V
     .locals 0
 
     iput p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->A:I
 
-    invoke-static {p2}, Lcom/google/android/material/picker/SimpleMonthView;->D(I)Z
+    invoke-static {p2}, Lcom/google/android/material/picker/SimpleMonthView;->E(I)Z
 
     move-result p1
 
@@ -947,7 +979,7 @@
 
     iput p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->E:I
 
-    invoke-static {p4}, Lcom/google/android/material/picker/SimpleMonthView;->C(I)Z
+    invoke-static {p4}, Lcom/google/android/material/picker/SimpleMonthView;->D(I)Z
 
     move-result p1
 
@@ -995,7 +1027,7 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    invoke-virtual {p0, p2, p1}, Lcom/google/android/material/picker/SimpleMonthView;->G(ILjava/util/Calendar;)Z
+    invoke-virtual {p0, p2, p1}, Lcom/google/android/material/picker/SimpleMonthView;->H(ILjava/util/Calendar;)Z
 
     move-result p4
 
@@ -1006,7 +1038,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {p5, p3, p4}, Lc/b/b/b/a0/a;->a(III)I
+    invoke-static {p5, p3, p4}, Lc/a/b/b/a0/a;->a(III)I
 
     move-result p1
 
@@ -1014,15 +1046,15 @@
 
     iget p2, p0, Lcom/google/android/material/picker/SimpleMonthView;->D:I
 
-    invoke-static {p6, p1, p2}, Lc/b/b/b/a0/a;->a(III)I
+    invoke-static {p6, p1, p2}, Lc/a/b/b/a0/a;->a(III)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->G:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->V()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->W()V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->U()V
+    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->V()V
 
     iget-object p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->j:Lcom/google/android/material/picker/SimpleMonthView$a;
 
@@ -1033,7 +1065,7 @@
     return-void
 .end method
 
-.method public P(I)V
+.method public Q(I)V
     .locals 8
 
     iget v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->N:I
@@ -1148,7 +1180,7 @@
     return-void
 .end method
 
-.method public Q(I)V
+.method public R(I)V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->a:Landroid/text/TextPaint;
@@ -1168,7 +1200,7 @@
     return-void
 .end method
 
-.method public R(Landroid/content/res/ColorStateList;)V
+.method public S(Landroid/content/res/ColorStateList;)V
     .locals 2
 
     sget-object v0, Landroid/view/View;->ENABLED_STATE_SET:[I
@@ -1188,7 +1220,7 @@
     return-void
 .end method
 
-.method public S(Lcom/google/android/material/picker/SimpleMonthView$b;)V
+.method public T(Lcom/google/android/material/picker/SimpleMonthView$b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->H:Lcom/google/android/material/picker/SimpleMonthView$b;
@@ -1196,7 +1228,7 @@
     return-void
 .end method
 
-.method public T(I)V
+.method public U(I)V
     .locals 0
 
     iput p1, p0, Lcom/google/android/material/picker/SimpleMonthView;->A:I
@@ -1210,7 +1242,7 @@
     return-void
 .end method
 
-.method public final U()V
+.method public final V()V
     .locals 6
 
     new-instance v0, Ljava/util/ArrayList;
@@ -1272,7 +1304,7 @@
     return-void
 .end method
 
-.method public final V()V
+.method public final W()V
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->i:Ljava/util/Locale;
@@ -1364,7 +1396,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->M:Landroid/content/Context;
 
-    sget-object v1, Lc/b/b/b/l;->TextAppearance:[I
+    sget-object v1, Lc/a/b/b/l;->TextAppearance:[I
 
     const/4 v2, 0x0
 
@@ -1374,7 +1406,7 @@
 
     move-result-object p2
 
-    sget v0, Lc/b/b/b/l;->TextAppearance_android_fontFamily:I
+    sget v0, Lc/a/b/b/l;->TextAppearance_android_fontFamily:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -1389,7 +1421,7 @@
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     :cond_0
-    sget v0, Lc/b/b/b/l;->TextAppearance_android_textSize:I
+    sget v0, Lc/a/b/b/l;->TextAppearance_android_textSize:I
 
     invoke-virtual {p1}, Landroid/graphics/Paint;->getTextSize()F
 
@@ -1405,7 +1437,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    sget v0, Lc/b/b/b/l;->TextAppearance_android_textColor:I
+    sget v0, Lc/a/b/b/l;->TextAppearance_android_textColor:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -1539,7 +1571,7 @@
     :cond_3
     iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->M:Landroid/content/Context;
 
-    sget v8, Lc/b/b/b/c;->op_control_text_color_disable_default:I
+    sget v8, Lc/a/b/b/c;->op_control_text_color_disable_default:I
 
     invoke-virtual {v15, v8}, Landroid/content/Context;->getColor(I)I
 
@@ -1672,7 +1704,7 @@
     :cond_7
     iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->M:Landroid/content/Context;
 
-    sget v10, Lc/b/b/b/c;->op_control_text_color_disable_default:I
+    sget v10, Lc/a/b/b/c;->op_control_text_color_disable_default:I
 
     invoke-virtual {v15, v10}, Landroid/content/Context;->getColor(I)I
 
@@ -1760,7 +1792,7 @@
     :goto_7
     iget v9, v0, Lcom/google/android/material/picker/SimpleMonthView;->D:I
 
-    if-gt v7, v9, :cond_16
+    if-gt v7, v9, :cond_17
 
     mul-int v9, v5, v8
 
@@ -1781,7 +1813,7 @@
     sub-int v9, v10, v9
 
     :cond_c
-    invoke-virtual {v0, v7}, Lcom/google/android/material/picker/SimpleMonthView;->y(I)Z
+    invoke-virtual {v0, v7}, Lcom/google/android/material/picker/SimpleMonthView;->z(I)Z
 
     move-result v10
 
@@ -1878,31 +1910,18 @@
 
     if-ne v10, v7, :cond_13
 
-    const/4 v10, 0x1
+    const/4 v15, 0x1
 
     goto :goto_d
 
     :cond_13
-    const/4 v10, 0x0
+    const/4 v15, 0x0
 
     :goto_d
-    if-eqz v10, :cond_14
+    if-eqz v15, :cond_15
 
-    if-nez v12, :cond_14
+    if-nez v12, :cond_15
 
-    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v10
-
-    const/4 v11, 0x1
-
-    const/4 v12, 0x0
-
-    goto :goto_e
-
-    :cond_14
     invoke-static {v11}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
 
     move-result-object v10
@@ -1915,45 +1934,170 @@
 
     move-result v10
 
-    const/4 v11, 0x1
+    new-instance v11, Landroid/graphics/Paint;
 
-    invoke-virtual {v2, v11}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-direct {v11}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v12
+
+    sget v13, Lc/a/b/b/c;->op_control_icon_color_inactive_default:I
+
+    invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v12
+
+    invoke-virtual {v11, v12}, Landroid/graphics/Paint;->setColor(I)V
+
+    int-to-float v11, v9
+
+    int-to-float v12, v3
+
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->x:I
+
+    const/4 v14, 0x2
+
+    div-int/2addr v13, v14
+
+    int-to-float v13, v13
+
+    iget-object v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    invoke-virtual {v1, v11, v12, v13, v14}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v13
+
+    iget v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->P:I
+
+    if-ge v13, v14, :cond_14
+
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    sget v15, Lc/a/b/b/c;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v14, v15}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v14
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_e
+
+    :cond_14
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    sget v15, Lc/a/b/b/c;->op_control_bg_color_default:I
+
+    invoke-virtual {v14, v15}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v14
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setColor(I)V
 
     :goto_e
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    new-instance v14, Landroid/graphics/PorterDuffXfermode;
+
+    sget-object v15, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v14, v15}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->x:I
+
+    const/4 v14, 0x2
+
+    div-int/2addr v13, v14
+
+    int-to-float v13, v13
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v15
+
+    const/4 v14, 0x1
+
+    invoke-static {v15, v14}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
+
+    move-result v15
+
+    sub-float/2addr v13, v15
+
+    iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->O:Landroid/graphics/Paint;
+
+    invoke-virtual {v1, v11, v12, v13, v15}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    const/4 v12, 0x0
+
+    goto :goto_f
+
+    :cond_15
+    const/4 v14, 0x1
+
+    invoke-static {v11}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
+
+    move-result-object v10
+
+    iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->I:Landroid/content/res/ColorStateList;
+
+    const/4 v12, 0x0
+
+    invoke-virtual {v11, v10, v12}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v10
+
+    invoke-virtual {v2, v14}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+
+    :goto_f
     invoke-virtual {v2, v10}, Landroid/text/TextPaint;->setColor(I)V
 
     iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->k:Ljava/text/NumberFormat;
 
-    int-to-long v13, v7
+    int-to-long v12, v7
 
-    invoke-virtual {v10, v13, v14}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v10, v12, v13}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
     move-result-object v10
 
     int-to-float v9, v9
 
-    int-to-float v13, v3
+    int-to-float v11, v3
 
-    sub-float/2addr v13, v6
+    sub-float/2addr v11, v6
 
-    invoke-virtual {v1, v10, v9, v13, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v10, v9, v11, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     add-int/lit8 v8, v8, 0x1
 
     const/4 v9, 0x7
 
-    if-ne v8, v9, :cond_15
+    if-ne v8, v9, :cond_16
 
     add-int/2addr v3, v4
 
-    move v8, v12
+    const/4 v8, 0x0
 
-    :cond_15
+    :cond_16
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_7
 
-    :cond_16
+    :cond_17
     return-void
 .end method
 
@@ -2142,7 +2286,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {p1, v0, v1}, Lc/b/b/b/a0/a;->a(III)I
+    invoke-static {p1, v0, v1}, Lc/a/b/b/a0/a;->a(III)I
 
     move-result p1
 
@@ -2383,7 +2527,7 @@
 
     xor-int/2addr v0, v3
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->E(Z)Z
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->F(Z)Z
 
     move-result v2
 
@@ -2400,7 +2544,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->E(Z)Z
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->F(Z)Z
 
     move-result v2
 
@@ -2459,7 +2603,7 @@
 
     if-eq v0, v1, :cond_6
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->F(I)Z
+    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/SimpleMonthView;->G(I)Z
 
     return v3
 
@@ -2848,7 +2992,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->F(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->G(I)Z
 
     :cond_1
     const/4 p1, -0x1
@@ -2980,7 +3124,7 @@
     :goto_0
     sub-int/2addr v1, v0
 
-    invoke-static {p1, v2, v1}, Lc/b/b/b/a0/a;->a(III)I
+    invoke-static {p1, v2, v1}, Lc/a/b/b/a0/a;->a(III)I
 
     move-result p1
 
@@ -3048,7 +3192,7 @@
 .method public s(ILandroid/graphics/Rect;)Z
     .locals 6
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->B(I)Z
+    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->C(I)Z
 
     move-result v0
 
@@ -3235,7 +3379,25 @@
     return v0
 .end method
 
-.method public final x(Landroid/content/res/Resources;)V
+.method public final x()V
+    .locals 1
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->P:I
+
+    return-void
+.end method
+
+.method public final y(Landroid/content/res/Resources;)V
     .locals 7
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -3243,37 +3405,37 @@
         }
     .end annotation
 
-    sget v0, Lc/b/b/b/j;->date_picker_month_typeface:I
+    sget v0, Lc/a/b/b/j;->date_picker_month_typeface:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/j;->date_picker_day_of_week_typeface:I
+    sget v1, Lc/a/b/b/j;->date_picker_day_of_week_typeface:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    sget v2, Lc/b/b/b/j;->date_picker_day_typeface:I
+    sget v2, Lc/a/b/b/j;->date_picker_day_typeface:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget v3, Lc/b/b/b/d;->date_picker_month_text_size:I
+    sget v3, Lc/a/b/b/d;->date_picker_month_text_size:I
 
     invoke-virtual {p1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    sget v4, Lc/b/b/b/d;->date_picker_day_of_week_text_size:I
+    sget v4, Lc/a/b/b/d;->date_picker_day_of_week_text_size:I
 
     invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
-    sget v5, Lc/b/b/b/d;->date_picker_day_text_size:I
+    sget v5, Lc/a/b/b/d;->date_picker_day_text_size:I
 
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3406,7 +3568,7 @@
     return-void
 .end method
 
-.method public final y(I)Z
+.method public final z(I)Z
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->F:I
@@ -3418,32 +3580,6 @@
     if-gt p1, v0, :cond_0
 
     const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-.end method
-
-.method public final z(I)Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/material/picker/SimpleMonthView;->q()I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    const/4 p1, 0x1
-
-    sub-int/2addr v0, p1
-
-    rem-int/lit8 v0, v0, 0x7
-
-    if-nez v0, :cond_0
 
     goto :goto_0
 

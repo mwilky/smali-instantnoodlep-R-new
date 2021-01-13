@@ -94,7 +94,7 @@
 
 .field public mOverScroll:Z
 
-.field public mPerf:Lc/c/b/l/a;
+.field public mPerf:Lc/b/b/l/a;
 
 .field public mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 
@@ -261,7 +261,7 @@
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mScrollViewType:I
 
-    iput-object v1, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/c/b/l/a;
+    iput-object v1, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/b/b/l/a;
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mTargetViewTop:I
 
@@ -445,24 +445,24 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    sget v1, Lc/c/b/a/d;->a:I
+    sget v1, Lc/b/b/a/d;->a:I
 
-    sget v3, Lc/c/b/a/d;->b:I
-
-    or-int/2addr v1, v3
-
-    sget v3, Lc/c/b/a/d;->c:I
+    sget v3, Lc/b/b/a/d;->b:I
 
     or-int/2addr v1, v3
 
-    invoke-static {v0, v1}, Lc/c/b/a/d;->a(Landroid/app/StatusBarManager;I)V
+    sget v3, Lc/b/b/a/d;->c:I
+
+    or-int/2addr v1, v3
+
+    invoke-static {v0, v1}, Lc/b/b/a/d;->a(Landroid/app/StatusBarManager;I)V
 
     goto :goto_1
 
     :cond_2
-    sget v1, Lc/c/b/a/d;->d:I
+    sget v1, Lc/b/b/a/d;->d:I
 
-    invoke-static {v0, v1}, Lc/c/b/a/d;->a(Landroid/app/StatusBarManager;I)V
+    invoke-static {v0, v1}, Lc/b/b/a/d;->a(Landroid/app/StatusBarManager;I)V
 
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -774,7 +774,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {v0, v1}, Lc/c/b/m/a;->a(ILandroid/os/ResultReceiver;)V
+    invoke-static {v0, v1}, Lc/b/b/m/a;->a(ILandroid/os/ResultReceiver;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2229,7 +2229,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100093
+    const v0, 0x7f100088
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2438,7 +2438,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10006b
+    const v0, 0x7f100063
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2661,18 +2661,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/c/b/l/a;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/b/b/l/a;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lc/c/b/l/a;
+    new-instance v0, Lc/b/b/l/a;
 
-    invoke-direct {v0}, Lc/c/b/l/a;-><init>()V
+    invoke-direct {v0}, Lc/b/b/l/a;-><init>()V
 
-    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/c/b/l/a;
+    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/b/b/l/a;
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/c/b/l/a;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPerf:Lc/b/b/l/a;
 
     if-eqz v0, :cond_1
 
@@ -2680,7 +2680,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->aBoostParamVal:[I
 
-    invoke-static {v0, v1}, Lc/c/b/l/a;->a(I[I)I
+    invoke-static {v0, v1}, Lc/b/b/l/a;->a(I[I)I
 
     :cond_1
     return-void
@@ -2858,7 +2858,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f10009e
+    const p2, 0x7f100093
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2877,7 +2877,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f1000cd
+    const p2, 0x7f1000b6
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2892,7 +2892,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f10006b
+    const p2, 0x7f100063
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2933,7 +2933,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1000b0
+    const v2, 0x7f1000a0
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

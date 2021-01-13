@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field public mProgressHelper:Lc/c/e/a;
+.field public mProgressHelper:Lc/b/e/a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/loading/LoadingAsyncTask$a;-><init>(Lcom/oneplus/loading/LoadingAsyncTask;)V
 
-    iput-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
+    iput-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/b/e/a;
 
     return-void
 .end method
@@ -46,13 +46,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/b/e/a;
 
     new-instance v1, Lcom/oneplus/loading/LoadingAsyncTask$b;
 
     invoke-direct {v1, p0, p1}, Lcom/oneplus/loading/LoadingAsyncTask$b;-><init>(Lcom/oneplus/loading/LoadingAsyncTask;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lc/c/e/a;->h(Lc/c/e/a$d;)V
+    invoke-virtual {v0, v1}, Lc/b/e/a;->h(Lc/b/e/a$d;)V
 
     return-void
 .end method
@@ -123,9 +123,9 @@
 .method public final onPreExecute()V
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/b/e/a;
 
-    invoke-virtual {v0}, Lc/c/e/a;->f()V
+    invoke-virtual {v0}, Lc/b/e/a;->f()V
 
     invoke-virtual {p0}, Lcom/oneplus/loading/LoadingAsyncTask;->onPreExecuteExtend()V
 
@@ -148,9 +148,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/b/e/a;
 
-    invoke-virtual {v0, p1, p2}, Lc/c/e/a;->j(J)Lc/c/e/a;
+    invoke-virtual {v0, p1, p2}, Lc/b/e/a;->j(J)Lc/b/e/a;
 
     return-object p0
 .end method
@@ -165,9 +165,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/c/e/a;
+    iget-object v0, p0, Lcom/oneplus/loading/LoadingAsyncTask;->mProgressHelper:Lc/b/e/a;
 
-    invoke-virtual {v0, p1, p2}, Lc/c/e/a;->k(J)Lc/c/e/a;
+    invoke-virtual {v0, p1, p2}, Lc/b/e/a;->k(J)Lc/b/e/a;
 
     return-object p0
 .end method

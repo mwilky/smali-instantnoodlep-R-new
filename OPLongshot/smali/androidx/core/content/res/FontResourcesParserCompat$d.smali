@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final a:Lb/h/i/a;
+.field public final a:Lb/g/i/a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -29,16 +29,16 @@
 
 
 # direct methods
-.method public constructor <init>(Lb/h/i/a;II)V
+.method public constructor <init>(Lb/g/i/a;II)V
     .locals 0
-    .param p1    # Lb/h/i/a;
+    .param p1    # Lb/g/i/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/h/i/a;
+    iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/g/i/a;
 
     iput p2, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->c:I
 
@@ -57,12 +57,12 @@
     return v0
 .end method
 
-.method public b()Lb/h/i/a;
+.method public b()Lb/g/i/a;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/h/i/a;
+    iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/g/i/a;
 
     return-object v0
 .end method

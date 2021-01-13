@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/b/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
+    value = Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/a/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

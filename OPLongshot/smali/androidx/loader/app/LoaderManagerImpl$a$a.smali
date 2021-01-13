@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/i$a;
+.implements Lb/l/i$a;
 
 
 # annotations
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Class;)Lb/m/h;
+.method public a(Ljava/lang/Class;)Lb/l/h;
     .locals 0
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -40,7 +40,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
-            "Lb/m/h;",
+            "Lb/l/h;",
             ">(",
             "Ljava/lang/Class<",
             "TT;>;)TT;"

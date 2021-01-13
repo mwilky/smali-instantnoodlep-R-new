@@ -224,21 +224,21 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v3}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v3}, Lc/b/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lc/c/b/m/f/b;->a:J
+    sget-wide v6, Lc/b/b/m/f/b;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lc/c/b/m/f/b;->b:I
+    sget v9, Lc/b/b/m/f/b;->b:I
 
     const/4 v10, 0x0
 
-    invoke-static/range {v4 .. v10}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v4 .. v10}, Lc/b/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v3
 
@@ -520,11 +520,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, p2}, Lc/c/b/m/f/b;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
+    invoke-static {p1, p2}, Lc/b/b/m/f/b;->b(Landroid/view/accessibility/AccessibilityNodeInfo;I)J
 
     move-result-wide v3
 
-    invoke-static {v0}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v0}, Lc/b/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v1
 
@@ -532,11 +532,11 @@
 
     const/4 v5, 0x1
 
-    sget v6, Lc/c/b/m/f/b;->b:I
+    sget v6, Lc/b/b/m/f/b;->b:I
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v1 .. v7}, Lc/b/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v0
     :try_end_0
@@ -756,6 +756,12 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isStitchByScrollDistance()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     invoke-virtual {p0}, Lcom/oneplus/screenshot/StitchViewService;->takeScrollNodeContentViewShotByScrollDistance()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -783,21 +789,21 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, Lc/c/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
+    invoke-static {v2}, Lc/b/b/m/f/b;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)I
 
     move-result v4
 
     iget v5, p0, Lcom/oneplus/screenshot/StitchViewService;->mWindowId:I
 
-    sget-wide v6, Lc/c/b/m/f/b;->a:J
+    sget-wide v6, Lc/b/b/m/f/b;->a:J
 
     const/4 v8, 0x1
 
-    sget v9, Lc/c/b/m/f/b;->b:I
+    sget v9, Lc/b/b/m/f/b;->b:I
 
     const/4 v10, 0x0
 
-    invoke-static/range {v4 .. v10}, Lc/c/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-static/range {v4 .. v10}, Lc/b/b/m/f/a;->a(IIJZILandroid/os/Bundle;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 
@@ -1385,7 +1391,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/screenshot/StitchViewService;->mViewPropCallback:Ljava/lang/Object;
 
-    invoke-static {v1}, Lc/c/b/h/a;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1}, Lc/b/b/h/a;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1393,19 +1399,19 @@
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lc/c/b/h/b;->a:Ljava/lang/String;
+    sget-object v1, Lc/b/b/h/b;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    sget-object v3, Lc/c/b/h/b;->b:Ljava/lang/String;
+    sget-object v3, Lc/b/b/h/b;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    sget-object v4, Lc/c/b/h/b;->c:Ljava/lang/String;
+    sget-object v4, Lc/b/b/h/b;->c:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 

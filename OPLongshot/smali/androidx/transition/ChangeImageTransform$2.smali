@@ -48,7 +48,7 @@
 .method public set(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
     .locals 0
 
-    invoke-static {p1, p2}, Lb/q/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Lb/p/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

@@ -65,13 +65,13 @@
 
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->d:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Lb/j/a/a;
+    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Lb/i/a/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/j/a/a;->k(Z)Z
+    invoke-virtual {v0, v1}, Lb/i/a/a;->k(Z)Z
 
     move-result v0
 

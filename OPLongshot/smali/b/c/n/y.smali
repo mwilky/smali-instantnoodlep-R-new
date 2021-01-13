@@ -2267,7 +2267,7 @@
 
     iget v3, p0, Lb/c/n/y;->mDropDownWindowLayoutType:I
 
-    invoke-static {v2, v3}, Lb/h/m/g;->b(Landroid/widget/PopupWindow;I)V
+    invoke-static {v2, v3}, Lb/g/m/g;->b(Landroid/widget/PopupWindow;I)V
 
     iget-object v2, p0, Lb/c/n/y;->mPopup:Landroid/widget/PopupWindow;
 
@@ -2522,7 +2522,7 @@
 
     iget-boolean v1, p0, Lb/c/n/y;->mOverlapAnchor:Z
 
-    invoke-static {v0, v1}, Lb/h/m/g;->a(Landroid/widget/PopupWindow;Z)V
+    invoke-static {v0, v1}, Lb/g/m/g;->a(Landroid/widget/PopupWindow;Z)V
 
     :cond_12
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -2582,7 +2582,7 @@
 
     iget v4, p0, Lb/c/n/y;->mDropDownGravity:I
 
-    invoke-static {v0, v1, v2, v3, v4}, Lb/h/m/g;->c(Landroid/widget/PopupWindow;Landroid/view/View;III)V
+    invoke-static {v0, v1, v2, v3, v4}, Lb/g/m/g;->c(Landroid/widget/PopupWindow;Landroid/view/View;III)V
 
     iget-object v0, p0, Lb/c/n/y;->mDropDownList:Lb/c/n/x;
 

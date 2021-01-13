@@ -25,7 +25,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7f10008d
+    const v0, 0x7f100083
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/util/AppIconInfo;->packagName:Ljava/lang/String;
 
-    const v0, 0x7f08009c
+    const v0, 0x7f080099
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -51,7 +51,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/screenshot/util/AppIconInfo;->isShareChooser:Z
 
-    const v0, 0x7f10008e
+    const v0, 0x7f100084
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

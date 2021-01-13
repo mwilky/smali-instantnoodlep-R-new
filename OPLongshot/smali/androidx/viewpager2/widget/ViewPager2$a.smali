@@ -1,5 +1,5 @@
-.class public Landroidx/viewpager2/widget/ViewPager2$a;
-.super Landroidx/viewpager2/widget/ViewPager2$g;
+.class public abstract Landroidx/viewpager2/widget/ViewPager2$a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
@@ -9,42 +9,66 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x401
+    name = "a"
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Landroidx/viewpager2/widget/ViewPager2;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
-    .locals 0
-
-    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$a;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Landroidx/viewpager2/widget/ViewPager2$g;-><init>(Landroidx/viewpager2/widget/ViewPager2$a;)V
-
-    return-void
+# virtual methods
+.method public abstract a()Z
 .end method
 
+.method public abstract b(ILandroid/os/Bundle;)Z
+.end method
 
-# virtual methods
-.method public a()V
-    .locals 2
+.method public abstract c(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+            "*>;)V"
+        }
+    .end annotation
+.end method
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$a;->a:Landroidx/viewpager2/widget/ViewPager2;
+.method public abstract d(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+            "*>;)V"
+        }
+    .end annotation
+.end method
 
-    const/4 v1, 0x1
+.method public abstract e()Ljava/lang/String;
+.end method
 
-    iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->e:Z
+.method public abstract f(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+.end method
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/u/c/d;
+.method public abstract g(ILandroid/os/Bundle;)Z
+.end method
 
-    invoke-virtual {v0}, Lb/u/c/d;->l()V
+.method public abstract h()V
+.end method
 
-    return-void
+.method public abstract i()V
+.end method
+
+.method public abstract j()V
+.end method
+
+.method public abstract k()V
+.end method
+
+.method public abstract l()V
 .end method

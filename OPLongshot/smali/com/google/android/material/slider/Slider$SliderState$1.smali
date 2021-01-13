@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/google/android/material/slider/Slider$SliderState;-><init>(Landroid/os/Parcel;Lc/b/b/b/g0/a;)V
+    invoke-direct {v0, p1, v1}, Lcom/google/android/material/slider/Slider$SliderState;-><init>(Landroid/os/Parcel;Lc/a/b/b/f0/a;)V
 
     return-object v0
 .end method

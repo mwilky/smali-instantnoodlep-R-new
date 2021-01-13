@@ -34,7 +34,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->c(I)Lb/h/l/y/d;
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->c(I)Lb/g/l/y/d;
 
     move-result-object p1
 
@@ -45,7 +45,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p1}, Lb/h/l/y/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {p1}, Lb/g/l/y/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
 

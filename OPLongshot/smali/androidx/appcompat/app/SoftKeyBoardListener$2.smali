@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;

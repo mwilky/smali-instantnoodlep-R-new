@@ -283,13 +283,13 @@
     return v0
 .end method
 
-.method public instantiate(Ljava/lang/ClassLoader;Lb/k/a/e;)Landroidx/fragment/app/Fragment;
+.method public instantiate(Ljava/lang/ClassLoader;Lb/j/a/e;)Landroidx/fragment/app/Fragment;
     .locals 1
     .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/k/a/e;
+    .param p2    # Lb/j/a/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -307,7 +307,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentState;->mClassName:Ljava/lang/String;
 
-    invoke-virtual {p2, p1, v0}, Lb/k/a/e;->a(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {p2, p1, v0}, Lb/j/a/e;->a(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p2
 
@@ -393,7 +393,7 @@
 
     iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    sget-boolean p1, Lb/k/a/g;->H:Z
+    sget-boolean p1, Lb/j/a/g;->H:Z
 
     if-eqz p1, :cond_2
 

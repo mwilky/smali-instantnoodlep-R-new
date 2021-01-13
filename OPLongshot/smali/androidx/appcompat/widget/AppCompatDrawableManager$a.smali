@@ -292,7 +292,7 @@
 
     aput-object p1, v1, v3
 
-    invoke-static {v2, p2}, Lb/h/f/d;->b(II)I
+    invoke-static {v2, p2}, Lb/g/f/d;->b(II)I
 
     move-result p1
 
@@ -304,7 +304,7 @@
 
     aput-object p1, v1, v3
 
-    invoke-static {v2, p2}, Lb/h/f/d;->b(II)I
+    invoke-static {v2, p2}, Lb/g/f/d;->b(II)I
 
     move-result p1
 

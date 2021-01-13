@@ -155,7 +155,7 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1}, Lb/h/d/c;->e(Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Lb/g/d/c;->e(Landroid/app/Activity;Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -167,7 +167,7 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1}, Lb/h/d/c;->f(Landroid/app/Activity;Landroid/content/Intent;)Z
+    invoke-static {p0, p1}, Lb/g/d/c;->f(Landroid/app/Activity;Landroid/content/Intent;)Z
 
     move-result p1
 
@@ -179,7 +179,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-static {p0}, Lb/h/d/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-static {p0}, Lb/g/d/c;->a(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
 

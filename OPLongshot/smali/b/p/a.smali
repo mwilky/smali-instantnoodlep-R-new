@@ -1,118 +1,150 @@
-.class public final Lb/p/a;
+.class public Lb/p/a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lb/p/b;
-
-.field public final b:Landroidx/savedstate/SavedStateRegistry;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lb/p/a$a;
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Lb/p/b;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb/p/a;->a:Lb/p/b;
-
-    new-instance p1, Landroidx/savedstate/SavedStateRegistry;
-
-    invoke-direct {p1}, Landroidx/savedstate/SavedStateRegistry;-><init>()V
-
-    iput-object p1, p0, Lb/p/a;->b:Landroidx/savedstate/SavedStateRegistry;
-
-    return-void
-.end method
-
-.method public static a(Lb/p/b;)Lb/p/a;
-    .locals 1
-    .param p0    # Lb/p/b;
+.method public static a(Landroid/animation/Animator;Landroid/animation/AnimatorListenerAdapter;)V
+    .locals 2
+    .param p0    # Landroid/animation/Animator;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    new-instance v0, Lb/p/a;
-
-    invoke-direct {v0, p0}, Lb/p/a;-><init>(Lb/p/b;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public b()Landroidx/savedstate/SavedStateRegistry;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    iget-object v0, p0, Lb/p/a;->b:Landroidx/savedstate/SavedStateRegistry;
-
-    return-object v0
-.end method
-
-.method public c(Landroid/os/Bundle;)V
-    .locals 3
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p1    # Landroid/animation/AnimatorListenerAdapter;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
 
-    iget-object v0, p0, Lb/p/a;->a:Lb/p/b;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-interface {v0}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/animation/Animator;->addPauseListener(Landroid/animation/Animator$AnimatorPauseListener;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static b(Landroid/animation/Animator;)V
+    .locals 5
+    .param p0    # Landroid/animation/Animator;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->pause()V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/animation/Animator;->getListeners()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->b()Landroidx/lifecycle/Lifecycle$State;
+    if-eqz v0, :cond_2
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    sget-object v2, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    if-ne v1, v2, :cond_0
+    move-result v2
 
-    new-instance v1, Landroidx/savedstate/Recreator;
+    :goto_0
+    if-ge v1, v2, :cond_2
 
-    iget-object v2, p0, Lb/p/a;->a:Lb/p/b;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Landroidx/savedstate/Recreator;-><init>(Lb/p/b;)V
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
+    check-cast v3, Landroid/animation/Animator$AnimatorListener;
 
-    iget-object v1, p0, Lb/p/a;->b:Landroidx/savedstate/SavedStateRegistry;
+    instance-of v4, v3, Lb/p/a$a;
 
-    invoke-virtual {v1, v0, p1}, Landroidx/savedstate/SavedStateRegistry;->performRestore(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
+    if-eqz v4, :cond_1
 
+    check-cast v3, Lb/p/a$a;
+
+    invoke-interface {v3, p0}, Lb/p/a$a;->onAnimationPause(Landroid/animation/Animator;)V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Restarter must be created only during owner\'s initialization stage"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public d(Landroid/os/Bundle;)V
-    .locals 1
-    .param p1    # Landroid/os/Bundle;
+.method public static c(Landroid/animation/Animator;)V
+    .locals 5
+    .param p0    # Landroid/animation/Animator;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
 
-    iget-object v0, p0, Lb/p/a;->b:Landroidx/savedstate/SavedStateRegistry;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {v0, p1}, Landroidx/savedstate/SavedStateRegistry;->performSave(Landroid/os/Bundle;)V
+    const/16 v1, 0x13
 
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->resume()V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/animation/Animator;->getListeners()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    :goto_0
+    if-ge v1, v2, :cond_2
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/animation/Animator$AnimatorListener;
+
+    instance-of v4, v3, Lb/p/a$a;
+
+    if-eqz v4, :cond_1
+
+    check-cast v3, Lb/p/a$a;
+
+    invoke-interface {v3, p0}, Lb/p/a$a;->onAnimationResume(Landroid/animation/Animator;)V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
     return-void
 .end method

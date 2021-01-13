@@ -1,5 +1,5 @@
 .class public Landroidx/transition/FragmentTransitionSupport$c;
-.super Lb/q/m;
+.super Lb/p/m;
 .source "SourceFile"
 
 
@@ -48,7 +48,7 @@
 
     iput-object p7, p0, Landroidx/transition/FragmentTransitionSupport$c;->f:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Lb/q/m;-><init>()V
+    invoke-direct {p0}, Lb/p/m;-><init>()V
 
     return-void
 .end method

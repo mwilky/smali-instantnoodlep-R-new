@@ -64,7 +64,7 @@
     move-result-object v1
 
     :goto_0
-    invoke-static {v1, v0}, Lc/b/c/v0;->e(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lc/a/c/v0;->e(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {p0, v1, p1}, Lcom/google/tagmanager/InstallReferrerService;->a(Landroid/content/Context;Landroid/content/Intent;)V
 

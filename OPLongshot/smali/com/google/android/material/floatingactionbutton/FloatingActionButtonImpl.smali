@@ -75,12 +75,12 @@
     .end annotation
 .end field
 
-.field public defaultHideMotionSpec:Lc/b/b/b/m/a;
+.field public defaultHideMotionSpec:Lc/a/b/b/m/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public defaultShowMotionSpec:Lc/b/b/b/m/a;
+.field public defaultShowMotionSpec:Lc/a/b/b/m/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -99,7 +99,7 @@
     .end annotation
 .end field
 
-.field public hideMotionSpec:Lc/b/b/b/m/a;
+.field public hideMotionSpec:Lc/a/b/b/m/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -128,7 +128,7 @@
 
 .field public shadowPaddingEnabled:Z
 
-.field public final shadowViewDelegate:Lc/b/b/b/e0/a;
+.field public final shadowViewDelegate:Lc/a/b/b/d0/a;
 
 .field public shapeAppearance:Lcom/google/android/material/shape/ShapeAppearanceModel;
     .annotation build Landroidx/annotation/Nullable;
@@ -150,7 +150,7 @@
     .end annotation
 .end field
 
-.field public showMotionSpec:Lc/b/b/b/m/a;
+.field public showMotionSpec:Lc/a/b/b/m/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -261,7 +261,7 @@
     .end array-data
 .end method
 
-.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/b/b/b/e0/a;)V
+.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/a/b/b/d0/a;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -304,7 +304,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->view:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
     new-instance p1, Lcom/google/android/material/internal/StateListAnimator;
 
@@ -500,9 +500,9 @@
     return-void
 .end method
 
-.method private createAnimator(Lc/b/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
+.method private createAnimator(Lc/a/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
     .locals 6
-    .param p1    # Lc/b/b/b/m/a;
+    .param p1    # Lc/a/b/b/m/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -531,11 +531,11 @@
 
     const-string v1, "opacity"
 
-    invoke-virtual {p1, v1}, Lc/b/b/b/m/a;->e(Ljava/lang/String;)Lc/b/b/b/m/b;
+    invoke-virtual {p1, v1}, Lc/a/b/b/m/a;->e(Ljava/lang/String;)Lc/a/b/b/m/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lc/b/b/b/m/b;->a(Landroid/animation/Animator;)V
+    invoke-virtual {v1, p2}, Lc/a/b/b/m/b;->a(Landroid/animation/Animator;)V
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -553,11 +553,11 @@
 
     const-string v1, "scale"
 
-    invoke-virtual {p1, v1}, Lc/b/b/b/m/a;->e(Ljava/lang/String;)Lc/b/b/b/m/b;
+    invoke-virtual {p1, v1}, Lc/a/b/b/m/a;->e(Ljava/lang/String;)Lc/a/b/b/m/b;
 
     move-result-object v2
 
-    invoke-virtual {v2, p2}, Lc/b/b/b/m/b;->a(Landroid/animation/Animator;)V
+    invoke-virtual {v2, p2}, Lc/a/b/b/m/b;->a(Landroid/animation/Animator;)V
 
     invoke-direct {p0, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->workAroundOreoBug(Landroid/animation/ObjectAnimator;)V
 
@@ -575,11 +575,11 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, v1}, Lc/b/b/b/m/a;->e(Ljava/lang/String;)Lc/b/b/b/m/b;
+    invoke-virtual {p1, v1}, Lc/a/b/b/m/a;->e(Ljava/lang/String;)Lc/a/b/b/m/b;
 
     move-result-object p3
 
-    invoke-virtual {p3, p2}, Lc/b/b/b/m/b;->a(Landroid/animation/Animator;)V
+    invoke-virtual {p3, p2}, Lc/a/b/b/m/b;->a(Landroid/animation/Animator;)V
 
     invoke-direct {p0, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->workAroundOreoBug(Landroid/animation/ObjectAnimator;)V
 
@@ -615,11 +615,11 @@
 
     const-string p3, "iconScale"
 
-    invoke-virtual {p1, p3}, Lc/b/b/b/m/a;->e(Ljava/lang/String;)Lc/b/b/b/m/b;
+    invoke-virtual {p1, p3}, Lc/a/b/b/m/a;->e(Ljava/lang/String;)Lc/a/b/b/m/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lc/b/b/b/m/b;->a(Landroid/animation/Animator;)V
+    invoke-virtual {p1, p2}, Lc/a/b/b/m/b;->a(Landroid/animation/Animator;)V
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -676,10 +676,10 @@
     .end array-data
 .end method
 
-.method private getDefaultHideMotionSpec()Lc/b/b/b/m/a;
+.method private getDefaultHideMotionSpec()Lc/a/b/b/m/a;
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/a/b/b/m/a;
 
     if-nez v0, :cond_0
 
@@ -689,30 +689,30 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/a;->design_fab_hide_motion_spec:I
+    sget v1, Lc/a/b/b/a;->design_fab_hide_motion_spec:I
 
-    invoke-static {v0, v1}, Lc/b/b/b/m/a;->c(Landroid/content/Context;I)Lc/b/b/b/m/a;
+    invoke-static {v0, v1}, Lc/a/b/b/m/a;->c(Landroid/content/Context;I)Lc/a/b/b/m/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/b/b/b/m/a;
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/a/b/b/m/a;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lc/a/b/b/m/a;
 
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc/b/b/b/m/a;
+    check-cast v0, Lc/a/b/b/m/a;
 
     return-object v0
 .end method
 
-.method private getDefaultShowMotionSpec()Lc/b/b/b/m/a;
+.method private getDefaultShowMotionSpec()Lc/a/b/b/m/a;
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/a/b/b/m/a;
 
     if-nez v0, :cond_0
 
@@ -722,22 +722,22 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/a;->design_fab_show_motion_spec:I
+    sget v1, Lc/a/b/b/a;->design_fab_show_motion_spec:I
 
-    invoke-static {v0, v1}, Lc/b/b/b/m/a;->c(Landroid/content/Context;I)Lc/b/b/b/m/a;
+    invoke-static {v0, v1}, Lc/a/b/b/m/a;->c(Landroid/content/Context;I)Lc/a/b/b/m/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/b/b/b/m/a;
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/a/b/b/m/a;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lc/a/b/b/m/a;
 
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc/b/b/b/m/a;
+    check-cast v0, Lc/a/b/b/m/a;
 
     return-object v0
 .end method
@@ -935,12 +935,12 @@
     return v0
 .end method
 
-.method public final getHideMotionSpec()Lc/b/b/b/m/a;
+.method public final getHideMotionSpec()Lc/a/b/b/m/a;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/a/b/b/m/a;
 
     return-object v0
 .end method
@@ -1051,12 +1051,12 @@
     return-object v0
 .end method
 
-.method public final getShowMotionSpec()Lc/b/b/b/m/a;
+.method public final getShowMotionSpec()Lc/a/b/b/m/a;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/a/b/b/m/a;
 
     return-object v0
 .end method
@@ -1090,21 +1090,21 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/a/b/b/m/a;
 
     if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getDefaultHideMotionSpec()Lc/b/b/b/m/a;
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getDefaultHideMotionSpec()Lc/a/b/b/m/a;
 
     move-result-object v0
 
     :goto_0
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1, v1, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/b/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
+    invoke-direct {p0, v0, v1, v1, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/a/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -1346,7 +1346,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->view:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    invoke-static {v1, v0}, Lc/b/b/b/f0/f;->f(Landroid/view/View;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
+    invoke-static {v1, v0}, Lc/a/b/b/e0/f;->f(Landroid/view/View;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->requirePreDrawListener()Z
@@ -1455,18 +1455,18 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
 
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
-    invoke-interface {p1, v0}, Lc/b/b/b/e0/a;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lc/a/b/b/d0/a;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->contentBackground:Landroid/graphics/drawable/Drawable;
 
-    invoke-interface {p1, v0}, Lc/b/b/b/e0/a;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lc/a/b/b/d0/a;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
     return-void
@@ -1694,14 +1694,14 @@
     return-void
 .end method
 
-.method public final setHideMotionSpec(Lc/b/b/b/m/a;)V
+.method public final setHideMotionSpec(Lc/a/b/b/m/a;)V
     .locals 0
-    .param p1    # Lc/b/b/b/m/a;
+    .param p1    # Lc/a/b/b/m/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/b/b/b/m/a;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->hideMotionSpec:Lc/a/b/b/m/a;
 
     return-void
 .end method
@@ -1802,7 +1802,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lb/h/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
@@ -1836,13 +1836,13 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->rippleDrawable:Landroid/graphics/drawable/Drawable;
 
-    instance-of v1, v0, Lc/b/b/b/f0/j;
+    instance-of v1, v0, Lc/a/b/b/e0/j;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lc/b/b/b/f0/j;
+    check-cast v0, Lc/a/b/b/e0/j;
 
-    invoke-interface {v0, p1}, Lc/b/b/b/f0/j;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+    invoke-interface {v0, p1}, Lc/a/b/b/e0/j;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->borderDrawable:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
@@ -1855,14 +1855,14 @@
     return-void
 .end method
 
-.method public final setShowMotionSpec(Lc/b/b/b/m/a;)V
+.method public final setShowMotionSpec(Lc/a/b/b/m/a;)V
     .locals 0
-    .param p1    # Lc/b/b/b/m/a;
+    .param p1    # Lc/a/b/b/m/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/b/b/b/m/a;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/a/b/b/m/a;
 
     return-void
 .end method
@@ -1963,19 +1963,19 @@
     invoke-virtual {p0, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setImageMatrixScale(F)V
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/b/b/b/m/a;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->showMotionSpec:Lc/a/b/b/m/a;
 
     if-eqz v0, :cond_3
 
     goto :goto_0
 
     :cond_3
-    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getDefaultShowMotionSpec()Lc/b/b/b/m/a;
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getDefaultShowMotionSpec()Lc/a/b/b/m/a;
 
     move-result-object v0
 
     :goto_0
-    invoke-direct {p0, v0, v1, v1, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/b/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
+    invoke-direct {p0, v0, v1, v1, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->createAnimator(Lc/a/b/b/m/a;FFF)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -2134,7 +2134,7 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->onPaddingUpdated(Landroid/graphics/Rect;)V
 
-    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/b/b/b/e0/a;
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shadowViewDelegate:Lc/a/b/b/d0/a;
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
@@ -2144,7 +2144,7 @@
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    invoke-interface {v1, v2, v3, v4, v0}, Lc/b/b/b/e0/a;->a(IIII)V
+    invoke-interface {v1, v2, v3, v4, v0}, Lc/a/b/b/d0/a;->a(IIII)V
 
     return-void
 .end method

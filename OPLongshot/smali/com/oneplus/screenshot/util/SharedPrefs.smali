@@ -6,7 +6,7 @@
 # static fields
 .field public static final LONGSHOT_GUIDE_EDIT:Ljava/lang/String; = "longshot_guide_edit"
 
-.field public static final PREFS_NAME:Ljava/lang/String; = "com.color.screenshot"
+.field public static final PREFS_NAME:Ljava/lang/String; = "com.oneplus.screenshot"
 
 .field public static final TAG:Ljava/lang/String; = "SharedPrefs"
 
@@ -31,7 +31,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/util/SharedPrefs;->mSharedPrefs:Landroid/content/SharedPreferences;
 
-    const-string v0, "com.color.screenshot"
+    const-string v0, "com.oneplus.screenshot"
 
     const/4 v1, 0x0
 

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Comparator;
-.implements Lb/o/d/i;
+.implements Lb/n/d/i;
 
 
 # annotations
@@ -25,7 +25,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
         "TT2;>;",
-        "Lb/o/d/i;"
+        "Lb/n/d/i;"
     }
 .end annotation
 

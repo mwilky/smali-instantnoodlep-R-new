@@ -15,11 +15,7 @@
 
 
 # static fields
-.field public static final color_switch_sound_off:I = 0x7f0f0000
-
-.field public static final color_switch_sound_on:I = 0x7f0f0001
-
-.field public static final focus_mode_scanning:I = 0x7f0f0002
+.field public static final focus_mode_scanning:I = 0x7f0f0000
 
 
 # direct methods

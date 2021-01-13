@@ -32,7 +32,7 @@
 
 .field public f:I
 
-.field public g:Lb/h/l/x;
+.field public g:Lb/g/l/x;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -786,11 +786,11 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->g:Lb/h/l/x;
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->g:Lb/g/l/x;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lb/h/l/x;->e()I
+    invoke-virtual {v0}, Lb/g/l/x;->e()I
 
     move-result v0
 
@@ -1118,7 +1118,7 @@
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
-    invoke-static {p0}, Lc/b/b/b/f0/f;->e(Landroid/view/View;)V
+    invoke-static {p0}, Lc/a/b/b/e0/f;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1153,12 +1153,12 @@
 
     if-eqz v2, :cond_1
 
-    sget v2, Lc/b/b/b/b;->state_liftable:I
+    sget v2, Lc/a/b/b/b;->state_liftable:I
 
     goto :goto_0
 
     :cond_1
-    sget v2, Lc/b/b/b/b;->state_liftable:I
+    sget v2, Lc/a/b/b/b;->state_liftable:I
 
     neg-int v2, v2
 
@@ -1175,12 +1175,12 @@
 
     if-eqz v2, :cond_2
 
-    sget v2, Lc/b/b/b/b;->state_lifted:I
+    sget v2, Lc/a/b/b/b;->state_lifted:I
 
     goto :goto_1
 
     :cond_2
-    sget v2, Lc/b/b/b/b;->state_lifted:I
+    sget v2, Lc/a/b/b/b;->state_lifted:I
 
     neg-int v2, v2
 
@@ -1193,12 +1193,12 @@
 
     if-eqz v2, :cond_3
 
-    sget v2, Lc/b/b/b/b;->state_collapsible:I
+    sget v2, Lc/a/b/b/b;->state_collapsible:I
 
     goto :goto_2
 
     :cond_3
-    sget v2, Lc/b/b/b/b;->state_collapsible:I
+    sget v2, Lc/a/b/b/b;->state_collapsible:I
 
     neg-int v2, v2
 
@@ -1215,12 +1215,12 @@
 
     if-eqz v2, :cond_4
 
-    sget v2, Lc/b/b/b/b;->state_collapsed:I
+    sget v2, Lc/a/b/b/b;->state_collapsed:I
 
     goto :goto_3
 
     :cond_4
-    sget v2, Lc/b/b/b/b;->state_collapsed:I
+    sget v2, Lc/a/b/b/b;->state_collapsed:I
 
     neg-int v2, v2
 
@@ -1434,7 +1434,7 @@
 
     move-result p2
 
-    invoke-static {p1, v0, p2}, Lb/h/g/a;->b(III)I
+    invoke-static {p1, v0, p2}, Lb/g/g/a;->b(III)I
 
     move-result v0
 
@@ -1573,7 +1573,7 @@
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setElevation(F)V
 
-    invoke-static {p0, p1}, Lc/b/b/b/f0/f;->d(Landroid/view/View;F)V
+    invoke-static {p0, p1}, Lc/a/b/b/e0/f;->d(Landroid/view/View;F)V
 
     return-void
 .end method
@@ -1683,7 +1683,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lb/h/f/f/a;->m(Landroid/graphics/drawable/Drawable;I)Z
+    invoke-static {p1, v0}, Lb/g/f/f/a;->m(Landroid/graphics/drawable/Drawable;I)Z
 
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->q:Landroid/graphics/drawable/Drawable;
 
@@ -2010,7 +2010,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/d;->design_appbar_elevation:I
+    sget v1, Lc/a/b/b/d;->design_appbar_elevation:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -2065,7 +2065,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/g;->app_bar_elevation_anim_duration:I
+    sget v1, Lc/a/b/b/g;->app_bar_elevation_anim_duration:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 

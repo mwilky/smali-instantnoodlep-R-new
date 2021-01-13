@@ -1,5 +1,5 @@
 .class public Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;
-.super Lb/h/l/a;
+.super Lb/g/l/a;
 .source "SourceFile"
 
 
@@ -24,21 +24,21 @@
 
     iput-object p1, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;->a:Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;
 
-    invoke-direct {p0}, Lb/h/l/a;-><init>()V
+    invoke-direct {p0}, Lb/g/l/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
     .locals 2
 
     iget-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;->a:Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;
 
-    iget-object v0, v0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Lb/h/l/a;
+    iget-object v0, v0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Lb/g/l/a;
 
-    invoke-virtual {v0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
+    invoke-virtual {v0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
 
     iget-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;->a:Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;
 
@@ -74,7 +74,7 @@
     return-void
 
     :cond_1
-    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->onInitializeAccessibilityNodeInfo(Lb/h/l/y/d;)V
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->onInitializeAccessibilityNodeInfo(Lb/g/l/y/d;)V
 
     return-void
 .end method
@@ -84,9 +84,9 @@
 
     iget-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;->a:Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;
 
-    iget-object v0, v0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Lb/h/l/a;
+    iget-object v0, v0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Lb/g/l/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lb/h/l/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lb/g/l/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 

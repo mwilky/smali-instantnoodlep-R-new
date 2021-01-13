@@ -29,9 +29,7 @@
 
 .field public static final mtrl_btn_textappearance_all_caps:I = 0x7f050006
 
-.field public static final oneplus_switch_theme_enable:I = 0x7f050007
-
-.field public static final preferences_prefer_dual_pane:I = 0x7f050008
+.field public static final preferences_prefer_dual_pane:I = 0x7f050007
 
 
 # direct methods

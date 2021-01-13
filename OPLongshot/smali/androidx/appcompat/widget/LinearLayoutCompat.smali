@@ -1272,7 +1272,7 @@
 
     move-result v1
 
-    invoke-static {v2, v1}, Lb/h/l/b;->b(II)I
+    invoke-static {v2, v1}, Lb/g/l/b;->b(II)I
 
     move-result v1
 
@@ -1764,7 +1764,7 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lb/h/l/b;->b(II)I
+    invoke-static {v1, v2}, Lb/g/l/b;->b(II)I
 
     move-result v1
 

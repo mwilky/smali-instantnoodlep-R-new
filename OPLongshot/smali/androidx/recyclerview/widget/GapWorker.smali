@@ -105,9 +105,9 @@
 .method public static e(Landroidx/recyclerview/widget/RecyclerView;I)Z
     .locals 5
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/o/d/d;
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/n/d/d;
 
-    invoke-virtual {v0}, Lb/o/d/d;->j()I
+    invoke-virtual {v0}, Lb/n/d/d;->j()I
 
     move-result v0
 
@@ -118,9 +118,9 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/o/d/d;
+    iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/n/d/d;
 
-    invoke-virtual {v3, v2}, Lb/o/d/d;->i(I)Landroid/view/View;
+    invoke-virtual {v3, v2}, Lb/n/d/d;->i(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -500,9 +500,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/o/d/d;
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mChildHelper:Lb/n/d/d;
 
-    invoke-virtual {v0}, Lb/o/d/d;->j()I
+    invoke-virtual {v0}, Lb/n/d/d;->j()I
 
     move-result v0
 
@@ -524,7 +524,7 @@
     :try_start_0
     const-string v1, "RV Nested Prefetch"
 
-    invoke-static {v1}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$v;
 
@@ -554,14 +554,14 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     goto :goto_1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     throw p1
 
@@ -652,7 +652,7 @@
     :try_start_0
     const-string v2, "RV Prefetch"
 
-    invoke-static {v2}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
     iget-object v2, p0, Landroidx/recyclerview/widget/GapWorker;->a:Ljava/util/ArrayList;
 
@@ -667,7 +667,7 @@
     :goto_0
     iput-wide v0, p0, Landroidx/recyclerview/widget/GapWorker;->b:J
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     return-void
 
@@ -737,7 +737,7 @@
 
     iput-wide v0, p0, Landroidx/recyclerview/widget/GapWorker;->b:J
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     return-void
 
@@ -746,7 +746,7 @@
 
     iput-wide v0, p0, Landroidx/recyclerview/widget/GapWorker;->b:J
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     throw v2
 .end method

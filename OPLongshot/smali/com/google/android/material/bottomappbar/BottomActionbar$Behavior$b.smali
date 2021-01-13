@@ -82,63 +82,39 @@
 
     if-lt p4, p5, :cond_1
 
-    iget-object p5, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+    iget-object p4, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
-    invoke-static {p5}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
+    invoke-static {p4}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
 
-    move-result-object p5
+    move-result-object p4
 
-    invoke-virtual {p5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p5
+    move-result-object p4
 
-    sget p6, Lc/b/b/b/d;->max_bottomappbar_width:I
+    sget p5, Lc/a/b/b/d;->max_bottomappbar_width:I
 
     goto :goto_0
 
     :cond_1
-    iget-object p5, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+    iget-object p4, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
-    invoke-static {p5}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p5
-
-    sget p6, Lc/b/b/b/d;->max_bottomappbar_width_normal:I
-
-    :goto_0
-    invoke-virtual {p5, p6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result p5
-
-    new-instance p6, Ljava/lang/StringBuilder;
-
-    invoke-direct {p6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p7, "maxwidth = "
-
-    invoke-virtual {p6, p7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p6, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p7, ",densityDpi = "
-
-    invoke-virtual {p6, p7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p6, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p4}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
 
     move-result-object p4
 
-    const-string p6, "chenhb"
+    invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-static {p6, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p4
 
-    invoke-virtual {p3, p5}, Landroid/widget/Button;->setMaxWidth(I)V
+    sget p5, Lc/a/b/b/d;->max_bottomappbar_width_normal:I
+
+    :goto_0
+    invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p4
+
+    invoke-virtual {p3, p4}, Landroid/widget/Button;->setMaxWidth(I)V
 
     const/4 p4, 0x2
 
@@ -210,18 +186,18 @@
 
     move-result-object p5
 
-    invoke-static {p5}, Lc/c/a/c;->b(Landroid/content/Context;)Z
+    invoke-static {p5}, Lc/b/a/d;->b(Landroid/content/Context;)Z
 
     move-result p5
 
     if-eqz p5, :cond_2
 
-    sget p5, Lc/b/b/b/d;->op_control_margin_screen_bottom2:I
+    sget p5, Lc/a/b/b/d;->op_control_margin_screen_bottom2:I
 
     goto :goto_1
 
     :cond_2
-    sget p5, Lc/b/b/b/d;->op_control_margin_screen_bottom3:I
+    sget p5, Lc/a/b/b/d;->op_control_margin_screen_bottom3:I
 
     :goto_1
     invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

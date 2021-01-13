@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/k;
+.implements Lb/l/k;
 .implements Lb/a/c;
 
 
@@ -22,7 +22,7 @@
         "Landroidx/fragment/app/FragmentHostCallback<",
         "Landroidx/fragment/app/FragmentActivity;",
         ">;",
-        "Lb/m/k;",
+        "Lb/l/k;",
         "Lb/a/c;"
     }
 .end annotation
@@ -52,7 +52,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    iget-object v0, v0, Landroidx/fragment/app/FragmentActivity;->g:Lb/m/f;
+    iget-object v0, v0, Landroidx/fragment/app/FragmentActivity;->g:Lb/l/f;
 
     return-object v0
 .end method
@@ -71,14 +71,14 @@
     return-object v0
 .end method
 
-.method public getViewModelStore()Lb/m/j;
+.method public getViewModelStore()Lb/l/j;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/m/j;
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/l/j;
 
     move-result-object v0
 

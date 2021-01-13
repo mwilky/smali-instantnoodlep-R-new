@@ -165,7 +165,7 @@
 
     invoke-direct {p2, p0}, Landroidx/savedstate/SavedStateRegistry$1;-><init>(Landroidx/savedstate/SavedStateRegistry;)V
 
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Lb/m/d;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Lb/l/d;)V
 
     const/4 p1, 0x1
 

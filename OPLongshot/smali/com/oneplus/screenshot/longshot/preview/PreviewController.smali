@@ -70,7 +70,7 @@
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/preview/PreviewController$1;
 
-    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object v2
 

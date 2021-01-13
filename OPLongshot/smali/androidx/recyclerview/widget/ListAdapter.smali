@@ -62,11 +62,11 @@
 
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    new-instance v1, Lb/o/d/b;
+    new-instance v1, Lb/n/d/b;
 
-    invoke-direct {v1, p0}, Lb/o/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v1, p0}, Lb/n/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/o/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
@@ -101,9 +101,9 @@
 
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    new-instance v1, Lb/o/d/b;
+    new-instance v1, Lb/n/d/b;
 
-    invoke-direct {v1, p0}, Lb/o/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v1, p0}, Lb/n/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     new-instance v2, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
@@ -113,7 +113,7 @@
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/o/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 

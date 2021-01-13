@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field public mCancellationSignal:Lb/h/h/a;
+.field public mCancellationSignal:Lb/g/h/a;
 
 .field public mCursor:Landroid/database/Cursor;
 
@@ -116,13 +116,13 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
-    invoke-virtual {v0}, Lb/h/h/a;->a()V
+    invoke-virtual {v0}, Lb/g/h/a;->a()V
 
     :cond_0
     monitor-exit p0
@@ -345,11 +345,11 @@
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lb/h/h/a;
+    new-instance v0, Lb/g/h/a;
 
-    invoke-direct {v0}, Lb/h/h/a;-><init>()V
+    invoke-direct {v0}, Lb/g/h/a;-><init>()V
 
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
     monitor-exit p0
     :try_end_0
@@ -376,9 +376,9 @@
 
     iget-object v7, p0, Landroidx/loader/content/CursorLoader;->mSortOrder:Ljava/lang/String;
 
-    iget-object v8, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iget-object v8, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
-    invoke-static/range {v2 .. v8}, Lb/h/e/a;->a(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lb/h/h/a;)Landroid/database/Cursor;
+    invoke-static/range {v2 .. v8}, Lb/g/e/a;->a(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lb/g/h/a;)Landroid/database/Cursor;
 
     move-result-object v1
     :try_end_1
@@ -413,7 +413,7 @@
     monitor-enter p0
 
     :try_start_4
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
     monitor-exit p0
 
@@ -434,7 +434,7 @@
     monitor-enter p0
 
     :try_start_5
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/h/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
 
     monitor-exit p0
     :try_end_5
@@ -454,9 +454,9 @@
 
     :cond_1
     :try_start_7
-    new-instance v0, Lb/h/h/c;
+    new-instance v0, Lb/g/h/c;
 
-    invoke-direct {v0}, Lb/h/h/c;-><init>()V
+    invoke-direct {v0}, Lb/g/h/c;-><init>()V
 
     throw v0
 

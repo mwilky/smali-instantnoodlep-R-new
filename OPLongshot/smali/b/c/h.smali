@@ -70,74 +70,74 @@
 
 .field public static final about_terms_service:I = 0x7f100020
 
-.field public static final app_name:I = 0x7f100023
+.field public static final app_name:I = 0x7f100022
 
-.field public static final back_button_label:I = 0x7f100025
+.field public static final back_button_label:I = 0x7f100024
 
-.field public static final capital_off:I = 0x7f100027
+.field public static final capital_off:I = 0x7f100026
 
-.field public static final capital_on:I = 0x7f100028
+.field public static final capital_on:I = 0x7f100027
 
-.field public static final loading_text:I = 0x7f100042
+.field public static final loading_text:I = 0x7f10003a
 
-.field public static final next_button_label:I = 0x7f100069
+.field public static final next_button_label:I = 0x7f100061
 
-.field public static final op_accessibility_quick_settings_page:I = 0x7f100076
+.field public static final op_accessibility_quick_settings_page:I = 0x7f10006c
 
-.field public static final op_control_font_display_h1:I = 0x7f100078
+.field public static final op_control_font_display_h1:I = 0x7f10006e
 
-.field public static final op_control_font_display_h2:I = 0x7f100079
+.field public static final op_control_font_display_h2:I = 0x7f10006f
 
-.field public static final op_control_font_display_h3:I = 0x7f10007a
+.field public static final op_control_font_display_h3:I = 0x7f100070
 
-.field public static final op_control_font_text_body1:I = 0x7f10007b
+.field public static final op_control_font_text_body1:I = 0x7f100071
 
-.field public static final op_control_font_text_button:I = 0x7f10007c
+.field public static final op_control_font_text_button:I = 0x7f100072
 
-.field public static final op_control_font_text_descriptions:I = 0x7f10007d
+.field public static final op_control_font_text_descriptions:I = 0x7f100073
 
-.field public static final op_control_font_text_h4:I = 0x7f10007e
+.field public static final op_control_font_text_h4:I = 0x7f100074
 
-.field public static final op_control_font_text_h5:I = 0x7f10007f
+.field public static final op_control_font_text_h5:I = 0x7f100075
 
-.field public static final op_control_font_text_h6:I = 0x7f100080
+.field public static final op_control_font_text_h6:I = 0x7f100076
 
-.field public static final op_control_font_text_subtitle:I = 0x7f100081
+.field public static final op_control_font_text_subtitle:I = 0x7f100077
 
-.field public static final permission_btn_text_denied:I = 0x7f100088
+.field public static final permission_btn_text_denied:I = 0x7f10007e
 
-.field public static final permission_btn_text_grant:I = 0x7f100089
+.field public static final permission_btn_text_grant:I = 0x7f10007f
 
-.field public static final permission_dialog_title:I = 0x7f10008a
+.field public static final permission_dialog_title:I = 0x7f100080
 
-.field public static final search_menu_title:I = 0x7f1000a0
+.field public static final search_menu_title:I = 0x7f100095
 
-.field public static final searchview_description_clear:I = 0x7f1000a1
+.field public static final searchview_description_clear:I = 0x7f100096
 
-.field public static final searchview_description_search:I = 0x7f1000a2
+.field public static final searchview_description_search:I = 0x7f100097
 
-.field public static final searchview_description_submit:I = 0x7f1000a3
+.field public static final searchview_description_submit:I = 0x7f100098
 
-.field public static final searchview_description_voice:I = 0x7f1000a4
+.field public static final searchview_description_voice:I = 0x7f100099
 
-.field public static final select_day:I = 0x7f1000a5
+.field public static final select_day:I = 0x7f10009a
 
-.field public static final select_hours:I = 0x7f1000a6
+.field public static final select_hours:I = 0x7f10009b
 
-.field public static final select_minutes:I = 0x7f1000a7
+.field public static final select_minutes:I = 0x7f10009c
 
-.field public static final select_year:I = 0x7f1000a8
+.field public static final select_year:I = 0x7f10009d
 
-.field public static final skip_button_label:I = 0x7f1000ad
+.field public static final skip_button_label:I = 0x7f10009e
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1000af
+.field public static final status_bar_notification_info_overflow:I = 0x7f10009f
 
-.field public static final time_picker_header_text:I = 0x7f1000ba
+.field public static final time_picker_header_text:I = 0x7f1000a3
 
-.field public static final time_picker_hour_label:I = 0x7f1000bb
+.field public static final time_picker_hour_label:I = 0x7f1000a4
 
-.field public static final time_picker_input_error:I = 0x7f1000bc
+.field public static final time_picker_input_error:I = 0x7f1000a5
 
-.field public static final time_picker_minute_label:I = 0x7f1000bd
+.field public static final time_picker_minute_label:I = 0x7f1000a6
 
-.field public static final time_picker_prompt_label:I = 0x7f1000be
+.field public static final time_picker_prompt_label:I = 0x7f1000a7

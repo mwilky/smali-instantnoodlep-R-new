@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc/c/b/b/b$c;
+.implements Lc/b/b/b/b$c;
 
 
 # annotations

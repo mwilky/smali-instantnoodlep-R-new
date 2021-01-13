@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/c;
+.implements Lb/l/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/viewpager2/adapter/FragmentStateAdapter;->placeFragmentInViewHolder(Lb/u/b/a;)V
+    value = Landroidx/viewpager2/adapter/FragmentStateAdapter;->placeFragmentInViewHolder(Lb/t/a/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,18 @@
 
 
 # instance fields
-.field public final synthetic a:Lb/u/b/a;
+.field public final synthetic a:Lb/t/a/a;
 
 .field public final synthetic b:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Lb/u/b/a;)V
+.method public constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Lb/t/a/a;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->b:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
-    iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/u/b/a;
+    iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/t/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Lb/m/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
-    .param p1    # Lb/m/e;
+    .param p1    # Lb/l/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -60,15 +60,15 @@
     return-void
 
     :cond_0
-    invoke-interface {p1}, Lb/m/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->c(Lb/m/d;)V
+    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->c(Lb/l/d;)V
 
-    iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/u/b/a;
+    iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/t/a/a;
 
-    invoke-virtual {p1}, Lb/u/b/a;->N()Landroid/widget/FrameLayout;
+    invoke-virtual {p1}, Lb/t/a/a;->N()Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -80,9 +80,9 @@
 
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->b:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
-    iget-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/u/b/a;
+    iget-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Lb/t/a/a;
 
-    invoke-virtual {p1, p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->placeFragmentInViewHolder(Lb/u/b/a;)V
+    invoke-virtual {p1, p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->placeFragmentInViewHolder(Lb/t/a/a;)V
 
     :cond_1
     return-void

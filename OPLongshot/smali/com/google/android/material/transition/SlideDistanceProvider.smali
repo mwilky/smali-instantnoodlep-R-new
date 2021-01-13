@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc/b/b/b/l0/e;
+.implements Lc/a/b/b/k0/e;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->mtrl_transition_shared_axis_slide_distance:I
+    sget p2, Lc/a/b/b/d;->mtrl_transition_shared_axis_slide_distance:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

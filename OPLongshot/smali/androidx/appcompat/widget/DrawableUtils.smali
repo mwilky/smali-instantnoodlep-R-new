@@ -347,7 +347,7 @@
     if-eqz v0, :cond_7
 
     :try_start_0
-    invoke-static {p0}, Lb/h/f/f/a;->q(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Lb/g/f/f/a;->q(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 

@@ -1,5 +1,5 @@
 .class public abstract Landroidx/fragment/app/FragmentHostCallback;
-.super Lb/k/a/c;
+.super Lb/j/a/c;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
         "<E:",
         "Ljava/lang/Object;",
         ">",
-        "Lb/k/a/c;"
+        "Lb/j/a/c;"
     }
 .end annotation
 
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field public final mFragmentManager:Lb/k/a/g;
+.field public final mFragmentManager:Lb/j/a/g;
 
 .field public final mHandler:Landroid/os/Handler;
     .annotation build Landroidx/annotation/NonNull;
@@ -51,13 +51,13 @@
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lb/k/a/c;-><init>()V
+    invoke-direct {p0}, Lb/j/a/c;-><init>()V
 
-    new-instance v0, Lb/k/a/g;
+    new-instance v0, Lb/j/a/g;
 
-    invoke-direct {v0}, Lb/k/a/g;-><init>()V
+    invoke-direct {v0}, Lb/j/a/g;-><init>()V
 
-    iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Lb/k/a/g;
+    iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Lb/j/a/g;
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 

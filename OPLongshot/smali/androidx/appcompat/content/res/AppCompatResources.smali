@@ -275,7 +275,7 @@
     return-object v0
 
     :cond_2
-    invoke-static {p0, p1}, Lb/h/e/b;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Lb/g/e/b;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 

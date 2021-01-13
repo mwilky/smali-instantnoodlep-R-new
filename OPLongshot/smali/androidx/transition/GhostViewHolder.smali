@@ -36,17 +36,17 @@
 
     iput-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Lb/q/k;->ghost_view_holder:I
+    sget v0, Lb/p/k;->ghost_view_holder:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
+    invoke-static {p1}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lb/q/t;->add(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Lb/p/t;->add(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
@@ -62,7 +62,7 @@
         .end annotation
     .end param
 
-    sget v0, Lb/q/k;->ghost_view_holder:I
+    sget v0, Lb/p/k;->ghost_view_holder:I
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
@@ -227,7 +227,7 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
-    invoke-static {v0, v2}, Lb/q/u;->a(Landroid/view/ViewGroup;I)I
+    invoke-static {v0, v2}, Lb/p/u;->a(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
@@ -451,7 +451,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Lb/q/k;->ghost_view_holder:I
+    sget v0, Lb/p/k;->ghost_view_holder:I
 
     const/4 v2, 0x0
 
@@ -459,11 +459,11 @@
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
+    invoke-static {p1}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lb/q/t;->remove(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Lb/p/t;->remove(Landroid/view/View;)V
 
     iput-boolean v1, p0, Landroidx/transition/GhostViewHolder;->mAttached:Z
 
@@ -480,19 +480,19 @@
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
+    invoke-static {v0}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lb/q/t;->remove(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Lb/p/t;->remove(Landroid/view/View;)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lb/q/u;->b(Landroid/view/ViewGroup;)Lb/q/t;
+    invoke-static {v0}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lb/q/t;->add(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Lb/p/t;->add(Landroid/view/View;)V
 
     return-void
 

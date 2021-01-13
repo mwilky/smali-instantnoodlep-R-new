@@ -76,7 +76,7 @@
 
 .field public d0:Lcom/google/android/material/edgeeffect/SpringNestScrollView$a;
 
-.field public e0:Lc/b/b/b/b0/b/a;
+.field public e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
 .field public f0:F
 
@@ -202,10 +202,10 @@
     return p1
 .end method
 
-.method public static synthetic P(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)Lc/b/b/b/b0/b/a;
+.method public static synthetic P(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)Landroidx/dynamicanimation/animation/SpringAnimation;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object p0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-object p0
 .end method
@@ -644,19 +644,19 @@
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0, p1}, Lc/b/b/b/b0/b/a;->n(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->f0:F
 
-    invoke-virtual {p1, v0}, Lc/b/b/b/b0/b/a;->m(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->start()V
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
     return-void
 
@@ -672,7 +672,7 @@
 .end method
 
 .method public final d0()V
-    .locals 4
+    .locals 3
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -716,15 +716,15 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setEdgeEffectFactory(Lcom/google/android/material/edgeeffect/SpringNestScrollView$SEdgeEffectFactory;)V
 
-    new-instance v0, Lc/b/b/b/b0/b/a;
+    new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v1, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->l0:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1, v2}, Lc/b/b/b/b0/b/a;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
+    invoke-direct {v0, p0, v1, v2}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
 
-    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     new-instance v1, Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -742,31 +742,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/b/b/b/b0/b/a;->l(Landroidx/dynamicanimation/animation/SpringForce;)Lc/b/b/b/b0/b/a;
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lc/b/b/b/j;->notification_animator_test_pull_from_top:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget v3, Lc/b/b/b/j;->notification_animator_test_pull_from_top_attr:I
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lc/b/b/b/b0/b/a;->o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
 .end method
@@ -919,9 +895,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0}, Lc/b/b/b/b0/b/a;->isRunning()Z
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->isRunning()Z
 
     move-result v0
 
@@ -2099,9 +2075,9 @@
 
     iput p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->E:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 
@@ -2203,9 +2179,9 @@
 
     iput v0, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->D:F
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->e0:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->f()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p1
 

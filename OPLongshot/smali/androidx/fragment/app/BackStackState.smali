@@ -211,12 +211,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lb/k/a/a;)V
+.method public constructor <init>(Lb/j/a/a;)V
     .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lb/k/a/j;->a:Ljava/util/ArrayList;
+    iget-object v0, p1, Lb/j/a/j;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -228,7 +228,7 @@
 
     iput-object v1, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
-    iget-boolean v1, p1, Lb/k/a/j;->h:Z
+    iget-boolean v1, p1, Lb/j/a/j;->h:Z
 
     if-eqz v1, :cond_2
 
@@ -253,25 +253,25 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    iget-object v3, p1, Lb/k/a/j;->a:Ljava/util/ArrayList;
+    iget-object v3, p1, Lb/j/a/j;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lb/k/a/j$a;
+    check-cast v3, Lb/j/a/j$a;
 
     iget-object v4, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v5, v2, 0x1
 
-    iget v6, v3, Lb/k/a/j$a;->a:I
+    iget v6, v3, Lb/j/a/j$a;->a:I
 
     aput v6, v4, v2
 
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mFragmentWhos:Ljava/util/ArrayList;
 
-    iget-object v4, v3, Lb/k/a/j$a;->b:Landroidx/fragment/app/Fragment;
+    iget-object v4, v3, Lb/j/a/j$a;->b:Landroidx/fragment/app/Fragment;
 
     if-eqz v4, :cond_0
 
@@ -289,31 +289,31 @@
 
     add-int/lit8 v4, v5, 0x1
 
-    iget v6, v3, Lb/k/a/j$a;->c:I
+    iget v6, v3, Lb/j/a/j$a;->c:I
 
     aput v6, v2, v5
 
     add-int/lit8 v5, v4, 0x1
 
-    iget v6, v3, Lb/k/a/j$a;->d:I
+    iget v6, v3, Lb/j/a/j$a;->d:I
 
     aput v6, v2, v4
 
     add-int/lit8 v4, v5, 0x1
 
-    iget v6, v3, Lb/k/a/j$a;->e:I
+    iget v6, v3, Lb/j/a/j$a;->e:I
 
     aput v6, v2, v5
 
     add-int/lit8 v5, v4, 0x1
 
-    iget v6, v3, Lb/k/a/j$a;->f:I
+    iget v6, v3, Lb/j/a/j$a;->f:I
 
     aput v6, v2, v4
 
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOldMaxLifecycleStates:[I
 
-    iget-object v4, v3, Lb/k/a/j$a;->g:Landroidx/lifecycle/Lifecycle$State;
+    iget-object v4, v3, Lb/j/a/j$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
@@ -323,7 +323,7 @@
 
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mCurrentMaxLifecycleStates:[I
 
-    iget-object v3, v3, Lb/k/a/j$a;->h:Landroidx/lifecycle/Lifecycle$State;
+    iget-object v3, v3, Lb/j/a/j$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
@@ -338,47 +338,47 @@
     goto :goto_0
 
     :cond_1
-    iget v0, p1, Lb/k/a/j;->f:I
+    iget v0, p1, Lb/j/a/j;->f:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransition:I
 
-    iget v0, p1, Lb/k/a/j;->g:I
+    iget v0, p1, Lb/j/a/j;->g:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
 
-    iget-object v0, p1, Lb/k/a/j;->i:Ljava/lang/String;
+    iget-object v0, p1, Lb/j/a/j;->i:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mName:Ljava/lang/String;
 
-    iget v0, p1, Lb/k/a/a;->t:I
+    iget v0, p1, Lb/j/a/a;->t:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mIndex:I
 
-    iget v0, p1, Lb/k/a/j;->j:I
+    iget v0, p1, Lb/j/a/j;->j:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleRes:I
 
-    iget-object v0, p1, Lb/k/a/j;->k:Ljava/lang/CharSequence;
+    iget-object v0, p1, Lb/j/a/j;->k:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
-    iget v0, p1, Lb/k/a/j;->l:I
+    iget v0, p1, Lb/j/a/j;->l:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleRes:I
 
-    iget-object v0, p1, Lb/k/a/j;->m:Ljava/lang/CharSequence;
+    iget-object v0, p1, Lb/j/a/j;->m:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
-    iget-object v0, p1, Lb/k/a/j;->n:Ljava/util/ArrayList;
+    iget-object v0, p1, Lb/j/a/j;->n:Ljava/util/ArrayList;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
-    iget-object v0, p1, Lb/k/a/j;->o:Ljava/util/ArrayList;
+    iget-object v0, p1, Lb/j/a/j;->o:Ljava/util/ArrayList;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
-    iget-boolean p1, p1, Lb/k/a/j;->p:Z
+    iget-boolean p1, p1, Lb/j/a/j;->p:Z
 
     iput-boolean p1, p0, Landroidx/fragment/app/BackStackState;->mReorderingAllowed:Z
 
@@ -404,12 +404,12 @@
     return v0
 .end method
 
-.method public instantiate(Lb/k/a/g;)Lb/k/a/a;
+.method public instantiate(Lb/j/a/g;)Lb/j/a/a;
     .locals 9
 
-    new-instance v0, Lb/k/a/a;
+    new-instance v0, Lb/j/a/a;
 
-    invoke-direct {v0, p1}, Lb/k/a/a;-><init>(Lb/k/a/g;)V
+    invoke-direct {v0, p1}, Lb/j/a/a;-><init>(Lb/j/a/g;)V
 
     const/4 v1, 0x0
 
@@ -422,9 +422,9 @@
 
     if-ge v1, v3, :cond_2
 
-    new-instance v3, Lb/k/a/j$a;
+    new-instance v3, Lb/j/a/j$a;
 
-    invoke-direct {v3}, Lb/k/a/j$a;-><init>()V
+    invoke-direct {v3}, Lb/j/a/j$a;-><init>()V
 
     iget-object v4, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
@@ -432,9 +432,9 @@
 
     aget v1, v4, v1
 
-    iput v1, v3, Lb/k/a/j$a;->a:I
+    iput v1, v3, Lb/j/a/j$a;->a:I
 
-    sget-boolean v1, Lb/k/a/g;->H:Z
+    sget-boolean v1, Lb/j/a/g;->H:Z
 
     if-eqz v1, :cond_0
 
@@ -483,7 +483,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v4, p1, Lb/k/a/g;->g:Ljava/util/HashMap;
+    iget-object v4, p1, Lb/j/a/g;->g:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -491,14 +491,14 @@
 
     check-cast v1, Landroidx/fragment/app/Fragment;
 
-    iput-object v1, v3, Lb/k/a/j$a;->b:Landroidx/fragment/app/Fragment;
+    iput-object v1, v3, Lb/j/a/j$a;->b:Landroidx/fragment/app/Fragment;
 
     goto :goto_1
 
     :cond_1
     const/4 v1, 0x0
 
-    iput-object v1, v3, Lb/k/a/j$a;->b:Landroidx/fragment/app/Fragment;
+    iput-object v1, v3, Lb/j/a/j$a;->b:Landroidx/fragment/app/Fragment;
 
     :goto_1
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
@@ -511,7 +511,7 @@
 
     aget-object v1, v1, v4
 
-    iput-object v1, v3, Lb/k/a/j$a;->g:Landroidx/lifecycle/Lifecycle$State;
+    iput-object v1, v3, Lb/j/a/j$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
@@ -523,7 +523,7 @@
 
     aget-object v1, v1, v4
 
-    iput-object v1, v3, Lb/k/a/j$a;->h:Landroidx/lifecycle/Lifecycle$State;
+    iput-object v1, v3, Lb/j/a/j$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
@@ -531,35 +531,35 @@
 
     aget v5, v1, v5
 
-    iput v5, v3, Lb/k/a/j$a;->c:I
+    iput v5, v3, Lb/j/a/j$a;->c:I
 
     add-int/lit8 v6, v4, 0x1
 
     aget v4, v1, v4
 
-    iput v4, v3, Lb/k/a/j$a;->d:I
+    iput v4, v3, Lb/j/a/j$a;->d:I
 
     add-int/lit8 v7, v6, 0x1
 
     aget v6, v1, v6
 
-    iput v6, v3, Lb/k/a/j$a;->e:I
+    iput v6, v3, Lb/j/a/j$a;->e:I
 
     add-int/lit8 v8, v7, 0x1
 
     aget v1, v1, v7
 
-    iput v1, v3, Lb/k/a/j$a;->f:I
+    iput v1, v3, Lb/j/a/j$a;->f:I
 
-    iput v5, v0, Lb/k/a/j;->b:I
+    iput v5, v0, Lb/j/a/j;->b:I
 
-    iput v4, v0, Lb/k/a/j;->c:I
+    iput v4, v0, Lb/j/a/j;->c:I
 
-    iput v6, v0, Lb/k/a/j;->d:I
+    iput v6, v0, Lb/j/a/j;->d:I
 
-    iput v1, v0, Lb/k/a/j;->e:I
+    iput v1, v0, Lb/j/a/j;->e:I
 
-    invoke-virtual {v0, v3}, Lb/k/a/j;->d(Lb/k/a/j$a;)V
+    invoke-virtual {v0, v3}, Lb/j/a/j;->d(Lb/j/a/j$a;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -570,53 +570,53 @@
     :cond_2
     iget p1, p0, Landroidx/fragment/app/BackStackState;->mTransition:I
 
-    iput p1, v0, Lb/k/a/j;->f:I
+    iput p1, v0, Lb/j/a/j;->f:I
 
     iget p1, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
 
-    iput p1, v0, Lb/k/a/j;->g:I
+    iput p1, v0, Lb/j/a/j;->g:I
 
     iget-object p1, p0, Landroidx/fragment/app/BackStackState;->mName:Ljava/lang/String;
 
-    iput-object p1, v0, Lb/k/a/j;->i:Ljava/lang/String;
+    iput-object p1, v0, Lb/j/a/j;->i:Ljava/lang/String;
 
     iget p1, p0, Landroidx/fragment/app/BackStackState;->mIndex:I
 
-    iput p1, v0, Lb/k/a/a;->t:I
+    iput p1, v0, Lb/j/a/a;->t:I
 
     const/4 p1, 0x1
 
-    iput-boolean p1, v0, Lb/k/a/j;->h:Z
+    iput-boolean p1, v0, Lb/j/a/j;->h:Z
 
     iget v1, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleRes:I
 
-    iput v1, v0, Lb/k/a/j;->j:I
+    iput v1, v0, Lb/j/a/j;->j:I
 
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
-    iput-object v1, v0, Lb/k/a/j;->k:Ljava/lang/CharSequence;
+    iput-object v1, v0, Lb/j/a/j;->k:Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleRes:I
 
-    iput v1, v0, Lb/k/a/j;->l:I
+    iput v1, v0, Lb/j/a/j;->l:I
 
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
-    iput-object v1, v0, Lb/k/a/j;->m:Ljava/lang/CharSequence;
+    iput-object v1, v0, Lb/j/a/j;->m:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lb/k/a/j;->n:Ljava/util/ArrayList;
+    iput-object v1, v0, Lb/j/a/j;->n:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lb/k/a/j;->o:Ljava/util/ArrayList;
+    iput-object v1, v0, Lb/j/a/j;->o:Ljava/util/ArrayList;
 
     iget-boolean v1, p0, Landroidx/fragment/app/BackStackState;->mReorderingAllowed:Z
 
-    iput-boolean v1, v0, Lb/k/a/j;->p:Z
+    iput-boolean v1, v0, Lb/j/a/j;->p:Z
 
-    invoke-virtual {v0, p1}, Lb/k/a/a;->r(I)V
+    invoke-virtual {v0, p1}, Lb/j/a/a;->r(I)V
 
     return-object v0
 .end method

@@ -21,8 +21,8 @@
 
 
 # virtual methods
-.method public abstract onCornerPathCreated(Lc/b/b/b/f0/i;Landroid/graphics/Matrix;I)V
+.method public abstract onCornerPathCreated(Lc/a/b/b/e0/i;Landroid/graphics/Matrix;I)V
 .end method
 
-.method public abstract onEdgePathCreated(Lc/b/b/b/f0/i;Landroid/graphics/Matrix;I)V
+.method public abstract onEdgePathCreated(Lc/a/b/b/e0/i;Landroid/graphics/Matrix;I)V
 .end method

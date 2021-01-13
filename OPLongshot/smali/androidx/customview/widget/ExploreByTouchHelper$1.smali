@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/customview/widget/FocusStrategy$BoundsAdapter<",
-        "Lb/h/l/y/d;",
+        "Lb/g/l/y/d;",
         ">;"
     }
 .end annotation
@@ -37,10 +37,10 @@
 
 
 # virtual methods
-.method public obtainBounds(Lb/h/l/y/d;Landroid/graphics/Rect;)V
+.method public obtainBounds(Lb/g/l/y/d;Landroid/graphics/Rect;)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Lb/h/l/y/d;->k(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2}, Lb/g/l/y/d;->k(Landroid/graphics/Rect;)V
 
     return-void
 .end method
@@ -48,9 +48,9 @@
 .method public bridge synthetic obtainBounds(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
-    check-cast p1, Lb/h/l/y/d;
+    check-cast p1, Lb/g/l/y/d;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$1;->obtainBounds(Lb/h/l/y/d;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$1;->obtainBounds(Lb/g/l/y/d;Landroid/graphics/Rect;)V
 
     return-void
 .end method

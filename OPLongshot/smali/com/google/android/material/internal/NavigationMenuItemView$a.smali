@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/internal/NavigationMenuItemView$a;
-.super Lb/h/l/a;
+.super Lb/g/l/a;
 .source "SourceFile"
 
 
@@ -24,27 +24,27 @@
 
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView$a;->a:Lcom/google/android/material/internal/NavigationMenuItemView;
 
-    invoke-direct {p0}, Lb/h/l/a;-><init>()V
+    invoke-direct {p0}, Lb/g/l/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
     .locals 0
-    .param p2    # Lb/h/l/y/d;
+    .param p2    # Lb/g/l/y/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Lb/h/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/h/l/y/d;)V
+    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView$a;->a:Lcom/google/android/material/internal/NavigationMenuItemView;
 
     iget-boolean p1, p1, Lcom/google/android/material/internal/NavigationMenuItemView;->checkable:Z
 
-    invoke-virtual {p2, p1}, Lb/h/l/y/d;->U(Z)V
+    invoke-virtual {p2, p1}, Lb/g/l/y/d;->U(Z)V
 
     return-void
 .end method

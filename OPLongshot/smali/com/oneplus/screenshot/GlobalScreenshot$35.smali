@@ -126,7 +126,7 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$35;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5400(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/animation/ValueAnimator;
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$5500(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 

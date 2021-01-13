@@ -264,7 +264,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->B(Landroid/view/View;)Lb/h/l/a;
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->B(Landroid/view/View;)Lb/g/l/a;
 
     iget v0, p0, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;->mTagKey:I
 

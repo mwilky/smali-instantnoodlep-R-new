@@ -235,7 +235,7 @@
     return p1
 .end method
 
-.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Lb/h/l/x;)Lb/h/l/x;
+.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
     .locals 0
     .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
         .annotation build Landroidx/annotation/NonNull;
@@ -245,7 +245,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lb/h/l/x;
+    .param p3    # Lb/g/l/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -257,9 +257,9 @@
             "(",
             "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
             "TV;",
-            "Lb/h/l/x;",
+            "Lb/g/l/x;",
             ")",
-            "Lb/h/l/x;"
+            "Lb/g/l/x;"
         }
     .end annotation
 

@@ -266,7 +266,7 @@
     :try_start_0
     iget p1, p0, Lb/c/n/t;->j:I
 
-    invoke-virtual {p2, v0, p1, v8}, Landroidx/appcompat/widget/TintTypedArray;->getFont(IILb/h/e/c/b$a;)Landroid/graphics/Typeface;
+    invoke-virtual {p2, v0, p1, v8}, Landroidx/appcompat/widget/TintTypedArray;->getFont(IILb/g/e/c/b$a;)Landroid/graphics/Typeface;
 
     move-result-object p1
 

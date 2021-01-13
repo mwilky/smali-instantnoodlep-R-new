@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc/b/b/b/l0/a;
+.implements Lc/a/b/b/k0/a;
 
 
 # annotations
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(FFF)Lc/b/b/b/l0/b;
+.method public a(FFF)Lc/a/b/b/k0/b;
     .locals 2
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     move-result p1
 
-    invoke-static {v1, p1}, Lc/b/b/b/l0/b;->a(II)Lc/b/b/b/l0/b;
+    invoke-static {v1, p1}, Lc/a/b/b/k0/b;->a(II)Lc/a/b/b/k0/b;
 
     move-result-object p1
 

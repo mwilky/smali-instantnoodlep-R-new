@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public a:Lb/m/j;
+.field public a:Lb/l/j;
 
 
 # direct methods

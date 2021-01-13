@@ -108,7 +108,7 @@
 
 .field public selectedItemPosition:I
 
-.field public final set:Lb/q/p;
+.field public final set:Lb/p/p;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/d;->design_bottom_navigation_item_max_width:I
+    sget v1, Lc/a/b/b/d;->design_bottom_navigation_item_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -190,7 +190,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMaxWidth:I
 
-    sget v1, Lc/b/b/b/d;->design_bottom_navigation_item_min_width:I
+    sget v1, Lc/a/b/b/d;->design_bottom_navigation_item_min_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -198,7 +198,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->inactiveItemMinWidth:I
 
-    sget v1, Lc/b/b/b/d;->design_bottom_navigation_active_item_max_width:I
+    sget v1, Lc/a/b/b/d;->design_bottom_navigation_active_item_max_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -206,7 +206,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->activeItemMaxWidth:I
 
-    sget v1, Lc/b/b/b/d;->design_bottom_navigation_active_item_min_width:I
+    sget v1, Lc/a/b/b/d;->design_bottom_navigation_active_item_min_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -214,7 +214,7 @@
 
     iput v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->activeItemMinWidth:I
 
-    sget v1, Lc/b/b/b/d;->op_bottom_navigation_height:I
+    sget v1, Lc/a/b/b/d;->op_bottom_navigation_height:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -230,35 +230,35 @@
 
     iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemTextColorDefault:Landroid/content/res/ColorStateList;
 
-    new-instance v0, Lb/q/b;
+    new-instance v0, Lb/p/b;
 
-    invoke-direct {v0}, Lb/q/b;-><init>()V
+    invoke-direct {v0}, Lb/p/b;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
+    iput-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/p/p;
 
-    invoke-virtual {v0, p1}, Lb/q/p;->q(I)Lb/q/p;
+    invoke-virtual {v0, p1}, Lb/p/p;->q(I)Lb/p/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/p/p;
 
     const-wide/16 v0, 0x73
 
-    invoke-virtual {p1, v0, v1}, Lb/q/p;->o(J)Lb/q/p;
+    invoke-virtual {p1, v0, v1}, Lb/p/p;->o(J)Lb/p/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/p/p;
 
-    new-instance v0, Lb/l/a/a/b;
+    new-instance v0, Lb/k/a/a/b;
 
-    invoke-direct {v0}, Lb/l/a/a/b;-><init>()V
+    invoke-direct {v0}, Lb/k/a/a/b;-><init>()V
 
-    invoke-virtual {p1, v0}, Lb/q/p;->p(Landroid/animation/TimeInterpolator;)Lb/q/p;
+    invoke-virtual {p1, v0}, Lb/p/p;->p(Landroid/animation/TimeInterpolator;)Lb/p/p;
 
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
+    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/p/p;
 
     new-instance v0, Lcom/google/android/material/internal/TextScale;
 
     invoke-direct {v0}, Lcom/google/android/material/internal/TextScale;-><init>()V
 
-    invoke-virtual {p1, v0}, Lb/q/p;->f(Landroidx/transition/Transition;)Lb/q/p;
+    invoke-virtual {p1, v0}, Lb/p/p;->f(Landroidx/transition/Transition;)Lb/p/p;
 
     new-instance p1, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView$a;
 
@@ -1106,7 +1106,7 @@
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {p1}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
+    invoke-static {p1}, Lb/g/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/g/l/y/d;
 
     move-result-object p1
 
@@ -1124,11 +1124,11 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2, v1}, Lb/h/l/y/d$b;->b(IIZI)Lb/h/l/y/d$b;
+    invoke-static {v1, v0, v2, v1}, Lb/g/l/y/d$b;->b(IIZI)Lb/g/l/y/d$b;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/l/y/d;->Y(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/g/l/y/d;->Y(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1984,9 +1984,9 @@
 
     if-eq v1, v3, :cond_4
 
-    iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/q/p;
+    iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->set:Lb/p/p;
 
-    invoke-static {p0, v1}, Lb/q/n;->a(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
+    invoke-static {p0, v1}, Lb/p/n;->a(Landroid/view/ViewGroup;Landroidx/transition/Transition;)V
 
     :cond_4
     iget v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->labelVisibilityMode:I

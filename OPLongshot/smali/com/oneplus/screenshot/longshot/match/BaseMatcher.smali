@@ -108,6 +108,17 @@
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mLeftSideOffset:I
 
+    sget p2, Lcom/oneplus/screenshot/longshot/util/Configs;->limitLeft:I
+
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_1
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mLeftSideOffset:I
+
+    :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

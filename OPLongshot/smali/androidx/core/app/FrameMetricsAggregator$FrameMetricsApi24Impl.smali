@@ -1,5 +1,5 @@
 .class public Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
-.super Lb/h/d/b;
+.super Lb/g/d/b;
 .source "SourceFile"
 
 
@@ -48,7 +48,7 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    invoke-direct {p0}, Lb/h/d/b;-><init>()V
+    invoke-direct {p0}, Lb/g/d/b;-><init>()V
 
     const/16 v0, 0x9
 

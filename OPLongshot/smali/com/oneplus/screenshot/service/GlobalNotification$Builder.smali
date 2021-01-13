@@ -126,7 +126,7 @@
 .method public getSmallIcon()I
     .locals 1
 
-    const v0, 0x7f0800e6
+    const v0, 0x7f0800e2
 
     return v0
 .end method
@@ -136,7 +136,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f10009c
+    const v1, 0x7f100091
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -156,7 +156,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00ed
+    const v1, 0x7f0a00dc
 
     if-eqz v0, :cond_0
 
@@ -165,7 +165,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800e6
+    const v0, 0x7f0800e2
 
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
@@ -178,7 +178,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00ec
+    const v1, 0x7f0a00db
 
     if-eqz v0, :cond_0
 
@@ -187,7 +187,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800e6
+    const v0, 0x7f0800e2
 
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 

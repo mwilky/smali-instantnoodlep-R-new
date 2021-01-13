@@ -30,13 +30,13 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {p2}, Lb/h/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/h/l/y/d;
+    invoke-static {p2}, Lb/g/l/y/d;->w0(Landroid/view/accessibility/AccessibilityNodeInfo;)Lb/g/l/y/d;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lb/h/l/y/d;->T(Z)V
+    invoke-virtual {p1, p2}, Lb/g/l/y/d;->T(Z)V
 
     return-void
 .end method

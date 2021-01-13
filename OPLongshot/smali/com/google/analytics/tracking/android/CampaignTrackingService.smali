@@ -49,7 +49,7 @@
     :catch_0
     const-string p1, "Error storing install campaign."
 
-    invoke-static {p1}, Lc/b/a/c/a/s;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lc/a/a/c/a/s;->a(Ljava/lang/String;)V
 
     :goto_0
     return-void

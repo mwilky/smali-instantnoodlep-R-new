@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc/b/a/c/a/h;
+.implements Lc/a/a/c/a/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/analytics/tracking/android/GAServiceProxy;-><init>(Landroid/content/Context;Lc/b/a/c/a/e;Lc/b/a/c/a/c;Lc/b/a/c/a/p;)V
+    value = Lcom/google/analytics/tracking/android/GAServiceProxy;-><init>(Landroid/content/Context;Lc/a/a/c/a/e;Lc/a/a/c/a/c;Lc/a/a/c/a/p;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

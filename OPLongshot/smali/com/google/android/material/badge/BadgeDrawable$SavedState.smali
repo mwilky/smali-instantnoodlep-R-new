@@ -109,7 +109,7 @@
 
     new-instance v0, Lcom/google/android/material/resources/TextAppearance;
 
-    sget v1, Lc/b/b/b/k;->TextAppearance_MaterialComponents_Badge:I
+    sget v1, Lc/a/b/b/k;->TextAppearance_MaterialComponents_Badge:I
 
     invoke-direct {v0, p1, v1}, Lcom/google/android/material/resources/TextAppearance;-><init>(Landroid/content/Context;I)V
 
@@ -121,7 +121,7 @@
 
     iput v0, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->badgeTextColor:I
 
-    sget v0, Lc/b/b/b/j;->mtrl_badge_numberless_content_description:I
+    sget v0, Lc/a/b/b/j;->mtrl_badge_numberless_content_description:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -129,7 +129,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->contentDescriptionNumberless:Ljava/lang/CharSequence;
 
-    sget p1, Lc/b/b/b/i;->mtrl_badge_content_description:I
+    sget p1, Lc/a/b/b/i;->mtrl_badge_content_description:I
 
     iput p1, p0, Lcom/google/android/material/badge/BadgeDrawable$SavedState;->contentDescriptionQuantityStrings:I
 

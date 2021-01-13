@@ -666,7 +666,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lb/h/l/b;->b(II)I
+    invoke-static {v2, v3}, Lb/g/l/b;->b(II)I
 
     move-result v2
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lb/q/q;Lb/q/q;)Landroid/animation/Animator;
+    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lb/p/q;Lb/p/q;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,13 +48,13 @@
 
     iget-object p1, p0, Landroidx/transition/ChangeBounds$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Landroidx/transition/ViewUtils;->b(Landroid/view/View;)Lb/q/x;
+    invoke-static {p1}, Landroidx/transition/ViewUtils;->b(Landroid/view/View;)Lb/p/x;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/ChangeBounds$a;->b:Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-interface {p1, v0}, Lb/q/x;->remove(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lb/p/x;->remove(Landroid/graphics/drawable/Drawable;)V
 
     iget-object p1, p0, Landroidx/transition/ChangeBounds$a;->c:Landroid/view/View;
 

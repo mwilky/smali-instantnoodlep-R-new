@@ -15,16 +15,16 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/viewpager/widget/ViewPager;Lb/t/a/a;Lb/t/a/a;)V
+.method public abstract a(Landroidx/viewpager/widget/ViewPager;Lb/s/a/a;Lb/s/a/a;)V
     .param p1    # Landroidx/viewpager/widget/ViewPager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/t/a/a;
+    .param p2    # Lb/s/a/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lb/t/a/a;
+    .param p3    # Lb/s/a/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

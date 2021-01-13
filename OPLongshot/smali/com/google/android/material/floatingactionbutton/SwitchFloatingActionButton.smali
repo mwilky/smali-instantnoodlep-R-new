@@ -77,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lc/b/b/b/b;->switchFloatingActionButtonStyle:I
+    sget v0, Lc/a/b/b/b;->switchFloatingActionButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -101,9 +101,9 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mIsSwitchState:Z
 
-    sget-object v0, Lc/b/b/b/l;->switchFloatingActionButton:[I
+    sget-object v0, Lc/a/b/b/l;->switchFloatingActionButton:[I
 
-    sget v1, Lc/b/b/b/k;->Widget_Design_SwitchFloatingActionButton:I
+    sget v1, Lc/a/b/b/k;->Widget_Design_SwitchFloatingActionButton:I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -113,13 +113,13 @@
 
     move-result-object p3
 
-    sget v0, Lc/b/b/b/d;->op_float_action_button_shadow_z8:I
+    sget v0, Lc/a/b/b/d;->op_float_action_button_shadow_z8:I
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p3
 
-    sget v0, Lc/b/b/b/l;->switchFloatingActionButton_tintColor:I
+    sget v0, Lc/a/b/b/l;->switchFloatingActionButton_tintColor:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    sget v2, Lc/b/b/b/e;->switch_floating_action_button:I
+    sget v2, Lc/a/b/b/e;->switch_floating_action_button:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -177,11 +177,11 @@
 
     check-cast p1, Landroid/view/LayoutInflater;
 
-    sget p3, Lc/b/b/b/h;->float_switch_button:I
+    sget p3, Lc/a/b/b/h;->float_switch_button:I
 
     invoke-virtual {p1, p3, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget p1, Lc/b/b/b/f;->normal_imageview:I
+    sget p1, Lc/a/b/b/f;->normal_imageview:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;->mNormalImageView:Landroid/widget/ImageView;
 
-    sget p1, Lc/b/b/b/l;->switchFloatingActionButton_image:I
+    sget p1, Lc/a/b/b/l;->switchFloatingActionButton_image:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget p1, Lc/b/b/b/f;->switch_imageview:I
+    sget p1, Lc/a/b/b/f;->switch_imageview:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -942,7 +942,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/e;->switch_floating_action_button:I
+    sget v1, Lc/a/b/b/e;->switch_floating_action_button:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

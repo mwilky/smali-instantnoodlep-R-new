@@ -410,7 +410,7 @@
 
     iget-boolean v5, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
-    invoke-static {v4, v5}, Lb/h/l/b;->b(II)I
+    invoke-static {v4, v5}, Lb/g/l/b;->b(II)I
 
     move-result v4
 
@@ -641,7 +641,7 @@
 
     iget-boolean v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
-    invoke-static {v2, v4}, Lb/h/l/b;->b(II)I
+    invoke-static {v2, v4}, Lb/g/l/b;->b(II)I
 
     move-result v2
 
@@ -832,12 +832,12 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lb/h/j/c;->b:Lb/h/j/b;
+    sget-object v0, Lb/g/j/c;->b:Lb/g/j/b;
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lb/h/j/c;->a:Lb/h/j/b;
+    sget-object v0, Lb/g/j/c;->a:Lb/g/j/b;
 
     :goto_0
     const/4 v1, 0x0
@@ -846,7 +846,7 @@
 
     move-result v2
 
-    invoke-interface {v0, p1, v1, v2}, Lb/h/j/b;->a(Ljava/lang/CharSequence;II)Z
+    invoke-interface {v0, p1, v1, v2}, Lb/g/j/b;->a(Ljava/lang/CharSequence;II)Z
 
     move-result p1
 
@@ -3053,7 +3053,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0, v1}, Lb/h/g/a;->a(FFF)F
+    invoke-static {p1, v0, v1}, Lb/g/g/a;->a(FFF)F
 
     move-result p1
 

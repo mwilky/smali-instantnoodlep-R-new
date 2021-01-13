@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/m/e;
+.implements Lb/l/e;
 
 
 # virtual methods

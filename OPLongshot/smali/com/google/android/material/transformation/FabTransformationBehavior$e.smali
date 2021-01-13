@@ -15,12 +15,12 @@
 
 
 # instance fields
-.field public a:Lc/b/b/b/m/a;
+.field public a:Lc/a/b/b/m/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public b:Lc/b/b/b/m/c;
+.field public b:Lc/a/b/b/m/c;
 
 
 # direct methods

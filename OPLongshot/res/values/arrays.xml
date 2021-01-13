@@ -73,9 +73,22 @@
         <item>com.google.android.apps.youtube.music/com.google.android.apps.youtube.music.activities.MusicActivity</item>
         <item>com.oneplus.note/com.oneplus.note.ui.MainActivity</item>
         <item>com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity</item>
+        <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity</item>
+        <item>com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity</item>
     </string-array>
     <string-array name="block_longshot_with_message">
         <item>com.heytap.market/com.heytap.uccreditlib.internal.UserCreditsMarketActivity</item>
+    </string-array>
+    <string-array name="can_scroll_check_limit_left">
+        <item>com.android.vending/com.google.android.finsky.activities.MainActivity</item>
+    </string-array>
+    <string-array name="can_scroll_check_limit_top">
+        <item>com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity</item>
+        <item>tv.danmaku.bili/com.bilibili.bangumi.ui.page.detail.BangumiDetailActivityV3</item>
+        <item>tv.danmaku.bili/tv.danmaku.bili.ui.video.VideoDetailsActivity</item>
+        <item>tv.danmaku.bili/com.bilibili.bililive.videoliveplayer.ui.roomv3.LiveRoomActivityV3</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.modular.video.detail.VideoDetailActivity</item>
     </string-array>
     <string-array name="config_line_sample_bglist">
         <item>66</item>
@@ -94,6 +107,50 @@
         <item>300|310|1</item>
         <item>350|360|1</item>
     </string-array>
+    <array name="coui_theme_arrays_first">
+        <item>@style/SupportOverlay.Theme.Green.First</item>
+        <item>@style/SupportOverlay.Theme.Red.First</item>
+        <item>@style/SupportOverlay.Theme.Yellow.First</item>
+        <item>@style/SupportOverlay.Theme.SkyBlue.First</item>
+        <item>@style/SupportOverlay.Theme.Blue.First</item>
+        <item>@style/SupportOverlay.Theme.Orange.First</item>
+    </array>
+    <array name="coui_theme_arrays_fourth">
+        <item>@style/SupportOverlay.Theme.Green.Fourth</item>
+        <item>@style/SupportOverlay.Theme.Red.Fourth</item>
+        <item>@style/SupportOverlay.Theme.Yellow.Fourth</item>
+        <item>@style/SupportOverlay.Theme.SkyBlue.Fourth</item>
+        <item>@style/SupportOverlay.Theme.Blue.Fourth</item>
+        <item>@style/SupportOverlay.Theme.Orange.Fourth</item>
+    </array>
+    <array name="coui_theme_arrays_second">
+        <item>@style/SupportOverlay.Theme.Green.Second</item>
+        <item>@style/SupportOverlay.Theme.Red.Second</item>
+        <item>@style/SupportOverlay.Theme.Yellow.Second</item>
+        <item>@style/SupportOverlay.Theme.SkyBlue.Second</item>
+        <item>@style/SupportOverlay.Theme.Blue.Second</item>
+        <item>@style/SupportOverlay.Theme.Orange.Second</item>
+    </array>
+    <array name="coui_theme_arrays_single">
+        <item>@style/SupportOverlay.Theme.Single.First</item>
+        <item>@style/SupportOverlay.Theme.Single.Second</item>
+        <item>@style/SupportOverlay.Theme.Single.Third</item>
+        <item>@style/SupportOverlay.Theme.Single.Fourth</item>
+        <item>@style/SupportOverlay.Theme.Single.Fifth</item>
+        <item>@style/SupportOverlay.Theme.Single.Sixth</item>
+        <item>@style/SupportOverlay.Theme.Single.Seventh</item>
+        <item>@style/SupportOverlay.Theme.Single.Eighth</item>
+        <item>@style/SupportOverlay.Theme.Single.Ninth</item>
+        <item>@style/SupportOverlay.Theme.Single.Tenth</item>
+    </array>
+    <array name="coui_theme_arrays_third">
+        <item>@style/SupportOverlay.Theme.Green.Third</item>
+        <item>@style/SupportOverlay.Theme.Red.Third</item>
+        <item>@style/SupportOverlay.Theme.Yellow.Third</item>
+        <item>@style/SupportOverlay.Theme.SkyBlue.Third</item>
+        <item>@style/SupportOverlay.Theme.Blue.Third</item>
+        <item>@style/SupportOverlay.Theme.Orange.Third</item>
+    </array>
     <string-array name="customize_move_app">
         <item>com.youku.phone</item>
         <item>com.android.dialer</item>
@@ -220,6 +277,7 @@
         <item>com.oneplus.mms/com.android.mms.ui.ConversationList</item>
         <item>com.oneplus.bbs/com.oneplus.bbs.ui.activity.ThreadsActivity</item>
         <item>com.whatsapp</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity</item>
     </string-array>
     <array name="inject_additional_swipe" />
     <string-array name="inject_touch_point_x">
@@ -246,6 +304,7 @@
         <item>com.google.android.apps.photos/com.google.android.apps.photos.home.HomeActivity</item>
         <item>com.oneplus.mms/com.android.mms.ui.ConversationList</item>
         <item>com.instagram.android/com.instagram.modal.ModalActivity</item>
+        <item>com.taobao.taobao/com.taobao.message.activity.ChatActivity</item>
     </string-array>
     <string-array name="is_margin_top">
         <item>com.instagram.android/com.instagram.mainactivity.MainActivity</item>
@@ -262,6 +321,7 @@
         <item>com.pinterest/com.pinterest.activity.task.activity.MainActivity</item>
         <item>com.heytap.reader/com.zhangyue.iReader.bookshelf.ui.ActivityBookShelf</item>
         <item>com.oneplus.mms/com.android.mms.ui.ConversationList</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.AppPickActivity</item>
     </string-array>
     <string-array name="keep_list_activity">
         <item>com.android.chrome</item>
@@ -279,10 +339,13 @@
         <item>com.android.dialer/com.android.dialer.oneplus.activity.OPDialerSettingsActivity</item>
         <item>com.oneplus.note/com.oneplus.note.ui.EditActivity</item>
         <item>com.oneplus.contacts/com.oneplus.contacts.personal.OnePlusPersonalInfoActivity</item>
-        <item>com.spotify.music/com.spotify.music.MainActivity</item>
         <item>com.whatsapp/com.whatsapp.SettingsNotifications</item>
         <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.settings.SettingsActivity</item>
         <item>com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity</item>
+        <item>tv.danmaku.bili/com.bilibili.bangumi.ui.page.detail.BangumiDetailActivityV3</item>
+        <item>tv.danmaku.bili/tv.danmaku.bili.ui.video.VideoDetailsActivity</item>
+        <item>tv.danmaku.bili/com.bilibili.bililive.videoliveplayer.ui.roomv3.LiveRoomActivityV3</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.modular.video.detail.VideoDetailActivity</item>
     </string-array>
     <string-array name="level1_5_scrollbar_activity">
         <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
@@ -307,9 +370,6 @@
         <item>com.oneplus.mms/com.android.mms.ui.conversation.ConversationActivity</item>
         <item>com.android.dialer/com.android.dialer.oneplus.activity.OPDialerSettingsActivity</item>
         <item>com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity</item>
-        <item>com.spotify.music/com.spotify.music.MainActivity</item>
-        <item>com.oneplus.gallery/com.oneplus.gallery2.OPGalleryActivity</item>
-        <item>com.oneplus.gallery/com.oneplus.gallery.OPGalleryActivity</item>
         <item>com.whatsapp/com.whatsapp.ContactPicker</item>
         <item>com.oneplus.factorymode/com.oneplus.factorymode.EngineerModeMain</item>
     </string-array>
@@ -340,9 +400,15 @@
         <item>com.tencent.mobileqq/cooperation.qzone.QzoneGPUPluginProxyActivity</item>
     </string-array>
     <array name="level_5_list_activity" />
-    <string-array name="limit_left_activity">
-        <item>com.tencent.mm/com.tencent.mm.plugin.webview.ui.tools.WebViewUI</item>
+    <string-array name="limit_left_1_activity">
+        <item>com.android.vending/com.google.android.finsky.activities.MainActivity</item>
     </string-array>
+    <string-array name="limit_left_2_activity">
+        <item>tv.danmaku.bili/com.bilibili.bangumi.ui.page.detail.BangumiDetailActivityV3</item>
+        <item>tv.danmaku.bili/tv.danmaku.bili.ui.video.VideoDetailsActivity</item>
+        <item>tv.danmaku.bili/com.bilibili.bililive.videoliveplayer.ui.roomv3.LiveRoomActivityV3</item>
+    </string-array>
+    <array name="limit_left_activity" />
     <string-array name="limit_right_activity">
         <item>com.android.settings/com.android.settings.SubSettings</item>
     </string-array>
@@ -464,6 +530,7 @@
         <item>com.oneplus.backuprestore/com.oneplus.changeover.QuestionAndAnswer</item>
         <item>com.ebay.mobile/com.ebay.mobile.activities.MainActivity</item>
         <item>com.oneplus.mms/com.oneplus.mms.ui.conversationlist.ClassifiedConversationListActivity</item>
+        <item>com.taobao.taobao/com.taobao.android.purchase.TBPurchaseActivity</item>
     </string-array>
     <string-array name="override_match_threshold_list_3">
         <item>com.google.android.music/com.google.android.music.ui.HomeActivity</item>
@@ -483,12 +550,11 @@
         <item>com.android.settings/com.android.settings.password.ConfirmLockPattern</item>
         <item>com.android.settings/com.android.settings.password.ConfirmDeviceCredentialActivity</item>
     </string-array>
-    <string-array name="scroll_dy_level_2">
-        <item>com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity</item>
-        <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.settings.SettingsActivity</item>
-        <item>com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity</item>
-    </string-array>
+    <array name="scroll_dy_level_2" />
     <array name="scroll_dy_level_3" />
+    <string-array name="selective_stitch_by_view_activity">
+        <item>com.oneplus.gallery/com.oneplus.gallery2.OPGalleryActivity</item>
+    </string-array>
     <array name="shot_next_level_2_list_activity" />
     <array name="shot_next_level_3_list_activity" />
     <string-array name="shot_next_level_4_list_activity">
@@ -522,6 +588,9 @@
         <item>com.facebook.orca/com.facebook.messenger.neue.MainActivity</item>
         <item>com.autonavi.minimap/com.autonavi.map.activity.NewMapActivity</item>
         <item>jp.naver.line.android/jp.naver.line.android.activity.chathistory.ChatHistoryActivity</item>
+        <item>com.taobao.taobao/com.taobao.message.activity.ChatActivity</item>
+        <item>com.viber.voip/com.viber.voip.messages.ui.ConversationActivity</item>
+        <item>com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity</item>
     </string-array>
     <string-array name="stitch_next_level_2_list_activity">
         <item>com.android.dialer/com.android.dialer.oneplus.activity.OPDialerSettingsActivity</item>
@@ -560,6 +629,7 @@
         <item>com.oneplus.contacts/com.android.contacts.activities.PeopleActivity</item>
         <item>com.microsoft.teams/com.microsoft.skype.teams.views.activities.MainActivity</item>
         <item>com.whatsapp/com.whatsapp.SettingsNotifications</item>
+        <item>com.taobao.taobao/com.taobao.android.purchase.TBPurchaseActivity</item>
     </string-array>
     <string-array name="strict_list_activity">
         <item>com.tencent.mm/com.tencent.mm.plugin.sns.ui.SnsTimeLineUI</item>
@@ -587,6 +657,7 @@
         <item>com.oneplus.mms</item>
         <item>com.google.android.apps.docs.editors.docs</item>
         <item>com.google.android.cellbroadcastreceiver</item>
+        <item>com.taobao.taobao</item>
     </string-array>
     <string-array name="with_issue_report_activity">
         <item>com.taobao.taobao</item>

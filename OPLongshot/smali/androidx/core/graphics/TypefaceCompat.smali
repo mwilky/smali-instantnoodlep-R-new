@@ -209,7 +209,7 @@
     return-object p0
 .end method
 
-.method public static createFromResourcesFamilyXml(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$a;Landroid/content/res/Resources;IILb/h/e/c/b$a;Landroid/os/Handler;Z)Landroid/graphics/Typeface;
+.method public static createFromResourcesFamilyXml(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$a;Landroid/content/res/Resources;IILb/g/e/c/b$a;Landroid/os/Handler;Z)Landroid/graphics/Typeface;
     .locals 7
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -223,7 +223,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p5    # Lb/h/e/c/b$a;
+    .param p5    # Lb/g/e/c/b$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -283,7 +283,7 @@
     :goto_1
     move v5, v1
 
-    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$d;->b()Lb/h/i/a;
+    invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$d;->b()Lb/g/i/a;
 
     move-result-object v1
 
@@ -295,7 +295,7 @@
 
     move v6, p4
 
-    invoke-static/range {v0 .. v6}, Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Lb/h/i/a;Lb/h/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v6}, Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Lb/g/i/a;Lb/g/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 
     move-result-object v0
 
@@ -316,14 +316,14 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p5, v0, p6}, Lb/h/e/c/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
+    invoke-virtual {p5, v0, p6}, Lb/g/e/c/b$a;->b(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     goto :goto_2
 
     :cond_4
     const/4 v1, -0x3
 
-    invoke-virtual {p5, v1, p6}, Lb/h/e/c/b$a;->a(ILandroid/os/Handler;)V
+    invoke-virtual {p5, v1, p6}, Lb/g/e/c/b$a;->a(ILandroid/os/Handler;)V
 
     :cond_5
     :goto_2

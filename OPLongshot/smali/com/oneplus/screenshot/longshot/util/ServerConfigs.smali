@@ -27,7 +27,7 @@
 
 # virtual methods
 .method public getConfigJsonForActivityName(Landroid/content/ComponentName;)Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -83,7 +83,7 @@
 
     const/4 v3, 0x5
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_2
     const-string v4, "ComponentInfo{jp.naver.line.android/jp.naver.line.android.activity.chathistory.ChatHistoryActivity}"
@@ -96,9 +96,22 @@
 
     const/4 v3, 0x4
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :sswitch_3
+    const-string v4, "ComponentInfo{com.oneplus.gallery/com.oneplus.gallery2.OPGalleryActivity}"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 v3, 0xa
+
+    goto/16 :goto_0
+
+    :sswitch_4
     const-string v4, "ComponentInfo{com.twitter.android/com.twitter.app.main.MainActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -109,9 +122,9 @@
 
     const/4 v3, 0x0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :sswitch_4
+    :sswitch_5
     const-string v4, "ComponentInfo{com.microsoft.teams/com.microsoft.skype.teams.views.activities.MainActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -124,7 +137,7 @@
 
     goto :goto_0
 
-    :sswitch_5
+    :sswitch_6
     const-string v4, "ComponentInfo{com.google.android.apps.youtube.music/com.google.android.apps.youtube.music.activities.MusicActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -137,7 +150,7 @@
 
     goto :goto_0
 
-    :sswitch_6
+    :sswitch_7
     const-string v4, "ComponentInfo{com.pinterest/com.pinterest.activity.task.activity.MainActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -150,7 +163,7 @@
 
     goto :goto_0
 
-    :sswitch_7
+    :sswitch_8
     const-string v4, "ComponentInfo{com.whatsapp/com.whatsapp.Conversation}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -163,7 +176,20 @@
 
     goto :goto_0
 
-    :sswitch_8
+    :sswitch_9
+    const-string v4, "ComponentInfo{com.oneplus.gamespace/com.oneplus.gamespace.ui.main.MainGameActivity}"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 v3, 0xd
+
+    goto :goto_0
+
+    :sswitch_a
     const-string v4, "ComponentInfo{com.heytap.browser/com.android.browser.BrowserActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -176,7 +202,7 @@
 
     goto :goto_0
 
-    :sswitch_9
+    :sswitch_b
     const-string v4, "ComponentInfo{com.oneplus.dialer/com.android.dialer.oneplus.activity.OPDialtactsActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -185,12 +211,38 @@
 
     if-eqz p1, :cond_1
 
-    const/16 v3, 0xa
+    const/16 v3, 0xb
 
     goto :goto_0
 
-    :sswitch_a
+    :sswitch_c
     const-string v4, "ComponentInfo{com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity}"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_d
+    const-string v4, "ComponentInfo{com.oneplus.contacts/com.oneplus.contacts.activities.OPPeopleActivity}"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 v3, 0xe
+
+    goto :goto_0
+
+    :sswitch_e
+    const-string v4, "ComponentInfo{com.viber.voip/com.viber.voip.messages.ui.ConversationActivity}"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -200,11 +252,15 @@
 
     if-eqz p1, :cond_1
 
-    const/4 v3, 0x6
+    const/16 v3, 0xc
 
     :cond_1
     :goto_0
-    const-string p1, "getViewVisibility"
+    const-string p1, "findAtleastOneViewVisibilityOnScreen"
+
+    const-string v4, "empty_view"
+
+    const-string v5, "getViewVisibility"
 
     packed-switch v3, :pswitch_data_0
 
@@ -212,119 +268,147 @@
 
     :pswitch_0
     :try_start_1
-    const-string p1, "speed_dial_empty_view"
+    const-string p1, "empty_list_view"
 
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v1, v5, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string p1, "calllog_empty_view"
-
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    const-string p1, "contacts_empty_view"
-
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    const-string p1, "findAtleastOneViewVisibilityOnScreen"
-
-    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_1
-    const-string v2, "empty_view"
+    invoke-virtual {v2, v4}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_2
-    const-string v2, "player_top_controls"
+    const-string p1, "btn_jump_to_bottom"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_3
-    const-string v2, "b54"
+    const-string v3, "speed_dial_empty_view"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    const-string v3, "calllog_empty_view"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    const-string v3, "contacts_empty_view"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_4
-    sget-object v2, Lc/c/b/h/b;->e:Ljava/lang/String;
+    const-string p1, "grid_view_container"
 
-    const-string v3, "url_bar"
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v2, "tab_switcher_toolbar"
-
-    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v5, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_5
-    const-string p1, "scroll_2_top_btn"
-
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v5, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_6
-    const-string p1, "chathistory_scroll_to_bottom_button"
+    const-string p1, "player_top_controls"
 
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v5, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_7
-    const-string p1, "scroll_bottom"
+    const-string p1, "b54"
 
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v5, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_8
-    const-string p1, "bottom_nav_bar"
+    sget-object p1, Lc/b/b/h/b;->e:Ljava/lang/String;
 
-    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+    const-string v2, "url_bar"
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string p1, "tab_switcher_toolbar"
+
+    invoke-virtual {v1, v5, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_9
-    const-string p1, "fab_layout"
+    const-string p1, "scroll_2_top_btn"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     goto :goto_1
 
     :pswitch_a
+    const-string p1, "chathistory_scroll_to_bottom_button"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_b
+    const-string p1, "scroll_bottom"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_c
+    const-string p1, "bottom_nav_bar"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_d
+    const-string p1, "fab_layout"
+
+    invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    :pswitch_e
     const-string p1, "composer_write"
 
     invoke-virtual {v2, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object p1, Lc/c/b/h/b;->d:Ljava/lang/String;
+    sget-object p1, Lc/b/b/h/b;->d:Ljava/lang/String;
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -344,18 +428,20 @@
 
     return-object v0
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
-        -0x1242b13d -> :sswitch_a
-        -0xdc13683 -> :sswitch_9
-        -0x44d25f7 -> :sswitch_8
-        0x24e8feb -> :sswitch_7
-        0x3618373 -> :sswitch_6
-        0x42bf0c7 -> :sswitch_5
-        0x2f164707 -> :sswitch_4
-        0x2f1bd90d -> :sswitch_3
+        -0x729b425c -> :sswitch_e
+        -0x6c809994 -> :sswitch_d
+        -0x1242b13d -> :sswitch_c
+        -0xdc13683 -> :sswitch_b
+        -0x44d25f7 -> :sswitch_a
+        0x152e0cd -> :sswitch_9
+        0x24e8feb -> :sswitch_8
+        0x3618373 -> :sswitch_7
+        0x42bf0c7 -> :sswitch_6
+        0x2f164707 -> :sswitch_5
+        0x2f1bd90d -> :sswitch_4
+        0x3d156b08 -> :sswitch_3
         0x50b1b3ac -> :sswitch_2
         0x5e2c0e48 -> :sswitch_1
         0x601c3c8a -> :sswitch_0
@@ -363,6 +449,10 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
         :pswitch_a
         :pswitch_9
         :pswitch_8

@@ -33,7 +33,7 @@
 
     new-instance p1, Landroid/os/Handler;
 
-    invoke-static {}, Lc/c/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
 
     move-result-object p2
 
@@ -151,8 +151,19 @@
 
 # virtual methods
 .method public getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
-    .locals 1
+    .locals 2
 
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->stitchViewServiceUnsupportedCase:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->WAITTING_PREVIEW:Lcom/oneplus/screenshot/longshot/state/LongshotState;
+
+    return-object v0
+
+    :cond_0
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->STITCH_NEXT:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
     return-object v0

@@ -332,17 +332,17 @@
 
     const-string v7, "Longshot.capture"
 
-    invoke-static {v7}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v7}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
-    invoke-static {v3, v5, v6, v2}, Lc/c/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
+    invoke-static {v3, v5, v6, v2}, Lc/b/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     const-string v7, "Longshot.hwBitmap.copy"
 
-    invoke-static {v7}, Lb/h/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v7}, Lb/g/h/d;->a(Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -380,7 +380,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lb/h/h/d;->b()V
+    invoke-static {}, Lb/g/h/d;->b()V
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 

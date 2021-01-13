@@ -50,7 +50,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lb/r/a/a/a;->l:[I
+    sget-object v0, Lb/q/a/a/a;->l:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -420,7 +420,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/f/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p1}, Lb/g/f/e;->e(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p2
 

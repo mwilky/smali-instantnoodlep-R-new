@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/l/u;
+.implements Lb/g/l/u;
 
 
 # annotations
@@ -56,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Lb/c/n/a;->mVisibilityAnim:Lb/h/l/t;
+    iput-object v0, p1, Lb/c/n/a;->mVisibilityAnim:Lb/g/l/t;
 
     iget v0, p0, Lb/c/n/a$b;->b:I
 
@@ -89,12 +89,12 @@
     return-void
 .end method
 
-.method public d(Lb/h/l/t;I)Lb/c/n/a$b;
+.method public d(Lb/g/l/t;I)Lb/c/n/a$b;
     .locals 1
 
     iget-object v0, p0, Lb/c/n/a$b;->c:Lb/c/n/a;
 
-    iput-object p1, v0, Lb/c/n/a;->mVisibilityAnim:Lb/h/l/t;
+    iput-object p1, v0, Lb/c/n/a;->mVisibilityAnim:Lb/g/l/t;
 
     iput p2, p0, Lb/c/n/a$b;->b:I
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lc/b/c/s2/a;)V
+.method public abstract a(Lc/a/c/s2/a;)V
 .end method

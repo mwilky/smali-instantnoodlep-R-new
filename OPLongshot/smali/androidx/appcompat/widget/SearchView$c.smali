@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$c;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->D:Lb/i/a/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->D:Lb/h/a/a;
 
     instance-of v1, v0, Landroidx/appcompat/widget/SuggestionsAdapter;
 
@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lb/i/a/a;->changeCursor(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lb/h/a/a;->changeCursor(Landroid/database/Cursor;)V
 
     :cond_0
     return-void

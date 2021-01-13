@@ -50,7 +50,7 @@
 
     const-string p1, "Preview activity"
 
-    invoke-static {p1}, Lc/b/c/z0;->d(Ljava/lang/String;)V
+    invoke-static {p1}, Lc/a/c/z0;->d(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -88,7 +88,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/b/c/z0;->f(Ljava/lang/String;)V
+    invoke-static {p1}, Lc/a/c/z0;->f(Ljava/lang/String;)V
 
     const-string v0, "Preview failure"
 
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/b/c/z0;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lc/a/c/z0;->d(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
@@ -154,7 +154,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/b/c/z0;->d(Ljava/lang/String;)V
+    invoke-static {p1}, Lc/a/c/z0;->d(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -181,7 +181,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/b/c/z0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lc/a/c/z0;->a(Ljava/lang/String;)V
 
     :goto_0
     return-void

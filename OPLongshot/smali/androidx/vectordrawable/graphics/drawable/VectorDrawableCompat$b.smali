@@ -55,7 +55,7 @@
     return-void
 
     :cond_0
-    sget-object v0, Lb/r/a/a/a;->d:[I
+    sget-object v0, Lb/q/a/a/a;->d:[I
 
     invoke-static {p1, p3, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -90,11 +90,11 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v1}, Lb/h/f/e;->d(Ljava/lang/String;)[Lb/h/f/e$b;
+    invoke-static {v1}, Lb/g/f/e;->d(Ljava/lang/String;)[Lb/g/f/e$b;
 
     move-result-object v1
 
-    iput-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/h/f/e$b;
+    iput-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$f;->a:[Lb/g/f/e$b;
 
     :cond_1
     const/4 v1, 0x2

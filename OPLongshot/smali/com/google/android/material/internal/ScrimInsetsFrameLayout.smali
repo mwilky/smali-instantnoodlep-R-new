@@ -84,9 +84,9 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->drawBottomInsetForeground:Z
 
-    sget-object v3, Lc/b/b/b/l;->ScrimInsetsFrameLayout:[I
+    sget-object v3, Lc/a/b/b/l;->ScrimInsetsFrameLayout:[I
 
-    sget v5, Lc/b/b/b/k;->Widget_Design_ScrimInsetsFrameLayout:I
+    sget v5, Lc/a/b/b/k;->Widget_Design_ScrimInsetsFrameLayout:I
 
     const/4 v1, 0x0
 
@@ -102,7 +102,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->ScrimInsetsFrameLayout_insetForeground:I
+    sget p2, Lc/a/b/b/l;->ScrimInsetsFrameLayout_insetForeground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -118,7 +118,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/h/l/m;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/g/l/m;)V
 
     return-void
 .end method
@@ -306,7 +306,7 @@
     return-void
 .end method
 
-.method public onInsetsChanged(Lb/h/l/x;)V
+.method public onInsetsChanged(Lb/g/l/x;)V
     .locals 0
 
     return-void

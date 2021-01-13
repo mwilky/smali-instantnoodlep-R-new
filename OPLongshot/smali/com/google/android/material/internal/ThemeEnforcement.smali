@@ -29,7 +29,7 @@
 
     new-array v1, v0, [I
 
-    sget v2, Lc/b/b/b/b;->colorPrimary:I
+    sget v2, Lc/a/b/b/b;->colorPrimary:I
 
     const/4 v3, 0x0
 
@@ -39,7 +39,7 @@
 
     new-array v0, v0, [I
 
-    sget v1, Lc/b/b/b/b;->colorPrimaryVariant:I
+    sget v1, Lc/a/b/b/b;->colorPrimaryVariant:I
 
     aput v1, v0, v3
 
@@ -87,13 +87,13 @@
         .end annotation
     .end param
 
-    sget-object v0, Lc/b/b/b/l;->ThemeEnforcement:[I
+    sget-object v0, Lc/a/b/b/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/l;->ThemeEnforcement_enforceMaterialTheme:I
+    sget p2, Lc/a/b/b/l;->ThemeEnforcement_enforceMaterialTheme:I
 
     const/4 p3, 0x0
 
@@ -113,7 +113,7 @@
 
     move-result-object p2
 
-    sget p3, Lc/b/b/b/b;->isMaterialTheme:I
+    sget p3, Lc/a/b/b/b;->isMaterialTheme:I
 
     const/4 v0, 0x1
 
@@ -187,13 +187,13 @@
         .end annotation
     .end param
 
-    sget-object v0, Lc/b/b/b/l;->ThemeEnforcement:[I
+    sget-object v0, Lc/a/b/b/l;->ThemeEnforcement:[I
 
     invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lc/b/b/b/l;->ThemeEnforcement_enforceTextAppearance:I
+    sget v1, Lc/a/b/b/l;->ThemeEnforcement_enforceTextAppearance:I
 
     const/4 v2, 0x0
 
@@ -225,7 +225,7 @@
 
     :cond_2
     :goto_0
-    sget p0, Lc/b/b/b/l;->ThemeEnforcement_android_textAppearance:I
+    sget p0, Lc/a/b/b/l;->ThemeEnforcement_android_textAppearance:I
 
     const/4 p1, -0x1
 

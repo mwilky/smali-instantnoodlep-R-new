@@ -746,7 +746,7 @@
 
     if-gt p1, p5, :cond_0
 
-    invoke-static {p3, p4, p5}, Lb/h/g/a;->b(III)I
+    invoke-static {p3, p4, p5}, Lb/g/g/a;->b(III)I
 
     move-result p2
 

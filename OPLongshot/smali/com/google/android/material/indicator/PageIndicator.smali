@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->qs_page_indicator_width:I
+    sget p2, Lc/a/b/b/d;->qs_page_indicator_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/d;->qs_page_indicator_height:I
+    sget p2, Lc/a/b/b/d;->qs_page_indicator_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -125,7 +125,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/b/b/b/g;->pageIndicator_alpha_material:I
+    sget p2, Lc/a/b/b/g;->pageIndicator_alpha_material:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -394,24 +394,24 @@
 
     if-eqz p2, :cond_0
 
-    sget p1, Lc/b/b/b/e;->op_major_b_a_animation:I
+    sget p1, Lc/a/b/b/e;->op_major_b_a_animation:I
 
     return p1
 
     :cond_0
-    sget p1, Lc/b/b/b/e;->op_major_b_c_animation:I
+    sget p1, Lc/a/b/b/e;->op_major_b_c_animation:I
 
     return p1
 
     :cond_1
     if-eqz p2, :cond_2
 
-    sget p1, Lc/b/b/b/e;->op_major_a_b_animation:I
+    sget p1, Lc/a/b/b/e;->op_major_a_b_animation:I
 
     return p1
 
     :cond_2
-    sget p1, Lc/b/b/b/e;->op_major_c_b_animation:I
+    sget p1, Lc/a/b/b/e;->op_major_c_b_animation:I
 
     return p1
 
@@ -420,24 +420,24 @@
 
     if-eqz p2, :cond_4
 
-    sget p1, Lc/b/b/b/e;->op_minor_b_c_animation:I
+    sget p1, Lc/a/b/b/e;->op_minor_b_c_animation:I
 
     return p1
 
     :cond_4
-    sget p1, Lc/b/b/b/e;->op_minor_b_a_animation:I
+    sget p1, Lc/a/b/b/e;->op_minor_b_a_animation:I
 
     return p1
 
     :cond_5
     if-eqz p2, :cond_6
 
-    sget p1, Lc/b/b/b/e;->op_minor_c_b_animation:I
+    sget p1, Lc/a/b/b/e;->op_minor_c_b_animation:I
 
     return p1
 
     :cond_6
-    sget p1, Lc/b/b/b/e;->op_minor_a_b_animation:I
+    sget p1, Lc/a/b/b/e;->op_minor_a_b_animation:I
 
     return p1
 .end method
@@ -494,7 +494,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    sget v4, Lc/b/b/b/e;->op_major_a_b:I
+    sget v4, Lc/a/b/b/e;->op_major_a_b:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -744,7 +744,7 @@
 
     move-result-object v1
 
-    sget v2, Lc/b/b/b/j;->op_accessibility_quick_settings_page:I
+    sget v2, Lc/a/b/b/j;->op_accessibility_quick_settings_page:I
 
     const/4 v3, 0x2
 
@@ -928,7 +928,7 @@
 
     invoke-direct {v2, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lc/b/b/b/e;->op_minor_a_b:I
+    sget v3, Lc/a/b/b/e;->op_minor_a_b:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 

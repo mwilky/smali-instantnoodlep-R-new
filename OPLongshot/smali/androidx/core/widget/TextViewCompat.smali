@@ -471,13 +471,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lb/h/m/i;
+    instance-of v0, p0, Lb/g/m/i;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Lb/h/m/i;
+    check-cast p0, Lb/g/m/i;
 
-    invoke-interface {p0, p1}, Lb/h/m/i;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p0, p1}, Lb/g/m/i;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     :goto_0
@@ -508,13 +508,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lb/h/m/i;
+    instance-of v0, p0, Lb/g/m/i;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Lb/h/m/i;
+    check-cast p0, Lb/g/m/i;
 
-    invoke-interface {p0, p1}, Lb/h/m/i;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p0, p1}, Lb/g/m/i;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_1
     :goto_0

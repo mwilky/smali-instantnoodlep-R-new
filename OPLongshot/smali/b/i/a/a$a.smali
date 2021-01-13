@@ -1,6 +1,9 @@
-.class public Lb/i/a/a$a;
-.super Landroid/database/ContentObserver;
+.class public final Lb/i/a/a$a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # annotations
@@ -9,46 +12,38 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = "a"
+    accessFlags = 0x9
+    name = null
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Lb/i/a/a;
-
-
 # direct methods
-.method public constructor <init>(Lb/i/a/a;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lb/i/a/a$a;->a:Lb/i/a/a;
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public deliverSelfNotifications()Z
-    .locals 1
+.method public getInterpolation(F)F
+    .locals 2
 
-    const/4 v0, 0x1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return v0
-.end method
+    sub-float/2addr p1, v0
 
-.method public onChange(Z)V
-    .locals 0
+    mul-float v1, p1, p1
 
-    iget-object p1, p0, Lb/i/a/a$a;->a:Lb/i/a/a;
+    mul-float/2addr v1, p1
 
-    invoke-virtual {p1}, Lb/i/a/a;->onContentChanged()V
+    mul-float/2addr v1, p1
 
-    return-void
+    mul-float/2addr v1, p1
+
+    add-float/2addr v1, v0
+
+    return v1
 .end method

@@ -302,13 +302,13 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Lb/m/c;
+    invoke-static {p0}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Lb/l/c;
 
     move-result-object p0
 
     new-instance v0, Landroidx/lifecycle/Lifecycling$1;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Lb/m/c;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/Lifecycling$1;-><init>(Lb/l/c;)V
 
     return-object v0
 .end method
@@ -367,7 +367,7 @@
 
     if-eqz p0, :cond_0
 
-    const-class v0, Lb/m/d;
+    const-class v0, Lb/l/d;
 
     invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -386,14 +386,14 @@
     return p0
 .end method
 
-.method public static lifecycleEventObserver(Ljava/lang/Object;)Lb/m/c;
+.method public static lifecycleEventObserver(Ljava/lang/Object;)Lb/l/c;
     .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    instance-of v0, p0, Lb/m/c;
+    instance-of v0, p0, Lb/l/c;
 
-    instance-of v1, p0, Lb/m/b;
+    instance-of v1, p0, Lb/l/b;
 
     if-eqz v0, :cond_0
 
@@ -403,11 +403,11 @@
 
     move-object v1, p0
 
-    check-cast v1, Lb/m/b;
+    check-cast v1, Lb/l/b;
 
-    check-cast p0, Lb/m/c;
+    check-cast p0, Lb/l/c;
 
-    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/m/b;Lb/m/c;)V
+    invoke-direct {v0, v1, p0}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/l/b;Lb/l/c;)V
 
     return-object v0
 
@@ -416,18 +416,18 @@
 
     new-instance v0, Landroidx/lifecycle/FullLifecycleObserverAdapter;
 
-    check-cast p0, Lb/m/b;
+    check-cast p0, Lb/l/b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/m/b;Lb/m/c;)V
+    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FullLifecycleObserverAdapter;-><init>(Lb/l/b;Lb/l/c;)V
 
     return-object v0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    check-cast p0, Lb/m/c;
+    check-cast p0, Lb/l/c;
 
     return-object p0
 
@@ -563,9 +563,9 @@
     return v2
 
     :cond_1
-    sget-object v0, Lb/m/a;->c:Lb/m/a;
+    sget-object v0, Lb/l/a;->c:Lb/l/a;
 
-    invoke-virtual {v0, p0}, Lb/m/a;->d(Ljava/lang/Class;)Z
+    invoke-virtual {v0, p0}, Lb/l/a;->d(Ljava/lang/Class;)Z
 
     move-result v0
 

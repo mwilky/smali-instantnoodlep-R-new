@@ -52,6 +52,12 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    invoke-static {}, Lc/b/a/g;->d()Lc/b/a/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lc/b/a/g;->a(Landroid/content/Context;)V
+
     new-instance v0, Landroidx/appcompat/app/AlertController$AlertParams;
 
     new-instance v1, Landroid/view/ContextThemeWrapper;

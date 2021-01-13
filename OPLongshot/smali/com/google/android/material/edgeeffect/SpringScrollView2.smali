@@ -59,7 +59,7 @@
 
 .field public v:I
 
-.field public w:Lc/b/b/b/b0/b/a;
+.field public w:Landroidx/dynamicanimation/animation/SpringAnimation;
 
 .field public x:Lcom/google/android/material/edgeeffect/SpringScrollView2$a;
 
@@ -498,19 +498,19 @@
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0, p1}, Lc/b/b/b/b0/b/a;->n(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->y:F
 
-    invoke-virtual {p1, v0}, Lc/b/b/b/b0/b/a;->m(F)Lc/b/b/b/b0/b/a;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Lc/b/b/b/b0/b/a;
+    iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Lc/b/b/b/b0/b/a;->start()V
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
     return-void
 
@@ -639,9 +639,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Lc/b/b/b/b0/b/a;
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringScrollView2;->w:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {v0}, Lc/b/b/b/b0/b/a;->isRunning()Z
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->isRunning()Z
 
     move-result v0
 

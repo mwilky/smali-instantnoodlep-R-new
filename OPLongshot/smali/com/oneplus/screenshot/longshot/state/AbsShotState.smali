@@ -328,7 +328,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080061
+    const v1, 0x7f080060
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -393,7 +393,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    const v1, 0x7f100045
+    const v1, 0x7f10003d
 
     const v2, 0x7f0d003e
 

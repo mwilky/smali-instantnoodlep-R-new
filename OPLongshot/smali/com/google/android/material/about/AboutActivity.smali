@@ -160,7 +160,7 @@
 .method public final K()V
     .locals 4
 
-    sget v0, Lc/b/b/b/f;->app_name:I
+    sget v0, Lc/a/b/b/f;->app_name:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -170,7 +170,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/about/AboutActivity;->s:Landroid/widget/TextView;
 
-    sget v0, Lc/b/b/b/f;->app_icon:I
+    sget v0, Lc/a/b/b/f;->app_icon:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/about/AboutActivity;->t:Landroid/widget/ImageView;
 
-    sget v0, Lc/b/b/b/f;->app_version:I
+    sget v0, Lc/a/b/b/f;->app_version:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -190,7 +190,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/about/AboutActivity;->u:Landroid/widget/TextView;
 
-    sget v0, Lc/b/b/b/f;->app_right_reserved:I
+    sget v0, Lc/a/b/b/f;->app_right_reserved:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +240,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    sget v0, Lc/b/b/b/f;->button_space:I
+    sget v0, Lc/a/b/b/f;->button_space:I
 
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -266,7 +266,7 @@
 .method public final M()V
     .locals 5
 
-    invoke-static {p0}, Lc/c/a/g;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/a/i;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    invoke-static {p0}, Lc/c/a/g;->c(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lc/b/a/i;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -285,7 +285,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/about/AboutActivity;->u:Landroid/widget/TextView;
 
-    sget v2, Lc/b/b/b/j;->about_app_version_text:I
+    sget v2, Lc/a/b/b/j;->about_app_version_text:I
 
     const/4 v3, 0x1
 
@@ -306,7 +306,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_1
-    invoke-static {p0}, Lc/c/a/g;->a(Landroid/content/Context;)I
+    invoke-static {p0}, Lc/b/a/i;->a(Landroid/content/Context;)I
 
     move-result v0
 
@@ -335,7 +335,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/about/AboutActivity;->v:Landroid/widget/TextView;
 
-    sget v3, Lc/b/b/b/j;->about_app_right_reserved:I
+    sget v3, Lc/a/b/b/j;->about_app_right_reserved:I
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -404,14 +404,14 @@
 
     if-eqz p1, :cond_2
 
-    sget p1, Lc/b/b/b/f;->app_icon:I
+    sget p1, Lc/a/b/b/f;->app_icon:I
 
     invoke-virtual {v0, v1, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
     goto :goto_1
 
     :cond_2
-    sget p1, Lc/b/b/b/f;->lottie_panel:I
+    sget p1, Lc/a/b/b/f;->lottie_panel:I
 
     invoke-virtual {v0, v1, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
@@ -543,11 +543,17 @@
 
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    sget p1, Lc/b/b/b/h;->about_activity:I
+    invoke-static {}, Lc/b/a/g;->d()Lc/b/a/g;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lc/b/a/g;->a(Landroid/content/Context;)V
+
+    sget p1, Lc/a/b/b/h;->about_activity:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    sget p1, Lc/b/b/b/f;->action_bar:I
+    sget p1, Lc/a/b/b/f;->action_bar:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -575,7 +581,7 @@
 
     invoke-virtual {p0}, Lcom/google/android/material/about/AboutActivity;->N()V
 
-    sget p1, Lc/b/b/b/f;->lottie_panel:I
+    sget p1, Lc/a/b/b/f;->lottie_panel:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -585,7 +591,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/about/AboutActivity;->O(Landroid/widget/FrameLayout;)V
 
-    sget p1, Lc/b/b/b/f;->release_note_panel:I
+    sget p1, Lc/a/b/b/f;->release_note_panel:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 

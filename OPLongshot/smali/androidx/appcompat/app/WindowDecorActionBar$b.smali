@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/app/WindowDecorActionBar$b;
-.super Lb/h/l/v;
+.super Lb/g/l/v;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/app/WindowDecorActionBar$b;->a:Landroidx/appcompat/app/WindowDecorActionBar;
 
-    invoke-direct {p0}, Lb/h/l/v;-><init>()V
+    invoke-direct {p0}, Lb/g/l/v;-><init>()V
 
     return-void
 .end method

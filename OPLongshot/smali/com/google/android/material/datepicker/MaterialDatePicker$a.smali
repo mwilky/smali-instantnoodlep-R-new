@@ -73,7 +73,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker$a;->a:Lcom/google/android/material/datepicker/MaterialDatePicker;
 
-    invoke-virtual {p1}, Lb/k/a/b;->dismiss()V
+    invoke-virtual {p1}, Lb/j/a/b;->dismiss()V
 
     return-void
 .end method

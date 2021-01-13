@@ -476,7 +476,7 @@
 
     const/16 v0, 0x44
 
-    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
+    invoke-static {p1, v0}, Lb/g/f/d;->d(II)I
 
     move-result v0
 
@@ -484,7 +484,7 @@
 
     const/16 v0, 0x14
 
-    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
+    invoke-static {p1, v0}, Lb/g/f/d;->d(II)I
 
     move-result v0
 
@@ -492,7 +492,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lb/h/f/d;->d(II)I
+    invoke-static {p1, v0}, Lb/g/f/d;->d(II)I
 
     move-result p1
 

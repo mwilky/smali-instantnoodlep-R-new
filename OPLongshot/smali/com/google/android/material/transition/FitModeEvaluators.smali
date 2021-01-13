@@ -10,9 +10,9 @@
 
 
 # static fields
-.field public static final HEIGHT:Lc/b/b/b/l0/c;
+.field public static final HEIGHT:Lc/a/b/b/k0/c;
 
-.field public static final WIDTH:Lc/b/b/b/l0/c;
+.field public static final WIDTH:Lc/a/b/b/k0/c;
 
 
 # direct methods
@@ -23,13 +23,13 @@
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$a;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/b/b/b/l0/c;
+    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/a/b/b/k0/c;
 
     new-instance v0, Lcom/google/android/material/transition/FitModeEvaluators$b;
 
     invoke-direct {v0}, Lcom/google/android/material/transition/FitModeEvaluators$b;-><init>()V
 
-    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/b/b/b/l0/c;
+    sput-object v0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/a/b/b/k0/c;
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public static get(IZLandroid/graphics/RectF;Landroid/graphics/RectF;)Lc/b/b/b/l0/c;
+.method public static get(IZLandroid/graphics/RectF;Landroid/graphics/RectF;)Lc/a/b/b/k0/c;
     .locals 0
 
     if-eqz p0, :cond_2
@@ -55,7 +55,7 @@
 
     if-ne p0, p1, :cond_0
 
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/b/b/b/l0/c;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/a/b/b/k0/c;
 
     return-object p0
 
@@ -81,7 +81,7 @@
     throw p1
 
     :cond_1
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/b/b/b/l0/c;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/a/b/b/k0/c;
 
     return-object p0
 
@@ -92,12 +92,12 @@
 
     if-eqz p0, :cond_3
 
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/b/b/b/l0/c;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->WIDTH:Lc/a/b/b/k0/c;
 
     goto :goto_0
 
     :cond_3
-    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/b/b/b/l0/c;
+    sget-object p0, Lcom/google/android/material/transition/FitModeEvaluators;->HEIGHT:Lc/a/b/b/k0/c;
 
     :goto_0
     return-object p0

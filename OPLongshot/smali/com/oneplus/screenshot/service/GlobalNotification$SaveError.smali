@@ -30,7 +30,7 @@
 
     iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f100095
+    const v0, 0x7f10008a
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -42,7 +42,7 @@
 
     iget-object p2, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v0, 0x7f100094
+    const v0, 0x7f100089
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -88,7 +88,7 @@
 .method public getSmallIcon()I
     .locals 1
 
-    const v0, 0x7f0801fd
+    const v0, 0x7f0801f1
 
     return v0
 .end method
@@ -98,7 +98,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f100095
+    const v1, 0x7f10008a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

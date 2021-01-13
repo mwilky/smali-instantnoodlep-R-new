@@ -1,5 +1,5 @@
 .class public Landroidx/fragment/app/Fragment$c;
-.super Lb/k/a/c;
+.super Lb/j/a/c;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/Fragment;
 
-    invoke-direct {p0}, Lb/k/a/c;-><init>()V
+    invoke-direct {p0}, Lb/j/a/c;-><init>()V
 
     return-void
 .end method

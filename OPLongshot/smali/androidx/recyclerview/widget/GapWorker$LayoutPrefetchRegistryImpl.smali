@@ -176,9 +176,9 @@
 
     if-eqz p2, :cond_1
 
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/o/d/a;
+    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
 
-    invoke-virtual {v1}, Lb/o/d/a;->p()Z
+    invoke-virtual {v1}, Lb/n/d/a;->p()Z
 
     move-result v1
 

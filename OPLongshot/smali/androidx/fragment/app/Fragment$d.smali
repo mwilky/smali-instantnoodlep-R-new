@@ -43,9 +43,9 @@
 
 .field public n:Ljava/lang/Boolean;
 
-.field public o:Lb/h/d/d;
+.field public o:Lb/g/d/d;
 
-.field public p:Lb/h/d/d;
+.field public p:Lb/g/d/d;
 
 .field public q:Z
 
@@ -76,9 +76,9 @@
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$d;->l:Ljava/lang/Object;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Lb/h/d/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Lb/g/d/d;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Lb/h/d/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Lb/g/d/d;
 
     return-void
 .end method

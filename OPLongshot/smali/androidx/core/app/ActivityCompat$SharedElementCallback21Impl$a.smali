@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb/h/d/d$a;
+.implements Lb/g/d/d$a;
 
 
 # annotations

@@ -33,7 +33,7 @@
 .method public getReason()I
     .locals 1
 
-    const v0, 0x7f100092
+    const v0, 0x7f100087
 
     return v0
 .end method

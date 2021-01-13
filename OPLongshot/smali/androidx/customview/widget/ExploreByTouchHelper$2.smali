@@ -21,9 +21,9 @@
         "Ljava/lang/Object;",
         "Landroidx/customview/widget/FocusStrategy$CollectionAdapter<",
         "Landroidx/collection/SparseArrayCompat<",
-        "Lb/h/l/y/d;",
+        "Lb/g/l/y/d;",
         ">;",
-        "Lb/h/l/y/d;",
+        "Lb/g/l/y/d;",
         ">;"
     }
 .end annotation
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public get(Landroidx/collection/SparseArrayCompat;I)Lb/h/l/y/d;
+.method public get(Landroidx/collection/SparseArrayCompat;I)Lb/g/l/y/d;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Lb/h/l/y/d;",
+            "Lb/g/l/y/d;",
             ">;I)",
-            "Lb/h/l/y/d;"
+            "Lb/g/l/y/d;"
         }
     .end annotation
 
@@ -56,7 +56,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lb/h/l/y/d;
+    check-cast p1, Lb/g/l/y/d;
 
     return-object p1
 .end method
@@ -66,7 +66,7 @@
 
     check-cast p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Lb/h/l/y/d;
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Lb/g/l/y/d;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Lb/h/l/y/d;",
+            "Lb/g/l/y/d;",
             ">;)I"
         }
     .end annotation

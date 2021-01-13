@@ -25,7 +25,7 @@
 
     const-string v0, "ro.boot.project_name"
 
-    invoke-static {v0}, Lc/c/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     const-string v1, "OpCustomizeSettings"
 
-    invoke-static {v1, v0}, Lc/c/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lc/b/c/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->a:Ljava/lang/String;
 
@@ -129,9 +129,9 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lc/c/c/a/c;
+    new-instance v0, Lc/b/c/a/c;
 
-    invoke-direct {v0}, Lc/c/c/a/c;-><init>()V
+    invoke-direct {v0}, Lc/b/c/a/c;-><init>()V
 
     sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
@@ -149,9 +149,9 @@
 
     :cond_3
     :goto_1
-    new-instance v0, Lc/c/c/a/b;
+    new-instance v0, Lc/b/c/a/b;
 
-    invoke-direct {v0}, Lc/c/c/a/b;-><init>()V
+    invoke-direct {v0}, Lc/b/c/a/b;-><init>()V
 
     sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->b:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
