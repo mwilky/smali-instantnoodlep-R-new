@@ -392,6 +392,12 @@
 
     move-result-object v1
 
+    if-eqz v1, :cond_1
+
+    array-length v2, v1
+
+    if-lez v2, :cond_1
+
     invoke-virtual {p1}, Landroid/app/ApplicationExitInfo;->getPackageUid()I
 
     move-result v2
@@ -412,9 +418,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v3}, Lcom/android/server/am/AppExitInfoTracker;->schedulePersistProcessExitInfo(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/server/am/AppExitInfoTracker;->schedulePersistProcessExitInfo(Z)V
 
     return-object v0
 .end method

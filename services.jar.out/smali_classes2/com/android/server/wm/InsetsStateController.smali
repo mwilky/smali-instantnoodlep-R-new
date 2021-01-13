@@ -1150,12 +1150,6 @@
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3}, Landroid/view/InsetsSource;->isVisible()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
     new-instance v4, Landroid/view/InsetsSource;
 
     invoke-direct {v4, v3}, Landroid/view/InsetsSource;-><init>(Landroid/view/InsetsSource;)V
@@ -1163,8 +1157,6 @@
     move-object v3, v4
 
     const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Landroid/view/InsetsSource;->setVisible(Z)V
 
     invoke-virtual {v3, v4, v4, v4, v4}, Landroid/view/InsetsSource;->setFrame(IIII)V
 
@@ -1280,19 +1272,11 @@
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v4}, Landroid/view/InsetsSource;->isVisible()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_2
-
     new-instance v7, Landroid/view/InsetsSource;
 
     invoke-direct {v7, v4}, Landroid/view/InsetsSource;-><init>(Landroid/view/InsetsSource;)V
 
     move-object v4, v7
-
-    invoke-virtual {v4, v2}, Landroid/view/InsetsSource;->setVisible(Z)V
 
     invoke-virtual {v4, v2, v2, v2, v2}, Landroid/view/InsetsSource;->setFrame(IIII)V
 

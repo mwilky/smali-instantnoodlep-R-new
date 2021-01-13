@@ -606,7 +606,11 @@
 
     move-result-object v4
 
-    iput-object v1, v4, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->clone()Landroid/os/storage/VolumeInfo;
+
+    move-result-object v5
+
+    iput-object v5, v4, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

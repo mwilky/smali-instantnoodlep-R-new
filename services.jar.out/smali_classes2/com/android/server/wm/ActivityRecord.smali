@@ -6628,6 +6628,13 @@
     return v8
 
     :cond_2
+    iget-object v0, v7, Lcom/android/server/wm/ActivityRecord;->task:Lcom/android/server/wm/Task;
+
+    if-nez v0, :cond_3
+
+    return v8
+
+    :cond_3
     iget-object v0, v7, Lcom/android/server/wm/ActivityRecord;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mTaskSnapshotController:Lcom/android/server/wm/TaskSnapshotController;
@@ -6650,13 +6657,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     const/4 v0, 0x2
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     move-object/from16 v0, p0
 
     move/from16 v1, p10
@@ -6680,13 +6687,13 @@
 
     const/4 v2, 0x1
 
-    if-ne v0, v2, :cond_5
+    if-ne v0, v2, :cond_6
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/ActivityRecord;->isActivityTypeHome()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     iget-object v2, v7, Lcom/android/server/wm/ActivityRecord;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -6708,23 +6715,23 @@
 
     and-int/2addr v1, v2
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     return v8
 
-    :cond_4
+    :cond_5
     invoke-direct {v7, v9}, Lcom/android/server/wm/ActivityRecord;->createSnapshot(Landroid/app/ActivityManager$TaskSnapshot;)Z
 
     move-result v1
 
     return v1
 
-    :cond_5
+    :cond_6
     sget-boolean v3, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
     const/4 v4, 0x0
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     int-to-long v5, v15
 
@@ -6742,8 +6749,8 @@
 
     invoke-static {v3, v8, v2, v4, v1}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_6
-    if-eqz v15, :cond_e
+    :cond_7
+    if-eqz v15, :cond_f
 
     invoke-static {}, Lcom/android/server/AttributeCache;->instance()Lcom/android/server/AttributeCache;
 
@@ -6761,13 +6768,13 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     const/4 v3, 0x0
 
     return v3
 
-    :cond_7
+    :cond_8
     const/4 v3, 0x0
 
     iget-object v5, v1, Lcom/android/server/AttributeCache$Entry;->array:Landroid/content/res/TypedArray;
@@ -6806,7 +6813,7 @@
 
     sget-boolean v3, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -6854,7 +6861,7 @@
 
     goto :goto_1
 
-    :cond_8
+    :cond_9
     move-object/from16 v21, v9
 
     move-object/from16 v23, v10
@@ -6862,20 +6869,7 @@
     const/4 v10, 0x0
 
     :goto_1
-    if-eqz v5, :cond_9
-
-    invoke-static {}, Lcom/android/server/wm/OpStartingWindowManagerInjector;->checkSplashWindowFlag()Z
-
-    move-result v3
-
-    if-nez v3, :cond_9
-
-    return v10
-
-    :cond_9
-    if-nez v4, :cond_d
-
-    if-eqz v1, :cond_a
+    if-eqz v5, :cond_a
 
     invoke-static {}, Lcom/android/server/wm/OpStartingWindowManagerInjector;->checkSplashWindowFlag()Z
 
@@ -6883,12 +6877,25 @@
 
     if-nez v3, :cond_a
 
+    return v10
+
+    :cond_a
+    if-nez v4, :cond_e
+
+    if-eqz v1, :cond_b
+
+    invoke-static {}, Lcom/android/server/wm/OpStartingWindowManagerInjector;->checkSplashWindowFlag()Z
+
+    move-result v3
+
+    if-nez v3, :cond_b
+
     const/4 v3, 0x0
 
     goto :goto_2
 
-    :cond_a
-    if-eqz v2, :cond_c
+    :cond_b
+    if-eqz v2, :cond_d
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/ActivityRecord;->getDisplayContent()Lcom/android/server/wm/DisplayContent;
 
@@ -6900,7 +6907,7 @@
 
     move-result-object v3
 
-    if-nez v3, :cond_b
+    if-nez v3, :cond_c
 
     const/high16 v3, 0x100000
 
@@ -6908,23 +6915,23 @@
 
     goto :goto_4
 
-    :cond_b
+    :cond_c
     const/4 v3, 0x0
 
     return v3
 
-    :cond_c
+    :cond_d
     const/4 v3, 0x0
 
     goto :goto_3
 
-    :cond_d
+    :cond_e
     const/4 v3, 0x0
 
     :goto_2
     return v3
 
-    :cond_e
+    :cond_f
     move-object/from16 v21, v9
 
     move-object/from16 v23, v10
@@ -6939,27 +6946,27 @@
 
     move-result v2
 
-    if-eqz v2, :cond_f
+    if-eqz v2, :cond_10
 
     const/4 v2, 0x1
 
     return v2
 
-    :cond_f
+    :cond_10
     const/4 v2, 0x2
 
-    if-eq v0, v2, :cond_10
+    if-eq v0, v2, :cond_11
 
     const/4 v2, 0x0
 
     return v2
 
-    :cond_10
+    :cond_11
     const/4 v2, 0x0
 
     sget-boolean v4, Lcom/android/server/protolog/ProtoLog$Cache;->WM_DEBUG_STARTING_WINDOW_enabled:Z
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_12
 
     sget-object v4, Lcom/android/server/wm/ProtoLogGroup;->WM_DEBUG_STARTING_WINDOW:Lcom/android/server/wm/ProtoLogGroup;
 
@@ -6973,7 +6980,7 @@
 
     invoke-static {v4, v5, v2, v6, v8}, Lcom/android/server/protolog/ProtoLogImpl;->v(Lcom/android/server/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_11
+    :cond_12
     new-instance v2, Lcom/android/server/wm/SplashScreenStartingData;
 
     iget-object v9, v7, Lcom/android/server/wm/ActivityRecord;->mWmService:Lcom/android/server/wm/WindowManagerService;
@@ -7294,7 +7301,7 @@
 .end method
 
 .method applyAnimation(Landroid/view/WindowManager$LayoutParams;IZZLjava/util/ArrayList;)Z
-    .locals 1
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -7315,11 +7322,71 @@
     return v0
 
     :cond_0
-    invoke-super/range {p0 .. p5}, Lcom/android/server/wm/WindowToken;->applyAnimation(Landroid/view/WindowManager$LayoutParams;IZZLjava/util/ArrayList;)Z
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    if-eqz v0, :cond_2
+
+    iget-object v1, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v2, -0x80000000
+
+    and-int/2addr v1, v2
+
+    if-nez v1, :cond_2
+
+    if-nez p3, :cond_2
+
+    const/16 v1, 0x19
+
+    if-ne p2, v1, :cond_2
+
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "use ALPHA anim if translucent and FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ActivityTaskManager"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    const/16 p2, 0xf
+
+    :cond_2
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    move-object v6, p5
+
+    invoke-super/range {v1 .. v6}, Lcom/android/server/wm/WindowToken;->applyAnimation(Landroid/view/WindowManager$LayoutParams;IZZLjava/util/ArrayList;)Z
+
+    move-result v1
+
+    return v1
 .end method
 
 .method applyFixedRotationTransform(Landroid/view/DisplayInfo;Lcom/android/server/wm/DisplayFrames;Landroid/content/res/Configuration;)V
@@ -9598,7 +9665,7 @@
 
     iget-boolean v0, p0, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     sget-object v0, Lcom/android/server/wm/ActivityStack$ActivityState;->RESUMED:Lcom/android/server/wm/ActivityStack$ActivityState;
 
@@ -9606,7 +9673,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
     sget-object v0, Lcom/android/server/wm/ActivityStack$ActivityState;->PAUSING:Lcom/android/server/wm/ActivityStack$ActivityState;
 
@@ -9717,40 +9784,52 @@
 
     move-result-object v5
 
+    if-nez v5, :cond_7
+
+    move-object v5, v3
+
+    goto :goto_4
+
+    :cond_7
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
+
+    move-result-object v5
+
     invoke-virtual {v5, v1}, Lcom/android/server/wm/TaskDisplayArea;->topRunningActivity(Z)Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v5
 
-    if-eqz v5, :cond_8
+    :goto_4
+    if-eqz v5, :cond_9
 
     iget-boolean v6, v5, Lcom/android/server/wm/ActivityRecord;->nowVisible:Z
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
     iget-boolean v6, v5, Lcom/android/server/wm/ActivityRecord;->mVisibleRequested:Z
 
-    if-nez v6, :cond_8
-
-    :cond_7
-    move v6, v1
-
-    goto :goto_4
+    if-nez v6, :cond_9
 
     :cond_8
+    move v6, v1
+
+    goto :goto_5
+
+    :cond_9
     move v6, v2
 
-    :goto_4
-    if-eqz v0, :cond_a
+    :goto_5
+    if-eqz v0, :cond_b
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_b
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_a
 
     invoke-virtual {v5}, Lcom/android/server/wm/ActivityRecord;->canShowWhenLocked()Z
 
     move-result v7
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
     iget-object v7, p0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -9758,9 +9837,9 @@
 
     move-result v7
 
-    if-nez v7, :cond_a
+    if-nez v7, :cond_b
 
-    :cond_9
+    :cond_a
     const-string v7, "completeFinishing"
 
     invoke-virtual {p0, v2, v2, v7}, Lcom/android/server/wm/ActivityRecord;->addToStopping(ZZLjava/lang/String;)V
@@ -9773,34 +9852,34 @@
 
     invoke-virtual {p0, v1, v7}, Lcom/android/server/wm/ActivityRecord;->setState(Lcom/android/server/wm/ActivityStack$ActivityState;Ljava/lang/String;)V
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_a
+    :cond_b
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->addToFinishingAndWaitForIdle()Z
 
     move-result v1
 
-    if-eqz v1, :cond_b
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityRecord;->destroyIfPossible(Ljava/lang/String;)Z
-
-    move-result v4
-
-    :goto_5
-    if-eqz v4, :cond_c
+    if-eqz v1, :cond_c
 
     goto :goto_6
 
     :cond_c
-    move-object v3, p0
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityRecord;->destroyIfPossible(Ljava/lang/String;)Z
+
+    move-result v4
 
     :goto_6
-    return-object v3
+    if-eqz v4, :cond_d
+
+    goto :goto_7
 
     :cond_d
+    move-object v3, p0
+
+    :goto_7
+    return-object v3
+
+    :cond_e
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;

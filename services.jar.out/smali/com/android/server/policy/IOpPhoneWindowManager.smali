@@ -25,6 +25,9 @@
 .method public abstract isGestureSideEnabled()Z
 .end method
 
+.method public abstract isNavIconHide()Z
+.end method
+
 .method public abstract isShuttingDown()Z
 .end method
 
