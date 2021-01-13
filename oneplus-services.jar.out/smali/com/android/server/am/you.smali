@@ -34,7 +34,7 @@
 
     iget p0, p0, Lcom/android/server/am/you;->you:I
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x2(I)V
+    invoke-virtual {v0, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->H2(I)V
 
     return-void
 .end method

@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l()Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q()Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v0, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
 
     const-string p2, "android.intent.action.SCREEN_ON"
 
@@ -89,7 +89,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$zta;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(Lcom/android/server/am/OnePlusBackgroundFrozen;Z)V
+    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->F(Lcom/android/server/am/OnePlusBackgroundFrozen;Z)V
 
     goto :goto_1
 
@@ -106,7 +106,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(Lcom/android/server/am/OnePlusBackgroundFrozen;Z)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->F(Lcom/android/server/am/OnePlusBackgroundFrozen;Z)V
 
     :cond_3
     :goto_1

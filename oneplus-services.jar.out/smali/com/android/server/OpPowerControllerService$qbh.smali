@@ -71,11 +71,11 @@
 
     const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_27
+    if-eq v0, v1, :cond_28
 
     const/16 v1, 0x1e6c
 
-    if-eq v0, v1, :cond_26
+    if-eq v0, v1, :cond_27
 
     const/4 v1, 0x0
 
@@ -89,7 +89,7 @@
 
     packed-switch v0, :pswitch_data_1
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -209,7 +209,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_29
 
     if-eqz p1, :cond_5
 
@@ -328,7 +328,7 @@
 
     invoke-static {p0, p1, v0}, Lcom/android/server/OpPowerControllerService;->access$4200(Lcom/android/server/OpPowerControllerService;Lcom/android/server/OpPowerControllerService$PkgRestrictType;Lcom/android/server/OpPowerControllerService$PurposeType;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_1
     const-string p1, "OpPowerControllerService"
@@ -343,7 +343,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$4500(Lcom/android/server/OpPowerControllerService;Lcom/android/server/OpPowerControllerService$TriggerType;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_2
     const-string p1, "OpPowerControllerService"
@@ -488,7 +488,7 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_a
     new-array p1, v4, [I
@@ -499,7 +499,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_28
+    if-eqz p1, :cond_29
 
     const-string p1, "OpPowerControllerService"
 
@@ -543,7 +543,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_b
     const-string p0, "OpPowerControllerService"
@@ -552,7 +552,7 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -573,7 +573,7 @@
 
     invoke-static {p0, p1, v0, v1}, Landroid/provider/Settings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_4
     :try_start_0
@@ -659,7 +659,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :catch_0
     move-exception p0
@@ -725,14 +725,14 @@
 
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_6
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p0
 
-    if-eqz p0, :cond_28
+    if-eqz p0, :cond_29
 
     const-string p0, "OpPowerControllerService"
 
@@ -742,7 +742,7 @@
 
     invoke-static {}, Lcom/android/server/power/OpPowerManagerInjector;->flushExclusiveWakeLock()V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_7
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -751,7 +751,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_28
+    if-eqz p1, :cond_29
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -767,7 +767,7 @@
 
     invoke-virtual {p0, v2, v0, p1, v1}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_8
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -832,7 +832,7 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_e
     const-string p0, "OpPowerControllerService"
@@ -841,7 +841,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/igw$zta;->zta(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_9
     new-instance p1, Lcom/oneplus/config/ConfigGrabber;
@@ -864,7 +864,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$2500(Lcom/android/server/OpPowerControllerService;Lorg/json/JSONArray;)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_a
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -875,14 +875,14 @@
 
     if-nez p1, :cond_f
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_f
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3400()Z
 
     move-result p1
 
-    if-nez p1, :cond_28
+    if-nez p1, :cond_29
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -945,7 +945,7 @@
     :cond_10
     monitor-exit v0
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :catchall_0
     move-exception p0
@@ -975,7 +975,7 @@
 
     if-nez p1, :cond_11
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_11
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -1214,7 +1214,7 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_16
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -1275,7 +1275,7 @@
 
     if-eqz v0, :cond_17
 
-    invoke-virtual {v0, p1}, Lcom/android/server/wtn;->C(Ljava/time/LocalTime;)V
+    invoke-virtual {v0, p1}, Lcom/android/server/wtn;->D(Ljava/time/LocalTime;)V
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -1289,7 +1289,7 @@
 
     move-result-wide v3
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/server/wtn;->A(J)V
+    invoke-virtual {v0, v3, v4}, Lcom/android/server/wtn;->B(J)V
 
     :cond_17
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -1426,14 +1426,14 @@
 
     if-nez p1, :cond_1a
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_1a
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3400()Z
 
     move-result p1
 
-    if-nez p1, :cond_28
+    if-nez p1, :cond_29
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -1456,7 +1456,7 @@
 
     monitor-exit p1
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :catchall_2
     move-exception p0
@@ -1551,7 +1551,7 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :catch_1
     move-exception p0
@@ -1575,7 +1575,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_e
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
@@ -1612,7 +1612,7 @@
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :cond_1d
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
@@ -1724,7 +1724,7 @@
 
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
     :pswitch_f
     const-string p1, "persist.sys.op_power_version"
@@ -1827,7 +1827,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_23
+    if-eqz p1, :cond_24
 
     new-array p1, v4, [I
 
@@ -1837,31 +1837,15 @@
 
     move-result p1
 
+    if-nez p1, :cond_23
+
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
+
+    invoke-virtual {p1}, Lcom/android/server/OpPowerControllerService;->checkOSVersion()Z
+
+    move-result p1
+
     if-eqz p1, :cond_22
-
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$1400(Lcom/android/server/OpPowerControllerService;)Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v0, "doze_mode_policy"
-
-    invoke-static {p1, v0, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v0, "optimal_power_save_mode_enabled"
-
-    invoke-static {p1, v0, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_a
 
@@ -1892,19 +1876,47 @@
 
     invoke-static {p1, v1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    goto :goto_b
+
+    :cond_23
     :goto_a
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$1400(Lcom/android/server/OpPowerControllerService;)Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string v0, "doze_mode_policy"
+
+    invoke-static {p1, v0, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    const-string v0, "optimal_power_save_mode_enabled"
+
+    invoke-static {p1, v0, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :goto_b
     const-string p1, "persist.sys.op_power_version"
 
     const-string v0, "1.1"
 
     invoke-static {p1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_23
+    :cond_24
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p1
 
-    if-eqz p1, :cond_24
+    if-eqz p1, :cond_25
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1956,7 +1968,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_24
+    :cond_25
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$2700(Lcom/android/server/OpPowerControllerService;)Landroid/telephony/SubscriptionManager;
@@ -1971,7 +1983,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_26
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1991,14 +2003,14 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_25
+    :cond_26
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p0, v4}, Lcom/android/server/OpPowerControllerService;->access$2802(Lcom/android/server/OpPowerControllerService;Z)Z
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_26
+    :cond_27
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3600(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
@@ -2017,18 +2029,16 @@
 
     invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->leaveOPSM()V
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_27
+    :cond_28
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
     invoke-virtual {p0, v2}, Lcom/android/server/OpPowerControllerService;->enterOPSMIfAppropriated(Z)V
 
-    :cond_28
-    :goto_b
+    :cond_29
+    :goto_c
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

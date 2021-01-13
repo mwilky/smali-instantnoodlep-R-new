@@ -367,7 +367,7 @@
 
     if-nez v3, :cond_2
 
-    invoke-static {v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->p2(I)Z
+    invoke-static {v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
 
     move-result v3
 

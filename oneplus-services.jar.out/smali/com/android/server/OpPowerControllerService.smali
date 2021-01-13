@@ -63,6 +63,8 @@
 
 .field private static final BLE_SCAN_UNAVAILABLE:I = 0x0
 
+.field private static final BUILD_FLAG_NAMES:[Ljava/lang/String;
+
 .field private static final CODE_VERSION:Ljava/lang/String; = "1.1"
 
 .field private static final CREATOR:Landroid/util/Singleton;
@@ -205,6 +207,8 @@
 
 .field private static final OPSM_ENABLED_UNKNOWN:I = -0x2
 
+.field private static final PARAM_ENC_TARGET_SW_ID:I = 0x18
+
 .field private static final POLICY_AGGRESSIVE:I = 0x1
 
 .field private static final POLICY_DEFAULT:I = 0x0
@@ -331,6 +335,8 @@
 
 .field private static mIsDeepSleep:Z
 
+.field private static mIsIndiaVersion:Z
+
 .field private static mLock:Ljava/lang/Object;
 
 .field private static mMaxIdleItems:I
@@ -398,6 +404,8 @@
 .field private mBootCompletedElapsedTime:J
 
 .field private final mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+.field private mBuildFlag:I
 
 .field private mConfigObserver:Lcom/oneplus/config/ConfigObserver;
 
@@ -629,7 +637,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -644,6 +652,24 @@
     sput-boolean v0, Lcom/android/server/OpPowerControllerService;->mDebugIdleStats:Z
 
     sput-boolean v0, Lcom/android/server/OpPowerControllerService;->mDebugSleepState:Z
+
+    sput-boolean v0, Lcom/android/server/OpPowerControllerService;->mIsIndiaVersion:Z
+
+    const-string v1, "DEFAULT"
+
+    const-string v2, "O2"
+
+    const-string v3, "H2"
+
+    const-string v4, "IN"
+
+    const-string v5, "EU"
+
+    filled-new-array {v1, v2, v3, v4, v5}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/android/server/OpPowerControllerService;->BUILD_FLAG_NAMES:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/Object;
 
@@ -766,6 +792,10 @@
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mDeepSleepWhitelistAppIds:Landroid/util/SparseBooleanArray;
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lcom/android/server/OpPowerControllerService;->mBuildFlag:I
 
     const/4 v0, 0x0
 
@@ -935,6 +965,10 @@
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->mDeepSleepWhitelistAppIds:Landroid/util/SparseBooleanArray;
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lcom/android/server/OpPowerControllerService;->mBuildFlag:I
 
     const/4 v0, 0x0
 
@@ -5071,6 +5105,90 @@
     throw p1
 .end method
 
+.method private getBuildFlagName()Ljava/lang/String;
+    .locals 2
+
+    iget p0, p0, Lcom/android/server/OpPowerControllerService;->mBuildFlag:I
+
+    if-ltz p0, :cond_0
+
+    sget-object v0, Lcom/android/server/OpPowerControllerService;->BUILD_FLAG_NAMES:[Ljava/lang/String;
+
+    array-length v1, v0
+
+    if-ge p0, v1, :cond_0
+
+    aget-object p0, v0, p0
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "NULL"
+
+    :goto_0
+    return-object p0
+.end method
+
+.method private getParamService()Lcom/oneplus/os/IParamService;
+    .locals 3
+
+    const-string p0, "OpPowerControllerService"
+
+    :try_start_0
+    const-string v0, "ParamService"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "param service="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v0}, Lcom/oneplus/os/IParamService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/os/IParamService;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Exception while getting param service: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
 .method private ifaceNameToType(Ljava/lang/String;)I
     .locals 1
 
@@ -5135,6 +5253,86 @@
     const/4 p0, -0x1
 
     return p0
+.end method
+
+.method private initBuildFlag()V
+    .locals 3
+
+    const-string v0, "OpPowerControllerService"
+
+    :try_start_0
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->getParamService()Lcom/oneplus/os/IParamService;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v2, 0x18
+
+    invoke-interface {v1, v2}, Lcom/oneplus/os/IParamService;->getParamIntSYNC(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/OpPowerControllerService;->mBuildFlag:I
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Custom flag value is "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/server/OpPowerControllerService;->mBuildFlag:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->getBuildFlagName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Exception while getting build flag value: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
+    return-void
 .end method
 
 .method private initFirewallList()Z
@@ -5975,7 +6173,7 @@
 .end method
 
 .method private parseHypnusConf(Lorg/json/JSONObject;)V
-    .locals 2
+    .locals 3
 
     const-string v0, "OpPowerControllerService"
 
@@ -6007,7 +6205,7 @@
     :goto_0
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_7
 
     const/4 p1, 0x0
 
@@ -6015,11 +6213,82 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_8
 
+    const-string v1, "shell_temp_throtting"
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "[OnlineConfig] shell_temp_throtting is null"
+
+    :goto_1
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->resetBacklight()V
+
+    goto :goto_2
+
+    :cond_1
+    const-string v2, "default"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "[OnlineConfig] default is null"
+
+    goto :goto_1
+
+    :cond_2
+    const-string v2, "cooling"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_3
+
+    const-string v1, "[OnlineConfig] cooling is null"
+
+    goto :goto_1
+
+    :cond_3
+    const-string v2, "backlight"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    const-string v1, "[OnlineConfig] backlight is null"
+
+    goto :goto_1
+
+    :cond_4
+    const-string v2, "ceiling"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    if-nez v1, :cond_5
+
+    const-string v1, "[OnlineConfig] ceiling is null"
+
+    goto :goto_1
+
+    :cond_5
+    :goto_2
     sget-boolean v1, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_6
 
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -6027,22 +6296,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_6
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/server/OpPowerControllerService;->saveConfToLocal(Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_2
-    const-string p0, "[OnlineConfig] config is null"
+    :cond_7
+    const-string p1, "[OnlineConfig] config is null"
 
-    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
-    :goto_1
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->resetBacklight()V
+
+    :cond_8
+    :goto_3
     return-void
 .end method
 
@@ -7214,6 +7485,72 @@
     return-void
 .end method
 
+.method private resetBacklight()V
+    .locals 3
+
+    sget-boolean p0, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
+
+    const-string v0, "OpPowerControllerService"
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "[OnlineConfig] resetBacklight"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    sget-object p0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    if-nez p0, :cond_1
+
+    sget-object p0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_hypnus:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {p0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/internal/app/IHypnusService;
+
+    sput-object p0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    :cond_1
+    sget-object p0, Lcom/android/server/OpPowerControllerService;->sHypnusService:Lcom/android/internal/app/IHypnusService;
+
+    if-eqz p0, :cond_2
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-interface {p0, v1}, Lcom/android/internal/app/IHypnusService;->setBrightness(I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "HypnusService: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
 .method private resolveConfigFromJSON(Lorg/json/JSONArray;)V
     .locals 9
 
@@ -7479,7 +7816,7 @@
 
     iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
-    invoke-virtual {v5, v4}, Lcom/android/server/wtn;->v(Lorg/json/JSONObject;)V
+    invoke-virtual {v5, v4}, Lcom/android/server/wtn;->w(Lorg/json/JSONObject;)V
 
     goto :goto_2
 
@@ -9249,6 +9586,51 @@
     return-void
 .end method
 
+.method public checkOSVersion()Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->getBuildFlagName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "IN"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    sput-boolean p0, Lcom/android/server/OpPowerControllerService;->mIsIndiaVersion:Z
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "checkOSVersion "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v0, Lcom/android/server/OpPowerControllerService;->mIsIndiaVersion:Z
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OpPowerControllerService"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    sget-boolean p0, Lcom/android/server/OpPowerControllerService;->mIsIndiaVersion:Z
+
+    return p0
+.end method
+
 .method convertOPSMEnabledToString(I)Ljava/lang/String;
     .locals 0
 
@@ -10642,6 +11024,8 @@
 
     iput-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusSensorManager:Lcom/android/server/dma;
 
+    invoke-direct {p0}, Lcom/android/server/OpPowerControllerService;->initBuildFlag()V
+
     new-array v1, v0, [I
 
     const/16 v2, 0x10d
@@ -10656,7 +11040,7 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/server/wtn;->q(Landroid/content/Context;)Lcom/android/server/wtn;
+    invoke-static {v1}, Lcom/android/server/wtn;->r(Landroid/content/Context;)Lcom/android/server/wtn;
 
     move-result-object v1
 
@@ -14395,7 +14779,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/server/wtn;->B(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/wtn;->C(J)V
 
     goto :goto_17
 
@@ -14418,7 +14802,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
-    invoke-virtual {v0, p1, p2}, Lcom/android/server/wtn;->A(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/wtn;->B(J)V
 
     goto :goto_17
 
@@ -14433,7 +14817,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mOnePlusChargingGuarder:Lcom/android/server/wtn;
 
-    invoke-virtual {p1}, Lcom/android/server/wtn;->D()V
+    invoke-virtual {p1}, Lcom/android/server/wtn;->E()V
 
     goto :goto_17
 

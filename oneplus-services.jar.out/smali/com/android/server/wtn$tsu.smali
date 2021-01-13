@@ -113,7 +113,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -121,7 +121,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -174,7 +174,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_18
+    if-eqz v2, :cond_19
 
     new-instance v2, Ljava/util/HashMap;
 
@@ -217,7 +217,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_18
+    if-eqz v2, :cond_19
 
     new-instance v2, Ljava/util/HashMap;
 
@@ -258,7 +258,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_18
+    if-eqz v2, :cond_19
 
     new-instance v2, Ljava/util/HashMap;
 
@@ -369,7 +369,7 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_18
+    if-eqz v6, :cond_19
 
     :try_start_1
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
@@ -444,7 +444,7 @@
 
     move-result-wide v2
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -685,7 +685,7 @@
 
     iget-object v3, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
-    invoke-virtual {v3, v6}, Lcom/android/server/wtn;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v6}, Lcom/android/server/wtn;->x(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -807,7 +807,7 @@
     :cond_5
     cmp-long v1, v1, v4
 
-    if-gtz v1, :cond_18
+    if-gtz v1, :cond_19
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -933,7 +933,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1038,7 +1038,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -1094,7 +1094,7 @@
 
     iget-object v3, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
-    invoke-virtual {v3}, Lcom/android/server/wtn;->o()I
+    invoke-virtual {v3}, Lcom/android/server/wtn;->p()I
 
     move-result v3
 
@@ -1134,6 +1134,37 @@
 
     invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    const/4 v3, 0x1
+
+    new-array v3, v3, [I
+
+    const/16 v4, 0xee
+
+    const/4 v5, 0x0
+
+    aput v4, v3, v5
+
+    invoke-static {v3}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    iget-object v3, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
+
+    invoke-virtual {v3}, Lcom/android/server/wtn;->o()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "dual_cell_voltage_diff"
+
+    invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6
     iget-object v3, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v3}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
@@ -1292,7 +1323,7 @@
 
     iget-object v0, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
-    invoke-virtual {v0}, Lcom/android/server/wtn;->y()V
+    invoke-virtual {v0}, Lcom/android/server/wtn;->z()V
 
     goto/16 :goto_d
 
@@ -1307,7 +1338,7 @@
 
     move-result-object v7
 
-    if-eqz v7, :cond_18
+    if-eqz v7, :cond_19
 
     :try_start_2
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
@@ -1351,7 +1382,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_6
+    if-ne v1, v2, :cond_7
 
     invoke-static {}, Lcom/android/server/wtn$rtg;->zta()Lcom/android/server/wtn$rtg;
 
@@ -1421,7 +1452,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
     new-instance v2, Ljava/util/HashMap;
 
@@ -1471,14 +1502,14 @@
 
     invoke-virtual {v1, v4, v12, v3, v2}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
 
-    :cond_6
+    :cond_7
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v1}, Lcom/android/server/wtn;->c(Lcom/android/server/wtn;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     goto :goto_7
 
@@ -1497,7 +1528,7 @@
 
     const/4 v2, 0x1
 
-    if-eq v1, v2, :cond_7
+    if-eq v1, v2, :cond_8
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1507,9 +1538,9 @@
 
     const/4 v2, 0x3
 
-    if-ne v1, v2, :cond_18
+    if-ne v1, v2, :cond_19
 
-    :cond_7
+    :cond_8
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-virtual {v1}, Lcom/android/server/wtn;->n()V
@@ -1554,7 +1585,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_8
+    if-ne v1, v2, :cond_9
 
     invoke-static {}, Lcom/android/server/wtn$rtg;->zta()Lcom/android/server/wtn$rtg;
 
@@ -1572,14 +1603,14 @@
 
     invoke-static {v1, v2}, Lcom/android/server/wtn;->b(Lcom/android/server/wtn;I)I
 
-    :cond_8
+    :cond_9
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v1}, Lcom/android/server/wtn;->c(Lcom/android/server/wtn;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     :goto_7
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
@@ -1611,7 +1642,7 @@
     :pswitch_f
     const/16 v7, 0x9
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_a
 
     iget v2, v1, Landroid/os/Message;->arg1:I
 
@@ -1625,12 +1656,12 @@
 
     goto :goto_9
 
-    :cond_9
+    :cond_a
     const/4 v8, 0x3
 
-    if-eq v2, v8, :cond_b
+    if-eq v2, v8, :cond_c
 
-    if-ne v2, v7, :cond_a
+    if-ne v2, v7, :cond_b
 
     iget-object v2, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1640,18 +1671,18 @@
 
     const/4 v8, 0x1
 
-    if-ne v2, v8, :cond_a
+    if-ne v2, v8, :cond_b
 
     goto :goto_8
 
-    :cond_a
+    :cond_b
     const/4 v2, 0x0
 
     const/4 v8, 0x0
 
     goto :goto_9
 
-    :cond_b
+    :cond_c
     :goto_8
     iget-object v2, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1728,20 +1759,20 @@
 
     move-result v11
 
-    if-eqz v11, :cond_c
+    if-eqz v11, :cond_d
 
     return-void
 
-    :cond_c
-    if-eqz v8, :cond_d
+    :cond_d
+    if-eqz v8, :cond_e
 
     const/16 v8, 0x50
 
-    if-lt v2, v8, :cond_d
+    if-lt v2, v8, :cond_e
 
     const/16 v8, 0x64
 
-    if-ge v2, v8, :cond_d
+    if-ge v2, v8, :cond_e
 
     iget-object v8, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1749,7 +1780,7 @@
 
     move-result v8
 
-    if-ne v8, v5, :cond_d
+    if-ne v8, v5, :cond_e
 
     iget-object v5, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1759,12 +1790,12 @@
 
     cmp-long v5, v9, v19
 
-    if-gtz v5, :cond_e
+    if-gtz v5, :cond_f
 
-    :cond_d
+    :cond_e
     iget v1, v1, Landroid/os/Message;->what:I
 
-    if-ne v1, v7, :cond_16
+    if-ne v1, v7, :cond_17
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1774,9 +1805,9 @@
 
     const/4 v5, 0x1
 
-    if-ne v1, v5, :cond_16
+    if-ne v1, v5, :cond_17
 
-    :cond_e
+    :cond_f
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     iget-object v1, v1, Lcom/android/server/wtn;->ywr:Landroid/os/BatteryManager;
@@ -1789,13 +1820,13 @@
 
     cmp-long v1, v7, v15
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
     add-long v15, v7, v13
 
     goto :goto_a
 
-    :cond_f
+    :cond_10
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v1}, Lcom/android/server/wtn;->veq(Lcom/android/server/wtn;)J
@@ -1811,13 +1842,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_11
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     const-string v5, "/sys/class/power_supply/wireless/online"
 
-    invoke-virtual {v1, v5}, Lcom/android/server/wtn;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v5}, Lcom/android/server/wtn;->x(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1827,7 +1858,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_11
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1837,7 +1868,7 @@
 
     add-long/2addr v15, v13
 
-    :cond_10
+    :cond_11
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v1}, Lcom/android/server/wtn;->tsu(Lcom/android/server/wtn;)J
@@ -1872,7 +1903,7 @@
 
     cmp-long v1, v21, v23
 
-    if-lez v1, :cond_12
+    if-lez v1, :cond_13
 
     const-string v1, "because of the next wake up alarm coming"
 
@@ -1886,16 +1917,16 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_11
+    if-ne v1, v2, :cond_12
 
     iget-object v0, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-virtual {v0}, Lcom/android/server/wtn;->n()V
 
-    :cond_11
+    :cond_12
     return-void
 
-    :cond_12
+    :cond_13
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     invoke-static {v1}, Lcom/android/server/wtn;->vju(Lcom/android/server/wtn;)Landroid/app/AlarmManager;
@@ -1910,7 +1941,7 @@
 
     cmp-long v1, v21, v23
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_15
 
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -1936,11 +1967,11 @@
 
     cmp-long v1, v15, v17
 
-    if-lez v1, :cond_13
+    if-lez v1, :cond_14
 
     cmp-long v1, v21, v13
 
-    if-gez v1, :cond_13
+    if-gez v1, :cond_14
 
     const-string v1, "alarm comes first, so need to change end time"
 
@@ -1958,7 +1989,7 @@
 
     goto :goto_b
 
-    :cond_13
+    :cond_14
     move/from16 p1, v2
 
     move-object v11, v6
@@ -1971,7 +2002,7 @@
 
     goto :goto_b
 
-    :cond_14
+    :cond_15
     const-wide/16 v17, 0x0
 
     move/from16 p1, v2
@@ -2041,11 +2072,11 @@
 
     cmp-long v2, v3, v9
 
-    if-ltz v2, :cond_17
+    if-ltz v2, :cond_18
 
     cmp-long v2, v3, v5
 
-    if-gtz v2, :cond_17
+    if-gtz v2, :cond_18
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2101,13 +2132,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_15
+    if-eqz v2, :cond_16
 
     iget-object v2, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
     const-string v3, "/sys/class/power_supply/wireless/online"
 
-    invoke-virtual {v2, v3}, Lcom/android/server/wtn;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/android/server/wtn;->x(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2117,7 +2148,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_15
+    if-eqz v2, :cond_16
 
     iget-object v2, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -2141,7 +2172,7 @@
 
     invoke-static {v2, v4, v3}, Lcom/android/server/wtn;->g(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_15
+    :cond_16
     invoke-static {}, Lcom/android/server/wtn$rtg;->zta()Lcom/android/server/wtn$rtg;
 
     move-result-object v2
@@ -2208,10 +2239,10 @@
 
     goto :goto_c
 
-    :cond_16
+    :cond_17
     move/from16 p1, v2
 
-    :cond_17
+    :cond_18
     :goto_c
     iget-object v1, v0, Lcom/android/server/wtn$tsu;->zta:Lcom/android/server/wtn;
 
@@ -2221,13 +2252,13 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_18
+    if-ne v1, v2, :cond_19
 
     move/from16 v2, p1
 
     const/16 v1, 0x3c
 
-    if-gt v2, v1, :cond_18
+    if-gt v2, v1, :cond_19
 
     const-string v1, "level is lower than 60, should enable charging"
 
@@ -2237,9 +2268,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/wtn;->n()V
 
-    :cond_18
+    :cond_19
     :goto_d
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

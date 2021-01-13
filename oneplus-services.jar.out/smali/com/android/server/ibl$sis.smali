@@ -41,7 +41,7 @@
     :cond_0
     iget-object p1, p0, Lcom/android/server/ibl$sis;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p1}, Lcom/android/server/ibl;->ssp(Lcom/android/server/ibl;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/ibl;->kth(Lcom/android/server/ibl;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -50,7 +50,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ibl$sis;->zta:Lcom/android/server/ibl;
 
-    invoke-static {v0}, Lcom/android/server/ibl;->cno(Lcom/android/server/ibl;)Z
+    invoke-static {v0}, Lcom/android/server/ibl;->bio(Lcom/android/server/ibl;)Z
 
     move-result v0
 
@@ -58,7 +58,7 @@
 
     iget-object v0, p0, Lcom/android/server/ibl$sis;->zta:Lcom/android/server/ibl;
 
-    invoke-static {v0}, Lcom/android/server/ibl;->kth(Lcom/android/server/ibl;)Z
+    invoke-static {v0}, Lcom/android/server/ibl;->igw(Lcom/android/server/ibl;)Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     iget-object p0, p0, Lcom/android/server/ibl$sis;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0}, Lcom/android/server/ibl;->bio(Lcom/android/server/ibl;)I
+    invoke-static {p0}, Lcom/android/server/ibl;->wtn(Lcom/android/server/ibl;)I
 
     move-result p0
 
@@ -88,7 +88,7 @@
     const/4 v1, 0x1
 
     :cond_2
-    invoke-static {v0, v1}, Lcom/android/server/ibl;->igw(Lcom/android/server/ibl;Z)V
+    invoke-static {v0, v1}, Lcom/android/server/ibl;->gck(Lcom/android/server/ibl;Z)V
 
     monitor-exit p1
 

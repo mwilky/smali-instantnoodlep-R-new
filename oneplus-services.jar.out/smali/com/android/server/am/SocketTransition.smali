@@ -1,5 +1,5 @@
 .class public Lcom/android/server/am/SocketTransition;
-.super Lcom/android/server/am/i;
+.super Lcom/android/server/am/j;
 .source ""
 
 
@@ -201,7 +201,7 @@
 
     const-string v0, "ORMSocketServerHandler"
 
-    invoke-direct {p0, v0}, Lcom/android/server/am/i;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/server/am/j;-><init>(Ljava/lang/String;)V
 
     new-instance v0, Lcom/android/server/am/SocketTransition$sis;
 
@@ -867,7 +867,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v1
 
@@ -881,11 +881,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/server/am/f;->tsu()I
+    invoke-virtual {v1}, Lcom/android/server/am/g;->tsu()I
 
     move-result v1
 
@@ -1866,7 +1866,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object p0
 
@@ -1878,7 +1878,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    iget-boolean p0, p0, Lcom/android/server/am/f;->ssp:Z
+    iget-boolean p0, p0, Lcom/android/server/am/g;->ssp:Z
 
     goto :goto_1
 
@@ -1922,7 +1922,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object p1
 
@@ -1935,7 +1935,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object v1, p1, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object v1, p1, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -1945,7 +1945,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object p1, p1, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object p1, p1, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 

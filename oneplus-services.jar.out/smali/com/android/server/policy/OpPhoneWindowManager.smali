@@ -229,6 +229,8 @@
 
 .field private mHomeKeyPressed:Z
 
+.field mIsNavIconHide:Z
+
 .field mIsSideEnabled:Z
 
 .field private mKeyLockModeReceiver:Lcom/android/server/policy/OpPhoneWindowManager$wtn;
@@ -5469,15 +5471,23 @@
 
     move-result v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardLocked()Z
+    const-string v5, "com.oneplus.camera"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_2e
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardLocked()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2e
 
     if-eqz v0, :cond_2f
 
     :cond_2e
+    if-nez v3, :cond_2f
+
     const/4 v0, 0x5
 
     invoke-virtual {v1, v0, v2}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
@@ -5753,6 +5763,30 @@
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
 
+    return p0
+.end method
+
+.method public isNavIconHide()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mIsNavIconHide:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->isGestureButtonEnabled()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
     return p0
 .end method
 

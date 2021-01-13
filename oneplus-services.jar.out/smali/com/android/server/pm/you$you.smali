@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/pm/you$you;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {p0, p1}, Lcom/android/server/pm/you;->sis(Lcom/android/server/pm/you;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/pm/you;->rtg(Lcom/android/server/pm/you;Lorg/json/JSONArray;)V
 
     return-void
 .end method

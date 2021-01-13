@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 6
+    .locals 7
 
     const-string p1, "OPBF"
 
@@ -63,21 +63,23 @@
 
     move-result v1
 
-    const-string v2, "com.android.tradefed.utils.wifi"
+    const-string v2, "android.permission.cts"
 
-    const-string v3, "pkg:"
+    const-string v3, "com.android.tradefed.utils.wifi"
 
-    const/4 v4, 0x1
+    const-string v4, "pkg:"
 
-    const/4 v5, 0x0
+    const/4 v5, 0x1
 
-    if-eqz v1, :cond_1
+    const/4 v6, 0x0
+
+    if-eqz v1, :cond_2
 
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -89,30 +91,37 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
+    :cond_1
     const-string p1, "detect pre-condition pkg installed, \'Both\' close Appboot & Background-freeze features"
 
-    invoke-static {v4, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
 
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$you;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->H(Lcom/android/server/am/OnePlusBackgroundFrozen;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O(Lcom/android/server/am/OnePlusBackgroundFrozen;)Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-static {p0, v5, v5}, Lcom/android/server/am/obl;->ywr(Landroid/content/Context;II)I
+    invoke-static {p0, v6, v6}, Lcom/android/server/am/obl;->ywr(Landroid/content/Context;II)I
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -123,13 +132,13 @@
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_4
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -141,21 +150,28 @@
 
     move-result-object p2
 
-    invoke-static {v4, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {v5, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_4
 
+    :cond_3
     const-string p2, "detect pre-condition pkg re-installed, \'Both\' close Appboot & Background-freeze features"
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    :cond_2
+    :cond_4
     :goto_1
     return-void
 .end method

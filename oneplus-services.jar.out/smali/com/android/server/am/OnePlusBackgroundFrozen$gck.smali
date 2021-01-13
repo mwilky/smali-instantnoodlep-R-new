@@ -144,7 +144,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$gck;->sis:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {v1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->s(Lcom/android/server/am/OnePlusBackgroundFrozen;I)Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;
+    invoke-static {v1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A(Lcom/android/server/am/OnePlusBackgroundFrozen;I)Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
 
     const-string v3, "systemUid notifyStateChange NOTIFY_ALL"
 
-    invoke-static {v1, p1, v3, v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->t(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, p1, v3, v2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -183,7 +183,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$gck;->sis:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {v0, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->s(Lcom/android/server/am/OnePlusBackgroundFrozen;I)Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;
+    invoke-static {v0, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A(Lcom/android/server/am/OnePlusBackgroundFrozen;I)Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;
 
     move-result-object p2
 
@@ -201,7 +201,7 @@
 
     const-string v1, "systemUid notifyStateChange"
 
-    invoke-static {v0, p1, v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->t(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p1, v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 

@@ -2200,7 +2200,7 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/server/am/f;
+    check-cast v5, Lcom/android/server/am/g;
 
     invoke-static {}, Lcom/android/server/am/SocketTransition;->getInstance()Lcom/android/server/am/SocketTransition;
 
@@ -2208,7 +2208,7 @@
 
     iget v7, v3, Lcom/android/server/am/bio;->zta:I
 
-    iget v8, v5, Lcom/android/server/am/f;->you:I
+    iget v8, v5, Lcom/android/server/am/g;->you:I
 
     invoke-virtual {v6, v7, v8}, Lcom/android/server/am/SocketTransition;->isPersistProcess(II)Z
 
@@ -2219,7 +2219,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-virtual {v5}, Lcom/android/server/am/f;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/android/server/am/g;->toString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2389,7 +2389,7 @@
 
     check-cast v1, Lcom/android/server/am/bio;
 
-    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {v1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v2
 
@@ -3028,7 +3028,7 @@
 
     check-cast p1, Lcom/android/server/am/bio;
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {p1, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v0
 
@@ -4490,13 +4490,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {p0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p3, p4}, Lcom/android/server/am/f;->ywr(J)V
+    invoke-virtual {v0, p3, p4}, Lcom/android/server/am/g;->ywr(J)V
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/bio;->obl(IIJ)V
 

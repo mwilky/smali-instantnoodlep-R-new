@@ -1364,48 +1364,45 @@
 .method public frontPackageChanged(Ljava/lang/String;IILjava/lang/String;II)V
     .locals 0
 
-    if-eq p2, p5, :cond_2
+    if-eq p2, p5, :cond_1
 
-    sget-boolean p3, Lcom/android/server/am/fto;->ssp:Z
+    sget-boolean p0, Lcom/android/server/am/fto;->ssp:Z
 
-    if-nez p3, :cond_0
+    if-nez p0, :cond_0
 
-    sget-boolean p3, Lcom/android/server/am/fto;->kth:Z
+    sget-boolean p0, Lcom/android/server/am/fto;->kth:Z
 
-    if-eqz p3, :cond_1
+    if-eqz p0, :cond_1
 
     :cond_0
-    new-instance p3, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p4, "event frontPackageChanged packageName:"
+    const-string p3, "event frontPackageChanged packageName:"
 
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p4, " |uid:"
+    const-string p1, " |uid:"
 
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p2, " |luid:"
+    const-string p1, " |luid:"
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p0
 
-    invoke-static {p2}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/android/server/am/fto;->bvj(Ljava/lang/String;)V
-
-    :cond_2
     return-void
 .end method

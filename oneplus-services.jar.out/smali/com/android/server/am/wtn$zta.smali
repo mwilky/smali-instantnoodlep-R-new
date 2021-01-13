@@ -135,7 +135,7 @@
 
     check-cast v1, Lcom/android/server/am/qbh;
 
-    invoke-interface {v1, v0, p1}, Lcom/android/server/am/qbh;->kth(IZ)V
+    invoke-interface {v1, v0, p1}, Lcom/android/server/am/qbh;->cno(IZ)V
 
     goto :goto_0
 
@@ -486,7 +486,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, v1, p1}, Lcom/android/server/am/qbh;->gck(ILjava/lang/String;Z)V
+    invoke-interface {v2, v0, v1, p1}, Lcom/android/server/am/qbh;->wtn(ILjava/lang/String;Z)V
 
     goto :goto_0
 
@@ -549,7 +549,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->cno(Ljava/lang/String;Z)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->ssp(Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -733,7 +733,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->bio(IZ)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->kth(IZ)V
 
     goto :goto_0
 
@@ -798,7 +798,7 @@
 
     check-cast v1, Lcom/android/server/am/qbh;
 
-    invoke-interface {v1, v0, p1}, Lcom/android/server/am/qbh;->wtn(IZ)V
+    invoke-interface {v1, v0, p1}, Lcom/android/server/am/qbh;->igw(IZ)V
 
     goto :goto_0
 
@@ -1039,7 +1039,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->dma(IZ)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->gck(IZ)V
 
     goto :goto_0
 
@@ -1202,7 +1202,7 @@
 .end method
 
 .method private tsu(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
     const-string v0, "uid"
 
@@ -1214,15 +1214,21 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v1
 
-    iget-object v1, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
+    const-string v2, "pkg"
 
-    invoke-static {v1}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
+    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    monitor-enter v1
+    iget-object v2, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
+
+    invoke-static {v2}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
+
+    move-result-object v2
+
+    monitor-enter v2
 
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
@@ -1231,9 +1237,9 @@
 
     move-result-object p0
 
-    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->rtg:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v3, Lcom/android/server/am/AppRecordManager$ListenerType;->rtg:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1246,29 +1252,29 @@
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/android/server/am/qbh;
+    check-cast v3, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->ssp(IZ)V
+    invoke-interface {v3, v0, p1, v1}, Lcom/android/server/am/qbh;->dma(ILjava/lang/String;Z)V
 
     goto :goto_0
 
     :cond_0
-    monitor-exit v1
+    monitor-exit v2
 
     return-void
 
     :catchall_0
     move-exception p0
 
-    monitor-exit v1
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1656,7 +1662,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->igw(II)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->bio(II)V
 
     goto :goto_0
 

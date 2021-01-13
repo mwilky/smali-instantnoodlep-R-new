@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public dma(IZ)V
+.method public gck(IZ)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/zgw$you;->you:Lcom/android/server/zgw;

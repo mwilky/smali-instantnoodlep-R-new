@@ -37,7 +37,7 @@
 .method public updateConfig(Lorg/json/JSONArray;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
+    invoke-static {}, Lcom/android/server/ibl;->ugm()Z
 
     move-result v0
 
@@ -45,14 +45,14 @@
 
     const-string v0, "CommonFrontMonitor"
 
-    const-string v1, "updateConfig"
+    const-string v1, "updateConfig for adaptive color gamut!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibl$ywr;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0, p1}, Lcom/android/server/ibl;->ugm(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/ibl;->rtg(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
 
     return-void
 .end method

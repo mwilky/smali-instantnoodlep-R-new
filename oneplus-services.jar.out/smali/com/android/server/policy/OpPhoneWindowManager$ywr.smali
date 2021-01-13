@@ -482,56 +482,74 @@
 
     invoke-static {v6, v7, v1, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_e
+    if-eqz v6, :cond_e
 
-    move v5, v1
+    move v6, v1
 
     goto :goto_9
 
     :cond_e
-    move v5, v4
+    move v6, v4
 
     :goto_9
-    iget-object v6, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+    iget-object v7, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->zta:Landroid/content/ContentResolver;
 
-    iget v6, v6, Lcom/android/server/policy/OpPhoneWindowManager;->mNavigationMode:I
+    const-string v8, "nav_icon_hide"
 
-    if-eq v2, v6, :cond_f
+    invoke-static {v7, v8, v4, v5}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    iget-object v6, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+    move-result v5
 
-    iput v2, v6, Lcom/android/server/policy/OpPhoneWindowManager;->mNavigationMode:I
+    if-ne v5, v1, :cond_f
 
-    const-string v2, "OpPhoneWindowManager"
+    move v5, v1
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    goto :goto_a
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    :cond_f
+    move v5, v4
 
-    const-string v7, "GestureButton: update navigation mode to "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    :goto_a
     iget-object v7, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
     iget v7, v7, Lcom/android/server/policy/OpPhoneWindowManager;->mNavigationMode:I
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eq v2, v7, :cond_10
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    move-result-object v6
+    iput v2, v7, Lcom/android/server/policy/OpPhoneWindowManager;->mNavigationMode:I
 
-    invoke-static {v2, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v2, "OpPhoneWindowManager"
 
-    :cond_f
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "GestureButton: update navigation mode to "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v8, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget v8, v8, Lcom/android/server/policy/OpPhoneWindowManager;->mNavigationMode:I
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v2, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_10
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
     iget-boolean v2, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mHideNavBar:Z
 
-    if-eq v3, v2, :cond_10
+    if-eq v3, v2, :cond_11
 
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
@@ -543,48 +561,15 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "GestureButton: update hideNavBar to "
+    const-string v7, "GestureButton: update hideNavBar to "
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+    iget-object v7, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    iget-boolean v6, v6, Lcom/android/server/policy/OpPhoneWindowManager;->mHideNavBar:Z
+    iget-boolean v7, v7, Lcom/android/server/policy/OpPhoneWindowManager;->mHideNavBar:Z
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_10
-    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
-
-    iget-boolean v2, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
-
-    if-eq v5, v2, :cond_11
-
-    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
-
-    iput-boolean v5, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
-
-    const-string v2, "OpPhoneWindowManager"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "GestureButton: update sideEnabled to "
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
-
-    iget-boolean v6, v6, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -595,19 +580,119 @@
     :cond_11
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
+    iget-boolean v2, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
+
+    if-eq v6, v2, :cond_12
+
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iput-boolean v6, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
+
+    const-string v2, "OpPhoneWindowManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "GestureButton: update sideEnabled to "
+
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-boolean v7, v7, Lcom/android/server/policy/OpPhoneWindowManager;->mIsSideEnabled:Z
+
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_12
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-boolean v2, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsNavIconHide:Z
+
+    if-eq v5, v2, :cond_15
+
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iput-boolean v5, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mIsNavIconHide:Z
+
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    if-nez v2, :cond_13
+
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    const-class v3, Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    invoke-static {v3}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    iput-object v3, v2, Lcom/android/server/policy/PhoneWindowManager;->mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    :cond_13
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    if-eqz v2, :cond_14
+
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mInputMethodManagerInternal:Lcom/android/server/inputmethod/InputMethodManagerInternal;
+
+    const/4 v3, 0x3
+
+    invoke-virtual {v2, v3}, Lcom/android/server/inputmethod/InputMethodManagerInternal;->hideCurrentInputMethod(I)V
+
+    :cond_14
+    const-string v2, "OpPhoneWindowManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "GestureButton: update isNavIconHide to "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
+    iget-boolean v5, v5, Lcom/android/server/policy/OpPhoneWindowManager;->mIsNavIconHide:Z
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_15
+    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
+
     invoke-virtual {v2}, Lcom/android/server/policy/OpPhoneWindowManager;->isGestureButtonEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_16
 
-    if-nez v5, :cond_12
+    if-nez v6, :cond_16
 
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
     iget-boolean v2, v2, Lcom/android/server/policy/OpPhoneWindowManager;->mHideNavBar:Z
 
-    if-nez v2, :cond_12
+    if-nez v2, :cond_16
 
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
@@ -619,7 +704,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_12
+    :cond_16
     iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
@@ -630,21 +715,21 @@
 
     move-result v3
 
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_18
 
     iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->you:Lcom/android/server/policy/OpPhoneWindowManager;
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHideNavBar:Z
 
-    if-nez p0, :cond_13
+    if-nez p0, :cond_17
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_13
+    :cond_17
     move v1, v4
 
-    :cond_14
-    :goto_a
+    :cond_18
+    :goto_b
     invoke-virtual {v2, v1}, Lcom/android/server/wm/DisplayPolicy;->setHasNavigationBar(Z)V
 
     monitor-exit v0
@@ -964,6 +1049,16 @@
     const-string v1, "tweaks_custom_recent_long_app"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager$ywr;->zta:Landroid/content/ContentResolver;
+
+    const-string v1, "nav_icon_hide"
+
+    invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 

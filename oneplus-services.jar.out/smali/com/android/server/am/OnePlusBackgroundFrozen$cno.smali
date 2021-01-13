@@ -175,11 +175,11 @@
 
     iput-object v0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$cno;->you:Ljava/lang/String;
 
-    iget-object p2, p2, Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;->ear:Ljava/lang/String;
+    iget-object p2, p2, Lcom/android/server/am/OnePlusBackgroundFrozen$qbh;->ire:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$cno;->cno:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/text/SimpleDateFormat;
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/text/SimpleDateFormat;
 
     move-result-object p1
 

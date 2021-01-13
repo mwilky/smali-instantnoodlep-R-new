@@ -50,7 +50,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$bio;->you:Landroid/os/IBinder$DeathRecipient;
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les()Z
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->c()Z
 
     move-result p0
 
@@ -137,7 +137,7 @@
     const-string p0, "connectHansService fail"
 
     :goto_0
-    invoke-static {v3, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
 
     :goto_1
     return-void
@@ -156,7 +156,7 @@
 .method public sis(I)I
     .locals 4
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les()Z
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->c()Z
 
     move-result v0
 
@@ -242,7 +242,7 @@
 .method public you(I)I
     .locals 4
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les()Z
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->c()Z
 
     move-result v0
 

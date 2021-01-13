@@ -36,7 +36,7 @@
 
 .field private static final vdb:Ljava/lang/String; = "update_version"
 
-.field static final wtn:Z = true
+.field static final wtn:Z = false
 
 .field public static final ywr:I = 0x1
 
@@ -504,7 +504,7 @@
 .end method
 
 .method private dma()V
-    .locals 4
+    .locals 1
 
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->cno:Ljava/io/InputStream;
 
@@ -514,90 +514,65 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/android/server/bluetooth/cno;->gck(Ljava/io/Closeable;)V
 
+    iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->rtg:Landroid/net/LocalServerSocket;
+
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/bluetooth/cno;->gck(Ljava/io/Closeable;)V
+
     const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/bluetooth/cno;->rtg:Landroid/net/LocalServerSocket;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/oneplus/android/server/bluetooth/cno;->rtg:Landroid/net/LocalServerSocket;
-
-    invoke-virtual {v1}, Landroid/net/LocalServerSocket;->close()V
-
-    iput-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->rtg:Landroid/net/LocalServerSocket;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Failed closing ServerSocket"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/io/IOException;->fillInStackTrace()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpBluetoothStackEvent"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    :goto_0
     iput-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->cno:Ljava/io/InputStream;
 
     iput-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->ssp:Landroid/net/LocalSocket;
+
+    iput-object v0, p0, Lcom/oneplus/android/server/bluetooth/cno;->rtg:Landroid/net/LocalServerSocket;
 
     return-void
 .end method
 
 .method private gck(Ljava/io/Closeable;)V
-    .locals 1
+    .locals 2
+
+    const-string p0, "OpBluetoothStackEvent"
 
     if-eqz p1, :cond_0
 
     :try_start_0
     invoke-interface {p1}, Ljava/io/Closeable;->close()V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Failed closing, NPE: "
 
     goto :goto_0
 
-    :catch_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    :catch_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Failed closing : "
+    const-string v1, "Failed closing : "
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "OpBluetoothStackEvent"
-
-    invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    :goto_0
+    :goto_1
     return-void
 .end method
 
