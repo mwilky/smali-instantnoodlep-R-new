@@ -69,13 +69,13 @@
 
     iget-object v1, p0, Lcom/android/server/ibl$you;->sis:Lcom/android/server/ibl;
 
-    invoke-static {v1}, Lcom/android/server/ibl;->oif(Lcom/android/server/ibl;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/ibl;->gwm(Lcom/android/server/ibl;)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
+    invoke-static {}, Lcom/android/server/ibl;->ugm()Z
 
     move-result v0
 

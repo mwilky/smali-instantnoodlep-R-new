@@ -39,192 +39,7 @@
 
 
 # virtual methods
-.method public sis(II)V
-    .locals 5
-
-    invoke-static {}, Lcom/android/server/display/zta;->cgv()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "noteUidStateChanged uid:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " state:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpProximityController"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v1}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    const/4 v2, 0x1
-
-    if-nez p2, :cond_1
-
-    :try_start_0
-    iget-object v3, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v3}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v3
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v0}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    move v0, v2
-
-    :cond_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v1}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v3
-
-    monitor-enter v3
-
-    if-nez p2, :cond_2
-
-    :try_start_1
-    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v1}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v0}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v0
-
-    :goto_0
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz v2, :cond_3
-
-    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    invoke-static {v0}, Lcom/android/server/display/zta;->tsu(Lcom/android/server/display/zta;)I
-
-    move-result v0
-
-    if-ne p1, v0, :cond_3
-
-    iget-object p0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "uidState "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lcom/android/server/display/zta;->ssp(Lcom/android/server/display/zta;Ljava/lang/String;)V
-
-    :cond_3
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_2
-    monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p0
-.end method
-
-.method public wtn(IZ)V
+.method public igw(IZ)V
     .locals 4
 
     invoke-static {}, Lcom/android/server/display/zta;->cgv()Z
@@ -426,6 +241,191 @@
 
     :try_start_3
     monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p0
+.end method
+
+.method public sis(II)V
+    .locals 5
+
+    invoke-static {}, Lcom/android/server/display/zta;->cgv()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "noteUidStateChanged uid:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " state:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpProximityController"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v1}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v1
+
+    monitor-enter v1
+
+    const/4 v2, 0x1
+
+    if-nez p2, :cond_1
+
+    :try_start_0
+    iget-object v3, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v3}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v3
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v0}, Lcom/android/server/display/zta;->les(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    move v0, v2
+
+    :cond_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v1}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v3
+
+    monitor-enter v3
+
+    if-nez p2, :cond_2
+
+    :try_start_1
+    iget-object v1, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v1}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v0}, Lcom/android/server/display/zta;->bud(Lcom/android/server/display/zta;)Ljava/util/HashSet;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    move v2, v0
+
+    :goto_0
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v2, :cond_3
+
+    iget-object v0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    invoke-static {v0}, Lcom/android/server/display/zta;->tsu(Lcom/android/server/display/zta;)I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_3
+
+    iget-object p0, p0, Lcom/android/server/display/zta$cno;->you:Lcom/android/server/display/zta;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "uidState "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/android/server/display/zta;->ssp(Lcom/android/server/display/zta;Ljava/lang/String;)V
+
+    :cond_3
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_2
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p0
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 

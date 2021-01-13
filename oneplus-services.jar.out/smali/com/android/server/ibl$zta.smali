@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -53,143 +53,166 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0}, Lcom/android/server/ibl;->qbh(Lcom/android/server/ibl;)V
+    invoke-static {p0}, Lcom/android/server/ibl;->ibl(Lcom/android/server/ibl;)V
 
     goto/16 :goto_0
 
     :cond_1
+    const-string p1, "CommonFrontMonitor"
+
     if-nez v0, :cond_2
 
-    const-string p0, "CommonFrontMonitor"
+    const-string p0, "[scene] arguments is null while handling CMD_FETCH_CONFIG"
 
-    const-string p1, "[scene] arguments is null while handling CMD_FETCH_CONFIG"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_2
-    new-array p1, v1, [I
+    new-array v2, v1, [I
 
-    const/16 v2, 0xb6
+    const/16 v3, 0xb6
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    aput v2, p1, v3
+    aput v3, v2, v4
 
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result p1
+    move-result v2
 
-    if-eqz p1, :cond_3
+    if-eqz v2, :cond_3
 
-    const-string p1, "CONFIG_NAME_VIDEO_ENHANCEMENT"
+    const-string v2, "CONFIG_NAME_VIDEO_ENHANCEMENT"
 
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    if-eqz p1, :cond_3
+    if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
+    iget-object v3, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
 
-    invoke-static {v2, p1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
 
     :cond_3
-    new-array p1, v1, [I
+    new-array v2, v1, [I
 
-    const/16 v2, 0x67
+    const/16 v3, 0x67
 
-    aput v2, p1, v3
+    aput v3, v2, v4
 
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result p1
+    move-result v2
 
-    if-eqz p1, :cond_4
+    if-eqz v2, :cond_4
 
-    const-string p1, "CONFIG_NAME_SMART5G"
+    const-string v2, "CONFIG_NAME_SMART5G"
 
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    if-eqz p1, :cond_4
+    if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
+    iget-object v3, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
 
-    invoke-static {v2, p1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
 
     :cond_4
-    new-array p1, v1, [I
+    new-array v2, v1, [I
 
-    const/16 v2, 0xef
+    const/16 v3, 0xef
 
-    aput v2, p1, v3
+    aput v3, v2, v4
 
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result p1
+    move-result v2
 
-    if-eqz p1, :cond_5
+    if-eqz v2, :cond_5
 
-    const-string p1, "CONFIG_NAME_FASTOUTPUT"
+    const-string v2, "CONFIG_NAME_FASTOUTPUT"
 
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    if-eqz p1, :cond_5
+    if-eqz v2, :cond_5
+
+    iget-object v3, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
+
+    invoke-static {v3, v2}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
+
+    :cond_5
+    new-array v1, v1, [I
+
+    const/16 v2, 0x112
+
+    aput v2, v1, v4
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "CONFIG_NAME_GAME_DOLBY"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
 
     iget-object v2, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
 
-    invoke-static {v2, p1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
-
-    :cond_5
-    new-array p1, v1, [I
-
-    const/16 v1, 0x112
-
-    aput v1, p1, v3
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const-string p1, "CONFIG_NAME_GAME_DOLBY"
-
-    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    iget-object v1, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
-
-    invoke-static {v1, p1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
 
     :cond_6
     invoke-static {}, Lcom/android/server/ibl;->dma()Z
 
-    move-result p1
+    move-result v1
 
-    if-eqz p1, :cond_7
+    if-eqz v1, :cond_7
 
-    const-string p1, "CONFIG_NAME_LMKD_WATERMARK"
+    const-string v1, "CONFIG_NAME_LMKD_WATERMARK"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_7
+
+    iget-object v2, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
+
+    invoke-static {v2, v1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
+
+    :cond_7
+    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "ready to resolve config for adaptive color gamut!"
+
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "CONFIG_NAME_ADAPTIVE_COLOR_GAMUT"
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     iget-object p0, p0, Lcom/android/server/ibl$zta;->zta:Lcom/android/server/ibl;
 
     invoke-static {p0, p1}, Lcom/android/server/ibl;->you(Lcom/android/server/ibl;Ljava/lang/String;)V
 
-    :cond_7
+    :cond_8
     :goto_0
     return-void
 .end method

@@ -50,27 +50,27 @@
 
 .field private static final j:J = 0x1L
 
-.field private static final k:J = 0x4L
+.field private static final k:J = 0x2L
 
-.field private static l:J = 0x0L
+.field private static final l:J = 0x4L
 
 .field private static final les:Ljava/lang/String; = "persist.radio.duallte.operated"
 
 .field private static final lqr:Ljava/lang/String; = "android.intent.action.SIM_STATE_CHANGED"
 
-.field public static m:Z = false
+.field private static m:J = 0x0L
 
-.field private static final n:Ljava/lang/String; = ""
+.field public static n:Z = false
 
-.field private static final o:Ljava/lang/String; = "Duallte"
+.field private static final o:Ljava/lang/String; = ""
 
-.field private static p:I = 0x0
+.field private static final p:Ljava/lang/String; = "Duallte"
 
 .field private static q:I = 0x0
 
 .field private static final qeg:I = 0x3
 
-.field private static r:Z = false
+.field private static r:I = 0x0
 
 .field private static s:Z = false
 
@@ -78,7 +78,7 @@
 
 .field private static u:Z = false
 
-.field public static v:Z = false
+.field private static v:Z = false
 
 .field private static final vdw:I = 0x2
 
@@ -86,7 +86,9 @@
 
 .field private static vju:Ljava/lang/Object;
 
-.field private static w:[Z
+.field public static w:Z
+
+.field private static x:[Z
 
 
 # instance fields
@@ -211,27 +213,27 @@
 
     const-wide/32 v0, 0xafc8
 
-    sput-wide v0, Lcom/android/server/am/cjf;->l:J
+    sput-wide v0, Lcom/android/server/am/cjf;->m:J
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/server/am/cjf;->m:Z
-
-    sput v0, Lcom/android/server/am/cjf;->p:I
+    sput-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     sput v0, Lcom/android/server/am/cjf;->q:I
 
-    sput-boolean v0, Lcom/android/server/am/cjf;->r:Z
+    sput v0, Lcom/android/server/am/cjf;->r:I
+
+    sput-boolean v0, Lcom/android/server/am/cjf;->s:Z
 
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->s:Z
-
-    sput-boolean v0, Lcom/android/server/am/cjf;->t:Z
+    sput-boolean v1, Lcom/android/server/am/cjf;->t:Z
 
     sput-boolean v0, Lcom/android/server/am/cjf;->u:Z
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->v:Z
+    sput-boolean v0, Lcom/android/server/am/cjf;->v:Z
+
+    sput-boolean v1, Lcom/android/server/am/cjf;->w:Z
 
     const/4 v0, 0x2
 
@@ -239,7 +241,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sput-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     return-void
 
@@ -359,9 +361,9 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->v:Z
+    sput-boolean v1, Lcom/android/server/am/cjf;->w:Z
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->m:Z
+    sput-boolean v1, Lcom/android/server/am/cjf;->n:Z
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -371,7 +373,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v2, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v2, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -409,7 +411,7 @@
 
     if-ne p1, v2, :cond_0
 
-    sget-object p1, Lcom/android/server/am/cjf;->w:[Z
+    sget-object p1, Lcom/android/server/am/cjf;->x:[Z
 
     aget-boolean v0, p1, v0
 
@@ -419,7 +421,7 @@
 
     if-eqz p1, :cond_0
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->r:Z
+    sput-boolean v1, Lcom/android/server/am/cjf;->s:Z
 
     :cond_0
     new-instance p1, Landroid/os/HandlerThread;
@@ -470,7 +472,7 @@
 
     if-nez p1, :cond_1
 
-    sput-boolean v1, Lcom/android/server/am/cjf;->s:Z
+    sput-boolean v1, Lcom/android/server/am/cjf;->t:Z
 
     :cond_1
     invoke-direct {p0}, Lcom/android/server/am/cjf;->b()V
@@ -794,7 +796,7 @@
 .method static synthetic bio()[Z
     .locals 1
 
-    sget-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     return-object v0
 .end method
@@ -833,7 +835,7 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean v0, Lcom/android/server/am/cjf;->r:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->s:Z
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -845,11 +847,11 @@
 
     move-result p1
 
-    sput-boolean p1, Lcom/android/server/am/cjf;->r:Z
+    sput-boolean p1, Lcom/android/server/am/cjf;->s:Z
 
     if-eqz p1, :cond_1
 
-    sget-boolean p1, Lcom/android/server/am/cjf;->s:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->t:Z
 
     if-eqz p1, :cond_2
 
@@ -945,15 +947,15 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean v0, Lcom/android/server/am/cjf;->t:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->u:Z
 
     if-eq v0, p1, :cond_2
 
-    sput-boolean p1, Lcom/android/server/am/cjf;->t:Z
+    sput-boolean p1, Lcom/android/server/am/cjf;->u:Z
 
     if-eqz p1, :cond_1
 
-    sget-boolean p1, Lcom/android/server/am/cjf;->s:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->t:Z
 
     if-eqz p1, :cond_2
 
@@ -1000,7 +1002,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v1, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1018,7 +1020,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-wide v1, Lcom/android/server/am/cjf;->l:J
+    sget-wide v1, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1953,7 +1955,7 @@
 .method private irq(Ljava/lang/Boolean;)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->s:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->t:Z
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1965,11 +1967,11 @@
 
     move-result p1
 
-    sput-boolean p1, Lcom/android/server/am/cjf;->s:Z
+    sput-boolean p1, Lcom/android/server/am/cjf;->t:Z
 
     if-eqz p1, :cond_0
 
-    sget-boolean p1, Lcom/android/server/am/cjf;->r:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->s:Z
 
     if-eqz p1, :cond_1
 
@@ -2002,7 +2004,7 @@
 .method private ivd()V
     .locals 4
 
-    sget-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     const/4 v1, 0x0
 
@@ -2017,7 +2019,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    sget-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     aget-boolean v2, v0, v1
 
@@ -2048,7 +2050,7 @@
 
     move-result v0
 
-    sget-object v1, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v1, Lcom/android/server/am/cjf;->x:[Z
 
     const/4 v2, 0x0
 
@@ -2119,11 +2121,11 @@
 .method private k()Z
     .locals 0
 
-    sget-boolean p0, Lcom/android/server/am/cjf;->r:Z
+    sget-boolean p0, Lcom/android/server/am/cjf;->s:Z
 
     if-eqz p0, :cond_0
 
-    sget-boolean p0, Lcom/android/server/am/cjf;->s:Z
+    sget-boolean p0, Lcom/android/server/am/cjf;->t:Z
 
     if-eqz p0, :cond_0
 
@@ -2165,7 +2167,7 @@
 .method private les()V
     .locals 2
 
-    sget-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     const/4 v1, 0x0
 
@@ -2179,7 +2181,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->r:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->s:Z
 
     if-nez v0, :cond_1
 
@@ -2188,7 +2190,7 @@
     goto :goto_0
 
     :cond_0
-    sget-boolean v0, Lcom/android/server/am/cjf;->r:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->s:Z
 
     if-eqz v0, :cond_1
 
@@ -2980,15 +2982,15 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean v0, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->v:Z
 
     if-eq v0, p1, :cond_2
 
-    sput-boolean p1, Lcom/android/server/am/cjf;->u:Z
+    sput-boolean p1, Lcom/android/server/am/cjf;->v:Z
 
     if-eqz p1, :cond_1
 
-    sget-boolean p1, Lcom/android/server/am/cjf;->s:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->t:Z
 
     if-eqz p1, :cond_2
 
@@ -3261,7 +3263,7 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/android/server/am/cjf;->m:Z
+    sput-boolean v2, Lcom/android/server/am/cjf;->n:Z
 
     goto/16 :goto_7
 
@@ -3292,7 +3294,7 @@
 
     int-to-long v2, v2
 
-    sput-wide v2, Lcom/android/server/am/cjf;->l:J
+    sput-wide v2, Lcom/android/server/am/cjf;->m:J
 
     goto/16 :goto_7
 
@@ -3617,7 +3619,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3637,7 +3639,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-wide v0, Lcom/android/server/am/cjf;->l:J
+    sget-wide v0, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3755,7 +3757,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3775,7 +3777,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-wide v0, Lcom/android/server/am/cjf;->l:J
+    sget-wide v0, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3871,7 +3873,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3891,7 +3893,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-wide v0, Lcom/android/server/am/cjf;->l:J
+    sget-wide v0, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3961,7 +3963,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v1, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3981,7 +3983,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-wide v1, Lcom/android/server/am/cjf;->l:J
+    sget-wide v1, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4124,7 +4126,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v3, Lcom/android/server/am/cjf;->t:Z
+    sget-boolean v3, Lcom/android/server/am/cjf;->u:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -4132,7 +4134,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v3, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean v3, Lcom/android/server/am/cjf;->v:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -4254,7 +4256,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/cjf;->kth:Landroid/os/Handler;
 
-    sget-wide v10, Lcom/android/server/am/cjf;->l:J
+    sget-wide v10, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {v1, p1, v10, v11}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -4291,12 +4293,12 @@
 
     iget-object v1, p0, Lcom/android/server/am/cjf;->kth:Landroid/os/Handler;
 
-    sget-wide v3, Lcom/android/server/am/cjf;->l:J
+    sget-wide v3, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {v1, p1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_8
-    sget-boolean p1, Lcom/android/server/am/cjf;->t:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->u:Z
 
     if-eqz p1, :cond_a
 
@@ -4331,12 +4333,12 @@
 
     iget-object v1, p0, Lcom/android/server/am/cjf;->kth:Landroid/os/Handler;
 
-    sget-wide v3, Lcom/android/server/am/cjf;->l:J
+    sget-wide v3, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {v1, p1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_a
-    sget-boolean p1, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->v:Z
 
     if-eqz p1, :cond_14
 
@@ -4361,7 +4363,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cjf;->kth:Landroid/os/Handler;
 
-    sget-wide v0, Lcom/android/server/am/cjf;->l:J
+    sget-wide v0, Lcom/android/server/am/cjf;->m:J
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -4469,7 +4471,7 @@
 
     :cond_10
     :goto_3
-    sget-boolean p1, Lcom/android/server/am/cjf;->t:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->u:Z
 
     if-eqz p1, :cond_12
 
@@ -4507,7 +4509,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_12
-    sget-boolean p1, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean p1, Lcom/android/server/am/cjf;->v:Z
 
     if-eqz p1, :cond_14
 
@@ -4642,7 +4644,7 @@
 
     if-gt v0, v1, :cond_0
 
-    sget-object v0, Lcom/android/server/am/cjf;->w:[Z
+    sget-object v0, Lcom/android/server/am/cjf;->x:[Z
 
     invoke-direct {p0}, Lcom/android/server/am/cjf;->hmo()I
 
@@ -5262,7 +5264,7 @@
 
     if-nez p1, :cond_1
 
-    sget-boolean v2, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean v2, Lcom/android/server/am/cjf;->v:Z
 
     if-nez v2, :cond_1
 
@@ -5352,7 +5354,7 @@
 
     invoke-virtual {v2, v8, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    const-wide/16 v6, 0x4
+    const-wide/16 v6, 0x2
 
     invoke-virtual {v2, v5, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
@@ -5468,7 +5470,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v2, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v2, Lcom/android/server/am/cjf;->n:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -5570,7 +5572,7 @@
 .method public frontPackageChanged(Ljava/lang/String;IILjava/lang/String;II)V
     .locals 0
 
-    sget-boolean p3, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean p3, Lcom/android/server/am/cjf;->n:Z
 
     if-nez p3, :cond_0
 
@@ -5616,8 +5618,6 @@
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->ire(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->q(Ljava/lang/String;)V
-
     :cond_2
     return-void
 .end method
@@ -5625,7 +5625,7 @@
 .method public ire(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     if-nez v0, :cond_0
 
@@ -5688,11 +5688,11 @@
 
     if-nez v0, :cond_4
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->t:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->u:Z
 
     if-nez v0, :cond_4
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->u:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->v:Z
 
     if-eqz v0, :cond_5
 
@@ -5867,7 +5867,7 @@
 .method public v(Z)V
     .locals 2
 
-    sget-boolean v0, Lcom/android/server/am/cjf;->m:Z
+    sget-boolean v0, Lcom/android/server/am/cjf;->n:Z
 
     if-nez v0, :cond_0
 

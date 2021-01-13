@@ -1,4 +1,4 @@
-.class Lcom/android/server/am/i$zta;
+.class Lcom/android/server/am/j$zta;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/i;->listentClientAsync()Z
+    value = Lcom/android/server/am/j;->listentClientAsync()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/am/i;
+.field final synthetic zta:Lcom/android/server/am/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/i;)V
+.method constructor <init>(Lcom/android/server/am/j;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/i$zta;->zta:Lcom/android/server/am/i;
+    iput-object p1, p0, Lcom/android/server/am/j$zta;->zta:Lcom/android/server/am/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +37,9 @@
 .method public run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/i$zta;->zta:Lcom/android/server/am/i;
+    iget-object p0, p0, Lcom/android/server/am/j$zta;->zta:Lcom/android/server/am/j;
 
-    invoke-static {p0}, Lcom/android/server/am/i;->access$000(Lcom/android/server/am/i;)Z
+    invoke-static {p0}, Lcom/android/server/am/j;->access$000(Lcom/android/server/am/j;)Z
 
     return-void
 .end method

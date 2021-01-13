@@ -1,491 +1,406 @@
-.class Lcom/android/server/am/f;
-.super Ljava/lang/Object;
+.class public Lcom/android/server/am/f;
+.super Lcom/android/server/am/igw;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/am/f$you;,
+        Lcom/android/server/am/f$sis;
+    }
+.end annotation
+
+
 # static fields
-.field public static final bvj:I = 0x2000
+.field public static final bio:Ljava/lang/String; = "OpUfsController"
 
-.field public static final dma:I = 0x4
+.field private static gck:Lcom/android/server/am/f; = null
 
-.field public static final gck:I = 0x2
+.field private static final igw:Ljava/lang/String; = "vendor.sys.op.disable_ufstw"
 
-.field public static final gwm:I = 0x40000000
-
-.field public static final ibl:I = 0x20000000
-
-.field public static final oif:I = 0x2000
-
-.field public static final qbh:I = 0x800
-
-.field public static final ywr:I = 0x8
+.field public static wtn:Z
 
 
 # instance fields
-.field private bio:I
+.field private cno:Lcom/oneplus/config/ConfigObserver;
 
-.field public cno:I
+.field private kth:Lcom/android/server/am/f$you;
 
-.field private igw:I
+.field private rtg:Landroid/content/Context;
 
-.field public kth:J
+.field private sis:Z
 
-.field public final rtg:Lcom/android/server/am/bio;
+.field private ssp:Lcom/android/server/am/f$sis;
 
-.field public final sis:Ljava/lang/String;
+.field private tsu:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field ssp:Z
-
-.field public final tsu:Ljava/lang/String;
-
-.field private final wtn:Ljava/lang/Object;
-
-.field public final you:I
-
-.field public final zta:I
+.field private you:Z
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;ZLcom/android/server/am/bio;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x14e
+
+    aput v2, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/android/server/am/f;->wtn:Z
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/am/f;->ssp:Z
-
-    iput v0, p0, Lcom/android/server/am/f;->bio:I
-
-    iput v0, p0, Lcom/android/server/am/f;->igw:I
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/am/f;->wtn:Ljava/lang/Object;
-
-    iput p1, p0, Lcom/android/server/am/f;->zta:I
-
-    iput p2, p0, Lcom/android/server/am/f;->you:I
-
-    iput-object p3, p0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lcom/android/server/am/f;->ssp:Z
-
-    iput-object p6, p0, Lcom/android/server/am/f;->rtg:Lcom/android/server/am/bio;
-
-    iput-object p4, p0, Lcom/android/server/am/f;->tsu:Ljava/lang/String;
+    sput-object v0, Lcom/android/server/am/f;->gck:Lcom/android/server/am/f;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZLcom/android/server/am/bio;)V
-    .locals 7
+.method private constructor <init>()V
+    .locals 2
 
-    iget v1, p5, Lcom/android/server/am/bio;->zta:I
+    invoke-direct {p0}, Lcom/android/server/am/igw;-><init>()V
 
-    move-object v0, p0
+    const/4 v0, 0x0
 
-    move v2, p1
+    iput-boolean v0, p0, Lcom/android/server/am/f;->you:Z
 
-    move-object v3, p2
+    sget-boolean v0, Lcom/android/server/am/f;->wtn:Z
 
-    move-object v4, p3
+    iput-boolean v0, p0, Lcom/android/server/am/f;->sis:Z
 
-    move v5, p4
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-object v6, p5
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/server/am/f;-><init>(IILjava/lang/String;Ljava/lang/String;ZLcom/android/server/am/bio;)V
+    iput-object v0, p0, Lcom/android/server/am/f;->tsu:Ljava/util/ArrayList;
+
+    new-instance v0, Lcom/android/server/am/f$sis;
+
+    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/android/server/am/f$sis;-><init>(Lcom/android/server/am/f;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/android/server/am/f;->ssp:Lcom/android/server/am/f$sis;
+
+    new-instance v0, Lcom/android/server/am/f$you;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/android/server/am/f$you;-><init>(Lcom/android/server/am/f;Lcom/android/server/am/f$zta;)V
+
+    iput-object v0, p0, Lcom/android/server/am/f;->kth:Lcom/android/server/am/f$you;
+
+    sget-object v0, Lcom/android/server/am/AppRecordManager$ListenerType;->rtg:Lcom/android/server/am/AppRecordManager$ListenerType;
+
+    invoke-static {v0, p0}, Lcom/android/server/am/AppRecordManager;->vdb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     return-void
+.end method
+
+.method static synthetic bvj(Lcom/android/server/am/f;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/am/f;->ear()V
+
+    return-void
+.end method
+
+.method private ear()V
+    .locals 5
+
+    iget-boolean v0, p0, Lcom/android/server/am/f;->you:Z
+
+    const-string v1, "OpUfsController"
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "[OnlineConfig] registerOnlineConfig"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/am/f;->rtg:Landroid/content/Context;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lcom/oneplus/config/ConfigObserver;
+
+    iget-object v2, p0, Lcom/android/server/am/f;->rtg:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/android/server/am/f;->ssp:Lcom/android/server/am/f$sis;
+
+    iget-object v4, p0, Lcom/android/server/am/f;->kth:Lcom/android/server/am/f$you;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/server/am/f;->cno:Lcom/oneplus/config/ConfigObserver;
+
+    invoke-virtual {v0}, Lcom/oneplus/config/ConfigObserver;->register()V
+
+    return-void
+.end method
+
+.method static synthetic gwm(Lcom/android/server/am/f;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/am/f;->sis:Z
+
+    return p0
+.end method
+
+.method static synthetic ibl(Lcom/android/server/am/f;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/am/f;->oxb()V
+
+    return-void
+.end method
+
+.method private ire(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    :try_start_0
+    invoke-static {p1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public static declared-synchronized obl()Lcom/android/server/am/f;
+    .locals 2
+
+    const-class v0, Lcom/android/server/am/f;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/android/server/am/f;->gck:Lcom/android/server/am/f;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lcom/android/server/am/f;
+
+    invoke-direct {v1}, Lcom/android/server/am/f;-><init>()V
+
+    sput-object v1, Lcom/android/server/am/f;->gck:Lcom/android/server/am/f;
+
+    :cond_0
+    sget-object v1, Lcom/android/server/am/f;->gck:Lcom/android/server/am/f;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method private oxb()V
+    .locals 3
+
+    iget-boolean v0, p0, Lcom/android/server/am/f;->you:Z
+
+    const-string v1, "OpUfsController"
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "[OnlineConfig] grabOnlineConfig"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/am/f;->rtg:Landroid/content/Context;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lcom/oneplus/config/ConfigGrabber;
+
+    iget-object v2, p0, Lcom/android/server/am/f;->rtg:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v1}, Lcom/oneplus/config/ConfigGrabber;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/server/am/f;->kth:Lcom/android/server/am/f$you;
+
+    invoke-virtual {v0}, Lcom/oneplus/config/ConfigGrabber;->grabConfig()Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/server/am/f$you;->zta(Lorg/json/JSONArray;)V
+
+    return-void
+.end method
+
+.method static synthetic ugm(Lcom/android/server/am/f;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/am/f;->sis:Z
+
+    return p1
+.end method
+
+.method static synthetic vdb(Lcom/android/server/am/f;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/am/f;->ire(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic zgw(Lcom/android/server/am/f;)Ljava/util/ArrayList;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/am/f;->tsu:Ljava/util/ArrayList;
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public bio()J
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/am/f;->wtn:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-wide v1, p0, Lcom/android/server/am/f;->kth:J
-
-    monitor-exit v0
-
-    return-wide v1
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method bvj()V
-    .locals 1
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iput v0, p0, Lcom/android/server/am/f;->bio:I
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public cno()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/am/f;->tsu:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method dma()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->bio:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcom/android/server/am/f;->bio:I
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method gck()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->igw:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcom/android/server/am/f;->igw:I
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method igw()Z
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/am/f;->cno:I
-
-    and-int/lit16 p0, p0, 0x2000
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public kth()I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/am/f;->you:I
-
-    return p0
-.end method
-
-.method oif()V
-    .locals 1
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iput v0, p0, Lcom/android/server/am/f;->igw:I
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method qbh(I)V
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/am/f;->cno:I
-
-    not-int p1, p1
-
-    and-int/2addr p1, v0
-
-    iput p1, p0, Lcom/android/server/am/f;->cno:I
-
-    return-void
-.end method
-
-.method rtg()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->igw:I
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method sis()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->bio:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/android/server/am/f;->bio:I
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method ssp()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->bio:I
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public toString()Ljava/lang/String;
+.method public cjf(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lcom/android/server/am/f;->rtg:Landroid/content/Context;
 
-    const-string v1, "ProcRecord { "
+    iget-object p1, p0, Lcom/android/server/am/f;->ssp:Lcom/android/server/am/f$sis;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    const-string v1, "uid="
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget v1, p0, Lcom/android/server/am/f;->zta:I
+    iget-object p0, p0, Lcom/android/server/am/f;->ssp:Lcom/android/server/am/f$sis;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x7530
 
-    const-string v1, ", pkg="
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/android/server/am/f;->tsu:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", pid="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcom/android/server/am/f;->you:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", procName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " }"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public tsu()I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/am/f;->cno:I
-
-    return p0
-.end method
-
-.method wtn()Z
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/am/f;->cno:I
-
-    and-int/lit16 p0, p0, 0x2000
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method you()V
+.method public dma(ILjava/lang/String;Z)V
     .locals 1
 
-    monitor-enter p0
+    iget-boolean p1, p0, Lcom/android/server/am/f;->sis:Z
 
-    :try_start_0
-    iget v0, p0, Lcom/android/server/am/f;->igw:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/android/server/am/f;->igw:I
-
-    monitor-exit p0
+    if-nez p1, :cond_0
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    iget-object p1, p0, Lcom/android/server/am/f;->tsu:Ljava/util/ArrayList;
 
-    monitor-exit p0
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/am/f;->tsu:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean p0, p0, Lcom/android/server/am/f;->you:Z
+
+    if-eqz p0, :cond_1
+
+    const-string p0, "OpUfsController"
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " is in black list."
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    monitor-exit p1
+
+    return-void
+
+    :cond_2
+    monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v0
-.end method
+    if-eqz p3, :cond_3
 
-.method public ywr(J)V
-    .locals 1
+    const-string p1, "1"
 
-    iget-object v0, p0, Lcom/android/server/am/f;->wtn:Ljava/lang/Object;
+    goto :goto_0
 
-    monitor-enter v0
+    :cond_3
+    const-string p1, "0"
 
-    :try_start_0
-    iput-wide p1, p0, Lcom/android/server/am/f;->kth:J
+    :goto_0
+    const-string p2, "vendor.sys.op.disable_ufstw"
 
-    monitor-exit v0
+    invoke-direct {p0, p2, p1}, Lcom/android/server/am/f;->ire(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :catchall_0
     move-exception p0
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p0
-.end method
-
-.method zta(I)V
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/am/f;->cno:I
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcom/android/server/am/f;->cno:I
-
-    return-void
 .end method

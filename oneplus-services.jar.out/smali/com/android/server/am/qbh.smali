@@ -4,19 +4,19 @@
 
 
 # virtual methods
-.method public abstract bio(IZ)V
+.method public abstract bio(II)V
 .end method
 
-.method public abstract cno(Ljava/lang/String;Z)V
+.method public abstract cno(IZ)V
 .end method
 
-.method public abstract dma(IZ)V
+.method public abstract dma(ILjava/lang/String;Z)V
 .end method
 
-.method public abstract gck(ILjava/lang/String;Z)V
+.method public abstract gck(IZ)V
 .end method
 
-.method public abstract igw(II)V
+.method public abstract igw(IZ)V
 .end method
 
 .method public abstract kth(IZ)V
@@ -61,13 +61,13 @@
 .method public abstract sis(II)V
 .end method
 
-.method public abstract ssp(IZ)V
+.method public abstract ssp(Ljava/lang/String;Z)V
 .end method
 
 .method public abstract tsu(IIZ)V
 .end method
 
-.method public abstract wtn(IZ)V
+.method public abstract wtn(ILjava/lang/String;Z)V
 .end method
 
 .method public abstract you(ILjava/lang/String;Z)V

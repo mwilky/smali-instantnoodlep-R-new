@@ -91,6 +91,27 @@
     return-object v0
 .end method
 
+.method private getNavBarColorConfig()Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    return-object p0
+.end method
+
 
 # virtual methods
 .method public changeFont(II)V
@@ -273,7 +294,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+    invoke-direct {p0}, Lcom/oneplus/server/OnePlusService;->getNavBarColorConfig()Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    move-result-object p0
 
     invoke-virtual {p0}, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;->getBlackList()Ljava/util/List;
 
@@ -344,13 +367,27 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+    invoke-direct {p0}, Lcom/oneplus/server/OnePlusService;->getNavBarColorConfig()Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
+
+    move-result-object p0
 
     invoke-virtual {p0}, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;->getWhiteList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method public hookMediaProvider(II)V
+    .locals 0
+
+    invoke-static {}, Lcom/android/server/ibl;->fto()Lcom/android/server/ibl;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/ibl;->vju(II)V
+
+    return-void
 .end method
 
 .method public isFullscreenScene()Z
@@ -695,7 +732,7 @@
 
     invoke-virtual {v0}, Lcom/oneplus/server/theme/zta;->ibl()V
 
-    invoke-static {}, Lcom/android/server/ibl;->ire()Lcom/android/server/ibl;
+    invoke-static {}, Lcom/android/server/ibl;->fto()Lcom/android/server/ibl;
 
     move-result-object v0
 
@@ -703,7 +740,7 @@
 
     iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/ibl;->veq(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/server/ibl;->bud(Landroid/content/Context;)V
 
     sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 
@@ -723,14 +760,6 @@
     invoke-virtual {v0, v1}, Lcom/oneplus/server/zta;->t(Landroid/content/Context;)V
 
     :cond_1
-    new-instance v0, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
-
-    iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lcom/oneplus/onlineconfig/OpNavBarColorConfig;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mNavBarColorConfig:Lcom/oneplus/onlineconfig/OpNavBarColorConfig;
-
     new-instance v0, Lcom/oneplus/onlineconfig/OpUFSHPBConfig;
 
     iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;

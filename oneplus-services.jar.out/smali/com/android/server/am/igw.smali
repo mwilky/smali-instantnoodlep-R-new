@@ -21,31 +21,31 @@
 
 
 # virtual methods
-.method public bio(IZ)V
+.method public bio(II)V
     .locals 0
 
     return-void
 .end method
 
-.method public cno(Ljava/lang/String;Z)V
+.method public cno(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public dma(IZ)V
+.method public dma(ILjava/lang/String;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public gck(ILjava/lang/String;Z)V
+.method public gck(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public igw(II)V
+.method public igw(IZ)V
     .locals 0
 
     return-void
@@ -135,7 +135,7 @@
     return-void
 .end method
 
-.method public ssp(IZ)V
+.method public ssp(Ljava/lang/String;Z)V
     .locals 0
 
     return-void
@@ -147,7 +147,7 @@
     return-void
 .end method
 
-.method public wtn(IZ)V
+.method public wtn(ILjava/lang/String;Z)V
     .locals 0
 
     return-void

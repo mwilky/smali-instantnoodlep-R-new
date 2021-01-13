@@ -125,7 +125,7 @@
 
     const-string v3, "/sys/module/tpd/parameters/tpd_cmds"
 
-    invoke-static {v2, v3, v1}, Lcom/android/server/ibl;->wtn(Lcom/android/server/ibl;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v2, v3, v1}, Lcom/android/server/ibl;->ywr(Lcom/android/server/ibl;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0
 
@@ -134,7 +134,7 @@
 
     const/4 p1, 0x1
 
-    invoke-static {p0, p1}, Lcom/android/server/ibl;->gck(Lcom/android/server/ibl;Z)V
+    invoke-static {p0, p1}, Lcom/android/server/ibl;->qbh(Lcom/android/server/ibl;Z)V
 
     return-void
 .end method

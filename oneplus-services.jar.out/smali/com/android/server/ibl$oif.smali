@@ -1,4 +1,4 @@
-.class Lcom/android/server/ibl$dma;
+.class Lcom/android/server/ibl$oif;
 .super Ljava/lang/Object;
 .source ""
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
-    name = "dma"
+    name = "oif"
 .end annotation
 
 
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/server/ibl;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/ibl$dma;->zta:Lcom/android/server/ibl;
+    iput-object p1, p0, Lcom/android/server/ibl$oif;->zta:Lcom/android/server/ibl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,12 +47,12 @@
 
     const-string v1, "updateConfig"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/ibl$dma;->zta:Lcom/android/server/ibl;
+    iget-object p0, p0, Lcom/android/server/ibl$oif;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0, p1}, Lcom/android/server/ibl;->ssp(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/ibl;->sis(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
 
     return-void
 .end method

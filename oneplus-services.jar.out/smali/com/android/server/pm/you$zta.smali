@@ -60,7 +60,7 @@
 
     if-eq v0, v1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
@@ -69,9 +69,9 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lcom/android/server/pm/you;->gck(Lcom/android/server/pm/you;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/android/server/pm/you;->tsu(Lcom/android/server/pm/you;Ljava/lang/String;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
@@ -80,9 +80,9 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lcom/android/server/pm/you;->wtn(Lcom/android/server/pm/you;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/android/server/pm/you;->sis(Lcom/android/server/pm/you;Ljava/lang/String;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_2
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
@@ -103,7 +103,7 @@
 
     iget-object v2, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v2}, Lcom/android/server/pm/you;->kth(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/server/pm/you;->gck(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -115,7 +115,7 @@
 
     iget-object v2, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v2}, Lcom/android/server/pm/you;->bio(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/server/pm/you;->dma(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -130,13 +130,13 @@
     :cond_3
     iget-object v2, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v2, v0, p1, v1}, Lcom/android/server/pm/you;->ssp(Lcom/android/server/pm/you;Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v2, v0, p1, v1}, Lcom/android/server/pm/you;->igw(Lcom/android/server/pm/you;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
     iget-object v1, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v1}, Lcom/android/server/pm/you;->igw(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/android/server/pm/you;->ywr(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -145,7 +145,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v2}, Lcom/android/server/pm/you;->igw(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/server/pm/you;->ywr(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -159,7 +159,7 @@
 
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {p0}, Lcom/android/server/pm/you;->kth(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+    invoke-static {p0}, Lcom/android/server/pm/you;->gck(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -190,7 +190,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :catchall_0
     move-exception p0
@@ -209,9 +209,9 @@
     :cond_6
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {p0}, Lcom/android/server/pm/you;->cno(Lcom/android/server/pm/you;)V
+    invoke-static {p0}, Lcom/android/server/pm/you;->wtn(Lcom/android/server/pm/you;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_7
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -246,7 +246,7 @@
     :cond_8
     monitor-exit v0
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
     iget-object v0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
@@ -276,11 +276,58 @@
     :cond_9
     monitor-exit v1
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    invoke-static {}, Lcom/android/server/pm/you;->ssp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
 
     iget-object v0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v0}, Lcom/android/server/pm/you;->tsu(Lcom/android/server/pm/you;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/pm/you;->cno(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    monitor-enter v0
+
+    :try_start_4
+    iget-object v1, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
+
+    invoke-static {v1}, Lcom/android/server/pm/you;->cno(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_a
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw p0
+
+    :cond_b
+    :goto_1
+    iget-object v0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
+
+    invoke-static {v0}, Lcom/android/server/pm/you;->kth(Lcom/android/server/pm/you;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -288,11 +335,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_d
 
-    sget-boolean p1, Lcom/android/server/pm/you;->oif:Z
+    sget-boolean p1, Lcom/android/server/pm/you;->bvj:Z
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_c
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -304,7 +351,7 @@
 
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {p0}, Lcom/android/server/pm/you;->tsu(Lcom/android/server/pm/you;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/server/pm/you;->kth(Lcom/android/server/pm/you;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -318,17 +365,17 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_a
+    :cond_c
     return-void
 
-    :cond_b
+    :cond_d
     iget-object v0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
-    invoke-static {v0, p1}, Lcom/android/server/pm/you;->rtg(Lcom/android/server/pm/you;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/android/server/pm/you;->bio(Lcom/android/server/pm/you;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-boolean v0, Lcom/android/server/pm/you;->oif:Z
+    sget-boolean v0, Lcom/android/server/pm/you;->bvj:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_e
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -348,18 +395,18 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_c
+    :cond_e
     iget-object v0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p1, v1, v2}, Lcom/android/server/pm/you;->ssp(Lcom/android/server/pm/you;Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v0, p1, v1, v2}, Lcom/android/server/pm/you;->igw(Lcom/android/server/pm/you;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -391,7 +438,7 @@
 
     monitor-enter v0
 
-    :try_start_4
+    :try_start_5
     iget-object v1, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
     invoke-static {v1}, Lcom/android/server/pm/you;->zta(Lcom/android/server/pm/you;)Ljava/util/ArrayList;
@@ -402,18 +449,18 @@
 
     monitor-exit v0
 
-    goto :goto_1
+    goto :goto_2
 
-    :catchall_1
+    :catchall_2
     move-exception p0
 
     monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     throw p0
 
-    :cond_d
+    :cond_f
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -436,33 +483,33 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1
+    :goto_2
     iget-object p0, p0, Lcom/android/server/pm/you$zta;->zta:Lcom/android/server/pm/you;
 
     const-string p1, "unlocked"
 
-    invoke-static {p0, p1}, Lcom/android/server/pm/you;->rtg(Lcom/android/server/pm/you;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/android/server/pm/you;->bio(Lcom/android/server/pm/you;Ljava/lang/String;)Ljava/lang/String;
 
-    :goto_2
+    :goto_3
     return-void
-
-    :catchall_2
-    move-exception p0
-
-    :try_start_5
-    monitor-exit v1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    throw p0
 
     :catchall_3
     move-exception p0
 
     :try_start_6
-    monitor-exit v0
+    monitor-exit v1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    throw p0
+
+    :catchall_4
+    move-exception p0
+
+    :try_start_7
+    monitor-exit v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
 
     throw p0
 .end method

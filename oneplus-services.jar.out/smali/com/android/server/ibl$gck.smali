@@ -34,7 +34,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
+    invoke-static {}, Lcom/android/server/ibl;->ugm()Z
 
     move-result p1
 
@@ -49,7 +49,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibl$gck;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0}, Lcom/android/server/ibl;->ibl(Lcom/android/server/ibl;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/ibl;->vdb(Lcom/android/server/ibl;)Landroid/os/Handler;
 
     move-result-object p0
 

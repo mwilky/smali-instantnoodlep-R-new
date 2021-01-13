@@ -36,35 +36,9 @@
 
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "handlMessage, msg.what: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", msg.obj: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v1, "OpBluetoothMonitorIotDevice"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x1
 
@@ -111,9 +85,19 @@
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
+    const-string v0, "version"
+
+    const-string v2, "2"
+
+    invoke-virtual {p1, v0, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/rtg$zta;->zta:Lcom/oneplus/android/server/bluetooth/rtg;
 
     invoke-static {v0}, Lcom/oneplus/android/server/bluetooth/rtg;->sis(Lcom/oneplus/android/server/bluetooth/rtg;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/android/server/bluetooth/bio;->wtn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -352,10 +336,6 @@
 
     :cond_3
     :try_start_0
-    const-string v0, "Check Device IOT Broadcast"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V

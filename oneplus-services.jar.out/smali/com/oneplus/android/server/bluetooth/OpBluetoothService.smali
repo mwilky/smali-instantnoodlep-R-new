@@ -14,7 +14,7 @@
     .end annotation
 .end field
 
-.field static final DBG:Z = true
+.field static final DBG:Z = false
 
 .field static final TAG:Ljava/lang/String; = "OpBluetoothService"
 
@@ -63,7 +63,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/android/bluetooth/IOpBluetooth$Stub;-><init>()V
 
@@ -86,12 +86,6 @@
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/bluetooth/OpBluetoothService$you;-><init>(Lcom/oneplus/android/server/bluetooth/OpBluetoothService;)V
 
     iput-object v0, p0, Lcom/oneplus/android/server/bluetooth/OpBluetoothService;->opBluetoothActionReceiver:Landroid/content/BroadcastReceiver;
-
-    const-string v0, "OpBluetoothService"
-
-    const-string v1, "Construct establish"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Lcom/oneplus/android/server/bluetooth/kth;
 
@@ -614,13 +608,7 @@
 .end method
 
 .method public onDestroy()V
-    .locals 2
-
-    const-string v0, "OpBluetoothService"
-
-    const-string v1, "onDestroy"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 1
 
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/OpBluetoothService;->sBluetoothDevice:Lcom/oneplus/android/server/bluetooth/zta;
 
@@ -647,25 +635,7 @@
 .end method
 
 .method public publish(Landroid/content/Context;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "publish context = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpBluetoothService"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 0
 
     iput-object p1, p0, Lcom/oneplus/android/server/bluetooth/OpBluetoothService;->mContext:Landroid/content/Context;
 
@@ -690,40 +660,6 @@
     return v0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "EnableInfo, enable: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", reason: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p2}, Lcom/oneplus/android/server/bluetooth/bio;->ugm(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", packageName: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "OpBluetoothService"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     iget-object v1, p0, Lcom/oneplus/android/server/bluetooth/OpBluetoothService;->sRecorder:Lcom/oneplus/android/server/bluetooth/kth;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -740,7 +676,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p2}, Lcom/oneplus/android/server/bluetooth/bio;->ugm(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/oneplus/android/server/bluetooth/bio;->vdb(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -782,12 +718,6 @@
 
 .method public systemReady()Z
     .locals 3
-
-    const-string v0, "OpBluetoothService"
-
-    const-string v1, "systemReady"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/oneplus/android/server/bluetooth/OpBluetoothService;->mContext:Landroid/content/Context;
 

@@ -1105,24 +1105,19 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_0
-
-    move v3, v2
-
-    :cond_0
     const-string v1, "ro.boot.opcarrier"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v4, "sprint"
+    const-string v3, "sprint"
 
-    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     const/4 v6, 0x1
 
@@ -1159,7 +1154,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_0
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1170,9 +1165,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
-
-    if-nez v3, :cond_2
+    if-eqz v1, :cond_1
 
     const/16 v18, 0x2
 
@@ -1192,7 +1185,6 @@
 
     invoke-direct/range {v12 .. v19}, Lyou/zta/zta/zta/tsu/you;->zta(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;Lcom/android/server/pm/UserManagerService;Landroid/util/ArrayMap;Landroid/util/ArraySet;II)V
 
-    :cond_2
     const/4 v6, 0x2
 
     move-object/from16 v0, p0
@@ -1213,7 +1205,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_1
     :goto_1
     return-void
 .end method
@@ -1237,49 +1229,15 @@
         }
     .end annotation
 
+    move/from16 v0, p6
+
     new-instance v5, Landroid/util/ArraySet;
-
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x1070073
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-direct {v5, v0}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v11, Landroid/util/ArraySet;
-
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x1070080
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Landroid/util/ArraySet;
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x1070074
+    const v2, 0x1070073
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1289,23 +1247,110 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v5, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    const-string v1, "ro.boot.opcarrier"
+    new-instance v11, Landroid/util/ArraySet;
 
-    const-string v2, "tmo"
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eqz p6, :cond_0
+    move-result-object v1
 
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    const v2, 0x1070080
 
-    move-result-object v3
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v3
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-eqz v3, :cond_0
+    move-result-object v1
+
+    invoke-direct {v11, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v1, Landroid/util/ArraySet;
+
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x1070074
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "device_provisioned"
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v3, v4}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v4
+
+    :goto_0
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "setUnifyAppsState, firstBoot = "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v7, " ,isDeviceProvisioned = "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "OpCarrierManager"
+
+    invoke-static {v7, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v6, "ro.boot.opcarrier"
+
+    const-string v7, "tmo"
+
+    if-nez v0, :cond_1
+
+    if-nez v2, :cond_2
+
+    :cond_1
+    invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     const/16 v18, 0x2
 
@@ -1321,41 +1366,37 @@
 
     move-object/from16 v16, p5
 
-    move-object/from16 v17, v0
+    move-object/from16 v17, v1
 
     invoke-direct/range {v12 .. v19}, Lyou/zta/zta/zta/tsu/you;->zta(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;Lcom/android/server/pm/UserManagerService;Landroid/util/ArrayMap;Landroid/util/ArraySet;II)V
 
-    :cond_0
+    :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v0
 
-    const-string v4, "carrier_sprint_first_boot"
+    const-string v2, "carrier_sprint_first_boot"
 
-    const/4 v6, 0x0
+    invoke-static {v0, v2, v4}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    invoke-static {v3, v4, v6}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    move-result v0
 
-    move-result v3
+    if-ne v0, v3, :cond_3
 
-    const/4 v7, 0x1
+    move v4, v3
 
-    if-ne v3, v7, :cond_1
-
-    move v6, v7
-
-    :cond_1
+    :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v0
 
     const-string v8, "carrier_pre_load"
 
-    invoke-static {v3, v8}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v8}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1365,16 +1406,23 @@
 
     move-result v8
 
-    if-eqz v8, :cond_3
+    if-eqz v8, :cond_5
 
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
-    if-nez v8, :cond_3
+    if-nez v8, :cond_5
 
-    if-nez v6, :cond_2
+    if-nez v4, :cond_4
 
+    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-static {v0, v2, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :cond_4
     const/16 v18, 0x1
 
     const/16 v19, -0x1
@@ -1389,17 +1437,10 @@
 
     move-object/from16 v16, p5
 
-    move-object/from16 v17, v0
+    move-object/from16 v17, v1
 
     invoke-direct/range {v12 .. v19}, Lyou/zta/zta/zta/tsu/you;->zta(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;Lcom/android/server/pm/UserManagerService;Landroid/util/ArrayMap;Landroid/util/ArraySet;II)V
 
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    invoke-static {v0, v4, v7}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    :cond_2
     const/4 v6, 0x1
 
     const/4 v7, -0x1
@@ -1418,24 +1459,24 @@
 
     const/4 v12, 0x2
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    :cond_5
+    invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
+    if-nez v0, :cond_6
 
     const/4 v6, 0x2
 
@@ -1455,7 +1496,7 @@
 
     const/4 v12, 0x1
 
-    :goto_0
+    :goto_1
     const/4 v13, -0x1
 
     move-object/from16 v6, p0
@@ -1470,7 +1511,7 @@
 
     invoke-direct/range {v6 .. v13}, Lyou/zta/zta/zta/tsu/you;->zta(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;Lcom/android/server/pm/UserManagerService;Landroid/util/ArrayMap;Landroid/util/ArraySet;II)V
 
-    :cond_4
+    :cond_6
     return-void
 .end method
 

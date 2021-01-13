@@ -39,98 +39,6 @@
 
 
 # virtual methods
-.method public cno(Ljava/lang/String;Z)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "noteHighUsedAppChanged  packageName = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " isHighUsedApp = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcom/android/server/am/dma;->sis(Ljava/lang/String;)V
-
-    sget-boolean p2, Lcom/android/server/am/dma;->kth:Z
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
-
-    invoke-static {p2, p1}, Lcom/android/server/am/SocketTransition;->access$600(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
-
-    invoke-static {p0, p1}, Lcom/android/server/am/SocketTransition;->access$700(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public gck(ILjava/lang/String;Z)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "noteTrafficChanged + uid = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " using = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p3}, Lcom/android/server/am/dma;->sis(Ljava/lang/String;)V
-
-    sget-boolean p3, Lcom/android/server/am/dma;->kth:Z
-
-    if-nez p3, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
-
-    invoke-static {p0, p2}, Lcom/android/server/am/SocketTransition;->access$600(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    invoke-static {p1}, Lcom/android/server/am/SocketTransition;->access$300(I)I
-
-    move-result p0
-
-    invoke-static {p0, p2}, Lcom/android/server/am/SocketTransition;->createAppStateBM(ILjava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public noteBluetoothConnectedChanged(Ljava/lang/String;Z)V
     .locals 3
 
@@ -462,7 +370,7 @@
 
     move-result-object p5
 
-    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {p5, p3}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object p6
 
@@ -481,7 +389,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object v3, p6, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object v3, p6, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -493,7 +401,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/SocketTransition;->mProcList:Ljava/util/Set;
 
-    iget-object p6, p6, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object p6, p6, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     invoke-interface {v2, p6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -665,7 +573,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {v0, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v0
 
@@ -679,7 +587,7 @@
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
@@ -691,7 +599,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v0, v0, Lcom/android/server/am/f;->sis:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/server/am/g;->sis:Ljava/lang/String;
 
     move-object v2, v0
 
@@ -900,7 +808,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/f;
+    invoke-virtual {v5, p2}, Lcom/android/server/am/bio;->ssp(I)Lcom/android/server/am/g;
 
     move-result-object v5
 
@@ -931,10 +839,10 @@
 
     const/16 v6, 0x8
 
-    invoke-virtual {v5, v6}, Lcom/android/server/am/f;->zta(I)V
+    invoke-virtual {v5, v6}, Lcom/android/server/am/g;->zta(I)V
 
     :cond_2
-    invoke-virtual {v5}, Lcom/android/server/am/f;->tsu()I
+    invoke-virtual {v5}, Lcom/android/server/am/g;->tsu()I
 
     move-result v5
 
@@ -1173,6 +1081,51 @@
     return-void
 .end method
 
+.method public ssp(Ljava/lang/String;Z)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "noteHighUsedAppChanged  packageName = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " isHighUsedApp = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/android/server/am/dma;->sis(Ljava/lang/String;)V
+
+    sget-boolean p2, Lcom/android/server/am/dma;->kth:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
+
+    invoke-static {p2, p1}, Lcom/android/server/am/SocketTransition;->access$600(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    iget-object p0, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
+
+    invoke-static {p0, p1}, Lcom/android/server/am/SocketTransition;->access$700(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public tsu(IIZ)V
     .locals 2
 
@@ -1231,6 +1184,53 @@
     iget-object p0, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/am/SocketTransition;->access$500(Lcom/android/server/am/SocketTransition;II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public wtn(ILjava/lang/String;Z)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "noteTrafficChanged + uid = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " using = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p3}, Lcom/android/server/am/dma;->sis(Ljava/lang/String;)V
+
+    sget-boolean p3, Lcom/android/server/am/dma;->kth:Z
+
+    if-nez p3, :cond_0
+
+    iget-object p0, p0, Lcom/android/server/am/SocketTransition$sis;->you:Lcom/android/server/am/SocketTransition;
+
+    invoke-static {p0, p2}, Lcom/android/server/am/SocketTransition;->access$600(Lcom/android/server/am/SocketTransition;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {p1}, Lcom/android/server/am/SocketTransition;->access$300(I)I
+
+    move-result p0
+
+    invoke-static {p0, p2}, Lcom/android/server/am/SocketTransition;->createAppStateBM(ILjava/lang/String;)V
 
     :cond_0
     return-void

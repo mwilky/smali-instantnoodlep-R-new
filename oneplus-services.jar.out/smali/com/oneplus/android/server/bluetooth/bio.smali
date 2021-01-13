@@ -38,7 +38,7 @@
 
 .field private static final wtn:I = 0x2
 
-.field static final you:Z = true
+.field static final you:Z = false
 
 .field private static final ywr:I = 0x20
 
@@ -162,19 +162,7 @@
 .method static bvj(I)Ljava/lang/String;
     .locals 2
 
-    if-eqz p0, :cond_3
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_0
+    packed-switch p0, :pswitch_data_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -196,25 +184,57 @@
 
     return-object p0
 
-    :cond_0
-    const-string p0, "32"
+    :pswitch_0
+    const-string p0, "PIN_16_DIGITS"
 
     return-object p0
 
-    :cond_1
-    const-string p0, "24"
+    :pswitch_1
+    const-string p0, "OOB_CONSENT"
 
     return-object p0
 
-    :cond_2
-    const-string p0, "16"
+    :pswitch_2
+    const-string p0, "DISPLAY_PIN"
 
     return-object p0
 
-    :cond_3
-    const-string p0, "NONE"
+    :pswitch_3
+    const-string p0, "DISPLAY_PASSKEY"
 
     return-object p0
+
+    :pswitch_4
+    const-string p0, "CONSENT"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "PASSKEY_CONFIRMATION"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "PASSKEY"
+
+    return-object p0
+
+    :pswitch_7
+    const-string p0, "PIN"
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method static cno(I)Ljava/lang/String;
@@ -324,48 +344,6 @@
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Unknown ("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "ACCESS_NO"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "ACCESS_YES"
-
-    return-object p0
-.end method
-
-.method static gck(I)Ljava/lang/String;
-    .locals 2
-
-    const/4 v0, 0x1
-
     if-eq p0, v0, :cond_3
 
     const/4 v0, 0x2
@@ -421,12 +399,8 @@
     return-object p0
 .end method
 
-.method static gwm(I)Ljava/lang/String;
+.method static gck(I)Ljava/lang/String;
     .locals 2
-
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_3
 
     if-eqz p0, :cond_2
 
@@ -459,27 +433,22 @@
     return-object p0
 
     :cond_0
-    const-string p0, "SCO_AUDIO_CONNECTING"
+    const-string p0, "STEREO"
 
     return-object p0
 
     :cond_1
-    const-string p0, "SCO_AUDIO_CONNECTED"
+    const-string p0, "MONO"
 
     return-object p0
 
     :cond_2
-    const-string p0, "SCO_AUDIO_DISCONNECTED"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "SCO_AUDIO_ERROR"
+    const-string p0, "NONE"
 
     return-object p0
 .end method
 
-.method static ibl(I)Ljava/lang/String;
+.method static gwm(I)Ljava/lang/String;
     .locals 2
 
     if-eqz p0, :cond_6
@@ -559,6 +528,64 @@
     return-object p0
 
     :cond_6
+    const-string p0, "NONE"
+
+    return-object p0
+.end method
+
+.method static ibl(I)Ljava/lang/String;
+    .locals 2
+
+    if-eqz p0, :cond_3
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Unknown ("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "32"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "24"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "16"
+
+    return-object p0
+
+    :cond_3
     const-string p0, "NONE"
 
     return-object p0
@@ -692,119 +719,54 @@
     return-object p0
 .end method
 
-.method static obl(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+.method static obl(Landroid/bluetooth/BluetoothDevice;)Z
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+    const/4 v0, 0x0
 
-    move-result-object p0
+    if-nez p0, :cond_0
 
-    :try_start_0
-    const-string v0, "SHA-256"
+    return v0
 
-    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
-
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+    :cond_0
+    invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/oneplus/android/server/bluetooth/bio;->you([B)Ljava/lang/String;
+    if-nez p0, :cond_1
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    return v0
 
-    return-object p0
+    :cond_1
+    invoke-virtual {p0}, Landroid/bluetooth/BluetoothClass;->getMajorDeviceClass()I
 
-    :catch_0
-    const-string p0, ""
+    move-result p0
 
-    return-object p0
+    and-int/lit16 v1, p0, 0x200
+
+    const/16 v2, 0x200
+
+    if-eq v1, v2, :cond_3
+
+    const/16 v1, 0x100
+
+    and-int/2addr p0, v1
+
+    if-ne p0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_3
+    :goto_0
+    return v0
 .end method
 
 .method static oif(I)Ljava/lang/String;
-    .locals 2
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Unknown ("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "PIN_16_DIGITS"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "OOB_CONSENT"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "DISPLAY_PIN"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "DISPLAY_PASSKEY"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "CONSENT"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "PASSKEY_CONFIRMATION"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "PASSKEY"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "PIN"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method static qbh(I)Ljava/lang/String;
     .locals 2
 
     packed-switch p0, :pswitch_data_0
@@ -888,6 +850,91 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method static oxb(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p0
+
+    :try_start_0
+    const-string v0, "SHA-256"
+
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
+
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/oneplus/android/server/bluetooth/bio;->you([B)Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    const-string p0, ""
+
+    return-object p0
+.end method
+
+.method static qbh(I)Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Unknown ("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "DUAL"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "LE"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "BR/EDR"
+
+    return-object p0
 .end method
 
 .method static rtg(I)Ljava/lang/String;
@@ -1069,6 +1116,64 @@
 .method static ugm(I)Ljava/lang/String;
     .locals 2
 
+    const/4 v0, -0x1
+
+    if-eq p0, v0, :cond_3
+
+    if-eqz p0, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Unknown ("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "SCO_AUDIO_CONNECTING"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "SCO_AUDIO_CONNECTED"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "SCO_AUDIO_DISCONNECTED"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "SCO_AUDIO_ERROR"
+
+    return-object p0
+.end method
+
+.method static vdb(I)Ljava/lang/String;
+    .locals 2
+
     packed-switch p0, :pswitch_data_0
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1156,7 +1261,206 @@
     .end packed-switch
 .end method
 
-.method static vdb(Landroid/os/ParcelUuid;)Ljava/lang/String;
+.method static wtn(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "UTF-8"
+
+    const-string v1, "OpBluetoothUtils"
+
+    const-string v2, ""
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    :try_start_0
+    new-instance v3, Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object p0
+
+    invoke-direct {v3, p0, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "nameReorganize: utf-8 the encode name is "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-ge p0, v0, :cond_1
+
+    rem-int/lit8 v0, p0, 0x2
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    add-int/lit8 p0, p0, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    const-string p0, "UnsupportedEncodingException"
+
+    goto :goto_1
+
+    :catch_1
+    const-string p0, "IndexOutOfBoundsException"
+
+    :goto_1
+    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return-object v2
+.end method
+
+.method static you([B)Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ""
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_1
+
+    aget-byte v2, p0, v1
+
+    and-int/lit16 v2, v2, 0xff
+
+    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "0"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method static ywr(I)Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Unknown ("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "ACCESS_NO"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "ACCESS_YES"
+
+    return-object p0
+.end method
+
+.method static zgw(Landroid/os/ParcelUuid;)Ljava/lang/String;
     .locals 1
 
     sget-object v0, Landroid/bluetooth/BluetoothUuid;->A2DP_SINK:Landroid/os/ParcelUuid;
@@ -1451,216 +1755,6 @@
     return-object p0
 .end method
 
-.method static wtn(I)Ljava/lang/String;
-    .locals 2
-
-    if-eqz p0, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Unknown ("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "STEREO"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "MONO"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "NONE"
-
-    return-object p0
-.end method
-
-.method static you([B)Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ""
-
-    const/4 v1, 0x0
-
-    :goto_0
-    array-length v2, p0
-
-    if-ge v1, v2, :cond_1
-
-    aget-byte v2, p0, v1
-
-    and-int/lit16 v2, v2, 0xff
-
-    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-ne v3, v4, :cond_0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "0"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method static ywr(I)Ljava/lang/String;
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Unknown ("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "DUAL"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "LE"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "BR/EDR"
-
-    return-object p0
-.end method
-
-.method static zgw(Landroid/bluetooth/BluetoothDevice;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
-
-    move-result-object p0
-
-    if-nez p0, :cond_1
-
-    return v0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/bluetooth/BluetoothClass;->getMajorDeviceClass()I
-
-    move-result p0
-
-    and-int/lit16 v1, p0, 0x200
-
-    const/16 v2, 0x200
-
-    if-eq v1, v2, :cond_3
-
-    const/16 v1, 0x100
-
-    and-int/2addr p0, v1
-
-    if-ne p0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    :goto_0
-    return v0
-.end method
-
 .method static zta(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -1668,7 +1762,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/oneplus/android/server/bluetooth/bio;->obl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/oneplus/android/server/bluetooth/bio;->oxb(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

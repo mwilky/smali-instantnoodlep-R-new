@@ -129,7 +129,7 @@
     const-string v0, "PUBLISH_SERVICE_TIMEOUT"
 
     :goto_0
-    invoke-static {p0, p1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->vju(IILjava/lang/String;)V
+    invoke-static {p0, p1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->ivd(IILjava/lang/String;)V
 
     goto :goto_1
 
@@ -138,7 +138,7 @@
 
     iget v0, p1, Landroid/os/Message;->arg2:I
 
-    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->bud(Lcom/android/server/am/OnePlusBackgroundFrozen;I)I
+    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->a(Lcom/android/server/am/OnePlusBackgroundFrozen;I)I
 
     move-result p0
 

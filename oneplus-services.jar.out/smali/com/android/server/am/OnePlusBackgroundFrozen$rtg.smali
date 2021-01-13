@@ -39,18 +39,18 @@
 
 
 # virtual methods
-.method public gck(ILjava/lang/String;Z)V
+.method public cno(IZ)V
     .locals 0
 
-    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y3(IZ)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w3(IZ)V
 
     return-void
 .end method
 
-.method public kth(IZ)V
+.method public wtn(ILjava/lang/String;Z)V
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->j3(IZ)V
+    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->L3(IZ)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 .method public you(ILjava/lang/String;Z)V
     .locals 0
 
-    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z3(IZ)V
+    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->M3(IZ)V
 
     return-void
 .end method
@@ -66,7 +66,7 @@
 .method public ywr(ILjava/lang/String;Z)V
     .locals 0
 
-    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->o1(IZ)V
+    invoke-static {p1, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->u1(IZ)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 .method public zta(IZ)V
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x0(IZ)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->C0(IZ)V
 
     return-void
 .end method

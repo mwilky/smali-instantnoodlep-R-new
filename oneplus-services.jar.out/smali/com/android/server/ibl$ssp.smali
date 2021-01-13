@@ -37,7 +37,7 @@
 .method public updateConfig(Lorg/json/JSONArray;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/server/ibl;->bvj()Z
+    invoke-static {}, Lcom/android/server/ibl;->ugm()Z
 
     move-result v0
 
@@ -52,7 +52,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibl$ssp;->zta:Lcom/android/server/ibl;
 
-    invoke-static {p0, p1}, Lcom/android/server/ibl;->sis(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/ibl;->tsu(Lcom/android/server/ibl;Lorg/json/JSONArray;)V
 
     return-void
 .end method

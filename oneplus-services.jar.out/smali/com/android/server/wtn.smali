@@ -15,95 +15,99 @@
 
 
 # static fields
-.field private static final A:Ljava/lang/String; = "\\|"
+.field private static final A:Ljava/lang/String; = "opcg_sleep_time_data"
 
-.field private static final B:Ljava/lang/String; = "opcg_recover_charge_data"
+.field private static final B:Ljava/lang/String; = "|"
 
-.field static final C:J = 0x2710L
+.field private static final C:Ljava/lang/String; = "\\|"
 
-.field private static final D:J = 0x6ddd00L
+.field private static final D:Ljava/lang/String; = "opcg_recover_charge_data"
 
-.field private static final E:I = 0x0
+.field static final E:J = 0x2710L
 
-.field private static final F:I = 0x1
+.field private static final F:J = 0x6ddd00L
 
-.field private static final G:I = 0x2
+.field private static final G:I = 0x0
 
-.field private static final H:I = -0x1
+.field private static final H:I = 0x1
 
-.field private static final I:I = 0x0
+.field private static final I:I = 0x2
 
-.field private static final J:I = 0x1
+.field private static final J:I = -0x1
 
-.field private static final K:I = 0x2
+.field private static final K:I = 0x0
 
-.field private static final a:Ljava/lang/String; = "net.oneplus.charingguarder.intent.mdm"
+.field private static final L:I = 0x1
 
-.field private static final b:Ljava/lang/String; = "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
+.field private static final M:I = 0x2
+
+.field private static final a:Ljava/lang/String; = "net.oneplus.chargingguarder.intent.enable"
+
+.field private static final b:Ljava/lang/String; = "net.oneplus.charingguarder.intent.OPCG"
 
 .field public static final bud:Ljava/lang/String; = "/sys/class/power_supply/bms/battery_health"
 
-.field private static final c:Ljava/lang/String; = "com.oneplus.chargingguarder.open_quietmode"
+.field private static final c:Ljava/lang/String; = "net.oneplus.charingguarder.intent.mdm"
 
 .field public static final cgv:Ljava/lang/String; = "OnePlusChargingGuarder"
 
-.field private static final d:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode"
+.field private static final d:Ljava/lang/String; = "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
 
-.field private static final e:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode.notification"
+.field private static final e:Ljava/lang/String; = "com.oneplus.chargingguarder.open_quietmode"
 
-.field private static final f:Ljava/lang/String; = "/sys/class/power_supply/wireless/online"
+.field private static final f:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode"
 
-.field private static final g:Ljava/lang/String; = "/proc/wireless/quiet_mode"
+.field private static final g:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode.notification"
 
-.field public static final h:I = 0x8
+.field private static final h:Ljava/lang/String; = "/sys/class/power_supply/wireless/online"
 
-.field private static final i:J = 0x249f00L
+.field private static final i:Ljava/lang/String; = "/proc/wireless/quiet_mode"
 
-.field private static final irq:Ljava/lang/String; = "Charging Guarder"
+.field private static final irq:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_min"
 
-.field private static final ivd:Ljava/lang/String; = "net.oneplus.charingguarder.intent.OPCG"
+.field private static final ivd:Ljava/lang/String; = "com.oneplus.action.INTENT_TRANSIT_ACTIVITY"
 
-.field private static final j:J = 0x36ee80L
+.field public static final j:I = 0x8
 
-.field private static final k:I = 0x1
+.field private static final k:J = 0x249f00L
 
-.field private static final l:I = 0x2
+.field private static final l:J = 0x36ee80L
 
-.field private static final les:Ljava/lang/String; = "charging_guarder_notification"
+.field private static final les:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_max"
 
-.field private static final m:I = 0x3
+.field private static final m:I = 0x1
 
-.field private static n:I = 0x0
+.field private static final n:I = 0x2
 
-.field private static final o:I = -0x2
+.field private static final o:I = 0x3
 
-.field private static final p:I = -0x1
+.field private static p:I = 0x0
 
-.field private static final q:I = 0x0
+.field private static final q:I = -0x2
 
-.field private static final qeg:Ljava/lang/String; = "net.oneplus.chargingguarder.intent.enable"
+.field private static final qeg:Ljava/lang/String; = "Charging Guarder"
 
-.field private static final r:I = 0x1
+.field private static final r:I = -0x1
 
-.field private static final s:I = 0x2
+.field private static final s:I = 0x0
 
 .field private static final t:I = 0x1
 
-.field private static final u:I = 0x0
+.field private static final u:I = 0x2
 
-.field private static final v:Ljava/lang/String; = "NYNCG4I0TI"
+.field private static final v:I = 0x1
 
-.field private static final vdw:Ljava/lang/String; = "com.oneplus.action.INTENT_TRANSIT_ACTIVITY"
+.field private static final vdw:Ljava/lang/String; = "charging_guarder_notification"
 
 .field public static final vju:Ljava/lang/String; = "/sys/class/power_supply/battery/op_disable_charge"
 
-.field private static final w:Ljava/lang/String; = "OnePlusChargingGuarder"
+.field private static final w:I = 0x0
 
-.field private static x:Lcom/android/server/wtn; = null
+.field private static final x:Ljava/lang/String; = "NYNCG4I0TI"
 
-.field private static final y:Ljava/lang/String; = "opcg_sleep_time_data"
+.field private static final y:Ljava/lang/String; = "OnePlusChargingGuarder"
 
-.field private static final z:Ljava/lang/String; = "|"
+.field private static z:Lcom/android/server/wtn;
 
 
 # instance fields
@@ -296,7 +300,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wtn;->t()Z
+    invoke-direct {p0}, Lcom/android/server/wtn;->u()Z
 
     move-result p1
 
@@ -471,16 +475,16 @@
 
     iput-object p1, p0, Lcom/android/server/wtn;->ugm:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
-    invoke-virtual {p0}, Lcom/android/server/wtn;->x()V
-
-    invoke-virtual {p0}, Lcom/android/server/wtn;->r()V
-
     invoke-virtual {p0}, Lcom/android/server/wtn;->y()V
+
+    invoke-virtual {p0}, Lcom/android/server/wtn;->s()V
+
+    invoke-virtual {p0}, Lcom/android/server/wtn;->z()V
 
     return-void
 .end method
 
-.method private F(Ljava/lang/String;Ljava/lang/String;)V
+.method private G(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
     const-string p0, " sucessfully!"
@@ -727,7 +731,7 @@
 .method static synthetic g(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wtn;->F(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -763,7 +767,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wtn;->t()Z
+    invoke-direct {p0}, Lcom/android/server/wtn;->u()Z
 
     move-result v0
 
@@ -1272,25 +1276,6 @@
     return p1
 .end method
 
-.method public static q(Landroid/content/Context;)Lcom/android/server/wtn;
-    .locals 1
-
-    sget-object v0, Lcom/android/server/wtn;->x:Lcom/android/server/wtn;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/android/server/wtn;
-
-    invoke-direct {v0, p0}, Lcom/android/server/wtn;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/android/server/wtn;->x:Lcom/android/server/wtn;
-
-    :cond_0
-    sget-object p0, Lcom/android/server/wtn;->x:Lcom/android/server/wtn;
-
-    return-object p0
-.end method
-
 .method static synthetic qbh(Lcom/android/server/wtn;)Z
     .locals 0
 
@@ -1305,6 +1290,25 @@
     invoke-direct {p0}, Lcom/android/server/wtn;->h()V
 
     return-void
+.end method
+
+.method public static r(Landroid/content/Context;)Lcom/android/server/wtn;
+    .locals 1
+
+    sget-object v0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/android/server/wtn;
+
+    invoke-direct {v0, p0}, Lcom/android/server/wtn;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+
+    :cond_0
+    sget-object p0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+
+    return-object p0
 .end method
 
 .method static synthetic rtg(Lcom/android/server/wtn;)Z
@@ -1331,7 +1335,15 @@
     return p1
 .end method
 
-.method private t()Z
+.method static synthetic tsu(Lcom/android/server/wtn;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/wtn;->tsu:J
+
+    return-wide v0
+.end method
+
+.method private u()Z
     .locals 6
 
     iget-object v0, p0, Lcom/android/server/wtn;->qbh:Landroid/telephony/TelephonyManager;
@@ -1363,7 +1375,7 @@
     return v1
 
     :cond_0
-    invoke-direct {p0, v0}, Lcom/android/server/wtn;->u(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/server/wtn;->v(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1403,15 +1415,15 @@
     return v1
 .end method
 
-.method static synthetic tsu(Lcom/android/server/wtn;)J
-    .locals 2
+.method static synthetic ugm(Lcom/android/server/wtn;)Z
+    .locals 0
 
-    iget-wide v0, p0, Lcom/android/server/wtn;->tsu:J
+    iget-boolean p0, p0, Lcom/android/server/wtn;->hmo:Z
 
-    return-wide v0
+    return p0
 .end method
 
-.method private u(Ljava/lang/String;)Ljava/lang/String;
+.method private v(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
     const/4 p0, 0x0
@@ -1600,14 +1612,6 @@
     return-object p0
 .end method
 
-.method static synthetic ugm(Lcom/android/server/wtn;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wtn;->hmo:Z
-
-    return p0
-.end method
-
 .method static synthetic vdb(Lcom/android/server/wtn;Z)Z
     .locals 0
 
@@ -1684,7 +1688,43 @@
 
 
 # virtual methods
-.method public A(J)V
+.method public A()V
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-wide v1, p0, Lcom/android/server/wtn;->tsu:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "|"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/android/server/wtn;->rtg:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "opcg_sleep_time_data"
+
+    invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    return-void
+.end method
+
+.method public B(J)V
     .locals 2
 
     const-wide/16 v0, 0x3e8
@@ -1713,7 +1753,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0}, Lcom/android/server/wtn;->E()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->F()V
 
     const/4 p1, 0x0
 
@@ -1722,7 +1762,7 @@
     return-void
 .end method
 
-.method public B(J)V
+.method public C(J)V
     .locals 2
 
     iput-wide p1, p0, Lcom/android/server/wtn;->tsu:J
@@ -1750,7 +1790,7 @@
     return-void
 .end method
 
-.method public C(Ljava/time/LocalTime;)V
+.method public D(Ljava/time/LocalTime;)V
     .locals 1
 
     iput-object p1, p0, Lcom/android/server/wtn;->sis:Ljava/time/LocalTime;
@@ -1778,7 +1818,7 @@
     return-void
 .end method
 
-.method public D()V
+.method public E()V
     .locals 1
 
     iget-object p0, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
@@ -1794,7 +1834,7 @@
     return-void
 .end method
 
-.method public E()V
+.method public F()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wtn;->sis:Ljava/time/LocalTime;
@@ -1867,7 +1907,7 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-virtual {p0}, Lcom/android/server/wtn;->z()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->A()V
 
     return-void
 .end method
@@ -1879,7 +1919,7 @@
 
     const-string v1, "/sys/class/power_supply/battery/op_disable_charge"
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/wtn;->F(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -2023,7 +2063,7 @@
 
     const-string v2, "/sys/class/power_supply/battery/op_disable_charge"
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/wtn;->F(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v2}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -2100,6 +2140,121 @@
 .end method
 
 .method public o()I
+    .locals 5
+
+    const/16 p0, 0xa
+
+    new-array v0, p0, [C
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [I
+
+    const/16 v2, 0xee
+
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    new-instance v1, Ljava/io/FileReader;
+
+    const-string v2, "/sys/class/power_supply/bms/vbat_cell_max"
+
+    invoke-direct {v1, v2}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-virtual {v1, v0, v3, p0}, Ljava/io/FileReader;->read([CII)I
+
+    move-result v2
+
+    new-instance v4, Ljava/lang/String;
+
+    invoke-direct {v4, v0, v3, v2}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileReader;->close()V
+
+    new-instance v1, Ljava/io/FileReader;
+
+    const-string v4, "/sys/class/power_supply/bms/vbat_cell_min"
+
+    invoke-direct {v1, v4}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :try_start_3
+    invoke-virtual {v1, v0, v3, p0}, Ljava/io/FileReader;->read([CII)I
+
+    move-result p0
+
+    new-instance v4, Ljava/lang/String;
+
+    invoke-direct {v4, v0, v3, p0}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileReader;->close()V
+
+    sub-int/2addr v2, p0
+
+    return v2
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v1}, Ljava/io/FileReader;->close()V
+
+    throw p0
+
+    :catchall_1
+    move-exception p0
+
+    invoke-virtual {v1}, Ljava/io/FileReader;->close()V
+
+    throw p0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    const-string p0, "OnePlusChargingGuarder"
+
+    const-string v0, "Can\'t get dual cell voltage."
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return v3
+.end method
+
+.method public p()I
     .locals 4
 
     const/16 p0, 0xa
@@ -2160,7 +2315,7 @@
     return v0
 .end method
 
-.method public p()I
+.method public q()I
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
@@ -2176,7 +2331,7 @@
     return p0
 .end method
 
-.method public r()V
+.method public s()V
     .locals 6
 
     iget-object v0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
@@ -2292,13 +2447,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/android/server/wtn;->E()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->F()V
 
     :cond_2
     return-void
 .end method
 
-.method public s()Z
+.method public t()Z
     .locals 1
 
     iget p0, p0, Lcom/android/server/wtn;->gck:I
@@ -2315,7 +2470,7 @@
     return p0
 .end method
 
-.method public v(Lorg/json/JSONObject;)V
+.method public w(Lorg/json/JSONObject;)V
     .locals 5
 
     const-string v0, "advance_period"
@@ -2447,7 +2602,7 @@
     goto :goto_0
 .end method
 
-.method public w(Ljava/lang/String;)Ljava/lang/String;
+.method public x(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     const-string p0, "BufferedReader close exception :"
@@ -2654,7 +2809,7 @@
     throw p1
 .end method
 
-.method public x()V
+.method public y()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
@@ -2674,7 +2829,7 @@
     return-void
 .end method
 
-.method public y()V
+.method public z()V
     .locals 8
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2793,42 +2948,6 @@
     const-string v0, "OnePlusChargingGuarder"
 
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public z()V
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-wide v1, p0, Lcom/android/server/wtn;->tsu:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "|"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcom/android/server/wtn;->rtg:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "opcg_sleep_time_data"
-
-    invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     return-void
 .end method

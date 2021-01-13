@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l()Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q()Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p0
 
@@ -47,7 +47,7 @@
 
     const-string p1, "event mPowerSaveWhitelistReceiver onReceive"
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(ILjava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -61,11 +61,11 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l()Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q()Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->n0(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x0(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto :goto_0
 
@@ -78,11 +78,11 @@
 
     if-eqz p0, :cond_2
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l()Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q()Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->o0(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->sis(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     :cond_2
     :goto_0

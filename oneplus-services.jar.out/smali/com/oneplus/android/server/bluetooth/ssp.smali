@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final bio:Z = true
+.field static final bio:Z = false
 
 .field private static final dma:Ljava/lang/String; = "bt_on_off_status"
 
-.field private static final gck:Ljava/lang/String; = "bt_of_off_package_name"
+.field private static final gck:Ljava/lang/String; = "bt_on_off_package_name"
 
 .field static final igw:Z = false
 
@@ -110,12 +110,6 @@
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    const-string p0, "OpBluetoothMonitorServiceOnOff"
-
-    const-string p1, "AirplaneModeObserver registered"
-
-    invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_1
     return-void
 .end method
@@ -148,28 +142,22 @@
 .end method
 
 .method private igw(J)V
-    .locals 5
-
-    const-string v0, "OpBluetoothMonitorServiceOnOff"
+    .locals 4
 
     invoke-static {}, Lnet/oneplus/odm/OpDeviceManagerInjector;->getInstance()Lnet/oneplus/odm/OpDeviceManagerInjector;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     :try_start_0
-    const-string v2, "Check Bluetooth Service Enabled Time info"
+    new-instance v1, Ljava/util/HashMap;
 
-    invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v2, Ljava/util/HashMap;
+    const-wide/16 v2, 0x3e8
 
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    const-wide/16 v3, 0x3e8
-
-    div-long/2addr p1, v3
+    div-long/2addr p1, v2
 
     long-to-int p1, p1
 
@@ -179,7 +167,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance p1, Ljava/util/HashMap;
 
@@ -187,15 +175,15 @@
 
     const-string p2, "appid"
 
-    const-string v3, "F6X2WLDK2K"
+    const-string v2, "F6X2WLDK2K"
 
-    invoke-virtual {p1, p2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/oneplus/android/server/bluetooth/ssp;->you:Landroid/content/Context;
 
     const-string p2, "bt_on_off_status"
 
-    invoke-virtual {v1, p0, p2, v2, p1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+    invoke-virtual {v0, p0, p2, v1, p1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -204,15 +192,17 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "Check Bluetooth Service Enabled Time info fail"
+    const-string p1, "OpBluetoothMonitorServiceOnOff"
 
-    invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p2, "Check Bluetooth Service Enabled Time info fail"
+
+    invoke-static {p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     :goto_0
@@ -349,45 +339,43 @@
 .end method
 
 .method public kth(ZILjava/lang/String;)Z
-    .locals 4
-
-    const-string v0, "OpBluetoothMonitorServiceOnOff"
+    .locals 3
 
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/bluetooth/ssp;->bio(Z)V
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x6
+    const/4 v1, 0x6
 
-    if-eq p2, v2, :cond_3
+    if-eq p2, v1, :cond_3
 
-    const/16 v2, 0x8
+    const/16 v1, 0x8
 
-    if-eq p2, v2, :cond_3
+    if-eq p2, v1, :cond_3
 
-    const/16 v2, 0x9
+    const/16 v1, 0x9
 
-    if-ne p2, v2, :cond_0
+    if-ne p2, v1, :cond_0
 
     goto :goto_2
 
     :cond_0
-    const-string v2, "com.oem.omelogkit"
+    const-string v1, "com.oem.omelogkit"
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_1
 
-    return v1
+    return v0
 
     :cond_1
     invoke-static {}, Lnet/oneplus/odm/OpDeviceManagerInjector;->getInstance()Lnet/oneplus/odm/OpDeviceManagerInjector;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_3
 
     if-eqz p1, :cond_2
 
@@ -403,27 +391,23 @@
 
     move-result-object p2
 
-    new-instance v1, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-string v3, "en"
+    const-string v2, "en"
 
-    invoke-virtual {v1, v3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "rsn"
 
-    invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "pn"
 
-    invoke-virtual {v1, p1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :try_start_0
-    const-string p1, "Check Enable Info"
-
-    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -436,9 +420,9 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/bluetooth/ssp;->you:Landroid/content/Context;
 
-    const-string p2, "bt_of_off_package_name"
+    const-string p2, "bt_on_off_package_name"
 
-    invoke-virtual {v2, p0, p2, v1, p1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+    invoke-virtual {v1, p0, p2, v0, p1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveAppData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -447,15 +431,17 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "Check Enable Info Fail"
+    const-string p1, "OpBluetoothMonitorServiceOnOff"
 
-    invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p2, "Check Enable Info Fail"
+
+    invoke-static {p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
     const/4 p0, 0x1
@@ -464,7 +450,7 @@
 
     :cond_3
     :goto_2
-    return v1
+    return v0
 .end method
 
 .method public wtn(Lcom/oneplus/android/server/bluetooth/kth;)V

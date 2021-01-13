@@ -44,7 +44,7 @@
 
 .field private static final ssp:Ljava/lang/String; = "/data/misc/bluetooth_op_device_info.json"
 
-.field static final tsu:Z = true
+.field static final tsu:Z = false
 
 .field public static final ugm:Ljava/lang/String; = "bits_per_sample"
 
@@ -91,15 +91,9 @@
 
     monitor-enter p0
 
-    :try_start_0
-    const-string v0, "OpBluetoothDevice"
-
-    const-string v1, "Read Cache List"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v0, 0x0
 
+    :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,17 +284,11 @@
 
     :try_start_9
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
-
-    :catch_7
-    :cond_5
-    const-string v0, "OpBluetoothDevice"
-
-    const-string v1, "Read Cache List Succeed!"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
+    :catch_7
+    :cond_5
     monitor-exit p0
 
     return-void
@@ -1117,12 +1105,6 @@
 .method public you()V
     .locals 5
 
-    const-string v0, "OpBluetoothDevice"
-
-    const-string v1, "flush"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v0, 0x0
 
     :try_start_0
@@ -1588,7 +1570,7 @@
 
     move-result v7
 
-    invoke-static {v7}, Lcom/oneplus/android/server/bluetooth/bio;->ywr(I)Ljava/lang/String;
+    invoke-static {v7}, Lcom/oneplus/android/server/bluetooth/bio;->qbh(I)Ljava/lang/String;
 
     move-result-object v7
 
