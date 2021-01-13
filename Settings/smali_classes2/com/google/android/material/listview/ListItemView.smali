@@ -547,17 +547,29 @@
 
     iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingTop()I
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
 
     move-result v1
 
     iget-object v3, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getPaddingTop()I
 
     move-result v3
 
-    invoke-virtual {v0, v2, v1, v2, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    iget-object v4, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getPaddingRight()I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/google/android/material/listview/ListItemView;->mRootLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result v5
+
+    invoke-virtual {v0, v1, v3, v4, v5}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     goto/16 :goto_7
 

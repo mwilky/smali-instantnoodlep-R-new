@@ -44,4 +44,4 @@
 
 .field public static final header_title:I = 0x7f0b0362
 
-.field public static final icon_view:I = 0x7f0b038d
+.field public static final icon_view:I = 0x7f0b0393

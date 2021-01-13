@@ -44,6 +44,14 @@
     return-void
 .end method
 
+.method static synthetic access$000(Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;)Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
+
+    return-object p0
+.end method
+
 .method private getConditionalFooterCard(Ljava/util/List;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -359,7 +367,7 @@
 .end method
 
 .method public onConditionsChanged()V
-    .locals 1
+    .locals 3
 
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
 
@@ -378,9 +386,15 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;->mListener:Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;
+    invoke-static {}, Lcom/android/settingslib/utils/ThreadUtils;->getUiThreadHandler()Landroid/os/Handler;
 
-    invoke-interface {p0, v0}, Lcom/android/settings/homepage/contextualcards/ContextualCardUpdateListener;->onContextualCardUpdated(Ljava/util/Map;)V
+    move-result-object v1
+
+    new-instance v2, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController$1;
+
+    invoke-direct {v2, p0, v0}, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController$1;-><init>(Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController;Ljava/util/Map;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

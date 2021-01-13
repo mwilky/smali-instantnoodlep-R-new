@@ -2246,8 +2246,12 @@ Kur aktivizon rezervimin automatik, të dhënat e pajisjes dhe të aplikacioneve
     <string name="help_feedback_label">Ndihma dhe komentet</string>
     <string name="help_label">Ndihmë dhe komente</string>
     <string name="hide_extra_apps">Shfaq përdorimin e aplikacionit</string>
+    <string name="hide_imeback_and_switcher">Rregullimi i lartësisë së tastierës</string>
+    <string name="hide_imeback_and_switcher_warning">Rregullimi i lartësisë së tastierës do të jetë i dukshëm në gjestet e ekranit të plotë.</string>
     <string name="hide_silent_icons_summary">Ikonat nga njoftimet me rëndësi të ulët nuk shfaqen në shiritin e statusit</string>
     <string name="hide_silent_icons_title">Fshih ikonat nga njoftimet me rëndësi të ulët</string>
+    <string name="hide_summary">Shiriti i shkurtoreve në fund të tastierës do të jetë i fshehur</string>
+    <string name="hide_title">Fshih</string>
     <string name="high_label">I lartë</string>
     <string name="high_power_app_text_nomal">%1$s Duke rrëzuar baterinë tuaj</string>
     <string name="high_power_app_text_red">%1$s Duke rrëzuar shumë baterinë tuaj</string>
@@ -3420,7 +3424,7 @@ Kursyesi i baterisë çaktivizohet automatikisht kur pajisja është duke u kari
     <string name="oneplus_clear_intenal_storage_data_summary">Duke përfshirë muzikën, fotot, videot dhe të dhënat e tjera personale</string>
     <string name="oneplus_clear_intenal_storage_data_title">Fshi memorien e brendshme</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Toni shumëngjyrësh mund të përdorë vetëm ngjyrat e sistemit</string>
-    <string name="oneplus_colorful_mode_title">Shumëngjyrëshe</string>
+    <string name="oneplus_colorful_mode_title">Shumëngjyrësh</string>
     <string name="oneplus_compatibility_mode_summary">Aplikacionet në ekran të plotë nuk mund ta përdorin pjesën e dhëmbëzuar</string>
     <string name="oneplus_compatibility_mode_title">Modaliteti i pajtueshmërisë</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ÇAKTIVIZO MODALITETIN AEROPLAN</string>
@@ -3673,10 +3677,10 @@ Për të shkuar te ekrani kryesor në çfarëdo kohe, lëvizni lart nga qendra e
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gjestet e navigimit (poshtë)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gjestet e navigimit (majtas dhe djathtas)</string>
     <string name="oneplus_gesture_of_answer_call_info">"Kur ka një telefonatë hyrëse, mund t'i përgjigjeni duke e ngritur telefonin te veshi."</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Përgjigjuni automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Përgjigju automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_of_answer_call_title">Përgjigju telefonatave me gjest</string>
     <string name="oneplus_gesture_start_learning">Filloni të mësoni</string>
-    <string name="oneplus_gesture_to_answer_summary">Përgjigjuni automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
+    <string name="oneplus_gesture_to_answer_summary">Përgjigju automatikisht telefonatave hyrëse duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_to_answer_title">"Ngri për t'u përgjigjur"</string>
     <string name="oneplus_gesture_to_control_call_info">Kontrolloni automatikisht telefonatat duke e ngritur telefonin te veshi</string>
     <string name="oneplus_gesture_to_control_calls_summary">Përgjigjuni automatikisht telefonatave ose kaloni te boksi i veshit duke bërë gjest</string>
@@ -3756,7 +3760,7 @@ Shënim: Shenja juaj e gishtit mund të jetë më pak e sigurt se një vizatim o
     <string name="oneplus_legal_summary">Rregullorja për privatësinë, kontratat etj.</string>
     <string name="oneplus_levels">Nivelet</string>
     <string name="oneplus_lift_up_display">Ekrani gjithnjë ndezur ose ngrijeni ekranin</string>
-    <string name="oneplus_light">E çelët</string>
+    <string name="oneplus_light">E lehtë</string>
     <string name="oneplus_local_ringtone">Rington nga memoria e brendshme</string>
     <string name="oneplus_location_information">Përshkrimi i shërbimeve të vendndodhjes</string>
     <string name="oneplus_lock_after_timeout">Kyç automatikisht pas gjumit</string>
@@ -4223,9 +4227,9 @@ Shënim:
     <string name="oneplus_theme_shape_effect_title">Zgjidh formën</string>
     <string name="oneplus_theme_system_customization">PERSONALIZIMI I SISTEMIT</string>
     <string name="oneplus_theme_tone">Toni</string>
-    <string name="oneplus_theme_tone_effect_color">Shumëngjyrëshe</string>
+    <string name="oneplus_theme_tone_effect_color">Shumëngjyrësh</string>
     <string name="oneplus_theme_tone_effect_dark">E errët</string>
-    <string name="oneplus_theme_tone_effect_light">E çelët</string>
+    <string name="oneplus_theme_tone_effect_light">E lehtë</string>
     <string name="oneplus_theme_tone_effect_title">Zgjidh tonin</string>
     <string name="oneplus_theme_wallpaper">Figurat e sfondit</string>
     <string name="oneplus_three_screenshots_enable_summary">Lëvizni me tre gishta mbi ekran për të bërë një foto ekrani</string>
@@ -4809,6 +4813,8 @@ Zhbllokimi me shenjën e gishtit mund të mos jetë i pajtueshëm me mbrojtës e
     <string name="radio_info_http_client_test">Testi i klientit HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Verifiko emrin e pritësit (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Verifiko emrin e pritësit (www.google.com) IPv6:</string>
+    <string name="raise_summary">Tastiera do të ngrihet nga poshtë dhe do të shfaqet tasti i shkurtoreve</string>
+    <string name="raise_title">Ngri</string>
     <string name="rarely_running">Përdoret rrallë (%s)</string>
     <string name="really_remove_account_message">Heqja e kësaj llogarie do të fshijë nga telefoni të gjitha mesazhet dhe kontaktet e saj, si dhe të dhëna të tjera!</string>
     <string name="really_remove_account_title">Të hiqet llogaria?</string>
@@ -5871,7 +5877,7 @@ Një metodë e Google për të sinkronizuar të dhënat për të të lejuar qasj
     <string name="touchscreen_double_tap_to_wake_gesture_title">Shtyp dy herë për të zgjuar</string>
     <string name="touchscreen_flashlight_gesture_summary">Vizatoni një V për të ndezur blicin</string>
     <string name="touchscreen_flashlight_gesture_title">Ndiz blicin</string>
-    <string name="touchscreen_music_gesture_summary">Vizatoni || me dy gishta për të luajtur ose ndaluar muzikën. Vizatoni &lt; ose > për të shkuar te kënga e mëparshme ose kënga tjetër</string>
+    <string name="touchscreen_music_gesture_summary">Vizatoni ‖ me dy gishta për të luajtur ose ndaluar muzikën. Vizatoni &lt; ose > për të shkuar te kënga e mëparshme ose kënga tjetër</string>
     <string name="touchscreen_music_gesture_title">Kontrolli i muzikës</string>
     <string name="track_frame_time">Interpretimi i profilit me HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>

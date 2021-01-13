@@ -2169,8 +2169,12 @@
     <string name="help_feedback_label">說明與意見反映</string>
     <string name="help_label">說明和意見反映</string>
     <string name="hide_extra_apps">顯示應用程式使用情況</string>
+    <string name="hide_imeback_and_switcher">鍵盤底部高度調節</string>
+    <string name="hide_imeback_and_switcher_warning">調節鍵盤底部高度只在全屏手勢下生效</string>
     <string name="hide_silent_icons_summary">低重要性的通知圖示不會顯示在狀態列</string>
     <string name="hide_silent_icons_title">隱藏低重要性通知圖示</string>
+    <string name="hide_summary">隱藏鍵盤底部的快捷操作欄</string>
+    <string name="hide_title">隱藏</string>
     <string name="high_label">高</string>
     <string name="high_power_app_text_nomal">%1$s背景正在耗電</string>
     <string name="high_power_app_text_red">%1$s背景正在嚴重耗電</string>
@@ -4522,8 +4526,8 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="op_starwar_mode_title">Star Wars 主題</string>
     <string name="op_storage">儲存和記憶體</string>
     <string name="op_switch_record_info">%1$s，使用壹加搬家遷移數據至 %2$s 手機</string>
-    <string name="op_switch_record_none">暫無紀錄</string>
-    <string name="op_switch_record_title">數據遷移紀錄</string>
+    <string name="op_switch_record_none">暫無記錄</string>
+    <string name="op_switch_record_title">數據遷移記錄</string>
     <string name="op_system">系統</string>
     <string name="op_system_dashboard_summary">語言、時間、重設、更新</string>
     <string name="op_system_update_settings">系統更新</string>
@@ -4854,6 +4858,8 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
     <string name="radio_info_http_client_test">HTTP 用戶端測試：</string>
     <string name="radio_info_ping_hostname_v4">連線偵測主機名稱 (www.google.com) IPv4：</string>
     <string name="radio_info_ping_hostname_v6">連線偵測主機名稱 (www.google.com) IPv6：</string>
+    <string name="raise_summary">適當抬高鍵盤並顯示鍵盤底部的快捷操作欄</string>
+    <string name="raise_title">抬高</string>
     <string name="rarely_running">甚少執行 (%s)</string>
     <string name="really_remove_account_message">移除此帳戶後，手機上的訊息、通訊錄和其他資料將會全部刪除！</string>
     <string name="really_remove_account_title">要移除帳戶嗎？</string>
@@ -5016,7 +5022,7 @@ OnePlus 與知名設計學院 Parsons School of Design 的學生，一起設計�
 固定應用程式後，該應用程式可開啟其他應用程式，亦能存取個人資料。
 
 使用應用程式固定功能的步驟如下：   
-1.    開啟應用程式固定功能 
+1. 開啟應用程式固定功能 
 2. 開啟「概覽」 
 3. 輕按畫面頂部的應用程式圖示，然後輕按 [固定]"</string>
     <string name="screen_pinning_dialog_message">"固定應用程式後：

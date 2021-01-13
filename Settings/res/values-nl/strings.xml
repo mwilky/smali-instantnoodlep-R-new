@@ -2246,8 +2246,12 @@ Als je de functie voor automatische back-ups inschakelt, worden apparaat- en app
     <string name="help_feedback_label">Hulp en feedback</string>
     <string name="help_label">Hulp en feedback</string>
     <string name="hide_extra_apps">App-gebruik weergeven</string>
+    <string name="hide_imeback_and_switcher">Aanpassing toetsenbordhoogte</string>
+    <string name="hide_imeback_and_switcher_warning">Aanpassing van de toetsenbordhoogte wordt duidelijk in de gebaren voor het volledig scherm.</string>
     <string name="hide_silent_icons_summary">Pictogrammen van subtiele meldingen worden niet weergegeven in de statusbalk</string>
     <string name="hide_silent_icons_title">Pictogrammen van subtiele meldingen verbergen</string>
+    <string name="hide_summary">De balk met snelkoppelingen onderaan het toetsenbord wordt verborgen</string>
+    <string name="hide_title">Verbergen</string>
     <string name="high_label">Hoog</string>
     <string name="high_power_app_text_nomal">%1$s verbruikt veel batterij</string>
     <string name="high_power_app_text_red">%1$s verbruikt heel veel batterij</string>
@@ -3576,8 +3580,8 @@ Let op: Gezichtsontgrendeling is minder veilig dan het gebruik van een vingerafd
     <string name="oneplus_fingerprint_findsendor_summary">Wanneer het vingerafdrukpatroon onderaan het scherm verschijnt, drukt u met uw vinger op het gebied van de vingerafdrukidentificatie om de vingerafdrukfunctie te gebruiken om uw telefoon te wekken of te ontgrendelen, aankopen te autoriseren of u aan te melden bij apps.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Vingerafdruk verwijderen</string>
     <string name="oneplus_fingerprint_functional_declaration">Verklaring van de vingerafdrukfunctie</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Houd de vingerafdruksensor ingedrukt via het zoekerscherm om een foto te nemen</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Lang indrukken om een foto te nemen</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Houd de vingerafdruksensor ingedrukt via het zoekerscherm om een foto te maken</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Ingedrukt houden om een foto te maken</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gebaar vingerafdruk</string>
     <string name="oneplus_fingerprint_hardware_exception">Informatie over vingerafdrukhardware klopt niet. Neem contact op met de klantenservice</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Houd de vingerafdruksensor ingedrukt om quick pay te openen</string>
@@ -4810,6 +4814,8 @@ Schermbeschermers van derden kunnen het ontgrendelen met een vingerafdruk onmoge
     <string name="radio_info_http_client_test">HTTP-client testen:</string>
     <string name="radio_info_ping_hostname_v4">IPv4 van hostnaam (www.google.com) pingen:</string>
     <string name="radio_info_ping_hostname_v6">IPv6 van hostnaam (www.google.com) pingen:</string>
+    <string name="raise_summary">Het toetsenbord wordt vanaf de onderkant omhoog getild en de snelkoppeling wordt weergegeven</string>
+    <string name="raise_title">Omhoog</string>
     <string name="rarely_running">Zelden actief (%s)</string>
     <string name="really_remove_account_message">Als dit account wordt verwijderd, worden ook alle account­berichten, contacten en andere gegevens van de telefoon verwijderd.</string>
     <string name="really_remove_account_title">Account verwijderen?</string>
@@ -5872,7 +5878,7 @@ Een benadering van Google voor de synchronisatie van gegevens, zodat je altijd e
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dubbeltap om te ontwaken</string>
     <string name="touchscreen_flashlight_gesture_summary">Teken een V om de zaklamp aan of uit te schakelen</string>
     <string name="touchscreen_flashlight_gesture_title">Zaklamp gebruiken</string>
-    <string name="touchscreen_music_gesture_summary">Tekenen || met twee vingers om muziek te spelen of te pauzeren. teken &lt; of > voor het vorige of volgende nummer</string>
+    <string name="touchscreen_music_gesture_summary">Teken || met twee vingers om muziek af te spelen of te pauzeren. Teken &lt; of > voor het vorige of volgende nummer</string>
     <string name="touchscreen_music_gesture_title">Muziek regelen</string>
     <string name="track_frame_time">HWUI-weergave van profiel</string>
     <string name="track_frame_time_keywords">GPU</string>

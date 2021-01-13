@@ -18,7 +18,7 @@
     <string name="add_fingerprints_dialog">तुमच्याकडे अद्याप कोणतेही बोटांचे ठसे स्थापित केलेले नाहीत. तुम्ही तुमच्या बोटांचे ठसे नोंदवू इच्छिता का?</string>
     <string name="add_oneplus_account_label">OnePlus खाते</string>
     <string name="advanced_calling_summary">एचडी व्हॉईस, व्हिडिओ कॉलिंग</string>
-    <string name="advanced_calling_title">प्रगत कॉलिंग</string>
+    <string name="advanced_calling_title">अॅडव्हान्सड कॉलिंग</string>
     <string name="advanced_reboot_summary">अनलॉक असताना, रीबूट, सामान्यपणे रीबूट, पुनर्प्राप्तीमध्ये किंवा फास्टबूट हे पर्याय ऑफर करेल</string>
     <string name="advanced_reboot_title">प्रगत रीबूट</string>
     <string name="advanced_wificall_summary">मोबाइल नेटवर्क उपल्ब्ध नसताना Wi‑Fi चा वापर करा</string>
@@ -259,6 +259,10 @@
     <string name="hardware_keys_long_press_title">दीर्घ दाबा बटण</string>
     <string name="hardware_keys_menu_key_title">अलीकडील बटणे</string>
     <string name="header_category_custom">सानुकूलन</string>
+    <string name="hide_imeback_and_switcher">कीबोर्ड उंची समायोजन</string>
+    <string name="hide_imeback_and_switcher_warning">कीबोर्डची उंची समायोजन पूर्ण-स्क्रीन जेश्चरमध्ये स्पष्ट होईल.</string>
+    <string name="hide_summary">कीबोर्डच्या तळाशी शॉर्टकट बार लपविला जाईल</string>
+    <string name="hide_title">लपवा</string>
     <string name="high_power_app_text_nomal">%1$s आपली बॅटरी कमी करीत आहे</string>
     <string name="high_power_app_text_red">%1$s आपली बॅटरी तीव्रतेने कमी करीत आहे</string>
     <string name="hint_data_used_alert">डेटा वापराने %1$s ओलांडले</string>
@@ -504,7 +508,7 @@
     <string name="oneplus_disconnected">जोडणी रद्द करा</string>
     <string name="oneplus_display_dashboard_no_theme_summary">स्थिती बार, सभोवतालचे प्रदर्शन, वॉलपेपर्स</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">स्थिती बार, सभोवतालचे प्रदर्शन, रात्र मोड, वाचन मोड</string>
-    <string name="oneplus_display_dashboard_summary">स्थिती बार, सभोवतालचे प्रदर्शन, वॉलपेपर्स, थीम</string>
+    <string name="oneplus_display_dashboard_summary">स्थिती बार, वातावरण डिस्प्ले, वॉलपेपर, थीम</string>
     <string name="oneplus_display_dashboard_summary_801">स्थिती बार, सभोवतालचे प्रदर्शन, वॉलपेपर्स, थीम</string>
     <string name="oneplus_display_screen_timeout">झोप</string>
     <string name="oneplus_display_size_adaption">पूर्ण स्क्रीन अॅप्स</string>
@@ -609,8 +613,8 @@
     <string name="oneplus_fingerprint_findsendor_summary">स्क्रीनच्या तळाशी जेव्हा फिंगरप्रिंट पॅटर्न आढळतो, तेव्हा फिंगरप्रिंट फंक्शन वापरण्यासाठी आपले बोट फिंगरप्रिंट ओळख पडताळणी क्षेत्रामध्ये दाबा: आपल्या फोनला जागे करा आणि तो अनलॉक करा, खरेद्या प्रमाणित करा किंवा अ‍ॅप्समध्ये साइन इन करा.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">फिंगरप्रिंट कसे वापरावे</string>
     <string name="oneplus_fingerprint_functional_declaration">फिंगरप्रिंट फंक्शन जाहीरनामा</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">फोटो घेण्यासाठी दृश्यशोध घेणार्‍या स्क्रीनकडून, फिंगरप्रिंट सेन्सर दीर्घकाळ दाबा</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">फोटो घेण्यासाठी दीर्घकाळ दाबा</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">व्ह्यूफाइंडर स्क्रीनवरून, फोटो घेण्यासाठी फिंगरप्रिंट सेन्सरवर दाबून ठेवा</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">फोटो घेण्यासाठी दाबून ठेवा</string>
     <string name="oneplus_fingerprint_gesture_settings_title">बोटाचा ठसा</string>
     <string name="oneplus_fingerprint_hardware_exception">फिंगरप्रिंट हार्डवेअर माहिती अचूक नाही, कृपया ग्राहक सेवेशी संपर्क साधा</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">क्विक पे सुरू करण्यासाठी बोटांच्या ठस्यांचा सेन्सर दीर्घ दाबा</string>
@@ -706,10 +710,10 @@
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">नेव्हिगेशन जेश्‍चर्स (तळाशी)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">नेव्हिगेशन जेश्‍चर्स (डावे आणि उजवे)</string>
     <string name="oneplus_gesture_of_answer_call_info">फोन येत असताना, आपण फोनला कानाजवळ नेऊन उत्तर देऊ शकता.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">आपल्‍या कानाजवळ फोन धरून स्‍वयंचलितपणे येणार्‍या कॉल्‍सचे उत्‍तर द्या</string>
+    <string name="oneplus_gesture_of_answer_call_summary">फोन कानाजवळ नेऊन येणार्‍या कॉल्सना आपोआप उत्तर द्या</string>
     <string name="oneplus_gesture_of_answer_call_title">हावभावाद्वारे कॉल्सना उत्तर द्या</string>
     <string name="oneplus_gesture_start_learning">जाणून घेण्‍यास प्रारंभ करा</string>
-    <string name="oneplus_gesture_to_answer_summary">आपल्‍या कानाजवळ फोन धरून स्‍वयंचलितपणे येणार्‍या कॉल्‍सचे उत्‍तर द्या</string>
+    <string name="oneplus_gesture_to_answer_summary">फोन कानाजवळ नेऊन येणार्‍या कॉल्सना आपोआप उत्तर द्या</string>
     <string name="oneplus_gesture_to_answer_title">उत्‍तर देण्‍यासाठी उचला</string>
     <string name="oneplus_gesture_to_control_call_info">आपल्‍या कानाजवळ फोन नेऊन स्‍वयंचलितपणे कॉल्‍स नियंत्रित करा</string>
     <string name="oneplus_gesture_to_control_calls_summary">स्‍वयंचलितपणे कॉल्‍सचे उत्‍तर द्या किंवा जेश्‍चरने इअरपिसवर स्विच करा</string>
@@ -817,7 +821,7 @@
     <string name="oneplus_memc_more_support_apps">आणखी समर्थित अनुप्रयोग</string>
     <string name="oneplus_memc_notice">या मोडमध्ये, व्हिडिओ फ्रेम रेट वाढविला जाईल, ग्राफिक्सची गती अस्पष्टता कमी करेल, ज्यामुळे तो स्पष्ट आणि नितळ होईल. केवळ पूर्ण स्क्रीन पुन्हा प्ले करण्याच्या दरम्यान प्रभावी असेल.</string>
     <string name="oneplus_memc_open">चालू</string>
-    <string name="oneplus_memc_support_apps">समर्थित अनुप्रयोग</string>
+    <string name="oneplus_memc_support_apps">अॅपला समर्थन दिले</string>
     <string name="oneplus_memc_support_no_apps">कोणतेही समर्थित अनुप्रयोग स्थापित केलेले नाहीत</string>
     <string name="oneplus_memc_video">मोशन ग्राफिक्स स्मूथिंग</string>
     <string name="oneplus_memc_video_effect">मोबदला प्रभाव</string>
@@ -834,7 +838,7 @@
     <string name="oneplus_more">अधिक</string>
     <string name="oneplus_motion_sensor_settings_title">प्रणालीचे हावभाव</string>
     <string name="oneplus_multi_app">समांतर अॅप्स</string>
-    <string name="oneplus_multi_app_disable_apps">समर्थित अनुप्रयोग</string>
+    <string name="oneplus_multi_app_disable_apps">अॅपला समर्थन दिले</string>
     <string name="oneplus_multi_app_disable_tips">समांतर अॅप निष्क्रिय केल्यावर त्यातील सर्व डेटा पुसून टाकला जाईल. आपल्याला सुरू ठेवायचे आहे का?</string>
     <string name="oneplus_multi_app_enable_apps">अॅप सक्रिय केले</string>
     <string name="oneplus_multi_app_init">लोड करीत आहे...</string>
@@ -946,7 +950,7 @@
 %d प्रयत्न शिल्लक."</string>
     <string name="oneplus_pocket_mode_summary">फोन तुमच्या खिशात असताना चुकून स्क्रीनला स्पर्श होणे रोखा</string>
     <string name="oneplus_pre_application">पूर्वस्थापित अनुप्रयोग सूची</string>
-    <string name="oneplus_preference_settings">वर्तणूक</string>
+    <string name="oneplus_preference_settings">वागणूक</string>
     <string name="oneplus_preference_settings_auto_activate">नियोजित</string>
     <string name="oneplus_preference_settings_behavior">आवडी</string>
     <string name="oneplus_preference_settings_custom_time">ऑटो-टॉगल</string>
@@ -1201,7 +1205,7 @@
     <string name="oneplus_support_apps">समर्थित अनुप्रयोग</string>
     <string name="oneplus_support_summary">डिव्हाइस वापरावरील टिपा आणि FAQ</string>
     <string name="oneplus_support_title">टिप्स &amp; सहाय्य</string>
-    <string name="oneplus_supported_apps">समर्थित अनुप्रयोग</string>
+    <string name="oneplus_supported_apps">अॅपला समर्थन दिले</string>
     <string name="oneplus_suspension_notice">चालू ठेवा</string>
     <string name="oneplus_suspension_notice_summary">अॅप्सना चालू ठेवण्याच्या सूचना दाखवण्याची परवानगी द्या</string>
     <string name="oneplus_switch">OnePlus Switch</string>
@@ -1429,7 +1433,7 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_display_motion_graphics_compensation_summary">ग्राफिक्सचा फ्रेम रेट वाढवा, व्हिडिओ आणि गेम प्रभाव सुरळित करा</string>
     <string name="op_dnd_summary">व्यत्यय आणू नका</string>
     <string name="op_enable_location_services">जवळपास चार्जिंग स्टेशन शोधण्यासाठी आणि त्याचा मागोवा घेण्यासाठी कृपया स्थान सेवा सक्षम करा</string>
-    <string name="op_enable_text">सक्षम करा</string>
+    <string name="op_enable_text">सक्रिय करा</string>
     <string name="op_face_unlock_set_unlock_password">फेस अनलॉक + पासवर्ड</string>
     <string name="op_face_unlock_set_unlock_pattern">फेस अनलॉक + पॅटर्न</string>
     <string name="op_face_unlock_set_unlock_pin">फेस अनलॉक + PIN</string>
@@ -1445,7 +1449,7 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="op_fragment">संक्षिप्‍त</string>
     <string name="op_gamespace">गेम स्‍पेस</string>
     <string name="op_global_drak_mode_apps_manage">डार्क मोडमध्ये अ‍ॅप्स व्यवस्थापित करा</string>
-    <string name="op_global_drak_mode_full_support_list">समर्थित अनुप्रयोग</string>
+    <string name="op_global_drak_mode_full_support_list">अॅपला समर्थन दिले</string>
     <string name="op_global_drak_mode_not_full_support_list">असमर्थित अॅप्स</string>
     <string name="op_global_drak_mode_support_description">समर्थित नसलेले अॅप्स डार्क मोडमध्ये योग्यरित्या कार्य करू शकत नाहीत</string>
     <string name="op_gps_off_warn_msg">कृपया प्रथम स्थान चालू करा</string>
@@ -1557,6 +1561,8 @@ Insight, OnePlus ने एकत्र डिझाइन केलेले &a
     <string name="prox_wake_title">जवळ असल्यास जागा करा</string>
     <string name="quick_unlock_summary">सक्रिय असेल तेव्हा, बरोबर पिन किंवा पासवर्ड सापडल्यानंतर लगेचच लॉकस्क्रीन आपोआप अनलॉक करेल.</string>
     <string name="quick_unlock_title">त्वरित अनलॉक</string>
+    <string name="raise_summary">कीबोर्ड तळापासून वर आणला जाईल आणि शॉर्टकट की दिसेल</string>
+    <string name="raise_title">वाढवा</string>
     <string name="reset_collect_diagnostics_summary">समस्या निवारणासाठी निदानात्मक डेटा संकलित करा</string>
     <string name="reset_collect_diagnostics_title">निदान संकलित करा</string>
     <string name="reset_system_settings_button_text">सेटिंग्ज ‍रिसेट करा</string>

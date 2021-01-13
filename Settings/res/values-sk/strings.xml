@@ -2246,8 +2246,12 @@ Keď zapnete automatické zálohovanie, údaje zariadenia a aplikácií sa budú
     <string name="help_feedback_label">Pomocník a spätná väzba</string>
     <string name="help_label">Pomocník a spät. väzba</string>
     <string name="hide_extra_apps">Zobraziť spotrebu aplikácií</string>
+    <string name="hide_imeback_and_switcher">Nastavenie výšky klávesnice</string>
+    <string name="hide_imeback_and_switcher_warning">Nastavenie výšky klávesnice bude zreteľné pri gestách na celej obrazovke.</string>
     <string name="hide_silent_icons_summary">Ikony nenápadných upozornení sa nezobrazujú v stavovom riadku</string>
     <string name="hide_silent_icons_title">Skrývať ikony nenápadných upozornení</string>
+    <string name="hide_summary">Panel s odkazmi v spodnej časti klávesnice bude skrytý</string>
+    <string name="hide_title">Skryť</string>
     <string name="high_label">Vysoká</string>
     <string name="high_power_app_text_nomal">%1$s čerpá energiu batérie</string>
     <string name="high_power_app_text_red">%1$s silne čerpá energiu batérie</string>
@@ -3420,7 +3424,7 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť režim bez vyrušen�
     <string name="oneplus_clear_intenal_storage_data_summary">Vrátane hudby, fotografií, videí a ďalších osobných údajov</string>
     <string name="oneplus_clear_intenal_storage_data_title">Vymazať interný ukladací priestor</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Farebný odtieň môže používať iba farebný motív systému</string>
-    <string name="oneplus_colorful_mode_title">Farebný</string>
+    <string name="oneplus_colorful_mode_title">Farebné</string>
     <string name="oneplus_compatibility_mode_summary">Aplikácie na celú obrazovku nemôžu používať oblasť zárezu</string>
     <string name="oneplus_compatibility_mode_title">Režim kompatibility</string>
     <string name="oneplus_condition_airplane_mode_turn_off">VYPNÚŤ REŽIM LIETADLO</string>
@@ -3576,8 +3580,8 @@ Upozornenie: funkcia Odomknúť tvárou je menej bezpečná ako odtlačok prsta 
     <string name="oneplus_fingerprint_findsendor_summary">Keď sa v dolnej časti obrazovky zobrazí obrázok odtlačku prsta, jednoducho priložte prst do oblasti identifikácie odtlačku prsta na použitie funkcií odtlačku prsta.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Ako používať odtlačok prsta</string>
     <string name="oneplus_fingerprint_functional_declaration">Vyhlásenie funkcie odtlačku prsta</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Na obrazovke hľadáčika dlho stlačte snímač odtlačkov prstov, aby ste urobili fotografiu</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Dlhým stlačením odfotografujete</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Na obrazovke hľadáčika dlhým stlačením snímača odtlačkov prstov urobíte fotografiu</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Dlhým stlačením urobíte fotografiu</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gesto na snímači odtlačku prsta</string>
     <string name="oneplus_fingerprint_hardware_exception">Hardvérové informácie pre odtlačok prsta nie sú presné. Kontaktujte služby zákazníkom</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Dlhým stlačením tlačidla snímača odtlačkov prstov sa spustí rýchla platba</string>
@@ -3876,7 +3880,7 @@ Poznámka: Váš odtlačok prsta môže byť menej bezpečný ako zložitý vzor
     <string name="oneplus_notifications_sound">Zvuky oznámení</string>
     <string name="oneplus_o2_contributors">Spolupracovníci OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Zapnúť vo vlastnom rozsahu času</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">Plán</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">Rozvrh</string>
     <string name="oneplus_open_bed_time_mode_summary">Režim spánku môžete zapnúť ručne</string>
     <string name="oneplus_open_bed_time_mode_title">Režim spánku</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Potvrdiť</string>
@@ -4012,7 +4016,7 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_rotation_silent_enable_summary">Ak chcete stlmiť prichádzajúci hovor, zariadenie preklopte</string>
     <string name="oneplus_rotation_silent_enable_title">Preklopením stlmiť</string>
     <string name="oneplus_scene_mode">SCÉNY</string>
-    <string name="oneplus_schedule">Plán</string>
+    <string name="oneplus_schedule">Rozvrh</string>
     <string name="oneplus_screen">OBRAZOVKA</string>
     <string name="oneplus_screen_better_cold">Studená</string>
     <string name="oneplus_screen_better_nature">Prirodzený</string>
@@ -4223,7 +4227,7 @@ Poznámka:
     <string name="oneplus_theme_shape_effect_title">Vybrať tvar</string>
     <string name="oneplus_theme_system_customization">PRISPÔSOBENIE SYSTÉMU</string>
     <string name="oneplus_theme_tone">Odtieň</string>
-    <string name="oneplus_theme_tone_effect_color">Farebný</string>
+    <string name="oneplus_theme_tone_effect_color">Farebné</string>
     <string name="oneplus_theme_tone_effect_dark">Tmavý</string>
     <string name="oneplus_theme_tone_effect_light">Ľahké</string>
     <string name="oneplus_theme_tone_effect_title">Vybrať tón</string>
@@ -4811,6 +4815,8 @@ Odomknutie odtlačkom prsta nemusí byť kompatibilné s ochrannými fóliami ob
     <string name="radio_info_http_client_test">Test klienta HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Testovať dostupnosť domény (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Testovať dostupnosť domény (www.google.com) IPv6:</string>
+    <string name="raise_summary">Klávesnica sa vytiahne zo spodnej časti a zobrazí sa tlačidlo s odkazom</string>
+    <string name="raise_title">Vytiahnuť</string>
     <string name="rarely_running">Výnimočne spustené (%s)</string>
     <string name="really_remove_account_message">Odstránením účtu odstránite z telefónu aj všetky správy, kontakty a ďalšie údaje tohto účtu.</string>
     <string name="really_remove_account_title">Chcete účet odstrániť?</string>
@@ -5873,7 +5879,7 @@ Spoločnosť Google pomocou nej synchronizuje údaje a umožňuje vám tak prist
     <string name="touchscreen_double_tap_to_wake_gesture_title">Prebudiť dvojitým poklepaním</string>
     <string name="touchscreen_flashlight_gesture_summary">Nakreslite V pre zapnute/vypnutie baterky</string>
     <string name="touchscreen_flashlight_gesture_title">Zapnúť/vypnúť baterku</string>
-    <string name="touchscreen_music_gesture_summary">Nakreslite || dvoma prstami na prehrávanie alebo pozastavenie hudby. Nakreslite &lt; alebo > pre predchadzajúcu alebo nasledujúcu skladbu</string>
+    <string name="touchscreen_music_gesture_summary">Na prehratie alebo pozastavenie hudby nakreslite || dvomi prstami. Pre predchádzajúcu alebo nasledujúcu skladbu nakreslite &lt; alebo ></string>
     <string name="touchscreen_music_gesture_title">Ovládanie hudby</string>
     <string name="track_frame_time">Vykresľovanie HWUI profilu</string>
     <string name="track_frame_time_keywords">Grafický procesor</string>

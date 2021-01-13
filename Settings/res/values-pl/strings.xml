@@ -2246,8 +2246,12 @@ Kiedy włączysz automatyczną kopię zapasową, dane urządzenia i aplikacji b�
     <string name="help_feedback_label">Pomoc i opinie</string>
     <string name="help_label">Pomoc i opinie</string>
     <string name="hide_extra_apps">Pokaż zużycie przez aplikacje</string>
+    <string name="hide_imeback_and_switcher">Regulacja wysokości klawiatury</string>
+    <string name="hide_imeback_and_switcher_warning">Regulacja wysokości klawiatury będzie widoczna w gestach pełnoekranowych.</string>
     <string name="hide_silent_icons_summary">Ikony z subtelnych powiadomień nie są pokazywane na pasku stanu</string>
     <string name="hide_silent_icons_title">Ukryj ikony z subtelnych powiadomień</string>
+    <string name="hide_summary">Pasek skrótów na dole klawiatury zostanie ukryty</string>
+    <string name="hide_title">Ukryj</string>
     <string name="high_label">Wysoka</string>
     <string name="high_power_app_text_nomal">%1$s rozładowuje baterię</string>
     <string name="high_power_app_text_red">%1$s istotnie rozładowuje baterię</string>
@@ -3673,10 +3677,10 @@ Aby w każdej chwili przejść do ekranu domowego, przesuń palcem w górę od �
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gesty Nawigacyjne (dół)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gesty Nawigacyjne (lewo i prawo)</string>
     <string name="oneplus_gesture_of_answer_call_info">Możesz odbierać połączenia przychodzące, podnosząc telefon do ucha.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Odbieraj automatycznie połączenia przychodzące, podnosząc telefon do ucha</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Automatycznie odbieraj połączenia przychodzące, podnosząc telefon do ucha</string>
     <string name="oneplus_gesture_of_answer_call_title">Odbieraj połączenia gestem</string>
     <string name="oneplus_gesture_start_learning">Rozpocznij naukę</string>
-    <string name="oneplus_gesture_to_answer_summary">Odbieraj automatycznie połączenia przychodzące, podnosząc telefon do ucha</string>
+    <string name="oneplus_gesture_to_answer_summary">Automatycznie odbieraj połączenia przychodzące, podnosząc telefon do ucha</string>
     <string name="oneplus_gesture_to_answer_title">Podnieś, aby odebrać</string>
     <string name="oneplus_gesture_to_control_call_info">Automatycznie kontroluj połączenia, podnosząc telefon do ucha</string>
     <string name="oneplus_gesture_to_control_calls_summary">Automatycznie odbieraj połączenia lub przełączaj na słuchawkę przy pomocy gestu</string>
@@ -4334,7 +4338,7 @@ Ustawienie sieci jako ukrytej nie ma wpływa na ustawienia routera."</string>
     <string name="onplus_hardware_version_info">Wersja Sprzętu</string>
     <string name="onplus_software_version_info">Wersja oprogamowania</string>
     <string name="onscreen_keyboard_settings_summary">Ustawienia klawiatury ekranowej</string>
-    <string name="op_advanced_settings">Zaawansowany</string>
+    <string name="op_advanced_settings">Zaawansowane</string>
     <string name="op_already_know">Rozumiem</string>
     <string name="op_android_mode_cannot_change_color_accent">Motyw domyślny może używać tylko koloru systemowego</string>
     <string name="op_aod_parsons_info_button">Ok</string>
@@ -4383,7 +4387,7 @@ Insight, zaprojektowany wspólnie przez OnePlus oraz studentów z Parsons School
     <string name="op_data_vowlan_enable_summary">Korzystaj z połączenia przez Wi-Fi, gdy dostępne</string>
     <string name="op_default_apps_summary">Ekran główny, przeglądarka</string>
     <string name="op_default_luncher_title">Aplikacja Główna</string>
-    <string name="op_display_advanced_settings">Zaawansowany</string>
+    <string name="op_display_advanced_settings">Zaawansowane</string>
     <string name="op_display_advanced_settings_summary_1">Kalibracja ekranu, rozdzielczość, częstotliwość odświeżania, ustawienia wycięcia</string>
     <string name="op_display_advanced_settings_summary_2">Kalibracja ekranu, częstotliwość odświeżania, ustawienia wycięcia</string>
     <string name="op_display_advanced_settings_summary_3">Kalibracja ekranu, rozdzielczość, częstotliwość odświeżania</string>
@@ -4811,6 +4815,8 @@ Ta funkcja może nie być zgodna z nakładkami zabezpieczającymi ekran innych f
     <string name="radio_info_http_client_test">Test klienta HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Ping nazwa_hosta(www.google.pl) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping Nazwa_hosta(www.google.pl) IPv6:</string>
+    <string name="raise_summary">Klawiatura zostanie podniesiona od dołu i zostanie wyświetlony klawisz skrótu</string>
+    <string name="raise_title">Podnieś</string>
     <string name="rarely_running">Rzadko aktywna (%s)</string>
     <string name="really_remove_account_message">Usunięcie tego konta spowoduje usunięcie z telefonu wszystkich powiązanych z nim wiadomości, kontaktów i innych danych.</string>
     <string name="really_remove_account_title">Usunąć konto?</string>
@@ -4977,7 +4983,7 @@ To ustawienie dotyczy wszystkich użytkowników tego telefonu."</string>
     <string name="scanning_status_text_wifi_on_ble_off">Skanowanie Wi-Fi włączone, skanowanie Bluetooth wyłączone</string>
     <string name="scanning_status_text_wifi_on_ble_on">Skanowanie Wi-Fi i Bluetooth jest włączone</string>
     <string name="schedule_reminders">Przypomnienia o wydarzeniu</string>
-    <string name="screen_color_mode_advanced">Zaawansowany</string>
+    <string name="screen_color_mode_advanced">Zaawansowane</string>
     <string name="screen_color_mode_advanced_settings">Ustawienia zaawansowane</string>
     <string name="screen_color_mode_vivid">Żywy</string>
     <string name="screen_compatibility_label">Zgodność z ekranem</string>
@@ -5873,7 +5879,7 @@ Synchronizacja danych daje Ci dostęp do kontaktów, wydarzeń i innych ważnych
     <string name="touchscreen_double_tap_to_wake_gesture_title">Stuknij Podwójnie, aby Wybudzić</string>
     <string name="touchscreen_flashlight_gesture_summary">Narysuj V, aby włączyć/wyłączyć latarkę</string>
     <string name="touchscreen_flashlight_gesture_title">Włącz/wyłącz latarkę</string>
-    <string name="touchscreen_music_gesture_summary">Narysuj || dwoma palcami do odtwarzania lub wstrzymywania muzyki. Narysuj &lt; lub >, aby przejść do poprzedniego lub następnego utworu</string>
+    <string name="touchscreen_music_gesture_summary">Narysuj ‖ dwoma palcami do odtwarzania lub wstrzymywania muzyki. Narysuj &lt; lub >, aby przejść do poprzedniego lub następnego utworu</string>
     <string name="touchscreen_music_gesture_title">Sterowanie Muzyką</string>
     <string name="track_frame_time">Profil renderowania HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>

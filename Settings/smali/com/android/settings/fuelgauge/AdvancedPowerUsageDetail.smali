@@ -651,13 +651,20 @@
 
     move-result v0
 
+    sget-object v1, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->loadDisabledApps()V
+
+    :cond_0
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
     move-result v1
 
     const/4 v3, 0x1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     sget-object v1, Lcom/oneplus/settings/backgroundoptimize/AppBgOptimizeBridge;->VZW_APPS_SHOWN_DISABLED:Ljava/util/HashSet;
 
@@ -667,17 +674,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     move v1, v3
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move v1, v2
 
     :goto_0
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
@@ -690,26 +697,26 @@
     iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
     invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    :cond_1
-    if-ne v0, v3, :cond_2
-
-    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
-
-    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
-
-    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
-
-    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
-
-    invoke-virtual {v4, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :cond_2
+    if-ne v0, v3, :cond_3
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    iget-object v4, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mNoOptimze:Lcom/android/settings/ui/RadioButtonPreference;
+
+    invoke-virtual {v4, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    :cond_3
     const/4 v4, 0x2
 
-    if-ne v0, v4, :cond_3
+    if-ne v0, v4, :cond_4
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
@@ -723,8 +730,8 @@
 
     invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_3
-    if-eqz v1, :cond_4
+    :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mSmartOptimze:Lcom/android/settings/ui/RadioButtonPreference;
 
@@ -750,7 +757,7 @@
 
     invoke-virtual {p0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 

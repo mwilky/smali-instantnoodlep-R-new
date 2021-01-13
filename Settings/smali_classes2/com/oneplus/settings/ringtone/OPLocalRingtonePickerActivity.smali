@@ -809,7 +809,7 @@
 
     move-result-object p0
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_0
     new-instance v2, Landroid/content/ContentValues;
@@ -867,6 +867,7 @@
     invoke-virtual {v2, p1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     :goto_1
+    :try_start_0
     invoke-virtual {p0}, Landroid/preference/PreferenceActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -892,7 +893,17 @@
     const/4 v3, 0x0
 
     invoke-virtual {p1, v7, v0, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_2
     invoke-virtual {p0}, Landroid/preference/PreferenceActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -901,7 +912,7 @@
 
     move-result-object p0
 
-    :goto_2
+    :goto_3
     if-eqz v1, :cond_4
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V

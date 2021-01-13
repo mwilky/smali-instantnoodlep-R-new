@@ -2245,8 +2245,12 @@ Wenn du die automatische Sicherung aktivierst, werden Geräte- und App-Daten reg
     <string name="help_feedback_label">Hilfe &amp; Feedback</string>
     <string name="help_label">Hilfe &amp; Feedback</string>
     <string name="hide_extra_apps">App-Nutzung anzeigen</string>
+    <string name="hide_imeback_and_switcher">Höhenanpassung der Tastatur</string>
+    <string name="hide_imeback_and_switcher_warning">Die Höhenanpassung der Tastatur macht sich bei Gesten im Vollbild-Modus bemerkbar.</string>
     <string name="hide_silent_icons_summary">Bei stummen Benachrichtigungen werden in der Statusleiste keine Symbole angezeigt</string>
     <string name="hide_silent_icons_title">Bei stummen Benachrichtigungen keine Symbole anzeigen</string>
+    <string name="hide_summary">Die Verknüpfungsleiste unten in der Tastatur wird ausgeblendet.</string>
+    <string name="hide_title">Verbergen</string>
     <string name="high_label">Hoch</string>
     <string name="high_power_app_text_nomal">%1$s verbraucht Batterie</string>
     <string name="high_power_app_text_red">%1$s verbraucht viel Batterie</string>
@@ -3576,7 +3580,7 @@ Vorsicht: Die Gesichtsentsperrung (Face Unlock) ist weniger sicher als die Entsp
     <string name="oneplus_fingerprint_findsendor_tilte">So nutzt du den Fingerabdruck</string>
     <string name="oneplus_fingerprint_functional_declaration">Erklärung der Fingerabdruckfunktion</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">Auf dem Sucherbildschirm lange auf den Fingerabdrucksensor drücken, um ein Foto aufzunehmen</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Lang drücken, um ein Foto aufzunehmen</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Lange drücken, um ein Foto aufzunehmen</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingerabdruck-Geste</string>
     <string name="oneplus_fingerprint_hardware_exception">Die Fingerabdruck-Hardwaredaten sind nicht präzise. Bitte wende dich an den Kundenservice.</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Zum Start der Expresszahlung lange auf den Fingerabdrucksensor drücken</string>
@@ -3755,7 +3759,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_legal_summary">Datenschutzerklärung, Vereinbarungen usw.</string>
     <string name="oneplus_levels">Stufen</string>
     <string name="oneplus_lift_up_display">Display immer aktivieren oder Display beim Hochheben aktivieren</string>
-    <string name="oneplus_light">Hell</string>
+    <string name="oneplus_light">Leicht</string>
     <string name="oneplus_local_ringtone">Klingelton aus internem Speicher</string>
     <string name="oneplus_location_information">Beschreibung von standortbezogenen Diensten</string>
     <string name="oneplus_lock_after_timeout">Nach Ruhemodus automatisch sperren</string>
@@ -3822,7 +3826,7 @@ Hinweis: Dein Fingerabdruck ist möglicherweise nicht so sicher wie ein starkes 
     <string name="oneplus_night_mode_color_temperature">Farbtemperatur</string>
     <string name="oneplus_night_mode_enabled_op">Nacht-Modus</string>
     <string name="oneplus_night_mode_enabled_op_summary">Nachtmodus manuell einschalten</string>
-    <string name="oneplus_night_mode_manual_open">Dunkelmodus</string>
+    <string name="oneplus_night_mode_manual_open">Manuell</string>
     <string name="oneplus_night_mode_open_tip">Schalte zuerst den Nachtmodus ein</string>
     <string name="oneplus_night_mode_sensor_summary">Je nach Lichtverhältnissen kalibriert der Nachtmodus automatisch die Farbtemperatur des Bildschirms, um sich der Umgebung anzupassen. Dies kann die Müdigkeit und Beanspruchung der Augen reduzieren und Ihnen eventuell helfen, besser zu schlafen.</string>
     <string name="oneplus_night_mode_strong">Am wärmsten</string>
@@ -4224,7 +4228,7 @@ Hinweis:
     <string name="oneplus_theme_tone">Tönung</string>
     <string name="oneplus_theme_tone_effect_color">Farbig</string>
     <string name="oneplus_theme_tone_effect_dark">Dunkel</string>
-    <string name="oneplus_theme_tone_effect_light">Hell</string>
+    <string name="oneplus_theme_tone_effect_light">Leicht</string>
     <string name="oneplus_theme_tone_effect_title">Tönung auswählen</string>
     <string name="oneplus_theme_wallpaper">Hintergrundbilder</string>
     <string name="oneplus_three_screenshots_enable_summary">Mit drei Fingern über den Bildschirm streichen, um einen Screenshot zu machen</string>
@@ -4810,6 +4814,8 @@ Das Entsperren mit Fingerabdruck ist möglicherweise mit einem Drittanbieter-Bil
     <string name="radio_info_http_client_test">HTTP-Client-Test:</string>
     <string name="radio_info_ping_hostname_v4">Hostnamen (www.google.com) IPv4 pingen:</string>
     <string name="radio_info_ping_hostname_v6">Hostnamen (www.google.com) IPv6 pingen:</string>
+    <string name="raise_summary">Die Tastatur wird von der unteren Kante angehoben, und die Verknüpfungstaste wird angezeigt.</string>
+    <string name="raise_title">Anheben</string>
     <string name="rarely_running">Kaum ausgeführt (%s)</string>
     <string name="really_remove_account_message">Durch das Entfernen dieses Kontos werden alle zugehörigen Nachrichten, Kontakte und anderen Daten vom Telefon gelöscht!</string>
     <string name="really_remove_account_title">Konto entfernen?</string>
@@ -5872,7 +5878,7 @@ Mit dieser Funktion von Google kannst du deine Daten synchronisieren, um auf dei
     <string name="touchscreen_double_tap_to_wake_gesture_title">Aufwecken durch doppeltes Tippen</string>
     <string name="touchscreen_flashlight_gesture_summary">Zum Ein- und Ausschalten des Blitzlichts ein V zeichnen</string>
     <string name="touchscreen_flashlight_gesture_title">Blitzlicht ein- und ausschalten</string>
-    <string name="touchscreen_music_gesture_summary">Zum Einschalten oder Pausieren der Musik mit zwei Fingern ein || zeichnen. Durch Zeichnen von &lt; oder > zum vorigen oder nächsten Track wechseln</string>
+    <string name="touchscreen_music_gesture_summary">Ziehe ‖ mit zwei Fingern, um Musik abzuspielen oder die Wiedergabe zu pausieren. Ziehe &lt; oder >, um zum vorherigen oder zum nächsten Titel zu springen.</string>
     <string name="touchscreen_music_gesture_title">Musiksteuerung</string>
     <string name="track_frame_time">HWUI-Rendering für Profil</string>
     <string name="track_frame_time_keywords">GPU</string>

@@ -2246,8 +2246,12 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="help_feedback_label">Help &amp; feedback</string>
     <string name="help_label">Help &amp; feedback</string>
     <string name="hide_extra_apps">Show app usage</string>
+    <string name="hide_imeback_and_switcher">Keyboard height adjustment</string>
+    <string name="hide_imeback_and_switcher_warning">"Keyboard's height adjustment will be evident in the full-screen gestures."</string>
     <string name="hide_silent_icons_summary">"Icons from gentle notifications aren't shown in the status bar"</string>
     <string name="hide_silent_icons_title">Hide icons from gentle notifications</string>
+    <string name="hide_summary">The shortcut bar at the bottom of the keyboard will be hidden</string>
+    <string name="hide_title">Hide</string>
     <string name="high_label">High</string>
     <string name="high_power_app_text_nomal">%1$s Draining your battery</string>
     <string name="high_power_app_text_red">%1$s Draining your battery heavily</string>
@@ -4809,6 +4813,8 @@ Fingerprint unlock might be incompatible with third-party screen protectors.
     <string name="radio_info_http_client_test">HTTP Client test:</string>
     <string name="radio_info_ping_hostname_v4">Ping Hostname(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping Hostname(www.google.com) IPv6:</string>
+    <string name="raise_summary">The keyboard will be raised up from the bottom and the shortcut key will be displayed</string>
+    <string name="raise_title">Raise</string>
     <string name="rarely_running">Rarely running (%s)</string>
     <string name="really_remove_account_message">Removing this account will delete all of its messages, contacts and other data from the phone.</string>
     <string name="really_remove_account_title">Remove account?</string>
@@ -5871,7 +5877,7 @@ A Google approach to syncing data to allow access to your contacts, appointments
     <string name="touchscreen_double_tap_to_wake_gesture_title">Double-Tap to Wake</string>
     <string name="touchscreen_flashlight_gesture_summary">Draw a V to toggle the flashlight</string>
     <string name="touchscreen_flashlight_gesture_title">Toggle flashlight</string>
-    <string name="touchscreen_music_gesture_summary">Draw || with two fingers to play or pause music. Draw &lt; or > for previous or next track.</string>
+    <string name="touchscreen_music_gesture_summary">Draw ‖ with two fingers to play or pause music. Draw &lt; or > for previous or next track</string>
     <string name="touchscreen_music_gesture_title">Music Control</string>
     <string name="track_frame_time">Profile HWUI rendering</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6277,7 +6283,7 @@ Any user can update apps for all other users."</string>
     <string name="verify_apps_over_usb_title">Verify apps over USB</string>
     <string name="verizon_store_demo_mode_hint">Enter the password</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Changing the way mobile hotspot is set up will disconnect any devices currently connected to the mobile hotspot.</string>
+    <string name="verizon_wifi_tether_band_warning">Changing the way Mobile Hotspot is set up will disconnect any devices currently connected to the Mobile Hotspot.</string>
     <string name="version_text">Version %1$s</string>
     <string name="vibrate_in_silent_title">Vibrate when silent</string>
     <string name="vibrate_input_devices">Redirect vibration</string>

@@ -2471,8 +2471,12 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="hidden_ssid_label">Hidden SSID:</string>
     <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="hide_extra_apps">Show app usage</string>
+    <string name="hide_imeback_and_switcher">Keyboard height adjustment</string>
+    <string name="hide_imeback_and_switcher_warning">"Keyboard's height adjustment will be evident in the full-screen gestures."</string>
     <string name="hide_silent_icons_summary">"Icons from gentle notifications aren't shown in the status bar"</string>
     <string name="hide_silent_icons_title">Hide icons from gentle notifications</string>
+    <string name="hide_summary">The shortcut bar at the bottom of the keyboard will be hidden</string>
+    <string name="hide_title">Hide</string>
     <string name="high_label">High</string>
     <string name="high_power_app_text_nomal">%1$s Draining your battery</string>
     <string name="high_power_app_text_red">%1$s Draining your battery heavily</string>
@@ -4537,6 +4541,8 @@ Go to \"Settings - Apps &amp; notifications\", click on the corresponding applic
     <string name="oneplus_reenroll_fingerprint_tips">Please re-enter your fingerprint after replacing the protective film of the mobile phone to ensure the accuracy of the fingerprint</string>
     <string name="oneplus_regulatory_info_canada">Canada</string>
     <string name="oneplus_regulatory_info_canada_can">CAN ICES-3(B)/NMB-3(B)</string>
+    <string name="oneplus_regulatory_info_canada_can_cnr">"CAN ICES-3(B)/NMB-3(B)
+CAN RSS-216/CNR-216"</string>
     <string name="oneplus_regulatory_info_canada_ic">IC:</string>
     <string name="oneplus_regulatory_info_saudi_arabia">Kingdom of Saudi Arabia</string>
     <string name="oneplus_regulatory_info_saudi_arabia_citc">CITC</string>
@@ -5582,6 +5588,8 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="radio_info_http_client_test">HTTP Client Test:</string>
     <string name="radio_info_ping_hostname_v4">Ping Hostname(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping Hostname(www.google.com) IPv6:</string>
+    <string name="raise_summary">The keyboard will be raised up from the bottom and the shortcut key will be displayed</string>
+    <string name="raise_title">Raise</string>
     <string name="ram_total_size">RAM total size</string>
     <string name="rarely_running">Rarely running (%s)</string>
     <string name="reading_settings">Reading settings…</string>
@@ -7113,7 +7121,7 @@ Any user can update apps for all other users."</string>
     <string name="verify_apps_over_usb_title">Verify apps over USB</string>
     <string name="verizon_store_demo_mode_hint">Enter the password</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Changing the way mobile hotspot is set up will disconnect any devices currently connected to the mobile hotspot.</string>
+    <string name="verizon_wifi_tether_band_warning">Changing the way Mobile Hotspot is set up will disconnect any devices currently connected to the Mobile Hotspot.</string>
     <string name="version_text">version %1$s</string>
     <string name="vibrate_in_silent_title">Vibrate when silent</string>
     <string name="vibrate_input_devices">Redirect vibration</string>
@@ -8053,36 +8061,36 @@ Update settings to:
     <string name="zzz_op_direct_boot_inputmethod_unaware_dialog_message">"If you restart your phone and have a screen lock set, this keyboard can't start until you unlock your phone"</string>
     <string name="zzz_op_ime_security_warning">%1$s may be able to collect all the text you type, including personal data like passwords and credit card numbers</string>
     <string name="zzz_op_ime_warning_confirm">TURN ON</string>
-    <item type="string" name="APKTOOL_DUMMY_819">false</item>
-    <item type="string" name="APKTOOL_DUMMY_890">false</item>
-    <item type="string" name="APKTOOL_DUMMY_891">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cc7">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cf1">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cf2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_cf3">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db1">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db3">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db4">false</item>
-    <item type="string" name="APKTOOL_DUMMY_de2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_de3">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e73">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f7a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fcd">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fcf">false</item>
-    <item type="string" name="APKTOOL_DUMMY_fd1">false</item>
-    <item type="string" name="APKTOOL_DUMMY_102a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_102b">false</item>
-    <item type="string" name="APKTOOL_DUMMY_107c">false</item>
-    <item type="string" name="APKTOOL_DUMMY_107d">false</item>
-    <item type="string" name="APKTOOL_DUMMY_11f1">false</item>
-    <item type="string" name="APKTOOL_DUMMY_11f7">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1232">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1233">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1277">false</item>
-    <item type="string" name="APKTOOL_DUMMY_12b3">false</item>
-    <item type="string" name="APKTOOL_DUMMY_12ea">false</item>
-    <item type="string" name="APKTOOL_DUMMY_1957">false</item>
-    <item type="string" name="APKTOOL_DUMMY_19ac">false</item>
-    <item type="string" name="APKTOOL_DUMMY_19ad">false</item>
+    <string name="APKTOOL_DUMMY_819" />
+    <string name="APKTOOL_DUMMY_890" />
+    <string name="APKTOOL_DUMMY_891" />
+    <string name="APKTOOL_DUMMY_ccb" />
+    <string name="APKTOOL_DUMMY_cf5" />
+    <string name="APKTOOL_DUMMY_cf6" />
+    <string name="APKTOOL_DUMMY_cf7" />
+    <string name="APKTOOL_DUMMY_db5" />
+    <string name="APKTOOL_DUMMY_db6" />
+    <string name="APKTOOL_DUMMY_db7" />
+    <string name="APKTOOL_DUMMY_db8" />
+    <string name="APKTOOL_DUMMY_de6" />
+    <string name="APKTOOL_DUMMY_de7" />
+    <string name="APKTOOL_DUMMY_e77" />
+    <string name="APKTOOL_DUMMY_f7e" />
+    <string name="APKTOOL_DUMMY_fd1" />
+    <string name="APKTOOL_DUMMY_fd3" />
+    <string name="APKTOOL_DUMMY_fd5" />
+    <string name="APKTOOL_DUMMY_102e" />
+    <string name="APKTOOL_DUMMY_102f" />
+    <string name="APKTOOL_DUMMY_1080" />
+    <string name="APKTOOL_DUMMY_1081" />
+    <string name="APKTOOL_DUMMY_11f6" />
+    <string name="APKTOOL_DUMMY_11fc" />
+    <string name="APKTOOL_DUMMY_1237" />
+    <string name="APKTOOL_DUMMY_1238" />
+    <string name="APKTOOL_DUMMY_127c" />
+    <string name="APKTOOL_DUMMY_12b8" />
+    <string name="APKTOOL_DUMMY_12ef" />
+    <string name="APKTOOL_DUMMY_195e" />
+    <string name="APKTOOL_DUMMY_19b3" />
+    <string name="APKTOOL_DUMMY_19b4" />
 </resources>

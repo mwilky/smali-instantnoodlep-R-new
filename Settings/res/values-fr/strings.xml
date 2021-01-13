@@ -2246,8 +2246,12 @@ Lorsque vous activez la sauvegarde automatique, les données de l'appareil et de
     <string name="help_feedback_label">Aide et commentaires</string>
     <string name="help_label">Aide et commentaires</string>
     <string name="hide_extra_apps">Afficher utilisation appli</string>
+    <string name="hide_imeback_and_switcher">Ajustement de la hauteur du clavier</string>
+    <string name="hide_imeback_and_switcher_warning">"L'ajustement de la hauteur du clavier est matérialisé dans les gestes en plein écran."</string>
     <string name="hide_silent_icons_summary">"Les icônes des notifications discrètes ne s'affichent pas dans la barre d'état"</string>
     <string name="hide_silent_icons_title">Masquer les icônes des notifications discrètes</string>
+    <string name="hide_summary">La barre des raccourcis au bas du clavier va être masquée</string>
+    <string name="hide_title">Masquer</string>
     <string name="high_label">Élevée</string>
     <string name="high_power_app_text_nomal">%1$s entraîne une consommation de votre batterie</string>
     <string name="high_power_app_text_red">%1$s entraîne une consommation importante de votre batterie</string>
@@ -3471,7 +3475,7 @@ L'économiseur de batterie se désactive automatiquement quand votre téléphone
     <string name="oneplus_disconnected">Déconnexion</string>
     <string name="oneplus_display_dashboard_no_theme_summary">"Barre d'état, affichage ambiant, fonds-d'écran"</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">"Barre d'état, affichage ambiant, confort de vision, mode lecture"</string>
-    <string name="oneplus_display_dashboard_summary">"Barre d'état, affichage ambiant, fonds-d'écran, thème"</string>
+    <string name="oneplus_display_dashboard_summary">"Barre d'état, affichage ambiant, fonds d'écran, thème"</string>
     <string name="oneplus_display_dashboard_summary_801">"Barre d'état, affichage ambiant, fonds-d'écran, thème"</string>
     <string name="oneplus_display_screen_timeout">Veille</string>
     <string name="oneplus_display_size_adaption">Applications plein écran</string>
@@ -3577,7 +3581,7 @@ Attention : la reconnaissance faciale est moins sécurisée qu'une empreinte dig
     <string name="oneplus_fingerprint_findsendor_summary">Lorsque le motif d’empreinte digitale apparaît au bas de l’écran, appuyez simplement sur la zone d’identification d’empreinte digitale pour utiliser la fonction d’empreinte digitale.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">"Comment utiliser l'empreinte digitale"</string>
     <string name="oneplus_fingerprint_functional_declaration">Déclaration de fonction d’empreintes digitales</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">"Depuis l'écran viseur, appuyez et maintenez le capteur d'empreinte digitale pour prendre une photo."</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">"Depuis l'écran viseur, appuyez et maintenez le capteur d'empreinte digitale pour prendre une photo"</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Pression longue pour prendre une photo</string>
     <string name="oneplus_fingerprint_gesture_settings_title">"Geste d'empreinte digitale"</string>
     <string name="oneplus_fingerprint_hardware_exception">"Les informations matérielles de l'empreinte digitale ne sont pas exactes, veuillez contacter le service clientèle"</string>
@@ -3674,10 +3678,10 @@ Pour vous rendre à tout moment sur l'écran d'accueil, balayez vers le haut dep
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gestes de Navigation (bas)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gestes de Navigation (gauche et droite)</string>
     <string name="oneplus_gesture_of_answer_call_info">Lorsque vous recevez un appel, vous pouvez y répondre simplement en plaçant le téléphone contre votre oreille.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Répondez automatiquement aux appels entrants en portant le téléphone à votre oreille</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Répondez automatiquement aux appels entrants en plaçant le téléphone contre votre oreille</string>
     <string name="oneplus_gesture_of_answer_call_title">"Répondez d'un geste aux appels"</string>
     <string name="oneplus_gesture_start_learning">"Démarrer l'apprentissage"</string>
-    <string name="oneplus_gesture_to_answer_summary">Répondez automatiquement aux appels entrants en portant le téléphone à votre oreille</string>
+    <string name="oneplus_gesture_to_answer_summary">Répondez automatiquement aux appels entrants en plaçant le téléphone contre votre oreille</string>
     <string name="oneplus_gesture_to_answer_title">Soulever pour répondre</string>
     <string name="oneplus_gesture_to_control_call_info">Commandez automatiquement les appels en portant le téléphone à votre oreille</string>
     <string name="oneplus_gesture_to_control_calls_summary">"Répondre automatiquement aux appels ou basculer vers l'écouteur au moyen d'un geste"</string>
@@ -4810,6 +4814,8 @@ Insight, conçu par OnePlus avec des étudiants de l'école de design Parsons, t
     <string name="radio_info_http_client_test">Test du client HTTP :</string>
     <string name="radio_info_ping_hostname_v4">"Pinguer l'IPv4 du nom d'hôte (www.google.com) :"</string>
     <string name="radio_info_ping_hostname_v6">"Pinguer l'IPv6 du nom d'hôte (www.google.com) :"</string>
+    <string name="raise_summary">"Le clavier va être monté du bas et la barre des raccourcis va s'afficher"</string>
+    <string name="raise_title">Monter</string>
     <string name="rarely_running">"Rarement en cours d'exécution (%s)"</string>
     <string name="really_remove_account_message">La suppression de ce compte entraînera la suppression de tous les messages, contacts et autres données du téléphone.</string>
     <string name="really_remove_account_title">Supprimer le compte ?</string>
@@ -5872,7 +5878,7 @@ Une solution Google pour synchroniser vos données et vous permettre d'accéder 
     <string name="touchscreen_double_tap_to_wake_gesture_title">Double Tapotage pour Réveiller</string>
     <string name="touchscreen_flashlight_gesture_summary">Dessinez un « V » pour activer/désactiver la lampe de poche</string>
     <string name="touchscreen_flashlight_gesture_title">Activer la lampe de poche</string>
-    <string name="touchscreen_music_gesture_summary">Dessinez || avec deux doigts pour jouer de la musique ou la mettre en pause. Dessinez &lt; ou > pour passer à la piste précédente ou suivante</string>
+    <string name="touchscreen_music_gesture_summary">Dessinez || avec deux doigts pour lire de la musique ou la mettre en pause. Dessinez &lt; ou > pour passer à la piste précédente ou suivante</string>
     <string name="touchscreen_music_gesture_title">Contrôle de la Musique</string>
     <string name="track_frame_time">Rendu HWUI du profil</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6278,7 +6284,7 @@ N'importe quel utilisateur peut mettre à jour les applications pour tous les au
     <string name="verify_apps_over_usb_title">Vérifier les applis via USB</string>
     <string name="verizon_store_demo_mode_hint">Saisir le mot de passe</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">"Modifier la configuration du point d'accès mobile déconnectera tout appareil connecté au point d'accès mobile."</string>
+    <string name="verizon_wifi_tether_band_warning">"Modifier la manière dont le Point d'accès mobile est défini déconnectera tout appareil connecté du point d'accès mobile."</string>
     <string name="version_text">version %1$s</string>
     <string name="vibrate_in_silent_title">Vibrer en mode silencieux</string>
     <string name="vibrate_input_devices">Vibreur pour la redirection</string>

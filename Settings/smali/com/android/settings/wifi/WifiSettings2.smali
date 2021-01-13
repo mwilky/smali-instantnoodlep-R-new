@@ -83,11 +83,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lcom/android/settings/wifi/WifiSettings2$4;
+    new-instance v0, Lcom/android/settings/wifi/WifiSettings2$6;
 
     sget v1, Lcom/android/settings/R$xml;->wifi_settings2:I
 
-    invoke-direct {v0, v1}, Lcom/android/settings/wifi/WifiSettings2$4;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/android/settings/wifi/WifiSettings2$6;-><init>(I)V
 
     sput-object v0, Lcom/android/settings/wifi/WifiSettings2;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
 
@@ -1503,12 +1503,104 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/settingslib/core/instrumentation/MetricsFeatureProvider;->action(Landroid/content/Context;IZ)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/android/wifitrackerlib/WifiEntry;->getSecurity()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->dialog_open_network_title:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/android/wifitrackerlib/WifiEntry;->getSsid()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lcom/android/settings/R$string;->dialog_open_network_title_info:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_open_network_cancel:I
+
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings2$4;
+
+    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiSettings2$4;-><init>(Lcom/android/settings/wifi/WifiSettings2;)V
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget v1, Lcom/android/settings/R$string;->dialog_open_network_connect:I
+
+    new-instance v2, Lcom/android/settings/wifi/WifiSettings2$5;
+
+    invoke-direct {v2, p0, p1, p2, p3}, Lcom/android/settings/wifi/WifiSettings2$5;-><init>(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;ZZ)V
+
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+
+    goto :goto_0
+
+    :cond_0
     new-instance v0, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/settings/wifi/WifiSettings2$WifiEntryConnectCallback;-><init>(Lcom/android/settings/wifi/WifiSettings2;Lcom/android/wifitrackerlib/WifiEntry;ZZ)V
 
     invoke-virtual {p1, v0}, Lcom/android/wifitrackerlib/WifiEntry;->connect(Lcom/android/wifitrackerlib/WifiEntry$ConnectCallback;)V
 
+    :goto_0
     return-void
 .end method
 

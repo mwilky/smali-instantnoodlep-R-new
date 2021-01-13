@@ -57,3 +57,11 @@
 
     return-object v0
 .end method
+
+.method public static getDefaultImpl()Lcom/verizon/loginenginesvc/ILoginEngineService;
+    .locals 1
+
+    sget-object v0, Lcom/verizon/loginenginesvc/ILoginEngineService$Stub$Proxy;->sDefaultImpl:Lcom/verizon/loginenginesvc/ILoginEngineService;
+
+    return-object v0
+.end method

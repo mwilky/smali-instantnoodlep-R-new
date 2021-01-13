@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">Довідка й відгуки</string>
     <string name="help_label">Довідка й відгуки</string>
     <string name="hide_extra_apps">Використання додатків</string>
+    <string name="hide_imeback_and_switcher">Регулювання висоти клавіатури</string>
+    <string name="hide_imeback_and_switcher_warning">Коригування висоти клавіатури помітне під час жестів у повноекранному режимі.</string>
     <string name="hide_silent_icons_summary">Значки тихих сповіщень не показуються в рядку стану</string>
     <string name="hide_silent_icons_title">Сховати значки тихих сповіщень</string>
+    <string name="hide_summary">Панель унизу клавіатури буде приховано</string>
+    <string name="hide_title">Приховати</string>
     <string name="high_label">Висока</string>
     <string name="high_power_app_text_nomal">%1$s виснажує акумулятор</string>
     <string name="high_power_app_text_red">%1$s значно виснажує акумулятор</string>
@@ -3420,7 +3424,7 @@
     <string name="oneplus_clear_intenal_storage_data_summary">У т. ч. музику, фотографії, відео й інші особисті дані</string>
     <string name="oneplus_clear_intenal_storage_data_title">"Очистити вбудовану пам'ять"</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Барвистий відтінок може використовувати тільки колір системи</string>
-    <string name="oneplus_colorful_mode_title">Яскравий</string>
+    <string name="oneplus_colorful_mode_title">Барвиста тема</string>
     <string name="oneplus_compatibility_mode_summary">Повноекранні додатки не можуть використовувати область виїмки</string>
     <string name="oneplus_compatibility_mode_title">Режим сумісності</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ВИМКНУТИ РЕЖИМ \"У ЛІТАКУ\"</string>
@@ -3576,7 +3580,7 @@
     <string name="oneplus_fingerprint_findsendor_summary">Коли внизу екрана з’являється піктограма відбитка пальця, просто прикладіть палець до ділянки розпізнавання відбитків пальців, щоб скористатися цією функцією.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Як користуватися відбитком пальця</string>
     <string name="oneplus_fingerprint_functional_declaration">Оголошення функції відбитка пальця</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">На екрані видошукача натисніть датчик сканування відбитків пальців і утримуйте його, щоб зняти фото</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">З відкритим екраном видошукача зробіть знімок тривалим натисканням датчика відбитків пальців</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Натисніть і утримуйте, щоб зробити знімок</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Жест для датчика сканування відбитків пальців</string>
     <string name="oneplus_fingerprint_hardware_exception">Неправильні дані апаратного забезпечення для відбитка пальця. Зв’яжіться зі службою підтримки клієнтів</string>
@@ -3673,10 +3677,10 @@
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Жести навігації (унизу)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Жести навігації (ліворуч і праворуч)</string>
     <string name="oneplus_gesture_of_answer_call_info">Щоб відповісти на вхідний виклик, піднесіть телефон до вуха.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Відповідати на вхідні виклики автоматично, піднімаючи телефон до вуха</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Відповідати на вхідні виклики автоматично, піднявши телефон до вуха</string>
     <string name="oneplus_gesture_of_answer_call_title">Відповісти на виклик жестом</string>
     <string name="oneplus_gesture_start_learning">Почати навчання</string>
-    <string name="oneplus_gesture_to_answer_summary">Відповідати на вхідні виклики автоматично, піднімаючи телефон до вуха</string>
+    <string name="oneplus_gesture_to_answer_summary">Відповідати на вхідні виклики автоматично, піднявши телефон до вуха</string>
     <string name="oneplus_gesture_to_answer_title">Підняти, щоб відповісти</string>
     <string name="oneplus_gesture_to_control_call_info">Автоматично керувати викликами, піднімаючи телефон до вуха</string>
     <string name="oneplus_gesture_to_control_calls_summary">Відповідати на виклики чи переключатися на динамік телефону автоматично за допомогою жесту</string>
@@ -3876,7 +3880,7 @@
     <string name="oneplus_notifications_sound">Звук сповіщень</string>
     <string name="oneplus_o2_contributors">Співавтори OxygenOS</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Ввімкнути інтервал, заданий користувачем</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">Запланувати</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">Розклад</string>
     <string name="oneplus_open_bed_time_mode_summary">Режим сну можна ввімкнути вручну</string>
     <string name="oneplus_open_bed_time_mode_title">Режим сну</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Підтвердити</string>
@@ -4012,7 +4016,7 @@
     <string name="oneplus_rotation_silent_enable_summary">Під час вхідного виклику переверніть пристрій, щоб вимкнути звук</string>
     <string name="oneplus_rotation_silent_enable_title">Перевернути для вимкнення звуку</string>
     <string name="oneplus_scene_mode">СЮЖЕТИ</string>
-    <string name="oneplus_schedule">Запланувати</string>
+    <string name="oneplus_schedule">Розклад</string>
     <string name="oneplus_screen">ЕКРАН</string>
     <string name="oneplus_screen_better_cold">Холодний</string>
     <string name="oneplus_screen_better_nature">Реалістичність</string>
@@ -4223,7 +4227,7 @@
     <string name="oneplus_theme_shape_effect_title">Вибрати форму</string>
     <string name="oneplus_theme_system_customization">ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ</string>
     <string name="oneplus_theme_tone">Відтінок</string>
-    <string name="oneplus_theme_tone_effect_color">Яскравий</string>
+    <string name="oneplus_theme_tone_effect_color">Барвиста тема</string>
     <string name="oneplus_theme_tone_effect_dark">Темна</string>
     <string name="oneplus_theme_tone_effect_light">Легка</string>
     <string name="oneplus_theme_tone_effect_title">Вибрати тон</string>
@@ -4334,7 +4338,7 @@
     <string name="onplus_hardware_version_info">Версія обладнання</string>
     <string name="onplus_software_version_info">Версія програмного забезпечення</string>
     <string name="onscreen_keyboard_settings_summary">Налашт-ня екранної клавіатури</string>
-    <string name="op_advanced_settings">Розширені кольори</string>
+    <string name="op_advanced_settings">Розширені</string>
     <string name="op_already_know">Зрозуміло</string>
     <string name="op_android_mode_cannot_change_color_accent">Темою за замовчуванням може використовуватися тільки системний колір</string>
     <string name="op_aod_parsons_info_button">ОК</string>
@@ -4383,7 +4387,7 @@
     <string name="op_data_vowlan_enable_summary">Здійснювати виклики через Wi-Fi (якщо послуга доступна)</string>
     <string name="op_default_apps_summary">Запускач, браузер</string>
     <string name="op_default_luncher_title">Додаток головного екрана</string>
-    <string name="op_display_advanced_settings">Розширені кольори</string>
+    <string name="op_display_advanced_settings">Розширені</string>
     <string name="op_display_advanced_settings_summary_1">Калібрування екрана, роздільна здатність, частота оновлення, налаштування міток</string>
     <string name="op_display_advanced_settings_summary_2">Калібрування екрана, роздільна здатність, налаштування міток</string>
     <string name="op_display_advanced_settings_summary_3">Калібрування екрана, роздільна здатність, частота оновлення</string>
@@ -4811,6 +4815,8 @@
     <string name="radio_info_http_client_test">Тест клієнта HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Надіслати запит ping на ім’я хосту (www.google.com) через IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Надіслати запит на ім’я хосту (www.google.com) через IPv6:</string>
+    <string name="raise_summary">Клавіатуру буде піднято знизу, і відображатиметься сполучення клавіш</string>
+    <string name="raise_title">Підняти</string>
     <string name="rarely_running">Рідко працює (%s)</string>
     <string name="really_remove_account_message">Видалення цього облікового запису призведе до видалення всіх його повідомлень, контактів та інших даних із телефону.</string>
     <string name="really_remove_account_title">Видалити обліковий запис?</string>
@@ -4977,7 +4983,7 @@
     <string name="scanning_status_text_wifi_on_ble_off">Пошук мереж Wi-Fi увімкнено, пошук пристроїв Bluetooth вимкнено</string>
     <string name="scanning_status_text_wifi_on_ble_on">Увімкнено пошук мереж Wi‑Fi та пристроїв Bluetooth</string>
     <string name="schedule_reminders">Нагадування про події</string>
-    <string name="screen_color_mode_advanced">Розширені кольори</string>
+    <string name="screen_color_mode_advanced">Розширені</string>
     <string name="screen_color_mode_advanced_settings">Додаткові налаштування</string>
     <string name="screen_color_mode_vivid">Яскраве зображення</string>
     <string name="screen_compatibility_label">Сумісність екрана</string>
@@ -5873,7 +5879,7 @@
     <string name="touchscreen_double_tap_to_wake_gesture_title">Увімкнення екрана подвійним торканням</string>
     <string name="touchscreen_flashlight_gesture_summary">Для ввімкнення/вимкнення ліхтарика намалюйте літеру \"V\"</string>
     <string name="touchscreen_flashlight_gesture_title">Ввімкнути/Вимкнути ліхтарик</string>
-    <string name="touchscreen_music_gesture_summary">Намалюйте двома пальцями знак \"||\", щоб розпочати або призупинити відтворення музики. Для переходу до наступної композиції намалюйте \"&lt;\" або \">\"</string>
+    <string name="touchscreen_music_gesture_summary">Намалюйте двома пальцями знак \"‖\", щоб розпочати або призупинити відтворення музики. Для переходу до наступної композиції намалюйте \"&lt;\" або \">\"</string>
     <string name="touchscreen_music_gesture_title">Управління музикою</string>
     <string name="track_frame_time">Обробка HWUI за профілем</string>
     <string name="track_frame_time_keywords">ГП</string>
@@ -6775,7 +6781,7 @@
     <string name="wifi_wapi_cert_create_subdir">Створити каталог</string>
     <string name="wifi_wapi_cert_delet_subdir">Вибрати потрібний сертифікат</string>
     <string name="wifi_wapi_cert_install">Встановити сертифікат WAPI</string>
-    <string name="wifi_wapi_cert_install_button">Встановити</string>
+    <string name="wifi_wapi_cert_install_button">Установити</string>
     <string name="wifi_wapi_cert_mgmt_as_dont_exist">"Для SD-карти та внутрішньої пам'яті відсутній сертифікат AS. Будь ласка, перевірте!"</string>
     <string name="wifi_wapi_cert_mgmt_as_format_is_wrong">Некоректний формат сертифікату AS! Будь ласка, встановіть правильний сертифікат AS</string>
     <string name="wifi_wapi_cert_mgmt_as_name_is_empty">Вкажіть назву сертифікату AS</string>

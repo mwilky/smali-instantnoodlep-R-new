@@ -2246,8 +2246,12 @@ Ha bekapcsolja az automatikus biztonsági mentést, akkor a rendszer szabályos 
     <string name="help_feedback_label">Súgó és visszajelzés</string>
     <string name="help_label">Súgó és visszajelzés</string>
     <string name="hide_extra_apps">Alkalmazáshasználat mutatása</string>
+    <string name="hide_imeback_and_switcher">Billentyűzetmagasság-beállítás</string>
+    <string name="hide_imeback_and_switcher_warning">A billentyűzet magasságbeállítása teljes képernyős kézmozdulatok esetén elengedhetetlen lesz.</string>
     <string name="hide_silent_icons_summary">A diszkrét értesítések ikonjai nem jelennek meg az állapotsoron</string>
     <string name="hide_silent_icons_title">Ikonok elrejtése a diszkrét értesítésekben</string>
+    <string name="hide_summary">A billentyűzet alján lévő parancsikon sáv el lesz rejtve</string>
+    <string name="hide_title">Elrejtés</string>
     <string name="high_label">Magas</string>
     <string name="high_power_app_text_nomal">%1$s fogyasztja az energiát</string>
     <string name="high_power_app_text_red">%1$s erősen fogyasztja az energiát</string>
@@ -3576,7 +3580,7 @@ Figyelem: Az Arcfelismerés kevésbé biztonságos, mint az ujjlenyomat vagy a j
     <string name="oneplus_fingerprint_findsendor_summary">Amikor az ujjlenyomat minta megjelenik a képernyő alján, egyszerűen csak nyomja meg az ujjlenyomat azonosítási felületet az ujjával, hogy használni tudja az ujjlenyomat funkciót.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Ujjlenyomat használatának módja</string>
     <string name="oneplus_fingerprint_functional_declaration">Az ujjlenyomat funkcióval kapcsolatos nyilatkozat</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">A kereső képernyőn nyomja meg hosszan az ujjlenyomat-érzékelőt fénykép készítéséhez</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">A nézetkereső képernyőn az ujjlenyomat-érzékelő hosszan tartó megnyomásával készíthet fényképet</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Nyomja meg hosszan fénykép készítéséhez</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Ujjlenyomat-kézmozdulat</string>
     <string name="oneplus_fingerprint_hardware_exception">Az ujjlenyomat hardverinformációi pontatlanok, lépjen kapcsolatba az ügyfélszolgálattal</string>
@@ -3673,10 +3677,10 @@ Ha bármikor a kezdőképernyőre kíván lépni, legyintsen felfelé a képerny
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Navigációs gesztusok (alul)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Navigációs gesztusok (bal és jobb)</string>
     <string name="oneplus_gesture_of_answer_call_info">Ha hívás érkezik, fogadhatja a hívást azáltal, hogy a telefont a füléhez emeli.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Automatikusan fogad bejövő hívásokat azzal, hogy a füléhez emeli a telefonját</string>
+    <string name="oneplus_gesture_of_answer_call_summary">A bejövő hívások automatikus fogadása a telefon fülhöz emelésével</string>
     <string name="oneplus_gesture_of_answer_call_title">Hívások fogadása kézmozdulattal</string>
     <string name="oneplus_gesture_start_learning">Tanulás indítása</string>
-    <string name="oneplus_gesture_to_answer_summary">Automatikusan fogad bejövő hívásokat azzal, hogy a füléhez emeli a telefonját</string>
+    <string name="oneplus_gesture_to_answer_summary">A bejövő hívások automatikus fogadása a telefon fülhöz emelésével</string>
     <string name="oneplus_gesture_to_answer_title">Emelés a fogadáshoz</string>
     <string name="oneplus_gesture_to_control_call_info">A hívások automatikus vezérlése azzal, hogy a füléhez emeli a telefont</string>
     <string name="oneplus_gesture_to_control_calls_summary">Automatikusan fogad hívásokat vagy vált át a fülhallgatóra gesztussal</string>
@@ -3756,7 +3760,7 @@ Megjegyzés: Az ujjlenyomata kevésbé biztonságos, mint egy erős minta vagy P
     <string name="oneplus_legal_summary">Adatvédelmi nyilatkozat, megállapodások, stb</string>
     <string name="oneplus_levels">Szintek</string>
     <string name="oneplus_lift_up_display">Mindig a képernyőn vagy felemelési képernyő</string>
-    <string name="oneplus_light">Fény</string>
+    <string name="oneplus_light">Enyhe</string>
     <string name="oneplus_local_ringtone">Csengőhang a belső tárhelyről</string>
     <string name="oneplus_location_information">Helyalapú szolgáltatások leírása</string>
     <string name="oneplus_lock_after_timeout">Automatikus zár az alvás után</string>
@@ -4225,7 +4229,7 @@ Megjegyzés:
     <string name="oneplus_theme_tone">Tónus</string>
     <string name="oneplus_theme_tone_effect_color">Színes</string>
     <string name="oneplus_theme_tone_effect_dark">Sötét</string>
-    <string name="oneplus_theme_tone_effect_light">Fény</string>
+    <string name="oneplus_theme_tone_effect_light">Enyhe</string>
     <string name="oneplus_theme_tone_effect_title">Hang kiválasztása</string>
     <string name="oneplus_theme_wallpaper">Háttérképek</string>
     <string name="oneplus_three_screenshots_enable_summary">Csúsztassa át három ujját a képernyőn képernyőfotó készítéséhez</string>
@@ -4397,7 +4401,7 @@ A OnePlus és a Parsons School of Design tanulói által közösen megtervezett 
     <string name="op_display_motion_graphics_compensation_summary">A grafika, képkocka-sebességének növelése, simább videó- és játékhatások</string>
     <string name="op_dnd_summary">Ne zavarj</string>
     <string name="op_enable_location_services">Kérjük, engedélyezze a helymeghatározást a közelben lévő töltőállomások kereséséhez</string>
-    <string name="op_enable_text">Engedélyez</string>
+    <string name="op_enable_text">Engedélyezés</string>
     <string name="op_face_unlock_set_unlock_password">Zár feloldása arcfelismeréssel + Jelszó</string>
     <string name="op_face_unlock_set_unlock_pattern">Zár feloldása arcfelismeréssel + Minta</string>
     <string name="op_face_unlock_set_unlock_pin">Zár feloldása arcfelismeréssel + PIN</string>
@@ -4811,6 +4815,8 @@ Előfordulhat, hogy az ujjlenyomat-feloldás nem kompatibilis a harmadik féltő
     <string name="radio_info_http_client_test">HTTP-kliens tesztje:</string>
     <string name="radio_info_ping_hostname_v4">Pingelt gazdagépnév(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Pingelt gazdagépnév(www.google.com) IPv6:</string>
+    <string name="raise_summary">A billentyűzet meg lesz emelve alulról, és megjelenik a parancsikon billentyű</string>
+    <string name="raise_title">Emelés</string>
     <string name="rarely_running">Ritkán fut (%s)</string>
     <string name="really_remove_account_message">A fiók eltávolításával törli valamennyi üzenetet, névjegyet és egyéb adatot a telefonról!</string>
     <string name="really_remove_account_title">Eltávolítja a fiókot?</string>
@@ -5779,7 +5785,7 @@ Az adatok Google-féle szinkronizálása lehetővé teszi, hogy bárhonnan hozz�
     <string name="system_dashboard_summary">Nyelvek, kézmozdulatok, idő, biztonsági mentés</string>
     <string name="system_default_app">(Alapértelmezett)</string>
     <string name="system_default_app_subtext">Alapértelmezett</string>
-    <string name="system_is_up_to_date">A rendszer aktuális</string>
+    <string name="system_is_up_to_date">A rendszer verziója a legfrissebb</string>
     <string name="system_navigation_title">Rendszernavigáció</string>
     <string name="system_package">A rendszerfrissítéseket nem lehet külső eszközre telepíteni.</string>
     <string name="system_ui_settings">Kezelőfelület-hangoló megjelenítése</string>
@@ -5873,7 +5879,7 @@ Az adatok Google-féle szinkronizálása lehetővé teszi, hogy bárhonnan hozz�
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dupla érintésre felébresztés</string>
     <string name="touchscreen_flashlight_gesture_summary">Rajzoljon egy \"V\" betűt a zseblámpához</string>
     <string name="touchscreen_flashlight_gesture_title">Lámpa be- és kikapcsolása</string>
-    <string name="touchscreen_music_gesture_summary">A zene lejátszásához vagy szüneteltetéséhez rajzoljon két ujjal egy || alakzatot. A következő vagy az előző számra ugráshoz rajzoljon &lt; vagy > jelet</string>
+    <string name="touchscreen_music_gesture_summary">A zene lejátszásához vagy szüneteltetéséhez rajzoljon két ujjal egy ll alakzatot. A következő vagy az előző számra ugráshoz rajzoljon &lt; vagy > jelet</string>
     <string name="touchscreen_music_gesture_title">Zene vezérlése</string>
     <string name="track_frame_time">Profil HWUI-renderelése</string>
     <string name="track_frame_time_keywords">GPU</string>

@@ -375,7 +375,7 @@
     <string name="alert_dialog_cancel">취소</string>
     <string name="alert_slider_settings_title">우선 순위 설정</string>
     <string name="alert_slider_silent_title">무음 설정</string>
-    <string name="alertslider_settings">알림 슬라이더</string>
+    <string name="alertslider_settings">Alert Slider</string>
     <string name="alertslider_settings_soc_tri_state_summary">무음, 진동, 벨소리</string>
     <string name="all_volume_title">볼륨</string>
     <string name="allow">허용</string>
@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">도움말 및 의견</string>
     <string name="help_label">고객센터</string>
     <string name="hide_extra_apps">앱 사용량 표시</string>
+    <string name="hide_imeback_and_switcher">키보드 높이 조정</string>
+    <string name="hide_imeback_and_switcher_warning">키보드의 높이 조정은 전체 화면 제스처에서 사용할 수 있습니다.</string>
     <string name="hide_silent_icons_summary">조용한 알림 아이콘이 상태 표시줄에 표시되지 않습니다.</string>
     <string name="hide_silent_icons_title">조용한 알림 아이콘 숨기기</string>
+    <string name="hide_summary">키보드 하단의 바로 가기 표시줄이 숨겨집니다.</string>
+    <string name="hide_title">숨기기</string>
     <string name="high_label">높음</string>
     <string name="high_power_app_text_nomal">%1$s 배터리를 소모 중</string>
     <string name="high_power_app_text_red">%1$s 배터리를 상당히 소모 중</string>
@@ -3400,7 +3404,7 @@
     <string name="oneplus_bluetooth_volume_switch_summary">Bluetooth에 연결된 경우 헤드셋과 장치 볼륨 자동 동기화</string>
     <string name="oneplus_broadcat_wifi_name">브로드캐스트 네트워크 이름(SSID)</string>
     <string name="oneplus_buttons_and_gestures_settings">버튼 및 제스처</string>
-    <string name="oneplus_buttons_dashboard_summary">알림 슬라이더, 탐색, 제스처</string>
+    <string name="oneplus_buttons_dashboard_summary">Alert Slider, 탐색, 제스처</string>
     <string name="oneplus_buttons_settings">버튼 설정</string>
     <string name="oneplus_buttons_settings_summary">탐색 제스처</string>
     <string name="oneplus_call_information_broadcast">발신자 번호 말하기</string>
@@ -3576,7 +3580,7 @@
     <string name="oneplus_fingerprint_findsendor_summary">지문 패턴이 화면 하단에 나타나면 지문 인식 영역에서 손가락을 누르기만 하면 됩니다. 이를 통해 지문 기능을 사용할 수 있습니다.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">지문 사용 방법</string>
     <string name="oneplus_fingerprint_functional_declaration">지문 기능 선언</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">뷰파인더 화면에서 지문 센서를 길게 눌러 사진을 찍습니다</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">뷰파인더 화면에서 지문 센서를 길게 눌러 사진을 찍습니다.</string>
     <string name="oneplus_fingerprint_gesture_camera_title">사진을 찍으려면 길게 누르기</string>
     <string name="oneplus_fingerprint_gesture_settings_title">지문 제스처</string>
     <string name="oneplus_fingerprint_hardware_exception">지문 하드웨어 정보가 정확하지 않습니다. 고객 서비스 팀에 문의하세요.</string>
@@ -3756,7 +3760,7 @@
     <string name="oneplus_legal_summary">개인 정보 보호 정책, 계약 등</string>
     <string name="oneplus_levels">레벨</string>
     <string name="oneplus_lift_up_display">Always On Display 또는 위로 올려서 표시</string>
-    <string name="oneplus_light">밝게</string>
+    <string name="oneplus_light">약하게</string>
     <string name="oneplus_local_ringtone">내부 저장소의 벨소리</string>
     <string name="oneplus_location_information">위치 기반 서비스에 대한 설명</string>
     <string name="oneplus_lock_after_timeout">수면 후 자동 잠금</string>
@@ -3796,7 +3800,7 @@
     <string name="oneplus_memc_video_theacme_title">하이퍼 모션 스무딩</string>
     <string name="oneplus_mobile_device_name_title">휴대폰 이름</string>
     <string name="oneplus_mode_choose">모드 선택</string>
-    <string name="oneplus_mode_settings">슬라이더 설정 변경</string>
+    <string name="oneplus_mode_settings">Alert Slider 설정</string>
     <string name="oneplus_moderate">보통</string>
     <string name="oneplus_more">자세히</string>
     <string name="oneplus_motion_sensor_settings_title">시스템 제스처</string>
@@ -4071,7 +4075,7 @@
     <string name="oneplus_search_keyword_rotation_silent">음소거</string>
     <string name="oneplus_search_keyword_screen_color_mode">모드, 색상</string>
     <string name="oneplus_search_keyword_show_pwd">표시, PIN, 비밀번호</string>
-    <string name="oneplus_search_keyword_soc_tri_state">알림 슬라이더, 무음, 진동, 벨소리</string>
+    <string name="oneplus_search_keyword_soc_tri_state">alert slider, 무음, 진동, 벨소리</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">방해 금지, 인터럽트, 중단, 브레이크, 모드</string>
     <string name="oneplus_search_keyword_swap_navkeys">버튼 바꾸기</string>
     <string name="oneplus_search_keyword_switch">전송, 데이터 마이그레이션</string>
@@ -4225,7 +4229,7 @@
     <string name="oneplus_theme_tone">톤</string>
     <string name="oneplus_theme_tone_effect_color">컬러풀</string>
     <string name="oneplus_theme_tone_effect_dark">어둡게</string>
-    <string name="oneplus_theme_tone_effect_light">밝게</string>
+    <string name="oneplus_theme_tone_effect_light">약하게</string>
     <string name="oneplus_theme_tone_effect_title">톤 선택</string>
     <string name="oneplus_theme_wallpaper">배경 화면</string>
     <string name="oneplus_three_screenshots_enable_summary">화면에서 세 손가락으로 살짝 밀어 스크린샷 생성</string>
@@ -4243,7 +4247,7 @@
     <string name="oneplus_tools_title">유틸리티</string>
     <string name="oneplus_top_level_accounts_summary">OnePlus 계정, 기타 계정</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">기본 앱, 알림, 권한</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">알림 슬라이더, 탐색 표시줄 및 제스처</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, 탐색 표시줄 및 제스처</string>
     <string name="oneplus_top_level_cloud_h2_summary">클라우드와 데이터 동기화, 휴대폰 찾기</string>
     <string name="oneplus_top_level_cloud_o2_summary">클라우드와 데이터 동기화</string>
     <string name="oneplus_top_level_connected_android_auto_summary">NFC, Android Auto, 캐스트, 탭 및 결제</string>
@@ -4811,6 +4815,8 @@ OnePlus와 파슨스 디자인 스쿨 학생이 함께 디자인한 인사이트
     <string name="radio_info_http_client_test">HTTP 클라이언트 테스트:</string>
     <string name="radio_info_ping_hostname_v4">핑 호스트 이름(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">핑 호스트 이름(www.google.com) IPv6:</string>
+    <string name="raise_summary">키보드가 아래쪽에서 위로 올라가고 바로 가기 키가 표시됩니다.</string>
+    <string name="raise_title">올리기</string>
     <string name="rarely_running">거의 실행되지 않음(%s)</string>
     <string name="really_remove_account_message">계정을 삭제하면 휴대전화의 메시지, 연락처 및 다른 데이터가 모두 지워집니다.</string>
     <string name="really_remove_account_title">계정을 삭제하시겠습니까?</string>
@@ -5873,7 +5879,7 @@ Google 동기화는 사용자가 어디에서든지 연락처, 일정 등에 액
     <string name="touchscreen_double_tap_to_wake_gesture_title">더블 탭으로 슬립 모드 해제</string>
     <string name="touchscreen_flashlight_gesture_summary">손전등을 끄고 켜려면 V를 한 번 그리세요</string>
     <string name="touchscreen_flashlight_gesture_title">손전등 토글</string>
-    <string name="touchscreen_music_gesture_summary">음악을 재생 또는 일시 정지하려면 두 손가락으로 ||를 그리세요. 이전 트랙을 재생하려면 &lt;를, 다음 트랙을 재생하려면 >를 그리세요.</string>
+    <string name="touchscreen_music_gesture_summary">음악을 재생 또는 일시 정지하려면 두 손가락으로 ‖를 그리세요. 이전 트랙을 재생하려면 &lt;를, 다음 트랙을 재생하려면 >를 그리세요.</string>
     <string name="touchscreen_music_gesture_title">음악 컨트롤</string>
     <string name="track_frame_time">프로필 HWUI 렌더링</string>
     <string name="track_frame_time_keywords">GPU</string>

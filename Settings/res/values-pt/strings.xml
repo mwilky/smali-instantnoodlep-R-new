@@ -1926,7 +1926,7 @@ Se isso continuar acontecendo, talvez seja necessário desinstalá-lo para melho
     <string name="enable_verbose_vendor_logging">Ativ. registro detal. de fornecedor</string>
     <string name="enable_verbose_vendor_logging_summary">Inclui mais registros de fornecedores específicos do dispositivo em relatórios de bugs, que podem conter informações privadas e usar mais bateria e/ou armazenamento.</string>
     <string name="enabled_by_admin">Ativado pelo administrador</string>
-    <string name="enabled_fingerprint_unlock">Ativar bloqueio por impressão digital</string>
+    <string name="enabled_fingerprint_unlock">Ativar desbloqueio por impressão digital</string>
     <string name="enabled_fingerprint_unlock_summary_disabled">O desbloqueio por impressão digital só pode ser ativado depois de ter definido o desbloqueio do ecrã principal</string>
     <string name="enabled_fingerprint_unlock_summary_enabled">Utilize a impressão digital para desbloquear o dispositivo</string>
     <string name="encrypt_talkback_dialog_message_password">Ao inserir sua senha para iniciar o dispositivo, serviços de disponibilidade como o %1$s ainda não estarão disponíveis.</string>
@@ -2246,8 +2246,12 @@ Quando você ativa o backup automático, os dados do dispositivo e de apps são 
     <string name="help_feedback_label">Ajuda e feedback</string>
     <string name="help_label">Ajuda e feedback</string>
     <string name="hide_extra_apps">Mostrar uso de apps</string>
+    <string name="hide_imeback_and_switcher">Ajuste de altura do teclado</string>
+    <string name="hide_imeback_and_switcher_warning">O ajuste de altura do teclado será evidente nos gestos de ecrã inteiro.</string>
     <string name="hide_silent_icons_summary">Os ícones de notificações discretas não são exibidos na barra de status</string>
     <string name="hide_silent_icons_title">Ocultar ícones das notificações discretas</string>
+    <string name="hide_summary">A barra de atalhos na parte inferior do teclado será oculta</string>
+    <string name="hide_title">Ocultar</string>
     <string name="high_label">Alta</string>
     <string name="high_power_app_text_nomal">%1$s está a consumir muita bateria</string>
     <string name="high_power_app_text_red">%1$s está a consumir imensa bateria</string>
@@ -3578,8 +3582,8 @@ Aviso: o Desbloqueio facial é menos seguro que utilizar a impressão digital ou
     <string name="oneplus_fingerprint_findsendor_summary">Quando o padrão da impressão digital aparece no fundo do ecrã, basta premir o dedo na área de identificação da impressão digital para utilizar a função de impressão digital.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Como utilizar a impressão digital</string>
     <string name="oneplus_fingerprint_functional_declaration">Declaração da função da impressão digital</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">No ecrã do visor, prima continuamente no sensor de impressões digitais para tirar uma fotografia</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Pressione demoradamente para tirar uma foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">A partir do ecrã do visor, mantenha premido o sensor de impressões digitais para tirar uma fotografia</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Premir continuamente para tirar uma fotografia</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gesto de impressão digital</string>
     <string name="oneplus_fingerprint_hardware_exception">As informações sobre o hardware de impressões digitais não são exatas, contacte o apoio ao cliente</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Pressione longamente o sensor de impressão digital para lançar o pagamento rápido</string>
@@ -3675,10 +3679,10 @@ Para ir para o ecrã inicial a qualquer momento, deslize para cima a partir do c
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gestos de Navegação (fundo)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gestos de Navegação (esquerda e direita)</string>
     <string name="oneplus_gesture_of_answer_call_info">Quando recebe uma chamada, poderá atendê-la levando o telefone ao ouvido.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Atenda auotmaticamente chamadas ao levantar o telefone até ao ouvido</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Atender as chamadas recebidas automaticamente levando o telefone ao ouvido</string>
     <string name="oneplus_gesture_of_answer_call_title">Atender chamadas com um gesto</string>
     <string name="oneplus_gesture_start_learning">Iniciar aprendizagem</string>
-    <string name="oneplus_gesture_to_answer_summary">Atenda auotmaticamente chamadas ao levantar o telefone até ao ouvido</string>
+    <string name="oneplus_gesture_to_answer_summary">Atender as chamadas recebidas automaticamente levando o telefone ao ouvido</string>
     <string name="oneplus_gesture_to_answer_title">Levantar para atender</string>
     <string name="oneplus_gesture_to_control_call_info">Controle automaticamente chamadas ao levantar o telefone até ao ouvido</string>
     <string name="oneplus_gesture_to_control_calls_summary">Atender automaticamente chamadas ou mudar para o auricular através de um gesto</string>
@@ -3758,7 +3762,7 @@ Nota: a sua impressão digital poderá ser menos segura do que um padrão seguro
     <string name="oneplus_legal_summary">Política de privacidade, acordos, etc.</string>
     <string name="oneplus_levels">Níveis</string>
     <string name="oneplus_lift_up_display">Ecrã sempre ligado ou liga quando levantado</string>
-    <string name="oneplus_light">Claro</string>
+    <string name="oneplus_light">Leve</string>
     <string name="oneplus_local_ringtone">Toque do Armazenamento Interno</string>
     <string name="oneplus_location_information">Descrição dos serviços com base na localização</string>
     <string name="oneplus_lock_after_timeout">Bloquear automaticamente após a suspensão</string>
@@ -4227,7 +4231,7 @@ Nota:
     <string name="oneplus_theme_tone">Tom</string>
     <string name="oneplus_theme_tone_effect_color">Colorido</string>
     <string name="oneplus_theme_tone_effect_dark">Escuro</string>
-    <string name="oneplus_theme_tone_effect_light">Claro</string>
+    <string name="oneplus_theme_tone_effect_light">Leve</string>
     <string name="oneplus_theme_tone_effect_title">Selecionar tom</string>
     <string name="oneplus_theme_wallpaper">Papéis de parede</string>
     <string name="oneplus_three_screenshots_enable_summary">Para capturar o ecrã deslize três dedos sobre o mesmo</string>
@@ -4813,6 +4817,8 @@ O desbloqueio por impressão digital pode ser incompatível com os protetores de
     <string name="radio_info_http_client_test">Teste do cliente HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Aplicar ping no nome do host (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Aplicar ping no nome do host (www.google.com) IPv6:</string>
+    <string name="raise_summary">O teclado será elevado desde a parte inferior e será apresentada a tecla de atalho</string>
+    <string name="raise_title">Elevar</string>
     <string name="rarely_running">Raramente em execução (%s)</string>
     <string name="really_remove_account_message">A remoção desta conta excluirá todas as suas mensagens, contatos e outros dados do telefone!</string>
     <string name="really_remove_account_title">Remover conta?</string>
@@ -5875,7 +5881,7 @@ Um método do Google para sincronizar dados a fim de permitir acesso aos seus co
     <string name="touchscreen_double_tap_to_wake_gesture_title">Duplo Toque para Ativar</string>
     <string name="touchscreen_flashlight_gesture_summary">"Desenhar um 'V' para alterar o estado da lanterna"</string>
     <string name="touchscreen_flashlight_gesture_title">Comutar a lanterna</string>
-    <string name="touchscreen_music_gesture_summary">Desenhar || com dois dedos para reproduzir ou pausar a música. Desenhar &lt; ou > para a faixa anterior ou seguinte</string>
+    <string name="touchscreen_music_gesture_summary">Desenhe || com dois dedos para reproduzir ou pausar a música. Desenhe &lt; ou > para ir para a faixa anterior ou seguinte</string>
     <string name="touchscreen_music_gesture_title">Controlo da Música</string>
     <string name="track_frame_time">Classificar renderização HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6281,7 +6287,7 @@ Qualquer usuário pode atualizar apps para os demais usuários."</string>
     <string name="verify_apps_over_usb_title">Verificar apps por USB</string>
     <string name="verizon_store_demo_mode_hint">Introduzir palavra-passe</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">A alteração da forma como o ponto de acesso móvel está configurado irá desligar quaisquer dispositivos atualmente ligados ao ponto de acesso móvel.</string>
+    <string name="verizon_wifi_tether_band_warning">A alteração da forma como o Ponto de acesso móvel está configurado irá desligar quaisquer dispositivos atualmente ligados ao Ponto de acesso móvel.</string>
     <string name="version_text">versão %1$s</string>
     <string name="vibrate_in_silent_title">Vibrar no modo silencioso</string>
     <string name="vibrate_input_devices">Redirecionar vibração</string>

@@ -18,7 +18,7 @@ Vai tiešām vēlaties iespējot šo funkciju?"</string>
     <string name="add_fingerprints_dialog">Jūs vēl nav iestatīts neviens pirksta nospiedums. Vai vēlaties reģistrēt savus pirkstu nospiedumus?</string>
     <string name="add_oneplus_account_label">OnePlus konts</string>
     <string name="advanced_calling_summary">Augstas izšķirtspējas balss, videozvans</string>
-    <string name="advanced_calling_title">Papildu zvanīšana</string>
+    <string name="advanced_calling_title">Uzlabota zvanīšana</string>
     <string name="advanced_reboot_summary">Kad ierīce tiks atbloķēta, atsāknēšanas vienums novirzīs jūs uz dialoglodziņu, kur jums tiks lūgts izvēlēties atsāknēšanas veidu: parastu, ar palaišanu atkopšanas režīmā vai ātro atkopšanu</string>
     <string name="advanced_reboot_title">Papildu atsāknēšanas iespējas</string>
     <string name="advanced_wificall_summary">Izmantot Wi‑Fi, kad nav pieejams mobilais tīkls</string>
@@ -259,6 +259,10 @@ Vai ieslēgt lidojuma režīmu?"</string>
     <string name="hardware_keys_long_press_title">Darbība ar piespiešanu</string>
     <string name="hardware_keys_menu_key_title">Poga Nesen izmantotās</string>
     <string name="header_category_custom">Pielāgošana</string>
+    <string name="hide_imeback_and_switcher">Tastatūras augstuma regulēšana</string>
+    <string name="hide_imeback_and_switcher_warning">Tastatūras augstuma regulēšana būs redzama, izmantojot pilna ekrāna žestus.</string>
+    <string name="hide_summary">Īsceļu josla tastatūras apakšā tiks paslēpta</string>
+    <string name="hide_title">Paslēpt</string>
     <string name="high_power_app_text_nomal">%1$s Tērē akumulatora enerģiju</string>
     <string name="high_power_app_text_red">%1$s Ievērojami tērē akumulatora enerģiju</string>
     <string name="hint_data_used_alert">Datu lietojums ir pārsniegts par %1$s</string>
@@ -453,7 +457,7 @@ Enerģijas taupīšanas režīms izslēdzas automātiski, kad ierīce uzlādēja
     <string name="oneplus_clear_intenal_storage_data_summary">Tostarp mūzika, fotoattēli, videoieraksti un citi personas dati</string>
     <string name="oneplus_clear_intenal_storage_data_title">Dzēst iekšējo krātuvi</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Krāsainais tonis var izmantot tikai sistēmas krāsas</string>
-    <string name="oneplus_colorful_mode_title">Krāsains</string>
+    <string name="oneplus_colorful_mode_title">Krāsainā</string>
     <string name="oneplus_compatibility_mode_summary">Lietotnes, kas darbojas pilnekrāna režīmā, nevar izmantot izliekuma zonu</string>
     <string name="oneplus_compatibility_mode_title">Saderības režīms</string>
     <string name="oneplus_condition_airplane_mode_turn_off">IZSLĒGT LIDOJUMA REŽĪMU</string>
@@ -609,8 +613,8 @@ Uzmanību! Face Unlock nav tik droša metode kā pirkstu nospiedums vai parole"<
     <string name="oneplus_fingerprint_findsendor_summary">Kad ekrāna lejasdaļā parādās pirksta nospieduma raksts, vienkārši uzspiediet ar pirkstu uz identifikācijas zonas, lai izmantotu pirkstu nospiedumu funkcijas.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Kā izmantot pirksta nospiedumu</string>
     <string name="oneplus_fingerprint_functional_declaration">Deklarācija par pirkstu nospiedumu funkciju</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Atrodoties skata meklētāja ekrānā, paturiet nospiestu pirksta nospiedumu sensoru, lai uzņemtu fotoattēlu</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Paturiet nospiestu, lai uzņemtu fotoattēlu</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Skata meklētāja ekrānā turiet piespiestu pirksta nospieduma sensoru, lai uzņemtu fotoattēlu</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Fotoattēla uzņemšana, turot piespiestu pirksta nospieduma sensoru</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Pirkstu nospieduma žests</string>
     <string name="oneplus_fingerprint_hardware_exception">Pirksta nospieduma aparatūras informācija nav precīza, lūdzu, sazinieties ar klientu apkalpošanas dienestu</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Paturiet nospiestu pirkstu nospiedumu sensoru, lai palaistu ātrās maksāšanas pakalpojumu</string>
@@ -706,10 +710,10 @@ Jebkurā laikā ejiet uz sākuma ekrānu un pavelciet uz augšu no ekrāna apak�
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Navigācijas žesti (lejasdaļa)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Navigācijas žesti (kreisā un labā)</string>
     <string name="oneplus_gesture_of_answer_call_info">Ja saņemat ienākošo zvanu, varat uz to atbildēt, vienkārši paceļot tālruni pie auss.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Automātiski atbildēt uz ienākošajiem zvaniem, pieliekot tālruni pie auss</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Automātiski atbildēt uz ienākošo zvanu, paceļot tālruni pie auss</string>
     <string name="oneplus_gesture_of_answer_call_title">Atbildēt uz zvaniem ar žestu</string>
     <string name="oneplus_gesture_start_learning">Sākt mācības</string>
-    <string name="oneplus_gesture_to_answer_summary">Automātiski atbildēt uz ienākošajiem zvaniem, pieliekot tālruni pie auss</string>
+    <string name="oneplus_gesture_to_answer_summary">Automātiski atbildēt uz ienākošo zvanu, paceļot tālruni pie auss</string>
     <string name="oneplus_gesture_to_answer_title">Pacelt, lai atbildētu</string>
     <string name="oneplus_gesture_to_control_call_info">Automātiski pārvaldīt zvanus, pieliekot tālruni pie auss</string>
     <string name="oneplus_gesture_to_control_calls_summary">Automātiski atbildēt uz zvaniem, vai ar žesta palīdzību pārslēgties uz klausuli</string>
@@ -789,7 +793,7 @@ Piezīme: jūsu pirksta nospiedums var nebūt tik drošs kā stiprs raksts vai P
     <string name="oneplus_legal_summary">Konfidencialitātes politika u.c.</string>
     <string name="oneplus_levels">Līmeņi</string>
     <string name="oneplus_lift_up_display">Vienmēr rādīt vai rādīt, paņemot rokās</string>
-    <string name="oneplus_light">Gaiša</string>
+    <string name="oneplus_light">Gaišs</string>
     <string name="oneplus_local_ringtone">Zvana tonis no iekšējās krātuves</string>
     <string name="oneplus_location_information">Uz atrašanās vietu balstītu pakalpojumu apraksts</string>
     <string name="oneplus_lock_after_timeout">Automātiski bloķēt pēc miega</string>
@@ -1256,9 +1260,9 @@ Piezīme:
     <string name="oneplus_theme_shape_effect_title">Atlasīt formu</string>
     <string name="oneplus_theme_system_customization">SISTĒMAS PIELĀGOŠANA</string>
     <string name="oneplus_theme_tone">Tonis</string>
-    <string name="oneplus_theme_tone_effect_color">Krāsains</string>
+    <string name="oneplus_theme_tone_effect_color">Krāsainā</string>
     <string name="oneplus_theme_tone_effect_dark">Tumša</string>
-    <string name="oneplus_theme_tone_effect_light">Gaiša</string>
+    <string name="oneplus_theme_tone_effect_light">Gaišs</string>
     <string name="oneplus_theme_tone_effect_title">Atlasīt krāsas toni</string>
     <string name="oneplus_theme_wallpaper">Fona tapetes</string>
     <string name="oneplus_three_screenshots_enable_summary">Pavelciet ar trīs pirkstiem pa ekrānu, lai uzņemtu ekrānuzņēmumu</string>
@@ -1557,6 +1561,8 @@ Atbloķēšana ar pirksta nospiedumu var būt nesaderīga ar trešo pušu ekrān
     <string name="prox_wake_title">Tuvuma pamodināšana</string>
     <string name="quick_unlock_summary">Kad šī funkcija ir aktivizēta, bloķēšanas ekrāns automātiski tiks atbloķēts, tiklīdz tiks ievadīts pareizais PIN kods vai parole.</string>
     <string name="quick_unlock_title">Ātrā atbloķēšana</string>
+    <string name="raise_summary">Tastatūra tiks pacelta no apakšas un īsceļu josla tiks parādīta</string>
+    <string name="raise_title">Pacelt</string>
     <string name="reset_collect_diagnostics_summary">Apkopot diagnostikas datus traucējummeklēšanai</string>
     <string name="reset_collect_diagnostics_title">Apkopot diagnostikas datus</string>
     <string name="reset_system_settings_button_text">Atiestatīt iestatījumus</string>
@@ -1698,7 +1704,7 @@ Vai vēlaties atiestatīt sistēmas iestatījumus? Šo darbību nevar atsaukt."<
     <string name="touchscreen_double_tap_to_wake_gesture_title">Veiciet dubultskārienu, lai pamodinātu</string>
     <string name="touchscreen_flashlight_gesture_summary">Uzzīmējiet V, lai mainītu luktura statusu</string>
     <string name="touchscreen_flashlight_gesture_title">Luktura statusa maiņa</string>
-    <string name="touchscreen_music_gesture_summary">Ar diviem pirkstiem uzzīmējiet ||, lai atskaņotu mūziku vai apturētu tās atskaņošanu. Uzzīmējiet &lt; vai >, lai pārslēgtu iepriekšējo vai nākamo dziesmu</string>
+    <string name="touchscreen_music_gesture_summary">Ar diviem pirkstiem uzzīmējiet ‖, lai atskaņotu mūziku vai apturētu tās atskaņošanu. Uzzīmējiet &lt; vai >, lai pārslēgtu iepriekšējo vai nākamo dziesmu</string>
     <string name="touchscreen_music_gesture_title">Mūzikas pārvaldība</string>
     <string name="traffic_auto_close_network">Automātiski atvienoties no tīkla</string>
     <string name="traffic_auto_close_network_keep_closed">Ignorēt</string>

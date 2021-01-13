@@ -104,74 +104,74 @@
 
 .field public static final guidedstep_background_view_root:I = 0x7f0b0353
 
-.field public static final icon:I = 0x7f0b0386
+.field public static final icon:I = 0x7f0b038c
 
-.field public static final image:I = 0x7f0b039b
+.field public static final image:I = 0x7f0b03a1
 
-.field public static final info_field:I = 0x7f0b03b9
+.field public static final info_field:I = 0x7f0b03bf
 
-.field public static final lb_focus_animator:I = 0x7f0b043a
+.field public static final lb_focus_animator:I = 0x7f0b0440
 
-.field public static final lb_parallax_source:I = 0x7f0b043c
+.field public static final lb_parallax_source:I = 0x7f0b0442
 
-.field public static final lb_results_frame:I = 0x7f0b043d
+.field public static final lb_results_frame:I = 0x7f0b0443
 
-.field public static final lb_row_container_header_dock:I = 0x7f0b043e
+.field public static final lb_row_container_header_dock:I = 0x7f0b0444
 
-.field public static final lb_search_bar:I = 0x7f0b043f
+.field public static final lb_search_bar:I = 0x7f0b0445
 
-.field public static final lb_search_bar_badge:I = 0x7f0b0440
+.field public static final lb_search_bar_badge:I = 0x7f0b0446
 
-.field public static final lb_search_bar_items:I = 0x7f0b0441
+.field public static final lb_search_bar_items:I = 0x7f0b0447
 
-.field public static final lb_search_bar_speech_orb:I = 0x7f0b0442
+.field public static final lb_search_bar_speech_orb:I = 0x7f0b0448
 
-.field public static final lb_search_frame:I = 0x7f0b0443
+.field public static final lb_search_frame:I = 0x7f0b0449
 
-.field public static final lb_search_text_editor:I = 0x7f0b0444
+.field public static final lb_search_text_editor:I = 0x7f0b044a
 
-.field public static final lb_shadow_impl:I = 0x7f0b0446
+.field public static final lb_shadow_impl:I = 0x7f0b044c
 
-.field public static final lb_slide_transition_value:I = 0x7f0b0448
+.field public static final lb_slide_transition_value:I = 0x7f0b044e
 
-.field public static final logo:I = 0x7f0b0471
+.field public static final logo:I = 0x7f0b0477
 
-.field public static final main_icon:I = 0x7f0b047e
+.field public static final main_icon:I = 0x7f0b0484
 
-.field public static final main_image:I = 0x7f0b047f
+.field public static final main_image:I = 0x7f0b0485
 
-.field public static final message:I = 0x7f0b049a
+.field public static final message:I = 0x7f0b04a0
 
-.field public static final page_container:I = 0x7f0b05d7
+.field public static final page_container:I = 0x7f0b05de
 
-.field public static final page_indicator:I = 0x7f0b05d8
+.field public static final page_indicator:I = 0x7f0b05df
 
-.field public static final picker:I = 0x7f0b060e
+.field public static final picker:I = 0x7f0b0615
 
-.field public static final playback_controls_dock:I = 0x7f0b0618
+.field public static final playback_controls_dock:I = 0x7f0b061f
 
-.field public static final playback_fragment_background:I = 0x7f0b0619
+.field public static final playback_fragment_background:I = 0x7f0b0620
 
-.field public static final playback_progress:I = 0x7f0b061b
+.field public static final playback_progress:I = 0x7f0b0622
 
-.field public static final row_content:I = 0x7f0b06b4
+.field public static final row_content:I = 0x7f0b06c0
 
-.field public static final row_header:I = 0x7f0b06b6
+.field public static final row_header:I = 0x7f0b06c2
 
-.field public static final row_header_description:I = 0x7f0b06b7
+.field public static final row_header_description:I = 0x7f0b06c3
 
-.field public static final scale_frame:I = 0x7f0b06c6
+.field public static final scale_frame:I = 0x7f0b06d2
 
-.field public static final search_orb:I = 0x7f0b06e2
+.field public static final search_orb:I = 0x7f0b06ee
 
-.field public static final title:I = 0x7f0b080e
+.field public static final title:I = 0x7f0b081a
 
-.field public static final title_badge:I = 0x7f0b0811
+.field public static final title_badge:I = 0x7f0b081d
 
-.field public static final title_orb:I = 0x7f0b0814
+.field public static final title_orb:I = 0x7f0b0820
 
-.field public static final title_text:I = 0x7f0b0816
+.field public static final title_text:I = 0x7f0b0822
 
-.field public static final transitionPosition:I = 0x7f0b082a
+.field public static final transitionPosition:I = 0x7f0b0836
 
-.field public static final video_surface_container:I = 0x7f0b087e
+.field public static final video_surface_container:I = 0x7f0b088a

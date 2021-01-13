@@ -510,7 +510,7 @@ Du skal blot placere enhederne tæt på hinanden (normalt bagside mod bagside) o
     <string name="app_notification_block_title">Bloker alle</string>
     <string name="app_notification_importance_title">Vigtighed</string>
     <string name="app_notification_led_enabled_summary">Vis LED-meddelelser for denne app</string>
-    <string name="app_notification_led_enabled_title">LED-underretninger</string>
+    <string name="app_notification_led_enabled_title">LED-meddelelser</string>
     <string name="app_notification_listing_summary_zero">Aktiveret for alle apps</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">Vis aldrig vedvarende meddelelser fra denne app på låseskærmen</string>
     <string name="app_notification_no_ongoing_on_keyguard_title">Deaktiver vedvarende meddelelse på låseskærmen</string>
@@ -2224,7 +2224,7 @@ Der så ikke ud til at være heste eller dyr af nogen art; mændene kørte med t
     <string name="hardware_keys_action_nothing">Ingen handling</string>
     <string name="hardware_keys_action_notification_center">Åbn/luk meddelelsescenteret</string>
     <string name="hardware_keys_action_recents">Nylige</string>
-    <string name="hardware_keys_action_shelf">Åbn hylde</string>
+    <string name="hardware_keys_action_shelf">Åbn Shelf</string>
     <string name="hardware_keys_action_turn_off_screen">Sluk skærmen</string>
     <string name="hardware_keys_action_voice_search">Stemmesøgning</string>
     <string name="hardware_keys_back_key_title">Tilbage-knappen</string>
@@ -2246,8 +2246,12 @@ Der så ikke ud til at være heste eller dyr af nogen art; mændene kørte med t
     <string name="help_feedback_label">Hjælp og feedback</string>
     <string name="help_label">Hjælp og feedback</string>
     <string name="hide_extra_apps">Vis appforbrug</string>
+    <string name="hide_imeback_and_switcher">Højdejustering af tastatur</string>
+    <string name="hide_imeback_and_switcher_warning">Højdejusteringen af tastaturet vil være tydelig i fuldskærmsgestus.</string>
     <string name="hide_silent_icons_summary">Ikoner fra diskrete notifikationer vises ikke på statusbjælken</string>
     <string name="hide_silent_icons_title">Skjul ikoner fra diskrete notifikationer</string>
+    <string name="hide_summary">Genvejsbjælken i bunden af tastaturet vil blive skjult</string>
+    <string name="hide_title">Skjul</string>
     <string name="high_label">Høj</string>
     <string name="high_power_app_text_nomal">%1$s tapper batteriet</string>
     <string name="high_power_app_text_red">%1$s tapper batteriet meget kraftigt</string>
@@ -3471,7 +3475,7 @@ Batterisparetilstanden deaktiveres automatisk, når din enhed oplader."</string>
     <string name="oneplus_disconnected">Afbryd</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Statuslinje, aktiv låseskærm, baggrunde</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">Statuslinje, aktiv låseskærm, synskomfort, læsetilstand</string>
-    <string name="oneplus_display_dashboard_summary">Statuslinje, aktiv låseskærm, baggrunde, tema</string>
+    <string name="oneplus_display_dashboard_summary">Statuslinjen, aktiv låseskærm, baggrunde, tema</string>
     <string name="oneplus_display_dashboard_summary_801">Statuslinje, aktiv låseskærm, baggrunde, tema</string>
     <string name="oneplus_display_screen_timeout">Dvale</string>
     <string name="oneplus_display_size_adaption">Fuldskærms-apps</string>
@@ -3576,8 +3580,8 @@ Forsigtig: Ansigtsgenkendelse er mindre sikkert end fingeraftryk eller en adgang
     <string name="oneplus_fingerprint_findsendor_summary">Når fingeraftryksmønster vises nederst på skærmen, skal du bare trykke med fingeren på fingeraftryksidentifikationsområdet for at bruge fingeraftryksfunktionen.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Sådan bruges fingeraftryk</string>
     <string name="oneplus_fingerprint_functional_declaration">Erklæring om fingeraftryksfunktion</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Fra søgerskærmen skal man trykke længe på fingeraftrykssensoren for at tage et billede</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Tryk lang tid for at tage et foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Fra søgerskærmen skal du trykke længe på fingeraftrykssensoren for at tage et billede</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Tryk længe for at tage et billede</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingeraftryk-bevægelse</string>
     <string name="oneplus_fingerprint_hardware_exception">Fingeraftryks-hardwareinformation er ikke korrekt, kontakt venligst kundeservice</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Tryk længe på fingeraftryksensoren for at åbne hurtig betaling</string>
@@ -3756,7 +3760,7 @@ Bemærk: Dit fingeraftryk kan være mindre sikkert end et stærkt mønster eller
     <string name="oneplus_legal_summary">Politik for beskyttelse af personlige oplysninger, aftaler, etc.</string>
     <string name="oneplus_levels">Niveauer</string>
     <string name="oneplus_lift_up_display">Skærm altid tændt eller løft skærm</string>
-    <string name="oneplus_light">Lys</string>
+    <string name="oneplus_light">Let</string>
     <string name="oneplus_local_ringtone">Ringetone fra internt lager</string>
     <string name="oneplus_location_information">Beskrivelse af placeringsbaserede tjenester</string>
     <string name="oneplus_lock_after_timeout">Lås automatisk efter dvale</string>
@@ -4225,7 +4229,7 @@ Bemærk:
     <string name="oneplus_theme_tone">Tone</string>
     <string name="oneplus_theme_tone_effect_color">Farverig</string>
     <string name="oneplus_theme_tone_effect_dark">Mørk</string>
-    <string name="oneplus_theme_tone_effect_light">Lys</string>
+    <string name="oneplus_theme_tone_effect_light">Let</string>
     <string name="oneplus_theme_tone_effect_title">Vælg tone</string>
     <string name="oneplus_theme_wallpaper">Baggrunde</string>
     <string name="oneplus_three_screenshots_enable_summary">Stryg tre fingre på skærmen for at tage et skærmbillede</string>
@@ -4397,7 +4401,7 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="op_display_motion_graphics_compensation_summary">Forbedre billedhastigheden for grafik, mere jævn video- og spileffekter</string>
     <string name="op_dnd_summary">Vil ikke forstyrres</string>
     <string name="op_enable_location_services">For at finde og spore ladestationer i nærheden skal du slå lokationstjenester til</string>
-    <string name="op_enable_text">Aktiver</string>
+    <string name="op_enable_text">Aktivér</string>
     <string name="op_face_unlock_set_unlock_password">Ansigtsgenkendelse + adgangskode</string>
     <string name="op_face_unlock_set_unlock_pattern">Ansigtsgenkendelse + mønster</string>
     <string name="op_face_unlock_set_unlock_pin">Ansigtsgenkendelse + pinkode</string>
@@ -4811,6 +4815,8 @@ Insight designet sammen med OnePlus &amp; studerende fra Parsons School of Desig
     <string name="radio_info_http_client_test">HTTP-klienttest:</string>
     <string name="radio_info_ping_hostname_v4">Ping værtsnavn (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping værtsnavn (www.google.com) IPv6:</string>
+    <string name="raise_summary">Tastaturet vil blive hævet op fra bunden, og genvejstasten vil blive synlig</string>
+    <string name="raise_title">Hæv</string>
     <string name="rarely_running">Kører sjældent (%s)</string>
     <string name="really_remove_account_message">Hvis du fjerner denne konto, slettes alle tilknyttede beskeder, kontakter og andre data fra telefonen!</string>
     <string name="really_remove_account_title">Vil du fjerne kontoen?</string>
@@ -5873,7 +5879,7 @@ Googles tilgang til synkronisering af data giver dig adgang til dine kontakter, 
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dobbelttryk for at vække</string>
     <string name="touchscreen_flashlight_gesture_summary">Tegn et V for at tænde / slukke for lommelygten</string>
     <string name="touchscreen_flashlight_gesture_title">Tænd / sluk lommelygte</string>
-    <string name="touchscreen_music_gesture_summary">Tegn || med to fingre for at afspille musik eller sætte den på pause. Tegn &lt; eller > for forrige eller næste nummer</string>
+    <string name="touchscreen_music_gesture_summary">Træk ‖ med to fingre for at afspille eller sætte musik på pause. Træk &lt; eller > for at gå til forrige eller næste musiknummer</string>
     <string name="touchscreen_music_gesture_title">Musikstyring</string>
     <string name="track_frame_time">HWUI-profilgengivelse</string>
     <string name="track_frame_time_keywords">Grafikprocessor</string>
@@ -6775,7 +6781,7 @@ Vil du tillade dette for alle apps, der gerne vil søge?"</string>
     <string name="wifi_wapi_cert_create_subdir">Opret en mappe</string>
     <string name="wifi_wapi_cert_delet_subdir">Vælg et passende certifikat</string>
     <string name="wifi_wapi_cert_install">Installér WAPI-certifikat</string>
-    <string name="wifi_wapi_cert_install_button">Installer</string>
+    <string name="wifi_wapi_cert_install_button">Installér</string>
     <string name="wifi_wapi_cert_mgmt_as_dont_exist">SD-kortet og det interne lager har ikke AS-certifikatet. Kontrollér det venligst!</string>
     <string name="wifi_wapi_cert_mgmt_as_format_is_wrong">AS-certifikatets format er forkert! Installér venligst det rigtige AS-certifikat.</string>
     <string name="wifi_wapi_cert_mgmt_as_name_is_empty">Indtast venligst navnet på AS-certifikatet</string>

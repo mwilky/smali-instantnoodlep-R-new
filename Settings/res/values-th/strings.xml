@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">ความช่วยเหลือและความคิดเห็น</string>
     <string name="help_label">ช่วยเหลือและความเห็น</string>
     <string name="hide_extra_apps">แสดงการใช้งานแอป</string>
+    <string name="hide_imeback_and_switcher">ปรับความสูงแป้นพิมพ์</string>
+    <string name="hide_imeback_and_switcher_warning">ปรับความสูงแป้นพิมพ์จะเห็นได้ชัดในท่าทางสัมผัสแบบเต็มหน้าจอ</string>
     <string name="hide_silent_icons_summary">ไอคอนจากการแจ้งเตือนเบาๆ จะไม่แสดงในแถบสถานะ</string>
     <string name="hide_silent_icons_title">ซ่อนไอคอนจากการแจ้งเตือนเบาๆ</string>
+    <string name="hide_summary">แถบทางลัดที่ด้านล่างของแป้นพิมพ์จะซ่อนอยู่</string>
+    <string name="hide_title">ซ่อน</string>
     <string name="high_label">สูง</string>
     <string name="high_power_app_text_nomal">%1$s กำลังใช้แบตเตอรี่เปลือง</string>
     <string name="high_power_app_text_red">%1$s กำลังใช้แบตเตอรี่อย่างหนัก</string>
@@ -3420,7 +3424,7 @@
     <string name="oneplus_clear_intenal_storage_data_summary">รวมถึงเพลง รูป วิดีโอ และข้อมูลส่วนตัวอื่น ๆ</string>
     <string name="oneplus_clear_intenal_storage_data_title">ลบที่เก็บข้อมูลภายใน</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">โทนหลากสีสามารถใช้สีของระบบได้เท่านั้น</string>
-    <string name="oneplus_colorful_mode_title">หลากสี</string>
+    <string name="oneplus_colorful_mode_title">สีสัน</string>
     <string name="oneplus_compatibility_mode_summary">แอปเต็มหน้าจอไม่สามารถใช้พื้นที่รอยบากได้</string>
     <string name="oneplus_compatibility_mode_title">โหมดความเข้ากันได้</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ปิดโหมดเครื่องบิน</string>
@@ -4223,7 +4227,7 @@
     <string name="oneplus_theme_shape_effect_title">เลือกรูปร่าง</string>
     <string name="oneplus_theme_system_customization">การปรับแต่งระบบ</string>
     <string name="oneplus_theme_tone">โทน</string>
-    <string name="oneplus_theme_tone_effect_color">หลากสี</string>
+    <string name="oneplus_theme_tone_effect_color">สีสัน</string>
     <string name="oneplus_theme_tone_effect_dark">มืด</string>
     <string name="oneplus_theme_tone_effect_light">เบา</string>
     <string name="oneplus_theme_tone_effect_title">เลือกโทน</string>
@@ -4811,6 +4815,8 @@
     <string name="radio_info_http_client_test">การทดสอบไคลเอ็นต์ HTTP:</string>
     <string name="radio_info_ping_hostname_v4">ใช้คำสั่ง ping ชื่อโฮสต์ (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">ใช้คำสั่ง ping ชื่อโฮสต์ (www.google.com) IPv6:</string>
+    <string name="raise_summary">แป้นพิมพ์จะแสดงออกมาจากด้านล่างและปุ่มทางลัดจะปรากฏขึ้น</string>
+    <string name="raise_title">แสดงออกมา</string>
     <string name="rarely_running">ทำงานน้อย (%s)</string>
     <string name="really_remove_account_message">การนำบัญชีนี้ออกจะลบข้อความ รายชื่อติดต่อ และข้อมูลอื่นๆ ทั้งหมดของบัญชีออกจากโทรศัพท์</string>
     <string name="really_remove_account_title">นำบัญชีออกหรือไม่</string>

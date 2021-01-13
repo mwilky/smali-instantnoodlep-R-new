@@ -2246,8 +2246,12 @@ Ko vklopite samodejno varnostno kopiranje, se podatki naprave in aplikacij redno
     <string name="help_feedback_label">Pomoč in povratne informacije</string>
     <string name="help_label">Pomoč in povr. inf.</string>
     <string name="hide_extra_apps">Prikaz porabe aplikacij</string>
+    <string name="hide_imeback_and_switcher">Prilagoditev višine tipkovnice</string>
+    <string name="hide_imeback_and_switcher_warning">Prilagoditev višine tipkovnice bo vidna v potezah celozaslonskega načina.</string>
     <string name="hide_silent_icons_summary">Ikone diskretnih obvestil niso prikazane v vrstici stanja</string>
     <string name="hide_silent_icons_title">Skrivanje ikon diskretnih obvestil</string>
+    <string name="hide_summary">Vrstica z bližnjicami na dnu tipkovnice bo skrita</string>
+    <string name="hide_title">Skrij</string>
     <string name="high_label">Visoka</string>
     <string name="high_power_app_text_nomal">Aplikacija %1$s povzroča visoko porabo akumulatorja</string>
     <string name="high_power_app_text_red">Aplikacija %1$s povzroča zelo visoko porabo akumulatorja</string>
@@ -3576,7 +3580,7 @@ Pozor: Odklepanje z obrazom je manj varno kot odklepanje s prstnim odtisom ali g
     <string name="oneplus_fingerprint_findsendor_summary">Ko se vzorec za prstni odtis pojavi na dnu zaslona, preprosto s prstom pritisnite na identifikacijsko območje za prstni odtis, da uporabite funkcijo prstnega odtisa: prebudite in odklenete telefon, odobrite nakupe ali se prijavite v aplikacije.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Uporaba prstnega odtisa</string>
     <string name="oneplus_fingerprint_functional_declaration">Izjava o funkciji prstnega odtisa</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Na zaslonu iskalnika z dolgim pritiskom bralnika prstnih odtisov zajamete fotografijo</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Na zaslonu iskalnika z dolgim pritiskom na bralnik prstnih odtisov zajamete fotografijo</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Z dolgim pritiskom zajamete fotografijo</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Poteza bralnika prstnih odtisov</string>
     <string name="oneplus_fingerprint_hardware_exception">Podatki strojne opreme za prstne odtise niso natančni. Obrnite se na službo za pomoč strankam.</string>
@@ -4811,6 +4815,8 @@ Odklepanje s prstnim odtisom je lahko nezdružljivo z zaščitnimi folijami tret
     <string name="radio_info_http_client_test">Preskus odjemalca HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Preverjanje imena gostitelja (www.google.com) za IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Preverjanje imena gostitelja (www.google.com) za IPv6:</string>
+    <string name="raise_summary">Tipkovnica se dvigne s spodnjega dela in prikazana bo bližnjična tipka</string>
+    <string name="raise_title">Dvigni</string>
     <string name="rarely_running">Redko se izvaja (%s)</string>
     <string name="really_remove_account_message">Z odstranitvijo računa boste iz telefona izbrisali vsa sporočila, stike in druge podatke v računu.</string>
     <string name="really_remove_account_title">Želite odstraniti račun?</string>
@@ -6279,7 +6285,7 @@ Vsak uporabnik lahko posodobi aplikacije za vse druge uporabnike."</string>
     <string name="verify_apps_over_usb_title">Preveri aplikacije prek USB-ja</string>
     <string name="verizon_store_demo_mode_hint">Vnesite geslo</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Če spremenite način nastavitve mobilne dostopne točke, bo prekinjena povezava z napravami, ki imajo trenutno vzpostavljeno povezavo z mobilno dostopno točko.</string>
+    <string name="verizon_wifi_tether_band_warning">Če spremenite način nastavitve mobilne dostopne točke, bo povezava v napravah, ki imajo trenutno vzpostavljeno povezavo z mobilno dostopno točko, prekinjena.</string>
     <string name="version_text">različica %1$s</string>
     <string name="vibrate_in_silent_title">Vibriraj v tihem načinu</string>
     <string name="vibrate_input_devices">Preusmeritev vibriranja</string>

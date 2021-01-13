@@ -20,20 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-.field final synthetic val$checkBox:Landroid/widget/CheckBox;
-
 .field final synthetic val$enabling:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AirplaneModeEnabler;Landroid/widget/CheckBox;Z)V
+.method constructor <init>(Lcom/android/settings/AirplaneModeEnabler;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/AirplaneModeEnabler$2;->this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-    iput-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$2;->val$checkBox:Landroid/widget/CheckBox;
-
-    iput-boolean p3, p0, Lcom/android/settings/AirplaneModeEnabler$2;->val$enabling:Z
+    iput-boolean p2, p0, Lcom/android/settings/AirplaneModeEnabler$2;->val$enabling:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,35 +39,30 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 0
 
-    iget-object p1, p0, Lcom/android/settings/AirplaneModeEnabler$2;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+    iget-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$2;->this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-    invoke-static {p1}, Lcom/android/settings/AirplaneModeEnabler;->access$100(Lcom/android/settings/AirplaneModeEnabler;)Landroid/content/SharedPreferences;
+    invoke-static {p2}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    if-eqz p2, :cond_0
 
-    move-result-object p1
+    iget-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$2;->this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-    iget-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$2;->val$checkBox:Landroid/widget/CheckBox;
+    invoke-static {p2}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
 
-    invoke-virtual {p2}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result p2
-
-    const-string v0, "airplanechecked"
-
-    invoke-interface {p1, v0, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    iget-object p1, p0, Lcom/android/settings/AirplaneModeEnabler$2;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+    move-result-object p2
 
     iget-boolean p0, p0, Lcom/android/settings/AirplaneModeEnabler$2;->val$enabling:Z
 
-    invoke-static {p1, p0}, Lcom/android/settings/AirplaneModeEnabler;->access$200(Lcom/android/settings/AirplaneModeEnabler;Z)V
+    xor-int/lit8 p0, p0, 0x1
+
+    invoke-interface {p2, p0}, Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;->onAirplaneModeChanged(Z)V
+
+    :cond_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

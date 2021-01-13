@@ -508,7 +508,7 @@
     <string name="app_notification_block_title">مسدود کردن همه</string>
     <string name="app_notification_importance_title">اهمیت</string>
     <string name="app_notification_led_enabled_summary">هشدارهای ال ای دی را برای این اپلیکیشن نشان بده</string>
-    <string name="app_notification_led_enabled_title">اخطارهای ای ای دی</string>
+    <string name="app_notification_led_enabled_title">هشدارهای ال ای دی</string>
     <string name="app_notification_listing_summary_zero">برای همه برنامه‌ها روشن‌ است</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">هرگز هشدارهای پیاپی این اپلیکیشین را روی قفل صفحه نمایش نشان نده</string>
     <string name="app_notification_no_ongoing_on_keyguard_title">«اعلان دائمی» بر روی «صفحۀ قفل» غیرفعال شود</string>
@@ -2236,7 +2236,7 @@
     <string name="header_account_settings">تنظیمات حساب</string>
     <string name="header_add_an_account">افزودن حساب</string>
     <string name="header_application_sync_settings">تنظیمات همگام‌سازی برنامه</string>
-    <string name="header_category_custom">شخصی سازی</string>
+    <string name="header_category_custom">سفارشی‌سازی</string>
     <string name="header_category_system">سیستم</string>
     <string name="header_category_wireless_networks">بی‌سیم و شبکه‌ها</string>
     <string name="header_data_and_synchronization">داده و همگام‌سازی</string>
@@ -2244,8 +2244,12 @@
     <string name="help_feedback_label">راهنما و بازخورد</string>
     <string name="help_label">راهنما و بازخورد</string>
     <string name="hide_extra_apps">نمایش مصرف برنامه</string>
+    <string name="hide_imeback_and_switcher">تنظیم ارتفاع صفحه‌کلید</string>
+    <string name="hide_imeback_and_switcher_warning">تنظیم ارتفاع صفحه‌کلید در فرمان‌های حرکتی تمام صفحه قابل مشاهده است.</string>
     <string name="hide_silent_icons_summary">نمادهای اعلان‌های آرام در نوار وضعیت نشان داده نمی‌شود</string>
     <string name="hide_silent_icons_title">پنهان کردن نماد اعلان‌های آرام</string>
+    <string name="hide_summary">نوار میانبر در پایین صفحه‌کلید پنهان خواهد شد</string>
+    <string name="hide_title">پنهان کردن</string>
     <string name="high_label">زیاد</string>
     <string name="high_power_app_text_nomal">%1$s باتری شما را تخلیه می‌کند</string>
     <string name="high_power_app_text_red">%1$s باتری شما را به شدت تخلیه می‌کند</string>
@@ -3469,7 +3473,7 @@
     <string name="oneplus_disconnected">قطع اتصال</string>
     <string name="oneplus_display_dashboard_no_theme_summary">نوار وضعیت، صفحۀ نمایش محدود، تصاویر زمینه</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">نوار وضعیت، نمایشگر محیطی، راحتی دید، حالت مطالعه</string>
-    <string name="oneplus_display_dashboard_summary">نوار وضعیت، نمایشگر محیطی، تصویر زمینه، تم</string>
+    <string name="oneplus_display_dashboard_summary">نوار وضعیت، نمایشگر محیط، تصاویر زمینه، تم</string>
     <string name="oneplus_display_dashboard_summary_801">نوار وضعیت، نمایشگر محیطی، تصویر زمینه، تم</string>
     <string name="oneplus_display_screen_timeout">خواب</string>
     <string name="oneplus_display_size_adaption">برنامه‌های تمام‌صفحه</string>
@@ -3574,8 +3578,8 @@
     <string name="oneplus_fingerprint_findsendor_summary">هنگامی که الگوی اثر انگشت در پایین صفحۀ نمایش ظاهر می‌شود، به‌سادگی انگشت خود را روی ناحیه شناسایی اثر انگشت فشار دهید تا از عملکرد اثر انگشت استفاده کنید.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">چگونگی استفاده از اثر انگشت</string>
     <string name="oneplus_fingerprint_functional_declaration">اظهارنامه عملکرد اثر انگشت</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">از داخل صفحۀ منظره‌یاب، حسگر اثر انگشت را فشار دهید و نگه دارید تا عکس گرفته شود</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">فشار طولانی برای گرفتن عکس</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">از صفحه منظره‌یاب، حسگر اثر انگشت را برای گرفتن عکس فشار دهید و نگه دارید</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">برای گرفتن عکس، فشار دهید و نگه دارید</string>
     <string name="oneplus_fingerprint_gesture_settings_title">حرکت اثر انگشت</string>
     <string name="oneplus_fingerprint_hardware_exception">اطلاعات سخت افزاری اثر انگشت دقیق نیست، لطفاً با خدمات مشتریان تماس بگیرید</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">حسگر اثر انگشت را برای مدت طولانی برای راه اندازی پرداخت سریع فشار دهید</string>
@@ -3671,10 +3675,10 @@
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">فرمان‌های حرکتی پیمایش (پایین)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">فرمان‌های حرکتی پیمایش (چپ و راست)</string>
     <string name="oneplus_gesture_of_answer_call_info">در صورت وجود تماس دریافتی، می‌‌توانید با نزدیک کردن تلفن به گوش به آن پاسخ دهید.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">پاسخ دادن خودکار به تماس‌های ورودی با بالا بردن تلفن تا نزدیک گوش</string>
+    <string name="oneplus_gesture_of_answer_call_summary">پاسخدهی خودکار به تماس‌های دریافتی از طریق نزدیک کردن تلفن به گوش</string>
     <string name="oneplus_gesture_of_answer_call_title">پاسخ به تماس‌ها با حرکت</string>
     <string name="oneplus_gesture_start_learning">شروع یادگیری</string>
-    <string name="oneplus_gesture_to_answer_summary">پاسخ دادن خودکار به تماس‌های ورودی با بالا بردن تلفن تا نزدیک گوش</string>
+    <string name="oneplus_gesture_to_answer_summary">پاسخدهی خودکار به تماس‌های دریافتی از طریق نزدیک کردن تلفن به گوش</string>
     <string name="oneplus_gesture_to_answer_title">بالا بردن برای پاسخ دادن</string>
     <string name="oneplus_gesture_to_control_call_info">کنترل خودکار تماس‌ها با بلند کردن تلفن تا نزدیک گوش</string>
     <string name="oneplus_gesture_to_control_calls_summary">پاسخ دادن خودکار به تماس‌ها یا تغییر وضعیت به گوشی با فرمان حرکتی</string>
@@ -3782,7 +3786,7 @@
     <string name="oneplus_memc_more_support_apps">سایر برنامه‌های پشتیبانی‌شده</string>
     <string name="oneplus_memc_notice">در این حالت، نرخ فریم ویدیو افزایش می‌یابد که باعث کاهش تاری حرکت گرافیک و واضح‌تر و روان‌تر شدن ویدیو می‌گردد. این حالت فقط در زمان پخش تمام‌صفحه در دسترس است.</string>
     <string name="oneplus_memc_open">روشن</string>
-    <string name="oneplus_memc_support_apps">برنامه‌های پشتیبانی‌شده</string>
+    <string name="oneplus_memc_support_apps">برنامه های پشتیبانی شده</string>
     <string name="oneplus_memc_support_no_apps">هیچ برنامۀ پشتیبانی‌شده‌ای نصب نشده است</string>
     <string name="oneplus_memc_video">یکدست کردن گرافیک حرکت</string>
     <string name="oneplus_memc_video_effect">جلوۀ جبران</string>
@@ -3799,7 +3803,7 @@
     <string name="oneplus_more">بیشتر</string>
     <string name="oneplus_motion_sensor_settings_title">حرکات سیستم</string>
     <string name="oneplus_multi_app">برنامه‌های موازی</string>
-    <string name="oneplus_multi_app_disable_apps">برنامه‌های پشتیبانی‌شده</string>
+    <string name="oneplus_multi_app_disable_apps">برنامه های پشتیبانی شده</string>
     <string name="oneplus_multi_app_disable_tips">در صورت غیرفعال کردن، تمام داده‌های موجود در برنامه موازی پاک خواهد شد. ادامه می‌دهید؟</string>
     <string name="oneplus_multi_app_enable_apps">برنامه های فعال</string>
     <string name="oneplus_multi_app_init">در حال بارگذاری...</string>
@@ -3911,7 +3915,7 @@
 %d تلاش باقی مانده است."</string>
     <string name="oneplus_pocket_mode_summary">وقتی تلفن در جیبتان قرار دارد، از لمس تصادفی صفحۀ نمایش جلوگیری کنید</string>
     <string name="oneplus_pre_application">لیست برنامه‌های از پیش نصب‌شده</string>
-    <string name="oneplus_preference_settings">رفتار</string>
+    <string name="oneplus_preference_settings">روش</string>
     <string name="oneplus_preference_settings_auto_activate">برنامه‌ریزی شده</string>
     <string name="oneplus_preference_settings_behavior">ترجیحات</string>
     <string name="oneplus_preference_settings_custom_time">تغییر خودکار وضعیت</string>
@@ -4166,7 +4170,7 @@
     <string name="oneplus_support_apps">برنامه‌های پشتیبانی‌شده</string>
     <string name="oneplus_support_summary">نکات و پرسش‌های متداول دربارۀ استفاده از دستگاه</string>
     <string name="oneplus_support_title">نکات و پشتیبانی</string>
-    <string name="oneplus_supported_apps">برنامه‌های پشتیبانی‌شده</string>
+    <string name="oneplus_supported_apps">برنامه های پشتیبانی شده</string>
     <string name="oneplus_suspension_notice">هشدار</string>
     <string name="oneplus_suspension_notice_summary">اجازه به برنامه‌ها برای نشان دادن اعلان هشدار</string>
     <string name="oneplus_switch">OnePlus Switch</string>
@@ -4198,7 +4202,7 @@
     <string name="oneplus_theme_drop_summary">از تغییرات انجام‌شده صرف نظر می‌کنید؟</string>
     <string name="oneplus_theme_drop_title">خروج از «حالت ویرایش»</string>
     <string name="oneplus_theme_entrance_summary">تصاویر زمینه، رنگ برجسته، فونت، تون</string>
-    <string name="oneplus_theme_entrance_title">شخصی سازی</string>
+    <string name="oneplus_theme_entrance_title">سفارشی‌سازی</string>
     <string name="oneplus_theme_fingerprint">پویانمایی اثر انگشت</string>
     <string name="oneplus_theme_fingerprint_snake_action">روشن کردن اثر انگشت</string>
     <string name="oneplus_theme_fingerprint_snake_tip">این قابلیت هنگام روشن بودن اثر انگشت در دسترس خواهد بود</string>
@@ -4395,7 +4399,7 @@
     <string name="op_display_motion_graphics_compensation_summary">بهبود نرخ فریم ویژگی‌های گرافیکی، روان‌تر شدن ویدیوها و جلوه‌های بازی</string>
     <string name="op_dnd_summary">بدون مزاحمت</string>
     <string name="op_enable_location_services">برای یافتن و ردگیری ایستگاه‌های شارژ نزدیک، لطفاً خدمات موقعیت مکانی را فعال کنید</string>
-    <string name="op_enable_text">فعال‌سازی</string>
+    <string name="op_enable_text">فعال کردن</string>
     <string name="op_face_unlock_set_unlock_password">قفل‌گشایی با چهره + رمز عبور</string>
     <string name="op_face_unlock_set_unlock_pattern">قفل‌گشایی با چهره + الگو</string>
     <string name="op_face_unlock_set_unlock_pin">قفل‌گشایی با چهره + پین</string>
@@ -4411,7 +4415,7 @@
     <string name="op_fragment">کوتاه</string>
     <string name="op_gamespace">فضای بازی</string>
     <string name="op_global_drak_mode_apps_manage">مدیریت برنامه‌ها در حالت تاریک</string>
-    <string name="op_global_drak_mode_full_support_list">برنامه‌های پشتیبانی‌شده</string>
+    <string name="op_global_drak_mode_full_support_list">برنامه های پشتیبانی شده</string>
     <string name="op_global_drak_mode_not_full_support_list">برنامه‌های پشتیبانی‌نشده</string>
     <string name="op_global_drak_mode_support_description">برنامه‌هایی که پشتیبانی نمی‌شوند، ممکن است در حالت تاریک به طور مناسبی عمل نکنند</string>
     <string name="op_gps_off_warn_msg">لطفاً ابتدا موقعیت مکانی را روشن کنید</string>
@@ -4809,6 +4813,8 @@
     <string name="radio_info_http_client_test">‏آزمایش کارخواه HTTP:</string>
     <string name="radio_info_ping_hostname_v4">‏پینگ کردن نام میزبان (www.google.com)‏ IPv4:</string>
     <string name="radio_info_ping_hostname_v6">‏پینگ کردن نام میزبان (www.google.com)‏ IPv6:</string>
+    <string name="raise_summary">صفحه‌کلید از پایین بالا خواهد آمد و کلید میانبر نمایش داده می‌شود</string>
+    <string name="raise_title">بالا آوردن</string>
     <string name="rarely_running">به‌ندرت درحال اجرا (%s)</string>
     <string name="really_remove_account_message">با حذف این حساب همه پیام‌ها، مخاطبین و دیگر داده‌ها از تلفن همراه حذف خواهد شد.</string>
     <string name="really_remove_account_title">حساب حذف شود؟</string>
@@ -5871,7 +5877,7 @@
     <string name="touchscreen_double_tap_to_wake_gesture_title">برای بیدار کردن، دو بار ضربه بزنید</string>
     <string name="touchscreen_flashlight_gesture_summary">یک V بکشید تا فلاش بچرخد</string>
     <string name="touchscreen_flashlight_gesture_title">فلاش را بچرخانید</string>
-    <string name="touchscreen_music_gesture_summary">با دو انگشت خود || را بکشید تا موسیقی اجرا یا متوقف شود. &lt; یا > را برای آهنگ قبلی یا بعدی بکشید</string>
+    <string name="touchscreen_music_gesture_summary">برای پخش یا مکث موسیقی، ‖ را با دو انگشت رسم کنید. برای آهنگ قبلی یا بعدی، &lt; یا > را رسم کنید</string>
     <string name="touchscreen_music_gesture_title">کنترل موسیقی</string>
     <string name="track_frame_time">‏پرداز زدن HWUI نمایه</string>
     <string name="track_frame_time_keywords">‏واحد پردازش گرافیکی (GPU)</string>
@@ -6277,7 +6283,7 @@
     <string name="verify_apps_over_usb_title">‏تأیید برنامه‌ها ازطریق USB</string>
     <string name="verizon_store_demo_mode_hint">رمز عبور را وارد کنید</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">با تغییر روش تنظیم نقطۀ اتصال همراه، هر دستگاهی که در حال حاضر به نقطۀ اتصال همراه متصل است، قطع خواهد شد.</string>
+    <string name="verizon_wifi_tether_band_warning">در صورت تغییر تنظیمات «نقطۀ اتصال همراه»، تمام دستگاه‌هایی که در حال حاضر به «نقطۀ اتصال همراه» وصل شده است قطع خواهد شد.</string>
     <string name="version_text">نسخه %1$s</string>
     <string name="vibrate_in_silent_title">لرزش در حالت بی‌صدا</string>
     <string name="vibrate_input_devices">تغییر مسیر لرزش</string>
@@ -6773,7 +6779,7 @@
     <string name="wifi_wapi_cert_create_subdir">ایجاد یک فهرست</string>
     <string name="wifi_wapi_cert_delet_subdir">انتخاب یک گواهی مناسب</string>
     <string name="wifi_wapi_cert_install">نصب گواهی WAPI</string>
-    <string name="wifi_wapi_cert_install_button">نصب کنید</string>
+    <string name="wifi_wapi_cert_install_button">نصب کردن</string>
     <string name="wifi_wapi_cert_mgmt_as_dont_exist">کارت حافظه و حافظۀ داخلی گواهی AS ندارند، لطفاً این مسئله را بررسی کنید!</string>
     <string name="wifi_wapi_cert_mgmt_as_format_is_wrong">فرمت گواهی AS نادرست است! لطفاً گواهی AS درستی را نصب کنید</string>
     <string name="wifi_wapi_cert_mgmt_as_name_is_empty">لطفاً نام گواهی AS را وارد کنید</string>

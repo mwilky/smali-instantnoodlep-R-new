@@ -903,7 +903,7 @@
 .end method
 
 .method public initData()V
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -925,6 +925,23 @@
 
     invoke-direct {p0}, Lcom/oneplus/security/network/view/DataUsageMainActivity;->findOutCurrentUsingSimSlot()V
 
+    invoke-static {}, Lcom/oneplus/security/utils/FunctionUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    const-string v1, "index_data_usage_unit"
+
+    invoke-static {p0, v1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    :cond_0
     return-void
 .end method
 

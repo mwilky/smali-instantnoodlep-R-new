@@ -1660,6 +1660,14 @@
 
     move-result v0
 
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getSoftApConfiguration()Landroid/net/wifi/SoftApConfiguration;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->config:Landroid/net/wifi/SoftApConfiguration;
+
     invoke-static {}, Lcom/oneplus/settings/utils/ProductUtils;->isUsvMode()Z
 
     move-result v1
@@ -1674,9 +1682,7 @@
 
     move-result v0
 
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->mContext:Landroid/content/Context;
 

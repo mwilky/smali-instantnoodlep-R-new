@@ -2272,7 +2272,7 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="header_account_settings">Nastavení účtu</string>
     <string name="header_add_an_account">Přidat účet</string>
     <string name="header_application_sync_settings">Nastavení synchronizace aplikací</string>
-    <string name="header_category_custom">Vlastní nastavení</string>
+    <string name="header_category_custom">Přizpůsobení</string>
     <string name="header_category_system">Systém</string>
     <string name="header_category_wireless_networks">Bezdrátová připojení a sítě</string>
     <string name="header_data_and_synchronization">Data a synchronizace</string>
@@ -2280,8 +2280,12 @@ Když zapnete automatické zálohování, data zařízení a aplikací se budou 
     <string name="help_feedback_label">Nápověda a zpětná vazba</string>
     <string name="help_label">Nápověda a zpětná vazba</string>
     <string name="hide_extra_apps">Zobrazit využití aplikací</string>
+    <string name="hide_imeback_and_switcher">Úprava výšky klávesnice</string>
+    <string name="hide_imeback_and_switcher_warning">Úprava výšky klávesnice bude dostupná v gestech na celé obrazovce.</string>
     <string name="hide_silent_icons_summary">Ikony nenápadných oznámení nejsou zobrazovány na stavovém řádku</string>
     <string name="hide_silent_icons_title">Skrýt ikony z nenápadných oznámení</string>
+    <string name="hide_summary">Panel zkratek v dolní části klávesnice se skryje</string>
+    <string name="hide_title">Skrýt</string>
     <string name="high_label">Vysoká</string>
     <string name="high_power_app_text_nomal">%1$s vybíjí vaši baterii</string>
     <string name="high_power_app_text_red">%1$s silně vybíjí baterii</string>
@@ -4248,7 +4252,7 @@ Poznámka:
     <string name="oneplus_theme_drop_summary">Zrušit změny?</string>
     <string name="oneplus_theme_drop_title">Ukončit Režim úprav</string>
     <string name="oneplus_theme_entrance_summary">Tapety, barva zvýraznění, písmo, odstín</string>
-    <string name="oneplus_theme_entrance_title">Vlastní nastavení</string>
+    <string name="oneplus_theme_entrance_title">Přizpůsobení</string>
     <string name="oneplus_theme_fingerprint">Animace otisku prstu</string>
     <string name="oneplus_theme_fingerprint_snake_action">ZAPNOUT OTISK PRSTU</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Tato funkce bude dostupná, pokud je zapnutý otisk prstu</string>
@@ -4865,6 +4869,8 @@ Během identifikace a porovnávání otisků prstů se dočasně zvýší jas ob
     <string name="radio_info_http_client_test">Test klienta HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Ping názvu hostitele (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping názvu hostitele (www.google.com) IPv6:</string>
+    <string name="raise_summary">Klávesnice se z dolní části zvýší a zobrazí se klávesa zkratky</string>
+    <string name="raise_title">Zvýšit</string>
     <string name="rarely_running">Spuštěno výjimečně (%s)</string>
     <string name="really_remove_account_message">Odebráním účtu smažete z telefonu také všechny zprávy, kontakty a další data tohoto účtu.</string>
     <string name="really_remove_account_title">Chcete odebrat účet?</string>

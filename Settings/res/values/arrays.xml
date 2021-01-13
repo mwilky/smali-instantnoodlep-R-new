@@ -2775,6 +2775,7 @@
         <item>com.oneplus.soundrecorder</item>
         <item>.qtidataservices</item>
         <item>com.google.android.googlequicksearchbox</item>
+        <item>com.qualcomm.wfd.service</item>
     </string-array>
     <string-array name="oneplus_notification_ringtone">
         <item>@string/oneplus_notification_dialog_ringtone_mode</item>
