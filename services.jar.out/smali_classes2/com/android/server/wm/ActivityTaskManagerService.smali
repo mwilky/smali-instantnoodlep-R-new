@@ -22869,12 +22869,6 @@
     invoke-static {v7, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_9
-    iget v12, v11, Lcom/android/server/wm/WindowProcessController;->mUid:I
-
-    const-string v13, "update configuration"
-
-    invoke-static {v12, v13}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
-
     invoke-virtual {v11, v8}, Lcom/android/server/wm/WindowProcessController;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     add-int/lit8 v10, v10, -0x1

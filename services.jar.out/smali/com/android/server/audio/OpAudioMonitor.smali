@@ -180,6 +180,10 @@
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    const-string v2, "android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"
+
+    invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
     iget-object v4, p0, Lcom/android/server/audio/OpAudioMonitor;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -363,7 +367,7 @@
 .end method
 
 .method private convertDevice2MdmType(I)I
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x2
 
@@ -376,29 +380,36 @@
     :cond_0
     const/4 v0, 0x4
 
-    if-eq p1, v0, :cond_3
+    if-eq p1, v0, :cond_4
 
-    const/16 v0, 0x8
+    const/16 v1, 0x8
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/high16 v0, 0x4000000
+    const/high16 v1, 0x4000000
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v1, :cond_2
 
     const/4 v0, 0x3
 
     return v0
 
     :cond_2
-    const/4 v0, -0x1
+    const/16 v1, 0x80
+
+    if-ne p1, v1, :cond_3
 
     return v0
 
     :cond_3
+    const/4 v0, -0x1
+
+    return v0
+
+    :cond_4
     :goto_0
     const/4 v0, 0x1
 
@@ -1517,7 +1528,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_5
 
     iget-object v2, v9, Lcom/android/server/audio/OpAudioMonitor;->mPkStartTime:Ljava/util/Map;
 
@@ -1568,7 +1579,7 @@
 
     const/4 v5, 0x4
 
-    if-ne v10, v5, :cond_6
+    if-ne v10, v5, :cond_5
 
     :cond_2
     const-string v5, "MDM,stop."
@@ -1596,7 +1607,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_5
 
     iget-object v2, v9, Lcom/android/server/audio/OpAudioMonitor;->mPkStartTime:Ljava/util/Map;
 
@@ -1749,7 +1760,6 @@
 
     invoke-static {v13, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1771,7 +1781,7 @@
 
     invoke-interface {v0, v12}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_6
+    :cond_5
     :goto_1
     return-void
 .end method

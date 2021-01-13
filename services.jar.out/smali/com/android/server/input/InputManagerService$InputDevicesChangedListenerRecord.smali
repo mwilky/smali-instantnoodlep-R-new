@@ -64,12 +64,6 @@
     :try_start_0
     iget v0, p0, Lcom/android/server/input/InputManagerService$InputDevicesChangedListenerRecord;->mUid:I
 
-    const-string/jumbo v1, "notifyInputDevicesChanged"
-
-    invoke-static {v0, v1}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
-
-    iget v0, p0, Lcom/android/server/input/InputManagerService$InputDevicesChangedListenerRecord;->mUid:I
-
     iget v1, p0, Lcom/android/server/input/InputManagerService$InputDevicesChangedListenerRecord;->mPid:I
 
     const/16 v2, 0x238c

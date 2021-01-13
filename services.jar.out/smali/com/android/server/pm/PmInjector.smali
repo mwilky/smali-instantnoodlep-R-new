@@ -1992,13 +1992,17 @@
 
     iget-object v1, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
+
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
     iget-object v1, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
@@ -2006,15 +2010,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
-
-    goto :goto_0
+    if-eqz v1, :cond_1
 
     :cond_0
-    return v2
-
-    :cond_1
-    :goto_0
     iget-object v1, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     invoke-static {p0, v1}, Lcom/android/server/pm/PmInjector;->isSystemApp(Landroid/content/Context;Ljava/lang/String;)Z
@@ -2038,6 +2036,9 @@
     invoke-static {p0, v4, v0, v3}, Lcom/android/server/pm/PmInjector;->showInstallPackageForegroundToast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
 
     return v3
+
+    :cond_1
+    return v2
 .end method
 
 .method public static isPkgNeedToBeHandleThemeAndOpSdk(Landroid/content/Context;Lcom/android/server/pm/PackageManagerService$OriginInfo;)Z

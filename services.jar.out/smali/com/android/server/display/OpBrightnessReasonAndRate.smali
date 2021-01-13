@@ -93,6 +93,8 @@
 
 .field private static mAutoBrightnessEnabled:Z
 
+.field private static mAutoFirstOn:Z
+
 .field private static mAutoRate:I
 
 .field private static mAutoStep:I
@@ -144,6 +146,8 @@
 .field private static mIsSystemUIOrSetting:Z
 
 .field private static mIsowerRequestScreenBrightnessOverrideChange:Z
+
+.field private static mMinFromConfig:F
 
 .field private static mPolicyChange:Z
 
@@ -232,6 +236,8 @@
 
     sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsAutoBrightnessStatusChange:Z
 
+    sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoFirstOn:Z
+
     const/4 v2, 0x0
 
     sput v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPowerRequestScreenBrightnessOverride:F
@@ -309,6 +315,8 @@
     sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDimDebug:I
 
     sput-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDarkModeInitiated:Z
+
+    sput v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mMinFromConfig:F
 
     const/16 v0, 0xb
 
@@ -411,6 +419,20 @@
     invoke-direct {v0, p0, v1}, Lcom/android/server/display/OpBrightnessReasonAndRate$SettingsObserver;-><init>(Lcom/android/server/display/OpBrightnessReasonAndRate;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mSettingsObserver:Lcom/android/server/display/OpBrightnessReasonAndRate$SettingsObserver;
+
+    sget-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x10500be
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
+
+    move-result v0
+
+    sput v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mMinFromConfig:F
 
     sget-object v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
 
@@ -3517,6 +3539,14 @@
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v6, " mAutoFirstOn "
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v6, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoFirstOn:Z
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -3524,21 +3554,25 @@
     invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
-    sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValueReason:I
+    sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoFirstOn:Z
 
-    if-ne v0, v2, :cond_b
+    const/4 v6, 0x0
+
+    if-eqz v0, :cond_b
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mReason:I
 
-    const/4 v2, 0x4
+    const/4 v7, 0x4
 
-    if-ne v0, v2, :cond_b
+    if-ne v0, v7, :cond_b
 
     sput v4, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValueReason:I
 
     const-string v0, "REASON_AUTOMATIC_ONING"
 
     invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    sput-boolean v6, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoFirstOn:Z
 
     goto :goto_0
 
@@ -3552,61 +3586,96 @@
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mStatus:I
 
-    if-ne v0, v5, :cond_f
+    if-ne v0, v5, :cond_10
 
     sget v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mCurrentValue:F
 
-    const/high16 v2, 0x41000000    # 8.0f
+    const/high16 v4, 0x41000000    # 8.0f
 
-    div-float/2addr v0, v2
+    div-float/2addr v0, v4
 
-    const p0, 0x3d4ccccd    # 0.05f
+    const-string/jumbo p0, "ro.boot.project_name"
 
-    cmpg-float p0, v0, p0
-
-    if-gez p0, :cond_c
-
-    const v0, 0x3d4ccccd    # 0.05f
-
-    :cond_c
-    sget-boolean p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
-
-    if-eqz p0, :cond_e
-
-    sget-object p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v2, 0x0
+    const-string v4, "20801"
+
+    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-ne v2, p0, :cond_c
+
+    sget p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mMinFromConfig:F
+
+    goto :goto_1
+
+    :cond_c
+    const p0, 0x3d4ccccd    # 0.05f
+
+    :goto_1
+    cmpg-float v2, v0, p0
+
+    if-gez v2, :cond_d
+
+    move v0, p0
+
+    :cond_d
+    sget-boolean v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
+
+    if-eqz v2, :cond_f
+
+    sget-object v2, Lcom/android/server/display/OpBrightnessReasonAndRate;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
 
     const/4 v4, -0x2
 
     const-string v5, "dim_target"
 
-    invoke-static {p0, v5, v2, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v2, v5, v6, v4}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    move-result p0
+    move-result v2
 
-    if-lez p0, :cond_d
+    if-lez v2, :cond_e
 
-    int-to-float v2, p0
+    int-to-float v4, v2
 
-    const/high16 v4, 0x447a0000    # 1000.0f
+    const/high16 v5, 0x447a0000    # 1000.0f
 
-    div-float v0, v2, v4
+    div-float v0, v4, v5
 
-    :cond_d
-    new-instance v2, Ljava/lang/StringBuilder;
+    :cond_e
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_f
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "DIM:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3614,29 +3683,7 @@
 
     move p0, v0
 
-    goto :goto_1
-
-    :cond_e
-    move p0, v0
-
-    :goto_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "DIM:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_f
+    :cond_10
     sput p0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mTargetValue:F
 
     sub-float v0, p0, p1
@@ -3653,7 +3700,7 @@
 
     sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3705,7 +3752,7 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_10
+    :cond_11
     return p0
 .end method
 
@@ -3845,18 +3892,25 @@
 
     sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mPreAutoBrightnessEnabled:Z
 
-    if-eq v0, v1, :cond_5
+    if-eq v0, v1, :cond_6
 
+    if-nez v0, :cond_5
+
+    if-eqz v1, :cond_5
+
+    sput-boolean v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mAutoFirstOn:Z
+
+    :cond_5
     sput-boolean v3, Lcom/android/server/display/OpBrightnessReasonAndRate;->mIsAutoBrightnessStatusChange:Z
 
     const-string v0, "AUTO CHANGING!"
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_6
     sget-boolean v0, Lcom/android/server/display/OpBrightnessReasonAndRate;->mDebug:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3900,7 +3954,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_6
+    :cond_7
     return-void
 .end method
 

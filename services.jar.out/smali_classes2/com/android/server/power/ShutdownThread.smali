@@ -2462,7 +2462,7 @@
     :try_start_3
     invoke-interface {v5, v0}, Landroid/app/IActivityManager;->shutdown(I)Z
     :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
     goto :goto_5
 

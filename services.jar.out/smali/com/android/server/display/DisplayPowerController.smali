@@ -359,6 +359,8 @@
 
 .field private final mSkipScreenOnBrightnessRamp:Z
 
+.field private mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
 .field private mTempScreenBrightnessRangeMinimum:I
 
 .field private mTemporaryAutoBrightnessAdjustment:F
@@ -1612,6 +1614,20 @@
 
     :cond_8
     :goto_4
+    nop
+
+    const-string/jumbo v0, "statusbar"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/android/server/display/DisplayPowerController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
     return-void
 .end method
 
@@ -3191,84 +3207,32 @@
     :try_start_0
     iget-boolean v6, p0, Lcom/android/server/display/DisplayPowerController;->mInHighTemp:Z
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
     const v6, 0x3ecccccd    # 0.4f
 
-    cmpg-float v6, p1, v6
+    cmpg-float v7, p1, v6
 
-    if-gez v6, :cond_2
+    if-gez v7, :cond_2
 
     goto :goto_3
 
     :cond_2
     cmpg-float v1, p1, v1
 
-    if-gtz v1, :cond_4
+    if-gtz v1, :cond_5
 
-    new-array v1, v5, [Ljava/lang/Float;
-
-    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
-
-    mul-float/2addr v6, p1
-
-    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v6
-
-    aput-object v6, v1, v3
-
-    iget-object v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempChange:Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempRate:F
-
-    goto :goto_1
-
-    :cond_3
-    move v6, p2
-
-    :goto_1
-    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v6
-
-    aput-object v6, v1, v2
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iput-object v4, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempChange:Ljava/lang/Boolean;
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    return-object v1
-
-    :cond_4
-    :try_start_2
-    iget v1, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempHBMFactor:F
+    iget v1, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
 
     mul-float/2addr v1, p1
 
-    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
-
     cmpg-float v6, v1, v6
 
-    if-gez v6, :cond_5
+    if-gez v6, :cond_3
 
-    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
+    const v1, 0x3ecccccd    # 0.4f
 
-    move v1, v6
-
-    :cond_5
+    :cond_3
     new-array v6, v5, [Ljava/lang/Float;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -3283,13 +3247,72 @@
 
     move-result v7
 
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_4
+
+    iget v7, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempRate:F
+
+    goto :goto_1
+
+    :cond_4
+    move v7, p2
+
+    :goto_1
+    invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v7
+
+    aput-object v7, v6, v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iput-object v4, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempChange:Ljava/lang/Boolean;
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    return-object v6
+
+    :cond_5
+    :try_start_2
+    iget v1, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempHBMFactor:F
+
+    mul-float/2addr v1, p1
+
+    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
+
+    cmpg-float v6, v1, v6
+
+    if-gez v6, :cond_6
+
+    iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempFactor:F
+
+    move v1, v6
+
+    :cond_6
+    new-array v6, v5, [Ljava/lang/Float;
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    iget-object v7, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempChange:Ljava/lang/Boolean;
+
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_7
 
     iget v7, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempRate:F
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     move v7, p2
 
     :goto_2
@@ -3311,7 +3334,7 @@
 
     return-object v6
 
-    :cond_7
+    :cond_8
     :goto_3
     :try_start_4
     new-array v1, v5, [Ljava/lang/Float;
@@ -3328,13 +3351,13 @@
 
     move-result v6
 
-    if-eqz v6, :cond_8
+    if-eqz v6, :cond_9
 
     iget v6, p0, Lcom/android/server/display/DisplayPowerController;->mHighTempRate:F
 
     goto :goto_4
 
-    :cond_8
+    :cond_9
     move v6, p2
 
     :goto_4
@@ -5648,7 +5671,7 @@
 .end method
 
 .method private setScreenState(IZ)Z
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -5672,7 +5695,7 @@
 
     const/4 v4, 0x3
 
-    if-eq v3, p1, :cond_6
+    if-eq v3, p1, :cond_8
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mOpBrightnessReasonAndRate:Lcom/android/server/display/OpBrightnessReasonAndRate;
 
@@ -5687,7 +5710,7 @@
     goto :goto_1
 
     :cond_1
-    if-ne p1, v4, :cond_3
+    if-ne p1, v4, :cond_5
 
     iget-object v5, p0, Lcom/android/server/display/DisplayPowerController;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
 
@@ -5720,16 +5743,78 @@
     invoke-interface {v5, p1}, Lcom/oneplus/iris/IOneplusIrisManager;->screenStateChange(I)V
 
     :cond_3
+    sget-boolean v5, Lcom/android/server/display/DisplayPowerController;->DEBUG_ONEPLUS:Z
+
+    const-string v6, "DisplayPowerController"
+
+    if-eqz v5, :cond_4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "set power state= "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, ", IStatusBarService = "
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p0, Lcom/android/server/display/DisplayPowerController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v6, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    iget-object v5, p0, Lcom/android/server/display/DisplayPowerController;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
+    if-eqz v5, :cond_5
+
+    :try_start_0
+    invoke-interface {v5, p1}, Lcom/android/internal/statusbar/IStatusBarService;->updateDisplayPowerStatus(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v5
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "can\'t notify statusbar service: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
     :goto_2
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_7
 
     iget-boolean v5, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffBecauseOfProximity:Z
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_7
 
     iget v5, p0, Lcom/android/server/display/DisplayPowerController;->mReportedScreenStateToPolicy:I
 
-    if-ne v5, v3, :cond_4
+    if-ne v5, v3, :cond_6
 
     invoke-direct {p0, v4}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
@@ -5747,16 +5832,16 @@
 
     goto :goto_3
 
-    :cond_4
+    :cond_6
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mPendingScreenOffUnblocker:Lcom/android/server/display/DisplayPowerController$ScreenOffUnblocker;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_7
 
     return v0
 
-    :cond_5
+    :cond_7
     :goto_3
-    if-nez p2, :cond_6
+    if-nez p2, :cond_8
 
     const-wide/32 v5, 0x20000
 
@@ -5776,29 +5861,29 @@
 
     invoke-virtual {v3, p1}, Lcom/android/server/display/DisplayPowerState;->setScreenState(I)V
 
-    :try_start_0
+    :try_start_1
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
     invoke-interface {v3, p1}, Lcom/android/internal/app/IBatteryStats;->noteScreenState(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_4
 
-    :catch_0
+    :catch_1
     move-exception v3
 
-    :cond_6
+    :cond_8
     :goto_4
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_9
 
     iget v3, p0, Lcom/android/server/display/DisplayPowerController;->mReportedScreenStateToPolicy:I
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_9
 
     iget-boolean v3, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffBecauseOfProximity:Z
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_9
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
@@ -5810,12 +5895,12 @@
 
     goto :goto_5
 
-    :cond_7
-    if-nez v2, :cond_8
+    :cond_9
+    if-nez v2, :cond_a
 
     iget v3, p0, Lcom/android/server/display/DisplayPowerController;->mReportedScreenStateToPolicy:I
 
-    if-ne v3, v4, :cond_8
+    if-ne v3, v4, :cond_a
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->unblockScreenOff()V
 
@@ -5825,13 +5910,13 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
-    :cond_8
+    :cond_a
     :goto_5
-    if-nez v2, :cond_a
+    if-nez v2, :cond_c
 
     iget v3, p0, Lcom/android/server/display/DisplayPowerController;->mReportedScreenStateToPolicy:I
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_c
 
     invoke-direct {p0, v1}, Lcom/android/server/display/DisplayPowerController;->setReportedScreenState(I)V
 
@@ -5845,13 +5930,13 @@
 
     cmpl-float v3, v3, v4
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_b
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->blockScreenOn()V
 
     goto :goto_6
 
-    :cond_9
+    :cond_b
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->unblockScreenOn()V
 
     :goto_6
@@ -5861,21 +5946,21 @@
 
     invoke-interface {v3, v4}, Lcom/android/server/policy/WindowManagerPolicy;->screenTurningOn(Lcom/android/server/policy/WindowManagerPolicy$ScreenOnListener;)V
 
-    :cond_a
-    if-eqz v2, :cond_b
+    :cond_c
+    if-eqz v2, :cond_d
 
     invoke-static {v0}, Lcom/android/server/am/OpRestartProcessManagerInjector;->doWriteRecord(Z)V
 
-    :cond_b
+    :cond_d
     invoke-static {v2}, Lcom/android/server/am/OpRestartProcessManagerInjector;->setScreenState(Z)V
 
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController;->mPendingScreenOnUnblocker:Lcom/android/server/display/DisplayPowerController$ScreenOnUnblocker;
 
-    if-nez v3, :cond_c
+    if-nez v3, :cond_e
 
     move v0, v1
 
-    :cond_c
+    :cond_e
     return v0
 .end method
 

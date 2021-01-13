@@ -228,7 +228,7 @@
 
     move-result-object v2
 
-    const-string v3, "install_sessions.xml"
+    const-string/jumbo v3, "install_sessions.xml"
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -244,7 +244,7 @@
 
     move-result-object v1
 
-    const-string v2, "install_sessions"
+    const-string/jumbo v2, "install_sessions"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 

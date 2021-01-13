@@ -55,7 +55,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 42
+    .locals 43
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -127,71 +127,73 @@
 
     const-string v9, "com.xunmeng.pinduoduo"
 
-    const-string v10, "com.youku.phone"
+    const-string v10, "air.tv.douyu.android"
 
-    const-string v11, "com.baidu.searchbox"
+    const-string v11, "com.youku.phone"
 
-    const-string v12, "com.baidu.tieba"
+    const-string v12, "com.baidu.searchbox"
 
-    const-string v13, "com.kugou.android"
+    const-string v13, "com.baidu.tieba"
 
-    const-string v14, "com.tencent.android.qqdownloader"
+    const-string v14, "com.kugou.android"
 
-    const-string v15, "com.xingin.xhs"
+    const-string v15, "com.tencent.android.qqdownloader"
 
-    const-string v16, "com.tencent.qqpimsecure"
+    const-string v16, "com.xingin.xhs"
 
-    const-string v17, "sogou.mobile.explorer"
+    const-string v17, "com.tencent.qqpimsecure"
 
-    const-string v18, "com.xiaomi.smarthome"
+    const-string v18, "sogou.mobile.explorer"
 
-    const-string v19, "com.unionpay"
+    const-string v19, "com.xiaomi.smarthome"
 
-    const-string v20, "com.tencent.weread"
+    const-string v20, "com.unionpay"
 
-    const-string v21, "com.cmbchina.ccd.pluto.cmbActivity"
+    const-string v21, "com.tencent.weread"
 
-    const-string v22, "com.hupu.games"
+    const-string v22, "com.cmbchina.ccd.pluto.cmbActivity"
 
-    const-string v23, "com.tencent.tim"
+    const-string v23, "com.hupu.games"
 
-    const-string v24, "com.google.earth"
+    const-string v24, "com.tencent.tim"
 
-    const-string v25, "jp.naver.line.android"
+    const-string v25, "com.google.earth"
 
-    const-string v26, "com.tencent.mobileqq"
+    const-string v26, "jp.naver.line.android"
 
-    const-string v27, "com.qq.reader"
+    const-string v27, "com.tencent.mobileqq"
 
-    const-string v28, "com.nintendo.znca"
+    const-string v28, "com.qq.reader"
 
-    const-string v29, "com.icbc"
+    const-string v29, "com.nintendo.znca"
 
-    const-string v30, "com.baidu.netdisk"
+    const-string v30, "com.icbc"
 
-    const-string v31, "cn.kuwo.player"
+    const-string v31, "com.baidu.netdisk"
 
-    const-string v32, "ctrip.android.view"
+    const-string v32, "cn.kuwo.player"
 
-    const-string v33, "com.baidu.homework"
+    const-string v33, "ctrip.android.view"
 
-    const-string v34, "com.alibaba.aliyun"
+    const-string v34, "com.baidu.homework"
 
-    const-string v35, "com.eastmoney.android.berlin"
+    const-string v35, "com.alibaba.aliyun"
 
-    const-string v36, "com.netease.mail"
+    const-string v36, "com.eastmoney.android.berlin"
 
-    const-string v37, "com.cainiao.wireless"
+    const-string v37, "com.netease.mail"
 
-    const-string v38, "com.google.android.apps.translate"
+    const-string v38, "com.cainiao.wireless"
 
-    const-string v39, "com.microsoft.teams"
+    const-string v39, "com.google.android.apps.translate"
 
-    const-string v40, "com.qiyi.video"
+    const-string v40, "com.microsoft.teams"
 
-    const-string v41, "com.iqiyi.i18n"
+    const-string v41, "com.qiyi.video"
 
-    filled-new-array/range {v2 .. v41}, [Ljava/lang/String;
+    const-string v42, "com.iqiyi.i18n"
+
+    filled-new-array/range {v2 .. v42}, [Ljava/lang/String;
 
     move-result-object v1
 

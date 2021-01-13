@@ -7926,7 +7926,13 @@
 
     const/4 v8, 0x2
 
-    if-ne v3, v8, :cond_5
+    if-eq v3, v8, :cond_4
+
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isNavIconHide()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
 
     :cond_4
     iget-object v3, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mNotificationManager:Landroid/app/NotificationManager;

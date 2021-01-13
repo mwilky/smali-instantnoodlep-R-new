@@ -127,6 +127,20 @@
     return v0
 .end method
 
+.method public static isNavIconHide()Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->ensureInterfaceNotNull()V
+
+    sget-object v0, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->sOpPhoneWindowManager:Lcom/android/server/policy/IOpPhoneWindowManager;
+
+    invoke-interface {v0}, Lcom/android/server/policy/IOpPhoneWindowManager;->isNavIconHide()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isShuttingDown()Z
     .locals 1
 

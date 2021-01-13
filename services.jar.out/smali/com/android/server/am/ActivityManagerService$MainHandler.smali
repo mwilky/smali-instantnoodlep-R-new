@@ -627,12 +627,6 @@
     if-eqz v3, :cond_9
 
     :try_start_f
-    iget v3, v2, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    const-string/jumbo v4, "update timeZone"
-
-    invoke-static {v3, v4}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
-
     iget-object v3, v2, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
     invoke-interface {v3}, Landroid/app/IApplicationThread;->updateTimeZone()V
