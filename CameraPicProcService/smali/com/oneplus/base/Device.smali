@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final FEATURE_FORCE_TREAT_AS_ALLIES1_DEVICE:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_FORCE_TREAT_AS_ONEPLUS_DEVICE:Lcom/oneplus/util/Feature;
 
 .field public static final ONEPLUS_PRODUCT_LIST:[Ljava/lang/String;
@@ -22,6 +24,8 @@
 
 .field private static volatile m_CustomType:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
+.field private static volatile m_IsAllies1:Ljava/lang/Boolean;
+
 .field private static volatile m_IsChinaRegion:Ljava/lang/Boolean;
 
 .field private static volatile m_IsHbmSupported:Ljava/lang/Boolean;
@@ -29,6 +33,8 @@
 .field private static volatile m_IsHydrogenOS:Ljava/lang/Boolean;
 
 .field private static volatile m_IsIndiaRegion:Ljava/lang/Boolean;
+
+.field private static volatile m_IsOPlus:Ljava/lang/Boolean;
 
 .field private static volatile m_IsOnePlus:Ljava/lang/Boolean;
 
@@ -79,6 +85,14 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/base/Device;->FEATURE_FORCE_TREAT_AS_ONEPLUS_DEVICE:Lcom/oneplus/util/Feature;
+
+    const-string v0, "Device.ForceTreatAsAllies1Device"
+
+    invoke-static {v0}, Lcom/oneplus/util/Feature;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->FEATURE_FORCE_TREAT_AS_ALLIES1_DEVICE:Lcom/oneplus/util/Feature;
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -283,6 +297,166 @@
     invoke-static {v1, v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
+.end method
+
+.method public static isAllies1()Z
+    .locals 6
+
+    sget-object v0, Lcom/oneplus/base/Device;->FEATURE_FORCE_TREAT_AS_ALLIES1_DEVICE:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v0}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const-string v0, "ro.product.brand"
+
+    invoke-static {v0}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_2
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    sub-int/2addr v3, v1
+
+    :goto_0
+    if-ltz v3, :cond_9
+
+    sget-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    if-eqz v4, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    const/16 v4, 0x6f
+
+    if-eqz v3, :cond_6
+
+    if-eq v3, v1, :cond_5
+
+    const/4 v5, 0x2
+
+    if-eq v3, v5, :cond_5
+
+    const/4 v5, 0x3
+
+    if-eq v3, v5, :cond_4
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    sput-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v5
+
+    if-eq v5, v4, :cond_8
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    sput-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    const/16 v5, 0x70
+
+    if-eq v4, v5, :cond_8
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    sput-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v5
+
+    if-ne v5, v4, :cond_7
+
+    move v4, v1
+
+    goto :goto_1
+
+    :cond_7
+    move v4, v2
+
+    :goto_1
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    sput-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    :cond_8
+    :goto_2
+    add-int/lit8 v3, v3, -0x1
+
+    goto :goto_0
+
+    :cond_9
+    :goto_3
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static isChinaRegion()Z
@@ -725,6 +899,91 @@
 
     :goto_0
     sget-object v0, Lcom/oneplus/base/Device;->m_IsIndiaRegion:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isOPCameraSupported()Z
+    .locals 2
+
+    const-string v0, "ro.opcamera.support"
+
+    invoke-static {v0}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public static isOPlus()Z
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsOPlus:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsOPlus:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/base/Device;->isOnePlus()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isAllies1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->m_IsOPlus:Ljava/lang/Boolean;
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsOPlus:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 

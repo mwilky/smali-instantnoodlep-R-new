@@ -1907,31 +1907,35 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mIsHomePageStatus:Z
 
-    iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+    iget-object v0, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
-    if-nez p1, :cond_1
+    if-nez v0, :cond_1
 
     invoke-virtual {p0}, Lcom/google/android/material/emptyview/EmptyPageView;->getPaddingBottom()I
 
-    move-result p1
+    move-result v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput v0, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mEmptyBottomPadding:I
+    iput v1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mEmptyBottomPadding:I
 
-    invoke-super {p0, v0, v0, v0, v0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    invoke-super {p0, v1, v1, v1, v1}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    new-instance v1, Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+    new-instance v2, Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
     invoke-virtual {p0}, Lcom/google/android/material/emptyview/EmptyPageView;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-direct {v1, v2}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+    iput-object v2, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
-    iget-object v1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+    iget-object v2, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+
+    invoke-virtual {v2, p1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setIsEmpty(Z)V
+
+    iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
@@ -1939,9 +1943,9 @@
 
     invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v1, v2}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v2}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+    iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
     invoke-virtual {p0}, Lcom/google/android/material/emptyview/EmptyPageView;->getPaddingLeft()I
 
@@ -1955,7 +1959,7 @@
 
     move-result v4
 
-    invoke-virtual {v1, v2, v3, v4, p1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setPadding(IIII)V
+    invoke-virtual {p1, v2, v3, v4, v0}, Lcom/google/android/material/edgeeffect/SpringNestScrollView;->setPadding(IIII)V
 
     iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mBaseView:Landroid/widget/LinearLayout;
 
@@ -1963,22 +1967,22 @@
 
     iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mBaseView:Landroid/widget/LinearLayout;
 
-    sget v1, Lcom/google/android/material/R$id;->control_empty_space1:I
+    sget v0, Lcom/google/android/material/R$id;->control_empty_space1:I
 
-    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
     iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->mBaseView:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p1, v0, v0, v0, v0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    invoke-virtual {p1, v1, v1, v1, v1}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     iget-object p1, p0, Lcom/google/android/material/emptyview/EmptyPageView;->scrollView:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 

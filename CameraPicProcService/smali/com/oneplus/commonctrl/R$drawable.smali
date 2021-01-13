@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final dialog_background_material:I = 0x7f080070
+.field public static final dialog_background_material:I = 0x7f080071
 
 
 # direct methods

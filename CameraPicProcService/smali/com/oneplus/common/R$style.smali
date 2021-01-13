@@ -19,41 +19,41 @@
 
 .field public static final OnePlus_TextAppearance_List_Title:I = 0x7f110112
 
-.field public static final TextAppearance_Compat_Notification:I = 0x7f1101dd
+.field public static final TextAppearance_Compat_Notification:I = 0x7f1101de
 
-.field public static final TextAppearance_Compat_Notification_Info:I = 0x7f1101de
+.field public static final TextAppearance_Compat_Notification_Info:I = 0x7f1101df
 
-.field public static final TextAppearance_Compat_Notification_Line2:I = 0x7f1101df
+.field public static final TextAppearance_Compat_Notification_Line2:I = 0x7f1101e0
 
-.field public static final TextAppearance_Compat_Notification_Time:I = 0x7f1101e0
+.field public static final TextAppearance_Compat_Notification_Time:I = 0x7f1101e1
 
-.field public static final TextAppearance_Compat_Notification_Title:I = 0x7f1101e1
+.field public static final TextAppearance_Compat_Notification_Title:I = 0x7f1101e2
 
-.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f1102d4
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f1102d5
 
-.field public static final Widget_Compat_NotificationActionText:I = 0x7f1102d5
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f1102d6
 
-.field public static final op_control_text_style_base:I = 0x7f110358
+.field public static final op_control_text_style_base:I = 0x7f110359
 
-.field public static final op_control_text_style_body1:I = 0x7f110359
+.field public static final op_control_text_style_body1:I = 0x7f11035a
 
-.field public static final op_control_text_style_button:I = 0x7f11035a
+.field public static final op_control_text_style_button:I = 0x7f11035b
 
-.field public static final op_control_text_style_descriptions:I = 0x7f11035b
+.field public static final op_control_text_style_descriptions:I = 0x7f11035c
 
-.field public static final op_control_text_style_h1:I = 0x7f11035c
+.field public static final op_control_text_style_h1:I = 0x7f11035d
 
-.field public static final op_control_text_style_h2:I = 0x7f11035d
+.field public static final op_control_text_style_h2:I = 0x7f11035e
 
-.field public static final op_control_text_style_h3:I = 0x7f11035e
+.field public static final op_control_text_style_h3:I = 0x7f11035f
 
-.field public static final op_control_text_style_h4:I = 0x7f11035f
+.field public static final op_control_text_style_h4:I = 0x7f110360
 
-.field public static final op_control_text_style_h5:I = 0x7f110360
+.field public static final op_control_text_style_h5:I = 0x7f110361
 
-.field public static final op_control_text_style_h6:I = 0x7f110361
+.field public static final op_control_text_style_h6:I = 0x7f110362
 
-.field public static final op_control_text_style_subtitle:I = 0x7f110362
+.field public static final op_control_text_style_subtitle:I = 0x7f110363
 
 
 # direct methods

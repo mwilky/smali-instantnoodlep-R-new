@@ -120,6 +120,8 @@
 
 .field private final mTextInputPickerView:Lcom/google/android/material/picker/TextInputTimePickerView;
 
+.field private final mTimeHeaderLayout:Landroid/view/View;
+
 .field private mWindow:Landroid/view/Window;
 
 
@@ -416,6 +418,14 @@
     invoke-direct {v4, v5}, Lcom/google/android/material/picker/TimePickerClockDelegate$NearestTouchDelegate;-><init>(Lcom/google/android/material/picker/TimePickerClockDelegate$1;)V
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    sget v3, Lcom/google/android/material/R$id;->time_header_layout:I
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mTimeHeaderLayout:Landroid/view/View;
 
     invoke-static {p2}, Lcom/google/android/material/picker/TimePicker;->getAmPmStrings(Landroid/content/Context;)[Ljava/lang/String;
 
@@ -2277,6 +2287,8 @@
 
     invoke-direct {p0, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setAmPmAtStart(Z)V
 
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->updateTimeHeaderPosition(Z)V
+
     invoke-direct {p0, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setInputAmPmAtStart(Z)V
 
     iget v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mCurrentHour:I
@@ -2627,6 +2639,91 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/picker/TextInputTimePickerView;->updateTextInputValues(IIIZZ)V
 
+    return-void
+.end method
+
+.method private updateTimeHeaderPosition(Z)V
+    .locals 3
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mAmLabel:Landroid/widget/RadioButton;
+
+    invoke-virtual {p1}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const/4 v0, 0x4
+
+    if-le p1, v0, :cond_2
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mTimeHeaderLayout:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    instance-of v0, p1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/google/android/material/R$dimen;->op_control_margin_space6:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    const/16 v1, 0x14
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mTimeHeaderLayout:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mRadialTimePickerHeader:Landroid/widget/RelativeLayout;
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mTimeHeaderLayout:Landroid/view/View;
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mRadialTimePickerHeader:Landroid/widget/RelativeLayout;
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate;->mTimeHeaderLayout:Landroid/view/View;
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+
+    :cond_2
     return-void
 .end method
 
