@@ -29,14 +29,20 @@
     return-void
 .end method
 
+.method private synthetic lambda$updateView$0(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public updateView(Ljava/lang/String;I)V
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->updateViewImpl(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method private updateViewImpl(Ljava/lang/String;I)V
     .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -66,10 +72,18 @@
 
     if-ne p2, v0, :cond_1
 
+    iget-object p2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
+
+    invoke-static {p2}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
     :try_start_0
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p2, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$100(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
+    invoke-static {p2, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$300(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
 
     move-result-object p2
 
@@ -123,7 +137,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$300(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$400(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -145,5 +159,42 @@
 
     :cond_1
     :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public synthetic lambda$updateView$0$BluetoothTile$1(Ljava/lang/String;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->lambda$updateView$0(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public updateView(Ljava/lang/String;I)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
+
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$1;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
+
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/android/systemui/qs/tiles/-$$Lambda$BluetoothTile$1$GRxIaWvDtxd1o_3yFKy3qShKziE;
+
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/systemui/qs/tiles/-$$Lambda$BluetoothTile$1$GRxIaWvDtxd1o_3yFKy3qShKziE;-><init>(Lcom/android/systemui/qs/tiles/BluetoothTile$1;Ljava/lang/String;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
     return-void
 .end method

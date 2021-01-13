@@ -2347,11 +2347,11 @@
 
     iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_a
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_4
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
@@ -2413,34 +2413,36 @@
 
     if-eqz v1, :cond_3
 
-    move v6, v7
+    move v1, v7
+
+    goto :goto_1
 
     :cond_3
-    invoke-virtual {v3, v4, v6}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+    move v1, v6
+
+    :goto_1
+    invoke-virtual {v3, v4, v1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
 
     invoke-virtual {v3, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
-    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    if-nez v1, :cond_4
-
-    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/oneplus/plugin/OpLsState;->getPhoneStatusBar()Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    :cond_4
     iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mNavBarController:Lcom/android/systemui/statusbar/NavigationBarController;
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/NavigationBarController;->getDefaultNavigationBarFragment()Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
     move-result-object v1
 
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_4
+    move v1, v7
+
+    :goto_2
     iget-object v3, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v3}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
@@ -2451,45 +2453,64 @@
 
     sget-boolean v3, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
 
-    if-eqz v3, :cond_5
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
-
-    move-result v1
-
-    goto :goto_1
+    if-nez v3, :cond_6
 
     :cond_5
-    move v1, v7
+    iget v3, p0, Lcom/android/systemui/recents/OverviewProxyService;->mNavBarMode:I
 
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v3}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v3
 
-    const-string v4, "Update nav bar is hidden :"
+    if-eqz v3, :cond_6
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v3, v7
 
-    xor-int/lit8 v4, v1, 0x1
+    goto :goto_3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :cond_6
+    move v3, v6
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_3
+    sget-boolean v4, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
-    move-result-object v3
+    if-eqz v4, :cond_7
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Update nav bar is hidden, navBarWindowVidsble:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", navBarHidde:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
     iget-object v2, p0, Lcom/android/systemui/recents/OverviewProxyService;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    xor-int/2addr v1, v7
+    if-nez v1, :cond_8
 
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+    if-nez v3, :cond_8
+
+    move v6, v7
+
+    :cond_8
+    invoke-virtual {v2, v4, v6}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
 
     invoke-virtual {v2, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
@@ -2499,7 +2520,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_9
 
     iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
@@ -2519,7 +2540,7 @@
 
     invoke-virtual {v1, v0}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
-    :cond_6
+    :cond_9
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
     invoke-virtual {v0}, Lcom/android/systemui/model/SysUiState;->getFlags()I
@@ -2528,8 +2549,8 @@
 
     invoke-direct {p0, v0}, Lcom/android/systemui/recents/OverviewProxyService;->notifySystemUiStateFlags(I)V
 
-    :cond_7
-    :goto_2
+    :cond_a
+    :goto_4
     return-void
 .end method
 

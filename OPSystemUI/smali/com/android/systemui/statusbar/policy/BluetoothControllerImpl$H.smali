@@ -77,13 +77,13 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {v2}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-static {v2}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$800(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {v3}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$700(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+    invoke-static {v3}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$900(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
 
     move-result v3
 
@@ -160,7 +160,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$800(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Z
+    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$1000(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Z
 
     move-result p0
 
@@ -172,7 +172,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+    .locals 6
 
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -196,12 +196,12 @@
 
     if-eq v0, p1, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_0
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->fireActvieDeviceChange()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->mCallbacks:Ljava/util/ArrayList;
@@ -230,7 +230,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
 
     move-result p1
 
@@ -240,7 +240,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
 
     move-result p1
 
@@ -250,27 +250,90 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
 
     move-result p1
 
     const/16 v0, 0xd
 
-    if-ne p1, v0, :cond_6
+    if-ne p1, v0, :cond_7
 
     :cond_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$502(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;Z)Z
+    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$702(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;Z)Z
 
     goto :goto_0
 
     :cond_5
-    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->firePairedDevicesChanged()V
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    const-wide/16 v4, 0x190
+
+    cmp-long p1, v2, v4
+
+    if-gez p1, :cond_6
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$500(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$500(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$500(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)J
+
+    move-result-wide v1
+
+    add-long/2addr v1, v4
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
+
+    return-void
 
     :cond_6
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->this$0:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {p1, v0, v1}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->access$402(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;J)J
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;->firePairedDevicesChanged()V
+
+    :cond_7
     :goto_0
     return-void
 .end method

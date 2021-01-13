@@ -57,7 +57,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$20;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$900(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object p0
 

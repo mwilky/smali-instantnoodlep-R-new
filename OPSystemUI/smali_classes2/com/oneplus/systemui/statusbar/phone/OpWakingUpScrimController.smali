@@ -130,7 +130,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
+.method static synthetic access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->selfRemoveFromWindow(Z)V
@@ -138,7 +146,7 @@
     return-void
 .end method
 
-.method static synthetic access$502(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
+.method static synthetic access$602(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->mIsAnimationStarted:Z

@@ -2339,7 +2339,7 @@
     </style>
     <style name="OnePlus.Widget.AppCompat.Raised.Label" parent="@style/Widget.AppCompat.TextView">
         <item name="android:textAppearance">@style/op_control_text_style_descriptions</item>
-        <item name="android:textColor">@color/op_btn_text_material</item>
+        <item name="android:textColor">@color/op_control_text_color_primary_dark</item>
         <item name="android:background">@drawable/op_label_raised_shape</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -3263,7 +3263,7 @@
     </style>
     <style name="TextAppearance.Design.Error" parent="@style/TextAppearance.AppCompat.Caption">
         <item name="android:textAppearance">@style/op_control_text_style_descriptions</item>
-        <item name="android:textColor">#ffeb0028</item>
+        <item name="android:textColor">@color/op_control_state_color_error_default</item>
     </style>
     <style name="TextAppearance.Design.HelperText" parent="@style/TextAppearance.AppCompat.Caption" />
     <style name="TextAppearance.Design.Hint" parent="@style/TextAppearance.AppCompat.Caption">

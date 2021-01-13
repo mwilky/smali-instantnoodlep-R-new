@@ -116,7 +116,7 @@
     :goto_0
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$10;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)V
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)V
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController$10;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 

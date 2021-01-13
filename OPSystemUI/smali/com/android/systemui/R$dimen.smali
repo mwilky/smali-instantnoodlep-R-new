@@ -708,11 +708,7 @@
 
 .field public static final op_front_camera_animation_front_camera_posistion:I = 0x7f0706e8
 
-.field public static final op_front_camera_animation_front_camera_posistion_second:I = 0x7f0706e9
-
 .field public static final op_front_camera_animation_front_camera_posistion_y:I = 0x7f0706ea
-
-.field public static final op_front_camera_animation_front_camera_posistion_y_second:I = 0x7f0706eb
 
 .field public static final op_front_camera_animation_height:I = 0x7f0706ec
 
@@ -872,372 +868,374 @@
 
 .field public static final op_volume_dialog_output_chooser_padding2:I = 0x7f0707ac
 
-.field public static final op_volume_dialog_panel_transparent_padding:I = 0x7f0707ad
+.field public static final op_volume_dialog_panel_transparent_padding:I = 0x7f0707ae
 
-.field public static final op_volume_dialog_panel_width:I = 0x7f0707ae
+.field public static final op_volume_dialog_panel_width:I = 0x7f0707af
 
-.field public static final op_volume_dialog_row_margin_bottom:I = 0x7f0707af
+.field public static final op_volume_dialog_row_margin_bottom:I = 0x7f0707b0
 
-.field public static final op_volume_dialog_settings_container_height:I = 0x7f0707b1
+.field public static final op_volume_dialog_settings_container_height:I = 0x7f0707b2
 
-.field public static final op_volume_dialog_settings_margin:I = 0x7f0707b2
+.field public static final op_volume_dialog_settings_margin:I = 0x7f0707b3
 
-.field public static final op_volume_dialog_slider_height:I = 0x7f0707b3
+.field public static final op_volume_dialog_slider_height:I = 0x7f0707b4
 
-.field public static final op_volume_dialog_slider_margin_bottom:I = 0x7f0707b4
+.field public static final op_volume_dialog_slider_margin_bottom:I = 0x7f0707b5
 
-.field public static final op_volume_dialog_slider_width:I = 0x7f0707b6
+.field public static final op_volume_dialog_slider_width:I = 0x7f0707b7
 
-.field public static final op_volume_dialog_volume_row_connected_device_text_size:I = 0x7f0707b8
+.field public static final op_volume_dialog_volume_row_connected_device_text_size:I = 0x7f0707b9
 
-.field public static final op_warp_charging_wireless_anim_info_battery_level_container_height:I = 0x7f0707c6
+.field public static final op_vzw_signal_indicator_to_icon_frame_spacing:I = 0x7f0707c0
 
-.field public static final op_warp_charging_wireless_anim_info_battery_level_height:I = 0x7f0707c7
+.field public static final op_warp_charging_wireless_anim_info_battery_level_container_height:I = 0x7f0707c8
 
-.field public static final op_warp_charging_wireless_anim_info_battery_level_text_padding_left:I = 0x7f0707c8
+.field public static final op_warp_charging_wireless_anim_info_battery_level_height:I = 0x7f0707c9
 
-.field public static final op_warp_charging_wireless_anim_info_battery_level_text_size:I = 0x7f0707c9
+.field public static final op_warp_charging_wireless_anim_info_battery_level_text_padding_left:I = 0x7f0707ca
 
-.field public static final op_warp_charging_wireless_anim_info_view_height:I = 0x7f0707cb
+.field public static final op_warp_charging_wireless_anim_info_battery_level_text_size:I = 0x7f0707cb
 
-.field public static final op_warp_charging_wireless_anim_info_warp_view_margin_top:I = 0x7f0707cc
+.field public static final op_warp_charging_wireless_anim_info_view_height:I = 0x7f0707cd
 
-.field public static final op_warp_charging_wireless_text_image_height:I = 0x7f0707cd
+.field public static final op_warp_charging_wireless_anim_info_warp_view_margin_top:I = 0x7f0707ce
 
-.field public static final op_warp_charging_wireless_text_image_width:I = 0x7f0707ce
+.field public static final op_warp_charging_wireless_text_image_height:I = 0x7f0707cf
 
-.field public static final overflow_dot_radius:I = 0x7f0707d1
+.field public static final op_warp_charging_wireless_text_image_width:I = 0x7f0707d0
 
-.field public static final overflow_icon_dot_padding:I = 0x7f0707d2
+.field public static final overflow_dot_radius:I = 0x7f0707d3
 
-.field public static final password_char_padding:I = 0x7f0707d8
+.field public static final overflow_icon_dot_padding:I = 0x7f0707d4
 
-.field public static final password_dot_size:I = 0x7f0707da
+.field public static final password_char_padding:I = 0x7f0707da
 
-.field public static final pip_action_padding:I = 0x7f0707ec
+.field public static final password_dot_size:I = 0x7f0707dc
 
-.field public static final pip_between_action_padding_land:I = 0x7f0707ee
+.field public static final pip_action_padding:I = 0x7f0707ee
 
-.field public static final pip_bottom_offset_buffer:I = 0x7f0707ef
+.field public static final pip_between_action_padding_land:I = 0x7f0707f0
 
-.field public static final pip_corner_radius:I = 0x7f0707f0
+.field public static final pip_bottom_offset_buffer:I = 0x7f0707f1
 
-.field public static final pip_expand_container_edge_margin:I = 0x7f0707f2
+.field public static final pip_corner_radius:I = 0x7f0707f2
 
-.field public static final pip_expanded_shortest_edge_size:I = 0x7f0707f3
+.field public static final pip_expand_container_edge_margin:I = 0x7f0707f4
 
-.field public static final pip_ime_offset:I = 0x7f0707f4
+.field public static final pip_expanded_shortest_edge_size:I = 0x7f0707f5
 
-.field public static final pip_resize_edge_size:I = 0x7f0707f5
+.field public static final pip_ime_offset:I = 0x7f0707f6
 
-.field public static final player_hit_size:I = 0x7f0707f8
+.field public static final pip_resize_edge_size:I = 0x7f0707f7
 
-.field public static final player_size:I = 0x7f0707f9
+.field public static final player_hit_size:I = 0x7f0707fa
 
-.field public static final player_z:I = 0x7f0707fa
+.field public static final player_size:I = 0x7f0707fb
 
-.field public static final player_z_boost:I = 0x7f0707fb
+.field public static final player_z:I = 0x7f0707fc
 
-.field public static final prevent_view_cancel_margin_horizontal:I = 0x7f070804
+.field public static final player_z_boost:I = 0x7f0707fd
 
-.field public static final prevent_view_img_height:I = 0x7f070805
+.field public static final prevent_view_cancel_margin_horizontal:I = 0x7f070806
 
-.field public static final prevent_view_img_margin_top:I = 0x7f070806
+.field public static final prevent_view_img_height:I = 0x7f070807
 
-.field public static final prevent_view_img_width:I = 0x7f070807
+.field public static final prevent_view_img_margin_top:I = 0x7f070808
 
-.field public static final prevent_view_inner_view_margin_top:I = 0x7f070808
+.field public static final prevent_view_img_width:I = 0x7f070809
 
-.field public static final prevent_view_title_cancel_margin_top:I = 0x7f070809
+.field public static final prevent_view_inner_view_margin_top:I = 0x7f07080a
 
-.field public static final prevent_view_title_cancel_size:I = 0x7f07080a
+.field public static final prevent_view_title_cancel_margin_top:I = 0x7f07080b
 
-.field public static final prevent_view_title_margin_horizontal:I = 0x7f07080b
+.field public static final prevent_view_title_cancel_size:I = 0x7f07080c
 
-.field public static final prevent_view_title_size:I = 0x7f07080c
+.field public static final prevent_view_title_margin_horizontal:I = 0x7f07080d
 
-.field public static final prevent_view_top_tag_size:I = 0x7f07080d
+.field public static final prevent_view_title_size:I = 0x7f07080e
 
-.field public static final prevent_view_top_tag_view1_margin_top:I = 0x7f07080e
+.field public static final prevent_view_top_tag_size:I = 0x7f07080f
 
-.field public static final prevent_view_top_tag_view2_margin_top:I = 0x7f07080f
+.field public static final prevent_view_top_tag_view1_margin_top:I = 0x7f070810
 
-.field public static final proximity_sensor_threshold:I = 0x7f070811
+.field public static final prevent_view_top_tag_view2_margin_top:I = 0x7f070811
 
-.field public static final pull_span_min:I = 0x7f070812
+.field public static final proximity_sensor_threshold:I = 0x7f070813
 
-.field public static final pulsing_notification_appear_translation:I = 0x7f070813
+.field public static final pull_span_min:I = 0x7f070814
 
-.field public static final qqs_media_spacing:I = 0x7f070814
+.field public static final pulsing_notification_appear_translation:I = 0x7f070815
 
-.field public static final qs_data_usage_text_size:I = 0x7f07082c
+.field public static final qqs_media_spacing:I = 0x7f070816
 
-.field public static final qs_data_usage_usage_text_size:I = 0x7f07082d
+.field public static final qs_data_usage_text_size:I = 0x7f07082e
 
-.field public static final qs_detail_button_text_size:I = 0x7f070831
+.field public static final qs_data_usage_usage_text_size:I = 0x7f07082f
 
-.field public static final qs_detail_empty_text_size:I = 0x7f070832
+.field public static final qs_detail_button_text_size:I = 0x7f070833
 
-.field public static final qs_detail_header_text_size:I = 0x7f070836
+.field public static final qs_detail_empty_text_size:I = 0x7f070834
 
-.field public static final qs_detail_icon_overlay_size:I = 0x7f070837
+.field public static final qs_detail_header_text_size:I = 0x7f070838
 
-.field public static final qs_detail_item_primary_text_size:I = 0x7f070840
+.field public static final qs_detail_icon_overlay_size:I = 0x7f070839
 
-.field public static final qs_detail_item_secondary_text_size:I = 0x7f070841
+.field public static final qs_detail_item_primary_text_size:I = 0x7f070842
 
-.field public static final qs_edit_tile_height:I = 0x7f070849
+.field public static final qs_detail_item_secondary_text_size:I = 0x7f070843
 
-.field public static final qs_edit_tile_margin:I = 0x7f07084a
+.field public static final qs_edit_tile_height:I = 0x7f07084b
 
-.field public static final qs_edit_tile_width:I = 0x7f07084b
+.field public static final qs_edit_tile_margin:I = 0x7f07084c
 
-.field public static final qs_falsing_threshold:I = 0x7f07084d
+.field public static final qs_edit_tile_width:I = 0x7f07084d
 
-.field public static final qs_footer_horizontal_margin:I = 0x7f070853
+.field public static final qs_falsing_threshold:I = 0x7f07084f
 
-.field public static final qs_framed_avatar_size:I = 0x7f07085c
+.field public static final qs_footer_horizontal_margin:I = 0x7f070855
 
-.field public static final qs_header_tile_margin_bottom:I = 0x7f070865
+.field public static final qs_framed_avatar_size:I = 0x7f07085e
 
-.field public static final qs_header_tooltip_height:I = 0x7f070867
+.field public static final qs_header_tile_margin_bottom:I = 0x7f070867
 
-.field public static final qs_media_album_size:I = 0x7f07086a
+.field public static final qs_header_tooltip_height:I = 0x7f070869
 
-.field public static final qs_media_disabled_seekbar_height:I = 0x7f07086b
+.field public static final qs_media_album_size:I = 0x7f07086c
 
-.field public static final qs_media_enabled_seekbar_height:I = 0x7f07086c
+.field public static final qs_media_disabled_seekbar_height:I = 0x7f07086d
 
-.field public static final qs_media_padding:I = 0x7f07086e
+.field public static final qs_media_enabled_seekbar_height:I = 0x7f07086e
 
-.field public static final qs_notification_padding:I = 0x7f070872
+.field public static final qs_media_padding:I = 0x7f070870
 
-.field public static final qs_page_indicator_height:I = 0x7f070873
+.field public static final qs_notification_padding:I = 0x7f070874
 
-.field public static final qs_page_indicator_width:I = 0x7f070874
+.field public static final qs_page_indicator_height:I = 0x7f070875
 
-.field public static final qs_paged_tile_layout_padding_bottom:I = 0x7f070875
+.field public static final qs_page_indicator_width:I = 0x7f070876
 
-.field public static final qs_panel_padding_bottom:I = 0x7f070877
+.field public static final qs_paged_tile_layout_padding_bottom:I = 0x7f070877
 
-.field public static final qs_panel_padding_top:I = 0x7f070878
+.field public static final qs_panel_padding_bottom:I = 0x7f070879
 
-.field public static final qs_panel_width:I = 0x7f070879
+.field public static final qs_panel_padding_top:I = 0x7f07087a
 
-.field public static final qs_peek_height:I = 0x7f07087a
+.field public static final qs_panel_width:I = 0x7f07087b
 
-.field public static final qs_quick_header_panel_height:I = 0x7f07087b
+.field public static final qs_peek_height:I = 0x7f07087c
 
-.field public static final qs_quick_tile_padding:I = 0x7f07087c
+.field public static final qs_quick_header_panel_height:I = 0x7f07087d
 
-.field public static final qs_quick_tile_size:I = 0x7f07087d
+.field public static final qs_quick_tile_padding:I = 0x7f07087e
 
-.field public static final qs_signal_indicator_shift_down_amount:I = 0x7f070881
+.field public static final qs_quick_tile_size:I = 0x7f07087f
 
-.field public static final qs_tile_background_size:I = 0x7f070884
+.field public static final qs_signal_indicator_shift_down_amount:I = 0x7f070883
 
-.field public static final qs_tile_height:I = 0x7f070887
+.field public static final qs_tile_background_size:I = 0x7f070886
 
-.field public static final qs_tile_icon_size:I = 0x7f070888
+.field public static final qs_tile_height:I = 0x7f070889
 
-.field public static final qs_tile_layout_margin_side:I = 0x7f070889
+.field public static final qs_tile_icon_size:I = 0x7f07088a
 
-.field public static final qs_tile_margin_horizontal:I = 0x7f07088a
+.field public static final qs_tile_layout_margin_side:I = 0x7f07088b
 
-.field public static final qs_tile_margin_horizontal_two_line:I = 0x7f07088b
+.field public static final qs_tile_margin_horizontal:I = 0x7f07088c
 
-.field public static final qs_tile_margin_row:I = 0x7f07088c
+.field public static final qs_tile_margin_horizontal_two_line:I = 0x7f07088d
 
-.field public static final qs_tile_margin_top:I = 0x7f07088d
+.field public static final qs_tile_margin_row:I = 0x7f07088e
 
-.field public static final qs_tile_margin_vertical:I = 0x7f070890
+.field public static final qs_tile_margin_top:I = 0x7f07088f
 
-.field public static final qs_tile_text_size:I = 0x7f070895
+.field public static final qs_tile_margin_vertical:I = 0x7f070892
 
-.field public static final quick_reply_notification_height:I = 0x7f07089c
+.field public static final qs_tile_text_size:I = 0x7f070897
 
-.field public static final quick_settings_bottom_margin_media:I = 0x7f07089d
+.field public static final quick_reply_notification_height:I = 0x7f07089e
 
-.field public static final recents_onboarding_toast_arrow_corner_radius:I = 0x7f07089f
+.field public static final quick_settings_bottom_margin_media:I = 0x7f07089f
 
-.field public static final recents_quick_scrub_onboarding_margin_start:I = 0x7f0708a0
+.field public static final recents_onboarding_toast_arrow_corner_radius:I = 0x7f0708a1
 
-.field public static final remote_input_history_extra_height:I = 0x7f0708a3
+.field public static final recents_quick_scrub_onboarding_margin_start:I = 0x7f0708a2
 
-.field public static final rounded_corner_content_padding:I = 0x7f0708a7
+.field public static final remote_input_history_extra_height:I = 0x7f0708a5
 
-.field public static final rounded_corner_radius_bottom:I = 0x7f0708a8
+.field public static final rounded_corner_content_padding:I = 0x7f0708a9
 
-.field public static final rounded_corner_radius_bottom_width:I = 0x7f0708a9
+.field public static final rounded_corner_radius_bottom:I = 0x7f0708aa
 
-.field public static final rounded_corner_radius_top:I = 0x7f0708aa
+.field public static final rounded_corner_radius_bottom_width:I = 0x7f0708ab
 
-.field public static final rounded_corner_radius_top_width:I = 0x7f0708ab
+.field public static final rounded_corner_radius_top:I = 0x7f0708ac
 
-.field public static final scenery_z:I = 0x7f0708ac
+.field public static final rounded_corner_radius_top_width:I = 0x7f0708ad
 
-.field public static final screen_pinning_description_bullet_gap_width:I = 0x7f0708ad
+.field public static final scenery_z:I = 0x7f0708ae
 
-.field public static final screenrecord_status_icon_height:I = 0x7f0708bd
+.field public static final screen_pinning_description_bullet_gap_width:I = 0x7f0708af
 
-.field public static final screenrecord_status_icon_radius:I = 0x7f0708be
+.field public static final screenrecord_status_icon_height:I = 0x7f0708bf
 
-.field public static final screenrecord_status_icon_width:I = 0x7f0708bf
+.field public static final screenrecord_status_icon_radius:I = 0x7f0708c0
 
-.field public static final screenrecord_status_text_size:I = 0x7f0708c0
+.field public static final screenrecord_status_icon_width:I = 0x7f0708c1
 
-.field public static final screenshot_dismissal_height_delta:I = 0x7f0708d3
+.field public static final screenrecord_status_text_size:I = 0x7f0708c2
 
-.field public static final scroll_fast_threshold:I = 0x7f0708d8
+.field public static final screenshot_dismissal_height_delta:I = 0x7f0708d5
 
-.field public static final shape_corner_radius:I = 0x7f0708e3
+.field public static final scroll_fast_threshold:I = 0x7f0708da
 
-.field public static final shape_corner_radius_cutting_edge_circle:I = 0x7f0708e4
+.field public static final shape_corner_radius:I = 0x7f0708e5
 
-.field public static final shape_corner_radius_cutting_edge_roundedrect:I = 0x7f0708e5
+.field public static final shape_corner_radius_cutting_edge_circle:I = 0x7f0708e6
 
-.field public static final shape_corner_radius_cutting_edge_squircle:I = 0x7f0708e6
+.field public static final shape_corner_radius_cutting_edge_roundedrect:I = 0x7f0708e7
 
-.field public static final shape_corner_radius_cutting_edge_teardrop:I = 0x7f0708e7
+.field public static final shape_corner_radius_cutting_edge_squircle:I = 0x7f0708e8
 
-.field public static final shape_corner_radius_for_check_roundedrect:I = 0x7f0708e8
+.field public static final shape_corner_radius_cutting_edge_teardrop:I = 0x7f0708e9
 
-.field public static final shape_corner_radius_for_check_squircle:I = 0x7f0708e9
+.field public static final shape_corner_radius_for_check_roundedrect:I = 0x7f0708ea
 
-.field public static final shape_corner_radius_for_check_teardrop:I = 0x7f0708ea
+.field public static final shape_corner_radius_for_check_squircle:I = 0x7f0708eb
 
-.field public static final shelf_appear_translation:I = 0x7f0708eb
+.field public static final shape_corner_radius_for_check_teardrop:I = 0x7f0708ec
 
-.field public static final shelf_icon_container_padding:I = 0x7f0708ec
+.field public static final shelf_appear_translation:I = 0x7f0708ed
 
-.field public static final shelf_transform_content_shift:I = 0x7f0708ed
+.field public static final shelf_icon_container_padding:I = 0x7f0708ee
 
-.field public static final signal_indicator_to_icon_frame_spacing:I = 0x7f0708f2
+.field public static final shelf_transform_content_shift:I = 0x7f0708ef
 
-.field public static final single_notification_horizontal_margin:I = 0x7f0708f3
+.field public static final signal_indicator_to_icon_frame_spacing:I = 0x7f0708f4
 
-.field public static final single_notification_icon_height:I = 0x7f0708f4
+.field public static final single_notification_horizontal_margin:I = 0x7f0708f5
 
-.field public static final single_notification_icon_width:I = 0x7f0708f5
+.field public static final single_notification_icon_height:I = 0x7f0708f6
 
-.field public static final smart_action_button_icon_size:I = 0x7f0708fc
+.field public static final single_notification_icon_width:I = 0x7f0708f7
 
-.field public static final smart_reply_button_max_height:I = 0x7f070900
+.field public static final smart_action_button_icon_size:I = 0x7f0708fe
 
-.field public static final snooze_snackbar_min_height:I = 0x7f07090f
+.field public static final smart_reply_button_max_height:I = 0x7f070902
 
-.field public static final star_size_max:I = 0x7f07091f
+.field public static final snooze_snackbar_min_height:I = 0x7f070911
 
-.field public static final star_size_min:I = 0x7f070920
+.field public static final star_size_max:I = 0x7f070921
 
-.field public static final status_bar_battery_icon_height:I = 0x7f070922
+.field public static final star_size_min:I = 0x7f070922
 
-.field public static final status_bar_battery_icon_width:I = 0x7f070923
+.field public static final status_bar_battery_icon_height:I = 0x7f070924
 
-.field public static final status_bar_clock_end_padding:I = 0x7f070924
+.field public static final status_bar_battery_icon_width:I = 0x7f070925
 
-.field public static final status_bar_clock_size:I = 0x7f070925
+.field public static final status_bar_clock_end_padding:I = 0x7f070926
 
-.field public static final status_bar_clock_starting_padding:I = 0x7f070926
+.field public static final status_bar_clock_size:I = 0x7f070927
 
-.field public static final status_bar_header_height_keyguard:I = 0x7f07092a
+.field public static final status_bar_clock_starting_padding:I = 0x7f070928
 
-.field public static final status_bar_height:I = 0x7f07092c
+.field public static final status_bar_header_height_keyguard:I = 0x7f07092c
 
-.field public static final status_bar_horizontal_padding:I = 0x7f07092d
+.field public static final status_bar_height:I = 0x7f07092e
 
-.field public static final status_bar_icon_drawing_alpha:I = 0x7f07092e
+.field public static final status_bar_horizontal_padding:I = 0x7f07092f
 
-.field public static final status_bar_icon_drawing_size:I = 0x7f07092f
+.field public static final status_bar_icon_drawing_alpha:I = 0x7f070930
 
-.field public static final status_bar_icon_drawing_size_dark:I = 0x7f070930
+.field public static final status_bar_icon_drawing_size:I = 0x7f070931
 
-.field public static final status_bar_icon_padding:I = 0x7f070931
+.field public static final status_bar_icon_drawing_size_dark:I = 0x7f070932
 
-.field public static final status_bar_icon_scale_factor:I = 0x7f070932
+.field public static final status_bar_icon_padding:I = 0x7f070933
 
-.field public static final status_bar_icon_size:I = 0x7f070933
+.field public static final status_bar_icon_scale_factor:I = 0x7f070934
 
-.field public static final status_bar_notification_icon_padding:I = 0x7f070936
+.field public static final status_bar_icon_size:I = 0x7f070935
 
-.field public static final status_bar_padding_end:I = 0x7f070938
+.field public static final status_bar_notification_icon_padding:I = 0x7f070938
 
-.field public static final status_bar_padding_start:I = 0x7f070939
+.field public static final status_bar_padding_end:I = 0x7f07093a
 
-.field public static final status_bar_padding_top:I = 0x7f07093a
+.field public static final status_bar_padding_start:I = 0x7f07093b
 
-.field public static final status_bar_system_icon_spacing:I = 0x7f07093b
+.field public static final status_bar_padding_top:I = 0x7f07093c
 
-.field public static final statusbar_mobile_type_overlap:I = 0x7f07093e
+.field public static final status_bar_system_icon_spacing:I = 0x7f07093d
 
-.field public static final statusbar_mobile_type_overlap_plus:I = 0x7f07093f
+.field public static final statusbar_mobile_type_overlap:I = 0x7f070940
 
-.field public static final subtitle_clock_padding:I = 0x7f070940
+.field public static final statusbar_mobile_type_overlap_plus:I = 0x7f070941
 
-.field public static final sun_size:I = 0x7f070944
+.field public static final subtitle_clock_padding:I = 0x7f070942
 
-.field public static final swipe_helper_falsing_threshold:I = 0x7f070945
+.field public static final sun_size:I = 0x7f070946
 
-.field public static final system_icons_keyguard_padding_end:I = 0x7f070948
+.field public static final swipe_helper_falsing_threshold:I = 0x7f070947
 
-.field public static final system_icons_super_container_avatarless_margin_end:I = 0x7f070949
+.field public static final system_icons_keyguard_padding_end:I = 0x7f07094a
 
-.field public static final system_icons_super_container_margin_start:I = 0x7f07094a
+.field public static final system_icons_super_container_avatarless_margin_end:I = 0x7f07094b
 
-.field public static final system_icons_switcher_hidden_expanded_margin:I = 0x7f07094b
+.field public static final system_icons_super_container_margin_start:I = 0x7f07094c
 
-.field public static final three_key_down_dialog_position:I = 0x7f070951
+.field public static final system_icons_switcher_hidden_expanded_margin:I = 0x7f07094d
 
-.field public static final three_key_down_dialog_position_l:I = 0x7f070952
+.field public static final three_key_down_dialog_position:I = 0x7f070953
 
-.field public static final three_key_middle_dialog_position:I = 0x7f070955
+.field public static final three_key_down_dialog_position_l:I = 0x7f070954
 
-.field public static final three_key_middle_dialog_position_l:I = 0x7f070956
+.field public static final three_key_middle_dialog_position:I = 0x7f070957
 
-.field public static final three_key_up_dialog_position:I = 0x7f07095a
+.field public static final three_key_middle_dialog_position_l:I = 0x7f070958
 
-.field public static final three_key_up_dialog_position_deep:I = 0x7f07095b
+.field public static final three_key_up_dialog_position:I = 0x7f07095c
 
-.field public static final three_key_up_dialog_position_deep_land:I = 0x7f07095c
+.field public static final three_key_up_dialog_position_deep:I = 0x7f07095d
 
-.field public static final three_key_up_dialog_position_l:I = 0x7f07095d
+.field public static final three_key_up_dialog_position_deep_land:I = 0x7f07095e
 
-.field public static final title_clock_padding:I = 0x7f070979
+.field public static final three_key_up_dialog_position_l:I = 0x7f07095f
 
-.field public static final translation_per_sec:I = 0x7f070986
+.field public static final title_clock_padding:I = 0x7f07097b
 
-.field public static final trust_circle_inner_radius_enter:I = 0x7f070987
+.field public static final translation_per_sec:I = 0x7f070988
 
-.field public static final trust_circle_inner_radius_exit:I = 0x7f070988
+.field public static final trust_circle_inner_radius_enter:I = 0x7f070989
 
-.field public static final trust_circle_inner_radius_visible_max:I = 0x7f070989
+.field public static final trust_circle_inner_radius_exit:I = 0x7f07098a
 
-.field public static final trust_circle_inner_radius_visible_min:I = 0x7f07098a
+.field public static final trust_circle_inner_radius_visible_max:I = 0x7f07098b
 
-.field public static final trust_circle_thickness:I = 0x7f07098b
+.field public static final trust_circle_inner_radius_visible_min:I = 0x7f07098c
 
-.field public static final unlock_falsing_threshold:I = 0x7f07098e
+.field public static final trust_circle_thickness:I = 0x7f07098d
 
-.field public static final volume_tool_tip_arrow_corner_radius:I = 0x7f0709bc
+.field public static final unlock_falsing_threshold:I = 0x7f070990
 
-.field public static final wide_type_icon_start_padding_qs:I = 0x7f0709c1
+.field public static final volume_tool_tip_arrow_corner_radius:I = 0x7f0709be
 
-.field public static final widget_horizontal_padding:I = 0x7f0709c4
+.field public static final wide_type_icon_start_padding_qs:I = 0x7f0709c3
 
-.field public static final widget_icon_padding:I = 0x7f0709c5
+.field public static final widget_horizontal_padding:I = 0x7f0709c6
 
-.field public static final widget_icon_size:I = 0x7f0709c6
+.field public static final widget_icon_padding:I = 0x7f0709c7
 
-.field public static final widget_small_font_size:I = 0x7f0709c8
+.field public static final widget_icon_size:I = 0x7f0709c8
 
-.field public static final widget_vertical_padding:I = 0x7f0709ca
+.field public static final widget_small_font_size:I = 0x7f0709ca
 
-.field public static final widget_vertical_padding_clock:I = 0x7f0709cb
+.field public static final widget_vertical_padding:I = 0x7f0709cc
 
-.field public static final widget_vertical_padding_with_header:I = 0x7f0709cc
+.field public static final widget_vertical_padding_clock:I = 0x7f0709cd
 
-.field public static final wireless_charging_anim_battery_level_text_size_end:I = 0x7f0709ce
+.field public static final widget_vertical_padding_with_header:I = 0x7f0709ce
 
-.field public static final wireless_charging_anim_battery_level_text_size_start:I = 0x7f0709cf
+.field public static final wireless_charging_anim_battery_level_text_size_end:I = 0x7f0709d0
 
-.field public static final z_distance_between_notifications:I = 0x7f0709d6
+.field public static final wireless_charging_anim_battery_level_text_size_start:I = 0x7f0709d1
+
+.field public static final z_distance_between_notifications:I = 0x7f0709d8

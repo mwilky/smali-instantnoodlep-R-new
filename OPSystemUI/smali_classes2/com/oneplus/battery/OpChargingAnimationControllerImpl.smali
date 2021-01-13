@@ -324,7 +324,23 @@
     return p1
 .end method
 
-.method static synthetic access$1302(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpBatteryStatus;)Lcom/oneplus/battery/OpBatteryStatus;
+.method static synthetic access$1300(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1302(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1402(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Lcom/oneplus/battery/OpBatteryStatus;)Lcom/oneplus/battery/OpBatteryStatus;
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBatteryStatus:Lcom/oneplus/battery/OpBatteryStatus;
@@ -332,7 +348,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)I
+.method static synthetic access$1500(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldChargingType:I
@@ -340,7 +356,7 @@
     return p0
 .end method
 
-.method static synthetic access$1402(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
+.method static synthetic access$1502(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldChargingType:I
@@ -348,7 +364,7 @@
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
+.method static synthetic access$1600(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mShouldPlayChargeSound:Z
@@ -356,7 +372,7 @@
     return p0
 .end method
 
-.method static synthetic access$1502(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
+.method static synthetic access$1602(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mShouldPlayChargeSound:Z
@@ -364,7 +380,7 @@
     return p1
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/android/systemui/keyguard/ScreenLifecycle;
+.method static synthetic access$1700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Lcom/android/systemui/keyguard/ScreenLifecycle;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
@@ -372,7 +388,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
+.method static synthetic access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldPluggedInAndCharging:Z
@@ -380,20 +396,12 @@
     return p0
 .end method
 
-.method static synthetic access$1702(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
+.method static synthetic access$1802(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOldPluggedInAndCharging:Z
 
     return p1
-.end method
-
-.method static synthetic access$1800(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
-
-    return p0
 .end method
 
 .method static synthetic access$1902(Lcom/oneplus/battery/OpChargingAnimationControllerImpl;I)I
@@ -993,6 +1001,8 @@
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
 
+    if-eqz v1, :cond_1
+
     invoke-virtual {v1, v0}, Lcom/oneplus/battery/OpWarpChargingView;->updaetScrimColor(I)V
 
     iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
@@ -1484,11 +1494,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    if-eq v0, v1, :cond_8
+    if-eq v0, v1, :cond_9
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mScreenLifecycle:Lcom/android/systemui/keyguard/ScreenLifecycle;
 
@@ -1512,23 +1522,36 @@
     :goto_0
     iget-boolean v2, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->isKeyguardShowing:Z
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mBouncerShow:Z
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_a
 
     iget-boolean v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mPreventViewShow:Z
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_a
 
+    iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
+
+    if-eqz v1, :cond_2
+
+    invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->updateScrim()V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
+
+    invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingView;->startAnimation()V
+
+    goto :goto_1
+
+    :cond_2
     invoke-virtual {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->isAnimationStarted()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->TAG:Ljava/lang/String;
 
@@ -1552,7 +1575,7 @@
 
     return-void
 
-    :cond_2
+    :cond_3
     invoke-direct {p0}, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->updateScrim()V
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isSupportREDCharging()Z
@@ -1563,76 +1586,70 @@
 
     const/4 v4, 0x4
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpCBWarpChargingView:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    if-ne p1, v4, :cond_3
+    if-ne p1, v4, :cond_4
 
     invoke-virtual {v1, v2}, Lcom/oneplus/battery/OpCBWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     invoke-virtual {v1, v3}, Lcom/oneplus/battery/OpCBWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     sget-boolean v1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V2:Z
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     iget-object v1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpSWarpChargingView:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    if-ne p1, v4, :cond_5
+    if-ne p1, v4, :cond_6
 
     invoke-virtual {v1, v2}, Lcom/oneplus/battery/OpSWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     invoke-virtual {v1, v3}, Lcom/oneplus/battery/OpSWarpChargingView;->notifyWarpCharging(I)V
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     sget-boolean p1, Lcom/oneplus/util/OpUtils;->SUPPORT_CHARGING_ANIM_V1:Z
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpNewWarpChargingView:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     invoke-virtual {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->notifyWarpCharging()V
 
-    goto :goto_1
-
-    :cond_7
-    iget-object p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mOpWarpChargingView:Lcom/oneplus/battery/OpWarpChargingView;
-
-    invoke-virtual {p1}, Lcom/oneplus/battery/OpWarpChargingView;->startAnimation()V
-
+    :cond_8
     :goto_1
     iput-boolean v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
     goto :goto_2
 
-    :cond_8
-    if-nez v0, :cond_9
+    :cond_9
+    if-nez v0, :cond_a
 
     iget-boolean p1, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    if-eq v0, p1, :cond_9
+    if-eq v0, p1, :cond_a
 
     iput-boolean v0, p0, Lcom/oneplus/battery/OpChargingAnimationControllerImpl;->mWarpFastCharging:Z
 
-    :cond_9
+    :cond_a
     :goto_2
     return-void
 .end method

@@ -32,6 +32,12 @@
     return-void
 .end method
 
+.method public onDisplayPowerStatusChanged(I)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onEnvironmentLightChanged(Z)V
     .locals 0
 

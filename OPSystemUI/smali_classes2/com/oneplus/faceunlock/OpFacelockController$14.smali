@@ -91,13 +91,13 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -147,7 +147,7 @@
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -527,13 +527,13 @@
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -574,13 +574,13 @@
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p3
 
@@ -598,7 +598,7 @@
 
     iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p3
 
@@ -624,13 +624,13 @@
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -684,7 +684,7 @@
 
     iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p3
 
@@ -745,13 +745,13 @@
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p3
 
@@ -793,13 +793,13 @@
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    invoke-static {p3}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
 
     move-result-object p3
 
@@ -841,7 +841,7 @@
     :goto_7
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$14;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3200(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
 
     move-result-object v5
 

@@ -2618,1242 +2618,1168 @@
 
 .field public static final op_battery_mask_95:I = 0x7f080b94
 
-.field public static final op_carmode_dnd_qs_icon:I = 0x7f080bb9
+.field public static final op_carmode_dnd_qs_icon:I = 0x7f080bba
 
-.field public static final op_circle_invalid_charge:I = 0x7f080c0a
+.field public static final op_circle_invalid_charge:I = 0x7f080c0b
 
-.field public static final op_circle_optimized_charging:I = 0x7f080c0b
+.field public static final op_circle_optimized_charging:I = 0x7f080c0c
 
-.field public static final op_dash_charging_state_0:I = 0x7f080c10
+.field public static final op_dash_charging_state_0:I = 0x7f080c11
 
-.field public static final op_dash_charging_state_10:I = 0x7f080c11
+.field public static final op_dash_charging_state_10:I = 0x7f080c12
 
-.field public static final op_dash_charging_state_100:I = 0x7f080c12
+.field public static final op_dash_charging_state_100:I = 0x7f080c13
 
-.field public static final op_dash_charging_state_20:I = 0x7f080c13
+.field public static final op_dash_charging_state_20:I = 0x7f080c14
 
-.field public static final op_dash_charging_state_30:I = 0x7f080c14
+.field public static final op_dash_charging_state_30:I = 0x7f080c15
 
-.field public static final op_dash_charging_state_40:I = 0x7f080c15
+.field public static final op_dash_charging_state_40:I = 0x7f080c16
 
-.field public static final op_dash_charging_state_50:I = 0x7f080c16
+.field public static final op_dash_charging_state_50:I = 0x7f080c17
 
-.field public static final op_dash_charging_state_60:I = 0x7f080c17
+.field public static final op_dash_charging_state_60:I = 0x7f080c18
 
-.field public static final op_dash_charging_state_70:I = 0x7f080c18
+.field public static final op_dash_charging_state_70:I = 0x7f080c19
 
-.field public static final op_dash_charging_state_80:I = 0x7f080c19
+.field public static final op_dash_charging_state_80:I = 0x7f080c1a
 
-.field public static final op_dash_charging_state_90:I = 0x7f080c1a
+.field public static final op_dash_charging_state_90:I = 0x7f080c1b
 
-.field public static final op_error_to_trustedstate_animation:I = 0x7f080c25
+.field public static final op_error_to_trustedstate_animation:I = 0x7f080c26
 
-.field public static final op_facelock_lock_ripple_drawable:I = 0x7f080c26
+.field public static final op_facelock_lock_ripple_drawable:I = 0x7f080c27
 
-.field public static final op_front_camera_animation_circle_000:I = 0x7f080c28
+.field public static final op_front_camera_animation_circle_000:I = 0x7f080c29
 
-.field public static final op_front_camera_animation_graph:I = 0x7f080c29
+.field public static final op_front_camera_animation_graph:I = 0x7f080c2a
 
-.field public static final op_gesture_button_side_back:I = 0x7f080c2a
+.field public static final op_gesture_button_side_back:I = 0x7f080c2b
 
-.field public static final op_ic_battery_saver:I = 0x7f080c2e
+.field public static final op_ic_battery_saver:I = 0x7f080c2f
 
-.field public static final op_ic_battery_saver_outline:I = 0x7f080c2f
+.field public static final op_ic_battery_saver_outline:I = 0x7f080c30
 
-.field public static final op_ic_lock_power_off:I = 0x7f080c38
+.field public static final op_ic_lock_power_off:I = 0x7f080c39
 
-.field public static final op_ic_qs_airplane:I = 0x7f080c3d
+.field public static final op_ic_qs_airplane:I = 0x7f080c3e
 
-.field public static final op_ic_qs_auto_rotate:I = 0x7f080c3e
+.field public static final op_ic_qs_auto_rotate:I = 0x7f080c3f
 
-.field public static final op_ic_qs_battery_saver:I = 0x7f080c3f
+.field public static final op_ic_qs_battery_saver:I = 0x7f080c40
 
-.field public static final op_ic_qs_bluetooth:I = 0x7f080c40
+.field public static final op_ic_qs_bluetooth:I = 0x7f080c41
 
-.field public static final op_ic_qs_cast:I = 0x7f080c41
+.field public static final op_ic_qs_cast:I = 0x7f080c42
 
-.field public static final op_ic_qs_data_saver:I = 0x7f080c42
+.field public static final op_ic_qs_data_saver:I = 0x7f080c43
 
-.field public static final op_ic_qs_data_switch_1:I = 0x7f080c43
+.field public static final op_ic_qs_data_switch_1:I = 0x7f080c44
 
-.field public static final op_ic_qs_data_switch_2:I = 0x7f080c44
+.field public static final op_ic_qs_data_switch_2:I = 0x7f080c45
 
-.field public static final op_ic_qs_dnd:I = 0x7f080c45
+.field public static final op_ic_qs_dnd:I = 0x7f080c46
 
-.field public static final op_ic_qs_flashlight:I = 0x7f080c46
+.field public static final op_ic_qs_flashlight:I = 0x7f080c47
 
-.field public static final op_ic_qs_invert_colors:I = 0x7f080c47
+.field public static final op_ic_qs_invert_colors:I = 0x7f080c48
 
-.field public static final op_ic_qs_location:I = 0x7f080c48
+.field public static final op_ic_qs_location:I = 0x7f080c49
 
-.field public static final op_ic_qs_nfc_enabled:I = 0x7f080c49
+.field public static final op_ic_qs_nfc_enabled:I = 0x7f080c4a
 
-.field public static final op_ic_qs_night_display_on:I = 0x7f080c4a
+.field public static final op_ic_qs_night_display_on:I = 0x7f080c4b
 
-.field public static final op_ic_qs_no_sim:I = 0x7f080c4b
+.field public static final op_ic_qs_no_sim:I = 0x7f080c4c
 
-.field public static final op_ic_qs_otg:I = 0x7f080c4c
+.field public static final op_ic_qs_otg:I = 0x7f080c4d
 
-.field public static final op_ic_qs_read_mode:I = 0x7f080c4d
+.field public static final op_ic_qs_read_mode:I = 0x7f080c4e
 
-.field public static final op_ic_qs_vpn:I = 0x7f080c4f
+.field public static final op_ic_qs_vpn:I = 0x7f080c50
 
-.field public static final op_ic_qs_wifi_0:I = 0x7f080c50
+.field public static final op_ic_qs_wifi_0:I = 0x7f080c51
 
-.field public static final op_ic_qs_wifi_1:I = 0x7f080c51
+.field public static final op_ic_qs_wifi_1:I = 0x7f080c52
 
-.field public static final op_ic_qs_wifi_2:I = 0x7f080c52
+.field public static final op_ic_qs_wifi_2:I = 0x7f080c53
 
-.field public static final op_ic_qs_wifi_3:I = 0x7f080c53
+.field public static final op_ic_qs_wifi_3:I = 0x7f080c54
 
-.field public static final op_ic_qs_wifi_4:I = 0x7f080c54
+.field public static final op_ic_qs_wifi_4:I = 0x7f080c55
 
-.field public static final op_ic_qs_wifi_disabled:I = 0x7f080c55
+.field public static final op_ic_qs_wifi_disabled:I = 0x7f080c56
 
-.field public static final op_ic_qs_wifi_full_0:I = 0x7f080c56
+.field public static final op_ic_qs_wifi_full_0:I = 0x7f080c57
 
-.field public static final op_ic_qs_wifi_full_1:I = 0x7f080c57
+.field public static final op_ic_qs_wifi_full_1:I = 0x7f080c58
 
-.field public static final op_ic_qs_wifi_full_2:I = 0x7f080c58
+.field public static final op_ic_qs_wifi_full_2:I = 0x7f080c59
 
-.field public static final op_ic_qs_wifi_full_3:I = 0x7f080c59
+.field public static final op_ic_qs_wifi_full_3:I = 0x7f080c5a
 
-.field public static final op_ic_qs_wifi_full_4:I = 0x7f080c5a
+.field public static final op_ic_qs_wifi_full_4:I = 0x7f080c5b
 
-.field public static final op_ic_qs_wifi_no_network:I = 0x7f080c5b
+.field public static final op_ic_qs_wifi_no_network:I = 0x7f080c5c
 
-.field public static final op_ic_restart:I = 0x7f080c5d
+.field public static final op_ic_restart:I = 0x7f080c5e
 
-.field public static final op_ic_ring:I = 0x7f080c5e
+.field public static final op_ic_ring:I = 0x7f080c5f
 
-.field public static final op_ic_settings:I = 0x7f080c60
+.field public static final op_ic_settings:I = 0x7f080c61
 
-.field public static final op_ic_signal_wifi_transient_animation:I = 0x7f080c62
+.field public static final op_ic_signal_wifi_transient_animation:I = 0x7f080c63
 
-.field public static final op_ic_silence:I = 0x7f080c63
+.field public static final op_ic_silence:I = 0x7f080c64
 
-.field public static final op_ic_vibrate:I = 0x7f080c64
+.field public static final op_ic_vibrate:I = 0x7f080c65
 
-.field public static final op_ic_volume_alarm:I = 0x7f080c65
+.field public static final op_ic_volume_alarm:I = 0x7f080c66
 
-.field public static final op_ic_weather_cloudy:I = 0x7f080c66
+.field public static final op_ic_weather_cloudy:I = 0x7f080c67
 
-.field public static final op_ic_weather_fog:I = 0x7f080c67
+.field public static final op_ic_weather_fog:I = 0x7f080c68
 
-.field public static final op_ic_weather_hail:I = 0x7f080c68
+.field public static final op_ic_weather_hail:I = 0x7f080c69
 
-.field public static final op_ic_weather_haze:I = 0x7f080c69
+.field public static final op_ic_weather_haze:I = 0x7f080c6a
 
-.field public static final op_ic_weather_overcast:I = 0x7f080c6a
+.field public static final op_ic_weather_overcast:I = 0x7f080c6b
 
-.field public static final op_ic_weather_rain:I = 0x7f080c6b
+.field public static final op_ic_weather_rain:I = 0x7f080c6c
 
-.field public static final op_ic_weather_sandstorm:I = 0x7f080c6c
+.field public static final op_ic_weather_sandstorm:I = 0x7f080c6d
 
-.field public static final op_ic_weather_sleet:I = 0x7f080c6d
+.field public static final op_ic_weather_sleet:I = 0x7f080c6e
 
-.field public static final op_ic_weather_snow:I = 0x7f080c6e
+.field public static final op_ic_weather_snow:I = 0x7f080c6f
 
-.field public static final op_ic_weather_sunny:I = 0x7f080c6f
+.field public static final op_ic_weather_sunny:I = 0x7f080c70
 
-.field public static final op_ic_weather_typhoon:I = 0x7f080c70
+.field public static final op_ic_weather_typhoon:I = 0x7f080c71
 
-.field public static final op_invalid_charge:I = 0x7f080c77
+.field public static final op_invalid_charge:I = 0x7f080c78
 
-.field public static final op_invalid_charge_outline:I = 0x7f080c78
+.field public static final op_invalid_charge_outline:I = 0x7f080c79
 
-.field public static final op_lockscreen_fingerprint_draw_off_animation:I = 0x7f080c7b
+.field public static final op_lockscreen_fingerprint_draw_off_animation:I = 0x7f080c7c
 
-.field public static final op_major_a_b_animation:I = 0x7f080c7d
+.field public static final op_major_a_b_animation:I = 0x7f080c7e
 
-.field public static final op_major_b_a_animation:I = 0x7f080c7f
+.field public static final op_major_b_a_animation:I = 0x7f080c80
 
-.field public static final op_major_b_c_animation:I = 0x7f080c81
+.field public static final op_major_b_c_animation:I = 0x7f080c82
 
-.field public static final op_major_c_b_animation:I = 0x7f080c83
+.field public static final op_major_c_b_animation:I = 0x7f080c84
 
-.field public static final op_minor_a_b:I = 0x7f080c84
+.field public static final op_minor_a_b:I = 0x7f080c85
 
-.field public static final op_minor_a_b_animation:I = 0x7f080c85
+.field public static final op_minor_a_b_animation:I = 0x7f080c86
 
-.field public static final op_minor_b_a_animation:I = 0x7f080c87
+.field public static final op_minor_b_a_animation:I = 0x7f080c88
 
-.field public static final op_minor_b_c_animation:I = 0x7f080c89
+.field public static final op_minor_b_c_animation:I = 0x7f080c8a
 
-.field public static final op_minor_c_b_animation:I = 0x7f080c8b
+.field public static final op_minor_c_b_animation:I = 0x7f080c8c
 
-.field public static final op_optimized_charging:I = 0x7f080c90
+.field public static final op_optimized_charging:I = 0x7f080c91
 
-.field public static final op_optimized_charging_outline:I = 0x7f080c91
+.field public static final op_optimized_charging_outline:I = 0x7f080c92
 
-.field public static final op_perm_group_location:I = 0x7f080c92
+.field public static final op_perm_group_location:I = 0x7f080c93
 
-.field public static final op_protect_charging_temperature:I = 0x7f080ca7
+.field public static final op_protect_charging_temperature:I = 0x7f080ca8
 
-.field public static final op_q_ic_qs_wifi_disabled:I = 0x7f080ca8
+.field public static final op_q_ic_qs_wifi_disabled:I = 0x7f080ca9
 
-.field public static final op_q_ic_qs_wifi_disconnected:I = 0x7f080ca9
+.field public static final op_q_ic_qs_wifi_disconnected:I = 0x7f080caa
 
-.field public static final op_q_stat_sys_wifi_signal_0:I = 0x7f080caa
+.field public static final op_q_stat_sys_wifi_signal_0:I = 0x7f080cab
 
-.field public static final op_q_stat_sys_wifi_signal_0_fully:I = 0x7f080cab
+.field public static final op_q_stat_sys_wifi_signal_0_fully:I = 0x7f080cac
 
-.field public static final op_q_stat_sys_wifi_signal_1:I = 0x7f080cac
+.field public static final op_q_stat_sys_wifi_signal_1:I = 0x7f080cad
 
-.field public static final op_q_stat_sys_wifi_signal_1_fully:I = 0x7f080cad
+.field public static final op_q_stat_sys_wifi_signal_1_fully:I = 0x7f080cae
 
-.field public static final op_q_stat_sys_wifi_signal_2:I = 0x7f080cae
+.field public static final op_q_stat_sys_wifi_signal_2:I = 0x7f080caf
 
-.field public static final op_q_stat_sys_wifi_signal_2_fully:I = 0x7f080caf
+.field public static final op_q_stat_sys_wifi_signal_2_fully:I = 0x7f080cb0
 
-.field public static final op_q_stat_sys_wifi_signal_3:I = 0x7f080cb0
+.field public static final op_q_stat_sys_wifi_signal_3:I = 0x7f080cb1
 
-.field public static final op_q_stat_sys_wifi_signal_3_fully:I = 0x7f080cb1
+.field public static final op_q_stat_sys_wifi_signal_3_fully:I = 0x7f080cb2
 
-.field public static final op_q_stat_sys_wifi_signal_4:I = 0x7f080cb2
+.field public static final op_q_stat_sys_wifi_signal_4:I = 0x7f080cb3
 
-.field public static final op_q_stat_sys_wifi_signal_4_fully:I = 0x7f080cb3
+.field public static final op_q_stat_sys_wifi_signal_4_fully:I = 0x7f080cb4
 
-.field public static final op_qs_dark_mode:I = 0x7f080cb4
+.field public static final op_qs_dark_mode:I = 0x7f080cb5
 
-.field public static final op_qs_footer_background_my:I = 0x7f080cb6
+.field public static final op_qs_footer_background_my:I = 0x7f080cb7
 
-.field public static final op_qs_red_all:I = 0x7f080cb7
+.field public static final op_qs_red_all:I = 0x7f080cb8
 
-.field public static final op_qs_red_detail_background:I = 0x7f080cb8
+.field public static final op_qs_red_detail_background:I = 0x7f080cb9
 
-.field public static final op_qs_red_middle:I = 0x7f080cb9
+.field public static final op_qs_red_middle:I = 0x7f080cba
 
-.field public static final op_qs_reverse_wireless_charge_icon:I = 0x7f080cba
+.field public static final op_qs_reverse_wireless_charge_icon:I = 0x7f080cbb
 
-.field public static final op_qs_widget_bg_dark:I = 0x7f080cbe
+.field public static final op_qs_widget_bg_dark:I = 0x7f080cbf
 
-.field public static final op_qs_widget_bg_light:I = 0x7f080cbf
+.field public static final op_qs_widget_bg_light:I = 0x7f080cc0
 
-.field public static final op_rounded_bg_full:I = 0x7f080cd5
+.field public static final op_rounded_bg_full:I = 0x7f080cd6
 
-.field public static final op_stat_sys_data_idle_3g:I = 0x7f080ce0
+.field public static final op_stat_sys_data_disconnected_5g:I = 0x7f080ce1
 
-.field public static final op_stat_sys_data_idle_4g_lte:I = 0x7f080ce1
+.field public static final op_stat_sys_data_disconnected_5g_uwb:I = 0x7f080ce2
 
-.field public static final op_stat_sys_data_idle_5g_uwb:I = 0x7f080ce2
+.field public static final op_stat_sys_data_idle_3g:I = 0x7f080ce3
 
-.field public static final op_stat_sys_wifi_signal_0:I = 0x7f080ce3
+.field public static final op_stat_sys_data_idle_4g_lte:I = 0x7f080ce4
 
-.field public static final op_stat_sys_wifi_signal_0_fully:I = 0x7f080ce4
+.field public static final op_stat_sys_data_idle_5g:I = 0x7f080ce5
 
-.field public static final op_stat_sys_wifi_signal_1:I = 0x7f080ce5
+.field public static final op_stat_sys_data_idle_5g_uwb:I = 0x7f080ce6
 
-.field public static final op_stat_sys_wifi_signal_1_fully:I = 0x7f080ce6
+.field public static final op_stat_sys_wifi_signal_0:I = 0x7f080ce7
 
-.field public static final op_stat_sys_wifi_signal_2:I = 0x7f080ce7
+.field public static final op_stat_sys_wifi_signal_0_fully:I = 0x7f080ce8
 
-.field public static final op_stat_sys_wifi_signal_2_fully:I = 0x7f080ce8
+.field public static final op_stat_sys_wifi_signal_1:I = 0x7f080ce9
 
-.field public static final op_stat_sys_wifi_signal_3:I = 0x7f080ce9
+.field public static final op_stat_sys_wifi_signal_1_fully:I = 0x7f080cea
 
-.field public static final op_stat_sys_wifi_signal_3_fully:I = 0x7f080cea
+.field public static final op_stat_sys_wifi_signal_2:I = 0x7f080ceb
 
-.field public static final op_stat_sys_wifi_signal_4:I = 0x7f080ceb
+.field public static final op_stat_sys_wifi_signal_2_fully:I = 0x7f080cec
 
-.field public static final op_stat_sys_wifi_signal_4_fully:I = 0x7f080cec
+.field public static final op_stat_sys_wifi_signal_3:I = 0x7f080ced
 
-.field public static final op_status_bar_notification_section_header_clear_btn:I = 0x7f080ced
+.field public static final op_stat_sys_wifi_signal_3_fully:I = 0x7f080cee
 
-.field public static final op_trusted_state_to_error_animation:I = 0x7f080d09
+.field public static final op_stat_sys_wifi_signal_4:I = 0x7f080cef
 
-.field public static final pip_icon:I = 0x7f080d16
+.field public static final op_stat_sys_wifi_signal_4_fully:I = 0x7f080cf0
 
-.field public static final prevent_mode_img:I = 0x7f080d1b
+.field public static final op_status_bar_notification_section_header_clear_btn:I = 0x7f080cf1
 
-.field public static final privacy_alert_icon_camera:I = 0x7f080d1c
+.field public static final op_trusted_state_to_error_animation:I = 0x7f080d0d
 
-.field public static final privacy_alert_icon_microphone:I = 0x7f080d1d
+.field public static final pip_icon:I = 0x7f080d1a
 
-.field public static final qs_ic_wifi_lock:I = 0x7f080d2b
+.field public static final prevent_mode_img:I = 0x7f080d1f
 
-.field public static final qs_panel_life_icon:I = 0x7f080d30
+.field public static final privacy_alert_icon_camera:I = 0x7f080d20
 
-.field public static final qs_panel_off_icon:I = 0x7f080d32
+.field public static final privacy_alert_icon_microphone:I = 0x7f080d21
 
-.field public static final qs_panel_work_icon:I = 0x7f080d34
+.field public static final qs_ic_wifi_lock:I = 0x7f080d2f
 
-.field public static final ripple_background_dark:I = 0x7f080d3a
+.field public static final qs_panel_life_icon:I = 0x7f080d34
 
-.field public static final ripple_background_white:I = 0x7f080d3b
+.field public static final qs_panel_off_icon:I = 0x7f080d36
 
-.field public static final ripple_drawable_pin:I = 0x7f080d3f
+.field public static final qs_panel_work_icon:I = 0x7f080d38
 
-.field public static final rounded:I = 0x7f080d41
+.field public static final ripple_background_dark:I = 0x7f080d3e
 
-.field public static final rounded_bg:I = 0x7f080d42
+.field public static final ripple_background_white:I = 0x7f080d3f
 
-.field public static final rounded_bg_bottom:I = 0x7f080d43
+.field public static final ripple_drawable_pin:I = 0x7f080d43
 
-.field public static final rounded_bg_full:I = 0x7f080d45
+.field public static final rounded:I = 0x7f080d45
 
-.field public static final rounded_bottom:I = 0x7f080d47
+.field public static final rounded_bg:I = 0x7f080d46
 
-.field public static final rounded_full_bg_bottom:I = 0x7f080d48
+.field public static final rounded_bg_bottom:I = 0x7f080d47
 
-.field public static final rounded_top:I = 0x7f080d4b
+.field public static final rounded_bg_full:I = 0x7f080d49
 
-.field public static final star:I = 0x7f080d58
+.field public static final rounded_bottom:I = 0x7f080d4b
 
-.field public static final stat_notify_image_error:I = 0x7f080d5a
+.field public static final rounded_full_bg_bottom:I = 0x7f080d4c
 
-.field public static final stat_sys_airplane_mode:I = 0x7f080d5b
+.field public static final rounded_top:I = 0x7f080d4f
 
-.field public static final stat_sys_alarm:I = 0x7f080d5c
+.field public static final star:I = 0x7f080d5c
 
-.field public static final stat_sys_alarm_dim:I = 0x7f080d5d
+.field public static final stat_notify_image_error:I = 0x7f080d5e
 
-.field public static final stat_sys_branded_vpn:I = 0x7f080d5e
+.field public static final stat_sys_airplane_mode:I = 0x7f080d5f
 
-.field public static final stat_sys_bt_battery_0:I = 0x7f080d5f
+.field public static final stat_sys_alarm:I = 0x7f080d60
 
-.field public static final stat_sys_bt_battery_1:I = 0x7f080d60
+.field public static final stat_sys_alarm_dim:I = 0x7f080d61
 
-.field public static final stat_sys_bt_battery_10:I = 0x7f080d61
+.field public static final stat_sys_branded_vpn:I = 0x7f080d62
 
-.field public static final stat_sys_bt_battery_1_dark:I = 0x7f080d62
+.field public static final stat_sys_bt_battery_0:I = 0x7f080d63
 
-.field public static final stat_sys_bt_battery_2:I = 0x7f080d63
+.field public static final stat_sys_bt_battery_1:I = 0x7f080d64
 
-.field public static final stat_sys_bt_battery_2_dark:I = 0x7f080d64
+.field public static final stat_sys_bt_battery_10:I = 0x7f080d65
 
-.field public static final stat_sys_bt_battery_3:I = 0x7f080d65
+.field public static final stat_sys_bt_battery_1_dark:I = 0x7f080d66
 
-.field public static final stat_sys_bt_battery_4:I = 0x7f080d66
+.field public static final stat_sys_bt_battery_2:I = 0x7f080d67
 
-.field public static final stat_sys_bt_battery_5:I = 0x7f080d67
+.field public static final stat_sys_bt_battery_2_dark:I = 0x7f080d68
 
-.field public static final stat_sys_bt_battery_6:I = 0x7f080d68
+.field public static final stat_sys_bt_battery_3:I = 0x7f080d69
 
-.field public static final stat_sys_bt_battery_7:I = 0x7f080d69
+.field public static final stat_sys_bt_battery_4:I = 0x7f080d6a
 
-.field public static final stat_sys_bt_battery_8:I = 0x7f080d6a
+.field public static final stat_sys_bt_battery_5:I = 0x7f080d6b
 
-.field public static final stat_sys_bt_battery_9:I = 0x7f080d6b
+.field public static final stat_sys_bt_battery_6:I = 0x7f080d6c
 
-.field public static final stat_sys_cast:I = 0x7f080d6d
+.field public static final stat_sys_bt_battery_7:I = 0x7f080d6d
 
-.field public static final stat_sys_data_bluetooth:I = 0x7f080d6e
+.field public static final stat_sys_bt_battery_8:I = 0x7f080d6e
 
-.field public static final stat_sys_data_bluetooth_connected:I = 0x7f080d6f
+.field public static final stat_sys_bt_battery_9:I = 0x7f080d6f
 
-.field public static final stat_sys_data_disabled:I = 0x7f080d70
+.field public static final stat_sys_cast:I = 0x7f080d71
 
-.field public static final stat_sys_data_disconnected_3g:I = 0x7f080d71
+.field public static final stat_sys_data_bluetooth:I = 0x7f080d72
 
-.field public static final stat_sys_data_disconnected_4g_lte:I = 0x7f080d72
+.field public static final stat_sys_data_bluetooth_connected:I = 0x7f080d73
 
-.field public static final stat_sys_data_fully_connected_1x:I = 0x7f080d73
+.field public static final stat_sys_data_disabled:I = 0x7f080d74
 
-.field public static final stat_sys_data_fully_connected_2g:I = 0x7f080d74
+.field public static final stat_sys_data_disconnected_3g:I = 0x7f080d75
 
-.field public static final stat_sys_data_fully_connected_3g:I = 0x7f080d75
+.field public static final stat_sys_data_disconnected_4g_lte:I = 0x7f080d76
 
-.field public static final stat_sys_data_fully_connected_3g_plus:I = 0x7f080d76
+.field public static final stat_sys_data_fully_connected_1x:I = 0x7f080d77
 
-.field public static final stat_sys_data_fully_connected_4g:I = 0x7f080d77
+.field public static final stat_sys_data_fully_connected_2g:I = 0x7f080d78
 
-.field public static final stat_sys_data_fully_connected_4g_lte:I = 0x7f080d78
+.field public static final stat_sys_data_fully_connected_3g:I = 0x7f080d79
 
-.field public static final stat_sys_data_fully_connected_4g_plus:I = 0x7f080d79
+.field public static final stat_sys_data_fully_connected_3g_plus:I = 0x7f080d7a
 
-.field public static final stat_sys_data_fully_connected_4g_plus_lte:I = 0x7f080d7a
+.field public static final stat_sys_data_fully_connected_4g:I = 0x7f080d7b
 
-.field public static final stat_sys_data_fully_connected_5g:I = 0x7f080d7b
+.field public static final stat_sys_data_fully_connected_4g_lte:I = 0x7f080d7c
 
-.field public static final stat_sys_data_fully_connected_5g_uwb:I = 0x7f080d7c
+.field public static final stat_sys_data_fully_connected_4g_plus:I = 0x7f080d7d
 
-.field public static final stat_sys_data_fully_connected_e:I = 0x7f080d7d
+.field public static final stat_sys_data_fully_connected_4g_plus_lte:I = 0x7f080d7e
 
-.field public static final stat_sys_data_fully_connected_g:I = 0x7f080d7e
+.field public static final stat_sys_data_fully_connected_5g:I = 0x7f080d7f
 
-.field public static final stat_sys_data_fully_connected_h:I = 0x7f080d7f
+.field public static final stat_sys_data_fully_connected_5g_uwb:I = 0x7f080d80
 
-.field public static final stat_sys_data_fully_connected_h_plus:I = 0x7f080d80
+.field public static final stat_sys_data_fully_connected_e:I = 0x7f080d81
 
-.field public static final stat_sys_data_fully_connected_lte:I = 0x7f080d81
+.field public static final stat_sys_data_fully_connected_g:I = 0x7f080d82
 
-.field public static final stat_sys_data_fully_connected_lte_plus:I = 0x7f080d82
+.field public static final stat_sys_data_fully_connected_h:I = 0x7f080d83
 
-.field public static final stat_sys_data_op_stacked_1x:I = 0x7f080d83
+.field public static final stat_sys_data_fully_connected_h_plus:I = 0x7f080d84
 
-.field public static final stat_sys_data_op_stacked_2g:I = 0x7f080d84
+.field public static final stat_sys_data_fully_connected_lte:I = 0x7f080d85
 
-.field public static final stat_sys_data_op_stacked_3g:I = 0x7f080d85
+.field public static final stat_sys_data_fully_connected_lte_plus:I = 0x7f080d86
 
-.field public static final stat_sys_data_op_stacked_4g:I = 0x7f080d86
+.field public static final stat_sys_data_op_stacked_1x:I = 0x7f080d87
 
-.field public static final stat_sys_data_op_stacked_4g_plus:I = 0x7f080d87
+.field public static final stat_sys_data_op_stacked_2g:I = 0x7f080d88
 
-.field public static final stat_sys_data_op_stacked_g:I = 0x7f080d88
+.field public static final stat_sys_data_op_stacked_3g:I = 0x7f080d89
 
-.field public static final stat_sys_data_op_stacked_lte:I = 0x7f080d89
+.field public static final stat_sys_data_op_stacked_4g:I = 0x7f080d8a
 
-.field public static final stat_sys_data_op_stacked_lte_plus:I = 0x7f080d8a
+.field public static final stat_sys_data_op_stacked_4g_plus:I = 0x7f080d8b
 
-.field public static final stat_sys_data_op_stacked_roam:I = 0x7f080d8b
+.field public static final stat_sys_data_op_stacked_g:I = 0x7f080d8c
 
-.field public static final stat_sys_data_saver:I = 0x7f080d8c
+.field public static final stat_sys_data_op_stacked_lte:I = 0x7f080d8d
 
-.field public static final stat_sys_dnd:I = 0x7f080d8d
+.field public static final stat_sys_data_op_stacked_lte_plus:I = 0x7f080d8e
 
-.field public static final stat_sys_ethernet:I = 0x7f080d8e
+.field public static final stat_sys_data_op_stacked_roam:I = 0x7f080d8f
 
-.field public static final stat_sys_ethernet_fully:I = 0x7f080d8f
+.field public static final stat_sys_data_saver:I = 0x7f080d90
 
-.field public static final stat_sys_femtocell:I = 0x7f080d90
+.field public static final stat_sys_dnd:I = 0x7f080d91
 
-.field public static final stat_sys_hd:I = 0x7f080d91
+.field public static final stat_sys_ethernet:I = 0x7f080d92
 
-.field public static final stat_sys_hd_slot1:I = 0x7f080d92
+.field public static final stat_sys_ethernet_fully:I = 0x7f080d93
 
-.field public static final stat_sys_hd_slot12:I = 0x7f080d93
+.field public static final stat_sys_femtocell:I = 0x7f080d94
 
-.field public static final stat_sys_hd_slot2:I = 0x7f080d94
+.field public static final stat_sys_hd:I = 0x7f080d95
 
-.field public static final stat_sys_hd_unavailable:I = 0x7f080d95
+.field public static final stat_sys_hd_slot1:I = 0x7f080d96
 
-.field public static final stat_sys_headset:I = 0x7f080d96
+.field public static final stat_sys_hd_slot12:I = 0x7f080d97
 
-.field public static final stat_sys_headset_mic:I = 0x7f080d97
+.field public static final stat_sys_hd_slot2:I = 0x7f080d98
 
-.field public static final stat_sys_hotspot:I = 0x7f080d98
+.field public static final stat_sys_hd_unavailable:I = 0x7f080d99
 
-.field public static final stat_sys_hotspot_1:I = 0x7f080d99
+.field public static final stat_sys_headset:I = 0x7f080d9a
 
-.field public static final stat_sys_hotspot_10:I = 0x7f080d9a
+.field public static final stat_sys_headset_mic:I = 0x7f080d9b
 
-.field public static final stat_sys_hotspot_2:I = 0x7f080d9b
+.field public static final stat_sys_hotspot:I = 0x7f080d9c
 
-.field public static final stat_sys_hotspot_3:I = 0x7f080d9c
+.field public static final stat_sys_hotspot_1:I = 0x7f080d9d
 
-.field public static final stat_sys_hotspot_4:I = 0x7f080d9d
+.field public static final stat_sys_hotspot_10:I = 0x7f080d9e
 
-.field public static final stat_sys_hotspot_5:I = 0x7f080d9e
+.field public static final stat_sys_hotspot_2:I = 0x7f080d9f
 
-.field public static final stat_sys_hotspot_6:I = 0x7f080d9f
+.field public static final stat_sys_hotspot_3:I = 0x7f080da0
 
-.field public static final stat_sys_hotspot_7:I = 0x7f080da0
+.field public static final stat_sys_hotspot_4:I = 0x7f080da1
 
-.field public static final stat_sys_hotspot_8:I = 0x7f080da1
+.field public static final stat_sys_hotspot_5:I = 0x7f080da2
 
-.field public static final stat_sys_hotspot_9:I = 0x7f080da2
+.field public static final stat_sys_hotspot_6:I = 0x7f080da3
 
-.field public static final stat_sys_managed_profile_status:I = 0x7f080da4
+.field public static final stat_sys_hotspot_7:I = 0x7f080da4
 
-.field public static final stat_sys_nfc:I = 0x7f080da6
+.field public static final stat_sys_hotspot_8:I = 0x7f080da5
 
-.field public static final stat_sys_no_sims_edge:I = 0x7f080da8
+.field public static final stat_sys_hotspot_9:I = 0x7f080da6
 
-.field public static final stat_sys_ringer_silent:I = 0x7f080da9
+.field public static final stat_sys_managed_profile_status:I = 0x7f080da8
 
-.field public static final stat_sys_ringer_vibrate:I = 0x7f080daa
+.field public static final stat_sys_nfc:I = 0x7f080daa
 
-.field public static final stat_sys_rotate_landscape:I = 0x7f080dac
+.field public static final stat_sys_no_sims_edge:I = 0x7f080dac
 
-.field public static final stat_sys_rotate_portrait:I = 0x7f080dad
+.field public static final stat_sys_ringer_silent:I = 0x7f080dad
 
-.field public static final stat_sys_screen_record:I = 0x7f080dae
+.field public static final stat_sys_ringer_vibrate:I = 0x7f080dae
 
-.field public static final stat_sys_screen_record_1:I = 0x7f080daf
+.field public static final stat_sys_rotate_landscape:I = 0x7f080db0
 
-.field public static final stat_sys_screen_record_2:I = 0x7f080db0
+.field public static final stat_sys_rotate_portrait:I = 0x7f080db1
 
-.field public static final stat_sys_screen_record_3:I = 0x7f080db1
+.field public static final stat_sys_screen_record:I = 0x7f080db2
 
-.field public static final stat_sys_sensors_off:I = 0x7f080db2
+.field public static final stat_sys_screen_record_1:I = 0x7f080db3
 
-.field public static final stat_sys_signal_0:I = 0x7f080db3
+.field public static final stat_sys_screen_record_2:I = 0x7f080db4
 
-.field public static final stat_sys_signal_0_fully:I = 0x7f080db4
+.field public static final stat_sys_screen_record_3:I = 0x7f080db5
 
-.field public static final stat_sys_signal_0_op_4_bar_stacked:I = 0x7f080db5
+.field public static final stat_sys_sensors_off:I = 0x7f080db6
 
-.field public static final stat_sys_signal_0_op_4_bar_virtual:I = 0x7f080db6
+.field public static final stat_sys_signal_0:I = 0x7f080db7
 
-.field public static final stat_sys_signal_0_op_5_bar:I = 0x7f080db7
+.field public static final stat_sys_signal_0_fully:I = 0x7f080db8
 
-.field public static final stat_sys_signal_0_op_5_bar_fully:I = 0x7f080db8
+.field public static final stat_sys_signal_0_op_4_bar_stacked:I = 0x7f080db9
 
-.field public static final stat_sys_signal_0_op_5_bar_roam:I = 0x7f080db9
+.field public static final stat_sys_signal_0_op_4_bar_virtual:I = 0x7f080dba
 
-.field public static final stat_sys_signal_0_op_5_bar_stacked:I = 0x7f080dba
+.field public static final stat_sys_signal_0_op_5_bar:I = 0x7f080dbb
 
-.field public static final stat_sys_signal_0_op_5_bar_virtual:I = 0x7f080dbb
+.field public static final stat_sys_signal_0_op_5_bar_fully:I = 0x7f080dbc
 
-.field public static final stat_sys_signal_1:I = 0x7f080dbc
+.field public static final stat_sys_signal_0_op_5_bar_roam:I = 0x7f080dbd
 
-.field public static final stat_sys_signal_1_fully:I = 0x7f080dbd
+.field public static final stat_sys_signal_0_op_5_bar_stacked:I = 0x7f080dbe
 
-.field public static final stat_sys_signal_1_op_4_bar_stacked:I = 0x7f080dbe
+.field public static final stat_sys_signal_0_op_5_bar_virtual:I = 0x7f080dbf
 
-.field public static final stat_sys_signal_1_op_4_bar_virtual:I = 0x7f080dbf
+.field public static final stat_sys_signal_1:I = 0x7f080dc0
 
-.field public static final stat_sys_signal_1_op_5_bar:I = 0x7f080dc0
+.field public static final stat_sys_signal_1_fully:I = 0x7f080dc1
 
-.field public static final stat_sys_signal_1_op_5_bar_fully:I = 0x7f080dc1
+.field public static final stat_sys_signal_1_op_4_bar_stacked:I = 0x7f080dc2
 
-.field public static final stat_sys_signal_1_op_5_bar_roam:I = 0x7f080dc2
+.field public static final stat_sys_signal_1_op_4_bar_virtual:I = 0x7f080dc3
 
-.field public static final stat_sys_signal_1_op_5_bar_stacked:I = 0x7f080dc3
+.field public static final stat_sys_signal_1_op_5_bar:I = 0x7f080dc4
 
-.field public static final stat_sys_signal_1_op_5_bar_virtual:I = 0x7f080dc4
+.field public static final stat_sys_signal_1_op_5_bar_fully:I = 0x7f080dc5
 
-.field public static final stat_sys_signal_2:I = 0x7f080dc5
+.field public static final stat_sys_signal_1_op_5_bar_roam:I = 0x7f080dc6
 
-.field public static final stat_sys_signal_2_fully:I = 0x7f080dc6
+.field public static final stat_sys_signal_1_op_5_bar_stacked:I = 0x7f080dc7
 
-.field public static final stat_sys_signal_2_op_4_bar_stacked:I = 0x7f080dc7
+.field public static final stat_sys_signal_1_op_5_bar_virtual:I = 0x7f080dc8
 
-.field public static final stat_sys_signal_2_op_4_bar_virtual:I = 0x7f080dc8
+.field public static final stat_sys_signal_2:I = 0x7f080dc9
 
-.field public static final stat_sys_signal_2_op_5_bar:I = 0x7f080dc9
+.field public static final stat_sys_signal_2_fully:I = 0x7f080dca
 
-.field public static final stat_sys_signal_2_op_5_bar_fully:I = 0x7f080dca
+.field public static final stat_sys_signal_2_op_4_bar_stacked:I = 0x7f080dcb
 
-.field public static final stat_sys_signal_2_op_5_bar_roam:I = 0x7f080dcb
+.field public static final stat_sys_signal_2_op_4_bar_virtual:I = 0x7f080dcc
 
-.field public static final stat_sys_signal_2_op_5_bar_stacked:I = 0x7f080dcc
+.field public static final stat_sys_signal_2_op_5_bar:I = 0x7f080dcd
 
-.field public static final stat_sys_signal_2_op_5_bar_virtual:I = 0x7f080dcd
+.field public static final stat_sys_signal_2_op_5_bar_fully:I = 0x7f080dce
 
-.field public static final stat_sys_signal_3:I = 0x7f080dce
+.field public static final stat_sys_signal_2_op_5_bar_roam:I = 0x7f080dcf
 
-.field public static final stat_sys_signal_3_fully:I = 0x7f080dcf
+.field public static final stat_sys_signal_2_op_5_bar_stacked:I = 0x7f080dd0
 
-.field public static final stat_sys_signal_3_op_4_bar_stacked:I = 0x7f080dd0
+.field public static final stat_sys_signal_2_op_5_bar_virtual:I = 0x7f080dd1
 
-.field public static final stat_sys_signal_3_op_4_bar_virtual:I = 0x7f080dd1
+.field public static final stat_sys_signal_3:I = 0x7f080dd2
 
-.field public static final stat_sys_signal_3_op_5_bar:I = 0x7f080dd2
+.field public static final stat_sys_signal_3_fully:I = 0x7f080dd3
 
-.field public static final stat_sys_signal_3_op_5_bar_fully:I = 0x7f080dd3
+.field public static final stat_sys_signal_3_op_4_bar_stacked:I = 0x7f080dd4
 
-.field public static final stat_sys_signal_3_op_5_bar_roam:I = 0x7f080dd4
+.field public static final stat_sys_signal_3_op_4_bar_virtual:I = 0x7f080dd5
 
-.field public static final stat_sys_signal_3_op_5_bar_stacked:I = 0x7f080dd5
+.field public static final stat_sys_signal_3_op_5_bar:I = 0x7f080dd6
 
-.field public static final stat_sys_signal_3_op_5_bar_virtual:I = 0x7f080dd6
+.field public static final stat_sys_signal_3_op_5_bar_fully:I = 0x7f080dd7
 
-.field public static final stat_sys_signal_4:I = 0x7f080dd7
+.field public static final stat_sys_signal_3_op_5_bar_roam:I = 0x7f080dd8
 
-.field public static final stat_sys_signal_4_fully:I = 0x7f080dd8
+.field public static final stat_sys_signal_3_op_5_bar_stacked:I = 0x7f080dd9
 
-.field public static final stat_sys_signal_4_op_4_bar_stacked:I = 0x7f080dd9
+.field public static final stat_sys_signal_3_op_5_bar_virtual:I = 0x7f080dda
 
-.field public static final stat_sys_signal_4_op_4_bar_virtual:I = 0x7f080dda
+.field public static final stat_sys_signal_4:I = 0x7f080ddb
 
-.field public static final stat_sys_signal_4_op_5_bar:I = 0x7f080ddb
+.field public static final stat_sys_signal_4_fully:I = 0x7f080ddc
 
-.field public static final stat_sys_signal_4_op_5_bar_fully:I = 0x7f080ddc
+.field public static final stat_sys_signal_4_op_4_bar_stacked:I = 0x7f080ddd
 
-.field public static final stat_sys_signal_4_op_5_bar_roam:I = 0x7f080ddd
+.field public static final stat_sys_signal_4_op_4_bar_virtual:I = 0x7f080dde
 
-.field public static final stat_sys_signal_4_op_5_bar_stacked:I = 0x7f080dde
+.field public static final stat_sys_signal_4_op_5_bar:I = 0x7f080ddf
 
-.field public static final stat_sys_signal_4_op_5_bar_virtual:I = 0x7f080ddf
+.field public static final stat_sys_signal_4_op_5_bar_fully:I = 0x7f080de0
 
-.field public static final stat_sys_signal_5_op_5_bar:I = 0x7f080de0
+.field public static final stat_sys_signal_4_op_5_bar_roam:I = 0x7f080de1
 
-.field public static final stat_sys_signal_5_op_5_bar_fully:I = 0x7f080de1
+.field public static final stat_sys_signal_4_op_5_bar_stacked:I = 0x7f080de2
 
-.field public static final stat_sys_signal_5_op_5_bar_roam:I = 0x7f080de2
+.field public static final stat_sys_signal_4_op_5_bar_virtual:I = 0x7f080de3
 
-.field public static final stat_sys_signal_5_op_5_bar_stacked:I = 0x7f080de3
+.field public static final stat_sys_signal_5_op_5_bar:I = 0x7f080de4
 
-.field public static final stat_sys_signal_5_op_5_bar_virtual:I = 0x7f080de4
+.field public static final stat_sys_signal_5_op_5_bar_fully:I = 0x7f080de5
 
-.field public static final stat_sys_signal_in:I = 0x7f080de5
+.field public static final stat_sys_signal_5_op_5_bar_roam:I = 0x7f080de6
 
-.field public static final stat_sys_signal_inout:I = 0x7f080de6
+.field public static final stat_sys_signal_5_op_5_bar_stacked:I = 0x7f080de7
 
-.field public static final stat_sys_signal_none:I = 0x7f080de7
+.field public static final stat_sys_signal_5_op_5_bar_virtual:I = 0x7f080de8
 
-.field public static final stat_sys_signal_null:I = 0x7f080de8
+.field public static final stat_sys_signal_in:I = 0x7f080de9
 
-.field public static final stat_sys_signal_oneplus_roam_0:I = 0x7f080de9
+.field public static final stat_sys_signal_inout:I = 0x7f080dea
 
-.field public static final stat_sys_signal_oneplus_roam_1:I = 0x7f080dea
+.field public static final stat_sys_signal_none:I = 0x7f080deb
 
-.field public static final stat_sys_signal_oneplus_roam_2:I = 0x7f080deb
+.field public static final stat_sys_signal_null:I = 0x7f080dec
 
-.field public static final stat_sys_signal_oneplus_roam_3:I = 0x7f080dec
+.field public static final stat_sys_signal_oneplus_roam_0:I = 0x7f080ded
 
-.field public static final stat_sys_signal_oneplus_roam_4:I = 0x7f080ded
+.field public static final stat_sys_signal_oneplus_roam_1:I = 0x7f080dee
 
-.field public static final stat_sys_signal_out:I = 0x7f080dee
+.field public static final stat_sys_signal_oneplus_roam_2:I = 0x7f080def
 
-.field public static final stat_sys_signal_stacked_in:I = 0x7f080def
+.field public static final stat_sys_signal_oneplus_roam_3:I = 0x7f080df0
 
-.field public static final stat_sys_signal_stacked_in_5g_uwb:I = 0x7f080df0
+.field public static final stat_sys_signal_oneplus_roam_4:I = 0x7f080df1
 
-.field public static final stat_sys_signal_stacked_inout:I = 0x7f080df1
+.field public static final stat_sys_signal_out:I = 0x7f080df2
 
-.field public static final stat_sys_signal_stacked_inout_5g_uwb:I = 0x7f080df2
+.field public static final stat_sys_signal_stacked_in:I = 0x7f080df3
 
-.field public static final stat_sys_signal_stacked_none:I = 0x7f080df3
+.field public static final stat_sys_signal_stacked_inout:I = 0x7f080df5
 
-.field public static final stat_sys_signal_stacked_none_5g_uwb:I = 0x7f080df4
+.field public static final stat_sys_signal_stacked_none:I = 0x7f080df7
 
-.field public static final stat_sys_signal_stacked_out:I = 0x7f080df5
+.field public static final stat_sys_signal_stacked_out:I = 0x7f080df9
 
-.field public static final stat_sys_signal_stacked_out_5g_uwb:I = 0x7f080df6
+.field public static final stat_sys_tether_bluetooth:I = 0x7f080dfb
 
-.field public static final stat_sys_tether_bluetooth:I = 0x7f080df7
+.field public static final stat_sys_tether_general:I = 0x7f080dfc
 
-.field public static final stat_sys_tether_general:I = 0x7f080df8
+.field public static final stat_sys_tether_usb:I = 0x7f080dfd
 
-.field public static final stat_sys_tether_usb:I = 0x7f080df9
+.field public static final stat_sys_tether_wifi:I = 0x7f080dfe
 
-.field public static final stat_sys_tether_wifi:I = 0x7f080dfa
+.field public static final stat_sys_three_key_no_disturb:I = 0x7f080dff
 
-.field public static final stat_sys_three_key_no_disturb:I = 0x7f080dfb
+.field public static final stat_sys_three_key_normal:I = 0x7f080e00
 
-.field public static final stat_sys_three_key_normal:I = 0x7f080dfc
+.field public static final stat_sys_three_key_silent:I = 0x7f080e01
 
-.field public static final stat_sys_three_key_silent:I = 0x7f080dfd
+.field public static final stat_sys_tty_mode:I = 0x7f080e02
 
-.field public static final stat_sys_tty_mode:I = 0x7f080dfe
+.field public static final stat_sys_vice_call_pull:I = 0x7f080e03
 
-.field public static final stat_sys_vice_call_pull:I = 0x7f080dff
+.field public static final stat_sys_volte:I = 0x7f080e04
 
-.field public static final stat_sys_volte:I = 0x7f080e00
+.field public static final stat_sys_volte_slot1:I = 0x7f080e05
 
-.field public static final stat_sys_volte_slot1:I = 0x7f080e01
+.field public static final stat_sys_volte_slot12:I = 0x7f080e06
 
-.field public static final stat_sys_volte_slot12:I = 0x7f080e02
+.field public static final stat_sys_volte_slot2:I = 0x7f080e07
 
-.field public static final stat_sys_volte_slot2:I = 0x7f080e03
+.field public static final stat_sys_vowifi:I = 0x7f080e08
 
-.field public static final stat_sys_vowifi:I = 0x7f080e04
+.field public static final stat_sys_vowifi_slot1:I = 0x7f080e09
 
-.field public static final stat_sys_vowifi_slot1:I = 0x7f080e05
+.field public static final stat_sys_vowifi_slot12:I = 0x7f080e0a
 
-.field public static final stat_sys_vowifi_slot12:I = 0x7f080e06
+.field public static final stat_sys_vowifi_slot2:I = 0x7f080e0b
 
-.field public static final stat_sys_vowifi_slot2:I = 0x7f080e07
+.field public static final stat_sys_vpn_ic:I = 0x7f080e0c
 
-.field public static final stat_sys_vpn_ic:I = 0x7f080e08
+.field public static final stat_sys_wifi_4_hotspot:I = 0x7f080e0d
 
-.field public static final stat_sys_wifi_4_hotspot:I = 0x7f080e09
+.field public static final stat_sys_wifi_5_hotspot:I = 0x7f080e0e
 
-.field public static final stat_sys_wifi_5_hotspot:I = 0x7f080e0a
+.field public static final stat_sys_wifi_6_hotspot:I = 0x7f080e0f
 
-.field public static final stat_sys_wifi_6_hotspot:I = 0x7f080e0b
+.field public static final stat_sys_wlb_mode:I = 0x7f080e10
 
-.field public static final stat_sys_wlb_mode:I = 0x7f080e0c
+.field public static final status_background:I = 0x7f080e11
 
-.field public static final status_background:I = 0x7f080e0d
+.field public static final sun:I = 0x7f080e14
 
-.field public static final sun:I = 0x7f080e10
+.field public static final threekey_volume_mutering_guide_dark_pic:I = 0x7f080e67
 
-.field public static final threekey_volume_mutering_guide_dark_pic:I = 0x7f080e70
+.field public static final threekey_volume_mutering_guide_light_pic:I = 0x7f080e69
 
-.field public static final threekey_volume_mutering_guide_light_pic:I = 0x7f080e72
+.field public static final threekey_volume_ring_guide_dark_pic:I = 0x7f080e6b
 
-.field public static final threekey_volume_ring_guide_dark_pic:I = 0x7f080e74
+.field public static final threekey_volume_ring_guide_light_pic:I = 0x7f080e6d
 
-.field public static final threekey_volume_ring_guide_light_pic:I = 0x7f080e76
+.field public static final threekey_volume_silent_guide_dark_pic:I = 0x7f080e6f
 
-.field public static final threekey_volume_silent_guide_dark_pic:I = 0x7f080e78
+.field public static final threekey_volume_silent_guide_light_pic:I = 0x7f080e71
 
-.field public static final threekey_volume_silent_guide_light_pic:I = 0x7f080e7a
+.field public static final threekey_volume_vibrate_guide_dark_pic:I = 0x7f080e73
 
-.field public static final threekey_volume_vibrate_guide_dark_pic:I = 0x7f080e7c
+.field public static final threekey_volume_vibrate_guide_light_pic:I = 0x7f080e75
 
-.field public static final threekey_volume_vibrate_guide_light_pic:I = 0x7f080e7e
+.field public static final volume_dialog_bg_dark:I = 0x7f080e84
 
-.field public static final volume_dialog_bg_dark:I = 0x7f080e8d
+.field public static final volume_dialog_bg_light:I = 0x7f080e85
 
-.field public static final volume_dialog_bg_light:I = 0x7f080e8e
+.field public static final volume_dialog_bg_red_dark:I = 0x7f080e86
 
-.field public static final volume_dialog_bg_red_dark:I = 0x7f080e8f
+.field public static final volume_dialog_progress:I = 0x7f080e87
 
-.field public static final volume_dialog_progress:I = 0x7f080e90
+.field public static final volume_dialog_row_container_bg:I = 0x7f080e8a
 
-.field public static final volume_dialog_row_container_bg:I = 0x7f080e93
+.field public static final warp_000:I = 0x7f080e8e
 
-.field public static final warp_000:I = 0x7f080e97
+.field public static final warp_001:I = 0x7f080e8f
 
-.field public static final warp_001:I = 0x7f080e98
+.field public static final warp_002:I = 0x7f080e90
 
-.field public static final warp_002:I = 0x7f080e99
+.field public static final warp_003:I = 0x7f080e91
 
-.field public static final warp_003:I = 0x7f080e9a
+.field public static final warp_004:I = 0x7f080e92
 
-.field public static final warp_004:I = 0x7f080e9b
+.field public static final warp_005:I = 0x7f080e93
 
-.field public static final warp_005:I = 0x7f080e9c
+.field public static final warp_006:I = 0x7f080e94
 
-.field public static final warp_006:I = 0x7f080e9d
+.field public static final warp_007:I = 0x7f080e95
 
-.field public static final warp_007:I = 0x7f080e9e
+.field public static final warp_008:I = 0x7f080e96
 
-.field public static final warp_008:I = 0x7f080e9f
+.field public static final warp_009:I = 0x7f080e97
 
-.field public static final warp_009:I = 0x7f080ea0
+.field public static final warp_010:I = 0x7f080e98
 
-.field public static final warp_010:I = 0x7f080ea1
+.field public static final warp_011:I = 0x7f080e99
 
-.field public static final warp_011:I = 0x7f080ea2
+.field public static final warp_012:I = 0x7f080e9a
 
-.field public static final warp_012:I = 0x7f080ea3
+.field public static final warp_013:I = 0x7f080e9b
 
-.field public static final warp_013:I = 0x7f080ea4
+.field public static final warp_014:I = 0x7f080e9c
 
-.field public static final warp_014:I = 0x7f080ea5
+.field public static final warp_015:I = 0x7f080e9d
 
-.field public static final warp_015:I = 0x7f080ea6
+.field public static final warp_016:I = 0x7f080e9e
 
-.field public static final warp_016:I = 0x7f080ea7
+.field public static final warp_017:I = 0x7f080e9f
 
-.field public static final warp_017:I = 0x7f080ea8
+.field public static final warp_018:I = 0x7f080ea0
 
-.field public static final warp_018:I = 0x7f080ea9
+.field public static final warp_019:I = 0x7f080ea1
 
-.field public static final warp_019:I = 0x7f080eaa
+.field public static final warp_020:I = 0x7f080ea2
 
-.field public static final warp_020:I = 0x7f080eab
+.field public static final warp_021:I = 0x7f080ea3
 
-.field public static final warp_021:I = 0x7f080eac
+.field public static final warp_022:I = 0x7f080ea4
 
-.field public static final warp_022:I = 0x7f080ead
+.field public static final warp_023:I = 0x7f080ea5
 
-.field public static final warp_023:I = 0x7f080eae
+.field public static final warp_024:I = 0x7f080ea6
 
-.field public static final warp_024:I = 0x7f080eaf
+.field public static final warp_025:I = 0x7f080ea7
 
-.field public static final warp_025:I = 0x7f080eb0
+.field public static final warp_026:I = 0x7f080ea8
 
-.field public static final warp_026:I = 0x7f080eb1
+.field public static final warp_027:I = 0x7f080ea9
 
-.field public static final warp_027:I = 0x7f080eb2
+.field public static final warp_028:I = 0x7f080eaa
 
-.field public static final warp_028:I = 0x7f080eb3
+.field public static final warp_029:I = 0x7f080eab
 
-.field public static final warp_029:I = 0x7f080eb4
+.field public static final warp_030:I = 0x7f080eac
 
-.field public static final warp_030:I = 0x7f080eb5
+.field public static final warp_031:I = 0x7f080ead
 
-.field public static final warp_031:I = 0x7f080eb6
+.field public static final warp_032:I = 0x7f080eae
 
-.field public static final warp_032:I = 0x7f080eb7
+.field public static final warp_033:I = 0x7f080eaf
 
-.field public static final warp_033:I = 0x7f080eb8
+.field public static final warp_034:I = 0x7f080eb0
 
-.field public static final warp_034:I = 0x7f080eb9
+.field public static final warp_035:I = 0x7f080eb1
 
-.field public static final warp_035:I = 0x7f080eba
+.field public static final warp_036:I = 0x7f080eb2
 
-.field public static final warp_036:I = 0x7f080ebb
+.field public static final warp_037:I = 0x7f080eb3
 
-.field public static final warp_037:I = 0x7f080ebc
+.field public static final warp_038:I = 0x7f080eb4
 
-.field public static final warp_038:I = 0x7f080ebd
+.field public static final warp_039:I = 0x7f080eb5
 
-.field public static final warp_039:I = 0x7f080ebe
+.field public static final warp_040:I = 0x7f080eb6
 
-.field public static final warp_040:I = 0x7f080ebf
+.field public static final warp_041:I = 0x7f080eb7
 
-.field public static final warp_041:I = 0x7f080ec0
+.field public static final warp_042:I = 0x7f080eb8
 
-.field public static final warp_042:I = 0x7f080ec1
+.field public static final warp_043:I = 0x7f080eb9
 
-.field public static final warp_043:I = 0x7f080ec2
+.field public static final warp_044:I = 0x7f080eba
 
-.field public static final warp_044:I = 0x7f080ec3
+.field public static final warp_045:I = 0x7f080ebb
 
-.field public static final warp_045:I = 0x7f080ec4
+.field public static final warp_046:I = 0x7f080ebc
 
-.field public static final warp_046:I = 0x7f080ec5
+.field public static final warp_047:I = 0x7f080ebd
 
-.field public static final warp_047:I = 0x7f080ec6
+.field public static final warp_048:I = 0x7f080ebe
 
-.field public static final warp_048:I = 0x7f080ec7
+.field public static final warp_049:I = 0x7f080ebf
 
-.field public static final warp_049:I = 0x7f080ec8
+.field public static final warp_050:I = 0x7f080ec0
 
-.field public static final warp_050:I = 0x7f080ec9
+.field public static final warp_051:I = 0x7f080ec1
 
-.field public static final warp_051:I = 0x7f080eca
+.field public static final warp_052:I = 0x7f080ec2
 
-.field public static final warp_052:I = 0x7f080ecb
+.field public static final warp_053:I = 0x7f080ec3
 
-.field public static final warp_053:I = 0x7f080ecc
+.field public static final warp_054:I = 0x7f080ec4
 
-.field public static final warp_054:I = 0x7f080ecd
+.field public static final warp_055:I = 0x7f080ec5
 
-.field public static final warp_055:I = 0x7f080ece
+.field public static final warp_056:I = 0x7f080ec6
 
-.field public static final warp_056:I = 0x7f080ecf
+.field public static final warp_057:I = 0x7f080ec7
 
-.field public static final warp_057:I = 0x7f080ed0
+.field public static final warp_058:I = 0x7f080ec8
 
-.field public static final warp_058:I = 0x7f080ed1
+.field public static final warp_059:I = 0x7f080ec9
 
-.field public static final warp_059:I = 0x7f080ed2
+.field public static final warp_060:I = 0x7f080eca
 
-.field public static final warp_060:I = 0x7f080ed3
+.field public static final warp_061:I = 0x7f080ecb
 
-.field public static final warp_061:I = 0x7f080ed4
+.field public static final warp_062:I = 0x7f080ecc
 
-.field public static final warp_062:I = 0x7f080ed5
+.field public static final warp_063:I = 0x7f080ecd
 
-.field public static final warp_063:I = 0x7f080ed6
+.field public static final warp_064:I = 0x7f080ece
 
-.field public static final warp_064:I = 0x7f080ed7
+.field public static final warp_065:I = 0x7f080ecf
 
-.field public static final warp_065:I = 0x7f080ed8
+.field public static final warp_066:I = 0x7f080ed0
 
-.field public static final warp_066:I = 0x7f080ed9
+.field public static final warp_067:I = 0x7f080ed1
 
-.field public static final warp_067:I = 0x7f080eda
+.field public static final warp_068:I = 0x7f080ed2
 
-.field public static final warp_068:I = 0x7f080edb
+.field public static final warp_069:I = 0x7f080ed3
 
-.field public static final warp_069:I = 0x7f080edc
+.field public static final warp_070:I = 0x7f080ed4
 
-.field public static final warp_070:I = 0x7f080edd
+.field public static final warpcharge_wired_000:I = 0x7f080ed7
 
-.field public static final warpcharge_wired_000:I = 0x7f080ee0
+.field public static final warpcharge_wired_001:I = 0x7f080ed8
 
-.field public static final warpcharge_wired_001:I = 0x7f080ee1
+.field public static final warpcharge_wired_002:I = 0x7f080ed9
 
-.field public static final warpcharge_wired_002:I = 0x7f080ee2
+.field public static final warpcharge_wired_003:I = 0x7f080eda
 
-.field public static final warpcharge_wired_003:I = 0x7f080ee3
+.field public static final warpcharge_wired_004:I = 0x7f080edb
 
-.field public static final warpcharge_wired_004:I = 0x7f080ee4
+.field public static final warpcharge_wired_005:I = 0x7f080edc
 
-.field public static final warpcharge_wired_005:I = 0x7f080ee5
+.field public static final warpcharge_wired_006:I = 0x7f080edd
 
-.field public static final warpcharge_wired_006:I = 0x7f080ee6
+.field public static final warpcharge_wired_007:I = 0x7f080ede
 
-.field public static final warpcharge_wired_007:I = 0x7f080ee7
+.field public static final warpcharge_wired_008:I = 0x7f080edf
 
-.field public static final warpcharge_wired_008:I = 0x7f080ee8
+.field public static final warpcharge_wired_009:I = 0x7f080ee0
 
-.field public static final warpcharge_wired_009:I = 0x7f080ee9
+.field public static final warpcharge_wired_010:I = 0x7f080ee1
 
-.field public static final warpcharge_wired_010:I = 0x7f080eea
+.field public static final warpcharge_wired_011:I = 0x7f080ee2
 
-.field public static final warpcharge_wired_011:I = 0x7f080eeb
+.field public static final warpcharge_wired_012:I = 0x7f080ee3
 
-.field public static final warpcharge_wired_012:I = 0x7f080eec
+.field public static final warpcharge_wired_013:I = 0x7f080ee4
 
-.field public static final warpcharge_wired_013:I = 0x7f080eed
+.field public static final warpcharge_wired_014:I = 0x7f080ee5
 
-.field public static final warpcharge_wired_014:I = 0x7f080eee
+.field public static final warpcharge_wired_015:I = 0x7f080ee6
 
-.field public static final warpcharge_wired_015:I = 0x7f080eef
+.field public static final warpcharge_wired_016:I = 0x7f080ee7
 
-.field public static final warpcharge_wired_016:I = 0x7f080ef0
+.field public static final warpcharge_wired_017:I = 0x7f080ee8
 
-.field public static final warpcharge_wired_017:I = 0x7f080ef1
+.field public static final warpcharge_wired_018:I = 0x7f080ee9
 
-.field public static final warpcharge_wired_018:I = 0x7f080ef2
+.field public static final warpcharge_wired_019:I = 0x7f080eea
 
-.field public static final warpcharge_wired_019:I = 0x7f080ef3
+.field public static final warpcharge_wired_020:I = 0x7f080eeb
 
-.field public static final warpcharge_wired_020:I = 0x7f080ef4
+.field public static final warpcharge_wired_021:I = 0x7f080eec
 
-.field public static final warpcharge_wired_021:I = 0x7f080ef5
+.field public static final warpcharge_wired_022:I = 0x7f080eed
 
-.field public static final warpcharge_wired_022:I = 0x7f080ef6
+.field public static final warpcharge_wired_023:I = 0x7f080eee
 
-.field public static final warpcharge_wired_023:I = 0x7f080ef7
+.field public static final warpcharge_wired_024:I = 0x7f080eef
 
-.field public static final warpcharge_wired_024:I = 0x7f080ef8
+.field public static final warpcharge_wired_025:I = 0x7f080ef0
 
-.field public static final warpcharge_wired_025:I = 0x7f080ef9
+.field public static final warpcharge_wired_026:I = 0x7f080ef1
 
-.field public static final warpcharge_wired_026:I = 0x7f080efa
+.field public static final warpcharge_wired_027:I = 0x7f080ef2
 
-.field public static final warpcharge_wired_027:I = 0x7f080efb
+.field public static final warpcharge_wired_028:I = 0x7f080ef3
 
-.field public static final warpcharge_wired_028:I = 0x7f080efc
+.field public static final warpcharge_wired_029:I = 0x7f080ef4
 
-.field public static final warpcharge_wired_029:I = 0x7f080efd
+.field public static final warpcharge_wired_030:I = 0x7f080ef5
 
-.field public static final warpcharge_wired_030:I = 0x7f080efe
+.field public static final warpcharge_wired_031:I = 0x7f080ef6
 
-.field public static final warpcharge_wired_031:I = 0x7f080eff
+.field public static final warpcharge_wired_032:I = 0x7f080ef7
 
-.field public static final warpcharge_wired_032:I = 0x7f080f00
+.field public static final warpcharge_wired_033:I = 0x7f080ef8
 
-.field public static final warpcharge_wired_033:I = 0x7f080f01
+.field public static final warpcharge_wired_034:I = 0x7f080ef9
 
-.field public static final warpcharge_wired_034:I = 0x7f080f02
+.field public static final warpcharge_wired_035:I = 0x7f080efa
 
-.field public static final warpcharge_wired_035:I = 0x7f080f03
+.field public static final warpcharge_wired_036:I = 0x7f080efb
 
-.field public static final warpcharge_wired_036:I = 0x7f080f04
+.field public static final warpcharge_wired_037:I = 0x7f080efc
 
-.field public static final warpcharge_wired_037:I = 0x7f080f05
+.field public static final warpcharge_wired_038:I = 0x7f080efd
 
-.field public static final warpcharge_wired_038:I = 0x7f080f06
+.field public static final warpcharge_wired_039:I = 0x7f080efe
 
-.field public static final warpcharge_wired_039:I = 0x7f080f07
+.field public static final warpcharge_wired_040:I = 0x7f080eff
 
-.field public static final warpcharge_wired_040:I = 0x7f080f08
+.field public static final warpcharge_wired_041:I = 0x7f080f00
 
-.field public static final warpcharge_wired_041:I = 0x7f080f09
+.field public static final warpcharge_wired_042:I = 0x7f080f01
 
-.field public static final warpcharge_wired_042:I = 0x7f080f0a
+.field public static final warpcharge_wired_043:I = 0x7f080f02
 
-.field public static final warpcharge_wired_043:I = 0x7f080f0b
+.field public static final warpcharge_wired_044:I = 0x7f080f03
 
-.field public static final warpcharge_wired_044:I = 0x7f080f0c
+.field public static final warpcharge_wired_045:I = 0x7f080f04
 
-.field public static final warpcharge_wired_045:I = 0x7f080f0d
+.field public static final warpcharge_wired_046:I = 0x7f080f05
 
-.field public static final warpcharge_wired_046:I = 0x7f080f0e
+.field public static final warpcharge_wired_047:I = 0x7f080f06
 
-.field public static final warpcharge_wired_047:I = 0x7f080f0f
+.field public static final warpcharge_wired_048:I = 0x7f080f07
 
-.field public static final warpcharge_wired_048:I = 0x7f080f10
+.field public static final warpcharge_wired_049:I = 0x7f080f08
 
-.field public static final warpcharge_wired_049:I = 0x7f080f11
+.field public static final warpcharge_wired_050:I = 0x7f080f09
 
-.field public static final warpcharge_wired_050:I = 0x7f080f12
+.field public static final warpcharge_wired_051:I = 0x7f080f0a
 
-.field public static final warpcharge_wired_051:I = 0x7f080f13
+.field public static final warpcharge_wired_052:I = 0x7f080f0b
 
-.field public static final warpcharge_wired_052:I = 0x7f080f14
+.field public static final warpcharge_wired_053:I = 0x7f080f0c
 
-.field public static final warpcharge_wired_053:I = 0x7f080f15
+.field public static final warpcharge_wired_054:I = 0x7f080f0d
 
-.field public static final warpcharge_wired_054:I = 0x7f080f16
+.field public static final warpcharge_wired_055:I = 0x7f080f0e
 
-.field public static final warpcharge_wired_055:I = 0x7f080f17
+.field public static final warpcharge_wired_056:I = 0x7f080f0f
 
-.field public static final warpcharge_wired_056:I = 0x7f080f18
+.field public static final warpcharge_wired_057:I = 0x7f080f10
 
-.field public static final warpcharge_wired_057:I = 0x7f080f19
+.field public static final warpcharge_wired_058:I = 0x7f080f11
 
-.field public static final warpcharge_wired_058:I = 0x7f080f1a
+.field public static final warpcharge_wired_059:I = 0x7f080f12
 
-.field public static final warpcharge_wired_059:I = 0x7f080f1b
+.field public static final warpcharge_wired_060:I = 0x7f080f13
 
-.field public static final warpcharge_wired_060:I = 0x7f080f1c
+.field public static final warpcharge_wired_061:I = 0x7f080f14
 
-.field public static final warpcharge_wired_061:I = 0x7f080f1d
+.field public static final warpcharge_wired_062:I = 0x7f080f15
 
-.field public static final warpcharge_wired_062:I = 0x7f080f1e
+.field public static final warpcharge_wired_063:I = 0x7f080f16
 
-.field public static final warpcharge_wired_063:I = 0x7f080f1f
+.field public static final warpcharge_wired_064:I = 0x7f080f17
 
-.field public static final warpcharge_wired_064:I = 0x7f080f20
+.field public static final warpcharge_wired_065:I = 0x7f080f18
 
-.field public static final warpcharge_wired_065:I = 0x7f080f21
+.field public static final warpcharge_wired_066:I = 0x7f080f19
 
-.field public static final warpcharge_wired_066:I = 0x7f080f22
+.field public static final warpcharge_wired_067:I = 0x7f080f1a
 
-.field public static final warpcharge_wired_067:I = 0x7f080f23
+.field public static final warpcharge_wired_068:I = 0x7f080f1b
 
-.field public static final warpcharge_wired_068:I = 0x7f080f24
+.field public static final warpcharge_wired_069:I = 0x7f080f1c
 
-.field public static final warpcharge_wired_069:I = 0x7f080f25
+.field public static final warpcharge_wired_070:I = 0x7f080f1d
 
-.field public static final warpcharge_wired_070:I = 0x7f080f26
+.field public static final warpcharge_wired_071:I = 0x7f080f1e
 
-.field public static final warpcharge_wired_071:I = 0x7f080f27
+.field public static final warpcharge_wired_072:I = 0x7f080f1f
 
-.field public static final warpcharge_wired_072:I = 0x7f080f28
+.field public static final warpcharge_wired_073:I = 0x7f080f20
 
-.field public static final warpcharge_wired_073:I = 0x7f080f29
+.field public static final warpcharge_wired_074:I = 0x7f080f21
 
-.field public static final warpcharge_wired_074:I = 0x7f080f2a
+.field public static final warpcharge_wired_075:I = 0x7f080f22
 
-.field public static final warpcharge_wired_075:I = 0x7f080f2b
+.field public static final warpcharge_wired_076:I = 0x7f080f23
 
-.field public static final warpcharge_wired_076:I = 0x7f080f2c
+.field public static final warpcharge_wired_077:I = 0x7f080f24
 
-.field public static final warpcharge_wired_077:I = 0x7f080f2d
+.field public static final warpcharge_wired_078:I = 0x7f080f25
 
-.field public static final warpcharge_wired_078:I = 0x7f080f2e
+.field public static final warpcharge_wired_079:I = 0x7f080f26
 
-.field public static final warpcharge_wired_079:I = 0x7f080f2f
+.field public static final warpcharge_wired_080:I = 0x7f080f27
 
-.field public static final warpcharge_wired_080:I = 0x7f080f30
+.field public static final warpcharge_wired_081:I = 0x7f080f28
 
-.field public static final warpcharge_wired_081:I = 0x7f080f31
+.field public static final warpcharge_wired_082:I = 0x7f080f29
 
-.field public static final warpcharge_wired_082:I = 0x7f080f32
+.field public static final warpcharge_wired_083:I = 0x7f080f2a
 
-.field public static final warpcharge_wired_083:I = 0x7f080f33
+.field public static final warpcharge_wired_084:I = 0x7f080f2b
 
-.field public static final warpcharge_wired_084:I = 0x7f080f34
+.field public static final warpcharge_wired_085:I = 0x7f080f2c
 
-.field public static final warpcharge_wired_085:I = 0x7f080f35
+.field public static final warpcharge_wired_086:I = 0x7f080f2d
 
-.field public static final warpcharge_wired_086:I = 0x7f080f36
+.field public static final warpcharge_wired_087:I = 0x7f080f2e
 
-.field public static final warpcharge_wired_087:I = 0x7f080f37
+.field public static final warpcharge_wired_088:I = 0x7f080f2f
 
-.field public static final warpcharge_wired_088:I = 0x7f080f38
+.field public static final warpcharge_wired_089:I = 0x7f080f30
 
-.field public static final warpcharge_wired_089:I = 0x7f080f39
+.field public static final warpcharge_wireless_000:I = 0x7f080f31
 
-.field public static final warpcharge_wired_090:I = 0x7f080f3a
+.field public static final warpcharge_wireless_001:I = 0x7f080f32
 
-.field public static final warpcharge_wired_091:I = 0x7f080f3b
+.field public static final warpcharge_wireless_002:I = 0x7f080f33
 
-.field public static final warpcharge_wired_092:I = 0x7f080f3c
+.field public static final warpcharge_wireless_003:I = 0x7f080f34
 
-.field public static final warpcharge_wired_093:I = 0x7f080f3d
+.field public static final warpcharge_wireless_004:I = 0x7f080f35
 
-.field public static final warpcharge_wired_094:I = 0x7f080f3e
+.field public static final warpcharge_wireless_005:I = 0x7f080f36
 
-.field public static final warpcharge_wired_095:I = 0x7f080f3f
+.field public static final warpcharge_wireless_006:I = 0x7f080f37
 
-.field public static final warpcharge_wired_096:I = 0x7f080f40
+.field public static final warpcharge_wireless_007:I = 0x7f080f38
 
-.field public static final warpcharge_wired_097:I = 0x7f080f41
+.field public static final warpcharge_wireless_008:I = 0x7f080f39
 
-.field public static final warpcharge_wired_098:I = 0x7f080f42
+.field public static final warpcharge_wireless_009:I = 0x7f080f3a
 
-.field public static final warpcharge_wired_099:I = 0x7f080f43
+.field public static final warpcharge_wireless_010:I = 0x7f080f3b
 
-.field public static final warpcharge_wired_100:I = 0x7f080f44
+.field public static final warpcharge_wireless_011:I = 0x7f080f3c
 
-.field public static final warpcharge_wired_101:I = 0x7f080f45
+.field public static final warpcharge_wireless_012:I = 0x7f080f3d
 
-.field public static final warpcharge_wired_102:I = 0x7f080f46
+.field public static final warpcharge_wireless_013:I = 0x7f080f3e
 
-.field public static final warpcharge_wired_103:I = 0x7f080f47
+.field public static final warpcharge_wireless_014:I = 0x7f080f3f
 
-.field public static final warpcharge_wired_104:I = 0x7f080f48
+.field public static final warpcharge_wireless_015:I = 0x7f080f40
 
-.field public static final warpcharge_wired_105:I = 0x7f080f49
+.field public static final warpcharge_wireless_016:I = 0x7f080f41
 
-.field public static final warpcharge_wired_106:I = 0x7f080f4a
+.field public static final warpcharge_wireless_017:I = 0x7f080f42
 
-.field public static final warpcharge_wired_107:I = 0x7f080f4b
+.field public static final warpcharge_wireless_018:I = 0x7f080f43
 
-.field public static final warpcharge_wireless_000:I = 0x7f080f4c
+.field public static final warpcharge_wireless_019:I = 0x7f080f44
 
-.field public static final warpcharge_wireless_001:I = 0x7f080f4d
+.field public static final warpcharge_wireless_020:I = 0x7f080f45
 
-.field public static final warpcharge_wireless_002:I = 0x7f080f4e
+.field public static final warpcharge_wireless_021:I = 0x7f080f46
 
-.field public static final warpcharge_wireless_003:I = 0x7f080f4f
+.field public static final warpcharge_wireless_022:I = 0x7f080f47
 
-.field public static final warpcharge_wireless_004:I = 0x7f080f50
+.field public static final warpcharge_wireless_023:I = 0x7f080f48
 
-.field public static final warpcharge_wireless_005:I = 0x7f080f51
+.field public static final warpcharge_wireless_024:I = 0x7f080f49
 
-.field public static final warpcharge_wireless_006:I = 0x7f080f52
+.field public static final warpcharge_wireless_025:I = 0x7f080f4a
 
-.field public static final warpcharge_wireless_007:I = 0x7f080f53
+.field public static final warpcharge_wireless_026:I = 0x7f080f4b
 
-.field public static final warpcharge_wireless_008:I = 0x7f080f54
+.field public static final warpcharge_wireless_027:I = 0x7f080f4c
 
-.field public static final warpcharge_wireless_009:I = 0x7f080f55
+.field public static final warpcharge_wireless_028:I = 0x7f080f4d
 
-.field public static final warpcharge_wireless_010:I = 0x7f080f56
+.field public static final warpcharge_wireless_029:I = 0x7f080f4e
 
-.field public static final warpcharge_wireless_011:I = 0x7f080f57
+.field public static final warpcharge_wireless_030:I = 0x7f080f4f
 
-.field public static final warpcharge_wireless_012:I = 0x7f080f58
+.field public static final warpcharge_wireless_031:I = 0x7f080f50
 
-.field public static final warpcharge_wireless_013:I = 0x7f080f59
+.field public static final warpcharge_wireless_032:I = 0x7f080f51
 
-.field public static final warpcharge_wireless_014:I = 0x7f080f5a
+.field public static final warpcharge_wireless_033:I = 0x7f080f52
 
-.field public static final warpcharge_wireless_015:I = 0x7f080f5b
+.field public static final warpcharge_wireless_034:I = 0x7f080f53
 
-.field public static final warpcharge_wireless_016:I = 0x7f080f5c
+.field public static final warpcharge_wireless_035:I = 0x7f080f54
 
-.field public static final warpcharge_wireless_017:I = 0x7f080f5d
+.field public static final warpcharge_wireless_036:I = 0x7f080f55
 
-.field public static final warpcharge_wireless_018:I = 0x7f080f5e
+.field public static final warpcharge_wireless_037:I = 0x7f080f56
 
-.field public static final warpcharge_wireless_019:I = 0x7f080f5f
+.field public static final warpcharge_wireless_038:I = 0x7f080f57
 
-.field public static final warpcharge_wireless_020:I = 0x7f080f60
+.field public static final warpcharge_wireless_039:I = 0x7f080f58
 
-.field public static final warpcharge_wireless_021:I = 0x7f080f61
+.field public static final warpcharge_wireless_040:I = 0x7f080f59
 
-.field public static final warpcharge_wireless_022:I = 0x7f080f62
+.field public static final warpcharge_wireless_041:I = 0x7f080f5a
 
-.field public static final warpcharge_wireless_023:I = 0x7f080f63
+.field public static final warpcharge_wireless_042:I = 0x7f080f5b
 
-.field public static final warpcharge_wireless_024:I = 0x7f080f64
+.field public static final warpcharge_wireless_043:I = 0x7f080f5c
 
-.field public static final warpcharge_wireless_025:I = 0x7f080f65
+.field public static final warpcharge_wireless_044:I = 0x7f080f5d
 
-.field public static final warpcharge_wireless_026:I = 0x7f080f66
+.field public static final warpcharge_wireless_045:I = 0x7f080f5e
 
-.field public static final warpcharge_wireless_027:I = 0x7f080f67
+.field public static final warpcharge_wireless_046:I = 0x7f080f5f
 
-.field public static final warpcharge_wireless_028:I = 0x7f080f68
+.field public static final warpcharge_wireless_047:I = 0x7f080f60
 
-.field public static final warpcharge_wireless_029:I = 0x7f080f69
+.field public static final warpcharge_wireless_048:I = 0x7f080f61
 
-.field public static final warpcharge_wireless_030:I = 0x7f080f6a
+.field public static final warpcharge_wireless_049:I = 0x7f080f62
 
-.field public static final warpcharge_wireless_031:I = 0x7f080f6b
+.field public static final warpcharge_wireless_050:I = 0x7f080f63
 
-.field public static final warpcharge_wireless_032:I = 0x7f080f6c
+.field public static final warpcharge_wireless_051:I = 0x7f080f64
 
-.field public static final warpcharge_wireless_033:I = 0x7f080f6d
+.field public static final warpcharge_wireless_052:I = 0x7f080f65
 
-.field public static final warpcharge_wireless_034:I = 0x7f080f6e
+.field public static final warpcharge_wireless_053:I = 0x7f080f66
 
-.field public static final warpcharge_wireless_035:I = 0x7f080f6f
+.field public static final warpcharge_wireless_054:I = 0x7f080f67
 
-.field public static final warpcharge_wireless_036:I = 0x7f080f70
+.field public static final warpcharge_wireless_055:I = 0x7f080f68
 
-.field public static final warpcharge_wireless_037:I = 0x7f080f71
+.field public static final warpcharge_wireless_056:I = 0x7f080f69
 
-.field public static final warpcharge_wireless_038:I = 0x7f080f72
+.field public static final warpcharge_wireless_057:I = 0x7f080f6a
 
-.field public static final warpcharge_wireless_039:I = 0x7f080f73
+.field public static final warpcharge_wireless_058:I = 0x7f080f6b
 
-.field public static final warpcharge_wireless_040:I = 0x7f080f74
+.field public static final warpcharge_wireless_059:I = 0x7f080f6c
 
-.field public static final warpcharge_wireless_041:I = 0x7f080f75
+.field public static final warpcharge_wireless_060:I = 0x7f080f6d
 
-.field public static final warpcharge_wireless_042:I = 0x7f080f76
+.field public static final warpcharge_wireless_061:I = 0x7f080f6e
 
-.field public static final warpcharge_wireless_043:I = 0x7f080f77
+.field public static final warpcharge_wireless_062:I = 0x7f080f6f
 
-.field public static final warpcharge_wireless_044:I = 0x7f080f78
+.field public static final warpcharge_wireless_063:I = 0x7f080f70
 
-.field public static final warpcharge_wireless_045:I = 0x7f080f79
+.field public static final warpcharge_wireless_064:I = 0x7f080f71
 
-.field public static final warpcharge_wireless_046:I = 0x7f080f7a
+.field public static final warpcharge_wireless_065:I = 0x7f080f72
 
-.field public static final warpcharge_wireless_047:I = 0x7f080f7b
+.field public static final warpcharge_wireless_066:I = 0x7f080f73
 
-.field public static final warpcharge_wireless_048:I = 0x7f080f7c
+.field public static final warpcharge_wireless_067:I = 0x7f080f74
 
-.field public static final warpcharge_wireless_049:I = 0x7f080f7d
+.field public static final warpcharge_wireless_068:I = 0x7f080f75
 
-.field public static final warpcharge_wireless_050:I = 0x7f080f7e
+.field public static final warpcharge_wireless_069:I = 0x7f080f76
 
-.field public static final warpcharge_wireless_051:I = 0x7f080f7f
+.field public static final warpcharge_wireless_070:I = 0x7f080f77
 
-.field public static final warpcharge_wireless_052:I = 0x7f080f80
+.field public static final warpcharge_wireless_071:I = 0x7f080f78
 
-.field public static final warpcharge_wireless_053:I = 0x7f080f81
+.field public static final warpcharge_wireless_072:I = 0x7f080f79
 
-.field public static final warpcharge_wireless_054:I = 0x7f080f82
+.field public static final warpcharge_wireless_073:I = 0x7f080f7a
 
-.field public static final warpcharge_wireless_055:I = 0x7f080f83
+.field public static final warpcharge_wireless_074:I = 0x7f080f7b
 
-.field public static final warpcharge_wireless_056:I = 0x7f080f84
+.field public static final warpcharge_wireless_075:I = 0x7f080f7c
 
-.field public static final warpcharge_wireless_057:I = 0x7f080f85
+.field public static final warpcharge_wireless_076:I = 0x7f080f7d
 
-.field public static final warpcharge_wireless_058:I = 0x7f080f86
+.field public static final warpcharge_wireless_077:I = 0x7f080f7e
 
-.field public static final warpcharge_wireless_059:I = 0x7f080f87
+.field public static final warpcharge_wireless_078:I = 0x7f080f7f
 
-.field public static final warpcharge_wireless_060:I = 0x7f080f88
+.field public static final warpcharge_wireless_079:I = 0x7f080f80
 
-.field public static final warpcharge_wireless_061:I = 0x7f080f89
+.field public static final warpcharge_wireless_080:I = 0x7f080f81
 
-.field public static final warpcharge_wireless_062:I = 0x7f080f8a
+.field public static final warpcharge_wireless_081:I = 0x7f080f82
 
-.field public static final warpcharge_wireless_063:I = 0x7f080f8b
+.field public static final warpcharge_wireless_082:I = 0x7f080f83
 
-.field public static final warpcharge_wireless_064:I = 0x7f080f8c
+.field public static final warpcharge_wireless_083:I = 0x7f080f84
 
-.field public static final warpcharge_wireless_065:I = 0x7f080f8d
+.field public static final warpcharge_wireless_084:I = 0x7f080f85
 
-.field public static final warpcharge_wireless_066:I = 0x7f080f8e
+.field public static final warpcharge_wireless_085:I = 0x7f080f86
 
-.field public static final warpcharge_wireless_067:I = 0x7f080f8f
+.field public static final warpcharge_wireless_086:I = 0x7f080f87
 
-.field public static final warpcharge_wireless_068:I = 0x7f080f90
+.field public static final warpcharge_wireless_087:I = 0x7f080f88
 
-.field public static final warpcharge_wireless_069:I = 0x7f080f91
+.field public static final warpcharge_wireless_088:I = 0x7f080f89
 
-.field public static final warpcharge_wireless_070:I = 0x7f080f92
+.field public static final warpcharge_wireless_089:I = 0x7f080f8a
 
-.field public static final warpcharge_wireless_071:I = 0x7f080f93
+.field public static final wlb_avathar_bg_disabled_dark:I = 0x7f080f8e
 
-.field public static final warpcharge_wireless_072:I = 0x7f080f94
+.field public static final wlb_avathar_bg_disabled_light:I = 0x7f080f8f
 
-.field public static final warpcharge_wireless_073:I = 0x7f080f95
-
-.field public static final warpcharge_wireless_074:I = 0x7f080f96
-
-.field public static final warpcharge_wireless_075:I = 0x7f080f97
-
-.field public static final warpcharge_wireless_076:I = 0x7f080f98
-
-.field public static final warpcharge_wireless_077:I = 0x7f080f99
-
-.field public static final warpcharge_wireless_078:I = 0x7f080f9a
-
-.field public static final warpcharge_wireless_079:I = 0x7f080f9b
-
-.field public static final warpcharge_wireless_080:I = 0x7f080f9c
-
-.field public static final warpcharge_wireless_081:I = 0x7f080f9d
-
-.field public static final warpcharge_wireless_082:I = 0x7f080f9e
-
-.field public static final warpcharge_wireless_083:I = 0x7f080f9f
-
-.field public static final warpcharge_wireless_084:I = 0x7f080fa0
-
-.field public static final warpcharge_wireless_085:I = 0x7f080fa1
-
-.field public static final warpcharge_wireless_086:I = 0x7f080fa2
-
-.field public static final warpcharge_wireless_087:I = 0x7f080fa3
-
-.field public static final warpcharge_wireless_088:I = 0x7f080fa4
-
-.field public static final warpcharge_wireless_089:I = 0x7f080fa5
-
-.field public static final warpcharge_wireless_090:I = 0x7f080fa6
-
-.field public static final warpcharge_wireless_091:I = 0x7f080fa7
-
-.field public static final warpcharge_wireless_092:I = 0x7f080fa8
-
-.field public static final warpcharge_wireless_093:I = 0x7f080fa9
-
-.field public static final warpcharge_wireless_094:I = 0x7f080faa
-
-.field public static final warpcharge_wireless_095:I = 0x7f080fab
-
-.field public static final warpcharge_wireless_096:I = 0x7f080fac
-
-.field public static final warpcharge_wireless_097:I = 0x7f080fad
-
-.field public static final warpcharge_wireless_098:I = 0x7f080fae
-
-.field public static final warpcharge_wireless_099:I = 0x7f080faf
-
-.field public static final warpcharge_wireless_100:I = 0x7f080fb0
-
-.field public static final warpcharge_wireless_101:I = 0x7f080fb1
-
-.field public static final warpcharge_wireless_102:I = 0x7f080fb2
-
-.field public static final warpcharge_wireless_103:I = 0x7f080fb3
-
-.field public static final warpcharge_wireless_104:I = 0x7f080fb4
-
-.field public static final warpcharge_wireless_105:I = 0x7f080fb5
-
-.field public static final warpcharge_wireless_106:I = 0x7f080fb6
-
-.field public static final warpcharge_wireless_107:I = 0x7f080fb7
-
-.field public static final wlb_avathar_bg_disabled_dark:I = 0x7f080fbb
-
-.field public static final wlb_avathar_bg_disabled_light:I = 0x7f080fbc
-
-.field public static final wlb_avathar_bg_enabled:I = 0x7f080fbd
+.field public static final wlb_avathar_bg_enabled:I = 0x7f080f90

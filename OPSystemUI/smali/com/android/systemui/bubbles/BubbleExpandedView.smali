@@ -904,6 +904,7 @@
     invoke-interface {v0, v2}, Landroid/app/IActivityTaskManager;->removeTask(I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 

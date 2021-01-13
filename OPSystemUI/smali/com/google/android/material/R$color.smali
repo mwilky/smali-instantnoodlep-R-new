@@ -26,6 +26,8 @@
 
 .field public static final op_control_accent_color_red_default:I = 0x7f06029b
 
+.field public static final op_control_bg_color_default:I = 0x7f0602a8
+
 .field public static final op_control_bg_color_popup_default:I = 0x7f0602af
 
 .field public static final op_control_divider_color_default:I = 0x7f0602c3
@@ -35,6 +37,8 @@
 .field public static final op_control_icon_color_active_light:I = 0x7f0602d0
 
 .field public static final op_control_icon_color_disable_default:I = 0x7f0602d2
+
+.field public static final op_control_icon_color_inactive_default:I = 0x7f0602d5
 
 .field public static final op_control_system_color_tips_default:I = 0x7f0602de
 

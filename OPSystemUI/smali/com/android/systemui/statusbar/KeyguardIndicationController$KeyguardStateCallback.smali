@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field private mSimSecure:Z
+
 .field final synthetic this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
 
@@ -108,8 +110,50 @@
 .end method
 
 .method public onSimSecureStateChanged(Z)V
-    .locals 0
+    .locals 2
 
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->mSimSecure:Z
+
+    if-eq v0, p1, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onSimSecureStateChanged simSecure "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "KeyguardIndication"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->updateIndicationArea()V
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->mSimSecure:Z
+
+    :cond_1
     return-void
 .end method
 

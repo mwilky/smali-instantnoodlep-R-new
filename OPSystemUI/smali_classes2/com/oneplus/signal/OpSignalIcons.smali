@@ -110,56 +110,105 @@
     return-void
 .end method
 
-.method public static getDisableDataIcon(J)I
-    .locals 4
+.method public static getDisableDataIcon(I)I
+    .locals 1
 
-    const-wide/32 v0, 0x16bb4
+    const/4 v0, 0x1
 
-    and-long/2addr v0, p0
+    if-eq p0, v0, :cond_3
 
-    const-wide/16 v2, 0x0
+    const/4 v0, 0x2
 
-    cmp-long v0, v0, v2
+    if-eq p0, v0, :cond_3
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x3
 
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_data_disconnected_3g:I
+    if-eq p0, v0, :cond_2
 
-    goto :goto_1
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_data_disabled:I
+
+    goto :goto_0
 
     :cond_0
-    const-wide/32 v0, 0x61000
-
-    and-long/2addr v0, p0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    const-wide/32 v0, 0x80000
-
-    and-long/2addr p0, v0
-
-    cmp-long p0, p0, v2
-
-    if-eqz p0, :cond_1
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_disconnected_5g_uwb:I
 
     goto :goto_0
 
     :cond_1
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_data_disabled:I
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_disconnected_5g:I
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    :goto_0
     sget p0, Lcom/android/systemui/R$drawable;->stat_sys_data_disconnected_4g_lte:I
 
-    :goto_1
+    goto :goto_0
+
+    :cond_3
+    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_data_disconnected_3g:I
+
+    :goto_0
     return p0
 .end method
 
-.method public static getIdleDataIcon(J)I
+.method public static getIdleDataIcon(I)I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g_uwb:I
+
+    goto :goto_0
+
+    :cond_1
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g:I
+
+    goto :goto_0
+
+    :cond_2
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_4g_lte:I
+
+    goto :goto_0
+
+    :cond_3
+    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_3g:I
+
+    :goto_0
+    return p0
+.end method
+
+.method public static getNetworkClass(J)I
     .locals 4
 
     const-wide/32 v0, 0x804b
@@ -191,7 +240,7 @@
 
     if-eqz v0, :cond_1
 
-    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_4g_lte:I
+    const/4 p0, 0x3
 
     goto :goto_1
 
@@ -204,7 +253,7 @@
 
     if-eqz p0, :cond_2
 
-    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g_uwb:I
+    const/4 p0, 0x4
 
     goto :goto_1
 
@@ -215,8 +264,14 @@
 
     :cond_3
     :goto_0
-    sget p0, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_3g:I
+    const/4 p0, 0x2
 
     :goto_1
+    const-string p1, "debug.network.class"
+
+    invoke-static {p1, p0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result p0
+
     return p0
 .end method

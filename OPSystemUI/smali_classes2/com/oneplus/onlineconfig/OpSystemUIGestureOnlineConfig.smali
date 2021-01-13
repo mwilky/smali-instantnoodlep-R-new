@@ -99,7 +99,9 @@
 
     const-string v1, "com.ss.android.ugc.aweme"
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    const-string v2, "com.ss.android.ugc.trill"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
     move-result-object v1
 

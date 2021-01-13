@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1300(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
 
     move-result-object v0
 

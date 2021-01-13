@@ -2683,6 +2683,20 @@
 
     if-eq v3, v4, :cond_0
 
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStatusBarLazy:Ldagger/Lazy;
+
+    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v3}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isHideImeBackAndSwitcher()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
     const-string v3, " Enable navigation bar touch when IME showing."
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -5159,7 +5173,7 @@
 .end method
 
 .method public updateSystemUiStateFlags(I)V
-    .locals 5
+    .locals 7
 
     if-gez p1, :cond_0
 
@@ -5192,38 +5206,83 @@
 
     if-eqz p1, :cond_2
 
-    move v1, v2
+    move p1, v2
+
+    goto :goto_1
 
     :cond_2
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mSysUiFlagsContainer:Lcom/android/systemui/model/SysUiState;
+    move p1, v1
 
-    const/16 v4, 0x10
+    :goto_1
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mStatusBarLazy:Ldagger/Lazy;
 
-    invoke-virtual {p1, v4, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+    invoke-interface {v4}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    invoke-virtual {p1, v3, v1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+    move-result-object v4
+
+    check-cast v4, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v4}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
+
+    move-result v4
+
+    if-eq v4, v2, :cond_3
+
+    sget-boolean v4, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
+
+    if-nez v4, :cond_4
+
+    :cond_3
+    iget v4, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mNavBarMode:I
+
+    invoke-static {v4}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    move v4, v2
+
+    goto :goto_2
+
+    :cond_4
+    move v4, v1
+
+    :goto_2
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mSysUiFlagsContainer:Lcom/android/systemui/model/SysUiState;
+
+    const/16 v6, 0x10
+
+    invoke-virtual {v5, v6, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+
+    invoke-virtual {v5, v3, p1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
 
     const/4 v3, 0x2
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->isNavBarWindowVisible()Z
 
-    move-result v4
+    move-result v6
 
-    xor-int/2addr v2, v4
+    if-nez v6, :cond_5
 
-    invoke-virtual {p1, v3, v2}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
+    if-nez v4, :cond_5
 
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDisplayId:I
+    move v1, v2
 
-    invoke-virtual {p1, v2}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
+    :cond_5
+    invoke-virtual {v5, v3, v1}, Lcom/android/systemui/model/SysUiState;->setFlag(IZ)Lcom/android/systemui/model/SysUiState;
 
-    const/16 p1, 0xb
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->mDisplayId:I
 
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->registerAction(ZI)V
+    invoke-virtual {v5, v1}, Lcom/android/systemui/model/SysUiState;->commitUpdate(I)V
 
-    const/16 p1, 0xc
+    const/16 v1, 0xb
 
-    invoke-direct {p0, v1, p1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->registerAction(ZI)V
+    invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->registerAction(ZI)V
+
+    const/16 v0, 0xc
+
+    invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->registerAction(ZI)V
 
     return-void
 .end method

@@ -41,13 +41,29 @@
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 2
 
-    const-string p0, "OpNewWarpChargingView"
+    const-string p1, "OpNewWarpChargingView"
 
-    const-string p1, "warp animation end"
+    const-string v0, "warp animation end"
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$16;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2500(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$16;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v1, v0, p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;II[Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

@@ -41,6 +41,12 @@
 .method public abstract getMobileDataController()Lcom/android/settingslib/net/DataUsageController;
 .end method
 
+.method public abstract getMobileDataNetworkName()Ljava/lang/String;
+.end method
+
+.method public abstract getNumberSubscriptions()I
+.end method
+
 .method public abstract hasEmergencyCryptKeeperText()Z
 .end method
 

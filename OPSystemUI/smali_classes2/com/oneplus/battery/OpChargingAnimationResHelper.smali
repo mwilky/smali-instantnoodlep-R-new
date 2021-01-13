@@ -19,7 +19,7 @@
 .method static constructor <clinit>()V
     .locals 25
 
-    const/16 v0, 0x6c
+    const/16 v0, 0x5a
 
     new-array v0, v0, [I
 
@@ -563,117 +563,9 @@
 
     aput v1, v0, v24
 
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_090:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_091:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_092:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_093:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_094:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_095:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_096:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_097:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_098:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_099:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_100:I
-
-    const/16 v24, 0x64
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_101:I
-
-    const/16 v24, 0x65
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_102:I
-
-    const/16 v24, 0x66
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_103:I
-
-    const/16 v24, 0x67
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_104:I
-
-    const/16 v24, 0x68
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_105:I
-
-    const/16 v24, 0x69
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_106:I
-
-    const/16 v24, 0x6a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wireless_107:I
-
-    const/16 v24, 0x6b
-
-    aput v1, v0, v24
-
     sput-object v0, Lcom/oneplus/battery/OpChargingAnimationResHelper;->WARP_CHARGING_BACKGROUND_ANIM_WIRELESS:[I
 
-    const/16 v0, 0x6c
+    const/16 v0, 0x5a
 
     new-array v0, v0, [I
 
@@ -1170,114 +1062,6 @@
     sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_089:I
 
     const/16 v24, 0x59
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_090:I
-
-    const/16 v24, 0x5a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_091:I
-
-    const/16 v24, 0x5b
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_092:I
-
-    const/16 v24, 0x5c
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_093:I
-
-    const/16 v24, 0x5d
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_094:I
-
-    const/16 v24, 0x5e
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_095:I
-
-    const/16 v24, 0x5f
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_096:I
-
-    const/16 v24, 0x60
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_097:I
-
-    const/16 v24, 0x61
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_098:I
-
-    const/16 v24, 0x62
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_099:I
-
-    const/16 v24, 0x63
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_100:I
-
-    const/16 v24, 0x64
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_101:I
-
-    const/16 v24, 0x65
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_102:I
-
-    const/16 v24, 0x66
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_103:I
-
-    const/16 v24, 0x67
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_104:I
-
-    const/16 v24, 0x68
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_105:I
-
-    const/16 v24, 0x69
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_106:I
-
-    const/16 v24, 0x6a
-
-    aput v1, v0, v24
-
-    sget v1, Lcom/android/systemui/R$drawable;->warpcharge_wired_107:I
-
-    const/16 v24, 0x6b
 
     aput v1, v0, v24
 

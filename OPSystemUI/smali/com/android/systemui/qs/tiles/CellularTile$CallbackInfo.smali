@@ -21,6 +21,12 @@
 
 .field airplaneModeEnabled:Z
 
+.field dataContentDescription:Ljava/lang/CharSequence;
+
+.field dataSubscriptionName:Ljava/lang/CharSequence;
+
+.field multipleSubs:Z
+
 .field noSim:Z
 
 .field roaming:Z

@@ -62,10 +62,10 @@
 
 .field public static final op_toolbar_navigation_max_button_height:I = 0x7f07079a
 
-.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f07097f
+.field public static final tooltip_precise_anchor_extra_offset:I = 0x7f070981
 
-.field public static final tooltip_precise_anchor_threshold:I = 0x7f070980
+.field public static final tooltip_precise_anchor_threshold:I = 0x7f070982
 
-.field public static final tooltip_y_offset_non_touch:I = 0x7f070982
+.field public static final tooltip_y_offset_non_touch:I = 0x7f070984
 
-.field public static final tooltip_y_offset_touch:I = 0x7f070983
+.field public static final tooltip_y_offset_touch:I = 0x7f070985

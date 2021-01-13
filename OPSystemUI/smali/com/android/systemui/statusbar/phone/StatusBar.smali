@@ -1568,6 +1568,8 @@
 
     const-string v0, "  "
 
+    if-eqz p2, :cond_0
+
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1586,6 +1588,18 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string p1, ".BarTransitions.mMode= null"
+
+    invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    :goto_0
     return-void
 .end method
 
@@ -8735,7 +8749,7 @@
 .end method
 
 .method makeExpandedInvisible()V
-    .locals 11
+    .locals 4
 
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/StatusBar;->SPEW:Z
 
@@ -8804,22 +8818,6 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mStatusBarWindowController:Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->setForceStatusBarVisible(Z)V
-
-    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mGutsManager:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x1
-
-    const/4 v8, -0x1
-
-    const/4 v9, -0x1
-
-    const/4 v10, 0x1
-
-    invoke-virtual/range {v4 .. v10}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mShadeController:Lcom/android/systemui/statusbar/phone/ShadeController;
 
@@ -14195,6 +14193,17 @@
 
     :cond_5
     :goto_1
+    if-eqz v0, :cond_6
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCTSAdded()Z
+
+    move-result p2
+
+    if-nez p2, :cond_6
+
+    invoke-virtual {v0}, Lcom/android/systemui/stackdivider/Divider;->onDockedFirstAnimationFrame()V
+
+    :cond_6
     invoke-static {}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->getInstance()Lcom/android/systemui/shared/system/WindowManagerWrapper;
 
     move-result-object p2
@@ -14205,16 +14214,16 @@
 
     move-result p2
 
-    if-ne p2, v3, :cond_6
+    if-ne p2, v3, :cond_7
 
     return v1
 
-    :cond_6
-    if-ne p2, v4, :cond_7
+    :cond_7
+    if-ne p2, v4, :cond_8
 
     move v1, v4
 
-    :cond_7
+    :cond_8
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mRecentsOptional:Ljava/util/Optional;
 
     invoke-virtual {p0}, Ljava/util/Optional;->get()Ljava/lang/Object;
@@ -14227,6 +14236,17 @@
 
     move-result p0
 
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCTSAdded()Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    if-eqz p0, :cond_9
+
+    sput-boolean v4, Lcom/oneplus/util/OpUtils;->mEnterFromToggleSplitScreenMode:Z
+
+    :cond_9
     return p0
 .end method
 
@@ -14573,6 +14593,50 @@
 
     invoke-interface {p0, p2, p3}, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;->setFullscreenState(ZZ)V
 
+    return-void
+.end method
+
+.method public updateDisplayPowerStatus(I)V
+    .locals 2
+
+    sget-boolean v0, Lcom/android/systemui/statusbar/phone/StatusBar;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "updateDisplayPowerStatus status: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", keyguardUpdateMonitor= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StatusBar"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->notifyDisplayPowerStatusChanged(I)V
+
+    :cond_1
     return-void
 .end method
 
@@ -15130,31 +15194,13 @@
 .end method
 
 .method visibilityChanged(Z)V
-    .locals 8
+    .locals 1
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mVisible:Z
 
     if-eq v0, p1, :cond_0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mVisible:Z
-
-    if-nez p1, :cond_0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBar;->mGutsManager:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x1
-
-    const/4 v5, -0x1
-
-    const/4 v6, -0x1
-
-    const/4 v7, 0x1
-
-    invoke-virtual/range {v1 .. v7}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateVisibleToUser()V

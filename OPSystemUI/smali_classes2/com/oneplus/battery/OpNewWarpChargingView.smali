@@ -3,6 +3,14 @@
 .source "OpNewWarpChargingView.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oneplus/battery/OpNewWarpChargingView$releaseBitmapTask;
+    }
+.end annotation
+
+
 # static fields
 .field private static final ANIMATION_INTERPILATOR:Landroid/view/animation/Interpolator;
 
@@ -38,17 +46,17 @@
 
 .field private mChargingAnimP3repeatCount:I
 
-.field mChargingAnimationAssets:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
 .field private mChargingAnimationController:Lcom/oneplus/battery/OpChargingAnimationController;
+
+.field private mChargingP1FrameEnd:I
+
+.field private mChargingP2FrameEnd:I
+
+.field private mChargingP3FrameEnd:I
+
+.field private mChargingP4FrameEnd:I
 
 .field private mChargingScaleDownAnimSet:Landroid/animation/AnimatorSet;
 
@@ -57,6 +65,8 @@
 .field private mChargingType:I
 
 .field private mContext:Landroid/content/Context;
+
+.field private mExecutorService:Ljava/util/concurrent/ExecutorService;
 
 .field private mHandler:Landroid/os/Handler;
 
@@ -80,15 +90,9 @@
 
 .field private mWarpAnimation:Landroid/animation/AnimatorSet;
 
-.field mWarpAnimationAssets:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field mWarpAnimationAssets:[Landroid/graphics/Bitmap;
+
+.field private mWarpFrameEnd:I
 
 .field private mWarpView:Landroid/widget/ImageView;
 
@@ -185,12 +189,6 @@
 
     iput-object p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mHandler:Landroid/os/Handler;
 
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
-
     const/4 p2, 0x0
 
     iput-boolean p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoading:Z
@@ -202,12 +200,6 @@
     iput-boolean p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mIsPaddingStartAnimation:Z
 
     iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingType:I
-
-    new-instance p3, Ljava/util/ArrayList;
-
-    invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
 
     iput-boolean p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mIsWarpAnimStart:Z
 
@@ -222,6 +214,26 @@
     iput p3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mNowPlaying:I
 
     iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3repeatCount:I
+
+    const/16 p2, 0xb
+
+    iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
+
+    const/16 p2, 0x18
+
+    iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
+
+    const/16 p2, 0x4a
+
+    iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
+
+    const/16 p2, 0x59
+
+    iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP4FrameEnd:I
+
+    const/16 p2, 0x46
+
+    iput p2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpFrameEnd:I
 
     iput-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mContext:Landroid/content/Context;
 
@@ -266,76 +278,76 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200()Landroid/content/res/Resources;
+.method static synthetic access$1200(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
+
+    return p0
+.end method
+
+.method static synthetic access$1300(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
+
+    return p0
+.end method
+
+.method static synthetic access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;II[Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseBitmap(II[Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP4FrameEnd:I
+
+    return p0
+.end method
+
+.method static synthetic access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingType:I
+
+    return p0
+.end method
+
+.method static synthetic access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;IIIZZ)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/oneplus/battery/OpNewWarpChargingView;->preloadAnimationList(IIIZZ)V
+
+    return-void
+.end method
+
+.method static synthetic access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mBackgroundHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1900(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
+
+    return p0
+.end method
+
+.method static synthetic access$2000()Landroid/content/res/Resources;
     .locals 1
 
     sget-object v0, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
 
     return-object v0
-.end method
-
-.method static synthetic access$1300(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpView:Landroid/widget/ImageView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1500(Lcom/oneplus/battery/OpNewWarpChargingView;)Lcom/oneplus/battery/OpChargingAnimationController;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationController:Lcom/oneplus/battery/OpChargingAnimationController;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->preloadAnimationList()V
-
-    return-void
-.end method
-
-.method static synthetic access$1800(Lcom/oneplus/battery/OpNewWarpChargingView;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseAnimationList()V
-
-    return-void
-.end method
-
-.method static synthetic access$1902(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoading:Z
-
-    return p1
-.end method
-
-.method static synthetic access$2002(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoaded:Z
-
-    return p1
 .end method
 
 .method static synthetic access$202(Lcom/oneplus/battery/OpNewWarpChargingView;I)I
@@ -346,36 +358,76 @@
     return p1
 .end method
 
-.method static synthetic access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+.method static synthetic access$2100(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mBatteryLevel:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/widget/ImageView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpView:Landroid/widget/ImageView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)Lcom/oneplus/battery/OpChargingAnimationController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationController:Lcom/oneplus/battery/OpChargingAnimationController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/AnimatorSet;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpFrameEnd:I
+
+    return p0
+.end method
+
+.method static synthetic access$2600(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseAnimationList()V
+
+    return-void
+.end method
+
+.method static synthetic access$2702(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoading:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2802(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetLoaded:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2900(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mKeyguardShowing:Z
 
     return p0
-.end method
-
-.method static synthetic access$2200(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mIsPaddingStartAnimation:Z
-
-    return p0
-.end method
-
-.method static synthetic access$2300(Lcom/oneplus/battery/OpNewWarpChargingView;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingType:I
-
-    return p0
-.end method
-
-.method static synthetic access$2402(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetReleasing:Z
-
-    return p1
 .end method
 
 .method static synthetic access$300(Lcom/oneplus/battery/OpNewWarpChargingView;Ljava/lang/String;)V
@@ -384,6 +436,22 @@
     invoke-direct {p0, p1}, Lcom/oneplus/battery/OpNewWarpChargingView;->animationEnd(Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method static synthetic access$3000(Lcom/oneplus/battery/OpNewWarpChargingView;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mIsPaddingStartAnimation:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3102(Lcom/oneplus/battery/OpNewWarpChargingView;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mAssetReleasing:Z
+
+    return p1
 .end method
 
 .method static synthetic access$400(Lcom/oneplus/battery/OpNewWarpChargingView;)Landroid/animation/ValueAnimator;
@@ -517,9 +585,9 @@
 
     if-eqz p1, :cond_0
 
-    const/16 v0, 0x67
+    const/16 v1, 0x67
 
-    invoke-interface {p1, v0}, Lcom/oneplus/battery/OpChargingAnimationController;->animationEnd(I)V
+    invoke-interface {p1, v1}, Lcom/oneplus/battery/OpChargingAnimationController;->animationEnd(I)V
 
     :cond_0
     const/4 p1, 0x0
@@ -532,13 +600,26 @@
 
     iput p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3repeatCount:I
 
+    iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    :cond_1
     invoke-virtual {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->releaseAsset()V
 
     return-void
 .end method
 
 .method private getChargeAnimation()Landroid/animation/AnimatorSet;
-    .locals 10
+    .locals 11
 
     new-instance v0, Landroid/animation/ValueAnimator;
 
@@ -548,123 +629,135 @@
 
     new-array v1, v0, [I
 
-    const/16 v2, 0x5a
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
+
+    add-int/2addr v2, v3
+
+    const/4 v4, 0x0
+
+    aput v2, v1, v4
+
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP4FrameEnd:I
 
     aput v2, v1, v3
-
-    const/4 v2, 0x1
-
-    const/16 v4, 0x6b
-
-    aput v4, v1, v2
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    new-instance v4, Landroid/view/animation/LinearInterpolator;
+    new-instance v2, Landroid/view/animation/LinearInterpolator;
 
-    invoke-direct {v4}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const/16 v4, 0x260
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP4FrameEnd:I
 
-    int-to-long v4, v4
+    iget v5, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
 
-    invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    sub-int/2addr v2, v5
 
-    new-instance v4, Lcom/oneplus/battery/OpNewWarpChargingView$1;
+    add-int/2addr v2, v3
 
-    invoke-direct {v4, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$1;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    const/16 v5, 0x26
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    mul-int/2addr v2, v5
 
-    new-instance v4, Landroid/animation/ValueAnimator;
+    int-to-long v6, v2
 
-    invoke-direct {v4}, Landroid/animation/ValueAnimator;-><init>()V
+    invoke-virtual {v1, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-array v4, v0, [F
+    new-instance v2, Lcom/oneplus/battery/OpNewWarpChargingView$1;
 
-    fill-array-data v4, :array_0
+    invoke-direct {v2, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$1;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    move-result-object v4
+    new-instance v2, Landroid/animation/ValueAnimator;
 
-    const/16 v5, 0xff
+    invoke-direct {v2}, Landroid/animation/ValueAnimator;-><init>()V
 
-    int-to-long v5, v5
+    new-array v2, v0, [F
 
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    fill-array-data v2, :array_0
 
-    new-instance v5, Lcom/oneplus/battery/OpNewWarpChargingView$2;
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    invoke-direct {v5, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$2;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    move-result-object v2
 
-    invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance v5, Landroid/animation/ValueAnimator;
-
-    invoke-direct {v5}, Landroid/animation/ValueAnimator;-><init>()V
-
-    new-array v5, v0, [F
-
-    fill-array-data v5, :array_1
-
-    invoke-static {v5}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v5
-
-    const/16 v6, 0x140
+    const/16 v6, 0xff
 
     int-to-long v6, v6
 
-    invoke-virtual {v5, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v2, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v8, Lcom/oneplus/battery/OpNewWarpChargingView$3;
+    new-instance v6, Lcom/oneplus/battery/OpNewWarpChargingView$2;
 
-    invoke-direct {v8, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$3;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-direct {v6, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$2;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    invoke-virtual {v5, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {v2, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    new-instance v8, Landroid/animation/AnimatorSet;
+    new-instance v6, Landroid/animation/ValueAnimator;
 
-    invoke-direct {v8}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-direct {v6}, Landroid/animation/ValueAnimator;-><init>()V
 
-    sget-object v9, Lcom/oneplus/battery/OpNewWarpChargingView;->ANIMATION_INTERPILATOR:Landroid/view/animation/Interpolator;
+    new-array v6, v0, [F
 
-    invoke-virtual {v8, v9}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    fill-array-data v6, :array_1
 
-    invoke-virtual {v8, v4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    invoke-static {v6}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    const/16 v7, 0x140
 
-    new-instance v4, Landroid/animation/AnimatorSet;
+    int-to-long v7, v7
 
-    invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-virtual {v6, v7, v8}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iput-object v4, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleDownAnimSet:Landroid/animation/AnimatorSet;
+    new-instance v9, Lcom/oneplus/battery/OpNewWarpChargingView$3;
 
-    new-array v5, v0, [Landroid/animation/Animator;
+    invoke-direct {v9, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$3;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    aput-object v1, v5, v3
+    invoke-virtual {v6, v9}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    aput-object v8, v5, v2
+    new-instance v9, Landroid/animation/AnimatorSet;
 
-    invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    invoke-direct {v9}, Landroid/animation/AnimatorSet;-><init>()V
+
+    sget-object v10, Lcom/oneplus/battery/OpNewWarpChargingView;->ANIMATION_INTERPILATOR:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v9, v10}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    invoke-virtual {v9, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v6}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    new-instance v2, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iput-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleDownAnimSet:Landroid/animation/AnimatorSet;
+
+    new-array v6, v0, [Landroid/animation/Animator;
+
+    aput-object v1, v6, v4
+
+    aput-object v9, v6, v3
+
+    invoke-virtual {v2, v6}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleDownAnimSet:Landroid/animation/AnimatorSet;
 
-    new-instance v4, Lcom/oneplus/battery/OpNewWarpChargingView$4;
+    new-instance v2, Lcom/oneplus/battery/OpNewWarpChargingView$4;
 
-    invoke-direct {v4, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$4;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$4;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    invoke-virtual {v1, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     new-instance v1, Landroid/animation/ValueAnimator;
 
@@ -672,13 +765,15 @@
 
     new-array v1, v0, [I
 
-    const/16 v4, 0x1e
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
 
-    aput v4, v1, v3
+    add-int/2addr v2, v3
 
-    const/16 v4, 0x59
+    aput v2, v1, v4
 
-    aput v4, v1, v2
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
+
+    aput v2, v1, v3
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
@@ -686,35 +781,43 @@
 
     iput-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3:Landroid/animation/ValueAnimator;
 
-    new-instance v4, Landroid/view/animation/LinearInterpolator;
+    new-instance v2, Landroid/view/animation/LinearInterpolator;
 
-    invoke-direct {v4}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3:Landroid/animation/ValueAnimator;
-
-    const/16 v4, 0x7a0
-
-    int-to-long v4, v4
-
-    invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3:Landroid/animation/ValueAnimator;
 
-    new-instance v4, Lcom/oneplus/battery/OpNewWarpChargingView$5;
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP3FrameEnd:I
 
-    invoke-direct {v4, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$5;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    iget v6, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    sub-int/2addr v2, v6
+
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v5
+
+    int-to-long v9, v2
+
+    invoke-virtual {v1, v9, v10}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3:Landroid/animation/ValueAnimator;
 
-    new-instance v4, Lcom/oneplus/battery/OpNewWarpChargingView$6;
+    new-instance v2, Lcom/oneplus/battery/OpNewWarpChargingView$5;
 
-    invoke-direct {v4, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$6;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-direct {v2, p0, v5}, Lcom/oneplus/battery/OpNewWarpChargingView$5;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;I)V
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP3:Landroid/animation/ValueAnimator;
+
+    new-instance v2, Lcom/oneplus/battery/OpNewWarpChargingView$6;
+
+    invoke-direct {v2, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$6;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     new-instance v1, Landroid/animation/ValueAnimator;
 
@@ -722,107 +825,117 @@
 
     new-array v1, v0, [I
 
-    const/16 v4, 0xe
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
 
-    aput v4, v1, v3
+    add-int/2addr v2, v3
 
-    const/16 v4, 0x1d
+    aput v2, v1, v4
 
-    aput v4, v1, v2
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
+
+    aput v2, v1, v3
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    new-instance v4, Landroid/view/animation/LinearInterpolator;
+    new-instance v2, Landroid/view/animation/LinearInterpolator;
 
-    invoke-direct {v4}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const/16 v4, 0x220
+    iget v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP2FrameEnd:I
 
-    int-to-long v4, v4
+    iget v6, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
 
-    invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    sub-int/2addr v2, v6
 
-    new-instance v4, Lcom/oneplus/battery/OpNewWarpChargingView$7;
+    add-int/2addr v2, v3
 
-    invoke-direct {v4, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$7;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    mul-int/2addr v2, v5
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    int-to-long v9, v2
 
-    new-instance v4, Landroid/animation/ValueAnimator;
+    invoke-virtual {v1, v9, v10}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-direct {v4}, Landroid/animation/ValueAnimator;-><init>()V
+    new-instance v2, Lcom/oneplus/battery/OpNewWarpChargingView$7;
 
-    new-array v4, v0, [F
+    invoke-direct {v2, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$7;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    fill-array-data v4, :array_2
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    new-instance v2, Landroid/animation/ValueAnimator;
 
-    move-result-object v4
+    invoke-direct {v2}, Landroid/animation/ValueAnimator;-><init>()V
 
-    const/16 v5, 0xbe
+    new-array v2, v0, [F
 
-    int-to-long v8, v5
+    fill-array-data v2, :array_2
 
-    invoke-virtual {v4, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    new-instance v5, Lcom/oneplus/battery/OpNewWarpChargingView$8;
+    move-result-object v2
 
-    invoke-direct {v5, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$8;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    const/16 v6, 0xbe
 
-    invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    int-to-long v9, v6
 
-    new-instance v5, Landroid/animation/ValueAnimator;
+    invoke-virtual {v2, v9, v10}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-direct {v5}, Landroid/animation/ValueAnimator;-><init>()V
+    new-instance v6, Lcom/oneplus/battery/OpNewWarpChargingView$8;
 
-    new-array v5, v0, [F
+    invoke-direct {v6, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$8;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    fill-array-data v5, :array_3
+    invoke-virtual {v2, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-static {v5}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    new-instance v6, Landroid/animation/ValueAnimator;
 
-    move-result-object v5
+    invoke-direct {v6}, Landroid/animation/ValueAnimator;-><init>()V
 
-    invoke-virtual {v5, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    new-array v6, v0, [F
 
-    new-instance v6, Lcom/oneplus/battery/OpNewWarpChargingView$9;
+    fill-array-data v6, :array_3
 
-    invoke-direct {v6, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$9;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-static {v6}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v5, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    move-result-object v6
 
-    new-instance v6, Landroid/animation/AnimatorSet;
+    invoke-virtual {v6, v7, v8}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-direct {v6}, Landroid/animation/AnimatorSet;-><init>()V
+    new-instance v7, Lcom/oneplus/battery/OpNewWarpChargingView$9;
 
-    sget-object v7, Lcom/oneplus/battery/OpNewWarpChargingView;->ANIMATION_INTERPILATOR:Landroid/view/animation/Interpolator;
+    invoke-direct {v7, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$9;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    invoke-virtual {v6, v7}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-virtual {v6, v4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    new-instance v7, Landroid/animation/AnimatorSet;
 
-    move-result-object v4
+    invoke-direct {v7}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    sget-object v8, Lcom/oneplus/battery/OpNewWarpChargingView;->ANIMATION_INTERPILATOR:Landroid/view/animation/Interpolator;
 
-    new-instance v4, Landroid/animation/AnimatorSet;
+    invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-virtual {v7, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    iput-object v4, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
+    move-result-object v2
 
-    new-array v5, v0, [Landroid/animation/Animator;
+    invoke-virtual {v2, v6}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    aput-object v1, v5, v3
+    new-instance v2, Landroid/animation/AnimatorSet;
 
-    aput-object v6, v5, v2
+    invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    iput-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
+
+    new-array v6, v0, [Landroid/animation/Animator;
+
+    aput-object v1, v6, v4
+
+    aput-object v7, v6, v3
+
+    invoke-virtual {v2, v6}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingScaleUpAnimSet:Landroid/animation/AnimatorSet;
 
@@ -838,7 +951,11 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_4
+    aput v4, v0, v4
+
+    iget v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
+
+    aput v1, v0, v3
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
@@ -854,7 +971,11 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimP1:Landroid/animation/ValueAnimator;
 
-    const/16 v1, 0x1c0
+    iget v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingP1FrameEnd:I
+
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v5
 
     int-to-long v1, v1
 
@@ -886,6 +1007,8 @@
 
     return-object v0
 
+    nop
+
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -909,12 +1032,6 @@
         0x3f8ccccd    # 1.1f
         0x3f800000    # 1.0f
     .end array-data
-
-    :array_4
-    .array-data 4
-        0x0
-        0xd
-    .end array-data
 .end method
 
 .method private getWarpAnimation()Landroid/animation/AnimatorSet;
@@ -932,11 +1049,9 @@
 
     aput v2, v1, v2
 
-    iget-object v3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
+    array-length v3, v3
 
     const/4 v4, 0x1
 
@@ -954,11 +1069,9 @@
 
     invoke-virtual {v1, v3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object v3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
+    array-length v3, v3
 
     mul-int/lit8 v3, v3, 0x20
 
@@ -1073,8 +1186,8 @@
     return-object v5
 .end method
 
-.method private preloadAnimationList()V
-    .locals 10
+.method private preloadAnimationList(IIIZZ)V
+    .locals 6
 
     sget-boolean v0, Lcom/oneplus/battery/OpNewWarpChargingView;->DEBUG:Z
 
@@ -1082,7 +1195,43 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "preloadAnimationList()"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "preloadAnimationList() start:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", end:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", resourceType:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", releaseBitmap:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", playAnimation:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1091,255 +1240,188 @@
 
     move-result-wide v2
 
-    iget v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingType:I
+    const/4 v0, 0x1
+
+    if-eq p3, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p3, v0, :cond_2
+
+    sget-object p3, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
+
+    sget v0, Lcom/android/systemui/R$array;->warpcharge_wired_anim:I
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+
+    move-result-object p3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
+    invoke-virtual {p3}, Landroid/content/res/TypedArray;->length()I
 
-    sget v4, Lcom/android/systemui/R$array;->warpcharge_wired_anim:I
+    move-result v0
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+    new-array v0, v0, [Landroid/graphics/Bitmap;
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    :cond_1
-    sget-object v0, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
+    :cond_2
+    sget-object p3, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
 
-    sget v4, Lcom/android/systemui/R$array;->warpcharge_wireless_anim:I
+    sget v0, Lcom/android/systemui/R$array;->warp_anim:I
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
-    move-result-object v0
+    move-result-object p3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p3}, Landroid/content/res/TypedArray;->length()I
+
+    move-result v0
+
+    new-array v0, v0, [Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
+
+    :cond_3
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
+
+    goto :goto_0
+
+    :cond_4
+    sget-object p3, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
+
+    sget v0, Lcom/android/systemui/R$array;->warpcharge_wireless_anim:I
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+
+    move-result-object p3
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_5
+
+    invoke-virtual {p3}, Landroid/content/res/TypedArray;->length()I
+
+    move-result v0
+
+    new-array v0, v0, [Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
+
+    :cond_5
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
     :goto_0
-    sget-object v4, Lcom/oneplus/battery/OpNewWarpChargingView;->mRes:Landroid/content/res/Resources;
+    const/4 v4, 0x0
 
-    sget v5, Lcom/android/systemui/R$array;->warp_anim:I
+    if-eqz p4, :cond_7
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    move v6, v5
+    move p4, v4
 
     :goto_1
-    iget-object v7, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
+    array-length v5, v0
 
-    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
+    if-ge p4, v5, :cond_7
 
-    move-result v7
+    aget-object v5, v0, p4
 
-    if-ge v6, v7, :cond_3
+    if-eqz v5, :cond_6
 
-    iget-object v7, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
 
-    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/graphics/Bitmap;
-
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_2
-    add-int/lit8 v6, v6, 0x1
+    :cond_6
+    add-int/lit8 p4, p4, 0x1
 
     goto :goto_1
 
-    :cond_3
-    move v6, v5
-
+    :cond_7
     :goto_2
-    iget-object v7, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
+    if-ge p1, p2, :cond_9
 
-    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p3, p1, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    move-result v7
-
-    if-ge v6, v7, :cond_5
-
-    iget-object v7, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/graphics/Bitmap;
-
-    if-eqz v7, :cond_4
-
-    invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_4
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    iget-object v6, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v6, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
-
-    move v6, v5
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->length()I
-
-    move-result v7
-
-    if-ge v6, v7, :cond_7
-
-    invoke-virtual {v0, v6, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v7
+    move-result p4
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v8
+    move-result-object v5
 
-    invoke-virtual {v8, v7}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+    invoke-virtual {v5, p4}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
-    move-result-object v7
+    move-result-object p4
 
-    invoke-static {v7}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+    invoke-static {p4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
-    move-result-object v8
+    move-result-object v5
 
-    iget-object v9, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
+    aput-object v5, v0, p1
 
-    invoke-virtual {v9, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz v7, :cond_6
+    if-eqz p4, :cond_8
 
     :try_start_0
-    invoke-virtual {v7}, Ljava/io/InputStream;->close()V
+    invoke-virtual {p4}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    :cond_6
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_3
-
-    :cond_7
-    move v6, v5
-
-    :goto_4
-    invoke-virtual {v4}, Landroid/content/res/TypedArray;->length()I
-
-    move-result v7
-
-    if-ge v6, v7, :cond_9
-
-    invoke-virtual {v4, v6, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v7
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v7}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    move-result-object v7
-
-    invoke-static {v7}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v9, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz v7, :cond_8
-
-    :try_start_1
-    invoke-virtual {v7}, Ljava/io/InputStream;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
     :cond_8
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 p1, p1, 0x1
 
-    goto :goto_4
+    goto :goto_2
 
     :cond_9
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {p3}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
+    if-eqz p5, :cond_a
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-object p1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mHandler:Landroid/os/Handler;
 
-    move-result-wide v4
+    new-instance p2, Lcom/oneplus/battery/OpNewWarpChargingView$19;
 
-    sget-boolean v0, Lcom/oneplus/battery/OpNewWarpChargingView;->DEBUG:Z
+    invoke-direct {p2, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$19;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
-    if-eqz v0, :cond_a
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "preloadAnimationList: cost Time"
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sub-long/2addr v4, v2
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " mChargingAnimationAssets size:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " mWarpAnimationAssets size:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_a
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mHandler:Landroid/os/Handler;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    new-instance v1, Lcom/oneplus/battery/OpNewWarpChargingView$19;
+    move-result-wide p0
 
-    invoke-direct {v1, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$19;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    sget-boolean p2, Lcom/oneplus/battery/OpNewWarpChargingView;->DEBUG:Z
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eqz p2, :cond_b
 
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "preloadAnimationList: cost Time"
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sub-long/2addr p0, v2
+
+    invoke-virtual {p2, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b
     return-void
 .end method
 
@@ -1542,7 +1624,7 @@
 .end method
 
 .method private releaseAnimationList()V
-    .locals 3
+    .locals 4
 
     sget-boolean v0, Lcom/oneplus/battery/OpNewWarpChargingView;->DEBUG:Z
 
@@ -1566,21 +1648,13 @@
     move v1, v0
 
     :goto_0
-    iget-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    array-length v3, v2
 
-    move-result v2
+    if-ge v1, v3, :cond_2
 
-    if-ge v1, v2, :cond_2
-
-    iget-object v2, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/Bitmap;
+    aget-object v2, v2, v1
 
     if-eqz v2, :cond_1
 
@@ -1592,26 +1666,14 @@
     goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mChargingAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
     :goto_1
-    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:[Landroid/graphics/Bitmap;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    array-length v2, v1
 
-    move-result v1
+    if-ge v0, v2, :cond_4
 
-    if-ge v0, v1, :cond_4
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/Bitmap;
+    aget-object v1, v1, v0
 
     if-eqz v1, :cond_3
 
@@ -1623,10 +1685,6 @@
     goto :goto_1
 
     :cond_4
-    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
     iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/oneplus/battery/OpNewWarpChargingView$20;
@@ -1634,6 +1692,65 @@
     invoke-direct {v1, p0}, Lcom/oneplus/battery/OpNewWarpChargingView$20;-><init>(Lcom/oneplus/battery/OpNewWarpChargingView;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method private releaseBitmap(II[Landroid/graphics/Bitmap;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, " releaseBitmap : start "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", end "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", arraysize "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    array-length v1, p3
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpNewWarpChargingView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView;->mExecutorService:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v0, Lcom/oneplus/battery/OpNewWarpChargingView$releaseBitmapTask;
+
+    invoke-direct {v0, p1, p2, p3}, Lcom/oneplus/battery/OpNewWarpChargingView$releaseBitmapTask;-><init>(II[Landroid/graphics/Bitmap;)V
+
+    invoke-interface {p0, v0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

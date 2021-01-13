@@ -5,7 +5,7 @@
     </style>
     <style name="DockedDividerBackground">
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_width">10.0dip</item>
+        <item name="android:layout_width">10.5dip</item>
         <item name="android:layout_height">fill_parent</item>
     </style>
     <style name="DockedDividerHandle">

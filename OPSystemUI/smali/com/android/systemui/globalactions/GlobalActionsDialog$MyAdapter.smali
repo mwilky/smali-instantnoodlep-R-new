@@ -355,7 +355,7 @@
 .end method
 
 .method public onClickItem(I)V
-    .locals 1
+    .locals 3
 
     iget-object v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyAdapter;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
@@ -369,34 +369,51 @@
 
     instance-of v0, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$SilentModeTriStateAction;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog$MyAdapter;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialog;
 
-    iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog;->mDialog:Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;
+    iget-object v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialog;->mDialog:Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_1
 
-    instance-of v0, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$PowerOptionsAction;
+    instance-of v1, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$PowerOptionsAction;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->dismiss()V
+    instance-of v1, p1, Lcom/android/systemui/globalactions/GlobalActionsDialog$EmergencyDialerAction;
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p0}, Lcom/android/systemui/globalactions/GlobalActionsDialog;->access$2200(Lcom/android/systemui/globalactions/GlobalActionsDialog;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    const-wide/16 v1, 0x12c
+
+    invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
     :cond_0
+    invoke-virtual {v0}, Lcom/android/systemui/globalactions/GlobalActionsDialog$ActionsDialog;->dismiss()V
+
+    goto :goto_0
+
+    :cond_1
     const-string p0, "GlobalActionsDialog"
 
     const-string v0, "Action clicked while mDialog is null."
 
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     :goto_0
     invoke-interface {p1}, Lcom/android/systemui/globalactions/GlobalActionsDialog$Action;->onPress()V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 

@@ -4787,17 +4787,17 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mChildrenContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mChildrenContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->getVisibleHeader()Landroid/view/NotificationHeaderView;
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->getVisibleHeader()Landroid/view/NotificationHeaderView;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/NotificationHeaderView;->getOriginalIconColor()I
+    invoke-virtual {v0}, Landroid/view/NotificationHeaderView;->getOriginalIconColor()I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    goto :goto_0
 
     :cond_0
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getShowingLayout()Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
@@ -4808,6 +4808,7 @@
 
     move-result v0
 
+    :goto_0
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_1
@@ -4833,12 +4834,12 @@
 
     move-result v0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     move v0, v2
 
-    :goto_0
+    :goto_1
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -4868,12 +4869,12 @@
 
     if-nez v4, :cond_4
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_4
     move v1, v2
 
-    :goto_1
+    :goto_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->getBackgroundColorWithoutTint()I
 
     move-result p0

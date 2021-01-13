@@ -43,7 +43,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
+    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -55,7 +55,7 @@
 
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController$13;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3400(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
+    invoke-static {p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3500(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
 
     move-result-object p2
 
@@ -73,7 +73,7 @@
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$13;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
@@ -83,7 +83,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p0, p1}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3702(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     return-void
 .end method
@@ -101,13 +101,13 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
+    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$13;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$13;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
@@ -119,7 +119,7 @@
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController$13;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p0, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p0, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3702(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     return-void
 .end method

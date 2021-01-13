@@ -138,6 +138,22 @@
     return-object p0
 .end method
 
+.method static synthetic access$400(Lcom/android/systemui/qs/tiles/CellularTile;)Lcom/android/systemui/statusbar/policy/NetworkController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mController:Lcom/android/systemui/statusbar/policy/NetworkController;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/android/systemui/qs/tiles/CellularTile;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->refreshState(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
 .method static synthetic access$600(Lcom/android/systemui/qs/tiles/CellularTile;Ljava/lang/Object;)V
     .locals 0
 
@@ -222,6 +238,14 @@
     move-result p0
 
     return p0
+.end method
+
+.method private getVzwMobileDataContentName(Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;)Ljava/lang/CharSequence;
+    .locals 0
+
+    iget-object p0, p1, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->dataContentDescription:Ljava/lang/CharSequence;
+
+    return-object p0
 .end method
 
 .method private getVzwVolteAndNoWiFiCallingStatus()Z
@@ -406,11 +430,24 @@
 
 # virtual methods
 .method public createTileView(Landroid/content/Context;)Lcom/android/systemui/plugins/qs/QSIconView;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lcom/android/systemui/qs/SignalTileView;
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/qs/SignalTileView;-><init>(Landroid/content/Context;)V
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance p0, Lcom/oneplus/systemui/qs/OpVzwAlphaControlledSignalTileView;
+
+    invoke-direct {p0, p1}, Lcom/oneplus/systemui/qs/OpVzwAlphaControlledSignalTileView;-><init>(Landroid/content/Context;)V
+
+    return-object p0
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->createTileView(Landroid/content/Context;)Lcom/android/systemui/plugins/qs/QSIconView;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -852,49 +889,73 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mDataController:Lcom/android/settingslib/net/DataUsageController;
+    iget-object v5, p0, Lcom/android/systemui/qs/tiles/CellularTile;->mDataController:Lcom/android/settingslib/net/DataUsageController;
 
-    invoke-virtual {p0}, Lcom/android/settingslib/net/DataUsageController;->isMobileDataEnabled()Z
+    invoke-virtual {v5}, Lcom/android/settingslib/net/DataUsageController;->isMobileDataEnabled()Z
 
-    move-result p0
+    move-result v5
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string p0, ", noSim="
+    const-string v5, ", noSim="
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->noSim:Z
+    iget-boolean v5, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->noSim:Z
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string p0, ", airplaneMode="
+    const-string v5, ", airplaneMode="
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->airplaneModeEnabled:Z
+    iget-boolean v5, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->airplaneModeEnabled:Z
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", mobileDataEnabled="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", activityOut="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$SignalState;->activityOut:Z
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", activityIn="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$SignalState;->activityIn:Z
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v4
 
-    invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    iget-boolean p0, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->noSim:Z
+    iget-boolean v3, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->noSim:Z
 
-    if-eqz p0, :cond_6
+    if-eqz v3, :cond_6
 
     iput v2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
     goto :goto_4
 
     :cond_6
-    iget-boolean p0, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->airplaneModeEnabled:Z
+    iget-boolean v3, p2, Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;->airplaneModeEnabled:Z
 
-    if-eqz p0, :cond_7
+    if-eqz v3, :cond_7
 
     iput v2, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
@@ -903,15 +964,28 @@
     :cond_7
     if-eqz v0, :cond_8
 
-    const/4 p0, 0x2
+    const/4 v0, 0x2
 
-    iput p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+    iput v0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-direct {p0, p2}, Lcom/android/systemui/qs/tiles/CellularTile;->getVzwMobileDataContentName(Lcom/android/systemui/qs/tiles/CellularTile$CallbackInfo;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    iput-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
 
     goto :goto_4
 
     :cond_8
     iput v1, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
+    :cond_9
     :goto_4
     iget-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
 
@@ -919,7 +993,7 @@
 
     iget p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
 
-    if-ne p0, v1, :cond_9
+    if-ne p0, v1, :cond_a
 
     const-string p0, ""
 
@@ -927,7 +1001,7 @@
 
     goto :goto_5
 
-    :cond_9
+    :cond_a
     iget-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
 
     iput-object p0, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->stateDescription:Ljava/lang/CharSequence;

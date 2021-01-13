@@ -66,6 +66,8 @@
 
 .field private mGoogleDarkTheme:Z
 
+.field private mHideImeBackAndSwitcher:Z
+
 .field protected mImeDisplayId:I
 
 .field private mImeNavLp:Landroid/view/WindowManager$LayoutParams;
@@ -207,6 +209,8 @@
 
     iput-wide v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mLastUpdateIMENavBarTime:J
 
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHideImeBackAndSwitcher:Z
+
     new-instance v0, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;
 
     invoke-direct {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$b4K8-DVbezRw2CdKDCQbZqxi8NU;-><init>(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
@@ -268,14 +272,20 @@
     return p0
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+.method static synthetic access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
 
-    move-result-object p0
+    return p0
+.end method
 
-    return-object p0
+.method static synthetic access$1002(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
+
+    return p1
 .end method
 
 .method static synthetic access$102(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
@@ -286,7 +296,25 @@
     return p1
 .end method
 
-.method static synthetic access$1102(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
+.method static synthetic access$1100(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1302(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDisableQs:I
@@ -294,7 +322,7 @@
     return p1
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+.method static synthetic access$1400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->checkIfThemeChanged()V
@@ -302,7 +330,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/os/Handler;
+.method static synthetic access$1500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/os/Handler;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
@@ -312,7 +340,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1402(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
+.method static synthetic access$1602(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->isCTSStart:Z
@@ -320,26 +348,10 @@
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+.method static synthetic access$1700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/pm/PackageManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPm:Landroid/content/pm/PackageManager;
 
     return-object p0
 .end method
@@ -352,10 +364,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$1900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+.method static synthetic access$1900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/pm/PackageManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mPm:Landroid/content/pm/PackageManager;
 
     return-object p0
 .end method
@@ -386,7 +398,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+.method static synthetic access$2200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -396,7 +424,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/util/OpBoostUtils;
+.method static synthetic access$2500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/util/OpBoostUtils;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpBoostUtils:Lcom/oneplus/util/OpBoostUtils;
@@ -404,7 +432,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
+.method static synthetic access$2600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeServiceHost()Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$OpDozeCallbacks;
@@ -454,28 +482,28 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+.method static synthetic access$700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHideImeBackAndSwitcher:Z
+
+    return p0
+.end method
+
+.method static synthetic access$702(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHideImeBackAndSwitcher:Z
+
+    return p1
+.end method
+
+.method static synthetic access$800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
 
     return-object p0
-.end method
-
-.method static synthetic access$800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
-
-    return p0
-.end method
-
-.method static synthetic access$802(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mDoubleTapPowerApp:I
-
-    return p1
 .end method
 
 .method static synthetic access$900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
@@ -725,6 +753,8 @@
 
     :cond_2
     iput v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mThemeColor:I
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->opUpdateScrimController()V
 
     return-void
 .end method
@@ -3470,6 +3500,14 @@
     return p0
 .end method
 
+.method public isHideImeBackAndSwitcher()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mHideImeBackAndSwitcher:Z
+
+    return p0
+.end method
+
 .method public isImeStateChange()Z
     .locals 0
 
@@ -5505,6 +5543,22 @@
     const-string v3, "op_gesture_button_side_enabled"
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    iget-object v5, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mFullScreenGestureObserver:Landroid/database/ContentObserver;
+
+    invoke-virtual {v2, v3, v1, v5, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object v2, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "nav_icon_hide"
+
+    invoke-static {v3}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 

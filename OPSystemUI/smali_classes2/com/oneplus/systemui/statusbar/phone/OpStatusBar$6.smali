@@ -86,7 +86,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p1, v6}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1402(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
+    invoke-static {p1, v6}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1602(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
 
     invoke-static {v6}, Lcom/oneplus/util/OpUtils;->setCTSAdded(Z)V
 
@@ -115,7 +115,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p1, v7}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1402(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
+    invoke-static {p1, v7}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1602(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;Z)Z
 
     invoke-static {v7}, Lcom/oneplus/util/OpUtils;->setCTSAdded(Z)V
 
@@ -157,7 +157,7 @@
 
     iget-object v10, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v10}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {v10}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object v10
 
@@ -198,7 +198,7 @@
 
     iget-object v10, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v10}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
+    invoke-static {v10}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
 
     move-result v10
 
@@ -224,7 +224,7 @@
 
     iget-object v8, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v8}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
+    invoke-static {v8}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)I
 
     move-result v8
 
@@ -234,7 +234,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1600(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -301,7 +301,7 @@
 
     iget-object p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1700(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/pm/PackageManager;
+    invoke-static {p2}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/pm/PackageManager;
 
     move-result-object p2
 
@@ -362,7 +362,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1800(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -380,7 +380,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2100(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -439,7 +439,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$6;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$2200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object p0
 

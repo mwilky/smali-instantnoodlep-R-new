@@ -1164,7 +1164,7 @@
 .end method
 
 .method private onFinished(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;)V
-    .locals 3
+    .locals 2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mPendingFrameCallback:Ljava/lang/Runnable;
 
@@ -1202,17 +1202,17 @@
     :cond_1
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mWakeLockHeld:Z
 
-    const/4 v1, 0x0
-
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mWakeLock:Lcom/android/systemui/util/wakelock/WakeLock;
 
-    const-string v2, "ScrimController"
+    const-string v1, "ScrimController"
 
-    invoke-interface {v0, v2}, Lcom/android/systemui/util/wakelock/WakeLock;->release(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/android/systemui/util/wakelock/WakeLock;->release(Ljava/lang/String;)V
 
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mWakeLockHeld:Z
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mWakeLockHeld:Z
 
     :cond_2
     if-eqz p1, :cond_3
@@ -1234,17 +1234,19 @@
 
     if-ne p1, v0, :cond_4
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mInFrontTint:I
+    const/high16 p1, -0x1000000
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBehindTint:I
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mInFrontTint:I
 
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBubbleTint:I
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBehindTint:I
 
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBubbleTint:I
 
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mInFrontAlpha:F
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/statusbar/ScrimView;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mInFrontAlpha:F
+
+    invoke-direct {p0, v0, v1, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/statusbar/ScrimView;
 
@@ -1718,45 +1720,59 @@
     :goto_1
     if-nez v1, :cond_7
 
-    if-eqz v2, :cond_b
+    if-eqz v2, :cond_d
 
     :cond_7
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mAnimateChange:Z
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_a
 
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    sget-object v3, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-eq v1, v3, :cond_8
+
+    sget-object v3, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    if-ne v1, v3, :cond_9
+
+    :cond_8
+    if-nez v2, :cond_a
+
+    :cond_9
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->startScrimAnimation(Landroid/view/View;F)V
 
     goto :goto_4
 
-    :cond_8
+    :cond_a
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    if-eq v0, v1, :cond_a
+    if-eq v0, v1, :cond_c
 
     sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->BUBBLE_EXPANDED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    if-ne v0, v1, :cond_9
+    if-ne v0, v1, :cond_b
 
     goto :goto_2
 
-    :cond_9
+    :cond_b
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->getCurrentScrimTint(Landroid/view/View;)I
 
     move-result v0
 
     goto :goto_3
 
-    :cond_a
+    :cond_c
     :goto_2
     const/high16 v0, -0x1000000
 
     :goto_3
     invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrimColor(Landroid/view/View;FI)V
 
-    :cond_b
+    :cond_d
     :goto_4
     return-void
 .end method

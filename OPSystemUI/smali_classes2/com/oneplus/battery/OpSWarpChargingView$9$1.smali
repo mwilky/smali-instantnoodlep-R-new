@@ -49,7 +49,7 @@
 
     const-string p1, "chargingScaleUpFadeOut"
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$500(Lcom/oneplus/battery/OpSWarpChargingView;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$600(Lcom/oneplus/battery/OpSWarpChargingView;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     const/4 p1, 0x3
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$202(Lcom/oneplus/battery/OpSWarpChargingView;I)I
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$302(Lcom/oneplus/battery/OpSWarpChargingView;I)I
 
     sget-boolean p0, Lcom/oneplus/battery/OpSWarpChargingView;->DEBUG:Z
 

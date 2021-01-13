@@ -36,7 +36,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1300(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1500(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/os/Handler;
 
     move-result-object p1
 

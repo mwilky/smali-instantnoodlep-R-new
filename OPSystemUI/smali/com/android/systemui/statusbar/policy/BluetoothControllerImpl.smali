@@ -58,6 +58,8 @@
 
 .field private mLastChangedActiveDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
+.field private mLastUpdateTime:J
+
 .field private final mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
 .field private mState:I
@@ -155,7 +157,39 @@
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+.method static synthetic access$1000(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mEnabled:Z
+
+    return p0
+.end method
+
+.method static synthetic access$400(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastUpdateTime:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$402(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastUpdateTime:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$500(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl$H;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mState:I
@@ -163,7 +197,7 @@
     return p0
 .end method
 
-.method static synthetic access$502(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;Z)Z
+.method static synthetic access$702(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mTransientEnabling:Z
@@ -171,7 +205,7 @@
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+.method static synthetic access$800(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastChangedActiveDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
@@ -179,18 +213,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
+.method static synthetic access$900(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastChangedActiveBluetoothProfile:I
-
-    return p0
-.end method
-
-.method static synthetic access$800(Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mEnabled:Z
 
     return p0
 .end method
@@ -1739,19 +1765,23 @@
 .end method
 
 .method public setBluetoothEnabled(Z)V
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setBluetoothEnabled(Z)Z
+    invoke-virtual {v0, p1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setBluetoothEnabled(Z)Z
 
     :cond_0
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->mLastUpdateTime:J
+
     return-void
 .end method
 

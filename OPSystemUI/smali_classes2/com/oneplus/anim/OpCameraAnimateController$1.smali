@@ -90,9 +90,9 @@
 
     check-cast p1, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+    iget-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->removeCallback(Ljava/lang/Object;)V
+    invoke-interface {p1, v1}, Lcom/android/systemui/statusbar/policy/CallbackController;->removeCallback(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
@@ -100,26 +100,30 @@
 
     move-result-object p1
 
+    iget-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-static {v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$300(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/database/ContentObserver;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
     iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$300(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/database/ContentObserver;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+    invoke-static {p0, v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$502(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
 
     :cond_0
     return-void
 .end method
 
 .method public onCameraUnavailable(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-super {p0, p1}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;->onCameraUnavailable(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -127,11 +131,11 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$502(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$602(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -159,7 +163,7 @@
     move v1, v3
 
     :goto_0
-    invoke-static {v0, v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$702(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$802(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
@@ -167,75 +171,95 @@
 
     move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
 
-    const-string v4, "onCameraUnavailable:"
+    move-result-object v1
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "onCameraUnavailable:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " isFrontCamera "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, ", OpUtils.isCutoutHide(mContext):"
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$500(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Z
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p1, ", oneHandMode:"
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$800(Lcom/oneplus/anim/OpCameraAnimateController;)Z
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p1, ", orientation: "
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "OpCameraAnimateController"
+    const-string v4, "OpCameraAnimateController"
 
-    invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$500(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$800(Lcom/oneplus/anim/OpCameraAnimateController;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
-    iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
-
-    invoke-static {p1, v2}, Lcom/oneplus/anim/OpCameraAnimateController;->access$102(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+    if-ne v1, v2, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
@@ -244,6 +268,34 @@
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/oneplus/anim/OpGraphLight;->postShow()V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-static {p1, v2}, Lcom/oneplus/anim/OpCameraAnimateController;->access$502(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+
+    iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-static {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->access$1000(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$900(Lcom/oneplus/anim/OpCameraAnimateController;)Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    const-wide/16 v4, 0x5dc
+
+    invoke-virtual {p1, v0, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :goto_1
+    iget-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
+
+    invoke-static {p1, v2}, Lcom/oneplus/anim/OpCameraAnimateController;->access$102(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
 
     const-class p1, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
@@ -265,7 +317,7 @@
 
     iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController$1;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$800(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/net/Uri;
+    invoke-static {v0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$1100(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -277,6 +329,6 @@
 
     invoke-virtual {p1, v0, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method

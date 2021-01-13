@@ -10418,7 +10418,7 @@
 .end method
 
 .method public resetViews(Z)V
-    .locals 8
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -10439,45 +10439,50 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mLastCameraLaunchSource:Ljava/lang/String;
 
     :cond_0
+    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_1
+
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->getGutsManager()Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
 
-    move-result-object v1
-
-    const/4 v2, 0x1
+    move-result-object v2
 
     const/4 v3, 0x1
 
     const/4 v4, 0x1
 
-    const/4 v5, -0x1
+    const/4 v5, 0x1
 
     const/4 v6, -0x1
 
-    const/4 v7, 0x1
+    const/4 v7, -0x1
 
-    invoke-virtual/range {v1 .. v7}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
+    const/4 v8, 0x1
 
-    const/4 v0, 0x1
+    invoke-virtual/range {v2 .. v8}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->closeAndSaveGuts(ZZZIIZ)V
 
-    if-eqz p1, :cond_1
+    :cond_1
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->animateCloseQs(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->animateCloseQs(Z)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->closeQs()V
 
     :goto_0
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     const/4 v2, 0x0
 
     xor-int/lit8 v3, p1, 0x1
 
-    invoke-virtual {v1, v2, v0, p1, v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setOverScrollAmount(FZZZ)V
+    invoke-virtual {v0, v2, v1, p1, v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setOverScrollAmount(FZZZ)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
@@ -10489,31 +10494,31 @@
 
     move-result p1
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelViewController;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    invoke-interface {v1}, Lcom/android/systemui/statusbar/policy/KeyguardStateController;->isKeyguardFadingAway()Z
-
-    move-result v1
-
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
-
-    if-ne v2, v0, :cond_2
-
-    if-nez v1, :cond_2
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
-
-    invoke-virtual {v0}, Landroid/widget/GridLayout;->getVisibility()I
+    invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/KeyguardStateController;->isKeyguardFadingAway()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
 
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
+    if-ne v2, v1, :cond_3
 
-    invoke-direct {p0, v0, v1, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->setKeyguardStatusViewVisibility(IZZ)V
+    if-nez v0, :cond_3
 
-    :cond_2
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mKeyguardStatusView:Lcom/android/keyguard/KeyguardStatusView;
+
+    invoke-virtual {v1}, Landroid/widget/GridLayout;->getVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->mBarState:I
+
+    invoke-direct {p0, v1, v0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelViewController;->setKeyguardStatusViewVisibility(IZZ)V
+
+    :cond_3
     return-void
 .end method
 

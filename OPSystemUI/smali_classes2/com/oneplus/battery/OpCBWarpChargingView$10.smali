@@ -47,7 +47,7 @@
 
     const-string p1, "WARP_ANIM_P2_P3"
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$900(Lcom/oneplus/battery/OpCBWarpChargingView;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1700(Lcom/oneplus/battery/OpCBWarpChargingView;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -59,24 +59,36 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
+    iget-object p1, p0, Lcom/oneplus/battery/OpCBWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    const/4 p1, 0x2
+    const/4 v0, 0x2
 
-    invoke-static {p0, p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$202(Lcom/oneplus/battery/OpCBWarpChargingView;I)I
+    invoke-static {p1, v0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$202(Lcom/oneplus/battery/OpCBWarpChargingView;I)I
 
-    sget-boolean p0, Lcom/oneplus/battery/OpCBWarpChargingView;->DEBUG:Z
+    sget-boolean p1, Lcom/oneplus/battery/OpCBWarpChargingView;->DEBUG:Z
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const-string p0, "OpCBWarpChargingView"
+    const-string p1, "OpCBWarpChargingView"
 
-    const-string p1, "WARP P2 P3 set onAnimationStart()"
+    const-string v0, "WARP P2 P3 set onAnimationStart()"
 
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-object p1, p0, Lcom/oneplus/battery/OpCBWarpChargingView$10;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
+
+    invoke-static {p1}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1000(Lcom/oneplus/battery/OpCBWarpChargingView;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/oneplus/battery/OpCBWarpChargingView$10$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/battery/OpCBWarpChargingView$10$1;-><init>(Lcom/oneplus/battery/OpCBWarpChargingView$10;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method

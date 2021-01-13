@@ -35,11 +35,43 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 12
 
-    iget-object p0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
+    iget-object v0, p0, Lcom/oneplus/battery/OpNewWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;)V
+    invoke-static {v0}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1200(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+
+    move-result v2
+
+    iget-object v1, p0, Lcom/oneplus/battery/OpNewWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
+
+    invoke-static {v1}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1600(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+
+    move-result v3
+
+    const/4 v1, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x1
+
+    invoke-static/range {v0 .. v5}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;IIIZZ)V
+
+    iget-object v6, p0, Lcom/oneplus/battery/OpNewWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpNewWarpChargingView;
+
+    invoke-static {v6}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$2500(Lcom/oneplus/battery/OpNewWarpChargingView;)I
+
+    move-result v8
+
+    const/4 v7, 0x0
+
+    const/4 v9, 0x2
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
+
+    invoke-static/range {v6 .. v11}, Lcom/oneplus/battery/OpNewWarpChargingView;->access$1700(Lcom/oneplus/battery/OpNewWarpChargingView;IIIZZ)V
 
     return-void
 .end method

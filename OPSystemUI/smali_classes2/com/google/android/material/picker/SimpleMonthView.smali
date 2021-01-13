@@ -60,6 +60,8 @@
 
 .field private final mDesiredMonthHeight:I
 
+.field private mDisplayWidth:I
+
 .field private mEnabledDayEnd:I
 
 .field private mEnabledDayStart:I
@@ -95,6 +97,8 @@
 .field private mWeekStart:I
 
 .field private mYear:I
+
+.field private paint:Landroid/graphics/Paint;
 
 
 # direct methods
@@ -282,6 +286,8 @@
     invoke-direct {p0}, Lcom/google/android/material/picker/SimpleMonthView;->updateDayOfWeekLabels()V
 
     invoke-direct {p0, p1}, Lcom/google/android/material/picker/SimpleMonthView;->initPaints(Landroid/content/res/Resources;)V
+
+    invoke-direct {p0}, Lcom/google/android/material/picker/SimpleMonthView;->initConfig()V
 
     return-void
 .end method
@@ -772,7 +778,7 @@
     :goto_7
     iget v9, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaysInMonth:I
 
-    if-gt v7, v9, :cond_16
+    if-gt v7, v9, :cond_17
 
     mul-int v9, v5, v8
 
@@ -890,31 +896,18 @@
 
     if-ne v10, v7, :cond_13
 
-    const/4 v10, 0x1
+    const/4 v15, 0x1
 
     goto :goto_d
 
     :cond_13
-    const/4 v10, 0x0
+    const/4 v15, 0x0
 
     :goto_d
-    if-eqz v10, :cond_14
+    if-eqz v15, :cond_15
 
-    if-nez v12, :cond_14
+    if-nez v12, :cond_15
 
-    iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v10
-
-    const/4 v11, 0x1
-
-    const/4 v12, 0x0
-
-    goto :goto_e
-
-    :cond_14
     invoke-static {v11}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
 
     move-result-object v10
@@ -927,45 +920,170 @@
 
     move-result v10
 
-    const/4 v11, 0x1
+    new-instance v11, Landroid/graphics/Paint;
 
-    invoke-virtual {v2, v11}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-direct {v11}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v12
+
+    sget v13, Lcom/google/android/material/R$color;->op_control_icon_color_inactive_default:I
+
+    invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v12
+
+    invoke-virtual {v11, v12}, Landroid/graphics/Paint;->setColor(I)V
+
+    int-to-float v11, v9
+
+    int-to-float v12, v3
+
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorRadius:I
+
+    const/4 v14, 0x2
+
+    div-int/2addr v13, v14
+
+    int-to-float v13, v13
+
+    iget-object v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v1, v11, v12, v13, v14}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v13
+
+    iget v14, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDisplayWidth:I
+
+    if-ge v13, v14, :cond_14
+
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    sget v15, Lcom/google/android/material/R$color;->op_control_bg_color_popup_default:I
+
+    invoke-virtual {v14, v15}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v14
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_e
+
+    :cond_14
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    sget v15, Lcom/google/android/material/R$color;->op_control_bg_color_default:I
+
+    invoke-virtual {v14, v15}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v14
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setColor(I)V
 
     :goto_e
+    iget-object v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    new-instance v14, Landroid/graphics/PorterDuffXfermode;
+
+    sget-object v15, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v14, v15}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v13, v14}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    iget v13, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDaySelectorRadius:I
+
+    const/4 v14, 0x2
+
+    div-int/2addr v13, v14
+
+    int-to-float v13, v13
+
+    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v15
+
+    const/4 v14, 0x1
+
+    invoke-static {v15, v14}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
+
+    move-result v15
+
+    sub-float/2addr v13, v15
+
+    iget-object v15, v0, Lcom/google/android/material/picker/SimpleMonthView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v1, v11, v12, v13, v15}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    const/4 v12, 0x0
+
+    goto :goto_f
+
+    :cond_15
+    const/4 v14, 0x1
+
+    invoke-static {v11}, Lcom/google/android/material/internal/ViewUtils;->getViewState(I)[I
+
+    move-result-object v10
+
+    iget-object v11, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayTextColor:Landroid/content/res/ColorStateList;
+
+    const/4 v12, 0x0
+
+    invoke-virtual {v11, v10, v12}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v10
+
+    invoke-virtual {v2, v14}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+
+    :goto_f
     invoke-virtual {v2, v10}, Landroid/text/TextPaint;->setColor(I)V
 
     iget-object v10, v0, Lcom/google/android/material/picker/SimpleMonthView;->mDayFormatter:Ljava/text/NumberFormat;
 
-    int-to-long v13, v7
+    int-to-long v12, v7
 
-    invoke-virtual {v10, v13, v14}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v10, v12, v13}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
     move-result-object v10
 
     int-to-float v9, v9
 
-    int-to-float v13, v3
+    int-to-float v11, v3
 
-    sub-float/2addr v13, v6
+    sub-float/2addr v11, v6
 
-    invoke-virtual {v1, v10, v9, v13, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v10, v9, v11, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     add-int/lit8 v8, v8, 0x1
 
     const/4 v9, 0x7
 
-    if-ne v8, v9, :cond_15
+    if-ne v8, v9, :cond_16
 
     add-int/2addr v3, v4
 
-    move v8, v12
+    const/4 v8, 0x0
 
-    :cond_15
+    :cond_16
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_7
 
-    :cond_16
+    :cond_17
     return-void
 .end method
 
@@ -1463,6 +1581,24 @@
         :pswitch_0
         :pswitch_2
     .end packed-switch
+.end method
+
+.method private initConfig()V
+    .locals 1
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/picker/SimpleMonthView;->mDisplayWidth:I
+
+    return-void
 .end method
 
 .method private initPaints(Landroid/content/res/Resources;)V
