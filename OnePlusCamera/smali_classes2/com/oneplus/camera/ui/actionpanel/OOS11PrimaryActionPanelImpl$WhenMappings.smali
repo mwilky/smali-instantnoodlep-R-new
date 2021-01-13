@@ -33,6 +33,8 @@
 
 .field public static final synthetic $EnumSwitchMapping$6:[I
 
+.field public static final synthetic $EnumSwitchMapping$7:[I
+
 
 # direct methods
 .method static synthetic constructor <clinit>()V
@@ -269,6 +271,36 @@
     sget-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$WhenMappings;->$EnumSwitchMapping$6:[I
 
     sget-object v1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->EXPANDED:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->values()[Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+
+    sget-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+
+    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->EXPANDING:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+
+    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->COLLAPSING:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->ordinal()I
 

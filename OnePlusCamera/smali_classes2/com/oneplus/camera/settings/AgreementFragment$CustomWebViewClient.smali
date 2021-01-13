@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient\n*L\n1#1,170:1\n*E\n"
+    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient\n*L\n1#1,183:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -73,7 +73,7 @@
 
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
     const-string v0, "view"
 
@@ -85,19 +85,20 @@
 
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
+    iget-object p1, p0, Lcom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
+
+    invoke-static {p1}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getShowWebViewOperation$p(Lcom/oneplus/camera/settings/AgreementFragment;)Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    move-result-object p1
+
     iget-object p0, p0, Lcom/oneplus/camera/settings/AgreementFragment$CustomWebViewClient;->this$0:Lcom/oneplus/camera/settings/AgreementFragment;
 
-    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getRelativelayout$p(Lcom/oneplus/camera/settings/AgreementFragment;)Landroid/widget/RelativeLayout;
+    invoke-static {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->access$getShowWebViewDelayTime$p(Lcom/oneplus/camera/settings/AgreementFragment;)J
 
-    move-result-object p0
+    move-result-wide v0
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    :cond_0
     return-void
 .end method
 

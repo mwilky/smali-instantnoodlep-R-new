@@ -11277,15 +11277,15 @@
     goto :goto_2
 
     :cond_5
-    const v6, 0x7f0804e8
+    const v6, 0x7f0804e9
 
     const v7, 0x7f0a0303
 
-    const v8, 0x7f0804eb
+    const v8, 0x7f0804ec
 
     const v9, 0x7f0a0304
 
-    const v10, 0x7f0804e6
+    const v10, 0x7f0804e7
 
     const v11, 0x7f0a0302
 
@@ -11890,13 +11890,13 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    const v2, 0x7f0804e5
+    const v2, 0x7f0804e6
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    const v3, 0x7f0804ea
+    const v3, 0x7f0804eb
 
     invoke-virtual {p0, v3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -1513,11 +1513,11 @@
 
     const v1, 0x7f0a01d2
 
-    const v2, 0x7f0804eb
+    const v2, 0x7f0804ec
 
     const v3, 0x7f0a01d0
 
-    const v4, 0x7f0804e6
+    const v4, 0x7f0804e7
 
     if-eqz v0, :cond_3
 
@@ -1621,7 +1621,7 @@
 
     new-instance v12, Lcom/oneplus/camera/widget/ZoomSwitcherItem;
 
-    const v6, 0x7f0804e8
+    const v6, 0x7f0804e9
 
     invoke-virtual {p0, v6}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3371,7 +3371,7 @@
 .end method
 
 .method protected onPreparePrimaryActionItems()Ljava/util/List;
-    .locals 4
+    .locals 3
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -3398,14 +3398,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcom/oneplus/camera/ui/actionpanel/ResolutionActionItem;
-
-    sget-object v3, Lcom/oneplus/camera/next/media/MediaType;->PHOTO:Lcom/oneplus/camera/next/media/MediaType;
-
-    invoke-direct {v2, v0, v3}, Lcom/oneplus/camera/ui/actionpanel/ResolutionActionItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/next/media/MediaType;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode;->nightCamera:Lcom/oneplus/camera/next/hardware/NightCamera;
 
     if-eqz p0, :cond_0
@@ -3417,6 +3409,14 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
+    new-instance p0, Lcom/oneplus/camera/ui/actionpanel/ResolutionActionItem;
+
+    sget-object v2, Lcom/oneplus/camera/next/media/MediaType;->PHOTO:Lcom/oneplus/camera/next/media/MediaType;
+
+    invoke-direct {p0, v0, v2}, Lcom/oneplus/camera/ui/actionpanel/ResolutionActionItem;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/next/media/MediaType;)V
+
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     check-cast v1, Ljava/util/List;
 
     return-object v1

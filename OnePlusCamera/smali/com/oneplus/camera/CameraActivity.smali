@@ -13919,7 +13919,7 @@
 
     if-eqz v4, :cond_2
 
-    const p1, 0x7f0804b4
+    const p1, 0x7f0804b5
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/CameraActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

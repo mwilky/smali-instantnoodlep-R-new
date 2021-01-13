@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl\n*L\n1#1,1775:1\n*E\n"
+    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl\n*L\n1#1,1784:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -186,6 +186,8 @@
 
 # static fields
 .field private static final ACTION_MEDIA_DELETED:Ljava/lang/String; = "com.oneplus.gallery.MEDIA_STORE_MEDIA_DELETED"
+
+.field private static final ACTION_PICTURE_PROCESSED:Ljava/lang/String; = "com.oneplus.camera.action.PICTURE_PROCESSED"
 
 .field private static final ACTION_SAVE_PIC_FAILED:Ljava/lang/String; = "com.oneplus.camera.NEW_PICTURE_FAILED"
 
@@ -2462,7 +2464,7 @@
 
     const/4 v3, 0x1
 
-    if-eq v2, v3, :cond_1e
+    if-eq v2, v3, :cond_1f
 
     const/4 v4, 0x2
 
@@ -2476,7 +2478,7 @@
 
     if-eq v2, v3, :cond_0
 
-    goto/16 :goto_9
+    goto/16 :goto_a
 
     :cond_0
     instance-of v2, v1, Lcom/oneplus/camera/io/PhotoSavingTask;
@@ -2579,7 +2581,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/oneplus/camera/io/FileManagerImpl;->raise(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
 
-    goto/16 :goto_9
+    goto/16 :goto_a
 
     :cond_3
     instance-of v2, v1, Lcom/oneplus/camera/io/PhotoSavingTask;
@@ -3209,17 +3211,44 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_1d
+    if-eqz v4, :cond_1e
 
+    instance-of v5, v1, Lcom/oneplus/camera/io/ProcessedPictureSavingTask;
+
+    if-eqz v5, :cond_1b
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/io/FileManagerImpl;->getGlobalContext()Lcom/oneplus/base/GlobalContext;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    const-string v5, "com.oneplus.camera.action.PICTURE_PROCESSED"
+
+    invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    new-instance v5, Landroid/content/ComponentName;
+
+    const-string v6, "com.oneplus.gallery"
+
+    const-string v7, "com.oneplus.gallery2.CameraReceiver"
+
+    invoke-direct {v5, v6, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v3, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v3}, Lcom/oneplus/base/GlobalContext;->sendBroadcast(Landroid/content/Intent;)V
+
+    goto :goto_9
+
+    :cond_1b
     invoke-interface/range {p1 .. p1}, Lcom/oneplus/camera/io/MediaSavingTask;->isServiceMode()Z
 
     move-result v5
 
-    if-nez v5, :cond_1d
-
-    instance-of v5, v1, Lcom/oneplus/camera/io/ProcessedPictureSavingTask;
-
-    if-nez v5, :cond_1d
+    if-nez v5, :cond_1e
 
     sget-object v5, Lcom/oneplus/camera/io/FileManagerImpl$WhenMappings;->$EnumSwitchMapping$0:[I
 
@@ -3229,17 +3258,17 @@
 
     aget v2, v5, v2
 
-    if-eq v2, v3, :cond_1c
+    if-eq v2, v3, :cond_1d
 
     const/4 v3, 0x2
 
-    if-eq v2, v3, :cond_1b
+    if-eq v2, v3, :cond_1c
 
     const/4 v7, 0x0
 
     goto :goto_8
 
-    :cond_1b
+    :cond_1c
     new-instance v7, Landroid/content/Intent;
 
     const-string v2, "android.hardware.action.NEW_VIDEO"
@@ -3248,7 +3277,7 @@
 
     goto :goto_8
 
-    :cond_1c
+    :cond_1d
     new-instance v7, Landroid/content/Intent;
 
     const-string v2, "android.hardware.action.NEW_PICTURE"
@@ -3256,7 +3285,7 @@
     invoke-direct {v7, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     :goto_8
-    if-eqz v7, :cond_1d
+    if-eqz v7, :cond_1e
 
     invoke-virtual {v7, v4}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
@@ -3266,7 +3295,8 @@
 
     invoke-virtual {v2, v7}, Lcom/oneplus/base/GlobalContext;->sendBroadcast(Landroid/content/Intent;)V
 
-    :cond_1d
+    :cond_1e
+    :goto_9
     sget-object v2, Lcom/oneplus/camera/io/FileManager;->Companion:Lcom/oneplus/camera/io/FileManager$Companion;
 
     invoke-virtual {v2}, Lcom/oneplus/camera/io/FileManager$Companion;->getEVENT_MEDIA_SAVED()Lcom/oneplus/base/EventKey;
@@ -3281,8 +3311,8 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/oneplus/camera/io/FileManagerImpl;->raise(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
 
-    :cond_1e
-    :goto_9
+    :cond_1f
+    :goto_a
     invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/io/FileManagerImpl;->getQueryLatestMediaInfoOperation()Lcom/oneplus/threading/UniqueDispatcherOperation;
 
     move-result-object v0

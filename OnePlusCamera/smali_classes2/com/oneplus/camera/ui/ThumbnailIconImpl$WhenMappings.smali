@@ -35,6 +35,8 @@
 
 .field public static final synthetic $EnumSwitchMapping$7:[I
 
+.field public static final synthetic $EnumSwitchMapping$8:[I
+
 
 # direct methods
 .method static synthetic constructor <clinit>()V
@@ -146,7 +148,7 @@
 
     aput v3, v0, v1
 
-    invoke-static {}, Lcom/oneplus/base/BaseActivity$State;->values()[Lcom/oneplus/base/BaseActivity$State;
+    invoke-static {}, Lcom/oneplus/camera/next/media/MediaType;->values()[Lcom/oneplus/camera/next/media/MediaType;
 
     move-result-object v0
 
@@ -158,9 +160,9 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$3:[I
 
-    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->PAUSING:Lcom/oneplus/base/BaseActivity$State;
+    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->PHOTO:Lcom/oneplus/camera/next/media/MediaType;
 
-    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
 
     move-result v1
 
@@ -168,37 +170,15 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$3:[I
 
-    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->RESUMING:Lcom/oneplus/base/BaseActivity$State;
+    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->VIDEO:Lcom/oneplus/camera/next/media/MediaType;
 
-    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
 
     move-result v1
 
     aput v3, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$3:[I
-
-    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->STOPPED:Lcom/oneplus/base/BaseActivity$State;
-
-    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
-
-    move-result v1
-
-    aput v4, v0, v1
-
-    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$3:[I
-
-    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->NEW_INTENT:Lcom/oneplus/base/BaseActivity$State;
-
-    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v5, 0x4
-
-    aput v5, v0, v1
-
-    invoke-static {}, Lcom/oneplus/camera/next/media/MediaType;->values()[Lcom/oneplus/camera/next/media/MediaType;
+    invoke-static {}, Lcom/oneplus/base/BaseActivity$State;->values()[Lcom/oneplus/base/BaseActivity$State;
 
     move-result-object v0
 
@@ -210,9 +190,9 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->PHOTO:Lcom/oneplus/camera/next/media/MediaType;
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->PAUSING:Lcom/oneplus/base/BaseActivity$State;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
 
     move-result v1
 
@@ -220,13 +200,35 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->VIDEO:Lcom/oneplus/camera/next/media/MediaType;
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->RESUMING:Lcom/oneplus/base/BaseActivity$State;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
+    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
 
     move-result v1
 
     aput v3, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$4:[I
+
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->STOPPED:Lcom/oneplus/base/BaseActivity$State;
+
+    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
+
+    move-result v1
+
+    aput v4, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$4:[I
+
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->NEW_INTENT:Lcom/oneplus/base/BaseActivity$State;
+
+    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v5, 0x4
+
+    aput v5, v0, v1
 
     invoke-static {}, Lcom/oneplus/camera/next/media/MediaType;->values()[Lcom/oneplus/camera/next/media/MediaType;
 
@@ -288,7 +290,7 @@
 
     aput v3, v0, v1
 
-    invoke-static {}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->values()[Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    invoke-static {}, Lcom/oneplus/camera/next/media/MediaType;->values()[Lcom/oneplus/camera/next/media/MediaType;
 
     move-result-object v0
 
@@ -300,6 +302,36 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$7:[I
 
+    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->PHOTO:Lcom/oneplus/camera/next/media/MediaType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+
+    sget-object v1, Lcom/oneplus/camera/next/media/MediaType;->VIDEO:Lcom/oneplus/camera/next/media/MediaType;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/next/media/MediaType;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->values()[Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
+
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
+
     sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->STOPPING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
@@ -308,7 +340,7 @@
 
     aput v2, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
     sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->UNAVAILABLE:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
@@ -318,7 +350,7 @@
 
     aput v3, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
     sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
@@ -328,7 +360,7 @@
 
     aput v4, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
     sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 

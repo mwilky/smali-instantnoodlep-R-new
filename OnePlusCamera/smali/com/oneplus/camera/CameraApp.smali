@@ -408,13 +408,13 @@
 
     invoke-static {}, Lcom/oneplus/camera/features/AndroidPlatformFeaturesKt;->initializeAndroidPlatformFeatures()V
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isOnePlus()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isOPlus()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/oneplus/camera/features/OnePlusFeaturesKt;->initializeOnePlusFeatures()V
+    invoke-static {}, Lcom/oneplus/camera/features/OnePlusFeaturesKt;->initializeOPlusFeatures()V
 
     :cond_1
     invoke-static {}, Lcom/oneplus/camera/features/ProjectFeaturesKt;->initializeProjectFeatures()V

@@ -2748,7 +2748,7 @@
 
     move-result v3
 
-    const v5, 0x7f0804eb
+    const v5, 0x7f0804ec
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2788,7 +2788,7 @@
 
     move-result v7
 
-    const v4, 0x7f0804e8
+    const v4, 0x7f0804e9
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2823,7 +2823,7 @@
 
     if-eqz v1, :cond_3
 
-    const v1, 0x7f0804e6
+    const v1, 0x7f0804e7
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

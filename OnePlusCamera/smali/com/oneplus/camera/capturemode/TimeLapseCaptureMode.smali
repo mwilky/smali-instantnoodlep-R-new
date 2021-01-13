@@ -1628,7 +1628,7 @@
 
     move-result-object v12
 
-    const v5, 0x7f0804e8
+    const v5, 0x7f0804e9
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1655,7 +1655,7 @@
 
     if-eqz v5, :cond_10
 
-    const v5, 0x7f0804eb
+    const v5, 0x7f0804ec
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1664,7 +1664,7 @@
     goto :goto_8
 
     :cond_10
-    const v5, 0x7f0804ea
+    const v5, 0x7f0804eb
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1694,7 +1694,7 @@
 
     if-eqz v5, :cond_12
 
-    const v5, 0x7f0804e6
+    const v5, 0x7f0804e7
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1703,7 +1703,7 @@
     goto :goto_8
 
     :cond_12
-    const v5, 0x7f0804e5
+    const v5, 0x7f0804e6
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

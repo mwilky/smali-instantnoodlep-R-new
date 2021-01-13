@@ -4679,7 +4679,7 @@
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f0804b4
+    const v0, 0x7f0804b5
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

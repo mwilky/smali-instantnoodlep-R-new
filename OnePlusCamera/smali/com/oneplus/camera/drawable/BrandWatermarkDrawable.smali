@@ -551,7 +551,7 @@
     :cond_4
     new-instance v2, Lcom/oneplus/drawable/ShadowDrawable;
 
-    const v3, 0x7f0804e1
+    const v3, 0x7f0804e2
 
     const v4, 0x7f1302b7
 
@@ -613,7 +613,7 @@
 
     new-instance p2, Lcom/oneplus/drawable/ShadowDrawable;
 
-    const v1, 0x7f0804e2
+    const v1, 0x7f0804e3
 
     invoke-direct {p2, p1, v1, v4}, Lcom/oneplus/drawable/ShadowDrawable;-><init>(Landroid/content/Context;II)V
 

@@ -1177,7 +1177,7 @@
 
     if-gtz v5, :cond_4
 
-    const v8, 0x7f0804e9
+    const v8, 0x7f0804ea
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1186,7 +1186,7 @@
     goto :goto_4
 
     :cond_4
-    const v8, 0x7f0804e7
+    const v8, 0x7f0804e8
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

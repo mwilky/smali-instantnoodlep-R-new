@@ -1578,34 +1578,82 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     iget v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mFraction:F
 
-    cmpl-float v0, v0, v1
+    cmpl-float v2, v0, v1
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     return-void
 
     :cond_0
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mTextView:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
+
+    invoke-virtual {v2}, Lcom/google/android/material/internal/MultiCollapsingHelper;->getTitleViewCollapsedTextSize()F
+
+    move-result v2
+
+    cmpl-float v0, v0, v2
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/material/internal/MultiCollapsingHelper;->getIsDrawLineInit()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTitleEnabled:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->drawCollapsingTitle:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mPrepareDraw:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/MultiCollapsingHelper;->drawLine(Landroid/graphics/Canvas;)V
+
+    :cond_1
+    return-void
+
+    :cond_2
     invoke-direct {p0}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->ensureTitlebar()V
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->appbar:Lcom/google/android/material/appbar/Appbar;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->contentScrim:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrimAlpha:I
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_3
 
     iget-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mDisableCollapsed:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_3
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
@@ -1619,46 +1667,46 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_1
+    :cond_3
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTitleEnabled:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->drawCollapsingTitle:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mPrepareDraw:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->mDisableCollapsed:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/internal/MultiCollapsingHelper;->setExpansionFraction(F)V
 
-    :cond_2
+    :cond_4
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/internal/MultiCollapsingHelper;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_3
+    :cond_5
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->statusBarScrim:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     iget v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->scrimAlpha:I
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_7
 
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->lastInsets:Landroidx/core/view/WindowInsetsCompat;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     invoke-virtual {v0}, Landroidx/core/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
 
@@ -1666,11 +1714,11 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_6
     move v0, v1
 
     :goto_0
-    if-lez v0, :cond_5
+    if-lez v0, :cond_7
 
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->statusBarScrim:Landroid/graphics/drawable/Drawable;
 
@@ -1702,7 +1750,7 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_5
+    :cond_7
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/MultiCollapsingHelper;
 
     invoke-virtual {p1}, Lcom/google/android/material/internal/MultiCollapsingHelper;->getExpansionFraction()F

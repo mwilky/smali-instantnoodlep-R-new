@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI$breathModeContentObserver$1\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,714:1\n57#2,8:715\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI$breathModeContentObserver$1\n*L\n65#1,8:715\n*E\n"
+    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI$breathModeContentObserver$1\n+ 2 Any.kt\ncom/oneplus/base/AnyKt\n*L\n1#1,716:1\n57#2,8:717\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI$breathModeContentObserver$1\n*L\n65#1,8:717\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

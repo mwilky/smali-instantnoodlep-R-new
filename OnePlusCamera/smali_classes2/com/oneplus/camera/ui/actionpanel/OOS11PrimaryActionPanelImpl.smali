@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1683:1\n12#2,3:1684\n12#2,3:1687\n12#2,3:1690\n12#2,3:1693\n12#2,3:1696\n*E\n*S KotlinDebug\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n*L\n666#1,3:1684\n669#1,3:1687\n680#1,3:1690\n683#1,3:1693\n686#1,3:1696\n*E\n"
+    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1696:1\n12#2,3:1697\n12#2,3:1700\n12#2,3:1703\n12#2,3:1706\n12#2,3:1709\n12#2,3:1712\n*E\n*S KotlinDebug\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n*L\n666#1,3:1697\n669#1,3:1700\n680#1,3:1703\n683#1,3:1706\n686#1,3:1709\n689#1,3:1712\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -26,7 +26,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00de\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0007\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\r\u0018\u0000 \u0085\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u0004\u0085\u0001\u0086\u0001B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010<\u001a\u00020=H\u0003J\u0012\u0010>\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020\'H\u0003J\u0012\u0010@\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020\'H\u0003J\u0018\u0010A\u001a\u00020=2\u0006\u0010?\u001a\u00020\'2\u0006\u0010B\u001a\u00020\u0018H\u0017J\u0010\u0010C\u001a\u00020\u001b2\u0006\u0010B\u001a\u00020\u0018H\u0017J\u0008\u0010D\u001a\u00020\u001bH\u0003J\u0010\u0010E\u001a\u00020=2\u0006\u0010F\u001a\u00020\u001bH\u0003J\u0012\u0010G\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020\'H\u0003J\u001c\u0010H\u001a\u00020\'\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0\u0008H\u0003J\u0018\u0010K\u001a\u00020=2\u0006\u0010L\u001a\u00020M2\u0006\u0010N\u001a\u00020MH\u0015J\u001c\u0010O\u001a\u00020=2\u0008\u0010P\u001a\u0004\u0018\u00010Q2\u0008\u0010R\u001a\u0004\u0018\u00010QH\u0015J\u0008\u0010S\u001a\u00020=H\u0015J4\u0010T\u001a\u00020\u000b\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010W\u001a\u00020XH\u0015J:\u0010Y\u001a\u0008\u0012\u0004\u0012\u0002HI0Z\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010[\u001a\u00020\u000bH\u0015J\u0008\u0010\\\u001a\u00020=H\u0003J\u0008\u0010]\u001a\u00020=H\u0003J\u0008\u0010^\u001a\u00020=H\u0015J4\u0010_\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010`\u001a\u00020\u0018H\u0015J*\u0010a\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000c\u0010b\u001a\u0008\u0012\u0004\u0012\u0002HI0ZH\u0015J\u001c\u0010c\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0UH\u0015J$\u0010d\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010e\u001a\u00020\'H\u0015J\u001c\u0010f\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0UH\u0015J$\u0010g\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010h\u001a\u00020iH\u0015J4\u0010j\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010`\u001a\u00020\u0018H\u0015J$\u0010k\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010l\u001a\u00020\'H\u0015J$\u0010m\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010n\u001a\u00020\'H\u0015J\u0008\u0010o\u001a\u00020=H\u0003J\u0008\u0010p\u001a\u00020=H\u0003J&\u0010q\u001a\u00020=2\u0006\u0010r\u001a\u00020s2\u000c\u0010t\u001a\u0008\u0012\u0004\u0012\u00020v0u2\u0006\u0010w\u001a\u00020vH\u0003J\u0010\u0010x\u001a\u00020=2\u0006\u0010y\u001a\u00020zH\u0015J\u0008\u0010{\u001a\u00020=H\u0003J\u0018\u0010|\u001a\u00020=2\u0006\u0010}\u001a\u00020)2\u0006\u0010h\u001a\u00020iH\u0003J\u0008\u0010~\u001a\u00020=H\u0003J\u0008\u0010\u007f\u001a\u00020=H\u0003J\t\u0010\u0080\u0001\u001a\u00020=H\u0003J\t\u0010\u0081\u0001\u001a\u00020=H\u0003J\t\u0010\u0082\u0001\u001a\u00020=H\u0003J\t\u0010\u0083\u0001\u001a\u00020=H\u0003J\t\u0010\u0084\u0001\u001a\u00020=H\u0003R\u0014\u0010\u0007\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010!X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\'X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00100\u001a\u0012\u0012\u0004\u0012\u00020\u001b01j\u0008\u0012\u0004\u0012\u00020\u001b`2X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00103\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00105\u001a\u000206X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0087\u0001"
+        "\u0000\u00de\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0007\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\r\u0018\u0000 \u0086\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u0004\u0086\u0001\u0087\u0001B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010=\u001a\u00020>H\u0003J\u0012\u0010?\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u0012\u0010A\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u0018\u0010B\u001a\u00020>2\u0006\u0010@\u001a\u00020\'2\u0006\u0010C\u001a\u00020\u0018H\u0017J\u0010\u0010D\u001a\u00020\u001b2\u0006\u0010C\u001a\u00020\u0018H\u0017J\u0008\u0010E\u001a\u00020\u001bH\u0003J\u0010\u0010F\u001a\u00020>2\u0006\u0010G\u001a\u00020\u001bH\u0003J\u0012\u0010H\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u001c\u0010I\u001a\u00020\'\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0\u0008H\u0003J\u0018\u0010L\u001a\u00020>2\u0006\u0010M\u001a\u00020N2\u0006\u0010O\u001a\u00020NH\u0015J\u001c\u0010P\u001a\u00020>2\u0008\u0010Q\u001a\u0004\u0018\u00010R2\u0008\u0010S\u001a\u0004\u0018\u00010RH\u0015J\u0008\u0010T\u001a\u00020>H\u0015J4\u0010U\u001a\u00020\u000b\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010X\u001a\u00020YH\u0015J:\u0010Z\u001a\u0008\u0012\u0004\u0012\u0002HJ0[\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010\\\u001a\u00020\u000bH\u0015J\u0008\u0010]\u001a\u00020>H\u0003J\u0008\u0010^\u001a\u00020>H\u0003J\u0008\u0010_\u001a\u00020>H\u0015J4\u0010`\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010a\u001a\u00020\u0018H\u0015J*\u0010b\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000c\u0010c\u001a\u0008\u0012\u0004\u0012\u0002HJ0[H\u0015J\u001c\u0010d\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0VH\u0015J$\u0010e\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010f\u001a\u00020\'H\u0015J\u001c\u0010g\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0VH\u0015J$\u0010h\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010i\u001a\u00020jH\u0015J4\u0010k\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010a\u001a\u00020\u0018H\u0015J$\u0010l\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010m\u001a\u00020\'H\u0015J$\u0010n\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010o\u001a\u00020\'H\u0015J\u0008\u0010p\u001a\u00020>H\u0003J\u0008\u0010q\u001a\u00020>H\u0003J&\u0010r\u001a\u00020>2\u0006\u0010s\u001a\u00020t2\u000c\u0010u\u001a\u0008\u0012\u0004\u0012\u00020w0v2\u0006\u0010x\u001a\u00020wH\u0003J\u0010\u0010y\u001a\u00020>2\u0006\u0010z\u001a\u00020{H\u0015J\u0008\u0010|\u001a\u00020>H\u0003J\u0018\u0010}\u001a\u00020>2\u0006\u0010~\u001a\u00020)2\u0006\u0010i\u001a\u00020jH\u0003J\u0008\u0010\u007f\u001a\u00020>H\u0003J\t\u0010\u0080\u0001\u001a\u00020>H\u0003J\t\u0010\u0081\u0001\u001a\u00020>H\u0003J\t\u0010\u0082\u0001\u001a\u00020>H\u0003J\t\u0010\u0083\u0001\u001a\u00020>H\u0003J\t\u0010\u0084\u0001\u001a\u00020>H\u0003J\t\u0010\u0085\u0001\u001a\u00020>H\u0003R\u0014\u0010\u0007\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010!X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\'X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u0004\u0018\u00010\u0002X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010-\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00101\u001a\u0012\u0012\u0004\u0012\u00020\u001b02j\u0008\u0012\u0004\u0012\u00020\u001b`3X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010;\u001a\u0004\u0018\u00010<X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0088\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;",
@@ -73,6 +73,7 @@
         "Landroid/widget/ImageView;",
         "moreIconContainer",
         "moreIconDrawable",
+        "primaryActionPanel",
         "secondLevelItemContainerView",
         "secondLevelPanelAnimationLockHandle",
         "settingpanelColorCollapsed",
@@ -281,6 +282,8 @@
 .field private moreIconContainer:Landroid/view/View;
 
 .field private moreIconDrawable:Landroid/graphics/drawable/AnimationDrawable;
+
+.field private primaryActionPanel:Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
 
 .field private secondLevelItemContainerView:Landroid/view/ViewGroup;
 
@@ -570,6 +573,14 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getPrimaryActionPanel$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->primaryActionPanel:Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getSubPanelItemListContainerView$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)Landroid/view/ViewGroup;
     .locals 0
 
@@ -646,6 +657,14 @@
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->filterPanel:Lcom/oneplus/camera/ui/FilterPanel;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setPrimaryActionPanel$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->primaryActionPanel:Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
 
     return-void
 .end method
@@ -3894,13 +3913,80 @@
 .end method
 
 .method private final updateMoreIconEnability()V
-    .locals 2
+    .locals 5
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
     iget-object v0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->moreIcon:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
+
+    move-object v1, p0
+
+    check-cast v1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;
+
+    invoke-static {v1}, Lcom/oneplus/camera/ui/actionpanel/ActionPanelKt;->getSubPanelState(Lcom/oneplus/camera/ui/actionpanel/ActionPanel;)Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$WhenMappings;->$EnumSwitchMapping$7:[I
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->ordinal()I
+
+    move-result v1
+
+    aget v1, v2, v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v1, v3, :cond_0
+
+    const/4 v4, 0x2
+
+    if-eq v1, v4, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/oneplus/camera/VideoCaptureControllerKt;->isCapturing(Lcom/oneplus/camera/VideoCaptureController;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    if-eqz v1, :cond_1
+
+    move v1, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    const/high16 p0, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setAlpha(F)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setEnabled(Z)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->getVideoCaptureController()Lcom/oneplus/camera/VideoCaptureController;
 
@@ -3910,31 +3996,14 @@
 
     move-result p0
 
-    const/4 v1, 0x1
-
-    xor-int/2addr p0, v1
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setEnabled(Z)V
+    if-eqz p0, :cond_3
 
     const p0, 0x3f07ae14    # 0.53f
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    :cond_1
-    :goto_0
+    :cond_3
+    :goto_2
     return-void
 .end method
 
@@ -5336,6 +5405,28 @@
 
     invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
+    move-result-object v1
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v1, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object v3, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class v4, Lcom/oneplus/camera/ui/Touch3AControl;
+
+    new-instance v5, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
+
+    invoke-direct {v5, p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
+
+    check-cast v5, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {v1, v3, v4, v5}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
+
+    sget-object v1, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {v0, v1}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
     move-result-object v0
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
@@ -5344,11 +5435,11 @@
 
     sget-object v1, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
 
-    const-class v2, Lcom/oneplus/camera/ui/Touch3AControl;
+    const-class v2, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
 
-    new-instance v3, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;
+    new-instance v3, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;
 
-    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$5;-><init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
+    invoke-direct {v3, p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$$inlined$findComponent$6;-><init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
 
     check-cast v3, Lcom/oneplus/base/component/ComponentSearchCallback;
 
@@ -5364,9 +5455,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$6;
+    new-instance v2, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$6;-><init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7;-><init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
 
     check-cast v2, Lcom/oneplus/base/PropertyChangedCallback;
 
@@ -5580,7 +5671,7 @@
 
     invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    sget-object v5, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;->INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;
+    sget-object v5, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;->INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;
 
     check-cast v5, Landroid/view/View$OnTouchListener;
 

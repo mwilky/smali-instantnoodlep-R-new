@@ -32,7 +32,7 @@
         "Landroid/view/View;",
         "kotlin.jvm.PlatformType",
         "onClick",
-        "com/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$4$1",
+        "com/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$4$1",
         "com/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$$special$$inlined$let$lambda$3"
     }
     k = 0x3

@@ -77,11 +77,30 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$setupUI$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
 
+    invoke-static {p1}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$getCaptureModesPanel$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Lcom/oneplus/camera/ui/CaptureModesPanel;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/CaptureModesPanelKt;->isExpandingOrExpanded(Lcom/oneplus/camera/ui/CaptureModesPanel;)Z
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$setupUI$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
+
     invoke-static {p1}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$isGoogleLensButtonAvailable$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$setupUI$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
 
@@ -117,7 +136,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object p0, p0, Lcom/oneplus/camera/ui/FloatingButtonUI$setupUI$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/ui/FloatingButtonUI;
 
     invoke-static {p0}, Lcom/oneplus/camera/ui/FloatingButtonUI;->access$getTAG$p(Lcom/oneplus/camera/ui/FloatingButtonUI;)Ljava/lang/String;

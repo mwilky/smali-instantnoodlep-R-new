@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Any.kt\ncom/oneplus/base/AnyKt\n+ 5 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,714:1\n858#2:715\n858#2:716\n858#2:717\n858#2:718\n858#2:719\n858#2:720\n858#2:721\n858#2:722\n858#2:723\n12#3,3:724\n12#3,3:727\n12#3,3:730\n57#4,8:733\n9#5:741\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n*L\n221#1:715\n227#1:716\n234#1:717\n239#1:718\n242#1:719\n246#1:720\n249#1:721\n252#1:722\n255#1:723\n267#1,3:724\n274#1,3:727\n285#1,3:730\n333#1,8:733\n37#1:741\n*E\n"
+    value = "SMAP\nFloatingButtonUI.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Any.kt\ncom/oneplus/base/AnyKt\n+ 5 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,716:1\n858#2:717\n858#2:718\n858#2:719\n858#2:720\n858#2:721\n858#2:722\n858#2:723\n858#2:724\n858#2:725\n12#3,3:726\n12#3,3:729\n12#3,3:732\n57#4,8:735\n9#5:743\n*E\n*S KotlinDebug\n*F\n+ 1 FloatingButtonUI.kt\ncom/oneplus/camera/ui/FloatingButtonUI\n*L\n221#1:717\n227#1:718\n234#1:719\n239#1:720\n242#1:721\n246#1:722\n249#1:723\n252#1:724\n255#1:725\n267#1,3:726\n274#1,3:729\n285#1,3:732\n333#1,8:735\n37#1:743\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
