@@ -38,7 +38,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPHdrV4CameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,1267:1\n183#2:1268\n183#2:1269\n396#3:1270\n396#3:1271\n396#3:1272\n396#3:1273\n874#4:1274\n902#4:1275\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n*L\n371#1:1268\n714#1:1269\n56#1:1270\n57#1:1271\n58#1:1272\n59#1:1273\n62#1:1274\n65#1:1275\n*E\n"
+    value = "SMAP\nOPHdrV4CameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,1280:1\n183#2:1281\n183#2:1282\n396#3:1283\n396#3:1284\n396#3:1285\n396#3:1286\n874#4:1287\n902#4:1288\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrV4CameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl\n*L\n377#1:1281\n724#1:1282\n56#1:1283\n57#1:1284\n58#1:1285\n59#1:1286\n62#1:1287\n65#1:1288\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -1688,7 +1688,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isHdrRequired()Z
+    invoke-virtual {v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
 
     move-result v1
 
@@ -3115,7 +3115,7 @@
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     iget-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
 
@@ -3143,16 +3143,45 @@
 
     move-result p2
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->getRequestOutputStreamInfo()Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;
 
     move-result-object p2
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_0
 
+    goto :goto_0
+
+    :cond_0
+    move-object p2, p0
+
+    check-cast p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p0, p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "onBuildCaptureRequests() - No valid RAW stream."
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_1
+    move-object p2, v0
+
+    check-cast p2, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;
+
+    :goto_0
     invoke-virtual {p5}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->save()V
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
@@ -3183,21 +3212,23 @@
 
     move v2, v1
 
-    :goto_0
-    if-ge v2, p4, :cond_4
+    :goto_1
+    if-ge v2, p4, :cond_6
 
-    if-eqz v2, :cond_0
+    if-eqz p2, :cond_3
 
-    if-eqz p0, :cond_1
+    if-eqz v2, :cond_2
 
-    :cond_0
+    if-eqz p0, :cond_3
+
+    :cond_2
     invoke-virtual {p5}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->getStreams()Ljava/util/List;
 
     move-result-object v3
 
     invoke-interface {v3, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_1
+    :cond_3
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1, v2, v1, p3, v0}, Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;->exposureCompensationAt$default(Lcom/oneplus/camera/hardware/camera2/OPInternalCaptureInfo;IIILjava/lang/Object;)I
@@ -3218,48 +3249,37 @@
 
     invoke-interface {p6, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_2
+    if-eqz p2, :cond_5
 
-    if-eqz p0, :cond_3
+    if-eqz v2, :cond_4
 
-    :cond_2
+    if-eqz p0, :cond_5
+
+    :cond_4
     invoke-virtual {p5}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->getStreams()Ljava/util/List;
 
     move-result-object v3
 
     invoke-interface {v3, p2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    :cond_3
+    :cond_5
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_4
+    :cond_6
     invoke-virtual {p5}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->restore()V
 
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_5
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
-
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
-
-    const-string p1, "onBuildCaptureRequests() - No valid RAW stream."
-
-    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    return-object p0
-
-    :cond_6
+    :cond_7
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_7
+    :cond_8
     check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
@@ -4091,6 +4111,12 @@
     :goto_0
     if-eqz p4, :cond_4
 
+    invoke-virtual {p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
+
+    move-result p4
+
+    if-eqz p4, :cond_4
+
     invoke-virtual {p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->getTotalCaptureResults()Ljava/util/ArrayList;
 
     move-result-object p4
@@ -4744,7 +4770,7 @@
 
     if-ne p1, p2, :cond_0
 
-    goto/16 :goto_7
+    goto/16 :goto_8
 
     :cond_0
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->isAppPictureProcessingEnabled()Z
@@ -5173,6 +5199,12 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
 
+    invoke-virtual {p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
     new-instance p1, Lcom/oneplus/base/SimpleRef;
 
     invoke-direct {p1}, Lcom/oneplus/base/SimpleRef;-><init>()V
@@ -5181,7 +5213,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_b
 
     iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->requestRawOutputHandle:Lcom/oneplus/base/Handle;
 
@@ -5189,13 +5221,13 @@
 
     check-cast v5, Lcom/oneplus/base/Ref;
 
-    new-instance v6, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1;
+    new-instance v6, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1$1;
 
     move-object v7, p0
 
     check-cast v7, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
 
-    invoke-direct {v6, v7}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;)V
+    invoke-direct {v6, v7}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;)V
 
     check-cast v6, Lkotlin/jvm/functions/Function2;
 
@@ -5203,13 +5235,13 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_b
 
     invoke-static {p2}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
 
     move-result p2
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_c
 
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -5223,7 +5255,7 @@
 
     check-cast p2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_c
 
     invoke-virtual {p1}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
 
@@ -5233,18 +5265,34 @@
 
     invoke-virtual {p2, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->setRequestOutputStreamInfo(Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;)V
 
+    goto :goto_6
+
     :cond_b
+    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "onPrepareCapturing() - Not able to activate RAW output."
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_c
+    :goto_6
     invoke-virtual {p3}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isLowLightHdr()Z
 
     move-result p1
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->getUseCustomShutterStateControl()Z
 
     move-result p1
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     iget-wide p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->estimatedExposureTime:J
 
@@ -5252,7 +5300,7 @@
 
     cmp-long p1, p1, v0
 
-    if-gtz p1, :cond_c
+    if-gtz p1, :cond_d
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
@@ -5266,20 +5314,20 @@
 
     invoke-virtual {p3, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->setDisableCaptureStartEstimationHandle(Lcom/oneplus/base/Handle;)V
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_c
+    :cond_d
     invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->getExposureControlCamera()Lcom/oneplus/camera/next/hardware/ExposureControlCamera;
 
     move-result-object p1
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     invoke-static {p1}, Lcom/oneplus/camera/next/hardware/ExposureControlCameraKt;->isLongExposureDetected(Lcom/oneplus/camera/next/hardware/ExposureControlCamera;)Z
 
     move-result p1
 
-    if-ne p1, v4, :cond_d
+    if-ne p1, v4, :cond_e
 
     invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -5303,22 +5351,9 @@
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$capturePreviewAnimationCamera$1;->setEnabled(Z)V
 
-    :cond_d
-    :goto_6
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    return-object p0
-
     :cond_e
-    check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
-
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
-
-    const-string p1, "onPrepareCapturing() - Not able to activate RAW output."
-
-    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+    :goto_7
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
@@ -5334,7 +5369,7 @@
     return-object p0
 
     :cond_10
-    :goto_7
+    :goto_8
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
@@ -5556,7 +5591,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isHdrRequired()Z
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
 
     move-result p1
 
@@ -6227,7 +6262,7 @@
 
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
     invoke-virtual {p2}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
@@ -6246,13 +6281,13 @@
 
     check-cast p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isHdrRequired()Z
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;->TAG:Ljava/lang/String;
 
@@ -6276,6 +6311,12 @@
 
     invoke-static {p0, p2}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->isReprocessNeeded()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
     invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->getTargetFrameCount()I
 
     move-result p0
@@ -6288,20 +6329,34 @@
 
     invoke-interface {p4, p0}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
 
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
-
     goto :goto_0
 
     :cond_1
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-virtual {p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$InternalCaptureInfo;->getTargetFrameCount()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-interface {p4, p0}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
 
     :goto_0
-    return-object p0
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    goto :goto_1
 
     :cond_2
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     :goto_1
+    return-object p0
+
+    :cond_3
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    :goto_2
     return-object p0
 .end method
 

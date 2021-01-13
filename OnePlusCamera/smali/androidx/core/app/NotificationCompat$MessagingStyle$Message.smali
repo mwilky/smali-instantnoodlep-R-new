@@ -151,7 +151,7 @@
 
     const-string v5, "person"
 
-    const-string v6, "time"
+    const-string/jumbo v6, "time"
 
     const-string v7, "text"
 
@@ -378,7 +378,7 @@
     :cond_0
     iget-wide v1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;->mTimestamp:J
 
-    const-string v3, "time"
+    const-string/jumbo v3, "time"
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 

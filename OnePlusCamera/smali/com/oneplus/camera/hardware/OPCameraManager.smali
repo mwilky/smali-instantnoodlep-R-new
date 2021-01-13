@@ -631,6 +631,14 @@
 
     instance-of v3, v2, Lcom/oneplus/camera/next/hardware/camera2/Camera2;
 
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Lcom/oneplus/camera/next/hardware/Camera;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
+
+    move-result-object v3
+
+    instance-of v3, v3, Lcom/oneplus/camera/hardware/OPCameraCore;
+
     if-nez v3, :cond_1
 
     goto :goto_0

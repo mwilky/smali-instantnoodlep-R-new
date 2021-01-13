@@ -1,4 +1,4 @@
-.class final synthetic Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1;
+.class final synthetic Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1$1;
 .super Lkotlin/jvm/internal/FunctionReference;
 .source "OPHdrV4CameraImpl.kt"
 
@@ -106,7 +106,7 @@
 
     check-cast p2, Lcom/oneplus/camera/next/media/Image;
 
-    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1;->invoke(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/media/Image;)V
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1$1;->invoke(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;Lcom/oneplus/camera/next/media/Image;)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
@@ -124,7 +124,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1;->receiver:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl$onPrepareCapturing$1$1;->receiver:Ljava/lang/Object;
 
     check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrV4CameraImpl;
 

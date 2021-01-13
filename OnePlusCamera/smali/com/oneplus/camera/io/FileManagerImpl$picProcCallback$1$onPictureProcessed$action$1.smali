@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$picProcCallback$1$onPictureProcessed$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n*L\n1#1,1775:1\n1299#2,8:1776\n*E\n*S KotlinDebug\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$picProcCallback$1$onPictureProcessed$action$1\n*L\n180#1,8:1776\n*E\n"
+    value = "SMAP\nFileManagerImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$picProcCallback$1$onPictureProcessed$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n*L\n1#1,1784:1\n1299#2,8:1785\n*E\n*S KotlinDebug\n*F\n+ 1 FileManagerImpl.kt\ncom/oneplus/camera/io/FileManagerImpl$picProcCallback$1$onPictureProcessed$action$1\n*L\n181#1,8:1785\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

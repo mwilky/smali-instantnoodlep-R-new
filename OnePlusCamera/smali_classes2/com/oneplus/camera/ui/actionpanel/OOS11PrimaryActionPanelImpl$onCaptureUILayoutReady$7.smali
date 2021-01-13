@@ -1,4 +1,4 @@
-.class final Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$6;
+.class final Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7;
 .super Ljava/lang/Object;
 .source "OOS11PrimaryActionPanelImpl.kt"
 
@@ -67,7 +67,7 @@
 .method constructor <init>(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
+    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -91,7 +91,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$6;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
+    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
 
     const-wide/16 p1, 0x4000
 

@@ -1,11 +1,11 @@
-.class public final Lcom/oneplus/camera/features/OnePlusFeaturesKt;
+.class public final Lcom/oneplus/camera/features/ProjectLemonadesFeaturesKt;
 .super Ljava/lang/Object;
-.source "OnePlusFeatures.kt"
+.source "ProjectLemonadesFeatures.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOnePlusFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OnePlusFeatures.kt\ncom/oneplus/camera/features/OnePlusFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,14:1\n112#2,2:15\n114#2,2:19\n116#2,2:22\n13#3,2:17\n15#3:21\n*E\n*S KotlinDebug\n*F\n+ 1 OnePlusFeatures.kt\ncom/oneplus/camera/features/OnePlusFeaturesKt\n*L\n3#1,2:15\n3#1,2:19\n3#1,2:22\n3#1,2:17\n3#1:21\n*E\n"
+    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,6:1\n112#2,2:7\n114#2,2:11\n116#2,2:14\n13#3,2:9\n15#3:13\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:7\n3#1,2:11\n3#1,2:14\n3#1,2:9\n3#1:13\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -18,7 +18,7 @@
         "\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0006\u0010\u0000\u001a\u00020\u0001\u00a8\u0006\u0002"
     }
     d2 = {
-        "initializeOPlusFeatures",
+        "initializeLemonadesFeatures",
         "",
         "OnePlusCamera_release"
     }
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method public static final initializeOPlusFeatures()V
+.method public static final initializeLemonadesFeatures()V
     .locals 5
 
     new-instance v0, Lcom/oneplus/camera/features/FeatureInitializer;
@@ -45,43 +45,11 @@
 
     const/4 v3, 0x1
 
-    const-string v4, "BokehCaptureMode.EnableByDefault"
+    const-string v4, "ObjectTracking.IsEnabled"
 
     invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
-    const-string v4, "DocumentScanningCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "ManualCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "NightCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "OPCamera2Core.AlwaysUsingAppPictureProcessing"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "PanoramaCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "PhotoCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "SlowMotionCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "TimeLapseCaptureMode.EnableByDefault"
-
-    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
-
-    const-string v4, "VideoCaptureMode.EnableByDefault"
+    const-string v4, "VideoCaptureMode.EnableBackCameraFaceDetection"
 
     invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 

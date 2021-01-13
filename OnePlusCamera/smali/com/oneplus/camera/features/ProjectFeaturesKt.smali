@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nProjectFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectFeatures.kt\ncom/oneplus/camera/features/ProjectFeaturesKt\n*L\n1#1,37:1\n*E\n"
+    value = "SMAP\nProjectFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectFeatures.kt\ncom/oneplus/camera/features/ProjectFeaturesKt\n*L\n1#1,38:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -61,7 +61,7 @@
 
     sget-object v3, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_14
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -248,9 +248,9 @@
     :cond_11
     const-wide v3, 0x8f0a6481L
 
-    cmp-long v0, v0, v3
+    cmp-long v3, v0, v3
 
-    if-nez v0, :cond_12
+    if-nez v3, :cond_12
 
     :goto_5
     invoke-static {}, Lcom/oneplus/camera/features/ProjectBillie8FeaturesKt;->initializeBillie8Features()V
@@ -258,6 +258,17 @@
     goto :goto_6
 
     :cond_12
+    const-wide/32 v3, 0x2e2bc9d
+
+    cmp-long v0, v0, v3
+
+    if-nez v0, :cond_13
+
+    invoke-static {}, Lcom/oneplus/camera/features/ProjectLemonadesFeaturesKt;->initializeLemonadesFeatures()V
+
+    goto :goto_6
+
+    :cond_13
     const-string v0, "No project features"
 
     invoke-static {v2, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
@@ -265,7 +276,7 @@
     :goto_6
     return-void
 
-    :cond_13
+    :cond_14
     new-instance v0, Lkotlin/TypeCastException;
 
     const-string v1, "null cannot be cast to non-null type java.lang.String"

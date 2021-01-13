@@ -154,7 +154,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const v0, 0x7f0804b9
+    const v0, 0x7f0804ba
 
     invoke-virtual {p1, v0}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

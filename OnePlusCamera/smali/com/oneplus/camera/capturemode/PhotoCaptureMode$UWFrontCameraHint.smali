@@ -78,7 +78,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$UWFrontCameraHint;->setCloseIconClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0804cc
+    const p1, 0x7f0804cd
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$UWFrontCameraHint;->setBackgroundResId(Ljava/lang/Integer;)V
 
-    const p1, 0x7f0804cd
+    const p1, 0x7f0804ce
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

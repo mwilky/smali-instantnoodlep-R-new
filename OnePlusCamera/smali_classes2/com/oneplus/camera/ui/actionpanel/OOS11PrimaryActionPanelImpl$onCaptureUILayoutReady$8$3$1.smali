@@ -1,4 +1,4 @@
-.class final Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;
+.class final Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;
 .super Ljava/lang/Object;
 .source "OOS11PrimaryActionPanelImpl.kt"
 
@@ -45,18 +45,18 @@
 
 
 # static fields
-.field public static final INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;
+.field public static final INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;
+    new-instance v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;
 
-    invoke-direct {v0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;-><init>()V
+    invoke-direct {v0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;-><init>()V
 
-    sput-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;->INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$7$3$1;
+    sput-object v0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;->INSTANCE:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onCaptureUILayoutReady$8$3$1;
 
     return-void
 .end method

@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nManualCaptureControlPanel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureControlPanel.kt\ncom/oneplus/camera/ui/ManualCaptureControlPanel\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,797:1\n858#2:798\n858#2:799\n858#2:800\n858#2:801\n858#2:802\n858#2:803\n858#2:804\n858#2:805\n858#2:806\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureControlPanel.kt\ncom/oneplus/camera/ui/ManualCaptureControlPanel\n*L\n210#1:798\n214#1:799\n221#1:800\n227#1:801\n231#1:802\n238#1:803\n510#1:804\n525#1:805\n549#1:806\n*E\n"
+    value = "SMAP\nManualCaptureControlPanel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ManualCaptureControlPanel.kt\ncom/oneplus/camera/ui/ManualCaptureControlPanel\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,800:1\n858#2:801\n858#2:802\n858#2:803\n858#2:804\n858#2:805\n858#2:806\n858#2:807\n858#2:808\n858#2:809\n*E\n*S KotlinDebug\n*F\n+ 1 ManualCaptureControlPanel.kt\ncom/oneplus/camera/ui/ManualCaptureControlPanel\n*L\n210#1:801\n214#1:802\n221#1:803\n227#1:804\n231#1:805\n238#1:806\n513#1:807\n528#1:808\n552#1:809\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -1192,7 +1192,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1202,21 +1202,36 @@
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/camera/widget/CameraKnobView;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/widget/CameraKnobView;->isExpanded()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v3}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->setControlMode(Lcom/oneplus/camera/ui/ManualCaptureControlPanel$ControlMode;)V
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
     move-result-object v1
 
     check-cast v1, Lcom/oneplus/camera/widget/CameraKnobView;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const/4 v4, 0x0
-
-    invoke-static {v1, p1, v2, v3, v4}, Lcom/oneplus/camera/widget/KnobView;->collapse$default(Lcom/oneplus/camera/widget/KnobView;ZZILjava/lang/Object;)V
+    invoke-static {v1, p1, v2, v4, v3}, Lcom/oneplus/camera/widget/KnobView;->collapse$default(Lcom/oneplus/camera/widget/KnobView;ZZILjava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-direct {p0, p1}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->expandItemsContainer(Z)V
 
     return-void
@@ -1929,7 +1944,7 @@
 
     move-result-object v1
 
-    const-string v6, "%.2f"
+    const-string v6, "%+.2f"
 
     invoke-static {v6, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

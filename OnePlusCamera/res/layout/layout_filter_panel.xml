@@ -10,7 +10,7 @@
     </RelativeLayout>
     <RelativeLayout android:id="@id/filter_icon_container" android:visibility="gone" android:layout_width="?oos11SubPanelItemIconContainerWidthHeight" android:layout_height="?oos11SubPanelItemIconContainerWidthHeight" android:layout_marginRight="?oos11SubPanelPaddingStartEnd" android:layout_marginBottom="?oos11FilterIconMarginBottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layoutDirection="ltr">
         <View android:id="@id/background" android:background="@drawable/filter_icon_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ImageView android:id="@id/filter_icon" android:layout_width="?oos11SettingIconSize" android:layout_height="?oos11SettingIconSize" android:src="@drawable/filter_panel_icon_png" android:scaleType="center" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/filter_icon" android:layout_width="?oos11SettingIconSize" android:layout_height="?oos11SettingIconSize" android:src="@drawable/filter_panel_icon_png" android:layout_centerInParent="true" />
     </RelativeLayout>
     <com.oneplus.camera.widget.GestureRelativeLayout android:id="@id/filter_panel" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?captureBarSize" android:layout_alignParentBottom="true" android:alpha="0.0">
         <RelativeLayout android:layout_width="fill_parent" android:layout_height="?filterPanelSize" android:layout_marginTop="?filterPanelPaddingTop" android:layout_alignParentTop="true">

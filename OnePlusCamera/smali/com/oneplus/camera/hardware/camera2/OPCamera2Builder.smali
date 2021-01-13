@@ -85,7 +85,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-static {}, Lcom/oneplus/base/Device;->isOnePlus()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isOPlus()Z
 
     move-result v0
 
@@ -180,7 +180,7 @@
 
     :cond_1
     :goto_0
-    invoke-static {}, Lcom/oneplus/base/Device;->isOnePlus()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isOPlus()Z
 
     move-result v0
 
@@ -287,7 +287,7 @@
     const/16 v9, 0x27
 
     :try_start_0
-    invoke-static {}, Lcom/oneplus/base/Device;->isOnePlus()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isOPlus()Z
 
     move-result v1
 
