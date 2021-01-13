@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$23;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2800(Lcom/oneplus/battery/OpSWarpChargingView;)V
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3700(Lcom/oneplus/battery/OpSWarpChargingView;)V
 
     return-void
 .end method

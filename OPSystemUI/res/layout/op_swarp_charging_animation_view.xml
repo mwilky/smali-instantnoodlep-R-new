@@ -4,7 +4,7 @@
     <ImageView android:layout_gravity="center_horizontal" android:id="@id/wallpaper_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <View android:id="@id/scrim_view" android:background="@color/op_swarp_charging_anim_dim_layer_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <RelativeLayout android:id="@id/info_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/op_swarp_charging_anim_view_margin_top">
-        <ImageView android:layout_gravity="center" android:id="@id/background_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/background_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <LinearLayout android:orientation="vertical" android:id="@id/info_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layoutDirection="ltr">
             <RelativeLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <LinearLayout android:orientation="horizontal" android:id="@id/battery_level_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layoutDirection="ltr">

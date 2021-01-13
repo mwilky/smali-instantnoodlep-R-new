@@ -20,6 +20,8 @@
 
 .field mContext:Landroid/content/Context;
 
+.field private mDelayAdjustBrightness:Z
+
 .field mDimControl:Lcom/oneplus/systemui/biometrics/OpFodDimControl;
 
 .field mDisplayNotifier:Lcom/oneplus/systemui/biometrics/OpFodDisplayNotifier;
@@ -33,6 +35,8 @@
 .field mIPowerManager:Landroid/os/IPowerManager;
 
 .field private mIsInAlwaysOnState:Z
+
+.field private mIsLowLightEnvironment:Z
 
 .field mPm:Landroid/os/PowerManager;
 
@@ -50,6 +54,10 @@
     iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHasRecognizeResult:Z
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsLowLightEnvironment:Z
 
     iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mContext:Landroid/content/Context;
 
@@ -300,7 +308,7 @@
 
     sget-object v0, Landroid/hardware/biometrics/BiometricSourceType;->FINGERPRINT:Landroid/hardware/biometrics/BiometricSourceType;
 
-    if-ne v0, p1, :cond_0
+    if-ne v0, p1, :cond_1
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -348,7 +356,7 @@
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const/4 p1, 0x1
 
@@ -362,7 +370,7 @@
 
     const/4 v0, 0x3
 
-    if-ge p1, v0, :cond_0
+    if-ge p1, v0, :cond_1
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHighlightControl:Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;
 
@@ -378,11 +386,26 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHighlightControl:Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHighlightControl:Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;
 
-    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->changeToAodMode()V
+    invoke-virtual {p1}, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->changeToAodMode()V
 
     :cond_0
+    iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mAodControl:Lcom/oneplus/systemui/biometrics/OpFodAodControl;
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsLowLightEnvironment:Z
+
+    invoke-virtual {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->adjustBrightness(Z)V
+
+    :cond_1
     return-void
 .end method
 
@@ -516,6 +539,8 @@
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHasRecognizeResult:Z
 
+    const/4 p2, 0x0
+
     if-nez p1, :cond_0
 
     iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
@@ -526,24 +551,142 @@
 
     invoke-virtual {p1}, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->changeToAodMode()V
 
+    iget-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    if-eqz p1, :cond_0
+
+    iput-boolean p2, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mAodControl:Lcom/oneplus/systemui/biometrics/OpFodAodControl;
+
+    iget-boolean p3, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsLowLightEnvironment:Z
+
+    invoke-virtual {p1, p3}, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->adjustBrightness(Z)V
+
     :cond_0
-    const/4 p1, 0x0
+    iput-boolean p2, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHasRecognizeResult:Z
 
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHasRecognizeResult:Z
-
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
+    iput-boolean p2, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
 
     :cond_1
     return-void
 .end method
 
+.method public onDisplayPowerStatusChanged(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onDisplayPowerStatusChanged: status= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpFodDisplayController"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mAodControl:Lcom/oneplus/systemui/biometrics/OpFodAodControl;
+
+    const-string v0, "display power status: on"
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->disable(Ljava/lang/String;)Z
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDimControl:Lcom/oneplus/systemui/biometrics/OpFodDimControl;
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFodDimControl;->enable(Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mAodControl:Lcom/oneplus/systemui/biometrics/OpFodAodControl;
+
+    const-string v0, "display power status: off"
+
+    invoke-virtual {p1, v0}, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->enable(Ljava/lang/String;)Z
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDimControl:Lcom/oneplus/systemui/biometrics/OpFodDimControl;
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFodDimControl;->disable(Ljava/lang/String;)Z
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
 .method public onEnvironmentLightChanged(Z)V
-    .locals 0
+    .locals 1
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHighlightControl:Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->isHighlight()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/plugin/OpLsState;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->isFingerprintAuthenticating()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->getInstance()Lcom/oneplus/systemui/biometrics/OpFodHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodHelper;->isFingerprintDetecting()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mAodControl:Lcom/oneplus/systemui/biometrics/OpFodAodControl;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->adjustBrightness(Z)V
 
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHighlightControl:Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;
+
+    invoke-virtual {v0}, Lcom/oneplus/systemui/biometrics/OpFodHighlightControl;->isHighlight()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsLowLightEnvironment:Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -936,6 +1079,10 @@
     iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsInAlwaysOnState:Z
 
     iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mHasRecognizeResult:Z
+
+    iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mDelayAdjustBrightness:Z
+
+    iput-boolean v1, p0, Lcom/oneplus/systemui/biometrics/OpFodDisplayController;->mIsLowLightEnvironment:Z
 
     return-void
 .end method

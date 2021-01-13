@@ -1968,7 +1968,7 @@
 .end method
 
 .method private getViewHeight(IZ)I
-    .locals 5
+    .locals 6
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewForVisibleType(I)Landroid/view/View;
 
@@ -2024,15 +2024,15 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "viewWrapper header translation: "
+    const-string/jumbo v5, "viewWrapper header translation: "
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p2}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->getHeaderTranslation(Z)I
 
-    move-result v1
+    move-result v5
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2048,9 +2048,7 @@
     add-int/2addr v2, p0
 
     :cond_2
-    sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz p0, :cond_3
+    if-eqz v1, :cond_3
 
     if-ne p1, v4, :cond_3
 

@@ -1962,6 +1962,7 @@
     <dimen name="op_volume_dialog_output_chooser_expand_text_size">34.0px</dimen>
     <dimen name="op_volume_dialog_output_chooser_padding">23.0px</dimen>
     <dimen name="op_volume_dialog_output_chooser_padding2">27.0px</dimen>
+    <dimen name="op_volume_dialog_padding_bottom">12.0dip</dimen>
     <dimen name="op_volume_dialog_panel_transparent_padding">21.0px</dimen>
     <dimen name="op_volume_dialog_panel_width">149.0px</dimen>
     <dimen name="op_volume_dialog_row_margin_bottom">47.0px</dimen>
@@ -1980,6 +1981,7 @@
     <dimen name="op_volume_row_slider_marginEnd">13.0px</dimen>
     <dimen name="op_volume_row_slider_marginStart">3.0px</dimen>
     <dimen name="op_volume_row_slider_width">801.0px</dimen>
+    <dimen name="op_vzw_signal_indicator_to_icon_frame_spacing">-18.899994dip</dimen>
     <dimen name="op_warp_charging_anim_info_battery_level_margin_top">188.0px</dimen>
     <dimen name="op_warp_charging_anim_info_battery_level_text_size">99.0px</dimen>
     <dimen name="op_warp_charging_anim_info_view_margin_top">665.0px</dimen>

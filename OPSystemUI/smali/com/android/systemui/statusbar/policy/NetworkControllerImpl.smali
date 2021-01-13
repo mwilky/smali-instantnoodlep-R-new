@@ -5018,6 +5018,18 @@
     return-object p0
 .end method
 
+.method public getNumberSubscriptions()I
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
+
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method handleConfigurationChanged()V
     .locals 3
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;

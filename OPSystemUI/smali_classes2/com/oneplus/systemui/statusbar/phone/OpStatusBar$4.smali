@@ -36,7 +36,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$900(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1100(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -46,7 +46,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
@@ -76,7 +76,7 @@
 
     iget-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1000(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
@@ -94,7 +94,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1102(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
+    invoke-static {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1302(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;I)I
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$4;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 

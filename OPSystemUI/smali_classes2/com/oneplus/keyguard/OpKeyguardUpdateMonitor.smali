@@ -16,7 +16,7 @@
 
 .field public static final IS_SUPPORT_BOOT_TO_ENTER_BOUNCER:Z
 
-.field private static final IS_SUPPORT_CUSTOM_FINGERPRINT:Z
+.field protected static final IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
 .field public static final IS_SUPPORT_FACE_UNLOCK:Z
 
@@ -30,7 +30,11 @@
 
 .field protected mAodAlwaysOnController:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
+.field protected mAodFpAuthenticatedTime:J
+
 .field private mAutoFacelockEnabled:Z
+
+.field private mBSPTotalTime:J
 
 .field private mBouncerRecognizeEnabled:Z
 
@@ -39,6 +43,8 @@
 .field private mClockCtrl:Lcom/oneplus/keyguard/clock/OpClockCtrl;
 
 .field private final mContext:Landroid/content/Context;
+
+.field private mCurDisplayPoweStatus:I
 
 .field protected mDuringAcquired:Z
 
@@ -227,7 +233,7 @@
 .end method
 
 .method protected constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -301,9 +307,9 @@
 
     iput-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mShutingDown:Z
 
-    const/4 v2, -0x1
+    const/4 v4, -0x1
 
-    iput v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mGoingToSleepReason:I
+    iput v4, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mGoingToSleepReason:I
 
     iput-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mSimUnlockSlot0:Z
 
@@ -316,6 +322,14 @@
     iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAodAlwaysOnController:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
     iput-boolean v1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mShowFodOnAodEnabled:Z
+
+    iput-wide v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
+    iput-wide v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAodFpAuthenticatedTime:J
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
 
     invoke-static {}, Lcom/oneplus/keyguard/clock/OpClockCtrl;->getInstance()Lcom/oneplus/keyguard/clock/OpClockCtrl;
 
@@ -423,7 +437,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+.method static synthetic access$1000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mPocketSensor:Landroid/hardware/Sensor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mPocketState:I
@@ -431,7 +453,7 @@
     return p0
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mLidOpen:Z
@@ -439,7 +461,7 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
+.method static synthetic access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFPStateBySensor(IZ)V
@@ -447,7 +469,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+.method static synthetic access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
@@ -455,7 +477,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
+.method static synthetic access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFacelockSettings()V
@@ -463,7 +485,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockEnabled:Z
@@ -471,7 +493,7 @@
     return p0
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAutoFacelockEnabled:Z
@@ -479,7 +501,7 @@
     return p0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockLightingEnabled:Z
@@ -487,18 +509,10 @@
     return p0
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBouncerRecognizeEnabled:Z
-
-    return p0
-.end method
-
-.method static synthetic access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockSuccessTimes:I
 
     return p0
 .end method
@@ -511,7 +525,15 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
+.method static synthetic access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockSuccessTimes:I
+
+    return p0
+.end method
+
+.method static synthetic access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
@@ -521,7 +543,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+.method static synthetic access$2200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFacelockTrustState(Z)V
@@ -553,7 +575,15 @@
     return-void
 .end method
 
-.method static synthetic access$602(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
+.method static synthetic access$600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleDisplayPowerStatusChanged(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$702(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mShowFodOnAodEnabled:Z
@@ -561,7 +591,7 @@
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
+.method static synthetic access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mContext:Landroid/content/Context;
@@ -569,20 +599,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+.method static synthetic access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
 
     move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mPocketSensor:Landroid/hardware/Sensor;
 
     return-object p0
 .end method
@@ -924,6 +946,51 @@
     if-eqz v1, :cond_0
 
     invoke-virtual {v1, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onAlwaysOnEnableChanged(Z)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method private handleDisplayPowerStatusChanged(I)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onDisplayPowerStatusChanged(I)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -1557,6 +1624,36 @@
     :cond_1
     :goto_0
     return p0
+.end method
+
+.method static synthetic lambda$reportAODFpUnlockedMdm$0(ILjava/lang/String;J)V
+    .locals 2
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "finger_time"
+
+    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-interface {v0, p1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string p0, "lock_unlock_success"
+
+    const-string p1, "YLTI9SVG4L"
+
+    invoke-static {p0, v0, p1}, Lcom/oneplus/systemui/util/OpMdmLogger;->log(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method private onScreenStatusChanged(Z)V
@@ -2545,6 +2642,14 @@
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAodAlwaysOnController:Lcom/oneplus/aod/alwayson/OpAodAlwaysOnController;
 
     return-object p0
+.end method
+
+.method public getDisplayPowerStatus()I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
+
+    return p0
 .end method
 
 .method public getFacelockNoticeEnabled()Z
@@ -3990,6 +4095,72 @@
     return-void
 .end method
 
+.method public notifyDisplayPowerStatusChanged(I)V
+    .locals 3
+
+    sget-boolean v0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "notifyDisplayPowerStatusChanged= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callstack= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpKeyguardUpdateMonitor"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
+
+    if-eq v0, p1, :cond_1
+
+    iput p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1fb
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_1
+    return-void
+.end method
+
 .method public notifyEnvironmentLightChanged(Z)V
     .locals 3
 
@@ -4122,6 +4293,91 @@
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFakeLocking:Z
 
+    return-void
+.end method
+
+.method public notifyFpAcquiredInfo(I)V
+    .locals 6
+
+    if-eqz p1, :cond_0
+
+    and-int/lit16 v0, p1, 0x3ff
+
+    shr-int/lit8 v1, p1, 0xa
+
+    and-int/lit16 v1, v1, 0xff
+
+    shr-int/lit8 v2, p1, 0x16
+
+    const/4 v3, 0x3
+
+    and-int/2addr v2, v3
+
+    shr-int/lit8 p1, p1, 0x18
+
+    and-int/lit16 p1, p1, 0xff
+
+    if-nez p1, :cond_0
+
+    add-int p1, v0, v1
+
+    int-to-long v4, p1
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iput-wide v4, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
+    const/4 p1, 0x1
+
+    int-to-long v4, v0
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    const-string v0, "time_length"
+
+    invoke-virtual {p0, p1, v0, v4, v5}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+
+    const/4 p1, 0x2
+
+    int-to-long v4, v2
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    const-string v2, "retry_times"
+
+    invoke-virtual {p0, p1, v2, v4, v5}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+
+    int-to-long v1, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    invoke-virtual {p0, v3, v0, v1, v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+
+    :cond_0
     return-void
 .end method
 
@@ -4641,6 +4897,49 @@
     invoke-virtual {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateIconVisibility(Z)V
 
     :cond_3
+    return-void
+.end method
+
+.method public onWakingUpScrimAnimationStart(J)V
+    .locals 6
+
+    iget-wide v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAodFpAuthenticatedTime:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    cmp-long v4, p1, v2
+
+    if-eqz v4, :cond_0
+
+    iget-wide v4, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
+    cmp-long v4, v4, v2
+
+    if-eqz v4, :cond_0
+
+    sub-long/2addr p1, v0
+
+    const/4 v0, 0x4
+
+    const-string v1, "time_length"
+
+    invoke-virtual {p0, v0, v1, p1, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+
+    const/4 v0, 0x0
+
+    iget-wide v4, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
+    add-long/2addr p1, v4
+
+    invoke-virtual {p0, v0, v1, p1, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+
+    iput-wide v2, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
+    :cond_0
     return-void
 .end method
 
@@ -5496,6 +5795,24 @@
     :goto_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "    mCurDisplayPoweStatus= "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p3, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mCurDisplayPoweStatus:I
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
     const/4 p1, 0x0
 
     const-string p3, "sys.debug.systemui.pin"
@@ -5896,6 +6213,10 @@
     iput-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mWakingUpTime:Ljava/util/Calendar;
 
     :cond_1
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBSPTotalTime:J
+
     return-void
 .end method
 
@@ -6602,6 +6923,18 @@
 
     :cond_18
     return v1
+.end method
+
+.method public reportAODFpUnlockedMdm(ILjava/lang/String;J)V
+    .locals 0
+
+    new-instance p0, Lcom/oneplus/keyguard/-$$Lambda$OpKeyguardUpdateMonitor$a18rc5JHQeCdGw_2rSyo-lzEWnM;
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/oneplus/keyguard/-$$Lambda$OpKeyguardUpdateMonitor$a18rc5JHQeCdGw_2rSyo-lzEWnM;-><init>(ILjava/lang/String;J)V
+
+    invoke-static {p0}, Lcom/android/settingslib/utils/ThreadUtils;->postOnBackgroundThread(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
+    return-void
 .end method
 
 .method public reportFaceUnlock()V

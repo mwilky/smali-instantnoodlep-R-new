@@ -91,21 +91,31 @@
 .end method
 
 .method public canEnable()Z
-    .locals 0
+    .locals 2
 
-    iget p0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
+    iget v0, p0, Lcom/oneplus/systemui/biometrics/OpFodAodControl;->mAodMode:I
 
-    if-nez p0, :cond_0
+    const/4 v1, 0x1
 
-    const/4 p0, 0x1
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/biometrics/OpFodDisplayController$OpDisplayControl;->getUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getDisplayPowerStatus()I
+
+    move-result p0
+
+    if-ne p0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    return p0
+    return v1
 .end method
 
 .method public disableInner(Ljava/lang/String;)V

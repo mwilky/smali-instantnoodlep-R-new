@@ -15,7 +15,11 @@
 
 .field private mContext:Landroid/content/Context;
 
+.field private mDelayToShowAnimate:Z
+
 .field private mGraphLight:Lcom/oneplus/anim/OpGraphLight;
+
+.field private final mHandler:Landroid/os/Handler;
 
 .field private mIsCutoutHide:Z
 
@@ -24,6 +28,8 @@
 .field private mIsOneHandMode:Z
 
 .field private mOneHandSettings:Landroid/net/Uri;
+
+.field private mShowAnimateRunnable:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -38,23 +44,35 @@
 
     iput-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsOneHandMode:Z
 
-    const-string v0, "one_hand_mode_status"
+    const-string v1, "one_hand_mode_status"
 
-    invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mOneHandSettings:Landroid/net/Uri;
+    iput-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mOneHandSettings:Landroid/net/Uri;
+
+    iput-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mDelayToShowAnimate:Z
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/oneplus/anim/OpCameraAnimateController$2;
 
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
+    iget-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
 
     invoke-direct {v0, p0, v1}, Lcom/oneplus/anim/OpCameraAnimateController$2;-><init>(Lcom/oneplus/anim/OpCameraAnimateController;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mContentObserver:Landroid/database/ContentObserver;
+
+    new-instance v0, Lcom/oneplus/anim/OpCameraAnimateController$3;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/anim/OpCameraAnimateController$3;-><init>(Lcom/oneplus/anim/OpCameraAnimateController;)V
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mShowAnimateRunnable:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mContext:Landroid/content/Context;
 
@@ -71,12 +89,36 @@
     return p0
 .end method
 
+.method static synthetic access$1000(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
 .method static synthetic access$102(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsLastFrontCameraAnimStateOn:Z
 
     return p1
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/net/Uri;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mOneHandSettings:Landroid/net/Uri;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1200(Lcom/oneplus/anim/OpCameraAnimateController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->updateCameraAnim()V
+
+    return-void
 .end method
 
 .method static synthetic access$200(Lcom/oneplus/anim/OpCameraAnimateController;)Lcom/oneplus/anim/OpGraphLight;
@@ -106,7 +148,7 @@
 .method static synthetic access$500(Lcom/oneplus/anim/OpCameraAnimateController;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsCutoutHide:Z
+    iget-boolean p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mDelayToShowAnimate:Z
 
     return p0
 .end method
@@ -114,12 +156,28 @@
 .method static synthetic access$502(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mDelayToShowAnimate:Z
+
+    return p1
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsCutoutHide:Z
+
+    return p0
+.end method
+
+.method static synthetic access$602(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsCutoutHide:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
+.method static synthetic access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mContext:Landroid/content/Context;
@@ -127,7 +185,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/anim/OpCameraAnimateController;)Z
+.method static synthetic access$800(Lcom/oneplus/anim/OpCameraAnimateController;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsOneHandMode:Z
@@ -135,7 +193,7 @@
     return p0
 .end method
 
-.method static synthetic access$702(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
+.method static synthetic access$802(Lcom/oneplus/anim/OpCameraAnimateController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsOneHandMode:Z
@@ -143,20 +201,12 @@
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/anim/OpCameraAnimateController;)Landroid/net/Uri;
+.method static synthetic access$900(Lcom/oneplus/anim/OpCameraAnimateController;)Ljava/lang/Runnable;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mOneHandSettings:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mShowAnimateRunnable:Ljava/lang/Runnable;
 
     return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/oneplus/anim/OpCameraAnimateController;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->updateCameraAnim()V
-
-    return-void
 .end method
 
 .method private isFrontCamera(Ljava/lang/String;)Z
@@ -388,9 +438,7 @@
 
     iget-object v3, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mContext:Landroid/content/Context;
 
-    new-instance v4, Landroid/os/Handler;
-
-    invoke-direct {v4}, Landroid/os/Handler;-><init>()V
+    iget-object v4, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
 
     invoke-direct {v0, v1, v3, v4}, Lcom/oneplus/anim/OpGraphLight;-><init>(Landroid/view/WindowManager;Landroid/content/Context;Landroid/os/Handler;)V
 
@@ -446,9 +494,7 @@
 
     invoke-direct {v1, p0}, Lcom/oneplus/anim/OpCameraAnimateController$1;-><init>(Lcom/oneplus/anim/OpCameraAnimateController;)V
 
-    new-instance p0, Landroid/os/Handler;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p0}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;Landroid/os/Handler;)V
 
@@ -465,19 +511,44 @@
 .end method
 
 .method public onConfigChanged(Landroid/content/res/Configuration;)V
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsLastFrontCameraAnimStateOn:Z
+    iget v0, p1, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mDelayToShowAnimate:Z
 
     if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mDelayToShowAnimate:Z
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mShowAnimateRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mGraphLight:Lcom/oneplus/anim/OpGraphLight;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/oneplus/anim/OpGraphLight;->postShow()V
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mIsLastFrontCameraAnimStateOn:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpCameraAnimateController;->mGraphLight:Lcom/oneplus/anim/OpGraphLight;
+
+    if-eqz v0, :cond_1
 
     invoke-virtual {v0, p1}, Lcom/oneplus/anim/OpGraphLight;->onConfigChanged(Landroid/content/res/Configuration;)V
 
-    :cond_0
+    :cond_1
     invoke-direct {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->updateCameraAnim()V
 
     return-void

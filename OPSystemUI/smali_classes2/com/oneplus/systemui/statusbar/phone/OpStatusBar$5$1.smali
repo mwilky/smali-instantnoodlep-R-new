@@ -52,7 +52,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar$5;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1200(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->access$1400(Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;)V
 
     return-void
 .end method

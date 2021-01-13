@@ -52,6 +52,8 @@
 
 .field private mMobileVzwGroup:Landroid/view/ViewGroup;
 
+.field private mMobileVzwType:Landroid/widget/ImageView;
+
 .field private mRect:Landroid/graphics/Rect;
 
 .field private mSlot:Ljava/lang/String;
@@ -253,7 +255,11 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwType:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
@@ -305,56 +311,6 @@
     invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/StatusIconDisplayable;->setVisibleState(I)V
 
     return-object p0
-.end method
-
-.method private getFiveGUWBInOutIndicator(ZZ)I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    if-eqz p1, :cond_0
-
-    move p1, p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    add-int/lit8 p1, p1, 0x2
-
-    :cond_1
-    if-eq p1, p0, :cond_4
-
-    const/4 p0, 0x2
-
-    if-eq p1, p0, :cond_3
-
-    const/4 p0, 0x3
-
-    if-eq p1, p0, :cond_2
-
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_signal_stacked_none_5g_uwb:I
-
-    return p0
-
-    :cond_2
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_signal_stacked_inout_5g_uwb:I
-
-    return p0
-
-    :cond_3
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_signal_stacked_out_5g_uwb:I
-
-    return p0
-
-    :cond_4
-    sget p0, Lcom/android/systemui/R$drawable;->stat_sys_signal_stacked_in_5g_uwb:I
-
-    return p0
 .end method
 
 .method private getInOutIndicator(ZZ)I
@@ -674,6 +630,16 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwGroup:Landroid/view/ViewGroup;
 
+    sget v1, Lcom/android/systemui/R$id;->mobile_type:I
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwType:Landroid/widget/ImageView;
+
     :cond_0
     const/4 v0, 0x0
     
@@ -742,22 +708,22 @@
 
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->visible:Z
 
-    const/16 v1, 0x8
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x8
 
     if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileGroup:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileGroup:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
@@ -768,7 +734,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobile:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileDrawable:Lcom/android/settingslib/graph/SignalDrawable;
 
@@ -783,7 +749,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobile:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
@@ -808,14 +774,14 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileType:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_2
 
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileType:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
@@ -830,14 +796,14 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mVolte:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_3
 
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mVolte:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_3
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
@@ -882,11 +848,11 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileSingleGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileStackedGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_6
 
@@ -928,11 +894,11 @@
     :goto_5
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileSingleGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileStackedGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     :goto_6
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOut:Landroid/widget/ImageView;
@@ -953,7 +919,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_b
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
 
@@ -969,18 +935,22 @@
 
     sget v3, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g_uwb:I
 
+    if-eq v0, v3, :cond_a
+
+    sget v3, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g:I
+
     if-ne v0, v3, :cond_8
 
-    goto :goto_7
+    goto :goto_8
 
     :cond_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileFiveGUWBGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwGroup:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOut:Landroid/widget/ImageView;
 
@@ -990,84 +960,75 @@
 
     if-eqz v3, :cond_9
 
-    move v1, v2
+    goto :goto_7
 
     :cond_9
+    move v1, v2
+
+    :goto_7
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    goto :goto_8
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwType:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
+
+    iget v1, v1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeId:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_a
 
     :cond_a
-    :goto_7
+    :goto_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwGroup:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileFiveGUWBGroup:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileFiveGUWBGroup:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileFiveGUWB:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
 
-    iget v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeId:I
+    iget v1, v1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeId:I
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
-
-    iget-object v3, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
-
-    iget-boolean v4, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityIn:Z
-
-    iget-boolean v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityOut:Z
-
-    invoke-direct {p0, v4, v3}, Lcom/android/systemui/statusbar/StatusBarMobileView;->getFiveGUWBInOutIndicator(ZZ)I
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-boolean v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->dataConnected:Z
-
-    if-eqz v3, :cond_b
-
-    move v1, v2
+    goto :goto_a
 
     :cond_b
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto :goto_8
-
-    :cond_c
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOut:Landroid/widget/ImageView;
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mState:Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;
 
     iget-boolean v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->dataConnected:Z
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_c
 
+    goto :goto_9
+
+    :cond_c
     move v1, v2
 
-    :cond_d
+    :goto_9
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    :goto_8
+    :goto_a
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_d
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->updateMobileIconPadding()V
 
-    :cond_e
+    :cond_d
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->updateInOutIndicatorPadding()V
 
     return-void
@@ -1576,7 +1537,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_11
 
     iget v1, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeId:I
 
@@ -1589,6 +1550,10 @@
     if-eq v1, v5, :cond_10
 
     sget v5, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g_uwb:I
+
+    if-eq v1, v5, :cond_10
+
+    sget v5, Lcom/android/systemui/R$drawable;->op_stat_sys_data_idle_5g:I
 
     if-ne v1, v5, :cond_e
 
@@ -1614,6 +1579,12 @@
     :cond_f
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwType:Landroid/widget/ImageView;
+
+    iget v3, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->typeId:I
+
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
     goto :goto_b
 
     :cond_10
@@ -1634,39 +1605,20 @@
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
 
-    iget-boolean v5, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityIn:Z
-
-    iget-boolean v6, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityOut:Z
-
-    invoke-direct {p0, v5, v6}, Lcom/android/systemui/statusbar/StatusBarMobileView;->getFiveGUWBInOutIndicator(ZZ)I
-
-    move-result v5
-
-    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
-
-    iget-boolean v5, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->dataConnected:Z
-
-    if-eqz v5, :cond_11
-
-    move v3, v4
-
-    :cond_11
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_b
 
-    :cond_12
+    :cond_11
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOut:Landroid/widget/ImageView;
 
     iget-boolean v5, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->dataConnected:Z
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_12
 
     move v3, v4
 
-    :cond_13
+    :cond_12
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_b
@@ -1676,26 +1628,26 @@
 
     iget-boolean v5, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->roaming:Z
 
-    if-ne v1, v5, :cond_15
+    if-ne v1, v5, :cond_14
 
     iget-boolean v1, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityIn:Z
 
     iget-boolean v5, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityIn:Z
 
-    if-ne v1, v5, :cond_15
+    if-ne v1, v5, :cond_14
 
     iget-boolean v1, p1, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityOut:Z
 
     iget-boolean v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$MobileIconState;->activityOut:Z
 
-    if-eq v1, v3, :cond_14
+    if-eq v1, v3, :cond_13
 
     goto :goto_c
 
-    :cond_14
+    :cond_13
     move v2, v4
 
-    :cond_15
+    :cond_14
     :goto_c
     or-int/2addr v0, v2
 
@@ -1705,11 +1657,11 @@
 
     move-result p1
 
-    if-nez p1, :cond_16
+    if-nez p1, :cond_15
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->updateMobileIconPadding()V
 
-    :cond_16
+    :cond_15
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarMobileView;->updateInOutIndicatorPadding()V
 
     return v0
@@ -2231,7 +2183,11 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileInOutFiveGUWB:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarMobileView;->mMobileVzwType:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 

@@ -94,26 +94,28 @@
 
 .field public static final abc_textfield_search_material:I = 0x7f0802b9
 
+.field public static final dialog_background_material:I = 0x7f080564
+
 .field public static final op_btn_borderless_mini_material_dark:I = 0x7f080b9a
 
-.field public static final op_clear_material:I = 0x7f080c0c
+.field public static final op_clear_material:I = 0x7f080c0d
 
-.field public static final op_clear_unabled_material:I = 0x7f080c0e
+.field public static final op_clear_unabled_material:I = 0x7f080c0f
 
-.field public static final op_dialog_material_background_bottom:I = 0x7f080c1b
+.field public static final op_dialog_material_background_bottom:I = 0x7f080c1c
 
-.field public static final op_dialog_material_background_bottom_edited:I = 0x7f080c1c
+.field public static final op_dialog_material_background_bottom_edited:I = 0x7f080c1d
 
-.field public static final op_dialog_material_background_landcape_with_image:I = 0x7f080c1d
+.field public static final op_dialog_material_background_landcape_with_image:I = 0x7f080c1e
 
-.field public static final op_drop_down_item_background:I = 0x7f080c1e
+.field public static final op_drop_down_item_background:I = 0x7f080c1f
 
-.field public static final op_drop_down_item_background_bottom:I = 0x7f080c1f
+.field public static final op_drop_down_item_background_bottom:I = 0x7f080c20
 
-.field public static final op_drop_down_item_background_top:I = 0x7f080c20
+.field public static final op_drop_down_item_background_top:I = 0x7f080c21
 
-.field public static final op_search_hint_circular_material:I = 0x7f080cd6
+.field public static final op_search_hint_circular_material:I = 0x7f080cd7
 
-.field public static final op_search_hint_circular_unabled_material:I = 0x7f080cd7
+.field public static final op_search_hint_circular_unabled_material:I = 0x7f080cd8
 
-.field public static final op_seekbar_track_material_dark:I = 0x7f080cde
+.field public static final op_seekbar_track_material_dark:I = 0x7f080cdf

@@ -789,7 +789,7 @@
 
     const-string v0, "LightBarController"
 
-    const-string v1, "setNavigationBar()"
+    const-string/jumbo v1, "setNavigationBar()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -53,6 +53,15 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
+    invoke-static {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;I)V
+
+    goto/16 :goto_1
+
+    :pswitch_1
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
+
+    iget p1, p1, Landroid/os/Message;->arg1:I
+
     if-eq p1, v2, :cond_0
 
     move v1, v2
@@ -62,7 +71,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_1
+    :pswitch_2
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -76,7 +85,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_2
+    :pswitch_3
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -90,14 +99,14 @@
 
     goto :goto_1
 
-    :pswitch_3
+    :pswitch_4
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleSystemReady()V
 
     goto :goto_1
 
-    :pswitch_4
+    :pswitch_5
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -111,7 +120,7 @@
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_6
     iget-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     iget-boolean v0, p1, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mDuringAcquired:Z
@@ -128,7 +137,7 @@
 
     goto :goto_1
 
-    :pswitch_6
+    :pswitch_7
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
     invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleScreenTurningOn()V
@@ -201,8 +210,11 @@
     :goto_1
     return-void
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1f4
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4

@@ -61,13 +61,13 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$702(Lcom/oneplus/battery/OpSWarpChargingView;Z)Z
+    invoke-static {p1, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1002(Lcom/oneplus/battery/OpSWarpChargingView;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$8$1;->this$1:Lcom/oneplus/battery/OpSWarpChargingView$8;
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$8;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$900(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1200(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object p0
 

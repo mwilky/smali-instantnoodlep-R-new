@@ -35,8 +35,6 @@
 
 .field private final mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
 .field private mCameraLaunching:Z
 
 .field private final mConnection:Landroid/content/ServiceConnection;
@@ -494,16 +492,6 @@
 
     iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mFpm:Landroid/hardware/fingerprint/FingerprintManager;
 
-    new-instance p1, Lcom/oneplus/anim/OpCameraAnimateController;
-
-    iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, p2}, Lcom/oneplus/anim/OpCameraAnimateController;-><init>(Landroid/content/Context;)V
-
-    iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mCameraAnim:Lcom/oneplus/anim/OpCameraAnimateController;
-
-    invoke-virtual {p1}, Lcom/oneplus/anim/OpCameraAnimateController;->init()V
-
     return-void
 .end method
 
@@ -675,20 +663,20 @@
     return-object p0
 .end method
 
-.method static synthetic access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)V
+.method static synthetic access$2800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->resetFPTimeout()V
 
     return-void
-.end method
-
-.method static synthetic access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIndicator:Lcom/android/systemui/statusbar/KeyguardIndicationController;
-
-    return-object p0
 .end method
 
 .method static synthetic access$300(Lcom/oneplus/faceunlock/OpFacelockController;)Z
@@ -699,12 +687,12 @@
     return p0
 .end method
 
-.method static synthetic access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Z
+.method static synthetic access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsGoingToSleep:Z
+    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIndicator:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    return p0
+    return-object p0
 .end method
 
 .method static synthetic access$302(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
@@ -715,7 +703,15 @@
     return p1
 .end method
 
-.method static synthetic access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
+.method static synthetic access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsGoingToSleep:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3200(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
@@ -723,7 +719,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3202(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
+.method static synthetic access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mService:Lcom/oneplus/faceunlock/internal/IOPFacelockService;
@@ -731,7 +727,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+.method static synthetic access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mBinding:Z
@@ -739,7 +735,7 @@
     return p1
 .end method
 
-.method static synthetic access$3400(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
+.method static synthetic access$3500(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mSettingService:Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
@@ -747,7 +743,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
+.method static synthetic access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;)Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mSettingService:Lcom/oneplus/faceunlock/internal/IOPFaceSettingService;
@@ -755,7 +751,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3502(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+.method static synthetic access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mBoundToSettingService:Z
@@ -763,7 +759,7 @@
     return p1
 .end method
 
-.method static synthetic access$3602(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+.method static synthetic access$3702(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mBindingSetting:Z
@@ -771,7 +767,7 @@
     return p1
 .end method
 
-.method static synthetic access$3700(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
+.method static synthetic access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mResetScreenOnRunnable:Ljava/lang/Runnable;
@@ -779,18 +775,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$3800(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
+.method static synthetic access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mUIHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3900(Lcom/oneplus/faceunlock/OpFacelockController;)Ljava/lang/Runnable;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
 
     return-object p0
 .end method
@@ -2716,104 +2704,108 @@
 .end method
 
 .method private updateKeyguardAlpha(IZZ)V
-    .locals 4
+    .locals 12
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v1, 0x0
 
-    const-string v1, "update alpha:"
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isShowingLiveWallpaper(Z)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, ", "
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "update alpha:"
 
-    iget-boolean v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsScreenOffUnlock:Z
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, ", live wp:"
+    const-string v3, ", "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+    iget-boolean v4, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsScreenOffUnlock:Z
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isShowingLiveWallpaper(Z)Z
+    const-string v4, ", live wp:"
 
-    move-result v2
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "OpFacelockController"
+    const-string v8, "OpFacelockController"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, 0x1
+    const/4 v9, 0x1
 
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
+    iget-object v3, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object v1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    sget v2, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->AUTHENTICATE_FACEUNLOCK:I
+    sget v3, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->AUTHENTICATE_FACEUNLOCK:I
 
-    invoke-virtual {v1, v0, v2, v0}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->notifyScreenOffAuthenticate(ZII)V
+    invoke-virtual {v2, v9, v3, v9}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->notifyScreenOffAuthenticate(ZII)V
 
     :cond_0
-    iget-object v1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mUIHandler:Landroid/os/Handler;
+    iget-object v10, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mUIHandler:Landroid/os/Handler;
 
-    new-instance v2, Lcom/oneplus/faceunlock/OpFacelockController$8;
+    new-instance v11, Lcom/oneplus/faceunlock/OpFacelockController$8;
 
-    invoke-direct {v2, p0, p1}, Lcom/oneplus/faceunlock/OpFacelockController$8;-><init>(Lcom/oneplus/faceunlock/OpFacelockController;I)V
+    move-object v2, v11
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-object v3, p0
 
-    if-ne p1, v0, :cond_4
+    move v4, v0
 
-    iput-boolean v3, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsScreenOffUnlock:Z
+    move v5, p1
 
-    iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    move v6, p2
 
-    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+    move v7, p3
 
-    move-result v0
+    invoke-direct/range {v2 .. v7}, Lcom/oneplus/faceunlock/OpFacelockController$8;-><init>(Lcom/oneplus/faceunlock/OpFacelockController;ZIZZ)V
 
-    invoke-virtual {p1, v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFingerprintEnrolled(I)Z
+    invoke-virtual {v10, v11}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    if-eqz p2, :cond_4
+    if-ne p1, v9, :cond_6
+
+    iput-boolean v1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mIsScreenOffUnlock:Z
+
+    if-eqz p2, :cond_6
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p1
 
-    iget-wide v0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mSleepTime:J
+    iget-wide v2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mSleepTime:J
 
-    sub-long/2addr p1, v0
+    sub-long/2addr p1, v2
 
-    const-wide/16 v0, 0x1388
+    const-wide/16 v2, 0x1388
 
-    cmp-long p1, p1, v0
+    cmp-long p1, p1, v2
 
     if-lez p1, :cond_1
 
@@ -2825,37 +2817,59 @@
     const/16 p1, 0x64
 
     :goto_0
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+    if-nez v0, :cond_2
 
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
-
-    iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {p2, p3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
-
-    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
-
-    int-to-long v0, p1
-
-    invoke-virtual {p2, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_1
+    const/16 p1, 0x12c
 
     :cond_2
+    sget-boolean p2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p2, :cond_3
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "updateKeyguardAlpha: delay= "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v8, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    if-eqz p3, :cond_3
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
 
+    move-result p2
+
+    if-nez p2, :cond_5
+
+    if-eqz p3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    sget p1, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->AUTHENTICATE_FACEUNLOCK:I
+
+    invoke-virtual {p0, v1, p1}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->notifyScreenOffAuthenticate(ZI)V
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
     iget-object p2, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mOffAuthenticateRunnable:Ljava/lang/Runnable;
@@ -2864,17 +2878,8 @@
 
     invoke-virtual {p2, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_1
-
-    :cond_3
-    iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
-
-    sget p1, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->AUTHENTICATE_FACEUNLOCK:I
-
-    invoke-virtual {p0, v3, p1}, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->notifyScreenOffAuthenticate(ZI)V
-
-    :cond_4
-    :goto_1
+    :cond_6
+    :goto_2
     return-void
 .end method
 

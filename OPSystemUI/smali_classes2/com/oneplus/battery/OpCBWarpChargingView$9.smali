@@ -20,16 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-.field final synthetic val$cbAnimP1end:I
-
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/battery/OpCBWarpChargingView;I)V
+.method constructor <init>(Lcom/oneplus/battery/OpCBWarpChargingView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
-
-    iput p2, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->val$cbAnimP1end:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,17 +35,7 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
-
-    invoke-static {v0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$000(Lcom/oneplus/battery/OpCBWarpChargingView;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
-
-    iget-object v1, v1, Lcom/oneplus/battery/OpCBWarpChargingView;->mWarpAnimationAssets:Ljava/util/ArrayList;
+    .locals 1
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -61,19 +47,30 @@
 
     move-result p1
 
-    iget p0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->val$cbAnimP1end:I
+    iget-object v0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    add-int/lit8 p0, p0, 0x1
+    invoke-static {v0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$500(Lcom/oneplus/battery/OpCBWarpChargingView;)I
 
-    sub-int/2addr p1, p0
+    move-result v0
 
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    add-int/lit8 v0, v0, 0x1
+
+    sub-int/2addr p1, v0
+
+    iget-object p0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$9;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpCBWarpChargingView;->mChargingAnimationSWarpAssets:[Landroid/graphics/Bitmap;
+
+    aget-object p1, v0, p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$000(Lcom/oneplus/battery/OpCBWarpChargingView;)Landroid/widget/ImageView;
 
     move-result-object p0
 
-    check-cast p0, Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
+    :cond_0
     return-void
 .end method

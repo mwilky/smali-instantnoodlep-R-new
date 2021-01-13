@@ -40,6 +40,8 @@
 
 .field private static mEditTileBefore:Z
 
+.field public static mEnterFromToggleSplitScreenMode:Z
+
 .field private static mIsCTS:Z
 
 .field private static mIsCTSAdded:Z
@@ -211,6 +213,8 @@
     move-result v1
 
     sput-boolean v1, Lcom/oneplus/util/OpUtils;->sIsREDCustomType:Z
+
+    sput-boolean v0, Lcom/oneplus/util/OpUtils;->mEnterFromToggleSplitScreenMode:Z
 
     const-string v1, "310120"
 

@@ -1041,6 +1041,11 @@
         <item>3</item>
     </string-array>
     <array name="swarpcharge_wired_anim">
+        <item>@drawable/swarpcharge_wired_025</item>
+        <item>@drawable/swarpcharge_wired_026</item>
+        <item>@drawable/swarpcharge_wired_027</item>
+        <item>@drawable/swarpcharge_wired_028</item>
+        <item>@drawable/swarpcharge_wired_029</item>
         <item>@drawable/swarpcharge_wired_030</item>
         <item>@drawable/swarpcharge_wired_031</item>
         <item>@drawable/swarpcharge_wired_032</item>
@@ -1111,24 +1116,6 @@
         <item>@drawable/swarpcharge_wired_097</item>
         <item>@drawable/swarpcharge_wired_098</item>
         <item>@drawable/swarpcharge_wired_099</item>
-        <item>@drawable/swarpcharge_wired_100</item>
-        <item>@drawable/swarpcharge_wired_101</item>
-        <item>@drawable/swarpcharge_wired_102</item>
-        <item>@drawable/swarpcharge_wired_103</item>
-        <item>@drawable/swarpcharge_wired_104</item>
-        <item>@drawable/swarpcharge_wired_105</item>
-        <item>@drawable/swarpcharge_wired_106</item>
-        <item>@drawable/swarpcharge_wired_107</item>
-        <item>@drawable/swarpcharge_wired_108</item>
-        <item>@drawable/swarpcharge_wired_109</item>
-        <item>@drawable/swarpcharge_wired_110</item>
-        <item>@drawable/swarpcharge_wired_111</item>
-        <item>@drawable/swarpcharge_wired_112</item>
-        <item>@drawable/swarpcharge_wired_113</item>
-        <item>@drawable/swarpcharge_wired_114</item>
-        <item>@drawable/swarpcharge_wired_115</item>
-        <item>@drawable/swarpcharge_wired_116</item>
-        <item>@drawable/swarpcharge_wired_117</item>
     </array>
     <string-array name="track_frame_time_entries">
         <item>Off</item>
@@ -1461,24 +1448,6 @@
         <item>@drawable/warpcharge_wired_087</item>
         <item>@drawable/warpcharge_wired_088</item>
         <item>@drawable/warpcharge_wired_089</item>
-        <item>@drawable/warpcharge_wired_090</item>
-        <item>@drawable/warpcharge_wired_091</item>
-        <item>@drawable/warpcharge_wired_092</item>
-        <item>@drawable/warpcharge_wired_093</item>
-        <item>@drawable/warpcharge_wired_094</item>
-        <item>@drawable/warpcharge_wired_095</item>
-        <item>@drawable/warpcharge_wired_096</item>
-        <item>@drawable/warpcharge_wired_097</item>
-        <item>@drawable/warpcharge_wired_098</item>
-        <item>@drawable/warpcharge_wired_099</item>
-        <item>@drawable/warpcharge_wired_100</item>
-        <item>@drawable/warpcharge_wired_101</item>
-        <item>@drawable/warpcharge_wired_102</item>
-        <item>@drawable/warpcharge_wired_103</item>
-        <item>@drawable/warpcharge_wired_104</item>
-        <item>@drawable/warpcharge_wired_105</item>
-        <item>@drawable/warpcharge_wired_106</item>
-        <item>@drawable/warpcharge_wired_107</item>
     </array>
     <array name="warpcharge_wireless_anim">
         <item>@drawable/warpcharge_wireless_000</item>
@@ -1571,24 +1540,6 @@
         <item>@drawable/warpcharge_wireless_087</item>
         <item>@drawable/warpcharge_wireless_088</item>
         <item>@drawable/warpcharge_wireless_089</item>
-        <item>@drawable/warpcharge_wireless_090</item>
-        <item>@drawable/warpcharge_wireless_091</item>
-        <item>@drawable/warpcharge_wireless_092</item>
-        <item>@drawable/warpcharge_wireless_093</item>
-        <item>@drawable/warpcharge_wireless_094</item>
-        <item>@drawable/warpcharge_wireless_095</item>
-        <item>@drawable/warpcharge_wireless_096</item>
-        <item>@drawable/warpcharge_wireless_097</item>
-        <item>@drawable/warpcharge_wireless_098</item>
-        <item>@drawable/warpcharge_wireless_099</item>
-        <item>@drawable/warpcharge_wireless_100</item>
-        <item>@drawable/warpcharge_wireless_101</item>
-        <item>@drawable/warpcharge_wireless_102</item>
-        <item>@drawable/warpcharge_wireless_103</item>
-        <item>@drawable/warpcharge_wireless_104</item>
-        <item>@drawable/warpcharge_wireless_105</item>
-        <item>@drawable/warpcharge_wireless_106</item>
-        <item>@drawable/warpcharge_wireless_107</item>
     </array>
     <string-array name="wifi_status">
         <item></item>

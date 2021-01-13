@@ -40,4 +40,4 @@
 
 .field public static final ic_smartphone:I = 0x7f080a65
 
-.field public static final op_ic_account_circle:I = 0x7f080c2c
+.field public static final op_ic_account_circle:I = 0x7f080c2d

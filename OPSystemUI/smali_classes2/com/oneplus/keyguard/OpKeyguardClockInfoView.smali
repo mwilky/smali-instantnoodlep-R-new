@@ -59,6 +59,10 @@
 
 .field private mUiHandler:Landroid/os/Handler;
 
+.field private mUser:I
+
+.field private mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
+
 .field private mViewType:Lcom/oneplus/keyguard/OpKeyguardClockInfoView$ViewTypeEnum;
 
 
@@ -112,9 +116,9 @@
 
     iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
 
-    new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;
+    new-instance p1, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$5;
 
-    invoke-direct {p1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    invoke-direct {p1, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$5;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     iput-object p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -178,9 +182,9 @@
 
     iput-object v2, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mKeyguardAssistantViewCallback:Lcom/android/keyguard/KeyguardAssistantView$Callback;
 
-    new-instance v2, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;
+    new-instance v2, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$5;
 
-    invoke-direct {v2, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
+    invoke-direct {v2, p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$5;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)V
 
     iput-object v2, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -380,6 +384,20 @@
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_4
+    const-class p1, Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/broadcast/BroadcastDispatcher;
+
+    new-instance p2, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;
+
+    invoke-direct {p2, p0, p1}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView$4;-><init>(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+
+    iput-object p2, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
+
     return-void
 
     :catchall_0
@@ -388,6 +406,8 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     throw p0
+
+    nop
 
     :array_0
     .array-data 1
@@ -452,6 +472,30 @@
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateView()V
 
     return-void
+.end method
+
+.method static synthetic access$602(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mUser:I
+
+    return p1
+.end method
+
+.method static synthetic access$700(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)Landroid/database/ContentObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mContentObserver:Landroid/database/ContentObserver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/oneplus/keyguard/OpKeyguardClockInfoView;)Landroid/database/ContentObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
+
+    return-object p0
 .end method
 
 .method private initAssitantView()V
@@ -2249,6 +2293,10 @@
     invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardAssistantView;->setHideSensitiveData(Z)V
 
     :cond_3
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
+
+    invoke-virtual {v0}, Lcom/android/systemui/settings/CurrentUserTracker;->startTracking()V
+
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->updateLayout()V
 
     return-void
@@ -2357,6 +2405,10 @@
     iget-object v2, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mIsFormat12HourObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mUserTracker:Lcom/android/systemui/settings/CurrentUserTracker;
+
+    invoke-virtual {v0}, Lcom/android/systemui/settings/CurrentUserTracker;->stopTracking()V
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardClockInfoView;->mDebugRaiseCrashRate:[Z
 

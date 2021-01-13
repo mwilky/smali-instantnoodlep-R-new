@@ -190,7 +190,15 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+.method static synthetic access$000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mTWSPodsHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
@@ -198,17 +206,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
+.method static synthetic access$1002(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->getBatteryInfo(Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
+    iput-boolean p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mBindingPodsService:Z
 
-    move-result-object p0
-
-    return-object p0
+    return p1
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
+.method static synthetic access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mStub:Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
@@ -216,18 +222,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mCurrentAddress:Ljava/lang/String;
-
-    return-object p0
-.end method
-
 .method static synthetic access$1200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mCurrentAddress:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -248,25 +246,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1500(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->isShowingDetail()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$1600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mDetailAdapter:Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+.method static synthetic access$1500(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
@@ -274,7 +254,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
+.method static synthetic access$1600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
     .locals 0
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->isShowingDetail()Z
@@ -282,6 +262,22 @@
     move-result p0
 
     return p0
+.end method
+
+.method static synthetic access$1700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mDetailAdapter:Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    return-object p0
 .end method
 
 .method static synthetic access$200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
@@ -292,12 +288,14 @@
     return-object p0
 .end method
 
-.method static synthetic access$2000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
+.method static synthetic access$2000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->isShowingDetail()Z
 
-    return-object p0
+    move-result p0
+
+    return p0
 .end method
 
 .method static synthetic access$202(Lcom/android/systemui/qs/tiles/BluetoothTile;Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;)Lcom/oos/onepluspods/service/aidl/IOnePlusPodDevice;
@@ -308,7 +306,15 @@
     return-object p1
 .end method
 
-.method static synthetic access$2100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/plugins/qs/QSTile$State;
+.method static synthetic access$2100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/plugins/qs/QSTile$State;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
@@ -316,7 +322,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/statusbar/policy/BluetoothController;
+.method static synthetic access$2300(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/statusbar/policy/BluetoothController;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mController:Lcom/android/systemui/statusbar/policy/BluetoothController;
@@ -324,7 +330,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2300()Landroid/content/Intent;
+.method static synthetic access$2400()Landroid/content/Intent;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/qs/tiles/BluetoothTile;->BLUETOOTH_SETTINGS:Landroid/content/Intent;
@@ -332,7 +338,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
+.method static synthetic access$2500(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
@@ -340,18 +346,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$2500(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/plugins/qs/QSTile$State;
+.method static synthetic access$2600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/plugins/qs/QSTile$State;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mState:Lcom/android/systemui/plugins/qs/QSTile$State;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
@@ -372,10 +370,20 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+.method static synthetic access$2900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Landroid/content/Context;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->getBatteryInfo(Ljava/lang/String;)Lcom/android/systemui/qs/tiles/BluetoothTile$BatteryInfo;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -396,7 +404,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/Object;)I
+.method static synthetic access$600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/android/systemui/qs/tiles/BluetoothTile;Ljava/lang/Object;)I
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->getBatteryLevel(Ljava/lang/Object;)I
@@ -404,14 +420,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method static synthetic access$700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
-
-    return-object p0
 .end method
 
 .method static synthetic access$800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
@@ -422,12 +430,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$902(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
+.method static synthetic access$900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile;->mBindingPodsService:Z
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
 
-    return p1
+    return-object p0
 .end method
 
 .method private bindOnePlusPodsService(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;)V

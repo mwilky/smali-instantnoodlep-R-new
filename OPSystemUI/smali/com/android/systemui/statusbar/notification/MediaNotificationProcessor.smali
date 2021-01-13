@@ -655,7 +655,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     const/4 v1, 0x1
 
@@ -673,7 +673,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -728,9 +728,12 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    :try_start_0
     invoke-static {v4}, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->generateArtworkPaletteBuilder(Landroid/graphics/Bitmap;)Landroidx/palette/graphics/Palette$Builder;
 
     move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     invoke-virtual {p1}, Landroidx/palette/graphics/Palette$Builder;->generate()Landroidx/palette/graphics/Palette;
 
@@ -803,9 +806,64 @@
 
     invoke-virtual {p2, v5, p1}, Landroid/app/Notification$Builder;->setColorPalette(II)V
 
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "MediaNotificationProcessor"
+
+    invoke-static {v3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mContext:Landroid/content/Context;
+
+    sget v3, Lcom/android/systemui/R$color;->notification_material_background_color:I
+
+    invoke-virtual {p1, v3}, Landroid/content/Context;->getColor(I)I
+
+    move-result p1
+
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mColorizer:Lcom/android/systemui/statusbar/notification/ImageGradientColorizer;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLayoutDirection()I
+
+    move-result p0
+
+    if-ne p0, v1, :cond_2
+
     goto :goto_0
 
     :cond_2
+    move v1, v2
+
+    :goto_0
+    invoke-virtual {v3, v0, p1, v1}, Lcom/android/systemui/statusbar/notification/ImageGradientColorizer;->colorize(Landroid/graphics/drawable/Drawable;IZ)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Icon;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
+
+    return-void
+
+    :cond_3
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mContext:Landroid/content/Context;
 
     sget v3, Lcom/android/systemui/R$color;->notification_material_background_color:I
@@ -814,7 +872,7 @@
 
     move-result v5
 
-    :goto_0
+    :goto_1
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mColorizer:Lcom/android/systemui/statusbar/notification/ImageGradientColorizer;
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/MediaNotificationProcessor;->mContext:Landroid/content/Context;
@@ -831,14 +889,14 @@
 
     move-result p0
 
-    if-ne p0, v1, :cond_3
+    if-ne p0, v1, :cond_4
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_4
     move v1, v2
 
-    :goto_1
+    :goto_2
     invoke-virtual {p1, v0, v5, v1}, Lcom/android/systemui/statusbar/notification/ImageGradientColorizer;->colorize(Landroid/graphics/drawable/Drawable;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -849,6 +907,6 @@
 
     invoke-virtual {p2, p0}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
 
-    :cond_4
+    :cond_5
     return-void
 .end method

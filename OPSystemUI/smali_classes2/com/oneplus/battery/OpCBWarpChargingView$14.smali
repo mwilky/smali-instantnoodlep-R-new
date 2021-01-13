@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/battery/OpCBWarpChargingView;->prepareAsset(I)V
+    value = Lcom/oneplus/battery/OpCBWarpChargingView;->releaseAsset()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpCBWarpChargingView$14;->this$0:Lcom/oneplus/battery/OpCBWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$1900(Lcom/oneplus/battery/OpCBWarpChargingView;)V
+    invoke-static {p0}, Lcom/oneplus/battery/OpCBWarpChargingView;->access$2800(Lcom/oneplus/battery/OpCBWarpChargingView;)V
 
     return-void
 .end method

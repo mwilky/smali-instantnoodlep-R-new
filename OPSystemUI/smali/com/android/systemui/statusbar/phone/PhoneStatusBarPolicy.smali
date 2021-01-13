@@ -446,15 +446,7 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateTTY(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Landroid/content/Intent;)V
+.method static synthetic access$1000(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Landroid/content/Intent;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateHeadsetPlug(Landroid/content/Intent;)V
@@ -462,7 +454,7 @@
     return-void
 .end method
 
-.method static synthetic access$1200()Z
+.method static synthetic access$1100()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->DEBUG:Z
@@ -470,7 +462,7 @@
     return v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
+.method static synthetic access$1200(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
@@ -486,18 +478,18 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateHotspotIcon(II)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Landroid/content/res/Resources;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
     return-object p0
 .end method
@@ -510,15 +502,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateHotspotIcon(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$700(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
+.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateCast()V
@@ -526,7 +510,7 @@
     return-void
 .end method
 
-.method static synthetic access$802(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Landroid/app/AlarmManager$AlarmClockInfo;)Landroid/app/AlarmManager$AlarmClockInfo;
+.method static synthetic access$702(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Landroid/app/AlarmManager$AlarmClockInfo;)Landroid/app/AlarmManager$AlarmClockInfo;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mNextAlarm:Landroid/app/AlarmManager$AlarmClockInfo;
@@ -534,12 +518,20 @@
     return-object p1
 .end method
 
-.method static synthetic access$900(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
+.method static synthetic access$800(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotSensorsOff:Ljava/lang/String;
 
     return-object p0
+.end method
+
+.method static synthetic access$900(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateTTY(I)V
+
+    return-void
 .end method
 
 .method private buildAlarmContentDescription()Ljava/lang/String;
@@ -1167,118 +1159,220 @@
     return-void
 .end method
 
-.method private updateHotspotIcon(I)V
+.method private updateHotspotIcon(II)V
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-array v0, v0, [I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v1, 0x0
+    const-string/jumbo v1, "updateHotspotIcon standard:"
 
-    const/16 v2, 0xc5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput v2, v0, v1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+    const-string v1, " numDevices:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PhoneStatusBarPolicy"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x6
+    packed-switch p2, :pswitch_data_0
 
-    if-ne p1, v0, :cond_0
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
 
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+    goto :goto_0
+
+    :pswitch_0
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_10:I
+
+    goto :goto_0
+
+    :pswitch_1
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_9:I
+
+    goto :goto_0
+
+    :pswitch_2
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_8:I
+
+    goto :goto_0
+
+    :pswitch_3
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_7:I
+
+    goto :goto_0
+
+    :pswitch_4
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_6:I
+
+    goto :goto_0
+
+    :pswitch_5
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_5:I
+
+    goto :goto_0
+
+    :pswitch_6
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_4:I
+
+    goto :goto_0
+
+    :pswitch_7
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_3:I
+
+    goto :goto_0
+
+    :pswitch_8
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_2:I
+
+    goto :goto_0
+
+    :pswitch_9
+    sget p1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_1:I
+
+    :goto_0
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
-    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_wifi_6_hotspot:I
-
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    sget v2, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
+    sget v1, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-interface {p1, v0, v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {p2, v0, p1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v0, 0x5
+    const/4 p2, 0x1
 
-    if-ne p1, v0, :cond_1
+    new-array p2, p2, [I
+
+    const/4 v0, 0x0
+
+    const/16 v2, 0xc5
+
+    aput v2, p2, v0
+
+    invoke-static {p2}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    const/4 p2, 0x6
+
+    if-ne p1, p2, :cond_1
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
-    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_wifi_5_hotspot:I
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_wifi_6_hotspot:I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    sget v2, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
+    sget v1, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-interface {p1, v0, v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {p1, p2, v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    const/4 v0, 0x4
+    const/4 p2, 0x5
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, p2, :cond_2
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
-    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_wifi_4_hotspot:I
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_wifi_5_hotspot:I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    sget v2, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
+    sget v1, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-interface {p1, v0, v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {p1, p2, v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
+    const/4 p2, 0x4
+
+    if-ne p1, p2, :cond_3
+
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
-    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_wifi_4_hotspot:I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    sget v2, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
+    sget v1, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-interface {p1, v0, v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {p1, p2, v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
-    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
+
+    sget v1, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
+
+    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-interface {p1, p2, v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_4
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+
+    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
@@ -1288,16 +1382,30 @@
 
     move-result-object p0
 
-    invoke-interface {p1, v0, v1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {p1, p2, v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
-    const-string p0, "PhoneStatusBarPolicy"
+    const-string/jumbo p0, "use default hotspot icon"
 
-    const-string/jumbo p1, "use default hotspot icon"
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_0
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method private updateLocation()V

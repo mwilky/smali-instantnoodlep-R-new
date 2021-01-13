@@ -51,7 +51,7 @@
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Z
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Z
 
     move-result v0
 
@@ -88,7 +88,7 @@
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object p0
 
@@ -183,7 +183,7 @@
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object p0
 
@@ -194,13 +194,13 @@
     :cond_5
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3200(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -219,13 +219,13 @@
     :cond_6
     iget-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$2900(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    invoke-static {v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3000(Lcom/oneplus/faceunlock/OpFacelockController;)Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/oneplus/faceunlock/OpFacelockController$11;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
-    invoke-static {v2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3100(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3200(Lcom/oneplus/faceunlock/OpFacelockController;)Landroid/content/Context;
 
     move-result-object v2
 

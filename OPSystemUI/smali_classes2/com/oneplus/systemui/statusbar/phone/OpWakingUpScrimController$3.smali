@@ -80,28 +80,49 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    invoke-static {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
+    invoke-static {p1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$500(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)V
 
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
 
-    invoke-static {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$502(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
+    invoke-static {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$602(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;Z)Z
 
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 2
 
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->mCancelled:Z
 
-    const-string p0, "OpWakingUpScrimController"
+    const-string p1, "OpWakingUpScrimController"
 
-    const-string p1, "WakingUpScrimView onAnimationStart"
+    const-string v0, "WakingUpScrimView onAnimationStart"
 
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    invoke-static {p1}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController$3;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    invoke-static {p0}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->access$400(Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object p0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->onWakingUpScrimAnimationStart(J)V
+
+    :cond_0
     return-void
 .end method

@@ -46,7 +46,7 @@
 
     iget-object p0, p0, Lcom/oneplus/anim/OpCameraAnimateController$2;->this$0:Lcom/oneplus/anim/OpCameraAnimateController;
 
-    invoke-static {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$900(Lcom/oneplus/anim/OpCameraAnimateController;)V
+    invoke-static {p0}, Lcom/oneplus/anim/OpCameraAnimateController;->access$1200(Lcom/oneplus/anim/OpCameraAnimateController;)V
 
     return-void
 .end method

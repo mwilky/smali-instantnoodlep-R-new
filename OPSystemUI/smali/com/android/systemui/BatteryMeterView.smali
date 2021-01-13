@@ -1470,7 +1470,7 @@
 .end method
 
 .method public onAttachedToWindow()V
-    .locals 5
+    .locals 6
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
@@ -1532,15 +1532,15 @@
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
+    iget-object v3, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
 
-    iget v3, p0, Lcom/android/systemui/BatteryMeterView;->mUser:I
+    iget v4, p0, Lcom/android/systemui/BatteryMeterView;->mUser:I
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    invoke-virtual {v0, v2, v5, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -1550,15 +1550,34 @@
 
     move-result-object v0
 
-    const-string v1, "battery_estimates_last_update_time"
+    const-string v2, "battery_estimates_last_update_time"
 
-    invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
+    iget-object v3, p0, Lcom/android/systemui/BatteryMeterView;->mSettingObserver:Lcom/android/systemui/BatteryMeterView$SettingObserver;
 
-    invoke-virtual {v0, v1, v4, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    invoke-virtual {v0, v2, v5, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-static {v0, v1, v5, v5}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v5, 0x1
+
+    :cond_0
+    iput-boolean v5, p0, Lcom/android/systemui/BatteryMeterView;->mBatteryPercentShow:Z
 
     invoke-direct {p0}, Lcom/android/systemui/BatteryMeterView;->updateShowPercent()V
 

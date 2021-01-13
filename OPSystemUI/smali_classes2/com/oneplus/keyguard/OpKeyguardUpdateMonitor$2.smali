@@ -45,7 +45,7 @@
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+    invoke-static {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$2;->this$0:Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;
 
-    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+    invoke-static {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
 
     move-result-object p0
 

@@ -49,13 +49,13 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3202(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
+    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$12;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p1, p2}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$12;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
@@ -83,13 +83,13 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3202(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
+    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Lcom/oneplus/faceunlock/internal/IOPFacelockService;)Lcom/oneplus/faceunlock/internal/IOPFacelockService;
 
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController$12;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3302(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
+    invoke-static {p1, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$3402(Lcom/oneplus/faceunlock/OpFacelockController;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/faceunlock/OpFacelockController$12;->this$0:Lcom/oneplus/faceunlock/OpFacelockController;
 

@@ -35,96 +35,14 @@
 
 # virtual methods
 .method public onHotspotChanged(ZI)V
-    .locals 4
+    .locals 2
 
-    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    packed-switch p2, :pswitch_data_0
-
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot:I
-
-    goto :goto_0
-
-    :pswitch_0
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_10:I
-
-    goto :goto_0
-
-    :pswitch_1
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_9:I
-
-    goto :goto_0
-
-    :pswitch_2
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_8:I
-
-    goto :goto_0
-
-    :pswitch_3
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_7:I
-
-    goto :goto_0
-
-    :pswitch_4
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_6:I
-
-    goto :goto_0
-
-    :pswitch_5
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_5:I
-
-    goto :goto_0
-
-    :pswitch_6
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_4:I
-
-    goto :goto_0
-
-    :pswitch_7
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_3:I
-
-    goto :goto_0
-
-    :pswitch_8
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_2:I
-
-    goto :goto_0
-
-    :pswitch_9
-    sget p2, Lcom/android/systemui/R$drawable;->stat_sys_hotspot_1:I
-
-    :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$500(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-static {v0, v1, p2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;II)V
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
-
-    invoke-static {v1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
-
-    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$400(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/android/systemui/R$string;->accessibility_status_bar_hotspot:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, p2, v2}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIcon(Ljava/lang/String;ILjava/lang/CharSequence;)V
-
-    :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
     invoke-static {p2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$500(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Lcom/android/systemui/statusbar/phone/StatusBarIconController;
@@ -133,35 +51,21 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$400(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-interface {p2, p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarIconController;->setIconVisibility(Ljava/lang/String;Z)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public onHotspotChanged(ZII)V
-    .locals 0
+    .locals 1
 
-    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
-    invoke-static {p2, p3}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$600(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;I)V
+    invoke-static {v0, p3, p2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;II)V
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
@@ -171,7 +75,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;->this$0:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$300(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->access$400(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)Ljava/lang/String;
 
     move-result-object p0
 

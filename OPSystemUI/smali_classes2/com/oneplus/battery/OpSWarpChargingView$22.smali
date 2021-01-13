@@ -35,11 +35,27 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 6
+
+    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$22;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$200(Lcom/oneplus/battery/OpSWarpChargingView;)I
+
+    move-result v2
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$22;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2700(Lcom/oneplus/battery/OpSWarpChargingView;)V
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2800(Lcom/oneplus/battery/OpSWarpChargingView;)I
+
+    move-result v3
+
+    const/4 v1, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x1
+
+    invoke-static/range {v0 .. v5}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;IIIZZ)V
 
     return-void
 .end method

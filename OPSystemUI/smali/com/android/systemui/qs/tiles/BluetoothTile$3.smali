@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$902(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
+    invoke-static {p1, v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1002(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
 
     if-nez p2, :cond_0
 
@@ -93,7 +93,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p2}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
+    invoke-static {p2}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
 
     move-result-object p2
 
@@ -101,7 +101,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -109,13 +109,13 @@
 
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
+    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/oos/onepluspods/service/aidl/IOnePlusUpdate$Stub;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p2}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -132,7 +132,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1200(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1300(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -162,7 +162,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$3;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1300(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1400(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -186,7 +186,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$902(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
+    invoke-static {p0, p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1002(Lcom/android/systemui/qs/tiles/BluetoothTile;Z)Z
 
     return-void
 .end method
