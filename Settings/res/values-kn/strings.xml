@@ -510,7 +510,7 @@
     <string name="app_notification_block_title">ಎಲ್ಲವನ್ನೂ ನಿರ್ಬಂಧಿಸು</string>
     <string name="app_notification_importance_title">ಪ್ರಾಮುಖ್ಯತೆ</string>
     <string name="app_notification_led_enabled_summary">ಈ ಆಪ್‌ಗಾಗಿ LED ನೋಟಿಫಿಕೇಶನ್ ತೋರಿಸಿ</string>
-    <string name="app_notification_led_enabled_title">LED ನೋಟಿಫಿಕೇಶನ್‍ಗಳು</string>
+    <string name="app_notification_led_enabled_title">LED ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="app_notification_listing_summary_zero">ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಆನ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">ಲಾಕ್‌ಸ್ಕ್ರೀನ್ ಮೇಲೆ ಈ ಆಪ್‌ನಿಂದ ನಿರಂತರ ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ಎಂದಿಗೂ ತೋರಿಸಬೇಡಿ</string>
     <string name="app_notification_no_ongoing_on_keyguard_title">ಲಾಕ್‌ಸ್ಕ್ರೀನ್ ಮೇಲೆ ನಿರಂತರ ನೋಟಿಫಿಕೇಶನ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ</string>
@@ -1879,7 +1879,7 @@
     <string name="earphone_support_current_version">ಪ್ರಸ್ತುತ ಆವೃತ್ತಿ:</string>
     <string name="earphone_support_update_ota">ಫರ್ಮ್‌ವೇರ್ ಅನ್ನು ಸ್ವಯಂ-ನವೀಕರಿಸಿ</string>
     <string name="earphone_support_wifi_data">ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿಕೊಂಡು ಸ್ವಯಂಚಾಲಿತ ನವೀಕರಣಗಳನ್ನು ಅನುಮತಿಸಿ</string>
-    <string name="earphone_usage_guide_complete">ಮುಗಿಯಿತು</string>
+    <string name="earphone_usage_guide_complete">ಮುಗಿದಿದೆ</string>
     <string name="edge_to_edge_navigation_summary">ಹೋಮ್‌ಗೆ ಹೋಗಲು, ಸ್ಕ್ರೀನ್‌ನ ಕೆಳಭಾಗದಿಂದ ಸ್ವೈಪ್ ಅಪ್ ಮಾಡಿ. ಆ್ಯಪ್‌ಗಳನ್ನು ಸ್ವಿಚ್ ಮಾಡಲು, ಕೆಳಭಾಗದಿಂದ ಸ್ವೈಪ್ ಅಪ್ ಮಾಡಿ, ಹಿಡಿದುಕೊಳ್ಳಿ, ನಂತರ ಬಿಟ್ಟು ಬಿಡಿ. ಹಿಂದಕ್ಕೆ ಹೋಗಲು, ಎಡಭಾಗ ಅಥವಾ ಬಲಭಾಗದ ಅಂತ್ಯದಿಂದ ಸ್ವೈಪ್ ಮಾಡಿ.</string>
     <string name="edge_to_edge_navigation_title">ಗೆಸ್ಚರ್ ನ್ಯಾವಿಗೇಶನ್</string>
     <string name="emergency_address_summary">ವೈ-ಫೈ ಮೂಲಕ ತುರ್ತು ಕರೆಯನ್ನು ನೀವು ಮಾಡಿದಾಗ ನಿಮ್ಮ ಸ್ಥಳದಂತೆ ಬಳಸಲಾಗುತ್ತದೆ</string>
@@ -2238,7 +2238,7 @@
     <string name="header_account_settings">ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="header_add_an_account">ಖಾತೆ ಸೇರಿಸಿ</string>
     <string name="header_application_sync_settings">ಅಪ್ಲಿಕೇಶನ್ ಸಿಂಕ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="header_category_custom">ಗ್ರಾಹಕೀಯಗೊಳಿಸುವಿಕೆ</string>
+    <string name="header_category_custom">ಕಸ್ಟಮೈಸೇಷನ್‌</string>
     <string name="header_category_system">ಸಿಸ್ಟಂ</string>
     <string name="header_category_wireless_networks">ವೈರ್‌ಲೆಸ್ &amp; ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="header_data_and_synchronization">ಡೇಟಾ &amp; ಸಿಂಕ್ರೋನೈಜ್ ಮಾಡುವಿಕೆ</string>
@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">ಸಹಾಯ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="help_label">ಸಹಾಯ,ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="hide_extra_apps">ಅಪ್ಲಿಕೇಶನ್ ಬಳಕೆಯನ್ನು ತೋರಿಸಿ</string>
+    <string name="hide_imeback_and_switcher">ಕೀಬೋರ್ಡ್ ಎತ್ತರ ಹೊಂದಾಣಿಕೆ</string>
+    <string name="hide_imeback_and_switcher_warning">ಕೀಬೋರ್ಡ್‌ನ ಎತ್ತರ ಹೊಂದಾಣಿಕೆ ಪೂರ್ಣ-ಪರದೆಯ ಗೆಶ್ಚರ್‌ಗಳಲ್ಲಿ ಸ್ಪಷ್ಟವಾಗಿರುತ್ತದೆ.</string>
     <string name="hide_silent_icons_summary">ಸಾಮಾನ್ಯ ಅಧಿಸೂಚನೆಗಳ ಐಕಾನ್‌ಗಳು ಸ್ಥಿತಿ ಪಟ್ಟಿಯಲ್ಲಿ ಗೋಚರಿಸುವುದಿಲ್ಲ</string>
     <string name="hide_silent_icons_title">ಸಾಮಾನ್ಯ ಅಧಿಸೂಚನೆಗಳಿಂದ ಐಕಾನ್‌ಗಳನ್ನು ಮರೆಮಾಡಿ</string>
+    <string name="hide_summary">ಕೀಬೋರ್ಡ್‌ನ ಕೆಳಭಾಗದಲ್ಲಿರುವ ಶಾರ್ಟ್‌ಕಟ್ ಬಾರ್ ಅನ್ನು ಮರೆಮಾಡಲಾಗುತ್ತದೆ</string>
+    <string name="hide_title">ಹುದುಗಿಸಿ</string>
     <string name="high_label">ಅಧಿಕ</string>
     <string name="high_power_app_text_nomal">%1$s ನಿಮ್ಮ ಬ್ಯಾಟರಿಯನ್ನು ಬರಿದುಮಾಡುತ್ತಿದೆ</string>
     <string name="high_power_app_text_red">%1$s ನಿಮ್ಮ ಬ್ಯಾಟರಿಯನ್ನು ಭಾರೀ ಆಗಿ ಬರಿದುಮಾಡುತ್ತಿದೆ</string>
@@ -3420,7 +3424,7 @@
     <string name="oneplus_clear_intenal_storage_data_summary">ಮ್ಯುಸಿಕ್, ಫೋಟೊಗಳು, ವೀಡಿಯೋಗಳು ಮತ್ತು ಇತರೆ ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಒಳಗೊಂಡು</string>
     <string name="oneplus_clear_intenal_storage_data_title">ಆಂತರಿಕ ಸ್ಟೋರೇಜ್ ಅಳಿಸಿ</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">ಕಲರ್‌ಫುಲ್ ಟೋನ್ ಕೇವಲ ಸಿಸ್ಟಂ ಬಣ್ಣವನ್ನು ಮಾತ್ರ ಬಳಸಬಲ್ಲದು</string>
-    <string name="oneplus_colorful_mode_title">ವರ್ಣಮಯ</string>
+    <string name="oneplus_colorful_mode_title">ಕಲರ್‌ಫುಲ್</string>
     <string name="oneplus_compatibility_mode_summary">ಪೂರ್ಣತೆರೆಯ ಆಪ್‌ಗಳು ನಾಚ್ ಪ್ರದೇಶವನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿರುವುದಿಲ್ಲ</string>
     <string name="oneplus_compatibility_mode_title">ಹೊಂದಾಣಿಕೆಯ ಮೋಡ್</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ಏರೋಪ್ಲೇನ್ ಮೋಡ್ ಆಫ್ ಮಾಡಿ</string>
@@ -3471,7 +3475,7 @@
     <string name="oneplus_disconnected">ಸಂಪರ್ಕಕಡಿತ</string>
     <string name="oneplus_display_dashboard_no_theme_summary">ಸ್ಥಿತಿ ಪಟ್ಟಿ, ಪೂರಕ ಡಿಸ್‌ಪ್ಲೇ, ವಾಲ್‌ಪೇಪರ್‌ಗಳು</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">ಸ್ಥಿತಿ ಪಟ್ಟಿ, ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ, ರಾತ್ರಿ ಮೋಡ್, ಓದುವಿಕೆ ಮೋಡ್</string>
-    <string name="oneplus_display_dashboard_summary">ಸ್ಥಿತಿ ಪಟ್ಟಿ, ಪೂರಕ ಡಿಸ್‌ಪ್ಲೇ, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಥೀಮ್</string>
+    <string name="oneplus_display_dashboard_summary">ಸ್ಟೇಟಸ್ ಬಾರ್, ಪೂರಕ ಡಿಸ್‌ಪ್ಲೇ, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಥೀಮ್</string>
     <string name="oneplus_display_dashboard_summary_801">ಸ್ಥಿತಿ ಪಟ್ಟಿ, ಪೂರಕ ಡಿಸ್‌ಪ್ಲೇ, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಥೀಮ್</string>
     <string name="oneplus_display_screen_timeout">ಸ್ಲೀಪ್</string>
     <string name="oneplus_display_size_adaption">ಪೂರ್ಣತೆರೆಯ ಆ್ಯಪ್‌ಗಳು</string>
@@ -3576,8 +3580,8 @@
     <string name="oneplus_fingerprint_findsendor_summary">ಪರದೆಯ ಕೆಳಭಾಗದಲ್ಲಿ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಮಾದರಿಯು ಕಾಣಿಸಿಕೊಂಡಾಗ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಕಾರ್ಯವನ್ನು ಬಳಸಲು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಗುರುತಿನ ಪ್ರದೇಶದ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳಿನಿಂದ ಒತ್ತಿರಿ.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">ಫಿಂಗರ್ಪ್ರಿಂಟ್ ಅನ್ನು ಹೇಗೆ ಬಳಸುವುದು</string>
     <string name="oneplus_fingerprint_functional_declaration">ಫಿಂಗರ್ಪ್ರಿಂಟ್ ಕಾರ್ಯಭಾರದ ಘೋಷಣೆ</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">ಪೋಟೋ ತೆಗೆಯಲು, ವ್ಯೂಫೈಂಡರ್ ಸ್ಕ್ರೀನ್‌ನಿಂದ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರನ್ನು ದೀರ್ಘಕಾಲದವರೆಗೆ ಒತ್ತಿ</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">ಫೋಟೊ ತೆಗೆದುಕೊಳ್ಳಲು ದೀರ್ಘಕಾಲ ಒತ್ತಿರಿ</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">ವ್ಯೂಫೈಂಡರ್ ಪರದೆಯಿಂದ, ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಲು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸಂವೇದಕವನ್ನು ದೀರ್ಘಕಾಲ ಒತ್ತಿರಿ</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಲು ದೀರ್ಘಕಾಲ ಒತ್ತಿರಿ</string>
     <string name="oneplus_fingerprint_gesture_settings_title">ಬೆರಳಮುದ್ರೆ ಗೆಸ್ಚರ್</string>
     <string name="oneplus_fingerprint_hardware_exception">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಹಾರ್ಡ್‌ವೇರ್ ಮಾಹಿತಿ ನಿಖರವಾಗಿಲ್ಲ, ದಯವಿಟ್ಟು ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">ತ್ವರಿತ ಪಾವತಿ ಪ್ರಾರಂಭಿಸಲು ಬೆರಳಮುದ್ರೆ ಸೆನ್ಸಾರನ್ನು ದೀರ್ಘ ಒತ್ತಿರಿ</string>
@@ -3673,10 +3677,10 @@
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">ನ್ಯಾವಿಗೇಶನ್ ಗೆಶ್ಚರ್‌ಗಳು (ಕೆಳಭಾಗ)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">ನ್ಯಾವಿಗೇಶನ್ ಗೆಶ್ಚರ್‌ಗಳು (ಎಡ ಮತ್ತು ಬಲ)</string>
     <string name="oneplus_gesture_of_answer_call_info">ಒಂದು ಕರೆ ಒಳಬರುತ್ತಿದ್ದರೆ, ನೀವು ನಿಮ್ಮ ಫೋನನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಆ ಕರೆಗೆ ಉತ್ತರಿಸಬಹುದು.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
+    <string name="oneplus_gesture_of_answer_call_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_of_answer_call_title">ಗೆಸ್ಚೂರ್ ಮೂಲಕ ಕರೆಗಳಿಗೆ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_start_learning">ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿ</string>
-    <string name="oneplus_gesture_to_answer_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
+    <string name="oneplus_gesture_to_answer_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_to_answer_title">ಉತ್ತರಿಸಲು ಫೋನ್ ಮೇಲೆತ್ತಿ</string>
     <string name="oneplus_gesture_to_control_call_info">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಕರೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಯಂತ್ರಿಸಿ</string>
     <string name="oneplus_gesture_to_control_calls_summary">ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ ಅಥವಾ ಸನ್ನೆ ಮಾಡುವ ಮೂಲಕ ಇಯರ್‌ಪೀಸ್ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಿ</string>
@@ -3756,7 +3760,7 @@
     <string name="oneplus_legal_summary">ಗೌಪ್ಯತೆ ನೀತಿ, ಒಪ್ಪಂದಗಳು, ಇತ್ಯಾದಿ</string>
     <string name="oneplus_levels">ಮಟ್ಟಗಳು</string>
     <string name="oneplus_lift_up_display">ಯಾವಾಗಲೂ ಡಿಸ್‌ಪ್ಲೆಯಲ್ಲಿ ಅಥವಾ ಮೇಲೆತ್ತಿದ ಡಿಸ್‌ಪ್ಲೆಯಲ್ಲಿ</string>
-    <string name="oneplus_light">ತೆಳು</string>
+    <string name="oneplus_light">ಲಘು</string>
     <string name="oneplus_local_ringtone">ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಿಂದ ರಿಂಗ್‌ಟೋನ್</string>
     <string name="oneplus_location_information">ಸ್ಥಳ ಆಧರಿತ ಸೇವೆಗಳ ವಿವರಣೆ</string>
     <string name="oneplus_lock_after_timeout">ಸ್ಲೀಪ್ ಮೋಡ್‌ಗೆ ಹೋದ ಬಳಿಕ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲಾಕ್ ಮಾಡಿ</string>
@@ -3876,7 +3880,7 @@
     <string name="oneplus_notifications_sound">ಅಧಿಸೂಚನೆ ಸೌಂಡ್‌</string>
     <string name="oneplus_o2_contributors">OxygenOS ಕೊಡುಗೆದಾರರು</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">ಕಸ್ಟಮ್ ಸಮಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಆನ್ ಮಾಡಿ</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">ವೇಳಾಪಟ್ಟಿ</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">ಶೆಡ್ಯೂಲ್</string>
     <string name="oneplus_open_bed_time_mode_summary">ನೀವು ಮಲಗುವ ಸಮಯದ ರೀತಿಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಆನ್ ಮಾಡಬಹುದು</string>
     <string name="oneplus_open_bed_time_mode_title">ಬೆಡ್‌ಟೈಮ್ ಮೋಡ್</string>
     <string name="oneplus_opfinger_input_completed_comfirm">ದೃಢೀಕರಿಸಿ</string>
@@ -4012,7 +4016,7 @@
     <string name="oneplus_rotation_silent_enable_summary">ಅದನ್ನು ಮ್ಯೂಟ್ ಮಾಡಲು ಒಳಬರುವ ಕರೆಯಲ್ಲಿ ಸಾಧನವನ್ನು ಫ್ಲಿಪ್ ಮಾಡಿ</string>
     <string name="oneplus_rotation_silent_enable_title">ಮ್ಯೂಟ್ ಮಾಡಲು ಫ್ಲಿಪ್ ಮಾಡಿ</string>
     <string name="oneplus_scene_mode">ದೃಶ್ಯಗಳು</string>
-    <string name="oneplus_schedule">ವೇಳಾಪಟ್ಟಿ</string>
+    <string name="oneplus_schedule">ಶೆಡ್ಯೂಲ್</string>
     <string name="oneplus_screen">ಪರದೆ</string>
     <string name="oneplus_screen_better_cold">ಶೀತ</string>
     <string name="oneplus_screen_better_nature">ಸಹಜ</string>
@@ -4200,7 +4204,7 @@
     <string name="oneplus_theme_drop_summary">ಮಾರ್ಪಾಡುಗಳನ್ನು ತ್ಯಜಿಸುವುದೇ?</string>
     <string name="oneplus_theme_drop_title">ನಿರ್ಗಮನ ಸಂಪಾದನೆ ಮೋಡ್</string>
     <string name="oneplus_theme_entrance_summary">ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಫಾಂಟ್, ಟೋನ್</string>
-    <string name="oneplus_theme_entrance_title">ಗ್ರಾಹಕೀಯಗೊಳಿಸುವಿಕೆ</string>
+    <string name="oneplus_theme_entrance_title">ಕಸ್ಟಮೈಸೇಷನ್‌</string>
     <string name="oneplus_theme_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಶನ್</string>
     <string name="oneplus_theme_fingerprint_snake_action">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ಬೆರಳುಮುದ್ರೆಯು ಆನ್ ಆಗಿರುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವು ಲಭ್ಯವಿರುತ್ತದೆ</string>
@@ -4223,9 +4227,9 @@
     <string name="oneplus_theme_shape_effect_title">ಆಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="oneplus_theme_system_customization">ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್</string>
     <string name="oneplus_theme_tone">ಟೋನ್</string>
-    <string name="oneplus_theme_tone_effect_color">ವರ್ಣಮಯ</string>
+    <string name="oneplus_theme_tone_effect_color">ಕಲರ್‌ಫುಲ್</string>
     <string name="oneplus_theme_tone_effect_dark">ಗಾಢ</string>
-    <string name="oneplus_theme_tone_effect_light">ತೆಳು</string>
+    <string name="oneplus_theme_tone_effect_light">ಲಘು</string>
     <string name="oneplus_theme_tone_effect_title">ಟೋನ್ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="oneplus_theme_wallpaper">ವಾಲ್‌ಪೇಪರ್‌ಗಳು</string>
     <string name="oneplus_three_screenshots_enable_summary">ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ತೆಗೆದುಕೊಳ್ಳಲು ಸ್ಕ್ರೀನಿನ ಮೇಲೆ ಮೂರು ಬೆರಳುಗಳೊಂದಿಗೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
@@ -4334,7 +4338,7 @@
     <string name="onplus_hardware_version_info">ಹಾರ್ಡ್‌ವೇರ್ ಆವೃತ್ತಿ</string>
     <string name="onplus_software_version_info">ಸಾಫ್ಟ್‌ವೇರ್ ಆವೃತ್ತಿ</string>
     <string name="onscreen_keyboard_settings_summary">ಪರದೆ ಮೇಲಿನ ಕೀಬೋರ್ಡ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="op_advanced_settings">ಸುಧಾರಿತ</string>
+    <string name="op_advanced_settings">ಅಡ್ವಾನ್ಸ್‌ಡ್</string>
     <string name="op_already_know">ಗೊತ್ತಾಯಿತು</string>
     <string name="op_android_mode_cannot_change_color_accent">ಡೀಫಾಲ್ಟ್ ಥೀಮ್ ಕೇವಲ ಸಿಸ್ಟಂ ಕಲರ್ ಥೀಮ್ ಬಳಸಬಹುದು</string>
     <string name="op_aod_parsons_info_button">ಸರಿ</string>
@@ -4383,7 +4387,7 @@
     <string name="op_data_vowlan_enable_summary">ಲಭ್ಯವಿದ್ದಾಗ Wi-Fi ಕರೆ ಬಳಸಿ</string>
     <string name="op_default_apps_summary">ಹೋಮ್, ಬ್ರೌಸರ್</string>
     <string name="op_default_luncher_title">ಹೋಮ್ ಅಪ್ಲಿಕೇಶನ್</string>
-    <string name="op_display_advanced_settings">ಸುಧಾರಿತ</string>
+    <string name="op_display_advanced_settings">ಅಡ್ವಾನ್ಸ್‌ಡ್</string>
     <string name="op_display_advanced_settings_summary_1">ಪರದೆ ಕ್ಯಾಲಿಬ್ರೇಶನ್, ರೆಸಲ್ಯೂಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್, ನಾಚ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="op_display_advanced_settings_summary_2">ಪರದೆ ಕ್ಯಾಲಿಬ್ರೇಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್, ನಾಚ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="op_display_advanced_settings_summary_3">ಪರದೆ ಕ್ಯಾಲಿಬ್ರೇಶನ್, ರೆಸಲ್ಯೂಶನ್, ರಿಫ್ರೆಶ್ ರೇಟ್</string>
@@ -4397,7 +4401,7 @@
     <string name="op_display_motion_graphics_compensation_summary">ಗ್ರಾಫಿಕ್ಸ್, ಸುಗಮವಾದ ವೀಡಿಯೊ ಮತ್ತು ಆಟದ ಪರಿಣಾಮಗಳ ಫ್ರೇಮ್ ದರವನ್ನು ಹೆಚ್ಚಿಸಿ</string>
     <string name="op_dnd_summary">ಅಡಚಣೆ ಮಾಡಬೇಡಿ</string>
     <string name="op_enable_location_services">ಹತ್ತಿರದ ಚಾರ್ಜಿಂಗ್ ಕೇಂದ್ರಗಳನ್ನು ಹುಡುಕಲು ಮತ್ತು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು, ದಯವಿಟ್ಟು ಲೊಕೇಶನ್‌ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
-    <string name="op_enable_text">ಸಕ್ರಿಯಗೊಳಿಸು</string>
+    <string name="op_enable_text">ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="op_face_unlock_set_unlock_password">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪಾಸ್‌ವರ್ಡ್</string>
     <string name="op_face_unlock_set_unlock_pattern">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪ್ಯಾಟರ್ನ್</string>
     <string name="op_face_unlock_set_unlock_pin">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪಿನ್</string>
@@ -4811,6 +4815,8 @@
     <string name="radio_info_http_client_test">HTTP ಕ್ಲೈಂಟ್ ಪರೀಕ್ಷೆ:</string>
     <string name="radio_info_ping_hostname_v4">ಹೋಸ್ಟ್‌ಹೆಸರನ್ನು ಪಿಂಗ್ ಮಾಡಿ(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">ಹೋಸ್ಟ್‌ಹೆಸರನ್ನು ಪಿಂಗ್ ಮಾಡಿ(www.google.com) IPv6:</string>
+    <string name="raise_summary">ಕೀಬೋರ್ಡ್ ಅನ್ನು ಕೆಳಗಿನಿಂದ ಮೇಲಕ್ಕೆತ್ತಲಾಗುತ್ತದೆ ಮತ್ತು ಶಾರ್ಟ್ಕಟ್ ಕೀಲಿಯನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ</string>
+    <string name="raise_title">ಎತ್ತು</string>
     <string name="rarely_running">ವಿರಳವಾಗಿ ರನ್‌ ಆಗುತ್ತದೆ (%s)</string>
     <string name="really_remove_account_message">ಈ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದರಿಂದ ಫೋನ್‌ನಲ್ಲಿರುವ ಅದರ ಸಂದೇಶಗಳು, ಸಂಪರ್ಕಗಳು, ಮತ್ತು ಇತರ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ!</string>
     <string name="really_remove_account_title">ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?</string>
@@ -4977,7 +4983,7 @@
     <string name="scanning_status_text_wifi_on_ble_off">ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್ ಆನ್ ಆಗಿದೆ, ಬ್ಲೂಟೂತ್ ಸ್ಕ್ಯಾನಿಂಗ್ ಆಫ್ ಆಗಿದೆ</string>
     <string name="scanning_status_text_wifi_on_ble_on">ವೈ-ಫೈ ಮತ್ತು ಬ್ಲೂಟೂತ್ ಎರಡರದ್ದೂ ಸ್ಕ್ಯಾನಿಂಗ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="schedule_reminders">ಈವೆಂಟ್ ನೆನಪೋಲೆಗಳು</string>
-    <string name="screen_color_mode_advanced">ಸುಧಾರಿತ</string>
+    <string name="screen_color_mode_advanced">ಅಡ್ವಾನ್ಸ್‌ಡ್</string>
     <string name="screen_color_mode_advanced_settings">ಸುಧಾರಿತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="screen_color_mode_vivid">ವಿಭಿನ್ನ</string>
     <string name="screen_compatibility_label">ಪರದೆಯ ಹೊಂದಾಣಿಕೆ</string>
@@ -5372,7 +5378,7 @@
     <string name="sim_enabler_summary">SIM %1$s</string>
     <string name="sim_enabler_summary_new_marshmallow">" %1$s"</string>
     <string name="sim_enabler_title">SIM ಎನೇಬ್ಲರ್‌ಗಳು</string>
-    <string name="sim_enabler_will_disable_sim_title">ಸೂಚನೆ</string>
+    <string name="sim_enabler_will_disable_sim_title">ಗಮನಹರಿಸಿ</string>
     <string name="sim_enter_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="sim_enter_new">ಹೊಸ ಸಿಮ್‌ ಪಿನ್‌</string>
     <string name="sim_enter_ok">ಸರಿ</string>
@@ -5873,7 +5879,7 @@
     <string name="touchscreen_double_tap_to_wake_gesture_title">ಎಚ್ಚರಿಸಲು ಎರಡು ಬಾರಿ ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="touchscreen_flashlight_gesture_summary">ಟಾಗಲ್ ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್‌ಗೆ V ಸೆಳೆಯಿರಿ</string>
     <string name="touchscreen_flashlight_gesture_title">ಟಾಗಲ್ ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್</string>
-    <string name="touchscreen_music_gesture_summary">ಮೂಸಿಕ್ ಪ್ಲೇ ಅಥವಾ ಪೌಸ್ ಮಾಡಲು ಎರಡು ಬೆರಳುಗಳೊಂದಿಗೆ || ಸೆಳೆಯಿರಿ. ಹಿಂದಿನ ಅಥವಾ ಮುಂದಿನ ಟ್ರ್ಯಾಕ್‌ಗಾಗಿ &lt; ಅಥವಾ > ಸೆಳೆಯಿರಿ</string>
+    <string name="touchscreen_music_gesture_summary">ಸಂಗೀತವನ್ನು ಪ್ಲೇ ಮಾಡಲು ಅಥವಾ ವಿರಾಮಗೊಳಿಸಲು ‖ ಎರಡು ಬೆರಳುಗಳಿಂದ ಎಳೆಯಿರಿ. ಹಿಂದಿನ ಅಥವಾ ಮುಂದಿನ ಟ್ರ್ಯಾಕ್‌ಗಾಗಿ &lt; ಅಥವಾ > ಎಳೆಯಿರಿ</string>
     <string name="touchscreen_music_gesture_title">ಮ್ಯೂಸಿಕ್ ನಿಯಂತ್ರಣ</string>
     <string name="track_frame_time">ಪ್ರೊಫೈಲ್ HWUI ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="track_frame_time_keywords">GPU</string>

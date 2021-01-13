@@ -1879,7 +1879,7 @@ Kung patuloy na mangyayari ito, maaaring kailanganin mong i-uninstall ang app up
     <string name="earphone_support_current_version">Kasalukuyang bersyon:</string>
     <string name="earphone_support_update_ota">Awtomatikong i-update ang firmware</string>
     <string name="earphone_support_wifi_data">Payagan ang mga awtomatikong update gamit ang mobile data</string>
-    <string name="earphone_usage_guide_complete">Tapos Na</string>
+    <string name="earphone_usage_guide_complete">Tapos na</string>
     <string name="edge_to_edge_navigation_summary">Para pumunta sa Home, mag-swipe pataas mula sa ibaba ng screen. Para magpalipat-lipat sa mga app, mag-swipe pataas mula sa ibaba, i-hold, pagkatapos ay bitawan. Para bumalik, mag-swipe mula sa kaliwa o kanang dulo.</string>
     <string name="edge_to_edge_navigation_title">Navigation gamit ang galaw</string>
     <string name="emergency_address_summary">Ginagamit bilang iyong lokasyon kapag nagsagawa ka ng pang-emergency na tawag sa pamamagitan ng Wi‑Fi</string>
@@ -2224,7 +2224,7 @@ Kapag i-on mo ang awtomatikong pag-backup, pana-panahong sine-save nang malayuan
     <string name="hardware_keys_action_nothing">Walang aksyon</string>
     <string name="hardware_keys_action_notification_center">Buksan/Isara ang notification center</string>
     <string name="hardware_keys_action_recents">Kamakailan</string>
-    <string name="hardware_keys_action_shelf">Buksan ang Shelf</string>
+    <string name="hardware_keys_action_shelf">Bukas na Salansan</string>
     <string name="hardware_keys_action_turn_off_screen">Patayin ang screen</string>
     <string name="hardware_keys_action_voice_search">Paghanap gamit ang tinig</string>
     <string name="hardware_keys_back_key_title">Buton para bumalik</string>
@@ -2246,8 +2246,12 @@ Kapag i-on mo ang awtomatikong pag-backup, pana-panahong sine-save nang malayuan
     <string name="help_feedback_label">Tulong at feedback</string>
     <string name="help_label">Tulong at feedback</string>
     <string name="hide_extra_apps">Ipakita ang paggamit ng app</string>
+    <string name="hide_imeback_and_switcher">Pag-adjust sa taas ng keyboard</string>
+    <string name="hide_imeback_and_switcher_warning">Ang pag-adjust sa taas ng keyboard ay magiging ebidensya sa mga gesture ng full-screen.</string>
     <string name="hide_silent_icons_summary">Hindi ipinapakita sa status bar ang mga icon mula sa mga malumanay na notification</string>
     <string name="hide_silent_icons_title">Itago ang mga icon mula sa mga malumanay na notification</string>
+    <string name="hide_summary">Ang shortcut bar sa ilalim ng keyboard ay itatago</string>
+    <string name="hide_title">Itago</string>
     <string name="high_label">Mataas</string>
     <string name="high_power_app_text_nomal">%1$s ay nagpapahihina ng iyong baterya</string>
     <string name="high_power_app_text_red">%1$s ay lubhang umuubos ng iyong baterya</string>
@@ -3420,7 +3424,7 @@ Ang Battery saver ay awtomatikong pinapatay kapag ang iyong aparato ay nag-charg
     <string name="oneplus_clear_intenal_storage_data_summary">Kasama ang musika, mga larawan, video at iba pang mga personal na data</string>
     <string name="oneplus_clear_intenal_storage_data_title">Burahin ang panloob na imbakan</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Ang kulay lang ng system ang maaaring gamitin ng Colorful tone</string>
-    <string name="oneplus_colorful_mode_title">Makulay</string>
+    <string name="oneplus_colorful_mode_title">Colorful theme</string>
     <string name="oneplus_compatibility_mode_summary">Hindi magagamit ng mga fullscreen na app ang notch</string>
     <string name="oneplus_compatibility_mode_title">Compatibility mode</string>
     <string name="oneplus_condition_airplane_mode_turn_off">I-OFF ANG AIRPLANE MODE</string>
@@ -3471,7 +3475,7 @@ Ang Battery saver ay awtomatikong pinapatay kapag ang iyong aparato ay nag-charg
     <string name="oneplus_disconnected">Tanggalin</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Status bar, ambient display, mga wallpaper</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">Status bar, ambient display, vision comfort, reading mode</string>
-    <string name="oneplus_display_dashboard_summary">Status bar, ambient na display, mga wallpaper, tema</string>
+    <string name="oneplus_display_dashboard_summary">Status bar, ambient display, mga wallpaper, tema</string>
     <string name="oneplus_display_dashboard_summary_801">Status bar, ambient na display, mga wallpaper, tema</string>
     <string name="oneplus_display_screen_timeout">Sleep</string>
     <string name="oneplus_display_size_adaption">Fullscreen na mga app</string>
@@ -3675,10 +3679,10 @@ Upang pumunta sa home screen kahit anu mang oras, i-swipe pataas mula sa ibabang
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Mga galaw sa pag-navigate (ibaba)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Mga galawa sa pag-navigate (kaliwa at kanan)</string>
     <string name="oneplus_gesture_of_answer_call_info">Kapag may papasok na tawag, maaari mo itong sagutin sa pamamagitan ng pagtaas ng telepono sa iyong tainga.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Awtomatikong sagutin ang mga papasok na tawag sa pamamagitan ng pagtapat ng telepono sa iyong tainga</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Awtomatiko sagutin ang mga papasok na tawag sa pamamagitan ng pagtataas ng telepono sa iyong tainga</string>
     <string name="oneplus_gesture_of_answer_call_title">Sagutin ang mga tawag sa pamamagitan ng gesture</string>
     <string name="oneplus_gesture_start_learning">Magsimulang Matuto</string>
-    <string name="oneplus_gesture_to_answer_summary">Awtomatikong sagutin ang mga papasok na tawag sa pamamagitan ng pagtapat ng telepono sa iyong tainga</string>
+    <string name="oneplus_gesture_to_answer_summary">Awtomatiko sagutin ang mga papasok na tawag sa pamamagitan ng pagtataas ng telepono sa iyong tainga</string>
     <string name="oneplus_gesture_to_answer_title">Iangat para sagutin</string>
     <string name="oneplus_gesture_to_control_call_info">Awtomatikong kontrolin ang mga tawag sa pamamagitan ng pagtapat ng telepono sa iyong tainga</string>
     <string name="oneplus_gesture_to_control_calls_summary">Awtomatikong sagutin ang mga tawag o lumipat sa earpiece sa pamamagitan ng gesture</string>
@@ -3786,7 +3790,7 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
     <string name="oneplus_memc_more_support_apps">Higit pang sinusuportahang app</string>
     <string name="oneplus_memc_notice">Sa mode na ito, tataasan ang frame rate ng video, na binabawasan ang motion blur ng graphics, na ginagawa itong mas malinaw at mas maganda. Mabisa lang ito sa panahon ng full screen na pag-playback.</string>
     <string name="oneplus_memc_open">Naka-on</string>
-    <string name="oneplus_memc_support_apps">Mga sinusuportahang app</string>
+    <string name="oneplus_memc_support_apps">Suportadong mga apps</string>
     <string name="oneplus_memc_support_no_apps">Walang naka-install na mga sinusuportahang app</string>
     <string name="oneplus_memc_video">Pagpapahusay ng motion graphics</string>
     <string name="oneplus_memc_video_effect">Epekto ng pag-compensate</string>
@@ -3803,7 +3807,7 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
     <string name="oneplus_more">Karagdagan</string>
     <string name="oneplus_motion_sensor_settings_title">Mga pagkilos sa sistema</string>
     <string name="oneplus_multi_app">Parallel na mga Apps</string>
-    <string name="oneplus_multi_app_disable_apps">Mga sinusuportahang app</string>
+    <string name="oneplus_multi_app_disable_apps">Suportadong mga apps</string>
     <string name="oneplus_multi_app_disable_tips">Ang lahat ng data sa parallel app ay mabubura kapag na-disable ito. Gusto mo bang magpatuloy?</string>
     <string name="oneplus_multi_app_enable_apps">Pinagana ang mga app</string>
     <string name="oneplus_multi_app_init">Nag-loload...</string>
@@ -3915,7 +3919,7 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
 %d pagtatangka ang nalalabi."</string>
     <string name="oneplus_pocket_mode_summary">Iwasan ang hindi sinasadyang pagpindot sa screen kapag nasa bulsa mo ang telepono</string>
     <string name="oneplus_pre_application">Listahan ng mga Aplikasyon na preinstalled</string>
-    <string name="oneplus_preference_settings">Pag-uugali</string>
+    <string name="oneplus_preference_settings">Gawi</string>
     <string name="oneplus_preference_settings_auto_activate">Nakaiskedyul</string>
     <string name="oneplus_preference_settings_behavior">Mga Kagustuhan</string>
     <string name="oneplus_preference_settings_custom_time">Awtomatikong I-toggle</string>
@@ -3924,7 +3928,7 @@ Tandaan: Ang fingerprint mo ay mas mahina ang seguridad kaysa sa isang mahirap n
     <string name="oneplus_preference_settings_turn_on">I-on ang Huwag Istorbohin</string>
     <string name="oneplus_preference_settings_turn_on_time">Mula</string>
     <string name="oneplus_prior_to_use_you_need_to">Bago ang paggamit, kinakailangan mo na:</string>
-    <string name="oneplus_privacy_policy">Patakaran sa Privacy</string>
+    <string name="oneplus_privacy_policy">Patakarang Pang-pribado</string>
     <string name="oneplus_privacy_protection_title">Naka-encrypt na espasyo</string>
     <string name="oneplus_product_info_introduce">Impormasyon ng device &amp; warranty card</string>
     <string name="oneplus_product_info_summary">Warranty card, paunang na-install na listahan</string>
@@ -4170,7 +4174,7 @@ Tandaan:
     <string name="oneplus_support_apps">MGA SINUSUPORTAHANG APP</string>
     <string name="oneplus_support_summary">Mga tip at FAQ sa paggamit ng device</string>
     <string name="oneplus_support_title">Mga tip &amp; suporta</string>
-    <string name="oneplus_supported_apps">Mga sinusuportahang app</string>
+    <string name="oneplus_supported_apps">Suportadong mga apps</string>
     <string name="oneplus_suspension_notice">Heads up</string>
     <string name="oneplus_suspension_notice_summary">Payagan ang mga app na magpakita ng heads up na notification</string>
     <string name="oneplus_switch">OnePlus Switch</string>
@@ -4225,7 +4229,7 @@ Tandaan:
     <string name="oneplus_theme_shape_effect_title">Piliin ang hugis</string>
     <string name="oneplus_theme_system_customization">PAG-CUSTOMIZE NG SYSTEM</string>
     <string name="oneplus_theme_tone">Tono</string>
-    <string name="oneplus_theme_tone_effect_color">Makulay</string>
+    <string name="oneplus_theme_tone_effect_color">Colorful theme</string>
     <string name="oneplus_theme_tone_effect_dark">Madilim</string>
     <string name="oneplus_theme_tone_effect_light">Banayad</string>
     <string name="oneplus_theme_tone_effect_title">Piliin ang tone</string>
@@ -4336,7 +4340,7 @@ Kahit gawing nakatago ang network, hindi nito mababago ang mga setting ng iyong 
     <string name="onplus_hardware_version_info">Bersiyon ng hardware</string>
     <string name="onplus_software_version_info">Bersiyon ng software</string>
     <string name="onscreen_keyboard_settings_summary">Mga setting ng keyboard ng onscreen</string>
-    <string name="op_advanced_settings">Advanced</string>
+    <string name="op_advanced_settings">Pasulong</string>
     <string name="op_already_know">Nakuha Ko Na</string>
     <string name="op_android_mode_cannot_change_color_accent">Ang default theme ay magagamit lamang ang theme ng system color</string>
     <string name="op_aod_parsons_info_button">Ok</string>
@@ -4385,7 +4389,7 @@ Ang pananaw, na sama-samang dinisenyo ng OnePlus &amp; mga estudyante mula sa Pa
     <string name="op_data_vowlan_enable_summary">Gamitin ang pagtawag gamit ang Wi-Fi kapag available</string>
     <string name="op_default_apps_summary">Home, browser</string>
     <string name="op_default_luncher_title">Home app</string>
-    <string name="op_display_advanced_settings">Advanced</string>
+    <string name="op_display_advanced_settings">Pasulong</string>
     <string name="op_display_advanced_settings_summary_1">Mga setting ng screen calibration, resolution, refresh rate, notch</string>
     <string name="op_display_advanced_settings_summary_2">Mga setting ng screen calibration, refresh rate, notch</string>
     <string name="op_display_advanced_settings_summary_3">Screen calibration, resolution, refresh rate</string>
@@ -4399,7 +4403,7 @@ Ang pananaw, na sama-samang dinisenyo ng OnePlus &amp; mga estudyante mula sa Pa
     <string name="op_display_motion_graphics_compensation_summary">Pahusayin ang antas ng frame ng graphics, mas pulidong video, at mga effect sa laro</string>
     <string name="op_dnd_summary">Huwag istorbohin</string>
     <string name="op_enable_location_services">Para mahanap at ma-track ang malalapit na charging station, paki-enable ang mga serbisyo ng lokasyon</string>
-    <string name="op_enable_text">I-enable</string>
+    <string name="op_enable_text">Paganahin</string>
     <string name="op_face_unlock_set_unlock_password">Face Unlock + Password</string>
     <string name="op_face_unlock_set_unlock_pattern">Face Unlock + Pattern</string>
     <string name="op_face_unlock_set_unlock_pin">Face Unlock + PIN</string>
@@ -4415,7 +4419,7 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="op_fragment">Maikli</string>
     <string name="op_gamespace">Game Space</string>
     <string name="op_global_drak_mode_apps_manage">Pangasiwaan ang mga app sa madilim na mode</string>
-    <string name="op_global_drak_mode_full_support_list">Mga sinusuportahang app</string>
+    <string name="op_global_drak_mode_full_support_list">Suportadong mga apps</string>
     <string name="op_global_drak_mode_not_full_support_list">Hindi suportadong mga app</string>
     <string name="op_global_drak_mode_support_description">Ang mga app na hindi suportado ay maaaring hindi gumana ng maayos sa madilim na mode</string>
     <string name="op_gps_off_warn_msg">I-on muna ang lokasyon</string>
@@ -4811,6 +4815,8 @@ Maaaring hindi compatible sa mga third-party na screen protector ang pag-unlock 
     <string name="radio_info_http_client_test">Test ng HTTP Client:</string>
     <string name="radio_info_ping_hostname_v4">I-ping ang Hostname(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">I-ping ang Hostname(www.google.com) IPv6:</string>
+    <string name="raise_summary">Ang keyboard ay itataas mula sa ilalim at ang shortcut key ay ipapakita</string>
+    <string name="raise_title">Itaas</string>
     <string name="rarely_running">Bihirang gumagana (%s)</string>
     <string name="really_remove_account_message">Ang pag-aalis ng account na ito ay magde-delete sa lahat ng mensahe, contact, at iba pang data nito mula sa telepono!</string>
     <string name="really_remove_account_title">Alisin ang account?</string>
@@ -4977,7 +4983,7 @@ Nakakaapekto ang setting na ito ang lahat ng user sa teleponong ito."</string>
     <string name="scanning_status_text_wifi_on_ble_off">Naka-on ang pag-scan ng Wi‑Fi, naka-off ang pag-scan ng Bluetooth</string>
     <string name="scanning_status_text_wifi_on_ble_on">Parehong naka-on ang pag-scan ng Wi‑Fi at Bluetooth</string>
     <string name="schedule_reminders">Paalala ng mga kaganapan</string>
-    <string name="screen_color_mode_advanced">Advanced</string>
+    <string name="screen_color_mode_advanced">Pasulong</string>
     <string name="screen_color_mode_advanced_settings">Mga advanced na setting</string>
     <string name="screen_color_mode_vivid">Vivid</string>
     <string name="screen_compatibility_label">Pagiging tugma ng screen</string>
@@ -5873,7 +5879,7 @@ Isang paraan ng Google sa pag-sync ng data upang payagan ang access sa iyong mga
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dalawang ulit I-tap para Magising</string>
     <string name="touchscreen_flashlight_gesture_summary">Iguhit ang V para i-toggle ang flaslight</string>
     <string name="touchscreen_flashlight_gesture_title">I-Toggle para sa flaslight</string>
-    <string name="touchscreen_music_gesture_summary">Iguhit || ng dalawang daliri para paandarin o ihinto ang musika. Draw &lt; o > para sa nauna o susunod na track</string>
+    <string name="touchscreen_music_gesture_summary">Iguhit ‖ ng dalawang daliri para paandarin o ihinto ang musika. Draw &lt; o > para sa nauna o susunod na track</string>
     <string name="touchscreen_music_gesture_title">Kontrol sa Musika</string>
     <string name="track_frame_time">Rendering ng Profile HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>

@@ -37,10 +37,67 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    const/4 p1, -0x1
+    const/4 v0, -0x1
 
-    if-ne p2, p1, :cond_0
+    if-ne p2, v0, :cond_1
 
+    iget-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
+
+    iget-object p2, p2, Lcom/android/settings/wifi/tether/WifiTetherBasePreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {p2}, Landroid/net/wifi/WifiManager;->isWifiApEnabled()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    new-instance p1, Landroidx/appcompat/app/AlertDialog$Builder;
+
+    iget-object p2, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
+
+    iget-object p2, p2, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    sget p2, Lcom/android/settings/R$string;->save_changes:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    sget p2, Lcom/android/settings/R$string;->verizon_wifi_tether_band_warning:I
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const p2, 0x104000a
+
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
+
+    iget-object v0, v0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const/high16 p2, 0x1040000
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->onWarningDialogCLickListner:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p1, p2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    const/4 p0, 0x0
+
+    invoke-virtual {p1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Landroidx/appcompat/app/AlertDialog$Builder;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+
+    goto :goto_0
+
+    :cond_0
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
 
     invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->access$700(Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;)I
@@ -93,10 +150,10 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p1, -0x2
 
-    if-ne p2, p1, :cond_1
+    if-ne p2, p1, :cond_2
 
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$2;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
 
@@ -116,7 +173,7 @@
 
     invoke-virtual {p1, p0}, Landroidx/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 .end method

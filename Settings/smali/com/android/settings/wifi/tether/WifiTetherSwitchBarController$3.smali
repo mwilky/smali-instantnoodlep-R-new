@@ -37,6 +37,8 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 0
 
+    if-eqz p2, :cond_0
+
     iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController$3;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;
 
     iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSwitchBarController;->pref:Landroid/content/SharedPreferences;
@@ -45,13 +47,14 @@
 
     move-result-object p0
 
-    const-string p1, "checked"
+    const/4 p1, 0x1
 
-    const/4 p2, 0x1
+    const-string p2, "checked"
 
-    invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {p0, p2, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    :cond_0
     return-void
 .end method

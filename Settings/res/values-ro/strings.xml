@@ -2246,8 +2246,12 @@ Când activați backupul automat, datele dispozitivului și ale aplicațiilor su
     <string name="help_feedback_label">Ajutor și feedback</string>
     <string name="help_label">Ajutor și feedback</string>
     <string name="hide_extra_apps">Afișați utilizarea aplicațiilor</string>
+    <string name="hide_imeback_and_switcher">Reglarea înălțimii tastaturii</string>
+    <string name="hide_imeback_and_switcher_warning">Înălțimea tastaturii se poate regla dacă telefonul este setat la gesturi în ecran complet.</string>
     <string name="hide_silent_icons_summary">Pictogramele pentru notificările silențioase nu se afișează în bara de stare</string>
     <string name="hide_silent_icons_title">Ascundeți pictogramele notificărilor discrete</string>
+    <string name="hide_summary">Bara de comenzi rapide din partea de jos a tastaturii va fi ascunsă</string>
+    <string name="hide_title">Ascundere</string>
     <string name="high_label">Ridicată</string>
     <string name="high_power_app_text_nomal">%1$s consumă bateria</string>
     <string name="high_power_app_text_red">%1$s consumă puternic bateria</string>
@@ -3756,7 +3760,7 @@ Notă: amprenta este mai puțin sigură decât un model complex sau un cod PIN"<
     <string name="oneplus_legal_summary">Politică de confidențialitate, acorduri etc.</string>
     <string name="oneplus_levels">Niveluri</string>
     <string name="oneplus_lift_up_display">Întotdeauna Afișare activată sau Ridicare afișaj</string>
-    <string name="oneplus_light">Luminos</string>
+    <string name="oneplus_light">Ușor</string>
     <string name="oneplus_local_ringtone">Ton de apel din memoria internă</string>
     <string name="oneplus_location_information">Descrierea serviciilor bazate pe locație</string>
     <string name="oneplus_lock_after_timeout">Blocare automată după pauză</string>
@@ -4225,7 +4229,7 @@ Notă:
     <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Colorat</string>
     <string name="oneplus_theme_tone_effect_dark">Întunecat</string>
-    <string name="oneplus_theme_tone_effect_light">Luminos</string>
+    <string name="oneplus_theme_tone_effect_light">Ușor</string>
     <string name="oneplus_theme_tone_effect_title">Selectare ton</string>
     <string name="oneplus_theme_wallpaper">Wallpaper-uri</string>
     <string name="oneplus_three_screenshots_enable_summary">Glisați cu trei degete pe ecran pentru a face o captură de ecran</string>
@@ -4811,6 +4815,8 @@ Deblocarea cu amprentă poate fi incompatibilă cu programele de protecție a ec
     <string name="radio_info_http_client_test">Test client HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Dați ping adresei IPv4 a numelui de gazdă (www.google.com):</string>
     <string name="radio_info_ping_hostname_v6">Dați ping adresei IPv6 a numelui de gazdă (www.google.com):</string>
+    <string name="raise_summary">Tastatura se va ridica din partea de jos și se va afișa tasta de comandă rapidă</string>
+    <string name="raise_title">Ridicare</string>
     <string name="rarely_running">Rulează rar (%s)</string>
     <string name="really_remove_account_message">Prin eliminarea acestui cont, se vor șterge toate mesajele și persoanele din agendă pe care le conține, precum și alte date de pe telefon!</string>
     <string name="really_remove_account_title">Eliminați contul?</string>
@@ -5873,7 +5879,7 @@ O abordare Google asupra sincronizării datelor, care vă permite accesul la age
     <string name="touchscreen_double_tap_to_wake_gesture_title">Atingere dublă pentru activare</string>
     <string name="touchscreen_flashlight_gesture_summary">Desenați V pentru a comuta lanterna</string>
     <string name="touchscreen_flashlight_gesture_title">Comutare lanternă</string>
-    <string name="touchscreen_music_gesture_summary">Desenați || cu două degete pentru a reda sau întrerupe redarea muzicii. Desenați &lt; sau > pentru melodia precedentă sau următoare</string>
+    <string name="touchscreen_music_gesture_summary">Desenați || cu două degete pentru a reda sau a întrerupe redarea muzicii. Desenați &lt; sau > pentru a trece la melodia precedentă sau următoare</string>
     <string name="touchscreen_music_gesture_title">Control muzică</string>
     <string name="track_frame_time">Profil redare cu HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6281,7 +6287,7 @@ Orice utilizator poate actualiza aplicațiile pentru toți ceilalți utilizatori
     <string name="verify_apps_over_usb_title">Verificați aplicațiile prin USB</string>
     <string name="verizon_store_demo_mode_hint">Introduceți parola</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Dacă schimbați configurația punctului de acces mobil, dispozitivele conectate la acesta vor fi deconectate.</string>
+    <string name="verizon_wifi_tether_band_warning">Dacă schimbați configurația Punctului de acces mobil, dispozitivele conectate la acesta vor fi deconectate.</string>
     <string name="version_text">versiunea %1$s</string>
     <string name="vibrate_in_silent_title">Vibrează la profilul Silențios</string>
     <string name="vibrate_input_devices">Redirecționați vibrațiile</string>

@@ -1,11 +1,14 @@
 .class Lcom/android/settings/wifi/WifiSettings2$4;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.super Ljava/lang/Object;
 .source "WifiSettings2.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSettings2;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/wifi/WifiSettings2;->connect(Lcom/android/wifitrackerlib/WifiEntry;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,62 +18,20 @@
 
 
 # direct methods
-.method constructor <init>(I)V
+.method constructor <init>(Lcom/android/settings/wifi/WifiSettings2;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    invoke-super {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;->getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    move-result-object p0
-
-    const-class v0, Landroid/net/wifi/WifiManager;
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/wifi/WifiManager;
-
-    invoke-static {p1, v0}, Lcom/android/settingslib/wifi/WifiSavedConfigUtils;->getAllConfigsCount(Landroid/content/Context;Landroid/net/wifi/WifiManager;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "saved_networks"
-
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    invoke-static {p1}, Lcom/android/settings/datausage/DataUsageUtils;->hasWifiRadio(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    const-string/jumbo p1, "wifi_data_usage"
-
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-object p0
+    return-void
 .end method

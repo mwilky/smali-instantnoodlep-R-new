@@ -346,356 +346,364 @@
 
 .field public static final op_btn_image_single_choice_selector:I = 0x7f080434
 
-.field public static final op_chromebook:I = 0x7f0804a1
+.field public static final op_chromebook:I = 0x7f0804a2
 
-.field public static final op_compatibility_mode_guide_dark:I = 0x7f0804a5
+.field public static final op_compatibility_mode_guide_dark:I = 0x7f0804a6
 
-.field public static final op_compatibility_mode_guide_light:I = 0x7f0804a6
+.field public static final op_compatibility_mode_guide_light:I = 0x7f0804a7
 
-.field public static final op_custom_accent_color_preview_upper_layer:I = 0x7f0804ab
+.field public static final op_custom_accent_color_preview_upper_layer:I = 0x7f0804ac
 
-.field public static final op_custom_aodpreview_analog_1:I = 0x7f0804ac
+.field public static final op_custom_aodpreview_analog_1:I = 0x7f0804ad
 
-.field public static final op_custom_aodpreview_analog_2:I = 0x7f0804ad
+.field public static final op_custom_aodpreview_analog_2:I = 0x7f0804ae
 
-.field public static final op_custom_aodpreview_analog_3:I = 0x7f0804ae
+.field public static final op_custom_aodpreview_analog_3:I = 0x7f0804af
 
-.field public static final op_custom_aodpreview_bold:I = 0x7f0804af
+.field public static final op_custom_aodpreview_bold:I = 0x7f0804b0
 
-.field public static final op_custom_aodpreview_default:I = 0x7f0804b0
+.field public static final op_custom_aodpreview_default:I = 0x7f0804b1
 
-.field public static final op_custom_aodpreview_digital_1:I = 0x7f0804b1
+.field public static final op_custom_aodpreview_digital_1:I = 0x7f0804b2
 
-.field public static final op_custom_aodpreview_digital_2:I = 0x7f0804b2
+.field public static final op_custom_aodpreview_digital_2:I = 0x7f0804b3
 
-.field public static final op_custom_aodpreview_mcl:I = 0x7f0804b3
+.field public static final op_custom_aodpreview_mcl:I = 0x7f0804b4
 
-.field public static final op_custom_aodpreview_minimalism_1:I = 0x7f0804b4
+.field public static final op_custom_aodpreview_minimalism_1:I = 0x7f0804b5
 
-.field public static final op_custom_aodpreview_minimalism_2:I = 0x7f0804b5
+.field public static final op_custom_aodpreview_minimalism_2:I = 0x7f0804b6
 
-.field public static final op_custom_aodpreview_none:I = 0x7f0804b6
+.field public static final op_custom_aodpreview_none:I = 0x7f0804b7
 
-.field public static final op_custom_aodpreview_parsons:I = 0x7f0804b7
+.field public static final op_custom_aodpreview_parsons:I = 0x7f0804b8
 
-.field public static final op_custom_aodpreview_red:I = 0x7f0804b8
+.field public static final op_custom_aodpreview_red:I = 0x7f0804b9
 
-.field public static final op_custom_aodpreview_smart_space_default:I = 0x7f0804b9
+.field public static final op_custom_aodpreview_smart_space_default:I = 0x7f0804ba
 
-.field public static final op_custom_aodpreview_text_clock:I = 0x7f0804ba
+.field public static final op_custom_aodpreview_text_clock:I = 0x7f0804bb
 
-.field public static final op_custom_color_default_bg:I = 0x7f0804bd
+.field public static final op_custom_color_default_bg:I = 0x7f0804be
 
-.field public static final op_custom_fingeprint_preview_00:I = 0x7f0804be
+.field public static final op_custom_fingeprint_preview_00:I = 0x7f0804bf
 
-.field public static final op_custom_fingeprint_preview_04:I = 0x7f0804bf
+.field public static final op_custom_fingeprint_preview_04:I = 0x7f0804c0
 
-.field public static final op_custom_fingeprint_preview_cosmos:I = 0x7f0804c0
+.field public static final op_custom_fingeprint_preview_cosmos:I = 0x7f0804c1
 
-.field public static final op_custom_fingeprint_preview_energy:I = 0x7f0804c1
+.field public static final op_custom_fingeprint_preview_energy:I = 0x7f0804c2
 
-.field public static final op_custom_fingeprint_preview_red:I = 0x7f0804c2
+.field public static final op_custom_fingeprint_preview_red:I = 0x7f0804c3
 
-.field public static final op_custom_fingeprint_preview_ripple:I = 0x7f0804c3
+.field public static final op_custom_fingeprint_preview_ripple:I = 0x7f0804c4
 
-.field public static final op_custom_fingeprint_preview_stripe:I = 0x7f0804c4
+.field public static final op_custom_fingeprint_preview_stripe:I = 0x7f0804c5
 
-.field public static final op_custom_horizon_light_blue:I = 0x7f0804c7
+.field public static final op_custom_horizon_light_blue:I = 0x7f0804c8
 
-.field public static final op_custom_horizon_light_gold:I = 0x7f0804c8
+.field public static final op_custom_horizon_light_gold:I = 0x7f0804c9
 
-.field public static final op_custom_horizon_light_mcl:I = 0x7f0804c9
+.field public static final op_custom_horizon_light_mcl:I = 0x7f0804ca
 
-.field public static final op_custom_horizon_light_preview_blue:I = 0x7f0804ca
+.field public static final op_custom_horizon_light_preview_blue:I = 0x7f0804cb
 
-.field public static final op_custom_horizon_light_preview_gold:I = 0x7f0804cb
+.field public static final op_custom_horizon_light_preview_gold:I = 0x7f0804cc
 
-.field public static final op_custom_horizon_light_preview_mcl:I = 0x7f0804cc
+.field public static final op_custom_horizon_light_preview_mcl:I = 0x7f0804cd
 
-.field public static final op_custom_horizon_light_preview_purple:I = 0x7f0804cd
+.field public static final op_custom_horizon_light_preview_purple:I = 0x7f0804ce
 
-.field public static final op_custom_horizon_light_preview_red:I = 0x7f0804ce
+.field public static final op_custom_horizon_light_preview_red:I = 0x7f0804cf
 
-.field public static final op_custom_horizon_light_preview_red1:I = 0x7f0804cf
+.field public static final op_custom_horizon_light_preview_red1:I = 0x7f0804d0
 
-.field public static final op_custom_horizon_light_purple:I = 0x7f0804d0
+.field public static final op_custom_horizon_light_purple:I = 0x7f0804d1
 
-.field public static final op_custom_horizon_light_red:I = 0x7f0804d1
+.field public static final op_custom_horizon_light_red:I = 0x7f0804d2
 
-.field public static final op_custom_horizon_light_red1:I = 0x7f0804d2
+.field public static final op_custom_horizon_light_red1:I = 0x7f0804d3
 
-.field public static final op_custom_shape_preview_rectangle:I = 0x7f0804d7
+.field public static final op_custom_shape_preview_rectangle:I = 0x7f0804d8
 
-.field public static final op_custom_shape_preview_round:I = 0x7f0804d8
+.field public static final op_custom_shape_preview_round:I = 0x7f0804d9
 
-.field public static final op_custom_shape_preview_square:I = 0x7f0804d9
+.field public static final op_custom_shape_preview_square:I = 0x7f0804da
 
-.field public static final op_custom_shape_preview_teardrop:I = 0x7f0804da
+.field public static final op_custom_shape_preview_teardrop:I = 0x7f0804db
 
-.field public static final op_custom_shape_round_rectangle_wifi:I = 0x7f0804db
+.field public static final op_custom_shape_round_rectangle_wifi:I = 0x7f0804dc
 
-.field public static final op_custom_shape_round_wifi:I = 0x7f0804dc
+.field public static final op_custom_shape_round_wifi:I = 0x7f0804dd
 
-.field public static final op_custom_shape_square_wifi:I = 0x7f0804dd
+.field public static final op_custom_shape_square_wifi:I = 0x7f0804de
 
-.field public static final op_custom_shape_teardrop_wifi:I = 0x7f0804de
+.field public static final op_custom_shape_teardrop_wifi:I = 0x7f0804df
 
-.field public static final op_default_accent_color_preview_bg:I = 0x7f0804e3
+.field public static final op_default_accent_color_preview_bg:I = 0x7f0804e4
 
-.field public static final op_device_name:I = 0x7f0804e7
+.field public static final op_device_name:I = 0x7f0804e8
 
-.field public static final op_empty:I = 0x7f0804f1
+.field public static final op_empty:I = 0x7f0804f2
 
-.field public static final op_esport_mode_introduction_dark:I = 0x7f0804f7
+.field public static final op_esport_mode_introduction_dark:I = 0x7f0804f8
 
-.field public static final op_esport_mode_introduction_light:I = 0x7f0804f8
+.field public static final op_esport_mode_introduction_light:I = 0x7f0804f9
 
-.field public static final op_face_settings:I = 0x7f0804f9
+.field public static final op_face_settings:I = 0x7f0804fa
 
-.field public static final op_forum_h2_dark:I = 0x7f0804ff
+.field public static final op_forum_h2_dark:I = 0x7f080500
 
-.field public static final op_forum_h2_light:I = 0x7f080500
+.field public static final op_forum_h2_light:I = 0x7f080501
 
-.field public static final op_forum_o2_dark:I = 0x7f080501
+.field public static final op_forum_o2_dark:I = 0x7f080502
 
-.field public static final op_forum_o2_light:I = 0x7f080502
+.field public static final op_forum_o2_light:I = 0x7f080503
 
-.field public static final op_front_camera_mode_guide_dark_8_series:I = 0x7f080503
+.field public static final op_front_camera_mode_guide_dark_8_series:I = 0x7f080504
 
-.field public static final op_front_camera_mode_guide_light_8_series:I = 0x7f080504
+.field public static final op_front_camera_mode_guide_light_8_series:I = 0x7f080505
 
-.field public static final op_fullscreen_mode_guide_dark:I = 0x7f080505
+.field public static final op_fullscreen_mode_guide_dark:I = 0x7f080506
 
-.field public static final op_fullscreen_mode_guide_light:I = 0x7f080506
+.field public static final op_fullscreen_mode_guide_light:I = 0x7f080507
 
-.field public static final op_h2_version:I = 0x7f08050c
+.field public static final op_h2_version:I = 0x7f08050d
 
-.field public static final op_hardware_icon:I = 0x7f08050d
+.field public static final op_hardware_icon:I = 0x7f08050e
 
-.field public static final op_ic_add_more:I = 0x7f080515
+.field public static final op_hide_keyboard_dark:I = 0x7f08050f
 
-.field public static final op_ic_audio_alarm_mute:I = 0x7f080518
+.field public static final op_hide_keyboard_light:I = 0x7f080510
 
-.field public static final op_ic_audio_media_mute:I = 0x7f08051a
+.field public static final op_ic_add_more:I = 0x7f080518
 
-.field public static final op_ic_audio_ring_notif:I = 0x7f08051b
+.field public static final op_ic_audio_alarm_mute:I = 0x7f08051b
 
-.field public static final op_ic_back:I = 0x7f08051f
+.field public static final op_ic_audio_media_mute:I = 0x7f08051d
 
-.field public static final op_ic_check:I = 0x7f080526
+.field public static final op_ic_audio_ring_notif:I = 0x7f08051e
 
-.field public static final op_ic_custom_finger_logo_bg_red:I = 0x7f080535
+.field public static final op_ic_back:I = 0x7f080522
 
-.field public static final op_ic_delete:I = 0x7f08053c
+.field public static final op_ic_check:I = 0x7f080529
 
-.field public static final op_ic_edit:I = 0x7f080541
+.field public static final op_ic_custom_finger_logo_bg_red:I = 0x7f080538
 
-.field public static final op_ic_error:I = 0x7f080542
+.field public static final op_ic_delete:I = 0x7f08053f
 
-.field public static final op_ic_homepage_common_card_round_icon:I = 0x7f080550
+.field public static final op_ic_edit:I = 0x7f080544
 
-.field public static final op_ic_homepage_google_settings:I = 0x7f080559
+.field public static final op_ic_error:I = 0x7f080545
 
-.field public static final op_ic_homepage_opwlb:I = 0x7f08055c
+.field public static final op_ic_homepage_common_card_round_icon:I = 0x7f080553
 
-.field public static final op_ic_homepage_wellbeing_settings:I = 0x7f080568
+.field public static final op_ic_homepage_google_settings:I = 0x7f08055c
 
-.field public static final op_ic_lock:I = 0x7f08056d
+.field public static final op_ic_homepage_opwlb:I = 0x7f08055f
 
-.field public static final op_ic_menu_search:I = 0x7f080571
+.field public static final op_ic_homepage_wellbeing_settings:I = 0x7f08056b
 
-.field public static final op_ic_oneplus_account_icon:I = 0x7f080576
+.field public static final op_ic_lock:I = 0x7f080570
 
-.field public static final op_ic_oneplus_lab_feature_dislike:I = 0x7f080577
+.field public static final op_ic_menu_search:I = 0x7f080574
 
-.field public static final op_ic_oneplus_lab_feature_dislike_fill:I = 0x7f080578
+.field public static final op_ic_oneplus_account_icon:I = 0x7f080579
 
-.field public static final op_ic_oneplus_lab_feature_like:I = 0x7f080579
+.field public static final op_ic_oneplus_lab_feature_dislike:I = 0x7f08057a
 
-.field public static final op_ic_oneplus_lab_feature_like_fill:I = 0x7f08057a
+.field public static final op_ic_oneplus_lab_feature_dislike_fill:I = 0x7f08057b
 
-.field public static final op_ic_otg:I = 0x7f08057b
+.field public static final op_ic_oneplus_lab_feature_like:I = 0x7f08057c
 
-.field public static final op_ic_settings_car:I = 0x7f08058f
+.field public static final op_ic_oneplus_lab_feature_like_fill:I = 0x7f08057d
 
-.field public static final op_ic_sim_card:I = 0x7f0805b4
+.field public static final op_ic_otg:I = 0x7f08057e
 
-.field public static final op_img_color_plate:I = 0x7f0805c2
+.field public static final op_ic_settings_car:I = 0x7f080592
 
-.field public static final op_img_fod_01:I = 0x7f0805c4
+.field public static final op_ic_sim_card:I = 0x7f0805b7
 
-.field public static final op_img_fod_02:I = 0x7f0805c5
+.field public static final op_img_color_plate:I = 0x7f0805c5
 
-.field public static final op_img_fod_03:I = 0x7f0805c6
+.field public static final op_img_fod_01:I = 0x7f0805c7
 
-.field public static final op_img_fod_04:I = 0x7f0805c7
+.field public static final op_img_fod_02:I = 0x7f0805c8
 
-.field public static final op_img_fod_05:I = 0x7f0805c8
+.field public static final op_img_fod_03:I = 0x7f0805c9
 
-.field public static final op_img_fod_06:I = 0x7f0805c9
+.field public static final op_img_fod_04:I = 0x7f0805ca
 
-.field public static final op_img_fod_red:I = 0x7f0805ca
+.field public static final op_img_fod_05:I = 0x7f0805cb
 
-.field public static final op_img_tone_color:I = 0x7f0805cb
+.field public static final op_img_fod_06:I = 0x7f0805cc
 
-.field public static final op_img_tone_color1:I = 0x7f0805cc
+.field public static final op_img_fod_red:I = 0x7f0805cd
 
-.field public static final op_img_tone_color2:I = 0x7f0805cd
+.field public static final op_img_tone_color:I = 0x7f0805ce
 
-.field public static final op_img_tone_dark:I = 0x7f0805ce
+.field public static final op_img_tone_color1:I = 0x7f0805cf
 
-.field public static final op_img_tone_dark1:I = 0x7f0805cf
+.field public static final op_img_tone_color2:I = 0x7f0805d0
 
-.field public static final op_img_tone_dark2:I = 0x7f0805d0
+.field public static final op_img_tone_dark:I = 0x7f0805d1
 
-.field public static final op_img_tone_light:I = 0x7f0805d1
+.field public static final op_img_tone_dark1:I = 0x7f0805d2
 
-.field public static final op_img_tone_light1:I = 0x7f0805d2
+.field public static final op_img_tone_dark2:I = 0x7f0805d3
 
-.field public static final op_img_tone_light2:I = 0x7f0805d3
+.field public static final op_img_tone_light:I = 0x7f0805d4
 
-.field public static final op_legal_settings:I = 0x7f0805da
+.field public static final op_img_tone_light1:I = 0x7f0805d5
 
-.field public static final op_member_grid_circle_left_bottom_bg:I = 0x7f0805e9
+.field public static final op_img_tone_light2:I = 0x7f0805d6
 
-.field public static final op_member_grid_circle_left_top_bg:I = 0x7f0805ea
+.field public static final op_legal_settings:I = 0x7f0805dd
 
-.field public static final op_member_grid_circle_right_bottom_bg:I = 0x7f0805eb
+.field public static final op_member_grid_circle_left_bottom_bg:I = 0x7f0805ec
 
-.field public static final op_member_grid_circle_right_top_bg:I = 0x7f0805ec
+.field public static final op_member_grid_circle_left_top_bg:I = 0x7f0805ed
 
-.field public static final op_member_grid_diagonal_left_bottom_01_bg:I = 0x7f0805ed
+.field public static final op_member_grid_circle_right_bottom_bg:I = 0x7f0805ee
 
-.field public static final op_member_grid_diagonal_left_bottom_02_bg:I = 0x7f0805ee
+.field public static final op_member_grid_circle_right_top_bg:I = 0x7f0805ef
 
-.field public static final op_member_grid_diagonal_left_bottom_03_bg:I = 0x7f0805ef
+.field public static final op_member_grid_diagonal_left_bottom_01_bg:I = 0x7f0805f0
 
-.field public static final op_member_grid_diagonal_left_top_bg:I = 0x7f0805f0
+.field public static final op_member_grid_diagonal_left_bottom_02_bg:I = 0x7f0805f1
 
-.field public static final op_member_grid_horizon_bg:I = 0x7f0805f1
+.field public static final op_member_grid_diagonal_left_bottom_03_bg:I = 0x7f0805f2
 
-.field public static final op_member_grid_vertical_bg:I = 0x7f0805f2
+.field public static final op_member_grid_diagonal_left_top_bg:I = 0x7f0805f3
 
-.field public static final op_model:I = 0x7f0805fc
+.field public static final op_member_grid_horizon_bg:I = 0x7f0805f4
 
-.field public static final op_o2_version:I = 0x7f080603
+.field public static final op_member_grid_vertical_bg:I = 0x7f0805f5
 
-.field public static final op_parsons_info_image:I = 0x7f080608
+.field public static final op_model:I = 0x7f0805ff
 
-.field public static final op_product_info:I = 0x7f080612
+.field public static final op_o2_version:I = 0x7f080606
 
-.field public static final op_red_custom_fingeprint_preview_04:I = 0x7f080641
+.field public static final op_parsons_info_image:I = 0x7f08060b
 
-.field public static final op_red_custom_fingeprint_preview_cosmos:I = 0x7f080642
+.field public static final op_product_info:I = 0x7f080615
 
-.field public static final op_red_custom_fingeprint_preview_energy:I = 0x7f080643
+.field public static final op_raise_keyboard_dark:I = 0x7f08063c
 
-.field public static final op_red_custom_fingeprint_preview_red:I = 0x7f080644
+.field public static final op_raise_keyboard_light:I = 0x7f08063d
 
-.field public static final op_red_custom_fingeprint_preview_ripple:I = 0x7f080645
+.field public static final op_red_custom_fingeprint_preview_04:I = 0x7f080646
 
-.field public static final op_red_custom_fingeprint_preview_stripe:I = 0x7f080646
+.field public static final op_red_custom_fingeprint_preview_cosmos:I = 0x7f080647
 
-.field public static final op_red_img_fod_01:I = 0x7f080647
+.field public static final op_red_custom_fingeprint_preview_energy:I = 0x7f080648
 
-.field public static final op_red_img_fod_02:I = 0x7f080648
+.field public static final op_red_custom_fingeprint_preview_red:I = 0x7f080649
 
-.field public static final op_red_img_fod_03:I = 0x7f080649
+.field public static final op_red_custom_fingeprint_preview_ripple:I = 0x7f08064a
 
-.field public static final op_red_img_fod_04:I = 0x7f08064a
+.field public static final op_red_custom_fingeprint_preview_stripe:I = 0x7f08064b
 
-.field public static final op_red_img_fod_06:I = 0x7f08064b
+.field public static final op_red_img_fod_01:I = 0x7f08064c
 
-.field public static final op_red_img_fod_red:I = 0x7f08064c
+.field public static final op_red_img_fod_02:I = 0x7f08064d
 
-.field public static final op_screen_show_1:I = 0x7f08065f
+.field public static final op_red_img_fod_03:I = 0x7f08064e
 
-.field public static final op_screen_show_2:I = 0x7f080660
+.field public static final op_red_img_fod_04:I = 0x7f08064f
 
-.field public static final op_screen_show_3:I = 0x7f080661
+.field public static final op_red_img_fod_06:I = 0x7f080650
 
-.field public static final op_seekbar_thumb_dark:I = 0x7f08066a
+.field public static final op_red_img_fod_red:I = 0x7f080651
 
-.field public static final op_seekbar_thumb_light:I = 0x7f08066b
+.field public static final op_screen_show_1:I = 0x7f080664
 
-.field public static final op_seekbar_track_dark:I = 0x7f080673
+.field public static final op_screen_show_2:I = 0x7f080665
 
-.field public static final op_seekbar_track_light:I = 0x7f080674
+.field public static final op_screen_show_3:I = 0x7f080666
 
-.field public static final op_settings_spinner_background:I = 0x7f080678
+.field public static final op_seekbar_thumb_dark:I = 0x7f08066f
 
-.field public static final op_shielding_notification_dark:I = 0x7f08067a
+.field public static final op_seekbar_thumb_light:I = 0x7f080670
 
-.field public static final op_shielding_notification_light:I = 0x7f08067b
+.field public static final op_seekbar_track_dark:I = 0x7f080678
 
-.field public static final op_soft_version:I = 0x7f080680
+.field public static final op_seekbar_track_light:I = 0x7f080679
 
-.field public static final op_software_icon:I = 0x7f080681
+.field public static final op_settings_spinner_background:I = 0x7f08067d
 
-.field public static final op_status_settings:I = 0x7f080687
+.field public static final op_shielding_notification_dark:I = 0x7f08067f
 
-.field public static final op_theme_mask_dark:I = 0x7f0806b1
+.field public static final op_shielding_notification_light:I = 0x7f080680
 
-.field public static final op_theme_mask_light:I = 0x7f0806b2
+.field public static final op_soft_version:I = 0x7f080685
 
-.field public static final op_wechat_qrcode:I = 0x7f0806d4
+.field public static final op_software_icon:I = 0x7f080686
 
-.field public static final op_wechat_ridecode:I = 0x7f0806d5
+.field public static final op_status_settings:I = 0x7f08068c
 
-.field public static final op_wechat_scanning:I = 0x7f0806d6
+.field public static final op_theme_mask_dark:I = 0x7f0806b6
 
-.field public static final opfinger_anim_color_bg:I = 0x7f0806da
+.field public static final op_theme_mask_light:I = 0x7f0806b7
 
-.field public static final opfinger_anim_color_bg_2:I = 0x7f0806db
+.field public static final op_wechat_qrcode:I = 0x7f0806d9
 
-.field public static final opfinger_anim_color_fod_bg:I = 0x7f0806dc
+.field public static final op_wechat_ridecode:I = 0x7f0806da
 
-.field public static final opfinger_anim_color_fod_bg_2:I = 0x7f0806dd
+.field public static final op_wechat_scanning:I = 0x7f0806db
 
-.field public static final preference_highlight:I = 0x7f0806eb
+.field public static final opfinger_anim_color_bg:I = 0x7f0806df
 
-.field public static final progress_horizontal:I = 0x7f08071f
+.field public static final opfinger_anim_color_bg_2:I = 0x7f0806e0
 
-.field public static final progress_horizontal_limit:I = 0x7f080720
+.field public static final opfinger_anim_color_fod_bg:I = 0x7f0806e1
 
-.field public static final radio_button_check:I = 0x7f080722
+.field public static final opfinger_anim_color_fod_bg_2:I = 0x7f0806e2
 
-.field public static final signal_strength_1x:I = 0x7f080737
+.field public static final preference_highlight:I = 0x7f0806f0
 
-.field public static final signal_strength_3g:I = 0x7f080738
+.field public static final progress_horizontal:I = 0x7f080724
 
-.field public static final signal_strength_5g:I = 0x7f080739
+.field public static final progress_horizontal_limit:I = 0x7f080725
 
-.field public static final signal_strength_g:I = 0x7f08073a
+.field public static final radio_button_check:I = 0x7f080727
 
-.field public static final signal_strength_lte:I = 0x7f08073b
+.field public static final signal_strength_1x:I = 0x7f08073c
 
-.field public static final system_nav_2_button:I = 0x7f080752
+.field public static final signal_strength_3g:I = 0x7f08073d
 
-.field public static final system_nav_3_button:I = 0x7f080753
+.field public static final signal_strength_5g:I = 0x7f08073e
 
-.field public static final system_nav_fully_gestural:I = 0x7f080754
+.field public static final signal_strength_g:I = 0x7f08073f
 
-.field public static final transparency_tileable:I = 0x7f080766
+.field public static final signal_strength_lte:I = 0x7f080740
 
-.field public static final wifi_dpp_error:I = 0x7f08076a
+.field public static final system_nav_2_button:I = 0x7f080757
 
-.field public static final wifi_dpp_success:I = 0x7f08076b
+.field public static final system_nav_3_button:I = 0x7f080758
 
-.field public static final wifi_signal:I = 0x7f08076d
+.field public static final system_nav_fully_gestural:I = 0x7f080759
 
-.field public static final zen_calls_any:I = 0x7f08076f
+.field public static final transparency_tileable:I = 0x7f08076b
 
-.field public static final zen_calls_contacts:I = 0x7f080770
+.field public static final wifi_dpp_error:I = 0x7f08076f
 
-.field public static final zen_calls_none:I = 0x7f080771
+.field public static final wifi_dpp_success:I = 0x7f080770
 
-.field public static final zen_calls_starred:I = 0x7f080772
+.field public static final wifi_signal:I = 0x7f080772
 
-.field public static final zen_messages_any:I = 0x7f080773
+.field public static final zen_calls_any:I = 0x7f080774
 
-.field public static final zen_messages_contacts:I = 0x7f080774
+.field public static final zen_calls_contacts:I = 0x7f080775
 
-.field public static final zen_messages_none:I = 0x7f080775
+.field public static final zen_calls_none:I = 0x7f080776
 
-.field public static final zen_messages_starred:I = 0x7f080776
+.field public static final zen_calls_starred:I = 0x7f080777
+
+.field public static final zen_messages_any:I = 0x7f080778
+
+.field public static final zen_messages_contacts:I = 0x7f080779
+
+.field public static final zen_messages_none:I = 0x7f08077a
+
+.field public static final zen_messages_starred:I = 0x7f08077b

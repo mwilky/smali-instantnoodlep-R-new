@@ -350,7 +350,7 @@ Quản trị viên của bạn có thể giám sát và quản lý cài đặt, 
     <string name="advanced_battery_graph_subtext">Thời lượng pin còn lại ước tính dựa trên mức sử dụng thiết bị</string>
     <string name="advanced_battery_title">Mức sử dụng pin</string>
     <string name="advanced_calling_summary">Thoại HD, Gọi video</string>
-    <string name="advanced_calling_title">Gọi điện Nâng cao</string>
+    <string name="advanced_calling_title">Gọi điện nâng cao</string>
     <string name="advanced_reboot_summary">Khi mở khóa, khởi động lại sẽ cho lựa chọn khởi động bình thường, vào chế độ phục hồi hoặc khởi động nhanh</string>
     <string name="advanced_reboot_title">Khởi động lại nâng cao</string>
     <string name="advanced_section_header">Nâng cao</string>
@@ -2246,8 +2246,12 @@ Khi bạn bật tính năng sao lưu tự động, dữ liệu ứng dụng và 
     <string name="help_feedback_label">Trợ giúp &amp; phản hồi</string>
     <string name="help_label">Trợ giúp và phản hồi</string>
     <string name="hide_extra_apps">Hiển thị mức sử dụng ứng dụng</string>
+    <string name="hide_imeback_and_switcher">Điều chỉnh độ cao bàn phím</string>
+    <string name="hide_imeback_and_switcher_warning">Điều chỉnh độ cao của bàn phím sẽ được thấy rõ ràng trong các cử chỉ toàn màn hình.</string>
     <string name="hide_silent_icons_summary">Các biểu tượng trong thông báo nhẹ nhàng không hiển thị trên thanh trạng thái</string>
     <string name="hide_silent_icons_title">Ẩn các biểu tượng khỏi thông báo nhẹ nhàng</string>
+    <string name="hide_summary">Thanh lối tắt ở cuối bàn phím sẽ bị ẩn</string>
+    <string name="hide_title">Ẩn</string>
     <string name="high_label">Cao</string>
     <string name="high_power_app_text_nomal">%1$s đang tiêu tốn pin của bạn</string>
     <string name="high_power_app_text_red">%1$s đang tiêu tốn nhiều pin của bạn</string>
@@ -3576,7 +3580,7 @@ Cảnh báo: Mở khóa bằng khuôn mặt kém an toàn hơn so với vân tay
     <string name="oneplus_fingerprint_findsendor_summary">Khi mẫu vân tay xuất hiện ở phía dưới cùng của màn hình, bạn chỉ cần nhấn ngón tay vào khu vực nhận dạng vân tay để sử dụng chức năng vân tay.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Cách sử dụng vân tay</string>
     <string name="oneplus_fingerprint_functional_declaration">Khai báo chức năng vân tay</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Từ màn hình khung ngắm, nhấn và giữ cảm biến vân tay để chụp ảnh</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Từ màn hình khung ngắm, nhấn giữ cảm biến vân tay để chụp ảnh</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Nhấn giữ để chụp ảnh</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Cử chỉ dấu vân tay</string>
     <string name="oneplus_fingerprint_hardware_exception">Thông tin kết cấu dấu vân tay không chính xác, vui lòng liên hệ với bộ phận chăm sóc khách hàng</string>
@@ -4332,7 +4336,7 @@ Việc cài đặt mạng dưới dạng ẩn sẽ không thay đổi cài đặ
     <string name="onplus_hardware_version_info">Phiên bản phần cứng</string>
     <string name="onplus_software_version_info">Phiên bản phần mềm</string>
     <string name="onscreen_keyboard_settings_summary">Cài đặt bàn phím ảo</string>
-    <string name="op_advanced_settings">Nâng cao</string>
+    <string name="op_advanced_settings">Cao cấp</string>
     <string name="op_already_know">Đã hiểu</string>
     <string name="op_android_mode_cannot_change_color_accent">Chủ đề mặc định chỉ có thể sử dụng chủ đề màu hệ thống</string>
     <string name="op_aod_parsons_info_button">Ok</string>
@@ -4381,7 +4385,7 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_data_vowlan_enable_summary">Sử dụng Gọi qua Wi-Fi khi có thể</string>
     <string name="op_default_apps_summary">Trang chủ, trình duyệt</string>
     <string name="op_default_luncher_title">Ứng dụng trang chủ</string>
-    <string name="op_display_advanced_settings">Nâng cao</string>
+    <string name="op_display_advanced_settings">Cao cấp</string>
     <string name="op_display_advanced_settings_summary_1">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới, cài đặt tai thỏ</string>
     <string name="op_display_advanced_settings_summary_2">Hiệu chuẩn màn hình, tốc độ làm mới, cài đặt tai thỏ</string>
     <string name="op_display_advanced_settings_summary_3">Hiệu chuẩn màn hình, độ phân giải, tốc độ làm mới</string>
@@ -4809,6 +4813,8 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="radio_info_http_client_test">Kiểm tra máy khách HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Tên máy chủ Ping (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Tên máy chủ Ping (www.google.com) IPv6:</string>
+    <string name="raise_summary">Bàn phím sẽ được nâng lên từ phía dưới và phím tắt sẽ được hiển thị</string>
+    <string name="raise_title">Nâng</string>
     <string name="rarely_running">Hiếm khi chạy (%s)</string>
     <string name="really_remove_account_message">Xóa tài khoản này sẽ xóa tất cả thư, danh bạ và dữ liệu khác khỏi điện thoại!</string>
     <string name="really_remove_account_title">Xóa tài khoản?</string>
@@ -4975,7 +4981,7 @@ Tùy chọn cài đặt này sẽ ảnh hưởng đến tất cả người dùn
     <string name="scanning_status_text_wifi_on_ble_off">Tính năng quét tìm Wi‑Fi đang bật, tính năng quét tìm Bluetooth đang tắt</string>
     <string name="scanning_status_text_wifi_on_ble_on">Cả tính năng quét tìm Wi‑Fi và quét tìm Bluetooth đều đang bật</string>
     <string name="schedule_reminders">Lời nhắc sự kiện</string>
-    <string name="screen_color_mode_advanced">Nâng cao</string>
+    <string name="screen_color_mode_advanced">Cao cấp</string>
     <string name="screen_color_mode_advanced_settings">Cài đặt nâng cao</string>
     <string name="screen_color_mode_vivid">Sống động</string>
     <string name="screen_compatibility_label">Khả năng tương thích với màn hình</string>
@@ -5871,7 +5877,7 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="touchscreen_double_tap_to_wake_gesture_title">Chạm hai lần để đánh thức</string>
     <string name="touchscreen_flashlight_gesture_summary">Vẽ chữ V để bật/tắt đèn pin</string>
     <string name="touchscreen_flashlight_gesture_title">Bật đèn pin</string>
-    <string name="touchscreen_music_gesture_summary">Vẽ || với hai ngón tay để chơi hoặc ngừng nhạc. Vẽ &lt; hoặc > để chuyển sang bài trước hoặc tiếp theo</string>
+    <string name="touchscreen_music_gesture_summary">Vẽ ‖ với hai ngón tay để phát hoặc ngừng nhạc. Vẽ &lt; hoặc > để chuyển sang bài trước hoặc tiếp theo</string>
     <string name="touchscreen_music_gesture_title">Điều khiển nhạc</string>
     <string name="track_frame_time">Kết xuất HWUI cấu hình</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6277,7 +6283,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="verify_apps_over_usb_title">Xác minh ứng dụng qua USB</string>
     <string name="verizon_store_demo_mode_hint">Nhập mật khẩu</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Việc thay đổi thiết lập của điểm truy cập di động sẽ ngắt kết nối mọi thiết bị hiện đang kết nối với điểm truy cập di động này.</string>
+    <string name="verizon_wifi_tether_band_warning">Việc thay đổi thiết lập của Điểm truy cập Di động sẽ ngắt kết nối mọi thiết bị hiện đang kết nối với Điểm truy cập Di động này.</string>
     <string name="version_text">phiên bản %1$s</string>
     <string name="vibrate_in_silent_title">Rung khi im lặng</string>
     <string name="vibrate_input_devices">Chuyển hướng rung</string>

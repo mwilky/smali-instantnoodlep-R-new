@@ -40,6 +40,8 @@
 
 .field public static final op_control_icon_color_disable_default:I = 0x7f0602e6
 
+.field public static final op_control_icon_color_inactive_default:I = 0x7f0602e9
+
 .field public static final op_control_system_color_tips_default:I = 0x7f0602f4
 
 .field public static final op_control_text_color_disable_default:I = 0x7f060303

@@ -18,7 +18,7 @@
     <string name="add_fingerprints_dialog">ਤੁਹਾਡੇ ਕੋਲ ਅਜੇ ਤੱਕ ਕੋਈ ਵੀ ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਟ ਅਪ ਕੀਤੇ ਹੋਏ ਨਹੀਂ ਹਨ। ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਫਿੰਗਰਪ੍ਰਿੰਟ ਰਜਿਸਟਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="add_oneplus_account_label">OnePlus ਖਾਤਾ</string>
     <string name="advanced_calling_summary">HD ਆਵਾਜ਼, ਵੀਡੀਓ ਕਾਲਿੰਗ</string>
-    <string name="advanced_calling_title">ਉੱਨਤ ਕਾਲਿੰਗ</string>
+    <string name="advanced_calling_title">ਐਡਵਾਂਸ ਕਾਲਿੰਗ</string>
     <string name="advanced_reboot_summary">"ਅਨਲੌਕ ਕਰਨ 'ਤੇ, ਰੀਬੂਟ ਸਧਾਰਨ ਢੰਗ ਨਾਲ ਰਿਕਵਰੀ ਜਾਂ ਫਾਸਟਬੂਟ ਵਿੱਚ ਰੀਬੂਟ ਕਰਨ ਦੇ ਵਿਕਲਪ ਪ੍ਰਸਤੁਤ ਕਰੇਗਾ"</string>
     <string name="advanced_reboot_title">ਉੱਨਤ ਰੀਬੂਟ</string>
     <string name="advanced_wificall_summary">ਜਦੋਂ ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ ਉਪਲੱਬਧ ਨਾ ਹੋਵੇ‚ ਤਾਂ Wi‑Fi ਦਾ ਇਸਤੇਮਾਲ ਕਰੋ</string>
@@ -259,7 +259,11 @@
     <string name="hardware_keys_home_key_title">ਹੋਮ ਬਟਨ</string>
     <string name="hardware_keys_long_press_title">ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦੱਬੋ ਕਾਰਵਾਈ</string>
     <string name="hardware_keys_menu_key_title">ਹਾਲੀਆ ਬਟਨ</string>
-    <string name="header_category_custom">ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਕਰਨਾ</string>
+    <string name="header_category_custom">ਅਨੁਕੂਲਨ</string>
+    <string name="hide_imeback_and_switcher">ਕੀਬੋਰਡ ਦੀ ਉਚਾਈ ਦੀ ਐਡਜਸਟਮੈਂਟ</string>
+    <string name="hide_imeback_and_switcher_warning">ਕੀਬੋਰਡ ਦੀ ਉਚਾਈ ਦੀ ਐਡਜਸਟਮੈਂਟ ਫੁਲ-ਸਕੀੑਨ ਇਸ਼ਾਰਿਆਂ ਵਿਚ ਸਪੱਸ਼ਟ ਹੋਵੇਗੀ</string>
+    <string name="hide_summary">ਕੀਬੋਰਡ ਦੇ ਹੇਠਾਂ ਸ਼ੌਰਟਕਟ ਬਾਰ ਲੁਕ ਜਾਵੇਗੀ</string>
+    <string name="hide_title">ਲੁਕਾਓ</string>
     <string name="high_power_app_text_nomal">%1$s ਤੁਹਾਡੀ ਬੈਟਰੀ ਦੀ ਖਪਤ ਕਰ ਰਿਹਾ ਹੈ</string>
     <string name="high_power_app_text_red">%1$s ਬਹੁਤ ਵੱਡੀ ਮਾਤਰਾ ਵਿੱਚ ਤੁਹਾਡੀ ਬੈਟਰੀ ਦੀ ਖਪਤ ਕਰ ਰਿਹਾ ਹੈ</string>
     <string name="hint_data_used_alert">ਡੇਟਾ ਵਰਤੋਂ %1$s ਤੋਂ ਵਧ ਗਈ ਹੈ</string>
@@ -610,8 +614,8 @@
     <string name="oneplus_fingerprint_findsendor_summary">"ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪੈਟਰਨ ਪ੍ਰਦਰਸ਼ਿਤ ਹੋਣ 'ਤੇ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਬੱਸ ਆਪਣੀ ਉਂਗਲੀ ਨਾਲ ਫਿੰਗਰਪ੍ਰਿੰਟ ਪਛਾਣ ਖੇਤਰ ਨੂੰ ਦਬਾਓ: ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਅਤੇ ਅਨਲੌਕ ਕਰਨਾ, ਖ਼ਰੀਦਦਾਰੀ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕਰਨਾ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰਨਾ।"</string>
     <string name="oneplus_fingerprint_findsendor_tilte">ਫਿੰਗਰਪਿੰੑਟ ਦੀ ਵਰਤੋਂ ਕਿਵੇਂ ਕੀਤੀ ਜਾਵੇ?</string>
     <string name="oneplus_fingerprint_functional_declaration">ਫਿੰਗਰਪ੍ਰਿੰਟ ਫੰਕਸ਼ਨ ਘੋਸ਼ਣਾ</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">"ਵਿਊਫਾਈਂਡਰ ਸਕ੍ਰੀਨ ਤੋਂ, ਫ਼ੋਟੋ ਖਿੱਚ੍ਹਣ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ 'ਤੇ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ"</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">ਫ਼ੋਟੋ ਖਿੱਚ੍ਹਣ ਲਈ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">ਵਿਊਫਾਈਂਡਰ ਸਕਰੀਨ ਤੋਂ, ਇਕ ਫੋਟੋ ਲੈਣ ਲਈ ਫਿੰਗਰਪਰਿੰਟ ਸੈਂਸਰ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤਕ ਦਬਾਓ</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">ਇਕ ਫੋਟੋ ਲੈਣ ਲਈ ਲੰਬੇ ਸਮੇਂ ਤਕ ਦਬਾਓ</string>
     <string name="oneplus_fingerprint_gesture_settings_title">ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੰਕੇਤ</string>
     <string name="oneplus_fingerprint_hardware_exception">ਫਿੰਗਰਪ੍ਰਿੰਟ ਹਾਰਡਵੇਅਰ ਜਾਣਕਾਰੀ ਸਹੀ ਨਹੀਂ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਗਾਹਕ ਸੇਵਾ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">"ਤਤਕਾਲ ਭੁਗਤਾਨ ਕਰੋ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫਿੰਗਰਪ੍ਰਿੰਟ ਸੈਂਸਰ 'ਤੇ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ"</string>
@@ -910,7 +914,7 @@
     <string name="oneplus_notifications_sound">ਸੂਚਨਾ ਆਵਾਜ਼</string>
     <string name="oneplus_o2_contributors">OxygenOS ਯੋਗਦਾਨੀ</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">"ਇੱਕ ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਸਮਾਂ ਰੇਂਜ 'ਤੇ ਚਾਲੂ ਕਰੋ"</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">ਸਮਾਂ-ਸੂਚੀ</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">ਅਨੁਸੂਚੀ</string>
     <string name="oneplus_open_bed_time_mode_summary">ਤੁਸੀਂ ਸੌਣ ਦੇ ਸਮੇਂ ਦੇ ਮੋਡ ਨੂੰ ਹੱਥੀਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ</string>
     <string name="oneplus_open_bed_time_mode_title">ਸੌਣ ਦੇ ਸਮੇਂ ਦਾ ਮੋਡ</string>
     <string name="oneplus_opfinger_input_completed_comfirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
@@ -1046,7 +1050,7 @@
     <string name="oneplus_rotation_silent_enable_summary">"ਇਨਕਮਿੰਗ ਕਾਲ ਨੂੰ ਮਿਊਟ ਕਰਨ ਲਈ ਇਸਦੇ ਆਉਣ 'ਤੇ ਡਿਵਾਈਸ ਨੂੰ ਫਲਿੱਪ ਕਰੋ"</string>
     <string name="oneplus_rotation_silent_enable_title">ਮਿਊਟ ਕਰਨ ਲਈ ਫਲਿੱਪ ਕਰੋ</string>
     <string name="oneplus_scene_mode">ਦ੍ਰਿਸ਼</string>
-    <string name="oneplus_schedule">ਸਮਾਂ-ਸੂਚੀ</string>
+    <string name="oneplus_schedule">ਅਨੁਸੂਚੀ</string>
     <string name="oneplus_screen">ਸਕ੍ਰੀਨ</string>
     <string name="oneplus_screen_better_cold">ਠੰਡ</string>
     <string name="oneplus_screen_better_nature">ਕੁਦਰਤੀ</string>
@@ -1234,7 +1238,7 @@
     <string name="oneplus_theme_drop_summary">ਸੋਧਾਂ ਖਾਰਜ ਕਰਨੀਆਂ ਹਨ?</string>
     <string name="oneplus_theme_drop_title">ਸੰਪਾਦਨ ਮੋਡ ਚੋਂ ਬਾਹਰ ਜਾਓ</string>
     <string name="oneplus_theme_entrance_summary">ਵਾਲ ਪੇਪਰ, ਐਕਸੇਂਟ ਕਲਰ, ਫੌਂਟ, ਟੋਨ</string>
-    <string name="oneplus_theme_entrance_title">ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤਬੱਧ ਕਰਨਾ</string>
+    <string name="oneplus_theme_entrance_title">ਅਨੁਕੂਲਨ</string>
     <string name="oneplus_theme_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ</string>
     <string name="oneplus_theme_fingerprint_snake_action">ਫਿੰਗਰਪ੍ਰਿੰਟ ਆੱਨ ਕਰੋ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ਇਹ ਫੀਚਰ ਉਦੋਂ ਹੀ ਉਪਲੱਬਧ ਹੋਵੇਗਾ ਜਦੋਂ ਫਿੰਗਰਪ੍ਰਿੰਟ ਆੱਨ ਹੋਵੇਗਾ</string>
@@ -1367,7 +1371,7 @@
     <string name="oneplus_zen_sound_title">ਹੋਰ ਧੁਨੀਆਂ</string>
     <string name="onplus_hardware_version_info">ਹਾਰਡਵੇਅਰ ਸੰਸਕਰਨ</string>
     <string name="onplus_software_version_info">ਸੌਫਟਵੇਅਰ ਸੰਸਕਰਨ</string>
-    <string name="op_advanced_settings">ਆਧੁਨਿਕ</string>
+    <string name="op_advanced_settings">ਉੱਨਤ</string>
     <string name="op_already_know">ਸਮਝ ਆ ਗਈ</string>
     <string name="op_android_mode_cannot_change_color_accent">ਡਿਫੌਲਟ ਥੀਮ ਸਿਰਫ਼ ਸਿਸਟਮ ਰੰਗ ਥੀਮ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ</string>
     <string name="op_aod_parsons_info_button">ਠੀਕ</string>
@@ -1416,7 +1420,7 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="op_data_vowlan_enable_summary">"ਉਪਲਬਧ ਹੋਣ 'ਤੇ Wi-Fi ਕਾਲਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="op_default_apps_summary">ਹੋਮ, ਬ੍ਰਾਊਜ਼ਰ</string>
     <string name="op_default_luncher_title">ਹੋਮ ਐਪ</string>
-    <string name="op_display_advanced_settings">ਆਧੁਨਿਕ</string>
+    <string name="op_display_advanced_settings">ਉੱਨਤ</string>
     <string name="op_display_advanced_settings_summary_1">ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ, ਰੈਜ਼ੋਲੂਸ਼ਨ, ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਦਰ, ਨੌਚ ਸੈਟਿੰਗਾਂ</string>
     <string name="op_display_advanced_settings_summary_2">ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ, ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਦਰ, ਨੌਚ ਸੈਟਿੇੰਗਾਂ</string>
     <string name="op_display_advanced_settings_summary_3">ਸਕ੍ਰੀਨ ਕੈਲੀਬ੍ਰੇਸ਼ਨ, ਰੈਜ਼ੋਲੂਸ਼ਨ, ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਦਰ</string>
@@ -1430,7 +1434,7 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="op_display_motion_graphics_compensation_summary">ਗ੍ਰਾਫ਼ਿਕਸ, ਨਿਰਵਿਘਨ ਵੀਡੀਓ ਅਤੇ ਗੇਮ ਪ੍ਰਭਾਵ ਦੀ ਫ੍ਰੇਮ ਦਰ ਨੂੰ ਵਧਾਓ</string>
     <string name="op_dnd_summary">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ</string>
     <string name="op_enable_location_services">ਨੇੜਲੇ ਚਾਰਜਿੰਗ ਸਟੇਸ਼ਨਾਂ ਨੂੰ ਲੱਭਣ ਅਤੇ ਟਰੈਕ ਕਰਨ ਲਈ‚ ਕਿਰਪਾ ਕਰ ਕੇ ਸਥਾਨ ਲੱਭਣ ਵਾਲੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</string>
-    <string name="op_enable_text">ਸਮਰੱਥ ਕਰੋ</string>
+    <string name="op_enable_text">ਸਮਰੱਥ ਬਣਾਓ</string>
     <string name="op_face_unlock_set_unlock_password">ਚਿਹਰਾ ਅਨਲੌਕ + ਪਾਸਵਰਡ</string>
     <string name="op_face_unlock_set_unlock_pattern">ਚਿਹਰਾ ਅਨਲੌਕ + ਪੈਟਰਨ</string>
     <string name="op_face_unlock_set_unlock_pin">ਚਿਹਰਾ ਅਨਲੌਕ + PIN</string>
@@ -1558,6 +1562,8 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="prox_wake_title">"ਨੇੜੇ ਜਾਣ 'ਤੇ ਕਿਰਿਆਸ਼ੀਲ"</string>
     <string name="quick_unlock_summary">"ਸਮਰੱਥ ਕਰਨ 'ਤੇ, ਜਿਵੇਂ ਹੀ ਸਹੀ PIN ਜਾਂ ਪਾਸਵਰਡ ਦਾ ਮਿਲਾਨ ਹੋ ਜਾਂਦਾ ਹੈ, ਲੌਕਸਕ੍ਰੀਨ ਆਪਣੇ-ਆਪ ਅਨਲੌਕ ਹੋ ਜਾਵੇਗੀ।"</string>
     <string name="quick_unlock_title">ਤੁਰੰਤ ਅਨਲੌਕ</string>
+    <string name="raise_summary">ਕੀ ਬੋਰਡ ਨੂੰ ਹੇਠਾਂ ਤੋ ਉਪਰ ਤਕ ਉੱਪਰ ਤੱਕ ਚੁੱਕਿਆ ਜਾਵੇਗਾ ਅਤੇ ਸ਼ੌਰਟਕਟ ਕੀ ਡਿਸਪਲੇਅ ਕੀਤੀ ਜਾਵੇਗੀ</string>
+    <string name="raise_title">ਉਠਾਓ</string>
     <string name="reset_collect_diagnostics_summary">ਸਮੱਸਿਆ ਦਾ ਹੱਲ ਕਰਨ ਲਈ ਨਿਦਾਨਕ ਡੇਟਾ ਨੂੰ ਇਕੱਤਰ ਕਰੋ</string>
     <string name="reset_collect_diagnostics_title">ਨਿਦਾਨਕ ਡੇਟਾ ਨੂੰ ਇਕੱਤਰ ਕਰੋ</string>
     <string name="reset_system_settings_button_text">ਰੀਸੈਟ ਸੈਟਿੰਗਾਂ</string>
@@ -1587,7 +1593,7 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="saturation_option_title">ਰੰਗ ਸੰਤੁਲਨ</string>
     <string name="save_changes">ਬਦਲਾਅ ਸੁਰੱਖਿਅਤ ਕਰੋ</string>
     <string name="schedule_reminders">ਈਵੈਂਟ ਯਾਦ-ਦਹਾਨੀਆਂ</string>
-    <string name="screen_color_mode_advanced">ਆਧੁਨਿਕ</string>
+    <string name="screen_color_mode_advanced">ਉੱਨਤ</string>
     <string name="screen_color_mode_advanced_settings">ਆਧੁਨਿਕ ਸੈਟਿੰਗਾਂ</string>
     <string name="screen_color_mode_vivid">ਸਪਸ਼ਟ</string>
     <string name="search_network_extenders">ਨੈੱਟਵਰਕ ਵਿਸਤਾਰਕਾਂ ਨੂੰ ਖੋਜਿਆ ਜਾ ਰਿਹਾ ਹੈ</string>
@@ -1699,7 +1705,7 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="touchscreen_double_tap_to_wake_gesture_title">ਜਗਾਉਣ ਲਈ ਦੋ ਵਾਰ ਟੈਪ ਕਰੋ</string>
     <string name="touchscreen_flashlight_gesture_summary">ਫਲੈਸ਼ਲਾਈਟ ਟੌਗਲ ਕਰਨ ਲਈ V ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ</string>
     <string name="touchscreen_flashlight_gesture_title">ਫਲੈਸ਼ਲਾਈਟ ਟੌਗਲ ਕਰੋ</string>
-    <string name="touchscreen_music_gesture_summary">ਸੰਗੀਤ ਨੂੰ ਚਲਾਉਣ ਜਾਂ ਰੋਕਣ ਲਈ ਦੋ ਉਂਗਲੀਆਂ ਨਾਲ || ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ। ਪਿਛਲੇ ਜਾਂ ਅਗਲੇ ਲਈ &lt; ਜਾਂ > ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ</string>
+    <string name="touchscreen_music_gesture_summary">ਸੰਗੀਤ ਨੂੰ ਚਲਾਉਣ ਜਾਂ ਰੋਕਣ ਲਈ ਦੋ ਉਂਗਲੀਆਂ ਨਾਲ | ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ ‖ ਪਿਛਲੇ ਜਾਂ ਅਗਲੇ ਟਰੈਕ ਲਈ &lt; ਜਾਂ > ਦੀ ਆਕ੍ਰਿਤੀ ਬਣਾਓ</string>
     <string name="touchscreen_music_gesture_title">ਸੰਗੀਤ ’ਤੇ ਕੰਟਰੋਲ</string>
     <string name="traffic_auto_close_network">ਨੈੱਟਵਰਕ ਤੋਂ ਸਵੈ-ਡਿਸਕਨੈਕਟ ਕਰੋ</string>
     <string name="traffic_auto_close_network_keep_closed">ਅਣਡਿੱਠ ਕਰੋ</string>
@@ -1824,7 +1830,7 @@ Insight, ਜੋ OnePlus &amp; ਪਰਸਨਸ ਸਕੂਲ ਆਫ ਡਿਜ਼�
     <string name="wifi_wapi_cert_create_subdir">ਇੱਕ ਡਾਇਰੈਕਟਰੀ ਬਣਾਓ</string>
     <string name="wifi_wapi_cert_delet_subdir">ਸੂਟ ਪ੍ਰਮਾਣਪੱਤਰ ਚੁਣੋ</string>
     <string name="wifi_wapi_cert_install">WAPI ਪ੍ਰਮਾਣਪੱਤਰ ਸਥਾਪਤ ਕਰੋ</string>
-    <string name="wifi_wapi_cert_install_button">ਸਥਾਪਤ ਕਰੋ</string>
+    <string name="wifi_wapi_cert_install_button">ਸਥਾਪਿਤ ਕਰੋ</string>
     <string name="wifi_wapi_cert_mgmt_as_dont_exist">SD ਕਾਰਡ ਅਤੇ ਅੰਦਰੂਨੀ ਸਟੋਰੇਜ ਕੋਲ AS ਪ੍ਰਮਾਣਪੱਤਰ ਨਹੀਂ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸਦੀ ਜਾਂਚ ਕਰ ਲਵੋ!</string>
     <string name="wifi_wapi_cert_mgmt_as_format_is_wrong">AS ਪ੍ਰਮਾਣਪੱਤਰ ਦੀ ਵੰਨਗੀ ਗਲਤ ਹੈ! ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ AS ਪ੍ਰਮਾਣਪੱਤਰ ਸਥਾਪਤ ਕਰੋ</string>
     <string name="wifi_wapi_cert_mgmt_as_name_is_empty">ਕਿਰਪਾ ਕਰਕੇ AS ਪ੍ਰਮਾਣਪੱਤਰ ਨਾਮ ਦਾਖਲ ਕਰੋ</string>

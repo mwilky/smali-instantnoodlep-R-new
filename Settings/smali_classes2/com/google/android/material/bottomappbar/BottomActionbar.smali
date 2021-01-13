@@ -1358,7 +1358,7 @@
     :goto_0
     invoke-virtual {v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setInterpolation(F)V
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationY()F
 
@@ -1368,7 +1368,7 @@
 
     instance-of v1, v0, Landroid/widget/Button;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_5
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -1382,7 +1382,7 @@
 
     cmpl-float v1, v1, v2
 
-    if-lez v1, :cond_2
+    if-lez v1, :cond_4
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -1430,24 +1430,77 @@
 
     move-result v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v2
 
-    const-string v3, "maxwidth = "
+    const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v2, v3, :cond_2
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    const/4 v3, 0x0
 
-    move-result-object v2
+    :goto_2
+    if-eqz v3, :cond_3
 
-    const-string v3, "chenhb"
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v2
 
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lcom/google/android/material/R$dimen;->op_control_margin_screen_left3:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
+
+    move-result p0
+
+    div-int/lit8 p0, p0, 0x2
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr p0, v1
+
+    sub-int/2addr v2, p0
+
+    neg-int p0, v2
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
+
+    goto :goto_3
+
+    :cond_3
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v2
@@ -1498,26 +1551,26 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
 
-    goto :goto_2
-
-    :cond_2
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
+    goto :goto_3
 
     :cond_4
-    :goto_2
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-direct {p0}, Lcom/google/android/material/bottomappbar/BottomActionbar;->getFabTranslationX()F
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationX(F)V
+
+    :cond_6
+    :goto_3
     return-void
 .end method
 

@@ -3,7 +3,7 @@
 .source "AirplaneModeEnabler.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations
@@ -20,16 +20,12 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-.field final synthetic val$enabling:Z
-
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AirplaneModeEnabler;Z)V
+.method constructor <init>(Lcom/android/settings/AirplaneModeEnabler;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
-
-    iput-boolean p2, p0, Lcom/android/settings/AirplaneModeEnabler$3;->val$enabling:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,31 +34,50 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public onDismiss(Landroid/content/DialogInterface;)V
+    .locals 2
 
-    iget-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+    iget-object p1, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
 
-    invoke-static {p2}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+    invoke-static {p1}, Lcom/android/settings/AirplaneModeEnabler;->access$400(Lcom/android/settings/AirplaneModeEnabler;)Landroid/content/Context;
 
-    move-result-object p2
+    move-result-object p1
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    iget-object p2, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+    move-result-object p1
 
-    invoke-static {p2}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+    const-string v0, "airplane_mode_on"
 
-    move-result-object p2
+    const/4 v1, 0x0
 
-    iget-boolean p0, p0, Lcom/android/settings/AirplaneModeEnabler$3;->val$enabling:Z
+    invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    xor-int/lit8 p0, p0, 0x1
+    move-result p1
 
-    invoke-interface {p2, p0}, Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;->onAirplaneModeChanged(Z)V
+    iget-object v0, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+
+    invoke-static {v0}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/android/settings/AirplaneModeEnabler$3;->this$0:Lcom/android/settings/AirplaneModeEnabler;
+
+    invoke-static {p0}, Lcom/android/settings/AirplaneModeEnabler;->access$300(Lcom/android/settings/AirplaneModeEnabler;)Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
+
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    move v1, v0
 
     :cond_0
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-interface {p0, v1}, Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;->onAirplaneModeChanged(Z)V
 
+    :cond_1
     return-void
 .end method

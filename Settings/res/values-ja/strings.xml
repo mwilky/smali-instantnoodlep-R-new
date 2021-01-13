@@ -2246,8 +2246,12 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="help_feedback_label">ヘルプとフィードバック</string>
     <string name="help_label">ヘルプとフィードバック</string>
     <string name="hide_extra_apps">アプリの使用状況を表示</string>
+    <string name="hide_imeback_and_switcher">キーボードの高さ調節</string>
+    <string name="hide_imeback_and_switcher_warning">全画面ジェスチャーでは、キーボードの高さ調節を利用できます。</string>
     <string name="hide_silent_icons_summary">通知音なしの通知のアイコンはステータスバーに表示されません</string>
     <string name="hide_silent_icons_title">通知音なしの通知でアイコンを非表示にする</string>
+    <string name="hide_summary">キーボードの下部にあるショートカットバーは非表示になります</string>
+    <string name="hide_title">隠す</string>
     <string name="high_label">高</string>
     <string name="high_power_app_text_nomal">%1$s バッテリーを消耗しています</string>
     <string name="high_power_app_text_red">%1$s バッテリーを大量に消耗しています</string>
@@ -3674,10 +3678,10 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">ナビゲーションジェスチャー（画面下）</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">ナビゲーションジェスチャー（左と右）</string>
     <string name="oneplus_gesture_of_answer_call_info">着信通話の際、耳の所まで携帯電話を持ち上げて応答することができます。</string>
-    <string name="oneplus_gesture_of_answer_call_summary">携帯電話を耳元まで持ち上げると自動的に着信に応答します</string>
+    <string name="oneplus_gesture_of_answer_call_summary">耳の所まで携帯電話を持ち上げると自動的に着信に応答する</string>
     <string name="oneplus_gesture_of_answer_call_title">ジェスチャーで着信に応答する</string>
     <string name="oneplus_gesture_start_learning">学習を開始</string>
-    <string name="oneplus_gesture_to_answer_summary">携帯電話を耳元まで持ち上げると自動的に着信に応答します</string>
+    <string name="oneplus_gesture_to_answer_summary">耳の所まで携帯電話を持ち上げると自動的に着信に応答する</string>
     <string name="oneplus_gesture_to_answer_title">持ち上げて応答</string>
     <string name="oneplus_gesture_to_control_call_info">携帯電話を耳元まで持ち上げることで、通話を自動的に制御します</string>
     <string name="oneplus_gesture_to_control_calls_summary">ジェスチャーによって、自動的に着信に応答したり、通話を携帯電話の受話口に切り替えたりします</string>
@@ -3757,7 +3761,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_legal_summary">プライバシーポリシー、規約など</string>
     <string name="oneplus_levels">レベル</string>
     <string name="oneplus_lift_up_display">常に表示、または持ち上げた際に表示</string>
-    <string name="oneplus_light">明るい</string>
+    <string name="oneplus_light">弱く</string>
     <string name="oneplus_local_ringtone">内部ストレージからの着信音</string>
     <string name="oneplus_location_information">位置情報に基づいたサービスの説明</string>
     <string name="oneplus_lock_after_timeout">スリープの後に自動的にロック</string>
@@ -3854,7 +3858,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_notification_advance_settings">詳細通知設定</string>
     <string name="oneplus_notification_alert_title">重要</string>
     <string name="oneplus_notification_channel_summary_low">重要性の低い通知は、サウンドまたはバイブを使用しません</string>
-    <string name="oneplus_notification_dialog_never_mode">通知しない</string>
+    <string name="oneplus_notification_dialog_never_mode">なし</string>
     <string name="oneplus_notification_dialog_ringtone">通知着信音</string>
     <string name="oneplus_notification_dialog_ringtone_mode">着信音モードでのみ</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">常時</string>
@@ -4226,7 +4230,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_theme_tone">トーン</string>
     <string name="oneplus_theme_tone_effect_color">カラフル</string>
     <string name="oneplus_theme_tone_effect_dark">暗い</string>
-    <string name="oneplus_theme_tone_effect_light">明るい</string>
+    <string name="oneplus_theme_tone_effect_light">弱く</string>
     <string name="oneplus_theme_tone_effect_title">トーンを選択</string>
     <string name="oneplus_theme_wallpaper">壁紙</string>
     <string name="oneplus_three_screenshots_enable_summary">スクリーンショットを撮るには、画面を 3 本の指でスワイプします</string>
@@ -4335,7 +4339,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="onplus_hardware_version_info">ハードウェアバージョン</string>
     <string name="onplus_software_version_info">ソフトウェアバージョン</string>
     <string name="onscreen_keyboard_settings_summary">画面キーボードを設定する</string>
-    <string name="op_advanced_settings">詳細</string>
+    <string name="op_advanced_settings">詳細設定</string>
     <string name="op_already_know">了解</string>
     <string name="op_android_mode_cannot_change_color_accent">既定のテーマではシステム色のテーマのみを使用できます</string>
     <string name="op_aod_parsons_info_button">Ok</string>
@@ -4384,7 +4388,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_data_vowlan_enable_summary">利用可能な場合に Wi-Fi 通話を使用します</string>
     <string name="op_default_apps_summary">ホーム、ブラウザ</string>
     <string name="op_default_luncher_title">ホームアプリ</string>
-    <string name="op_display_advanced_settings">詳細</string>
+    <string name="op_display_advanced_settings">詳細設定</string>
     <string name="op_display_advanced_settings_summary_1">画面のキャリブレーション、解像度、リフレッシュレート、ノッチ設定</string>
     <string name="op_display_advanced_settings_summary_2">画面のキャリブレーション、リフレッシュレート、ノッチ設定</string>
     <string name="op_display_advanced_settings_summary_3">画面のキャリブレーション、解像度、リフレッシュレート</string>
@@ -4812,6 +4816,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="radio_info_http_client_test">HTTP クライアント テスト:</string>
     <string name="radio_info_ping_hostname_v4">ホスト名（www.google.com）の ping（IPv4）:</string>
     <string name="radio_info_ping_hostname_v6">ホスト名（www.google.com）の ping（IPv6）:</string>
+    <string name="raise_summary">キーボードが最下部から上に移動し、ショートカットキーが表示されます</string>
+    <string name="raise_title">上に移動</string>
     <string name="rarely_running">たまに実行（%s）</string>
     <string name="really_remove_account_message">このアカウントを削除すると、メール、連絡先などのすべてのデータもモバイル デバイスから削除されます。</string>
     <string name="really_remove_account_title">アカウントを削除しますか？</string>
@@ -4887,7 +4893,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="restr_pin_enter_admin_pin">管理者 PIN の入力</string>
     <string name="restrict_background_blacklisted">バックグラウンド データは無効になっています</string>
     <string name="restrict_background_uss_always">常時</string>
-    <string name="restrict_background_uss_never">通知しない</string>
+    <string name="restrict_background_uss_never">なし</string>
     <string name="restrict_background_uss_roaming">ローミング中のみ</string>
     <string name="restrict_background_uss_title">バックグラウンドデータを制限</string>
     <string name="restricted_app_detail_footer">このアプリがバックグラウンドで電池を使用していました。制限したアプリは正常に動作しないことがあります。また、通知が遅れる可能性もあります。</string>
@@ -4978,7 +4984,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="scanning_status_text_wifi_on_ble_off">Wi‑Fi スキャンが ON、Bluetooth スキャンが OFF です</string>
     <string name="scanning_status_text_wifi_on_ble_on">Wi‑Fi と Bluetooth の両方のスキャンが ON です</string>
     <string name="schedule_reminders">イベントのリマインダー</string>
-    <string name="screen_color_mode_advanced">詳細</string>
+    <string name="screen_color_mode_advanced">詳細設定</string>
     <string name="screen_color_mode_advanced_settings">詳細設定</string>
     <string name="screen_color_mode_vivid">鮮明</string>
     <string name="screen_compatibility_label">画面の互換性</string>
@@ -5874,7 +5880,7 @@ PINが正しくない可能性があります。"</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">ダブルタップでスリープ解除</string>
     <string name="touchscreen_flashlight_gesture_summary">V字を描いてフラッシュをオン</string>
     <string name="touchscreen_flashlight_gesture_title">フラッシュをオン</string>
-    <string name="touchscreen_music_gesture_summary">音楽を再生または一時停止するには || を2本の指で描きます。 前後のトラックに移動するには &lt; または > を描きます</string>
+    <string name="touchscreen_music_gesture_summary">音楽を再生または一時停止するには ‖ を2本の指で描きます。 前後のトラックに移動するには &lt; または > を描きます</string>
     <string name="touchscreen_music_gesture_title">音楽コントロール</string>
     <string name="track_frame_time">HWUI レンダリングのプロファイル作成</string>
     <string name="track_frame_time_keywords">GPU</string>

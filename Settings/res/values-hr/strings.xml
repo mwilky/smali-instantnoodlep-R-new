@@ -2224,7 +2224,7 @@ Kada uključite automatsku izradu sigurnosnih kopija, podaci uređaja i aplikaci
     <string name="hardware_keys_action_nothing">Nema radnje</string>
     <string name="hardware_keys_action_notification_center">Otvaranje/zatvaranje centra za obavijesti</string>
     <string name="hardware_keys_action_recents">Nedavno</string>
-    <string name="hardware_keys_action_shelf">Otvori policu</string>
+    <string name="hardware_keys_action_shelf">Otvori Shelf</string>
     <string name="hardware_keys_action_turn_off_screen">Isključivanje zaslona</string>
     <string name="hardware_keys_action_voice_search">Glasovno pretraživanje</string>
     <string name="hardware_keys_back_key_title">Gumb za povratak</string>
@@ -2246,8 +2246,12 @@ Kada uključite automatsku izradu sigurnosnih kopija, podaci uređaja i aplikaci
     <string name="help_feedback_label">Pomoć i povratne informacije</string>
     <string name="help_label">Pomoć/povratne inf.</string>
     <string name="hide_extra_apps">Prikaži potrošnju aplikacija</string>
+    <string name="hide_imeback_and_switcher">Podešavanje visine tipkovnice</string>
+    <string name="hide_imeback_and_switcher_warning">Podešavanje visine tipkovnice vidljivo će biti pri gestama preko cijelog zaslona.</string>
     <string name="hide_silent_icons_summary">Ikone iz neupadljivih obavijesti ne prikazuju se na traci statusa</string>
     <string name="hide_silent_icons_title">Sakrij ikone iz neupadljivih obavijesti</string>
+    <string name="hide_summary">Sakrit će se traka s prečacima na dnu tipkovnice</string>
+    <string name="hide_title">Sakrij</string>
     <string name="high_label">Visoka</string>
     <string name="high_power_app_text_nomal">%1$s prazni vašu bateriju</string>
     <string name="high_power_app_text_red">%1$s brzo prazni vašu bateriju</string>
@@ -3420,7 +3424,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne uznemirava
     <string name="oneplus_clear_intenal_storage_data_summary">Uključujući glazbu, fotografije, videozapise i druge osobne podatke</string>
     <string name="oneplus_clear_intenal_storage_data_title">Izbrisati internu memoriju</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Šareni ton može koristiti samo tematsku boju sustava</string>
-    <string name="oneplus_colorful_mode_title">Šareno</string>
+    <string name="oneplus_colorful_mode_title">Šarena</string>
     <string name="oneplus_compatibility_mode_summary">Aplikacije za cijeli zaslon ne mogu upotrebljavati područje poluotoka</string>
     <string name="oneplus_compatibility_mode_title">Način kompatibilnosti</string>
     <string name="oneplus_condition_airplane_mode_turn_off">ISKLJUČI ZRAKOPLOVNI NAČIN</string>
@@ -3577,7 +3581,7 @@ Pozor: otključavanje licem manje je sigurno od otiska prsta ili lozinke"</strin
     <string name="oneplus_fingerprint_findsendor_tilte">Kako upotrebljavati otisak prsta</string>
     <string name="oneplus_fingerprint_functional_declaration">Deklaracija funkcije otiska prsta</string>
     <string name="oneplus_fingerprint_gesture_camera_summary">Na zaslonu tražila dugo pritisnite senzor otiska prsta kako biste snimili fotografiju</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Dugo pritisnite za snimanje fotografije</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Dugi pritisak za snimanje fotografije</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gesta otiska prsta</string>
     <string name="oneplus_fingerprint_hardware_exception">Podaci o opremi za otisak prsta nisu precizni, obratite se službi za korisnike</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Dugo pritisnite senzor otiska prsta za pokretanje brzog plaćanja</string>
@@ -3756,7 +3760,7 @@ Napomena: otisak prsta može biti manje siguran od jakog uzorka ili PIN-a"</stri
     <string name="oneplus_legal_summary">Pravilnik o zaštiti privatnosti, sporazumi itd.</string>
     <string name="oneplus_levels">Razine</string>
     <string name="oneplus_lift_up_display">Uvijek aktivan zaslon ili uključivanje podizanjem</string>
-    <string name="oneplus_light">Svijetlo</string>
+    <string name="oneplus_light">Lagano</string>
     <string name="oneplus_local_ringtone">Zvuk zvona iz unutarnje pohrane</string>
     <string name="oneplus_location_information">Opis usluga temeljenih na lokaciji</string>
     <string name="oneplus_lock_after_timeout">Automatski zaključaj poslije mirovanja</string>
@@ -4223,9 +4227,9 @@ Napomena:
     <string name="oneplus_theme_shape_effect_title">Odabir oblik</string>
     <string name="oneplus_theme_system_customization">PRILAGODBA SUSTAVA</string>
     <string name="oneplus_theme_tone">Ton</string>
-    <string name="oneplus_theme_tone_effect_color">Šareno</string>
+    <string name="oneplus_theme_tone_effect_color">Šarena</string>
     <string name="oneplus_theme_tone_effect_dark">Tamno</string>
-    <string name="oneplus_theme_tone_effect_light">Svijetlo</string>
+    <string name="oneplus_theme_tone_effect_light">Lagano</string>
     <string name="oneplus_theme_tone_effect_title">Odaberite zvuk</string>
     <string name="oneplus_theme_wallpaper">Pozadine</string>
     <string name="oneplus_three_screenshots_enable_summary">S tri prsta prijeđite po zaslonu kako biste napravili snimku zaslona</string>
@@ -4811,6 +4815,8 @@ Otključavanje otiskom prsta možda nije kompatibilno sa zaštitama zaslona tre�
     <string name="radio_info_http_client_test">Test HTTP klijenta:</string>
     <string name="radio_info_ping_hostname_v4">Pinganje naziva hosta (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Pinganje naziva hosta (www.google.com) IPv6:</string>
+    <string name="raise_summary">Podignut će se tipkovnica s dna i prikazat će se tipka prečaca</string>
+    <string name="raise_title">Podigni</string>
     <string name="rarely_running">Rijetko se izvodi (%s)</string>
     <string name="really_remove_account_message">Uklanjanjem ovog računa izbrisat će se sve njegove poruke, kontakti i ostali podaci s telefona!</string>
     <string name="really_remove_account_title">Ukloniti račun?</string>
@@ -5873,7 +5879,7 @@ Googleov pristup sinkronizaciji podataka za mogućnost pristupa kontaktima, sast
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dvostruki dodir za buđenje</string>
     <string name="touchscreen_flashlight_gesture_summary">Nacrtajte V za uklj./isklj. svjetiljke</string>
     <string name="touchscreen_flashlight_gesture_title">Uklj./isklj. svjetiljke</string>
-    <string name="touchscreen_music_gesture_summary">Nacrtajte|| pomoću dva prsta za reprodukciju ili pauziranje glazbe. Nacrtajte &lt; ili > za prethodnu ili sljedeću pjesmu</string>
+    <string name="touchscreen_music_gesture_summary">Nacrtajte ‖ dvama prstima za reprodukciju ili pauziranje glazbe. Nacrtajte &lt; ili > za prethodnu ili sljedeću pjesmu</string>
     <string name="touchscreen_music_gesture_title">Kontrola glazbe</string>
     <string name="track_frame_time">Profil HWUI generiranja</string>
     <string name="track_frame_time_keywords">GPU</string>

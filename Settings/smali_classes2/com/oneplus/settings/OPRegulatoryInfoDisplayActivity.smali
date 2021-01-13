@@ -1245,6 +1245,27 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_model_19811_for_us:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->mRegulatoryInfoCanadaCan:Landroid/widget/TextView;
+
+    sget v1, Lcom/android/settings/R$string;->oneplus_regulatory_info_canada_can_cnr:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    :cond_0
     invoke-direct {p0}, Lcom/oneplus/settings/OPRegulatoryInfoDisplayActivity;->setCanadaIC()V
 
     return-void

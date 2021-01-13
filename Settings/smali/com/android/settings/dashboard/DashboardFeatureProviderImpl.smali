@@ -1260,6 +1260,8 @@
 
     if-eqz v0, :cond_c
 
+    if-eqz p1, :cond_c
+
     invoke-virtual {p1}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v0

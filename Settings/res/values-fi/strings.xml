@@ -2246,8 +2246,12 @@ Kun otat automaattisen varmuuskopioinnin käyttöön, laitteen ja sovellusten ti
     <string name="help_feedback_label">Ohje ja palaute</string>
     <string name="help_label">Ohjeet ja palaute</string>
     <string name="hide_extra_apps">Näytä sovelluksen käyttö</string>
+    <string name="hide_imeback_and_switcher">Näppäimistön korkeuden säätö</string>
+    <string name="hide_imeback_and_switcher_warning">Näppäimistön korkeuden säätö näkyy selvimmin käytettäessä eleitä kokonäyttötilassa.</string>
     <string name="hide_silent_icons_summary">Varovaisten ilmoitusten kuvakkeita ei näytetä tilapalkissa.</string>
     <string name="hide_silent_icons_title">Piilota varovaisten ilmoitusten kuvakkeet</string>
+    <string name="hide_summary">Näppäimistön alaosan pikavalintapalkki piilotetaan</string>
+    <string name="hide_title">Piilota</string>
     <string name="high_label">Korkea</string>
     <string name="high_power_app_text_nomal">%1$s kuluttaa akkua</string>
     <string name="high_power_app_text_red">%1$s kuluttaa akkua paljon</string>
@@ -3673,10 +3677,10 @@ Voit siirtyä aloitusnäyttöön milloin vain pyyhkäisemällä näytön alareun
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Navigointieleet (alalaita)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Navigointieleet (vasen ja oikea)</string>
     <string name="oneplus_gesture_of_answer_call_info">Voit vastata soittoon nostamalla puhelimen korvalle.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Vastaa puheluihin automaattisesti nostamalla puhelin korvalle</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Vastaa soittoihin automaattisesti nostamalla puhelin korvalle</string>
     <string name="oneplus_gesture_of_answer_call_title">Vastaa soittoihin eleellä</string>
     <string name="oneplus_gesture_start_learning">Aloita opiskelu</string>
-    <string name="oneplus_gesture_to_answer_summary">Vastaa puheluihin automaattisesti nostamalla puhelin korvalle</string>
+    <string name="oneplus_gesture_to_answer_summary">Vastaa soittoihin automaattisesti nostamalla puhelin korvalle</string>
     <string name="oneplus_gesture_to_answer_title">Vastaa nostamalla</string>
     <string name="oneplus_gesture_to_control_call_info">Hallitse puheluita automaattisesti nostamalla puhelin korvallesi</string>
     <string name="oneplus_gesture_to_control_calls_summary">Vastaa puheluihin automaattisesti tai vaihda kuulokkeeseen eleellä</string>
@@ -3756,7 +3760,7 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_legal_summary">Tietosuojakäytäntö, sopimukset jne.</string>
     <string name="oneplus_levels">Tasot</string>
     <string name="oneplus_lift_up_display">Aina päällä oleva näyttö tai nostonäyttö</string>
-    <string name="oneplus_light">Valoisa</string>
+    <string name="oneplus_light">Kevyt</string>
     <string name="oneplus_local_ringtone">Soittoääni sisäisestä tallennustilasta</string>
     <string name="oneplus_location_information">Sijaintipohjaisten palveluiden kuvaus</string>
     <string name="oneplus_lock_after_timeout">Lukitse automaattisesti lepotilan jälkeen</string>
@@ -3876,7 +3880,7 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_notifications_sound">Ilmoitusten ääni</string>
     <string name="oneplus_o2_contributors">OxygenOS:n tukijat</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Käynnistä mukautettuna ajankohtana</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">Ajoitus</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">Aikataulu</string>
     <string name="oneplus_open_bed_time_mode_summary">Voit ottaa nukkumaanmenoaika-tilan käyttöön manuaalisesti</string>
     <string name="oneplus_open_bed_time_mode_title">Nukkumaanmenoaika-tila</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Vahvista</string>
@@ -3922,7 +3926,7 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_preference_settings_turn_on">Ota Ei saa häiritä -tila käyttöön</string>
     <string name="oneplus_preference_settings_turn_on_time">Mistä</string>
     <string name="oneplus_prior_to_use_you_need_to">Ennen käyttöä sinun täytyy:</string>
-    <string name="oneplus_privacy_policy">Yksityisyyden suoja</string>
+    <string name="oneplus_privacy_policy">Tietosuojakäytäntö</string>
     <string name="oneplus_privacy_protection_title">Salattu tila</string>
     <string name="oneplus_product_info_introduce">Laitteen tiedot ja takuukortti</string>
     <string name="oneplus_product_info_summary">Takuukortti, valmiiksi asennettujen luettelo</string>
@@ -4012,7 +4016,7 @@ Huomaa: Sormenjälki ei saata olla niin turvallinen kuin kuvio tai PIN-koodi"</s
     <string name="oneplus_rotation_silent_enable_summary">Mykistä saapuva puhelu kääntämällä laitetta</string>
     <string name="oneplus_rotation_silent_enable_title">Mykistä kääntämällä</string>
     <string name="oneplus_scene_mode">NÄKYMÄT</string>
-    <string name="oneplus_schedule">Ajoitus</string>
+    <string name="oneplus_schedule">Aikataulu</string>
     <string name="oneplus_screen">NÄYTTÖ</string>
     <string name="oneplus_screen_better_cold">Kylmä</string>
     <string name="oneplus_screen_better_nature">Luonnollinen</string>
@@ -4225,7 +4229,7 @@ Huomaa:
     <string name="oneplus_theme_tone">Värisävy</string>
     <string name="oneplus_theme_tone_effect_color">Värikäs</string>
     <string name="oneplus_theme_tone_effect_dark">Pimeä</string>
-    <string name="oneplus_theme_tone_effect_light">Valoisa</string>
+    <string name="oneplus_theme_tone_effect_light">Kevyt</string>
     <string name="oneplus_theme_tone_effect_title">Valitse sävy</string>
     <string name="oneplus_theme_wallpaper">Taustakuvat</string>
     <string name="oneplus_three_screenshots_enable_summary">Ota kuvakaappaus pyyhkäisemällä näyttöä kolmella sormella</string>
@@ -4811,6 +4815,8 @@ Eri valmistajien näytönsuojakalvot eivät ehkä toimi sormenjälkitunnistuksen
     <string name="radio_info_http_client_test">HTTP-asiakastesti:</string>
     <string name="radio_info_ping_hostname_v4">Ping-kutsu isäntänimelle (www.google.com), IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping-kutsu isäntänimelle (www.google.com), IPv6:</string>
+    <string name="raise_summary">Näppäimistöä nostetaan ja pikapainike näytetään</string>
+    <string name="raise_title">Nosta</string>
     <string name="rarely_running">Harvoin käynnissä (%s)</string>
     <string name="really_remove_account_message">Poistamalla tämän tilin poistat kaikki sen viestit, yhteystiedot ja muut tiedot puhelimesta.</string>
     <string name="really_remove_account_title">Poistetaanko tili?</string>
@@ -5873,7 +5879,7 @@ Se on Googlen tapa synkronoida tietoja, ja sen avulla voit käyttää yhteystiet
     <string name="touchscreen_double_tap_to_wake_gesture_title">Herätys kaksoisnapautuksella</string>
     <string name="touchscreen_flashlight_gesture_summary">"Piirrä 'V' avataksesi taskulampun"</string>
     <string name="touchscreen_flashlight_gesture_title">Käynnistä taskulamppu</string>
-    <string name="touchscreen_music_gesture_summary">Piirrä || kahdella sormella toistaaksesi tai keskeyttääksesi musiikkia. Piirrä &lt; tai > vaihtaaksesi kappaleen</string>
+    <string name="touchscreen_music_gesture_summary">Toista musiikkia tai keskeytä toisto piirtämällä || kahdella sormella. Siirry edelliseen tai seuraavaan kappaleeseen piirtämällä &lt; tai >.</string>
     <string name="touchscreen_music_gesture_title">Musiikin hallinta</string>
     <string name="track_frame_time">HWUI-profiilirenderöinti</string>
     <string name="track_frame_time_keywords">Grafiikkasuoritin</string>
@@ -6279,7 +6285,7 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</stri
     <string name="verify_apps_over_usb_title">Tarkista USB:n kautta asennetut</string>
     <string name="verizon_store_demo_mode_hint">Syötä salasana</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Mobiili-hotspotin asetusten muuttaminen katkaisee mobiili-hotspotiin yhdistettyjen laitteiden yhteyden.</string>
+    <string name="verizon_wifi_tether_band_warning">Mobiili-hotspotin asetusten muuttaminen katkaisee katkaisee mobiili-hotspotiin yhdistettyjen laitteiden yhteyden.</string>
     <string name="version_text">versio %1$s</string>
     <string name="vibrate_in_silent_title">Käytä värinää äänettömässä tilassa</string>
     <string name="vibrate_input_devices">Uudelleenohjaa värinä</string>

@@ -258,7 +258,11 @@
     <string name="hardware_keys_home_key_title">હોમ બટન</string>
     <string name="hardware_keys_long_press_title">લાંબુ દબાવો ક્રિયા</string>
     <string name="hardware_keys_menu_key_title">તાજેતરના બટન</string>
-    <string name="header_category_custom">વૈવિધ્યપણું</string>
+    <string name="header_category_custom">કસ્ટમાઇઝેશન</string>
+    <string name="hide_imeback_and_switcher">કીબોર્ડ હાઇટની ગોઠવણી</string>
+    <string name="hide_imeback_and_switcher_warning">કીબોર્ડની ઊંચાઈનું એડજેસ્ટમેન્ટ ફુલ-સ્ક્રીન ચેષ્ટાઓમાં દેખાશે.</string>
+    <string name="hide_summary">કીબોર્ડના તળિયે ટૂંકાણ પટ્ટી છુપાયેલ હશે</string>
+    <string name="hide_title">છુપાઓ</string>
     <string name="high_power_app_text_nomal">%1$s તમારી બેટરી ખાલી કરી રહ્યું છે</string>
     <string name="high_power_app_text_red">%1$s તમારી બેટરી ખુબજ ખાલી કરી રહ્યું છે</string>
     <string name="hint_data_used_alert">ડેટા વપરાશ %1$s થી વધી ગયો છે</string>
@@ -816,7 +820,7 @@
     <string name="oneplus_memc_more_support_apps">વધુ સપોર્ટેડ એપ્લિકેશન</string>
     <string name="oneplus_memc_notice">આ મોડમાં, વિડિયો ફ્રેમ રેટ વધારવામાં આવશે, ગ્રાફિક્સની ગતિ અસ્પષ્ટતાને ઘટાડીને, તેને સ્પષ્ટ અને સરળ બનાવશે. ફક્ત પૂર્ણ સ્ક્રીન પ્લેબેક દરમિયાન અસરકારક.</string>
     <string name="oneplus_memc_open">ચાલુ</string>
-    <string name="oneplus_memc_support_apps">સપોર્ટેડ એપ્લિકેશન</string>
+    <string name="oneplus_memc_support_apps">સપોર્ટેડ એપ્સ</string>
     <string name="oneplus_memc_support_no_apps">કોઈ સપોર્ટેડ એપ્લિકેશન ઇન્સ્ટોલ કરેલ નથી</string>
     <string name="oneplus_memc_video">ગતિ ગ્રાફિક સુગમતા</string>
     <string name="oneplus_memc_video_effect">વળતર પ્રભાવ</string>
@@ -833,7 +837,7 @@
     <string name="oneplus_more">વધુ</string>
     <string name="oneplus_motion_sensor_settings_title">સિસ્ટમ હાવભાવ</string>
     <string name="oneplus_multi_app">સમાંતર એપ્સ</string>
-    <string name="oneplus_multi_app_disable_apps">સપોર્ટેડ એપ્લિકેશન</string>
+    <string name="oneplus_multi_app_disable_apps">સપોર્ટેડ એપ્સ</string>
     <string name="oneplus_multi_app_disable_tips">સમાંતર એપમાંના તમામ ડેટાને નિષ્ક્રિય કરવા પર દૂર કરવામાં આવશે. શું તમે ચાલુ રાખવા માગો છો?</string>
     <string name="oneplus_multi_app_enable_apps">સક્ષમ એપ્સ</string>
     <string name="oneplus_multi_app_init">લોડ કરી રહ્યું છે...</string>
@@ -908,7 +912,7 @@
     <string name="oneplus_notifications_sound">સૂચના અવાજ</string>
     <string name="oneplus_o2_contributors">OxygenOS સહયોગકર્તાઓ</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">કસ્ટમ ટાઈમ રેન્જને ચાલુ કરો</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">અનુસૂચિ તૈયાર કરવી</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">શેડ્યૂલ</string>
     <string name="oneplus_open_bed_time_mode_summary">બેડટાઈમ મોડને તમે જાતે ચાલુ કરી શકો છો</string>
     <string name="oneplus_open_bed_time_mode_title">સૂવાનો સમયનો મોડ</string>
     <string name="oneplus_opfinger_input_completed_comfirm">પુષ્ટિ કરો</string>
@@ -1044,7 +1048,7 @@
     <string name="oneplus_rotation_silent_enable_summary">ઇનકમિંગ કોલને મ્યુટ કરવા માટે ફ્લીપ કરો</string>
     <string name="oneplus_rotation_silent_enable_title">મ્યુટ કરવા માટે ફ્લીપ કરો</string>
     <string name="oneplus_scene_mode">દૃશ્યો</string>
-    <string name="oneplus_schedule">અનુસૂચિ તૈયાર કરવી</string>
+    <string name="oneplus_schedule">શેડ્યૂલ</string>
     <string name="oneplus_screen">સ્ક્રીન</string>
     <string name="oneplus_screen_better_cold">ઠંડુ</string>
     <string name="oneplus_screen_better_nature">કુદરતી</string>
@@ -1201,7 +1205,7 @@
     <string name="oneplus_support_apps">સમર્થિત એપ્લિકેશનો</string>
     <string name="oneplus_support_summary">ઉપકરણના વપરાશ પર ટિપ્સ અને વારંવાર પુછાતા પ્રશ્નો</string>
     <string name="oneplus_support_title">ટિપ્સ &amp; આધાર</string>
-    <string name="oneplus_supported_apps">સપોર્ટેડ એપ્લિકેશન</string>
+    <string name="oneplus_supported_apps">સપોર્ટેડ એપ્સ</string>
     <string name="oneplus_suspension_notice">હેડ્સ અપ</string>
     <string name="oneplus_suspension_notice_summary">હેડ્સ અપ સૂચના બતાવવા માટે એપ્લિકેશનને મંજૂરી આપો</string>
     <string name="oneplus_switch">OnePlus સ્વિચ</string>
@@ -1233,7 +1237,7 @@
     <string name="oneplus_theme_drop_summary">ફેરફારોને રદ્દ કરીએ?</string>
     <string name="oneplus_theme_drop_title">એડિટ મોડમાંથી બહાર નિકળો</string>
     <string name="oneplus_theme_entrance_summary">વૉલપેપરો, એક્સેન્ટ રંગ, ફોન્ટ, ટોન</string>
-    <string name="oneplus_theme_entrance_title">વૈવિધ્યપણું</string>
+    <string name="oneplus_theme_entrance_title">કસ્ટમાઇઝેશન</string>
     <string name="oneplus_theme_fingerprint">ફિંગરપ્રિન્ટ એનિમેશન</string>
     <string name="oneplus_theme_fingerprint_snake_action">ફિંગરપ્રિન્ટ ચાલુ કરો</string>
     <string name="oneplus_theme_fingerprint_snake_tip">જ્યારે ફિંગરપ્રિન્ટની સુવિધા ચાલુ હોય, ત્યારે આ સુવિધા ઉપલબ્ધ હશે</string>
@@ -1429,7 +1433,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_display_motion_graphics_compensation_summary">ગ્રાફિક્સ, સુગમ વિડિયો અને ગેમ પ્રભાવોના ફ્રેમ રેટમાં વધારો</string>
     <string name="op_dnd_summary">પરેશાન ન કરો</string>
     <string name="op_enable_location_services">નજીકના ચાર્જિંગ સ્ટેશન શોધવા અને ટ્રૅક કરવાં માટે, કૃપા કરીને સ્થાન સેવાઓ સક્ષમ કરો</string>
-    <string name="op_enable_text">સક્ષમ કરો</string>
+    <string name="op_enable_text">સક્રિય કરો</string>
     <string name="op_face_unlock_set_unlock_password">ફેસ અનલૉક + પાસવર્ડ</string>
     <string name="op_face_unlock_set_unlock_pattern">ફેસ અનલૉક + પેટર્ન</string>
     <string name="op_face_unlock_set_unlock_pin">ફેસ અનલૉક + PIN</string>
@@ -1445,7 +1449,7 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="op_fragment">નાની</string>
     <string name="op_gamespace">Game Space</string>
     <string name="op_global_drak_mode_apps_manage">એપ્લિકેશન્સને ડાર્ક મોડમાં સંચાલિત કરો</string>
-    <string name="op_global_drak_mode_full_support_list">સપોર્ટેડ એપ્લિકેશન</string>
+    <string name="op_global_drak_mode_full_support_list">સપોર્ટેડ એપ્સ</string>
     <string name="op_global_drak_mode_not_full_support_list">બિનસમર્થિત એપ્સ</string>
     <string name="op_global_drak_mode_support_description">જે એપ્લિકેશન્સ આધારભૂત નથી તે ડાર્ક મોડમાં યોગ્ય રીતે કામ કરી શકે નહિં</string>
     <string name="op_gps_off_warn_msg">કૃપા કરીને પ્રથમ સ્થાન મોડ ચાલુ કરો</string>
@@ -1557,6 +1561,8 @@ IOnePlus &amp; દ્વારા એકસાથે સમજણ, ડિઝા�
     <string name="prox_wake_title">નજીક આવવા પર સક્રિય</string>
     <string name="quick_unlock_summary">જ્યારે સક્રિય હોય, લોક સ્ક્રીન સાચો PIN અથવા પાસવર્ડ મળતાંજ આપોઆપ જલદી અનલૉક થઇ જશે.</string>
     <string name="quick_unlock_title">ઝડપી અનલોક</string>
+    <string name="raise_summary">કીબોર્ડ તળિયેથી ઉપર ઉઠાવવામાં આવશે અને ટૂંકાણ કી પ્રદર્શિત કરવામાં આવશે</string>
+    <string name="raise_title">વધારો</string>
     <string name="reset_collect_diagnostics_summary">સમસ્યાનિવારણ માટે નિદાનનો ડેટા એકત્રિત કરો</string>
     <string name="reset_collect_diagnostics_title">નિદાનો એકત્રિત કરો</string>
     <string name="reset_system_settings_button_text">સેટિંગ રીસેટ કરો</string>

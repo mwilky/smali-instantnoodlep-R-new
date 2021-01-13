@@ -350,7 +350,7 @@ L'amministratore ha la possibilità di monitorare e gestire impostazioni, access
     <string name="advanced_battery_graph_subtext">La stima della batteria residua si basa sul tuo utilizzo del dispositivo</string>
     <string name="advanced_battery_title">Utilizzo batteria</string>
     <string name="advanced_calling_summary">Voce HD, videochiamata</string>
-    <string name="advanced_calling_title">Chiamate avanzate</string>
+    <string name="advanced_calling_title">Chiamata avanzata</string>
     <string name="advanced_reboot_summary">Allo sblocco, la funzione di avvio ti consentirà di riavviare normalmente, in recovery o in fastboot</string>
     <string name="advanced_reboot_title">Riavvio avanzato</string>
     <string name="advanced_section_header">Avanzate</string>
@@ -2246,8 +2246,12 @@ Quando attivi il backup automatico, i dati del dispositivo e delle app vengono s
     <string name="help_feedback_label">Guida e feedback</string>
     <string name="help_label">Guida e feedback</string>
     <string name="hide_extra_apps">Mostra utilizzo delle app</string>
+    <string name="hide_imeback_and_switcher">Regolazione altezza tastiera</string>
+    <string name="hide_imeback_and_switcher_warning">La regolazione altezza tastiera sarà evidente nei gesti a tutto schermo.</string>
     <string name="hide_silent_icons_summary">Le icone per le notifiche senza avvisi non appaiono nella barra di stato</string>
     <string name="hide_silent_icons_title">Nascondi le icone dalle notifiche senza avvisi</string>
+    <string name="hide_summary">La barra di scelta rapida nella parte inferiore della tastiera sarà nascosta</string>
+    <string name="hide_title">Nascondi</string>
     <string name="high_label">Alta</string>
     <string name="high_power_app_text_nomal">%1$s sta scaricando la batteria</string>
     <string name="high_power_app_text_red">%1$s sta scaricando velocemente la batteria</string>
@@ -3471,7 +3475,7 @@ La funzione di risparmio batteria è disattivata automaticamente quando il dispo
     <string name="oneplus_disconnected">Disconnetti</string>
     <string name="oneplus_display_dashboard_no_theme_summary">Barra di stato, display ambient, sfondi</string>
     <string name="oneplus_display_dashboard_no_theme_summary_801">Barra di stato, schermo ambient, comodità visiva, modalità di lettura</string>
-    <string name="oneplus_display_dashboard_summary">Barra di stato, display ambiente, sfondi, tema</string>
+    <string name="oneplus_display_dashboard_summary">Barra di stato, schermo ambiente, sfondi, tema</string>
     <string name="oneplus_display_dashboard_summary_801">Barra di stato, display ambiente, sfondi, tema</string>
     <string name="oneplus_display_screen_timeout">Sospensione</string>
     <string name="oneplus_display_size_adaption">App a schermo intero</string>
@@ -3577,7 +3581,7 @@ Attenzione: lo sblocco tramite riconoscimento facciale è meno sicuro dell'impro
     <string name="oneplus_fingerprint_findsendor_summary">"Quando la sequenza dell'impronta digitale viene visualizzata nella parte inferiore dello schermo, è sufficiente premere il dito sull'area di identificazione dell'impronta digitale per utilizzare la funzione di impronta digitale."</string>
     <string name="oneplus_fingerprint_findsendor_tilte">"Come utilizzare l'impronta digitale"</string>
     <string name="oneplus_fingerprint_functional_declaration">Dichiarazione funzione Impronte digitali</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Nella schermata del mirino, premere a lungo il sensore di impronte digitali per scattare una foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Dalla schermata del mirino, tieni premuto il sensore di impronte digitali per scattare una foto</string>
     <string name="oneplus_fingerprint_gesture_camera_title">Tieni premuto per scattare una foto</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gesto impronta digitale</string>
     <string name="oneplus_fingerprint_hardware_exception">"Le informazioni sull'hardware dell'impronta digitale non sono precise. Contatta il servizio clienti"</string>
@@ -3757,7 +3761,7 @@ Nota: la tua impronta digitale può essere meno sicura di una sequenza o di un P
     <string name="oneplus_legal_summary">Informativa sulla privacy, accordi, ecc.</string>
     <string name="oneplus_levels">Livelli</string>
     <string name="oneplus_lift_up_display">Display sempre acceso o sollevato</string>
-    <string name="oneplus_light">Chiaro</string>
+    <string name="oneplus_light">Leggero</string>
     <string name="oneplus_local_ringtone">Suoneria da memoria interna</string>
     <string name="oneplus_location_information">Descrizione dei Servizi Basati sulla Posizione</string>
     <string name="oneplus_lock_after_timeout">Blocca automaticamente dopo il riposo</string>
@@ -4226,7 +4230,7 @@ Nota:
     <string name="oneplus_theme_tone">Tonalità</string>
     <string name="oneplus_theme_tone_effect_color">A colori</string>
     <string name="oneplus_theme_tone_effect_dark">Scuro</string>
-    <string name="oneplus_theme_tone_effect_light">Chiaro</string>
+    <string name="oneplus_theme_tone_effect_light">Leggero</string>
     <string name="oneplus_theme_tone_effect_title">Seleziona tonalità</string>
     <string name="oneplus_theme_wallpaper">Sfondi</string>
     <string name="oneplus_three_screenshots_enable_summary">Sfiora lo schermo con tre dita per catturare uno screenshot</string>
@@ -4398,7 +4402,7 @@ Insight, progettato da OnePlus insieme agli studenti della Parsons School of Des
     <string name="op_display_motion_graphics_compensation_summary">Migliora il frame rate della grafica, il livello di uniformità nei video e gli effetti di gioco</string>
     <string name="op_dnd_summary">Non disturbare</string>
     <string name="op_enable_location_services">Per trovare e seguire le stazioni di ricarica nelle vicinanze, attiva i servizi di localizzazione</string>
-    <string name="op_enable_text">Abilita</string>
+    <string name="op_enable_text">Attiva</string>
     <string name="op_face_unlock_set_unlock_password">Face Unlock + Password</string>
     <string name="op_face_unlock_set_unlock_pattern">Face Unlock + Motivo</string>
     <string name="op_face_unlock_set_unlock_pin">Face Unlock + PIN</string>
@@ -4812,6 +4816,8 @@ Lo sblocco tramite impronta digitale potrebbe essere incompatibile con le pellic
     <string name="radio_info_http_client_test">Test client HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Ping nome host (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping nome host (www.google.com) IPv6:</string>
+    <string name="raise_summary">La tastiera sarà sollevata dal basso e verrà visualizzato il tasto di scelta rapida</string>
+    <string name="raise_title">Alza</string>
     <string name="rarely_running">Attiva raramente (%s)</string>
     <string name="really_remove_account_message">"La rimozione di questo account comporterà l'eliminazione di tutti i relativi messaggi, contatti e altri dati dal telefono."</string>
     <string name="really_remove_account_title">"Rimuovere l'account?"</string>
@@ -5874,7 +5880,7 @@ L'approccio di Google alla sincronizzazione di dati per consentirti l'accesso ai
     <string name="touchscreen_double_tap_to_wake_gesture_title">Doppio tocco per riattivare</string>
     <string name="touchscreen_flashlight_gesture_summary">Disegna una V per attivare/disattivare la torcia</string>
     <string name="touchscreen_flashlight_gesture_title">Attiva/Disattiva torcia</string>
-    <string name="touchscreen_music_gesture_summary">Disegna || con due dita per riprodurre o sospendere la musica. Disegna &lt; o > per passare alla traccia precedente o successiva</string>
+    <string name="touchscreen_music_gesture_summary">Disegna ‖ con due dita per riprodurre o sospendere la musica. Disegna &lt; o > per passare alla traccia precedente o successiva</string>
     <string name="touchscreen_music_gesture_title">Controllo musica</string>
     <string name="track_frame_time">Rendering HWUI profilo</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6280,7 +6286,7 @@ Qualsiasi utente può aggiornare le app per tutti gli altri."</string>
     <string name="verify_apps_over_usb_title">Verifica app tramite USB</string>
     <string name="verizon_store_demo_mode_hint">Inserisci la password</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">"La modifica delle impostazioni dell'hotspot mobile comporterà la disconnessione di qualunque dispositivo al momento connesso all'hotspot mobile."</string>
+    <string name="verizon_wifi_tether_band_warning">"La modifica delle impostazioni di hotspot mobile comporterà la disconnessione di qualunque dispositivo al momento connesso all'hotspot mobile."</string>
     <string name="version_text">versione %1$s</string>
     <string name="vibrate_in_silent_title">Vibra in modalità silenziosa</string>
     <string name="vibrate_input_devices">Reindirizza vibrazione</string>

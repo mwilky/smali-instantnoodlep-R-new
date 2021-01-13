@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">עזרה ומשוב</string>
     <string name="help_label">עזרה ומשוב</string>
     <string name="hide_extra_apps">הצג את נתוני השימוש באפליקציה</string>
+    <string name="hide_imeback_and_switcher">התאמת גובה מקלדת</string>
+    <string name="hide_imeback_and_switcher_warning">התאמת גובה המקלדת יהיה זמין במחוות מסך מלא.</string>
     <string name="hide_silent_icons_summary">סמלים מהתזכורות המתונות לא מוצגים בשורת הסטטוס</string>
     <string name="hide_silent_icons_title">הסתרת הסמלים מההתראות המתונות</string>
+    <string name="hide_summary">סרגל קיצור הדרך בתחתית המקלדת יהיה מוסתר</string>
+    <string name="hide_title">הסתר</string>
     <string name="high_label">גבוהה</string>
     <string name="high_power_app_text_nomal">%1$s מרוקן את הסוללה שלך</string>
     <string name="high_power_app_text_red">%1$s מרוקן את הסוללה שלך במהירות</string>
@@ -3673,10 +3677,10 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">מחוות ניווט (תחתית)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">מחוות ניווט (שמאלה וימינה)</string>
     <string name="oneplus_gesture_of_answer_call_info">כאשר נכנסת שיחה, באפשרותך לענות על ידי העלאת הטלפון לאוזן.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">מענה אוטומטי לשיחות נכנסות על ידי הרמת הטלפון לאוזן</string>
+    <string name="oneplus_gesture_of_answer_call_summary">מענה אוטומטי לשיחות נכנסות על ידי העלאת הטלפון לאוזן</string>
     <string name="oneplus_gesture_of_answer_call_title">מענה לשיחות באמצעות הבעה</string>
     <string name="oneplus_gesture_start_learning">התחל בלמידה</string>
-    <string name="oneplus_gesture_to_answer_summary">מענה אוטומטי לשיחות נכנסות על ידי הרמת הטלפון לאוזן</string>
+    <string name="oneplus_gesture_to_answer_summary">מענה אוטומטי לשיחות נכנסות על ידי העלאת הטלפון לאוזן</string>
     <string name="oneplus_gesture_to_answer_title">הרמה כדי לענות</string>
     <string name="oneplus_gesture_to_control_call_info">שליטה אוטומטית בשיחות באמצעות הרמת הטלפון לאוזן</string>
     <string name="oneplus_gesture_to_control_calls_summary">מענה אוטומטי לשיחות או העברה לאזניות באמצעות מחווה</string>
@@ -3756,7 +3760,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_legal_summary">מדיניות הפרטיות, הסכמים וכדומה</string>
     <string name="oneplus_levels">רמות</string>
     <string name="oneplus_lift_up_display">הצג תמיד או הרם תצוגה</string>
-    <string name="oneplus_light">בהיר</string>
+    <string name="oneplus_light">קל</string>
     <string name="oneplus_local_ringtone">רינגטון מאחסון פנימי</string>
     <string name="oneplus_location_information">תיאור של שירותים מבוססי מיקום</string>
     <string name="oneplus_lock_after_timeout">נעילה אוטומטית אחרי מצב שינה</string>
@@ -4225,7 +4229,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="oneplus_theme_tone">גוון</string>
     <string name="oneplus_theme_tone_effect_color">צבעוני</string>
     <string name="oneplus_theme_tone_effect_dark">כהה</string>
-    <string name="oneplus_theme_tone_effect_light">בהיר</string>
+    <string name="oneplus_theme_tone_effect_light">קל</string>
     <string name="oneplus_theme_tone_effect_title">בחר גוון</string>
     <string name="oneplus_theme_wallpaper">רקעים</string>
     <string name="oneplus_three_screenshots_enable_summary">החלק עם שלוש אצבעות על המסך כדי לבצע צילום מסך</string>
@@ -4809,6 +4813,8 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="radio_info_http_client_test">‏בדיקת לקוח HTTP:</string>
     <string name="radio_info_ping_hostname_v4">‏נדנד לשם המארח (www.google.com) מסוג IPv4:</string>
     <string name="radio_info_ping_hostname_v6">‏נדנד לשם המארח (www.google.com) מסוג IPv6:</string>
+    <string name="raise_summary">המקלדת תעלה מלמטה ומפתח קיצור הדרך יהיה מוצג</string>
+    <string name="raise_title">העלה</string>
     <string name="rarely_running">פועלת לעתים רחוקות (%s)</string>
     <string name="really_remove_account_message">הסרת חשבון זה תגרום למחיקה של כל ההודעות, אנשי הקשר ונתונים נוספים של החשבון מהטלפון!</string>
     <string name="really_remove_account_title">להסיר את החשבון?</string>
@@ -5871,7 +5877,7 @@ Battery Saver נכבה אוטומטית כאשר המכשיר במצב טעינ�
     <string name="touchscreen_double_tap_to_wake_gesture_title">לחץ לחיצה כפולה כדי להעיר</string>
     <string name="touchscreen_flashlight_gesture_summary">צייר V כדי להפעיל או לכבות את הפנס</string>
     <string name="touchscreen_flashlight_gesture_title">הפעלה וכיבוי הפנס</string>
-    <string name="touchscreen_music_gesture_summary">צייר || עם שתי אצבעות כדי להפעיל או להשהות את המוזיקה. צייר &lt; או > להשמעת הרצועה הקודמת או הבאה</string>
+    <string name="touchscreen_music_gesture_summary">צייר ‖ עם שתי אצבעות כדי להפעיל או להשהות את המוזיקה. צייר &lt; או > להשמעת הרצועה הקודמת או הבאה</string>
     <string name="touchscreen_music_gesture_title">בקרת מוזיקה</string>
     <string name="track_frame_time">‏עיבוד פרופיל ב-HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>

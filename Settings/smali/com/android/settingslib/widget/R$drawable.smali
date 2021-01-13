@@ -6,4 +6,4 @@
 # static fields
 .field public static final ic_help_actionbar:I = 0x7f0801bc
 
-.field public static final settings_spinner_background:I = 0x7f08072c
+.field public static final settings_spinner_background:I = 0x7f080731

@@ -2246,8 +2246,12 @@ Al activar la copia de seguridad automática, los datos del dispositivo y de las
     <string name="help_feedback_label">Ayuda y sugerencias</string>
     <string name="help_label">Ayuda y sugerencias</string>
     <string name="hide_extra_apps">Mostrar uso de aplicaciones</string>
+    <string name="hide_imeback_and_switcher">Ajuste de la altura del teclado</string>
+    <string name="hide_imeback_and_switcher_warning">El ajuste de la altura del teclado será evidente en los gestos de pantalla completa.</string>
     <string name="hide_silent_icons_summary">Los iconos de las notificaciones discretas no se muestran la barra de estado.</string>
     <string name="hide_silent_icons_title">Ocultar iconos de las notificaciones discretas</string>
+    <string name="hide_summary">La barra de accesos directos situada en la parte inferior de la pantalla estará oculta</string>
+    <string name="hide_title">Ocultar</string>
     <string name="high_label">Alta</string>
     <string name="high_power_app_text_nomal">%1$s está agotando la batería</string>
     <string name="high_power_app_text_red">%1$s está gastando mucha batería</string>
@@ -3577,8 +3581,8 @@ Precaución: el desbloqueo facial es menos seguro que el uso de la huella digita
     <string name="oneplus_fingerprint_findsendor_summary">Cuando el patrón de huella digital aparece en la parte inferior de la pantalla, solo tienes que presionar el dedo sobre el área de identificación de la huella digital para utilizar la función de huella digital.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Cómo usar la huella digital</string>
     <string name="oneplus_fingerprint_functional_declaration">Declaración de la función de huella digital</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Desde la pantalla del visor, haz una pulsación larga en el sensor de huella digital para hacer una foto</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Haz una pulsación larga para hacer una foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Desde la pantalla del visor, mantén pulsado el sensor de huella digital para hacer una foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Mantén pulsado para hacer una foto</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gesto de la huella digital</string>
     <string name="oneplus_fingerprint_hardware_exception">La información de hardware de la huella digital non es precisa. Ponte en contacto con el servicio de atención al cliente.</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Haz una pulsación larga en el sensor de huella digital para ejecutar el pago rápido</string>
@@ -3757,7 +3761,7 @@ Nota: Tu huella digital puede ser menos segura que un patrón seguro o PIN"</str
     <string name="oneplus_legal_summary">Política de privacidad, acuerdos, etc.</string>
     <string name="oneplus_levels">Niveles</string>
     <string name="oneplus_lift_up_display">Pantalla siempre activada o pantalla activada al levantar</string>
-    <string name="oneplus_light">Luz</string>
+    <string name="oneplus_light">Suave</string>
     <string name="oneplus_local_ringtone">Tono de almacenamiento interno</string>
     <string name="oneplus_location_information">Descripción de los servicios basados en la ubicación</string>
     <string name="oneplus_lock_after_timeout">Bloquear automáticamente cuando esté en suspensión</string>
@@ -4226,7 +4230,7 @@ Nota:
     <string name="oneplus_theme_tone">Tono</string>
     <string name="oneplus_theme_tone_effect_color">A color</string>
     <string name="oneplus_theme_tone_effect_dark">Oscuro</string>
-    <string name="oneplus_theme_tone_effect_light">Luz</string>
+    <string name="oneplus_theme_tone_effect_light">Suave</string>
     <string name="oneplus_theme_tone_effect_title">Seleccionar tono</string>
     <string name="oneplus_theme_wallpaper">Fondos de pantalla</string>
     <string name="oneplus_three_screenshots_enable_summary">Desliza tres dedos sobre la pantalla para realizar una captura de pantalla</string>
@@ -4398,7 +4402,7 @@ Insight, diseñado conjuntamente por OnePlus y estudiantes de la Parsons School 
     <string name="op_display_motion_graphics_compensation_summary">Mejorar la velocidad de fotogramas de los gráficos, efectos más fluidos en juegos y vídeos</string>
     <string name="op_dnd_summary">No molestar</string>
     <string name="op_enable_location_services">Activa los servicios de ubicación para encontrar y hacer un seguimiento de las estaciones de carga cercanas</string>
-    <string name="op_enable_text">Activar</string>
+    <string name="op_enable_text">Habilitar</string>
     <string name="op_face_unlock_set_unlock_password">Desbloqueo facial y contraseña</string>
     <string name="op_face_unlock_set_unlock_pattern">Desbloqueo facial y patrón</string>
     <string name="op_face_unlock_set_unlock_pin">Desbloqueo facial y PIN</string>
@@ -4812,6 +4816,8 @@ El desbloqueo mediante huella digital podría ser incompatible con los protector
     <string name="radio_info_http_client_test">Prueba de cliente HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Hacer ping a IPv4 de nombre de host (www.google.com):</string>
     <string name="radio_info_ping_hostname_v6">Hacer ping a IPv6 de nombre de host (www.google.com):</string>
+    <string name="raise_summary">El teclado se elevará desde la parte inferior y se mostrará la tecla de acceso directo</string>
+    <string name="raise_title">Elevar</string>
     <string name="rarely_running">Apenas en ejecución (%s)</string>
     <string name="really_remove_account_message">Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del teléfono.</string>
     <string name="really_remove_account_title">¿Quitar cuenta?</string>
@@ -5874,7 +5880,7 @@ un servicio de Google que te permite sincronizar datos para que puedas acceder a
     <string name="touchscreen_double_tap_to_wake_gesture_title">Doble toque para despertar</string>
     <string name="touchscreen_flashlight_gesture_summary">Dibujar una V para encender/apagar la linterna</string>
     <string name="touchscreen_flashlight_gesture_title">Encender/apagar linterna</string>
-    <string name="touchscreen_music_gesture_summary">Dibuja || con dos dedos para reproducir o pausar la música. Dibuja &lt; or > para la pista anterior o la siguiente</string>
+    <string name="touchscreen_music_gesture_summary">Dibjua ‖ con dos dedos para reproducir o pausar la música. Dibuja &lt; o > para la pista anterior o la siguiente</string>
     <string name="touchscreen_music_gesture_title">Control de música</string>
     <string name="track_frame_time">Trazar la renderización de HWUI</string>
     <string name="track_frame_time_keywords">GPU</string>

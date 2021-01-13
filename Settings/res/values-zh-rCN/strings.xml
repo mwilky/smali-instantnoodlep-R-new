@@ -448,7 +448,7 @@
     <string name="aod_horizon_light_effect_6">绿色</string>
     <string name="aod_horizon_light_effect_7">粉红色</string>
     <string name="aod_horizon_light_effect_8">橙色</string>
-    <string name="aod_horizon_light_select">选择颜⾊</string>
+    <string name="aod_horizon_light_select">选择颜色</string>
     <string name="aod_horizon_light_snake_action">去开启</string>
     <string name="aod_horizon_light_snake_tip">此功能在开启“新通知提醒”后即可使用</string>
     <string name="apn_apn">APN</string>
@@ -2199,8 +2199,12 @@
     <string name="help_feedback_label">帮助和反馈</string>
     <string name="help_label">帮助和反馈</string>
     <string name="hide_extra_apps">显示应用的耗电情况</string>
+    <string name="hide_imeback_and_switcher">键盘底部高度调节</string>
+    <string name="hide_imeback_and_switcher_warning">调节键盘底部高度只在全屏手势下生效</string>
     <string name="hide_silent_icons_summary">无声通知的图标不会显示在状态栏中</string>
     <string name="hide_silent_icons_title">隐藏无声通知的图标</string>
+    <string name="hide_summary">隐藏键盘底部的快捷操作栏</string>
+    <string name="hide_title">隐藏</string>
     <string name="high_label">高</string>
     <string name="high_power_app_text_nomal">%1$s后台正在耗电</string>
     <string name="high_power_app_text_red">%1$s后台正在严重耗电</string>
@@ -4936,6 +4940,8 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
     <string name="radio_info_http_client_test">HTTP 客户端测试：</string>
     <string name="radio_info_ping_hostname_v4">ping 主机名(www.google.com) IPv4：</string>
     <string name="radio_info_ping_hostname_v6">ping 主机名(www.google.com) IPv6：</string>
+    <string name="raise_summary">适当抬高键盘并显示键盘底部的快捷操作栏</string>
+    <string name="raise_title">抬高</string>
     <string name="ram_total_size">运行内存</string>
     <string name="rarely_running">极少运行 (%s)</string>
     <string name="reading_settings">正在读取设置...</string>
@@ -5101,8 +5107,8 @@ OnePlus 与知名设计学院 Parsons School of Design 的学生，一起设计�
 固定某个应用后，该应用可打开其他应用，也能访问您的个人数据。
 
 如需使用固定应用功能，请按以下步骤操作：   
-1.    开启固定应用功能 
-2.   打开“概览” 
+1. 开启固定应用功能 
+2. 打开“概览” 
 3. 点按屏幕顶部的应用图标，然后点按“固定”"</string>
     <string name="screen_pinning_dialog_message">"固定应用后：
 

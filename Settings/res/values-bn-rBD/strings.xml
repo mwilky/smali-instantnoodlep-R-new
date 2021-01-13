@@ -250,7 +250,7 @@
     <string name="hardware_keys_action_nothing">কোনো অ্যাকশন নেই</string>
     <string name="hardware_keys_action_notification_center">বিজ্ঞপ্তি কেন্দ্র খুলুন/বন্ধ করুন</string>
     <string name="hardware_keys_action_recents">সাম্প্রতিক</string>
-    <string name="hardware_keys_action_shelf">Shelf খুলুন</string>
+    <string name="hardware_keys_action_shelf">Shelf চালু করুন</string>
     <string name="hardware_keys_action_turn_off_screen">স্ক্রিন বন্ধ করুন</string>
     <string name="hardware_keys_action_voice_search">ভয়েস অনুসন্ধান করুন</string>
     <string name="hardware_keys_back_key_title">ফিরে যাওয়ার বোতাম</string>
@@ -259,6 +259,10 @@
     <string name="hardware_keys_long_press_title">দীর্ঘক্ষণ টেপার অ্যাকশন</string>
     <string name="hardware_keys_menu_key_title">সাম্প্রতিক বোতাম</string>
     <string name="header_category_custom">কাস্টমাইজেশন</string>
+    <string name="hide_imeback_and_switcher">কীবোর্ডের উচ্চতা সামঞ্জস্য করা</string>
+    <string name="hide_imeback_and_switcher_warning">কীবোর্ডের উচ্চতা সামঞ্জস্যতা পূর্ণ স্ক্রীন অঙ্গভঙ্গিতে স্পষ্ট হবে।</string>
+    <string name="hide_summary">কীবোর্ডের নিচের শর্টকাট বারটি লুকানো হবে</string>
+    <string name="hide_title">লুকান</string>
     <string name="high_power_app_text_nomal">%1$s আপনার ব্যাটারি খরচ করছে</string>
     <string name="high_power_app_text_red">%1$s আপনার ব্যাটারি খুব বেশী খরচ করছে</string>
     <string name="hint_data_used_alert">ডেটা ব্যবহার %1$s অতিক্রম করেছে</string>
@@ -609,8 +613,8 @@
     <string name="oneplus_fingerprint_findsendor_summary">যখন ফিঙ্গারপ্রিন্ট প্যাটার্ন স্ক্রীনের নীচের অংশে দেখা দেয়, তখন সহজেই ফিঙ্গারপ্রিন্ট ফাংশনটি ব্যবহার করতে ফিঙ্গারপ্রিন্ট সনাক্তকরণ জায়গায় আপনার আঙুল দিয়ে চাপুন।</string>
     <string name="oneplus_fingerprint_findsendor_tilte">কীভাবে আঙুলের ছাপ ব্যবহার করবেন</string>
     <string name="oneplus_fingerprint_functional_declaration">ফিঙ্গারপ্রিন্ট বৈশিষ্ট্যের ডিক্লারেশন</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">ভিউফাইন্ডার স্ক্রীন থেকে, ছবি তুলতে আঙুলের ছাপের সেন্সর দীর্ঘক্ষণ টিপে রাখুন</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">ছবি তুলতে দীর্ঘক্ষণ টিপে ধরুন</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">ভিউফাইন্ডার স্ক্রিন থেকে, ছবি তুলতে ফিঙ্গারপ্রিন্ট সেন্সরটিতে দীর্ঘক্ষণ চাপুন</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">ছবি তুলতে দীর্ঘক্ষণ চেপে রাখুন</string>
     <string name="oneplus_fingerprint_gesture_settings_title">আঙ্গুলের ছাপের অঙ্গভঙ্গী</string>
     <string name="oneplus_fingerprint_hardware_exception">ফিঙ্গারপ্রিন্ট হার্ডওয়্যারের তথ্য সঠিক নয়, অনুগ্রহ করে গ্রাহক পরিষেবায় যোগাযোগ করুন</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">ক্যুইক পে চালু করতে দীর্ঘ ফিঙ্গারপ্রিন্ট সেন্সর টিপুন</string>
@@ -817,7 +821,7 @@
     <string name="oneplus_memc_more_support_apps">আরও সমর্থিত অ্যাপ</string>
     <string name="oneplus_memc_notice">এই মোডটিতে, ভিডিও ফ্রেম রেট বাড়ানো হবে, গ্রাফিক্সের অস্পষ্ট গতি কম করে, এটিক আরও পরিষ্কার ও বাধাহীন করে৷ শুধুমাত্র পুরো স্ক্রিন প্লেব্যাকের সময় কার্যকর হয়৷</string>
     <string name="oneplus_memc_open">চালু</string>
-    <string name="oneplus_memc_support_apps">সমর্থিত অ্যাপস</string>
+    <string name="oneplus_memc_support_apps">সমর্থিত অ্যাপ</string>
     <string name="oneplus_memc_support_no_apps">সমর্থিত অ্যাপস ইনস্টল করা হয়নি</string>
     <string name="oneplus_memc_video">মোশন গ্রাফিক্স স্মুথিং</string>
     <string name="oneplus_memc_video_effect">কম্পেনসেশনের প্রভাব</string>
@@ -834,7 +838,7 @@
     <string name="oneplus_more">আরো</string>
     <string name="oneplus_motion_sensor_settings_title">সিস্টেমের অঙ্গভঙ্গী</string>
     <string name="oneplus_multi_app">সমান্তরাল অ্যাপ</string>
-    <string name="oneplus_multi_app_disable_apps">সমর্থিত অ্যাপস</string>
+    <string name="oneplus_multi_app_disable_apps">সমর্থিত অ্যাপ</string>
     <string name="oneplus_multi_app_disable_tips">সমান্তরাল অ্যাপের সমস্ত ডেটা মুছে যাবে যদি সেটা অক্ষম করে দেওয়া হয়, আপনি কি অবিরত করতে চান?</string>
     <string name="oneplus_multi_app_enable_apps">সক্ষমিত অ্যাপ</string>
     <string name="oneplus_multi_app_init">লোড হচ্ছে...</string>
@@ -909,7 +913,7 @@
     <string name="oneplus_notifications_sound">বিজ্ঞপ্তি শব্দ</string>
     <string name="oneplus_o2_contributors">OxygenOS কন্ট্রিবিউটর</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">কাস্টম সময় ব্যাপ্তিতে চালু করুন</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">সময় সূচি</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">নির্ধারিত</string>
     <string name="oneplus_open_bed_time_mode_summary">আপনি ম্যানুয়ালি বেডটাইম মোড চালু করতে পারেন</string>
     <string name="oneplus_open_bed_time_mode_title">বেডটাইম মোড</string>
     <string name="oneplus_opfinger_input_completed_comfirm">নিশ্চিত করুন</string>
@@ -1045,7 +1049,7 @@
     <string name="oneplus_rotation_silent_enable_summary">ইনকামিং কল আসার সময় সেটি নিঃশব্দ করতে ডিভাইসটিকে ফ্লিপ করুন</string>
     <string name="oneplus_rotation_silent_enable_title">নীরব করতে ফ্লিপ করুন</string>
     <string name="oneplus_scene_mode">দৃশ্যগুলি</string>
-    <string name="oneplus_schedule">সময় সূচি</string>
+    <string name="oneplus_schedule">নির্ধারিত</string>
     <string name="oneplus_screen">স্ক্রীন</string>
     <string name="oneplus_screen_better_cold">ঠান্ডা</string>
     <string name="oneplus_screen_better_nature">প্রাকৃতিক</string>
@@ -1201,7 +1205,7 @@
     <string name="oneplus_support_apps">সমর্থিত আপ</string>
     <string name="oneplus_support_summary">ডিভাইস ব্যবহার সম্পর্কে টিপস এবং প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী</string>
     <string name="oneplus_support_title">টিপ্স &amp; সহায়তা</string>
-    <string name="oneplus_supported_apps">সমর্থিত অ্যাপস</string>
+    <string name="oneplus_supported_apps">সমর্থিত অ্যাপ</string>
     <string name="oneplus_suspension_notice">নজর রাখুন</string>
     <string name="oneplus_suspension_notice_summary">অ্যাপগুলিকে আগে থেকে বিজ্ঞপ্তি জানাতে অনুমতি দিন</string>
     <string name="oneplus_switch">OnePlus Switch</string>
@@ -1445,7 +1449,7 @@ Insight, যৌথভাবে OnePlus &amp; পারসন্স স্কু�
     <string name="op_fragment">বাছাই করুন</string>
     <string name="op_gamespace">গেম স্পেস</string>
     <string name="op_global_drak_mode_apps_manage">অন্ধকার মোডে অ্যাপগুলি পরিচালনা করুন</string>
-    <string name="op_global_drak_mode_full_support_list">সমর্থিত অ্যাপস</string>
+    <string name="op_global_drak_mode_full_support_list">সমর্থিত অ্যাপ</string>
     <string name="op_global_drak_mode_not_full_support_list">অসমর্থিত অ্যাপগুলি</string>
     <string name="op_global_drak_mode_support_description">যেই অ্যাপগুলি সমর্থিত নয় সেই অ্যাপগুলি অন্ধকার মোডে সঠিকভাবে কাজ নাও করতে পারে</string>
     <string name="op_gps_off_warn_msg">অনুগ্রহ করে প্রথমে অবস্থান চালু করুন</string>
@@ -1557,6 +1561,8 @@ Insight, যৌথভাবে OnePlus &amp; পারসন্স স্কু�
     <string name="prox_wake_title">প্রক্সিমিটি জাগানো</string>
     <string name="quick_unlock_summary">লকস্ক্রিনটি সক্ষম করা হলে এটি স্বয়ংক্রিয়ভাবে সঠিক PIN অথবা পাসওয়ার্ড শনাক্ত হলে সঙ্গে সঙ্গে আনলক হবে।</string>
     <string name="quick_unlock_title">দ্রুত আনলক</string>
+    <string name="raise_summary">"কীবোর্ডটি নিচ থেকে উপরে তুলা হবে এবং শর্টকাট কী'টি দেখানো হবে"</string>
+    <string name="raise_title">তুলুন</string>
     <string name="reset_collect_diagnostics_summary">সমস্যার সমাধান করতে সমস্যার ডেটা সংগ্রহ করুন</string>
     <string name="reset_collect_diagnostics_title">সমস্যার বিষয় সংগ্রহ করুন</string>
     <string name="reset_system_settings_button_text">সেটিংস রিসেট করুন</string>
@@ -1698,7 +1704,7 @@ Insight, যৌথভাবে OnePlus &amp; পারসন্স স্কু�
     <string name="touchscreen_double_tap_to_wake_gesture_title">জাগ্রত করতে দুইবার আলতো চাপুন</string>
     <string name="touchscreen_flashlight_gesture_summary">ফ্ল্যাশলাইট টগল করতে V আঁকুন</string>
     <string name="touchscreen_flashlight_gesture_title">ফ্ল্যাশলাইট টগল করুন</string>
-    <string name="touchscreen_music_gesture_summary">সঙ্গীত চালাতে দুই আঙুলে করে || আঁকুন। আগের ও পরের ট্র্যাকের জন্য &lt; বা > আঁকুন</string>
+    <string name="touchscreen_music_gesture_summary">সঙ্গীত চালু করতে অথবা থামাতে দুই আঙুল দিয়ে ‖ আঁকুন। পূর্ববর্তী অথবা পরবর্তী গানে যেতে &lt; অথবা > আঁকুন</string>
     <string name="touchscreen_music_gesture_title">সঙ্গীত নিয়ন্ত্রণ</string>
     <string name="traffic_auto_close_network">নেটওয়ার্ক থেকে স্বতঃ সংংযোগ বিচ্ছিন্ন করুন</string>
     <string name="traffic_auto_close_network_keep_closed">উপেক্ষা করুন</string>

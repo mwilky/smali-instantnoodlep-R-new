@@ -2246,8 +2246,12 @@ Kada uključite automatsko pravljenje rezervnih kopija, podaci uređaja i aplika
     <string name="help_feedback_label">Pomoć i povratne informacije</string>
     <string name="help_label">Pomoć i povratne inf.</string>
     <string name="hide_extra_apps">Prikaži korišćenje aplikacija</string>
+    <string name="hide_imeback_and_switcher">Podešavanje tastature po visini</string>
+    <string name="hide_imeback_and_switcher_warning">Podešena visina tastature videće se pri pokretima rukom u režimu prikaza preko celog ekrana.</string>
     <string name="hide_silent_icons_summary">Ikone iz diskretnih obaveštenja se ne prikazuju na statusnoj traci</string>
     <string name="hide_silent_icons_title">Sakrij ikone iz diskretnih obaveštenja</string>
+    <string name="hide_summary">Traka sa prečicama u donjem delu tastature biće sakrivena</string>
+    <string name="hide_title">Sakrij</string>
     <string name="high_label">Visoka</string>
     <string name="high_power_app_text_nomal">%1$s prazni bateriju</string>
     <string name="high_power_app_text_red">%1$s brzo prazni bateriju</string>
@@ -3755,7 +3759,7 @@ prikaz u nekim delovima ekrana biće abnormalan
     <string name="oneplus_legal_summary">Izjava o privatnosti, sporazumi itd.</string>
     <string name="oneplus_levels">Nivoi</string>
     <string name="oneplus_lift_up_display">Uvek uključeni ekran ili uključivanje pri podizanju</string>
-    <string name="oneplus_light">Svetla</string>
+    <string name="oneplus_light">Slabo</string>
     <string name="oneplus_local_ringtone">Ton zvona sa unutrašnjeg skladišta</string>
     <string name="oneplus_location_information">Opis usluga zavisnih o lokaciji</string>
     <string name="oneplus_lock_after_timeout">Automatski zaključaj nakon stanja spavanja</string>
@@ -4224,7 +4228,7 @@ Napomena:
     <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Šareno</string>
     <string name="oneplus_theme_tone_effect_dark">Tamna</string>
-    <string name="oneplus_theme_tone_effect_light">Svetla</string>
+    <string name="oneplus_theme_tone_effect_light">Slabo</string>
     <string name="oneplus_theme_tone_effect_title">Izaberi ton</string>
     <string name="oneplus_theme_wallpaper">Pozadine</string>
     <string name="oneplus_three_screenshots_enable_summary">Prevucite s tri prsta na ekranu da biste zabeležili snimak ekrana</string>
@@ -4808,6 +4812,8 @@ Otključavanje otiskom prsta možda ne podržava zaštitne folije nezavisnih pro
     <string name="radio_info_http_client_test">Test za HTTP klijenta:</string>
     <string name="radio_info_ping_hostname_v4">IPv4 imena hosta za pingovanje (www.google.com):</string>
     <string name="radio_info_ping_hostname_v6">IPv6 imena hosta za pingovanje (www.google.com):</string>
+    <string name="raise_summary">Tastatura će biti podignuta s donje ivice, a tasterska prečica biće prikazana</string>
+    <string name="raise_title">Podigni</string>
     <string name="rarely_running">Retko kada je pokrenuta (%s)</string>
     <string name="really_remove_account_message">Uklanjanjem ovog naloga izbrisaćete sve poruke, kontakte i druge podatke sa telefona!</string>
     <string name="really_remove_account_title">Želite li da uklonite nalog?</string>
@@ -5870,7 +5876,7 @@ Google-ov pristup sinhronizovanju podataka kako bi se omogućio pristup kontakti
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dodirnite dvaput da biste probudili</string>
     <string name="touchscreen_flashlight_gesture_summary">Nacrtajte V da biste uključili/isključili lampu</string>
     <string name="touchscreen_flashlight_gesture_title">Uključivanje/isključivanje lampe</string>
-    <string name="touchscreen_music_gesture_summary">Nacrtajte || s dva prsta da biste pokrenuli ili pauzirali reprodukciju muzike. Nacrtajte &lt; odnosno > za prethodnu odnosno narednu numeru</string>
+    <string name="touchscreen_music_gesture_summary">Nacrtajte ‖ s dva prsta da biste pokrenuli ili pauzirali reprodukciju muzike. Nacrtajte &lt; odnosno > za prethodnu odnosno narednu numeru</string>
     <string name="touchscreen_music_gesture_title">Komande za muziku</string>
     <string name="track_frame_time">Renderuj pomoću HWUI-a</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6276,7 +6282,7 @@ Svaki korisnik može da ažurira aplikacije za sve ostale korisnike."</string>
     <string name="verify_apps_over_usb_title">Verifikuj aplikacije preko USB-a</string>
     <string name="verizon_store_demo_mode_hint">Unesite lozinku</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Promenom načina podešavanja mobilne pristupne tačke prekinuće se veza sa svim uređajima koji su trenutno povezani na mobilnu pristupnu tačku.</string>
+    <string name="verizon_wifi_tether_band_warning">Changing the way Mobile Hotspot is set up will disconnect any devices currently connected to the Mobile Hotspot.</string>
     <string name="version_text">verzija %1$s</string>
     <string name="vibrate_in_silent_title">Vibracija u nečujnom režimu</string>
     <string name="vibrate_input_devices">Preusmeri vibraciju</string>

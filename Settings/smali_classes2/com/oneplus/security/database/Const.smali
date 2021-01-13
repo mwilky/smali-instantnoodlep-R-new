@@ -6,7 +6,11 @@
 # static fields
 .field public static final AUTHORITY_URI:Landroid/net/Uri;
 
+.field public static final AUTHORITY_URI_FROM_Q:Landroid/net/Uri;
+
 .field public static URI_NETWORK_RESTRICT:Landroid/net/Uri;
+
+.field public static URI_NETWORK_RESTRICT_FROM_Q:Landroid/net/Uri;
 
 
 # direct methods
@@ -20,6 +24,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/security/database/Const;->AUTHORITY_URI:Landroid/net/Uri;
+
+    const-string v0, "content://com.oneplus.security.database.comm.SafeProvider"
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/security/database/Const;->AUTHORITY_URI_FROM_Q:Landroid/net/Uri;
+
+    sget-object v0, Lcom/oneplus/security/database/Const;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "tm_network_control"
 
@@ -40,6 +54,14 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/security/database/Const;->URI_NETWORK_RESTRICT:Landroid/net/Uri;
+
+    sget-object v0, Lcom/oneplus/security/database/Const;->AUTHORITY_URI_FROM_Q:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/security/database/Const;->URI_NETWORK_RESTRICT_FROM_Q:Landroid/net/Uri;
 
     return-void
 .end method

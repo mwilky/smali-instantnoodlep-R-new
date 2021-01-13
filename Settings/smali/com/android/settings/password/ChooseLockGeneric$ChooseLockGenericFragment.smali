@@ -1285,7 +1285,7 @@
     if-nez v0, :cond_4
 
     :cond_3
-    const-string v0, "unlock_skip_fingerprint"
+    const-string/jumbo v0, "unlock_skip_fingerprint"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
@@ -1299,7 +1299,7 @@
     if-nez v0, :cond_6
 
     :cond_5
-    const-string v0, "unlock_skip_face"
+    const-string/jumbo v0, "unlock_skip_face"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
@@ -1431,7 +1431,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setViewId(I)V
 
-    const-string v0, "unlock_skip_fingerprint"
+    const-string/jumbo v0, "unlock_skip_fingerprint"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
@@ -1441,7 +1441,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setViewId(I)V
 
-    const-string v0, "unlock_skip_face"
+    const-string/jumbo v0, "unlock_skip_face"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
@@ -2736,7 +2736,7 @@
     return v1
 
     :cond_0
-    const-string v0, "unlock_skip_fingerprint"
+    const-string/jumbo v0, "unlock_skip_fingerprint"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2744,7 +2744,7 @@
 
     if-nez v0, :cond_2
 
-    const-string v0, "unlock_skip_face"
+    const-string/jumbo v0, "unlock_skip_face"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/oneplus/security/firewall/NetworkRestrictManager$IAppsNetworkRestrictTaskCallBack;,
+        Lcom/oneplus/security/firewall/NetworkRestrictManager$UpdateRulesFromQRunnable;,
         Lcom/oneplus/security/firewall/NetworkRestrictManager$BatchUpdateRulesRunnable;,
         Lcom/oneplus/security/firewall/NetworkRestrictManager$RefreshTaskRunnable;
     }
@@ -1028,11 +1029,48 @@
 .method public init()V
     .locals 3
 
+    iget-object v0, p0, Lcom/oneplus/security/firewall/NetworkRestrictManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "update_rules_from_Q"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/security/firewall/NetworkRestrictManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    new-instance v0, Ljava/lang/Thread;
+
+    new-instance v1, Lcom/oneplus/security/firewall/NetworkRestrictManager$UpdateRulesFromQRunnable;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/security/firewall/NetworkRestrictManager$UpdateRulesFromQRunnable;-><init>(Lcom/oneplus/security/firewall/NetworkRestrictManager;)V
+
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    goto :goto_0
+
+    :cond_0
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/oneplus/security/firewall/NetworkRestrictManager$RefreshTaskRunnable;
-
-    const/4 v2, 0x0
 
     invoke-direct {v1, p0, v2}, Lcom/oneplus/security/firewall/NetworkRestrictManager$RefreshTaskRunnable;-><init>(Lcom/oneplus/security/firewall/NetworkRestrictManager;Z)V
 
@@ -1040,6 +1078,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
+    :goto_0
     return-void
 .end method
 

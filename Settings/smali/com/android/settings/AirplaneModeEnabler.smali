@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/settings/AirplaneModeEnabler$OPPhoneStateListener;,
         Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;
     }
 .end annotation
@@ -57,13 +58,13 @@
 
     iput-object p1, p0, Lcom/android/settings/AirplaneModeEnabler;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    new-instance p1, Lcom/android/settings/AirplaneModeEnabler$1;
+    new-instance p1, Lcom/android/settings/AirplaneModeEnabler$OPPhoneStateListener;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p2
 
-    invoke-direct {p1, p0, p2}, Lcom/android/settings/AirplaneModeEnabler$1;-><init>(Lcom/android/settings/AirplaneModeEnabler;Landroid/os/Looper;)V
+    invoke-direct {p1, p2, p0}, Lcom/android/settings/AirplaneModeEnabler$OPPhoneStateListener;-><init>(Landroid/os/Looper;Lcom/android/settings/AirplaneModeEnabler;)V
 
     iput-object p1, p0, Lcom/android/settings/AirplaneModeEnabler;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
@@ -339,23 +340,23 @@
 
     const v0, 0x104000a
 
-    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$2;
+    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$1;
 
-    invoke-direct {v1, p0, v3, p1}, Lcom/android/settings/AirplaneModeEnabler$2;-><init>(Lcom/android/settings/AirplaneModeEnabler;Landroid/widget/CheckBox;Z)V
+    invoke-direct {v1, p0, v3, p1}, Lcom/android/settings/AirplaneModeEnabler$1;-><init>(Lcom/android/settings/AirplaneModeEnabler;Landroid/widget/CheckBox;Z)V
 
     invoke-virtual {v4, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     const/high16 v0, 0x1040000
 
-    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$3;
+    new-instance v1, Lcom/android/settings/AirplaneModeEnabler$2;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/AirplaneModeEnabler$3;-><init>(Lcom/android/settings/AirplaneModeEnabler;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings/AirplaneModeEnabler$2;-><init>(Lcom/android/settings/AirplaneModeEnabler;Z)V
 
     invoke-virtual {v4, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    new-instance p1, Lcom/android/settings/AirplaneModeEnabler$4;
+    new-instance p1, Lcom/android/settings/AirplaneModeEnabler$3;
 
-    invoke-direct {p1, p0}, Lcom/android/settings/AirplaneModeEnabler$4;-><init>(Lcom/android/settings/AirplaneModeEnabler;)V
+    invoke-direct {p1, p0}, Lcom/android/settings/AirplaneModeEnabler$3;-><init>(Lcom/android/settings/AirplaneModeEnabler;)V
 
     invoke-virtual {v4, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

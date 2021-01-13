@@ -266,7 +266,9 @@
     :cond_1
     iget-object v5, v5, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
 
-    if-eqz v5, :cond_2
+    instance-of v6, v5, Lcom/android/settings/datausage/AppStateDataUsageBridge$DataUsageState;
+
+    if-eqz v6, :cond_2
 
     check-cast v5, Lcom/android/settings/datausage/AppStateDataUsageBridge$DataUsageState;
 

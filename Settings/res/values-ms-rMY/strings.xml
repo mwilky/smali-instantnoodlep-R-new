@@ -259,6 +259,10 @@ Hidupkan Mod Pesawat?"</string>
     <string name="hardware_keys_long_press_title">Tindakan tekan panjang</string>
     <string name="hardware_keys_menu_key_title">Butang Terakhir</string>
     <string name="header_category_custom">Penyesuaian</string>
+    <string name="hide_imeback_and_switcher">Pelarasan ketinggian papan kekunci</string>
+    <string name="hide_imeback_and_switcher_warning">Pelarasan ketinggian papan kekunci boleh dilihat dalam gerak isyarat skrin penuh.</string>
+    <string name="hide_summary">Bar pintasan pada bahagian bawah papan kekunci akan disembunyikan</string>
+    <string name="hide_title">Sembunyi</string>
     <string name="high_power_app_text_nomal">%1$s Menghabiskan bateri anda</string>
     <string name="high_power_app_text_red">%1$s Menghabiskan bateri anda dengan terlalu banyak</string>
     <string name="hint_data_used_alert">Penggunaan data telah melebihi %1$s</string>
@@ -706,10 +710,10 @@ Untuk pergi ke skrin utama pada bila-bila masa, leret ke atas dari pinggir tenga
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gerak isyarat navigasi (bawah)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gerak isyarat navigasi (kiri dan kanan)</string>
     <string name="oneplus_gesture_of_answer_call_info">Apabila terdapat panggilan masuk, anda boleh menjawab dengan memegang telefon ke telinga anda.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Jawab panggilan masuk secara automatik dengan mengangkat telefon ke telinga anda</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Jawab panggilan masuk secara automatik dengan memegang telefon ke telinga anda</string>
     <string name="oneplus_gesture_of_answer_call_title">Jawab panggilan oleh gerak isyarat</string>
     <string name="oneplus_gesture_start_learning">Mula Belajar</string>
-    <string name="oneplus_gesture_to_answer_summary">Jawab panggilan masuk secara automatik dengan mengangkat telefon ke telinga anda</string>
+    <string name="oneplus_gesture_to_answer_summary">Jawab panggilan masuk secara automatik dengan memegang telefon ke telinga anda</string>
     <string name="oneplus_gesture_to_answer_title">Angkat untuk menjawab</string>
     <string name="oneplus_gesture_to_control_call_info">Kawal panggilan secara automatik dengan mengangkat telefon ke telinga anda</string>
     <string name="oneplus_gesture_to_control_calls_summary">Jawab panggilan atau tukar secara automatik ke fon telinga menggunakan gerak isyarat</string>
@@ -886,7 +890,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding dengan corak atau PIN
     <string name="oneplus_notification_advance_settings">Pemberitahuan tetapan lanjutan</string>
     <string name="oneplus_notification_alert_title">Penting</string>
     <string name="oneplus_notification_channel_summary_low">Pemberitahuan yang kurang penting tanpa apa-apa bunyi atau getaran</string>
-    <string name="oneplus_notification_dialog_never_mode">Tidak pernah</string>
+    <string name="oneplus_notification_dialog_never_mode">Jangan sekali-kali</string>
     <string name="oneplus_notification_dialog_ringtone">Nada dering pemberitahuan</string>
     <string name="oneplus_notification_dialog_ringtone_mode">Hanya dalam mod deringan</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Sentiasa</string>
@@ -1429,7 +1433,7 @@ Wawasan yang direka bentuk bersama-bersama oleh OnePlus &amp; pelajar dari Parso
     <string name="op_display_motion_graphics_compensation_summary">Meningkatkan kadar bingkai grafik, melancarkan video dan kesan permainan</string>
     <string name="op_dnd_summary">Jangan ganggu</string>
     <string name="op_enable_location_services">Untuk mencari dan menjejaki stesen pengecasan yang berdekatan, sila dayakan perkhidmatan lokasi</string>
-    <string name="op_enable_text">Bolehkan</string>
+    <string name="op_enable_text">Dayakan</string>
     <string name="op_face_unlock_set_unlock_password">Buka Kunci Muka + Kata Laluan</string>
     <string name="op_face_unlock_set_unlock_pattern">Buka Kunci Muka + Corak</string>
     <string name="op_face_unlock_set_unlock_pin">Buka Kunci Muka + PIN</string>
@@ -1557,6 +1561,8 @@ Buka kunci cap jari mungkin tidak serasi dengan pelindung skrin pihak ketiga.
     <string name="prox_wake_title">Bangun kehampiran</string>
     <string name="quick_unlock_summary">Apabila diaktifkan, skrin kunci akan membuka secara automatik sebaik sahaja PIN atau kata laluan yang betul dikesan.</string>
     <string name="quick_unlock_title">Buka kunci cepat</string>
+    <string name="raise_summary">Papan kekunci akan ditinggikan dari bawah dan kekunci pintasan akan dipaparkan</string>
+    <string name="raise_title">Tinggikan</string>
     <string name="reset_collect_diagnostics_summary">Kumpul data diagnostik untuk penyelesaian masalah</string>
     <string name="reset_collect_diagnostics_title">Kumpul diagnostik</string>
     <string name="reset_system_settings_button_text">Tetap semula tetapan</string>
@@ -1573,7 +1579,7 @@ Adakah anda mahu menetapkan semula tetapan sistem? Anda tidak boleh membuat asal
     <string name="reset_system_settings_dialog_title">Amaran</string>
     <string name="reset_system_settings_title">Tetap semula tetapan</string>
     <string name="restrict_background_uss_always">Sentiasa</string>
-    <string name="restrict_background_uss_never">Tidak pernah</string>
+    <string name="restrict_background_uss_never">Jangan sekali-kali</string>
     <string name="restrict_background_uss_roaming">Semasa perayauan sahaja</string>
     <string name="restrict_background_uss_title">Hadkan data latar belakang</string>
     <string name="reverse_wireless_charging">Pengecasan Berbalik</string>
@@ -1698,7 +1704,7 @@ Adakah anda mahu menetapkan semula tetapan sistem? Anda tidak boleh membuat asal
     <string name="touchscreen_double_tap_to_wake_gesture_title">Ketik dua kali untuk bangun</string>
     <string name="touchscreen_flashlight_gesture_summary">"Lukis 'V' untuk togol lampu suluh"</string>
     <string name="touchscreen_flashlight_gesture_title">Togol lampu suluh</string>
-    <string name="touchscreen_music_gesture_summary">Lukis|| dengan kedua-dua jari untuk memainkan atau menjeda muzik. Lukis &lt; atau > untuk runut seterusnya</string>
+    <string name="touchscreen_music_gesture_summary">Lukis ‖ dengan kedua-dua jari untuk memainkan atau menjeda muzik. Lukis &lt; atau > untuk lagu sebelumnya atau seterusnya</string>
     <string name="touchscreen_music_gesture_title">Kawalan muzik</string>
     <string name="traffic_auto_close_network">Putus secara automatik daripada rangkaian</string>
     <string name="traffic_auto_close_network_keep_closed">Abaikan</string>

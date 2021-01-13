@@ -17,6 +17,10 @@
 .end annotation
 
 
+# static fields
+.field public static sDefaultImpl:Lcom/verizon/loginenginesvc/ILoginEngineService;
+
+
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -43,7 +47,7 @@
 .end method
 
 .method public request(Ljava/lang/String;Lcom/verizon/loginenginesvc/IResponseCallback;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -69,27 +73,53 @@
 
     invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    move-result-object p1
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
     iget-object p0, p0, Lcom/verizon/loginenginesvc/ILoginEngineService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 p1, 0x1
+    const/4 v2, 0x1
 
-    const/4 p2, 0x0
+    const/4 v3, 0x0
 
-    invoke-interface {p0, p1, v0, v1, p2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-static {}, Lcom/verizon/loginenginesvc/ILoginEngineService$Stub;->getDefaultImpl()Lcom/verizon/loginenginesvc/ILoginEngineService;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-static {}, Lcom/verizon/loginenginesvc/ILoginEngineService$Stub;->getDefaultImpl()Lcom/verizon/loginenginesvc/ILoginEngineService;
+
+    move-result-object p0
+
+    invoke-interface {p0, p1, p2}, Lcom/verizon/loginenginesvc/ILoginEngineService;->request(Ljava/lang/String;Lcom/verizon/loginenginesvc/IResponseCallback;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 

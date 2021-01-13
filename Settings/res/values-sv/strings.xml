@@ -2246,8 +2246,12 @@ När du aktiverar automatisk säkerhetskopiering fjärrsparas enhets- och appdat
     <string name="help_feedback_label">Hjälp och feedback</string>
     <string name="help_label">Hjälp och feedback</string>
     <string name="hide_extra_apps">Visa appanvändning</string>
+    <string name="hide_imeback_and_switcher">Justering av tangentbordets höjd</string>
+    <string name="hide_imeback_and_switcher_warning">Justeringen av tangentbordets höjd märks tydligt vid användningen av helskärmsgester.</string>
     <string name="hide_silent_icons_summary">Ikoner för aviseringar utan avbrott visas inte i statusfältet</string>
     <string name="hide_silent_icons_title">Dölj ikoner från aviseringar utan avbrott</string>
+    <string name="hide_summary">Genvägsfältet i tangentbordets nederdel kommer att döljas</string>
+    <string name="hide_title">Dölj</string>
     <string name="high_label">Hög</string>
     <string name="high_power_app_text_nomal">%1$s laddar ur ditt batteri</string>
     <string name="high_power_app_text_red">%1$s laddar ur ditt batteri kraftigt</string>
@@ -3420,7 +3424,7 @@ Batteribesparing stängs av automatiskt när enheten laddar."</string>
     <string name="oneplus_clear_intenal_storage_data_summary">Inklusive musik, foton, videoklipp och annan personlig information</string>
     <string name="oneplus_clear_intenal_storage_data_title">Radera intern lagring</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Färgrik ton kan enbart använda systemfärger</string>
-    <string name="oneplus_colorful_mode_title">Färgrik</string>
+    <string name="oneplus_colorful_mode_title">Färgrika</string>
     <string name="oneplus_compatibility_mode_summary">Appar i helskärmsläge kan inte använda flärpområdet</string>
     <string name="oneplus_compatibility_mode_title">Kompatibilitetsläge</string>
     <string name="oneplus_condition_airplane_mode_turn_off">SLÅ AV FLYGPLANSLÄGE</string>
@@ -3576,8 +3580,8 @@ Var försiktig eftersom ansiktsupplåsning är mindre säker än fingeravtryck o
     <string name="oneplus_fingerprint_findsendor_summary">När fingeravtrycksmönstret visas längst ned på skärmen trycker du bara med fingret på området för identifiering av fingeravtryck för att använda fingeravtrycksfunktionen.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Så här använder du funktionen för fingeravtryck</string>
     <string name="oneplus_fingerprint_functional_declaration">Funktionsdeklaration för fingeravtryck</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Från sökarskärmen trycker du länge på sensorn för att ta ett foto</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Långtryck för att ta ett foto</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Du tar ett foto genom att göra ett långt tryck på fingeravtryckssensorn när sökarskärmen visas</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Gör ett långt tryck för att ta ett foto</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Fingeravtrycksgest</string>
     <string name="oneplus_fingerprint_hardware_exception">Informationen om maskinvara för fingeravtryck är inte korrekt. Kontakta kundtjänst</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Långtryck på fingeravtryckssensorn för att aktivera snabbetalning</string>
@@ -3756,7 +3760,7 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_legal_summary">Sekretesspolicy, avtal etc.</string>
     <string name="oneplus_levels">Nivåer</string>
     <string name="oneplus_lift_up_display">Displayen alltid på eller lyft upp displayen</string>
-    <string name="oneplus_light">Ljus</string>
+    <string name="oneplus_light">Lätt</string>
     <string name="oneplus_local_ringtone">Ringsignal från internminne</string>
     <string name="oneplus_location_information">Beskrivning av platsbaserade tjänster</string>
     <string name="oneplus_lock_after_timeout">Lås automatiskt efter viloläge</string>
@@ -3864,7 +3868,7 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_notification_ringtone_silent_mode">Alltid</string>
     <string name="oneplus_notification_ringtone_title">Ringsignal för meddelanden i hörlurar</string>
     <string name="oneplus_notification_silence_title">Annan</string>
-    <string name="oneplus_notification_sound_default">Standardmeddelande</string>
+    <string name="oneplus_notification_sound_default">Standardmeddelanden</string>
     <string name="oneplus_notification_ways">Visningsläge</string>
     <string name="oneplus_notification_ways_title">Så här visar du aviseringar</string>
     <string name="oneplus_notifications">Meddelanden</string>
@@ -3876,7 +3880,7 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_notifications_sound">Aviseringsljud</string>
     <string name="oneplus_o2_contributors">OxygenOS-bidragsgivare</string>
     <string name="oneplus_open_bed_time_mode_schedule_summary">Slå på vid ett anpassat tidsintervall</string>
-    <string name="oneplus_open_bed_time_mode_schedule_title">Schema</string>
+    <string name="oneplus_open_bed_time_mode_schedule_title">Planera</string>
     <string name="oneplus_open_bed_time_mode_summary">Du kan slå på sovtidsläget manuellt</string>
     <string name="oneplus_open_bed_time_mode_title">Sovtidsläge</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Bekräfta</string>
@@ -4012,7 +4016,7 @@ Obs! Ditt fingeravtryck kan vara mindre säkert än starka mönster eller PIN-ko
     <string name="oneplus_rotation_silent_enable_summary">Vänd på enheten för att slå av ljudet vid inkommande samtal</string>
     <string name="oneplus_rotation_silent_enable_title">Växla till ljudlös</string>
     <string name="oneplus_scene_mode">SCENER</string>
-    <string name="oneplus_schedule">Schema</string>
+    <string name="oneplus_schedule">Planera</string>
     <string name="oneplus_screen">SKÄRM</string>
     <string name="oneplus_screen_better_cold">Kall</string>
     <string name="oneplus_screen_better_nature">Naturlig</string>
@@ -4223,9 +4227,9 @@ Obs!
     <string name="oneplus_theme_shape_effect_title">Välj form</string>
     <string name="oneplus_theme_system_customization">SYSTEMANPASSNING</string>
     <string name="oneplus_theme_tone">Färgton</string>
-    <string name="oneplus_theme_tone_effect_color">Färgrik</string>
+    <string name="oneplus_theme_tone_effect_color">Färgrika</string>
     <string name="oneplus_theme_tone_effect_dark">Mörk</string>
-    <string name="oneplus_theme_tone_effect_light">Ljus</string>
+    <string name="oneplus_theme_tone_effect_light">Lätt</string>
     <string name="oneplus_theme_tone_effect_title">Välj ton</string>
     <string name="oneplus_theme_wallpaper">Bakgrundsbilder</string>
     <string name="oneplus_three_screenshots_enable_summary">Svep med tre fingrar på skärmen för att ta en skärmbild</string>
@@ -4811,6 +4815,8 @@ Funktionen för upplåsning med fingeravtryck fungerar kanske inte om du använd
     <string name="radio_info_http_client_test">Test av HTTP-klient:</string>
     <string name="radio_info_ping_hostname_v4">Pinga värdnamn(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Pinga värdnamn(www.google.com) IPv6:</string>
+    <string name="raise_summary">Tangentbordet flyttas uppåt från nederkanten och genvägsknappen visas</string>
+    <string name="raise_title">Flytta uppåt</string>
     <string name="rarely_running">Körs sällan (%s)</string>
     <string name="really_remove_account_message">Om du tar bort kontot tar du också bort alla meddelanden, kontakter och andra data från mobilen!</string>
     <string name="really_remove_account_title">Vill du ta bort kontot?</string>
@@ -5372,7 +5378,7 @@ Obs! Du kan inte använda fingeravtrycket för att låsa upp den här enheten. K
     <string name="sim_enabler_summary">SIM-kortet är %1$s</string>
     <string name="sim_enabler_summary_new_marshmallow">" är %1$s"</string>
     <string name="sim_enabler_title">SIM-verktyg</string>
-    <string name="sim_enabler_will_disable_sim_title">Obs!</string>
+    <string name="sim_enabler_will_disable_sim_title">Obs</string>
     <string name="sim_enter_cancel">Avbryt</string>
     <string name="sim_enter_new">Ny PIN-kod för SIM-kort</string>
     <string name="sim_enter_ok">OK</string>
@@ -5873,7 +5879,7 @@ En funktion i Google som du kan använda om du vill synkronisera så att du komm
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dubbeltryck för att väcka</string>
     <string name="touchscreen_flashlight_gesture_summary">Rita ett V för att växla ficklampan</string>
     <string name="touchscreen_flashlight_gesture_title">Växla ficklampan</string>
-    <string name="touchscreen_music_gesture_summary">Rita || med två fingrar för att spela upp eller pausa musiken. Rita &lt; eller > för föregående eller nästa spår</string>
+    <string name="touchscreen_music_gesture_summary">Rita ‖ med två fingrar för att spela upp eller pausa musik. Rita &lt; eller > för att gå till föregående eller nästa spår</string>
     <string name="touchscreen_music_gesture_title">Musikkontroll</string>
     <string name="track_frame_time">Profilens HWUI-rendering</string>
     <string name="track_frame_time_keywords">Grafikprocessor</string>
@@ -6279,7 +6285,7 @@ Alla användare kan uppdatera appar för samtliga användares räkning."</string
     <string name="verify_apps_over_usb_title">Verifiera appar via USB</string>
     <string name="verizon_store_demo_mode_hint">Ange lösenordet</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Om du ändrar konfigurationen för trådlös surfzon frånkopplas de enheter som redan är anslutna till den trådlösa surfzonen.</string>
+    <string name="verizon_wifi_tether_band_warning">Om du ändrar konfigurationen för trådlös surfzon frånkopplas enheter som för närvarande är anslutna till trådlös surfzon.</string>
     <string name="version_text">version %1$s</string>
     <string name="vibrate_in_silent_title">Vibrera vid tyst</string>
     <string name="vibrate_input_devices">Omdirigera vibration</string>

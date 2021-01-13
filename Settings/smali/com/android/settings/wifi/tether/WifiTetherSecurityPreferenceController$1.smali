@@ -252,6 +252,27 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$1;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
+
+    iget-object p1, p1, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->mContext:Landroid/content/Context;
+
+    sget v3, Lcom/android/settings/R$string;->wifi_security_open:I
+
+    invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_5
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$1;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
 
     iget-object p1, p1, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;->mContext:Landroid/content/Context;
@@ -264,6 +285,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    :goto_0
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController$1;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSecurityPreferenceController;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

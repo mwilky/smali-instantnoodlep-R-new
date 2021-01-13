@@ -259,6 +259,10 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="hardware_keys_long_press_title">Ilgas paspaudimas</string>
     <string name="hardware_keys_menu_key_title">Naujausių mygtukas</string>
     <string name="header_category_custom">Pritaikymas</string>
+    <string name="hide_imeback_and_switcher">Klaviatūros aukščio reguliavimas</string>
+    <string name="hide_imeback_and_switcher_warning">Klaviatūros aukščio reguliavimas veiks naudojant viso ekrano gestus.</string>
+    <string name="hide_summary">Nuorodų juosta klaviatūros apačioje bus paslėpta</string>
+    <string name="hide_title">Slėpti</string>
     <string name="high_power_app_text_nomal">%1$s Eikvoja jūsų baterijos energiją</string>
     <string name="high_power_app_text_red">%1$s Stipriai eikvoja jūsų baterijos energiją</string>
     <string name="hint_data_used_alert">Duomenų sunaudota daugiau nei %1$s</string>
@@ -609,8 +613,8 @@ Dėmesio. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto ants
     <string name="oneplus_fingerprint_findsendor_summary">Piršto antspaudo raštui pasirodžius ekrano apačioje, tiesiog prispauskite pirštą prie pirštų antspaudų identifikavimo srities, kad galėtumėte pasinaudoti piršto antspaudo funkcija.</string>
     <string name="oneplus_fingerprint_findsendor_tilte">Kaip naudoti piršto atspaudą</string>
     <string name="oneplus_fingerprint_functional_declaration">Pirštų antspaudų funkcijos paaiškinimas</string>
-    <string name="oneplus_fingerprint_gesture_camera_summary">Rodinių ieškiklio ekrane palaikykite nuspaudę piršto antspaudo jutiklį, kad nufotografuotumėte</string>
-    <string name="oneplus_fingerprint_gesture_camera_title">Ilgas paspaudimas, kad nufotografuotumėte</string>
+    <string name="oneplus_fingerprint_gesture_camera_summary">Vaizdo ieškiklio ekrane palaikykite nuspaudę pirštų atspaudų jutiklį, kad užfiksuotumėte nuotrauką</string>
+    <string name="oneplus_fingerprint_gesture_camera_title">Palaikykite nuspaudę ir užfiksuokite nuotrauką</string>
     <string name="oneplus_fingerprint_gesture_settings_title">Gestas pirštu</string>
     <string name="oneplus_fingerprint_hardware_exception">Pirštų atspaudų aparatinės įrangos informacija netiksli, kreipkitės į klientų aptarnavimo tarnybą</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">Palaikykite nuspaudę piršto antspaudo jutiklį, kad įjungtumėte greitojo apmokėjimo funkciją</string>
@@ -706,10 +710,10 @@ Kad bet kuriuo metu grįžtumėte į pagrindinį ekraną, perbraukite nuo ekrano
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Naršymo gestai (apačia)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Naršymo gestai (kairė ir dešinė)</string>
     <string name="oneplus_gesture_of_answer_call_info">Įeinančio skambučio atveju atsiliepti galite prie ausies pridėję telefoną.</string>
-    <string name="oneplus_gesture_of_answer_call_summary">Atsiliepkite į skambučius automatiškai pakeldami telefoną prie ausinės</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Atsiliepti į įeinančius skambučius automatiškai, prie ausies pridėjus telefoną</string>
     <string name="oneplus_gesture_of_answer_call_title">Atsiliepti gestu</string>
     <string name="oneplus_gesture_start_learning">Pradėti mokymąsi</string>
-    <string name="oneplus_gesture_to_answer_summary">Atsiliepkite į skambučius automatiškai pakeldami telefoną prie ausinės</string>
+    <string name="oneplus_gesture_to_answer_summary">Atsiliepti į įeinančius skambučius automatiškai, prie ausies pridėjus telefoną</string>
     <string name="oneplus_gesture_to_answer_title">Pakelti ir atsiliepti</string>
     <string name="oneplus_gesture_to_control_call_info">Automatiškai valdyti skambučius pakeliant telefoną prie ausies</string>
     <string name="oneplus_gesture_to_control_calls_summary">Automatiškai atsiliepti į skambučius arba įjungti ausinę gestu</string>
@@ -817,7 +821,7 @@ Pastaba. Jūsų piršto atspaudas gali būti mažiau saugus nei sudėtingas taš
     <string name="oneplus_memc_more_support_apps">Daugiau palaikomų programų</string>
     <string name="oneplus_memc_notice">Veikiant šiam režimui vaizdo įrašo kadrų sparta padidinamas, sumažinamas judančių vaizdų liejimas, todėl vaizdas tampa ryškesnis ir sklandesnis. Gali būti taikomas tik atkuriant per visą ekraną.</string>
     <string name="oneplus_memc_open">Įjungta</string>
-    <string name="oneplus_memc_support_apps">Palaikomos programos</string>
+    <string name="oneplus_memc_support_apps">Palaikomos programėlės</string>
     <string name="oneplus_memc_support_no_apps">Nėra įdiegtų palaikomų programų</string>
     <string name="oneplus_memc_video">Judančios grafikos sklandumas</string>
     <string name="oneplus_memc_video_effect">Kompensavimo efektas</string>
@@ -834,7 +838,7 @@ Pastaba. Jūsų piršto atspaudas gali būti mažiau saugus nei sudėtingas taš
     <string name="oneplus_more">Daugiau</string>
     <string name="oneplus_motion_sensor_settings_title">Sistemos gestai</string>
     <string name="oneplus_multi_app">Lygiagrečiosios programėlės</string>
-    <string name="oneplus_multi_app_disable_apps">Palaikomos programos</string>
+    <string name="oneplus_multi_app_disable_apps">Palaikomos programėlės</string>
     <string name="oneplus_multi_app_disable_tips">Išjungiant, visi lygiagrečiosios programėlės duomenys bus ištrinti. Ar norite tęsti?</string>
     <string name="oneplus_multi_app_enable_apps">Įjungtos programėlės</string>
     <string name="oneplus_multi_app_init">Įkeliama...</string>
@@ -1201,7 +1205,7 @@ Pastaba.
     <string name="oneplus_support_apps">PALAIKOMOS PROGRAMOS</string>
     <string name="oneplus_support_summary">Patarimai ir DUK apie įrenginio naudojimą</string>
     <string name="oneplus_support_title">Patarimai ir palaikymas</string>
-    <string name="oneplus_supported_apps">Palaikomos programos</string>
+    <string name="oneplus_supported_apps">Palaikomos programėlės</string>
     <string name="oneplus_suspension_notice">Perspėjimas</string>
     <string name="oneplus_suspension_notice_summary">Leisti programėlėms rodyti priminimo pranešimus</string>
     <string name="oneplus_switch">„OnePlus Switch“</string>
@@ -1445,7 +1449,7 @@ Atrakinimas piršto atspaudu gali būti nesuderinamas su trečiųjų šalių ekr
     <string name="op_fragment">Trumpas</string>
     <string name="op_gamespace">Žaidimų erdvė</string>
     <string name="op_global_drak_mode_apps_manage">Tvarkyti programas tamsiuoju režimu</string>
-    <string name="op_global_drak_mode_full_support_list">Palaikomos programos</string>
+    <string name="op_global_drak_mode_full_support_list">Palaikomos programėlės</string>
     <string name="op_global_drak_mode_not_full_support_list">Nepalaikomos programos</string>
     <string name="op_global_drak_mode_support_description">Nepalaikomos programos tamsiuoju režimu gali neveikti tinkamai</string>
     <string name="op_gps_off_warn_msg">Pirma įjunkite vietos nustatymą</string>
@@ -1557,6 +1561,8 @@ Atrakinimas piršto atspaudu gali būti nesuderinamas su trečiųjų šalių ekr
     <string name="prox_wake_title">Pažadinimas artumu</string>
     <string name="quick_unlock_summary">Įjungus, užrakto ekranas automatiškai atsirakins įvedus teisingą PIN kodą arba slaptažodį.</string>
     <string name="quick_unlock_title">Greitas atrakinimas</string>
+    <string name="raise_summary">Klaviatūra bus pakelta aukštyn nuo apačios ir bus rodomas nuorodos mygtukas</string>
+    <string name="raise_title">Pakelti</string>
     <string name="reset_collect_diagnostics_summary">Surinkti diagnostikos duomenis, reikalingus triktims diagnozuoti</string>
     <string name="reset_collect_diagnostics_title">Surinkti diagnostiką</string>
     <string name="reset_system_settings_button_text">Iš naujo nustatyti nustatymus</string>
@@ -1698,7 +1704,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dukart bakstelėkite ir pažadinkite</string>
     <string name="touchscreen_flashlight_gesture_summary">Nupieškite V, kad perjungtumėte žibintuvėlį</string>
     <string name="touchscreen_flashlight_gesture_title">Perjungti žibintuvėlį</string>
-    <string name="touchscreen_music_gesture_summary">Dviem pirštais nupieškite ||, kad paleistumėte arba sustabdytumėte muziką. Nupieškite &lt; arba >, kad įjungtumėte ankstesnį arba tolesnį takelį</string>
+    <string name="touchscreen_music_gesture_summary">Dviem pirštais nupieškite ‖, kad paleistumėte arba sustabdytumėte muziką. Nupieškite &lt; arba >, kad įjungtumėte ankstesnį arba kitą įrašą</string>
     <string name="touchscreen_music_gesture_title">Muzikos valdymas</string>
     <string name="traffic_auto_close_network">Automatiškai atsijungti nuo tinklo</string>
     <string name="traffic_auto_close_network_keep_closed">Nepaisyti</string>
@@ -1823,7 +1829,7 @@ Ar norite iš naujo nustatyti sistemos nustatymus? Šio veiksmo negalima anuliuo
     <string name="wifi_wapi_cert_create_subdir">Sukurti katalogą</string>
     <string name="wifi_wapi_cert_delet_subdir">Pasirinkti tinkamą sertifikatą</string>
     <string name="wifi_wapi_cert_install">Įdiegti WAPI sertifikatą</string>
-    <string name="wifi_wapi_cert_install_button">Įdiegti</string>
+    <string name="wifi_wapi_cert_install_button">Diegti</string>
     <string name="wifi_wapi_cert_mgmt_as_dont_exist">SD kortelė ir tarptautinė saugykla AS sertifikato neturi, patikrinkite dar kartą!</string>
     <string name="wifi_wapi_cert_mgmt_as_format_is_wrong">AS sertifikato formatas klaidingas! Įdiekite tinkamą AS sertifikatą</string>
     <string name="wifi_wapi_cert_mgmt_as_name_is_empty">Įveskite AS sertifikato pavadinimą</string>

@@ -7,6 +7,14 @@
 .implements Lcom/android/settingslib/core/lifecycle/events/OnDestroy;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController$OPPhoneStateListener;
+    }
+.end annotation
+
+
 # static fields
 .field static final ID:I
 
@@ -55,12 +63,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController$2;
-
-    invoke-direct {v0, p0}, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController$2;-><init>(Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;)V
-
-    iput-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
-
     iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mAppContext:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
@@ -92,6 +94,14 @@
     check-cast p1, Landroid/net/ConnectivityManager;
 
     iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    new-instance p1, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController$OPPhoneStateListener;
+
+    iget-object p2, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
+
+    invoke-direct {p1, p2}, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController$OPPhoneStateListener;-><init>(Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;)V
+
+    iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     return-void
 .end method
@@ -144,14 +154,6 @@
     invoke-direct {p0, p1, p2}, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->restartPhoneStateListener(Landroid/content/Context;I)V
 
     return-void
-.end method
-
-.method static synthetic access$500(Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;)Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CellularDataConditionController;->mConditionManager:Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;
-
-    return-object p0
 .end method
 
 .method private getDefaultDataSubscriptionId(Landroid/content/Context;)I

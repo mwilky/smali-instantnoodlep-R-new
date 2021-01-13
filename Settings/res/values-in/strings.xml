@@ -2246,8 +2246,12 @@ Jika Anda mengaktifkan cadangan otomatis, data perangkat dan aplikasi secara ber
     <string name="help_feedback_label">Bantuan &amp; masukan</string>
     <string name="help_label">Bantuan &amp; masukan</string>
     <string name="hide_extra_apps">Tampilkan penggunaan aplikasi</string>
+    <string name="hide_imeback_and_switcher">Penyesuaian ketinggian keyboard</string>
+    <string name="hide_imeback_and_switcher_warning">Penyesuaian ketinggian keyboard akan terlihat jelas dalam isyarat layar penuh.</string>
     <string name="hide_silent_icons_summary">Ikon dari notifikasi senyap tidak ditampilkan di status bar</string>
     <string name="hide_silent_icons_title">Sembunyikan ikon dari notifikasi senyap</string>
+    <string name="hide_summary">Bilah pintasan di bagian bawah keyboard akan disembunyikan</string>
+    <string name="hide_title">Sembunyikan</string>
     <string name="high_label">Tinggi</string>
     <string name="high_power_app_text_nomal">%1$s Menguras baterai Anda</string>
     <string name="high_power_app_text_red">%1$s Sangat menguras baterai Anda</string>
@@ -3420,7 +3424,7 @@ Penghemat baterai dimatikan otomatis saat daya perangkat diisi ulang."</string>
     <string name="oneplus_clear_intenal_storage_data_summary">Termasuk musik, foto, video dan data pribadi lainnya</string>
     <string name="oneplus_clear_intenal_storage_data_title">Hapus memori internal</string>
     <string name="oneplus_colorful_mode_cannot_change_color_accent">Nada kaya warna hanya bisa menggunakan warna sistem</string>
-    <string name="oneplus_colorful_mode_title">Warna-warni</string>
+    <string name="oneplus_colorful_mode_title">Kaya warna</string>
     <string name="oneplus_compatibility_mode_summary">Apl layar penuh tidak dapat menggunakan area takik</string>
     <string name="oneplus_compatibility_mode_title">Mode kompatibilitas</string>
     <string name="oneplus_condition_airplane_mode_turn_off">MATIKAN MODE PESAWAT</string>
@@ -3756,7 +3760,7 @@ Catatan: sidik jari mungkin tidak seaman pola atau PIN yang memiliki tingkat kea
     <string name="oneplus_legal_summary">Kebijakan privasi, perjanjian, dll</string>
     <string name="oneplus_levels">Tingkat</string>
     <string name="oneplus_lift_up_display">Selalu Di Layar atau angkat layar</string>
-    <string name="oneplus_light">Terang</string>
+    <string name="oneplus_light">Ringan</string>
     <string name="oneplus_local_ringtone">Nada Dering dari Memori Internal</string>
     <string name="oneplus_location_information">Deskripsi Layanan Berbasis Lokasi</string>
     <string name="oneplus_lock_after_timeout">Otomatis kunci setelah tidur</string>
@@ -3784,7 +3788,7 @@ Catatan: sidik jari mungkin tidak seaman pola atau PIN yang memiliki tingkat kea
     <string name="oneplus_memc_more_support_apps">Aplikasi lainnya yang didukung</string>
     <string name="oneplus_memc_notice">Di mode ini, laju bingkai video akan meningkat, mengurangi gerak buram grafis, menjadikannya lebih jelas dan halus. Efektif hanya dalam pemutaran layar penuh.</string>
     <string name="oneplus_memc_open">Aktif</string>
-    <string name="oneplus_memc_support_apps">Aplikasi yang didukung</string>
+    <string name="oneplus_memc_support_apps">Apl yang didukung</string>
     <string name="oneplus_memc_support_no_apps">Tidak ada aplikasi didukung terinstal</string>
     <string name="oneplus_memc_video">Penghalusan grafis gerak</string>
     <string name="oneplus_memc_video_effect">Efek kompensasi</string>
@@ -3801,7 +3805,7 @@ Catatan: sidik jari mungkin tidak seaman pola atau PIN yang memiliki tingkat kea
     <string name="oneplus_more">Selengkapnya</string>
     <string name="oneplus_motion_sensor_settings_title">Isyarat sistem</string>
     <string name="oneplus_multi_app">App Paralel</string>
-    <string name="oneplus_multi_app_disable_apps">Aplikasi yang didukung</string>
+    <string name="oneplus_multi_app_disable_apps">Apl yang didukung</string>
     <string name="oneplus_multi_app_disable_tips">Semua data dalam apl paralel akan dihapus setelah dimatikan. Anda ingin melanjutkan?</string>
     <string name="oneplus_multi_app_enable_apps">Apl yang diaktifkan</string>
     <string name="oneplus_multi_app_init">Memuat...</string>
@@ -4168,7 +4172,7 @@ Catatan:
     <string name="oneplus_support_apps">APLIKASI YANG DIDUKUNG</string>
     <string name="oneplus_support_summary">Kiat dan T&amp;J mengenai penggunaan perangkat</string>
     <string name="oneplus_support_title">Kiat &amp; Dukungan</string>
-    <string name="oneplus_supported_apps">Aplikasi yang didukung</string>
+    <string name="oneplus_supported_apps">Apl yang didukung</string>
     <string name="oneplus_suspension_notice">Perhatian</string>
     <string name="oneplus_suspension_notice_summary">Izinkan apl menampilkan notifikasi perhatian</string>
     <string name="oneplus_switch">OnePlus Switch</string>
@@ -4223,9 +4227,9 @@ Catatan:
     <string name="oneplus_theme_shape_effect_title">Pilih bentuk</string>
     <string name="oneplus_theme_system_customization">KUSTOMISASI SISTEM</string>
     <string name="oneplus_theme_tone">Suasana</string>
-    <string name="oneplus_theme_tone_effect_color">Warna-warni</string>
+    <string name="oneplus_theme_tone_effect_color">Kaya warna</string>
     <string name="oneplus_theme_tone_effect_dark">Gelap</string>
-    <string name="oneplus_theme_tone_effect_light">Terang</string>
+    <string name="oneplus_theme_tone_effect_light">Ringan</string>
     <string name="oneplus_theme_tone_effect_title">Pilih nada</string>
     <string name="oneplus_theme_wallpaper">Wallpaper</string>
     <string name="oneplus_three_screenshots_enable_summary">Geser tiga jari pada layar untuk mengambil tangkapan layar</string>
@@ -4413,7 +4417,7 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="op_fragment">Pendek</string>
     <string name="op_gamespace">Ruang Game</string>
     <string name="op_global_drak_mode_apps_manage">Kelola apl di mode gelap</string>
-    <string name="op_global_drak_mode_full_support_list">Aplikasi yang didukung</string>
+    <string name="op_global_drak_mode_full_support_list">Apl yang didukung</string>
     <string name="op_global_drak_mode_not_full_support_list">Apl yang tidak didukung</string>
     <string name="op_global_drak_mode_support_description">Apl yang tidak didukung mungkin tidak akan bekerja sebagaimana mestinya di mode gelap</string>
     <string name="op_gps_off_warn_msg">Nyalakan lokasi terlebih dahulu</string>
@@ -4811,6 +4815,8 @@ Insight, dirancang bersama oleh OnePlus &amp; para pelajar dari Parsons School o
     <string name="radio_info_http_client_test">Uji Klien HTTP:</string>
     <string name="radio_info_ping_hostname_v4">Ping Hostname(www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Ping Hostname(www.google.com) IPv6:</string>
+    <string name="raise_summary">Posisi keyboard yang semula di bawah akan dinaikkan dan tombol pintasan akan ditampilkan</string>
+    <string name="raise_title">Naikkan</string>
     <string name="rarely_running">Jarang dijalankan (%s)</string>
     <string name="really_remove_account_message">Menghapus akun ini akan menghapus semua pesan, kontak, dan data lain akun tersebut dari ponsel.</string>
     <string name="really_remove_account_title">Hapus akun?</string>
@@ -5873,7 +5879,7 @@ Pendekatan Google untuk menyinkronkan data guna memungkinkan akses ke kontak, ja
     <string name="touchscreen_double_tap_to_wake_gesture_title">Ketuk Dua Kali untuk Membangunkan</string>
     <string name="touchscreen_flashlight_gesture_summary">Gambar pola V untuk menggunakan senter</string>
     <string name="touchscreen_flashlight_gesture_title">Menggunakan senter</string>
-    <string name="touchscreen_music_gesture_summary">Gambar pola || dengan dua jari untuk memutar atau menjeda musik. Gambar pola &lt; atau > untuk trek sebelum atau berikutnya</string>
+    <string name="touchscreen_music_gesture_summary">Gambar pola ‖ dengan dua jari untuk memutar atau menjeda musik. Gambar pola &lt; atau > untuk trek sebelum atau berikutnya</string>
     <string name="touchscreen_music_gesture_title">Kontrol Musik</string>
     <string name="track_frame_time">Rendering HWUI profil</string>
     <string name="track_frame_time_keywords">GPU</string>
@@ -6279,7 +6285,7 @@ Pengguna mana pun dapat memperbarui aplikasi untuk semua pengguna lain."</string
     <string name="verify_apps_over_usb_title">Verifikasi aplikasi melalui USB</string>
     <string name="verizon_store_demo_mode_hint">Masukkan kata sandi</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Mengubah pengaturan hotspot seluler akan memutus koneksi perangkat yang sedang terhubung ke hotspot seluler.</string>
+    <string name="verizon_wifi_tether_band_warning">Mengubah pengaturan Hotspot Seluler akan memutus koneksi perangkat yang sedang terhubung ke Hotspot Seluler.</string>
     <string name="version_text">versi %1$s</string>
     <string name="vibrate_in_silent_title">Getar saat senyap</string>
     <string name="vibrate_input_devices">Mengalihkan getaran</string>

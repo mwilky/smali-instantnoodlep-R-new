@@ -2246,8 +2246,12 @@
     <string name="help_feedback_label">Помощ и отзиви</string>
     <string name="help_label">Помощ и отзиви</string>
     <string name="hide_extra_apps">Употреба на прилож.: Показване</string>
+    <string name="hide_imeback_and_switcher">Регулиране на височината на клавиатурата</string>
+    <string name="hide_imeback_and_switcher_warning">Регулирането на височината на клавиатурата ще стане видимо при жестовете на цял екран.</string>
     <string name="hide_silent_icons_summary">Иконите от ненатрапчивите известия не се показват в лентата на състоянието</string>
     <string name="hide_silent_icons_title">Скриване на иконите от ненатрапчивите известия</string>
+    <string name="hide_summary">Лентата с преки пътища в долната част на клавиатурата ще бъде скрита</string>
+    <string name="hide_title">Скриване</string>
     <string name="high_label">Висока</string>
     <string name="high_power_app_text_nomal">%1$s изтощава вашата батерия</string>
     <string name="high_power_app_text_red">%1$s сериозно изтощава вашата батерия</string>
@@ -3755,7 +3759,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_legal_summary">Правила за поверителност, споразумения и др.</string>
     <string name="oneplus_levels">Нива</string>
     <string name="oneplus_lift_up_display">Винаги включен дисплей или включване при повдигане</string>
-    <string name="oneplus_light">Светла</string>
+    <string name="oneplus_light">Леко</string>
     <string name="oneplus_local_ringtone">Тон на звънене от вътрешно място за съхранение</string>
     <string name="oneplus_location_information">Описание на услугите, базирани на местоположение</string>
     <string name="oneplus_lock_after_timeout">Автоматично заключване след заспиване</string>
@@ -4224,7 +4228,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="oneplus_theme_tone">Тон</string>
     <string name="oneplus_theme_tone_effect_color">Цветен</string>
     <string name="oneplus_theme_tone_effect_dark">Тъмна</string>
-    <string name="oneplus_theme_tone_effect_light">Светла</string>
+    <string name="oneplus_theme_tone_effect_light">Леко</string>
     <string name="oneplus_theme_tone_effect_title">Избор на тон</string>
     <string name="oneplus_theme_wallpaper">Тапети</string>
     <string name="oneplus_three_screenshots_enable_summary">Плъзнете с три пръста върху екрана за заснемане на екранна снимка</string>
@@ -4810,6 +4814,8 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="radio_info_http_client_test">HTTP тест на клиентската програма:</string>
     <string name="radio_info_ping_hostname_v4">Име на хост за позив (www.google.com) IPv4:</string>
     <string name="radio_info_ping_hostname_v6">Име на хост за позив (www.google.com) IPv6:</string>
+    <string name="raise_summary">Клавиатурата ще се повдигне от долната част и ще се покаже клавиш за пряк път</string>
+    <string name="raise_title">Повдигане</string>
     <string name="rarely_running">Рядко се изпълнява (%s)</string>
     <string name="really_remove_account_message">Премахването на този профил ще изтрие всички съобщения, контакти и други данни в него от телефона!</string>
     <string name="really_remove_account_title">Да се премахне ли профилът?</string>
@@ -5872,7 +5878,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="touchscreen_double_tap_to_wake_gesture_title">Двукратно докосване за събуждане</string>
     <string name="touchscreen_flashlight_gesture_summary">Нарисувайте V, за да превключите фенерчето</string>
     <string name="touchscreen_flashlight_gesture_title">Превключване на фенерче</string>
-    <string name="touchscreen_music_gesture_summary">Начертайте || с два пръста, за да изпълните или спрете музиката. Начертайте &lt; или > за предишен или следващ запис</string>
+    <string name="touchscreen_music_gesture_summary">Начертайте ‖ с два пръста, за да възпроизведете или поставите музиката на пауза. Начертайте &lt; или > за предишната или следващата песен</string>
     <string name="touchscreen_music_gesture_title">Контрол на музика</string>
     <string name="track_frame_time">Изобр. на HWUI: Профилир.</string>
     <string name="track_frame_time_keywords">ГП</string>
@@ -6278,7 +6284,7 @@ Insight – създаден от OnePlus и студенти в Parsons School 
     <string name="verify_apps_over_usb_title">Потвържд. на прил. през USB</string>
     <string name="verizon_store_demo_mode_hint">Въвеждане на парола</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Променянето на начина, по който мобилният хотспот е настроен, ще прекъсне връзката с всички устройства, които в момента са свързани с мобилния хотспот.</string>
+    <string name="verizon_wifi_tether_band_warning">Changing the way Mobile Hotspot is set up will disconnect any devices currently connected to the Mobile Hotspot.</string>
     <string name="version_text">версия %1$s</string>
     <string name="vibrate_in_silent_title">Вибрира при тих режим</string>
     <string name="vibrate_input_devices">Пренасочване на вибрирането</string>
