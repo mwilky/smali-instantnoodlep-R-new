@@ -142,7 +142,8 @@
     <color name="numberpicker_divider_color_light">#89000000</color>
     <color name="numberpicker_minute_text_color_dark">@color/op_control_text_color_secondary_dark</color>
     <color name="numberpicker_minute_text_color_light">@color/op_control_text_color_secondary_light</color>
-    <color name="oneplus_accent_button_text_color">#d8000000</color>
+    <color name="oneplus_accent_active_color">#d8ffffff</color>
+    <color name="oneplus_accent_button_text_color">#ffffffff</color>
     <color name="oneplus_accent_color">#ffc41442</color>
     <color name="oneplus_accent_text_color">#ffc41442</color>
     <color name="oneplus_accent_theme_2">#fffbc02d</color>

@@ -49,20 +49,70 @@
 
     check-cast p2, Lcom/google/android/material/bottomappbar/BottomActionbar;
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     instance-of p3, p1, Landroid/widget/Button;
 
     if-nez p3, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_0
     move-object p3, p1
 
     check-cast p3, Landroid/widget/Button;
 
-    const/16 p4, 0x226
+    iget-object p4, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+
+    invoke-static {p4}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p4
+
+    iget p4, p4, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    const/16 p5, 0x208
+
+    if-lt p4, p5, :cond_1
+
+    iget-object p4, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+
+    invoke-static {p4}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p4
+
+    sget p5, Lcom/google/android/material/R$dimen;->max_bottomappbar_width:I
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p4, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$2;->this$0:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+
+    invoke-static {p4}, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;->access$2400(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)Landroid/content/Context;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p4
+
+    sget p5, Lcom/google/android/material/R$dimen;->max_bottomappbar_width_normal:I
+
+    :goto_0
+    invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p4
 
     invoke-virtual {p3, p4}, Landroid/widget/Button;->setMaxWidth(I)V
 
@@ -116,7 +166,7 @@
 
     move-result p6
 
-    if-nez p6, :cond_3
+    if-nez p6, :cond_4
 
     invoke-virtual {p3}, Landroid/widget/Button;->getMeasuredHeight()I
 
@@ -140,16 +190,16 @@
 
     move-result p5
 
-    if-eqz p5, :cond_1
+    if-eqz p5, :cond_2
 
     sget p5, Lcom/google/android/material/R$dimen;->op_control_margin_screen_bottom2:I
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     sget p5, Lcom/google/android/material/R$dimen;->op_control_margin_screen_bottom3:I
 
-    :goto_0
+    :goto_1
     invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p4
@@ -180,7 +230,7 @@
 
     move-result p3
 
-    if-eqz p3, :cond_2
+    if-eqz p3, :cond_3
 
     iget p3, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->leftMargin:I
 
@@ -192,9 +242,9 @@
 
     iput p3, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->leftMargin:I
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_2
+    :cond_3
     iget p3, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->rightMargin:I
 
     invoke-static {p2}, Lcom/google/android/material/bottomappbar/BottomActionbar;->access$2800(Lcom/google/android/material/bottomappbar/BottomActionbar;)I
@@ -205,12 +255,12 @@
 
     iput p3, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->rightMargin:I
 
-    :cond_3
-    :goto_1
-    return-void
-
     :cond_4
     :goto_2
+    return-void
+
+    :cond_5
+    :goto_3
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     return-void

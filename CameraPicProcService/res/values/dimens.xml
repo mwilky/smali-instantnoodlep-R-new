@@ -244,6 +244,8 @@
     <item type="dimen" name="material_emphasis_disabled">0.38</item>
     <item type="dimen" name="material_emphasis_high_type">0.87</item>
     <item type="dimen" name="material_emphasis_medium">0.6</item>
+    <dimen name="max_bottomappbar_width">130.0dip</dimen>
+    <dimen name="max_bottomappbar_width_normal">178.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24.0dip</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24.0dip</dimen>
@@ -430,6 +432,7 @@
     <dimen name="oneplus_control_tick_seekbar_radius">3.0dip</dimen>
     <dimen name="oneplus_dialog_button_height">48.0dip</dimen>
     <dimen name="oneplus_dialog_image_panel_height">166.0dip</dimen>
+    <dimen name="oneplus_dialog_landscape_width">480.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_multiline">56.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_noline">21.0dip</dimen>
     <dimen name="oneplus_dialog_subtitle_minHeight_singleline">75.0px</dimen>

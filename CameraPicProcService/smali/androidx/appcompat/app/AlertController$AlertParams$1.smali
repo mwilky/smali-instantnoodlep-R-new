@@ -50,7 +50,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_6
 
     const p3, 0x1020014
 
@@ -68,7 +68,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
@@ -101,7 +101,7 @@
 
     iget-object v2, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -115,10 +115,23 @@
 
     const/4 v4, 0x0
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
-    if-le v1, v3, :cond_1
+    if-gt v1, v3, :cond_1
 
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    const/16 v2, 0x32
+
+    if-le v1, v2, :cond_2
+
+    :cond_1
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
@@ -139,7 +152,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -148,7 +161,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
@@ -170,7 +183,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -179,7 +192,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
@@ -203,7 +216,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object v1, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-object v1, v1, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
@@ -231,13 +244,13 @@
 
     aget-boolean v0, v0, p1
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-virtual {p3, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     invoke-virtual {p3, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     :goto_1
@@ -247,12 +260,12 @@
 
     aget-boolean p3, p3, p1
 
-    if-eqz p3, :cond_5
+    if-eqz p3, :cond_6
 
     iget-object p3, p0, Landroidx/appcompat/app/AlertController$AlertParams$1;->val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
 
     invoke-virtual {p3, p1, v3}, Landroidx/appcompat/app/AlertController$RecycleListView;->setItemChecked(IZ)V
 
-    :cond_5
+    :cond_6
     return-object p2
 .end method

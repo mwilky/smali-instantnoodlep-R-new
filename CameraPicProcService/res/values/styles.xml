@@ -2108,6 +2108,12 @@
         <item name="android:radius">@dimen/op_ripple_radius</item>
         <item name="buttonCompat">@drawable/op_btn_checkbox_material_anim</item>
     </style>
+    <style name="OnePlus.Widget.AppCompat.CompoundButton.CheckBox.DayNight" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/control_background_40dp_material_day_night</item>
+        <item name="android:button">@drawable/op_btn_checkbox_material_anim_day_night</item>
+        <item name="android:radius">@dimen/op_ripple_radius</item>
+        <item name="buttonCompat">@drawable/op_btn_checkbox_material_anim_day_night</item>
+    </style>
     <style name="OnePlus.Widget.AppCompat.CompoundButton.RadioButton" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:button">@drawable/op_btn_radio_material_anim</item>
     </style>
@@ -2346,7 +2352,7 @@
         <item name="android:weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.DayOfWeek</item>
         <item name="android:dateTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Day</item>
         <item name="dateTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Day</item>
-        <item name="daySelectorColor">?pickerColorActivated</item>
+        <item name="daySelectorColor">?colorAccent</item>
         <item name="monthTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.Month</item>
         <item name="weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Widget.Calendar.DayOfWeek</item>
     </style>
@@ -2363,7 +2369,7 @@
         <item name="android:weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.DayOfWeek</item>
         <item name="android:dateTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Day</item>
         <item name="dateTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Day</item>
-        <item name="daySelectorColor">?pickerColorActivated</item>
+        <item name="daySelectorColor">?colorAccent</item>
         <item name="monthTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.Month</item>
         <item name="weekDayTextAppearance">@style/Oneplus.TextAppearance.Material.Light.Widget.Calendar.DayOfWeek</item>
     </style>
@@ -2376,7 +2382,7 @@
         <item name="android:headerBackground">?colorAccent</item>
         <item name="android:numbersTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
         <item name="android:numbersBackgroundColor">@color/op_time_picker_numbers_background_color_light</item>
-        <item name="android:numbersSelectorColor">?pickerColorActivated</item>
+        <item name="android:numbersSelectorColor">?colorAccent</item>
         <item name="android:amPmTextColor">@color/op_time_picker_am_pm_label_text_color_light</item>
         <item name="android:numbersInnerTextColor">@color/op_timepicker_text_inverse_when_activated_material_light</item>
         <item name="headerTextColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
@@ -2388,7 +2394,7 @@
     <style name="Oneplus.Widget.Material.TimePicker" parent="@android:style/Widget.Material.TimePicker">
         <item name="android:headerBackground">?colorAccent</item>
         <item name="android:numbersBackgroundColor">@color/op_time_picker_numbers_background_color_dark</item>
-        <item name="android:numbersSelectorColor">?pickerColorActivated</item>
+        <item name="android:numbersSelectorColor">?colorAccent</item>
         <item name="android:amPmTextColor">@color/op_time_picker_am_pm_label_text_color_dark</item>
         <item name="headerTextColor">@color/op_primary_text_secondary_when_activated_material_inverse</item>
         <item name="internalLayout">@layout/op_time_picker_material</item>
@@ -3372,7 +3378,7 @@
         <item name="onePlusButtonDisableColor">@color/op_button_material_disable_dark</item>
         <item name="onePlusCardColorBorder">@color/op_control_card_color_border_dark</item>
         <item name="onePlusCheckBoxBgColor">@color/op_control_checkout_layout_bg_dark</item>
-        <item name="onePlusCheckBoxCheckedColor">#fffafafa</item>
+        <item name="onePlusCheckBoxCheckedColor">@color/oneplus_accent_active_color</item>
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_dark</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_dark</item>
@@ -3645,7 +3651,7 @@
         <item name="onePlusButtonDisableColor">@color/op_button_material_disable_light</item>
         <item name="onePlusCardColorBorder">@color/op_control_card_color_border_light</item>
         <item name="onePlusCheckBoxBgColor">@color/op_control_checkout_layout_bg_light</item>
-        <item name="onePlusCheckBoxCheckedColor">#fffafafa</item>
+        <item name="onePlusCheckBoxCheckedColor">@color/oneplus_accent_active_color</item>
         <item name="onePlusColorButtonNormal">@color/op_btn_color_default_material</item>
         <item name="onePlusDividerColor">@color/op_control_divider_color_light</item>
         <item name="onePlusEmptyTextTitleColor">@color/op_control_empty_text_title_light</item>
@@ -4302,7 +4308,7 @@
     </style>
     <style name="Widget.MaterialComponents.CardView" parent="@style/CardView">
         <item name="android:stateListAnimator">@animator/mtrl_card_state_list_anim</item>
-        <item name="cardBackgroundColor">@color/opcardview_light_background_light</item>
+        <item name="cardBackgroundColor">@color/op_control_bg_color_card_default</item>
         <item name="cardBackgroundColorMask">@color/opcardview_light_background_mask_light</item>
         <item name="cardCornerRadius">@null</item>
         <item name="cardElevation">@dimen/mtrl_card_elevation</item>

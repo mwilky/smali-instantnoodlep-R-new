@@ -3,12 +3,12 @@
 .source "CollapsingAppbarLayout.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/appbar/CollapsingAppbarLayout;->animateScrim(I)V
+    value = Lcom/google/android/material/appbar/CollapsingAppbarLayout;->onAttachedToWindow()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,22 +34,25 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingAppbarLayout$2;->this$0:Lcom/google/android/material/appbar/CollapsingAppbarLayout;
 
-    move-result p1
+    invoke-static {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->access$000(Lcom/google/android/material/appbar/CollapsingAppbarLayout;)Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout;->setScrimAlpha(I)V
+    move-result-object p1
 
+    invoke-interface {p1}, Lcom/google/android/material/appbar/CollapsingAppbarLayout$OnSubTitleClickListener;->onClick()V
+
+    :cond_0
     return-void
 .end method

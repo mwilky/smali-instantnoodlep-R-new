@@ -403,7 +403,17 @@
 
     invoke-virtual {p2, v0, v1}, Lcom/google/android/material/indicator/draw/data/Indicator;->setIdleDuration(J)V
 
-    const/4 v0, 0x7
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$dimen;->qs_page_indicator_height:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
 
     invoke-virtual {p2, v0}, Lcom/google/android/material/indicator/draw/data/Indicator;->setRadius(I)V
 
@@ -415,7 +425,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/google/android/material/R$dimen;->op_control_margin_space1:I
+    sget v1, Lcom/google/android/material/R$dimen;->op_control_margin_space2:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

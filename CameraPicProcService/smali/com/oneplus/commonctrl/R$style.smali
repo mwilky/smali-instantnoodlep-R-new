@@ -19,27 +19,27 @@
 
 .field public static final OnePlus_TextAppearance_List_Title:I = 0x7f110112
 
-.field public static final op_control_text_style_base:I = 0x7f110358
+.field public static final op_control_text_style_base:I = 0x7f110359
 
-.field public static final op_control_text_style_body1:I = 0x7f110359
+.field public static final op_control_text_style_body1:I = 0x7f11035a
 
-.field public static final op_control_text_style_button:I = 0x7f11035a
+.field public static final op_control_text_style_button:I = 0x7f11035b
 
-.field public static final op_control_text_style_descriptions:I = 0x7f11035b
+.field public static final op_control_text_style_descriptions:I = 0x7f11035c
 
-.field public static final op_control_text_style_h1:I = 0x7f11035c
+.field public static final op_control_text_style_h1:I = 0x7f11035d
 
-.field public static final op_control_text_style_h2:I = 0x7f11035d
+.field public static final op_control_text_style_h2:I = 0x7f11035e
 
-.field public static final op_control_text_style_h3:I = 0x7f11035e
+.field public static final op_control_text_style_h3:I = 0x7f11035f
 
-.field public static final op_control_text_style_h4:I = 0x7f11035f
+.field public static final op_control_text_style_h4:I = 0x7f110360
 
-.field public static final op_control_text_style_h5:I = 0x7f110360
+.field public static final op_control_text_style_h5:I = 0x7f110361
 
-.field public static final op_control_text_style_h6:I = 0x7f110361
+.field public static final op_control_text_style_h6:I = 0x7f110362
 
-.field public static final op_control_text_style_subtitle:I = 0x7f110362
+.field public static final op_control_text_style_subtitle:I = 0x7f110363
 
 
 # direct methods

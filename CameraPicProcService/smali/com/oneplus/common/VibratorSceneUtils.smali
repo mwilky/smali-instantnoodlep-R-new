@@ -14,21 +14,43 @@
 
 .field public static final VIBRATOR_SCENE_DASH_CHARGER:I = 0x16
 
+.field public static final VIBRATOR_SCENE_DIAL_PAD_BUTTON:I = 0x28b6
+
+.field public static final VIBRATOR_SCENE_DIAL_PAD_HOT_KEY:I = 0x28b7
+
+.field public static final VIBRATOR_SCENE_DIAL_PAD_KEY:I = 0x28b5
+
+.field public static final VIBRATOR_SCENE_GAME_SETTINGS_BOX:I = 0x28be
+
+.field public static final VIBRATOR_SCENE_GAMING_MODE_SWITCH:I = 0x28b9
+
 .field public static final VIBRATOR_SCENE_GESTURE_KEY:I = 0x18
+
+.field public static final VIBRATOR_SCENE_HANG_UP:I = 0x28b8
 
 .field public static final VIBRATOR_SCENE_INVALID:I = -0x1
 
 .field public static final VIBRATOR_SCENE_LONG_PRESS:I = 0x4
 
+.field public static final VIBRATOR_SCENE_NIGHT_MODE:I = 0x28bd
+
 .field public static final VIBRATOR_SCENE_POWER_KEY_ASSIST:I = 0x17
 
 .field public static final VIBRATOR_SCENE_POWER_KEY_MENU:I = 0x14
+
+.field public static final VIBRATOR_SCENE_PROFESSION_MODE:I = 0x28bf
+
+.field public static final VIBRATOR_SCENE_SELECTED_GAME:I = 0x28bc
+
+.field public static final VIBRATOR_SCENE_SLIDER_VIBRATE:I = 0x28ba
 
 .field public static final VIBRATOR_SCENE_SWITCH:I = 0x3eb
 
 .field public static final VIBRATOR_SCENE_SWITCH_FOR_CLOCK:I = 0x3ea
 
 .field public static final VIBRATOR_SCENE_VIRTUAL_KEY:I = 0x1
+
+.field public static final VIBRATOR_SCENE_WEATHER_THUNDER:I = 0x28bb
 
 
 # direct methods

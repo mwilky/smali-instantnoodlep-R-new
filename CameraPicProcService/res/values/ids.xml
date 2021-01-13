@@ -81,6 +81,7 @@
     <item type="id" name="button2" />
     <item type="id" name="buttonPanel" />
     <item type="id" name="button_bar" />
+    <item type="id" name="button_layout" />
     <item type="id" name="button_space" />
     <item type="id" name="calendar_view" />
     <item type="id" name="cancel_button" />

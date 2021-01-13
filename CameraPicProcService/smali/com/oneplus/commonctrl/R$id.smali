@@ -15,21 +15,21 @@
 
 
 # static fields
-.field public static final icon:I = 0x7f0a00c7
+.field public static final icon:I = 0x7f0a00c8
 
-.field public static final icon_frame:I = 0x7f0a00c8
+.field public static final icon_frame:I = 0x7f0a00c9
 
-.field public static final op_text_input_counter:I = 0x7f0a0127
+.field public static final op_text_input_counter:I = 0x7f0a0128
 
-.field public static final op_text_input_error:I = 0x7f0a0128
+.field public static final op_text_input_error:I = 0x7f0a0129
 
-.field public static final summary:I = 0x7f0a017e
+.field public static final summary:I = 0x7f0a017f
 
-.field public static final text_layout:I = 0x7f0a0194
+.field public static final text_layout:I = 0x7f0a0195
 
-.field public static final title:I = 0x7f0a01a0
+.field public static final title:I = 0x7f0a01a1
 
-.field public static final widget_frame:I = 0x7f0a01b9
+.field public static final widget_frame:I = 0x7f0a01ba
 
 
 # direct methods

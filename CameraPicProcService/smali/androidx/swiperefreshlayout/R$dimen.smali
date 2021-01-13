@@ -29,35 +29,35 @@
 
 .field public static final compat_notification_large_icon_max_width:I = 0x7f070063
 
-.field public static final notification_action_icon_size:I = 0x7f070197
+.field public static final notification_action_icon_size:I = 0x7f070199
 
-.field public static final notification_action_text_size:I = 0x7f070198
+.field public static final notification_action_text_size:I = 0x7f07019a
 
-.field public static final notification_big_circle_margin:I = 0x7f070199
+.field public static final notification_big_circle_margin:I = 0x7f07019b
 
-.field public static final notification_content_margin_start:I = 0x7f07019a
+.field public static final notification_content_margin_start:I = 0x7f07019c
 
-.field public static final notification_large_icon_height:I = 0x7f07019b
+.field public static final notification_large_icon_height:I = 0x7f07019d
 
-.field public static final notification_large_icon_width:I = 0x7f07019c
+.field public static final notification_large_icon_width:I = 0x7f07019e
 
-.field public static final notification_main_column_padding_top:I = 0x7f07019d
+.field public static final notification_main_column_padding_top:I = 0x7f07019f
 
-.field public static final notification_media_narrow_margin:I = 0x7f07019e
+.field public static final notification_media_narrow_margin:I = 0x7f0701a0
 
-.field public static final notification_right_icon_size:I = 0x7f07019f
+.field public static final notification_right_icon_size:I = 0x7f0701a1
 
-.field public static final notification_right_side_padding_top:I = 0x7f0701a0
+.field public static final notification_right_side_padding_top:I = 0x7f0701a2
 
-.field public static final notification_small_icon_background_padding:I = 0x7f0701a1
+.field public static final notification_small_icon_background_padding:I = 0x7f0701a3
 
-.field public static final notification_small_icon_size_as_large:I = 0x7f0701a2
+.field public static final notification_small_icon_size_as_large:I = 0x7f0701a4
 
-.field public static final notification_subtext_size:I = 0x7f0701a3
+.field public static final notification_subtext_size:I = 0x7f0701a5
 
-.field public static final notification_top_pad:I = 0x7f0701a4
+.field public static final notification_top_pad:I = 0x7f0701a6
 
-.field public static final notification_top_pad_large_text:I = 0x7f0701a5
+.field public static final notification_top_pad_large_text:I = 0x7f0701a7
 
 
 # direct methods

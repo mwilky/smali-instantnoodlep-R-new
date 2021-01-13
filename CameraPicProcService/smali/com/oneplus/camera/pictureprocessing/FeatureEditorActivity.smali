@@ -312,7 +312,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->setContentView(I)V
 
-    const p1, 0x7f0a00b3
+    const p1, 0x7f0a00b4
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->findViewById(I)Landroid/view/View;
 
@@ -348,7 +348,7 @@
     :goto_0
     iput-object p1, p0, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->featureRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    const p1, 0x7f0a01a7
+    const p1, 0x7f0a01a8
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/pictureprocessing/FeatureEditorActivity;->findViewById(I)Landroid/view/View;
 
@@ -368,7 +368,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Toolbar;->inflateMenu(I)V
 
-    const v0, 0x7f08008c
+    const v0, 0x7f08008d
 
     invoke-virtual {p1, v0}, Landroid/widget/Toolbar;->setNavigationIcon(I)V
 

@@ -2104,6 +2104,14 @@
 
     move-result-object v3
 
+    instance-of v3, v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v3, :cond_e
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
     check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
 
     if-eqz v1, :cond_e
@@ -2182,6 +2190,16 @@
     iget-object v3, p0, Landroidx/preference/Preference;->mImageFrame:Landroid/view/View;
 
     if-eqz v3, :cond_10
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    instance-of v3, v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v3, :cond_10
+
+    iget-object v3, p0, Landroidx/preference/Preference;->mImageFrame:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
