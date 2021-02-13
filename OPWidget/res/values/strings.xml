@@ -155,6 +155,6 @@
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="widget_weather">Weather</string>
-    <item type="string" name="APKTOOL_DUMMY_2e">false</item>
-    <item type="string" name="APKTOOL_DUMMY_32">false</item>
+    <string name="APKTOOL_DUMMY_2e" />
+    <string name="APKTOOL_DUMMY_32" />
 </resources>
