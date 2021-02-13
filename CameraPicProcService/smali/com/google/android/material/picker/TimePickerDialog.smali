@@ -24,6 +24,8 @@
 
 
 # instance fields
+.field private mHasTitle:Z
+
 .field private final mInitialHourOfDay:I
 
 .field private final mInitialMinute:I
@@ -46,6 +48,10 @@
     move-result p2
 
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/app/AlertDialog;-><init>(Landroid/content/Context;I)V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/google/android/material/picker/TimePickerDialog;->mHasTitle:Z
 
     iput-object p3, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimeSetListener:Lcom/google/android/material/picker/TimePickerDialog$OnTimeSetListener;
 
@@ -190,12 +196,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+.method static synthetic access$200(Lcom/google/android/material/picker/TimePickerDialog;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+    iget-boolean p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mHasTitle:Z
 
-    return-object p0
+    return p0
 .end method
 
 .method static synthetic access$300(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
@@ -231,6 +237,14 @@
 .end method
 
 .method static synthetic access$700(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mContext:Landroid/content/Context;
@@ -507,6 +521,60 @@
 .method public onTimeChanged(Lcom/google/android/material/picker/TimePicker;II)V
     .locals 0
 
+    return-void
+.end method
+
+.method public setTitle(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AlertDialog;->setTitle(I)V
+
+    invoke-virtual {p0}, Lcom/google/android/material/picker/TimePickerDialog;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimePicker:Lcom/google/android/material/picker/TimePicker;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/picker/TimePicker;->setHasTitle(Z)V
+
+    iput-boolean v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mHasTitle:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/picker/TimePickerDialog;->mTimePicker:Lcom/google/android/material/picker/TimePicker;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/picker/TimePicker;->setHasTitle(Z)V
+
+    iput-boolean v0, p0, Lcom/google/android/material/picker/TimePickerDialog;->mHasTitle:Z
+
+    :cond_0
     return-void
 .end method
 

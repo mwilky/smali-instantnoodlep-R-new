@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCamcorder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camcorder.kt\ncom/oneplus/camera/next/hardware/Camcorder$Companion\n+ 2 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,620:1\n128#1:621\n128#1:622\n129#1:623\n128#1:624\n129#1:625\n128#1:626\n129#1:627\n129#1:628\n129#1:629\n129#1:630\n9#2:631\n*E\n*S KotlinDebug\n*F\n+ 1 Camcorder.kt\ncom/oneplus/camera/next/hardware/Camcorder$Companion\n*L\n84#1:621\n88#1:622\n92#1:623\n96#1:624\n100#1:625\n104#1:626\n108#1:627\n112#1:628\n116#1:629\n120#1:630\n125#1:631\n*E\n"
+    value = "SMAP\nCamcorder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camcorder.kt\ncom/oneplus/camera/next/hardware/Camcorder$Companion\n+ 2 EventKeys.kt\ncom/oneplus/base/EventKeysKt\n*L\n1#1,767:1\n128#1:768\n128#1:769\n129#1:770\n128#1:771\n129#1:772\n128#1:773\n129#1:774\n129#1:775\n129#1:776\n129#1:777\n9#2:778\n*E\n*S KotlinDebug\n*F\n+ 1 Camcorder.kt\ncom/oneplus/camera/next/hardware/Camcorder$Companion\n*L\n84#1:768\n88#1:769\n92#1:770\n96#1:771\n100#1:772\n104#1:773\n108#1:774\n112#1:775\n116#1:776\n120#1:777\n125#1:778\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

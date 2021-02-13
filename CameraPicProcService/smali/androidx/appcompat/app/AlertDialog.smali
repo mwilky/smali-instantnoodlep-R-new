@@ -311,7 +311,7 @@
 
     move-result-object v0
 
-    const/4 v1, -0x2
+    const/4 v1, -0x1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 

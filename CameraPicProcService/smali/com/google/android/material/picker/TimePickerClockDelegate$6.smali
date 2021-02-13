@@ -101,7 +101,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$6;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1100(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1200(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 

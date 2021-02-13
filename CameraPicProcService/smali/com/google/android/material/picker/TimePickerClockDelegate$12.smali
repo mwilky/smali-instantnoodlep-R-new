@@ -51,7 +51,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$12;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1800(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
+    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
 
     goto :goto_0
 
@@ -64,7 +64,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$12;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1800(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
+    invoke-static {p1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;I)V
 
     goto :goto_0
 
@@ -75,7 +75,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$12;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v0, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1400(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
+    invoke-static {p1, v0, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1500(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
 
     goto :goto_0
 
@@ -86,12 +86,12 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$12;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v1, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1400(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
+    invoke-static {p1, v1, v1, v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1500(Lcom/google/android/material/picker/TimePickerClockDelegate;IZZ)V
 
     :goto_0
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$12;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$2300(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$2400(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
 
     nop
 

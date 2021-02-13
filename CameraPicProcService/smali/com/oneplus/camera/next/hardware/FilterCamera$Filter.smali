@@ -66,6 +66,8 @@
 
 .field public static final ID_FOOD:Ljava/lang/String; = "Food"
 
+.field public static final ID_FUGU:Ljava/lang/String; = "FUGU"
+
 .field public static final ID_INFRARED:Ljava/lang/String; = "Infrared"
 
 .field public static final ID_INSCLARE:Ljava/lang/String; = "Insclare"
@@ -76,17 +78,29 @@
 
 .field public static final ID_LANDSCAPE:Ljava/lang/String; = "Landscape"
 
+.field public static final ID_LENGDIAO:Ljava/lang/String; = "LENGDIAO"
+
 .field public static final ID_NIGHT:Ljava/lang/String; = "Night"
 
 .field public static final ID_NIGHT_CITY:Ljava/lang/String; = "NightCity"
 
 .field public static final ID_NORTH_CALIFORNIA:Ljava/lang/String; = "NorthCalifornia"
 
+.field public static final ID_OPLUS_BLACK_GOLD:Ljava/lang/String; = "OPLUS_BLACK_GOLD"
+
+.field public static final ID_OPLUS_CYBERPUNK:Ljava/lang/String; = "OPLUS_CYBERPUNK"
+
+.field public static final ID_OPLUS_INFRA:Ljava/lang/String; = "OPLUS_INFRA"
+
+.field public static final ID_OPLUS_TEAL_ORANGE:Ljava/lang/String; = "OPLUS_TEAL_ORANGE"
+
 .field public static final ID_POP:Ljava/lang/String; = "Pop"
 
 .field public static final ID_PORTRAIT:Ljava/lang/String; = "Portrait"
 
 .field public static final ID_SAREK:Ljava/lang/String; = "Sarek"
+
+.field public static final ID_SENLIN_2020:Ljava/lang/String; = "SENLIN_2020"
 
 .field public static final ID_SNAPSEED:Ljava/lang/String; = "SnapSeed"
 
@@ -101,6 +115,8 @@
 .field public static final ID_YLLAAS:Ljava/lang/String; = "Yllaas"
 
 .field public static final ID_YOUCAM:Ljava/lang/String; = "YouCam"
+
+.field public static final ID_YUANQI_2020:Ljava/lang/String; = "YUANQI_2020"
 
 .field public static final ID_YUMMY:Ljava/lang/String; = "Yummy"
 

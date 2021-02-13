@@ -68,6 +68,8 @@
 
 .field public static final FILTER_TYPE_FACEAPP_PHOTO:I = 0xc
 
+.field public static final FILTER_TYPE_FUGU_PHOTO:I = 0x1d
+
 .field public static final FILTER_TYPE_INFRARED_PHOTO:I = 0x12
 
 .field public static final FILTER_TYPE_INSCLARE_PHOTO:I = 0xa
@@ -75,6 +77,8 @@
 .field public static final FILTER_TYPE_INSJUNO_PHOTO:I = 0xe
 
 .field public static final FILTER_TYPE_INSVALENCIA_PHOTO:I = 0x11
+
+.field public static final FILTER_TYPE_LENGDIAO_PHOTO:I = 0x1f
 
 .field public static final FILTER_TYPE_NIGHT_CITY_PHOTO:I = 0x19
 
@@ -88,6 +92,14 @@
 
 .field public static final FILTER_TYPE_NORTH_CALIFORNIA_VIDEO:I = 0x1c
 
+.field public static final FILTER_TYPE_OPLUS_BLACK_GOLD_PHOTO:I = 0x22
+
+.field public static final FILTER_TYPE_OPLUS_CYBERPUNK_PHOTO:I = 0x21
+
+.field public static final FILTER_TYPE_OPLUS_INFRA_PHOTO:I = 0x23
+
+.field public static final FILTER_TYPE_OPLUS_TEAL_ORANGE_PHOTO:I = 0x24
+
 .field public static final FILTER_TYPE_POP_PHOTO:I = 0x2
 
 .field public static final FILTER_TYPE_POP_VIDEO:I = 0x4
@@ -99,6 +111,8 @@
 .field public static final FILTER_TYPE_R6:I = 0x18
 
 .field public static final FILTER_TYPE_SAREK_PHOTO:I = 0x13
+
+.field public static final FILTER_TYPE_SENLIN_2020_PHOTO:I = 0x1e
 
 .field public static final FILTER_TYPE_SNAPSEED_PHOTO:I = 0xf
 
@@ -113,6 +127,8 @@
 .field public static final FILTER_TYPE_YLLAAS_PHOTO:I = 0x15
 
 .field public static final FILTER_TYPE_YOUCAM_PHOTO:I = 0xd
+
+.field public static final FILTER_TYPE_YUANQI_2020_PHOTO:I = 0x20
 
 .field public static final FILTER_TYPE_YUMMY_VIDEO:I = 0x6
 

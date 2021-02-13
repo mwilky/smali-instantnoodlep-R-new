@@ -444,6 +444,7 @@
     <dimen name="oneplus_search_view_preferred_width">370.0dip</dimen>
     <dimen name="oneplus_smooth_round_radius">6.0dip</dimen>
     <dimen name="op_abc_config_prefDialogWidth">270.0dip</dimen>
+    <dimen name="op_about_button_max_size">480.0px</dimen>
     <dimen name="op_app_bar_collapsed_text_size">42.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_margin">16.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_subtitle_margin">12.0px</dimen>

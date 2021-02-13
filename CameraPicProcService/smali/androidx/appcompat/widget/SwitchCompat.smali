@@ -172,6 +172,16 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SwitchCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 15
 
     move-object v7, p0
@@ -182,7 +192,7 @@
 
     move/from16 v10, p3
 
-    invoke-direct/range {p0 .. p3}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct/range {p0 .. p4}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v11, 0x0
 
@@ -250,7 +260,9 @@
 
     sget-object v0, Landroidx/appcompat/R$styleable;->SwitchCompat:[I
 
-    invoke-static {v8, v9, v0, v10, v12}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
+    move/from16 v6, p4
+
+    invoke-static {v8, v9, v0, v10, v6}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
 
     move-result-object v14
 
@@ -266,8 +278,6 @@
 
     move-result-object v4
 
-    const/4 v6, 0x0
-
     move-object v0, p0
 
     move-object/from16 v1, p1
@@ -275,6 +285,8 @@
     move-object/from16 v3, p2
 
     move/from16 v5, p3
+
+    move/from16 v6, p4
 
     invoke-virtual/range {v0 .. v6}, Landroidx/appcompat/widget/SwitchCompat;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 

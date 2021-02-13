@@ -21,7 +21,7 @@
 .end method
 
 .method public static getSystemIntegerRes(Landroid/content/Context;Ljava/lang/String;)I
-    .locals 3
+    .locals 2
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -35,29 +35,7 @@
 
     move-result p1
 
-    const-string v0, "NavigationButtonUtils"
-
     if-eqz p1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "res.getInteger(resId) = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -66,10 +44,6 @@
     return p0
 
     :cond_0
-    const-string p0, "Failed to get system resource ID. Incompatible framework version?"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 p0, -0x1
 
     return p0
@@ -98,29 +72,7 @@
 .end method
 
 .method public static isGestureAndButtonNotShow(Landroid/content/Context;)Z
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "isGestureButtonShowOnCreen = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Lcom/oneplus/common/NavigationButtonUtils;->isGestureButtonShowOnCreen(Landroid/content/Context;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "NavigationButtonUtils"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 1
 
     invoke-static {p0}, Lcom/oneplus/common/NavigationButtonUtils;->isGestureNavigationBar(Landroid/content/Context;)Z
 

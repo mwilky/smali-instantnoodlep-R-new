@@ -242,7 +242,7 @@
 .end method
 
 .method public static getSimCount(Landroid/telephony/TelephonyManager;)I
-    .locals 4
+    .locals 2
 
     const-string v0, "10.14.0"
 
@@ -261,19 +261,9 @@
     :cond_0
     const-class v0, Landroid/telephony/TelephonyManager;
 
-    const/4 v1, 0x1
+    const-string v1, "getSimCount"
 
-    new-array v1, v1, [Ljava/lang/Class;
-
-    const/4 v2, 0x0
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v3, v1, v2
-
-    const-string v2, "getSimCount"
-
-    invoke-static {v0, v2, v1}, Lcom/oneplus/utils/reflection/MethodReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v0, v1}, Lcom/oneplus/utils/reflection/MethodReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
