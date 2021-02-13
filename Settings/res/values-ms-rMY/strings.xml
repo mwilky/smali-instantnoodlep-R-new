@@ -85,6 +85,8 @@ Hidupkan Mod Pesawat?"</string>
     <string name="app_permissions_warning_message">Melumpuhkan kebenaran boleh menyebabkan aplikasi untuk berhenti berfungsi dengan betul. Sila meneruskan dengan berhati-hati.</string>
     <string name="app_permissions_warning_title">Amaran</string>
     <string name="automatic">Automatik</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="battery_bar">Palang bateri</string>
     <string name="battery_circle">Bulatan bateri</string>
     <string name="battery_hidden">Bateri yang tersembunyi</string>
@@ -184,7 +186,7 @@ Hidupkan Mod Pesawat?"</string>
     <string name="earphone_function_control_play_pause">Main/Jeda</string>
     <string name="earphone_function_introduction">Penerangan Fungsi</string>
     <string name="earphone_function_listening_breeno">Pembantu Suara</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">Kiri: %1$s</string>
     <string name="earphone_support_battery_info_right">Kanan: %1$s</string>
@@ -243,6 +245,7 @@ Hidupkan Mod Pesawat?"</string>
     <string name="gestures_settings">Gerak isyarat</string>
     <string name="ghzonly_2.4">Hanya 2.4 GHz</string>
     <string name="ghzonly_5">Hanya 5 GHz</string>
+    <string name="go_to_settings">PERGI KE TETAPAN</string>
     <string name="hardware_keys_action_assist">Pembantu carian</string>
     <string name="hardware_keys_action_camera">Buka kamera</string>
     <string name="hardware_keys_action_last_app">Buka aplikasi digunakan terakhir</string>
@@ -259,6 +262,7 @@ Hidupkan Mod Pesawat?"</string>
     <string name="hardware_keys_long_press_title">Tindakan tekan panjang</string>
     <string name="hardware_keys_menu_key_title">Butang Terakhir</string>
     <string name="header_category_custom">Penyesuaian</string>
+    <string name="headphone_function">Fon kepala</string>
     <string name="hide_imeback_and_switcher">Pelarasan ketinggian papan kekunci</string>
     <string name="hide_imeback_and_switcher_warning">Pelarasan ketinggian papan kekunci boleh dilihat dalam gerak isyarat skrin penuh.</string>
     <string name="hide_summary">Bar pintasan pada bahagian bawah papan kekunci akan disembunyikan</string>
@@ -303,7 +307,7 @@ Jika anda menghidupkan semula data mudah alih, anda akan dikenakan caj untuk pen
     <string name="list_saved_fingerprints_footer">Sehingga lima cap jari boleh disimpan. Ketik pada mana-mana cap jari disimpan di atas untuk menamakan semula atau memadam.</string>
     <string name="load_error">Ralat memuat</string>
     <string name="loading_text">Memuatkan...</string>
-    <string name="location_carrier_location_access">Akses lokasi pembawa</string>
+    <string name="location_carrier_location_access">Akses Lokasi Pembawa</string>
     <string name="location_text">Lokasi</string>
     <string name="lockpassword_choose_your_fingerprint_header">Cap jari</string>
     <string name="long_press_power_button">Tekan dan tahan butang kuasa</string>
@@ -331,6 +335,7 @@ Untuk melanggan Hotspot Mudah Alih, kunjungi Verizon Saya atau hubungi khidmat p
     <string name="no_network">Tiada perkhidmatan rangkaian</string>
     <string name="no_network_extenders">Tiada Penyambung Rangkaian</string>
     <string name="no_sim_card_available">Tiada kad SIM</string>
+    <string name="no_thanks">TIDAK, TERIMA KASIH</string>
     <string name="not_connected_to_the_verizon_network">Tidak bersambung ke rangkaian Verizon</string>
     <string name="not_optimize_summery">Aplikasi tidak akan disekat daripada menggunakan bateri dalam latar belakang. Ini akan menyebabkan penggunaan bateri yang lebih tinggi</string>
     <string name="not_optimized_apps">Aplikasi tidak dioptimumkan</string>
@@ -436,6 +441,7 @@ Penjimat bateri dipadamkan secara automatik apabila peranti anda sedang mengecas
     <string name="oneplus_bluetooth_volume_switch">Kelantangan mutlak Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Segerak secara automatik set kepala dan kelantangan peranti apabila bersambung kepada Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Penyiaran nama rangkaian (SSID)</string>
+    <string name="oneplus_buds_need_update">Sila kemas kini Aplikasi OnePlus Buds ke versi terkini sebelum menggunakannya</string>
     <string name="oneplus_buttons_and_gestures_settings">Butang &amp; Gerak isyarat</string>
     <string name="oneplus_buttons_dashboard_summary">Alert Slider, navigasi, gerak isyarat</string>
     <string name="oneplus_buttons_settings">Tetapan butang</string>
@@ -787,7 +793,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding dengan corak atau PIN
     <string name="oneplus_laboratory_community_rating_feedback">Terima kasih atas maklum balas anda.</string>
     <string name="oneplus_laboratory_community_rating_summary">Kami sentiasa berani mencuba untuk mencipta ciri baru dan menarik untuk pengguna kami dan dengan maklum balas anda, kami berharap untuk menjadi lebih berani dalam meningkatkan pengalaman pengguna. Oleh itu, beritahu pendapat anda kepada kami tentang ciri-ciri tersebut. Kami sentiasa mengalu-alukannya.</string>
     <string name="oneplus_laboratory_description">Pemerihalan</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Benarkan cahaya pemberitahuan denyut</string>
     <string name="oneplus_legal_notices">Notis Undang-undang</string>
     <string name="oneplus_legal_summary">Dasar privasi, perjanjian dan lain-lain</string>
@@ -1114,11 +1120,11 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding dengan corak atau PIN
     <string name="oneplus_search_keyword_switch">pindahan,pemindahan data</string>
     <string name="oneplus_search_keyword_theme_settings">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon Light, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon Light, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Penyesuaian Skrin Kunci, Kertas Dinding, Gaya Jam, Animasi Cap Jari, Horizon Light, Penyesuaian Sistem, Aksen Warna, Bentuk, Fon, Tona, Pek Ikon, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Nada, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah</string>
     <string name="oneplus_search_keyword_theme_settings_new">Penyesuaian Skrin Kunci, Kertas Dinding, Gaya Jam, Animasi Cap Jari, Horizon Light, Penyesuaian Sistem, Aksen Warna, Bentuk, Fon, Tona, Pek Ikon</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon Light, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah, McLaren</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Penyesuaian Skrin Kunci, Kertas Dinding, Gaya Jam, Animasi Cap Jari, Penyesuaian Sistem, Aksen Warna, Bentuk, Fon, Tona, Pek Ikon</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">syot layar</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">pemberitahuan,pengalaman,program,peningkatan</string>
@@ -1182,7 +1188,7 @@ Perhatian:
     <string name="oneplus_silent_mode_on">Mod senyap dihidupkan</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Panggilan dan pemberitahuan akan disenyapkan, kecuali penggera</string>
     <string name="oneplus_silent_mode_summary">Panggilan dan pemberitahuan akan disenyapkan, kecuali penggera</string>
-    <string name="oneplus_silent_notifications_status_bar">Sembunyikan pemberitahuan senyap dalam bar status</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">Kad SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Kad SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -1209,6 +1215,7 @@ Perhatian:
     <string name="oneplus_suspension_notice">Terapung</string>
     <string name="oneplus_suspension_notice_summary">Benarkan aplikasi untuk memaparkan pemberitahuan terapung</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Penukaran kepada penjimatan kuasa automatik boleh menyebabkan beberapa aplikasi latar belakang ditutup. Adakah anda pasti untuk menukar?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Tukar</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Menukar resolusi boleh menyebabkan beberapa aplikasi latar belakang ditutup. Adakah anda pasti untuk menukar?</string>
     <string name="oneplus_switch_sa_option">Mod NSA + SA</string>
@@ -1314,6 +1321,7 @@ Nota: Buka Kunci Muka mungkin kurang selamat berbanding cap jari, PIN atau pilih
     <string name="oneplus_user_enjoy_plan_title">Sertai program pengalaman pengguna</string>
     <string name="oneplus_vibrant_color_effect">Kesan warna terang Pro</string>
     <string name="oneplus_vibrate">Getaran</string>
+    <string name="oneplus_vibrate_and_silent">Getaran &amp; Senyap</string>
     <string name="oneplus_vibrate_dynamic_mode">Dinamik</string>
     <string name="oneplus_vibrate_intensity">Keamatan getaran</string>
     <string name="oneplus_vibrate_on_touch_intensity">Bergetar semasa mengetik</string>
@@ -1382,6 +1390,13 @@ Wawasan yang direka bentuk bersama-bersama oleh OnePlus &amp; pelajar dari Parso
     <string name="op_auto_power_saving_summary">Bertukar kepada resolusi yang sesuai secara automatik tanpa menghabiskan bateri</string>
     <string name="op_battery_saver_description">Penjimat bateri mematikan atau mengehadkan aktiviti latar belakang aplikasi, sesetengah kesan visual &amp; fungsi penggunaan kuasa tinggi yang lain untuk meningkatkan hayat bateri.</string>
     <string name="op_battery_suggestion_summary">Hidupkan bateri mudah suai</string>
+    <string name="op_bitmoji_aod_download">Muat turun</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Dapatkan Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Sediakan Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Muat turun Pelekat Bitmoji</string>
     <string name="op_cast_description">Paparkan skrin telefon dan audio anda pada peranti seperti TV</string>
     <string name="op_cast_nearby">Peranti berdekatan</string>
     <string name="op_cast_no_devices">Tiada peranti berdekatan dijumpai</string>
@@ -1431,9 +1446,11 @@ Wawasan yang direka bentuk bersama-bersama oleh OnePlus &amp; pelajar dari Parso
     <string name="op_display_graphics_enhancement_engine">ENJIN PENINGKATAN VIDEO</string>
     <string name="op_display_motion_graphics_compensation">Memperlancarkan gerakan grafik</string>
     <string name="op_display_motion_graphics_compensation_summary">Meningkatkan kadar bingkai grafik, melancarkan video dan kesan permainan</string>
+    <string name="op_display_video_super_compensation">Resolusi video ultra tinggi</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Jangan ganggu</string>
     <string name="op_enable_location_services">Untuk mencari dan menjejaki stesen pengecasan yang berdekatan, sila dayakan perkhidmatan lokasi</string>
-    <string name="op_enable_text">Dayakan</string>
+    <string name="op_enable_text">Bolehkan</string>
     <string name="op_face_unlock_set_unlock_password">Buka Kunci Muka + Kata Laluan</string>
     <string name="op_face_unlock_set_unlock_pattern">Buka Kunci Muka + Corak</string>
     <string name="op_face_unlock_set_unlock_pin">Buka Kunci Muka + PIN</string>
@@ -1466,6 +1483,7 @@ Buka kunci cap jari mungkin tidak serasi dengan pelindung skrin pihak ketiga.
     <string name="op_lockpassword_choose_your_pin_header_for_face">Untuk menggunakan Buka Kunci Muka, tetapkan PIN</string>
     <string name="op_member_description">Ikat peranti anda untuk mendapatkan faedah eksklusif</string>
     <string name="op_member_title">Log masuk Akaun OnePlus</string>
+    <string name="op_network_unlock">Buka Kunci Rangkaian</string>
     <string name="op_night_display_title">Keselesaan penglihatan</string>
     <string name="op_not_disturb">Keutamaan Jangan Mengganggu</string>
     <string name="op_not_disturb_summary">Bisukan panggilan dan pemberitahuan serta matikan getaran, kecuali untuk penggera</string>
@@ -1473,6 +1491,8 @@ Buka kunci cap jari mungkin tidak serasi dengan pelindung skrin pihak ketiga.
     <string name="op_notification_history_summary">Tunjukkan kenalan terbaru</string>
     <string name="op_oneplus_roaming_summary">Sediakan perkhidmatan akses Internet global</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Apabila penggunaan kuasa aplikasi yang tidak lazim di latar belakang dikesan, ciri ini boleh meningkatkan hayat bateri sistem dan menyesuaikan penggunaan kuasa peranti sewajarnya.</string>
+    <string name="op_optimize_app_power_title">Optimumkan Penggunaan Kuasa Aplikasi</string>
     <string name="op_powerkey_menu_cards_description">Apabila didayakan, mod pembayaran dan maklumat penginapan akan dipaparkan dengan selamat</string>
     <string name="op_powerkey_menu_device_controller_description">Dayakan akses ke pengawal peranti yang berkaitan</string>
     <string name="op_powerkey_menu_lock_display_title">Paparan skrin kunci</string>
@@ -1498,7 +1518,9 @@ Buka kunci cap jari mungkin tidak serasi dengan pelindung skrin pihak ketiga.
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; rangkaian</string>
     <string name="op_sim_cord_summary">Kad SIM lalai, penggunaan lebar jalur</string>
+    <string name="op_sim_lock_summary">Fungsi dinyahdayakan. Pergi ke Buka Kunci aplikasi di bawah Maklumat Aplikasi untuk MENDAYAKAN</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Peranti ini tidak dikunci oleh rangkaian</string>
     <string name="op_smart_battery_manager_title">Bateri Mudah Suai</string>
     <string name="op_smart_battery_title">Gunakan Bateri Mudah Suai</string>
     <string name="op_sms_ringtone">Nada dering SMS</string>
@@ -1519,6 +1541,8 @@ Buka kunci cap jari mungkin tidak serasi dengan pelindung skrin pihak ketiga.
     <string name="op_theme_entrance_summary">Kertas dinding, warna serlah, fon</string>
     <string name="op_theme_lock_screen_customization">SKRIN KUNCI DAN PAPARAN AMBIEN</string>
     <string name="op_theme_mode_title">Tema</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Gunakan Siar</string>
     <string name="op_user_manual_settings">Manual Pengguna</string>
     <string name="op_volume">Kelantangan</string>
@@ -1722,7 +1746,7 @@ Adakah anda mahu menetapkan semula tetapan sistem? Anda tidak boleh membuat asal
     <string name="traffic_set_limit_title_vzw">Had Penggunaan Data</string>
     <string name="traffic_set_warn_description_vzw">Berikan amaran kepada saya apabila saya telah menggunakan sejumlah amaun data mudah.</string>
     <string name="traffic_set_warn_title">Tetapkan amaran data</string>
-    <string name="traffic_set_warn_title_vzw">Amaran penggunaan data</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Penggunaan data mudah alih anda akan dimatikan apabila mencapai had yang ditetapkan anda. Disebabkan penggunaan data diukur oleh telefon anda, manakala pembawa anda mungkin mengira penggunaannya secara berbeza, pertimbangkan untuk menetapkan had yang konservatif.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Untuk menetapkan had, pertimbangkan jumlah data yang anda ingin gunakan pada peranti ini. Penggunaan data diukur melalui telefon anda dan mungkin berbeza daripada apa yang ditunjukkan pada bil anda.</string>
     <string name="traffic_usage_limit_dialog_title">Hadkan Penggunaan Data</string>

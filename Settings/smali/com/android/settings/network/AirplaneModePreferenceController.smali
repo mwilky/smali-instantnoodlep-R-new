@@ -22,7 +22,15 @@
 
 .field private mAirplaneModePreference:Landroidx/preference/SwitchPreference;
 
-.field private mFragment:Landroidx/fragment/app/Fragment;
+.field private mFragment:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroidx/fragment/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -82,6 +90,10 @@
     new-instance p1, Lcom/android/settings/AirplaneModeEnabler;
 
     iget-object p2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p2
 
     invoke-direct {p1, p2, p0}, Lcom/android/settings/AirplaneModeEnabler;-><init>(Landroid/content/Context;Lcom/android/settings/AirplaneModeEnabler$OnAirplaneModeChangedListener;)V
 
@@ -241,24 +253,36 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mFragment:Landroidx/fragment/app/Fragment;
+    iget-object p1, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mFragment:Ljava/lang/ref/WeakReference;
 
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    new-instance v0, Landroid/content/Intent;
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mFragment:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/fragment/app/Fragment;
+
+    new-instance p1, Landroid/content/Intent;
 
     const/4 v1, 0x0
 
     const-string v2, "android.telephony.action.SHOW_NOTICE_ECM_BLOCK_OTHERS"
 
-    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {p1, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    invoke-virtual {p0, v0, p1}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     :cond_0
-    return p1
+    return v0
 
     :cond_1
     const/4 p0, 0x0
@@ -374,9 +398,13 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mAirplaneModeEnabler:Lcom/android/settings/AirplaneModeEnabler;
+
+    invoke-virtual {v0}, Lcom/android/settings/AirplaneModeEnabler;->stop()V
+
     iget-object p0, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mAirplaneModeEnabler:Lcom/android/settings/AirplaneModeEnabler;
 
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeEnabler;->stop()V
+    invoke-virtual {p0}, Lcom/android/settings/network/GlobalSettingsChangeListener;->close()V
 
     :cond_0
     return-void
@@ -414,9 +442,13 @@
 .end method
 
 .method public setFragment(Landroidx/fragment/app/Fragment;)V
-    .locals 0
+    .locals 1
 
-    iput-object p1, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mFragment:Landroidx/fragment/app/Fragment;
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/android/settings/network/AirplaneModePreferenceController;->mFragment:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method

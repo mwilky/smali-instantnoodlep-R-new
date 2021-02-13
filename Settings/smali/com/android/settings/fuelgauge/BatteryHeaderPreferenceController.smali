@@ -371,12 +371,20 @@
 
     iget-object v1, p1, Lcom/android/settings/fuelgauge/BatteryInfo;->statusLabel:Ljava/lang/String;
 
+    invoke-static {v1}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_0
     iget-object v1, p0, Lcom/android/settings/fuelgauge/BatteryHeaderPreferenceController;->mSummary1:Landroid/widget/TextView;
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

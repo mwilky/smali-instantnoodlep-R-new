@@ -47,45 +47,6 @@
     return-void
 .end method
 
-.method private setBluetoothDiscoverableState()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "bluetooth_default_scan_mode"
-
-    const/16 v2, 0x15
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/16 v1, 0x17
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lcom/android/settings/connecteddevice/AddDevicePreferenceController;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    invoke-virtual {p0, v1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
-
-    goto :goto_0
-
-    :cond_0
-    if-ne v0, v2, :cond_1
-
-    iget-object p0, p0, Lcom/android/settings/connecteddevice/AddDevicePreferenceController;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    invoke-virtual {p0, v2}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
 
 # virtual methods
 .method public bridge synthetic copy()V
@@ -254,8 +215,6 @@
     iget-object v0, p0, Lcom/android/settings/connecteddevice/AddDevicePreferenceController;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/settings/connecteddevice/AddDevicePreferenceController;->setBluetoothDiscoverableState()V
 
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 

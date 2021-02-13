@@ -651,6 +651,8 @@ Executat per últim cop el dia %2$s"</string>
     <string name="available_virtual_keyboard_category">Teclat en pantalla disponible</string>
     <string name="average_memory_use">Ús mitjà de la memòria</string>
     <string name="average_used">Mitjana utilitzada (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">"Temps d'activació del dispositiu"</string>
     <string name="back_sensitivity_dialog_message">"Una sensibilitat alta pot entrar en conflicte amb altres gestos de l'aplicació que es facin als extrems de la pantalla."</string>
     <string name="back_sensitivity_dialog_title">Sensibilitat cap enrere</string>
@@ -1872,7 +1874,7 @@ Si el problema persisteix, pot ser que hagis de desinstal·lar l'aplicació per 
     <string name="earphone_function_control_play_pause">Reprodueix/Posa en pausa</string>
     <string name="earphone_function_introduction">Descripció de funcions</string>
     <string name="earphone_function_listening_breeno">Assistent per veu</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">Esquerre: %1$s</string>
     <string name="earphone_support_battery_info_right">Dret: %1$s</string>
@@ -2203,6 +2205,7 @@ Quan activis les còpies de seguretat automàtiques, les dades dels dispositius 
     <string name="ghzonly_2.4">Només 2,4 GHz</string>
     <string name="ghzonly_5">Només 5 GHz</string>
     <string name="go_back_button_label">Torna</string>
+    <string name="go_to_settings">VÉS A CONFIGURACIÓ</string>
     <string name="graphics_driver_all_apps_preference_title">Activa per a totes les aplicacions</string>
     <string name="graphics_driver_app_preference_default">Predeterminat</string>
     <string name="graphics_driver_app_preference_game_driver">Controlador de jocs</string>
@@ -2242,6 +2245,7 @@ Quan activis les còpies de seguretat automàtiques, les dades dels dispositius 
     <string name="header_category_system">Sistema</string>
     <string name="header_category_wireless_networks">Connexions sense fil i xarxes</string>
     <string name="header_data_and_synchronization">Dades i sincronització</string>
+    <string name="headphone_function">Auriculars</string>
     <string name="heavy_weight_stop_description">"Aquesta aplicació no es pot aturar amb seguretat. Si l'atures, és possible que perdis una part del que estiguis fent."</string>
     <string name="help_feedback_label">Ajuda i suggeriments</string>
     <string name="help_label">Ajuda i suggeriments</string>
@@ -3154,6 +3158,7 @@ Això substitueix %2$s com a aplicació per pagar predeterminada."</string>
     <string name="no_services">No actiu</string>
     <string name="no_sim_card">No hi ha cap SIM</string>
     <string name="no_sim_card_available">No hi ha cap targeta SIM</string>
+    <string name="no_thanks">NO, GRÀCIES</string>
     <string name="no_trust_agents">No hi ha agents de confiança disponibles.</string>
     <string name="no_vr_listeners">"Cap aplicació instal·lada no ha sol·licitat que s'executi com un servei d'ajuda per a RV."</string>
     <string name="not_allowed">La targeta SIM no et permet connectar-te a aquesta xarxa.</string>
@@ -3403,6 +3408,7 @@ L'estalviador de bateria es desactiva automàticament quan el dispositiu s'està
     <string name="oneplus_bluetooth_volume_switch">Volum absolut de Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">"Sincronitza automàticament el volum de l'auricular i el dispositiu quan està connectat al Bluetooth"</string>
     <string name="oneplus_broadcat_wifi_name">Difon el nom de la xarxa (SSID)</string>
+    <string name="oneplus_buds_need_update">"Actualitzeu l'aplicació de OnePlus Buds a la versió més recent abans d'utilitzar-los"</string>
     <string name="oneplus_buttons_and_gestures_settings">Botons i gestos</string>
     <string name="oneplus_buttons_dashboard_summary">Alert Slider, navegació, gestos</string>
     <string name="oneplus_buttons_settings">Configuració dels botons</string>
@@ -3754,7 +3760,7 @@ La vostra empremta pot ser menys segura que un patró o pin complex"</string>
     <string name="oneplus_laboratory_community_rating_feedback">Gràcies pels comentaris.</string>
     <string name="oneplus_laboratory_community_rating_summary">"Sempre hem intentat ser atrevits a l'hora d'oferir funcions noves i interessants als nostres usuaris i esperem que els vostres comentaris ens ajudin a ser encara més atrevits i agosarats per millorar l'experiència de l'usuari. Digueu-nos què us semblen aquestes funcions. Sempre estem disposats a escoltar-vos."</string>
     <string name="oneplus_laboratory_description">Descripció</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Permet llum de notificacions polsada</string>
     <string name="oneplus_legal_notices">Avisos legals</string>
     <string name="oneplus_legal_summary">Política de privacitat, acords, etc</string>
@@ -4081,11 +4087,11 @@ La vostra empremta pot ser menys segura que un patró o pin complex"</string>
     <string name="oneplus_search_keyword_switch">transferència,migració de dades</string>
     <string name="oneplus_search_keyword_theme_settings">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants"</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants, McLaren"</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, Horizon Light, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones, McLaren"</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">"PERSONALITZACIÓ DE LA PANTALLA DE BLOQUEIG, Fons de pantalla, Estil de rellotge, PERSONALITZACIÓ DEL SISTEMA, Color d'accent, Forma, To, Paquet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants"</string>
     <string name="oneplus_search_keyword_theme_settings_new">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, Horizon Light, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones"</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants"</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">"Personalització de la pantalla de bloqueig, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, personalització del sistema, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones"</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">captura de pantalla</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notificacions,experiència,programa,millora</string>
@@ -4149,7 +4155,7 @@ Nota:
     <string name="oneplus_silent_mode_on">El mode silenci està activat</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Les trucades i notificacions se silenciaran, excepte les alarmes</string>
     <string name="oneplus_silent_mode_summary">Les trucades i notificacions se silenciaran, excepte les alarmes</string>
-    <string name="oneplus_silent_notifications_status_bar">"Amaga les notificacions silenciades a la barra d'estat"</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">Targeta SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Targeta SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4176,6 +4182,7 @@ Nota:
     <string name="oneplus_suspension_notice">Avís</string>
     <string name="oneplus_suspension_notice_summary">Permet que les aplicacions mostrin notificacions amb avisos</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">"L'estalvi d'energia automàtic pot originar que algunes aplicacions en segon pla es tanquin. Confirmeu el canvi?"</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Canvia</string>
     <string name="oneplus_switch_resolution_kill_process_tips">El canvi de resolució pot originar que algunes aplicacions en segon pla es tanquin. Confirmeu el canvi?</string>
     <string name="oneplus_switch_sa_option">Mode NSA + SA</string>
@@ -4281,6 +4288,7 @@ Nota: el desbloqueig facial pot ser menys segur que el d'empremta digital, PIN o
     <string name="oneplus_user_enjoy_plan_title">"Participa al programa d'experiència de l'usuari"</string>
     <string name="oneplus_vibrant_color_effect">Efecte de color vibrant Pro</string>
     <string name="oneplus_vibrate">Vibració</string>
+    <string name="oneplus_vibrate_and_silent">Vibració i silenci</string>
     <string name="oneplus_vibrate_dynamic_mode">Dinàmica</string>
     <string name="oneplus_vibrate_intensity">Intensitat de vibració</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibra en tocar</string>
@@ -4350,6 +4358,13 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_auto_power_saving_summary">Canvia automàticament a la resolució adequada sense esgotar la bateria</string>
     <string name="op_battery_saver_description">"L'estalvi de bateria desactiva o restringeix l'activitat en segon pla, alguns efectes visuals i altres funciones d'alt consum de bateria per augmentar-ne la vida."</string>
     <string name="op_battery_suggestion_summary">Activa la bateria adaptativa</string>
+    <string name="op_bitmoji_aod_download">Baixa</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Obtenir Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Configura Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Baixa els adhesius Bitmoji</string>
     <string name="op_cast_description">"Mostreu la pantalla del vostre telèfon i l'àudio a un dispositiu com una televisió"</string>
     <string name="op_cast_nearby">Dispositius propers</string>
     <string name="op_cast_no_devices">"No s'ha trobat cap dispositiu proper"</string>
@@ -4399,9 +4414,11 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_display_graphics_enhancement_engine">MOTOR DE MILLORA DE VÍDEO</string>
     <string name="op_display_motion_graphics_compensation">Suavitat dels gràfics de moviment</string>
     <string name="op_display_motion_graphics_compensation_summary">Milloreu la velocitat de fotogrames dels gràfics, vídeos més suaus i efectes dels jocs</string>
+    <string name="op_display_video_super_compensation">Resolució de vídeo ultra alta</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">No molesteu</string>
     <string name="op_enable_location_services">"Per trobar i fer el seguiment d'estacions de càrrega properes, habiliteu els serveis d'ubicació"</string>
-    <string name="op_enable_text">Habilitar</string>
+    <string name="op_enable_text">Habilita</string>
     <string name="op_face_unlock_set_unlock_password">Desbloqueig facial + Contrasenya</string>
     <string name="op_face_unlock_set_unlock_pattern">Desbloqueig facial + Patró</string>
     <string name="op_face_unlock_set_unlock_pin">Desbloqueig facial + PIN</string>
@@ -4434,6 +4451,7 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_lockpassword_choose_your_pin_header_for_face">Per utilitzar el Desbloqueig facial, configureu un PIN</string>
     <string name="op_member_description">Vinculeu el vostre dispositiu per obtenir beneficis exclusius</string>
     <string name="op_member_title">Inicia sessió al compte OnePlus</string>
+    <string name="op_network_unlock">Desbloqueig de la xarxa</string>
     <string name="op_night_display_title">Visualització de confort</string>
     <string name="op_not_disturb">Preferències de No molestar</string>
     <string name="op_not_disturb_summary">Silencia les trucades i les notificacions, i activa la vibració, exceptuant les alarmes</string>
@@ -4441,6 +4459,8 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_notification_history_summary">Mostra les notificacions recents</string>
     <string name="op_oneplus_roaming_summary">"Ofereix serveis globals d'accés a internet"</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">Quan es detecta el consum d’energia inusual d’una aplicació en segon pla, aquesta funció pot millorar la durada de la bateria del sistema i ajustar el consum d’energia del dispositiu en conseqüència.</string>
+    <string name="op_optimize_app_power_title">"Optimitza el consum d'energia de l'aplicació"</string>
     <string name="op_powerkey_menu_cards_description">"Quan està activat, el mode de pagament i la informació d'embarcament es mostraran de manera segura"</string>
     <string name="op_powerkey_menu_device_controller_description">Habiliteu-ho per accedir al controlador del dispositiu relacionat</string>
     <string name="op_powerkey_menu_lock_display_title">Visualització de la pantalla de bloqueig</string>
@@ -4466,7 +4486,9 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_sim_card_with_slotid">"SIM  %1$s "</string>
     <string name="op_sim_cord">SIM i xarxa</string>
     <string name="op_sim_cord_summary">"Targeta SIM predeterminada, ús de l'amplada de banda"</string>
+    <string name="op_sim_lock_summary">"La funció està inhabilitada. Aneu a Desbloqueja l'aplicació baix la Informació d'aplicacions per HABILITAR"</string>
     <string name="op_sim_name_with_prefix">(%1$s)</string>
+    <string name="op_sim_unlock_summary">Aquest dispositiu està desbloquejat de la xarxa</string>
     <string name="op_smart_battery_manager_title">Bateria adaptativa</string>
     <string name="op_smart_battery_title">Utilitza la bateria adaptativa</string>
     <string name="op_sms_ringtone">"To d'SMS"</string>
@@ -4487,6 +4509,8 @@ Insight, un dispositiu dissenyat conjuntament per OnePlus i estudiants de la Par
     <string name="op_theme_entrance_summary">Fons de pantalla, color accentuat, font</string>
     <string name="op_theme_lock_screen_customization">"PANTALLA DE BLOQUEIG I D'AMBIENT"</string>
     <string name="op_theme_mode_title">Tema</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Utilitza Emissió de pantalla</string>
     <string name="op_user_manual_settings">"Manual d'usuari"</string>
     <string name="op_volume">Volum</string>
@@ -5899,7 +5923,7 @@ La sincronització de dades que ha ideat Google per permetre l'accés als contac
     <string name="traffic_set_limit_title_vzw">"Límit de l'ús de dades"</string>
     <string name="traffic_set_warn_description_vzw">"Avisa'm quan hagi utilitzat aquesta quantitat de dades mòbils."</string>
     <string name="traffic_set_warn_title">"Establiu l'avís de dades"</string>
-    <string name="traffic_set_warn_title_vzw">"Alerta de l'ús de dades"</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">"El vostre telèfon desactivarà les dades mòbils una vegada s'ha assolit el límit que vau configurar. Com que l'ús de dades es mesurat pel telèfon, i el vostre operador pot calcular les dades d'una altra manera, us aconsellem que configureu un límit prudent."</string>
     <string name="traffic_usage_limit_dialog_message_vzw">"Per establir un límit, considereu el nombre de dades que voleu utilitzar en aquest dispositiu. El vostre telèfon mesura l'ús de dades i pot ser diferent a l'ús de dades de la vostra factura."</string>
     <string name="traffic_usage_limit_dialog_title">"Limita l'ús de dades"</string>
@@ -6285,7 +6309,7 @@ Qualsevol usuari pot actualitzar les aplicacions dels altres usuaris."</string>
     <string name="verify_apps_over_usb_title">Verifica aplicacions per USB</string>
     <string name="verizon_store_demo_mode_hint">Introduïu la contrasenya</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Canviar la configuració de la zona Wi-Fi mòbil desconectarà qualsevol dispositiu connectat actualment a la zona Wi-Fi mòbil.</string>
+    <string name="verizon_wifi_tether_band_warning">Si canvieu la configuració de la zona Wi-Fi mòbil, es desconnectarà qualsevol dispositiu connectat actualment a la zona Wi-Fi mòbil.</string>
     <string name="version_text">versió %1$s</string>
     <string name="vibrate_in_silent_title">Vibra quan estigui en silenci</string>
     <string name="vibrate_input_devices">Redirigeix la vibració</string>

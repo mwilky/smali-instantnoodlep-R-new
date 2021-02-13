@@ -112,6 +112,10 @@
 
     iput-object p2, p0, Lcom/android/settings/accessibility/ToggleAutoclickPreferenceController;->mAccessibilityAutoclickKeyToValueMap:Ljava/util/Map;
 
+    const-string p2, "ToggleAutoclickPreferenceController"
+
+    invoke-static {p2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
@@ -462,6 +466,13 @@
 
     invoke-super {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->updateState(Landroidx/preference/Preference;)V
 
+    iget-object p1, p0, Lcom/android/settings/accessibility/ToggleAutoclickPreferenceController;->mDelayModePref:Lcom/android/settings/widget/RadioButtonPreference;
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -478,15 +489,15 @@
 
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move v0, v1
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-direct {p0}, Lcom/android/settings/accessibility/ToggleAutoclickPreferenceController;->getSharedPreferenceForAutoClickMode()I
 
@@ -494,7 +505,7 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     move p1, v1
 
     :goto_1

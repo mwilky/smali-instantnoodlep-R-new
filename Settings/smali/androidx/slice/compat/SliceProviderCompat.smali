@@ -1673,7 +1673,7 @@
 
     iget-object p0, v0, Landroidx/slice/compat/SliceProviderCompat$ProviderHolder;->mProvider:Landroid/content/ContentProviderClient;
 
-    const-string/jumbo p1, "unpin_slice"
+    const-string p1, "unpin_slice"
 
     const-string p2, "supports_versioned_parcelable"
 
@@ -1897,7 +1897,7 @@
     return-object v1
 
     :cond_5
-    const-string/jumbo p2, "unpin_slice"
+    const-string p2, "unpin_slice"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

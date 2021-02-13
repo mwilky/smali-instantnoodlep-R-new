@@ -116,10 +116,34 @@
     return-void
 .end method
 
+.method public onPause()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onPause()V
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPCustomClockSettings;->mOPCustomClockPreference:Lcom/oneplus/settings/ui/OPCustomClockPreference;
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->onPause()V
+
+    return-void
+.end method
+
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 0
 
     const/4 p0, 0x0
 
     return p0
+.end method
+
+.method public onResume()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/dashboard/DashboardFragment;->onResume()V
+
+    iget-object p0, p0, Lcom/oneplus/settings/OPCustomClockSettings;->mOPCustomClockPreference:Lcom/oneplus/settings/ui/OPCustomClockPreference;
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->onResume()V
+
+    return-void
 .end method

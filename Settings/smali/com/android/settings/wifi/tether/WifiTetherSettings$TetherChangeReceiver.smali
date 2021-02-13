@@ -56,10 +56,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
-
-    invoke-static {v1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$200(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
-
     const-string v1, "android.net.conn.TETHER_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -72,7 +68,7 @@
 
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$300(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/net/wifi/WifiManager;
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$100(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/net/wifi/WifiManager;
 
     move-result-object p1
 
@@ -84,15 +80,15 @@
 
     iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$400(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Z
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$200(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$000(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$000(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
 
     goto :goto_0
 
@@ -115,7 +111,7 @@
 
     iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$500(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/oneplus/settings/wifi/tether/OPWifiTetherApBandPreferenceController;
+    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$600(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/oneplus/settings/wifi/tether/OPWifiTetherApBandPreferenceController;
 
     move-result-object v3
 
@@ -123,7 +119,7 @@
 
     iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$600(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/oneplus/settings/wifi/tether/OPWifiTetherDeviceManagerController;
+    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$700(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Lcom/oneplus/settings/wifi/tether/OPWifiTetherDeviceManagerController;
 
     move-result-object v3
 
@@ -131,7 +127,7 @@
 
     iget-object v3, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$700(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$800(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -148,58 +144,62 @@
 
     iget-object v2, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {v2}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$400(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Z
+    invoke-static {v2}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$200(Lcom/android/settings/wifi/tether/WifiTetherSettings;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
 
-    invoke-static {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$000(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
+    invoke-static {p1}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$000(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
 
     goto :goto_0
 
     :cond_2
-    const/16 p0, 0xe
+    const/16 v2, 0xe
 
-    if-ne v0, p0, :cond_3
+    if-ne v0, v2, :cond_3
 
-    const-string p0, "android.net.wifi.extra.WIFI_AP_FAILURE_REASON"
+    const-string v0, "android.net.wifi.extra.WIFI_AP_FAILURE_REASON"
 
-    invoke-virtual {p2, p0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result p0
+    move-result v0
 
-    const-string/jumbo v0, "wifi_ap_error_description"
+    const-string/jumbo v1, "wifi_ap_error_description"
 
-    invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    if-ne p0, v0, :cond_3
+    if-ne v0, v1, :cond_3
 
     if-eqz p2, :cond_3
 
-    const-string/jumbo p0, "wifi_ap_error_no_5g_support"
+    const-string/jumbo v0, "wifi_ap_error_no_5g_support"
 
-    invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p2
 
-    if-eqz p0, :cond_3
+    if-eqz p2, :cond_3
 
-    const-string p0, "5Ghz band not supported. band selection disabled"
+    const-string p2, "5Ghz band not supported. band selection disabled"
 
-    invoke-static {p1, p0, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    invoke-static {p1, p2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     :cond_3
     :goto_0
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/WifiTetherSettings$TetherChangeReceiver;->this$0:Lcom/android/settings/wifi/tether/WifiTetherSettings;
+
+    invoke-static {p0}, Lcom/android/settings/wifi/tether/WifiTetherSettings;->access$900(Lcom/android/settings/wifi/tether/WifiTetherSettings;)V
+
     return-void
 .end method

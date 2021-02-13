@@ -138,6 +138,13 @@
 .method private getNotificationSummary(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;Landroid/content/Context;Lcom/android/settings/notification/NotificationBackend;)Ljava/lang/CharSequence;
     .locals 0
 
+    if-nez p1, :cond_0
+
+    const-string p0, ""
+
+    return-object p0
+
+    :cond_0
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0

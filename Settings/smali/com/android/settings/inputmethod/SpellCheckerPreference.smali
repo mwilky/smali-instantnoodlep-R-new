@@ -19,6 +19,10 @@
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/SpellCheckerPreference;->mScis:[Landroid/view/textservice/SpellCheckerInfo;
 
+    sget v0, Lcom/android/settings/R$layout;->op_preference_two_target:I
+
+    invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setLayoutResource(I)V
+
     sget v0, Lcom/android/settings/R$layout;->preference_widget_gear:I
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setWidgetLayoutResource(I)V

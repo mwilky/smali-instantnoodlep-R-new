@@ -264,3 +264,33 @@
 
     return-void
 .end method
+
+.method protected onClick()V
+    .locals 3
+
+    invoke-super {p0}, Landroidx/preference/Preference;->onClick()V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.oneplus.intent.ACTION_LAUNCH_WLB"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const/high16 v1, 0x10200000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    const-string v1, "oneplus.intent.extra.launchFrom"
+
+    const-string v2, "settings"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method

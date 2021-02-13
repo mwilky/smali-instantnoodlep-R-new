@@ -271,15 +271,21 @@
 .end method
 
 .method protected onDestroy()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onDestroy()V
 
+    iget-object v0, p0, Lcom/android/settings/homepage/SettingsHomepageActivity;->mHandler:Landroid/os/Handler;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
     iget-object p0, p0, Lcom/android/settings/homepage/SettingsHomepageActivity;->mHandler:Landroid/os/Handler;
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     return-void
 .end method

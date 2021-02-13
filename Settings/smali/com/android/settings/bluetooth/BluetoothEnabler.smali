@@ -235,31 +235,6 @@
 
     invoke-direct {p0, v2}, Lcom/android/settings/bluetooth/BluetoothEnabler;->setChecked(Z)V
 
-    iget-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v0, "bluetooth_default_scan_mode"
-
-    const/16 v1, 0x15
-
-    invoke-static {p1, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    const/16 v0, 0x17
-
-    if-ne p1, v0, :cond_0
-
-    move v1, v0
-
-    :cond_0
-    invoke-virtual {p0, v1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
-
     goto :goto_0
 
     :pswitch_2
@@ -338,12 +313,6 @@
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
-
-    const-string v0, "BluetoothEnabler"
-
-    const-string v2, "maybeEnforceRestrictions"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothEnabler;->triggerParentPreferenceCallback(Z)V
 

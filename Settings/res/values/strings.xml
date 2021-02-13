@@ -453,6 +453,7 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_clock_analog">Analog 1</string>
     <string name="aod_clock_analog_1">Analog 2</string>
     <string name="aod_clock_analog_2">Analog 3</string>
+    <string name="aod_clock_bitmoji">Bitmoji</string>
     <string name="aod_clock_bold">Bold</string>
     <string name="aod_clock_default">Default</string>
     <string name="aod_clock_digital">Digital 1</string>
@@ -689,6 +690,8 @@ Last ran on %2$s"</string>
     <string name="available_virtual_keyboard_category">Available On-screen keyboard</string>
     <string name="average_memory_use">Average memory use</string>
     <string name="average_used">Average used (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Device awake time</string>
     <string name="back_button_label">Back</string>
     <string name="back_sensitivity_dialog_message">Higher sensitivity may conflict with any app gestures along the edges of the screen.</string>
@@ -1983,7 +1986,7 @@ If this keeps happening, you may need to uninstall the app to improve battery pe
     <string name="earphone_function_control_play_pause">Play/Pause</string>
     <string name="earphone_function_introduction">Function Description</string>
     <string name="earphone_function_listening_breeno">Voice Assistant</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">L: %1$s</string>
     <string name="earphone_support_battery_info_right">R: %1$s</string>
@@ -2326,6 +2329,7 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="ghzonly_5">5 GHz only</string>
     <string name="gigabyteShort">GB</string>
     <string name="go_back_button_label">Go back</string>
+    <string name="go_to_settings">GO TO SETTINGS</string>
     <string name="google_system_update">Google system update</string>
     <string name="graphics_driver_all_apps_preference_title">Enable for all apps</string>
     <string name="graphics_driver_app_preference_default">Default</string>
@@ -2368,6 +2372,7 @@ When you turn on automatic backup, device and app data is periodically saved rem
     <string name="header_category_system">System</string>
     <string name="header_category_wireless_networks">Wireless &amp; networks</string>
     <string name="header_data_and_synchronization">Data &amp; synchronization</string>
+    <string name="headphone_function">Headphones</string>
     <string name="heavy_weight_stop_description">This app can’t safely be stopped. If you stop it, you may lose some of your current work.</string>
     <string name="help_feedback_label">Help &amp; feedback</string>
     <string name="help_label">Help &amp; feedback</string>
@@ -2829,7 +2834,7 @@ If you turn mobile data back on, you may be charged for data usage by your carri
     <string name="location_access_title">Access to my location</string>
     <string name="location_app_level_permissions">App access to location</string>
     <string name="location_app_permission_summary_location_off">Location is off</string>
-    <string name="location_carrier_location_access">Carrier location access</string>
+    <string name="location_carrier_location_access">Carrier Location Access</string>
     <string name="location_category_location_services">Location services</string>
     <string name="location_category_recent_location_access">Recent location access</string>
     <string name="location_category_recent_location_requests">Recent location requests</string>
@@ -3447,6 +3452,7 @@ This replaces %2$s as your default payment app."</string>
     <string name="no_services">Not active</string>
     <string name="no_sim_card">No SIM card</string>
     <string name="no_sim_card_available">No SIM card</string>
+    <string name="no_thanks">NO, THANKS</string>
     <string name="no_trust_agents">No available trust agents</string>
     <string name="no_vr_listeners">No installed apps have requested to be run as VR helper services.</string>
     <string name="not_allowed">Your SIM card doesn’t allow a connection to this network.</string>
@@ -3780,6 +3786,7 @@ Battery saver turns off automatically when your device is charging."</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Autosync headset and device volume when connected to Bluetooth</string>
     <string name="oneplus_bottom_led_title">Buttons backlight</string>
     <string name="oneplus_broadcat_wifi_name">Broadcast network name (SSID)</string>
+    <string name="oneplus_buds_need_update">Please update the OnePlus Buds App to the latest version before using</string>
     <string name="oneplus_buttons_and_gestures_settings">Buttons &amp; Gestures</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, navigation, gestures</string>
     <string name="oneplus_buttons_settings">Buttons settings</string>
@@ -4191,7 +4198,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_laboratory_community_rating_feedback">Thank you for your feedback.</string>
     <string name="oneplus_laboratory_community_rating_summary">"We've always tried to be bold when coming up with new and interesting features for our users and with your feedback, we hope to be even bolder and more daring to enhance the user experience. So tell us what you think about these features. We're always here to listen."</string>
     <string name="oneplus_laboratory_description">Description</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Allow pulse notification light</string>
     <string name="oneplus_led_support_summary">@string/oneplus_led_support</string>
     <string name="oneplus_legal_notices">Legal Notices</string>
@@ -4769,6 +4776,7 @@ Note:
     <string name="oneplus_suspension_notice">Heads up</string>
     <string name="oneplus_suspension_notice_summary">Allow apps to show heads up notification</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Switching the auto power saving may cause some background apps to close. Do you confirm the switch?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Switching the resolution may cause some background apps to close. Do you confirm the switch?</string>
     <string name="oneplus_switch_sa_option">NSA + SA Mode</string>
@@ -4885,6 +4893,7 @@ Note: Face Unlock may be less secure than fingerprint, PIN or other screen lock 
     <string name="oneplus_user_enjoy_plan_title">Join user experience program</string>
     <string name="oneplus_vibrant_color_effect">Vibrant Color Effect Pro</string>
     <string name="oneplus_vibrate">Vibration</string>
+    <string name="oneplus_vibrate_and_silent">Vibration &amp; Silent</string>
     <string name="oneplus_vibrate_dynamic_mode">Dynamic</string>
     <string name="oneplus_vibrate_intensity">Vibration Intensity</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibrate on tap</string>
@@ -4928,7 +4937,7 @@ Note: Face Unlock may be less secure than fingerprint, PIN or other screen lock 
     <string name="oneplus_wifi_6_standard_hotspot_cancel">CANCEL</string>
     <string name="oneplus_wifi_6_standard_hotspot_enable">ENABLE</string>
     <string name="oneplus_wifi_6_standard_hotspot_title">Wi‑Fi 6 standard hotspot</string>
-    <string name="oneplus_wifi_6_standard_hotspot_warning">Some devices to be connected might not support Wi‑Fi 6 standard. Continue to enable it?</string>
+    <string name="oneplus_wifi_6_standard_hotspot_warning">Some devices may not support Wi‑Fi 6 standard, do you still wish to enable it?</string>
     <string name="oneplus_wifi_ap_error">Please insert the SIM card</string>
     <string name="oneplus_wifi_display_settings_title">@string/wifi_display_settings_title</string>
     <string name="oneplus_wifi_hidden_network_warning">"If your router disables the SSID broadcast, you should select \"Yes\" to connect to the hidden network.
@@ -5032,6 +5041,13 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_battery_info_voltage_units">mV</string>
     <string name="op_battery_saver_description">Battery saver turns off or restricts background activity, some visual effects &amp; other high-power features to extend battery life.</string>
     <string name="op_battery_suggestion_summary">Turn on adaptive battery</string>
+    <string name="op_bitmoji_aod_download">Download</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Get Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Connect Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Download Bitmoji Stickers</string>
     <string name="op_build_number">Software version</string>
     <string name="op_buttons_settings">@string/buttons_settings</string>
     <string name="op_cast_description">"Show your phone's screen and audio on a device such as a TV"</string>
@@ -5106,6 +5122,8 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_display_graphics_enhancement_engine">VIDEO ENHANCEMENT ENGINE</string>
     <string name="op_display_motion_graphics_compensation">Motion graphics smoothing</string>
     <string name="op_display_motion_graphics_compensation_summary">Enhance the frame rate of graphics, smoother video and game effects</string>
+    <string name="op_display_video_super_compensation">Ultra-high video resolution</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Do not disturb</string>
     <string name="op_do_not_disturb">@string/notification_volume_title</string>
     <string name="op_enable_location_services">To find and track charging stations nearby, please enable the location services</string>
@@ -5147,6 +5165,7 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_member_description">Bind your device to get exclusive benefits</string>
     <string name="op_member_title">Login to OnePlus Account</string>
     <string name="op_more_settings">More</string>
+    <string name="op_network_unlock">Network Unlock</string>
     <string name="op_nfc_how_it_works_content">"1. Download apps which support tap &amp; pay;
 2. According to the apps to complete the setup;
 3. When the phone is on，open the NFC then hold the phone to any terminal with the contactless symbol."</string>
@@ -5159,6 +5178,8 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_notification_history_summary">Show recent notifications</string>
     <string name="op_oneplus_roaming_summary">Provide global internet access services</string>
     <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
+    <string name="op_optimize_app_power_summary">"When an app's unusual power consumption in the background is detected, this feature can improve the system's battery life and adjust the device's power consumption accordingly."</string>
+    <string name="op_optimize_app_power_title">Optimize App Power Consumption</string>
     <string name="op_password_toggle_content_description">Toggle password visibility</string>
     <string name="op_powerkey_menu_cards_description">When enabled, the payment mode and boarding information will be displayed securely</string>
     <string name="op_powerkey_menu_device_controller_description">Enable to access the controller of the related device</string>
@@ -5208,7 +5229,9 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; Network</string>
     <string name="op_sim_cord_summary">Default SIM card, bandwidth usage</string>
+    <string name="op_sim_lock_summary">Function is disabled. Go to Unlock app under App info to ENABLE</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">This device is network unlocked</string>
     <string name="op_smart_battery_manager_title">Adaptive Battery</string>
     <string name="op_smart_battery_title">Use Adaptive Battery</string>
     <string name="op_sms_ringtone">SMS Ringtone</string>
@@ -5234,6 +5257,8 @@ Fingerprint unlock might be incompatible with the third-party screen protectors.
     <string name="op_theme_entrance_summary">Wallpapers, accent color, font</string>
     <string name="op_theme_lock_screen_customization">LOCK SCREEN AND AMBIENT DISPLAY</string>
     <string name="op_theme_mode_title">Theme</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Use Cast</string>
     <string name="op_user_manual_settings">User Manual</string>
     <string name="op_volume">Volume</string>
@@ -5810,10 +5835,10 @@ To use app pinning: \u0009
     <string name="screen_zoom_conversation_message_2">Hey, want to grab coffee and catch up today?</string>
     <string name="screen_zoom_conversation_message_3">Sounds great. I know of a good place not too far from here.</string>
     <string name="screen_zoom_conversation_message_4">Perfect!</string>
-    <string name="screen_zoom_conversation_timestamp_1">Tue 6:00PM</string>
-    <string name="screen_zoom_conversation_timestamp_2">Tue 6:01PM</string>
-    <string name="screen_zoom_conversation_timestamp_3">Tue 6:02PM</string>
-    <string name="screen_zoom_conversation_timestamp_4">Tue 6:03PM</string>
+    <string name="screen_zoom_conversation_timestamp_1">Tue 6:00 PM</string>
+    <string name="screen_zoom_conversation_timestamp_2">Tue 6:01 PM</string>
+    <string name="screen_zoom_conversation_timestamp_3">Tue 6:02 PM</string>
+    <string name="screen_zoom_conversation_timestamp_4">Tue 6:03 PM</string>
     <string name="screen_zoom_keywords">display density, screen zoom, scale, scaling</string>
     <string name="screen_zoom_make_larger_desc">Make larger</string>
     <string name="screen_zoom_make_smaller_desc">Make smaller</string>
@@ -8061,36 +8086,35 @@ Update settings to:
     <string name="zzz_op_direct_boot_inputmethod_unaware_dialog_message">"If you restart your phone and have a screen lock set, this keyboard can't start until you unlock your phone"</string>
     <string name="zzz_op_ime_security_warning">%1$s may be able to collect all the text you type, including personal data like passwords and credit card numbers</string>
     <string name="zzz_op_ime_warning_confirm">TURN ON</string>
-    <string name="APKTOOL_DUMMY_819" />
-    <string name="APKTOOL_DUMMY_890" />
-    <string name="APKTOOL_DUMMY_891" />
-    <string name="APKTOOL_DUMMY_ccb" />
-    <string name="APKTOOL_DUMMY_cf5" />
-    <string name="APKTOOL_DUMMY_cf6" />
-    <string name="APKTOOL_DUMMY_cf7" />
-    <string name="APKTOOL_DUMMY_db5" />
-    <string name="APKTOOL_DUMMY_db6" />
-    <string name="APKTOOL_DUMMY_db7" />
-    <string name="APKTOOL_DUMMY_db8" />
-    <string name="APKTOOL_DUMMY_de6" />
-    <string name="APKTOOL_DUMMY_de7" />
-    <string name="APKTOOL_DUMMY_e77" />
-    <string name="APKTOOL_DUMMY_f7e" />
-    <string name="APKTOOL_DUMMY_fd1" />
-    <string name="APKTOOL_DUMMY_fd3" />
-    <string name="APKTOOL_DUMMY_fd5" />
-    <string name="APKTOOL_DUMMY_102e" />
-    <string name="APKTOOL_DUMMY_102f" />
-    <string name="APKTOOL_DUMMY_1080" />
-    <string name="APKTOOL_DUMMY_1081" />
-    <string name="APKTOOL_DUMMY_11f6" />
-    <string name="APKTOOL_DUMMY_11fc" />
-    <string name="APKTOOL_DUMMY_1237" />
-    <string name="APKTOOL_DUMMY_1238" />
-    <string name="APKTOOL_DUMMY_127c" />
-    <string name="APKTOOL_DUMMY_12b8" />
-    <string name="APKTOOL_DUMMY_12ef" />
-    <string name="APKTOOL_DUMMY_195e" />
-    <string name="APKTOOL_DUMMY_19b3" />
-    <string name="APKTOOL_DUMMY_19b4" />
+    <string name="APKTOOL_DUMMY_81b" />
+    <string name="APKTOOL_DUMMY_892" />
+    <string name="APKTOOL_DUMMY_893" />
+    <string name="APKTOOL_DUMMY_ccf" />
+    <string name="APKTOOL_DUMMY_cfa" />
+    <string name="APKTOOL_DUMMY_cfb" />
+    <string name="APKTOOL_DUMMY_cfc" />
+    <string name="APKTOOL_DUMMY_dba" />
+    <string name="APKTOOL_DUMMY_dbb" />
+    <string name="APKTOOL_DUMMY_dbc" />
+    <string name="APKTOOL_DUMMY_dbd" />
+    <string name="APKTOOL_DUMMY_deb" />
+    <string name="APKTOOL_DUMMY_dec" />
+    <string name="APKTOOL_DUMMY_e7d" />
+    <string name="APKTOOL_DUMMY_f84" />
+    <string name="APKTOOL_DUMMY_fd7" />
+    <string name="APKTOOL_DUMMY_fd9" />
+    <string name="APKTOOL_DUMMY_fdb" />
+    <string name="APKTOOL_DUMMY_1034" />
+    <string name="APKTOOL_DUMMY_1035" />
+    <string name="APKTOOL_DUMMY_1086" />
+    <string name="APKTOOL_DUMMY_1087" />
+    <string name="APKTOOL_DUMMY_1202" />
+    <string name="APKTOOL_DUMMY_123d" />
+    <string name="APKTOOL_DUMMY_123e" />
+    <string name="APKTOOL_DUMMY_1283" />
+    <string name="APKTOOL_DUMMY_12bf" />
+    <string name="APKTOOL_DUMMY_12f6" />
+    <string name="APKTOOL_DUMMY_1975" />
+    <string name="APKTOOL_DUMMY_19ca" />
+    <string name="APKTOOL_DUMMY_19cb" />
 </resources>

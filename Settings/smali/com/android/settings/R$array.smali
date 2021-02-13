@@ -444,6 +444,10 @@
 
 .field public static final wifi_ap_band_vendor_summary_no_dual:I = 0x7f03016c
 
+.field public static final wifi_ap_channel_band:I = 0x7f03016d
+
+.field public static final wifi_ap_channel_config:I = 0x7f03016e
+
 .field public static final wifi_ap_upstream_type_entry:I = 0x7f030170
 
 .field public static final wifi_ap_upstream_type_summary:I = 0x7f030171

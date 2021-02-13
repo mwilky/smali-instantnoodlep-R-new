@@ -92,60 +92,60 @@
 
 .field public static final oneplus_settings_layout_margin_left2:I = 0x7f0704a0
 
-.field public static final op_control_margin_space4:I = 0x7f070519
+.field public static final op_control_margin_space4:I = 0x7f070530
 
-.field public static final op_control_margin_space8:I = 0x7f07051d
+.field public static final op_control_margin_space8:I = 0x7f070534
 
-.field public static final op_custom_shape_item_space:I = 0x7f070540
+.field public static final op_custom_shape_item_space:I = 0x7f070557
 
-.field public static final output_switcher_panel_icon_corner_radius:I = 0x7f07056f
+.field public static final output_switcher_panel_icon_corner_radius:I = 0x7f070586
 
-.field public static final output_switcher_panel_icon_size:I = 0x7f070570
+.field public static final output_switcher_panel_icon_size:I = 0x7f070587
 
-.field public static final output_switcher_slice_max_height:I = 0x7f070571
+.field public static final output_switcher_slice_max_height:I = 0x7f070588
 
-.field public static final output_switcher_slice_padding_top:I = 0x7f070572
+.field public static final output_switcher_slice_padding_top:I = 0x7f070589
 
-.field public static final panel_view_width:I = 0x7f070577
+.field public static final panel_view_width:I = 0x7f07058e
 
-.field public static final picker_preview_item_height:I = 0x7f070582
+.field public static final picker_preview_item_height:I = 0x7f070599
 
-.field public static final picker_preview_item_width:I = 0x7f070583
+.field public static final picker_preview_item_width:I = 0x7f07059a
 
-.field public static final qrcode_size:I = 0x7f070593
+.field public static final qrcode_size:I = 0x7f0705aa
 
-.field public static final sat_val_panel_height:I = 0x7f0705a8
+.field public static final sat_val_panel_height:I = 0x7f0705bf
 
-.field public static final search_bar_height:I = 0x7f0705bb
+.field public static final search_bar_height:I = 0x7f0705d2
 
-.field public static final search_bar_margin:I = 0x7f0705bc
+.field public static final search_bar_margin:I = 0x7f0705d3
 
-.field public static final shortcut_size:I = 0x7f0705ca
+.field public static final shortcut_size:I = 0x7f0705e1
 
-.field public static final shortcut_size_maskable:I = 0x7f0705cb
+.field public static final shortcut_size_maskable:I = 0x7f0705e2
 
-.field public static final signal_strength_icon_size:I = 0x7f0705cd
+.field public static final signal_strength_icon_size:I = 0x7f0705e4
 
-.field public static final storage_donut_thickness:I = 0x7f0705d5
+.field public static final storage_donut_thickness:I = 0x7f0705ec
 
-.field public static final storage_donut_view_percent_sign_size:I = 0x7f0705d7
+.field public static final storage_donut_view_percent_sign_size:I = 0x7f0705ee
 
-.field public static final storage_donut_view_percent_text_size:I = 0x7f0705d8
+.field public static final storage_donut_view_percent_text_size:I = 0x7f0705ef
 
-.field public static final storage_donut_view_shrunken_label_text_size:I = 0x7f0705d9
+.field public static final storage_donut_view_shrunken_label_text_size:I = 0x7f0705f0
 
-.field public static final sud_items_glif_text_divider_inset:I = 0x7f07061b
+.field public static final sud_items_glif_text_divider_inset:I = 0x7f070632
 
-.field public static final system_navigation_illustration_height:I = 0x7f07063f
+.field public static final system_navigation_illustration_height:I = 0x7f070656
 
-.field public static final update_user_photo_popup_min_width:I = 0x7f070669
+.field public static final update_user_photo_popup_min_width:I = 0x7f070680
 
-.field public static final usage_number_text_size:I = 0x7f070673
+.field public static final usage_number_text_size:I = 0x7f07068a
 
-.field public static final wifi_detail_page_header_image_size:I = 0x7f070687
+.field public static final wifi_detail_page_header_image_size:I = 0x7f07069e
 
-.field public static final zen_conversations_icon_offset:I = 0x7f07068b
+.field public static final zen_conversations_icon_offset:I = 0x7f0706a2
 
-.field public static final zen_conversations_icon_size:I = 0x7f07068c
+.field public static final zen_conversations_icon_size:I = 0x7f0706a3
 
-.field public static final zen_schedule_day_margin:I = 0x7f070695
+.field public static final zen_schedule_day_margin:I = 0x7f0706ac

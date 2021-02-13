@@ -608,29 +608,33 @@
 
     invoke-virtual {p0}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->updateLastFullChargePreference()V
 
-    iget-object p1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mScreenUsagePref:Landroidx/preference/Preference;
-
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mBatteryUtils:Lcom/android/settings/fuelgauge/BatteryUtils;
+    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mBatteryUtils:Lcom/android/settings/fuelgauge/BatteryUtils;
 
-    iget-object p0, p0, Lcom/android/settings/fuelgauge/PowerUsageBase;->mStatsHelper:Lcom/android/internal/os/BatteryStatsHelper;
+    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerUsageBase;->mStatsHelper:Lcom/android/internal/os/BatteryStatsHelper;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/fuelgauge/BatteryUtils;->calculateScreenUsageTime(Lcom/android/internal/os/BatteryStatsHelper;)J
+    invoke-virtual {v0, v1}, Lcom/android/settings/fuelgauge/BatteryUtils;->calculateScreenUsageTime(Lcom/android/internal/os/BatteryStatsHelper;)J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    long-to-double v1, v1
+    long-to-double v0, v0
 
-    const/4 p0, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2, p0}, Lcom/android/settingslib/utils/StringUtil;->formatElapsedTime(Landroid/content/Context;DZ)Ljava/lang/CharSequence;
+    invoke-static {p1, v0, v1, v2}, Lcom/android/settingslib/utils/StringUtil;->formatElapsedTime(Landroid/content/Context;DZ)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    iget-object p0, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mScreenUsagePref:Landroidx/preference/Preference;
+
+    invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

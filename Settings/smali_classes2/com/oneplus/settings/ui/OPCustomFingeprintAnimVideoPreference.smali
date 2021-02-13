@@ -596,6 +596,12 @@
     invoke-direct {v3, v5, v12, v14}, Lcom/oneplus/settings/ui/OPCustomItemEntity;-><init>(Ljava/lang/String;II)V
 
     :cond_2
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
     invoke-virtual/range {p0 .. p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -1119,6 +1125,12 @@
     move-result-object v4
 
     check-cast v4, Landroid/widget/ImageView;
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportREDTheme()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
 
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 

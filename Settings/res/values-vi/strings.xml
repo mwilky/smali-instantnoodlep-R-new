@@ -651,6 +651,8 @@ Lần chạy gần đây nhất vào %2$s"</string>
     <string name="available_virtual_keyboard_category">Bàn phím ảo có sẵn</string>
     <string name="average_memory_use">Sử dụng bộ nhớ trung bình</string>
     <string name="average_used">Đã sử dụng trung bình (%)</string>
+    <string name="avoid_bad_wifi_connection_dialog_title">"The Wi-Fi network you're connected to is not connected to the Internet.  
+ To automatically switch to the mobile network when this happens, turn on Avoid bad Wi-Fi connections in the Advanced Wi-Fi Settings."</string>
     <string name="awake">Thời gian thức của thiết bị</string>
     <string name="back_sensitivity_dialog_message">Độ nhạy cao hơn có thể xung đột với mọi cử chỉ trong ứng dụng dọc theo các cạnh màn hình.</string>
     <string name="back_sensitivity_dialog_title">Độ nhạy với cử chỉ quay lại</string>
@@ -1872,7 +1874,7 @@ Nếu sự cố này vẫn tiếp diễn, có thể bạn cần phải gỡ cài
     <string name="earphone_function_control_play_pause">Phát/Tạm dừng</string>
     <string name="earphone_function_introduction">Mô tả chức năng</string>
     <string name="earphone_function_listening_breeno">Hỗ trợ bằng giọng nói</string>
-    <string name="earphone_support_battery_dot">;</string>
+    <string name="earphone_support_battery_dot">"; "</string>
     <string name="earphone_support_battery_info_box">OnePlus Buds Case: %1$s</string>
     <string name="earphone_support_battery_info_left">T: %1$s</string>
     <string name="earphone_support_battery_info_right">P: %1$s</string>
@@ -2203,6 +2205,7 @@ Khi bạn bật tính năng sao lưu tự động, dữ liệu ứng dụng và 
     <string name="ghzonly_2.4">Chỉ 2,4 GHz</string>
     <string name="ghzonly_5">Chỉ 5 GHz</string>
     <string name="go_back_button_label">Quay lại</string>
+    <string name="go_to_settings">ĐI ĐẾN CÀI ĐẶT</string>
     <string name="graphics_driver_all_apps_preference_title">Bật cho tất cả các ứng dụng</string>
     <string name="graphics_driver_app_preference_default">Mặc định</string>
     <string name="graphics_driver_app_preference_game_driver">Trình điều khiển trò chơi</string>
@@ -2242,6 +2245,7 @@ Khi bạn bật tính năng sao lưu tự động, dữ liệu ứng dụng và 
     <string name="header_category_system">Hệ thống</string>
     <string name="header_category_wireless_networks">Không dây và mạng</string>
     <string name="header_data_and_synchronization">Dữ liệu &amp; đồng bộ hóa</string>
+    <string name="headphone_function">Tai nghe</string>
     <string name="heavy_weight_stop_description">Không thể dừng ứng dụng này một cách an toàn. Nếu dừng ứng dụng, bạn có thể mất một số công việc hiện tại.</string>
     <string name="help_feedback_label">Trợ giúp &amp; phản hồi</string>
     <string name="help_label">Trợ giúp và phản hồi</string>
@@ -3154,6 +3158,7 @@ Khi chuyển sang %1$s, dịch vụ %2$s của bạn sẽ không bị hủy."</s
     <string name="no_services">Không hoạt động</string>
     <string name="no_sim_card">Không có thẻ SIM</string>
     <string name="no_sim_card_available">Không có thẻ SIM</string>
+    <string name="no_thanks">KHÔNG, CẢM ƠN</string>
     <string name="no_trust_agents">Không có tác nhân tin cậy nào</string>
     <string name="no_vr_listeners">Không có ứng dụng đã cài đặt nào yêu cầu được chạy dưới dạng dịch vụ trình trợ giúp VR.</string>
     <string name="not_allowed">Thẻ SIM của bạn không cho phép kết nối với mạng này.</string>
@@ -3403,6 +3408,7 @@ Trình tiết kiệm pin sẽ tắt tự động khi thiết bị của bạn đ
     <string name="oneplus_bluetooth_volume_switch">Âm lượng tuyệt đối Bluetooth</string>
     <string name="oneplus_bluetooth_volume_switch_summary">Tự động đồng bộ âm lượng của bộ tai nghe và thiết bị khi kết nối đến Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Tên mạng truyền phát (SSID)</string>
+    <string name="oneplus_buds_need_update">Vui lòng cập nhật Ứng dụng OnePlus Buds lên phiên bản mới nhất trước khi sử dụng</string>
     <string name="oneplus_buttons_and_gestures_settings">Nút &amp; Cử chỉ</string>
     <string name="oneplus_buttons_dashboard_summary">Alert slider, điều hướng, cử chỉ</string>
     <string name="oneplus_buttons_settings">Cài đặt nút</string>
@@ -3754,7 +3760,7 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn mẫu hình mở khó
     <string name="oneplus_laboratory_community_rating_feedback">Cảm ơn phản hồi của bạn.</string>
     <string name="oneplus_laboratory_community_rating_summary">Chúng tôi luôn cố gắng mạnh dạn sáng tạo các tính năng mới và thú vị cho người dùng và với phản hồi của bạn, chúng tôi hi vọng sẽ ngày càng trở nên táo bạo và quyết tâm hơn nữa nhằm nâng cao trải nghiệm người dùng. Vậy hãy cho chúng tôi biết bạn nghĩ gì về những tính năng này. Chúng tôi luôn lắng nghe.</string>
     <string name="oneplus_laboratory_description">Mô tả</string>
-    <string name="oneplus_language_and_input">%1$s,%2$s</string>
+    <string name="oneplus_language_and_input">%1$s, %2$s</string>
     <string name="oneplus_led_support">Cho phép thông báo nháy đèn</string>
     <string name="oneplus_legal_notices">Thông báo Pháp lý</string>
     <string name="oneplus_legal_summary">Chính sách bảo mật, thỏa thuận, v.v.</string>
@@ -4081,11 +4087,11 @@ Còn %d lượt."</string>
     <string name="oneplus_search_keyword_switch">chuyển, di chuyển dữ liệu</string>
     <string name="oneplus_search_keyword_theme_settings">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, Horizon Light, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack, McLaren</string>
     <string name="oneplus_search_keyword_theme_settings_must_have">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
     <string name="oneplus_search_keyword_theme_settings_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
     <string name="oneplus_search_keyword_theme_settings_no_notification_light">Tùy chỉnh Màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
-    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Tùy chỉnh màn hình khóa, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Tùy chỉnh hệ thống, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng</string>
+    <string name="oneplus_search_keyword_theme_settings_no_notification_light_new">Lock Screen Customization, Wallpapers, Clock Style, Fingerprint Animation, SYSTEM System Customization, Accent Color, Shape, Font, Tone, Icon Pack</string>
     <string name="oneplus_search_keyword_three_screenshots">ảnh chụp màn hình</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">thông báo, trải nghiệm, chương trình, cải thiện</string>
@@ -4149,7 +4155,7 @@ Lưu ý:
     <string name="oneplus_silent_mode_on">Chế độ Im lặng đang bật</string>
     <string name="oneplus_silent_mode_soc_tri_state_summary">Các cuộc gọi và thông báo sẽ bị tắt âm, ngoại trừ báo thức</string>
     <string name="oneplus_silent_mode_summary">Các cuộc gọi và thông báo sẽ bị tắt âm, ngoại trừ báo thức</string>
-    <string name="oneplus_silent_notifications_status_bar">Ẩn thông báo im lặng trong thanh trạng thái</string>
+    <string name="oneplus_silent_notifications_status_bar">Hide silent notification in status bar</string>
     <string name="oneplus_sim1_ringtone_switch">Thẻ SIM 1</string>
     <string name="oneplus_sim2_ringtone_switch">Thẻ SIM 2</string>
     <string name="oneplus_simcard_title">SIM</string>
@@ -4176,6 +4182,7 @@ Lưu ý:
     <string name="oneplus_suspension_notice">Trên đầu</string>
     <string name="oneplus_suspension_notice_summary">Cho phép các ứng dụng hiển thị thông báo trên đầu</string>
     <string name="oneplus_switch">OnePlus Switch</string>
+    <string name="oneplus_switch_intelligent_resolution_kill_process_tips">Việc chuyển đổi tự động tiết kiệm pin có thể khiến một số ứng dụng chạy dưới nền bị đóng. Bạn có xác nhận chuyển đổi không?</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Chuyển đổi</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Việc chuyển đổi độ phân giải có thể khiến một số ứng dụng chạy dưới nền bị đóng. Bạn có xác nhận chuyển đổi không?</string>
     <string name="oneplus_switch_sa_option">Chế độ NSA + SA</string>
@@ -4279,6 +4286,7 @@ Lưu ý:
     <string name="oneplus_user_enjoy_plan_title">Tham gia chương trình trải nghiệm người dùng</string>
     <string name="oneplus_vibrant_color_effect">Hiệu ứng màu sắc rực rỡ chuyên nghiệp</string>
     <string name="oneplus_vibrate">Rung</string>
+    <string name="oneplus_vibrate_and_silent">Rung &amp; Im lặng</string>
     <string name="oneplus_vibrate_dynamic_mode">Động</string>
     <string name="oneplus_vibrate_intensity">Cường độ rung</string>
     <string name="oneplus_vibrate_on_touch_intensity">Rung khi chạm</string>
@@ -4348,6 +4356,13 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_auto_power_saving_summary">Tự động chuyển sang độ phân giải phù hợp mà không tiêu tốn pin</string>
     <string name="op_battery_saver_description">Trình tiết kiệm pin tắt hoặc hạn chế hoạt động trong nền, một số hiệu ứng hình ảnh &amp; các tính năng tiêu thụ nhiều pin khác để kéo dài tuổi thọ pin.</string>
     <string name="op_battery_suggestion_summary">Bật pin thích nghi</string>
+    <string name="op_bitmoji_aod_download">Tải về</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">Please download the Bitmoji sticker pack to enable Bitmoji. The download will consume around %1$d %2$s of your data. Download now?</string>
+    <string name="op_bitmoji_aod_guide_button">Tải Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_connect">Thiết lập Bitmoji</string>
+    <string name="op_bitmoji_aod_guide_content1">Liven up the ambient display with your personal Bitmoji avatar! Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_content2">Your avatar will update throughout the day based on your activity and things happening around you.</string>
+    <string name="op_bitmoji_aod_guide_download">Tải xuống hình dán Bitmoji</string>
     <string name="op_cast_description">Hiển thị màn hình và âm thanh điện thoại của bạn trên thiết bị như TV</string>
     <string name="op_cast_nearby">Thiết bị ở gần</string>
     <string name="op_cast_no_devices">Không tìm thấy thiết bị nào ở gần</string>
@@ -4397,6 +4412,8 @@ Insight, được thiết kế bởi OnePlus &amp; các sinh viên từ Trườn
     <string name="op_display_graphics_enhancement_engine">CÔNG CỤ TĂNG CƯỜNG VIDEO</string>
     <string name="op_display_motion_graphics_compensation">Làm mượt hình ảnh chuyển động</string>
     <string name="op_display_motion_graphics_compensation_summary">Tăng cường tốc độ khung hình của đồ họa, các hiệu ứng video và trò chơi mượt mà hơn</string>
+    <string name="op_display_video_super_compensation">Độ phân giải video siêu cao</string>
+    <string name="op_display_video_super_compensation_notice">Improved video clarity by enhancing algorithm with AI and the power consumption will be slightly increased when turned on.</string>
     <string name="op_dnd_summary">Không làm phiền</string>
     <string name="op_enable_location_services">Để tìm kiếm và theo dõi các trạm sạc ở gần, hãy bật dịch vụ vị trí</string>
     <string name="op_enable_text">Bật</string>
@@ -4432,6 +4449,7 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_lockpassword_choose_your_pin_header_for_face">Để sử dụng Mở khóa bằng gương mặt, hãy đặt mã PIN</string>
     <string name="op_member_description">Kết ghép thiết bị của bạn để nhận các quyền lợi riêng</string>
     <string name="op_member_title">Đăng nhập Tài khoản OnePlus</string>
+    <string name="op_network_unlock">Mở khóa Mạng</string>
     <string name="op_night_display_title">Thoải mái cho mắt</string>
     <string name="op_not_disturb">Thiết lập Không làm phiền</string>
     <string name="op_not_disturb_summary">Tắt tiếng các cuộc gọi, thông báo và tắt rung, ngoại trừ báo thức</string>
@@ -4439,6 +4457,8 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_notification_history_summary">Hiển thị các thông báo gần đây</string>
     <string name="op_oneplus_roaming_summary">Cung cấp dịch vụ truy cập internet trên toàn cầu</string>
     <string name="op_oneplus_roaming_title">Chuyển vùng OnePlus</string>
+    <string name="op_optimize_app_power_summary">Khi phát hiện thấy ứng dụng trong nền có mức tiêu thụ điện năng bất thường, tính năng này có thể cải thiện thời lượng pin của hệ thống và điều chỉnh mức tiêu thụ điện năng của thiết bị cho phù hợp.</string>
+    <string name="op_optimize_app_power_title">Tối ưu hóa mức tiêu thụ điện năng của ứng dụng</string>
     <string name="op_powerkey_menu_cards_description">Khi bật, chế độ thanh toán và thông tin lên máy bay sẽ được hiển thị an toàn</string>
     <string name="op_powerkey_menu_device_controller_description">Bật để truy cập trình điều khiển của thiết bị liên quan</string>
     <string name="op_powerkey_menu_lock_display_title">Hiển thị màn hình khóa</string>
@@ -4464,7 +4484,9 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
     <string name="op_sim_cord">SIM &amp; mạng</string>
     <string name="op_sim_cord_summary">Thẻ SIM mặc định, sử dụng băng thông</string>
+    <string name="op_sim_lock_summary">Chức năng đã bị tắt. Hãy đi đến mục Mở khóa ứng dụng bên dưới Thông tin ứng dụng để BẬT</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
+    <string name="op_sim_unlock_summary">Thiết bị này đã được mở khóa mạng</string>
     <string name="op_smart_battery_manager_title">Pin thích nghi</string>
     <string name="op_smart_battery_title">Sử dụng Pin thích nghi</string>
     <string name="op_sms_ringtone">Nhạc chuông SMS</string>
@@ -4485,6 +4507,8 @@ Mở khóa bằng vân tay có thể không tương thích với tấm bảo v�
     <string name="op_theme_entrance_summary">Hình nền, màu nhấn mạnh, phông chữ</string>
     <string name="op_theme_lock_screen_customization">MÀN HÌNH KHÓA VÀ HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="op_theme_mode_title">Chủ đề</string>
+    <string name="op_unlock_status_locked">Locked</string>
+    <string name="op_unlock_status_unlock">Unlocked</string>
     <string name="op_use_cast">Sử dụng Truyền</string>
     <string name="op_user_manual_settings">Hướng dẫn Sử dụng</string>
     <string name="op_volume">Âm lượng</string>
@@ -5897,7 +5921,7 @@ Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền 
     <string name="traffic_set_limit_title_vzw">Giới hạn sử dụng dữ liệu</string>
     <string name="traffic_set_warn_description_vzw">Cảnh báo khi tôi đã sử dụng hết lượng dữ liệu di động này.</string>
     <string name="traffic_set_warn_title">Đặt cảnh báo dữ liệu</string>
-    <string name="traffic_set_warn_title_vzw">Cảnh báo sử dụng dữ liệu</string>
+    <string name="traffic_set_warn_title_vzw">Data Usage Alert</string>
     <string name="traffic_usage_limit_dialog_message">Việc sử dụng dữ liệu di động sẽ bị chặn một khi nó đạt đến giới hạn do bạn quy định. Bởi mức sử dụng dữ liệu được đo bởi điện thoại của bạn, và nhà mạng của bạn có thể tính mức sử dụng theo cách khác, bạn nên đặt một giới hạn an toàn.</string>
     <string name="traffic_usage_limit_dialog_message_vzw">Để đặt giới hạn, hãy xem xét lượng dữ liệu bạn muốn sử dụng trên thiết bị này. Mức sử dụng dữ liệu được đo bởi điện thoại và thông tin được thể hiện trên hóa đơn của bạn có thể khác nhau.</string>
     <string name="traffic_usage_limit_dialog_title">Sử dụng dữ liệu giới hạn</string>
@@ -6283,7 +6307,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="verify_apps_over_usb_title">Xác minh ứng dụng qua USB</string>
     <string name="verizon_store_demo_mode_hint">Nhập mật khẩu</string>
     <string name="verizon_store_demo_mode_title">Verizon Store Demo Mode</string>
-    <string name="verizon_wifi_tether_band_warning">Việc thay đổi thiết lập của Điểm truy cập Di động sẽ ngắt kết nối mọi thiết bị hiện đang kết nối với Điểm truy cập Di động này.</string>
+    <string name="verizon_wifi_tether_band_warning">Việc thay đổi thiết lập của Điểm truy cập di động sẽ ngắt kết nối mọi thiết bị hiện đang kết nối với Điểm truy cập di động này.</string>
     <string name="version_text">phiên bản %1$s</string>
     <string name="vibrate_in_silent_title">Rung khi im lặng</string>
     <string name="vibrate_input_devices">Chuyển hướng rung</string>

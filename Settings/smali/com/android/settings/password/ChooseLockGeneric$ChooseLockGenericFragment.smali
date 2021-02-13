@@ -65,6 +65,8 @@
 
 .field private mHasChallenge:Z
 
+.field private mHeaderMarginPreference:Landroidx/preference/Preference;
+
 .field private mIsCallingAppAdmin:Z
 
 .field private mIsSetNewPassword:Z
@@ -1199,7 +1201,13 @@
 
     iget-boolean v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mForFingerprint:Z
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mHeaderMarginPreference:Landroidx/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PATTERN:Lcom/android/settings/password/ScreenLockType;
 
@@ -1225,6 +1233,10 @@
     iget-boolean v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mForFace:Z
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mHeaderMarginPreference:Landroidx/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->PATTERN:Lcom/android/settings/password/ScreenLockType;
 
@@ -1285,7 +1297,7 @@
     if-nez v0, :cond_4
 
     :cond_3
-    const-string/jumbo v0, "unlock_skip_fingerprint"
+    const-string v0, "unlock_skip_fingerprint"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
@@ -1299,7 +1311,7 @@
     if-nez v0, :cond_6
 
     :cond_5
-    const-string/jumbo v0, "unlock_skip_face"
+    const-string v0, "unlock_skip_face"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)Z
 
@@ -1419,6 +1431,14 @@
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
     :goto_0
+    const-string v0, "preference_divider_line"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mHeaderMarginPreference:Landroidx/preference/Preference;
+
     sget-object v0, Lcom/android/settings/password/ScreenLockType;->NONE:Lcom/android/settings/password/ScreenLockType;
 
     iget-object v0, v0, Lcom/android/settings/password/ScreenLockType;->preferenceKey:Ljava/lang/String;
@@ -1431,7 +1451,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setViewId(I)V
 
-    const-string/jumbo v0, "unlock_skip_fingerprint"
+    const-string v0, "unlock_skip_fingerprint"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
@@ -1441,7 +1461,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setViewId(I)V
 
-    const-string/jumbo v0, "unlock_skip_face"
+    const-string v0, "unlock_skip_face"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
@@ -2736,7 +2756,7 @@
     return v1
 
     :cond_0
-    const-string/jumbo v0, "unlock_skip_fingerprint"
+    const-string v0, "unlock_skip_fingerprint"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2744,7 +2764,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "unlock_skip_face"
+    const-string v0, "unlock_skip_face"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

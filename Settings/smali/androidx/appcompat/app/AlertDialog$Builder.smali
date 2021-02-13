@@ -163,22 +163,6 @@
     return-object p0
 .end method
 
-.method public setCustomImage(I)Landroidx/appcompat/app/AlertDialog$Builder;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/appcompat/app/AlertDialog$Builder;->P:Landroidx/appcompat/app/AlertController$AlertParams;
-
-    iget-object v1, v0, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iput-object p1, v0, Landroidx/appcompat/app/AlertController$AlertParams;->mCustomImage:Landroid/graphics/drawable/Drawable;
-
-    return-object p0
-.end method
-
 .method public setCustomTitle(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 

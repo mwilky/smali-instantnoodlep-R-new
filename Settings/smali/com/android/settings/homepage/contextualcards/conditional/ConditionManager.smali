@@ -26,7 +26,15 @@
 
 .field private mIsListeningToStateChange:Z
 
-.field private final mListener:Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;
+.field private final mListener:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -47,7 +55,11 @@
 
     iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mCardControllers:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mListener:Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mListener:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0}, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->initCandidates()V
 
@@ -381,11 +393,25 @@
 .end method
 
 .method onConditionChanged()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mListener:Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;
+    iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mListener:Ljava/lang/ref/WeakReference;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionManager;->mListener:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;
 
     invoke-interface {p0}, Lcom/android/settings/homepage/contextualcards/conditional/ConditionListener;->onConditionsChanged()V
 

@@ -90,7 +90,11 @@
     move-result-object v0
 
     :goto_0
-    return-object v0
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->handleTimeSummary(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_3
     :goto_1

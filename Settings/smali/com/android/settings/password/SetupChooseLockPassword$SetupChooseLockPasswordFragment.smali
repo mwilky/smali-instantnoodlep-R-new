@@ -55,14 +55,30 @@
 
 # virtual methods
 .method protected getRedactionInterstitialIntent(Landroid/content/Context;)Landroid/content/Intent;
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    invoke-static {p1, p0}, Lcom/android/settings/SetupRedactionInterstitial;->setEnabled(Landroid/content/Context;Z)V
+    invoke-static {p1, v0}, Lcom/android/settings/SetupRedactionInterstitial;->setEnabled(Landroid/content/Context;Z)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget p0, p0, Lcom/android/settings/password/ChooseLockPassword$ChooseLockPasswordFragment;->mUserId:I
+
+    invoke-static {p1, p0}, Lcom/android/settings/SetupRedactionInterstitial;->createStartIntent(Landroid/content/Context;I)Landroid/content/Intent;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return-object p0
 .end method
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final motion_base:I = 0x7f0b04bd
+.field public static final motion_base:I = 0x7f0b04c6
 
 
 # direct methods

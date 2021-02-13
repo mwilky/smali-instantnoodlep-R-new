@@ -140,6 +140,9 @@
     <item type="id" name="animation_view_dots" />
     <item type="id" name="animator" />
     <item type="id" name="anonymous" />
+    <item type="id" name="aod_clock_detail_content" />
+    <item type="id" name="aod_clock_detail_preview" />
+    <item type="id" name="aod_clock_detail_title" />
     <item type="id" name="apn_radiobutton" />
     <item type="id" name="app1_view" />
     <item type="id" name="app2_view" />
@@ -223,6 +226,9 @@
     <item type="id" name="battery_usage" />
     <item type="id" name="bg_optimize_preferences" />
     <item type="id" name="big_icon" />
+    <item type="id" name="bitmoji_button" />
+    <item type="id" name="bitmoji_button_text" />
+    <item type="id" name="bitmoji_desp" />
     <item type="id" name="blob_expiry" />
     <item type="id" name="blob_id" />
     <item type="id" name="blob_label" />
@@ -359,6 +365,7 @@
     <item type="id" name="checked" />
     <item type="id" name="choose_container" />
     <item type="id" name="choose_different_network" />
+    <item type="id" name="choose_extra" />
     <item type="id" name="choose_image" />
     <item type="id" name="choose_lock_password_clear_button" />
     <item type="id" name="choose_lock_password_next_button" />
@@ -372,6 +379,7 @@
     <item type="id" name="clear_button" />
     <item type="id" name="clear_data" />
     <item type="id" name="clickable" />
+    <item type="id" name="clock_extra" />
     <item type="id" name="close_button" />
     <item type="id" name="collapse_button" />
     <item type="id" name="color_0" />
@@ -731,6 +739,7 @@
     <item type="id" name="guidance_description" />
     <item type="id" name="guidance_icon" />
     <item type="id" name="guidance_title" />
+    <item type="id" name="guide" />
     <item type="id" name="guide_anim" />
     <item type="id" name="guide_summary" />
     <item type="id" name="guide_summary_container" />
@@ -1443,6 +1452,7 @@
     <item type="id" name="prev" />
     <item type="id" name="preview" />
     <item type="id" name="preview_container" />
+    <item type="id" name="preview_extra" />
     <item type="id" name="preview_pager" />
     <item type="id" name="preview_text" />
     <item type="id" name="preview_text1" />

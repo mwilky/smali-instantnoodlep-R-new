@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 4
+    .locals 3
 
     iget-object p1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$2;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -59,7 +59,11 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$2;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Z
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/utils/OpCanvasAodHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/settings/utils/OpCanvasAodHelper;->isCanvasAodEnabled()Z
 
     move-result v0
 
@@ -74,25 +78,15 @@
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :try_start_0
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$2;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$300(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/utils/OpCanvasAodHelper;
 
-    new-instance v1, Landroid/content/ComponentName;
+    move-result-object v0
 
-    const-string v2, "com.oneplus.canvasresources"
+    invoke-virtual {v0}, Lcom/oneplus/settings/utils/OpCanvasAodHelper;->getConfirmDialogIntent()Landroid/content/Intent;
 
-    const-string v3, "com.oneplus.canvasresources.canvaswallpaper.CanvasAodMessageDialog"
-
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    const-string v1, "action_code"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    move-result-object v0
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$2;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 

@@ -118,6 +118,7 @@
     <uses-permission android:name="com.oneplus.account.READ_ACCOUNT_INFO"/>
     <permission android:name="com.android.settings.RECEIVE_PERMISSION"/>
     <uses-permission android:name="com.android.settings.SEND_PERMISSION"/>
+    <uses-permission android:name="com.oplus.permission.safe.OpThemeBroadcastPerm"/>
     <original-package android:name="com.android.settings"/>
     <protected-broadcast android:name="com.android.settings.POWER_OP_ON"/>
     <protected-broadcast android:name="com.android.settings.action.REQUEST_POWER_OFF"/>
@@ -210,7 +211,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.connecteddevice.BluetoothDashboardFragment"/>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
         </activity>
-        <activity-alias android:exported="true" android:label="@string/devices_title" android:name="com.android.settings.Settings$BluetoothSettingsActivity" android:screenOrientation="portrait" android:targetActivity="com.android.settings.Settings$ConnectedDeviceDashboardActivity">
+        <activity-alias android:exported="true" android:icon="@drawable/ic_homepage_bluetoothsetting" android:label="@string/bluetooth" android:name="com.android.settings.Settings$BluetoothSettingsActivity" android:screenOrientation="portrait" android:targetActivity="com.android.settings.Settings$ConnectedDeviceDashboardActivity">
             <intent-filter android:priority="10">
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="com.android.settings.SHORTCUT"/>
@@ -385,7 +386,7 @@
         <activity-alias android:clearTaskOnLaunch="true" android:exported="true" android:label="@string/tether_settings_title_all" android:name="com.android.settings.TetherSettings" android:targetActivity="com.android.settings.Settings$TetherSettingsActivity">
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.TetherSettings"/>
         </activity-alias>
-        <activity android:icon="@drawable/ic_wifi_tethering" android:label="@string/wifi_hotspot_checkbox_text" android:name="com.android.settings.Settings$WifiTetherSettingsActivity">
+        <activity android:icon="@drawable/ic_homepage_wifitethersettings" android:label="@string/wifi_hotspot_checkbox_text" android:name="com.android.settings.Settings$WifiTetherSettingsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.WIFI_TETHER_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -404,7 +405,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.wifi.p2p.WifiP2pSettings"/>
         </activity>
-        <activity android:icon="@drawable/ic_vpn_key" android:label="@string/vpn_settings_title" android:name="com.android.settings.Settings$VpnSettingsActivity" android:screenOrientation="portrait">
+        <activity android:icon="@drawable/ic_homepage_vpnsettings" android:label="@string/vpn_settings_title" android:name="com.android.settings.Settings$VpnSettingsActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.VPN_SETTINGS"/>
                 <action android:name="android.net.vpn.SETTINGS"/>
@@ -531,7 +532,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:exported="true" android:icon="@drawable/ic_notifications" android:label="@string/zen_mode_settings_title" android:name="com.android.settings.Settings$ZenModeSettingsActivity" android:screenOrientation="portrait">
+        <activity android:exported="true" android:icon="@drawable/ic_homepage_zenmodesettings" android:label="@string/zen_mode_settings_title" android:name="com.android.settings.Settings$ZenModeSettingsActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.ZEN_MODE_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -654,7 +655,7 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
             <meta-data android:name="com.android.settings.summary" android:resource="@string/qtifeedback_settings_subtitle"/>
         </activity>
-        <activity android:enabled="true" android:label="@string/dark_ui_auto_mode_title" android:name="com.android.settings.Settings$DarkThemeSettingsActivity">
+        <activity android:enabled="true" android:icon="@drawable/ic_homepage_darkthemesetting" android:label="@string/oneplus_dark_mode" android:name="com.android.settings.Settings$DarkThemeSettingsActivity">
             <intent-filter android:priority="32">
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="com.android.settings.SHORTCUT"/>
@@ -705,7 +706,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.deviceinfo.legal.ModuleLicensesDashboard"/>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
         </activity>
-        <activity android:label="@string/applications_settings" android:name="com.android.settings.Settings$ManageApplicationsActivity">
+        <activity android:icon="@drawable/ic_homepage_about" android:label="@string/applications_settings" android:name="com.android.settings.Settings$ManageApplicationsActivity">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APPLICATION_SETTINGS"/>
                 <action android:name="android.settings.MANAGE_APPLICATIONS_SETTINGS"/>
@@ -812,7 +813,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.applications.manageapplications.ManageApplications"/>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
         </activity>
-        <activity android:label="@string/notification_log_title" android:name="com.android.settings.Settings$NotificationStationActivity">
+        <activity android:icon="@drawable/ic_homepage_notificationstation" android:label="@string/notification_log_title" android:name="com.android.settings.Settings$NotificationStationActivity">
             <intent-filter android:priority="22">
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="com.android.settings.SHORTCUT"/>
@@ -836,7 +837,7 @@
                 <category android:name="android.intent.category.VOICE"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/ic_settings_location" android:label="@string/location_settings_title" android:name="com.android.settings.Settings$LocationSettingsActivity" android:screenOrientation="portrait">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/ic_homepage_locationsetting" android:label="@string/location_settings_title" android:name="com.android.settings.Settings$LocationSettingsActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.LOCATION_SOURCE_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -1370,7 +1371,7 @@
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE"/>
             </intent-filter>
         </activity>
-        <activity android:icon="@drawable/ic_settings_battery" android:label="@string/power_usage_summary_title" android:name="com.android.settings.Settings$PowerUsageSummaryActivity" android:screenOrientation="portrait">
+        <activity android:icon="@drawable/ic_homepage_powerusagesummary" android:label="@string/power_usage_summary_title" android:name="com.android.settings.Settings$PowerUsageSummaryActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.intent.action.POWER_USAGE_SUMMARY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -1577,7 +1578,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.notification.zen.ZenAccessSettings"/>
         </activity>
-        <activity android:exported="true" android:label="@string/configure_notification_settings" android:name="com.android.settings.Settings$ConfigureNotificationSettingsActivity" android:screenOrientation="portrait">
+        <activity android:exported="true" android:icon="@drawable/ic_homepage_confignotification" android:label="@string/configure_notification_settings" android:name="com.android.settings.Settings$ConfigureNotificationSettingsActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.NOTIFICATION_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -1604,7 +1605,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.notification.app.AppBubbleNotificationSettings"/>
         </activity>
-        <activity android:exported="true" android:icon="@drawable/ic_homepage_sound" android:label="@string/sound_settings" android:name="com.android.settings.Settings$SoundSettingsActivity" android:screenOrientation="portrait">
+        <activity android:exported="true" android:icon="@drawable/ic_homepage_soundsetting" android:label="@string/sound_settings" android:name="com.android.settings.Settings$SoundSettingsActivity" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.SOUND_SETTINGS"/>
                 <action android:name="android.settings.SOUND_SETTINGS"/>
@@ -2750,7 +2751,6 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED"/>
                 <action android:name="android.intent.action.TIME_SET"/>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
-                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
                 <action android:name="oneplus.intent.action.otg_auto_shutdown"/>
                 <action android:name="oneplus.settings.intent.action.PACKAGE_REMOVED"/>
             </intent-filter>
@@ -2803,7 +2803,7 @@
                 <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
             </intent-filter>
         </receiver>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/data_usage_summary_title" android:launchMode="singleTask" android:name="com.oneplus.security.network.view.DataUsageMainActivity" android:resizeableActivity="false" android:screenOrientation="nosensor" android:taskAffinity="com.oneplus.security">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/ic_homepage_datausage" android:label="@string/data_usage_summary_title" android:launchMode="singleTask" android:name="com.oneplus.security.network.view.DataUsageMainActivity" android:resizeableActivity="false" android:screenOrientation="nosensor" android:taskAffinity="com.oneplus.security">
             <intent-filter>
                 <action android:name="com.oneplus.security.action.USAGE_DATA_SUMMARY"/>
                 <category android:name="android.intent.category.DEFAULT"/>

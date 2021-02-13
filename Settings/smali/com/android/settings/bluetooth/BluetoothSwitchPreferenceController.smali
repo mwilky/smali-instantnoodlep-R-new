@@ -11,6 +11,8 @@
 
 
 # instance fields
+.field mAlwaysDiscoverable:Lcom/android/settings/bluetooth/AlwaysDiscoverable;
+
 .field private mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
 .field private mBluetoothEnabler:Lcom/android/settings/bluetooth/BluetoothEnabler;
@@ -84,6 +86,12 @@
 
     invoke-virtual {p2, p0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->setToggleCallback(Lcom/android/settings/widget/SwitchWidgetController$OnSwitchChangeListener;)V
 
+    new-instance p2, Lcom/android/settings/bluetooth/AlwaysDiscoverable;
+
+    invoke-direct {p2, p1}, Lcom/android/settings/bluetooth/AlwaysDiscoverable;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mAlwaysDiscoverable:Lcom/android/settings/bluetooth/AlwaysDiscoverable;
+
     return-void
 .end method
 
@@ -96,45 +104,6 @@
 
     invoke-direct {p0, p1, v0, p2, p3}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;-><init>(Landroid/content/Context;Lcom/android/settings/bluetooth/RestrictionUtils;Lcom/android/settings/widget/SwitchWidgetController;Lcom/oneplus/settings/widget/OPFooterPreference;)V
 
-    return-void
-.end method
-
-.method private setBluetoothDiscoverableState()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "bluetooth_default_scan_mode"
-
-    const/16 v2, 0x15
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/16 v1, 0x17
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    invoke-virtual {p0, v1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
-
-    goto :goto_0
-
-    :cond_0
-    if-ne v0, v2, :cond_1
-
-    iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
-
-    invoke-virtual {p0, v2}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
@@ -177,8 +146,6 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->setBluetoothDiscoverableState()V
-
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -211,6 +178,10 @@
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/android/settings/bluetooth/BluetoothEnabler;->resume(Landroid/content/Context;)V
+
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mAlwaysDiscoverable:Lcom/android/settings/bluetooth/AlwaysDiscoverable;
+
+    invoke-virtual {v0}, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->start()V
 
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mSwitch:Lcom/android/settings/widget/SwitchWidgetController;
 
@@ -247,6 +218,10 @@
 
     invoke-virtual {v0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->pause()V
 
+    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mAlwaysDiscoverable:Lcom/android/settings/bluetooth/AlwaysDiscoverable;
+
+    invoke-virtual {v0}, Lcom/android/settings/bluetooth/AlwaysDiscoverable;->stop()V
+
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -260,8 +235,6 @@
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->updateText(Z)V
-
-    invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothSwitchPreferenceController;->setBluetoothDiscoverableState()V
 
     const/4 p0, 0x1
 

@@ -1869,6 +1869,7 @@
 
     if-ne p1, v0, :cond_0
 
+    :try_start_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1888,7 +1889,17 @@
     invoke-direct {v1, p0}, Landroid/os/UserHandle;-><init>(I)V
 
     invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     const/4 p0, 0x1
 
     return p0
