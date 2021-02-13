@@ -4,12 +4,15 @@
 
 # interfaces
 .implements Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController$OnHighlightHintStateChangeListener;
+.implements Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector$OnBurnInPreventListener;
 
 
 # instance fields
 .field private mCarrierLabel:Landroid/widget/TextView;
 
 .field private mHighlightHintView:Landroid/view/View;
+
+.field private mKeyguardHeader:Landroid/view/View;
 
 .field private mSystemIcons:Landroid/view/View;
 
@@ -26,7 +29,7 @@
 
 # virtual methods
 .method protected onAttachedToWindow()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
@@ -40,6 +43,29 @@
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
+    invoke-static {}, Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;->getInstance()Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v1, p0}, Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;->registerListener(Landroid/content/Context;Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector$OnBurnInPreventListener;)V
+
+    return-void
+.end method
+
+.method public onBurnInPreventTrigger(I)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mKeyguardHeader:Landroid/view/View;
+
+    if-eqz p0, :cond_0
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationX(F)V
+
+    :cond_0
     return-void
 .end method
 
@@ -57,6 +83,12 @@
     check-cast v0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->removeCallback(Ljava/lang/Object;)V
+
+    invoke-static {}, Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;->getInstance()Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector;->unregisterListener(Lcom/oneplus/systemui/statusbar/phone/OpScreenBurnInProtector$OnBurnInPreventListener;)V
 
     return-void
 .end method
@@ -99,6 +131,14 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+
+    sget v0, Lcom/android/systemui/R$id;->keyguard_header:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpKeyguardStatusBarView;->mKeyguardHeader:Landroid/view/View;
 
     return-void
 .end method

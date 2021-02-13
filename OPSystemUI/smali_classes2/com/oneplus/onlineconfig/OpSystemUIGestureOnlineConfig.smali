@@ -290,15 +290,31 @@
 .end method
 
 .method public isUseNativeOpaqueColor(Ljava/lang/String;)Z
-    .locals 0
+    .locals 1
 
+    iget-object v0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
+
+    monitor-enter v0
+
+    :try_start_0
     iget-object p0, p0, Lcom/oneplus/onlineconfig/OpSystemUIGestureOnlineConfig;->mUseNativeOpaqueColorList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
+    monitor-exit v0
+
     return p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public resolveConfigFromJSON(Lorg/json/JSONArray;)V

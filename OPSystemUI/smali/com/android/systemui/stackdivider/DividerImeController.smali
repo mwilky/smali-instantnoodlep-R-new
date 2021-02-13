@@ -6,6 +6,10 @@
 .implements Lcom/android/systemui/wm/DisplayImeController$ImePositionProcessor;
 
 
+# static fields
+.field private static final DEBUG:Z
+
+
 # instance fields
 .field private mAdjusted:Z
 
@@ -45,6 +49,16 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-boolean v0, Lcom/android/systemui/stackdivider/Divider;->DEBUG:Z
+
+    sput-boolean v0, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
+
+    return-void
+.end method
+
 .method constructor <init>(Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;Lcom/android/systemui/TransactionPool;Landroid/os/Handler;)V
     .locals 2
 
@@ -121,6 +135,146 @@
     iput-object p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAnimation:Landroid/animation/ValueAnimator;
 
     return-object p1
+.end method
+
+.method private dumpState()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "top:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mHiddenTop:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "->"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mShownTop:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " adj:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAdjusted:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetAdjusted:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, "("
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mLastAdjustTop:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ") shw:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mImeWasShown:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetShown:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " dims:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mLastPrimaryDim:F
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v2, ","
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mLastSecondaryDim:F
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetPrimaryDim:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetSecondaryDim:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, " shf:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mSecondaryHasFocus:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " desync:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAnimation:Landroid/animation/ValueAnimator;
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " paus:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "["
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPausedTargetAdjusted:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, "]"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private getLayout()Lcom/android/systemui/stackdivider/SplitDisplayLayout;
@@ -202,15 +356,42 @@
 .end method
 
 .method private synthetic lambda$pause$1()V
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
+    sget-boolean v0, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "ime pause run posted "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DividerImeController"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    iget-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
@@ -235,24 +416,51 @@
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAnimation:Landroid/animation/ValueAnimator;
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->end()V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
 .method private synthetic lambda$resume$2()V
     .locals 3
 
+    sget-boolean v0, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "ime resume run posted "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DividerImeController"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
@@ -271,7 +479,7 @@
 
     iget-boolean v2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAdjusted:Z
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v2, :cond_2
 
     iget-object v1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mSplits:Lcom/android/systemui/stackdivider/SplitScreenTaskOrganizer;
 
@@ -281,13 +489,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/android/systemui/stackdivider/DividerView;->finishAnimations()V
 
-    :cond_1
+    :cond_2
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->updateImeAdjustState()V
 
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->startAsyncAnimation()V
@@ -1130,48 +1338,133 @@
     :goto_3
     iget-boolean p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPaused:Z
 
-    if-eqz p1, :cond_7
+    const-string p2, "DividerImeController"
+
+    if-eqz p1, :cond_8
 
     iput-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mPausedTargetAdjusted:Z
 
-    return-void
+    sget-boolean p1, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
+
+    if-eqz p1, :cond_7
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, " ime starting but paused "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
+    return-void
+
+    :cond_8
     iput-boolean v0, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetAdjusted:Z
 
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->updateDimTargets()V
 
-    iget-object p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAnimation:Landroid/animation/ValueAnimator;
-
-    if-nez p1, :cond_8
-
-    iget-boolean p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mImeWasShown:Z
+    sget-boolean p1, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
 
     if-eqz p1, :cond_9
 
-    if-eqz p4, :cond_9
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, " ime starting. vis:"
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p3, "  "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
+    iget-object p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAnimation:Landroid/animation/ValueAnimator;
+
+    if-nez p1, :cond_a
+
+    iget-boolean p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mImeWasShown:Z
+
+    if-eqz p1, :cond_b
+
+    if-eqz p4, :cond_b
 
     iget-boolean p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mTargetAdjusted:Z
 
     iget-boolean p2, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mAdjusted:Z
 
-    if-eq p1, p2, :cond_9
+    if-eq p1, p2, :cond_b
 
-    :cond_8
+    :cond_a
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->startAsyncAnimation()V
 
-    :cond_9
-    if-eqz p5, :cond_a
+    :cond_b
+    if-eqz p5, :cond_c
 
     invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->updateImeAdjustState()V
 
-    :cond_a
+    :cond_c
     return-void
 .end method
 
 .method public pause(I)V
     .locals 1
 
+    sget-boolean p1, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "ime pause posting "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "DividerImeController"
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-object p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/systemui/stackdivider/-$$Lambda$DividerImeController$WahrdFPYjNuoSU9XvYFcvsrVnqE;
@@ -1186,6 +1479,33 @@
 .method public resume(I)V
     .locals 1
 
+    sget-boolean p1, Lcom/android/systemui/stackdivider/DividerImeController;->DEBUG:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "ime resume posting "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/systemui/stackdivider/DividerImeController;->dumpState()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "DividerImeController"
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-object p1, p0, Lcom/android/systemui/stackdivider/DividerImeController;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/systemui/stackdivider/-$$Lambda$DividerImeController$BXScwQHRnelwDiQfpGXRr_rI2HQ;

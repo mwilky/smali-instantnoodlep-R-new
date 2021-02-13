@@ -78,6 +78,8 @@
 
 .field protected mImeVisibleState:I
 
+.field private mIsInMultiWindow:Z
+
 .field private mLastExpand:Z
 
 .field private mLastUpdateIMENavBarTime:J
@@ -198,6 +200,8 @@
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpOneHandModeController:Lcom/oneplus/systemui/statusbar/phone/OpOneHandModeController;
+
+    iput-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mIsInMultiWindow:Z
 
     iput p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavType:I
 
@@ -3516,6 +3520,14 @@
     return p0
 .end method
 
+.method public isInMultiWindow()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mIsInMultiWindow:Z
+
+    return p0
+.end method
+
 .method public isQsDisabled()Z
     .locals 0
 
@@ -4515,6 +4527,53 @@
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
+    return-void
+.end method
+
+.method protected opOnSystemBarAppearanceChanged(II[Lcom/android/internal/view/AppearanceRegion;Z)V
+    .locals 0
+
+    if-eqz p3, :cond_2
+
+    array-length p1, p3
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    sget-boolean p1, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->DEBUG:Z
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mIsInMultiWindow:Z
+
+    if-eq p2, p1, :cond_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "isInMultiWindow = "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p3, "OpStatusBar"
+
+    invoke-static {p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iput-boolean p2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mIsInMultiWindow:Z
+
+    :cond_2
     return-void
 .end method
 

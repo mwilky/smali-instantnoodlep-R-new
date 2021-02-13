@@ -293,6 +293,17 @@
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$902(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;Z)Z
 
     :cond_0
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "NavigationBar"
+
+    const-string v0, "Calling orientSecondaryHomeHandle #1"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
     invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->access$1000(Lcom/android/systemui/statusbar/phone/NavigationBarFragment;)V

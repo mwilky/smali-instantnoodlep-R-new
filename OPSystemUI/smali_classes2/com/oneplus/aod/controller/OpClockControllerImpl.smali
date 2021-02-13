@@ -307,9 +307,11 @@
 
     if-eqz p0, :cond_1
 
+    const/4 v0, 0x0
+
     int-to-float p0, p0
 
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextSize(F)V
+    invoke-virtual {p1, v0, p0}, Landroid/widget/TextView;->setTextSize(IF)V
 
     :cond_1
     return-void

@@ -1353,6 +1353,54 @@
     return-object v0
 .end method
 
+.method public static getPackageVersionCode(Landroid/content/Context;Ljava/lang/String;)I
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not installed."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OpUtils"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
 .method private static getReleaseType()I
     .locals 3
 
@@ -2627,6 +2675,20 @@
     return v1
 .end method
 
+.method public static isMEARom()Z
+    .locals 2
+
+    const-string v0, "ro.build.mea"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isNavigationBarShowing()Z
     .locals 1
 
@@ -3359,6 +3421,12 @@
 
     move-result v0
 
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsVisMode()Z
+
+    move-result v0
+
     if-eqz v0, :cond_1
 
     :cond_0
@@ -3658,6 +3726,12 @@
 
     move-result v0
 
+    if-nez v0, :cond_1
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsVisMode()Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
     goto :goto_0
@@ -3743,6 +3817,12 @@
 
     if-nez p0, :cond_0
 
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsVisMode()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
     const/4 p0, 0x1
 
     goto :goto_0
@@ -3764,6 +3844,12 @@
     if-nez v0, :cond_0
 
     invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsvMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/android/systemui/util/ProductUtils;->isUsVisMode()Z
 
     move-result v0
 

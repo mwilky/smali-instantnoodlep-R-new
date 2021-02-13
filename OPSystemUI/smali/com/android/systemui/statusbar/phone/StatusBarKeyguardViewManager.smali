@@ -1083,18 +1083,10 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBouncer:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    if-eqz v2, :cond_0
-
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->isShowing()Z
 
     move-result v2
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v2, " mOccluded:"
@@ -1113,37 +1105,31 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccluded:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->reset(Z)V
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBouncer:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
-
-    if-eqz v0, :cond_2
-
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->updateStates()V
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBouncer:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
-
-    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->isShowing()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBouncer:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->forceHide()V
 
-    :cond_2
-    :goto_1
+    :cond_1
+    :goto_0
     return-void
 .end method
 

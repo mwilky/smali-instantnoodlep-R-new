@@ -17,11 +17,21 @@
 
 
 # static fields
+.field private static ALPHA_MODE_HIGH:I
+
+.field private static ALPHA_MODE_LOW:I
+
 .field private static final CIRCLE_FRONT_CAMERA_ANIM:Z
+
+.field private static LUX_THRESHOLD_HIGH:F
+
+.field private static LUX_THRESHOLD_MIDDLE:F
 
 
 # instance fields
 .field private m2kOr1080p:I
+
+.field private mAlphaMode:I
 
 .field private mAnimateImageHeight:I
 
@@ -43,7 +53,15 @@
 
 .field private final mLightBarController:Lcom/android/systemui/statusbar/phone/LightBarController;
 
+.field private mLightSensorRegistered:Z
+
 .field private mOrientationListener:Landroid/view/OrientationEventListener;
+
+.field private mSensor:Landroid/hardware/Sensor;
+
+.field private mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+.field private mSensorManager:Landroid/hardware/SensorManager;
 
 .field private mShowRunnable:Ljava/lang/Runnable;
 
@@ -68,6 +86,22 @@
 
     sput-boolean v0, Lcom/oneplus/anim/OpGraphLight;->CIRCLE_FRONT_CAMERA_ANIM:Z
 
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_HIGH:F
+
+    const/high16 v0, 0x41a00000    # 20.0f
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_MIDDLE:F
+
+    const/16 v0, 0xff
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_HIGH:I
+
+    const/16 v0, 0x64
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_LOW:I
+
     return-void
 .end method
 
@@ -84,6 +118,14 @@
 
     iput v0, p0, Lcom/oneplus/anim/OpGraphLight;->mAnimateImageHeight:I
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/anim/OpGraphLight;->mLightSensorRegistered:Z
+
+    sget v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_HIGH:I
+
+    iput v0, p0, Lcom/oneplus/anim/OpGraphLight;->mAlphaMode:I
+
     new-instance v0, Lcom/oneplus/anim/OpGraphLight$2;
 
     invoke-direct {v0, p0}, Lcom/oneplus/anim/OpGraphLight$2;-><init>(Lcom/oneplus/anim/OpGraphLight;)V
@@ -95,6 +137,12 @@
     invoke-direct {v0, p0}, Lcom/oneplus/anim/OpGraphLight$3;-><init>(Lcom/oneplus/anim/OpGraphLight;)V
 
     iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mHideRunnable:Ljava/lang/Runnable;
+
+    new-instance v0, Lcom/oneplus/anim/OpGraphLight$4;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/anim/OpGraphLight$4;-><init>(Lcom/oneplus/anim/OpGraphLight;)V
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
     iput-object p2, p0, Lcom/oneplus/anim/OpGraphLight;->mContext:Landroid/content/Context;
 
@@ -168,7 +216,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/anim/OpGraphLight;)Z
+.method static synthetic access$1300(Lcom/oneplus/anim/OpGraphLight;)I
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/anim/OpGraphLight;->mAlphaMode:I
+
+    return p0
+.end method
+
+.method static synthetic access$1302(Lcom/oneplus/anim/OpGraphLight;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/oneplus/anim/OpGraphLight;->mAlphaMode:I
+
+    return p1
+.end method
+
+.method static synthetic access$1400(Lcom/oneplus/anim/OpGraphLight;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight;->mViewAdded:Z
@@ -176,7 +240,7 @@
     return p0
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/anim/OpGraphLight;)Z
+.method static synthetic access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight;->mSupportDarkMode:Z
@@ -184,12 +248,44 @@
     return p0
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/anim/OpGraphLight;)Z
+.method static synthetic access$1700(Lcom/oneplus/anim/OpGraphLight;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/anim/OpGraphLight;->mDarkMode:Z
 
     return p0
+.end method
+
+.method static synthetic access$1800()F
+    .locals 1
+
+    sget v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_MIDDLE:F
+
+    return v0
+.end method
+
+.method static synthetic access$1900()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_LOW:I
+
+    return v0
+.end method
+
+.method static synthetic access$2000()F
+    .locals 1
+
+    sget v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_HIGH:F
+
+    return v0
+.end method
+
+.method static synthetic access$2100()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_HIGH:I
+
+    return v0
 .end method
 
 .method static synthetic access$300(Lcom/oneplus/anim/OpGraphLight;)Ljava/lang/Runnable;
@@ -246,6 +342,150 @@
     iget p0, p0, Lcom/oneplus/anim/OpGraphLight;->mAnimateImageWidth:I
 
     return p0
+.end method
+
+.method private disableLightSensor()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/hardware/SystemSensorManager;
+
+    iget-object v1, p0, Lcom/oneplus/anim/OpGraphLight;->mContext:Landroid/content/Context;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/hardware/SystemSensorManager;-><init>(Landroid/content/Context;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/oneplus/anim/OpGraphLight;->mLightSensorRegistered:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    iget-object v1, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/anim/OpGraphLight;->mLightSensorRegistered:Z
+
+    :cond_1
+    return-void
+.end method
+
+.method private enableLightSensor()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/hardware/SystemSensorManager;
+
+    iget-object v1, p0, Lcom/oneplus/anim/OpGraphLight;->mContext:Landroid/content/Context;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/hardware/SystemSensorManager;-><init>(Landroid/content/Context;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    :cond_0
+    const-string v0, "debug.frontcamera.lightsensor.enable"
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/16 v0, 0x14
+
+    const-string v2, "debug.frontcamera.lux.threshold.middle"
+
+    invoke-static {v2, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_MIDDLE:F
+
+    const-string v0, "debug.frontcamera.lux.threshold.high"
+
+    const/16 v2, 0x64
+
+    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->LUX_THRESHOLD_HIGH:F
+
+    const/16 v0, 0xff
+
+    const-string v3, "debug.frontcamera.alpha.mode.high"
+
+    invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_HIGH:I
+
+    const/16 v0, 0x96
+
+    const-string v3, "debug.frontcamera.alpha.mode.middle"
+
+    invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    const-string v0, "debug.frontcamera.alpha.low"
+
+    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    sput v0, Lcom/oneplus/anim/OpGraphLight;->ALPHA_MODE_LOW:I
+
+    iget-boolean v0, p0, Lcom/oneplus/anim/OpGraphLight;->mLightSensorRegistered:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mSensor:Landroid/hardware/Sensor;
+
+    iget-object v2, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorManager:Landroid/hardware/SensorManager;
+
+    iget-object v3, p0, Lcom/oneplus/anim/OpGraphLight;->mSensorEventListener:Landroid/hardware/SensorEventListener;
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v2, v3, v0, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+
+    iput-boolean v1, p0, Lcom/oneplus/anim/OpGraphLight;->mLightSensorRegistered:Z
+
+    :cond_1
+    return-void
 .end method
 
 .method private hide()V
@@ -339,6 +579,8 @@
     .locals 20
 
     move-object/from16 v0, p0
+
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/anim/OpGraphLight;->enableLightSensor()V
 
     iget-boolean v1, v0, Lcom/oneplus/anim/OpGraphLight;->mViewAdded:Z
 
@@ -1417,6 +1659,8 @@
     return-void
 
     :cond_0
+    invoke-direct {p0}, Lcom/oneplus/anim/OpGraphLight;->disableLightSensor()V
+
     iget-object v0, p0, Lcom/oneplus/anim/OpGraphLight;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/oneplus/anim/OpGraphLight;->mHideRunnable:Ljava/lang/Runnable;

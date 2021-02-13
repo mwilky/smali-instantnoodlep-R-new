@@ -51,7 +51,7 @@
 
 .field private final mReceiver:Lcom/android/systemui/power/PowerNotificationWarnings$Receiver;
 
-.field private mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+.field private mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
 .field private mShowAutoSaverSuggestion:Z
 
@@ -185,10 +185,10 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/systemui/power/PowerNotificationWarnings;)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+.method static synthetic access$100(Lcom/android/systemui/power/PowerNotificationWarnings;)Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iget-object p0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     return-object p0
 .end method
@@ -577,30 +577,6 @@
     return p0
 .end method
 
-.method private isEnglishLocale()Z
-    .locals 1
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method private synthetic lambda$showHighTemperatureDialog$0(Landroid/content/DialogInterface;)V
     .locals 0
 
@@ -656,7 +632,7 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iput-object p1, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     return-void
 .end method
@@ -1129,20 +1105,20 @@
 .end method
 
 .method private showStartSaverConfirmation(Landroid/os/Bundle;)V
-    .locals 7
+    .locals 6
 
-    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance v0, Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     iget-object v1, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;-><init>(Landroid/content/Context;)V
 
     const-string v1, "extra_confirm_only"
 
@@ -1162,101 +1138,86 @@
 
     invoke-virtual {p1, v4, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    move-result v4
+    move-result v3
 
-    const-string v5, "extra_power_save_mode_caller"
+    const-string v4, "extra_power_save_mode_caller"
 
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    iget-object v5, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-nez v5, :cond_2
+    if-nez v4, :cond_2
 
-    sget-boolean v5, Lcom/oneplus/systemui/power/OpPowerNotificationWarnings;->OP_DEBUG:Z
+    sget-boolean v4, Lcom/oneplus/systemui/power/OpPowerNotificationWarnings;->OP_DEBUG:Z
 
-    if-eqz v5, :cond_1
+    if-eqz v4, :cond_1
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Set power save mode confirm window type for caller: "
+    const-string v5, "Set power save mode confirm window type for caller: "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v5, "PowerUI.Notification"
+    const-string v4, "PowerUI.Notification"
 
-    invoke-static {v5, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    const/16 v5, 0x7d8
+    const/16 v4, 0x7d8
 
-    invoke-virtual {p1, v5}, Landroid/view/Window;->setType(I)V
+    invoke-virtual {p1, v4}, Landroid/view/Window;->setType(I)V
 
     :cond_2
     invoke-direct {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->getBatterySaverDescription()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->isEnglishLocale()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0, v3}, Landroid/app/AlertDialog;->setMessageHyphenationFrequency(I)V
-
-    :cond_3
-    invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setMessageMovementMethod(Landroid/text/method/MovementMethod;)V
-
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     sget p1, Lcom/android/systemui/R$string;->battery_saver_confirmation_title_generic:I
 
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setTitle(I)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setTitle(I)V
 
     const p1, 0x1040276
 
     new-instance v1, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$i9YMNbne4kaewl8DwiUWlEIhHLU;
 
-    invoke-direct {v1, p0, v2, v4}, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$i9YMNbne4kaewl8DwiUWlEIhHLU;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;II)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$i9YMNbne4kaewl8DwiUWlEIhHLU;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;II)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, p1, v1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
     goto :goto_0
 
-    :cond_4
+    :cond_3
     sget p1, Lcom/android/systemui/R$string;->battery_saver_confirmation_title:I
 
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setTitle(I)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setTitle(I)V
 
     sget p1, Lcom/android/systemui/R$string;->battery_saver_confirmation_ok:I
 
@@ -1264,28 +1225,28 @@
 
     invoke-direct {v1, p0}, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$Uf-fCz3D5JaMRKgj_soLcPpUL04;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, p1, v1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
     const/high16 p1, 0x1040000
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, p1, v1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
     :goto_0
     const/4 p1, 0x1
 
-    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Z)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;->setShowForAllUsers(Z)V
 
     new-instance p1, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$AE5LLn9E8Dx1b7_xgN4SxgDN7R4;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/power/-$$Lambda$PowerNotificationWarnings$AE5LLn9E8Dx1b7_xgN4SxgDN7R4;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;)V
 
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, p1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    iput-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iput-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     return-void
 .end method
@@ -1717,7 +1678,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/oneplus/systemui/statusbar/phone/OpSystemUIDialog;
 
     const-string v1, "not null"
 

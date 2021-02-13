@@ -1349,6 +1349,23 @@
     return-void
 .end method
 
+.method public static injectMOpBitmojiManager(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/Dependency;",
+            "Ldagger/Lazy<",
+            "Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/android/systemui/Dependency;->mOpBitmojiManager:Ldagger/Lazy;
+
+    return-void
+.end method
+
 .method public static injectMOpChargingAnimationController(Lcom/android/systemui/Dependency;Ldagger/Lazy;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;

@@ -1338,6 +1338,13 @@ IT 관리자가 설정, 기업 액세스, 앱, 기기와 연결된 데이터, �
     <string name="op_battery_saver_description_no_ga">"배터리 수명을 연장할 수 있는 배터리 세이버:
 
 •백그라운드 활동과 일부 시각 효과를 끄거나 제한합니다."</string>
+    <string name="op_bitmoji_aod_download">다운로드</string>
+    <string name="op_bitmoji_aod_download_stickers_error">오류 발생</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Bitmoji 스티커 팩 다운로드 중...</string>
+    <string name="op_bitmoji_connect_to_resume">등록하여 계속</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji 시계를 사용할 수 없습니다.</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji 시계가 준비되었습니다!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">확인해 보세요!</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">연결 중...</string>
     <string name="op_earphone_connected_fail">연결하지 못했습니다. 헤드셋 및 Bluetooth 상태를 확인하세요.</string>

@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"כדי להאריך את חיי הסוללה, Battery Saver:
 
 •מכבה או מגביל פעילות רקע ומספר אפקטים ויזואליים"</string>
+    <string name="op_bitmoji_aod_download">הורד</string>
+    <string name="op_bitmoji_aod_download_stickers_error">משהו השתבש</string>
+    <string name="op_bitmoji_aod_download_stickers_title">מוריד חבילת מדבקות של Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">הירשם כדי להמשיך</string>
+    <string name="op_bitmoji_not_working_normally">שעון Bitmoji אינו זמין</string>
+    <string name="op_bitmoji_ready_to_use">שעון ה-Bitmoji שלך מוכן!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">נסה את זה!</string>
     <string name="op_earphone_connect">משייך...</string>
     <string name="op_earphone_connected_fail">השיוך נכשל. באפשרותך לבדוק את מצב האוזניות וה-Bluetooth.</string>
     <string name="op_earphone_connected_success">השיוך בוצע. הקש כדי להגדיר עוד.</string>

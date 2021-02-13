@@ -1273,6 +1273,15 @@
     <string name="op_battery_saver_description_no_ga">"為延長電池壽命，「省電模式」會：
 
 •關閉或限制背景活動、某些視覺效果和其他功能"</string>
+    <string name="op_bitmoji_aod_download">下載</string>
+    <string name="op_bitmoji_aod_download_stickers_error">發生錯誤</string>
+    <string name="op_bitmoji_aod_download_stickers_msg">使用 Bitmoji 需先下載 Bitmoji 貼圖，Bitmoji 將會在貼圖下載完成後套用。大約將消耗 %1$d %2$s 的網絡流量，要現在進行下載嗎？</string>
+    <string name="op_bitmoji_aod_download_stickers_title">正在下載 Bitmoji 貼圖...</string>
+    <string name="op_bitmoji_aod_guide_download">下載 Bitmoji 貼圖</string>
+    <string name="op_bitmoji_connect_to_resume">連結 Bitmoji 以保持正常使用</string>
+    <string name="op_bitmoji_not_working_normally">檢測到 Bitmoji 連結異常</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji 已經準備就緒</string>
+    <string name="op_bitmoji_ready_to_use_go_check">去看看</string>
     <string name="op_date_format">M月d日</string>
     <string name="op_earphone_connect">配對中...</string>
     <string name="op_earphone_connected_fail">配對失敗，你可以檢查耳機和手機藍牙狀態。</string>
@@ -1772,15 +1781,15 @@
 \u0009• 在高溫環境下使用手機"</string>
     <string name="thermal_shutdown_message">您的手機現已正常運作</string>
     <string name="thermal_shutdown_title">手機因過熱而關上</string>
-    <string name="threekey_volume_guide_dialog_mutering_msg">請將三段式開關設為振動或靜音模式</string>
+    <string name="threekey_volume_guide_dialog_mutering_msg">請將三段式開關設為震動或靜音模式</string>
     <string name="threekey_volume_guide_dialog_mutering_title">關閉來電響鈴</string>
     <string name="threekey_volume_guide_dialog_ok">好的</string>
     <string name="threekey_volume_guide_dialog_ring_msg">請將三段式開關設為響鈴模式以恢復來電響鈴通知</string>
     <string name="threekey_volume_guide_dialog_ring_title">開啓來電響鈴</string>
     <string name="threekey_volume_guide_dialog_silent_msg">三段式開關已經設為靜音模式。設備來電時將不會響鈴，如果要恢復來電響鈴通知請切回響鈴模式。</string>
     <string name="threekey_volume_guide_dialog_silent_title">靜音模式</string>
-    <string name="threekey_volume_guide_dialog_vibrate_msg">三段式開關已經設為振動模式。設備來電時將會振動提醒，不會響鈴。如果要恢復來電響鈴通知請切回響鈴模式。</string>
-    <string name="threekey_volume_guide_dialog_vibrate_title">振動模式</string>
+    <string name="threekey_volume_guide_dialog_vibrate_msg">三段式開關已經設為震動模式。設備來電時將會震動提醒，不會響鈴。如果要恢復來電響鈴通知請切回響鈴模式。</string>
+    <string name="threekey_volume_guide_dialog_vibrate_title">震動模式</string>
     <string name="tile_unavailable">無法使用</string>
     <string name="time_unit_just_now">剛剛</string>
     <string name="title_convert_fbe">正在轉換為檔案式加密</string>

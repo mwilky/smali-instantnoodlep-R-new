@@ -18,6 +18,8 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field public static final TIME_CHANGED_INTERVAL:I
+
 .field private static mInstance:Lcom/oneplus/keyguard/clock/OpClockCtrl;
 
 
@@ -39,11 +41,21 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     sput-boolean v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
+
+    const-string v0, "sys.aod.time.interval"
+
+    const v1, 0xea60
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    sput v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->TIME_CHANGED_INTERVAL:I
 
     return-void
 .end method
@@ -206,12 +218,39 @@
 .end method
 
 .method private startSchedule(Ljava/lang/String;)V
-    .locals 13
+    .locals 11
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    sget v2, Lcom/oneplus/keyguard/clock/OpClockCtrl;->TIME_CHANGED_INTERVAL:I
+
+    const v3, 0xea60
+
+    if-ge v2, v3, :cond_0
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v0}, Ljava/util/Date;->getSeconds()I
+
+    move-result v0
+
+    sget v1, Lcom/oneplus/keyguard/clock/OpClockCtrl;->TIME_CHANGED_INTERVAL:I
+
+    mul-int/lit16 v0, v0, 0x3e8
+
+    rem-int/2addr v0, v1
+
+    sub-int/2addr v1, v0
+
+    int-to-long v0, v1
+
+    goto :goto_0
+
+    :cond_0
     const-wide/32 v2, 0xea60
 
     div-long v4, v0, v2
@@ -222,31 +261,38 @@
 
     mul-long/2addr v4, v2
 
-    sub-long/2addr v4, v0
+    sub-long v0, v4, v0
 
+    :goto_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    add-long v8, v0, v4
+    add-long v6, v2, v0
 
-    sget-boolean v0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
+    sget-boolean v2, Lcom/oneplus/keyguard/clock/OpClockCtrl;->DEBUG:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "startSchedule: reason= "
+    const-string v3, "startSchedule: reason= "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", delay= "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string p1, ", callers= "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p1, 0x1
 
@@ -254,9 +300,9 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -264,10 +310,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    iget-object v6, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mAlarmManager:Landroid/app/AlarmManager;
+    :cond_1
+    iget-object v4, p0, Lcom/oneplus/keyguard/clock/OpClockCtrl;->mAlarmManager:Landroid/app/AlarmManager;
 
-    const/4 v7, 0x2
+    const/4 v5, 0x2
 
     invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
@@ -283,13 +329,13 @@
 
     invoke-virtual {p1}, Lcom/oneplus/aod/OpAodWindowManager;->getUIHandler()Landroid/os/Handler;
 
-    move-result-object v12
+    move-result-object v10
 
-    const-string v10, "OpClockCtrl.always_on"
+    const-string v8, "OpClockCtrl.always_on"
 
-    move-object v11, p0
+    move-object v9, p0
 
-    invoke-virtual/range {v6 .. v12}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
+    invoke-virtual/range {v4 .. v10}, Landroid/app/AlarmManager;->setExact(IJLjava/lang/String;Landroid/app/AlarmManager$OnAlarmListener;Landroid/os/Handler;)V
 
     return-void
 .end method

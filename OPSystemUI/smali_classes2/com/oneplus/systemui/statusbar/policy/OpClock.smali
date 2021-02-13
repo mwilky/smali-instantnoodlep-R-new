@@ -268,7 +268,7 @@
 
     add-int/lit8 p1, v2, 0x1
 
-    const-string v3, "\u2236"
+    const-string v3, "\u16ec"
 
     invoke-virtual {v0, v2, p1, v3}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
 

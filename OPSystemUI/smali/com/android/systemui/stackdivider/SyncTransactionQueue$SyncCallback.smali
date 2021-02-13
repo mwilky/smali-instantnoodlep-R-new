@@ -44,7 +44,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$400(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -94,21 +94,48 @@
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$200(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object v1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {v1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$100(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$200(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    invoke-static {}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$100()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "SyncTransactionQueue"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onTransactionReady id="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mId:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     iget-object p1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$400(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -116,11 +143,11 @@
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p1, p2}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$400(Lcom/android/systemui/stackdivider/SyncTransactionQueue;Landroid/view/SurfaceControl$Transaction;)V
+    invoke-static {p1, p2}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$500(Lcom/android/systemui/stackdivider/SyncTransactionQueue;Landroid/view/SurfaceControl$Transaction;)V
 
     iget-object p1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$400(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -128,11 +155,11 @@
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
+    invoke-static {p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$400(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -146,7 +173,7 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->send()V
 
-    :cond_1
+    :cond_2
     monitor-exit v0
 
     return-void
@@ -176,7 +203,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$200(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -198,33 +225,85 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
     invoke-static {v0, p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$002(Lcom/android/systemui/stackdivider/SyncTransactionQueue;Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;)Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;
 
+    invoke-static {}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$100()Z
+
+    move-result v0
+
+    const-string v1, "SyncTransactionQueue"
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Sending sync transaction: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mWCT:Landroid/window/WindowContainerTransaction;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     new-instance v0, Landroid/window/WindowOrganizer;
 
     invoke-direct {v0}, Landroid/window/WindowOrganizer;-><init>()V
 
-    iget-object v1, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mWCT:Landroid/window/WindowContainerTransaction;
+    iget-object v2, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mWCT:Landroid/window/WindowContainerTransaction;
 
-    invoke-virtual {v0, v1, p0}, Landroid/window/WindowOrganizer;->applySyncTransaction(Landroid/window/WindowContainerTransaction;Landroid/window/WindowContainerTransactionCallback;)I
+    invoke-virtual {v0, v2, p0}, Landroid/window/WindowOrganizer;->applySyncTransaction(Landroid/window/WindowContainerTransaction;Landroid/window/WindowContainerTransactionCallback;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mId:I
 
+    invoke-static {}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$100()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " Sent sync transaction. Got id="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->mId:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$200(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$300(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/systemui/stackdivider/SyncTransactionQueue$SyncCallback;->this$0:Lcom/android/systemui/stackdivider/SyncTransactionQueue;
 
-    invoke-static {p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$100(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lcom/android/systemui/stackdivider/SyncTransactionQueue;->access$200(Lcom/android/systemui/stackdivider/SyncTransactionQueue;)Ljava/lang/Runnable;
 
     move-result-object p0
 
@@ -234,7 +313,7 @@
 
     return-void
 
-    :cond_0
+    :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;

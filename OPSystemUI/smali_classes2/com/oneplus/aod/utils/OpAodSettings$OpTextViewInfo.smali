@@ -45,6 +45,16 @@
     return-void
 .end method
 
+.method constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;-><init>()V
+
+    iput p1, p0, Lcom/oneplus/aod/utils/OpAodSettings$OpTextViewInfo;->mTextSizeId:I
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public getFontFamily()I

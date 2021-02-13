@@ -969,11 +969,7 @@
 .end method
 
 .method private updateSelectionColor()V
-    .locals 4
-
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
-
-    if-eqz v0, :cond_9
+    .locals 5
 
     sget v0, Lcom/android/systemui/R$id;->done:I
 
@@ -983,219 +979,221 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget v0, Lcom/android/systemui/R$id;->priority:I
-
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+    invoke-virtual {v0}, Landroid/widget/TextView;->getCurrentTextColor()I
 
     move-result v0
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_9
 
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    sget v1, Lcom/android/systemui/R$id;->priority:I
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {v1}, Landroid/view/View;->isSelected()Z
+
+    move-result v1
+
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v1, :cond_0
+
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
 
     goto :goto_0
 
     :cond_0
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_0
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+    invoke-virtual {v2, v3, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    sget v1, Lcom/android/systemui/R$id;->priority_icon:I
+    sget v2, Lcom/android/systemui/R$id;->priority_icon:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/ImageView;
+    check-cast v2, Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    move v3, v0
 
     goto :goto_1
 
     :cond_1
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_1
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    sget v1, Lcom/android/systemui/R$id;->priority_label:I
+    sget v2, Lcom/android/systemui/R$id;->priority_label:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    move v1, v0
 
     goto :goto_2
 
     :cond_2
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_2
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget v0, Lcom/android/systemui/R$id;->default_behavior:I
+    sget v1, Lcom/android/systemui/R$id;->default_behavior:I
 
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {v1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+    move-result-object v2
 
-    move-result v0
+    check-cast v2, Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+    invoke-virtual {v1}, Landroid/view/View;->isSelected()Z
 
-    if-eqz v0, :cond_3
+    move-result v1
 
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v1, :cond_3
+
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
 
     goto :goto_3
 
     :cond_3
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_3
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+    invoke-virtual {v2, v3, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    sget v1, Lcom/android/systemui/R$id;->default_icon:I
+    sget v2, Lcom/android/systemui/R$id;->default_icon:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/ImageView;
+    check-cast v2, Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    move v3, v0
 
     goto :goto_4
 
     :cond_4
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_4
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    sget v1, Lcom/android/systemui/R$id;->default_label:I
+    sget v2, Lcom/android/systemui/R$id;->default_label:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
 
-    if-eqz v0, :cond_5
+    if-eqz v1, :cond_5
 
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    move v1, v0
 
     goto :goto_5
 
     :cond_5
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_5
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget v0, Lcom/android/systemui/R$id;->silence:I
+    sget v1, Lcom/android/systemui/R$id;->silence:I
 
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {v1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Landroid/view/View;->isSelected()Z
+    move-result-object v2
 
-    move-result v0
+    check-cast v2, Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+    invoke-virtual {v1}, Landroid/view/View;->isSelected()Z
 
-    if-eqz v0, :cond_6
+    move-result v1
 
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mImportanceButtonStroke:I
+
+    if-eqz v1, :cond_6
+
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
 
     goto :goto_6
 
     :cond_6
-    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_6
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+    invoke-virtual {v2, v3, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    sget v1, Lcom/android/systemui/R$id;->silence_icon:I
+    sget v2, Lcom/android/systemui/R$id;->silence_icon:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/ImageView;
+    check-cast v2, Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_7
+    if-eqz v1, :cond_7
 
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    move v3, v0
 
     goto :goto_7
 
     :cond_7
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_7
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    sget v1, Lcom/android/systemui/R$id;->silence_label:I
+    sget v2, Lcom/android/systemui/R$id;->silence_label:I
 
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
 
-    if-eqz v0, :cond_8
-
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOneplusAccentColor:I
+    if-eqz v1, :cond_8
 
     goto :goto_8
 
     :cond_8
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
+    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mSecondaryColor:I
 
     :goto_8
-    invoke-virtual {v1, p0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_9
     return-void

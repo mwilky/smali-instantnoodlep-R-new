@@ -144,6 +144,13 @@ Jei norite užsisakyti mobiliojo interneto prieigos taško paslaugą, apsilankyk
     <string name="op_battery_saver_description_no_ga">"Kad akumuliatorius veiktų ilgiau, akumuliatoriaus energijos taupymas:
 
 •išjungia arba apriboja veiklą fone ir kai kuriuos vaizdo efektus"</string>
+    <string name="op_bitmoji_aod_download">Atsisiųsti</string>
+    <string name="op_bitmoji_aod_download_stickers_error">įvyko klaida</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Atsisiunčiamas „Bitmoji“ lipdukų paketas...</string>
+    <string name="op_bitmoji_connect_to_resume">Jei norite tęsti, užsiregistruokite</string>
+    <string name="op_bitmoji_not_working_normally">„Bitmoji“ laikrodis negalimas</string>
+    <string name="op_bitmoji_ready_to_use">Jūsų „Bitmoji“ laikrodis parengtas!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Išbandykite!</string>
     <string name="op_earphone_connect">Susiejama...</string>
     <string name="op_earphone_connected_fail">Susieti nepavyko. Patikrinkite ausinių ir „Bluetooth“ būseną.</string>
     <string name="op_earphone_connected_success">Susieta. Bakstelėkite, kad nustatytumėte daugiau.</string>

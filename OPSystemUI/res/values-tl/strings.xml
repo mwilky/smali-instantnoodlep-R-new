@@ -1338,6 +1338,13 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_battery_saver_description_no_ga">"Para patagalin ang, Battery Saver:
 
 •Isara o pagbawalan ang mga aktibdad ng background, at ilan sa mga visual effect"</string>
+    <string name="op_bitmoji_aod_download">I-Download</string>
+    <string name="op_bitmoji_aod_download_stickers_error">may pagkakamali</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Dina-download ang Bitmoji sticker pack...</string>
+    <string name="op_bitmoji_connect_to_resume">Mag-sign up para magpatuloy</string>
+    <string name="op_bitmoji_not_working_normally">Hindi available ang orasan ng Bitmoji</string>
+    <string name="op_bitmoji_ready_to_use">Handa na ang iyong Bitmoji na orasan!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Tingnan ito!</string>
     <string name="op_earphone_connect">Pinapares...</string>
     <string name="op_earphone_connected_fail">Hindi napares. Maaari mong tingnan ang status ng headset at Bluetooth.</string>
     <string name="op_earphone_connected_success">Napares na. I-tap para magtakda pa.</string>

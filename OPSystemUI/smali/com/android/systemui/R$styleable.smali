@@ -118,6 +118,14 @@
 
 .field public static final OpBigDigitClock_subBottom:I = 0x3
 
+.field public static final OpBitmojiClock:[I
+
+.field public static final OpBitmojiClock_bitmojiIconHeight:I = 0x0
+
+.field public static final OpBitmojiClock_bitmojiIconWidth:I = 0x1
+
+.field public static final OpBitmojiClock_dateMarginTop:I = 0x2
+
 .field public static final OpDateView:[I
 
 .field public static final OpDateView_dateFormat:I = 0x0
@@ -296,7 +304,7 @@
 
     new-array v1, v0, [I
 
-    const v2, 0x7f04025a
+    const v2, 0x7f04025d
 
     const/4 v3, 0x0
 
@@ -342,7 +350,7 @@
 
     new-array v4, v0, [I
 
-    const v5, 0x7f04015c
+    const v5, 0x7f04015f
 
     aput v5, v4, v3
 
@@ -384,7 +392,7 @@
 
     new-array v5, v0, [I
 
-    const v6, 0x7f040207
+    const v6, 0x7f04020a
 
     aput v6, v5, v3
 
@@ -404,15 +412,21 @@
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpBigDigitClock:[I
 
-    new-array v5, v1, [I
+    new-array v5, v2, [I
 
     fill-array-data v5, :array_b
+
+    sput-object v5, Lcom/android/systemui/R$styleable;->OpBitmojiClock:[I
+
+    new-array v5, v1, [I
+
+    fill-array-data v5, :array_c
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpDateView:[I
 
     new-array v5, v0, [I
 
-    const v6, 0x7f04029f
+    const v6, 0x7f0402a2
 
     aput v6, v5, v3
 
@@ -420,7 +434,7 @@
 
     new-array v5, v0, [I
 
-    const v6, 0x7f04015b
+    const v6, 0x7f04015d
 
     aput v6, v5, v3
 
@@ -428,7 +442,7 @@
 
     new-array v5, v4, [I
 
-    fill-array-data v5, :array_c
+    fill-array-data v5, :array_d
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpOneColorStyleClock:[I
 
@@ -436,19 +450,19 @@
 
     new-array v5, v5, [I
 
-    fill-array-data v5, :array_d
+    fill-array-data v5, :array_e
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpParsonsClock:[I
 
     new-array v5, v1, [I
 
-    fill-array-data v5, :array_e
+    fill-array-data v5, :array_f
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpParsonsUnlockLabel:[I
 
     new-array v5, v0, [I
 
-    const v6, 0x7f040324
+    const v6, 0x7f040327
 
     aput v6, v5, v3
 
@@ -456,7 +470,7 @@
 
     new-array v5, v4, [I
 
-    fill-array-data v5, :array_f
+    fill-array-data v5, :array_10
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpTypoGraphicClock:[I
 
@@ -464,7 +478,7 @@
 
     new-array v5, v5, [I
 
-    fill-array-data v5, :array_10
+    fill-array-data v5, :array_11
 
     sput-object v5, Lcom/android/systemui/R$styleable;->OpburnInSettings:[I
 
@@ -472,13 +486,13 @@
 
     new-array v5, v5, [I
 
-    fill-array-data v5, :array_11
+    fill-array-data v5, :array_12
 
     sput-object v5, Lcom/android/systemui/R$styleable;->PasswordTextView:[I
 
     new-array v5, v0, [I
 
-    const v6, 0x7f0405a7
+    const v6, 0x7f0405aa
 
     aput v6, v5, v3
 
@@ -486,19 +500,19 @@
 
     new-array v2, v2, [I
 
-    fill-array-data v2, :array_12
+    fill-array-data v2, :array_13
 
     sput-object v2, Lcom/android/systemui/R$styleable;->PseudoGridView:[I
 
     new-array v2, v4, [I
 
-    fill-array-data v2, :array_13
+    fill-array-data v2, :array_14
 
     sput-object v2, Lcom/android/systemui/R$styleable;->SmartReplyView:[I
 
     new-array v2, v0, [I
 
-    const v4, 0x7f04028d
+    const v4, 0x7f040290
 
     aput v4, v2, v3
 
@@ -506,7 +520,7 @@
 
     new-array v0, v0, [I
 
-    const v2, 0x7f04052f
+    const v2, 0x7f040532
 
     aput v2, v0, v3
 
@@ -514,7 +528,7 @@
 
     new-array v0, v1, [I
 
-    fill-array-data v0, :array_14
+    fill-array-data v0, :array_15
 
     sput-object v0, Lcom/android/systemui/R$styleable;->TunerSwitch:[I
 
@@ -522,208 +536,217 @@
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_15
+    fill-array-data v0, :array_16
 
     sput-object v0, Lcom/android/systemui/R$styleable;->UserAvatarView:[I
 
     new-array v0, v1, [I
 
-    fill-array-data v0, :array_16
+    fill-array-data v0, :array_17
 
     sput-object v0, Lcom/android/systemui/R$styleable;->UserDetailItemView:[I
 
     return-void
 
+    nop
+
     :array_0
     .array-data 4
-        0x7f0401b7
-        0x7f0402b1
+        0x7f0401ba
+        0x7f0402b4
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f040216
-        0x7f040531
+        0x7f040219
+        0x7f040534
     .end array-data
 
     :array_2
     .array-data 4
         0x7f040034
-        0x7f0404b3
-        0x7f0404b7
+        0x7f0404b6
+        0x7f0404ba
     .end array-data
 
     :array_3
     .array-data 4
         0x7f04003d
         0x7f04003e
-        0x7f0404b5
+        0x7f0404b8
     .end array-data
 
     :array_4
     .array-data 4
-        0x7f040140
-        0x7f04026f
-        0x7f040475
-        0x7f040476
+        0x7f040142
+        0x7f040272
+        0x7f040478
+        0x7f040479
     .end array-data
 
     :array_5
     .array-data 4
         0x1010273
-        0x7f0402cf
-        0x7f04041e
+        0x7f0402d2
+        0x7f040421
     .end array-data
 
     :array_6
     .array-data 4
-        0x7f040314
-        0x7f040315
+        0x7f040317
+        0x7f040318
     .end array-data
 
     :array_7
     .array-data 4
-        0x7f040185
-        0x7f040554
+        0x7f040188
+        0x7f040557
     .end array-data
 
     :array_8
     .array-data 4
         0x7f04007d
-        0x7f040190
-        0x7f04027d
-        0x7f040394
-        0x7f0403ed
-        0x7f040496
+        0x7f040193
+        0x7f040280
+        0x7f040397
+        0x7f0403f0
+        0x7f040499
     .end array-data
 
     :array_9
     .array-data 4
-        0x7f04034b
-        0x7f04034c
-        0x7f04034d
         0x7f04034e
         0x7f04034f
         0x7f040350
-        0x7f0404b2
-        0x7f0404c6
+        0x7f040351
+        0x7f040352
+        0x7f040353
+        0x7f0404b5
+        0x7f0404c9
     .end array-data
 
     :array_a
     .array-data 4
-        0x7f04021d
-        0x7f04021e
-        0x7f04021f
-        0x7f0404ef
+        0x7f040220
+        0x7f040221
+        0x7f040222
+        0x7f0404f2
     .end array-data
 
     :array_b
     .array-data 4
-        0x7f04015a
-        0x7f040335
+        0x7f04007e
+        0x7f04007f
+        0x7f04015e
     .end array-data
 
     :array_c
     .array-data 4
-        0x7f04036f
-        0x7f040370
-        0x7f0404d3
-        0x7f0404f2
+        0x7f04015c
+        0x7f040338
     .end array-data
 
     :array_d
+    .array-data 4
+        0x7f040372
+        0x7f040373
+        0x7f0404d6
+        0x7f0404f5
+    .end array-data
+
+    :array_e
     .array-data 4
         0x7f040068
         0x7f040069
         0x7f04006a
         0x7f04006c
         0x7f04006d
-        0x7f040080
-        0x7f0400e7
-        0x7f0400e8
+        0x7f040082
         0x7f0400e9
         0x7f0400ea
-        0x7f040114
-        0x7f040160
-        0x7f040161
-        0x7f04021a
-        0x7f040439
-        0x7f040599
-    .end array-data
-
-    :array_e
-    .array-data 4
-        0x7f040598
-        0x7f04059a
+        0x7f0400eb
+        0x7f0400ec
+        0x7f040116
+        0x7f040163
+        0x7f040164
+        0x7f04021d
+        0x7f04043c
+        0x7f04059c
     .end array-data
 
     :array_f
     .array-data 4
-        0x7f040114
-        0x7f040323
-        0x7f040549
-        0x7f04054e
+        0x7f04059b
+        0x7f04059d
     .end array-data
 
     :array_10
     .array-data 4
-        0x7f040259
-        0x7f0402d9
-        0x7f040388
-        0x7f040389
-        0x7f04038b
-        0x7f04038c
-        0x7f04038d
-        0x7f04038e
-        0x7f040390
-        0x7f040391
-        0x7f0403a5
+        0x7f040116
+        0x7f040326
+        0x7f04054c
+        0x7f040551
     .end array-data
 
     :array_11
     .array-data 4
-        0x1010098
-        0x10100af
-        0x7f0400c2
-        0x7f040192
-        0x7f040489
+        0x7f04025c
+        0x7f0402dc
+        0x7f04038b
+        0x7f04038c
+        0x7f04038e
+        0x7f04038f
+        0x7f040390
+        0x7f040391
+        0x7f040393
+        0x7f040394
+        0x7f0403a8
     .end array-data
 
     :array_12
     .array-data 4
-        0x7f04027c
-        0x7f0403ad
-        0x7f0405a5
+        0x1010098
+        0x10100af
+        0x7f0400c4
+        0x7f040195
+        0x7f04048c
     .end array-data
 
     :array_13
     .array-data 4
-        0x7f0400af
-        0x7f040195
-        0x7f0404c1
-        0x7f0404d1
+        0x7f04027f
+        0x7f0403b0
+        0x7f0405a8
     .end array-data
 
     :array_14
     .array-data 4
-        0x7f040168
-        0x7f040383
+        0x7f0400b1
+        0x7f040198
+        0x7f0404c4
+        0x7f0404d4
     .end array-data
 
     :array_15
+    .array-data 4
+        0x7f04016b
+        0x7f040386
+    .end array-data
+
+    :array_16
     .array-data 4
         0x7f04002b
         0x7f040053
         0x7f040061
         0x7f040063
-        0x7f040216
-        0x7f040217
         0x7f040219
+        0x7f04021a
+        0x7f04021c
     .end array-data
 
-    :array_16
+    :array_17
     .array-data 4
         0x7f04002a
-        0x7f040469
+        0x7f04046c
     .end array-data
 .end method

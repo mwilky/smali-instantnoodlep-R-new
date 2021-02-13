@@ -1934,7 +1934,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mEntryManager:Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
 
@@ -1944,7 +1944,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mMediaController:Landroid/media/session/MediaController;
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     invoke-virtual {v0}, Landroid/media/session/MediaController;->getPlaybackState()Landroid/media/session/PlaybackState;
 
@@ -1952,7 +1952,9 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mState:Landroid/media/session/PlaybackState;
 
-    sget-boolean v0, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+    sget-boolean v3, Lcom/android/systemui/statusbar/NotificationMediaManager;->DEBUG_MEDIA:Z
+
+    if-eqz v3, :cond_d
 
     if-eqz v0, :cond_c
 
@@ -1980,7 +1982,17 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    goto :goto_3
+
     :cond_c
+    const-string v0, "NotificationMediaManager"
+
+    const-string v3, "metaDataChanged: mState is null "
+
+    invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_d
+    :goto_3
     invoke-direct {p0, v2, v1}, Lcom/android/systemui/statusbar/NotificationMediaManager;->dispatchUpdateMediaMetaData(ZZ)V
 
     return-void

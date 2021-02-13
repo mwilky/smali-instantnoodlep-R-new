@@ -1338,6 +1338,13 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_battery_saver_description_no_ga">"ബാറ്ററി ആയുസ്സ് വർദ്ധിപ്പിക്കുന്നതിന്, ബാറ്ററി സേവർ:
 
 • പശ്ചാത്തല പ്രവർത്തനം ഓഫുചെയ്യുകയോ നിയന്ത്രിക്കുകയോ ചെയ്യുന്നു, കൂടാതെ ചില വിഷ്വൽ ഇഫക്റ്റുകളും"</string>
+    <string name="op_bitmoji_aod_download">ഡൗണ്‍ലോഡ് ചെയ്യുക</string>
+    <string name="op_bitmoji_aod_download_stickers_error">എന്തോ പിശക്</string>
+    <string name="op_bitmoji_aod_download_stickers_title">ബിറ്റ്‌മോജി സ്റ്റിക്കർ പായ്ക്ക് ഡൗൺലോഡ് ചെയ്യുന്നു...</string>
+    <string name="op_bitmoji_connect_to_resume">തുടരുന്നതിന് സൈൻ അപ്പ് ചെയ്യുക</string>
+    <string name="op_bitmoji_not_working_normally">ബിറ്റ്മോജി ക്ലോക്ക് ലഭ്യമല്ല</string>
+    <string name="op_bitmoji_ready_to_use">നിങ്ങളുടെ ബിറ്റ്മോജി ക്ലോക്ക് തയ്യാറാണ്!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">ഇത് പരിശോധിക്കുക!</string>
     <string name="op_earphone_connect">ജോടിയാക്കുന്നു...</string>
     <string name="op_earphone_connected_fail">ജോടിയാക്കുന്നതിൽ പരാജയപ്പെട്ടു. ഹെഡ്‌സെറ്റ്, Bluetooth സ്റ്റാറ്റസ് നിങ്ങൾക്ക് പരിശോധിക്കാം.</string>
     <string name="op_earphone_connected_success">ജോടിയാക്കി. കൂടുതൽ ക്രമീകരിക്കാൻ ടാപ്പുചെയ്യുക.</string>

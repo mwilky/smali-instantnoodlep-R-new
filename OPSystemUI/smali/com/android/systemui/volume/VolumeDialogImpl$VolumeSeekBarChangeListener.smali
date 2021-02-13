@@ -272,7 +272,7 @@
     :goto_0
     iput v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRecordNearlyProgress:I
 
-    invoke-static {p1, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4700(Landroid/widget/SeekBar;I)I
+    invoke-static {p1, v1}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4800(Landroid/widget/SeekBar;I)I
 
     move-result p1
 
@@ -486,7 +486,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4700(Landroid/widget/SeekBar;I)I
+    invoke-static {p1, v0}, Lcom/android/systemui/volume/VolumeDialogImpl;->access$4800(Landroid/widget/SeekBar;I)I
 
     move-result p1
 

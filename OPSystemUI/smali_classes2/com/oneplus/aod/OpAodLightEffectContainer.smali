@@ -22,6 +22,8 @@
 
 .field private mBitmapRight:[Landroid/graphics/Bitmap;
 
+.field private mCustStartAnimationDelay:I
+
 .field private mDecodeIndex:I
 
 .field private final mFrameRunnable:Ljava/lang/Runnable;
@@ -53,6 +55,8 @@
 
     sput p1, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
+
     const/16 p1, 0x10
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
@@ -81,6 +85,8 @@
 
     sput p1, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
+
     const/16 p1, 0x10
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
@@ -107,6 +113,8 @@
 
     sput p1, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
+
     const/16 p1, 0x10
 
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFramesDuration:I
@@ -132,6 +140,8 @@
     iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimateIndex:I
 
     sput p1, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
 
     const/16 p1, 0x10
 
@@ -1418,10 +1428,10 @@
     .registers 8
     .param p1, "run"    # Z
 
-    .line 554
+    .line 601
     sget v0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    .line 555
+    .line 602
     .local v0, "i":I
     const/16 v1, 0xa
 
@@ -1433,16 +1443,16 @@
 
     goto :goto_23
 
-    .line 565
+    .line 615
     :cond_b
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setAlpha(F)V
 
-    .line 566
+    .line 616
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightAnimator:Landroid/animation/ValueAnimator;
 
-    .line 567
+    .line 617
     .local v1, "valueAnimator":Landroid/animation/ValueAnimator;
     if-eqz v1, :cond_1c
 
@@ -1454,31 +1464,27 @@
 
     if-nez v2, :cond_22
 
-    .line 568
+    .line 618
     :cond_1c
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->loadResources()V
-    
-    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
 
-    .line 569
+    .line 619
     invoke-direct {p0, p1}, Lcom/oneplus/aod/OpAodLightEffectContainer;->animateNotification(Z)V
 
-    .line 571
+    .line 621
     :cond_22
     return-void
 
-    .line 556
+    .line 603
     .end local v1    # "valueAnimator":Landroid/animation/ValueAnimator;
     :cond_23
     :goto_23
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->prepareResources()V
-    
-    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
 
-    .line 557
+    .line 604
     iget v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimateIndex:I
 
-    .line 558
+    .line 605
     .local v1, "i2":I
     if-lez v1, :cond_30
 
@@ -1488,31 +1494,56 @@
 
     goto :goto_30
 
-    .line 563
+    .line 613
     :cond_2f
     return-void
 
-    .line 559
+    .line 606
     :cond_30
     :goto_30
-    invoke-virtual {p0}, Lcom/oneplus/aod/OpAodLightEffectContainer;->setCustomEdgeColors()V
+    iget v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
 
+    if-nez v2, :cond_46
+
+    .line 607
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const-string v3, "cust_aod_notification_start_animation_delay"
+
+    const-string v4, "integer"
+
+    invoke-static {v3, v4}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v2
+
+    iput v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
+
+    .line 609
+    :cond_46
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 560
+    .line 610
     iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mFrameRunnable:Ljava/lang/Runnable;
 
-    const-wide/16 v4, 0x15e
+    iget v4, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mCustStartAnimationDelay:I
+
+    int-to-long v4, v4
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 561
+    .line 611
     return-void
 .end method
 

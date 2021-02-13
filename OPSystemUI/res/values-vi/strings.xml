@@ -1338,6 +1338,13 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="op_battery_saver_description_no_ga">"Để kéo dài tuổi thọ pin, Trình tiết kiệm pin:
 
 •Tắt hoặc hạn chế các hoạt động trong nền và một số hiệu ứng hình ảnh"</string>
+    <string name="op_bitmoji_aod_download">Tải về</string>
+    <string name="op_bitmoji_aod_download_stickers_error">có lỗi xảy ra</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Đang tải xuống gói hình dán Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Đăng ký để tiếp tục</string>
+    <string name="op_bitmoji_not_working_normally">Đồng hồ Bitmoji không khả dụng</string>
+    <string name="op_bitmoji_ready_to_use">Đồng hồ Bitmoji của bạn đã sẵn sàng!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Xem thử ngay!</string>
     <string name="op_earphone_connect">Đang ghép nối...</string>
     <string name="op_earphone_connected_fail">Ghép nối thất bại. Bạn có thể kiểm tra tai nghe và trạng thái Bluetooth.</string>
     <string name="op_earphone_connected_success">Đã ghép nối. Chạm để cài đặt thêm.</string>

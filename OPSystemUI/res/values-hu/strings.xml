@@ -1338,6 +1338,13 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="op_battery_saver_description_no_ga">"Az akkumulátoros üzemidő hosszabbítása érdekében a Battery Saver a következőt teszi:
 
 •Leállítja vagy korlátozza a háttértevékenységeket és egyes vizuális effektusokat"</string>
+    <string name="op_bitmoji_aod_download">Letöltés</string>
+    <string name="op_bitmoji_aod_download_stickers_error">valami hiba</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Bitmoji matricacsomag letöltése...</string>
+    <string name="op_bitmoji_connect_to_resume">A folytatáshoz regisztrálj</string>
+    <string name="op_bitmoji_not_working_normally">A Bitmoji-óra nem érhető el</string>
+    <string name="op_bitmoji_ready_to_use">A Bitmoji-óra kész!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Próbáld ki!</string>
     <string name="op_earphone_connect">Párosítás...</string>
     <string name="op_earphone_connected_fail">Sikertelen párosítás. Ellenőrizze a fejhallgatót és a Bluetooth-állapotát.</string>
     <string name="op_earphone_connected_success">Párosítva. Koppintson a további beállításokért.</string>

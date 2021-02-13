@@ -252,39 +252,68 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    sget-object v0, Lcom/android/systemui/statusbar/phone/PanelBar;->TAG:Ljava/lang/String;
+    const-class v0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
+
+    sget-object v1, Lcom/android/systemui/statusbar/phone/PanelBar;->TAG:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelBar;->panelEnabled()Z
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_3
 
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
+
+    invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;->isHighLightHintShow()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;
+
+    invoke-interface {p0}, Lcom/oneplus/systemui/statusbar/phone/OpHighlightHintController;->isCarModeHighlightHintSHow()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p0
 
-    if-nez p0, :cond_0
+    if-nez p0, :cond_1
 
-    new-array p0, v2, [Ljava/lang/Object;
+    new-array p0, v3, [Ljava/lang/Object;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    move-result v1
+    move-result v0
 
-    float-to-int v1, v1
+    float-to-int v0, v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    aput-object v1, p0, v3
+    aput-object v0, p0, v4
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -296,7 +325,7 @@
 
     move-result-object p1
 
-    aput-object p1, p0, v4
+    aput-object p1, p0, v5
 
     const-string p1, "onTouch: all panels disabled, ignoring touch at (%d,%d)"
 
@@ -304,35 +333,26 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return v3
+    invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    return v4
 
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanel:Lcom/android/systemui/statusbar/phone/PanelViewController;
-
-    if-nez v1, :cond_2
-
-    new-array p0, v2, [Ljava/lang/Object;
+    :cond_2
+    :goto_0
+    new-array p0, v3, [Ljava/lang/Object;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    move-result v1
+    move-result v0
 
-    float-to-int v1, v1
+    float-to-int v0, v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    aput-object v1, p0, v3
+    aput-object v0, p0, v4
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -344,7 +364,54 @@
 
     move-result-object p1
 
-    aput-object p1, p0, v4
+    aput-object p1, p0, v5
+
+    const-string p1, "onTouch: all panels disabled, just pass touch event for highlgiht hint"
+
+    invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v5
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanel:Lcom/android/systemui/statusbar/phone/PanelViewController;
+
+    if-nez v0, :cond_4
+
+    new-array p0, v3, [Ljava/lang/Object;
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, p0, v4
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, p0, v5
 
     const-string p1, "onTouch: no panel for touch at (%d,%d)"
 
@@ -352,34 +419,34 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v4
+    return v5
 
-    :cond_2
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/PanelViewController;->isEnabled()Z
+    :cond_4
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->isEnabled()Z
 
-    move-result v5
+    move-result v2
 
-    if-nez v5, :cond_3
+    if-nez v2, :cond_5
 
     const/4 p0, 0x3
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    aput-object v1, p0, v3
+    aput-object v0, p0, v4
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    move-result v1
+    move-result v0
 
-    float-to-int v1, v1
+    float-to-int v0, v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    aput-object v1, p0, v4
+    aput-object v0, p0, v5
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -391,7 +458,7 @@
 
     move-result-object p1
 
-    aput-object p1, p0, v2
+    aput-object p1, p0, v3
 
     const-string p1, "onTouch: panel (%s) is disabled, ignoring touch at (%d,%d)"
 
@@ -399,14 +466,14 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    return v4
+    return v5
 
-    :cond_3
+    :cond_5
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PanelBar;->mPanel:Lcom/android/systemui/statusbar/phone/PanelViewController;
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_6
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelViewController;->getView()Landroid/view/ViewGroup;
 
@@ -416,13 +483,13 @@
 
     move-result p0
 
-    if-eqz p0, :cond_5
+    if-eqz p0, :cond_7
 
-    :cond_4
-    move v3, v4
+    :cond_6
+    move v4, v5
 
-    :cond_5
-    return v3
+    :cond_7
+    return v4
 .end method
 
 .method public onTrackingStarted()V

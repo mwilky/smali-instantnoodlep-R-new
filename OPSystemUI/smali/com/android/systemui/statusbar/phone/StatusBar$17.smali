@@ -41,7 +41,7 @@
 
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBar;->mKeyguardIndicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4700(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$4800(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/content/Context;
 
     move-result-object v0
 

@@ -51,15 +51,15 @@
 
     iget-object v0, v0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$700(Lcom/oneplus/battery/OpSWarpChargingView;)I
+    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1100(Lcom/oneplus/battery/OpSWarpChargingView;)I
 
     move-result v3
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15$1;->this$1:Lcom/oneplus/battery/OpSWarpChargingView$15;
+    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15$1;->this$1:Lcom/oneplus/battery/OpSWarpChargingView$15;
 
-    iget-object v0, v0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2800(Lcom/oneplus/battery/OpSWarpChargingView;)I
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2100(Lcom/oneplus/battery/OpSWarpChargingView;)I
 
     move-result v4
 
@@ -67,35 +67,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;IIIZZ)V
-
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15$1;->this$1:Lcom/oneplus/battery/OpSWarpChargingView$15;
-
-    iget-object v1, v0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {v1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2100(Lcom/oneplus/battery/OpSWarpChargingView;)I
-
-    move-result v0
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15$1;->this$1:Lcom/oneplus/battery/OpSWarpChargingView$15;
-
-    iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$15;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
-
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$200(Lcom/oneplus/battery/OpSWarpChargingView;)I
-
-    move-result p0
-
-    sub-int/2addr v0, p0
-
-    add-int/lit8 v3, v0, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x1
-
-    invoke-static/range {v1 .. v6}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;IIIZZ)V
+    invoke-static/range {v1 .. v6}, Lcom/oneplus/battery/OpSWarpChargingView;->access$1700(Lcom/oneplus/battery/OpSWarpChargingView;IIIZZ)V
 
     return-void
 .end method

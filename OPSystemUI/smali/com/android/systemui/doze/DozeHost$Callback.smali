@@ -21,6 +21,12 @@
     return-void
 .end method
 
+.method public onDozeServiceTimeChanged()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onDozeSuppressedChanged(Z)V
     .locals 0
 

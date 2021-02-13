@@ -345,7 +345,7 @@
 .end method
 
 .method private getMaxExpandedHeight()I
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mWindowManager:Landroid/view/WindowManager;
 
@@ -361,6 +361,8 @@
 
     move-result-object v0
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getRootWindowInsets()Landroid/view/WindowInsets;
@@ -374,18 +376,73 @@
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v1
 
     :goto_0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-ne v2, v3, :cond_1
+
+    move v1, v4
+
+    :cond_1
+    if-eqz v1, :cond_2
+
     iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mDisplaySize:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->y:I
 
     iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mExpandedViewContainerLocation:[I
 
-    const/4 v3, 0x1
+    aget v2, v2, v4
 
-    aget v2, v2, v3
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingTop()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    iget v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mPointerHeight:I
+
+    sub-int/2addr v1, v2
+
+    iget p0, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mPointerMargin:I
+
+    :goto_1
+    sub-int/2addr v1, p0
+
+    sub-int/2addr v1, v0
+
+    return v1
+
+    :cond_2
+    iget-object v1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mDisplaySize:Landroid/graphics/Point;
+
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    iget-object v2, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mExpandedViewContainerLocation:[I
+
+    aget v2, v2, v4
 
     sub-int/2addr v1, v2
 
@@ -411,11 +468,7 @@
 
     iget p0, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mPointerMargin:I
 
-    sub-int/2addr v1, p0
-
-    sub-int/2addr v1, v0
-
-    return v1
+    goto :goto_1
 .end method
 
 .method private getVirtualDisplay()Landroid/hardware/display/VirtualDisplay;
@@ -1986,7 +2039,7 @@
 .end method
 
 .method public updateView([I)V
-    .locals 0
+    .locals 2
 
     iput-object p1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mExpandedViewContainerLocation:[I
 
@@ -1994,7 +2047,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mActivityView:Landroid/app/ActivityView;
 
@@ -2002,7 +2055,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_2
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mActivityView:Landroid/app/ActivityView;
 
@@ -2010,7 +2063,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mActivityView:Landroid/app/ActivityView;
 
@@ -2018,6 +2071,39 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/bubbles/BubbleExpandedView;->updateHeight()V
 
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
     :cond_0
+    move p1, v1
+
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/bubbles/BubbleExpandedView;->mSettingsIcon:Lcom/android/systemui/statusbar/AlphaOptimizedButton;
+
+    if-eqz p1, :cond_1
+
+    const/16 v1, 0x8
+
+    :cond_1
+    invoke-virtual {p0, v1}, Landroid/widget/Button;->setVisibility(I)V
+
+    :cond_2
     return-void
 .end method

@@ -25,6 +25,8 @@
 
 .field private mAodMainView:Lcom/oneplus/aod/OpAodMain;
 
+.field private mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
 .field private mClockViewCtrl:Lcom/oneplus/aod/OpClockViewCtrl;
 
 .field private mContainer:Landroid/view/ViewGroup;
@@ -188,6 +190,8 @@
 
     iput-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mSliceManager:Lcom/oneplus/aod/slice/OpSliceManager;
 
+    invoke-direct {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->initBitmojiManager()V
+
     const-class p2, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -239,7 +243,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
+.method static synthetic access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/bg/OpAodCanvas;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mAodCanvas:Lcom/oneplus/aod/bg/OpAodCanvas;
@@ -247,7 +259,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodNotificationIconAreaController;
+.method static synthetic access$1200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodNotificationIconAreaController;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mNotificationIconCtrl:Lcom/oneplus/aod/OpAodNotificationIconAreaController;
@@ -255,7 +267,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
+.method static synthetic access$1300(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/os/PowerManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mPowerManager:Landroid/os/PowerManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mScreenTurnedOn:Z
@@ -263,7 +283,7 @@
     return p0
 .end method
 
-.method static synthetic access$1202(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+.method static synthetic access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mScreenTurnedOn:Z
@@ -271,7 +291,7 @@
     return p1
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
+.method static synthetic access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateView()V
@@ -279,7 +299,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
+.method static synthetic access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mIsScreenTurnedOff:Z
@@ -287,7 +307,7 @@
     return p0
 .end method
 
-.method static synthetic access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+.method static synthetic access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mIsScreenTurnedOff:Z
@@ -295,7 +315,7 @@
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
+.method static synthetic access$1700(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->userActivityInAlwaysOn(Ljava/lang/String;)V
@@ -303,7 +323,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
+.method static synthetic access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mResetIndicationRunnable:Ljava/lang/Runnable;
@@ -311,28 +331,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodLightEffectContainer;
+.method static synthetic access$1900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodLightEffectContainer;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mLightEffectContainer:Lcom/oneplus/aod/OpAodLightEffectContainer;
 
     return-object p0
-.end method
-
-.method static synthetic access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpSingleNotificationView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mSingleNotificationView:Lcom/oneplus/aod/OpSingleNotificationView;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1902(Lcom/oneplus/aod/OpAodDisplayViewManager;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mStatus:I
-
-    return p1
 .end method
 
 .method static synthetic access$200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/os/Handler;
@@ -343,7 +347,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$2002(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+.method static synthetic access$2000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpSingleNotificationView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mSingleNotificationView:Lcom/oneplus/aod/OpSingleNotificationView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2102(Lcom/oneplus/aod/OpAodDisplayViewManager;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mStatus:I
+
+    return p1
+.end method
+
+.method static synthetic access$2202(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mIsPress:Z
@@ -351,7 +371,7 @@
     return p1
 .end method
 
-.method static synthetic access$2102(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+.method static synthetic access$2302(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mShouldPlayLightEffect:Z
@@ -375,7 +395,15 @@
     return p0
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
+.method static synthetic access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mClockViewCtrl:Lcom/oneplus/aod/OpClockViewCtrl;
@@ -383,7 +411,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
+.method static synthetic access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/slice/OpSliceManager;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mSliceManager:Lcom/oneplus/aod/slice/OpSliceManager;
@@ -391,7 +419,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
+.method static synthetic access$800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpAodMain;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mAodMainView:Lcom/oneplus/aod/OpAodMain;
@@ -399,18 +427,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
+.method static synthetic access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     return-object p0
 .end method
@@ -809,6 +829,44 @@
 
     .line 355
     :goto_13c
+    return-void
+.end method
+
+.method private initBitmojiManager()V
+    .locals 2
+
+    :try_start_0
+    const-class v0, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    iput-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mBitmojiManager:Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v0, p0}, Lcom/oneplus/aod/utils/bitmoji/OpBitmojiManager;->setHandler(Landroid/os/Handler;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "AodDisplayViewManager"
+
+    const-string v1, "initBitmojiManager occur error"
+
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
     return-void
 .end method
 

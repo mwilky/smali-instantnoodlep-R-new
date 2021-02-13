@@ -1338,6 +1338,13 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="op_battery_saver_description_no_ga">"Batterisparfunktionen förlänger telefonens batteritid
 
 •genom att stänga av eller begränsa bakgrundsaktiviteter och vissa visuella effekter"</string>
+    <string name="op_bitmoji_aod_download">Hämta</string>
+    <string name="op_bitmoji_aod_download_stickers_error">något gick fel</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Laddar ned Bitmoji-etikettpaketet...</string>
+    <string name="op_bitmoji_connect_to_resume">Registrera dig för att fortsätta</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji-klockan är inte tillgänglig</string>
+    <string name="op_bitmoji_ready_to_use">Din Bitmoji-klocka är klar att användas!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Ta en titt på den!</string>
     <string name="op_earphone_connect">Parar ihop ...</string>
     <string name="op_earphone_connected_fail">Det gick inte att para ihop. Kontrollera status för headset och Bluetooth.</string>
     <string name="op_earphone_connected_success">Ihopparad. Tryck för att ställa in fler.</string>

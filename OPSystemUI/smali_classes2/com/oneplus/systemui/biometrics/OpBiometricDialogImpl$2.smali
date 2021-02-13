@@ -45,7 +45,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$700(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$800(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
 
     return-void
 .end method

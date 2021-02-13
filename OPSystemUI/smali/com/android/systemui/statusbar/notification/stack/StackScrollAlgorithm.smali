@@ -198,7 +198,7 @@
 .end method
 
 .method private clampPositionToShelf(Lcom/android/systemui/statusbar/notification/row/ExpandableView;Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;Lcom/android/systemui/statusbar/notification/stack/AmbientState;)V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getShelf()Lcom/android/systemui/statusbar/NotificationShelf;
 
@@ -225,35 +225,35 @@
 
     move-result v3
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mHostView:Landroid/view/ViewGroup;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mHostView:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+    invoke-virtual {v4, v0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
-    move-result p0
+    move-result v0
 
-    if-ge v3, p0, :cond_1
+    if-ge v3, v0, :cond_1
 
-    move p0, v1
+    move v0, v1
 
     goto :goto_0
 
     :cond_1
-    move p0, v2
+    move v0, v2
 
     :goto_0
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getInnerHeight()I
 
-    move-result v0
+    move-result v3
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->getShelf()Lcom/android/systemui/statusbar/NotificationShelf;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getIntrinsicHeight()I
+    invoke-virtual {v4}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getIntrinsicHeight()I
 
-    move-result v3
+    move-result v4
 
-    sub-int/2addr v0, v3
+    sub-int/2addr v3, v4
 
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->isAppearing()Z
 
@@ -267,60 +267,72 @@
 
     if-nez p3, :cond_2
 
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
 
-    iget p0, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
+    iget p3, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    int-to-float p3, v0
+    int-to-float v0, v3
 
-    invoke-static {p0, p3}, Ljava/lang/Math;->max(FF)F
+    invoke-static {p3, v0}, Ljava/lang/Math;->max(FF)F
 
-    move-result p0
+    move-result p3
 
-    iput p0, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
+    iput p3, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
     :cond_2
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mIsQsFullyExpanded:Z
+
+    if-eqz p0, :cond_3
+
+    int-to-float p0, v3
+
+    goto :goto_1
+
+    :cond_3
     iget p0, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
 
-    int-to-float p3, v0
+    int-to-float p3, v3
 
     invoke-static {p0, p3}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
 
+    :goto_1
     iput p0, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->yTranslation:F
+
+    int-to-float p3, v3
 
     cmpl-float p0, p0, p3
 
-    if-ltz p0, :cond_4
+    if-ltz p0, :cond_5
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->isExpandAnimationRunning()Z
 
     move-result p0
 
-    if-nez p0, :cond_3
+    if-nez p0, :cond_4
 
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->hasExpandingChild()Z
 
     move-result p0
 
-    if-nez p0, :cond_3
+    if-nez p0, :cond_4
 
     move p0, v1
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_4
     move p0, v2
 
-    :goto_1
+    :goto_2
     iput-boolean p0, p2, Lcom/android/systemui/statusbar/notification/stack/ViewState;->hidden:Z
 
     iput-boolean v1, p2, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->inShelf:Z
 
     iput-boolean v2, p2, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->headsUpIsVisible:Z
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 

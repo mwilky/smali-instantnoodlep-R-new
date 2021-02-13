@@ -144,11 +144,14 @@
     <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER"/>
     <uses-permission android:name="android.permission.MODIFY_SETTINGS_OVERRIDEABLE_BY_RESTORE"/>
     <uses-permission android:name="android.permission.ADD_TRUSTED_DISPLAY"/>
+    <uses-permission android:name="com.bitstrips.imoji.provider.READ"/>
     <protected-broadcast android:name="com.android.settingslib.action.REGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"/>
     <protected-broadcast android:name="com.android.settings.flashlight.action.FLASHLIGHT_CHANGED"/>
     <protected-broadcast android:name="com.oneplus.intent.WLB_MANUAL_SELECTION"/>
     <protected-broadcast android:name="com.oneplus.intent.ACTION_WLB_BREAK_MODE"/>
+    <protected-broadcast android:name="com.oneplus.intent.NOTIFICATION_ADDED"/>
+    <protected-broadcast android:name="com.oneplus.intent.NOTIFICATION_CLEAR_ALL"/>
     <uses-permission android:name="android.permission.READ_CALENDAR"/>
     <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
@@ -162,6 +165,8 @@
     <protected-broadcast android:name="com.android.settings.flashlight.action.FLASHLIGHT_CHANGED"/>
     <protected-broadcast android:name="com.oneplus.intent.WLB_MANUAL_SELECTION"/>
     <protected-broadcast android:name="com.oneplus.intent.ACTION_WLB_BREAK_MODE"/>
+    <protected-broadcast android:name="com.oneplus.intent.NOTIFICATION_ADDED"/>
+    <protected-broadcast android:name="com.oneplus.intent.NOTIFICATION_CLEAR_ALL"/>
     <protected-broadcast android:name="com.android.dialer.action.END_CALL"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
     <queries>
@@ -318,6 +323,8 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+        <activity android:excludeFromRecents="true" android:name="com.oneplus.aod.utils.bitmoji.OpBitmojiConnectedEntry" android:theme="@style/Theme.Transparent"/>
+        <provider android:authorities="com.oneplus.systemui.ContentProvider" android:exported="true" android:name="com.oneplus.systemui.OpSystemUIProvider" android:singleUser="true"/>
         <activity android:excludeFromRecents="true" android:name="androidx.slice.compat.SlicePermissionActivity"/>
         <receiver android:name="androidx.remotecallback.ProviderRelayReceiver"/>
         <provider android:authorities="com.android.systemui.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>

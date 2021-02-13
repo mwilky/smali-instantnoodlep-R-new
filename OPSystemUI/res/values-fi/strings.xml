@@ -1338,6 +1338,13 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="op_battery_saver_description_no_ga">"Virransäästötoiminto pidentää akun käyttöikää
 
 •ottamalla taustatoiminnot ja jotkin visuaaliset tehosteet pois käytöstä tai rajoittamalla niitä"</string>
+    <string name="op_bitmoji_aod_download">Lataa</string>
+    <string name="op_bitmoji_aod_download_stickers_error">jokin virhe</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Ladataan Bitmoji-tarrapakettia...</string>
+    <string name="op_bitmoji_connect_to_resume">Jatka rekisteröitymällä</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji-kello ei ole käytettävissä</string>
+    <string name="op_bitmoji_ready_to_use">Bitmoji-kellosi on valmis!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Näytä se!</string>
     <string name="op_earphone_connect">Muodostetaan laiteparia...</string>
     <string name="op_earphone_connected_fail">Laiteparin muodostus epäonnistui. Voit tarkistaa kuulokkeet ja Bluetoothin tilan.</string>
     <string name="op_earphone_connected_success">Laitepari muodostettu. Määritä enemmän napauttamalla.</string>

@@ -35,11 +35,139 @@
 
 # virtual methods
 .method public onPendingEntryAdded(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-    .locals 0
+    .locals 6
+
+    const-class v0, Lcom/android/systemui/statusbar/policy/ZenModeController;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/statusbar/policy/ZenModeController;
+
+    invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/ZenModeController;->getZen()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getSbn()Landroid/service/notification/StatusBarNotification;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object v3
+
+    iget-object v3, v3, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v3}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v3}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getShortClassName()Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_1
+    if-eqz v4, :cond_2
+
+    const-string v3, "InCallActivity"
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    move v3, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v3, v2
+
+    :goto_1
+    if-eqz v3, :cond_3
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->access$000(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v2
+
+    :goto_2
+    if-eqz v1, :cond_4
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
+
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->access$200(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1$1;
+
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1$1;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+
+    const-wide/16 v3, 0x44c
+
+    invoke-virtual {v0, v1, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->access$000(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
+    invoke-static {p0, v2}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->access$002(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;Z)Z
+
+    return-void
+
+    :cond_4
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$1;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
+
+    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->access$100(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
     return-void
 .end method

@@ -321,8 +321,8 @@
     <dimen name="complete_icon_margin_top">446.0px</dimen>
     <dimen name="complete_icon_size">86.0dip</dimen>
     <item type="dimen" name="config_rounded_mask_size">@android:dimen/rounded_corner_radius</item>
-    <item type="dimen" name="config_rounded_mask_size_bottom">@android:dimen/rounded_corner_radius_bottom</item>
-    <item type="dimen" name="config_rounded_mask_size_top">@android:dimen/rounded_corner_radius_top</item>
+    <item type="dimen" name="config_rounded_mask_size_bottom">@dimen/rounded_corner_radius_bottom</item>
+    <item type="dimen" name="config_rounded_mask_size_top">@dimen/rounded_corner_radius_top</item>
     <dimen name="control_app_bar_ar_margin">20.0dip</dimen>
     <dimen name="control_base_item_margin">6.0dip</dimen>
     <item type="dimen" name="control_card_elevation">15.0</item>
@@ -1535,6 +1535,9 @@
     <dimen name="oneplus_widget_label_font_size">16.0dip</dimen>
     <dimen name="op_5g_inout_indicator_margin_top">1.3999939dip</dimen>
     <dimen name="op_abc_config_prefDialogWidth">270.0dip</dimen>
+    <dimen name="op_about_button_max_size">480.0px</dimen>
+    <dimen name="op_aod_bitmoji_icon_size">165.0dip</dimen>
+    <dimen name="op_aod_bitmoji_margin_top">87.0dip</dimen>
     <dimen name="op_aod_clock_analog_my_margin_top">106.0dip</dimen>
     <dimen name="op_aod_clock_analog_my_size">211.0dip</dimen>
     <dimen name="op_aod_light_effect_my_width">290.0px</dimen>
@@ -1972,7 +1975,7 @@
     <dimen name="op_volume_dialog_slider_height">422.0px</dimen>
     <dimen name="op_volume_dialog_slider_margin_bottom">5.0px</dimen>
     <dimen name="op_volume_dialog_slider_margin_top">5.0px</dimen>
-    <dimen name="op_volume_dialog_slider_width">149.0px</dimen>
+    <dimen name="op_volume_dialog_slider_width">150.0px</dimen>
     <dimen name="op_volume_dialog_stream_padding">21.0px</dimen>
     <dimen name="op_volume_dialog_volume_row_connected_device_text_size">22.0px</dimen>
     <dimen name="op_volume_expander_margin_end">10.0px</dimen>
@@ -2173,7 +2176,7 @@
     <dimen name="qs_signal_indicator_shift_down_amount">7.0dip</dimen>
     <dimen name="qs_status_separator">32.0dip</dimen>
     <dimen name="qs_statusbar_header_margin_top">12.0dip</dimen>
-    <dimen name="qs_tile_background_size">48.0dip</dimen>
+    <dimen name="qs_tile_background_size">50.0dip</dimen>
     <dimen name="qs_tile_detail_padding">3.0dip</dimen>
     <dimen name="qs_tile_divider_height">1.0dip</dimen>
     <dimen name="qs_tile_height">96.0dip</dimen>

@@ -1338,6 +1338,13 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_battery_saver_description_no_ga">"Za daljše delovanje akumulatorja funkcija varčevanja z akumulatorjem:
 
 •izklopi ali omeji delovanje aplikacij v ozadju in nekatere vizualne učinke"</string>
+    <string name="op_bitmoji_aod_download">Prenos</string>
+    <string name="op_bitmoji_aod_download_stickers_error">določena napaka</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Prenašanje kompleta nalepk Bitmoji ...</string>
+    <string name="op_bitmoji_connect_to_resume">Prijavite se za nadaljevanje</string>
+    <string name="op_bitmoji_not_working_normally">Ura Bitmoji ni na voljo</string>
+    <string name="op_bitmoji_ready_to_use">Vaša ura Bitmoji je pripravljena!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Preverite!</string>
     <string name="op_earphone_connect">Seznanjanje ...</string>
     <string name="op_earphone_connected_fail">Sezanitev ni uspela. Preverite lahko slušalke in status Bluetooth.</string>
     <string name="op_earphone_connected_success">Seznanjeno. Tapnite za več nastavitev.</string>

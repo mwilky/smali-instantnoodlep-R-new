@@ -183,6 +183,8 @@
     </attr>
     <attr name="behavior_skipCollapsed" format="boolean" />
     <attr name="bg" format="reference" />
+    <attr name="bitmojiIconHeight" format="reference" />
+    <attr name="bitmojiIconWidth" format="reference" />
     <attr name="bodyAppearance" format="reference" />
     <attr name="bodyGravity">
         <enum name="center" value="0" />
@@ -465,6 +467,7 @@
     <attr name="darkIconTheme" format="reference" />
     <attr name="dateFormat" format="string" />
     <attr name="dateMarginLeft" format="reference" />
+    <attr name="dateMarginTop" format="reference" />
     <attr name="datePattern" format="string" />
     <attr name="datePickerFormat" format="string" />
     <attr name="datePickerStyle" format="reference" />

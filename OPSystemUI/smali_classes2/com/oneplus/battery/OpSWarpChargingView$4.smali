@@ -61,9 +61,9 @@
 
     iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView;->mChargingAnimationSWarpAssets:[Landroid/graphics/Bitmap;
 
-    aget-object p1, v0, p1
+    if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_0
+    aget-object p1, v0, p1
 
     invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$000(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/ImageView;
 

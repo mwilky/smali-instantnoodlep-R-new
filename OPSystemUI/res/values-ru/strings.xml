@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"Чтобы увеличить время работы от батареи, \"Регулятор потребляемой энергии\":
 
 •отключит или ограничит фоновые процессы и некоторые визуальные эффекты"</string>
+    <string name="op_bitmoji_aod_download">Скачать</string>
+    <string name="op_bitmoji_aod_download_stickers_error">неизвестная ошибка</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Загружается пакет стикеров Bitmoji...</string>
+    <string name="op_bitmoji_connect_to_resume">Зарегистрируйтесь, чтобы продолжить</string>
+    <string name="op_bitmoji_not_working_normally">Часы Bitmoji недоступны</string>
+    <string name="op_bitmoji_ready_to_use">Часы Bitmoji готовы!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Попробуйте их!</string>
     <string name="op_earphone_connect">Сопряжение...</string>
     <string name="op_earphone_connected_fail">Не удалось выполнить сопряжение. Проверьте состояние гарнитуры и Bluetooth.</string>
     <string name="op_earphone_connected_success">Сопряжено. Нажмите для настройки.</string>

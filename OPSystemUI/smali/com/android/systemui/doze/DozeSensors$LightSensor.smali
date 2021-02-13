@@ -1,5 +1,5 @@
 .class Lcom/android/systemui/doze/DozeSensors$LightSensor;
-.super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+.super Ljava/lang/Object;
 .source "DozeSensors.java"
 
 # interfaces
@@ -41,7 +41,7 @@
 
     iput-object p1, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->this$0:Lcom/android/systemui/doze/DozeSensors;
 
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "debug.aod_low_light_detect.enabled"
 
@@ -129,10 +129,6 @@
     invoke-virtual {v1, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
     :cond_1
-    iget-object v1, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v1, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
-
     iput-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mIsIgnoredFirstChanged:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mRegisteredSensor:Z
@@ -219,11 +215,15 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mRegistered:Z
 
-    iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    invoke-virtual {v0, p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
-
     return-void
+.end method
+
+.method public isListened()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mRegistered:Z
+
+    return p0
 .end method
 
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
@@ -340,7 +340,7 @@
     return-void
 .end method
 
-.method public onTimeChanged()V
+.method public receiveTimeChanged()V
     .locals 8
 
     iget-object v0, p0, Lcom/android/systemui/doze/DozeSensors$LightSensor;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;

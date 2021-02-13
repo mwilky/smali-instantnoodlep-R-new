@@ -437,7 +437,17 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
+.method static synthetic access$1000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/hardware/Sensor;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mPocketSensor:Landroid/hardware/Sensor;
@@ -445,7 +455,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+.method static synthetic access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mPocketState:I
@@ -453,7 +463,7 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mLidOpen:Z
@@ -461,7 +471,7 @@
     return p0
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
+.method static synthetic access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;IZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFPStateBySensor(IZ)V
@@ -469,7 +479,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+.method static synthetic access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
@@ -477,7 +487,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
+.method static synthetic access$1600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFacelockSettings()V
@@ -485,7 +495,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockEnabled:Z
@@ -493,7 +503,7 @@
     return p0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+.method static synthetic access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mAutoFacelockEnabled:Z
@@ -501,18 +511,10 @@
     return p0
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockLightingEnabled:Z
-
-    return p0
-.end method
-
 .method static synthetic access$1900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBouncerRecognizeEnabled:Z
+    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockLightingEnabled:Z
 
     return p0
 .end method
@@ -525,7 +527,15 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
+.method static synthetic access$2000(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mBouncerRecognizeEnabled:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFacelockSuccessTimes:I
@@ -533,7 +543,7 @@
     return p0
 .end method
 
-.method static synthetic access$2100(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
+.method static synthetic access$2200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Ljava/util/ArrayList;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
@@ -543,7 +553,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
+.method static synthetic access$2300(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->updateFacelockTrustState(Z)V
@@ -583,7 +593,15 @@
     return-void
 .end method
 
-.method static synthetic access$702(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
+.method static synthetic access$700(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->handleFinishedWakingUp()V
+
+    return-void
+.end method
+
+.method static synthetic access$802(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mShowFodOnAodEnabled:Z
@@ -591,20 +609,10 @@
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
+.method static synthetic access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;)Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
-
-    move-result-object p0
 
     return-object p0
 .end method
@@ -1099,6 +1107,51 @@
     goto :goto_0
 
     :cond_2
+    return-void
+.end method
+
+.method private handleFinishedWakingUp()V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getCallbacks()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onFinishedWakingUp()V
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
@@ -2601,6 +2654,20 @@
     goto :goto_0
 
     :cond_1
+    return-void
+.end method
+
+.method public dispatchFinishedWakingUp()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->getHandler()Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor$OpHandler;
+
+    move-result-object p0
+
+    const/16 v0, 0x1fc
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
     return-void
 .end method
 

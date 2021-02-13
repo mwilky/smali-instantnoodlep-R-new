@@ -3,12 +3,12 @@
 .source "OpSWarpChargingView.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/battery/OpSWarpChargingView;->prepareAsset(I)V
+    value = Lcom/oneplus/battery/OpSWarpChargingView;->combineWarpAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,28 +34,42 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/oneplus/battery/OpSWarpChargingView$22;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$200(Lcom/oneplus/battery/OpSWarpChargingView;)I
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-result v2
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$22;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$402(Lcom/oneplus/battery/OpSWarpChargingView;Z)Z
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$22;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2800(Lcom/oneplus/battery/OpSWarpChargingView;)I
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
-    move-result v3
+    move-result-object p0
 
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    const/4 v4, 0x1
-
-    const/4 v5, 0x1
-
-    invoke-static/range {v0 .. v5}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2400(Lcom/oneplus/battery/OpSWarpChargingView;IIIZZ)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
     return-void
 .end method

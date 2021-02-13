@@ -57,7 +57,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2600(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -67,7 +67,7 @@
 
     iget-object p1, p0, Lcom/oneplus/battery/OpSWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p1}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2600(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -75,7 +75,7 @@
 
     iget-object p0, p0, Lcom/oneplus/battery/OpSWarpChargingView$17;->this$0:Lcom/oneplus/battery/OpSWarpChargingView;
 
-    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$3100(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
+    invoke-static {p0}, Lcom/oneplus/battery/OpSWarpChargingView;->access$2600(Lcom/oneplus/battery/OpSWarpChargingView;)Landroid/widget/TextView;
 
     move-result-object p0
 

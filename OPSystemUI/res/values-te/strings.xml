@@ -1338,6 +1338,13 @@
     <string name="op_battery_saver_description_no_ga">"బ్యాటరీ లైఫ్ ను పొడిగించడానికి, బ్యాటరీ సేవర్:
 
 • ఆపుతుంది లేదా బ్యాక్ గ్రౌండ్ కార్యకలాపము, మరియు కొన్ని దృశ్య ప్రభావాలను పరిమితం చేస్తుంది."</string>
+    <string name="op_bitmoji_aod_download">డౌన్‌లోడ్</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ఏదో దోషము</string>
+    <string name="op_bitmoji_aod_download_stickers_title">బిట్మోజి స్టికర్ ప్యాక్ డౌన్లోడ్ చేయబుతున్నది...</string>
+    <string name="op_bitmoji_connect_to_resume">కొనసాగడానికి సైన్అప్ చేయండి</string>
+    <string name="op_bitmoji_not_working_normally">బిట్మోజి క్లాక్ అందుబాటులో లేదు</string>
+    <string name="op_bitmoji_ready_to_use">మీ బిట్మోజి క్లాక్ సిద్ధంగా ఉంది!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">ఇక్కడ చెక్ చేయండి!</string>
     <string name="op_earphone_connect">జత చేస్తోంది...</string>
     <string name="op_earphone_connected_fail">జత చేయడం విఫలమైంది. మీరు హెడ్‌సెట్ మరియు బ్లూటూత్ స్థితిని తనిఖీ చేయండి.</string>
     <string name="op_earphone_connected_success">జత చేయబడింది. మరిన్ని సెట్ చేయడానికి ట్యాప్ చేయండి.</string>

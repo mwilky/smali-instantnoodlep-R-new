@@ -223,9 +223,11 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mMoreIcon:Landroid/widget/TextView;
 
-    int-to-float p1, p3
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSize(F)V
+    int-to-float p2, p3
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     :cond_1
     return-void

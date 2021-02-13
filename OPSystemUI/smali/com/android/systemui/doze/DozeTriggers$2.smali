@@ -120,6 +120,20 @@
     return-void
 .end method
 
+.method public onDozeServiceTimeChanged()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/doze/DozeTriggers$2;->this$0:Lcom/android/systemui/doze/DozeTriggers;
+
+    invoke-static {p0}, Lcom/android/systemui/doze/DozeTriggers;->access$600(Lcom/android/systemui/doze/DozeTriggers;)Lcom/android/systemui/doze/DozeSensors;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/doze/DozeSensors;->onDozeTimeChanged()V
+
+    return-void
+.end method
+
 .method public onDozeSuppressedChanged(Z)V
     .locals 2
 

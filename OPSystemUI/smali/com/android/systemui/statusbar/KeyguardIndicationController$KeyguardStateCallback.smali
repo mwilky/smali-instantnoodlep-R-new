@@ -39,8 +39,44 @@
     return-void
 .end method
 
+.method private synthetic lambda$onShowingStateChanged$0()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4400(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$onShowingStateChanged$1()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4300(Lcom/android/systemui/statusbar/KeyguardIndicationController;)V
+
+    return-void
+.end method
+
 
 # virtual methods
+.method public synthetic lambda$onShowingStateChanged$0$KeyguardIndicationController$KeyguardStateCallback()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->lambda$onShowingStateChanged$0()V
+
+    return-void
+.end method
+
+.method public synthetic lambda$onShowingStateChanged$1$KeyguardIndicationController$KeyguardStateCallback()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->lambda$onShowingStateChanged$1()V
+
+    return-void
+.end method
+
 .method public onDisabledStateChanged(Z)V
     .locals 0
 
@@ -94,16 +130,32 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->updateDashViews()V
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$1800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/android/systemui/statusbar/-$$Lambda$KeyguardIndicationController$KeyguardStateCallback$Ooi94KuPUsZHwUgjujy0gVnwcFA;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/-$$Lambda$KeyguardIndicationController$KeyguardStateCallback$Ooi94KuPUsZHwUgjujy0gVnwcFA;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->releaseDashViews()V
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$1800(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/android/systemui/statusbar/-$$Lambda$KeyguardIndicationController$KeyguardStateCallback$u8PSQkm1rN82GMDkXvdeG3zliBw;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/-$$Lambda$KeyguardIndicationController$KeyguardStateCallback$u8PSQkm1rN82GMDkXvdeG3zliBw;-><init>(Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :goto_0
     return-void
@@ -136,7 +188,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
 
     move-result-object v0
 
@@ -144,7 +196,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$KeyguardStateCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$4200(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
 
     move-result-object v0
 

@@ -59,9 +59,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$7;
+    new-instance v0, Lcom/oneplus/aod/OpAodDisplayViewManager$4$8;
 
-    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$4$7;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;)V
+    invoke-direct {v0, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$4$8;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -95,7 +95,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -127,7 +127,7 @@
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -153,7 +153,7 @@
 
     const-string p1, "fingerprint error"
 
-    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1700(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -188,12 +188,12 @@
 
     const-string p2, "fingerprint help"
 
-    invoke-static {p1, p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1700(Lcom/oneplus/aod/OpAodDisplayViewManager;Ljava/lang/String;)V
 
     :cond_0
     iget-object p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object p1
 
@@ -211,7 +211,7 @@
 
     iget-object p2, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
+    invoke-static {p2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
 
     move-result-object p2
 
@@ -225,7 +225,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1800(Lcom/oneplus/aod/OpAodDisplayViewManager;)Ljava/lang/Runnable;
 
     move-result-object p0
 
@@ -258,7 +258,7 @@
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$500(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
+    invoke-static {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/oneplus/aod/OpClockViewCtrl;
 
     move-result-object p0
 
@@ -340,11 +340,11 @@
     
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1202(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1600(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
 
     move-result v0
 
@@ -360,11 +360,11 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1300(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
 
     :cond_0
     invoke-static {}, Lcom/oneplus/aod/OpAodUtils;->isCustomFingerprint()Z
@@ -388,9 +388,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/oneplus/aod/OpAodDisplayViewManager$4$6;
+    new-instance v1, Lcom/oneplus/aod/OpAodDisplayViewManager$4$7;
 
-    invoke-direct {v1, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$4$6;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;)V
+    invoke-direct {v1, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$4$7;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -406,11 +406,11 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1202(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {v0, v1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$900(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1000(Lcom/oneplus/aod/OpAodDisplayViewManager;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
@@ -422,9 +422,29 @@
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1300(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1500(Lcom/oneplus/aod/OpAodDisplayViewManager;)V
 
     :cond_0
+    iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
+
+    invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/aod/OpAodDisplayViewManager$4$6;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/aod/OpAodDisplayViewManager$4$6;-><init>(Lcom/oneplus/aod/OpAodDisplayViewManager$4;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public onScreenTurningOn()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitorCallback;->onScreenTurningOn()V
+
     iget-object v0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
     invoke-static {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Landroid/os/Handler;
@@ -445,7 +465,7 @@
 
     iget-object p1, p0, Lcom/oneplus/aod/OpAodDisplayViewManager$4;->this$0:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1200(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
+    invoke-static {p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1400(Lcom/oneplus/aod/OpAodDisplayViewManager;)Z
 
     move-result p1
 
@@ -455,7 +475,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {p0, p1}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     :cond_0
     return-void
@@ -468,7 +488,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1402(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
+    invoke-static {p0, v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->access$1602(Lcom/oneplus/aod/OpAodDisplayViewManager;Z)Z
 
     return-void
 .end method

@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final drawerLayoutStyle:I = 0x7f0401a4
+.field public static final drawerLayoutStyle:I = 0x7f0401a7

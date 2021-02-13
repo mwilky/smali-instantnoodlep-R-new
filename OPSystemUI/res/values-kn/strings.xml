@@ -1337,6 +1337,13 @@
     <string name="op_battery_saver_description_no_ga">"ಬ್ಯಾಟರಿ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು, ಬ್ಯಾಟರಿ ಉಳಿಕೆಗಾಗಿ:
 
 •ಹಿನ್ನೆಲೆ ಚಟುವಟಿಕೆ ಮತ್ತು ಕೆಲವು ದೃಶ್ಯ ಪರಿಣಾಮಗಳನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ ಅಥವಾ ನಿರ್ಬಂಧಿಸುತ್ತದೆ"</string>
+    <string name="op_bitmoji_aod_download">ಡೌನ್‌ಲೋಡ್</string>
+    <string name="op_bitmoji_aod_download_stickers_error">ಏನೋ ದೋಷ</string>
+    <string name="op_bitmoji_aod_download_stickers_title">ಬಿಟ್‌ಮೊಜಿ ಸ್ಟಿಕ್ಕರ್ ಪ್ಯಾಕ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
+    <string name="op_bitmoji_connect_to_resume">ಮುಂದುವರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ</string>
+    <string name="op_bitmoji_not_working_normally">ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರ ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="op_bitmoji_ready_to_use">ನಿಮ್ಮ ಬಿಟ್‌ಮೊಜಿ ಗಡಿಯಾರ ಸಿದ್ಧವಾಗಿದೆ!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">ಇದನ್ನು ಪರಿಶೀಲಿಸಿ!</string>
     <string name="op_earphone_connect">ಜೋಡಿ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
     <string name="op_earphone_connected_fail">ಜೋಡಿ ಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ. ನೀವು ಹೆಡ್‌ಸೆಟ್ ಮತ್ತು ಬ್ಲೂಟೂತ್ ಸ್ಥಿತಿಯನ್ನು ಪರೀಕ್ಷಿಸಬಹುದು.</string>
     <string name="op_earphone_connected_success">ಜೋಡಿ ಮಾಡಲಾಗಿದೆ. ಇನ್ನಷ್ಟು ಸೆಟ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>

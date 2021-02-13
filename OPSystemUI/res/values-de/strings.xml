@@ -1338,16 +1338,22 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="op_battery_saver_description_no_ga">"Um die Akkulaufzeit zu verlängern, deaktiviert oder beschränkt der Akkusparmodus Folgendes:
 
 •Hintergrundaktivitäten und einige visuelle Effekte"</string>
+    <string name="op_bitmoji_aod_download_stickers_error">Es ist ein Fehler aufgetreten</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Bitmoji-Stickerpaket wird heruntergeladen...</string>
+    <string name="op_bitmoji_connect_to_resume">Zum Fortfahren registrieren</string>
+    <string name="op_bitmoji_not_working_normally">Die Bitmoji-Uhr ist nicht verfügbar.</string>
+    <string name="op_bitmoji_ready_to_use">Deine Bitmoji-Uhr ist bereit!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Jetzt ausprobieren!</string>
     <string name="op_earphone_connect">Kopplung läuft...</string>
     <string name="op_earphone_connected_fail">Koppeln fehlgeschlagen. Sie können den Headset- und Bluetooth-Status überprüfen.</string>
     <string name="op_earphone_connected_success">Gekoppelt. Tippen, um weitere einzustellen.</string>
     <string name="op_earphone_device">ZUM KOPPELN TIPPEN</string>
     <string name="op_earphone_title">OnePlus Bullets drahtlos</string>
     <string name="op_emergency_indicator_hint_text">Für Notfalldienste nach unten streichen</string>
-    <string name="op_keyguard_indication_charging_time">%2$s • Lädt (cirka %1$s verbleibend)</string>
-    <string name="op_keyguard_indication_charging_time_fast">%2$s • Schnelladen (cirka %1$s verbleibend)</string>
-    <string name="op_keyguard_indication_charging_time_slowly">%2$s • Langsames Laden (cirka %1$s verbleibend)</string>
-    <string name="op_keyguard_indication_charging_time_wireless">%2$s • Kabelloses Laden (cirka %1$s verbleibend)</string>
+    <string name="op_keyguard_indication_charging_time">%2$s • Lädt (circa %1$s verbleibend)</string>
+    <string name="op_keyguard_indication_charging_time_fast">%2$s • Schnelladen (circa %1$s verbleibend)</string>
+    <string name="op_keyguard_indication_charging_time_slowly">%2$s • Langsames Laden (circa %1$s verbleibend)</string>
+    <string name="op_keyguard_indication_charging_time_wireless">%2$s • Kabelloses Laden (circa %1$s verbleibend)</string>
     <string name="op_keyguard_indication_face_unlocked">Von Face Unlock entsperrt gelassen</string>
     <string name="op_keyguard_indication_trust_unlocked">Von Smart Lock entsperrt gelassen</string>
     <string name="op_keyguard_plugged_in_charging_time_warp">%2$s • Warp-Laden (weniger als %1$s verbleibend)</string>

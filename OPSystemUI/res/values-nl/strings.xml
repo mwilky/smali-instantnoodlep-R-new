@@ -1338,6 +1338,13 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="op_battery_saver_description_no_ga">"To extend battery life, Battery Saver:
 
 •Turns off or restricts background activity, and some visual effects"</string>
+    <string name="op_bitmoji_aod_download">Downloaden</string>
+    <string name="op_bitmoji_aod_download_stickers_error">fout opgetreden</string>
+    <string name="op_bitmoji_aod_download_stickers_title">Pakket met bitmoji-stickers downloaden...</string>
+    <string name="op_bitmoji_connect_to_resume">Meld u aan om door te gaan</string>
+    <string name="op_bitmoji_not_working_normally">Bitmoji-klok is niet beschikbaar</string>
+    <string name="op_bitmoji_ready_to_use">Uw bitmoji-klok is klaar!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">Kijk snel!</string>
     <string name="op_earphone_connect">Bezig met koppelen...</string>
     <string name="op_earphone_connected_fail">Koppelen mislukt. Contoleer de hoofdtelefoon en Bluetooth-status.</string>
     <string name="op_earphone_connected_success">Gekoppeld, tik voor meer instellingen.</string>

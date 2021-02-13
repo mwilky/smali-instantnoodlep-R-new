@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
+.method static synthetic access$1100(Lcom/android/systemui/statusbar/phone/StatusBar$5;)Landroid/util/ArraySet;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5;->mOverlays:Landroid/util/ArraySet;
@@ -92,7 +92,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1000(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/DozeParameters;
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1200(Lcom/android/systemui/statusbar/phone/StatusBar;)Lcom/android/systemui/statusbar/phone/DozeParameters;
 
     move-result-object p0
 
@@ -156,7 +156,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$800(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
+    invoke-static {p2}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1000(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
 
     move-result-object p2
 
@@ -184,7 +184,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBar$5;->this$0:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$800(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->access$1000(Lcom/android/systemui/statusbar/phone/StatusBar;)Landroid/os/Handler;
 
     move-result-object v0
 

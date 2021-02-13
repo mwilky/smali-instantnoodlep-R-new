@@ -386,45 +386,45 @@
 .method private synthetic lambda$showDetail$1()V
     .locals 4
 
+    new-instance v0, Landroid/view/ContextThemeWrapper;
+
+    iget-object v1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+
     invoke-static {}, Lcom/oneplus/util/ThemeColorUtils;->getCurrentTheme()I
 
-    move-result v0
+    move-result v2
 
-    const/4 v1, 0x1
+    const/4 v3, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v2, v3, :cond_0
 
-    sget v0, Lcom/android/systemui/R$style;->Oneplus_DND_Dialog_Dark:I
+    sget v2, Lcom/android/systemui/R$style;->oneplus_theme_dialog_dark:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/android/systemui/R$style;->Oneplus_DND_Dialog_Light:I
+    sget v2, Lcom/android/systemui/R$style;->oneplus_theme_dialog_light:I
 
     :goto_0
-    iget-object v2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
+    invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v2, v0}, Landroid/content/Context;->setTheme(I)V
+    new-instance v1, Lcom/android/settingslib/notification/EnableZenModeDialog;
 
-    new-instance v0, Lcom/android/settingslib/notification/EnableZenModeDialog;
+    invoke-direct {v1, v0}, Lcom/android/settingslib/notification/EnableZenModeDialog;-><init>(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
-
-    invoke-direct {v0, v2}, Lcom/android/settingslib/notification/EnableZenModeDialog;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/android/settingslib/notification/EnableZenModeDialog;->createDialog()Landroid/app/Dialog;
+    invoke-virtual {v1}, Lcom/android/settingslib/notification/EnableZenModeDialog;->createDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
-    move-result-object v2
+    move-result-object v1
 
-    const/16 v3, 0x7d9
+    const/16 v2, 0x7d9
 
-    invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
+    invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;Z)V
+    invoke-static {v0, v3}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;Z)V
 
     invoke-static {v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->registerDismissListener(Landroid/app/Dialog;)V
 

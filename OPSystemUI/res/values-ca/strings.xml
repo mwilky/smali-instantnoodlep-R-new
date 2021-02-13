@@ -1338,6 +1338,13 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="op_battery_saver_description_no_ga">"Per allargar la vida útil de la bateria, l'estalviador de bateria realitza les següents tasques:
 
 •Desactiva o restringeix l'activitat en segon pla i alguns efectes visuals"</string>
+    <string name="op_bitmoji_aod_download">Baixa</string>
+    <string name="op_bitmoji_aod_download_stickers_error">hi ha hagut algun problema</string>
+    <string name="op_bitmoji_aod_download_stickers_title">"S'està baixant el paquet d'adhesius Bitmoji..."</string>
+    <string name="op_bitmoji_connect_to_resume">Inicieu la sessió per continuar</string>
+    <string name="op_bitmoji_not_working_normally">El rellotge Bitmoji no està disponible</string>
+    <string name="op_bitmoji_ready_to_use">El rellotge Bitmoji està preparat!</string>
+    <string name="op_bitmoji_ready_to_use_go_check">"Feu-hi un cop d'ull!"</string>
     <string name="op_earphone_connect">"S'estan aparellant..."</string>
     <string name="op_earphone_connected_fail">"No s'han pogut aparellar. Podeu comprovar l'estat dels auriculars i del Bluetooth."</string>
     <string name="op_earphone_connected_success">"S'han aparellat. Toqueu per seguir configurant."</string>

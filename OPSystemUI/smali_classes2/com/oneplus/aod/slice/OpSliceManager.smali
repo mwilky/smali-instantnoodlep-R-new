@@ -1507,6 +1507,10 @@
 
     :cond_2
     :goto_0
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/aod/slice/OpSliceManager;->refresh(Z)V
+
     return-void
 .end method
 

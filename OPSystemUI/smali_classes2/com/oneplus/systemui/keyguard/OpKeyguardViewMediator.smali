@@ -719,6 +719,28 @@
     return-void
 .end method
 
+.method public onFinishedWakingUp()V
+    .locals 2
+
+    const-string v0, "KeyguardViewMediator#onFinishedWakingUp"
+
+    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    const-string v0, "OpKeyguardViewMediator"
+
+    const-string v1, "onFinishedWakingUp"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/systemui/keyguard/OpKeyguardViewMediator;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {p0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->dispatchFinishedWakingUp()V
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    return-void
+.end method
+
 .method public onWakeAndUnlocking(Z)V
     .locals 1
 

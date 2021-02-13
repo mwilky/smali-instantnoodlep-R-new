@@ -794,6 +794,8 @@
         <item>@xml/op_aod_clock_style_parsons</item>
         <item>50</item>
         <item>@xml/op_aod_clock_style_smart_space_default</item>
+        <item>12</item>
+        <item>@xml/op_aod_clock_style_bitmoji</item>
     </array>
     <array name="op_aod_screenlockbar_colors">
         <item>#ff3300ff</item>

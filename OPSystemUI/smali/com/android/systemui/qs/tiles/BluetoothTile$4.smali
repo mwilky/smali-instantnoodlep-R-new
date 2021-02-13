@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1900(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$2000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$2000(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$2100(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
 
     move-result v0
 
@@ -61,11 +61,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
+    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;->access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;)V
+    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;->access$1900(Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;)V
 
     :cond_0
     return-void
@@ -76,7 +76,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1500(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1600(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
+    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Z
 
     move-result p1
 
@@ -110,15 +110,15 @@
 
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
+    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;->access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;)V
+    invoke-static {p1}, Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;->access$1900(Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;)V
 
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/BluetoothTile$4;->this$0:Lcom/android/systemui/qs/tiles/BluetoothTile;
 
-    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1700(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
+    invoke-static {p0}, Lcom/android/systemui/qs/tiles/BluetoothTile;->access$1800(Lcom/android/systemui/qs/tiles/BluetoothTile;)Lcom/android/systemui/qs/tiles/BluetoothTile$BluetoothDetailAdapter;
 
     move-result-object p1
 

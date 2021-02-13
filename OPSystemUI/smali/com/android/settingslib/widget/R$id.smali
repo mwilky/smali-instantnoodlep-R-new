@@ -26,16 +26,16 @@
 
 .field public static final bar_views_container:I = 0x7f0b00ea
 
-.field public static final button1:I = 0x7f0b013e
+.field public static final button1:I = 0x7f0b013f
 
-.field public static final button2:I = 0x7f0b013f
+.field public static final button2:I = 0x7f0b0140
 
-.field public static final button3:I = 0x7f0b0140
+.field public static final button3:I = 0x7f0b0141
 
-.field public static final button4:I = 0x7f0b0141
+.field public static final button4:I = 0x7f0b0142
 
-.field public static final empty_view:I = 0x7f0b0234
+.field public static final empty_view:I = 0x7f0b0235
 
-.field public static final icon_view:I = 0x7f0b02e7
+.field public static final icon_view:I = 0x7f0b02e8
 
-.field public static final summary_container:I = 0x7f0b05fc
+.field public static final summary_container:I = 0x7f0b05fd
