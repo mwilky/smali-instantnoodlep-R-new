@@ -1,6 +1,6 @@
 .class public Landroidx/core/view/KeyEventDispatcher;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,23 +18,23 @@
 
 
 # static fields
-.field public static sActionBarFieldsFetched:Z = false
+.field private static sActionBarFieldsFetched:Z = false
 
-.field public static sActionBarOnMenuKeyMethod:Ljava/lang/reflect/Method; = null
+.field private static sActionBarOnMenuKeyMethod:Ljava/lang/reflect/Method; = null
 
-.field public static sDialogFieldsFetched:Z = false
+.field private static sDialogFieldsFetched:Z = false
 
-.field public static sDialogKeyListenerField:Ljava/lang/reflect/Field;
+.field private static sDialogKeyListenerField:Ljava/lang/reflect/Field;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public static actionBarOnMenuKeyEventPre28(Landroid/app/ActionBar;Landroid/view/KeyEvent;)Z
+.method private static actionBarOnMenuKeyEventPre28(Landroid/app/ActionBar;Landroid/view/KeyEvent;)Z
     .locals 6
 
     sget-boolean v0, Landroidx/core/view/KeyEventDispatcher;->sActionBarFieldsFetched:Z
@@ -107,7 +107,7 @@
     return v2
 .end method
 
-.method public static activitySuperDispatchKeyEventPre28(Landroid/app/Activity;Landroid/view/KeyEvent;)Z
+.method private static activitySuperDispatchKeyEventPre28(Landroid/app/Activity;Landroid/view/KeyEvent;)Z
     .locals 5
 
     invoke-virtual {p0}, Landroid/app/Activity;->onUserInteraction()V
@@ -190,7 +190,7 @@
     return p0
 .end method
 
-.method public static dialogSuperDispatchKeyEventPre28(Landroid/app/Dialog;Landroid/view/KeyEvent;)Z
+.method private static dialogSuperDispatchKeyEventPre28(Landroid/app/Dialog;Landroid/view/KeyEvent;)Z
     .locals 3
 
     invoke-static {p0}, Landroidx/core/view/KeyEventDispatcher;->getDialogKeyListenerPre28(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;
@@ -364,7 +364,7 @@
     return v0
 .end method
 
-.method public static getDialogKeyListenerPre28(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;
+.method private static getDialogKeyListenerPre28(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;
     .locals 3
 
     sget-boolean v0, Landroidx/core/view/KeyEventDispatcher;->sDialogFieldsFetched:Z

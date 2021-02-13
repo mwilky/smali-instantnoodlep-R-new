@@ -1,9 +1,9 @@
 .class public abstract Landroidx/versionedparcelable/CustomVersionedParcelable;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/r/a;
+.implements Landroidx/versionedparcelable/a;
 
 
 # annotations

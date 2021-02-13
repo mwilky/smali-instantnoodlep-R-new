@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/ILongScreenshotCallback$Stub;
 .super Landroid/os/Binder;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshotCallback;
@@ -24,13 +24,13 @@
 
 
 # static fields
-.field public static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.ILongScreenshotCallback"
+.field private static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.ILongScreenshotCallback"
 
-.field public static final TRANSACTION_isTopActivityDisplayCompat:I = 0x3
+.field static final TRANSACTION_isTopActivityDisplayCompat:I = 0x3
 
-.field public static final TRANSACTION_notifyMove:I = 0x2
+.field static final TRANSACTION_notifyMove:I = 0x2
 
-.field public static final TRANSACTION_stop:I = 0x1
+.field static final TRANSACTION_stop:I = 0x1
 
 
 # direct methods
@@ -175,6 +175,7 @@
 
     invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback;->notifyMove()V
 
+    :goto_0
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v0
@@ -184,7 +185,5 @@
 
     invoke-interface {p0}, Lcom/oneplus/longshot/ILongScreenshotCallback;->stop()V
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v0
+    goto :goto_0
 .end method

@@ -1,6 +1,6 @@
-.class public abstract Lcom/google/android/material/datepicker/PickerFragment;
+.class abstract Lcom/google/android/material/datepicker/PickerFragment;
 .super Landroidx/fragment/app/Fragment;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final onSelectionChangedListeners:Ljava/util/LinkedHashSet;
+.field protected final onSelectionChangedListeners:Ljava/util/LinkedHashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashSet<",
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public addOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
+.method addOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -62,7 +62,7 @@
     return p1
 .end method
 
-.method public clearOnSelectionChangedListeners()V
+.method clearOnSelectionChangedListeners()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->onSelectionChangedListeners:Ljava/util/LinkedHashSet;
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public abstract getDateSelector()Lcom/google/android/material/datepicker/DateSelector;
+.method abstract getDateSelector()Lcom/google/android/material/datepicker/DateSelector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -82,7 +82,7 @@
     .end annotation
 .end method
 
-.method public removeOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
+.method removeOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

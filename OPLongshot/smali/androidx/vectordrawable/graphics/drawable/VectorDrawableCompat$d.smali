@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
+.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;
 .super Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/graphics/Matrix;
+.field final a:Landroid/graphics/Matrix;
 
-.field public final b:Ljava/util/ArrayList;
+.field final b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -27,27 +27,27 @@
     .end annotation
 .end field
 
-.field public c:F
+.field c:F
 
-.field public d:F
+.field private d:F
 
-.field public e:F
+.field private e:F
 
-.field public f:F
+.field private f:F
 
-.field public g:F
+.field private g:F
 
-.field public h:F
+.field private h:F
 
-.field public i:F
+.field private i:F
 
-.field public final j:Landroid/graphics/Matrix;
+.field final j:Landroid/graphics/Matrix;
 
-.field public k:I
+.field k:I
 
-.field public l:[I
+.field private l:[I
 
-.field public m:Ljava/lang/String;
+.field private m:Ljava/lang/String;
 
 
 # direct methods
@@ -290,106 +290,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
-
-    invoke-virtual {v2}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
-.end method
-
-.method public b([I)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_0
-
-    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
-
-    invoke-virtual {v2, p1}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;->b([I)Z
-
-    move-result v2
-
-    or-int/2addr v1, v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public c(Landroid/content/res/Resources;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 1
-
-    sget-object v0, Lb/q/a/a/a;->b:[I
-
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p4}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->e(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
-
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
-.end method
-
-.method public final d()V
+.method private d()V
     .locals 4
 
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->j:Landroid/graphics/Matrix;
@@ -443,7 +344,7 @@
     return-void
 .end method
 
-.method public final e(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
+.method private e(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 3
 
     const/4 v0, 0x0
@@ -541,7 +442,106 @@
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->m:Ljava/lang/String;
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
+
+    invoke-virtual {v2}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+.end method
+
+.method public b([I)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_0
+
+    iget-object v2, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
+
+    invoke-virtual {v2, p1}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;->b([I)Z
+
+    move-result v2
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v1
+.end method
+
+.method public c(Landroid/content/res/Resources;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;)V
+    .locals 1
+
+    sget-object v0, Landroidx/vectordrawable/graphics/drawable/a;->b:[I
+
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1, p4}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->e(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
@@ -629,7 +629,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -646,7 +646,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->e:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -663,7 +663,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->c:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -680,7 +680,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->f:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -697,7 +697,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->g:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -714,7 +714,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->h:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void
@@ -731,7 +731,7 @@
 
     iput p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->i:F
 
-    invoke-virtual {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$d;->d()V
 
     :cond_0
     return-void

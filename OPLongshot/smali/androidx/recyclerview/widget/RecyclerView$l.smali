@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$l;
 .super Landroid/view/ViewGroup$MarginLayoutParams;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public a:Landroidx/recyclerview/widget/RecyclerView$y;
+.field a:Landroidx/recyclerview/widget/RecyclerView$y;
 
-.field public final b:Landroid/graphics/Rect;
+.field final b:Landroid/graphics/Rect;
 
-.field public c:Z
+.field c:Z
 
-.field public d:Z
+.field d:Z
 
 
 # direct methods

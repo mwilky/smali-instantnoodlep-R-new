@@ -1,6 +1,6 @@
-.class public final Landroidx/lifecycle/Lifecycling$1;
+.class final Landroidx/lifecycle/Lifecycling$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/GenericLifecycleObserver;
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lb/l/c;
+.field final synthetic a:Landroidx/lifecycle/c;
 
 
 # direct methods
-.method public constructor <init>(Lb/l/c;)V
+.method constructor <init>(Landroidx/lifecycle/c;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/lifecycle/Lifecycling$1;->a:Lb/l/c;
+    iput-object p1, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
-    .param p1    # Lb/l/e;
+    .param p1    # Landroidx/lifecycle/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -45,9 +45,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->a:Lb/l/c;
+    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/c;
 
-    invoke-interface {v0, p1, p2}, Lb/l/c;->onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/c;->onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

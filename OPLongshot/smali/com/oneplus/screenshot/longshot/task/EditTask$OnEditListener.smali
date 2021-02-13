@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/longshot/task/EditTask$OnEditListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

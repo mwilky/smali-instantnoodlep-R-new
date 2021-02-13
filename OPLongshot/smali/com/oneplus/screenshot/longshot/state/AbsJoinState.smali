@@ -1,21 +1,21 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/task/JoinTask$OnJoinListener;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.AbsJoinState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.AbsJoinState"
 
 
 # instance fields
-.field public mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+.field protected mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-.field public mJoinTask:Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.field protected mJoinTask:Lcom/oneplus/screenshot/longshot/task/JoinTask;
 
-.field public mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
+.field protected mRunnableCache:Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 
 
 # direct methods
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public abstract createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method protected abstract createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
 .end method
 
 .method public enter(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method public getErrorText()Ljava/lang/String;
+.method protected getErrorText()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
@@ -123,7 +123,7 @@
     return-object v0
 .end method
 
-.method public getFailedText()Ljava/lang/String;
+.method protected getFailedText()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Features;->SHOW_JOIN_ERROR:Lcom/oneplus/screenshot/longshot/util/Features;
@@ -148,7 +148,7 @@
     return-object v0
 .end method
 
-.method public getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method protected getStateOnFailed()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
@@ -170,7 +170,7 @@
     return-object v0
 .end method
 
-.method public getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method protected getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->MAIN:Lcom/oneplus/screenshot/longshot/state/LongshotState;
@@ -178,7 +178,7 @@
     return-object v0
 .end method
 
-.method public abstract getSuccessText()Ljava/lang/String;
+.method protected abstract getSuccessText()Ljava/lang/String;
 .end method
 
 .method public onJoinFailed()V
@@ -265,11 +265,11 @@
     return-void
 .end method
 
-.method public prepareSuccess()V
+.method protected prepareSuccess()V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract updateIndex()V
+.method protected abstract updateIndex()V
 .end method

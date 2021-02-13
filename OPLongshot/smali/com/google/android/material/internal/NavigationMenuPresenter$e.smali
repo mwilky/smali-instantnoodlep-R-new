@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/NavigationMenuPresenter$e;
+.class Lcom/google/android/material/internal/NavigationMenuPresenter$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/internal/NavigationMenuPresenter$d;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public final a:I
+.field private final a:I
 
-.field public final b:I
+.field private final b:I
 
 
 # direct methods

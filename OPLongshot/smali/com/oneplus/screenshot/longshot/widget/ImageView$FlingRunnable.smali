@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
+.class Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "FlingRunnable"
 .end annotation
 
 
 # instance fields
-.field public mLastFlingY:I
+.field private mLastFlingY:I
 
-.field public mScroller:Landroid/widget/Scroller;
+.field private mScroller:Landroid/widget/Scroller;
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/widget/ImageView;
 
 
 # direct methods
@@ -46,7 +46,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;Z)V
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/widget/ImageView$FlingRunnable;->endFling(Z)V

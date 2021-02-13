@@ -109,7 +109,6 @@
     <item type="id" name="content_view" />
     <item type="id" name="control_empty_space1" />
     <item type="id" name="coordinator" />
-    <item type="id" name="coui_global_theme" />
     <item type="id" name="customPanel" />
     <item type="id" name="datePicker" />
     <item type="id" name="date_picker_actions" />

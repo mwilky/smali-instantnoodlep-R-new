@@ -1,6 +1,6 @@
 .class public Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field private final a:Ljava/lang/Object;
 
 
 # direct methods
@@ -32,9 +32,10 @@
 
     invoke-direct {v0, p0}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19;-><init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
 
+    :goto_0
     iput-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a:Ljava/lang/Object;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     const/16 v1, 0x10
@@ -45,16 +46,14 @@
 
     invoke-direct {v0, p0}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;-><init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
 
-    iput-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a:Ljava/lang/Object;
-
     goto :goto_0
 
     :cond_1
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a:Ljava/lang/Object;
+    goto :goto_0
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
@@ -70,7 +69,7 @@
 
 
 # virtual methods
-.method public a(I)Lb/g/l/y/d;
+.method public a(I)Landroidx/core/view/accessibility/d;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -91,7 +90,7 @@
             "Ljava/lang/String;",
             "I)",
             "Ljava/util/List<",
-            "Lb/g/l/y/d;",
+            "Landroidx/core/view/accessibility/d;",
             ">;"
         }
     .end annotation
@@ -101,7 +100,7 @@
     return-object p1
 .end method
 
-.method public c(I)Lb/g/l/y/d;
+.method public c(I)Landroidx/core/view/accessibility/d;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

@@ -1,6 +1,6 @@
 .class public Landroidx/drawerlayout/widget/DrawerLayout$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -16,19 +16,19 @@
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:I
+.field b:I
 
-.field public c:I
+.field c:I
 
-.field public d:I
+.field d:I
 
-.field public e:I
+.field e:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState$1;

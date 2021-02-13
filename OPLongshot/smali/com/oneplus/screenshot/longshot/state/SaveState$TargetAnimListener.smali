@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/state/SaveState$TargetAnimListener;
+.class Lcom/oneplus/screenshot/longshot/state/SaveState$TargetAnimListener;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "TargetAnimListener"
 .end annotation
 
 
 # instance fields
-.field public mDecor:Landroid/view/View;
+.field private mDecor:Landroid/view/View;
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/SaveState;
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$a;
+.class Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton$a;
 .super Landroid/view/ViewOutlineProvider;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/SwitchFloatingActionButton;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V

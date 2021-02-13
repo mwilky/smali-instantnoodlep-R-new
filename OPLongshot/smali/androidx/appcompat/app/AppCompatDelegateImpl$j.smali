@@ -1,6 +1,6 @@
-.class public final Landroidx/appcompat/app/AppCompatDelegateImpl$j;
+.class final Landroidx/appcompat/app/AppCompatDelegateImpl$j;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter$a;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x12
     name = "j"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$j;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;

@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/AppComponentFactory;
 .super Landroid/app/AppComponentFactory;
-.source "SourceFile"
+.source ""
 
 
 # annotations

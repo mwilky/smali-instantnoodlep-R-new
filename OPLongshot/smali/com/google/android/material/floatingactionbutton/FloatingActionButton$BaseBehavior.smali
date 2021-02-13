@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton$BaseBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xc
     name = "BaseBehavior"
 .end annotation
 
@@ -25,15 +25,15 @@
 
 
 # static fields
-.field public static final AUTO_HIDE_DEFAULT:Z = true
+.field private static final AUTO_HIDE_DEFAULT:Z = true
 
 
 # instance fields
-.field public autoHideEnabled:Z
+.field private autoHideEnabled:Z
 
-.field public internalAutoHideListener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
+.field private internalAutoHideListener:Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
 
-.field public tmpRect:Landroid/graphics/Rect;
+.field private tmpRect:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -54,13 +54,13 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lc/a/b/b/l;->FloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lb/a/b/a/l;->FloatingActionButton_Behavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/l;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lb/a/b/a/l;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x1
 
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public static isBottomSheet(Landroid/view/View;)Z
+.method private static isBottomSheet(Landroid/view/View;)Z
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;

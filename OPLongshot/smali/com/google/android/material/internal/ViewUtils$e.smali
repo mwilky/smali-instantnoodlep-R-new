@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/internal/ViewUtils$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/View;Lb/g/l/x;Lcom/google/android/material/internal/ViewUtils$f;)Lb/g/l/x;
+.method public abstract a(Landroid/view/View;Landroidx/core/view/x;Lcom/google/android/material/internal/ViewUtils$f;)Landroidx/core/view/x;
 .end method

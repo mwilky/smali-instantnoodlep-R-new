@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/TextInputTimePickerView$b;
+.class Lcom/google/android/material/picker/TextInputTimePickerView$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnFocusChangeListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
+.field final synthetic a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
+.method constructor <init>(Lcom/google/android/material/picker/TextInputTimePickerView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TextInputTimePickerView$b;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
@@ -61,7 +61,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/TextInputTimePickerView$b;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
-    sget v2, Lc/a/b/b/k;->OPTextAppearance_Material_TimePicker_InputFieldUnActive:I
+    sget v2, Lb/a/b/a/k;->OPTextAppearance_Material_TimePicker_InputFieldUnActive:I
 
     invoke-static {p2}, Lcom/google/android/material/picker/TextInputTimePickerView;->a(Lcom/google/android/material/picker/TextInputTimePickerView;)Landroid/widget/EditText;
 
@@ -71,7 +71,7 @@
 
     iget-object p2, p0, Lcom/google/android/material/picker/TextInputTimePickerView$b;->a:Lcom/google/android/material/picker/TextInputTimePickerView;
 
-    sget v2, Lc/a/b/b/k;->OPTextAppearance_Material_TimePicker_InputField:I
+    sget v2, Lb/a/b/a/k;->OPTextAppearance_Material_TimePicker_InputField:I
 
     invoke-static {p2}, Lcom/google/android/material/picker/TextInputTimePickerView;->b(Lcom/google/android/material/picker/TextInputTimePickerView;)Landroid/widget/EditText;
 

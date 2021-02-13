@@ -1,10 +1,10 @@
 .class public abstract Landroidx/recyclerview/widget/SortedList$Callback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
-.implements Lb/n/d/i;
+.implements Landroidx/recyclerview/widget/i;
 
 
 # annotations
@@ -25,7 +25,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
         "TT2;>;",
-        "Lb/n/d/i;"
+        "Landroidx/recyclerview/widget/i;"
     }
 .end annotation
 

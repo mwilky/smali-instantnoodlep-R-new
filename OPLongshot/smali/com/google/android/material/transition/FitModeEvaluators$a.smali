@@ -1,9 +1,9 @@
-.class public final Lcom/google/android/material/transition/FitModeEvaluators$a;
+.class final Lcom/google/android/material/transition/FitModeEvaluators$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/a/b/b/k0/c;
+.implements Lcom/google/android/material/transition/c;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +28,12 @@
 
 
 # virtual methods
-.method public a(Landroid/graphics/RectF;FLc/a/b/b/k0/d;)V
+.method public a(Landroid/graphics/RectF;FLcom/google/android/material/transition/d;)V
     .locals 1
 
-    iget v0, p3, Lc/a/b/b/k0/d;->f:F
+    iget v0, p3, Lcom/google/android/material/transition/d;->f:F
 
-    iget p3, p3, Lc/a/b/b/k0/d;->d:F
+    iget p3, p3, Lcom/google/android/material/transition/d;->d:F
 
     sub-float/2addr v0, p3
 
@@ -52,12 +52,12 @@
     return-void
 .end method
 
-.method public b(Lc/a/b/b/k0/d;)Z
+.method public b(Lcom/google/android/material/transition/d;)Z
     .locals 1
 
-    iget v0, p1, Lc/a/b/b/k0/d;->d:F
+    iget v0, p1, Lcom/google/android/material/transition/d;->d:F
 
-    iget p1, p1, Lc/a/b/b/k0/d;->f:F
+    iget p1, p1, Lcom/google/android/material/transition/d;->f:F
 
     cmpl-float p1, v0, p1
 
@@ -74,7 +74,7 @@
     return p1
 .end method
 
-.method public c(FFFFFFF)Lc/a/b/b/k0/d;
+.method public c(FFFFFFF)Lcom/google/android/material/transition/d;
     .locals 2
 
     invoke-static {p4, p6, p2, p3, p1}, Lcom/google/android/material/transition/TransitionUtils;->lerp(FFFFF)F
@@ -89,7 +89,7 @@
 
     mul-float/2addr p7, p3
 
-    new-instance v1, Lc/a/b/b/k0/d;
+    new-instance v1, Lcom/google/android/material/transition/d;
 
     move-object p1, v1
 
@@ -97,7 +97,7 @@
 
     move p6, v0
 
-    invoke-direct/range {p1 .. p7}, Lc/a/b/b/k0/d;-><init>(FFFFFF)V
+    invoke-direct/range {p1 .. p7}, Lcom/google/android/material/transition/d;-><init>(FFFFFF)V
 
     return-object v1
 .end method

@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -33,11 +33,11 @@
 
 
 # instance fields
-.field public mLayoutState:Landroid/os/Parcelable;
+.field mLayoutState:Landroid/os/Parcelable;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$SavedState$1;
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcelable;)V
+.method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
@@ -85,7 +85,7 @@
 
 
 # virtual methods
-.method public copyFrom(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
+.method copyFrom(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
     .locals 0
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;

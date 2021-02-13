@@ -1,6 +1,6 @@
-.class public final Landroidx/core/provider/FontsContractCompat$3;
+.class final Landroidx/core/provider/FontsContractCompat$3;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
@@ -8,11 +8,11 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Lb/g/i/a;Lb/g/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field public final synthetic val$id:Ljava/lang/String;
+.field final synthetic val$id:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/provider/FontsContractCompat$3;->val$id:Ljava/lang/String;

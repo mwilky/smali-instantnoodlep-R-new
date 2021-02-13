@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/SupportMenuInflater$a;
+.class Landroidx/appcompat/view/SupportMenuInflater$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "a"
 .end annotation
 
 
 # static fields
-.field public static final c:[Ljava/lang/Class;
+.field private static final c:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -30,13 +30,13 @@
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field private a:Ljava/lang/Object;
 
-.field public b:Ljava/lang/reflect/Method;
+.field private b:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/AnimationUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
@@ -33,21 +33,21 @@
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Lb/k/a/a/b;
+    new-instance v0, La/f/a/a/b;
 
-    invoke-direct {v0}, Lb/k/a/a/b;-><init>()V
+    invoke-direct {v0}, La/f/a/a/b;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Lb/k/a/a/a;
+    new-instance v0, La/f/a/a/a;
 
-    invoke-direct {v0}, Lb/k/a/a/a;-><init>()V
+    invoke-direct {v0}, La/f/a/a/a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_LINEAR_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    new-instance v0, Lb/k/a/a/c;
+    new-instance v0, La/f/a/a/c;
 
-    invoke-direct {v0}, Lb/k/a/a/c;-><init>()V
+    invoke-direct {v0}, La/f/a/a/c;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

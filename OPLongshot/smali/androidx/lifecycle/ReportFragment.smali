@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/ReportFragment;
 .super Landroid/app/Fragment;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # static fields
-.field public static final REPORT_FRAGMENT_TAG:Ljava/lang/String; = "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
+.field private static final REPORT_FRAGMENT_TAG:Ljava/lang/String; = "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
 
 
 # instance fields
-.field public mProcessListener:Landroidx/lifecycle/ReportFragment$a;
+.field private mProcessListener:Landroidx/lifecycle/ReportFragment$a;
 
 
 # direct methods
@@ -41,38 +41,38 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lb/l/g;
+    instance-of v1, v0, Landroidx/lifecycle/g;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lb/l/g;
+    check-cast v0, Landroidx/lifecycle/g;
 
-    invoke-interface {v0}, Lb/l/g;->getLifecycle()Lb/l/f;
+    invoke-interface {v0}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lb/l/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 
     :cond_0
-    instance-of v1, v0, Lb/l/e;
+    instance-of v1, v0, Landroidx/lifecycle/e;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lb/l/e;
+    check-cast v0, Landroidx/lifecycle/e;
 
-    invoke-interface {v0}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    instance-of v1, v0, Lb/l/f;
+    instance-of v1, v0, Landroidx/lifecycle/f;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lb/l/f;
+    check-cast v0, Landroidx/lifecycle/f;
 
-    invoke-virtual {v0, p1}, Lb/l/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/f;->i(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     return-void
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public static get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
+.method static get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
     .locals 1
 
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method public setProcessListener(Landroidx/lifecycle/ReportFragment$a;)V
+.method setProcessListener(Landroidx/lifecycle/ReportFragment$a;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/ReportFragment;->mProcessListener:Landroidx/lifecycle/ReportFragment$a;

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xc
     name = "SavedState"
 .end annotation
 
@@ -27,17 +27,17 @@
 
 
 # instance fields
-.field public final a:I
+.field private final a:I
 
-.field public final b:I
+.field private final b:I
 
-.field public final c:Z
+.field private final c:Z
 
-.field public final d:I
+.field private final d:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate$SavedState$1;
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method private constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/picker/TimePicker$a;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/picker/TimePicker$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate$SavedState;-><init>(Landroid/os/Parcel;)V

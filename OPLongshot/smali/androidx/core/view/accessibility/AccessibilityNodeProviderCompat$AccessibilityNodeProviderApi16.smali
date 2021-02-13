@@ -1,6 +1,6 @@
-.class public Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
+.class Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
 .super Landroid/view/accessibility/AccessibilityNodeProvider;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,17 +13,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "AccessibilityNodeProviderApi16"
 .end annotation
 
 
 # instance fields
-.field public final mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
+.field final mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
+.method constructor <init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeProvider;-><init>()V
@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a(I)Lb/g/l/y/d;
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->a(I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
@@ -51,7 +51,7 @@
     return-object p1
 
     :cond_0
-    invoke-virtual {p1}, Lb/g/l/y/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {p1}, Landroidx/core/view/accessibility/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
 
@@ -101,9 +101,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lb/g/l/y/d;
+    check-cast v2, Landroidx/core/view/accessibility/d;
 
-    invoke-virtual {v2}, Lb/g/l/y/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {v2}, Landroidx/core/view/accessibility/d;->v0()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v2
 

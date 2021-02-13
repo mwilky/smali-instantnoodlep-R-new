@@ -1,6 +1,6 @@
 .class public abstract Landroidx/core/view/ActionProvider;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "ActionProvider(support)"
+.field private static final TAG:Ljava/lang/String; = "ActionProvider(support)"
 
 
 # instance fields
-.field public final mContext:Landroid/content/Context;
+.field private final mContext:Landroid/content/Context;
 
-.field public mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
+.field private mSubUiVisibilityListener:Landroidx/core/view/ActionProvider$SubUiVisibilityListener;
 
-.field public mVisibilityListener:Landroidx/core/view/ActionProvider$a;
+.field private mVisibilityListener:Landroidx/core/view/ActionProvider$a;
 
 
 # direct methods

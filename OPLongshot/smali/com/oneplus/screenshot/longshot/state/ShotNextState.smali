@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotNextState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.ShotNextState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.ShotNextState"
 
 
 # instance fields
-.field public mBackgroundHandler:Landroid/os/Handler;
+.field private mBackgroundHandler:Landroid/os/Handler;
 
-.field public mBitmap:Landroid/graphics/Bitmap;
+.field private mBitmap:Landroid/graphics/Bitmap;
 
-.field public mCaptureSuccess:Ljava/lang/Runnable;
+.field private mCaptureSuccess:Ljava/lang/Runnable;
 
-.field public mGenBitmapCache:Ljava/lang/Runnable;
+.field private mGenBitmapCache:Ljava/lang/Runnable;
 
-.field public mHandler:Landroid/os/Handler;
+.field private mHandler:Landroid/os/Handler;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     new-instance p1, Landroid/os/Handler;
 
-    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object p2
 
@@ -73,46 +73,28 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
-
     goto :goto_0
 
     :cond_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_4:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
     goto :goto_0
 
     :cond_1
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_3:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
-
     goto :goto_0
 
     :cond_2
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->OFFSET_SHOT_NEXT_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mOffset:I
 
-    :goto_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->CAPTURE_NEXT_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
@@ -124,7 +106,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/graphics/Bitmap;
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/graphics/Bitmap;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mBitmap:Landroid/graphics/Bitmap;
@@ -132,7 +114,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Ljava/lang/Runnable;
+.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mCaptureSuccess:Ljava/lang/Runnable;
@@ -140,7 +122,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/os/Handler;
+.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/state/ShotNextState;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mHandler:Landroid/os/Handler;
@@ -150,7 +132,7 @@
 
 
 # virtual methods
-.method public getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method protected getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 2
 
     sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->stitchViewServiceUnsupportedCase:I
@@ -169,7 +151,7 @@
     return-object v0
 .end method
 
-.method public getTopBase()I
+.method protected getTopBase()I
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsShotState;->mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
@@ -212,9 +194,10 @@
 
     const-string v0, "unsupported blockScreenByViewVisibility"
 
+    :goto_0
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->isBlockLongshotWithMessage()Z
@@ -231,10 +214,10 @@
 
     const-string v0, "blocked longshot: blockLongshotWithMessage"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mBitmap:Landroid/graphics/Bitmap;
 
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mBackgroundHandler:Landroid/os/Handler;
@@ -246,7 +229,7 @@
     return-void
 .end method
 
-.method public updateState()V
+.method protected updateState()V
     .locals 6
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J

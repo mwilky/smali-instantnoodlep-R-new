@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;
+.class Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveNext;
 .super Lcom/oneplus/screenshot/longshot/util/MovePoint;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "MoveNext"
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
 
 # direct methods

@@ -1,18 +1,18 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/reject/Reject;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Reject"
+.field private static final TAG:Ljava/lang/String; = "Reject"
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void

@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$c;
+.class Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/widget/PopupWindow$OnDismissListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.field final synthetic a:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-.field public final synthetic b:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
+.field final synthetic b:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+.method constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup$c;->b:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;

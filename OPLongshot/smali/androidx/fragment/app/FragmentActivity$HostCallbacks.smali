@@ -1,10 +1,10 @@
-.class public Landroidx/fragment/app/FragmentActivity$HostCallbacks;
+.class Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 .super Landroidx/fragment/app/FragmentHostCallback;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/l/k;
-.implements Lb/a/c;
+.implements Landroidx/lifecycle/k;
+.implements Landroidx/activity/c;
 
 
 # annotations
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "HostCallbacks"
 .end annotation
 
@@ -22,14 +22,14 @@
         "Landroidx/fragment/app/FragmentHostCallback<",
         "Landroidx/fragment/app/FragmentActivity;",
         ">;",
-        "Lb/l/k;",
-        "Lb/a/c;"
+        "Landroidx/lifecycle/k;",
+        "Landroidx/activity/c;"
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/fragment/app/FragmentActivity;
+.field final synthetic this$0:Landroidx/fragment/app/FragmentActivity;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    iget-object v0, v0, Landroidx/fragment/app/FragmentActivity;->g:Lb/l/f;
+    iget-object v0, v0, Landroidx/fragment/app/FragmentActivity;->g:Landroidx/lifecycle/f;
 
     return-object v0
 .end method
@@ -71,14 +71,14 @@
     return-object v0
 .end method
 
-.method public getViewModelStore()Lb/l/j;
+.method public getViewModelStore()Landroidx/lifecycle/j;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Lb/l/j;
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle/j;
 
     move-result-object v0
 
@@ -298,7 +298,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
 
-    invoke-static {v0, p1}, Landroidx/core/app/ActivityCompat;->k(Landroid/app/Activity;Ljava/lang/String;)Z
+    invoke-static {v0, p1}, Landroidx/core/app/ActivityCompat;->i(Landroid/app/Activity;Ljava/lang/String;)Z
 
     move-result p1
 

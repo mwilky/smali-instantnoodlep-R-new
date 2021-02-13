@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/TextDrawableHelper$a;
+.class Lcom/google/android/material/internal/TextDrawableHelper$a;
 .super Lcom/google/android/material/resources/TextAppearanceFontCallback;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/internal/TextDrawableHelper;
+.field final synthetic a:Lcom/google/android/material/internal/TextDrawableHelper;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/TextDrawableHelper;)V
+.method constructor <init>(Lcom/google/android/material/internal/TextDrawableHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/TextDrawableHelper$a;->a:Lcom/google/android/material/internal/TextDrawableHelper;

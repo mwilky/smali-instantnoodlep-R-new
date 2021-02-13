@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActionMenuPresenter$b;
+.class Landroidx/appcompat/widget/ActionMenuPresenter$b;
 .super Landroidx/appcompat/view/menu/ActionMenuItemView$b;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;)V
+.method constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$b;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -40,7 +40,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->getPopup()Lb/c/m/d/c;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->getPopup()Landroidx/appcompat/view/menu/c;
 
     move-result-object v0
 

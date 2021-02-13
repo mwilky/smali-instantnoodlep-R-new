@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/CoreComponentFactory;
 .super Landroid/app/AppComponentFactory;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static checkCompatWrapper(Ljava/lang/Object;)Ljava/lang/Object;
+.method static checkCompatWrapper(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

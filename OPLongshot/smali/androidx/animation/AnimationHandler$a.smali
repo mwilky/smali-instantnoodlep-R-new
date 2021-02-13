@@ -1,6 +1,6 @@
-.class public Landroidx/animation/AnimationHandler$a;
+.class Landroidx/animation/AnimationHandler$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroidx/collection/SimpleArrayMap;
+.field final a:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field public final b:Ljava/util/ArrayList;
+.field final b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -36,11 +36,11 @@
     .end annotation
 .end field
 
-.field public c:Z
+.field c:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

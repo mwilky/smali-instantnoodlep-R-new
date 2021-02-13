@@ -1,6 +1,6 @@
-.class public Landroidx/fragment/app/FragmentTabHost$SavedState;
+.class Landroidx/fragment/app/FragmentTabHost$SavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/fragment/app/FragmentTabHost$SavedState$1;
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V

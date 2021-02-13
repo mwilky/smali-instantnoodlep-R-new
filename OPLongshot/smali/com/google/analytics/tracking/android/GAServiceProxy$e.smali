@@ -1,6 +1,6 @@
-.class public Lcom/google/analytics/tracking/android/GAServiceProxy$e;
+.class Lcom/google/analytics/tracking/android/GAServiceProxy$e;
 .super Ljava/util/TimerTask;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
+.field final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
+.method private constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$e;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;Lcom/google/analytics/tracking/android/GAServiceProxy$a;)V
+.method synthetic constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;Lcom/google/analytics/tracking/android/GAServiceProxy$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/analytics/tracking/android/GAServiceProxy$e;-><init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V

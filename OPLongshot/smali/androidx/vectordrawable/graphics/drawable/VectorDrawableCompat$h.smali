@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$h;
+.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$h;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,35 +9,35 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "h"
 .end annotation
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;
+.field b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$g;
 
-.field public c:Landroid/content/res/ColorStateList;
+.field c:Landroid/content/res/ColorStateList;
 
-.field public d:Landroid/graphics/PorterDuff$Mode;
+.field d:Landroid/graphics/PorterDuff$Mode;
 
-.field public e:Z
+.field e:Z
 
-.field public f:Landroid/graphics/Bitmap;
+.field f:Landroid/graphics/Bitmap;
 
-.field public g:Landroid/content/res/ColorStateList;
+.field g:Landroid/content/res/ColorStateList;
 
-.field public h:Landroid/graphics/PorterDuff$Mode;
+.field h:Landroid/graphics/PorterDuff$Mode;
 
-.field public i:I
+.field i:I
 
-.field public j:Z
+.field j:Z
 
-.field public k:Z
+.field k:Z
 
-.field public l:Landroid/graphics/Paint;
+.field l:Landroid/graphics/Paint;
 
 
 # direct methods

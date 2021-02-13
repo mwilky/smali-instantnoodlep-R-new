@@ -1,9 +1,9 @@
-.class public Lcom/oneplus/loading/LoadingAsyncTask$b;
+.class Lcom/oneplus/loading/LoadingAsyncTask$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/b/e/a$d;
+.implements Lcom/oneplus/loading/a$d;
 
 
 # annotations
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Object;
+.field final synthetic a:Ljava/lang/Object;
 
-.field public final synthetic b:Lcom/oneplus/loading/LoadingAsyncTask;
+.field final synthetic b:Lcom/oneplus/loading/LoadingAsyncTask;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/loading/LoadingAsyncTask;Ljava/lang/Object;)V
+.method constructor <init>(Lcom/oneplus/loading/LoadingAsyncTask;Ljava/lang/Object;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/loading/LoadingAsyncTask$b;->b:Lcom/oneplus/loading/LoadingAsyncTask;

@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/loading/DialogLoadingAsyncTask;
 .super Lcom/oneplus/loading/LoadingAsyncTask;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field public mDialog:Landroid/app/Dialog;
+.field private mDialog:Landroid/app/Dialog;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public hideProgree(Ljava/lang/Object;)V
+.method protected hideProgree(Ljava/lang/Object;)V
     .locals 0
 
     iget-object p1, p0, Lcom/oneplus/loading/DialogLoadingAsyncTask;->mDialog:Landroid/app/Dialog;
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public showProgree()Ljava/lang/Object;
+.method protected showProgree()Ljava/lang/Object;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/loading/DialogLoadingAsyncTask;->mDialog:Landroid/app/Dialog;

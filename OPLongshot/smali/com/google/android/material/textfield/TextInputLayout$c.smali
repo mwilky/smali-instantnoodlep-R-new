@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/textfield/TextInputLayout$c;
+.class Lcom/google/android/material/textfield/TextInputLayout$c;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/CharSequence;
+.field final synthetic a:Ljava/lang/CharSequence;
 
-.field public final synthetic b:Lcom/google/android/material/textfield/TextInputLayout;
+.field final synthetic b:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Ljava/lang/CharSequence;)V
+.method constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Ljava/lang/CharSequence;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$c;->b:Lcom/google/android/material/textfield/TextInputLayout;

@@ -1,6 +1,6 @@
 .class public final Landroidx/core/widget/TextViewCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -134,7 +134,7 @@
     return v0
 .end method
 
-.method public static d(Landroid/text/TextDirectionHeuristic;)I
+.method private static d(Landroid/text/TextDirectionHeuristic;)I
     .locals 2
     .param p0    # Landroid/text/TextDirectionHeuristic;
         .annotation build Landroidx/annotation/NonNull;
@@ -217,7 +217,7 @@
     return v1
 .end method
 
-.method public static e(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
+.method private static e(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
     .locals 4
     .param p0    # Landroid/widget/TextView;
         .annotation build Landroidx/annotation/NonNull;
@@ -471,13 +471,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lb/g/m/i;
+    instance-of v0, p0, Landroidx/core/widget/i;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Lb/g/m/i;
+    check-cast p0, Landroidx/core/widget/i;
 
-    invoke-interface {p0, p1}, Lb/g/m/i;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p0, p1}, Landroidx/core/widget/i;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     :goto_0
@@ -508,13 +508,13 @@
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lb/g/m/i;
+    instance-of v0, p0, Landroidx/core/widget/i;
 
     if-eqz v0, :cond_1
 
-    check-cast p0, Lb/g/m/i;
+    check-cast p0, Landroidx/core/widget/i;
 
-    invoke-interface {p0, p1}, Lb/g/m/i;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p0, p1}, Landroidx/core/widget/i;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_1
     :goto_0
@@ -825,9 +825,10 @@
 
     move-result-object p1
 
+    :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-static {p0}, Landroidx/core/widget/TextViewCompat;->f(Landroid/widget/TextView;)Landroidx/core/text/PrecomputedTextCompat$a;
@@ -844,9 +845,9 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    goto :goto_0
 
-    :goto_0
+    :goto_1
     return-void
 
     :cond_1

@@ -1,6 +1,6 @@
-.class public Landroidx/animation/Keyframe$ObjectKeyframe;
+.class Landroidx/animation/Keyframe$ObjectKeyframe;
 .super Landroidx/animation/Keyframe;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "ObjectKeyframe"
 .end annotation
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field public mValue:Ljava/lang/Object;
+.field mValue:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method public constructor <init>(FLjava/lang/Object;)V
+.method constructor <init>(FLjava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -116,11 +116,11 @@
 
     iput-boolean v1, v0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z
 
-    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
+    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe;->setInterpolator(Lb/b/d;)V
+    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe;->setInterpolator(Landroidx/animation/d;)V
 
     return-object v0
 .end method

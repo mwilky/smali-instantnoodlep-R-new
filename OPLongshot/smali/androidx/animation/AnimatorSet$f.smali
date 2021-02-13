@@ -1,6 +1,6 @@
-.class public Landroidx/animation/AnimatorSet$f;
+.class Landroidx/animation/AnimatorSet$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public a:J
+.field private a:J
 
-.field public b:Z
+.field private b:Z
 
-.field public final synthetic c:Landroidx/animation/AnimatorSet;
+.field final synthetic c:Landroidx/animation/AnimatorSet;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/animation/AnimatorSet;)V
+.method constructor <init>(Landroidx/animation/AnimatorSet;)V
     .locals 2
 
     iput-object p1, p0, Landroidx/animation/AnimatorSet$f;->c:Landroidx/animation/AnimatorSet;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a()J
+.method a()J
     .locals 2
 
     iget-wide v0, p0, Landroidx/animation/AnimatorSet$f;->a:J
@@ -51,7 +51,7 @@
     return-wide v0
 .end method
 
-.method public b()J
+.method b()J
     .locals 4
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet$f;->c:Landroidx/animation/AnimatorSet;
@@ -82,7 +82,7 @@
     return-wide v0
 .end method
 
-.method public c()Z
+.method c()Z
     .locals 4
 
     iget-wide v0, p0, Landroidx/animation/AnimatorSet$f;->a:J
@@ -104,7 +104,7 @@
     return v0
 .end method
 
-.method public d()V
+.method d()V
     .locals 2
 
     const-wide/16 v0, -0x1
@@ -118,7 +118,7 @@
     return-void
 .end method
 
-.method public e(Z)V
+.method e(Z)V
     .locals 4
 
     if-eqz p1, :cond_1

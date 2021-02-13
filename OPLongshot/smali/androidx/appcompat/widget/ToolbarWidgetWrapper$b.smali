@@ -1,36 +1,36 @@
-.class public Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;
-.super Lb/g/l/v;
-.source "SourceFile"
+.class Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;
+.super Landroidx/core/view/v;
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Lb/g/l/t;
+    value = Landroidx/appcompat/widget/ToolbarWidgetWrapper;->setupAnimatorToVisibility(IJ)Landroidx/core/view/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public a:Z
+.field private a:Z
 
-.field public final synthetic b:I
+.field final synthetic b:I
 
-.field public final synthetic c:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
+.field final synthetic c:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;I)V
+.method constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;I)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;->c:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iput p2, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$b;->b:I
 
-    invoke-direct {p0}, Lb/g/l/v;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/v;-><init>()V
 
     const/4 p1, 0x0
 

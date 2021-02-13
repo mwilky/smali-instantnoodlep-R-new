@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/core/util/Predicate;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

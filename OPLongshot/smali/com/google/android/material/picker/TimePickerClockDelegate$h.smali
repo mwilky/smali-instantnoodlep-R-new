@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/TimePickerClockDelegate$h;
+.class Lcom/google/android/material/picker/TimePickerClockDelegate$h;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -8,21 +8,21 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->M()V
+    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->N()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -45,7 +45,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->H(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/RadialTimePickerView;
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->I(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/RadialTimePickerView;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->I(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/RelativeLayout;
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->J(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/RelativeLayout;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->G(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
+    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->H(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->K(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/View;
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->L(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/view/View;
 
     move-result-object p1
 
@@ -117,11 +117,11 @@
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->F(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+    invoke-static {p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->G(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$h;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->G(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
+    invoke-static {p1, v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->H(Lcom/google/android/material/picker/TimePickerClockDelegate;Z)Z
 
     return-void
 .end method

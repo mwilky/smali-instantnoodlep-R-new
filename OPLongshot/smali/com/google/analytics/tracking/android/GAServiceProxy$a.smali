@@ -1,24 +1,24 @@
-.class public Lcom/google/analytics/tracking/android/GAServiceProxy$a;
+.class Lcom/google/analytics/tracking/android/GAServiceProxy$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/a/a/c/a/h;
+.implements Lcom/google/analytics/tracking/android/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/analytics/tracking/android/GAServiceProxy;-><init>(Landroid/content/Context;Lc/a/a/c/a/e;Lc/a/a/c/a/c;Lc/a/a/c/a/p;)V
+    value = Lcom/google/analytics/tracking/android/GAServiceProxy;-><init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/e;Lcom/google/analytics/tracking/android/c;Lcom/google/analytics/tracking/android/p;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
+.method constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

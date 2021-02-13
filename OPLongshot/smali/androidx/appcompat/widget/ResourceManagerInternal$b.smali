@@ -1,6 +1,6 @@
-.class public interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$b;
+.class interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x60a
     name = "b"
 .end annotation
 

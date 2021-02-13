@@ -1,6 +1,6 @@
 .class public final Landroidx/loader/content/Loader$a;
 .super Landroid/database/ContentObserver;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/loader/content/Loader;
+.field final synthetic a:Landroidx/loader/content/Loader;
 
 
 # direct methods

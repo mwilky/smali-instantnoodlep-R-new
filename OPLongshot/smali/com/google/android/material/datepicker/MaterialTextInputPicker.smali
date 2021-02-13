@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/datepicker/MaterialTextInputPicker;
 .super Lcom/google/android/material/datepicker/PickerFragment;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -22,18 +22,18 @@
 
 
 # static fields
-.field public static final CALENDAR_CONSTRAINTS_KEY:Ljava/lang/String; = "CALENDAR_CONSTRAINTS_KEY"
+.field private static final CALENDAR_CONSTRAINTS_KEY:Ljava/lang/String; = "CALENDAR_CONSTRAINTS_KEY"
 
-.field public static final DATE_SELECTOR_KEY:Ljava/lang/String; = "DATE_SELECTOR_KEY"
+.field private static final DATE_SELECTOR_KEY:Ljava/lang/String; = "DATE_SELECTOR_KEY"
 
 
 # instance fields
-.field public calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+.field private calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+.field private dateSelector:Lcom/google/android/material/datepicker/DateSelector;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public static newInstance(Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialTextInputPicker;
+.method static newInstance(Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialTextInputPicker;
     .locals 3
     .param p0    # Lcom/google/android/material/datepicker/DateSelector;
         .annotation build Landroidx/annotation/NonNull;

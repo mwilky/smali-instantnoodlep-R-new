@@ -1,13 +1,13 @@
 .class public Lcom/oneplus/screenshot/longshot/transform/JTFFT;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/transform/FFT;
 
 
 # instance fields
-.field public mFFT:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;
+.field private mFFT:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;
 
 
 # direct methods

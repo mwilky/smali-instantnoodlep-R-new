@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/core/util/Pools$Pool;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

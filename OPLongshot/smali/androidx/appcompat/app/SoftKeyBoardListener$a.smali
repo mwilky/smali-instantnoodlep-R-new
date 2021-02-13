@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/SoftKeyBoardListener$a;
+.class Landroidx/appcompat/app/SoftKeyBoardListener$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/SoftKeyBoardListener;
+.field final synthetic a:Landroidx/appcompat/app/SoftKeyBoardListener;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
+.method constructor <init>(Landroidx/appcompat/app/SoftKeyBoardListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/SoftKeyBoardListener$a;->a:Landroidx/appcompat/app/SoftKeyBoardListener;

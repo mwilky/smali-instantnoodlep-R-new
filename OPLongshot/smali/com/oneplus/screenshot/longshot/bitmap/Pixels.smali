@@ -1,20 +1,20 @@
 .class public Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final MAX:I = 0x64
+.field private static final MAX:I = 0x64
 
-.field public static final PERCENT:I = 0x64
+.field private static final PERCENT:I = 0x64
 
-.field public static final TAG:Ljava/lang/String; = "Pixels"
+.field private static final TAG:Ljava/lang/String; = "Pixels"
 
 
 # instance fields
-.field public mComparable:Lcom/oneplus/screenshot/longshot/compare/ColorCompare;
+.field private mComparable:Lcom/oneplus/screenshot/longshot/compare/ColorCompare;
 
-.field public mPixels:[I
+.field private mPixels:[I
 
 
 # direct methods

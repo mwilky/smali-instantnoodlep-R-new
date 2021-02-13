@@ -1,6 +1,6 @@
 .class public Landroidx/loader/content/CursorLoader;
 .super Landroidx/loader/content/AsyncTaskLoader;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,11 +14,11 @@
 
 
 # instance fields
-.field public mCancellationSignal:Lb/g/h/a;
+.field mCancellationSignal:Landroidx/core/os/a;
 
-.field public mCursor:Landroid/database/Cursor;
+.field mCursor:Landroid/database/Cursor;
 
-.field public final mObserver:Landroidx/loader/content/Loader$a;
+.field final mObserver:Landroidx/loader/content/Loader$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader<",
@@ -28,15 +28,15 @@
     .end annotation
 .end field
 
-.field public mProjection:[Ljava/lang/String;
+.field mProjection:[Ljava/lang/String;
 
-.field public mSelection:Ljava/lang/String;
+.field mSelection:Ljava/lang/String;
 
-.field public mSelectionArgs:[Ljava/lang/String;
+.field mSelectionArgs:[Ljava/lang/String;
 
-.field public mSortOrder:Ljava/lang/String;
+.field mSortOrder:Ljava/lang/String;
 
-.field public mUri:Landroid/net/Uri;
+.field mUri:Landroid/net/Uri;
 
 
 # direct methods
@@ -116,13 +116,13 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
-    invoke-virtual {v0}, Lb/g/h/a;->a()V
+    invoke-virtual {v0}, Landroidx/core/os/a;->a()V
 
     :cond_0
     monitor-exit p0
@@ -345,11 +345,11 @@
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lb/g/h/a;
+    new-instance v0, Landroidx/core/os/a;
 
-    invoke-direct {v0}, Lb/g/h/a;-><init>()V
+    invoke-direct {v0}, Landroidx/core/os/a;-><init>()V
 
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
     monitor-exit p0
     :try_end_0
@@ -376,9 +376,9 @@
 
     iget-object v7, p0, Landroidx/loader/content/CursorLoader;->mSortOrder:Ljava/lang/String;
 
-    iget-object v8, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iget-object v8, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
-    invoke-static/range {v2 .. v8}, Lb/g/e/a;->a(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lb/g/h/a;)Landroid/database/Cursor;
+    invoke-static/range {v2 .. v8}, Landroidx/core/content/a;->a(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/a;)Landroid/database/Cursor;
 
     move-result-object v1
     :try_end_1
@@ -413,7 +413,7 @@
     monitor-enter p0
 
     :try_start_4
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
     monitor-exit p0
 
@@ -434,7 +434,7 @@
     monitor-enter p0
 
     :try_start_5
-    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Lb/g/h/a;
+    iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/a;
 
     monitor-exit p0
     :try_end_5
@@ -454,9 +454,9 @@
 
     :cond_1
     :try_start_7
-    new-instance v0, Lb/g/h/c;
+    new-instance v0, Landroidx/core/os/c;
 
-    invoke-direct {v0}, Lb/g/h/c;-><init>()V
+    invoke-direct {v0}, Landroidx/core/os/c;-><init>()V
 
     throw v0
 
@@ -507,7 +507,7 @@
     return-void
 .end method
 
-.method public onReset()V
+.method protected onReset()V
     .locals 1
 
     invoke-super {p0}, Landroidx/loader/content/Loader;->onReset()V
@@ -536,7 +536,7 @@
     return-void
 .end method
 
-.method public onStartLoading()V
+.method protected onStartLoading()V
     .locals 1
 
     iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCursor:Landroid/database/Cursor;
@@ -563,7 +563,7 @@
     return-void
 .end method
 
-.method public onStopLoading()V
+.method protected onStopLoading()V
     .locals 0
 
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->cancelLoad()Z

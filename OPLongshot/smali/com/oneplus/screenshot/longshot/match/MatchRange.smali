@@ -1,18 +1,18 @@
 .class public Lcom/oneplus/screenshot/longshot/match/MatchRange;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "MatchRange"
+.field private static final TAG:Ljava/lang/String; = "MatchRange"
 
 
 # instance fields
-.field public mEnd:I
+.field private mEnd:I
 
-.field public mLines:[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+.field private mLines:[Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
-.field public mStart:I
+.field private mStart:I
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/AsyncListDiffer$b;
+.class Landroidx/recyclerview/widget/AsyncListDiffer$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field final a:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

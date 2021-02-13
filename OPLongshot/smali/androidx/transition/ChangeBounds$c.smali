@@ -1,37 +1,37 @@
-.class public Landroidx/transition/ChangeBounds$c;
+.class Landroidx/transition/ChangeBounds$c;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lb/p/q;Lb/p/q;)Landroid/animation/Animator;
+    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Landroidx/transition/q;Landroidx/transition/q;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public a:Z
+.field private a:Z
 
-.field public final synthetic b:Landroid/view/View;
+.field final synthetic b:Landroid/view/View;
 
-.field public final synthetic c:Landroid/graphics/Rect;
+.field final synthetic c:Landroid/graphics/Rect;
 
-.field public final synthetic d:I
+.field final synthetic d:I
 
-.field public final synthetic e:I
+.field final synthetic e:I
 
-.field public final synthetic f:I
+.field final synthetic f:I
 
-.field public final synthetic g:I
+.field final synthetic g:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/View;Landroid/graphics/Rect;IIII)V
+.method constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/View;Landroid/graphics/Rect;IIII)V
     .locals 0
 
     iput-object p2, p0, Landroidx/transition/ChangeBounds$c;->b:Landroid/view/View;

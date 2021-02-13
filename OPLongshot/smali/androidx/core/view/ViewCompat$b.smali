@@ -1,6 +1,6 @@
-.class public Landroidx/core/view/ViewCompat$b;
+.class Landroidx/core/view/ViewCompat$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -13,13 +13,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public a:Ljava/util/WeakHashMap;
+.field private a:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,9 +46,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/view/View;Z)V
+.method private a(Landroid/view/View;Z)V
     .locals 1
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x13
@@ -89,7 +87,7 @@
     return-void
 .end method
 
-.method public final b(Landroid/view/View;)V
+.method private b(Landroid/view/View;)V
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x13
@@ -104,6 +102,8 @@
     return-void
 .end method
 
+
+# virtual methods
 .method public onGlobalLayout()V
     .locals 3
     .annotation build Landroidx/annotation/RequiresApi;
@@ -149,7 +149,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v2, v1}, Landroidx/core/view/ViewCompat$b;->a(Landroid/view/View;Z)V
+    invoke-direct {p0, v2, v1}, Landroidx/core/view/ViewCompat$b;->a(Landroid/view/View;Z)V
 
     goto :goto_0
 
@@ -163,7 +163,7 @@
         value = 0x13
     .end annotation
 
-    invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$b;->b(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Landroidx/core/view/ViewCompat$b;->b(Landroid/view/View;)V
 
     return-void
 .end method

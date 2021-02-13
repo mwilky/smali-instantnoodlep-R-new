@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/longshot/IViewPropCallback$Default;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/IViewPropCallback;

@@ -1,6 +1,6 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi29Impl;
 .super Landroidx/core/graphics/TypefaceCompatBaseImpl;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -379,7 +379,7 @@
     return-object p1
 .end method
 
-.method public createFromInputStream(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
+.method protected createFromInputStream(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     .locals 0
 
     new-instance p1, Ljava/lang/RuntimeException;
@@ -463,7 +463,7 @@
     return-object p1
 .end method
 
-.method public findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
+.method protected findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
     .locals 0
 
     new-instance p1, Ljava/lang/RuntimeException;

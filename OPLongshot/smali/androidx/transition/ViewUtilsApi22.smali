@@ -1,6 +1,6 @@
-.class public Landroidx/transition/ViewUtilsApi22;
+.class Landroidx/transition/ViewUtilsApi22;
 .super Landroidx/transition/ViewUtilsApi21;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,17 +10,17 @@
 
 
 # static fields
-.field public static sTryHiddenSetLeftTopRightBottom:Z = true
+.field private static sTryHiddenSetLeftTopRightBottom:Z = true
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/transition/ViewUtilsApi21;-><init>()V

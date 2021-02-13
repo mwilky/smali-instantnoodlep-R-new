@@ -1,6 +1,6 @@
-.class public Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;
+.class Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "IteratorWithAdditions"
 .end annotation
 
@@ -30,9 +30,9 @@
 
 
 # instance fields
-.field public mBeforeStart:Z
+.field private mBeforeStart:Z
 
-.field public mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field private mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -41,11 +41,11 @@
     .end annotation
 .end field
 
-.field public final synthetic this$0:Landroidx/arch/core/internal/SafeIterableMap;
+.field final synthetic this$0:Landroidx/arch/core/internal/SafeIterableMap;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/arch/core/internal/SafeIterableMap;)V
+.method constructor <init>(Landroidx/arch/core/internal/SafeIterableMap;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->this$0:Landroidx/arch/core/internal/SafeIterableMap;
@@ -136,6 +136,7 @@
 
     iget-object v0, v0, Landroidx/arch/core/internal/SafeIterableMap;->mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
+    :goto_0
     iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     goto :goto_1
@@ -152,8 +153,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    :goto_0
-    iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+    goto :goto_0
 
     :goto_1
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;

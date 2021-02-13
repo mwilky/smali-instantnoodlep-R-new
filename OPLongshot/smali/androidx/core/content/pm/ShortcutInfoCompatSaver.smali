@@ -1,6 +1,6 @@
 .class public abstract Landroidx/core/content/pm/ShortcutInfoCompatSaver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

@@ -1,6 +1,6 @@
 .class public Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;
-.super Lb/n/d/m;
-.source "SourceFile"
+.super Landroidx/recyclerview/widget/m;
+.source ""
 
 
 # annotations
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field public final mDefaultItemDelegate:Lb/g/l/a;
+.field final mDefaultItemDelegate:Landroidx/core/view/a;
 
-.field public final mItemDelegate:Lb/g/l/a;
+.field final mItemDelegate:Landroidx/core/view/a;
 
-.field public final mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
+.field final mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lb/n/d/m;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/m;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-super {p0}, Lb/n/d/m;->getItemDelegate()Lb/g/l/a;
+    invoke-super {p0}, Landroidx/recyclerview/widget/m;->getItemDelegate()Landroidx/core/view/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Lb/g/l/a;
+    iput-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mDefaultItemDelegate:Landroidx/core/view/a;
 
     new-instance v0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;
 
     invoke-direct {v0, p0}, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate$a;-><init>(Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;)V
 
-    iput-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mItemDelegate:Lb/g/l/a;
+    iput-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mItemDelegate:Landroidx/core/view/a;
 
     iput-object p1, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public getItemDelegate()Lb/g/l/a;
+.method public getItemDelegate()Landroidx/core/view/a;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mItemDelegate:Lb/g/l/a;
+    iget-object v0, p0, Landroidx/preference/PreferenceRecyclerViewAccessibilityDelegate;->mItemDelegate:Landroidx/core/view/a;
 
     return-object v0
 .end method

@@ -1,6 +1,6 @@
-.class public interface abstract synthetic Landroidx/core/internal/package-info;
+.class interface abstract synthetic Landroidx/core/internal/package-info;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

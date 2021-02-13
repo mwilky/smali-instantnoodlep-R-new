@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
+.class Landroidx/appcompat/graphics/drawable/StateListDrawable$a;
 .super Landroidx/appcompat/graphics/drawable/DrawableContainer$c;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public J:[[I
+.field J:[[I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
+.method constructor <init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$a;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;-><init>(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;Landroidx/appcompat/graphics/drawable/DrawableContainer;Landroid/content/res/Resources;)V
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public B([ILandroid/graphics/drawable/Drawable;)I
+.method B([ILandroid/graphics/drawable/Drawable;)I
     .locals 1
 
     invoke-virtual {p0, p2}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->a(Landroid/graphics/drawable/Drawable;)I
@@ -61,7 +61,7 @@
     return p2
 .end method
 
-.method public C([I)I
+.method C([I)I
     .locals 4
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->J:[[I
@@ -140,7 +140,7 @@
     return-void
 .end method
 
-.method public t()V
+.method t()V
     .locals 4
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/StateListDrawable$a;->J:[[I

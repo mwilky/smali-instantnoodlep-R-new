@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/internal/BaselineLayout;
 .super Landroid/view/ViewGroup;
-.source "SourceFile"
+.source ""
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
 
 # direct methods
@@ -32,7 +32,7 @@
     return v0
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 6
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -134,7 +134,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 11
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I

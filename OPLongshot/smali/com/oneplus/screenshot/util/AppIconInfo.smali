@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/util/AppIconInfo;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # instance fields
-.field public activityLabel:Ljava/lang/String;
+.field activityLabel:Ljava/lang/String;
 
-.field public appIconDrawable:Landroid/graphics/drawable/Drawable;
+.field appIconDrawable:Landroid/graphics/drawable/Drawable;
 
-.field public appNameToDisplay:Ljava/lang/String;
+.field appNameToDisplay:Ljava/lang/String;
 
-.field public appNameToShare:Ljava/lang/String;
+.field appNameToShare:Ljava/lang/String;
 
-.field public isSelected:Z
+.field isSelected:Z
 
-.field public isShareChooser:Z
+.field isShareChooser:Z
 
-.field public packagName:Ljava/lang/String;
+.field packagName:Ljava/lang/String;
 
 
 # direct methods

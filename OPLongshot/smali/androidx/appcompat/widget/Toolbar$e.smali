@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/Toolbar$e;
 .super Landroidx/appcompat/app/ActionBar$a;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public b:I
+.field b:I
 
 
 # direct methods
@@ -121,7 +121,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/ViewGroup$MarginLayoutParams;)V
+.method a(Landroid/view/ViewGroup$MarginLayoutParams;)V
     .locals 1
 
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I

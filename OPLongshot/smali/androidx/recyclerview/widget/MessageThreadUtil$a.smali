@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/MessageThreadUtil$a;
+.class Landroidx/recyclerview/widget/MessageThreadUtil$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public a:Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.field private a:Landroidx/recyclerview/widget/MessageThreadUtil$b;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public declared-synchronized a()Landroidx/recyclerview/widget/MessageThreadUtil$b;
+.method declared-synchronized a()Landroidx/recyclerview/widget/MessageThreadUtil$b;
     .locals 2
 
     monitor-enter p0
@@ -71,7 +71,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized b(I)V
+.method declared-synchronized b(I)V
     .locals 4
 
     monitor-enter p0
@@ -147,7 +147,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized c(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
+.method declared-synchronized c(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
     .locals 2
 
     monitor-enter p0
@@ -195,7 +195,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized d(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
+.method declared-synchronized d(Landroidx/recyclerview/widget/MessageThreadUtil$b;)V
     .locals 1
 
     monitor-enter p0

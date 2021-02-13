@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ViewUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "ViewUtils"
+.field private static final TAG:Ljava/lang/String; = "ViewUtils"
 
-.field public static sComputeFitSystemWindowsMethod:Ljava/lang/reflect/Method;
+.field private static sComputeFitSystemWindowsMethod:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -195,21 +195,20 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p0
-
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_1
     move-exception p0
 
+    :goto_0
     invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_2
     const-string p0, "Could not find method makeOptionalFitsSystemWindows. Oh well..."
@@ -217,6 +216,6 @@
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method

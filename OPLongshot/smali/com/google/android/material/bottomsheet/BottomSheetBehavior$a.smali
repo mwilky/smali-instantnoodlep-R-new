@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;
+.class Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:I
+.field final synthetic b:I
 
-.field public final synthetic c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+.field final synthetic c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Landroid/view/View;I)V
+.method constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Landroid/view/View;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;

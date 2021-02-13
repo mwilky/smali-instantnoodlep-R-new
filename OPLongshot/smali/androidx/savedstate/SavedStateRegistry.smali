@@ -1,6 +1,6 @@
 .class public final Landroidx/savedstate/SavedStateRegistry;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -19,13 +19,13 @@
 
 
 # static fields
-.field public static final SAVED_COMPONENTS_KEY:Ljava/lang/String; = "androidx.lifecycle.BundlableSavedStateRegistry.key"
+.field private static final SAVED_COMPONENTS_KEY:Ljava/lang/String; = "androidx.lifecycle.BundlableSavedStateRegistry.key"
 
 
 # instance fields
-.field public mAllowingSavingState:Z
+.field mAllowingSavingState:Z
 
-.field public mComponents:Landroidx/arch/core/internal/SafeIterableMap;
+.field private mComponents:Landroidx/arch/core/internal/SafeIterableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap<",
@@ -36,18 +36,18 @@
     .end annotation
 .end field
 
-.field public mRecreatorProvider:Landroidx/savedstate/Recreator$a;
+.field private mRecreatorProvider:Landroidx/savedstate/Recreator$a;
 
-.field public mRestored:Z
+.field private mRestored:Z
 
-.field public mRestoredState:Landroid/os/Bundle;
+.field private mRestoredState:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -133,7 +133,7 @@
     return v0
 .end method
 
-.method public performRestore(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
+.method performRestore(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
     .locals 1
     .param p1    # Landroidx/lifecycle/Lifecycle;
         .annotation build Landroidx/annotation/NonNull;
@@ -165,7 +165,7 @@
 
     invoke-direct {p2, p0}, Landroidx/savedstate/SavedStateRegistry$1;-><init>(Landroidx/savedstate/SavedStateRegistry;)V
 
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Lb/l/d;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
 
     const/4 p1, 0x1
 
@@ -183,7 +183,7 @@
     throw p1
 .end method
 
-.method public performSave(Landroid/os/Bundle;)V
+.method performSave(Landroid/os/Bundle;)V
     .locals 4
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/NonNull;

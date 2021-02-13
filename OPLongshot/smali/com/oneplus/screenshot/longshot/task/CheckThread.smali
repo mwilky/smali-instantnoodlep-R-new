@@ -1,18 +1,18 @@
 .class public Lcom/oneplus/screenshot/longshot/task/CheckThread;
 .super Lcom/oneplus/screenshot/longshot/task/BaseThread;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final CHECK_DELAY:J = 0x32L
+.field private static final CHECK_DELAY:J = 0x32L
 
 .field public static final TAG:Ljava/lang/String; = "Longshot.CheckThread"
 
 
 # instance fields
-.field public mIsStopped:Z
+.field private mIsStopped:Z
 
-.field public mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field private mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
 
 # direct methods
@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/task/CheckThread;)Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/task/CheckThread;)Lcom/oneplus/screenshot/longshot/state/LongshotContext;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
@@ -137,7 +137,7 @@
 
 
 # virtual methods
-.method public onRun()V
+.method protected onRun()V
     .locals 3
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;

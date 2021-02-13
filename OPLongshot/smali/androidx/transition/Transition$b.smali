@@ -1,6 +1,6 @@
-.class public Landroidx/transition/Transition$b;
+.class Landroidx/transition/Transition$b;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/collection/ArrayMap;
+.field final synthetic a:Landroidx/collection/ArrayMap;
 
-.field public final synthetic b:Landroidx/transition/Transition;
+.field final synthetic b:Landroidx/transition/Transition;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/transition/Transition;Landroidx/collection/ArrayMap;)V
+.method constructor <init>(Landroidx/transition/Transition;Landroidx/collection/ArrayMap;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/transition/Transition$b;->b:Landroidx/transition/Transition;

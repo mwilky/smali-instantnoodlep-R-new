@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;
+.class Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field private final a:Landroid/view/View;
 
-.field public b:Z
+.field private b:Z
 
-.field public c:I
+.field c:I
 
-.field public final synthetic d:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+.field final synthetic d:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Landroid/view/View;I)V
+.method constructor <init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Landroid/view/View;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->d:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;)Z
+.method static synthetic a(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->b:Z
@@ -50,7 +50,7 @@
     return p0
 .end method
 
-.method public static synthetic b(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;Z)Z
+.method static synthetic b(Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->b:Z
@@ -65,13 +65,13 @@
 
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->d:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Lb/i/a/a;
+    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->viewDragHelper:Landroidx/customview/widget/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/i/a/a;->k(Z)Z
+    invoke-virtual {v0, v1}, Landroidx/customview/widget/a;->k(Z)Z
 
     move-result v0
 

@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/screenshot/BuildConfig;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -12,7 +12,7 @@
 
 .field public static final VERSION_CODE:I = 0x4
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "2.2.0.201127130319.41c3ca5"
+.field public static final VERSION_NAME:Ljava/lang/String; = "2.2.0.210107122732.3705867"
 
 
 # direct methods

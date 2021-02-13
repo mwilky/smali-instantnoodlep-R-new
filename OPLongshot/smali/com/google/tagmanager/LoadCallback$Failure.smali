@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/LoadCallback$Failure;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/tagmanager/LoadCallback$Failure;
+.field private static final synthetic $VALUES:[Lcom/google/tagmanager/LoadCallback$Failure;
 
 .field public static final enum IO_ERROR:Lcom/google/tagmanager/LoadCallback$Failure;
 
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 6
 
     new-instance v0, Lcom/google/tagmanager/LoadCallback$Failure;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$c;
+.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/MenuItem$OnActionExpandListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "c"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/view/MenuItem$OnActionExpandListener;
+.field private final a:Landroid/view/MenuItem$OnActionExpandListener;
 
-.field public final synthetic b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
+.field final synthetic b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnActionExpandListener;)V
+.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnActionExpandListener;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$c;->b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
@@ -45,7 +45,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$c;->b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    invoke-virtual {v1, p1}, Lb/c/m/d/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$c;->b:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    invoke-virtual {v1, p1}, Lb/c/m/d/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/a;->getMenuItemWrapper(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
     move-result-object p1
 

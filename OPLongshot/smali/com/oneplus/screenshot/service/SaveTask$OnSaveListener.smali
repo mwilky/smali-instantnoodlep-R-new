@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/screenshot/service/SaveTask$OnSaveListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

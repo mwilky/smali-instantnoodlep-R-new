@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

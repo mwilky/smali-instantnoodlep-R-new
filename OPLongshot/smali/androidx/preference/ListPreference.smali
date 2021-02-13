@@ -1,6 +1,6 @@
 .class public Landroidx/preference/ListPreference;
-.super Lb/m/a;
-.source "SourceFile"
+.super Landroidx/preference/a;
+.source ""
 
 
 # annotations
@@ -13,15 +13,29 @@
 
 
 # instance fields
-.field public b:[Ljava/lang/CharSequence;
+.field private b:[Ljava/lang/CharSequence;
 
-.field public c:[Ljava/lang/CharSequence;
+.field private c:[Ljava/lang/CharSequence;
 
-.field public d:Ljava/lang/String;
+.field private d:Ljava/lang/String;
 
-.field public e:Ljava/lang/String;
+.field private e:Ljava/lang/String;
 
-.field public f:Z
+.field private f:Z
+
+
+# direct methods
+.method private d()I
+    .locals 1
+
+    iget-object v0, p0, Landroidx/preference/ListPreference;->d:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Landroidx/preference/ListPreference;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
 
 
 # virtual methods
@@ -67,7 +81,7 @@
 .method public b()Ljava/lang/CharSequence;
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/preference/ListPreference;->d()I
+    invoke-direct {p0}, Landroidx/preference/ListPreference;->d()I
 
     move-result v0
 
@@ -94,18 +108,6 @@
     iget-object v0, p0, Landroidx/preference/ListPreference;->d:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    iget-object v0, p0, Landroidx/preference/ListPreference;->d:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroidx/preference/ListPreference;->a(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public e(Ljava/lang/String;)V
@@ -212,7 +214,7 @@
     return-object v0
 .end method
 
-.method public onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method protected onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -222,7 +224,7 @@
     return-object p1
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
     if-eqz p1, :cond_1
@@ -263,7 +265,7 @@
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
     invoke-super {p0}, Landroidx/preference/Preference;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -292,7 +294,7 @@
     return-object v1
 .end method
 
-.method public onSetInitialValue(Ljava/lang/Object;)V
+.method protected onSetInitialValue(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/String;
@@ -319,9 +321,10 @@
 
     const/4 p1, 0x0
 
+    :goto_0
     iput-object p1, p0, Landroidx/preference/ListPreference;->e:Ljava/lang/String;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     if-eqz p1, :cond_1
@@ -338,9 +341,9 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/ListPreference;->e:Ljava/lang/String;
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method

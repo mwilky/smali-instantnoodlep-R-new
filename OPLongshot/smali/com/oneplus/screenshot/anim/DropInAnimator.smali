@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/DropInAnimator;
 .super Lcom/oneplus/screenshot/anim/TargetAnimator;
-.source "SourceFile"
+.source ""
 
 
 # direct methods

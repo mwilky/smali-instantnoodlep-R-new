@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringRecyclerView;
 .super Landroidx/recyclerview/widget/RecyclerView;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,65 +13,65 @@
 
 
 # static fields
-.field public static final A:Ljava/lang/String;
+.field static final A:Ljava/lang/String;
 
 
 # instance fields
-.field public a:F
+.field private a:F
 
-.field public b:F
+.field private b:F
 
-.field public c:Landroid/view/VelocityTracker;
+.field private c:Landroid/view/VelocityTracker;
 
-.field public d:I
+.field private d:I
 
-.field public e:I
+.field private e:I
 
-.field public f:I
+.field private f:I
 
-.field public g:I
+.field private g:I
 
-.field public h:I
+.field private h:I
 
-.field public i:[I
+.field private i:[I
 
-.field public j:[I
+.field private j:[I
 
-.field public k:Z
+.field k:Z
 
-.field public l:F
+.field l:F
 
-.field public m:F
+.field m:F
 
-.field public n:Landroid/widget/EdgeEffect;
+.field private n:Landroid/widget/EdgeEffect;
 
-.field public o:Landroid/widget/EdgeEffect;
+.field private o:Landroid/widget/EdgeEffect;
 
-.field public p:Z
+.field private p:Z
 
-.field public q:Lcom/google/android/material/edgeeffect/SpringRecyclerView$b;
+.field private q:Lcom/google/android/material/edgeeffect/SpringRecyclerView$b;
 
-.field public r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
+.field private r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
 
-.field public s:Landroidx/dynamicanimation/animation/SpringAnimation;
+.field private s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-.field public t:F
+.field private t:F
 
-.field public u:I
+.field private u:I
 
-.field public v:I
+.field private v:I
 
-.field public w:Z
+.field private w:Z
 
-.field public x:Z
+.field private x:Z
 
-.field public y:Z
+.field private y:Z
 
-.field public z:Z
+.field private z:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     const-class v0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/material/edgeeffect/SpringRecyclerView;)F
+.method static synthetic a(Lcom/google/android/material/edgeeffect/SpringRecyclerView;)F
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->t:F
@@ -99,19 +99,7 @@
     return p0
 .end method
 
-.method private setActiveEdge(Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
-
-    iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b(F)V
+.method private b(F)V
     .locals 2
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->t:F
@@ -182,7 +170,7 @@
     return-void
 .end method
 
-.method public final c(Z)Z
+.method private c(Z)Z
     .locals 3
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
@@ -268,10 +256,10 @@
     return v1
 .end method
 
-.method public final cancelScroll()V
+.method private cancelScroll()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->e()V
+    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->e()V
 
     const/4 v0, 0x0
 
@@ -280,7 +268,394 @@
     return-void
 .end method
 
-.method public considerReleasingGlowsOnScroll(II)V
+.method private e()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
+
+    :cond_0
+    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->releaseGlows()V
+
+    return-void
+.end method
+
+.method private onPointerUp(Landroid/view/MotionEvent;)V
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v1
+
+    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
+
+    if-ne v1, v2, :cond_1
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
+
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result p1
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    add-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->d:I
+
+    :cond_1
+    return-void
+.end method
+
+.method private pullGlows(FFFF)V
+    .locals 5
+
+    iget-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    cmpl-float v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    cmpg-float v0, p1, v1
+
+    if-gez v0, :cond_2
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    cmpl-float v0, p3, v0
+
+    if-gtz v0, :cond_9
+
+    cmpg-float v0, p3, v1
+
+    if-gez v0, :cond_2
+
+    goto/16 :goto_3
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float v0, p1, v0
+
+    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float v0, p3, v0
+
+    move v2, p4
+
+    goto :goto_0
+
+    :cond_3
+    move v2, p2
+
+    :goto_0
+    cmpg-float v3, v2, v1
+
+    const/4 v4, 0x1
+
+    if-gez v3, :cond_5
+
+    iget v3, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->m:F
+
+    cmpg-float v3, v0, v3
+
+    if-gez v3, :cond_5
+
+    iget v3, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->l:F
+
+    cmpl-float v3, v0, v3
+
+    if-lez v3, :cond_5
+
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->ensureTopGlow()V
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
+
+    if-eqz v0, :cond_7
+
+    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
+
+    if-nez v2, :cond_4
+
+    neg-float p3, p4
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p3, v2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p1, v2
+
+    invoke-virtual {v0, p3, p1}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    goto :goto_1
+
+    :cond_4
+    neg-float p1, p2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p1, v2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p3, v2
+
+    invoke-virtual {v0, p1, p3}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    :goto_1
+    iput-boolean v4, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
+
+    goto :goto_2
+
+    :cond_5
+    cmpl-float v2, v2, v1
+
+    if-lez v2, :cond_7
+
+    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->l:F
+
+    cmpl-float v2, v0, v2
+
+    if-lez v2, :cond_7
+
+    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->m:F
+
+    cmpg-float v0, v0, v2
+
+    if-gez v0, :cond_7
+
+    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->ensureBottomGlow()V
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
+
+    if-eqz v0, :cond_7
+
+    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-nez v2, :cond_6
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float p3, p4, p3
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p1, v2
+
+    sub-float/2addr v3, p1
+
+    invoke-virtual {v0, p3, v3}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    div-float p1, p2, p1
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr p3, v2
+
+    sub-float/2addr v3, p3
+
+    invoke-virtual {v0, p1, v3}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    goto :goto_1
+
+    :cond_7
+    const/4 v4, 0x0
+
+    :goto_2
+    if-nez v4, :cond_8
+
+    cmpl-float p1, p2, v1
+
+    if-nez p1, :cond_8
+
+    cmpl-float p1, p4, v1
+
+    if-eqz p1, :cond_9
+
+    :cond_8
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->postInvalidateOnAnimation()V
+
+    :cond_9
+    :goto_3
+    return-void
+.end method
+
+.method private releaseGlows()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iput-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v0}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v0
+
+    or-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iget-object v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iput-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
+
+    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v1}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->postInvalidateOnAnimation()V
+
+    :cond_2
+    return-void
+.end method
+
+.method private resetScroll()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
+
+    :cond_0
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->stopNestedScroll()V
+
+    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->releaseGlows()V
+
+    return-void
+.end method
+
+.method private setActiveEdge(Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
+
+    iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->r:Lcom/google/android/material/edgeeffect/SpringRecyclerView$a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method considerReleasingGlowsOnScroll(II)V
     .locals 1
 
     iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
@@ -372,7 +747,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->b(F)V
+    invoke-direct {p0, v0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->b(F)V
 
     return-void
 .end method
@@ -420,22 +795,7 @@
     return-void
 .end method
 
-.method public final e()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->releaseGlows()V
-
-    return-void
-.end method
-
-.method public ensureBottomGlow()V
+.method ensureBottomGlow()V
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->q:Lcom/google/android/material/edgeeffect/SpringRecyclerView$b;
@@ -503,8 +863,6 @@
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
-
     goto :goto_0
 
     :cond_1
@@ -518,14 +876,14 @@
 
     move-result v2
 
+    :goto_0
     invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
 
     :cond_2
-    :goto_0
     return-void
 .end method
 
-.method public ensureTopGlow()V
+.method ensureTopGlow()V
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->q:Lcom/google/android/material/edgeeffect/SpringRecyclerView$b;
@@ -593,8 +951,6 @@
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
-
     goto :goto_0
 
     :cond_1
@@ -608,10 +964,10 @@
 
     move-result v2
 
+    :goto_0
     invoke-virtual {v0, v1, v2}, Landroid/widget/EdgeEffect;->setSize(II)V
 
     :cond_2
-    :goto_0
     return-void
 .end method
 
@@ -664,7 +1020,7 @@
 
     if-eq v0, v2, :cond_2
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_2
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
@@ -809,12 +1165,6 @@
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    invoke-interface {v0, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
     goto :goto_2
 
     :cond_9
@@ -832,13 +1182,14 @@
 
     if-eqz v0, :cond_d
 
+    :goto_2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     invoke-interface {v0, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_a
     invoke-virtual {p1, v4}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -896,7 +1247,7 @@
     aput v4, v0, v4
 
     :cond_d
-    :goto_2
+    :goto_3
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -908,53 +1259,6 @@
     move-result p1
 
     return p1
-.end method
-
-.method public final onPointerUp(Landroid/view/MotionEvent;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v1
-
-    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
-
-    if-ne v1, v2, :cond_1
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
-
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result p1
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    add-float/2addr p1, v0
-
-    float-to-int p1, p1
-
-    iput p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->d:I
-
-    :cond_1
-    return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1020,12 +1324,12 @@
 
     if-eq v1, v2, :cond_2
 
-    goto/16 :goto_3
+    goto/16 :goto_6
 
     :cond_2
-    invoke-virtual {p0, p1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->onPointerUp(Landroid/view/MotionEvent;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->onPointerUp(Landroid/view/MotionEvent;)V
 
-    goto/16 :goto_3
+    goto/16 :goto_6
 
     :cond_3
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -1048,18 +1352,12 @@
 
     move-result v1
 
-    add-float/2addr v1, v3
-
-    float-to-int v1, v1
-
-    iput v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->e:I
-
-    goto/16 :goto_3
+    goto/16 :goto_5
 
     :cond_4
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->cancelScroll()V
+    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->cancelScroll()V
 
-    goto/16 :goto_3
+    goto/16 :goto_6
 
     :cond_5
     iget v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->g:I
@@ -1204,13 +1502,7 @@
 
     if-eqz v1, :cond_11
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    invoke-interface {v1, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    goto :goto_3
+    goto :goto_2
 
     :cond_c
     iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->i:[I
@@ -1227,13 +1519,14 @@
 
     if-eqz v1, :cond_11
 
+    :goto_2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     invoke-interface {v1, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    goto :goto_3
+    goto :goto_6
 
     :cond_d
     iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
@@ -1280,9 +1573,10 @@
 
     if-eqz v2, :cond_e
 
+    :goto_3
     invoke-virtual {p0, v4}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->setScrollState(I)V
 
-    goto :goto_2
+    goto :goto_4
 
     :cond_e
     cmpl-float v1, v1, v3
@@ -1293,15 +1587,15 @@
 
     if-nez v1, :cond_f
 
-    invoke-virtual {p0, v4}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->setScrollState(I)V
+    goto :goto_3
 
     :cond_f
-    :goto_2
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->resetScroll()V
+    :goto_4
+    invoke-direct {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->resetScroll()V
 
     move v4, v5
 
-    goto :goto_3
+    goto :goto_6
 
     :cond_10
     invoke-virtual {p1, v4}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -1324,6 +1618,7 @@
 
     move-result v1
 
+    :goto_5
     add-float/2addr v1, v3
 
     float-to-int v1, v1
@@ -1331,7 +1626,7 @@
     iput v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->e:I
 
     :cond_11
-    :goto_3
+    :goto_6
     if-nez v4, :cond_12
 
     iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
@@ -1352,323 +1647,7 @@
     return p1
 .end method
 
-.method public final pullGlows(FFFF)V
-    .locals 5
-
-    iget-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    cmpl-float v0, p1, v0
-
-    if-gtz v0, :cond_0
-
-    cmpg-float v0, p1, v1
-
-    if-gez v0, :cond_2
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    cmpl-float v0, p3, v0
-
-    if-gtz v0, :cond_9
-
-    cmpg-float v0, p3, v1
-
-    if-gez v0, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v0, p1, v0
-
-    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
-
-    if-nez v2, :cond_3
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float v0, p3, v0
-
-    move v2, p4
-
-    goto :goto_0
-
-    :cond_3
-    move v2, p2
-
-    :goto_0
-    cmpg-float v3, v2, v1
-
-    const/4 v4, 0x1
-
-    if-gez v3, :cond_5
-
-    iget v3, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->m:F
-
-    cmpg-float v3, v0, v3
-
-    if-gez v3, :cond_5
-
-    iget v3, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->l:F
-
-    cmpl-float v3, v0, v3
-
-    if-lez v3, :cond_5
-
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->ensureTopGlow()V
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
-
-    if-eqz v0, :cond_7
-
-    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
-
-    if-nez v2, :cond_4
-
-    neg-float p3, p4
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p3, v2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {v0, p3, p1}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    goto :goto_1
-
-    :cond_4
-    neg-float p1, p2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p3, v2
-
-    invoke-virtual {v0, p1, p3}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    :goto_1
-    iput-boolean v4, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
-
-    goto :goto_3
-
-    :cond_5
-    cmpl-float v2, v2, v1
-
-    if-lez v2, :cond_7
-
-    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->l:F
-
-    cmpl-float v2, v0, v2
-
-    if-lez v2, :cond_7
-
-    iget v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->m:F
-
-    cmpg-float v0, v0, v2
-
-    if-gez v0, :cond_7
-
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->ensureBottomGlow()V
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
-
-    if-eqz v0, :cond_7
-
-    iget-boolean v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    if-nez v2, :cond_6
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result p3
-
-    int-to-float p3, p3
-
-    div-float p3, p4, p3
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p1, v2
-
-    sub-float/2addr v3, p1
-
-    invoke-virtual {v0, p3, v3}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    div-float p1, p2, p1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p3, v2
-
-    sub-float/2addr v3, p3
-
-    invoke-virtual {v0, p1, v3}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    :goto_2
-    iput-boolean v4, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
-
-    goto :goto_3
-
-    :cond_7
-    const/4 v4, 0x0
-
-    :goto_3
-    if-nez v4, :cond_8
-
-    cmpl-float p1, p2, v1
-
-    if-nez p1, :cond_8
-
-    cmpl-float p1, p4, v1
-
-    if-eqz p1, :cond_9
-
-    :cond_8
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->postInvalidateOnAnimation()V
-
-    :cond_9
-    :goto_4
-    return-void
-.end method
-
-.method public final releaseGlows()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    iput-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->n:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {v0}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result v0
-
-    or-int/2addr v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iget-object v2, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    iput-boolean v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->p:Z
-
-    iget-object v1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->o:Landroid/widget/EdgeEffect;
-
-    invoke-virtual {v1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->postInvalidateOnAnimation()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final resetScroll()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->stopNestedScroll()V
-
-    invoke-virtual {p0}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->releaseGlows()V
-
-    return-void
-.end method
-
-.method public scrollByInternal(IILandroid/view/MotionEvent;)Z
+.method scrollByInternal(IILandroid/view/MotionEvent;)Z
     .locals 4
 
     iget-boolean v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->w:Z
@@ -1692,7 +1671,7 @@
     move v1, v2
 
     :goto_0
-    invoke-virtual {p0, v1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c(Z)Z
+    invoke-direct {p0, v1}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->c(Z)Z
 
     move-result v0
 
@@ -1737,7 +1716,7 @@
 
     int-to-float v3, p2
 
-    invoke-virtual {p0, v0, v1, p3, v3}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->pullGlows(FFFF)V
+    invoke-direct {p0, v0, v1, p3, v3}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->pullGlows(FFFF)V
 
     :cond_3
     invoke-virtual {p0, p1, p2}, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->considerReleasingGlowsOnScroll(II)V
@@ -1762,18 +1741,18 @@
 
     iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->b:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->e(F)Landroidx/dynamicanimation/animation/b;
 
     return-void
 .end method
 
-.method public setDampedScrollShift(F)V
+.method protected setDampedScrollShift(F)V
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->t:F
@@ -1836,7 +1815,7 @@
     return-void
 .end method
 
-.method public setScrollState(I)V
+.method setScrollState(I)V
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->f:I
@@ -1870,13 +1849,13 @@
 
     iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->s:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRecyclerView;->a:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->g(F)Landroidx/dynamicanimation/animation/b;
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ActionMenuView$b;
 .super Landroidx/appcompat/widget/LinearLayoutCompat$a;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field public h:Z
+.field h:Z
 
 
 # direct methods

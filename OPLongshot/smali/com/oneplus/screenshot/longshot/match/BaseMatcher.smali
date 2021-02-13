@@ -1,37 +1,37 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/match/Matcher;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.BaseMatcher"
+.field private static final TAG:Ljava/lang/String; = "Longshot.BaseMatcher"
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field protected mContext:Landroid/content/Context;
 
-.field public mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field protected mCurrDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field public mIndex:I
+.field protected mIndex:I
 
-.field public mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field protected mLastDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field public mLeftSideOffset:I
+.field protected mLeftSideOffset:I
 
-.field public mOffsetCurr:I
+.field protected mOffsetCurr:I
 
-.field public mOffsetLast:I
+.field protected mOffsetLast:I
 
-.field public mRightSideOffset:I
+.field protected mRightSideOffset:I
 
-.field public mSameDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
+.field protected mSameDumper:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
 
-.field public mSize:I
+.field protected mSize:I
 
-.field public mStep:I
+.field protected mStep:I
 
 
 # direct methods
@@ -119,15 +119,26 @@
     iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mLeftSideOffset:I
 
     :cond_1
+    sget p1, Lcom/oneplus/screenshot/longshot/util/Configs;->limitRight:I
+
+    if-eq p1, v0, :cond_2
+
+    iget p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mRightSideOffset:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mRightSideOffset:I
+
+    :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "right and left side offsets= "
+    const-string p2, "left and right side offsets= "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mRightSideOffset:I
+    iget p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mLeftSideOffset:I
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -135,7 +146,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mLeftSideOffset:I
+    iget p2, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mRightSideOffset:I
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -152,13 +163,13 @@
 
 
 # virtual methods
-.method public abstract canDump()Z
+.method protected abstract canDump()Z
 .end method
 
-.method public abstract createDumper()V
+.method protected abstract createDumper()V
 .end method
 
-.method public getCurrTag()Ljava/lang/String;
+.method protected getCurrTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "Curr"
@@ -166,7 +177,7 @@
     return-object v0
 .end method
 
-.method public getLastTag()Ljava/lang/String;
+.method protected getLastTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "Last"
@@ -190,7 +201,7 @@
     return v0
 .end method
 
-.method public getStep()I
+.method protected getStep()I
     .locals 1
 
     const/4 v0, 0x1
@@ -198,5 +209,5 @@
     return v0
 .end method
 
-.method public abstract getTag()Ljava/lang/String;
+.method protected abstract getTag()Ljava/lang/String;
 .end method

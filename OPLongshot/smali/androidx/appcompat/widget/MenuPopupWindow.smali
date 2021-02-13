@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/MenuPopupWindow;
-.super Lb/c/n/y;
-.source "SourceFile"
+.super Landroidx/appcompat/widget/y;
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/widget/MenuItemHoverListener;
@@ -21,17 +21,17 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "MenuPopupWindow"
+.field private static final TAG:Ljava/lang/String; = "MenuPopupWindow"
 
-.field public static sSetTouchModalMethod:Ljava/lang/reflect/Method;
+.field private static sSetTouchModalMethod:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field public mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
+.field private mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     :try_start_0
@@ -88,14 +88,14 @@
         .end annotation
     .end param
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lb/c/n/y;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/y;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public createDropDownListView(Landroid/content/Context;Z)Lb/c/n/x;
+.method createDropDownListView(Landroid/content/Context;Z)Landroidx/appcompat/widget/x;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -160,7 +160,7 @@
 
     if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Lb/c/n/y;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     check-cast p1, Landroid/transition/Transition;
 
@@ -179,7 +179,7 @@
 
     if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Lb/c/n/y;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     check-cast p1, Landroid/transition/Transition;
 
@@ -211,7 +211,7 @@
     if-eqz v0, :cond_1
 
     :try_start_0
-    iget-object v1, p0, Lb/c/n/y;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v1, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     const/4 v2, 0x1
 
@@ -241,7 +241,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lb/c/n/y;->mPopup:Landroid/widget/PopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/y;->mPopup:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setTouchModal(Z)V
 

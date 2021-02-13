@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/BitmapCache;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,21 +12,21 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.BitmapCache"
+.field private static final TAG:Ljava/lang/String; = "Longshot.BitmapCache"
 
 
 # instance fields
-.field public isLastCache:Z
+.field private isLastCache:Z
 
-.field public isStitchComplete:Z
+.field private isStitchComplete:Z
 
-.field public mBitmapBottom:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
+.field private mBitmapBottom:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
 
-.field public mBitmapMain:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
+.field private mBitmapMain:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
 
-.field public mBitmapTop:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
+.field private mBitmapTop:Lcom/oneplus/screenshot/longshot/cache/BitmapCache$BitmapHolder;
 
-.field public mIndex:I
+.field private mIndex:I
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class public Landroidx/transition/ViewUtilsApi21;
+.class Landroidx/transition/ViewUtilsApi21;
 .super Landroidx/transition/ViewUtilsApi19;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,21 +10,21 @@
 
 
 # static fields
-.field public static sTryHiddenSetAnimationMatrix:Z = true
+.field private static sTryHiddenSetAnimationMatrix:Z = true
 
-.field public static sTryHiddenTransformMatrixToGlobal:Z = true
+.field private static sTryHiddenTransformMatrixToGlobal:Z = true
 
-.field public static sTryHiddenTransformMatrixToLocal:Z = true
+.field private static sTryHiddenTransformMatrixToLocal:Z = true
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/transition/ViewUtilsApi19;-><init>()V

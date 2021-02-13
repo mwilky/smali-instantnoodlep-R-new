@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
+.class Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "StitchLastPattern"
 .end annotation
 
 
 # instance fields
-.field public mChecked:Z
+.field mChecked:Z
 
-.field public mIndex:I
+.field mIndex:I
 
-.field public mPixels:Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+.field mPixels:Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
-.field public mRepeatCount:I
+.field mRepeatCount:I
 
-.field public mSimilarity:I
+.field mSimilarity:I
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;
 
 
 # direct methods

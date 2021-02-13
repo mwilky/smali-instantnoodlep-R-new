@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oneplus/longshot/ILongScreenshot;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/IInterface;

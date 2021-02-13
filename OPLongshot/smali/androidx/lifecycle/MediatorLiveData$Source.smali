@@ -1,6 +1,6 @@
-.class public Landroidx/lifecycle/MediatorLiveData$Source;
+.class Landroidx/lifecycle/MediatorLiveData$Source;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "Source"
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field public final mLiveData:Landroidx/lifecycle/LiveData;
+.field final mLiveData:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/LiveData<",
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field public final mObserver:Landroidx/lifecycle/Observer;
+.field final mObserver:Landroidx/lifecycle/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/Observer<",
@@ -47,11 +47,11 @@
     .end annotation
 .end field
 
-.field public mVersion:I
+.field mVersion:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
+.method constructor <init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -116,7 +116,7 @@
     return-void
 .end method
 
-.method public plug()V
+.method plug()V
     .locals 1
 
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public unplug()V
+.method unplug()V
     .locals 1
 
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData$Source;->mLiveData:Landroidx/lifecycle/LiveData;

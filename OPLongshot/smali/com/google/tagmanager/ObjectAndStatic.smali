@@ -1,6 +1,6 @@
-.class public Lcom/google/tagmanager/ObjectAndStatic;
+.class Lcom/google/tagmanager/ObjectAndStatic;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public final mIsStatic:Z
+.field private final mIsStatic:Z
 
-.field public final mObject:Ljava/lang/Object;
+.field private final mObject:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Z)V
+.method constructor <init>(Ljava/lang/Object;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

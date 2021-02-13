@@ -1,6 +1,6 @@
-.class public final Landroidx/core/provider/FontsContractCompat$c;
+.class final Landroidx/core/provider/FontsContractCompat$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1a
     name = "c"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/graphics/Typeface;
+.field final a:Landroid/graphics/Typeface;
 
-.field public final b:I
+.field final b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Typeface;I)V
+.method constructor <init>(Landroid/graphics/Typeface;I)V
     .locals 0
     .param p1    # Landroid/graphics/Typeface;
         .annotation build Landroidx/annotation/Nullable;

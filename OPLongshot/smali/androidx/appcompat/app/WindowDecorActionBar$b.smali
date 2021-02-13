@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/WindowDecorActionBar$b;
-.super Lb/g/l/v;
-.source "SourceFile"
+.class Landroidx/appcompat/app/WindowDecorActionBar$b;
+.super Landroidx/core/view/v;
+.source ""
 
 
 # annotations
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/WindowDecorActionBar;
+.field final synthetic a:Landroidx/appcompat/app/WindowDecorActionBar;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/WindowDecorActionBar;)V
+.method constructor <init>(Landroidx/appcompat/app/WindowDecorActionBar;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/WindowDecorActionBar$b;->a:Landroidx/appcompat/app/WindowDecorActionBar;
 
-    invoke-direct {p0}, Lb/g/l/v;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/v;-><init>()V
 
     return-void
 .end method

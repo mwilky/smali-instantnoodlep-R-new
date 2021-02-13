@@ -1,6 +1,6 @@
-.class public interface abstract Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
+.class interface abstract Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "SpinnerPopup"
 .end annotation
 

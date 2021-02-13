@@ -1,6 +1,6 @@
-.class public Landroidx/core/app/NotificationCompatBuilder;
+.class Landroidx/core/app/NotificationCompatBuilder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/app/NotificationBuilderWithBuilderAccessor;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final mActionExtrasList:Ljava/util/List;
+.field private final mActionExtrasList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,23 +25,23 @@
     .end annotation
 .end field
 
-.field public mBigContentView:Landroid/widget/RemoteViews;
+.field private mBigContentView:Landroid/widget/RemoteViews;
 
-.field public final mBuilder:Landroid/app/Notification$Builder;
+.field private final mBuilder:Landroid/app/Notification$Builder;
 
-.field public final mBuilderCompat:Landroidx/core/app/NotificationCompat$b;
+.field private final mBuilderCompat:Landroidx/core/app/NotificationCompat$b;
 
-.field public mContentView:Landroid/widget/RemoteViews;
+.field private mContentView:Landroid/widget/RemoteViews;
 
-.field public final mExtras:Landroid/os/Bundle;
+.field private final mExtras:Landroid/os/Bundle;
 
-.field public mGroupAlertBehavior:I
+.field private mGroupAlertBehavior:I
 
-.field public mHeadsUpContentView:Landroid/widget/RemoteViews;
+.field private mHeadsUpContentView:Landroid/widget/RemoteViews;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/app/NotificationCompat$b;)V
+.method constructor <init>(Landroidx/core/app/NotificationCompat$b;)V
     .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -74,8 +74,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Landroidx/core/app/NotificationCompatBuilder;->mBuilder:Landroid/app/Notification$Builder;
-
     goto :goto_0
 
     :cond_0
@@ -85,9 +83,9 @@
 
     invoke-direct {v0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
+    :goto_0
     iput-object v0, p0, Landroidx/core/app/NotificationCompatBuilder;->mBuilder:Landroid/app/Notification$Builder;
 
-    :goto_0
     iget-object v0, p1, Landroidx/core/app/NotificationCompat$b;->P:Landroid/app/Notification;
 
     iget-object v2, p0, Landroidx/core/app/NotificationCompatBuilder;->mBuilder:Landroid/app/Notification$Builder;
@@ -377,8 +375,6 @@
 
     const-string v6, "android.support.isGroupSummary"
 
-    invoke-virtual {v2, v6, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
     goto :goto_6
 
     :cond_9
@@ -386,10 +382,10 @@
 
     const-string v6, "android.support.useSideChannel"
 
+    :goto_6
     invoke-virtual {v2, v6, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_a
-    :goto_6
     iget-object v2, p1, Landroidx/core/app/NotificationCompat$b;->w:Ljava/lang/String;
 
     if-eqz v2, :cond_b
@@ -1033,9 +1029,10 @@
 
     if-eqz v1, :cond_2
 
+    :goto_1
     iput-object v1, v2, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
     iget-object v1, p0, Landroidx/core/app/NotificationCompatBuilder;->mBuilderCompat:Landroidx/core/app/NotificationCompat$b;
@@ -1044,10 +1041,10 @@
 
     if-eqz v1, :cond_3
 
-    iput-object v1, v2, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
+    goto :goto_1
 
     :cond_3
-    :goto_1
+    :goto_2
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x10
@@ -1104,7 +1101,7 @@
     return-object v2
 .end method
 
-.method public buildInternal()Landroid/app/Notification;
+.method protected buildInternal()Landroid/app/Notification;
     .locals 7
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

@@ -1,9 +1,9 @@
-.class public Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;
+.class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/g/l/y/f;
+.implements Landroidx/core/view/accessibility/f;
 
 
 # annotations
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.field final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public final synthetic b:Lcom/google/android/material/appbar/AppBarLayout;
+.field final synthetic b:Lcom/google/android/material/appbar/AppBarLayout;
 
-.field public final synthetic c:Landroid/view/View;
+.field final synthetic c:Landroid/view/View;
 
-.field public final synthetic d:I
+.field final synthetic d:I
 
-.field public final synthetic e:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+.field final synthetic e:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
+.method constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$d;->e:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/g/l/y/f$a;)Z
+.method public a(Landroid/view/View;Landroidx/core/view/accessibility/f$a;)Z
     .locals 8
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/g/l/y/f$a;
+    .param p2    # Landroidx/core/view/accessibility/f$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

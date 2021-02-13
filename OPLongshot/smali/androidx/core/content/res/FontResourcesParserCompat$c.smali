@@ -1,6 +1,6 @@
 .class public final Landroidx/core/content/res/FontResourcesParserCompat$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,20 +15,20 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field private final a:Ljava/lang/String;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public b:I
+.field private b:I
 
-.field public c:Z
+.field private c:Z
 
-.field public d:Ljava/lang/String;
+.field private d:Ljava/lang/String;
 
-.field public e:I
+.field private e:I
 
-.field public f:I
+.field private f:I
 
 
 # direct methods

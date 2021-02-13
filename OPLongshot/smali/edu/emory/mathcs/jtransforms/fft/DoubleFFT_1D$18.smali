@@ -1,6 +1,6 @@
-.class public synthetic Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$18;
+.class synthetic Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$18;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
+    accessFlags = 0x1008
     name = null
 .end annotation
 
 
 # static fields
-.field public static final synthetic $SwitchMap$edu$emory$mathcs$jtransforms$fft$DoubleFFT_1D$Plans:[I
+.field static final synthetic $SwitchMap$edu$emory$mathcs$jtransforms$fft$DoubleFFT_1D$Plans:[I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 3
 
     invoke-static {}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;->values()[Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;

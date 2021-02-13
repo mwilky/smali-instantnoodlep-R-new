@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/app/GlobalScreenShotFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.GlobalFrameLayout"
+.field private static final TAG:Ljava/lang/String; = "Longshot.GlobalFrameLayout"
 
 
 # instance fields
-.field public mKeyCallback:Lcom/oneplus/screenshot/GlobalScreenshot$KeyEventCallBack;
+.field private mKeyCallback:Lcom/oneplus/screenshot/GlobalScreenshot$KeyEventCallBack;
 
 
 # direct methods

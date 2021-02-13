@@ -1,6 +1,6 @@
-.class public final Landroidx/customview/view/AbsSavedState$a;
+.class final Landroidx/customview/view/AbsSavedState$a;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     const/4 v0, 0x0

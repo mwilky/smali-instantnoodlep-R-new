@@ -1,6 +1,6 @@
-.class public Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
+.class Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -17,14 +17,14 @@
 
 
 # instance fields
-.field public final synthetic this$0:Lb/t/b/a;
+.field final synthetic this$0:Landroidx/viewpager2/widget/a;
 
 
 # direct methods
-.method public constructor <init>(Lb/t/b/a;)V
+.method constructor <init>(Landroidx/viewpager2/widget/a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;->this$0:Lb/t/b/a;
+    iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;->this$0:Landroidx/viewpager2/widget/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

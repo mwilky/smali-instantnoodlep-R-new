@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/ParcelableSparseIntArray;
 .super Landroid/util/SparseIntArray;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/internal/ParcelableSparseIntArray$1;

@@ -1,6 +1,6 @@
 .class public Landroidx/core/provider/FontsContractCompat$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public final a:I
+.field private final a:I
 
-.field public final b:[Landroidx/core/provider/FontsContractCompat$b;
+.field private final b:[Landroidx/core/provider/FontsContractCompat$b;
 
 
 # direct methods

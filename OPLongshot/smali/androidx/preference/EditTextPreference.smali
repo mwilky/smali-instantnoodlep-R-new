@@ -1,6 +1,6 @@
 .class public Landroidx/preference/EditTextPreference;
-.super Lb/m/a;
-.source "SourceFile"
+.super Landroidx/preference/a;
+.source ""
 
 
 # annotations
@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field public b:Ljava/lang/String;
+.field private b:Ljava/lang/String;
 
 
 # virtual methods
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method protected onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -60,7 +60,7 @@
     return-object p1
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
     if-eqz p1, :cond_1
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
     invoke-super {p0}, Landroidx/preference/Preference;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -130,7 +130,7 @@
     return-object v1
 .end method
 
-.method public onSetInitialValue(Ljava/lang/Object;)V
+.method protected onSetInitialValue(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/String;

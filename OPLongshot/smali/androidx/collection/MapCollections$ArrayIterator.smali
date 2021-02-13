@@ -1,6 +1,6 @@
-.class public final Landroidx/collection/MapCollections$ArrayIterator;
+.class final Landroidx/collection/MapCollections$ArrayIterator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x10
     name = "ArrayIterator"
 .end annotation
 
@@ -29,19 +29,19 @@
 
 
 # instance fields
-.field public mCanRemove:Z
+.field mCanRemove:Z
 
-.field public mIndex:I
+.field mIndex:I
 
-.field public final mOffset:I
+.field final mOffset:I
 
-.field public mSize:I
+.field mSize:I
 
-.field public final synthetic this$0:Landroidx/collection/MapCollections;
+.field final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/collection/MapCollections;I)V
+.method constructor <init>(Landroidx/collection/MapCollections;I)V
     .locals 1
 
     iput-object p1, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;

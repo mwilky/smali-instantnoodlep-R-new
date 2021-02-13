@@ -1,9 +1,9 @@
-.class public Landroidx/appcompat/app/AppCompatDelegateImpl$i;
+.class Landroidx/appcompat/app/AppCompatDelegateImpl$i;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/c/k/a;
+.implements Landroidx/appcompat/app/a;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "i"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

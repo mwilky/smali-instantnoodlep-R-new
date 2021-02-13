@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/UnsupportedState;
 .super Lcom/oneplus/screenshot/longshot/state/MainState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.UnsupportedState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.UnsupportedState"
 
 
 # direct methods
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public initViews(Landroid/widget/FrameLayout;)V
+.method protected initViews(Landroid/widget/FrameLayout;)V
     .locals 0
 
     return-void
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public updateButtons(Landroid/widget/FrameLayout;)V
+.method protected updateButtons(Landroid/widget/FrameLayout;)V
     .locals 0
 
     return-void

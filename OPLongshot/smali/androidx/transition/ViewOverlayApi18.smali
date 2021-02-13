@@ -1,9 +1,9 @@
-.class public Landroidx/transition/ViewOverlayApi18;
+.class Landroidx/transition/ViewOverlayApi18;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/p/x;
+.implements Landroidx/transition/x;
 
 
 # annotations
@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public final mViewOverlay:Landroid/view/ViewOverlay;
+.field private final mViewOverlay:Landroid/view/ViewOverlay;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method constructor <init>(Landroid/view/View;)V
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;

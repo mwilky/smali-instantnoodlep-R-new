@@ -1,6 +1,6 @@
-.class public Landroidx/transition/Styleable;
+.class Landroidx/transition/Styleable;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,64 +12,64 @@
 
 
 # static fields
-.field public static final ARC_MOTION:[I
+.field static final ARC_MOTION:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final CHANGE_BOUNDS:[I
+.field static final CHANGE_BOUNDS:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final CHANGE_TRANSFORM:[I
+.field static final CHANGE_TRANSFORM:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final FADE:[I
+.field static final FADE:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final PATTERN_PATH_MOTION:[I
+.field static final PATTERN_PATH_MOTION:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final SLIDE:[I
+.field static final SLIDE:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final TRANSITION:[I
+.field static final TRANSITION:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final TRANSITION_MANAGER:[I
+.field static final TRANSITION_MANAGER:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final TRANSITION_SET:[I
+.field static final TRANSITION_SET:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final TRANSITION_TARGET:[I
+.field static final TRANSITION_TARGET:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
-.field public static final VISIBILITY_TRANSITION:[I
+.field static final VISIBILITY_TRANSITION:[I
     .annotation build Landroidx/annotation/StyleableRes;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     const/4 v0, 0x6
@@ -203,7 +203,7 @@
     .end array-data
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

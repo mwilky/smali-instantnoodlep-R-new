@@ -1,6 +1,6 @@
-.class public synthetic Lcom/google/android/material/shape/ShapeAppearanceModel$a;
+.class synthetic Lcom/google/android/material/shape/ShapeAppearanceModel$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
+    accessFlags = 0x1008
     name = null
 .end annotation

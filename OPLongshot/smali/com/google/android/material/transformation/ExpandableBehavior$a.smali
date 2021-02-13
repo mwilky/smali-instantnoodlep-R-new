@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transformation/ExpandableBehavior$a;
+.class Lcom/google/android/material/transformation/ExpandableBehavior$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:I
+.field final synthetic b:I
 
-.field public final synthetic c:Lc/a/b/b/w/a;
+.field final synthetic c:Lb/a/b/a/o/a;
 
-.field public final synthetic d:Lcom/google/android/material/transformation/ExpandableBehavior;
+.field final synthetic d:Lcom/google/android/material/transformation/ExpandableBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILc/a/b/b/w/a;)V
+.method constructor <init>(Lcom/google/android/material/transformation/ExpandableBehavior;Landroid/view/View;ILb/a/b/a/o/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->d:Lcom/google/android/material/transformation/ExpandableBehavior;
@@ -37,7 +37,7 @@
 
     iput p3, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->b:I
 
-    iput-object p4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/a/b/b/w/a;
+    iput-object p4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lb/a/b/a/o/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->d:Lcom/google/android/material/transformation/ExpandableBehavior;
 
-    iget-object v1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lc/a/b/b/w/a;
+    iget-object v1, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->c:Lb/a/b/a/o/a;
 
     move-object v3, v1
 
@@ -79,7 +79,7 @@
 
     iget-object v4, p0, Lcom/google/android/material/transformation/ExpandableBehavior$a;->a:Landroid/view/View;
 
-    invoke-interface {v1}, Lc/a/b/b/w/a;->a()Z
+    invoke-interface {v1}, Lb/a/b/a/o/a;->a()Z
 
     move-result v1
 

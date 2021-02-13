@@ -1,6 +1,6 @@
-.class public Landroidx/customview/widget/ExploreByTouchHelper$a;
+.class Landroidx/customview/widget/ExploreByTouchHelper$a;
 .super Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final synthetic b:Landroidx/customview/widget/ExploreByTouchHelper;
+.field final synthetic b:Landroidx/customview/widget/ExploreByTouchHelper;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/customview/widget/ExploreByTouchHelper;)V
+.method constructor <init>(Landroidx/customview/widget/ExploreByTouchHelper;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper$a;->b:Landroidx/customview/widget/ExploreByTouchHelper;
@@ -31,23 +31,23 @@
 
 
 # virtual methods
-.method public a(I)Lb/g/l/y/d;
+.method public a(I)Landroidx/core/view/accessibility/d;
     .locals 1
 
     iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper$a;->b:Landroidx/customview/widget/ExploreByTouchHelper;
 
-    invoke-virtual {v0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Lb/g/l/y/d;
+    invoke-virtual {v0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/g/l/y/d;->K(Lb/g/l/y/d;)Lb/g/l/y/d;
+    invoke-static {p1}, Landroidx/core/view/accessibility/d;->K(Landroidx/core/view/accessibility/d;)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public c(I)Lb/g/l/y/d;
+.method public c(I)Landroidx/core/view/accessibility/d;
     .locals 1
 
     const/4 v0, 0x2
@@ -75,7 +75,7 @@
     return-object p1
 
     :cond_1
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper$a;->a(I)Lb/g/l/y/d;
+    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper$a;->a(I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 

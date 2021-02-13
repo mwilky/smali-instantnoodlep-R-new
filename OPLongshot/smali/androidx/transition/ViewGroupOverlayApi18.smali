@@ -1,9 +1,9 @@
-.class public Landroidx/transition/ViewGroupOverlayApi18;
+.class Landroidx/transition/ViewGroupOverlayApi18;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/p/t;
+.implements Landroidx/transition/t;
 
 
 # annotations
@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public final mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
+.field private final mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
+.method constructor <init>(Landroid/view/ViewGroup;)V
     .locals 0
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;

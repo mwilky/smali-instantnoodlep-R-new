@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/ActivityCompat;
-.super Lb/g/e/b;
-.source "SourceFile"
+.super Landroidx/core/content/b;
+.source ""
 
 
 # annotations
@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static c:Landroidx/core/app/ActivityCompat$c;
+.field private static c:Landroidx/core/app/ActivityCompat$c;
 
 
 # direct methods
-.method public static g(Landroid/app/Activity;)V
+.method public static e(Landroid/app/Activity;)V
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public static h()Landroidx/core/app/ActivityCompat$c;
+.method public static f()Landroidx/core/app/ActivityCompat$c;
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -56,7 +56,7 @@
     return-object v0
 .end method
 
-.method public static i(Landroid/app/Activity;)V
+.method public static g(Landroid/app/Activity;)V
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
@@ -69,9 +69,10 @@
 
     if-lt v0, v1, :cond_0
 
+    :goto_0
     invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-static {p0}, Landroidx/core/app/ActivityRecreator;->recreate(Landroid/app/Activity;)Z
@@ -80,14 +81,14 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method
 
-.method public static j(Landroid/app/Activity;[Ljava/lang/String;I)V
+.method public static h(Landroid/app/Activity;[Ljava/lang/String;I)V
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
@@ -161,7 +162,7 @@
     return-void
 .end method
 
-.method public static k(Landroid/app/Activity;Ljava/lang/String;)Z
+.method public static i(Landroid/app/Activity;Ljava/lang/String;)Z
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
@@ -190,7 +191,7 @@
     return p0
 .end method
 
-.method public static l(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
+.method public static j(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
@@ -222,7 +223,7 @@
     return-void
 .end method
 
-.method public static m(Landroid/app/Activity;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+.method public static k(Landroid/app/Activity;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
     .locals 2
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;

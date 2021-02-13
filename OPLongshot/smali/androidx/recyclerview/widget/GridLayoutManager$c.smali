@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/GridLayoutManager$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public final a:Landroid/util/SparseIntArray;
+.field final a:Landroid/util/SparseIntArray;
 
-.field public final b:Landroid/util/SparseIntArray;
+.field final b:Landroid/util/SparseIntArray;
 
-.field public c:Z
+.field private c:Z
 
-.field public d:Z
+.field private d:Z
 
 
 # direct methods
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/util/SparseIntArray;I)I
+.method static a(Landroid/util/SparseIntArray;I)I
     .locals 4
 
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
@@ -113,7 +113,7 @@
 
 
 # virtual methods
-.method public b(II)I
+.method b(II)I
     .locals 2
 
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager$c;->d:Z
@@ -151,7 +151,7 @@
     return p2
 .end method
 
-.method public c(II)I
+.method c(II)I
     .locals 2
 
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager$c;->c:Z

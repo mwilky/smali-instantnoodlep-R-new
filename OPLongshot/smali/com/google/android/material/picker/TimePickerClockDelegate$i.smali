@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/TimePickerClockDelegate$i;
+.class Lcom/google/android/material/picker/TimePickerClockDelegate$i;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -8,21 +8,21 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->M()V
+    value = Lcom/google/android/material/picker/TimePickerClockDelegate;->N()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$i;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -91,17 +91,29 @@
     :goto_0
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v1, :cond_2
 
     int-to-float v0, v0
 
     iget-object v1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$i;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    iget-object v1, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->b:Landroid/content/Context;
+    iget-object v2, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->b:Landroid/content/Context;
 
-    const/16 v2, 0x162
+    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->r(Lcom/google/android/material/picker/TimePickerClockDelegate;)Z
 
-    invoke-static {v1, v2}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/16 v1, 0x176
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v1, 0x162
+
+    :goto_1
+    invoke-static {v2, v1}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
 
     move-result v1
 
@@ -123,7 +135,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/e;->op_picker_dialog_material_background_bottom:I
+    sget v1, Lb/a/b/a/e;->op_picker_dialog_material_background_bottom:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -145,7 +157,7 @@
 
     iget-object v1, v1, Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;->b:Landroid/content/Context;
 
-    sget v2, Lc/a/b/b/c;->op_control_bg_color_popup_default:I
+    sget v2, Lb/a/b/a/c;->op_control_bg_color_popup_default:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -161,10 +173,10 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$i;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->r(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->s(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
@@ -184,7 +196,7 @@
 
     move-result-object p1
 
-    sget v2, Lc/a/b/b/d;->op_control_margin_space3:I
+    sget v2, Lb/a/b/a/d;->op_control_margin_space3:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/reject/ByKeyguard;
 .super Lcom/oneplus/screenshot/longshot/reject/Reject;
-.source "SourceFile"
+.source ""
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
 
 # direct methods

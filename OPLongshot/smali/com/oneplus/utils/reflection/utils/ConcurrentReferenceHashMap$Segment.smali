@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
 .super Ljava/util/concurrent/locks/ReentrantLock;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x14
     name = "Segment"
 .end annotation
 
 
 # instance fields
-.field public final a:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
+.field private final a:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap<",
@@ -24,9 +24,9 @@
     .end annotation
 .end field
 
-.field public final b:I
+.field private final b:I
 
-.field public volatile c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field private volatile c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -36,11 +36,11 @@
     .end annotation
 .end field
 
-.field public volatile d:I
+.field private volatile d:I
 
-.field public e:I
+.field private e:I
 
-.field public final synthetic f:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field final synthetic f:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
@@ -73,16 +73,16 @@
 
     iput p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->b:I
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-direct {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
+.method static synthetic a(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->a:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
@@ -90,7 +90,7 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.method static synthetic b(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -98,7 +98,7 @@
     return-object p0
 .end method
 
-.method public static synthetic c(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)I
+.method static synthetic c(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)I
     .locals 2
 
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->d:I
@@ -108,6 +108,134 @@
     iput v1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->d:I
 
     return v0
+.end method
+
+.method private e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)[",
+            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    const-class v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+
+    invoke-static {v0, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+
+    return-object p1
+.end method
+
+.method private g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
+            "TK;TV;>;",
+            "Ljava/lang/Object;",
+            "I)",
+            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->getHash()I
+
+    move-result v0
+
+    if-ne v0, p3, :cond_1
+
+    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->get()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p2, :cond_0
+
+    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    return-object p1
+
+    :cond_1
+    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->getNext()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method private i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I[",
+            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
+            "TK;TV;>;)I"
+        }
+    .end annotation
+
+    array-length p2, p2
+
+    add-int/lit8 p2, p2, -0x1
+
+    and-int/2addr p1, p2
+
+    return p1
+.end method
+
+.method private l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+
+    array-length p1, p1
+
+    int-to-float p1, p1
+
+    iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->f:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+
+    invoke-virtual {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->getLoadFactor()F
+
+    move-result v0
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    iput p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e:I
+
+    return-void
 .end method
 
 
@@ -127,11 +255,11 @@
     :try_start_0
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->b:I
 
-    invoke-virtual {p0, v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-direct {p0, v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
 
     const/4 v0, 0x0
 
@@ -149,27 +277,6 @@
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     throw v0
-.end method
-
-.method public final e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)[",
-            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
-            "TK;TV;>;"
-        }
-    .end annotation
-
-    const-class v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-
-    invoke-static {v0, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-
-    return-object p1
 .end method
 
 .method public f(ILjava/lang/Object;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;)Ljava/lang/Object;
@@ -228,7 +335,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
-    invoke-virtual {p0, p1, v1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
+    invoke-direct {p0, p1, v1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
 
     move-result v8
 
@@ -236,7 +343,7 @@
 
     aget-object v7, v1, v8
 
-    invoke-virtual {p0, v7, p2, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-direct {p0, v7, p2, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object v1
 
@@ -299,88 +406,12 @@
     throw p1
 .end method
 
-.method public final g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
-            "TK;TV;>;",
-            "Ljava/lang/Object;",
-            "I)",
-            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
-            "TK;TV;>;"
-        }
-    .end annotation
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->getHash()I
-
-    move-result v0
-
-    if-ne v0, p3, :cond_1
-
-    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->get()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p2, :cond_0
-
-    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    return-object p1
-
-    :cond_1
-    invoke-interface {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;->getNext()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
 .method public final h()I
     .locals 1
 
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->d:I
 
     return v0
-.end method
-
-.method public final i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I[",
-            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
-            "TK;TV;>;)I"
-        }
-    .end annotation
-
-    array-length p2, p2
-
-    add-int/lit8 p2, p2, -0x1
-
-    and-int/2addr p1, p2
-
-    return p1
 .end method
 
 .method public j(Ljava/lang/Object;ILcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -417,20 +448,20 @@
     :cond_1
     iget-object p3, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
-    invoke-virtual {p0, p2, p3}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
+    invoke-direct {p0, p2, p3}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
 
     move-result v0
 
     aget-object p3, p3, v0
 
-    invoke-virtual {p0, p3, p1, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-direct {p0, p3, p1, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->g(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Ljava/lang/Object;I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final k(Z)V
+.method protected final k(Z)V
     .locals 11
 
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->d:I
@@ -539,7 +570,7 @@
     :goto_3
     if-eqz v1, :cond_5
 
-    invoke-virtual {p0, v5}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+    invoke-direct {p0, v5}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
     move-result-object p1
 
@@ -588,7 +619,7 @@
 
     move-result v6
 
-    invoke-virtual {p0, v6, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
+    invoke-direct {p0, v6, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->i(I[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)I
 
     move-result v6
 
@@ -625,7 +656,7 @@
     :cond_9
     if-eqz v1, :cond_a
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
 
     :cond_a
     invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
@@ -647,35 +678,4 @@
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     throw p1
-.end method
-
-.method public final l([Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
-            "TK;TV;>;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->c:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
-
-    array-length p1, p1
-
-    int-to-float p1, p1
-
-    iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->f:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
-
-    invoke-virtual {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->getLoadFactor()F
-
-    move-result v0
-
-    mul-float/2addr p1, v0
-
-    float-to-int p1, p1
-
-    iput p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->e:I
-
-    return-void
 .end method

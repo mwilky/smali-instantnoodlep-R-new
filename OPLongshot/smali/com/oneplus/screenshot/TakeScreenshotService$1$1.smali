@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/TakeScreenshotService$1$1;
+.class Lcom/oneplus/screenshot/TakeScreenshotService$1$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$1:Lcom/oneplus/screenshot/TakeScreenshotService$1;
+.field final synthetic this$1:Lcom/oneplus/screenshot/TakeScreenshotService$1;
 
-.field public final synthetic val$callback:Landroid/os/Messenger;
+.field final synthetic val$callback:Landroid/os/Messenger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/TakeScreenshotService$1;Landroid/os/Messenger;)V
+.method constructor <init>(Lcom/oneplus/screenshot/TakeScreenshotService$1;Landroid/os/Messenger;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/TakeScreenshotService$1$1;->this$1:Lcom/oneplus/screenshot/TakeScreenshotService$1;

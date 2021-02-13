@@ -1,6 +1,6 @@
-.class public final Landroidx/customview/widget/ExploreByTouchHelper$2;
+.class final Landroidx/customview/widget/ExploreByTouchHelper$2;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/customview/widget/FocusStrategy$CollectionAdapter;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -21,16 +21,16 @@
         "Ljava/lang/Object;",
         "Landroidx/customview/widget/FocusStrategy$CollectionAdapter<",
         "Landroidx/collection/SparseArrayCompat<",
-        "Lb/g/l/y/d;",
+        "Landroidx/core/view/accessibility/d;",
         ">;",
-        "Lb/g/l/y/d;",
+        "Landroidx/core/view/accessibility/d;",
         ">;"
     }
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public get(Landroidx/collection/SparseArrayCompat;I)Lb/g/l/y/d;
+.method public get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/d;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Lb/g/l/y/d;",
+            "Landroidx/core/view/accessibility/d;",
             ">;I)",
-            "Lb/g/l/y/d;"
+            "Landroidx/core/view/accessibility/d;"
         }
     .end annotation
 
@@ -56,7 +56,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lb/g/l/y/d;
+    check-cast p1, Landroidx/core/view/accessibility/d;
 
     return-object p1
 .end method
@@ -66,7 +66,7 @@
 
     check-cast p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Lb/g/l/y/d;
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$2;->get(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
         value = {
             "(",
             "Landroidx/collection/SparseArrayCompat<",
-            "Lb/g/l/y/d;",
+            "Landroidx/core/view/accessibility/d;",
             ">;)I"
         }
     .end annotation

@@ -1,6 +1,6 @@
 .class public Landroidx/arch/core/executor/ArchTaskExecutor;
 .super Landroidx/arch/core/executor/TaskExecutor;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,33 +12,33 @@
 
 
 # static fields
-.field public static final sIOThreadExecutor:Ljava/util/concurrent/Executor;
+.field private static final sIOThreadExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public static volatile sInstance:Landroidx/arch/core/executor/ArchTaskExecutor;
+.field private static volatile sInstance:Landroidx/arch/core/executor/ArchTaskExecutor;
 
-.field public static final sMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field private static final sMainThreadExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # instance fields
-.field public mDefaultTaskExecutor:Landroidx/arch/core/executor/TaskExecutor;
+.field private mDefaultTaskExecutor:Landroidx/arch/core/executor/TaskExecutor;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public mDelegate:Landroidx/arch/core/executor/TaskExecutor;
+.field private mDelegate:Landroidx/arch/core/executor/TaskExecutor;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/arch/core/executor/ArchTaskExecutor$a;
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Landroidx/arch/core/executor/TaskExecutor;-><init>()V

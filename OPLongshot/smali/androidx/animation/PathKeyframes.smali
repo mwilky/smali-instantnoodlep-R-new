@@ -1,6 +1,6 @@
-.class public Landroidx/animation/PathKeyframes;
+.class Landroidx/animation/PathKeyframes;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes;
@@ -26,7 +26,7 @@
 
 
 # static fields
-.field public static final EMPTY_KEYFRAMES:Ljava/util/ArrayList;
+.field private static final EMPTY_KEYFRAMES:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -37,23 +37,23 @@
     .end annotation
 .end field
 
-.field public static final FRACTION_OFFSET:I = 0x0
+.field private static final FRACTION_OFFSET:I = 0x0
 
-.field public static final NUM_COMPONENTS:I = 0x3
+.field private static final NUM_COMPONENTS:I = 0x3
 
-.field public static final X_OFFSET:I = 0x1
+.field private static final X_OFFSET:I = 0x1
 
-.field public static final Y_OFFSET:I = 0x2
+.field private static final Y_OFFSET:I = 0x2
 
 
 # instance fields
-.field public final mKeyframeData:[F
+.field private final mKeyframeData:[F
 
-.field public mTempPointF:Landroid/graphics/PointF;
+.field private mTempPointF:Landroid/graphics/PointF;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/util/ArrayList;
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/Path;)V
+.method constructor <init>(Landroid/graphics/Path;)V
     .locals 1
 
     const/high16 v0, 0x3f000000    # 0.5f
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/Path;F)V
+.method constructor <init>(Landroid/graphics/Path;F)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -94,7 +94,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p1, p2}, Lb/b/g;->b(Landroid/graphics/Path;F)[F
+    invoke-static {p1, p2}, Landroidx/animation/g;->b(Landroid/graphics/Path;F)[F
 
     move-result-object p1
 
@@ -112,7 +112,7 @@
     throw p1
 .end method
 
-.method public static interpolate(FFF)F
+.method private static interpolate(FFF)F
     .locals 0
 
     sub-float/2addr p2, p1
@@ -364,9 +364,9 @@
     return-object p1
 
     :cond_2
-    if-nez v2, :cond_3
-
     sub-int/2addr v0, v4
+
+    if-nez v2, :cond_3
 
     invoke-direct {p0, v0}, Landroidx/animation/PathKeyframes;->pointForIndex(I)Landroid/graphics/PointF;
 
@@ -375,8 +375,6 @@
     return-object p1
 
     :cond_3
-    sub-int/2addr v0, v4
-
     move v1, v3
 
     :goto_0

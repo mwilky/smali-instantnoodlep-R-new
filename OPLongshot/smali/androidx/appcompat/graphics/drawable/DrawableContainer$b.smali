@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/graphics/drawable/DrawableContainer$b;
+.class Landroidx/appcompat/graphics/drawable/DrawableContainer$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/graphics/drawable/Drawable$Callback;
+.field private a:Landroid/graphics/drawable/Drawable$Callback;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

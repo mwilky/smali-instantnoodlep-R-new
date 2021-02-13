@@ -1,6 +1,6 @@
-.class public interface abstract Lcom/google/android/material/picker/DatePicker$b;
+.class interface abstract Lcom/google/android/material/picker/DatePicker$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "b"
 .end annotation
 

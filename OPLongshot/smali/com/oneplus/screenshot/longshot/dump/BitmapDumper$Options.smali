@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
+.field private static final synthetic $VALUES:[Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
 
 .field public static final enum DIVIDE:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
 
@@ -43,11 +43,11 @@
 
 
 # instance fields
-.field public mValue:Z
+.field private mValue:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 11
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
@@ -169,7 +169,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IZ)V
+.method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -188,7 +188,7 @@
     return-void
 .end method
 
-.method public static synthetic access$002(Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;Z)Z
+.method static synthetic access$002(Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;->mValue:Z

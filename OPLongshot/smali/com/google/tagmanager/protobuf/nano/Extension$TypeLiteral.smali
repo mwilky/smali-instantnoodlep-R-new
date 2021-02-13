@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,11 +24,11 @@
 
 
 # instance fields
-.field public final type:Ljava/lang/reflect/Type;
+.field private final type:Ljava/lang/reflect/Type;
 
 
 # direct methods
-.method public constructor <init>()V
+.method protected constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -69,7 +69,7 @@
     throw v0
 .end method
 
-.method public static synthetic access$000(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Z
+.method static synthetic access$000(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;->isList()Z
@@ -79,7 +79,7 @@
     return p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Ljava/lang/Class;
+.method static synthetic access$100(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Ljava/lang/Class;
     .locals 0
 
     invoke-direct {p0}, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;->getTargetClass()Ljava/lang/Class;
@@ -89,7 +89,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Ljava/lang/Class;
+.method static synthetic access$200(Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)Ljava/lang/Class;
     .locals 0
 
     invoke-direct {p0}, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;->getListType()Ljava/lang/Class;
@@ -150,6 +150,7 @@
 
     aget-object v0, v0, v1
 
+    :goto_0
     check-cast v0, Ljava/lang/Class;
 
     return-object v0
@@ -157,9 +158,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;->type:Ljava/lang/reflect/Type;
 
-    check-cast v0, Ljava/lang/Class;
-
-    return-object v0
+    goto :goto_0
 .end method
 
 .method private isList()Z

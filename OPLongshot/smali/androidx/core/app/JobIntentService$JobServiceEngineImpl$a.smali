@@ -1,9 +1,9 @@
-.class public final Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;
+.class final Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Landroidx/core/app/JobIntentService$d;
+.implements Landroidx/core/app/JobIntentService$a;
 
 
 # annotations
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x10
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/app/job/JobWorkItem;
+.field final a:Landroid/app/job/JobWorkItem;
 
-.field public final synthetic b:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
+.field final synthetic b:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
+.method constructor <init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$a;->b:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringRelativeLayout;
 .super Landroid/widget/RelativeLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final h:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+.field private static final h:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/dynamicanimation/animation/FloatPropertyCompat<",
@@ -24,23 +24,23 @@
 
 
 # instance fields
-.field public a:F
+.field private a:F
 
-.field public b:F
+.field private b:F
 
-.field public final c:Landroid/util/SparseBooleanArray;
+.field protected final c:Landroid/util/SparseBooleanArray;
 
-.field public final d:Landroidx/dynamicanimation/animation/SpringAnimation;
+.field private final d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-.field public e:F
+.field private e:F
 
-.field public f:Lcom/google/android/material/edgeeffect/SpringRelativeLayout$a;
+.field private f:Lcom/google/android/material/edgeeffect/SpringRelativeLayout$a;
 
-.field public g:Z
+.field private g:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout$1;
@@ -99,24 +99,20 @@
 
     iput-object v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Landroidx/dynamicanimation/animation/SpringForce;
+    new-instance v1, Landroidx/dynamicanimation/animation/b;
 
-    invoke-direct {v1, p3}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V
+    invoke-direct {v1, p3}, Landroidx/dynamicanimation/animation/b;-><init>(F)V
 
-    invoke-virtual {v1, p1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {v1, p1}, Landroidx/dynamicanimation/animation/b;->g(F)Landroidx/dynamicanimation/animation/b;
 
-    move-result-object p1
+    invoke-virtual {v1, p2}, Landroidx/dynamicanimation/animation/b;->e(F)Landroidx/dynamicanimation/animation/b;
 
-    invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+    invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/b;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/material/edgeeffect/SpringRelativeLayout;)F
+.method static synthetic a(Lcom/google/android/material/edgeeffect/SpringRelativeLayout;)F
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->e:F
@@ -136,7 +132,7 @@
 
 
 # virtual methods
-.method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
+.method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 6
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->e:F
@@ -241,7 +237,7 @@
     return v0
 .end method
 
-.method public setAnimationEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)V
+.method public setAnimationEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$q;)V
     .locals 0
 
     return-void
@@ -254,18 +250,18 @@
 
     iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->b:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->e(F)Landroidx/dynamicanimation/animation/b;
 
     return-void
 .end method
 
-.method public setDampedScrollShift(F)V
+.method protected setDampedScrollShift(F)V
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->e:F
@@ -329,13 +325,13 @@
 
     iget-object p1, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->d:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/b;
 
     move-result-object p1
 
     iget v0, p0, Lcom/google/android/material/edgeeffect/SpringRelativeLayout;->a:F
 
-    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+    invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/b;->g(F)Landroidx/dynamicanimation/animation/b;
 
     return-void
 .end method

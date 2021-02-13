@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/viewpager/widget/ViewPager$g;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,16 +15,16 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/viewpager/widget/ViewPager;Lb/s/a/a;Lb/s/a/a;)V
+.method public abstract a(Landroidx/viewpager/widget/ViewPager;Landroidx/viewpager/widget/a;Landroidx/viewpager/widget/a;)V
     .param p1    # Landroidx/viewpager/widget/ViewPager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/s/a/a;
+    .param p2    # Landroidx/viewpager/widget/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lb/s/a/a;
+    .param p3    # Landroidx/viewpager/widget/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

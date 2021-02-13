@@ -1,6 +1,6 @@
-.class public Landroidx/core/app/NotificationCompatJellybean;
+.class Landroidx/core/app/NotificationCompatJellybean;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,59 +10,59 @@
 
 
 # static fields
-.field public static final EXTRA_ALLOW_GENERATED_REPLIES:Ljava/lang/String; = "android.support.allowGeneratedReplies"
+.field static final EXTRA_ALLOW_GENERATED_REPLIES:Ljava/lang/String; = "android.support.allowGeneratedReplies"
 
-.field public static final EXTRA_DATA_ONLY_REMOTE_INPUTS:Ljava/lang/String; = "android.support.dataRemoteInputs"
+.field static final EXTRA_DATA_ONLY_REMOTE_INPUTS:Ljava/lang/String; = "android.support.dataRemoteInputs"
 
-.field public static final KEY_ACTION_INTENT:Ljava/lang/String; = "actionIntent"
+.field private static final KEY_ACTION_INTENT:Ljava/lang/String; = "actionIntent"
 
-.field public static final KEY_ALLOWED_DATA_TYPES:Ljava/lang/String; = "allowedDataTypes"
+.field private static final KEY_ALLOWED_DATA_TYPES:Ljava/lang/String; = "allowedDataTypes"
 
-.field public static final KEY_ALLOW_FREE_FORM_INPUT:Ljava/lang/String; = "allowFreeFormInput"
+.field private static final KEY_ALLOW_FREE_FORM_INPUT:Ljava/lang/String; = "allowFreeFormInput"
 
-.field public static final KEY_CHOICES:Ljava/lang/String; = "choices"
+.field private static final KEY_CHOICES:Ljava/lang/String; = "choices"
 
-.field public static final KEY_DATA_ONLY_REMOTE_INPUTS:Ljava/lang/String; = "dataOnlyRemoteInputs"
+.field private static final KEY_DATA_ONLY_REMOTE_INPUTS:Ljava/lang/String; = "dataOnlyRemoteInputs"
 
-.field public static final KEY_EXTRAS:Ljava/lang/String; = "extras"
+.field private static final KEY_EXTRAS:Ljava/lang/String; = "extras"
 
-.field public static final KEY_ICON:Ljava/lang/String; = "icon"
+.field private static final KEY_ICON:Ljava/lang/String; = "icon"
 
-.field public static final KEY_LABEL:Ljava/lang/String; = "label"
+.field private static final KEY_LABEL:Ljava/lang/String; = "label"
 
-.field public static final KEY_REMOTE_INPUTS:Ljava/lang/String; = "remoteInputs"
+.field private static final KEY_REMOTE_INPUTS:Ljava/lang/String; = "remoteInputs"
 
-.field public static final KEY_RESULT_KEY:Ljava/lang/String; = "resultKey"
+.field private static final KEY_RESULT_KEY:Ljava/lang/String; = "resultKey"
 
-.field public static final KEY_SEMANTIC_ACTION:Ljava/lang/String; = "semanticAction"
+.field private static final KEY_SEMANTIC_ACTION:Ljava/lang/String; = "semanticAction"
 
-.field public static final KEY_SHOWS_USER_INTERFACE:Ljava/lang/String; = "showsUserInterface"
+.field private static final KEY_SHOWS_USER_INTERFACE:Ljava/lang/String; = "showsUserInterface"
 
-.field public static final KEY_TITLE:Ljava/lang/String; = "title"
+.field private static final KEY_TITLE:Ljava/lang/String; = "title"
 
 .field public static final TAG:Ljava/lang/String; = "NotificationCompat"
 
-.field public static sActionIconField:Ljava/lang/reflect/Field;
+.field private static sActionIconField:Ljava/lang/reflect/Field;
 
-.field public static sActionIntentField:Ljava/lang/reflect/Field;
+.field private static sActionIntentField:Ljava/lang/reflect/Field;
 
-.field public static sActionTitleField:Ljava/lang/reflect/Field;
+.field private static sActionTitleField:Ljava/lang/reflect/Field;
 
-.field public static sActionsAccessFailed:Z
+.field private static sActionsAccessFailed:Z
 
-.field public static sActionsField:Ljava/lang/reflect/Field;
+.field private static sActionsField:Ljava/lang/reflect/Field;
 
-.field public static final sActionsLock:Ljava/lang/Object;
+.field private static final sActionsLock:Ljava/lang/Object;
 
-.field public static sExtrasField:Ljava/lang/reflect/Field;
+.field private static sExtrasField:Ljava/lang/reflect/Field;
 
-.field public static sExtrasFieldAccessFailed:Z
+.field private static sExtrasFieldAccessFailed:Z
 
-.field public static final sExtrasLock:Ljava/lang/Object;
+.field private static final sExtrasLock:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -139,7 +139,7 @@
     return-object v1
 .end method
 
-.method public static ensureActionReflectionReadyLocked()Z
+.method private static ensureActionReflectionReadyLocked()Z
     .locals 5
 
     const-string v0, "Unable to access notification actions"
@@ -207,26 +207,23 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception v3
-
-    invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    sput-boolean v2, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
     goto :goto_0
 
     :catch_1
     move-exception v3
 
+    :goto_0
     invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     sput-boolean v2, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
     :cond_1
-    :goto_0
+    :goto_1
     sget-boolean v0, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
     xor-int/2addr v0, v2
@@ -234,7 +231,7 @@
     return v0
 .end method
 
-.method public static fromBundle(Landroid/os/Bundle;)Landroidx/core/app/RemoteInput;
+.method private static fromBundle(Landroid/os/Bundle;)Landroidx/core/app/RemoteInput;
     .locals 9
 
     const-string v0, "allowedDataTypes"
@@ -312,7 +309,7 @@
     return-object v0
 .end method
 
-.method public static fromBundleArray([Landroid/os/Bundle;)[Landroidx/core/app/RemoteInput;
+.method private static fromBundleArray([Landroid/os/Bundle;)[Landroidx/core/app/RemoteInput;
     .locals 3
 
     if-nez p0, :cond_0
@@ -494,7 +491,7 @@
     throw p0
 .end method
 
-.method public static getActionFromBundle(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$Action;
+.method static getActionFromBundle(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$Action;
     .locals 14
 
     const-string v0, "extras"
@@ -585,7 +582,7 @@
     return-object v1
 .end method
 
-.method public static getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;
+.method private static getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;
     .locals 4
 
     sget-object v0, Landroidx/core/app/NotificationCompatJellybean;->sActionsLock:Ljava/lang/Object;
@@ -652,7 +649,7 @@
     throw p0
 .end method
 
-.method public static getBundleArrayFromBundle(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/os/Bundle;
+.method private static getBundleArrayFromBundle(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/os/Bundle;
     .locals 3
 
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
@@ -689,7 +686,7 @@
     return-object v0
 .end method
 
-.method public static getBundleForAction(Landroidx/core/app/NotificationCompat$Action;)Landroid/os/Bundle;
+.method static getBundleForAction(Landroidx/core/app/NotificationCompat$Action;)Landroid/os/Bundle;
     .locals 4
 
     new-instance v0, Landroid/os/Bundle;
@@ -894,9 +891,10 @@
 
     const-string v4, "Unable to access notification extras"
 
+    :goto_0
     invoke-static {v3, v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception p0
@@ -905,9 +903,9 @@
 
     const-string v4, "Unable to access notification extras"
 
-    invoke-static {v3, v4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    goto :goto_0
 
-    :goto_0
+    :goto_1
     sput-boolean v1, Landroidx/core/app/NotificationCompatJellybean;->sExtrasFieldAccessFailed:Z
 
     monitor-exit v0
@@ -998,7 +996,7 @@
     return-object v11
 .end method
 
-.method public static toBundle(Landroidx/core/app/RemoteInput;)Landroid/os/Bundle;
+.method private static toBundle(Landroidx/core/app/RemoteInput;)Landroid/os/Bundle;
     .locals 3
 
     new-instance v0, Landroid/os/Bundle;
@@ -1095,7 +1093,7 @@
     return-object v0
 .end method
 
-.method public static toBundleArray([Landroidx/core/app/RemoteInput;)[Landroid/os/Bundle;
+.method private static toBundleArray([Landroidx/core/app/RemoteInput;)[Landroid/os/Bundle;
     .locals 3
 
     if-nez p0, :cond_0

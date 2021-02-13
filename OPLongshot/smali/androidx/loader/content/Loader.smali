@@ -1,6 +1,6 @@
 .class public Landroidx/loader/content/Loader;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,15 +23,15 @@
 
 
 # instance fields
-.field public mAbandoned:Z
+.field mAbandoned:Z
 
-.field public mContentChanged:Z
+.field mContentChanged:Z
 
-.field public mContext:Landroid/content/Context;
+.field mContext:Landroid/content/Context;
 
-.field public mId:I
+.field mId:I
 
-.field public mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
+.field mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader$OnLoadCompleteListener<",
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field public mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
+.field mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader$OnLoadCanceledListener<",
@@ -49,11 +49,11 @@
     .end annotation
 .end field
 
-.field public mProcessingChange:Z
+.field mProcessingChange:Z
 
-.field public mReset:Z
+.field mReset:Z
 
-.field public mStarted:Z
+.field mStarted:Z
 
 
 # direct methods
@@ -348,7 +348,7 @@
     return v0
 .end method
 
-.method public onAbandon()V
+.method protected onAbandon()V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -356,7 +356,7 @@
     return-void
 .end method
 
-.method public onCancelLoad()Z
+.method protected onCancelLoad()Z
     .locals 1
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -388,7 +388,7 @@
     return-void
 .end method
 
-.method public onForceLoad()V
+.method protected onForceLoad()V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -396,7 +396,7 @@
     return-void
 .end method
 
-.method public onReset()V
+.method protected onReset()V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -404,7 +404,7 @@
     return-void
 .end method
 
-.method public onStartLoading()V
+.method protected onStartLoading()V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -412,7 +412,7 @@
     return-void
 .end method
 
-.method public onStopLoading()V
+.method protected onStopLoading()V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation

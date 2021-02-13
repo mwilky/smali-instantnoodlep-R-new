@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/RecyclerView$Adapter;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field public mHasStableIds:Z
+.field private mHasStableIds:Z
 
-.field public final mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
+.field private final mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
 
 # direct methods
@@ -85,7 +85,7 @@
 
     const-string v0, "RV OnBindView"
 
-    invoke-static {v0}, Lb/g/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$y;->o()Ljava/util/List;
 
@@ -110,7 +110,7 @@
     iput-boolean v1, p1, Landroidx/recyclerview/widget/RecyclerView$l;->c:Z
 
     :cond_1
-    invoke-static {}, Lb/g/h/d;->b()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
     :try_start_0
     const-string v0, "RV CreateView"
 
-    invoke-static {v0}, Lb/g/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$y;
 
@@ -153,7 +153,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Lb/g/h/d;->b()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     return-object p1
 
@@ -172,7 +172,7 @@
     :catchall_0
     move-exception p1
 
-    invoke-static {}, Lb/g/h/d;->b()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     throw p1
 .end method

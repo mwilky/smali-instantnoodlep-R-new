@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchBgOverTask;
 .super Lcom/oneplus/screenshot/longshot/task/StitchBgNextTask;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "StitchBgOverTask"
+.field private static final TAG:Ljava/lang/String; = "StitchBgOverTask"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method protected createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;

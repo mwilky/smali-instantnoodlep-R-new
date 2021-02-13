@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/MessageThreadUtil$2;
+.class Landroidx/recyclerview/widget/MessageThreadUtil$2;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,31 +26,31 @@
 
 
 # static fields
-.field public static final LOAD_TILE:I = 0x3
+.field static final LOAD_TILE:I = 0x3
 
-.field public static final RECYCLE_TILE:I = 0x4
+.field static final RECYCLE_TILE:I = 0x4
 
-.field public static final REFRESH:I = 0x1
+.field static final REFRESH:I = 0x1
 
-.field public static final UPDATE_RANGE:I = 0x2
+.field static final UPDATE_RANGE:I = 0x2
 
 
 # instance fields
-.field public mBackgroundRunnable:Ljava/lang/Runnable;
+.field private mBackgroundRunnable:Ljava/lang/Runnable;
 
-.field public mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final mExecutor:Ljava/util/concurrent/Executor;
+.field private final mExecutor:Ljava/util/concurrent/Executor;
 
-.field public final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
+.field final mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
 
-.field public final synthetic this$0:Landroidx/recyclerview/widget/MessageThreadUtil;
+.field final synthetic this$0:Landroidx/recyclerview/widget/MessageThreadUtil;
 
-.field public final synthetic val$callback:Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
+.field final synthetic val$callback:Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil;Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;)V
+.method constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil;Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$2;->this$0:Landroidx/recyclerview/widget/MessageThreadUtil;

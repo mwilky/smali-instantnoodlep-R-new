@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/RadialTimePickerView$b;
+.class Lcom/google/android/material/picker/RadialTimePickerView$b;
 .super Landroidx/customview/widget/ExploreByTouchHelper;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final l:Landroid/graphics/Rect;
+.field private final l:Landroid/graphics/Rect;
 
-.field public final synthetic m:Lcom/google/android/material/picker/RadialTimePickerView;
+.field final synthetic m:Lcom/google/android/material/picker/RadialTimePickerView;
 
 
 # direct methods
@@ -37,9 +37,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final B(I)V
+.method private B(I)V
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->m:Lcom/google/android/material/picker/RadialTimePickerView;
@@ -73,7 +71,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->J(I)I
+    invoke-direct {p0, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->J(I)I
 
     move-result v0
 
@@ -101,7 +99,7 @@
 
     mul-int/2addr v0, v1
 
-    invoke-static {v0, v2, v3}, Lc/a/b/b/a0/a;->a(III)I
+    invoke-static {v0, v2, v3}, Lb/a/b/a/p/a;->a(III)I
 
     move-result p1
 
@@ -128,14 +126,14 @@
     return-void
 .end method
 
-.method public final C(ILandroid/graphics/Rect;)V
+.method private C(ILandroid/graphics/Rect;)V
     .locals 7
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
 
     move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
 
     move-result p1
 
@@ -169,16 +167,6 @@
 
     aget v1, v2, v1
 
-    sub-int/2addr v0, v1
-
-    int-to-float v0, v0
-
-    iget-object v1, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->m:Lcom/google/android/material/picker/RadialTimePickerView;
-
-    invoke-static {v1}, Lcom/google/android/material/picker/RadialTimePickerView;->d(Lcom/google/android/material/picker/RadialTimePickerView;)I
-
-    move-result v1
-
     goto :goto_0
 
     :cond_0
@@ -198,6 +186,7 @@
 
     aget v1, v1, v2
 
+    :goto_0
     sub-int/2addr v0, v1
 
     int-to-float v0, v0
@@ -208,7 +197,6 @@
 
     move-result v1
 
-    :goto_0
     int-to-float v1, v1
 
     move v3, v1
@@ -345,7 +333,7 @@
     return-void
 .end method
 
-.method public final D(III)I
+.method private D(III)I
     .locals 0
 
     sub-int/2addr p1, p2
@@ -364,7 +352,7 @@
     return p1
 .end method
 
-.method public final E(I)I
+.method private E(I)I
     .locals 0
 
     ushr-int/lit8 p1, p1, 0x0
@@ -374,7 +362,7 @@
     return p1
 .end method
 
-.method public final F(I)I
+.method private F(I)I
     .locals 0
 
     ushr-int/lit8 p1, p1, 0x8
@@ -384,7 +372,7 @@
     return p1
 .end method
 
-.method public final G(II)Ljava/lang/CharSequence;
+.method private G(II)Ljava/lang/CharSequence;
     .locals 1
 
     const/4 v0, 0x1
@@ -412,7 +400,7 @@
     return-object p1
 .end method
 
-.method public final H(II)I
+.method private H(II)I
     .locals 2
 
     const/4 v0, 0x1
@@ -439,7 +427,7 @@
     :goto_0
     if-gt p2, v0, :cond_3
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result p1
 
@@ -466,7 +454,7 @@
 
     if-le v1, v0, :cond_2
 
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result p1
 
@@ -477,7 +465,7 @@
 
     if-ge v1, p2, :cond_3
 
-    invoke-virtual {p0, p1, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, p1, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result p1
 
@@ -489,7 +477,7 @@
     return p1
 .end method
 
-.method public final I(II)I
+.method private I(II)I
     .locals 1
 
     const/16 v0, 0xc
@@ -514,7 +502,7 @@
     return p1
 .end method
 
-.method public final J(I)I
+.method private J(I)I
     .locals 1
 
     const/16 v0, 0xc
@@ -532,7 +520,7 @@
     return p1
 .end method
 
-.method public final K(II)Z
+.method private K(II)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -574,7 +562,7 @@
     return v0
 .end method
 
-.method public final L(II)I
+.method private L(II)I
     .locals 0
 
     shl-int/lit8 p1, p1, 0x0
@@ -586,7 +574,9 @@
     return p1
 .end method
 
-.method public i(FF)I
+
+# virtual methods
+.method protected i(FF)I
     .locals 4
 
     iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->m:Lcom/google/android/material/picker/RadialTimePickerView;
@@ -640,12 +630,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->J(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->J(I)I
 
     move-result p1
 
     :goto_0
-    invoke-virtual {p0, v1, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, v1, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result p1
 
@@ -672,11 +662,11 @@
 
     const/16 v1, 0x3c
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->D(III)I
+    invoke-direct {p0, p1, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->D(III)I
 
     move-result v2
 
-    invoke-virtual {p0, v0, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->D(III)I
+    invoke-direct {p0, v0, p2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->D(III)I
 
     move-result p2
 
@@ -690,7 +680,7 @@
     :goto_1
     const/4 p2, 0x2
 
-    invoke-virtual {p0, p2, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, p2, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result p1
 
@@ -703,7 +693,7 @@
     return p1
 .end method
 
-.method public j(Ljava/util/List;)V
+.method protected j(Ljava/util/List;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -750,7 +740,7 @@
     :goto_0
     if-gt v0, v2, :cond_3
 
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, v1, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result v3
 
@@ -780,7 +770,7 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p0, v2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, v2, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result v3
 
@@ -796,7 +786,7 @@
 
     if-ge v0, v3, :cond_2
 
-    invoke-virtual {p0, v2, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
+    invoke-direct {p0, v2, v0}, Lcom/google/android/material/picker/RadialTimePickerView$b;->L(II)I
 
     move-result v2
 
@@ -815,18 +805,18 @@
     return-void
 .end method
 
-.method public o(IILandroid/os/Bundle;)Z
+.method protected o(IILandroid/os/Bundle;)Z
     .locals 1
 
     const/16 p3, 0x10
 
     if-ne p2, p3, :cond_2
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
 
     move-result p2
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
 
     move-result p1
 
@@ -851,7 +841,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->I(II)I
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->I(II)I
 
     move-result p1
 
@@ -879,20 +869,20 @@
     return p1
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
 
-    invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->r(Lb/g/l/y/d;)V
+    invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->r(Landroidx/core/view/accessibility/d;)V
 
     const/16 p1, 0x1000
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->a(I)V
 
     const/16 p1, 0x2000
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->a(I)V
 
     return-void
 .end method
@@ -900,7 +890,7 @@
 .method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lb/g/l/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-super {p0, p1, p2, p3}, Landroidx/core/view/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 
@@ -926,17 +916,17 @@
     :cond_1
     const/4 p1, -0x1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->B(I)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->B(I)V
 
     return p3
 
     :cond_2
-    invoke-virtual {p0, p3}, Lcom/google/android/material/picker/RadialTimePickerView$b;->B(I)V
+    invoke-direct {p0, p3}, Lcom/google/android/material/picker/RadialTimePickerView$b;->B(I)V
 
     return p3
 .end method
 
-.method public q(ILandroid/view/accessibility/AccessibilityEvent;)V
+.method protected q(ILandroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
     const-class v0, Lcom/google/android/material/picker/RadialTimePickerView$b;
@@ -947,15 +937,15 @@
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
 
     move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
 
     move-result p1
 
-    invoke-virtual {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->G(II)Ljava/lang/CharSequence;
+    invoke-direct {p0, v0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->G(II)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -964,9 +954,9 @@
     return-void
 .end method
 
-.method public s(ILb/g/l/y/d;)V
+.method protected s(ILandroidx/core/view/accessibility/d;)V
     .locals 3
-    .param p2    # Lb/g/l/y/d;
+    .param p2    # Landroidx/core/view/accessibility/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -977,41 +967,41 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lb/g/l/y/d;->W(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->W(Ljava/lang/CharSequence;)V
 
     const/16 v0, 0x10
 
-    invoke-virtual {p2, v0}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/d;->a(I)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->E(I)I
 
     move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
+    invoke-direct {p0, p1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->F(I)I
 
     move-result v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->G(II)Ljava/lang/CharSequence;
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->G(II)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Lb/g/l/y/d;->a0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v2}, Landroidx/core/view/accessibility/d;->a0(Ljava/lang/CharSequence;)V
 
     iget-object v2, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->l:Landroid/graphics/Rect;
 
-    invoke-virtual {p0, p1, v2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->C(ILandroid/graphics/Rect;)V
+    invoke-direct {p0, p1, v2}, Lcom/google/android/material/picker/RadialTimePickerView$b;->C(ILandroid/graphics/Rect;)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->l:Landroid/graphics/Rect;
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->R(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->R(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->K(II)Z
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->K(II)Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->q0(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->q0(Z)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->H(II)I
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/picker/RadialTimePickerView$b;->H(II)I
 
     move-result p1
 
@@ -1027,7 +1017,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/RadialTimePickerView$b;->m:Lcom/google/android/material/picker/RadialTimePickerView;
 
-    invoke-virtual {p2, v0, p1}, Lb/g/l/y/d;->t0(Landroid/view/View;I)V
+    invoke-virtual {p2, v0, p1}, Landroidx/core/view/accessibility/d;->t0(Landroid/view/View;I)V
 
     :cond_0
     return-void

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transition/MaterialContainerTransform$a;
+.class Lcom/google/android/material/transition/MaterialContainerTransform$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/transition/MaterialContainerTransform$e;
+.field final synthetic a:Lcom/google/android/material/transition/MaterialContainerTransform$e;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransform;Lcom/google/android/material/transition/MaterialContainerTransform$e;)V
+.method constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransform;Lcom/google/android/material/transition/MaterialContainerTransform$e;)V
     .locals 0
 
     iput-object p2, p0, Lcom/google/android/material/transition/MaterialContainerTransform$a;->a:Lcom/google/android/material/transition/MaterialContainerTransform$e;

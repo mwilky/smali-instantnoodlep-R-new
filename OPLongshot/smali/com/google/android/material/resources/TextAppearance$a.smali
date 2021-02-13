@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/resources/TextAppearance$a;
-.super Lb/g/e/c/b$a;
-.source "SourceFile"
+.class Lcom/google/android/material/resources/TextAppearance$a;
+.super Landroidx/core/content/res/b$a;
+.source ""
 
 
 # annotations
@@ -9,26 +9,26 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/resources/TextAppearanceFontCallback;
+.field final synthetic a:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-.field public final synthetic b:Lcom/google/android/material/resources/TextAppearance;
+.field final synthetic b:Lcom/google/android/material/resources/TextAppearance;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/resources/TextAppearance;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
+.method constructor <init>(Lcom/google/android/material/resources/TextAppearance;Lcom/google/android/material/resources/TextAppearanceFontCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/resources/TextAppearance$a;->b:Lcom/google/android/material/resources/TextAppearance;
 
     iput-object p2, p0, Lcom/google/android/material/resources/TextAppearance$a;->a:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-    invoke-direct {p0}, Lb/g/e/c/b$a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/content/res/b$a;-><init>()V
 
     return-void
 .end method

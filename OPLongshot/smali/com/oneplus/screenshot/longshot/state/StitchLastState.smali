@@ -1,14 +1,14 @@
 .class public Lcom/oneplus/screenshot/longshot/state/StitchLastState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.StitchLastState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.StitchLastState"
 
 
 # instance fields
-.field public mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
+.field private mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 14
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -131,7 +131,7 @@
     return-object v0
 .end method
 
-.method public getFailedText()Ljava/lang/String;
+.method protected getFailedText()Ljava/lang/String;
     .locals 1
 
     const/4 v0, 0x0
@@ -139,7 +139,7 @@
     return-object v0
 .end method
 
-.method public getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method protected getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/state/LongshotState;->WAITTING_PREVIEW:Lcom/oneplus/screenshot/longshot/state/LongshotState;
@@ -147,7 +147,7 @@
     return-object v0
 .end method
 
-.method public getSuccessText()Ljava/lang/String;
+.method protected getSuccessText()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/AbsJoinState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -243,7 +243,7 @@
     return-void
 .end method
 
-.method public updateIndex()V
+.method protected updateIndex()V
     .locals 0
 
     return-void

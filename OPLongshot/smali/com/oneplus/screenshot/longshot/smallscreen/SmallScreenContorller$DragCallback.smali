@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

@@ -1,6 +1,6 @@
-.class public Landroidx/animation/AnimatorSet$e;
+.class Landroidx/animation/AnimatorSet$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public a:Lb/b/b;
+.field a:Landroidx/animation/b;
 
-.field public b:Ljava/util/ArrayList;
+.field b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -30,9 +30,9 @@
     .end annotation
 .end field
 
-.field public c:Z
+.field c:Z
 
-.field public d:Ljava/util/ArrayList;
+.field d:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field public e:Ljava/util/ArrayList;
+.field e:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -52,19 +52,19 @@
     .end annotation
 .end field
 
-.field public f:Landroidx/animation/AnimatorSet$e;
+.field f:Landroidx/animation/AnimatorSet$e;
 
-.field public g:Z
+.field g:Z
 
-.field public h:J
+.field h:J
 
-.field public i:J
+.field i:J
 
-.field public j:J
+.field j:J
 
 
 # direct methods
-.method public constructor <init>(Lb/b/b;)V
+.method constructor <init>(Landroidx/animation/b;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -89,14 +89,14 @@
 
     iput-wide v0, p0, Landroidx/animation/AnimatorSet$e;->j:J
 
-    iput-object p1, p0, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iput-object p1, p0, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/animation/AnimatorSet$e;)V
+.method a(Landroidx/animation/AnimatorSet$e;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet$e;->b:Ljava/util/ArrayList;
@@ -253,13 +253,13 @@
 
     check-cast v0, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v1, p0, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, p0, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v1}, Lb/b/b;->d()Lb/b/b;
+    invoke-virtual {v1}, Landroidx/animation/b;->d()Landroidx/animation/b;
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iput-object v1, v0, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     iget-object v1, p0, Landroidx/animation/AnimatorSet$e;->b:Ljava/util/ArrayList;
 

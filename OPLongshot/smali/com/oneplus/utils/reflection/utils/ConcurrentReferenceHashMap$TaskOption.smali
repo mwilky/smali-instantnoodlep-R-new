@@ -1,6 +1,6 @@
-.class public final enum Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
+.class final enum Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
+    accessFlags = 0x401a
     name = "TaskOption"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
+.field private static final synthetic $VALUES:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
 
 .field public static final enum RESIZE:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
 
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 7
 
     new-instance v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

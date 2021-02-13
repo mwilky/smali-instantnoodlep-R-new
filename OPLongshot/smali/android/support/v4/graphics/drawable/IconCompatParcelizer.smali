@@ -1,6 +1,6 @@
 .class public final Landroid/support/v4/graphics/drawable/IconCompatParcelizer;
 .super Landroidx/core/graphics/drawable/IconCompatParcelizer;
-.source "SourceFile"
+.source ""
 
 
 # annotations

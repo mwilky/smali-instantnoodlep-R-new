@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/NotificationCompat$Action;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,24 +21,24 @@
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field final a:Landroid/os/Bundle;
 
-.field public b:Landroidx/core/graphics/drawable/IconCompat;
+.field private b:Landroidx/core/graphics/drawable/IconCompat;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final c:[Landroidx/core/app/RemoteInput;
+.field private final c:[Landroidx/core/app/RemoteInput;
 
-.field public final d:[Landroidx/core/app/RemoteInput;
+.field private final d:[Landroidx/core/app/RemoteInput;
 
-.field public e:Z
+.field private e:Z
 
-.field public f:Z
+.field f:Z
 
-.field public final g:I
+.field private final g:I
 
-.field public final h:Z
+.field private final h:Z
 
 .field public i:I
     .annotation runtime Ljava/lang/Deprecated;
@@ -51,7 +51,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+.method constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
     .locals 13
 
     move v0, p1
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+.method constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
     .locals 2
     .param p1    # Landroidx/core/graphics/drawable/IconCompat;
         .annotation build Landroidx/annotation/Nullable;

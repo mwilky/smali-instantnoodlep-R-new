@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/transition/SlideDistanceProvider;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/a/b/b/k0/e;
+.implements Lcom/google/android/material/transition/e;
 
 
 # annotations
@@ -19,12 +19,12 @@
 
 
 # instance fields
-.field public slideDistance:I
+.field private slideDistance:I
     .annotation build Landroidx/annotation/Px;
     .end annotation
 .end field
 
-.field public slideEdge:I
+.field private slideEdge:I
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/d;->mtrl_transition_shared_axis_slide_distance:I
+    sget p2, Lb/a/b/a/d;->mtrl_transition_shared_axis_slide_distance:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -358,7 +358,7 @@
     return-object p1
 .end method
 
-.method public static createTranslationXAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
+.method private static createTranslationXAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
     .locals 5
 
     const/4 v0, 0x1
@@ -390,7 +390,7 @@
     return-object p0
 .end method
 
-.method public static createTranslationYAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
+.method private static createTranslationYAnimator(Landroid/view/View;FF)Landroid/animation/Animator;
     .locals 5
 
     const/4 v0, 0x1
@@ -422,7 +422,7 @@
     return-object p0
 .end method
 
-.method public static isRtl(Landroid/view/View;)Z
+.method private static isRtl(Landroid/view/View;)Z
     .locals 1
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->y(Landroid/view/View;)I

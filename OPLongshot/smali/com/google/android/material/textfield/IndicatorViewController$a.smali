@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/textfield/IndicatorViewController$a;
+.class Lcom/google/android/material/textfield/IndicatorViewController$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:I
+.field final synthetic a:I
 
-.field public final synthetic b:Landroid/widget/TextView;
+.field final synthetic b:Landroid/widget/TextView;
 
-.field public final synthetic c:I
+.field final synthetic c:I
 
-.field public final synthetic d:Landroid/widget/TextView;
+.field final synthetic d:Landroid/widget/TextView;
 
-.field public final synthetic e:Lcom/google/android/material/textfield/IndicatorViewController;
+.field final synthetic e:Lcom/google/android/material/textfield/IndicatorViewController;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/IndicatorViewController;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
+.method constructor <init>(Lcom/google/android/material/textfield/IndicatorViewController;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/textfield/IndicatorViewController$a;->e:Lcom/google/android/material/textfield/IndicatorViewController;

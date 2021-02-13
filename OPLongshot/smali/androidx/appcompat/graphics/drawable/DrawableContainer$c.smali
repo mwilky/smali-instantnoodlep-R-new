@@ -1,6 +1,6 @@
-.class public abstract Landroidx/appcompat/graphics/drawable/DrawableContainer$c;
+.class abstract Landroidx/appcompat/graphics/drawable/DrawableContainer$c;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,41 +9,41 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x408
     name = "c"
 .end annotation
 
 
 # instance fields
-.field public A:I
+.field A:I
 
-.field public B:I
+.field B:I
 
-.field public C:Z
+.field C:Z
 
-.field public D:Landroid/graphics/ColorFilter;
+.field D:Landroid/graphics/ColorFilter;
 
-.field public E:Z
+.field E:Z
 
-.field public F:Landroid/content/res/ColorStateList;
+.field F:Landroid/content/res/ColorStateList;
 
-.field public G:Landroid/graphics/PorterDuff$Mode;
+.field G:Landroid/graphics/PorterDuff$Mode;
 
-.field public H:Z
+.field H:Z
 
-.field public I:Z
+.field I:Z
 
-.field public final a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
+.field final a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
 
-.field public b:Landroid/content/res/Resources;
+.field b:Landroid/content/res/Resources;
 
-.field public c:I
+.field c:I
 
-.field public d:I
+.field d:I
 
-.field public e:I
+.field e:I
 
-.field public f:Landroid/util/SparseArray;
+.field f:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -53,49 +53,49 @@
     .end annotation
 .end field
 
-.field public g:[Landroid/graphics/drawable/Drawable;
+.field g:[Landroid/graphics/drawable/Drawable;
 
-.field public h:I
+.field h:I
 
-.field public i:Z
+.field i:Z
 
-.field public j:Z
+.field j:Z
 
-.field public k:Landroid/graphics/Rect;
+.field k:Landroid/graphics/Rect;
 
-.field public l:Z
+.field l:Z
 
-.field public m:Z
+.field m:Z
 
-.field public n:I
+.field n:I
 
-.field public o:I
+.field o:I
 
-.field public p:I
+.field p:I
 
-.field public q:I
+.field q:I
 
-.field public r:Z
+.field r:Z
 
-.field public s:I
+.field s:I
 
-.field public t:Z
+.field t:Z
 
-.field public u:Z
+.field u:Z
 
-.field public v:Z
+.field v:Z
 
-.field public w:Z
+.field w:Z
 
-.field public x:Z
+.field x:Z
 
-.field public y:Z
+.field y:Z
 
-.field public z:I
+.field z:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;Landroidx/appcompat/graphics/drawable/DrawableContainer;Landroid/content/res/Resources;)V
+.method constructor <init>(Landroidx/appcompat/graphics/drawable/DrawableContainer$c;Landroidx/appcompat/graphics/drawable/DrawableContainer;Landroid/content/res/Resources;)V
     .locals 2
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
@@ -309,8 +309,6 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
-
     goto :goto_2
 
     :cond_7
@@ -320,9 +318,9 @@
 
     invoke-direct {p1, p3}, Landroid/util/SparseArray;-><init>(I)V
 
+    :goto_2
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
 
-    :goto_2
     iget p1, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I
 
     :goto_3
@@ -372,9 +370,91 @@
     return-void
 .end method
 
+.method private f()V
+    .locals 6
+
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    iget-object v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
+
+    invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
+
+    move-result v2
+
+    iget-object v3, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
+
+    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    iget-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->g:[Landroid/graphics/drawable/Drawable;
+
+    iget-object v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->b:Landroid/content/res/Resources;
+
+    invoke-virtual {v3, v5}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    invoke-direct {p0, v3}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    aput-object v3, v4, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
+
+    :cond_1
+    return-void
+.end method
+
+.method private u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->z:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object p1
+.end method
+
 
 # virtual methods
-.method public final A(Landroid/content/res/Resources;)V
+.method final A(Landroid/content/res/Resources;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -466,7 +546,7 @@
     return v0
 .end method
 
-.method public final b(Landroid/content/res/Resources$Theme;)V
+.method final b(Landroid/content/res/Resources$Theme;)V
     .locals 5
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x15
@@ -474,7 +554,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I
 
@@ -549,7 +629,7 @@
 
     :cond_0
     :try_start_1
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     const/4 v0, 0x1
 
@@ -664,7 +744,7 @@
     return v2
 .end method
 
-.method public final d()V
+.method final d()V
     .locals 1
 
     const/4 v0, 0x0
@@ -674,14 +754,14 @@
     return-void
 .end method
 
-.method public e()V
+.method protected e()V
     .locals 6
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->m:Z
 
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I
 
@@ -756,64 +836,7 @@
     return-void
 .end method
 
-.method public final f()V
-    .locals 6
-
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    iget-object v2, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v2
-
-    iget-object v3, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/Drawable$ConstantState;
-
-    iget-object v4, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->g:[Landroid/graphics/drawable/Drawable;
-
-    iget-object v5, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->b:Landroid/content/res/Resources;
-
-    invoke-virtual {v3, v5}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v3}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    aput-object v3, v4, v2
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f:Landroid/util/SparseArray;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g()I
+.method final g()I
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->g:[Landroid/graphics/drawable/Drawable;
@@ -873,7 +896,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v2}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -978,7 +1001,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -1093,7 +1116,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I
 
@@ -1160,7 +1183,7 @@
     return-void
 .end method
 
-.method public q()V
+.method q()V
     .locals 1
 
     const/4 v0, 0x0
@@ -1192,7 +1215,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
+    invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->f()V
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I
 
@@ -1233,32 +1256,7 @@
     return v2
 .end method
 
-.method public abstract t()V
-.end method
-
-.method public final u(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->z:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->a:Landroidx/appcompat/graphics/drawable/DrawableContainer;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    return-object p1
+.method abstract t()V
 .end method
 
 .method public final v(Z)V
@@ -1285,7 +1283,7 @@
     return-void
 .end method
 
-.method public final y(II)Z
+.method final y(II)Z
     .locals 7
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawableContainer$c;->h:I

@@ -1,28 +1,28 @@
 .class public Lcom/oneplus/screenshot/longshot/match/MatchData;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "MatchData"
+.field private static final TAG:Ljava/lang/String; = "MatchData"
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public mIndex:I
+.field private mIndex:I
 
-.field public mMatched:I
+.field private mMatched:I
 
-.field public mOffset:I
+.field private mOffset:I
 
-.field public mRangeCurr:Lcom/oneplus/screenshot/longshot/match/MatchRange;
+.field private mRangeCurr:Lcom/oneplus/screenshot/longshot/match/MatchRange;
 
-.field public mRangeLast:Lcom/oneplus/screenshot/longshot/match/MatchRange;
+.field private mRangeLast:Lcom/oneplus/screenshot/longshot/match/MatchRange;
 
-.field public mRate:I
+.field private mRate:I
 
-.field public mTag:Ljava/lang/String;
+.field private mTag:Ljava/lang/String;
 
 
 # direct methods

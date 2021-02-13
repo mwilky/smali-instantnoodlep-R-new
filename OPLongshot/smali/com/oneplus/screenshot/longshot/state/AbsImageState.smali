@@ -1,18 +1,18 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsImageState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsViewState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "AbsImageState"
+.field private static final TAG:Ljava/lang/String; = "AbsImageState"
 
 
 # instance fields
-.field public mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field protected mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field public mImageView:Landroid/widget/ImageView;
+.field protected mImageView:Landroid/widget/ImageView;
 
-.field public mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field protected mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
 
 # direct methods
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public initViews(Landroid/widget/FrameLayout;)V
+.method protected initViews(Landroid/widget/FrameLayout;)V
     .locals 2
 
     const-string v0, "AbsImageState"
@@ -77,7 +77,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v0, 0x7f0a00e6
+    const v0, 0x7f0a00e5
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

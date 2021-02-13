@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/FitWindowsLinearLayout;
 .super Landroid/widget/LinearLayout;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/widget/FitWindowsViewGroup;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public mListener:Landroidx/appcompat/widget/FitWindowsViewGroup$a;
+.field private mListener:Landroidx/appcompat/widget/FitWindowsViewGroup$a;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public fitSystemWindows(Landroid/graphics/Rect;)Z
+.method protected fitSystemWindows(Landroid/graphics/Rect;)Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsLinearLayout;->mListener:Landroidx/appcompat/widget/FitWindowsViewGroup$a;

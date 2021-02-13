@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

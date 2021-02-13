@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/menu/SubMenuBuilder;
 .super Landroidx/appcompat/view/menu/MenuBuilder;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/SubMenu;
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public mItem:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field private mItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
-.field public mParentMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field private mParentMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
 
 # direct methods
@@ -47,7 +47,7 @@
     return p1
 .end method
 
-.method public dispatchMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
+.method dispatchMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 1
 
     invoke-super {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuBuilder;->dispatchMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z

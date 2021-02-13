@@ -1,6 +1,6 @@
-.class public Landroidx/core/graphics/TypefaceCompatBaseImpl$2;
+.class Landroidx/core/graphics/TypefaceCompatBaseImpl$2;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;
+.field final synthetic this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/graphics/TypefaceCompatBaseImpl;)V
+.method constructor <init>(Landroidx/core/graphics/TypefaceCompatBaseImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/graphics/TypefaceCompatBaseImpl$2;->this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;

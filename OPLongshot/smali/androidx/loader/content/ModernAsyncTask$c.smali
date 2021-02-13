@@ -1,6 +1,6 @@
-.class public Landroidx/loader/content/ModernAsyncTask$c;
+.class Landroidx/loader/content/ModernAsyncTask$c;
 .super Landroid/os/Handler;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "c"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;

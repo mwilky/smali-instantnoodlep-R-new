@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/resources/TextAppearance;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,29 +12,29 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "TextAppearance"
+.field private static final TAG:Ljava/lang/String; = "TextAppearance"
 
-.field public static final TYPEFACE_MONOSPACE:I = 0x3
+.field private static final TYPEFACE_MONOSPACE:I = 0x3
 
-.field public static final TYPEFACE_SANS:I = 0x1
+.field private static final TYPEFACE_SANS:I = 0x1
 
-.field public static final TYPEFACE_SERIF:I = 0x2
+.field private static final TYPEFACE_SERIF:I = 0x2
 
 
 # instance fields
-.field public font:Landroid/graphics/Typeface;
+.field private font:Landroid/graphics/Typeface;
 
 .field public final fontFamily:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final fontFamilyResourceId:I
+.field private final fontFamilyResourceId:I
     .annotation build Landroidx/annotation/FontRes;
     .end annotation
 .end field
 
-.field public fontResolved:Z
+.field private fontResolved:Z
 
 .field public final shadowColor:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
@@ -89,13 +89,13 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/resources/TextAppearance;->fontResolved:Z
 
-    sget-object v1, Lc/a/b/b/l;->TextAppearance:[I
+    sget-object v1, Lb/a/b/a/l;->TextAppearance:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_textSize:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_textSize:I
 
     const/4 v2, 0x0
 
@@ -105,7 +105,7 @@
 
     iput v1, p0, Lcom/google/android/material/resources/TextAppearance;->textSize:F
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_textColor:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_textColor:I
 
     invoke-static {p1, p2, v1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -113,7 +113,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/resources/TextAppearance;->textColor:Landroid/content/res/ColorStateList;
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_textColorHint:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_textColorHint:I
 
     invoke-static {p1, p2, v1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -121,7 +121,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/resources/TextAppearance;->textColorHint:Landroid/content/res/ColorStateList;
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_textColorLink:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_textColorLink:I
 
     invoke-static {p1, p2, v1}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -129,7 +129,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/resources/TextAppearance;->textColorLink:Landroid/content/res/ColorStateList;
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_textStyle:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_textStyle:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -137,7 +137,7 @@
 
     iput v1, p0, Lcom/google/android/material/resources/TextAppearance;->textStyle:I
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_android_typeface:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_android_typeface:I
 
     const/4 v3, 0x1
 
@@ -147,9 +147,9 @@
 
     iput v1, p0, Lcom/google/android/material/resources/TextAppearance;->typeface:I
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_fontFamily:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_fontFamily:I
 
-    sget v3, Lc/a/b/b/l;->TextAppearance_android_fontFamily:I
+    sget v3, Lb/a/b/a/l;->TextAppearance_android_fontFamily:I
 
     invoke-static {p2, v1, v3}, Lcom/google/android/material/resources/MaterialResources;->getIndexWithValue(Landroid/content/res/TypedArray;II)I
 
@@ -167,7 +167,7 @@
 
     iput-object v1, p0, Lcom/google/android/material/resources/TextAppearance;->fontFamily:Ljava/lang/String;
 
-    sget v1, Lc/a/b/b/l;->TextAppearance_textAllCaps:I
+    sget v1, Lb/a/b/a/l;->TextAppearance_textAllCaps:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -175,7 +175,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/resources/TextAppearance;->textAllCaps:Z
 
-    sget v0, Lc/a/b/b/l;->TextAppearance_android_shadowColor:I
+    sget v0, Lb/a/b/a/l;->TextAppearance_android_shadowColor:I
 
     invoke-static {p1, p2, v0}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -183,7 +183,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/resources/TextAppearance;->shadowColor:Landroid/content/res/ColorStateList;
 
-    sget p1, Lc/a/b/b/l;->TextAppearance_android_shadowDx:I
+    sget p1, Lb/a/b/a/l;->TextAppearance_android_shadowDx:I
 
     invoke-virtual {p2, p1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -191,7 +191,7 @@
 
     iput p1, p0, Lcom/google/android/material/resources/TextAppearance;->shadowDx:F
 
-    sget p1, Lc/a/b/b/l;->TextAppearance_android_shadowDy:I
+    sget p1, Lb/a/b/a/l;->TextAppearance_android_shadowDy:I
 
     invoke-virtual {p2, p1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -199,7 +199,7 @@
 
     iput p1, p0, Lcom/google/android/material/resources/TextAppearance;->shadowDy:F
 
-    sget p1, Lc/a/b/b/l;->TextAppearance_android_shadowRadius:I
+    sget p1, Lb/a/b/a/l;->TextAppearance_android_shadowRadius:I
 
     invoke-virtual {p2, p1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -212,7 +212,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/google/android/material/resources/TextAppearance;)Landroid/graphics/Typeface;
+.method static synthetic access$000(Lcom/google/android/material/resources/TextAppearance;)Landroid/graphics/Typeface;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
@@ -220,7 +220,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$002(Lcom/google/android/material/resources/TextAppearance;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+.method static synthetic access$002(Lcom/google/android/material/resources/TextAppearance;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
@@ -228,7 +228,7 @@
     return-object p1
 .end method
 
-.method public static synthetic access$102(Lcom/google/android/material/resources/TextAppearance;Z)Z
+.method static synthetic access$102(Lcom/google/android/material/resources/TextAppearance;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/resources/TextAppearance;->fontResolved:Z
@@ -276,30 +276,24 @@
 
     sget-object v0, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
-    iput-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
-
     goto :goto_0
 
     :cond_1
     sget-object v0, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
-
-    iput-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
 
     goto :goto_0
 
     :cond_2
     sget-object v0, Landroid/graphics/Typeface;->SERIF:Landroid/graphics/Typeface;
 
-    iput-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
-
     goto :goto_0
 
     :cond_3
     sget-object v0, Landroid/graphics/Typeface;->SANS_SERIF:Landroid/graphics/Typeface;
 
+    :goto_0
     iput-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
 
-    :goto_0
     iget-object v0, p0, Lcom/google/android/material/resources/TextAppearance;->font:Landroid/graphics/Typeface;
 
     iget v1, p0, Lcom/google/android/material/resources/TextAppearance;->textStyle:I
@@ -356,7 +350,7 @@
     :try_start_0
     iget v0, p0, Lcom/google/android/material/resources/TextAppearance;->fontFamilyResourceId:I
 
-    invoke-static {p1, v0}, Lb/g/e/c/b;->b(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    invoke-static {p1, v0}, Landroidx/core/content/res/b;->b(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -456,7 +450,7 @@
         .end annotation
     .end param
 
-    invoke-static {}, Lc/a/b/b/c0/a;->a()Z
+    invoke-static {}, Lcom/google/android/material/resources/a;->a()Z
 
     move-result v0
 
@@ -499,7 +493,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v2, v3}, Lb/g/e/c/b;->d(Landroid/content/Context;ILb/g/e/c/b$a;Landroid/os/Handler;)V
+    invoke-static {p1, v0, v2, v3}, Landroidx/core/content/res/b;->d(Landroid/content/Context;ILandroidx/core/content/res/b$a;Landroid/os/Handler;)V
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -631,7 +625,7 @@
         .end annotation
     .end param
 
-    invoke-static {}, Lc/a/b/b/c0/a;->a()Z
+    invoke-static {}, Lcom/google/android/material/resources/a;->a()Z
 
     move-result v0
 

@@ -1,9 +1,9 @@
-.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$b;
+.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$b;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/c/m/b;
+.implements Landroidx/appcompat/view/b;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/view/CollapsibleActionView;
+.field final a:Landroid/view/CollapsibleActionView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method constructor <init>(Landroid/view/View;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public c()Landroid/view/View;
+.method c()Landroid/view/View;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$b;->a:Landroid/view/CollapsibleActionView;

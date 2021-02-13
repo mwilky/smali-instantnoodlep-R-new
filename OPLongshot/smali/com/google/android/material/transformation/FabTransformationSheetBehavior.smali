@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transformation/FabTransformationSheetBehavior;
 .super Lcom/google/android/material/transformation/FabTransformationBehavior;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field public h:Ljava/util/Map;
+.field private h:Ljava/util/Map;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -41,69 +41,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
-    .locals 0
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/CallSuper;
-    .end annotation
-
-    invoke-virtual {p0, p2, p3}, Lcom/google/android/material/transformation/FabTransformationSheetBehavior;->y(Landroid/view/View;Z)V
-
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;->onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public w(Landroid/content/Context;Z)Lcom/google/android/material/transformation/FabTransformationBehavior$e;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    if-eqz p2, :cond_0
-
-    sget p2, Lc/a/b/b/a;->mtrl_fab_transformation_sheet_expand_spec:I
-
-    goto :goto_0
-
-    :cond_0
-    sget p2, Lc/a/b/b/a;->mtrl_fab_transformation_sheet_collapse_spec:I
-
-    :goto_0
-    new-instance v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;
-
-    invoke-direct {v0}, Lcom/google/android/material/transformation/FabTransformationBehavior$e;-><init>()V
-
-    invoke-static {p1, p2}, Lc/a/b/b/m/a;->c(Landroid/content/Context;I)Lc/a/b/b/m/a;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;->a:Lc/a/b/b/m/a;
-
-    new-instance p1, Lc/a/b/b/m/c;
-
-    const/16 p2, 0x11
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p2, v1, v1}, Lc/a/b/b/m/c;-><init>(IFF)V
-
-    iput-object p1, v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;->b:Lc/a/b/b/m/c;
-
-    return-object v0
-.end method
-
-.method public final y(Landroid/view/View;Z)V
+.method private y(Landroid/view/View;Z)V
     .locals 8
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -187,7 +125,7 @@
 
     if-eqz v6, :cond_3
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_3
     if-nez p2, :cond_4
@@ -214,8 +152,6 @@
 
     move-result v6
 
-    invoke-static {v5, v6}, Landroidx/core/view/ViewCompat;->q0(Landroid/view/View;I)V
-
     goto :goto_2
 
     :cond_4
@@ -238,10 +174,11 @@
     :cond_5
     const/4 v6, 0x4
 
+    :goto_2
     invoke-static {v5, v6}, Landroidx/core/view/ViewCompat;->q0(Landroid/view/View;I)V
 
     :cond_6
-    :goto_2
+    :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
@@ -255,4 +192,66 @@
 
     :cond_8
     return-void
+.end method
+
+
+# virtual methods
+.method protected onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
+    .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
+
+    invoke-direct {p0, p2, p3}, Lcom/google/android/material/transformation/FabTransformationSheetBehavior;->y(Landroid/view/View;Z)V
+
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;->onExpandedStateChange(Landroid/view/View;Landroid/view/View;ZZ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected w(Landroid/content/Context;Z)Lcom/google/android/material/transformation/FabTransformationBehavior$e;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    if-eqz p2, :cond_0
+
+    sget p2, Lb/a/b/a/a;->mtrl_fab_transformation_sheet_expand_spec:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p2, Lb/a/b/a/a;->mtrl_fab_transformation_sheet_collapse_spec:I
+
+    :goto_0
+    new-instance v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;
+
+    invoke-direct {v0}, Lcom/google/android/material/transformation/FabTransformationBehavior$e;-><init>()V
+
+    invoke-static {p1, p2}, Lcom/google/android/material/animation/a;->c(Landroid/content/Context;I)Lcom/google/android/material/animation/a;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;->a:Lcom/google/android/material/animation/a;
+
+    new-instance p1, Lcom/google/android/material/animation/c;
+
+    const/16 p2, 0x11
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p2, v1, v1}, Lcom/google/android/material/animation/c;-><init>(IFF)V
+
+    iput-object p1, v0, Lcom/google/android/material/transformation/FabTransformationBehavior$e;->b:Lcom/google/android/material/animation/c;
+
+    return-object v0
 .end method

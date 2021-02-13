@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$a;
+.class Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
+.field final synthetic a:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
+.method constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$a;->a:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;

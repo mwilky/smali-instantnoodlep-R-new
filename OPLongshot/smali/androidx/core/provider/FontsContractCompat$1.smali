@@ -1,6 +1,6 @@
-.class public final Landroidx/core/provider/FontsContractCompat$1;
+.class final Landroidx/core/provider/FontsContractCompat$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
@@ -8,11 +8,11 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Lb/g/i/a;Lb/g/e/c/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/FontsContractCompat;->g(Landroid/content/Context;Landroidx/core/provider/a;Landroidx/core/content/res/b$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -27,22 +27,22 @@
 
 
 # instance fields
-.field public final synthetic val$context:Landroid/content/Context;
+.field final synthetic val$context:Landroid/content/Context;
 
-.field public final synthetic val$id:Ljava/lang/String;
+.field final synthetic val$id:Ljava/lang/String;
 
-.field public final synthetic val$request:Lb/g/i/a;
+.field final synthetic val$request:Landroidx/core/provider/a;
 
-.field public final synthetic val$style:I
+.field final synthetic val$style:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lb/g/i/a;ILjava/lang/String;)V
+.method constructor <init>(Landroid/content/Context;Landroidx/core/provider/a;ILjava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$context:Landroid/content/Context;
 
-    iput-object p2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Lb/g/i/a;
+    iput-object p2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/a;
 
     iput p3, p0, Landroidx/core/provider/FontsContractCompat$1;->val$style:I
 
@@ -60,11 +60,11 @@
 
     iget-object v0, p0, Landroidx/core/provider/FontsContractCompat$1;->val$context:Landroid/content/Context;
 
-    iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Lb/g/i/a;
+    iget-object v1, p0, Landroidx/core/provider/FontsContractCompat$1;->val$request:Landroidx/core/provider/a;
 
     iget v2, p0, Landroidx/core/provider/FontsContractCompat$1;->val$style:I
 
-    invoke-static {v0, v1, v2}, Landroidx/core/provider/FontsContractCompat;->f(Landroid/content/Context;Lb/g/i/a;I)Landroidx/core/provider/FontsContractCompat$c;
+    invoke-static {v0, v1, v2}, Landroidx/core/provider/FontsContractCompat;->f(Landroid/content/Context;Landroidx/core/provider/a;I)Landroidx/core/provider/FontsContractCompat$c;
 
     move-result-object v0
 

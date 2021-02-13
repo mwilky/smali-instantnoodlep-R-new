@@ -1,6 +1,6 @@
-.class public final Landroidx/collection/MapCollections$ValuesCollection;
+.class final Landroidx/collection/MapCollections$ValuesCollection;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x10
     name = "ValuesCollection"
 .end annotation
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/collection/MapCollections;
+.field final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/collection/MapCollections;)V
+.method constructor <init>(Landroidx/collection/MapCollections;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/collection/MapCollections$ValuesCollection;->this$0:Landroidx/collection/MapCollections;

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transformation/FabTransformationBehavior$d;
+.class Lcom/google/android/material/transformation/FabTransformationBehavior$d;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/circularreveal/CircularRevealWidget;
+.field final synthetic a:Lcom/google/android/material/circularreveal/CircularRevealWidget;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lcom/google/android/material/circularreveal/CircularRevealWidget;)V
+.method constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lcom/google/android/material/circularreveal/CircularRevealWidget;)V
     .locals 0
 
     iput-object p2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$d;->a:Lcom/google/android/material/circularreveal/CircularRevealWidget;

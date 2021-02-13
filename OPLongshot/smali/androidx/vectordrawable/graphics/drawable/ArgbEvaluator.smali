@@ -1,6 +1,6 @@
 .class public Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
+.field private static final sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/NumberPicker$k;
+.class Lcom/google/android/material/picker/NumberPicker$k;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "k"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/widget/EditText;
+.field private final a:Landroid/widget/EditText;
 
-.field public b:I
+.field private b:I
 
-.field public c:I
+.field private c:I
 
-.field public d:Z
+.field private d:Z
 
 
 # direct methods

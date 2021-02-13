@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;
+.class Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "SavedState"
 .end annotation
 
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Z
+.field b:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/bottomappbar/BottomActionbar$SavedState$1;

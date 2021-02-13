@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/datepicker/MaterialCalendar$g;
+.class Lcom/google/android/material/datepicker/MaterialCalendar$g;
 .super Landroidx/recyclerview/widget/RecyclerView$p;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
+.field final synthetic a:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
 
-.field public final synthetic b:Lcom/google/android/material/button/MaterialButton;
+.field final synthetic b:Lcom/google/android/material/button/MaterialButton;
 
-.field public final synthetic c:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field final synthetic c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;Lcom/google/android/material/button/MaterialButton;)V
+.method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;Lcom/google/android/material/button/MaterialButton;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$g;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
@@ -81,13 +81,13 @@
         .end annotation
     .end param
 
-    if-gez p2, :cond_0
-
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$g;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
 
     move-result-object p1
+
+    if-gez p2, :cond_0
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z1()I
 
@@ -96,12 +96,6 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$g;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
-
-    invoke-virtual {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object p1
-
     invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->c2()I
 
     move-result p1

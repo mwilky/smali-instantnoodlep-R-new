@@ -1,29 +1,29 @@
 .class public Lcom/oneplus/screenshot/longshot/state/MainState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsViewState;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.MainState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.MainState"
 
 
 # instance fields
-.field public mEnterRunnable:Ljava/lang/Runnable;
+.field protected mEnterRunnable:Ljava/lang/Runnable;
 
-.field public mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field protected mFirstCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field public mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
+.field protected mImageCache:Lcom/oneplus/screenshot/longshot/cache/ImageCache;
 
-.field public mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
+.field protected mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
 
-.field public mNextListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+.field private mNextListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
 
-.field public mSaveListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+.field private mSaveListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
 
-.field public mSharedPrefs:Lcom/oneplus/screenshot/util/SharedPrefs;
+.field protected mSharedPrefs:Lcom/oneplus/screenshot/util/SharedPrefs;
 
 
 # direct methods
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/MainState;)Z
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/MainState;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/state/MainState;->hasNext()Z
@@ -105,7 +105,7 @@
     return p0
 .end method
 
-.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/state/MainState;)Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/state/MainState;)Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/state/MainState;->mNextListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
@@ -113,7 +113,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/state/MainState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
+.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/state/MainState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/state/MainState;->gotToNextState(Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
@@ -121,7 +121,7 @@
     return-void
 .end method
 
-.method public static synthetic access$300(Lcom/oneplus/screenshot/longshot/state/MainState;)Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/state/MainState;)Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/state/MainState;->mSaveListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
@@ -174,6 +174,7 @@
 
     const-string v0, "touch to stop scroll"
 
+    :goto_0
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -211,7 +212,7 @@
 
     if-eqz v0, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState;->mJoinCache:Lcom/oneplus/screenshot/longshot/cache/JoinCache;
@@ -228,24 +229,20 @@
 
     const-string v0, "max pages"
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    goto :goto_0
 
     :cond_2
     return v3
 
     :cond_3
-    :goto_0
+    :goto_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
     invoke-interface {v0, v3}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->setLast(Z)V
 
     const-string v0, "last page"
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    goto :goto_0
 .end method
 
 
@@ -277,8 +274,6 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
     goto :goto_0
 
     :cond_0
@@ -292,9 +287,10 @@
 
     const-wide/16 v0, 0x0
 
+    :goto_0
     invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     const-string p1, "Longshot.MainState"
@@ -313,17 +309,17 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
-.method public initDecor(Landroid/widget/FrameLayout;)V
+.method protected initDecor(Landroid/widget/FrameLayout;)V
     .locals 0
 
     return-void
 .end method
 
-.method public initViews(Landroid/widget/FrameLayout;)V
+.method protected initViews(Landroid/widget/FrameLayout;)V
     .locals 0
 
     return-void
@@ -343,7 +339,7 @@
     return-void
 .end method
 
-.method public updateButtons(Landroid/widget/FrameLayout;)V
+.method protected updateButtons(Landroid/widget/FrameLayout;)V
     .locals 0
 
     return-void

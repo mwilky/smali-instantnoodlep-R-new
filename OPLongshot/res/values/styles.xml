@@ -1998,11 +1998,7 @@
         <item name="android:textColorPrimary">@color/op_control_text_color_primary_default</item>
         <item name="android:textColor">@color/op_control_text_color_primary_default</item>
         <item name="android:textColorAlertDialogListItem">@color/op_control_text_color_primary_default</item>
-        <item name="colorAccent">?opAccentColor</item>
-        <item name="opAccentBtnTextColor">@color/oneplus_accent_button_text_color</item>
-        <item name="opAccentColor">@color/couiGreenTintControlNormal</item>
-        <item name="opAccentTextColor">@color/oneplus_accent_text_color</item>
-        <item name="opSubAccentColor">@color/oneplus_sub_accent_color</item>
+        <item name="colorAccent">@color/oneplus_accent_color</item>
     </style>
     <style name="OnePlus.Theme.Design.BottomSheetDialog" parent="@style/Theme.Design.BottomSheetDialog">
         <item name="android:windowAnimationStyle">@style/OnePlus.Animation.Design.BottomSheetDialog</item>
@@ -2014,7 +2010,7 @@
         <item name="android:windowBackground">@drawable/dialog_background_material</item>
         <item name="android:textColor">@color/op_control_text_color_primary_default</item>
         <item name="android:textColorAlertDialogListItem">@color/op_control_text_color_primary_default</item>
-        <item name="colorAccent">?opAccentColor</item>
+        <item name="colorAccent">@color/oneplus_accent_color</item>
     </style>
     <style name="OnePlus.Widget.AppCompat.ActionButton" parent="@style/Widget.AppCompat.ActionButton">
         <item name="android:minWidth">42.0dip</item>
@@ -2856,244 +2852,6 @@
         <item name="cornerSizeBottomLeft">@dimen/mtrl_textinput_box_corner_radius_small</item>
         <item name="cornerSizeBottomRight">@dimen/mtrl_textinput_box_corner_radius_small</item>
     </style>
-    <style name="SupportOverlay.Theme.Blue.First" parent="">
-        <item name="android:textColorHighlight">@color/couiBlueFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiBlueFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiBlueFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiBlueFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Blue.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiBlueFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiBlueFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiBlueFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiBlueFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Blue.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiBlueSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiBlueSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiBlueSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiBlueSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Blue.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiBlueThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiBlueThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiSkyBlueThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiBlueThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Green.First" parent="">
-        <item name="android:textColorHighlight">@color/couiGreenFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiGreenFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiGreenFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiGreenFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Green.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiGreenFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiGreenFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiGreenFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiGreenFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Green.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiGreenSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiGreenSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiGreenSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiGreenSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Green.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiGreenThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiGreenThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiGreenThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiGreenThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Orange.First" parent="">
-        <item name="android:textColorHighlight">@color/couiOrangeFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiOrangeFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiOrangeFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiOrangeFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Orange.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiOrangeFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiOrangeFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiOrangeFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiOrangeFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Orange.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiOrangeSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiOrangeSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiOrangeSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiOrangeSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Orange.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiOrangeThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiOrangeThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiOrangeThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiOrangeThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Red.First" parent="">
-        <item name="android:textColorHighlight">@color/couiRedFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiRedFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiRedFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiRedFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Red.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiRedFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiRedFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiRedFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiRedFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Red.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiRedSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiRedSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiRedSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiRedSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Red.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiRedThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiRedThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiRedThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiRedThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Eighth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleEighthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleEighthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleEighthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleEighthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Fifth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleFifthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleFifthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleFifthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleFifthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.First" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Ninth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleNinthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleNinthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleNinthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleNinthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Seventh" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleSeventhTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleSeventhNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleSeventhNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleSeventhNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Sixth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleSixthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleSixthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleSixthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleSixthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Tenth" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleTenthTextHighLight</item>
-        <item name="opAccentBtnTextColor">@color/couiSingleTenthNormal</item>
-        <item name="opAccentColor">@color/couiSingleTenthNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleTenthNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleTenthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Single.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiSingleThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSingleThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiSingleThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiSingleThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.SkyBlue.First" parent="">
-        <item name="android:textColorHighlight">@color/couiSkyBlueFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSkyBlueFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiSkyBlueFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiSkyBlueFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.SkyBlue.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiSkyBlueFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSkyBlueFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiSkyBlueFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiSkyBlueFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.SkyBlue.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiSkyBlueSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSkyBlueSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiSkyBlueSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiSkyBlueSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.SkyBlue.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiSkyBlueThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiSkyBlueThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiSkyBlueThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiSkyBlueThirdNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Yellow.First" parent="">
-        <item name="android:textColorHighlight">@color/couiYellowFirstTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiYellowFirstNormal</item>
-        <item name="opAccentTextColor">@color/couiYellowFirstNormal</item>
-        <item name="opSubAccentColor">@color/couiYellowFirstNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Yellow.Fourth" parent="">
-        <item name="android:textColorHighlight">@color/couiYellowFourthTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiYellowFourthNormal</item>
-        <item name="opAccentTextColor">@color/couiYellowFourthNormal</item>
-        <item name="opSubAccentColor">@color/couiYellowFourthNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Yellow.Second" parent="">
-        <item name="android:textColorHighlight">@color/couiYellowSecondTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiYellowSecondNormal</item>
-        <item name="opAccentTextColor">@color/couiYellowSecondNormal</item>
-        <item name="opSubAccentColor">@color/couiYellowSecondNormal</item>
-    </style>
-    <style name="SupportOverlay.Theme.Yellow.Third" parent="">
-        <item name="android:textColorHighlight">@color/couiYellowThirdTextHighLight</item>
-        <item name="opAccentBtnTextColor">#ffffffff</item>
-        <item name="opAccentColor">@color/couiYellowThirdNormal</item>
-        <item name="opAccentTextColor">@color/couiYellowThirdNormal</item>
-        <item name="opSubAccentColor">@color/couiYellowThirdNormal</item>
-    </style>
     <style name="TextAppearance" parent="@android:style/TextAppearance" />
     <style name="TextAppearance.AppCompat" parent="@style/Base.TextAppearance.AppCompat" />
     <style name="TextAppearance.AppCompat.Body1" parent="@style/Base.TextAppearance.AppCompat.Body1" />
@@ -3617,7 +3375,7 @@
         <item name="chipSelectIconColor">@color/op_control_icon_color_active_light</item>
         <item name="chipSelectTextColor">@color/op_control_text_color_primary_light</item>
         <item name="chipStyle">@style/OnePlus.Widget.MaterialComponents.Chip.Filter</item>
-        <item name="colorAccent">?opAccentColor</item>
+        <item name="colorAccent">@color/oneplus_accent_color</item>
         <item name="colorActionBarControlNormal">@color/op_control_icon_color_active_dark</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
         <item name="colorControlActivated">?colorAccent</item>
@@ -3685,16 +3443,12 @@
         <item name="onePlusTextColorHint">@color/op_control_text_color_hint_dark</item>
         <item name="onePlusTextColorPrimary">@color/op_control_text_color_primary_dark</item>
         <item name="onePlusTextColorSecondary">@color/op_control_text_color_secondary_dark</item>
-        <item name="opAccentBtnTextColor">@color/oneplus_accent_button_text_color</item>
-        <item name="opAccentColor">@color/couiGreenTintControlNormal</item>
-        <item name="opAccentTextColor">@color/oneplus_accent_text_color</item>
-        <item name="opSubAccentColor">@color/oneplus_sub_accent_color</item>
         <item name="outlineButtonStyle">@style/OnePlus.Widget.AppCompat.Button.Outline</item>
         <item name="outlineStrokeColor">@color/op_button_outline_stroke_dark</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
-        <item name="pickerColorActivated">?opAccentTextColor</item>
+        <item name="pickerColorActivated">@color/oneplus_accent_text_color</item>
         <item name="pickerColorUnActivated">@color/op_control_text_color_primary_dark</item>
         <item name="pickerInputLabelUnActivated">@color/op_control_text_color_secondary_dark</item>
         <item name="popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
@@ -3894,7 +3648,7 @@
         <item name="chipSelectIconColor">@color/op_control_icon_color_active_dark</item>
         <item name="chipSelectTextColor">@color/op_control_text_color_primary_dark</item>
         <item name="chipStyle">@style/OnePlus.Widget.MaterialComponents.Chip.Filter</item>
-        <item name="colorAccent">?opAccentColor</item>
+        <item name="colorAccent">@color/oneplus_accent_color</item>
         <item name="colorActionBarControlNormal">@color/op_control_icon_color_active_light</item>
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
         <item name="colorControlActivated">?colorAccent</item>
@@ -3949,7 +3703,7 @@
         <item name="onePlusIconColorActive">@color/op_control_icon_color_active_light</item>
         <item name="onePlusIconColorDisable">@color/op_control_icon_color_disable_light</item>
         <item name="onePlusIconColorInactive">@color/op_control_icon_color_inactive_light</item>
-        <item name="onePlusLabelStrokeColor">?opAccentColor</item>
+        <item name="onePlusLabelStrokeColor">@color/op_control_accent_color_red_light</item>
         <item name="onePlusPreferenceDividerColor">#2e000000</item>
         <item name="onePlusRippleColor">#1e000000</item>
         <item name="onePlusSearchBgColor">@color/op_control_hint_searchview_bg_light</item>
@@ -3962,16 +3716,12 @@
         <item name="onePlusTextColorHint">@color/op_control_text_color_hint_light</item>
         <item name="onePlusTextColorPrimary">@color/op_control_text_color_primary_light</item>
         <item name="onePlusTextColorSecondary">@color/op_control_text_color_secondary_light</item>
-        <item name="opAccentBtnTextColor">@color/oneplus_accent_button_text_color</item>
-        <item name="opAccentColor">@color/couiGreenTintControlNormal</item>
-        <item name="opAccentTextColor">@color/oneplus_accent_text_color</item>
-        <item name="opSubAccentColor">@color/couiGreenTintSubAccent</item>
         <item name="outlineButtonStyle">@style/OnePlus.Widget.AppCompat.Button.Outline</item>
         <item name="outlineStrokeColor">@color/op_button_outline_stroke_light</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
-        <item name="pickerColorActivated">?opAccentTextColor</item>
+        <item name="pickerColorActivated">@color/oneplus_accent_text_color</item>
         <item name="pickerColorUnActivated">@color/op_control_text_color_primary_light</item>
         <item name="pickerInputLabelUnActivated">@color/op_control_text_color_secondary_light</item>
         <item name="popupMenuStyle">@style/OnePlus.Widget.MaterialComponents.PopupMenu</item>
@@ -4380,7 +4130,6 @@
     </style>
     <style name="Widget.Design.SwitchFloatingActionButton" parent="@android:style/Widget">
         <item name="android:elevation">@dimen/op_control_shadow_z2</item>
-        <item name="tintColor">?opAccentColor</item>
     </style>
     <style name="Widget.Design.TabBarView" parent="">
         <item name="enforceMaterialTheme">false</item>

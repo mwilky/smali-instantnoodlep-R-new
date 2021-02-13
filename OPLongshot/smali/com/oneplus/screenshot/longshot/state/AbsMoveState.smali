@@ -1,21 +1,21 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/AbsMoveState;
 .super Lcom/oneplus/screenshot/longshot/state/BaseState;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.AbsMoveState"
+.field private static final TAG:Ljava/lang/String; = "Longshot.AbsMoveState"
 
 
 # instance fields
-.field public mMoveKeep:I
+.field protected mMoveKeep:I
 
-.field public mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
+.field protected mMovePoint:Lcom/oneplus/screenshot/longshot/util/MovePoint;
 
-.field public mMoveTask:Lcom/oneplus/screenshot/longshot/task/MoveTask;
+.field protected mMoveTask:Lcom/oneplus/screenshot/longshot/task/MoveTask;
 
 
 # direct methods
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/AbsMoveState;)V
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/state/AbsMoveState;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/state/AbsMoveState;->executeMove()V
@@ -215,7 +215,7 @@
     return-void
 .end method
 
-.method public abstract getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
+.method protected abstract getNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
 .end method
 
 .method public isOverScroll()Z

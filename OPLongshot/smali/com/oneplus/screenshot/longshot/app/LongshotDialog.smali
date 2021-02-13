@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/app/LongshotDialog;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver$BroadcastListener;
@@ -17,29 +17,29 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.Dialog"
+.field private static final TAG:Ljava/lang/String; = "Longshot.Dialog"
 
 
 # instance fields
-.field public mContentChanged:Z
+.field private mContentChanged:Z
 
-.field public mContentLayout:I
+.field private mContentLayout:I
 
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public mDecorView:Landroid/widget/FrameLayout;
+.field private mDecorView:Landroid/widget/FrameLayout;
 
-.field public mLayoutParams:Landroid/view/WindowManager$LayoutParams;
+.field private mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-.field public mOnDismissListener:Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnDismissListener;
+.field private mOnDismissListener:Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnDismissListener;
 
-.field public mOnShowListener:Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;
+.field private mOnShowListener:Lcom/oneplus/screenshot/longshot/app/LongshotDialog$OnShowListener;
 
-.field public mReceiver:Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver;
+.field private mReceiver:Lcom/oneplus/screenshot/service/GlobalBroadcastReceiver;
 
-.field public mShowing:Z
+.field private mShowing:Z
 
-.field public mWindowManager:Landroid/view/WindowManager;
+.field private mWindowManager:Landroid/view/WindowManager;
 
 
 # direct methods
@@ -78,7 +78,7 @@
 
     new-instance v8, Landroid/view/WindowManager$LayoutParams;
 
-    sget v5, Lc/b/b/m/e;->a:I
+    sget v5, Lb/b/b/l/e;->a:I
 
     const/4 v1, -0x1
 
@@ -213,7 +213,7 @@
     return-void
 .end method
 
-.method public onCreate()V
+.method protected onCreate()V
     .locals 2
 
     const-string v0, "Longshot.Dialog"

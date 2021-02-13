@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/tabbar/TabBarPresenter;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -21,13 +21,13 @@
 
 
 # instance fields
-.field public id:I
+.field private id:I
 
-.field public menu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field private menu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field public menuView:Lcom/google/android/material/tabbar/TabBarMenuView;
+.field private menuView:Lcom/google/android/material/tabbar/TabBarMenuView;
 
-.field public updateSuspended:Z
+.field private updateSuspended:Z
 
 
 # direct methods

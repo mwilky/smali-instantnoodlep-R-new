@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/LinearLayoutManager$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xc
     name = "b"
 .end annotation
 
@@ -25,7 +25,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method protected constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a()V
+.method a()V
     .locals 1
 
     const/4 v0, 0x0

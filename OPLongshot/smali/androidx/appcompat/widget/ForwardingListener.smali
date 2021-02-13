@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/widget/ForwardingListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -23,23 +23,23 @@
 
 
 # instance fields
-.field public mActivePointerId:I
+.field private mActivePointerId:I
 
-.field public mDisallowIntercept:Ljava/lang/Runnable;
+.field private mDisallowIntercept:Ljava/lang/Runnable;
 
-.field public mForwarding:Z
+.field private mForwarding:Z
 
-.field public final mLongPressTimeout:I
+.field private final mLongPressTimeout:I
 
-.field public final mScaledTouchSlop:F
+.field private final mScaledTouchSlop:F
 
-.field public final mSrc:Landroid/view/View;
+.field final mSrc:Landroid/view/View;
 
-.field public final mTapTimeout:I
+.field private final mTapTimeout:I
 
-.field public final mTmpLocation:[I
+.field private final mTmpLocation:[I
 
-.field public mTriggerLongPress:Ljava/lang/Runnable;
+.field private mTriggerLongPress:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -147,7 +147,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lb/c/n/x;
+    check-cast v1, Landroidx/appcompat/widget/x;
 
     if-eqz v1, :cond_3
 
@@ -170,7 +170,7 @@
 
     iget v0, p0, Landroidx/appcompat/widget/ForwardingListener;->mActivePointerId:I
 
-    invoke-virtual {v1, v3, v0}, Lb/c/n/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
+    invoke-virtual {v1, v3, v0}, Landroidx/appcompat/widget/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
 
     move-result v0
 
@@ -333,7 +333,7 @@
     return v2
 .end method
 
-.method public static pointInView(Landroid/view/View;FFF)Z
+.method private static pointInView(Landroid/view/View;FFF)Z
     .locals 2
 
     neg-float v0, p3
@@ -450,7 +450,7 @@
 .method public abstract getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
 .end method
 
-.method public onForwardingStarted()Z
+.method protected onForwardingStarted()Z
     .locals 2
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ForwardingListener;->getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
@@ -473,7 +473,7 @@
     return v0
 .end method
 
-.method public onForwardingStopped()Z
+.method protected onForwardingStopped()Z
     .locals 2
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ForwardingListener;->getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
@@ -496,7 +496,7 @@
     return v0
 .end method
 
-.method public onLongPress()V
+.method onLongPress()V
     .locals 11
 
     invoke-direct {p0}, Landroidx/appcompat/widget/ForwardingListener;->clearCallbacks()V

@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/ListMenuPresenter$a;
+.class Landroidx/appcompat/view/menu/ListMenuPresenter$a;
 .super Landroid/widget/BaseAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
-.field public final synthetic b:Landroidx/appcompat/view/menu/ListMenuPresenter;
+.field final synthetic b:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public a()V
+.method a()V
     .locals 5
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$a;->b:Landroidx/appcompat/view/menu/ListMenuPresenter;

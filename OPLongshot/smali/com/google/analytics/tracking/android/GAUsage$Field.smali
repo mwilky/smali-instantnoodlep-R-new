@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/tracking/android/GAUsage$Field;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/GAUsage$Field;
+.field private static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/GAUsage$Field;
 
 .field public static final enum BLANK_04:Lcom/google/analytics/tracking/android/GAUsage$Field;
 
@@ -153,7 +153,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 16
 
     new-instance v0, Lcom/google/analytics/tracking/android/GAUsage$Field;
@@ -1145,7 +1145,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

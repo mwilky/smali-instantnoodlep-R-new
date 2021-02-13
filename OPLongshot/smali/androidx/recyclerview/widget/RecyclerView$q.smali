@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$q;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field public a:Landroid/util/SparseArray;
+.field a:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field public b:I
+.field private b:I
 
 
 # direct methods
@@ -53,9 +53,34 @@
     return-void
 .end method
 
+.method private g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    .locals 2
+
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$q;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$q$a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroidx/recyclerview/widget/RecyclerView$q$a;
+
+    invoke-direct {v0}, Landroidx/recyclerview/widget/RecyclerView$q$a;-><init>()V
+
+    iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$q;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_0
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public a()V
+.method a()V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$q;->b:I
@@ -101,7 +126,7 @@
     return-void
 .end method
 
-.method public c()V
+.method c()V
     .locals 1
 
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$q;->b:I
@@ -113,10 +138,10 @@
     return-void
 .end method
 
-.method public d(IJ)V
+.method d(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
 
     move-result-object p1
 
@@ -131,10 +156,10 @@
     return-void
 .end method
 
-.method public e(IJ)V
+.method e(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
 
     move-result-object p1
 
@@ -214,32 +239,7 @@
     return-object p1
 .end method
 
-.method public final g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$q;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$q$a;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroidx/recyclerview/widget/RecyclerView$q$a;
-
-    invoke-direct {v0}, Landroidx/recyclerview/widget/RecyclerView$q$a;-><init>()V
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$q;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public h(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
+.method h(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -271,7 +271,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
 
     move-result-object v1
 
@@ -303,7 +303,7 @@
     return-void
 .end method
 
-.method public j(JJ)J
+.method j(JJ)J
     .locals 4
 
     const-wide/16 v0, 0x0
@@ -330,10 +330,10 @@
     return-wide p1
 .end method
 
-.method public k(IJJ)Z
+.method k(IJJ)Z
     .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
 
     move-result-object p1
 
@@ -366,10 +366,10 @@
     return p1
 .end method
 
-.method public l(IJJ)Z
+.method l(IJJ)Z
     .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
+    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$q;->g(I)Landroidx/recyclerview/widget/RecyclerView$q$a;
 
     move-result-object p1
 

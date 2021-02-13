@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$k$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

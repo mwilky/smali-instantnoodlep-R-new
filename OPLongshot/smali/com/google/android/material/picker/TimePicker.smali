@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/picker/TimePicker;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,19 +15,19 @@
 
 
 # static fields
-.field public static final d:Ljava/lang/String;
+.field private static final d:Ljava/lang/String;
 
 
 # instance fields
-.field public a:Landroid/view/Window;
+.field private a:Landroid/view/Window;
 
-.field public final b:Lcom/google/android/material/picker/TimePicker$c;
+.field private final b:Lcom/google/android/material/picker/TimePicker$c;
 
-.field public final c:I
+.field private final c:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const-class v0, Lcom/google/android/material/picker/TimePicker;
@@ -44,7 +44,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lc/a/b/b/b;->timePickerStyle:I
+    sget v0, Lb/a/b/a/b;->timePickerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/picker/TimePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -66,13 +66,13 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    sget-object v0, Lc/a/b/b/l;->TimePicker:[I
+    sget-object v0, Lb/a/b/a/l;->TimePicker:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/l;->TimePicker_dialogMode:I
+    sget v1, Lb/a/b/a/l;->TimePicker_dialogMode:I
 
     const/4 v2, 0x0
 
@@ -80,7 +80,7 @@
 
     move-result v1
 
-    sget v2, Lc/a/b/b/l;->TimePicker_android_timePickerMode:I
+    sget v2, Lb/a/b/a/l;->TimePicker_android_timePickerMode:I
 
     const/4 v3, 0x2
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/g;->time_picker_mode:I
+    sget v1, Lb/a/b/a/g;->time_picker_mode:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -116,7 +116,7 @@
 
     if-eq v0, v3, :cond_1
 
-    new-instance v0, Lc/a/b/b/b0/d;
+    new-instance v0, Lcom/google/android/material/picker/d;
 
     move-object v4, v0
 
@@ -130,11 +130,12 @@
 
     move v9, p4
 
-    invoke-direct/range {v4 .. v9}, Lc/a/b/b/b0/d;-><init>(Lcom/google/android/material/picker/TimePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct/range {v4 .. v9}, Lcom/google/android/material/picker/d;-><init>(Lcom/google/android/material/picker/TimePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    :goto_1
     iput-object v0, p0, Lcom/google/android/material/picker/TimePicker;->b:Lcom/google/android/material/picker/TimePicker$c;
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
     new-instance v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -153,9 +154,9 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/google/android/material/picker/TimePickerClockDelegate;-><init>(Lcom/google/android/material/picker/TimePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    iput-object v0, p0, Lcom/google/android/material/picker/TimePicker;->b:Lcom/google/android/material/picker/TimePicker$c;
+    goto :goto_1
 
-    :goto_1
+    :goto_2
     iget-object p1, p0, Lcom/google/android/material/picker/TimePicker;->b:Lcom/google/android/material/picker/TimePicker$c;
 
     new-instance p2, Lcom/google/android/material/picker/TimePicker$a;
@@ -463,7 +464,7 @@
     return v0
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
     check-cast p1, Landroid/view/View$BaseSavedState;
@@ -481,7 +482,7 @@
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -537,6 +538,25 @@
     return-void
 .end method
 
+.method public setHasTitle(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePicker;->b:Lcom/google/android/material/picker/TimePicker$c;
+
+    if-eqz v0, :cond_0
+
+    instance-of v1, v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->e0(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setHour(I)V
     .locals 3
 
@@ -546,7 +566,7 @@
 
     const/16 v2, 0x17
 
-    invoke-static {p1, v1, v2}, Lc/a/b/b/a0/a;->a(III)I
+    invoke-static {p1, v1, v2}, Lb/a/b/a/p/a;->a(III)I
 
     move-result p1
 
@@ -583,7 +603,7 @@
 
     const/16 v2, 0x3b
 
-    invoke-static {p1, v1, v2}, Lc/a/b/b/a0/a;->a(III)I
+    invoke-static {p1, v1, v2}, Lb/a/b/a/p/a;->a(III)I
 
     move-result p1
 
@@ -617,7 +637,7 @@
 
     check-cast v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->g0(Landroid/view/Window;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->i0(Landroid/view/Window;)V
 
     :cond_0
     return-void

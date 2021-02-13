@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$b;
+.class Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$b;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
+.field b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
-.field public c:Landroid/animation/AnimatorSet;
+.field c:Landroid/animation/AnimatorSet;
 
-.field public d:Ljava/util/ArrayList;
+.field d:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field public e:Landroidx/collection/ArrayMap;
+.field e:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArrayMap<",
@@ -71,10 +71,6 @@
 
     move-result-object p1
 
-    check-cast p1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
-
-    iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$b;->b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
-
     goto :goto_0
 
     :cond_0
@@ -82,11 +78,11 @@
 
     move-result-object p1
 
+    :goto_0
     check-cast p1, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$b;->b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
-    :goto_0
     iget-object p1, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$b;->b:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     invoke-virtual {p1}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mutate()Landroid/graphics/drawable/Drawable;

@@ -1,6 +1,6 @@
-.class public final Landroidx/core/text/util/LinkifyCompat$1;
+.class final Landroidx/core/text/util/LinkifyCompat$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Comparator;
@@ -11,14 +11,14 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Lb/g/j/e/a;",
+        "Landroidx/core/text/util/a;",
         ">;"
     }
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +28,12 @@
 
 
 # virtual methods
-.method public compare(Lb/g/j/e/a;Lb/g/j/e/a;)I
+.method public compare(Landroidx/core/text/util/a;Landroidx/core/text/util/a;)I
     .locals 4
 
-    iget v0, p1, Lb/g/j/e/a;->a:I
+    iget v0, p1, Landroidx/core/text/util/a;->a:I
 
-    iget v1, p2, Lb/g/j/e/a;->a:I
+    iget v1, p2, Landroidx/core/text/util/a;->a:I
 
     const/4 v2, -0x1
 
@@ -49,9 +49,9 @@
     return v3
 
     :cond_1
-    iget p1, p1, Lb/g/j/e/a;->b:I
+    iget p1, p1, Landroidx/core/text/util/a;->b:I
 
-    iget p2, p2, Lb/g/j/e/a;->b:I
+    iget p2, p2, Landroidx/core/text/util/a;->b:I
 
     if-ge p1, p2, :cond_2
 
@@ -71,11 +71,11 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lb/g/j/e/a;
+    check-cast p1, Landroidx/core/text/util/a;
 
-    check-cast p2, Lb/g/j/e/a;
+    check-cast p2, Landroidx/core/text/util/a;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Lb/g/j/e/a;Lb/g/j/e/a;)I
+    invoke-virtual {p0, p1, p2}, Landroidx/core/text/util/LinkifyCompat$1;->compare(Landroidx/core/text/util/a;Landroidx/core/text/util/a;)I
 
     move-result p1
 

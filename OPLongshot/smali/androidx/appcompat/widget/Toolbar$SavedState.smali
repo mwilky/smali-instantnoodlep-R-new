@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/Toolbar$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Z
+.field b:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/widget/Toolbar$SavedState$1;

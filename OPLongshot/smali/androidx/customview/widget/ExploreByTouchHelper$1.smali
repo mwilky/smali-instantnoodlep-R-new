@@ -1,6 +1,6 @@
-.class public final Landroidx/customview/widget/ExploreByTouchHelper$1;
+.class final Landroidx/customview/widget/ExploreByTouchHelper$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/customview/widget/FocusStrategy$BoundsAdapter;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -20,14 +20,14 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/customview/widget/FocusStrategy$BoundsAdapter<",
-        "Lb/g/l/y/d;",
+        "Landroidx/core/view/accessibility/d;",
         ">;"
     }
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,10 +37,10 @@
 
 
 # virtual methods
-.method public obtainBounds(Lb/g/l/y/d;Landroid/graphics/Rect;)V
+.method public obtainBounds(Landroidx/core/view/accessibility/d;Landroid/graphics/Rect;)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Lb/g/l/y/d;->k(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2}, Landroidx/core/view/accessibility/d;->k(Landroid/graphics/Rect;)V
 
     return-void
 .end method
@@ -48,9 +48,9 @@
 .method public bridge synthetic obtainBounds(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
-    check-cast p1, Lb/g/l/y/d;
+    check-cast p1, Landroidx/core/view/accessibility/d;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$1;->obtainBounds(Lb/g/l/y/d;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$1;->obtainBounds(Landroidx/core/view/accessibility/d;Landroid/graphics/Rect;)V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/shape/MaterialShapeDrawable$b;
+.class Lcom/google/android/material/shape/MaterialShapeDrawable$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:F
+.field final synthetic a:F
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable;F)V
+.method constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable;F)V
     .locals 0
 
     iput p2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable$b;->a:F
@@ -34,16 +34,16 @@
 
 
 # virtual methods
-.method public apply(Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+.method public apply(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
     .locals 2
-    .param p1    # Lc/a/b/b/e0/b;
+    .param p1    # Lcom/google/android/material/shape/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    instance-of v0, p1, Lc/a/b/b/e0/g;
+    instance-of v0, p1, Lcom/google/android/material/shape/g;
 
     if-eqz v0, :cond_0
 
@@ -54,7 +54,7 @@
 
     iget v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable$b;->a:F
 
-    invoke-direct {v0, v1, p1}, Lcom/google/android/material/shape/AdjustedCornerSize;-><init>(FLc/a/b/b/e0/b;)V
+    invoke-direct {v0, v1, p1}, Lcom/google/android/material/shape/AdjustedCornerSize;-><init>(FLcom/google/android/material/shape/b;)V
 
     move-object p1, v0
 

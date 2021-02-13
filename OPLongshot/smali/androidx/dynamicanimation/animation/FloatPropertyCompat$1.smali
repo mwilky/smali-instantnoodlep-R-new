@@ -1,6 +1,6 @@
-.class public final Landroidx/dynamicanimation/animation/FloatPropertyCompat$1;
+.class final Landroidx/dynamicanimation/animation/FloatPropertyCompat$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field public final synthetic val$property:Landroid/util/FloatProperty;
+.field final synthetic val$property:Landroid/util/FloatProperty;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/util/FloatProperty;)V
+.method constructor <init>(Ljava/lang/String;Landroid/util/FloatProperty;)V
     .locals 0
 
     iput-object p2, p0, Landroidx/dynamicanimation/animation/FloatPropertyCompat$1;->val$property:Landroid/util/FloatProperty;

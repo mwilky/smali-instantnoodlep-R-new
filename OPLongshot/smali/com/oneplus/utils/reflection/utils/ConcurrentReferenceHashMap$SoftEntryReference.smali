@@ -1,6 +1,6 @@
-.class public final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;
+.class final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$SoftEntryReference;
 .super Ljava/lang/ref/SoftReference;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1a
     name = "SoftEntryReference"
 .end annotation
 
@@ -33,9 +33,9 @@
 
 
 # instance fields
-.field public final hash:I
+.field private final hash:I
 
-.field public final nextReference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field private final nextReference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",

@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/app/ActionBar$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

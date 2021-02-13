@@ -1,34 +1,34 @@
-.class public Lcom/oneplus/screenshot/SaveImageInBackgroundData;
+.class Lcom/oneplus/screenshot/SaveImageInBackgroundData;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # instance fields
-.field public context:Landroid/content/Context;
+.field context:Landroid/content/Context;
 
-.field public errorMsgResId:I
+.field errorMsgResId:I
 
-.field public finishAfterSave:Z
+.field finishAfterSave:Z
 
-.field public finisher:Ljava/lang/Runnable;
+.field finisher:Ljava/lang/Runnable;
 
-.field public finshRunnable:Ljava/lang/Runnable;
+.field finshRunnable:Ljava/lang/Runnable;
 
-.field public handler:Landroid/os/Handler;
+.field handler:Landroid/os/Handler;
 
-.field public iconSize:I
+.field iconSize:I
 
-.field public image:Landroid/graphics/Bitmap;
+.field image:Landroid/graphics/Bitmap;
 
-.field public imageUri:Landroid/net/Uri;
+.field imageUri:Landroid/net/Uri;
 
-.field public previewWidth:I
+.field previewWidth:I
 
-.field public previewheight:I
+.field previewheight:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method public clearContext()V
+.method clearContext()V
     .locals 1
 
     const/4 v0, 0x0
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public clearImage()V
+.method clearImage()V
     .locals 1
 
     const/4 v0, 0x0

@@ -1,6 +1,6 @@
-.class public abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
+.class abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x40a
     name = "e"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;)V
+.method synthetic constructor <init>(Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$e;-><init>()V

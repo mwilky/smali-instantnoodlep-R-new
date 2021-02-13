@@ -1,6 +1,6 @@
-.class public Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
+.class Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 .super Landroidx/core/app/ActivityOptionsCompat;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,17 +13,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "ActivityOptionsCompatImpl"
 .end annotation
 
 
 # instance fields
-.field public final mActivityOptions:Landroid/app/ActivityOptions;
+.field private final mActivityOptions:Landroid/app/ActivityOptions;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/ActivityOptions;)V
+.method constructor <init>(Landroid/app/ActivityOptions;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/core/app/ActivityOptionsCompat;-><init>()V

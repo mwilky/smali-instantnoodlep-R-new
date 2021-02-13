@@ -1,6 +1,6 @@
 .class public final Landroidx/core/content/res/ColorStateListInflaterCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -186,7 +186,7 @@
     return-object p0
 .end method
 
-.method public static inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+.method private static inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 17
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -261,10 +261,10 @@
 
     if-nez v7, :cond_1
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_1
-    sget-object v7, Lb/g/c;->ColorStateListItem:[I
+    sget-object v7, La/d/c;->ColorStateListItem:[I
 
     move-object/from16 v8, p0
 
@@ -274,7 +274,7 @@
 
     move-result-object v7
 
-    sget v10, Lb/g/c;->ColorStateListItem_android_color:I
+    sget v10, La/d/c;->ColorStateListItem_android_color:I
 
     const v11, -0xff01
 
@@ -284,7 +284,7 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    sget v12, Lb/g/c;->ColorStateListItem_android_alpha:I
+    sget v12, La/d/c;->ColorStateListItem_android_alpha:I
 
     invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -292,16 +292,17 @@
 
     if-eqz v12, :cond_2
 
-    sget v12, Lb/g/c;->ColorStateListItem_android_alpha:I
+    sget v12, La/d/c;->ColorStateListItem_android_alpha:I
 
+    :goto_1
     invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v11
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
-    sget v12, Lb/g/c;->ColorStateListItem_alpha:I
+    sget v12, La/d/c;->ColorStateListItem_alpha:I
 
     invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -309,14 +310,12 @@
 
     if-eqz v12, :cond_3
 
-    sget v12, Lb/g/c;->ColorStateListItem_alpha:I
+    sget v12, La/d/c;->ColorStateListItem_alpha:I
 
-    invoke-virtual {v7, v12, v11}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v11
+    goto :goto_1
 
     :cond_3
-    :goto_1
+    :goto_2
     invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
 
     invoke-interface/range {p2 .. p2}, Landroid/util/AttributeSet;->getAttributeCount()I
@@ -329,7 +328,7 @@
 
     move v14, v13
 
-    :goto_2
+    :goto_3
     if-ge v13, v7, :cond_6
 
     invoke-interface {v0, v13}, Landroid/util/AttributeSet;->getAttributeNameResource(I)I
@@ -344,7 +343,7 @@
 
     if-eq v15, v2, :cond_5
 
-    sget v2, Lb/g/a;->alpha:I
+    sget v2, La/d/a;->alpha:I
 
     if-eq v15, v2, :cond_5
 
@@ -356,12 +355,12 @@
 
     if-eqz v16, :cond_4
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_4
     neg-int v15, v15
 
-    :goto_3
+    :goto_4
     aput v15, v12, v14
 
     move v14, v2
@@ -371,7 +370,7 @@
 
     const/4 v2, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_6
     invoke-static {v12, v14}, Landroid/util/StateSet;->trimStateSet([II)[I
@@ -382,11 +381,11 @@
 
     move-result v7
 
-    invoke-static {v3, v6, v7}, Lb/g/e/c/a;->a([III)[I
+    invoke-static {v3, v6, v7}, Landroidx/core/content/res/a;->a([III)[I
 
     move-result-object v3
 
-    invoke-static {v4, v6, v2}, Lb/g/e/c/a;->b([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v4, v6, v2}, Landroidx/core/content/res/a;->b([Ljava/lang/Object;ILjava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
 
@@ -396,15 +395,15 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_7
-    :goto_4
+    :goto_5
     move-object/from16 v8, p0
 
     move-object/from16 v9, p3
 
-    :goto_5
+    :goto_6
     const/4 v2, 0x1
 
     goto/16 :goto_0
@@ -425,7 +424,7 @@
     return-object v2
 .end method
 
-.method public static modulateColorAlpha(IF)I
+.method private static modulateColorAlpha(IF)I
     .locals 1
     .param p0    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -463,7 +462,7 @@
     return p0
 .end method
 
-.method public static obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+.method private static obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
     .locals 0
 
     if-nez p1, :cond_0

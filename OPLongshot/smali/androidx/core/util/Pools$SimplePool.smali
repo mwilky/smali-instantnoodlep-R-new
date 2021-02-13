@@ -1,6 +1,6 @@
 .class public Landroidx/core/util/Pools$SimplePool;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/util/Pools$Pool;
@@ -20,9 +20,9 @@
 
 
 # instance fields
-.field public final mPool:[Ljava/lang/Object;
+.field private final mPool:[Ljava/lang/Object;
 
-.field public mPoolSize:I
+.field private mPoolSize:I
 
 
 # direct methods

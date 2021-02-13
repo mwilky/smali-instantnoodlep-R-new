@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transition/TransitionUtils;
+.class Lcom/google/android/material/transition/TransitionUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -17,11 +17,11 @@
 
 
 # static fields
-.field public static final transformAlphaRectF:Landroid/graphics/RectF;
+.field private static final transformAlphaRectF:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroid/graphics/RectF;
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public static calculateArea(Landroid/graphics/RectF;)F
+.method static calculateArea(Landroid/graphics/RectF;)F
     .locals 1
     .param p0    # Landroid/graphics/RectF;
         .annotation build Landroidx/annotation/NonNull;
@@ -61,7 +61,7 @@
     return v0
 .end method
 
-.method public static convertToRelativeCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)Lcom/google/android/material/shape/ShapeAppearanceModel;
+.method static convertToRelativeCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)Lcom/google/android/material/shape/ShapeAppearanceModel;
     .locals 1
 
     new-instance v0, Lcom/google/android/material/transition/TransitionUtils$a;
@@ -75,7 +75,7 @@
     return-object p0
 .end method
 
-.method public static createColorShader(I)Landroid/graphics/Shader;
+.method static createColorShader(I)Landroid/graphics/Shader;
     .locals 9
     .param p0    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -105,7 +105,7 @@
     return-object v8
 .end method
 
-.method public static defaultIfNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method static defaultIfNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
     .param p0    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/Nullable;
@@ -137,7 +137,7 @@
     return-object p0
 .end method
 
-.method public static findAncestorById(Landroid/view/View;I)Landroid/view/View;
+.method static findAncestorById(Landroid/view/View;I)Landroid/view/View;
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/IdRes;
@@ -198,7 +198,7 @@
     throw p0
 .end method
 
-.method public static findDescendantOrAncestorById(Landroid/view/View;I)Landroid/view/View;
+.method static findDescendantOrAncestorById(Landroid/view/View;I)Landroid/view/View;
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/IdRes;
@@ -221,7 +221,7 @@
     return-object p0
 .end method
 
-.method public static getLocationOnScreen(Landroid/view/View;)Landroid/graphics/RectF;
+.method static getLocationOnScreen(Landroid/view/View;)Landroid/graphics/RectF;
     .locals 4
 
     const/4 v0, 0x2
@@ -265,7 +265,7 @@
     return-object v3
 .end method
 
-.method public static getRelativeBounds(Landroid/view/View;)Landroid/graphics/RectF;
+.method static getRelativeBounds(Landroid/view/View;)Landroid/graphics/RectF;
     .locals 4
 
     new-instance v0, Landroid/graphics/RectF;
@@ -299,7 +299,7 @@
     return-object v0
 .end method
 
-.method public static getRelativeBoundsRect(Landroid/view/View;)Landroid/graphics/Rect;
+.method static getRelativeBoundsRect(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 4
 
     new-instance v0, Landroid/graphics/Rect;
@@ -325,14 +325,14 @@
     return-object v0
 .end method
 
-.method public static isShapeAppearanceSignificant(Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)Z
+.method private static isShapeAppearanceSignificant(Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)Z
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result v0
 
@@ -342,11 +342,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result v0
 
@@ -354,11 +354,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result v0
 
@@ -366,11 +366,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lcom/google/android/material/shape/b;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {p0, p1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result p0
 
@@ -393,7 +393,7 @@
     return p0
 .end method
 
-.method public static lerp(FFF)F
+.method static lerp(FFF)F
     .locals 0
     .param p2    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -411,7 +411,7 @@
     return p0
 .end method
 
-.method public static lerp(FFFFF)F
+.method static lerp(FFFFF)F
     .locals 1
     .param p2    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -459,7 +459,7 @@
     return p0
 .end method
 
-.method public static lerp(IIFFF)I
+.method static lerp(IIFFF)I
     .locals 1
     .param p2    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -513,7 +513,7 @@
     return p0
 .end method
 
-.method public static lerp(Lcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)Lcom/google/android/material/shape/ShapeAppearanceModel;
+.method static lerp(Lcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)Lcom/google/android/material/shape/ShapeAppearanceModel;
     .locals 7
     .param p4    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -571,7 +571,7 @@
     return-object p0
 .end method
 
-.method public static maybeAddTransition(Landroid/transition/TransitionSet;Landroid/transition/Transition;)V
+.method static maybeAddTransition(Landroid/transition/TransitionSet;Landroid/transition/Transition;)V
     .locals 0
     .param p1    # Landroid/transition/Transition;
         .annotation build Landroidx/annotation/Nullable;
@@ -586,7 +586,7 @@
     return-void
 .end method
 
-.method public static maybeRemoveTransition(Landroid/transition/TransitionSet;Landroid/transition/Transition;)V
+.method static maybeRemoveTransition(Landroid/transition/TransitionSet;Landroid/transition/Transition;)V
     .locals 0
     .param p1    # Landroid/transition/Transition;
         .annotation build Landroidx/annotation/Nullable;
@@ -601,7 +601,7 @@
     return-void
 .end method
 
-.method public static saveLayerAlphaCompat(Landroid/graphics/Canvas;Landroid/graphics/Rect;I)I
+.method private static saveLayerAlphaCompat(Landroid/graphics/Canvas;Landroid/graphics/Rect;I)I
     .locals 7
 
     sget-object v0, Lcom/google/android/material/transition/TransitionUtils;->transformAlphaRectF:Landroid/graphics/RectF;
@@ -646,7 +646,7 @@
     return p0
 .end method
 
-.method public static transform(Landroid/graphics/Canvas;Landroid/graphics/Rect;FFFILcom/google/android/material/transition/TransitionUtils$c;)V
+.method static transform(Landroid/graphics/Canvas;Landroid/graphics/Rect;FFFILcom/google/android/material/transition/TransitionUtils$c;)V
     .locals 1
 
     if-gtz p5, :cond_0
@@ -676,7 +676,7 @@
     return-void
 .end method
 
-.method public static transformCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Lcom/google/android/material/transition/TransitionUtils$d;)Lcom/google/android/material/shape/ShapeAppearanceModel;
+.method static transformCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Lcom/google/android/material/transition/TransitionUtils$d;)Lcom/google/android/material/shape/ShapeAppearanceModel;
     .locals 2
 
     invoke-static {p0, p2}, Lcom/google/android/material/transition/TransitionUtils;->isShapeAppearanceSignificant(Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)Z
@@ -697,61 +697,61 @@
 
     move-result-object p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lc/a/b/b/e0/b;
+    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lcom/google/android/material/shape/b;
 
     move-result-object v1
 
-    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lc/a/b/b/e0/b;Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->B(Lc/a/b/b/e0/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->B(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lc/a/b/b/e0/b;
+    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lcom/google/android/material/shape/b;
 
     move-result-object v1
 
-    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lc/a/b/b/e0/b;Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->F(Lc/a/b/b/e0/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->F(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lc/a/b/b/e0/b;
+    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lcom/google/android/material/shape/b;
 
     move-result-object v1
 
-    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lc/a/b/b/e0/b;Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+    invoke-interface {p3, v0, v1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->s(Lc/a/b/b/e0/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+    invoke-virtual {p2, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->s(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lc/a/b/b/e0/b;
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lcom/google/android/material/shape/b;
 
     move-result-object p0
 
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lc/a/b/b/e0/b;
+    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lcom/google/android/material/shape/b;
 
     move-result-object p1
 
-    invoke-interface {p3, p0, p1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lc/a/b/b/e0/b;Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+    invoke-interface {p3, p0, p1}, Lcom/google/android/material/transition/TransitionUtils$d;->a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
 
     move-result-object p0
 
-    invoke-virtual {p2, p0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->w(Lc/a/b/b/e0/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+    invoke-virtual {p2, p0}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->w(Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
     invoke-virtual {p2}, Lcom/google/android/material/shape/ShapeAppearanceModel$b;->m()Lcom/google/android/material/shape/ShapeAppearanceModel;
 

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/NavigationMenuView;
 .super Landroidx/recyclerview/widget/RecyclerView;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuView;

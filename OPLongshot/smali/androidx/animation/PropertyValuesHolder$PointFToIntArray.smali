@@ -1,6 +1,6 @@
-.class public Landroidx/animation/PropertyValuesHolder$PointFToIntArray;
+.class Landroidx/animation/PropertyValuesHolder$PointFToIntArray;
 .super Landroidx/animation/TypeConverter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "PointFToIntArray"
 .end annotation
 
@@ -23,11 +23,11 @@
 
 
 # instance fields
-.field public mCoordinates:[I
+.field private mCoordinates:[I
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 2
 
     const-class v0, Landroid/graphics/PointF;

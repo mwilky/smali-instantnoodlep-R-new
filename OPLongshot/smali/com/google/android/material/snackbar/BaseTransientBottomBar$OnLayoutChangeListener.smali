@@ -1,6 +1,6 @@
-.class public interface abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;
+.class interface abstract Lcom/google/android/material/snackbar/BaseTransientBottomBar$OnLayoutChangeListener;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "OnLayoutChangeListener"
 .end annotation
 

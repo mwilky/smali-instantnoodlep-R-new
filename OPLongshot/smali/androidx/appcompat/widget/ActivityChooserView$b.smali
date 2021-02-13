@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActivityChooserView$b;
+.class Landroidx/appcompat/widget/ActivityChooserView$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
+.field final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
+.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
@@ -55,22 +55,22 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Lb/c/n/y;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/c/n/y;->dismiss()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/y;->dismiss()V
 
     goto :goto_0
 
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Lb/c/n/y;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/c/n/y;->show()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/y;->show()V
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
 

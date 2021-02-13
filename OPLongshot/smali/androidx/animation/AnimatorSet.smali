@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/AnimatorSet;
-.super Lb/b/b;
-.source "SourceFile"
+.super Landroidx/animation/b;
+.source ""
 
 # interfaces
 .implements Landroidx/animation/AnimationHandler$b;
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field public static final z:Ljava/util/Comparator;
+.field private static final z:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field public e:Ljava/util/ArrayList;
+.field private e:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -40,18 +40,18 @@
     .end annotation
 .end field
 
-.field public f:Landroidx/collection/ArrayMap;
+.field f:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArrayMap<",
-            "Lb/b/b;",
+            "Landroidx/animation/b;",
             "Landroidx/animation/AnimatorSet$e;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public g:Ljava/util/ArrayList;
+.field private g:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -61,7 +61,7 @@
     .end annotation
 .end field
 
-.field public h:Ljava/util/ArrayList;
+.field private h:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -71,43 +71,43 @@
     .end annotation
 .end field
 
-.field public i:Z
+.field i:Z
 
-.field public j:Z
+.field private j:Z
 
-.field public k:J
+.field k:J
 
-.field public l:Lb/b/h;
+.field private l:Landroidx/animation/h;
 
-.field public m:Landroidx/animation/AnimatorSet$e;
+.field private m:Landroidx/animation/AnimatorSet$e;
 
-.field public n:J
+.field private n:J
 
-.field public o:Lb/b/d;
+.field private o:Landroidx/animation/d;
 
-.field public p:J
+.field private p:J
 
-.field public q:J
+.field private q:J
 
-.field public r:J
+.field private r:J
 
-.field public s:I
+.field private s:I
 
-.field public t:Z
+.field t:Z
 
-.field public u:Z
+.field private u:Z
 
-.field public v:Landroidx/animation/AnimatorSet$f;
+.field private v:Landroidx/animation/AnimatorSet$f;
 
-.field public w:Z
+.field private w:Z
 
-.field public x:J
+.field private x:J
 
-.field public y:Lb/b/c;
+.field private y:Landroidx/animation/c;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/animation/AnimatorSet$3;
@@ -122,7 +122,7 @@
 .method public constructor <init>()V
     .locals 6
 
-    invoke-direct {p0}, Lb/b/b;-><init>()V
+    invoke-direct {p0}, Landroidx/animation/b;-><init>()V
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -164,19 +164,19 @@
 
     fill-array-data v3, :array_0
 
-    invoke-static {v3}, Lb/b/h;->J([F)Lb/b/h;
+    invoke-static {v3}, Landroidx/animation/h;->J([F)Landroidx/animation/h;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1, v2}, Lb/b/h;->O(J)Lb/b/h;
+    invoke-virtual {v3, v1, v2}, Landroidx/animation/h;->O(J)Landroidx/animation/h;
 
     move-result-object v3
 
-    iput-object v3, p0, Landroidx/animation/AnimatorSet;->l:Lb/b/h;
+    iput-object v3, p0, Landroidx/animation/AnimatorSet;->l:Landroidx/animation/h;
 
     new-instance v4, Landroidx/animation/AnimatorSet$e;
 
-    invoke-direct {v4, v3}, Landroidx/animation/AnimatorSet$e;-><init>(Lb/b/b;)V
+    invoke-direct {v4, v3}, Landroidx/animation/AnimatorSet$e;-><init>(Landroidx/animation/b;)V
 
     iput-object v4, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
 
@@ -186,7 +186,7 @@
 
     const/4 v5, 0x0
 
-    iput-object v5, p0, Landroidx/animation/AnimatorSet;->o:Lb/b/d;
+    iput-object v5, p0, Landroidx/animation/AnimatorSet;->o:Landroidx/animation/d;
 
     iput-wide v1, p0, Landroidx/animation/AnimatorSet;->p:J
 
@@ -218,11 +218,11 @@
 
     invoke-direct {v0, p0}, Landroidx/animation/AnimatorSet$a;-><init>(Landroidx/animation/AnimatorSet;)V
 
-    iput-object v0, p0, Landroidx/animation/AnimatorSet;->y:Lb/b/c;
+    iput-object v0, p0, Landroidx/animation/AnimatorSet;->y:Landroidx/animation/c;
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
 
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->l:Lb/b/h;
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->l:Landroidx/animation/h;
 
     iget-object v2, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
 
@@ -245,78 +245,7 @@
     .end array-data
 .end method
 
-.method public static I(Landroidx/animation/AnimatorSet;)Z
-    .locals 4
-
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->g()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    const/4 v1, 0x0
-
-    if-lez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->B()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_3
-
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->B()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lb/b/b;
-
-    instance-of v3, v2, Landroidx/animation/AnimatorSet;
-
-    if-nez v3, :cond_1
-
-    return v1
-
-    :cond_1
-    check-cast v2, Landroidx/animation/AnimatorSet;
-
-    invoke-static {v2}, Landroidx/animation/AnimatorSet;->I(Landroidx/animation/AnimatorSet;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    return v1
-
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+.method private A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -362,7 +291,7 @@
 
     check-cast v1, Landroidx/animation/AnimatorSet$e;
 
-    invoke-virtual {p0, v1, p2}, Landroidx/animation/AnimatorSet;->A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+    invoke-direct {p0, v1, p2}, Landroidx/animation/AnimatorSet;->A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -372,102 +301,19 @@
     return-void
 .end method
 
-.method public B()Ljava/util/ArrayList;
-    .locals 5
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lb/b/b;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v4, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
-
-    if-eq v3, v4, :cond_0
-
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public C(Lb/b/b;)Landroidx/animation/AnimatorSet$e;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
-
-    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/animation/AnimatorSet$e;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroidx/animation/AnimatorSet$e;
-
-    invoke-direct {v0, p1}, Landroidx/animation/AnimatorSet$e;-><init>(Lb/b/b;)V
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
-
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final D(JLandroidx/animation/AnimatorSet$e;)J
+.method private D(JLandroidx/animation/AnimatorSet$e;)J
     .locals 1
 
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
 
-    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/animation/AnimatorSet;->E(JLandroidx/animation/AnimatorSet$e;Z)J
+    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/animation/AnimatorSet;->E(JLandroidx/animation/AnimatorSet$e;Z)J
 
     move-result-wide p1
 
     return-wide p1
 .end method
 
-.method public final E(JLandroidx/animation/AnimatorSet$e;Z)J
+.method private E(JLandroidx/animation/AnimatorSet$e;Z)J
     .locals 2
 
     if-eqz p4, :cond_0
@@ -492,7 +338,7 @@
     return-wide p1
 .end method
 
-.method public final F(IIJ)V
+.method private F(IIJ)V
     .locals 9
 
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
@@ -537,17 +383,17 @@
 
     if-ne v7, v3, :cond_2
 
-    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v7}, Lb/b/b;->k()Z
+    invoke-virtual {v7}, Landroidx/animation/b;->k()Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v7}, Lb/b/b;->c()V
+    invoke-virtual {v7}, Landroidx/animation/b;->c()V
 
     :cond_1
     iput-boolean v4, v6, Landroidx/animation/AnimatorSet$e;->c:Z
@@ -558,11 +404,11 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v0, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v0, v5}, Lb/b/b;->t(Z)V
+    invoke-virtual {v0, v5}, Landroidx/animation/b;->t(Z)V
 
-    invoke-virtual {p0, v6, v1, v2}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
+    invoke-direct {p0, v6, v1, v2}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
 
     goto :goto_1
 
@@ -573,11 +419,11 @@
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0, p3, p4, v6}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
+    invoke-direct {p0, p3, p4, v6}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
 
     move-result-wide v7
 
-    invoke-virtual {p0, v6, v7, v8}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
+    invoke-direct {p0, v6, v7, v8}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
 
     :cond_3
     :goto_1
@@ -609,26 +455,26 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v0}, Lb/b/b;->k()Z
+    invoke-virtual {v0}, Landroidx/animation/b;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v0}, Lb/b/b;->c()V
+    invoke-virtual {v0}, Landroidx/animation/b;->c()V
 
     :cond_5
     iput-boolean v4, v5, Landroidx/animation/AnimatorSet$e;->c:Z
 
-    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v0, v5, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v0, v4}, Lb/b/b;->t(Z)V
+    invoke-virtual {v0, v4}, Landroidx/animation/b;->t(Z)V
 
-    invoke-virtual {p0, v5, v1, v2}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
+    invoke-direct {p0, v5, v1, v2}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
 
     goto :goto_3
 
@@ -639,11 +485,11 @@
 
     if-nez v0, :cond_7
 
-    invoke-virtual {p0, p3, p4, v5}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
+    invoke-direct {p0, p3, p4, v5}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
 
     move-result-wide v6
 
-    invoke-virtual {p0, v5, v6, v7}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
+    invoke-direct {p0, v5, v6, v7}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
 
     :cond_7
     :goto_3
@@ -655,10 +501,10 @@
     return-void
 .end method
 
-.method public final G()V
+.method private G()V
     .locals 3
 
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->o:Lb/b/d;
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->o:Landroidx/animation/d;
 
     if-eqz v0, :cond_0
 
@@ -681,25 +527,25 @@
 
     check-cast v1, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    iget-object v2, p0, Landroidx/animation/AnimatorSet;->o:Lb/b/d;
+    iget-object v2, p0, Landroidx/animation/AnimatorSet;->o:Landroidx/animation/d;
 
-    invoke-virtual {v1, v2}, Lb/b/b;->q(Lb/b/d;)V
+    invoke-virtual {v1, v2}, Landroidx/animation/b;->q(Landroidx/animation/d;)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->T()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->T()V
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->x()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->x()V
 
     return-void
 .end method
 
-.method public final H()V
+.method private H()V
     .locals 1
 
     invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->i()Z
@@ -720,17 +566,86 @@
     return-void
 .end method
 
-.method public final J()V
+.method private static I(Landroidx/animation/AnimatorSet;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->g()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    const/4 v1, 0x0
+
+    if-lez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->B()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_3
+
+    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->B()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/animation/b;
+
+    instance-of v3, v2, Landroidx/animation/AnimatorSet;
+
+    if-nez v3, :cond_1
+
+    return v1
+
+    :cond_1
+    check-cast v2, Landroidx/animation/AnimatorSet;
+
+    invoke-static {v2}, Landroidx/animation/AnimatorSet;->I(Landroidx/animation/AnimatorSet;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method private J()V
     .locals 2
 
-    iget-object v0, p0, Lb/b/b;->c:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/animation/b;->c:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lb/b/b;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/animation/b;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -738,15 +653,15 @@
 
     if-ge v0, v1, :cond_0
 
-    iget-object v1, p0, Lb/b/b;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/animation/b;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lb/b/b$b;
+    check-cast v1, Landroidx/animation/b$b;
 
-    invoke-interface {v1, p0}, Lb/b/b$b;->a(Lb/b/b;)V
+    invoke-interface {v1, p0}, Landroidx/animation/b$b;->a(Landroidx/animation/b;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -756,66 +671,14 @@
     return-void
 .end method
 
-.method public K(Lb/b/b;)Landroidx/animation/AnimatorSet$d;
-    .locals 1
-    .param p1    # Lb/b/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    new-instance v0, Landroidx/animation/AnimatorSet$d;
-
-    invoke-direct {v0, p0, p1}, Landroidx/animation/AnimatorSet$d;-><init>(Landroidx/animation/AnimatorSet;Lb/b/b;)V
-
-    return-object v0
-.end method
-
-.method public varargs L([Lb/b/b;)V
-    .locals 3
-    .param p1    # [Lb/b/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    aget-object v0, p1, v0
-
-    invoke-virtual {p0, v0}, Landroidx/animation/AnimatorSet;->K(Lb/b/b;)Landroidx/animation/AnimatorSet$d;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    :goto_0
-    array-length v2, p1
-
-    if-ge v1, v2, :cond_0
-
-    aget-object v2, p1, v1
-
-    invoke-virtual {v0, v2}, Landroidx/animation/AnimatorSet$d;->a(Lb/b/b;)Landroidx/animation/AnimatorSet$d;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final M(Landroidx/animation/AnimatorSet$e;J)V
+.method private M(Landroidx/animation/AnimatorSet$e;J)V
     .locals 2
 
     iget-boolean v0, p1, Landroidx/animation/AnimatorSet$e;->c:Z
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lb/b/h;->C()F
+    invoke-static {}, Landroidx/animation/h;->C()F
 
     move-result v0
 
@@ -828,7 +691,7 @@
     const/high16 v0, 0x3f800000    # 1.0f
 
     :cond_0
-    iget-object v1, p1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, p1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     long-to-float p2, p2
 
@@ -836,7 +699,7 @@
 
     float-to-long p2, p2
 
-    invoke-virtual {v1, p2, p3}, Lb/b/b;->l(J)Z
+    invoke-virtual {v1, p2, p3}, Landroidx/animation/b;->l(J)Z
 
     move-result p2
 
@@ -846,7 +709,7 @@
     return-void
 .end method
 
-.method public final N()V
+.method private N()V
     .locals 1
 
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->u:Z
@@ -865,7 +728,7 @@
     return-void
 .end method
 
-.method public final O()V
+.method private O()V
     .locals 3
 
     const/4 v0, 0x1
@@ -887,11 +750,11 @@
 
     check-cast v1, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    iget-object v2, p0, Landroidx/animation/AnimatorSet;->y:Lb/b/c;
+    iget-object v2, p0, Landroidx/animation/AnimatorSet;->y:Landroidx/animation/c;
 
-    invoke-virtual {v1, v2}, Lb/b/b;->n(Lb/b/b$a;)V
+    invoke-virtual {v1, v2}, Landroidx/animation/b;->n(Landroidx/animation/b$a;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -901,36 +764,7 @@
     return-void
 .end method
 
-.method public P(J)Landroidx/animation/AnimatorSet;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->i:Z
-
-    iput-wide p1, p0, Landroidx/animation/AnimatorSet;->n:J
-
-    return-object p0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "duration must be a value of zero or greater"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final Q()V
+.method private Q()V
     .locals 13
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
@@ -1035,9 +869,9 @@
     goto :goto_2
 
     :cond_1
-    iget-object v6, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v6, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v6}, Lb/b/b;->g()J
+    invoke-virtual {v6}, Landroidx/animation/b;->g()J
 
     move-result-wide v11
 
@@ -1311,7 +1145,7 @@
     throw v0
 .end method
 
-.method public final R(ZZ)V
+.method private R(ZZ)V
     .locals 4
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -1328,7 +1162,7 @@
 
     const/4 p2, 0x0
 
-    iput-boolean p2, p0, Lb/b/b;->d:Z
+    iput-boolean p2, p0, Landroidx/animation/b;->d:Z
 
     const-wide/16 v0, -0x1
 
@@ -1360,7 +1194,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->G()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->G()V
 
     if-eqz p1, :cond_2
 
@@ -1391,10 +1225,10 @@
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->S()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->S()V
 
     :cond_3
-    iget-object v1, p0, Lb/b/b;->a:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/animation/b;->a:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_4
 
@@ -1415,9 +1249,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lb/b/b$a;
+    check-cast v3, Landroidx/animation/b$a;
 
-    invoke-virtual {v3, p0, p1}, Lb/b/b$a;->f(Lb/b/b;Z)V
+    invoke-virtual {v3, p0, p1}, Landroidx/animation/b$a;->f(Landroidx/animation/b;Z)V
 
     add-int/lit8 p2, p2, 0x1
 
@@ -1441,10 +1275,10 @@
     throw p1
 .end method
 
-.method public final S()V
+.method private S()V
     .locals 6
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->u()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->u()V
 
     iget-object v0, p0, Landroidx/animation/AnimatorSet;->v:Landroidx/animation/AnimatorSet$f;
 
@@ -1475,28 +1309,23 @@
 
     if-eqz v0, :cond_1
 
+    :goto_0
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
 
     xor-int/2addr v0, v1
 
     invoke-virtual {p0, v0}, Landroidx/animation/AnimatorSet;->r(Z)V
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->H()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->H()V
 
-    iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
-
-    xor-int/2addr v0, v1
-
-    invoke-virtual {p0, v0}, Landroidx/animation/AnimatorSet;->r(Z)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
     iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
@@ -1507,7 +1336,7 @@
 
     sub-int/2addr v0, v1
 
-    :goto_0
+    :goto_1
     if-ltz v0, :cond_4
 
     iget-object v4, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
@@ -1532,23 +1361,23 @@
 
     iget-object v4, v4, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v4, v4, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v4, v4, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v4}, Lb/b/b;->i()Z
+    invoke-virtual {v4}, Landroidx/animation/b;->i()Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    invoke-virtual {v4, v1}, Lb/b/b;->r(Z)V
+    invoke-virtual {v4, v1}, Landroidx/animation/b;->r(Z)V
 
     :cond_3
     add-int/lit8 v0, v0, -0x1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
-    :goto_1
+    :goto_2
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
 
     if-nez v0, :cond_5
@@ -1589,13 +1418,13 @@
     move-result-wide v2
 
     :cond_6
-    invoke-virtual {p0, v2, v3}, Landroidx/animation/AnimatorSet;->z(J)I
+    invoke-direct {p0, v2, v3}, Landroidx/animation/AnimatorSet;->z(J)I
 
     move-result v0
 
     const/4 v4, -0x1
 
-    invoke-virtual {p0, v4, v0, v2, v3}, Landroidx/animation/AnimatorSet;->F(IIJ)V
+    invoke-direct {p0, v4, v0, v2, v3}, Landroidx/animation/AnimatorSet;->F(IIJ)V
 
     iget-object v2, p0, Landroidx/animation/AnimatorSet;->e:Ljava/util/ArrayList;
 
@@ -1605,7 +1434,7 @@
 
     sub-int/2addr v2, v1
 
-    :goto_2
+    :goto_3
     if-ltz v2, :cond_8
 
     iget-object v1, p0, Landroidx/animation/AnimatorSet;->e:Ljava/util/ArrayList;
@@ -1627,7 +1456,7 @@
     :cond_7
     add-int/lit8 v2, v2, -0x1
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_8
     iput v0, p0, Landroidx/animation/AnimatorSet;->s:I
@@ -1637,13 +1466,13 @@
 
     if-eqz v0, :cond_a
 
-    invoke-static {p0}, Lb/b/b;->a(Landroidx/animation/AnimationHandler$b;)V
+    invoke-static {p0}, Landroidx/animation/b;->a(Landroidx/animation/AnimationHandler$b;)V
 
     :cond_a
     return-void
 .end method
 
-.method public final T()V
+.method private T()V
     .locals 5
 
     iget-wide v0, p0, Landroidx/animation/AnimatorSet;->n:J
@@ -1673,27 +1502,27 @@
 
     check-cast v2, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v2, v2, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v2, v2, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     iget-wide v3, p0, Landroidx/animation/AnimatorSet;->n:J
 
-    invoke-virtual {v2, v3, v4}, Lb/b/b;->p(J)Lb/b/b;
+    invoke-virtual {v2, v3, v4}, Landroidx/animation/b;->p(J)Landroidx/animation/b;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->l:Lb/b/h;
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->l:Landroidx/animation/h;
 
     iget-wide v1, p0, Landroidx/animation/AnimatorSet;->k:J
 
-    invoke-virtual {v0, v1, v2}, Lb/b/h;->O(J)Lb/b/h;
+    invoke-virtual {v0, v1, v2}, Landroidx/animation/h;->O(J)Landroidx/animation/h;
 
     return-void
 .end method
 
-.method public final U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+.method private U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1770,9 +1599,9 @@
 
     check-cast v4, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v5}, Lb/b/b;->h()J
+    invoke-virtual {v5}, Landroidx/animation/b;->h()J
 
     move-result-wide v5
 
@@ -1899,7 +1728,7 @@
 
     :cond_8
     :goto_4
-    invoke-virtual {p0, v4, p2}, Landroidx/animation/AnimatorSet;->U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+    invoke-direct {p0, v4, p2}, Landroidx/animation/AnimatorSet;->U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
 
     :goto_5
     add-int/lit8 v1, v1, 0x1
@@ -1910,6 +1739,659 @@
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method private u()V
+    .locals 3
+
+    const/4 v0, 0x1
+
+    :goto_0
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
+
+    iget-object v2, p0, Landroidx/animation/AnimatorSet;->y:Landroidx/animation/c;
+
+    invoke-virtual {v1, v2}, Landroidx/animation/b;->b(Landroidx/animation/b$a;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method private x()V
+    .locals 9
+
+    iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->i:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_1
+
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
+
+    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/animation/AnimatorSet$e;
+
+    iget-wide v4, v4, Landroidx/animation/AnimatorSet$e;->j:J
+
+    invoke-virtual {v3}, Landroidx/animation/b;->h()J
+
+    move-result-wide v6
+
+    cmp-long v3, v4, v6
+
+    if-eqz v3, :cond_0
+
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    :goto_1
+    if-nez v0, :cond_2
+
+    return-void
+
+    :cond_2
+    iput-boolean v1, p0, Landroidx/animation/AnimatorSet;->i:Z
+
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    move v3, v1
+
+    :goto_2
+    if-ge v3, v0, :cond_3
+
+    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/animation/AnimatorSet$e;
+
+    iput-boolean v1, v4, Landroidx/animation/AnimatorSet$e;->g:Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    move v3, v1
+
+    :goto_3
+    if-ge v3, v0, :cond_8
+
+    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/animation/AnimatorSet$e;
+
+    iget-boolean v5, v4, Landroidx/animation/AnimatorSet$e;->g:Z
+
+    if-eqz v5, :cond_4
+
+    goto :goto_6
+
+    :cond_4
+    iput-boolean v2, v4, Landroidx/animation/AnimatorSet$e;->g:Z
+
+    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
+
+    if-nez v5, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    invoke-direct {p0, v4, v5}, Landroidx/animation/AnimatorSet;->A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+
+    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    move v6, v1
+
+    :goto_4
+    if-ge v6, v5, :cond_6
+
+    iget-object v7, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v7, v7, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v7}, Landroidx/animation/AnimatorSet$e;->c(Ljava/util/ArrayList;)V
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    move v6, v1
+
+    :goto_5
+    if-ge v6, v5, :cond_7
+
+    iget-object v7, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v8, v4, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v8}, Landroidx/animation/AnimatorSet$e;->c(Ljava/util/ArrayList;)V
+
+    iput-boolean v2, v7, Landroidx/animation/AnimatorSet$e;->g:Z
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    :goto_6
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_3
+
+    :cond_8
+    :goto_7
+    if-ge v1, v0, :cond_a
+
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v4, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
+
+    if-eq v3, v4, :cond_9
+
+    iget-object v5, v3, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
+
+    if-nez v5, :cond_9
+
+    invoke-virtual {v3, v4}, Landroidx/animation/AnimatorSet$e;->b(Landroidx/animation/AnimatorSet$e;)V
+
+    :cond_9
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_7
+
+    :cond_a
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
+
+    const-wide/16 v3, 0x0
+
+    iput-wide v3, v1, Landroidx/animation/AnimatorSet$e;->h:J
+
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->l:Landroidx/animation/h;
+
+    invoke-virtual {v3}, Landroidx/animation/h;->f()J
+
+    move-result-wide v3
+
+    iput-wide v3, v1, Landroidx/animation/AnimatorSet$e;->i:J
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
+
+    invoke-direct {p0, v1, v0}, Landroidx/animation/AnimatorSet;->U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
+
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->Q()V
+
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/animation/AnimatorSet$c;
+
+    invoke-virtual {v0}, Landroidx/animation/AnimatorSet$c;->a()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Landroidx/animation/AnimatorSet;->p:J
+
+    return-void
+.end method
+
+.method private y()V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->j:Z
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->q:J
+
+    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->r:J
+
+    const/4 v3, -0x1
+
+    iput v3, p0, Landroidx/animation/AnimatorSet;->s:I
+
+    iput-boolean v0, p0, Landroidx/animation/b;->d:Z
+
+    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->x:J
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->v:Landroidx/animation/AnimatorSet$f;
+
+    invoke-virtual {v1}, Landroidx/animation/AnimatorSet$f;->d()V
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->N()V
+
+    iget-object v1, p0, Landroidx/animation/b;->a:Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    move v3, v0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/animation/b$a;
+
+    iget-boolean v5, p0, Landroidx/animation/AnimatorSet;->t:Z
+
+    invoke-virtual {v4, p0, v5}, Landroidx/animation/b$a;->c(Landroidx/animation/b;Z)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->O()V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Landroidx/animation/AnimatorSet;->u:Z
+
+    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
+
+    return-void
+.end method
+
+.method private z(J)I
+    .locals 8
+
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    iget v1, p0, Landroidx/animation/AnimatorSet;->s:I
+
+    iget-boolean v2, p0, Landroidx/animation/AnimatorSet;->t:Z
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->h()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, p1
+
+    iget p1, p0, Landroidx/animation/AnimatorSet;->s:I
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, p1
+
+    :goto_0
+    iput v0, p0, Landroidx/animation/AnimatorSet;->s:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_1
+    if-ltz v0, :cond_4
+
+    iget-object p1, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/animation/AnimatorSet$c;
+
+    invoke-virtual {p1}, Landroidx/animation/AnimatorSet$c;->a()J
+
+    move-result-wide p1
+
+    cmp-long p1, p1, v2
+
+    if-ltz p1, :cond_1
+
+    move v1, v0
+
+    :cond_1
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v2, v1, 0x1
+
+    :goto_2
+    if-ge v2, v0, :cond_4
+
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/animation/AnimatorSet$c;
+
+    invoke-virtual {v3}, Landroidx/animation/AnimatorSet$c;->a()J
+
+    move-result-wide v4
+
+    const-wide/16 v6, -0x1
+
+    cmp-long v4, v4, v6
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v3}, Landroidx/animation/AnimatorSet$c;->a()J
+
+    move-result-wide v3
+
+    cmp-long v3, v3, p1
+
+    if-gtz v3, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    return v1
+.end method
+
+
+# virtual methods
+.method public B()Ljava/util/ArrayList;
+    .locals 5
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Landroidx/animation/b;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/animation/AnimatorSet$e;
+
+    iget-object v4, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
+
+    if-eq v3, v4, :cond_0
+
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method C(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$e;
+    .locals 2
+
+    iget-object v0, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/animation/AnimatorSet$e;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroidx/animation/AnimatorSet$e;
+
+    invoke-direct {v0, p1}, Landroidx/animation/AnimatorSet$e;-><init>(Landroidx/animation/b;)V
+
+    iget-object v1, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public K(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$d;
+    .locals 1
+    .param p1    # Landroidx/animation/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Landroidx/animation/AnimatorSet$d;
+
+    invoke-direct {v0, p0, p1}, Landroidx/animation/AnimatorSet$d;-><init>(Landroidx/animation/AnimatorSet;Landroidx/animation/b;)V
+
+    return-object v0
+.end method
+
+.method public varargs L([Landroidx/animation/b;)V
+    .locals 3
+    .param p1    # [Landroidx/animation/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    aget-object v0, p1, v0
+
+    invoke-virtual {p0, v0}, Landroidx/animation/AnimatorSet;->K(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$d;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    :goto_0
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_0
+
+    aget-object v2, p1, v1
+
+    invoke-virtual {v0, v2}, Landroidx/animation/AnimatorSet$d;->a(Landroidx/animation/b;)Landroidx/animation/AnimatorSet$d;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public P(J)Landroidx/animation/AnimatorSet;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->i:Z
+
+    iput-wide p1, p0, Landroidx/animation/AnimatorSet;->n:J
+
+    return-object p0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "duration must be a value of zero or greater"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public c()V
@@ -1927,7 +2409,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lb/b/b;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/animation/b;->a:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -1952,9 +2434,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lb/b/b$a;
+    check-cast v4, Landroidx/animation/b$a;
 
-    invoke-virtual {v4, p0}, Lb/b/b$a;->a(Lb/b/b;)V
+    invoke-virtual {v4, p0}, Landroidx/animation/b$a;->a(Landroidx/animation/b;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -1980,9 +2462,9 @@
 
     check-cast v3, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v3}, Lb/b/b;->c()V
+    invoke-virtual {v3}, Landroidx/animation/b;->c()V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -1993,7 +2475,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->y()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->y()V
 
     :cond_2
     return-void
@@ -2018,7 +2500,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic d()Lb/b/b;
+.method public bridge synthetic d()Landroidx/animation/b;
     .locals 1
 
     invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->w()Landroidx/animation/AnimatorSet;
@@ -2036,7 +2518,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lb/b/h;->C()F
+    invoke-static {}, Landroidx/animation/h;->C()F
 
     move-result v0
 
@@ -2064,7 +2546,7 @@
     iput-wide p1, p0, Landroidx/animation/AnimatorSet;->r:J
 
     :cond_1
-    iget-boolean v1, p0, Lb/b/b;->d:Z
+    iget-boolean v1, p0, Landroidx/animation/b;->d:Z
 
     const-wide/16 v3, -0x1
 
@@ -2081,7 +2563,7 @@
     iput-wide p1, p0, Landroidx/animation/AnimatorSet;->x:J
 
     :cond_2
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->N()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->N()V
 
     return v7
 
@@ -2127,16 +2609,6 @@
 
     move-result-wide v3
 
-    long-to-float v1, v3
-
-    mul-float/2addr v1, v0
-
-    float-to-long v3, v1
-
-    sub-long v3, p1, v3
-
-    iput-wide v3, p0, Landroidx/animation/AnimatorSet;->r:J
-
     goto :goto_0
 
     :cond_5
@@ -2150,6 +2622,7 @@
 
     add-long/2addr v3, v5
 
+    :goto_0
     long-to-float v1, v3
 
     mul-float/2addr v1, v0
@@ -2160,7 +2633,6 @@
 
     iput-wide v3, p0, Landroidx/animation/AnimatorSet;->r:J
 
-    :goto_0
     iget-object v1, p0, Landroidx/animation/AnimatorSet;->v:Landroidx/animation/AnimatorSet$f;
 
     invoke-virtual {v1}, Landroidx/animation/AnimatorSet$f;->d()V
@@ -2201,13 +2673,13 @@
 
     iput-wide p1, p0, Landroidx/animation/AnimatorSet;->q:J
 
-    invoke-virtual {p0, v0, v1}, Landroidx/animation/AnimatorSet;->z(J)I
+    invoke-direct {p0, v0, v1}, Landroidx/animation/AnimatorSet;->z(J)I
 
     move-result p1
 
     iget p2, p0, Landroidx/animation/AnimatorSet;->s:I
 
-    invoke-virtual {p0, p2, p1, v0, v1}, Landroidx/animation/AnimatorSet;->F(IIJ)V
+    invoke-direct {p0, p2, p1, v0, v1}, Landroidx/animation/AnimatorSet;->F(IIJ)V
 
     iput p1, p0, Landroidx/animation/AnimatorSet;->s:I
 
@@ -2234,11 +2706,11 @@
 
     if-nez v3, :cond_8
 
-    invoke-virtual {p0, v0, v1, p2}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
+    invoke-direct {p0, v0, v1, p2}, Landroidx/animation/AnimatorSet;->D(JLandroidx/animation/AnimatorSet$e;)J
 
     move-result-wide v3
 
-    invoke-virtual {p0, p2, v3, v4}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
+    invoke-direct {p0, p2, v3, v4}, Landroidx/animation/AnimatorSet;->M(Landroidx/animation/AnimatorSet$e;J)V
 
     :cond_8
     add-int/lit8 p1, p1, 0x1
@@ -2352,11 +2824,11 @@
     goto :goto_3
 
     :goto_4
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->J()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->J()V
 
     if-eqz p1, :cond_f
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->y()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->y()V
 
     return v2
 
@@ -2422,7 +2894,7 @@
 
     iget-object v3, v0, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     iget-object v4, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
 
@@ -2443,20 +2915,20 @@
 
     if-ne v0, v1, :cond_3
 
-    invoke-virtual {v3}, Lb/b/b;->o()V
+    invoke-virtual {v3}, Landroidx/animation/b;->o()V
 
     goto :goto_0
 
     :cond_3
     if-ne v0, v2, :cond_1
 
-    invoke-virtual {v3}, Lb/b/b;->k()Z
+    invoke-virtual {v3}, Landroidx/animation/b;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v3}, Lb/b/b;->e()V
+    invoke-virtual {v3}, Landroidx/animation/b;->e()V
 
     goto :goto_0
 
@@ -2490,7 +2962,7 @@
 
     iget-object v3, v0, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     iget-object v4, p0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
 
@@ -2511,20 +2983,20 @@
 
     if-nez v0, :cond_6
 
-    invoke-virtual {v3}, Lb/b/b;->s()V
+    invoke-virtual {v3}, Landroidx/animation/b;->s()V
 
     goto :goto_1
 
     :cond_6
     if-ne v0, v1, :cond_4
 
-    invoke-virtual {v3}, Lb/b/b;->k()Z
+    invoke-virtual {v3}, Landroidx/animation/b;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v3}, Lb/b/b;->e()V
+    invoke-virtual {v3}, Landroidx/animation/b;->e()V
 
     goto :goto_1
 
@@ -2534,7 +3006,7 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     :cond_8
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->y()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->y()V
 
     return-void
 
@@ -2567,16 +3039,16 @@
 .method public h()J
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->T()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->T()V
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->x()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->x()V
 
     iget-wide v0, p0, Landroidx/animation/AnimatorSet;->p:J
 
     return-wide v0
 .end method
 
-.method public i()Z
+.method i()Z
     .locals 4
 
     iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->w:Z
@@ -2609,9 +3081,9 @@
 
     check-cast v3, Landroidx/animation/AnimatorSet$e;
 
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v3}, Lb/b/b;->i()Z
+    invoke-virtual {v3}, Landroidx/animation/b;->i()Z
 
     move-result v3
 
@@ -2674,7 +3146,7 @@
     return v0
 .end method
 
-.method public l(J)Z
+.method l(J)Z
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroidx/animation/AnimatorSet;->doAnimationFrame(J)Z
@@ -2689,12 +3161,12 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, v0}, Landroidx/animation/AnimatorSet;->R(ZZ)V
+    invoke-direct {p0, v0, v0}, Landroidx/animation/AnimatorSet;->R(ZZ)V
 
     return-void
 .end method
 
-.method public bridge synthetic p(J)Lb/b/b;
+.method public bridge synthetic p(J)Landroidx/animation/b;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -2704,19 +3176,19 @@
     return-object p0
 .end method
 
-.method public q(Lb/b/d;)V
+.method public q(Landroidx/animation/d;)V
     .locals 0
-    .param p1    # Lb/b/d;
+    .param p1    # Landroidx/animation/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    iput-object p1, p0, Landroidx/animation/AnimatorSet;->o:Lb/b/d;
+    iput-object p1, p0, Landroidx/animation/AnimatorSet;->o:Landroidx/animation/d;
 
     return-void
 .end method
 
-.method public r(Z)V
+.method r(Z)V
     .locals 3
 
     invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->i()Z
@@ -2725,7 +3197,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->G()V
+    invoke-direct {p0}, Landroidx/animation/AnimatorSet;->G()V
 
     if-eqz p1, :cond_1
 
@@ -2764,9 +3236,9 @@
 
     iget-object v1, v1, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v1, v0}, Lb/b/b;->r(Z)V
+    invoke-virtual {v1, v0}, Landroidx/animation/b;->r(Z)V
 
     :cond_0
     add-int/lit8 p1, p1, -0x1
@@ -2811,9 +3283,9 @@
 
     iget-object v1, v1, Landroidx/animation/AnimatorSet$c;->a:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    invoke-virtual {v1, p1}, Lb/b/b;->r(Z)V
+    invoke-virtual {v1, p1}, Landroidx/animation/b;->r(Z)V
 
     :cond_2
     add-int/lit8 v0, v0, 0x1
@@ -2840,17 +3312,17 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Landroidx/animation/AnimatorSet;->R(ZZ)V
+    invoke-direct {p0, v0, v1}, Landroidx/animation/AnimatorSet;->R(ZZ)V
 
     return-void
 .end method
 
-.method public t(Z)V
+.method t(Z)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Landroidx/animation/AnimatorSet;->R(ZZ)V
+    invoke-direct {p0, p1, v0}, Landroidx/animation/AnimatorSet;->R(ZZ)V
 
     return-void
 .end method
@@ -2913,7 +3385,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v0, v3, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -2947,42 +3419,6 @@
     return-object v0
 .end method
 
-.method public final u()V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    :goto_0
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v1, v1, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
-
-    iget-object v2, p0, Landroidx/animation/AnimatorSet;->y:Lb/b/c;
-
-    invoke-virtual {v1, v2}, Lb/b/b;->b(Lb/b/b$a;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method public v()Z
     .locals 4
 
@@ -3010,7 +3446,7 @@
 .method public w()Landroidx/animation/AnimatorSet;
     .locals 11
 
-    invoke-super {p0}, Lb/b/b;->d()Lb/b/b;
+    invoke-super {p0}, Landroidx/animation/b;->d()Landroidx/animation/b;
 
     move-result-object v0
 
@@ -3036,7 +3472,7 @@
 
     iput v5, v0, Landroidx/animation/AnimatorSet;->s:I
 
-    iput-boolean v2, v0, Lb/b/b;->d:Z
+    iput-boolean v2, v0, Landroidx/animation/b;->d:Z
 
     iput-wide v3, v0, Landroidx/animation/AnimatorSet;->x:J
 
@@ -3078,7 +3514,7 @@
 
     invoke-direct {v4, p0, v0}, Landroidx/animation/AnimatorSet$b;-><init>(Landroidx/animation/AnimatorSet;Landroidx/animation/AnimatorSet;)V
 
-    iput-object v4, v0, Landroidx/animation/AnimatorSet;->y:Lb/b/c;
+    iput-object v4, v0, Landroidx/animation/AnimatorSet;->y:Landroidx/animation/c;
 
     iput-boolean v2, v0, Landroidx/animation/AnimatorSet;->t:Z
 
@@ -3105,11 +3541,11 @@
 
     move-result-object v6
 
-    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    iget-object v8, p0, Landroidx/animation/AnimatorSet;->y:Lb/b/c;
+    iget-object v8, p0, Landroidx/animation/AnimatorSet;->y:Landroidx/animation/c;
 
-    invoke-virtual {v7, v8}, Lb/b/b;->n(Lb/b/b$a;)V
+    invoke-virtual {v7, v8}, Landroidx/animation/b;->n(Landroidx/animation/b$a;)V
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3119,7 +3555,7 @@
 
     iget-object v5, v0, Landroidx/animation/AnimatorSet;->f:Landroidx/collection/ArrayMap;
 
-    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v7, v6, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
     invoke-virtual {v5, v7, v6}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3138,11 +3574,11 @@
 
     iput-object v4, v0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
 
-    iget-object v4, v4, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
+    iget-object v4, v4, Landroidx/animation/AnimatorSet$e;->a:Landroidx/animation/b;
 
-    check-cast v4, Lb/b/h;
+    check-cast v4, Landroidx/animation/h;
 
-    iput-object v4, v0, Landroidx/animation/AnimatorSet;->l:Lb/b/h;
+    iput-object v4, v0, Landroidx/animation/AnimatorSet;->l:Landroidx/animation/h;
 
     move v4, v2
 
@@ -3301,455 +3737,4 @@
 
     :cond_8
     return-object v0
-.end method
-
-.method public final x()V
-    .locals 9
-
-    iget-boolean v0, p0, Landroidx/animation/AnimatorSet;->i:Z
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    :goto_0
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_1
-
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v3, v3, Landroidx/animation/AnimatorSet$e;->a:Lb/b/b;
-
-    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/animation/AnimatorSet$e;
-
-    iget-wide v4, v4, Landroidx/animation/AnimatorSet$e;->j:J
-
-    invoke-virtual {v3}, Lb/b/b;->h()J
-
-    move-result-wide v6
-
-    cmp-long v3, v4, v6
-
-    if-eqz v3, :cond_0
-
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    :goto_1
-    if-nez v0, :cond_2
-
-    return-void
-
-    :cond_2
-    iput-boolean v1, p0, Landroidx/animation/AnimatorSet;->i:Z
-
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    move v3, v1
-
-    :goto_2
-    if-ge v3, v0, :cond_3
-
-    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/animation/AnimatorSet$e;
-
-    iput-boolean v1, v4, Landroidx/animation/AnimatorSet$e;->g:Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    move v3, v1
-
-    :goto_3
-    if-ge v3, v0, :cond_8
-
-    iget-object v4, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/animation/AnimatorSet$e;
-
-    iget-boolean v5, v4, Landroidx/animation/AnimatorSet$e;->g:Z
-
-    if-eqz v5, :cond_4
-
-    goto :goto_6
-
-    :cond_4
-    iput-boolean v2, v4, Landroidx/animation/AnimatorSet$e;->g:Z
-
-    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
-
-    if-nez v5, :cond_5
-
-    goto :goto_6
-
-    :cond_5
-    invoke-virtual {p0, v4, v5}, Landroidx/animation/AnimatorSet;->A(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
-
-    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v5, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    move v6, v1
-
-    :goto_4
-    if-ge v6, v5, :cond_6
-
-    iget-object v7, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v7, v7, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v7}, Landroidx/animation/AnimatorSet$e;->c(Ljava/util/ArrayList;)V
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_4
-
-    :cond_6
-    move v6, v1
-
-    :goto_5
-    if-ge v6, v5, :cond_7
-
-    iget-object v7, v4, Landroidx/animation/AnimatorSet$e;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v8, v4, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v8}, Landroidx/animation/AnimatorSet$e;->c(Ljava/util/ArrayList;)V
-
-    iput-boolean v2, v7, Landroidx/animation/AnimatorSet$e;->g:Z
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_5
-
-    :cond_7
-    :goto_6
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_8
-    :goto_7
-    if-ge v1, v0, :cond_a
-
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/animation/AnimatorSet$e;
-
-    iget-object v4, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
-
-    if-eq v3, v4, :cond_9
-
-    iget-object v5, v3, Landroidx/animation/AnimatorSet$e;->e:Ljava/util/ArrayList;
-
-    if-nez v5, :cond_9
-
-    invoke-virtual {v3, v4}, Landroidx/animation/AnimatorSet$e;->b(Landroidx/animation/AnimatorSet$e;)V
-
-    :cond_9
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_7
-
-    :cond_a
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
-
-    const-wide/16 v3, 0x0
-
-    iput-wide v3, v1, Landroidx/animation/AnimatorSet$e;->h:J
-
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->l:Lb/b/h;
-
-    invoke-virtual {v3}, Lb/b/h;->f()J
-
-    move-result-wide v3
-
-    iput-wide v3, v1, Landroidx/animation/AnimatorSet$e;->i:J
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->m:Landroidx/animation/AnimatorSet$e;
-
-    invoke-virtual {p0, v1, v0}, Landroidx/animation/AnimatorSet;->U(Landroidx/animation/AnimatorSet$e;Ljava/util/ArrayList;)V
-
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->Q()V
-
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/animation/AnimatorSet$c;
-
-    invoke-virtual {v0}, Landroidx/animation/AnimatorSet$c;->a()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Landroidx/animation/AnimatorSet;->p:J
-
-    return-void
-.end method
-
-.method public final y()V
-    .locals 6
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->j:Z
-
-    const-wide/16 v1, -0x1
-
-    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->q:J
-
-    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->r:J
-
-    const/4 v3, -0x1
-
-    iput v3, p0, Landroidx/animation/AnimatorSet;->s:I
-
-    iput-boolean v0, p0, Lb/b/b;->d:Z
-
-    iput-wide v1, p0, Landroidx/animation/AnimatorSet;->x:J
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->v:Landroidx/animation/AnimatorSet$f;
-
-    invoke-virtual {v1}, Landroidx/animation/AnimatorSet$f;->d()V
-
-    iget-object v1, p0, Landroidx/animation/AnimatorSet;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->N()V
-
-    iget-object v1, p0, Lb/b/b;->a:Ljava/util/ArrayList;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    move v3, v0
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lb/b/b$a;
-
-    iget-boolean v5, p0, Landroidx/animation/AnimatorSet;->t:Z
-
-    invoke-virtual {v4, p0, v5}, Lb/b/b$a;->c(Lb/b/b;Z)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->O()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Landroidx/animation/AnimatorSet;->u:Z
-
-    iput-boolean v0, p0, Landroidx/animation/AnimatorSet;->t:Z
-
-    return-void
-.end method
-
-.method public final z(J)I
-    .locals 8
-
-    iget-object v0, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    iget v1, p0, Landroidx/animation/AnimatorSet;->s:I
-
-    iget-boolean v2, p0, Landroidx/animation/AnimatorSet;->t:Z
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0}, Landroidx/animation/AnimatorSet;->h()J
-
-    move-result-wide v2
-
-    sub-long/2addr v2, p1
-
-    iget p1, p0, Landroidx/animation/AnimatorSet;->s:I
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, p1
-
-    :goto_0
-    iput v0, p0, Landroidx/animation/AnimatorSet;->s:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_1
-    if-ltz v0, :cond_4
-
-    iget-object p1, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/animation/AnimatorSet$c;
-
-    invoke-virtual {p1}, Landroidx/animation/AnimatorSet$c;->a()J
-
-    move-result-wide p1
-
-    cmp-long p1, p1, v2
-
-    if-ltz p1, :cond_1
-
-    move v1, v0
-
-    :cond_1
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 v2, v1, 0x1
-
-    :goto_2
-    if-ge v2, v0, :cond_4
-
-    iget-object v3, p0, Landroidx/animation/AnimatorSet;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/animation/AnimatorSet$c;
-
-    invoke-virtual {v3}, Landroidx/animation/AnimatorSet$c;->a()J
-
-    move-result-wide v4
-
-    const-wide/16 v6, -0x1
-
-    cmp-long v4, v4, v6
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v3}, Landroidx/animation/AnimatorSet$c;->a()J
-
-    move-result-wide v3
-
-    cmp-long v3, v3, p1
-
-    if-gtz v3, :cond_3
-
-    move v1, v2
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    return v1
 .end method

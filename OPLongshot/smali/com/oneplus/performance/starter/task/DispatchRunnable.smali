@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/performance/starter/task/DispatchRunnable;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field public mLauncherStarter:Lc/b/f/a/a;
+.field private mLauncherStarter:Lb/b/d/a/a;
 
-.field public mTask:Lc/b/f/a/c/b;
+.field private mTask:Lcom/oneplus/performance/starter/task/b;
 
 
 # direct methods
-.method public constructor <init>(Lc/b/f/a/c/b;)V
+.method public constructor <init>(Lcom/oneplus/performance/starter/task/b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iput-object p1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     return-void
 .end method
 
-.method public constructor <init>(Lc/b/f/a/c/b;Lc/b/f/a/a;)V
+.method public constructor <init>(Lcom/oneplus/performance/starter/task/b;Lb/b/d/a/a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iput-object p1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    iput-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lc/b/f/a/a;
+    iput-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lb/b/d/a/a;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     sub-long/2addr v0, p1
 
-    invoke-static {}, Lc/b/f/a/d/a;->b()Z
+    invoke-static {}, Lb/b/d/a/c/a;->b()Z
 
     move-result p1
 
@@ -62,7 +62,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -118,9 +118,9 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object p2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {p2}, Lc/b/f/a/c/b;->c()Z
+    invoke-virtual {p2}, Lcom/oneplus/performance/starter/task/b;->c()Z
 
     move-result p2
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lc/b/f/a/b/a;->a()Ljava/lang/String;
+    invoke-static {}, Lb/b/d/a/b/a;->a()Ljava/lang/String;
 
     move-result-object p2
 
@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/b/f/a/d/a;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lb/b/d/a/c/a;->a(Ljava/lang/String;)V
 
     :cond_3
     return-void
@@ -198,13 +198,13 @@
 .method public run()V
     .locals 6
 
-    invoke-static {}, Lc/b/f/a/d/a;->b()Z
+    invoke-static {}, Lb/b/d/a/c/a;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -241,7 +241,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lc/b/f/a/b/a;->a()Ljava/lang/String;
+    invoke-static {}, Lb/b/d/a/b/a;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -251,11 +251,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/b/f/a/d/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lb/b/d/a/c/a;->a(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v0}, Lc/b/f/a/c/b;->d()I
+    invoke-virtual {v0}, Lcom/oneplus/performance/starter/task/b;->d()I
 
     move-result v0
 
@@ -265,15 +265,15 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lc/b/f/a/c/b;->h(Z)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/performance/starter/task/b;->h(Z)V
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v2}, Lc/b/f/a/c/b;->i()V
+    invoke-virtual {v2}, Lcom/oneplus/performance/starter/task/b;->i()V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -285,17 +285,17 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v2, v3}, Lc/b/f/a/c/b;->g(Z)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/performance/starter/task/b;->g(Z)V
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-interface {v2}, Lc/b/f/a/c/a;->run()V
+    invoke-interface {v2}, Lcom/oneplus/performance/starter/task/a;->run()V
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v2}, Lc/b/f/a/c/b;->a()Ljava/lang/Runnable;
+    invoke-virtual {v2}, Lcom/oneplus/performance/starter/task/b;->a()Ljava/lang/Runnable;
 
     move-result-object v2
 
@@ -304,17 +304,17 @@
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
     :cond_1
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v2}, Lc/b/f/a/c/b;->b()Z
+    invoke-virtual {v2}, Lcom/oneplus/performance/starter/task/b;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v2, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v2}, Lc/b/f/a/c/b;->e()Z
+    invoke-virtual {v2}, Lcom/oneplus/performance/starter/task/b;->e()Z
 
     move-result v2
 
@@ -323,32 +323,32 @@
     :cond_2
     invoke-direct {p0, v0, v1, v4, v5}, Lcom/oneplus/performance/starter/task/DispatchRunnable;->printTaskLog(JJ)V
 
-    invoke-static {}, Lc/b/f/a/b/a;->b()V
+    invoke-static {}, Lb/b/d/a/b/a;->b()V
 
-    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v0, v3}, Lc/b/f/a/c/b;->f(Z)V
+    invoke-virtual {v0, v3}, Lcom/oneplus/performance/starter/task/b;->f(Z)V
 
-    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lc/b/f/a/a;
+    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lb/b/d/a/a;
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v0, v1}, Lc/b/f/a/a;->b(Lc/b/f/a/c/b;)V
+    invoke-virtual {v0, v1}, Lb/b/d/a/a;->b(Lcom/oneplus/performance/starter/task/b;)V
 
-    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lc/b/f/a/a;
+    iget-object v0, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mLauncherStarter:Lb/b/d/a/a;
 
-    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
-    invoke-virtual {v0, v1}, Lc/b/f/a/a;->a(Lc/b/f/a/c/b;)V
+    invoke-virtual {v0, v1}, Lb/b/d/a/a;->a(Lcom/oneplus/performance/starter/task/b;)V
 
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lc/b/f/a/c/b;
+    iget-object v1, p0, Lcom/oneplus/performance/starter/task/DispatchRunnable;->mTask:Lcom/oneplus/performance/starter/task/b;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -368,10 +368,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/b/f/a/d/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lb/b/d/a/c/a;->a(Ljava/lang/String;)V
 
     :cond_4
-    invoke-static {}, Lc/b/f/a/d/a;->b()Z
+    invoke-static {}, Lb/b/d/a/c/a;->b()Z
 
     move-result v0
 

@@ -1,6 +1,6 @@
-.class public final Lcom/google/analytics/containertag/proto/Debug$MacroEvaluationInfo$1;
+.class final Lcom/google/analytics/containertag/proto/Debug$MacroEvaluationInfo$1;
 .super Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;-><init>()V

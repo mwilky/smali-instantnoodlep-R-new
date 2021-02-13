@@ -1,9 +1,9 @@
-.class public Landroidx/cardview/widget/CardViewApi17Impl$a;
+.class Landroidx/cardview/widget/CardViewApi17Impl$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/d/c/e$a;
+.implements Landroidx/cardview/widget/e$a;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroidx/cardview/widget/CardViewApi17Impl;)V
+.method constructor <init>(Landroidx/cardview/widget/CardViewApi17Impl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

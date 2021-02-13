@@ -1,6 +1,6 @@
-.class public abstract Lcom/oneplus/screenshot/service/GlobalNotification$Builder;
+.class abstract Lcom/oneplus/screenshot/service/GlobalNotification$Builder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401
+    accessFlags = 0x402
     name = "Builder"
 .end annotation
 
 
 # instance fields
-.field public mBuilder:Landroid/app/Notification$Builder;
+.field protected mBuilder:Landroid/app/Notification$Builder;
 
-.field public mPreview:Landroid/graphics/Bitmap;
+.field protected mPreview:Landroid/graphics/Bitmap;
 
-.field public mResources:Landroid/content/res/Resources;
+.field protected mResources:Landroid/content/res/Resources;
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
+.field final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
 
 
 # direct methods
@@ -117,13 +117,13 @@
     return-object v0
 .end method
 
-.method public abstract getBigContentViews()Landroid/widget/RemoteViews;
+.method protected abstract getBigContentViews()Landroid/widget/RemoteViews;
 .end method
 
-.method public abstract getContentViews()Landroid/widget/RemoteViews;
+.method protected abstract getContentViews()Landroid/widget/RemoteViews;
 .end method
 
-.method public getSmallIcon()I
+.method protected getSmallIcon()I
     .locals 1
 
     const v0, 0x7f0800e2
@@ -131,7 +131,7 @@
     return v0
 .end method
 
-.method public getTicker()Ljava/lang/String;
+.method protected getTicker()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;
@@ -145,18 +145,18 @@
     return-object v0
 .end method
 
-.method public onBuild(Landroid/widget/RemoteViews;Landroid/widget/RemoteViews;)V
+.method protected onBuild(Landroid/widget/RemoteViews;Landroid/widget/RemoteViews;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setBigIcon(Landroid/widget/RemoteViews;)V
+.method protected setBigIcon(Landroid/widget/RemoteViews;)V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00dc
+    const v1, 0x7f0a00db
 
     if-eqz v0, :cond_0
 
@@ -173,12 +173,12 @@
     return-void
 .end method
 
-.method public setIcon(Landroid/widget/RemoteViews;)V
+.method protected setIcon(Landroid/widget/RemoteViews;)V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mPreview:Landroid/graphics/Bitmap;
 
-    const v1, 0x7f0a00db
+    const v1, 0x7f0a00da
 
     if-eqz v0, :cond_0
 

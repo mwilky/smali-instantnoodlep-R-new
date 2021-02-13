@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;
+.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,13 +13,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "VectorDrawableDelegateState"
 .end annotation
 
 
 # instance fields
-.field public final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
+.field private final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
 
 # direct methods
@@ -74,7 +74,7 @@
 
     check-cast v1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object v1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -94,7 +94,7 @@
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -114,7 +114,7 @@
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method

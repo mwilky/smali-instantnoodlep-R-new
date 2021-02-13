@@ -1,6 +1,6 @@
-.class public Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$15;
+.class Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$15;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,29 +12,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;
+.field final synthetic this$0:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;
 
-.field public final synthetic val$a:[D
+.field final synthetic val$a:[D
 
-.field public final synthetic val$firstIdx:I
+.field final synthetic val$firstIdx:I
 
-.field public final synthetic val$mf:I
+.field final synthetic val$mf:I
 
-.field public final synthetic val$n:I
+.field final synthetic val$n:I
 
-.field public final synthetic val$nw:I
+.field final synthetic val$nw:I
 
-.field public final synthetic val$w:[D
+.field final synthetic val$w:[D
 
 
 # direct methods
-.method public constructor <init>(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;III[D[DI)V
+.method constructor <init>(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;III[D[DI)V
     .locals 0
 
     iput-object p1, p0, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$15;->this$0:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;

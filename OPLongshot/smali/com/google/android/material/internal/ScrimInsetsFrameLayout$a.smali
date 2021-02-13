@@ -1,9 +1,9 @@
-.class public Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;
+.class Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/g/l/m;
+.implements Landroidx/core/view/m;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
+.field final synthetic a:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
+.method constructor <init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;->a:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
+.method public a(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
     .locals 4
-    .param p2    # Lb/g/l/x;
+    .param p2    # Landroidx/core/view/x;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -58,19 +58,19 @@
 
     iget-object p1, p1, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
 
-    invoke-virtual {p2}, Lb/g/l/x;->c()I
+    invoke-virtual {p2}, Landroidx/core/view/x;->c()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lb/g/l/x;->e()I
+    invoke-virtual {p2}, Landroidx/core/view/x;->e()I
 
     move-result v1
 
-    invoke-virtual {p2}, Lb/g/l/x;->d()I
+    invoke-virtual {p2}, Landroidx/core/view/x;->d()I
 
     move-result v2
 
-    invoke-virtual {p2}, Lb/g/l/x;->b()I
+    invoke-virtual {p2}, Landroidx/core/view/x;->b()I
 
     move-result v3
 
@@ -78,11 +78,11 @@
 
     iget-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;->a:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onInsetsChanged(Lb/g/l/x;)V
+    invoke-virtual {p1, p2}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onInsetsChanged(Landroidx/core/view/x;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;->a:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
-    invoke-virtual {p2}, Lb/g/l/x;->f()Z
+    invoke-virtual {p2}, Landroidx/core/view/x;->f()Z
 
     move-result v0
 
@@ -112,7 +112,7 @@
 
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->Y(Landroid/view/View;)V
 
-    invoke-virtual {p2}, Lb/g/l/x;->a()Lb/g/l/x;
+    invoke-virtual {p2}, Landroidx/core/view/x;->a()Landroidx/core/view/x;
 
     move-result-object p1
 

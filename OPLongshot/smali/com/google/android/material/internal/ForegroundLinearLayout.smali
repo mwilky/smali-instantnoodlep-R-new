@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/ForegroundLinearLayout;
 .super Landroidx/appcompat/widget/LinearLayoutCompat;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,20 +12,20 @@
 
 
 # instance fields
-.field public foreground:Landroid/graphics/drawable/Drawable;
+.field private foreground:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public foregroundBoundsChanged:Z
+.field foregroundBoundsChanged:Z
 
-.field public foregroundGravity:I
+.field private foregroundGravity:I
 
-.field public mForegroundInPadding:Z
+.field protected mForegroundInPadding:Z
 
-.field public final overlayBounds:Landroid/graphics/Rect;
+.field private final overlayBounds:Landroid/graphics/Rect;
 
-.field public final selfBounds:Landroid/graphics/Rect;
+.field private final selfBounds:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -98,7 +98,7 @@
 
     iput-boolean v1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z
 
-    sget-object v4, Lc/a/b/b/l;->ForegroundLinearLayout:[I
+    sget-object v4, Lb/a/b/a/l;->ForegroundLinearLayout:[I
 
     new-array v7, v1, [I
 
@@ -114,7 +114,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_android_foregroundGravity:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_android_foregroundGravity:I
 
     iget p3, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
@@ -124,7 +124,7 @@
 
     iput p2, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
-    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_android_foreground:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_android_foreground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -135,7 +135,7 @@
     invoke-virtual {p0, p2}, Lcom/google/android/material/internal/ForegroundLinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    sget p2, Lc/a/b/b/l;->ForegroundLinearLayout_foregroundInsidePadding:I
+    sget p2, Lb/a/b/a/l;->ForegroundLinearLayout_foregroundInsidePadding:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -270,7 +270,7 @@
     return-void
 .end method
 
-.method public drawableStateChanged()V
+.method protected drawableStateChanged()V
     .locals 2
 
     invoke-super {p0}, Landroid/view/ViewGroup;->drawableStateChanged()V
@@ -333,7 +333,7 @@
     return-void
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 0
 
     invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/LinearLayoutCompat;->onLayout(ZIIII)V
@@ -347,7 +347,7 @@
     return-void
 .end method
 
-.method public onSizeChanged(IIII)V
+.method protected onSizeChanged(IIII)V
     .locals 0
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->onSizeChanged(IIII)V
@@ -483,7 +483,7 @@
     return-void
 .end method
 
-.method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+.method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z

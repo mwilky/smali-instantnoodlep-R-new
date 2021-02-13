@@ -1,6 +1,6 @@
-.class public Landroidx/transition/FragmentTransitionSupport$c;
-.super Lb/p/m;
-.source "SourceFile"
+.class Landroidx/transition/FragmentTransitionSupport$c;
+.super Landroidx/transition/m;
+.source ""
 
 
 # annotations
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Object;
+.field final synthetic a:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/util/ArrayList;
+.field final synthetic b:Ljava/util/ArrayList;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field final synthetic c:Ljava/lang/Object;
 
-.field public final synthetic d:Ljava/util/ArrayList;
+.field final synthetic d:Ljava/util/ArrayList;
 
-.field public final synthetic e:Ljava/lang/Object;
+.field final synthetic e:Ljava/lang/Object;
 
-.field public final synthetic f:Ljava/util/ArrayList;
+.field final synthetic f:Ljava/util/ArrayList;
 
-.field public final synthetic g:Landroidx/transition/FragmentTransitionSupport;
+.field final synthetic g:Landroidx/transition/FragmentTransitionSupport;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/transition/FragmentTransitionSupport;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+.method constructor <init>(Landroidx/transition/FragmentTransitionSupport;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/transition/FragmentTransitionSupport$c;->g:Landroidx/transition/FragmentTransitionSupport;
@@ -48,7 +48,7 @@
 
     iput-object p7, p0, Landroidx/transition/FragmentTransitionSupport$c;->f:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Lb/p/m;-><init>()V
+    invoke-direct {p0}, Landroidx/transition/m;-><init>()V
 
     return-void
 .end method

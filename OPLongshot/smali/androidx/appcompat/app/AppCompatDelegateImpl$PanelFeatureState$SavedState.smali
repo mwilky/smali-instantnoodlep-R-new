@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;
+.class Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "SavedState"
 .end annotation
 
@@ -36,15 +36,15 @@
 
 
 # instance fields
-.field public featureId:I
+.field featureId:I
 
-.field public isOpen:Z
+.field isOpen:Z
 
-.field public menuState:Landroid/os/Bundle;
+.field menuState:Landroid/os/Bundle;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState$1;
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public static readFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;
+.method static readFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;
     .locals 3
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl$PanelFeatureState$SavedState;

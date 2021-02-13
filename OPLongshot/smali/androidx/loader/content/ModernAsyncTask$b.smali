@@ -1,6 +1,6 @@
-.class public synthetic Landroidx/loader/content/ModernAsyncTask$b;
+.class synthetic Landroidx/loader/content/ModernAsyncTask$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
+    accessFlags = 0x1008
     name = null
 .end annotation
 
 
 # static fields
-.field public static final synthetic a:[I
+.field static final synthetic a:[I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 3
 
     invoke-static {}, Landroidx/loader/content/ModernAsyncTask$Status;->values()[Landroidx/loader/content/ModernAsyncTask$Status;

@@ -1,20 +1,20 @@
 .class public Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;
 .super Landroid/widget/RelativeLayout;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static TAG:Ljava/lang/String; = "Longshot.QuickShareAppPanelView"
+.field private static TAG:Ljava/lang/String; = "Longshot.QuickShareAppPanelView"
 
 
 # instance fields
-.field public mIntervalAngel:I
+.field private mIntervalAngel:I
 
-.field public mMaxParts:I
+.field private mMaxParts:I
 
-.field public mPadding:I
+.field private mPadding:I
 
-.field public mQuickShareAppIconRects:Ljava/util/List;
+.field private mQuickShareAppIconRects:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -24,15 +24,15 @@
     .end annotation
 .end field
 
-.field public mRadius:I
+.field private mRadius:I
 
-.field public mStartAngle:I
+.field private mStartAngle:I
 
-.field public statusBarHeight:I
+.field private statusBarHeight:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -87,7 +87,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0702db
+    const p2, 0x7f0702dd
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -353,7 +353,7 @@
     return-object v0
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 0
 
     sget-object p2, Lcom/oneplus/screenshot/longshot/widget/QuickShareAppPanelView;->TAG:Ljava/lang/String;
@@ -446,7 +446,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V

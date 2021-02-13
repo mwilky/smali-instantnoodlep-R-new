@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/DescendantOffsetUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final matrix:Ljava/lang/ThreadLocal;
+.field private static final matrix:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field public static final rectF:Ljava/lang/ThreadLocal;
+.field private static final rectF:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -34,7 +34,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/ThreadLocal;
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method public static offsetDescendantMatrix(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+.method private static offsetDescendantMatrix(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 2
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;

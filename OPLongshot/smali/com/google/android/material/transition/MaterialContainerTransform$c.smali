@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialContainerTransform$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field public final a:F
+.field final a:F
     .annotation build Landroidx/annotation/FloatRange;
         from = 0.0
         to = 1.0
     .end annotation
 .end field
 
-.field public final b:F
+.field final b:F
     .annotation build Landroidx/annotation/FloatRange;
         from = 0.0
         to = 1.0

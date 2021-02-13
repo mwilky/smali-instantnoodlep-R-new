@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/dump/FullDumper;
 .super Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "FullDumper"
+.field private static final TAG:Ljava/lang/String; = "FullDumper"
 
 
 # direct methods

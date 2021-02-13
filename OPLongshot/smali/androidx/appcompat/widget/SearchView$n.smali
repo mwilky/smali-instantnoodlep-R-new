@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/SearchView$n;
+.class Landroidx/appcompat/widget/SearchView$n;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "n"
 .end annotation
 
 
 # instance fields
-.field public a:Ljava/lang/reflect/Method;
+.field private a:Ljava/lang/reflect/Method;
 
-.field public b:Ljava/lang/reflect/Method;
+.field private b:Ljava/lang/reflect/Method;
 
-.field public c:Ljava/lang/reflect/Method;
+.field private c:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 6
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -108,7 +108,7 @@
     return-void
 .end method
 
-.method public static d()V
+.method private static d()V
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -131,7 +131,7 @@
 
 
 # virtual methods
-.method public a(Landroid/widget/AutoCompleteTextView;)V
+.method a(Landroid/widget/AutoCompleteTextView;)V
     .locals 2
 
     invoke-static {}, Landroidx/appcompat/widget/SearchView$n;->d()V
@@ -154,7 +154,7 @@
     return-void
 .end method
 
-.method public b(Landroid/widget/AutoCompleteTextView;)V
+.method b(Landroid/widget/AutoCompleteTextView;)V
     .locals 2
 
     invoke-static {}, Landroidx/appcompat/widget/SearchView$n;->d()V
@@ -177,7 +177,7 @@
     return-void
 .end method
 
-.method public c(Landroid/widget/AutoCompleteTextView;)V
+.method c(Landroid/widget/AutoCompleteTextView;)V
     .locals 4
 
     invoke-static {}, Landroidx/appcompat/widget/SearchView$n;->d()V

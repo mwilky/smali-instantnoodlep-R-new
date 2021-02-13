@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$f;
+.class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TimeInterpolator;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public a:[I
+.field private a:[I
 
-.field public b:I
+.field private b:I
 
-.field public c:I
+.field private c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
+.method constructor <init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public a()I
+.method a()I
     .locals 1
 
     iget v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$f;->c:I
@@ -46,7 +46,7 @@
     return v0
 .end method
 
-.method public b(Landroid/graphics/drawable/AnimationDrawable;Z)I
+.method b(Landroid/graphics/drawable/AnimationDrawable;Z)I
     .locals 5
 
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I

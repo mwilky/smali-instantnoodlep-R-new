@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/shape/MaterialShapeDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/graphics/drawable/TintAwareDrawable;
-.implements Lc/a/b/b/e0/j;
+.implements Lcom/google/android/material/shape/j;
 
 
 # annotations
@@ -17,71 +17,71 @@
 
 
 # static fields
-.field public static final w:Ljava/lang/String;
+.field private static final w:Ljava/lang/String;
 
-.field public static final x:Landroid/graphics/Paint;
+.field private static final x:Landroid/graphics/Paint;
 
 
 # instance fields
-.field public a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+.field private a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
 
-.field public final b:[Lc/a/b/b/e0/i$g;
+.field private final b:[Lcom/google/android/material/shape/i$g;
 
-.field public final c:[Lc/a/b/b/e0/i$g;
+.field private final c:[Lcom/google/android/material/shape/i$g;
 
-.field public final d:Ljava/util/BitSet;
+.field private final d:Ljava/util/BitSet;
 
-.field public e:Z
+.field private e:Z
 
-.field public final f:Landroid/graphics/Matrix;
+.field private final f:Landroid/graphics/Matrix;
 
-.field public final g:Landroid/graphics/Path;
+.field private final g:Landroid/graphics/Path;
 
-.field public final h:Landroid/graphics/Path;
+.field private final h:Landroid/graphics/Path;
 
-.field public final i:Landroid/graphics/RectF;
+.field private final i:Landroid/graphics/RectF;
 
-.field public final j:Landroid/graphics/RectF;
+.field private final j:Landroid/graphics/RectF;
 
-.field public final k:Landroid/graphics/Region;
+.field private final k:Landroid/graphics/Region;
 
-.field public final l:Landroid/graphics/Region;
+.field private final l:Landroid/graphics/Region;
 
-.field public m:Lcom/google/android/material/shape/ShapeAppearanceModel;
+.field private m:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-.field public final n:Landroid/graphics/Paint;
+.field private final n:Landroid/graphics/Paint;
 
-.field public final o:Landroid/graphics/Paint;
+.field private final o:Landroid/graphics/Paint;
 
-.field public final p:Lcom/google/android/material/shadow/ShadowRenderer;
+.field private final p:Lcom/google/android/material/shadow/ShadowRenderer;
 
-.field public final q:Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;
+.field private final q:Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final r:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
+.field private final r:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
 
-.field public s:Landroid/graphics/PorterDuffColorFilter;
+.field private s:Landroid/graphics/PorterDuffColorFilter;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public t:Landroid/graphics/PorterDuffColorFilter;
+.field private t:Landroid/graphics/PorterDuffColorFilter;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final u:Landroid/graphics/RectF;
+.field private final u:Landroid/graphics/RectF;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public v:Z
+.field private v:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     const-class v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -147,7 +147,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;)V
+.method private constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;)V
     .locals 2
     .param p1    # Lcom/google/android/material/shape/MaterialShapeDrawable$c;
         .annotation build Landroidx/annotation/NonNull;
@@ -158,13 +158,13 @@
 
     const/4 v0, 0x4
 
-    new-array v1, v0, [Lc/a/b/b/e0/i$g;
+    new-array v1, v0, [Lcom/google/android/material/shape/i$g;
 
-    iput-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lc/a/b/b/e0/i$g;
+    iput-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lcom/google/android/material/shape/i$g;
 
-    new-array v0, v0, [Lc/a/b/b/e0/i$g;
+    new-array v0, v0, [Lcom/google/android/material/shape/i$g;
 
-    iput-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lc/a/b/b/e0/i$g;
+    iput-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lcom/google/android/material/shape/i$g;
 
     new-instance v0, Ljava/util/BitSet;
 
@@ -280,13 +280,13 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f0([I)Z
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f0([I)Z
 
     new-instance p1, Lcom/google/android/material/shape/MaterialShapeDrawable$a;
 
@@ -297,7 +297,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;Lcom/google/android/material/shape/MaterialShapeDrawable$a;)V
+.method synthetic constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;Lcom/google/android/material/shape/MaterialShapeDrawable$a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;)V
@@ -316,65 +316,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable$c;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;Lc/a/b/b/u/a;)V
+    invoke-direct {v0, p1, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable$c;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;Lb/a/b/a/n/a;)V
 
     invoke-direct {p0, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/MaterialShapeDrawable$c;)V
 
     return-void
 .end method
 
-.method public static O(II)I
-    .locals 1
-
-    ushr-int/lit8 v0, p1, 0x7
-
-    add-int/2addr p1, v0
-
-    mul-int/2addr p0, p1
-
-    ushr-int/lit8 p0, p0, 0x8
-
-    return p0
-.end method
-
-.method public static synthetic a(Lcom/google/android/material/shape/MaterialShapeDrawable;)Ljava/util/BitSet;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->d:Ljava/util/BitSet;
-
-    return-object p0
-.end method
-
-.method public static synthetic b(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lc/a/b/b/e0/i$g;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lc/a/b/b/e0/i$g;
-
-    return-object p0
-.end method
-
-.method public static synthetic c(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lc/a/b/b/e0/i$g;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lc/a/b/b/e0/i$g;
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->e:Z
-
-    return p1
-.end method
-
-
-# virtual methods
-.method public final A()F
+.method private A()F
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->I()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->I()Z
 
     move-result v0
 
@@ -398,89 +350,7 @@
     return v0
 .end method
 
-.method public B()Landroid/content/res/ColorStateList;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
-
-    return-object v0
-.end method
-
-.method public C()F
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lc/a/b/b/e0/b;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public D()F
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lc/a/b/b/e0/b;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public E()F
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->p:F
-
-    return v0
-.end method
-
-.method public F()F
-    .locals 2
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->t()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->E()F
-
-    move-result v1
-
-    add-float/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final G()Z
+.method private G()Z
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
@@ -515,7 +385,7 @@
     return v2
 .end method
 
-.method public final H()Z
+.method private H()Z
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
@@ -545,7 +415,7 @@
     return v0
 .end method
 
-.method public final I()Z
+.method private I()Z
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
@@ -584,23 +454,7 @@
     return v0
 .end method
 
-.method public J(Landroid/content/Context;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    new-instance v1, Lc/a/b/b/u/a;
-
-    invoke-direct {v1, p1}, Lc/a/b/b/u/a;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lc/a/b/b/u/a;
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
-
-    return-void
-.end method
-
-.method public final K()V
+.method private K()V
     .locals 0
 
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
@@ -608,63 +462,14 @@
     return-void
 .end method
 
-.method public L()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lc/a/b/b/u/a;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lc/a/b/b/u/a;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public M()Z
-    .locals 2
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->u(Landroid/graphics/RectF;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final N(Landroid/graphics/Canvas;)V
+.method private N(Landroid/graphics/Canvas;)V
     .locals 6
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->G()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->G()Z
 
     move-result v0
 
@@ -675,14 +480,15 @@
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->P(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->P(Landroid/graphics/Canvas;)V
 
     iget-boolean v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->v:Z
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->l(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->l(Landroid/graphics/Canvas;)V
 
+    :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -816,7 +622,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-virtual {p0, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->l(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->l(Landroid/graphics/Canvas;)V
 
     const/4 v3, 0x0
 
@@ -824,9 +630,7 @@
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
+    goto :goto_0
 
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -838,7 +642,21 @@
     throw p1
 .end method
 
-.method public final P(Landroid/graphics/Canvas;)V
+.method private static O(II)I
+    .locals 1
+
+    ushr-int/lit8 v0, p1, 0x7
+
+    add-int/2addr p1, v0
+
+    mul-int/2addr p0, p1
+
+    ushr-int/lit8 p0, p0, 0x8
+
+    return p0
+.end method
+
+.method private P(Landroid/graphics/Canvas;)V
     .locals 5
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
@@ -891,6 +709,888 @@
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/google/android/material/shape/MaterialShapeDrawable;)Ljava/util/BitSet;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->d:Ljava/util/BitSet;
+
+    return-object p0
+.end method
+
+.method static synthetic b(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lcom/google/android/material/shape/i$g;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lcom/google/android/material/shape/i$g;
+
+    return-object p0
+.end method
+
+.method static synthetic c(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lcom/google/android/material/shape/i$g;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lcom/google/android/material/shape/i$g;
+
+    return-object p0
+.end method
+
+.method static synthetic d(Lcom/google/android/material/shape/MaterialShapeDrawable;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->e:Z
+
+    return p1
+.end method
+
+.method private e(Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
+    .locals 1
+    .param p1    # Landroid/graphics/Paint;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getColor()I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->k(I)I
+
+    move-result p2
+
+    if-eq p2, p1, :cond_0
+
+    new-instance p1, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {p1, p2, v0}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method private f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+    .locals 4
+    .param p1    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Path;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->j:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v1, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->j:F
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    div-float/2addr v2, v3
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+
+    move-result p1
+
+    div-float/2addr p1, v3
+
+    invoke-virtual {v0, v1, v1, v2, p1}, Landroid/graphics/Matrix;->setScale(FFFF)V
+
+    iget-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
+
+    invoke-virtual {p2, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->u:Landroid/graphics/RectF;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
+
+    return-void
+.end method
+
+.method private f0([I)Z
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->d:Landroid/content/res/ColorStateList;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->d:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v2, p1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->e:Landroid/content/res/ColorStateList;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->e:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v3, p1, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p1
+
+    if-eq v2, p1, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v0
+
+    :goto_1
+    return v1
+.end method
+
+.method private g0()Z
+    .locals 7
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
+
+    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->h:Landroid/graphics/PorterDuff$Mode;
+
+    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
+
+    const/4 v5, 0x1
+
+    invoke-direct {p0, v3, v2, v4, v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->f:Landroid/content/res/ColorStateList;
+
+    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->h:Landroid/graphics/PorterDuff$Mode;
+
+    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
+
+    const/4 v6, 0x0
+
+    invoke-direct {p0, v3, v2, v4, v6}, Lcom/google/android/material/shape/MaterialShapeDrawable;->j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-boolean v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->u:Z
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
+
+    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4, v6}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v2
+
+    invoke-virtual {v3, v2}, Lcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-static {v0, v2}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-static {v1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v5, v6
+
+    :cond_2
+    :goto_0
+    return v5
+.end method
+
+.method private h()V
+    .locals 5
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->A()F
+
+    move-result v0
+
+    neg-float v0, v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/google/android/material/shape/MaterialShapeDrawable$b;
+
+    invoke-direct {v2, p0, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable$b;-><init>(Lcom/google/android/material/shape/MaterialShapeDrawable;F)V
+
+    invoke-virtual {v1, v2}, Lcom/google/android/material/shape/ShapeAppearanceModel;->x(Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;)Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->m:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->r:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->k:F
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->s()Landroid/graphics/RectF;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->h:Landroid/graphics/Path;
+
+    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->d(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
+
+    return-void
+.end method
+
+.method private h0()V
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->F()F
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    const/high16 v2, 0x3f400000    # 0.75f
+
+    mul-float/2addr v2, v0
+
+    float-to-double v2, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v2, v2
+
+    iput v2, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    const/high16 v2, 0x3e800000    # 0.25f
+
+    mul-float/2addr v0, v2
+
+    float-to-double v2, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v0, v2
+
+    iput v0, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->s:I
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+
+    return-void
+.end method
+
+.method private i(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
+    .locals 2
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p1
+
+    if-eqz p3, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->k(I)I
+
+    move-result p1
+
+    :cond_0
+    new-instance p3, Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-direct {p3, p1, p2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    return-object p3
+.end method
+
+.method private j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
+    .locals 0
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Paint;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    if-eqz p1, :cond_1
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0, p1, p2, p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->i(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-direct {p0, p3, p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->e(Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+.end method
+
+.method private k(I)I
+    .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->F()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->w()F
+
+    move-result v1
+
+    add-float/2addr v0, v1
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v1, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lb/a/b/a/n/a;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1, v0}, Lb/a/b/a/n/a;->c(IF)I
+
+    move-result p1
+
+    :cond_0
+    return p1
+.end method
+
+.method private l(Landroid/graphics/Canvas;)V
+    .locals 4
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->d:Ljava/util/BitSet;
+
+    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    sget-object v0, Lcom/google/android/material/shape/MaterialShapeDrawable;->w:Ljava/lang/String;
+
+    const-string v1, "Compatibility shadow requested but can\'t be drawn for all operations in this shape."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->s:I
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
+
+    invoke-virtual {v1}, Lcom/google/android/material/shadow/ShadowRenderer;->getShadowPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    const/4 v1, 0x4
+
+    if-ge v0, v1, :cond_2
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lcom/google/android/material/shape/i$g;
+
+    aget-object v1, v1, v0
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
+
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/material/shape/i$g;->b(Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lcom/google/android/material/shape/i$g;
+
+    aget-object v1, v1, v0
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
+
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/material/shape/i$g;->b(Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->v:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->x()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->y()I
+
+    move-result v1
+
+    neg-int v2, v0
+
+    int-to-float v2, v2
+
+    neg-int v3, v1
+
+    int-to-float v3, v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
+
+    sget-object v3, Lcom/google/android/material/shape/MaterialShapeDrawable;->x:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    int-to-float v0, v0
+
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
+
+    :cond_3
+    return-void
+.end method
+
+.method private m(Landroid/graphics/Canvas;)V
+    .locals 6
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v4, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
+
+    move-result-object v5
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
+
+    return-void
+.end method
+
+.method private n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
+    .locals 1
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Paint;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Path;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Lcom/google/android/material/shape/ShapeAppearanceModel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p5    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-virtual {p4, p5}, Lcom/google/android/material/shape/ShapeAppearanceModel;->u(Landroid/graphics/RectF;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p4}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lcom/google/android/material/shape/b;
+
+    move-result-object p3
+
+    invoke-interface {p3, p5}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
+
+    move-result p3
+
+    iget-object p4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget p4, p4, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->k:F
+
+    mul-float/2addr p3, p4
+
+    invoke-virtual {p1, p5, p3, p3, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, p3, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private o(Landroid/graphics/Canvas;)V
+    .locals 6
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
+
+    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->h:Landroid/graphics/Path;
+
+    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->m:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->s()Landroid/graphics/RectF;
+
+    move-result-object v5
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
+
+    return-void
+.end method
+
+.method private s()Landroid/graphics/RectF;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->A()F
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
+
+    invoke-virtual {v1, v0, v0}, Landroid/graphics/RectF;->inset(FF)V
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public B()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
+
+    return-object v0
+.end method
+
+.method public C()F
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->r()Lcom/google/android/material/shape/b;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public D()F
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lcom/google/android/material/shape/b;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public E()F
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->p:F
+
+    return v0
+.end method
+
+.method public F()F
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->t()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->E()F
+
+    move-result v1
+
+    add-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public J(Landroid/content/Context;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    new-instance v1, Lb/a/b/a/n/a;
+
+    invoke-direct {v1, p1}, Lb/a/b/a/n/a;-><init>(Landroid/content/Context;)V
+
+    iput-object v1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lb/a/b/a/n/a;
+
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
+
+    return-void
+.end method
+
+.method public L()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lb/a/b/a/n/a;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lb/a/b/a/n/a;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public M()Z
+    .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
+
+    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/shape/ShapeAppearanceModel;->u(Landroid/graphics/RectF;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public Q()Z
@@ -966,7 +1666,7 @@
 
     iput p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->o:F
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
 
     :cond_0
     return-void
@@ -1027,7 +1727,7 @@
 
     iput-object p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->v:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     return-void
 .end method
@@ -1045,7 +1745,7 @@
 
     iput p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->n:F
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h0()V
 
     :cond_0
     return-void
@@ -1077,7 +1777,7 @@
 
     iput-boolean v0, p1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->u:Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     return-void
 .end method
@@ -1093,7 +1793,7 @@
 
     iput p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->t:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     :cond_0
     return-void
@@ -1110,7 +1810,7 @@
 
     iput p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->q:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     :cond_0
     return-void
@@ -1240,7 +1940,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->h()V
 
     invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
 
@@ -1248,31 +1948,31 @@
 
     iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
 
-    invoke-virtual {p0, v2, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+    invoke-direct {p0, v2, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
 
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->e:Z
 
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->N(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->N(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->H()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->H()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->m(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->m(Landroid/graphics/Canvas;)V
 
     :cond_1
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->I()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->I()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->o(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->o(Landroid/graphics/Canvas;)V
 
     :cond_2
     iget-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
@@ -1284,41 +1984,6 @@
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     return-void
-.end method
-
-.method public final e(Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-    .locals 1
-    .param p1    # Landroid/graphics/Paint;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getColor()I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->k(I)I
-
-    move-result p2
-
-    if-eq p2, p1, :cond_0
-
-    new-instance p1, Landroid/graphics/PorterDuffColorFilter;
-
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {p1, p2, v0}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
 .end method
 
 .method public e0(F)V
@@ -1333,144 +1998,7 @@
     return-void
 .end method
 
-.method public final f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
-    .locals 4
-    .param p1    # Landroid/graphics/RectF;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/Path;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g(Landroid/graphics/RectF;Landroid/graphics/Path;)V
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->j:F
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    cmpl-float v0, v0, v1
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v1, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->j:F
-
-    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
-
-    move-result v2
-
-    const/high16 v3, 0x40000000    # 2.0f
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
-
-    move-result p1
-
-    div-float/2addr p1, v3
-
-    invoke-virtual {v0, v1, v1, v2, p1}, Landroid/graphics/Matrix;->setScale(FFFF)V
-
-    iget-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->f:Landroid/graphics/Matrix;
-
-    invoke-virtual {p2, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
-
-    :cond_0
-    iget-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->u:Landroid/graphics/RectF;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p2, p1, v0}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
-
-    return-void
-.end method
-
-.method public final f0([I)Z
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->d:Landroid/content/res/ColorStateList;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v0
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->d:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v2, p1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->e:Landroid/content/res/ColorStateList;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->e:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v3, p1, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p1
-
-    if-eq v2, p1, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v0
-
-    :goto_1
-    return v1
-.end method
-
-.method public final g(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+.method protected final g(Landroid/graphics/RectF;Landroid/graphics/Path;)V
     .locals 6
     .param p1    # Landroid/graphics/RectF;
         .annotation build Landroidx/annotation/NonNull;
@@ -1507,92 +2035,6 @@
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->e(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;Landroid/graphics/Path;)V
 
     return-void
-.end method
-
-.method public final g0()Z
-    .locals 7
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
-
-    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->h:Landroid/graphics/PorterDuff$Mode;
-
-    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
-
-    const/4 v5, 0x1
-
-    invoke-virtual {p0, v3, v2, v4, v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->f:Landroid/content/res/ColorStateList;
-
-    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->h:Landroid/graphics/PorterDuff$Mode;
-
-    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {p0, v3, v2, v4, v6}, Lcom/google/android/material/shape/MaterialShapeDrawable;->j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-boolean v3, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->u:Z
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
-
-    iget-object v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4, v6}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v2
-
-    invoke-virtual {v3, v2}, Lcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
-
-    :cond_0
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->s:Landroid/graphics/PorterDuffColorFilter;
-
-    invoke-static {v0, v2}, Lb/g/k/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->t:Landroid/graphics/PorterDuffColorFilter;
-
-    invoke-static {v1, v0}, Lb/g/k/a;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v5, v6
-
-    :cond_2
-    :goto_0
-    return v5
 .end method
 
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -1665,7 +2107,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
 
@@ -1746,7 +2188,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f(Landroid/graphics/RectF;Landroid/graphics/Path;)V
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->l:Landroid/graphics/Region;
 
@@ -1767,129 +2209,6 @@
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->k:Landroid/graphics/Region;
 
     return-object v0
-.end method
-
-.method public final h()V
-    .locals 5
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->A()F
-
-    move-result v0
-
-    neg-float v0, v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/google/android/material/shape/MaterialShapeDrawable$b;
-
-    invoke-direct {v2, p0, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable$b;-><init>(Lcom/google/android/material/shape/MaterialShapeDrawable;F)V
-
-    invoke-virtual {v1, v2}, Lcom/google/android/material/shape/ShapeAppearanceModel;->x(Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;)Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->m:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->r:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v2, v2, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->k:F
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->s()Landroid/graphics/RectF;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->h:Landroid/graphics/Path;
-
-    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/google/android/material/shape/ShapeAppearancePathProvider;->d(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Landroid/graphics/Path;)V
-
-    return-void
-.end method
-
-.method public final h0()V
-    .locals 4
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->F()F
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    const/high16 v2, 0x3f400000    # 0.75f
-
-    mul-float/2addr v2, v0
-
-    float-to-double v2, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v2
-
-    double-to-int v2, v2
-
-    iput v2, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    const/high16 v2, 0x3e800000    # 0.25f
-
-    mul-float/2addr v0, v2
-
-    float-to-double v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v2
-
-    double-to-int v0, v2
-
-    iput v0, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->s:I
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
-
-    return-void
-.end method
-
-.method public final i(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
-    .locals 2
-    .param p1    # Landroid/content/res/ColorStateList;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/PorterDuff$Mode;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p1
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->k(I)I
-
-    move-result p1
-
-    :cond_0
-    new-instance p3, Landroid/graphics/PorterDuffColorFilter;
-
-    invoke-direct {p3, p1, p2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    return-object p3
 .end method
 
 .method public invalidateSelf()V
@@ -1979,220 +2298,6 @@
     return v0
 .end method
 
-.method public final j(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-    .locals 0
-    .param p1    # Landroid/content/res/ColorStateList;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/PorterDuff$Mode;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/graphics/Paint;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    if-eqz p1, :cond_1
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2, p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->i(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p3, p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->e(Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object p1
-
-    :goto_1
-    return-object p1
-.end method
-
-.method public final k(I)I
-    .locals 2
-    .param p1    # I
-        .annotation build Landroidx/annotation/ColorInt;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/ColorInt;
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->F()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->w()F
-
-    move-result v1
-
-    add-float/2addr v0, v1
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v1, v1, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->b:Lc/a/b/b/u/a;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, v0}, Lc/a/b/b/u/a;->c(IF)I
-
-    move-result p1
-
-    :cond_0
-    return p1
-.end method
-
-.method public final l(Landroid/graphics/Canvas;)V
-    .locals 4
-    .param p1    # Landroid/graphics/Canvas;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->d:Ljava/util/BitSet;
-
-    invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    sget-object v0, Lcom/google/android/material/shape/MaterialShapeDrawable;->w:Ljava/lang/String;
-
-    const-string v1, "Compatibility shadow requested but can\'t be drawn for all operations in this shape."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->s:I
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
-
-    invoke-virtual {v1}, Lcom/google/android/material/shadow/ShadowRenderer;->getShadowPaint()Landroid/graphics/Paint;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    const/4 v1, 0x4
-
-    if-ge v0, v1, :cond_2
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->b:[Lc/a/b/b/e0/i$g;
-
-    aget-object v1, v1, v0
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
-
-    invoke-virtual {v1, v2, v3, p1}, Lc/a/b/b/e0/i$g;->b(Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->c:[Lc/a/b/b/e0/i$g;
-
-    aget-object v1, v1, v0
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->p:Lcom/google/android/material/shadow/ShadowRenderer;
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget v3, v3, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->r:I
-
-    invoke-virtual {v1, v2, v3, p1}, Lc/a/b/b/e0/i$g;->b(Lcom/google/android/material/shadow/ShadowRenderer;ILandroid/graphics/Canvas;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->v:Z
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->x()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->y()I
-
-    move-result v1
-
-    neg-int v2, v0
-
-    int-to-float v2, v2
-
-    neg-int v3, v1
-
-    int-to-float v3, v3
-
-    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
-
-    sget-object v3, Lcom/google/android/material/shape/MaterialShapeDrawable;->x:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final m(Landroid/graphics/Canvas;)V
-    .locals 6
-    .param p1    # Landroid/graphics/Canvas;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->n:Landroid/graphics/Paint;
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->g:Landroid/graphics/Path;
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget-object v4, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
-
-    move-result-object v5
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
-
-    return-void
-.end method
-
 .method public mutate()Landroid/graphics/drawable/Drawable;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -2209,87 +2314,7 @@
     return-object p0
 .end method
 
-.method public final n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
-    .locals 1
-    .param p1    # Landroid/graphics/Canvas;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/Paint;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroid/graphics/Path;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lcom/google/android/material/shape/ShapeAppearanceModel;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Landroid/graphics/RectF;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    invoke-virtual {p4, p5}, Lcom/google/android/material/shape/ShapeAppearanceModel;->u(Landroid/graphics/RectF;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p4}, Lcom/google/android/material/shape/ShapeAppearanceModel;->t()Lc/a/b/b/e0/b;
-
-    move-result-object p3
-
-    invoke-interface {p3, p5}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
-
-    move-result p3
-
-    iget-object p4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->a:Lcom/google/android/material/shape/MaterialShapeDrawable$c;
-
-    iget p4, p4, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->k:F
-
-    mul-float/2addr p3, p4
-
-    invoke-virtual {p1, p5, p3, p3, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, p3, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public final o(Landroid/graphics/Canvas;)V
-    .locals 6
-    .param p1    # Landroid/graphics/Canvas;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->o:Landroid/graphics/Paint;
-
-    iget-object v3, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->h:Landroid/graphics/Path;
-
-    iget-object v4, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->m:Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->s()Landroid/graphics/RectF;
-
-    move-result-object v5
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/shape/MaterialShapeDrawable;->n(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;)V
-
-    return-void
-.end method
-
-.method public onBoundsChange(Landroid/graphics/Rect;)V
+.method protected onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -2301,14 +2326,14 @@
     return-void
 .end method
 
-.method public onStateChange([I)Z
+.method protected onStateChange([I)Z
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f0([I)Z
+    invoke-direct {p0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->f0([I)Z
 
     move-result p1
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
 
     move-result v0
 
@@ -2343,7 +2368,7 @@
 
     iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lc/a/b/b/e0/b;
+    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->j()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
@@ -2351,7 +2376,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, v1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result v0
 
@@ -2365,7 +2390,7 @@
 
     iget-object v0, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->a:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lc/a/b/b/e0/b;
+    invoke-virtual {v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->l()Lcom/google/android/material/shape/b;
 
     move-result-object v0
 
@@ -2373,14 +2398,14 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {v0, v1}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result v0
 
     return v0
 .end method
 
-.method public r()Landroid/graphics/RectF;
+.method protected r()Landroid/graphics/RectF;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -2394,32 +2419,6 @@
     invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->i:Landroid/graphics/RectF;
-
-    return-object v0
-.end method
-
-.method public final s()Landroid/graphics/RectF;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->r()Landroid/graphics/RectF;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->A()F
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
-
-    invoke-virtual {v1, v0, v0}, Landroid/graphics/RectF;->inset(FF)V
-
-    iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->j:Landroid/graphics/RectF;
 
     return-object v0
 .end method
@@ -2441,7 +2440,7 @@
 
     iput p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->m:I
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     :cond_0
     return-void
@@ -2458,7 +2457,7 @@
 
     iput-object p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->c:Landroid/graphics/ColorFilter;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     return-void
 .end method
@@ -2506,9 +2505,9 @@
 
     iput-object p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->g:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     return-void
 .end method
@@ -2528,9 +2527,9 @@
 
     iput-object p1, v0, Lcom/google/android/material/shape/MaterialShapeDrawable$c;->h:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->g0()Z
 
-    invoke-virtual {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
+    invoke-direct {p0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->K()V
 
     :cond_0
     return-void

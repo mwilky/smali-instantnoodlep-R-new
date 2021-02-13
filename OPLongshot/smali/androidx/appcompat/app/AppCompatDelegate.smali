@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/app/AppCompatDelegate;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -38,9 +38,9 @@
 
 .field public static final MODE_NIGHT_YES:I = 0x2
 
-.field public static final TAG:Ljava/lang/String; = "AppCompatDelegate"
+.field static final TAG:Ljava/lang/String; = "AppCompatDelegate"
 
-.field public static final sActiveDelegates:Landroidx/collection/ArraySet;
+.field private static final sActiveDelegates:Landroidx/collection/ArraySet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArraySet<",
@@ -51,13 +51,13 @@
     .end annotation
 .end field
 
-.field public static final sActiveDelegatesLock:Ljava/lang/Object;
+.field private static final sActiveDelegatesLock:Ljava/lang/Object;
 
-.field public static sDefaultNightMode:I = -0x64
+.field private static sDefaultNightMode:I = -0x64
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/collection/ArraySet;
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public static applyDayNightToActiveDelegates()V
+.method private static applyDayNightToActiveDelegates()V
     .locals 3
 
     sget-object v0, Landroidx/appcompat/app/AppCompatDelegate;->sActiveDelegatesLock:Ljava/lang/Object;
@@ -138,13 +138,13 @@
     throw v1
 .end method
 
-.method public static create(Landroid/app/Activity;Lb/c/k/c;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/app/Activity;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
     .param p0    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lb/c/k/c;
+    .param p1    # Landroidx/appcompat/app/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -153,18 +153,18 @@
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Lb/c/k/c;)V
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/app/Dialog;Lb/c/k/c;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
     .param p0    # Landroid/app/Dialog;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lb/c/k/c;
+    .param p1    # Landroidx/appcompat/app/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -173,12 +173,12 @@
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Lb/c/k/c;)V
+    invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/content/Context;Landroid/app/Activity;Lb/c/k/c;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -188,7 +188,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/c/k/c;
+    .param p2    # Landroidx/appcompat/app/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -197,12 +197,12 @@
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/app/Activity;Lb/c/k/c;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
 
-.method public static create(Landroid/content/Context;Landroid/view/Window;Lb/c/k/c;)Landroidx/appcompat/app/AppCompatDelegate;
+.method public static create(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/d;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -212,7 +212,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/c/k/c;
+    .param p2    # Landroidx/appcompat/app/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -221,7 +221,7 @@
 
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/view/Window;Lb/c/k/c;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/d;)V
 
     return-object v0
 .end method
@@ -244,7 +244,7 @@
     return v0
 .end method
 
-.method public static markStarted(Landroidx/appcompat/app/AppCompatDelegate;)V
+.method static markStarted(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
     .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
         .annotation build Landroidx/annotation/NonNull;
@@ -280,7 +280,7 @@
     throw p0
 .end method
 
-.method public static markStopped(Landroidx/appcompat/app/AppCompatDelegate;)V
+.method static markStopped(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 1
     .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
         .annotation build Landroidx/annotation/NonNull;
@@ -308,7 +308,7 @@
     throw p0
 .end method
 
-.method public static removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
+.method private static removeDelegateFromActives(Landroidx/appcompat/app/AppCompatDelegate;)V
     .locals 3
     .param p0    # Landroidx/appcompat/app/AppCompatDelegate;
         .annotation build Landroidx/annotation/NonNull;
@@ -467,7 +467,7 @@
     .end annotation
 .end method
 
-.method public abstract getDrawerToggleDelegate()Lb/c/k/a;
+.method public abstract getDrawerToggleDelegate()Landroidx/appcompat/app/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
@@ -570,8 +570,8 @@
     .end param
 .end method
 
-.method public abstract startSupportActionMode(Lb/c/m/a$a;)Lb/c/m/a;
-    .param p1    # Lb/c/m/a$a;
+.method public abstract startSupportActionMode(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
+    .param p1    # Landroidx/appcompat/view/a$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

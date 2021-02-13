@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Map$Entry;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1c
     name = "Entry"
 .end annotation
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field public final key:Ljava/lang/Object;
+.field private final key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field public volatile value:Ljava/lang/Object;
+.field private volatile value:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
+.method static synthetic access$000(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->value:Ljava/lang/Object;
@@ -105,7 +105,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lc/b/h/b/d/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -119,7 +119,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lc/b/h/b/d/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -165,13 +165,13 @@
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->key:Ljava/lang/Object;
 
-    invoke-static {v0}, Lc/b/h/b/d/c;->f(Ljava/lang/Object;)I
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/c;->f(Ljava/lang/Object;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;->value:Ljava/lang/Object;
 
-    invoke-static {v1}, Lc/b/h/b/d/c;->f(Ljava/lang/Object;)I
+    invoke-static {v1}, Lcom/oneplus/utils/reflection/utils/c;->f(Ljava/lang/Object;)I
 
     move-result v1
 

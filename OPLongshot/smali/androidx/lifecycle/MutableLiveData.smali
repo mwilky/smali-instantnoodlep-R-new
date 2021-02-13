@@ -1,6 +1,6 @@
 .class public Landroidx/lifecycle/MutableLiveData;
 .super Landroidx/lifecycle/LiveData;
-.source "SourceFile"
+.source ""
 
 
 # annotations

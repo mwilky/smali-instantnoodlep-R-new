@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
-.super Lb/c/n/c;
-.source "SourceFile"
+.super Landroidx/appcompat/widget/c;
+.source ""
 
 
 # annotations
@@ -21,13 +21,13 @@
 
 
 # instance fields
-.field public mHasPendingShowSoftInputRequest:Z
+.field private mHasPendingShowSoftInputRequest:Z
 
-.field public final mRunShowSoftInputIfNecessary:Ljava/lang/Runnable;
+.field final mRunShowSoftInputIfNecessary:Ljava/lang/Runnable;
 
-.field public mSearchView:Landroidx/appcompat/widget/SearchView;
+.field private mSearchView:Landroidx/appcompat/widget/SearchView;
 
-.field public mThreshold:I
+.field private mThreshold:I
 
 
 # direct methods
@@ -44,7 +44,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lb/c/a;->autoCompleteTextViewStyle:I
+    sget v0, La/a/a;->autoCompleteTextViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -54,7 +54,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lb/c/n/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     new-instance p1, Landroidx/appcompat/widget/SearchView$SearchAutoComplete$a;
 
@@ -161,7 +161,7 @@
     return v0
 .end method
 
-.method public ensureImeVisible()V
+.method ensureImeVisible()V
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -230,7 +230,7 @@
     return p1
 .end method
 
-.method public isEmpty()Z
+.method isEmpty()Z
     .locals 1
 
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
@@ -257,7 +257,7 @@
 .method public onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
     .locals 1
 
-    invoke-super {p0, p1}, Lb/c/n/c;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/c;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
     move-result-object p1
 
@@ -277,7 +277,7 @@
     return-object p1
 .end method
 
-.method public onFinishInflate()V
+.method protected onFinishInflate()V
     .locals 3
 
     invoke-super {p0}, Landroid/widget/AutoCompleteTextView;->onFinishInflate()V
@@ -309,7 +309,7 @@
     return-void
 .end method
 
-.method public onFocusChanged(ZILandroid/graphics/Rect;)V
+.method protected onFocusChanged(ZILandroid/graphics/Rect;)V
     .locals 0
 
     invoke-super {p0, p1, p2, p3}, Landroid/widget/AutoCompleteTextView;->onFocusChanged(ZILandroid/graphics/Rect;)V
@@ -504,13 +504,13 @@
     return-void
 .end method
 
-.method public replaceText(Ljava/lang/CharSequence;)V
+.method protected replaceText(Ljava/lang/CharSequence;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setImeVisibility(Z)V
+.method setImeVisibility(Z)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getContext()Landroid/content/Context;
@@ -568,7 +568,7 @@
     return-void
 .end method
 
-.method public setSearchView(Landroidx/appcompat/widget/SearchView;)V
+.method setSearchView(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->mSearchView:Landroidx/appcompat/widget/SearchView;
@@ -586,7 +586,7 @@
     return-void
 .end method
 
-.method public showSoftInputIfNecessary()V
+.method showSoftInputIfNecessary()V
     .locals 2
 
     iget-boolean v0, p0, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->mHasPendingShowSoftInputRequest:Z

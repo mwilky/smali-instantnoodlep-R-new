@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/StateListAnimator$a;
+.class Lcom/google/android/material/internal/StateListAnimator$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/internal/StateListAnimator;
+.field final synthetic a:Lcom/google/android/material/internal/StateListAnimator;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/StateListAnimator;)V
+.method constructor <init>(Lcom/google/android/material/internal/StateListAnimator;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/StateListAnimator$a;->a:Lcom/google/android/material/internal/StateListAnimator;

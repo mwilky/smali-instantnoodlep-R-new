@@ -1,6 +1,6 @@
 .class public Landroidx/viewpager/widget/ViewPager$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Landroid/os/Parcelable;
+.field b:Landroid/os/Parcelable;
 
-.field public c:Ljava/lang/ClassLoader;
+.field c:Ljava/lang/ClassLoader;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/viewpager/widget/ViewPager$SavedState$1;
@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V

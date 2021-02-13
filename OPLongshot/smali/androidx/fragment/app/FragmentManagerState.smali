@@ -1,6 +1,6 @@
-.class public final Landroidx/fragment/app/FragmentManagerState;
+.class final Landroidx/fragment/app/FragmentManagerState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public mActive:Ljava/util/ArrayList;
+.field mActive:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field public mAdded:Ljava/util/ArrayList;
+.field mAdded:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -47,15 +47,15 @@
     .end annotation
 .end field
 
-.field public mBackStack:[Landroidx/fragment/app/BackStackState;
+.field mBackStack:[Landroidx/fragment/app/BackStackState;
 
-.field public mNextFragmentIndex:I
+.field mNextFragmentIndex:I
 
-.field public mPrimaryNavActiveWho:Ljava/lang/String;
+.field mPrimaryNavActiveWho:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/fragment/app/FragmentManagerState$1;

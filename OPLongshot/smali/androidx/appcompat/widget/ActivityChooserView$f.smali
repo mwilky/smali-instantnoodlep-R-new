@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActivityChooserView$f;
+.class Landroidx/appcompat/widget/ActivityChooserView$f;
 .super Landroid/widget/BaseAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,27 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public a:Landroidx/appcompat/widget/ActivityChooserModel;
+.field private a:Landroidx/appcompat/widget/ActivityChooserModel;
 
-.field public b:I
+.field private b:I
 
-.field public c:Z
+.field private c:Z
 
-.field public d:Z
+.field private d:Z
 
-.field public e:Z
+.field private e:Z
 
-.field public final synthetic f:Landroidx/appcompat/widget/ActivityChooserView;
+.field final synthetic f:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
+.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$f;->f:Landroidx/appcompat/widget/ActivityChooserView;
@@ -361,7 +361,7 @@
 
     move-result-object p1
 
-    sget p2, Lb/c/g;->abc_activity_chooser_view_list_item:I
+    sget p2, La/a/g;->abc_activity_chooser_view_list_item:I
 
     invoke-virtual {p1, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -369,7 +369,7 @@
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setId(I)V
 
-    sget p1, Lb/c/f;->title:I
+    sget p1, La/a/f;->title:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -383,7 +383,7 @@
 
     move-result-object p3
 
-    sget v0, Lb/c/h;->abc_activity_chooser_view_see_all:I
+    sget v0, La/a/h;->abc_activity_chooser_view_see_all:I
 
     invoke-virtual {p3, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -408,7 +408,7 @@
 
     move-result v0
 
-    sget v3, Lb/c/f;->list_item:I
+    sget v3, La/a/f;->list_item:I
 
     if-eq v0, v3, :cond_5
 
@@ -423,7 +423,7 @@
 
     move-result-object p2
 
-    sget v0, Lb/c/g;->abc_activity_chooser_view_list_item:I
+    sget v0, La/a/g;->abc_activity_chooser_view_list_item:I
 
     invoke-virtual {p2, v0, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -440,7 +440,7 @@
 
     move-result-object p3
 
-    sget v0, Lb/c/f;->icon:I
+    sget v0, La/a/f;->icon:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -460,7 +460,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget v0, Lb/c/f;->title:I
+    sget v0, La/a/f;->title:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

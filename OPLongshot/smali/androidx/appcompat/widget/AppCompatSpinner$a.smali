@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/AppCompatSpinner$a;
+.class Landroidx/appcompat/widget/AppCompatSpinner$a;
 .super Landroidx/appcompat/widget/ForwardingListener;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
+.field final synthetic a:Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;
 
-.field public final synthetic b:Landroidx/appcompat/widget/AppCompatSpinner;
+.field final synthetic b:Landroidx/appcompat/widget/AppCompatSpinner;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
+.method constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$DropdownPopup;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->b:Landroidx/appcompat/widget/AppCompatSpinner;

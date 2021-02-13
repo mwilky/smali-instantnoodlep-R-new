@@ -1,6 +1,6 @@
 .class public Landroidx/animation/AnimatorUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -72,9 +72,9 @@
 
 .field public static final location_right_upper:I = 0x3
 
-.field public static mEndValues:Landroid/os/Bundle; = null
+.field private static mEndValues:Landroid/os/Bundle; = null
 
-.field public static mStartValues:Landroid/os/Bundle; = null
+.field private static mStartValues:Landroid/os/Bundle; = null
 
 .field public static final op__control_interpolator_fast_out_linear_in:Landroid/view/animation/Interpolator;
 
@@ -222,7 +222,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 8
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
@@ -328,7 +328,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -336,7 +336,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Landroid/view/View;)V
+.method static synthetic access$000(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Landroidx/animation/AnimatorUtils;->prepareScene(Landroid/view/View;)V
@@ -344,7 +344,7 @@
     return-void
 .end method
 
-.method public static synthetic access$100(Landroid/view/View;)V
+.method static synthetic access$100(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Landroidx/animation/AnimatorUtils;->runEnterAnimation(Landroid/view/View;)V
@@ -424,7 +424,7 @@
     return-void
 .end method
 
-.method public static prepareScene(Landroid/view/View;)V
+.method private static prepareScene(Landroid/view/View;)V
     .locals 4
 
     sget-object v0, Landroidx/animation/AnimatorUtils;->mEndValues:Landroid/os/Bundle;
@@ -528,7 +528,7 @@
     return-void
 .end method
 
-.method public static runEnterAnimation(Landroid/view/View;)V
+.method private static runEnterAnimation(Landroid/view/View;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -697,7 +697,7 @@
     return-void
 .end method
 
-.method public static scaleDelta(Landroid/os/Bundle;Landroid/os/Bundle;Ljava/lang/String;)F
+.method private static scaleDelta(Landroid/os/Bundle;Landroid/os/Bundle;Ljava/lang/String;)F
     .locals 0
 
     if-eqz p0, :cond_0
@@ -731,60 +731,28 @@
 
     packed-switch p1, :pswitch_data_0
 
-    goto/16 :goto_0
+    goto :goto_7
 
     :pswitch_0
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_1
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_2
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_2
 
     :pswitch_3
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -793,19 +761,12 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_0
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_3
 
     :pswitch_4
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -814,21 +775,12 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_1
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_4
 
     :pswitch_5
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
@@ -837,48 +789,47 @@
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_2
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_6
 
     :pswitch_6
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p1
 
-    int-to-float p1, p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
-
-    goto :goto_0
+    goto :goto_5
 
     :pswitch_7
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_4
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p1
 
     div-int/lit8 p1, p1, 0x2
 
+    :goto_5
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
 
-    goto :goto_0
+    goto :goto_7
 
     :pswitch_8
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
+    :goto_6
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
 
-    :goto_0
+    :goto_7
     return-void
 
     :pswitch_data_0
@@ -895,7 +846,7 @@
     .end packed-switch
 .end method
 
-.method public static translationDelta(Landroid/os/Bundle;Landroid/os/Bundle;Ljava/lang/String;)I
+.method private static translationDelta(Landroid/os/Bundle;Landroid/os/Bundle;Ljava/lang/String;)I
     .locals 0
 
     if-eqz p0, :cond_0

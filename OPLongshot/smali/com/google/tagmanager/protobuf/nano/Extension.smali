@@ -1,6 +1,6 @@
 .class public Lcom/google/tagmanager/protobuf/nano/Extension;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -45,7 +45,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)V
+.method private constructor <init>(ILcom/google/tagmanager/protobuf/nano/Extension$TypeLiteral;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

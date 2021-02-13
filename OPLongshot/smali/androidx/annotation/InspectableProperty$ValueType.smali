@@ -1,6 +1,6 @@
 .class public final enum Landroidx/annotation/InspectableProperty$ValueType;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Landroidx/annotation/InspectableProperty$ValueType;
+.field private static final synthetic $VALUES:[Landroidx/annotation/InspectableProperty$ValueType;
 
 .field public static final enum COLOR:Landroidx/annotation/InspectableProperty$ValueType;
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 10
 
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

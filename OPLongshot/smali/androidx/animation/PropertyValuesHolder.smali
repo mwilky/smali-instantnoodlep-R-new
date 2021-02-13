@@ -1,6 +1,6 @@
 .class public Landroidx/animation/PropertyValuesHolder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -17,11 +17,11 @@
 
 
 # static fields
-.field public static final k:Landroidx/animation/TypeEvaluator;
+.field private static final k:Landroidx/animation/TypeEvaluator;
 
-.field public static final l:Landroidx/animation/TypeEvaluator;
+.field private static final l:Landroidx/animation/TypeEvaluator;
 
-.field public static final m:[Ljava/lang/Class;
+.field private static final m:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field public static final n:[Ljava/lang/Class;
+.field private static final n:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field public static final o:[Ljava/lang/Class;
+.field private static final o:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public static final p:Ljava/util/HashMap;
+.field static final p:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -65,7 +65,7 @@
     .end annotation
 .end field
 
-.field public static final q:Ljava/util/HashMap;
+.field private static final q:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -81,15 +81,15 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
-.field public b:Landroid/util/Property;
+.field b:Landroid/util/Property;
 
-.field public c:Ljava/lang/reflect/Method;
+.field c:Ljava/lang/reflect/Method;
 
-.field public d:Ljava/lang/reflect/Method;
+.field private d:Ljava/lang/reflect/Method;
 
-.field public e:Ljava/lang/Class;
+.field e:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -98,19 +98,19 @@
     .end annotation
 .end field
 
-.field public f:Landroidx/animation/Keyframes;
+.field f:Landroidx/animation/Keyframes;
 
-.field public final g:[Ljava/lang/Object;
+.field final g:[Ljava/lang/Object;
 
-.field public h:Landroidx/animation/TypeEvaluator;
+.field private h:Landroidx/animation/TypeEvaluator;
 
-.field public i:Ljava/lang/Object;
+.field private i:Ljava/lang/Object;
 
-.field public j:Landroidx/animation/TypeConverter;
+.field private j:Landroidx/animation/TypeConverter;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 12
 
     const-class v0, Ljava/lang/Integer;
@@ -222,7 +222,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/util/Property;)V
+.method constructor <init>(Landroid/util/Property;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -255,7 +255,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -279,175 +279,7 @@
     return-void
 .end method
 
-.method public static e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Character;->toUpperCase(C)C
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_0
-    return-object p0
-.end method
-
-.method public static varargs i(Landroid/util/Property;[F)Landroidx/animation/PropertyValuesHolder;
-    .locals 1
-    .param p0    # Landroid/util/Property;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # [F
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/Property<",
-            "*",
-            "Ljava/lang/Float;",
-            ">;[F)",
-            "Landroidx/animation/PropertyValuesHolder;"
-        }
-    .end annotation
-
-    new-instance v0, Landroidx/animation/PropertyValuesHolder$a;
-
-    invoke-direct {v0, p0, p1}, Landroidx/animation/PropertyValuesHolder$a;-><init>(Landroid/util/Property;[F)V
-
-    return-object v0
-.end method
-
-.method public static varargs j(Ljava/lang/String;[F)Landroidx/animation/PropertyValuesHolder;
-    .locals 1
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # [F
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    new-instance v0, Landroidx/animation/PropertyValuesHolder$a;
-
-    invoke-direct {v0, p0, p1}, Landroidx/animation/PropertyValuesHolder$a;-><init>(Ljava/lang/String;[F)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public a(F)V
-    .locals 1
-
-    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
-
-    invoke-interface {v0, p1}, Landroidx/animation/Keyframes;->getValue(F)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->j:Landroidx/animation/TypeConverter;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0, p1}, Landroidx/animation/TypeConverter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_0
-    iput-object p1, p0, Landroidx/animation/PropertyValuesHolder;->i:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public b()Landroidx/animation/PropertyValuesHolder;
-    .locals 2
-
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/animation/PropertyValuesHolder;
-
-    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
-
-    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->b:Landroid/util/Property;
-
-    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->b:Landroid/util/Property;
-
-    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
-
-    invoke-interface {v1}, Landroidx/animation/Keyframes;->clone()Landroidx/animation/Keyframes;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
-
-    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->h:Landroidx/animation/TypeEvaluator;
-
-    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->h:Landroidx/animation/TypeEvaluator;
-    :try_end_0
-    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
+.method private c(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
     iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->j:Landroidx/animation/TypeConverter;
@@ -506,25 +338,56 @@
     return-object p1
 .end method
 
-.method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
+.method static e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p0}, Landroidx/animation/PropertyValuesHolder;->b()Landroidx/animation/PropertyValuesHolder;
+    if-eqz p1, :cond_1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    return-object v0
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_1
+    :goto_0
+    return-object p0
 .end method
 
-.method public d()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->i:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method private f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -685,6 +548,255 @@
     return-object v1
 .end method
 
+.method public static varargs i(Landroid/util/Property;[F)Landroidx/animation/PropertyValuesHolder;
+    .locals 1
+    .param p0    # Landroid/util/Property;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/Property<",
+            "*",
+            "Ljava/lang/Float;",
+            ">;[F)",
+            "Landroidx/animation/PropertyValuesHolder;"
+        }
+    .end annotation
+
+    new-instance v0, Landroidx/animation/PropertyValuesHolder$a;
+
+    invoke-direct {v0, p0, p1}, Landroidx/animation/PropertyValuesHolder$a;-><init>(Landroid/util/Property;[F)V
+
+    return-object v0
+.end method
+
+.method public static varargs j(Ljava/lang/String;[F)Landroidx/animation/PropertyValuesHolder;
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Landroidx/animation/PropertyValuesHolder$a;
+
+    invoke-direct {v0, p0, p1}, Landroidx/animation/PropertyValuesHolder$a;-><init>(Ljava/lang/String;[F)V
+
+    return-object v0
+.end method
+
+.method private n(Ljava/lang/Class;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)V"
+        }
+    .end annotation
+
+    sget-object v0, Landroidx/animation/PropertyValuesHolder;->q:Ljava/util/HashMap;
+
+    const-string v1, "get"
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, p1, v0, v1, v2}, Landroidx/animation/PropertyValuesHolder;->q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/animation/PropertyValuesHolder;->d:Ljava/lang/reflect/Method;
+
+    return-void
+.end method
+
+.method private q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Ljava/lang/reflect/Method;",
+            ">;>;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/reflect/Method;"
+        }
+    .end annotation
+
+    monitor-enter p2
+
+    :try_start_0
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/HashMap;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/reflect/Method;
+
+    :cond_0
+    if-nez v1, :cond_2
+
+    invoke-direct {p0, p1, p3, p4}, Landroidx/animation/PropertyValuesHolder;->f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    iget-object p1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    monitor-exit p2
+
+    return-object v2
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method a(F)V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
+
+    invoke-interface {v0, p1}, Landroidx/animation/Keyframes;->getValue(F)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->j:Landroidx/animation/TypeConverter;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Landroidx/animation/TypeConverter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Landroidx/animation/PropertyValuesHolder;->i:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public b()Landroidx/animation/PropertyValuesHolder;
+    .locals 2
+
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/animation/PropertyValuesHolder;
+
+    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
+
+    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->b:Landroid/util/Property;
+
+    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->b:Landroid/util/Property;
+
+    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
+
+    invoke-interface {v1}, Landroidx/animation/Keyframes;->clone()Landroidx/animation/Keyframes;
+
+    move-result-object v1
+
+    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->f:Landroidx/animation/Keyframes;
+
+    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->h:Landroidx/animation/TypeEvaluator;
+
+    iput-object v1, v0, Landroidx/animation/PropertyValuesHolder;->h:Landroidx/animation/TypeEvaluator;
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Landroidx/animation/PropertyValuesHolder;->b()Landroidx/animation/PropertyValuesHolder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method d()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->i:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public g()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
@@ -695,7 +807,7 @@
     return-object v0
 .end method
 
-.method public h()V
+.method h()V
     .locals 2
 
     iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->h:Landroidx/animation/TypeEvaluator;
@@ -740,7 +852,7 @@
     return-void
 .end method
 
-.method public k(Ljava/lang/Object;)V
+.method k(Ljava/lang/Object;)V
     .locals 4
 
     const-string v0, "PropertyValuesHolder"
@@ -780,7 +892,7 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
@@ -788,8 +900,6 @@
     invoke-virtual {p1}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -800,10 +910,11 @@
 
     move-result-object p1
 
+    :goto_0
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method
 
@@ -839,32 +950,7 @@
     return-void
 .end method
 
-.method public final n(Ljava/lang/Class;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "*>;)V"
-        }
-    .end annotation
-
-    sget-object v0, Landroidx/animation/PropertyValuesHolder;->q:Ljava/util/HashMap;
-
-    const-string v1, "get"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Landroidx/animation/PropertyValuesHolder;->q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/animation/PropertyValuesHolder;->d:Ljava/lang/reflect/Method;
-
-    return-void
-.end method
-
-.method public o(Ljava/lang/Class;)V
+.method o(Ljava/lang/Class;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -892,7 +978,7 @@
 
     const-string v2, "set"
 
-    invoke-virtual {p0, p1, v1, v2, v0}, Landroidx/animation/PropertyValuesHolder;->q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-direct {p0, p1, v1, v2, v0}, Landroidx/animation/PropertyValuesHolder;->q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
@@ -901,7 +987,7 @@
     return-void
 .end method
 
-.method public p(Ljava/lang/Object;)V
+.method p(Ljava/lang/Object;)V
     .locals 10
 
     iget-object v0, p0, Landroidx/animation/PropertyValuesHolder;->b:Landroid/util/Property;
@@ -969,7 +1055,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Landroidx/animation/PropertyValuesHolder;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, v7}, Landroidx/animation/PropertyValuesHolder;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -1085,7 +1171,7 @@
 
     if-nez v8, :cond_9
 
-    invoke-virtual {p0, v0}, Landroidx/animation/PropertyValuesHolder;->n(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Landroidx/animation/PropertyValuesHolder;->n(Ljava/lang/Class;)V
 
     iget-object v8, p0, Landroidx/animation/PropertyValuesHolder;->d:Ljava/lang/reflect/Method;
 
@@ -1103,7 +1189,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0, v8}, Landroidx/animation/PropertyValuesHolder;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, v8}, Landroidx/animation/PropertyValuesHolder;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
@@ -1114,7 +1200,7 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_4
+    goto :goto_5
 
     :catch_1
     move-exception v7
@@ -1122,8 +1208,6 @@
     invoke-virtual {v7}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
 
     move-result-object v7
-
-    invoke-static {v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
@@ -1134,103 +1218,17 @@
 
     move-result-object v7
 
+    :goto_4
     invoke-static {v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
-    :goto_4
+    :goto_5
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
     :cond_b
     return-void
-.end method
-
-.method public final q(Ljava/lang/Class;Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/reflect/Method;",
-            ">;>;",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "*>;)",
-            "Ljava/lang/reflect/Method;"
-        }
-    .end annotation
-
-    monitor-enter p2
-
-    :try_start_0
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/reflect/Method;
-
-    :cond_0
-    if-nez v1, :cond_2
-
-    invoke-virtual {p0, p1, p3, p4}, Landroidx/animation/PropertyValuesHolder;->f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object p1, p0, Landroidx/animation/PropertyValuesHolder;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    monitor-exit p2
-
-    return-object v2
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method
 
 .method public toString()Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/TintTypedArray;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,15 +12,15 @@
 
 
 # instance fields
-.field public final mContext:Landroid/content/Context;
+.field private final mContext:Landroid/content/Context;
 
-.field public mTypedValue:Landroid/util/TypedValue;
+.field private mTypedValue:Landroid/util/TypedValue;
 
-.field public final mWrapped:Landroid/content/res/TypedArray;
+.field private final mWrapped:Landroid/content/res/TypedArray;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
+.method private constructor <init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -284,13 +284,13 @@
     return p1
 .end method
 
-.method public getFont(IILb/g/e/c/b$a;)Landroid/graphics/Typeface;
+.method public getFont(IILandroidx/core/content/res/b$a;)Landroid/graphics/Typeface;
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/StyleableRes;
         .end annotation
     .end param
-    .param p3    # Lb/g/e/c/b$a;
+    .param p3    # Landroidx/core/content/res/b$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -327,7 +327,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/TintTypedArray;->mTypedValue:Landroid/util/TypedValue;
 
-    invoke-static {v0, p1, v1, p2, p3}, Lb/g/e/c/b;->c(Landroid/content/Context;ILandroid/util/TypedValue;ILb/g/e/c/b$a;)Landroid/graphics/Typeface;
+    invoke-static {v0, p1, v1, p2, p3}, Landroidx/core/content/res/b;->c(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/b$a;)Landroid/graphics/Typeface;
 
     move-result-object p1
 

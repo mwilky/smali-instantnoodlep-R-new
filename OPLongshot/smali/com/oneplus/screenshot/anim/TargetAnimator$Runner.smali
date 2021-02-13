@@ -1,6 +1,6 @@
-.class public interface abstract Lcom/oneplus/screenshot/anim/TargetAnimator$Runner;
+.class interface abstract Lcom/oneplus/screenshot/anim/TargetAnimator$Runner;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x60a
     name = "Runner"
 .end annotation
 

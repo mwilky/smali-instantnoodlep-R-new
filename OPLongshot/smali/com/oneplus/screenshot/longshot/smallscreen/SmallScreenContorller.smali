@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/smallscreen/TraceCallBack;
@@ -16,53 +16,53 @@
 
 
 # static fields
-.field public static final DRAG_THRESHOLD:I = 0x14
+.field private static final DRAG_THRESHOLD:I = 0x14
 
-.field public static final DROP_THRESHOLD:I = 0x52
+.field private static final DROP_THRESHOLD:I = 0x52
 
-.field public static final SCREEN_FADOUT_DURATION:I = 0x12c
+.field private static final SCREEN_FADOUT_DURATION:I = 0x12c
 
-.field public static final SCREEN_RESET_DURATION:I = 0x12c
+.field private static final SCREEN_RESET_DURATION:I = 0x12c
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.SmallScreenContorller"
+.field private static final TAG:Ljava/lang/String; = "Longshot.SmallScreenContorller"
 
-.field public static final VELOCITY_THRESHOLD:F = 20.0f
+.field private static final VELOCITY_THRESHOLD:F = 20.0f
 
-.field public static leftFadoutanimationEnd:I = 0xfa
+.field private static leftFadoutanimationEnd:I = 0xfa
 
-.field public static rightFadoutanimationEnd:I = 0x52
+.field private static rightFadoutanimationEnd:I = 0x52
 
 
 # instance fields
-.field public isStart:Z
+.field private isStart:Z
 
-.field public mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
+.field private mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public final mDefaultPostion:[I
+.field private final mDefaultPostion:[I
 
-.field public mDraggable:Z
+.field private mDraggable:Z
 
-.field public mDragged:Z
+.field private mDragged:Z
 
-.field public mDropped:Z
+.field private mDropped:Z
 
-.field public mIsReseting:Z
+.field private mIsReseting:Z
 
-.field public mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
+.field private mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 
-.field public mSmallLayoutLp:Landroid/view/WindowManager$LayoutParams;
+.field private mSmallLayoutLp:Landroid/view/WindowManager$LayoutParams;
 
-.field public mStartX:F
+.field private mStartX:F
 
-.field public mVelocityTracler:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
+.field private mVelocityTracler:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
 
-.field public mWindowManager:Landroid/view/WindowManager;
+.field private mWindowManager:Landroid/view/WindowManager;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000()I
+.method static synthetic access$000()I
     .locals 1
 
     sget v0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->leftFadoutanimationEnd:I
@@ -120,7 +120,7 @@
     return v0
 .end method
 
-.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
+.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayoutLp:Landroid/view/WindowManager$LayoutParams;
@@ -128,7 +128,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)[I
+.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)[I
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mDefaultPostion:[I
@@ -136,7 +136,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$300(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;II)V
+.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->scrollBy(II)V
@@ -144,7 +144,7 @@
     return-void
 .end method
 
-.method public static synthetic access$400(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;Z)V
+.method static synthetic access$400(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->hookWindowTouch(Z)V
@@ -152,7 +152,7 @@
     return-void
 .end method
 
-.method public static synthetic access$500(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
+.method static synthetic access$500(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
@@ -160,7 +160,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$600(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Z
+.method static synthetic access$600(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mDropped:Z
@@ -168,7 +168,7 @@
     return p0
 .end method
 
-.method public static synthetic access$702(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;Z)Z
+.method static synthetic access$702(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mIsReseting:Z
@@ -176,7 +176,7 @@
     return p1
 .end method
 
-.method public static synthetic access$800(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)V
+.method static synthetic access$800(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->reset()V
@@ -281,8 +281,6 @@
 
     or-int/2addr v0, v1
 
-    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
-
     goto :goto_0
 
     :cond_0
@@ -294,9 +292,9 @@
 
     and-int/2addr v0, v1
 
+    :goto_0
     iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    :goto_0
     iget-object p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mSmallLayout:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
@@ -365,9 +363,10 @@
 
     move-result-object v0
 
+    :goto_0
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->isScrolledToLeft()Z
@@ -388,14 +387,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
-
     goto :goto_0
 
     :cond_1
     invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->hookWindowTouch(Z)V
 
-    :goto_0
+    :goto_1
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 
     if-eqz v0, :cond_2

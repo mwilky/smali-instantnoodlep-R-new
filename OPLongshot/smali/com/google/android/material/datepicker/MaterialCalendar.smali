@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/datepicker/MaterialCalendar;
 .super Lcom/google/android/material/datepicker/PickerFragment;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -29,53 +29,53 @@
 
 
 # static fields
-.field public static final CALENDAR_CONSTRAINTS_KEY:Ljava/lang/String; = "CALENDAR_CONSTRAINTS_KEY"
+.field private static final CALENDAR_CONSTRAINTS_KEY:Ljava/lang/String; = "CALENDAR_CONSTRAINTS_KEY"
 
-.field public static final CURRENT_MONTH_KEY:Ljava/lang/String; = "CURRENT_MONTH_KEY"
+.field private static final CURRENT_MONTH_KEY:Ljava/lang/String; = "CURRENT_MONTH_KEY"
 
-.field public static final GRID_SELECTOR_KEY:Ljava/lang/String; = "GRID_SELECTOR_KEY"
+.field private static final GRID_SELECTOR_KEY:Ljava/lang/String; = "GRID_SELECTOR_KEY"
 
-.field public static final MONTHS_VIEW_GROUP_TAG:Ljava/lang/Object;
+.field static final MONTHS_VIEW_GROUP_TAG:Ljava/lang/Object;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final NAVIGATION_NEXT_TAG:Ljava/lang/Object;
+.field static final NAVIGATION_NEXT_TAG:Ljava/lang/Object;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final NAVIGATION_PREV_TAG:Ljava/lang/Object;
+.field static final NAVIGATION_PREV_TAG:Ljava/lang/Object;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final SELECTOR_TOGGLE_TAG:Ljava/lang/Object;
+.field static final SELECTOR_TOGGLE_TAG:Ljava/lang/Object;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final SMOOTH_SCROLL_MAX:I = 0x3
+.field private static final SMOOTH_SCROLL_MAX:I = 0x3
 
-.field public static final THEME_RES_ID_KEY:Ljava/lang/String; = "THEME_RES_ID_KEY"
+.field private static final THEME_RES_ID_KEY:Ljava/lang/String; = "THEME_RES_ID_KEY"
 
 
 # instance fields
-.field public calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+.field private calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public calendarSelector:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
+.field private calendarSelector:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 
-.field public calendarStyle:Lc/a/b/b/t/b;
+.field private calendarStyle:Lcom/google/android/material/datepicker/b;
 
-.field public current:Lcom/google/android/material/datepicker/Month;
+.field private current:Lcom/google/android/material/datepicker/Month;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+.field private dateSelector:Lcom/google/android/material/datepicker/DateSelector;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -87,19 +87,19 @@
     .end annotation
 .end field
 
-.field public dayFrame:Landroid/view/View;
+.field private dayFrame:Landroid/view/View;
 
-.field public recyclerView:Landroidx/recyclerview/widget/RecyclerView;
+.field private recyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public themeResId:I
+.field private themeResId:I
 
-.field public yearFrame:Landroid/view/View;
+.field private yearFrame:Landroid/view/View;
 
-.field public yearSelector:Landroidx/recyclerview/widget/RecyclerView;
+.field private yearSelector:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const-string v0, "MONTHS_VIEW_GROUP_TAG"
@@ -129,7 +129,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
+.method static synthetic access$000(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->recyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -137,7 +137,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/CalendarConstraints;
+.method static synthetic access$100(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/CalendarConstraints;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
@@ -145,7 +145,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/DateSelector;
+.method static synthetic access$200(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/DateSelector;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
@@ -153,7 +153,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$300(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
+.method static synthetic access$300(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->yearSelector:Landroidx/recyclerview/widget/RecyclerView;
@@ -161,15 +161,15 @@
     return-object p0
 .end method
 
-.method public static synthetic access$400(Lcom/google/android/material/datepicker/MaterialCalendar;)Lc/a/b/b/t/b;
+.method static synthetic access$400(Lcom/google/android/material/datepicker/MaterialCalendar;)Lcom/google/android/material/datepicker/b;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lc/a/b/b/t/b;
+    iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lcom/google/android/material/datepicker/b;
 
     return-object p0
 .end method
 
-.method public static synthetic access$500(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroid/view/View;
+.method static synthetic access$500(Lcom/google/android/material/datepicker/MaterialCalendar;)Landroid/view/View;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->dayFrame:Landroid/view/View;
@@ -177,7 +177,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$602(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/Month;)Lcom/google/android/material/datepicker/Month;
+.method static synthetic access$602(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/Month;)Lcom/google/android/material/datepicker/Month;
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->current:Lcom/google/android/material/datepicker/Month;
@@ -196,7 +196,7 @@
         .end annotation
     .end param
 
-    sget v0, Lc/a/b/b/f;->month_navigation_fragment_toggle:I
+    sget v0, Lb/a/b/a/f;->month_navigation_fragment_toggle:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -212,9 +212,9 @@
 
     invoke-direct {v1, p0}, Lcom/google/android/material/datepicker/MaterialCalendar$f;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-static {v0, v1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/g/l/a;)V
+    invoke-static {v0, v1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
 
-    sget v1, Lc/a/b/b/f;->month_navigation_previous:I
+    sget v1, Lb/a/b/a/f;->month_navigation_previous:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -226,7 +226,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    sget v2, Lc/a/b/b/f;->month_navigation_next:I
+    sget v2, Lb/a/b/a/f;->month_navigation_next:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    sget v3, Lc/a/b/b/f;->mtrl_calendar_year_selector_frame:I
+    sget v3, Lb/a/b/a/f;->mtrl_calendar_year_selector_frame:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +246,7 @@
 
     iput-object v3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->yearFrame:Landroid/view/View;
 
-    sget v3, Lc/a/b/b/f;->mtrl_calendar_day_selector_frame:I
+    sget v3, Lb/a/b/a/f;->mtrl_calendar_day_selector_frame:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -307,7 +307,7 @@
     return-object v0
 .end method
 
-.method public static getDayHeight(Landroid/content/Context;)I
+.method static getDayHeight(Landroid/content/Context;)I
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -320,7 +320,7 @@
 
     move-result-object p0
 
-    sget v0, Lc/a/b/b/d;->mtrl_calendar_day_height:I
+    sget v0, Lb/a/b/a/d;->mtrl_calendar_day_height:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -329,7 +329,7 @@
     return p0
 .end method
 
-.method public static newInstance(Lcom/google/android/material/datepicker/DateSelector;ILcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialCalendar;
+.method static newInstance(Lcom/google/android/material/datepicker/DateSelector;ILcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialCalendar;
     .locals 3
     .param p2    # Lcom/google/android/material/datepicker/CalendarConstraints;
         .annotation build Landroidx/annotation/NonNull;
@@ -401,7 +401,7 @@
 
 
 # virtual methods
-.method public getCalendarConstraints()Lcom/google/android/material/datepicker/CalendarConstraints;
+.method getCalendarConstraints()Lcom/google/android/material/datepicker/CalendarConstraints;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -411,15 +411,15 @@
     return-object v0
 .end method
 
-.method public getCalendarStyle()Lc/a/b/b/t/b;
+.method getCalendarStyle()Lcom/google/android/material/datepicker/b;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lc/a/b/b/t/b;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lcom/google/android/material/datepicker/b;
 
     return-object v0
 .end method
 
-.method public getCurrentMonth()Lcom/google/android/material/datepicker/Month;
+.method getCurrentMonth()Lcom/google/android/material/datepicker/Month;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -447,7 +447,7 @@
     return-object v0
 .end method
 
-.method public getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
+.method getLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -547,11 +547,11 @@
 
     invoke-direct {p3, v0, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    new-instance v0, Lc/a/b/b/t/b;
+    new-instance v0, Lcom/google/android/material/datepicker/b;
 
-    invoke-direct {v0, p3}, Lc/a/b/b/t/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p3}, Lcom/google/android/material/datepicker/b;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lc/a/b/b/t/b;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarStyle:Lcom/google/android/material/datepicker/b;
 
     invoke-virtual {p1, p3}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -573,14 +573,14 @@
 
     if-eqz v1, :cond_0
 
-    sget v1, Lc/a/b/b/h;->mtrl_calendar_vertical:I
+    sget v1, Lb/a/b/a/h;->mtrl_calendar_vertical:I
 
     move v9, v2
 
     goto :goto_0
 
     :cond_0
-    sget v1, Lc/a/b/b/h;->mtrl_calendar_horizontal:I
+    sget v1, Lb/a/b/a/h;->mtrl_calendar_horizontal:I
 
     move v9, v3
 
@@ -589,7 +589,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/f;->mtrl_calendar_days_of_week:I
+    sget p2, Lb/a/b/a/f;->mtrl_calendar_days_of_week:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -601,11 +601,11 @@
 
     invoke-direct {v1, p0}, Lcom/google/android/material/datepicker/MaterialCalendar$b;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-static {p2, v1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Lb/g/l/a;)V
+    invoke-static {p2, v1}, Landroidx/core/view/ViewCompat;->g0(Landroid/view/View;Landroidx/core/view/a;)V
 
-    new-instance v1, Lc/a/b/b/t/e;
+    new-instance v1, Lcom/google/android/material/datepicker/e;
 
-    invoke-direct {v1}, Lc/a/b/b/t/e;-><init>()V
+    invoke-direct {v1}, Lcom/google/android/material/datepicker/e;-><init>()V
 
     invoke-virtual {p2, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -615,7 +615,7 @@
 
     invoke-virtual {p2, v3}, Landroid/widget/GridView;->setEnabled(Z)V
 
-    sget p2, Lc/a/b/b/f;->mtrl_calendar_months:I
+    sget p2, Lb/a/b/a/f;->mtrl_calendar_months:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -671,13 +671,13 @@
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/g;->mtrl_calendar_year_selector_span:I
+    sget v1, Lb/a/b/a/g;->mtrl_calendar_year_selector_span:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    sget v1, Lc/a/b/b/f;->mtrl_calendar_year_selector_frame:I
+    sget v1, Lb/a/b/a/f;->mtrl_calendar_year_selector_frame:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -716,7 +716,7 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$j;)V
 
     :cond_1
-    sget v0, Lc/a/b/b/f;->month_navigation_fragment_toggle:I
+    sget v0, Lb/a/b/a/f;->month_navigation_fragment_toggle:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -733,13 +733,13 @@
 
     if-nez p3, :cond_3
 
-    new-instance p3, Lb/n/d/h;
+    new-instance p3, Landroidx/recyclerview/widget/h;
 
-    invoke-direct {p3}, Lb/n/d/h;-><init>()V
+    invoke-direct {p3}, Landroidx/recyclerview/widget/h;-><init>()V
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->recyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p3, v0}, Lb/n/d/p;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/p;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_3
     iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->recyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -791,7 +791,7 @@
     return-void
 .end method
 
-.method public setCurrentMonth(Lcom/google/android/material/datepicker/Month;)V
+.method setCurrentMonth(Lcom/google/android/material/datepicker/Month;)V
     .locals 6
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->recyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -852,10 +852,6 @@
 
     add-int/lit8 v0, v1, -0x3
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
-
-    invoke-direct {p0, v1}, Lcom/google/android/material/datepicker/MaterialCalendar;->postSmoothRecyclerViewScroll(I)V
-
     goto :goto_2
 
     :cond_2
@@ -865,20 +861,16 @@
 
     add-int/lit8 v0, v1, 0x3
 
+    :goto_2
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
-
-    invoke-direct {p0, v1}, Lcom/google/android/material/datepicker/MaterialCalendar;->postSmoothRecyclerViewScroll(I)V
-
-    goto :goto_2
 
     :cond_3
     invoke-direct {p0, v1}, Lcom/google/android/material/datepicker/MaterialCalendar;->postSmoothRecyclerViewScroll(I)V
 
-    :goto_2
     return-void
 .end method
 
-.method public setSelector(Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;)V
+.method setSelector(Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;)V
     .locals 4
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarSelector:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
@@ -947,7 +939,7 @@
     return-void
 .end method
 
-.method public toggleVisibleSelector()V
+.method toggleVisibleSelector()V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->calendarSelector:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
@@ -958,9 +950,10 @@
 
     sget-object v0, Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;->DAY:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 
+    :goto_0
     invoke-virtual {p0, v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->setSelector(Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
     sget-object v1, Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;->DAY:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
@@ -969,9 +962,9 @@
 
     sget-object v0, Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;->YEAR:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/datepicker/MaterialCalendar;->setSelector(Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;)V
+    goto :goto_0
 
     :cond_1
-    :goto_0
+    :goto_1
     return-void
 .end method

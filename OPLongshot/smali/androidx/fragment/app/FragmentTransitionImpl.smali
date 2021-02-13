@@ -1,6 +1,6 @@
 .class public abstract Landroidx/fragment/app/FragmentTransitionImpl;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -26,7 +26,7 @@
     return-void
 .end method
 
-.method public static bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
+.method protected static bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public static containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z
+.method private static containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -149,7 +149,7 @@
     return v0
 .end method
 
-.method public static findKeyForValue(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
+.method static findKeyForValue(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -209,7 +209,7 @@
     return-object p0
 .end method
 
-.method public static isNullOrEmpty(Ljava/util/List;)Z
+.method protected static isNullOrEmpty(Ljava/util/List;)Z
     .locals 0
 
     if-eqz p0, :cond_1
@@ -258,7 +258,7 @@
 .method public abstract canHandle(Ljava/lang/Object;)Z
 .end method
 
-.method public captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V
+.method captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -283,13 +283,11 @@
 
     check-cast p2, Landroid/view/ViewGroup;
 
-    invoke-static {p2}, Lb/g/l/r;->a(Landroid/view/ViewGroup;)Z
+    invoke-static {p2}, Landroidx/core/view/r;->a(Landroid/view/ViewGroup;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
@@ -314,17 +312,17 @@
     goto :goto_0
 
     :cond_1
+    :goto_1
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    :goto_1
     return-void
 .end method
 
 .method public abstract cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public findNamedViews(Ljava/util/Map;Landroid/view/View;)V
+.method findNamedViews(Ljava/util/Map;Landroid/view/View;)V
     .locals 3
     .param p2    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -386,7 +384,7 @@
     return-void
 .end method
 
-.method public getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
+.method protected getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 6
 
     const/4 v0, 0x2
@@ -430,7 +428,7 @@
 .method public abstract mergeTransitionsTogether(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public prepareSetNameOverridesReordered(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method prepareSetNameOverridesReordered(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -512,7 +510,7 @@
     .end annotation
 .end method
 
-.method public scheduleNameReset(Landroid/view/ViewGroup;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method scheduleNameReset(Landroid/view/ViewGroup;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -532,7 +530,7 @@
 
     invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$c;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Lb/g/l/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Lb/g/l/n;
+    invoke-static {p1, v0}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method
@@ -564,7 +562,7 @@
 .method public abstract setEpicenter(Ljava/lang/Object;Landroid/view/View;)V
 .end method
 
-.method public setNameOverridesOrdered(Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method setNameOverridesOrdered(Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -584,12 +582,12 @@
 
     invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/FragmentTransitionImpl$b;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Lb/g/l/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Lb/g/l/n;
+    invoke-static {p1, v0}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method
 
-.method public setNameOverridesReordered(Landroid/view/View;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/Map;)V
+.method setNameOverridesReordered(Landroid/view/View;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -704,7 +702,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/fragment/app/FragmentTransitionImpl$a;-><init>(Landroidx/fragment/app/FragmentTransitionImpl;ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    invoke-static {p1, p5}, Lb/g/l/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Lb/g/l/n;
+    invoke-static {p1, p5}, Landroidx/core/view/n;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/view/n;
 
     return-void
 .end method

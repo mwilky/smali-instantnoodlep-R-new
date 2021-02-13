@@ -1,6 +1,6 @@
-.class public Landroidx/core/widget/TextViewCompat$OreoCallback;
+.class Landroidx/core/widget/TextViewCompat$OreoCallback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ActionMode$Callback;
@@ -16,23 +16,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "OreoCallback"
 .end annotation
 
 
 # static fields
-.field public static final MENU_ITEM_ORDER_PROCESS_TEXT_INTENT_ACTIONS_START:I = 0x64
+.field private static final MENU_ITEM_ORDER_PROCESS_TEXT_INTENT_ACTIONS_START:I = 0x64
 
 
 # instance fields
-.field public final mCallback:Landroid/view/ActionMode$Callback;
+.field private final mCallback:Landroid/view/ActionMode$Callback;
 
-.field public mCanUseMenuBuilderReferences:Z
+.field private mCanUseMenuBuilderReferences:Z
 
-.field public mInitializedMenuBuilderReferences:Z
+.field private mInitializedMenuBuilderReferences:Z
 
-.field public mMenuBuilderClass:Ljava/lang/Class;
+.field private mMenuBuilderClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -41,13 +41,13 @@
     .end annotation
 .end field
 
-.field public mMenuBuilderRemoveItemAtMethod:Ljava/lang/reflect/Method;
+.field private mMenuBuilderRemoveItemAtMethod:Ljava/lang/reflect/Method;
 
-.field public final mTextView:Landroid/widget/TextView;
+.field private final mTextView:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)V
+.method constructor <init>(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

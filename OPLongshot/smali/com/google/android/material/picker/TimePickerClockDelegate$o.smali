@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/TimePickerClockDelegate$o;
+.class Lcom/google/android/material/picker/TimePickerClockDelegate$o;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "o"
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/view/View;
+.field private a:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate$e;)V
+.method synthetic constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate$e;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/android/material/picker/TimePickerClockDelegate$o;-><init>()V
@@ -38,9 +38,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/view/ViewGroup;II)Landroid/view/View;
+.method private a(Landroid/view/ViewGroup;II)Landroid/view/View;
     .locals 8
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
@@ -109,6 +107,8 @@
     return-object v1
 .end method
 
+
+# virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 5
 
@@ -140,7 +140,7 @@
 
     float-to-int v4, v4
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/google/android/material/picker/TimePickerClockDelegate$o;->a(Landroid/view/ViewGroup;II)Landroid/view/View;
+    invoke-direct {p0, v2, v3, v4}, Lcom/google/android/material/picker/TimePickerClockDelegate$o;->a(Landroid/view/ViewGroup;II)Landroid/view/View;
 
     move-result-object v2
 

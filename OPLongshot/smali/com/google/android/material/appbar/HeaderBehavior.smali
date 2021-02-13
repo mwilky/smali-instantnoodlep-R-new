@@ -1,6 +1,6 @@
-.class public abstract Lcom/google/android/material/appbar/HeaderBehavior;
+.class abstract Lcom/google/android/material/appbar/HeaderBehavior;
 .super Lcom/google/android/material/appbar/ViewOffsetBehavior;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -28,7 +28,7 @@
 # instance fields
 .field public activePointerId:I
 
-.field public flingRunnable:Ljava/lang/Runnable;
+.field private flingRunnable:Ljava/lang/Runnable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -37,11 +37,11 @@
 
 .field public lastMotionY:I
 
-.field public scroller:Landroid/widget/OverScroller;
+.field scroller:Landroid/widget/OverScroller;
 
 .field public touchSlop:I
 
-.field public velocityTracker:Landroid/view/VelocityTracker;
+.field private velocityTracker:Landroid/view/VelocityTracker;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -95,7 +95,7 @@
 
 
 # virtual methods
-.method public canDragView(Landroid/view/View;)Z
+.method canDragView(Landroid/view/View;)Z
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -108,7 +108,7 @@
     return p1
 .end method
 
-.method public final fling(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIF)Z
+.method final fling(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;IIF)Z
     .locals 13
     .param p2    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -208,7 +208,7 @@
     return v1
 .end method
 
-.method public getMaxDragOffset(Landroid/view/View;)I
+.method getMaxDragOffset(Landroid/view/View;)I
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -229,7 +229,7 @@
     return p1
 .end method
 
-.method public getScrollRangeForDragFling(Landroid/view/View;)I
+.method getScrollRangeForDragFling(Landroid/view/View;)I
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -248,7 +248,7 @@
     return p1
 .end method
 
-.method public getTopBottomOffsetForScrollingSibling()I
+.method getTopBottomOffsetForScrollingSibling()I
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/material/appbar/ViewOffsetBehavior;->getTopAndBottomOffset()I
@@ -258,7 +258,7 @@
     return v0
 .end method
 
-.method public onFlingFinished(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
+.method onFlingFinished(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -664,7 +664,7 @@
     return v2
 .end method
 
-.method public final scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
+.method final scroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -697,7 +697,7 @@
     return p1
 .end method
 
-.method public setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
+.method setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)I
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -726,7 +726,7 @@
     return p1
 .end method
 
-.method public setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
+.method setHeaderTopBottomOffset(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)I
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -746,7 +746,7 @@
 
     if-gt p1, p5, :cond_0
 
-    invoke-static {p3, p4, p5}, Lb/g/g/a;->b(III)I
+    invoke-static {p3, p4, p5}, La/d/d/a;->b(III)I
 
     move-result p2
 

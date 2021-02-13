@@ -1,6 +1,6 @@
 .class public final Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field public final mGraph:Landroidx/collection/SimpleArrayMap;
+.field private final mGraph:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field public final mListPool:Landroidx/core/util/Pools$Pool;
+.field private final mListPool:Landroidx/core/util/Pools$Pool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/core/util/Pools$Pool<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field public final mSortResult:Ljava/util/ArrayList;
+.field private final mSortResult:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public final mSortTmpMarked:Ljava/util/HashSet;
+.field private final mSortTmpMarked:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
@@ -587,7 +587,7 @@
     return v1
 .end method
 
-.method public size()I
+.method size()I
     .locals 1
 
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;->mGraph:Landroidx/collection/SimpleArrayMap;

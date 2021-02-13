@@ -1,6 +1,6 @@
 .class public abstract Landroidx/lifecycle/Lifecycle;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -27,8 +27,8 @@
 
 
 # virtual methods
-.method public abstract a(Lb/l/d;)V
-    .param p1    # Lb/l/d;
+.method public abstract a(Landroidx/lifecycle/d;)V
+    .param p1    # Landroidx/lifecycle/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -44,8 +44,8 @@
     .end annotation
 .end method
 
-.method public abstract c(Lb/l/d;)V
-    .param p1    # Lb/l/d;
+.method public abstract c(Landroidx/lifecycle/d;)V
+    .param p1    # Landroidx/lifecycle/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/viewpager2/widget/ViewPager2$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

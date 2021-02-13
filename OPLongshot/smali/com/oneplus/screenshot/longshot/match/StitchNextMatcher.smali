@@ -1,18 +1,18 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final FILE_PREFIX:Ljava/lang/String; = "tracing"
+.field private static final FILE_PREFIX:Ljava/lang/String; = "tracing"
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.StitchNextMatcher"
+.field private static final TAG:Ljava/lang/String; = "Longshot.StitchNextMatcher"
 
 
 # instance fields
-.field public mExtendCurr:I
+.field protected mExtendCurr:I
 
-.field public mExtendLast:I
+.field protected mExtendLast:I
 
 
 # direct methods
@@ -47,57 +47,33 @@
 
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->LINES_STITCH_NEXT_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
-
     goto :goto_0
 
     :cond_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->LINES_STITCH_NEXT_LEVEL_5:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
 
     goto :goto_0
 
     :cond_1
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->LINES_STITCH_NEXT_LEVEL_4:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
-
     goto :goto_0
 
     :cond_2
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->LINES_STITCH_NEXT_LEVEL_3:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-    invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
 
     goto :goto_0
 
     :cond_3
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->LINES_STITCH_NEXT_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result p1
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mSize:I
 
-    :goto_0
     sget-object p1, Lcom/oneplus/screenshot/longshot/util/Configs;->EXTEND_STITCH_NEXT_LAST:Lcom/oneplus/screenshot/longshot/util/Configs;
 
     invoke-virtual {p1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
@@ -222,17 +198,15 @@
 
     const-string v1, "tracing_0_last"
 
-    invoke-virtual {v8, v7, v1}, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->dump(Landroid/graphics/Bitmap;Ljava/lang/String;)V
-
     goto :goto_2
 
     :cond_2
     const-string v1, "tracing_0_current"
 
+    :goto_2
     invoke-virtual {v8, v7, v1}, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->dump(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
     :cond_3
-    :goto_2
     return-object v12
 .end method
 
@@ -301,15 +275,15 @@
 
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_6
+    if-eqz p0, :cond_5
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_5
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_5
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -317,7 +291,7 @@
 
     if-eqz v1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :cond_0
     if-eqz p2, :cond_2
@@ -332,18 +306,19 @@
 
     if-le p2, v1, :cond_1
 
+    :goto_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -354,20 +329,11 @@
 
     move-result v1
 
-    if-ge p2, v1, :cond_3
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
+    if-ge p2, v1, :cond_1
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
-
-    :goto_0
+    :goto_1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -376,7 +342,7 @@
 
     const/4 v3, 0x0
 
-    if-eq v1, p2, :cond_4
+    if-eq v1, p2, :cond_3
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -404,14 +370,14 @@
 
     move-result-object p0
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_4
+    :cond_3
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    if-eq v1, p2, :cond_5
+    if-eq v1, p2, :cond_4
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -439,8 +405,8 @@
 
     move-result-object p1
 
-    :cond_5
-    :goto_1
+    :cond_4
+    :goto_2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -501,8 +467,8 @@
 
     return-object v2
 
-    :cond_6
-    :goto_2
+    :cond_5
+    :goto_3
     const-string p0, "Longshot.StitchNextMatcher"
 
     const-string p1, "incorrect bitmaps"
@@ -514,7 +480,7 @@
 
 
 # virtual methods
-.method public canDump()Z
+.method protected canDump()Z
     .locals 1
 
     invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->shouldDumpForTraceNext()Z
@@ -524,7 +490,7 @@
     return v0
 .end method
 
-.method public createDumper()V
+.method protected createDumper()V
     .locals 5
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/dump/NextDumper;
@@ -576,7 +542,7 @@
     return-void
 .end method
 
-.method public getStep()I
+.method protected getStep()I
     .locals 2
 
     sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchNext:I
@@ -591,6 +557,7 @@
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_NEXT_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+    :goto_0
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result v0
@@ -600,23 +567,15 @@
     :cond_0
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_NEXT_LEVEL_0:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    return v0
+    goto :goto_0
 
     :cond_1
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STEP_STITCH_NEXT_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
-
-    move-result v0
-
-    return v0
+    goto :goto_0
 .end method
 
-.method public getTag()Ljava/lang/String;
+.method protected getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "StitchNext"
@@ -624,7 +583,7 @@
     return-object v0
 .end method
 
-.method public getTraingBitmap(Z)Landroid/graphics/Bitmap;
+.method getTraingBitmap(Z)Landroid/graphics/Bitmap;
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;

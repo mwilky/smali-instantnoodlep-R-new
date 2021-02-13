@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,18 +12,18 @@
 
 
 # instance fields
-.field public drawBottomInsetForeground:Z
+.field private drawBottomInsetForeground:Z
 
-.field public drawTopInsetForeground:Z
+.field private drawTopInsetForeground:Z
 
-.field public insetForeground:Landroid/graphics/drawable/Drawable;
+.field insetForeground:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public insets:Landroid/graphics/Rect;
+.field insets:Landroid/graphics/Rect;
 
-.field public tempRect:Landroid/graphics/Rect;
+.field private tempRect:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -84,9 +84,9 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->drawBottomInsetForeground:Z
 
-    sget-object v3, Lc/a/b/b/l;->ScrimInsetsFrameLayout:[I
+    sget-object v3, Lb/a/b/a/l;->ScrimInsetsFrameLayout:[I
 
-    sget v5, Lc/a/b/b/k;->Widget_Design_ScrimInsetsFrameLayout:I
+    sget v5, Lb/a/b/a/k;->Widget_Design_ScrimInsetsFrameLayout:I
 
     const/4 v1, 0x0
 
@@ -102,7 +102,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/l;->ScrimInsetsFrameLayout_insetForeground:I
+    sget p2, Lb/a/b/a/l;->ScrimInsetsFrameLayout_insetForeground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -118,7 +118,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$a;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Lb/g/l/m;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->s0(Landroid/view/View;Landroidx/core/view/m;)V
 
     return-void
 .end method
@@ -274,7 +274,7 @@
     return-void
 .end method
 
-.method public onAttachedToWindow()V
+.method protected onAttachedToWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
@@ -289,7 +289,7 @@
     return-void
 .end method
 
-.method public onDetachedFromWindow()V
+.method protected onDetachedFromWindow()V
     .locals 2
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
@@ -306,7 +306,7 @@
     return-void
 .end method
 
-.method public onInsetsChanged(Lb/g/l/x;)V
+.method protected onInsetsChanged(Landroidx/core/view/x;)V
     .locals 0
 
     return-void

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomappbar/BottomActionbar$d;
+.class Lcom/google/android/material/bottomappbar/BottomActionbar$d;
 .super Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:I
+.field final synthetic a:I
 
-.field public final synthetic b:Lcom/google/android/material/bottomappbar/BottomActionbar;
+.field final synthetic b:Lcom/google/android/material/bottomappbar/BottomActionbar;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar;I)V
+.method constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$d;->b:Lcom/google/android/material/bottomappbar/BottomActionbar;

@@ -1,16 +1,16 @@
 .class public Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;
 .super Lcom/oneplus/screenshot/longshot/task/JoinTask;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.NewStitchNextTask"
+.field private static final TAG:Ljava/lang/String; = "Longshot.NewStitchNextTask"
 
 
 # instance fields
-.field public mLastMove:I
+.field private mLastMove:I
 
-.field public mMatchedSize:I
+.field private mMatchedSize:I
 
 
 # direct methods
@@ -195,7 +195,7 @@
 
 
 # virtual methods
-.method public createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
+.method protected createMatcher(Landroid/content/Context;I)Lcom/oneplus/screenshot/longshot/match/Matcher;
     .locals 1
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;
@@ -205,7 +205,7 @@
     return-object v0
 .end method
 
-.method public onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
+.method protected onJoin(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/task/StitchNextByDistanceTask;->stitchForLast(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;)V

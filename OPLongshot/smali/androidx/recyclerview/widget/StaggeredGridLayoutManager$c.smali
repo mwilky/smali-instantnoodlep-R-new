@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/StaggeredGridLayoutManager$c;
 .super Landroidx/recyclerview/widget/RecyclerView$l;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public e:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$d;
+.field e:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$d;
 
-.field public f:Z
+.field f:Z
 
 
 # direct methods

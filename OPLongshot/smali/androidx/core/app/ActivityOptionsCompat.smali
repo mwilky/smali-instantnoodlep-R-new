@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/ActivityOptionsCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method protected constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

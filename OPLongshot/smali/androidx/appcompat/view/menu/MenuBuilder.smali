@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/menu/MenuBuilder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/internal/view/SupportMenu;
@@ -22,19 +22,19 @@
 
 
 # static fields
-.field public static final ACTION_VIEW_STATES_KEY:Ljava/lang/String; = "android:menu:actionviewstates"
+.field private static final ACTION_VIEW_STATES_KEY:Ljava/lang/String; = "android:menu:actionviewstates"
 
-.field public static final EXPANDED_ACTION_VIEW_ID:Ljava/lang/String; = "android:menu:expandedactionview"
+.field private static final EXPANDED_ACTION_VIEW_ID:Ljava/lang/String; = "android:menu:expandedactionview"
 
-.field public static final PRESENTER_KEY:Ljava/lang/String; = "android:menu:presenters"
+.field private static final PRESENTER_KEY:Ljava/lang/String; = "android:menu:presenters"
 
-.field public static final TAG:Ljava/lang/String; = "MenuBuilder"
+.field private static final TAG:Ljava/lang/String; = "MenuBuilder"
 
-.field public static final sCategoryToOrder:[I
+.field private static final sCategoryToOrder:[I
 
 
 # instance fields
-.field public mActionItems:Ljava/util/ArrayList;
+.field private mActionItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -44,17 +44,17 @@
     .end annotation
 .end field
 
-.field public mCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
+.field private mCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
 
-.field public final mContext:Landroid/content/Context;
+.field private final mContext:Landroid/content/Context;
 
-.field public mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
+.field private mCurrentMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
-.field public mDefaultShowAsAction:I
+.field private mDefaultShowAsAction:I
 
-.field public mExpandedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field private mExpandedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
-.field public mFrozenViewStates:Landroid/util/SparseArray;
+.field private mFrozenViewStates:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -64,19 +64,19 @@
     .end annotation
 .end field
 
-.field public mHeaderIcon:Landroid/graphics/drawable/Drawable;
+.field mHeaderIcon:Landroid/graphics/drawable/Drawable;
 
-.field public mHeaderTitle:Ljava/lang/CharSequence;
+.field mHeaderTitle:Ljava/lang/CharSequence;
 
-.field public mHeaderView:Landroid/view/View;
+.field mHeaderView:Landroid/view/View;
 
-.field public mIsActionItemsStale:Z
+.field private mIsActionItemsStale:Z
 
-.field public mIsClosing:Z
+.field private mIsClosing:Z
 
-.field public mIsVisibleItemsStale:Z
+.field private mIsVisibleItemsStale:Z
 
-.field public mItems:Ljava/util/ArrayList;
+.field private mItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -86,9 +86,9 @@
     .end annotation
 .end field
 
-.field public mItemsChangedWhileDispatchPrevented:Z
+.field private mItemsChangedWhileDispatchPrevented:Z
 
-.field public mNonActionItems:Ljava/util/ArrayList;
+.field private mNonActionItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -98,11 +98,11 @@
     .end annotation
 .end field
 
-.field public mOptionalIconsVisible:Z
+.field private mOptionalIconsVisible:Z
 
-.field public mOverrideVisibleItems:Z
+.field private mOverrideVisibleItems:Z
 
-.field public mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field private mPresenters:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
@@ -113,17 +113,17 @@
     .end annotation
 .end field
 
-.field public mPreventDispatchingItemsChanged:Z
+.field private mPreventDispatchingItemsChanged:Z
 
-.field public mQwertyMode:Z
+.field private mQwertyMode:Z
 
-.field public final mResources:Landroid/content/res/Resources;
+.field private final mResources:Landroid/content/res/Resources;
 
-.field public mShortcutsVisible:Z
+.field private mShortcutsVisible:Z
 
-.field public mStructureChangedWhileDispatchPrevented:Z
+.field private mStructureChangedWhileDispatchPrevented:Z
 
-.field public mTempShortcutItemList:Ljava/util/ArrayList;
+.field private mTempShortcutItemList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -133,7 +133,7 @@
     .end annotation
 .end field
 
-.field public mVisibleItems:Ljava/util/ArrayList;
+.field private mVisibleItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -145,7 +145,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x6
@@ -560,7 +560,7 @@
     return v1
 .end method
 
-.method public static findInsertIndex(Ljava/util/ArrayList;I)I
+.method private static findInsertIndex(Ljava/util/ArrayList;I)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -607,7 +607,7 @@
     return p0
 .end method
 
-.method public static getOrdering(I)I
+.method private static getOrdering(I)I
     .locals 3
 
     const/high16 v0, -0x10000
@@ -720,7 +720,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lb/g/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p3}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -764,7 +764,7 @@
 
     iget-object p1, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
-    sget v1, Lb/c/b;->abc_config_showMenuShortcutsWhenKeyboardPresent:I
+    sget v1, La/a/b;->abc_config_showMenuShortcutsWhenKeyboardPresent:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -951,7 +951,7 @@
     return v2
 .end method
 
-.method public addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+.method protected addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 8
 
     invoke-static {p3}, Landroidx/appcompat/view/menu/MenuBuilder;->getOrdering(I)I
@@ -1317,7 +1317,7 @@
     return v1
 .end method
 
-.method public dispatchMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
+.method dispatchMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
@@ -1562,7 +1562,7 @@
     return p1
 .end method
 
-.method public findItemWithShortcutForKey(ILandroid/view/KeyEvent;)Landroidx/appcompat/view/menu/MenuItemImpl;
+.method findItemWithShortcutForKey(ILandroid/view/KeyEvent;)Landroidx/appcompat/view/menu/MenuItemImpl;
     .locals 11
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mTempShortcutItemList:Ljava/util/ArrayList;
@@ -1686,7 +1686,7 @@
     return-object v2
 .end method
 
-.method public findItemsWithShortcutForKey(Ljava/util/List;ILandroid/view/KeyEvent;)V
+.method findItemsWithShortcutForKey(Ljava/util/List;ILandroid/view/KeyEvent;)V
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1940,16 +1940,14 @@
 
     iget-object v5, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mActionItems:Ljava/util/ArrayList;
 
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     goto :goto_2
 
     :cond_3
     iget-object v5, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mNonActionItems:Ljava/util/ArrayList;
 
+    :goto_2
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
@@ -1995,7 +1993,7 @@
     return-object v0
 .end method
 
-.method public getActionViewStatesKey()Ljava/lang/String;
+.method protected getActionViewStatesKey()Ljava/lang/String;
     .locals 1
 
     const-string v0, "android:menu:actionviewstates"
@@ -2075,7 +2073,7 @@
     return-object v0
 .end method
 
-.method public getOptionalIconsVisible()Z
+.method getOptionalIconsVisible()Z
     .locals 1
 
     iget-boolean v0, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mOptionalIconsVisible:Z
@@ -2083,7 +2081,7 @@
     return v0
 .end method
 
-.method public getResources()Landroid/content/res/Resources;
+.method getResources()Landroid/content/res/Resources;
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
@@ -2220,7 +2218,7 @@
     return v2
 .end method
 
-.method public isQwertyMode()Z
+.method isQwertyMode()Z
     .locals 1
 
     iget-boolean v0, p0, Landroidx/appcompat/view/menu/MenuBuilder;->mQwertyMode:Z
@@ -2256,7 +2254,7 @@
     return v0
 .end method
 
-.method public onItemActionRequestChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+.method onItemActionRequestChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
 
     const/4 p1, 0x1
@@ -2268,7 +2266,7 @@
     return-void
 .end method
 
-.method public onItemVisibleChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+.method onItemVisibleChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
 
     const/4 p1, 0x1
@@ -2353,7 +2351,7 @@
 
     if-nez v1, :cond_0
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_0
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->invoke()Z
@@ -2396,9 +2394,10 @@
 
     if-eqz v1, :cond_8
 
+    :goto_1
     invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_2
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuItemImpl;->hasSubMenu()Z
@@ -2409,19 +2408,17 @@
 
     if-eqz v4, :cond_3
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     and-int/lit8 p1, p3, 0x1
 
     if-nez p1, :cond_8
 
-    invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
-    :goto_1
+    :goto_2
     and-int/lit8 p3, p3, 0x4
 
     if-nez p3, :cond_5
@@ -2465,14 +2462,14 @@
 
     if-nez v1, :cond_8
 
-    invoke-virtual {p0, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
+    goto :goto_1
 
     :cond_8
-    :goto_2
+    :goto_3
     return v1
 
     :cond_9
-    :goto_3
+    :goto_4
     return v0
 .end method
 
@@ -2844,7 +2841,7 @@
     return-object p0
 .end method
 
-.method public setExclusiveItemChecked(Landroid/view/MenuItem;)V
+.method setExclusiveItemChecked(Landroid/view/MenuItem;)V
     .locals 6
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getGroupId()I
@@ -3062,7 +3059,7 @@
     return-void
 .end method
 
-.method public setHeaderIconInt(I)Landroidx/appcompat/view/menu/MenuBuilder;
+.method protected setHeaderIconInt(I)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 6
 
     const/4 v1, 0x0
@@ -3082,7 +3079,7 @@
     return-object p0
 .end method
 
-.method public setHeaderIconInt(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method protected setHeaderIconInt(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 6
 
     const/4 v1, 0x0
@@ -3102,7 +3099,7 @@
     return-object p0
 .end method
 
-.method public setHeaderTitleInt(I)Landroidx/appcompat/view/menu/MenuBuilder;
+.method protected setHeaderTitleInt(I)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 6
 
     const/4 v2, 0x0
@@ -3122,7 +3119,7 @@
     return-object p0
 .end method
 
-.method public setHeaderTitleInt(Ljava/lang/CharSequence;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method protected setHeaderTitleInt(Ljava/lang/CharSequence;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 6
 
     const/4 v1, 0x0
@@ -3142,7 +3139,7 @@
     return-object p0
 .end method
 
-.method public setHeaderViewInt(Landroid/view/View;)Landroidx/appcompat/view/menu/MenuBuilder;
+.method protected setHeaderViewInt(Landroid/view/View;)Landroidx/appcompat/view/menu/MenuBuilder;
     .locals 6
 
     const/4 v1, 0x0

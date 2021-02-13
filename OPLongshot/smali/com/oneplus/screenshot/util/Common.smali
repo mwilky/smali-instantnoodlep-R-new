@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/util/Common;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields

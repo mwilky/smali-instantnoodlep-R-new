@@ -1,6 +1,6 @@
 .class public abstract Landroidx/lifecycle/LiveData;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,23 +23,23 @@
 
 
 # static fields
-.field public static final NOT_SET:Ljava/lang/Object;
+.field static final NOT_SET:Ljava/lang/Object;
 
-.field public static final START_VERSION:I = -0x1
+.field static final START_VERSION:I = -0x1
 
 
 # instance fields
-.field public mActiveCount:I
+.field mActiveCount:I
 
-.field public volatile mData:Ljava/lang/Object;
+.field private volatile mData:Ljava/lang/Object;
 
-.field public final mDataLock:Ljava/lang/Object;
+.field final mDataLock:Ljava/lang/Object;
 
-.field public mDispatchInvalidated:Z
+.field private mDispatchInvalidated:Z
 
-.field public mDispatchingValue:Z
+.field private mDispatchingValue:Z
 
-.field public mObservers:Landroidx/arch/core/internal/SafeIterableMap;
+.field private mObservers:Landroidx/arch/core/internal/SafeIterableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap<",
@@ -51,15 +51,15 @@
     .end annotation
 .end field
 
-.field public volatile mPendingData:Ljava/lang/Object;
+.field volatile mPendingData:Ljava/lang/Object;
 
-.field public final mPostValueRunnable:Ljava/lang/Runnable;
+.field private final mPostValueRunnable:Ljava/lang/Runnable;
 
-.field public mVersion:I
+.field private mVersion:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -113,7 +113,7 @@
     return-void
 .end method
 
-.method public static assertMainThread(Ljava/lang/String;)V
+.method private static assertMainThread(Ljava/lang/String;)V
     .locals 3
 
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
@@ -210,7 +210,7 @@
 
 
 # virtual methods
-.method public dispatchingValue(Landroidx/lifecycle/LiveData$b;)V
+.method dispatchingValue(Landroidx/lifecycle/LiveData$b;)V
     .locals 3
     .param p1    # Landroidx/lifecycle/LiveData$b;
         .annotation build Landroidx/annotation/Nullable;
@@ -318,7 +318,7 @@
     return-object v0
 .end method
 
-.method public getVersion()I
+.method getVersion()I
     .locals 1
 
     iget v0, p0, Landroidx/lifecycle/LiveData;->mVersion:I
@@ -366,9 +366,9 @@
     return v0
 .end method
 
-.method public observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
+.method public observe(Landroidx/lifecycle/e;Landroidx/lifecycle/Observer;)V
     .locals 2
-    .param p1    # Lb/l/e;
+    .param p1    # Landroidx/lifecycle/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -382,7 +382,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/l/e;",
+            "Landroidx/lifecycle/e;",
             "Landroidx/lifecycle/Observer<",
             "-TT;>;)V"
         }
@@ -392,7 +392,7 @@
 
     invoke-static {v0}, Landroidx/lifecycle/LiveData;->assertMainThread(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
@@ -409,7 +409,7 @@
     :cond_0
     new-instance v0, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;-><init>(Landroidx/lifecycle/LiveData;Lb/l/e;Landroidx/lifecycle/Observer;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/lifecycle/LiveData$LifecycleBoundObserver;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/e;Landroidx/lifecycle/Observer;)V
 
     iget-object v1, p0, Landroidx/lifecycle/LiveData;->mObservers:Landroidx/arch/core/internal/SafeIterableMap;
 
@@ -421,7 +421,7 @@
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/l/e;)Z
+    invoke-virtual {p2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Landroidx/lifecycle/e;)Z
 
     move-result v1
 
@@ -445,11 +445,11 @@
     return-void
 
     :cond_3
-    invoke-interface {p1}, Lb/l/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {p1}, Landroidx/lifecycle/e;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Lb/l/d;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/d;)V
 
     return-void
 .end method
@@ -518,19 +518,19 @@
     return-void
 .end method
 
-.method public onActive()V
+.method protected onActive()V
     .locals 0
 
     return-void
 .end method
 
-.method public onInactive()V
+.method protected onInactive()V
     .locals 0
 
     return-void
 .end method
 
-.method public postValue(Ljava/lang/Object;)V
+.method protected postValue(Ljava/lang/Object;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -632,9 +632,9 @@
     return-void
 .end method
 
-.method public removeObservers(Lb/l/e;)V
+.method public removeObservers(Landroidx/lifecycle/e;)V
     .locals 3
-    .param p1    # Lb/l/e;
+    .param p1    # Landroidx/lifecycle/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -671,7 +671,7 @@
 
     check-cast v2, Landroidx/lifecycle/LiveData$b;
 
-    invoke-virtual {v2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Lb/l/e;)Z
+    invoke-virtual {v2, p1}, Landroidx/lifecycle/LiveData$b;->isAttachedTo(Landroidx/lifecycle/e;)Z
 
     move-result v2
 
@@ -691,7 +691,7 @@
     return-void
 .end method
 
-.method public setValue(Ljava/lang/Object;)V
+.method protected setValue(Ljava/lang/Object;)V
     .locals 1
     .annotation build Landroidx/annotation/MainThread;
     .end annotation

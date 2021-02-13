@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapperJB;
+.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapperJB;
 .super Landroidx/appcompat/view/menu/MenuItemWrapperICS$a;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ActionProvider$VisibilityListener;
@@ -16,19 +16,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "ActionProviderWrapperJB"
 .end annotation
 
 
 # instance fields
-.field public mListener:Landroidx/core/view/ActionProvider$a;
+.field private mListener:Landroidx/core/view/ActionProvider$a;
 
-.field public final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
+.field final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapperJB;->this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
