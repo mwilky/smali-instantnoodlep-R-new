@@ -49,11 +49,11 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f12001a
 
-.field public static final app_name:I = 0x7f120057
+.field public static final app_name:I = 0x7f120048
 
-.field public static final search_menu_title:I = 0x7f12014a
+.field public static final search_menu_title:I = 0x7f12013e
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1201cb
+.field public static final status_bar_notification_info_overflow:I = 0x7f1201c1
 
 
 # direct methods

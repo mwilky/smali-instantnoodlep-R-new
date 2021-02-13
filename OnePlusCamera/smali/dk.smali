@@ -1,26 +1,17 @@
-.class public interface abstract Ldk;
-.super Ljava/lang/Object;
+.class public final Ldk;
+.super Ldl;
 .source "PG"
 
-# interfaces
-.implements Ldj;
-.implements Ljava/lang/Cloneable;
+
+# static fields
+.field private static final serialVersionUID:J = 0x2d92b8a3b8283743L
 
 
-# virtual methods
-.method public abstract a(Ldh;)Ldk;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "other"
-        }
-    .end annotation
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-.method public abstract d()Ldh;
-.end method
+    invoke-direct {p0, p1}, Ldl;-><init>(Ljava/lang/String;)V
 
-.method public abstract f()Ldh;
+    return-void
 .end method

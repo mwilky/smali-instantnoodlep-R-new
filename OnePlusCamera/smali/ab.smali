@@ -1,64 +1,33 @@
-.class public interface abstract Lab;
+.class public final Lab;
 .super Ljava/lang/Object;
 .source "PG"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# static fields
+.field public static final a:Lcq;
 
-.method public abstract a([B)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "serializedClientEvent"
-        }
-    .end annotation
-.end method
 
-.method public abstract a(Z)Z
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "bypassLensAvailabilityCheck"
-        }
-    .end annotation
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-.method public abstract b()V
-.end method
+    sget-object v0, Lo;->c:Lo;
 
-.method public abstract b([BLj;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "serializedClientEvent",
-            "systemParcelableWrapper"
-        }
-    .end annotation
-.end method
+    sget-object v1, Lad;->a:Lad;
 
-.method public abstract c()V
-.end method
+    sget-object v2, Lad;->a:Lad;
 
-.method public abstract d()I
-.end method
+    sget-object v4, Lfy;->k:Lfy;
 
-.method public abstract e()Lr$a;
-.end method
+    const-class v5, Lad;
 
-.method public abstract f()Laf$a;
-.end method
+    const v3, 0xb706546
 
-.method public abstract g()Z
-.end method
+    invoke-static/range {v0 .. v5}, Lde;->a(Leh;Ljava/lang/Object;Leh;ILfy;Ljava/lang/Class;)Lcq;
 
-.method public abstract h()Z
+    move-result-object v0
+
+    sput-object v0, Lab;->a:Lcq;
+
+    return-void
 .end method

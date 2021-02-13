@@ -668,7 +668,7 @@
 
     check-cast v0, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f12006b
+    const v1, 0x7f12005c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1378,7 +1378,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a02db
+    const v0, 0x7f0a02dc
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2285,13 +2285,13 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const v0, 0x7f0a02cf
+    const v0, 0x7f0a02d0
 
     invoke-direct {p0, p1, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0a02c8
+    const v0, 0x7f0a02c9
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2427,7 +2427,7 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_2
-    const v0, 0x7f0d007e
+    const v0, 0x7f0d007f
 
     const/4 v3, 0x1
 
@@ -2439,7 +2439,7 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setConfirmTextListener(Landroid/view/View;)V
 
-    const v4, 0x7f0a02cb
+    const v4, 0x7f0a02cc
 
     invoke-direct {p0, v0, v4}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
@@ -2550,7 +2550,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f0404a8
+    const v7, 0x7f0404a9
 
     invoke-virtual {v4, v7, v6}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2569,7 +2569,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f04049f
+    const v7, 0x7f0404a0
 
     invoke-virtual {v4, v7, v6}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2582,7 +2582,7 @@
 
     if-eqz v0, :cond_a
 
-    const v2, 0x7f0a02c9
+    const v2, 0x7f0a02ca
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2659,7 +2659,7 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_0
-    const v0, 0x7f0d0082
+    const v0, 0x7f0d0083
 
     const/4 v2, 0x1
 
@@ -2671,7 +2671,7 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setConfirmTextListener(Landroid/view/View;)V
 
-    const v3, 0x7f0a02cb
+    const v3, 0x7f0a02cc
 
     invoke-direct {p0, v0, v3}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->setEmptyTouchListener(Landroid/view/View;I)V
 
@@ -2685,7 +2685,7 @@
 
     check-cast v3, Lcom/oneplus/base/BaseActivity;
 
-    const v4, 0x7f0404d1
+    const v4, 0x7f0404d2
 
     const/4 v5, 0x0
 
@@ -2703,7 +2703,7 @@
 
     check-cast v4, Lcom/oneplus/base/BaseActivity;
 
-    const v6, 0x7f0404d3
+    const v6, 0x7f0404d4
 
     invoke-virtual {v4, v6, v5}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2719,7 +2719,7 @@
 
     check-cast v6, Lcom/oneplus/base/BaseActivity;
 
-    const v7, 0x7f0404cf
+    const v7, 0x7f0404d0
 
     invoke-virtual {v6, v7, v5}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2729,7 +2729,7 @@
 
     if-eqz v0, :cond_2
 
-    const v7, 0x7f0a02ca
+    const v7, 0x7f0a02cb
 
     invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2762,7 +2762,7 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    const v4, 0x7f0a02c9
+    const v4, 0x7f0a02ca
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2795,7 +2795,7 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    const v4, 0x7f0a02da
+    const v4, 0x7f0a02db
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2855,7 +2855,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f1200e4
+    const v0, 0x7f1200d8
 
     const/4 v1, 0x0
 
@@ -4244,7 +4244,7 @@
 
     :cond_2
     :goto_1
-    const v5, 0x7f0402a0
+    const v5, 0x7f0402a1
 
     invoke-static {p0, v5, v4, v9, v8}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -4253,7 +4253,7 @@
     goto :goto_2
 
     :cond_3
-    const v5, 0x7f0402a1
+    const v5, 0x7f0402a2
 
     invoke-static {p0, v5, v4, v9, v8}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -4274,7 +4274,7 @@
 
     const-wide/high16 v11, 0x3fe0000000000000L    # 0.5
 
-    const v13, 0x7f0402a3
+    const v13, 0x7f0402a4
 
     if-eq v10, v3, :cond_8
 
@@ -4476,7 +4476,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f04029d
+    const v5, 0x7f04029e
 
     const/4 v6, 0x2
 
@@ -4679,7 +4679,7 @@
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f0804b5
+    const v0, 0x7f0804aa
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4714,7 +4714,7 @@
 
     check-cast v2, Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f1200e3
+    const v0, 0x7f1200d7
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -4816,7 +4816,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08025c
+    const v0, 0x7f080254
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4825,7 +4825,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f080259
+    const v0, 0x7f080251
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -6236,7 +6236,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a018f
+    const v1, 0x7f0a0190
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -6256,7 +6256,7 @@
 
     if-eqz v0, :cond_3
 
-    const v4, 0x7f0a018e
+    const v4, 0x7f0a018f
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6350,7 +6350,7 @@
 
     :cond_2
     :goto_0
-    const v4, 0x7f0a0196
+    const v4, 0x7f0a0197
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6358,7 +6358,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramViewContainer:Landroid/view/View;
 
-    const v4, 0x7f0a0195
+    const v4, 0x7f0a0196
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6368,7 +6368,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->histogramView:Lcom/oneplus/camera/widget/HistogramView;
 
-    const v4, 0x7f0a0197
+    const v4, 0x7f0a0198
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6391,7 +6391,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v4, 0x7f0a0190
+    const v4, 0x7f0a0191
 
     invoke-virtual {v0, v4}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -6407,7 +6407,7 @@
 
     if-eqz v0, :cond_7
 
-    const v4, 0x7f0a019d
+    const v4, 0x7f0a019e
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6419,7 +6419,7 @@
 
     if-eqz v0, :cond_4
 
-    const v4, 0x7f0a019c
+    const v4, 0x7f0a019d
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6452,7 +6452,7 @@
 
     if-eqz v0, :cond_6
 
-    const v3, 0x7f0a019e
+    const v3, 0x7f0a019f
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6478,7 +6478,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02dc
+    const v1, 0x7f0a02dd
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -7729,7 +7729,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "timer"
+    const-string v0, "timer"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

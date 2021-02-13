@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPictureCaptured$1$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Arrays.kt\ncom/oneplus/util/ArraysKt\n*L\n1#1,468:1\n1299#2,3:469\n1299#2,3:472\n662#2,3:475\n666#2:483\n1305#2,2:484\n1305#2,2:486\n12#3,5:478\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPictureCaptured$1$action$1\n*L\n203#1,3:469\n203#1,3:472\n203#1,3:475\n203#1:483\n203#1,2:484\n203#1,2:486\n203#1,5:478\n*E\n"
+    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPictureCaptured$1$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Arrays.kt\ncom/oneplus/util/ArraysKt\n*L\n1#1,489:1\n1299#2,3:490\n1299#2,3:493\n662#2,3:496\n666#2:504\n1305#2,2:505\n1305#2,2:507\n12#3,5:499\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPictureCaptured$1$action$1\n*L\n224#1,3:490\n224#1,3:493\n224#1,3:496\n224#1:504\n224#1,2:505\n224#1,2:507\n224#1,5:499\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

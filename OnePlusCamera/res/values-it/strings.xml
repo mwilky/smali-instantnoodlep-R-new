@@ -96,6 +96,12 @@
     <string name="filter_landscape">Orizzontale</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Notte</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Nessuno</string>
     <string name="filter_pop">Vivido</string>
     <string name="filter_portrait">Ritratto</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nessuna immissione di testo; impossibile salvare il nome nella filigrana.</string>
     <string name="settings_watermark_summary">Alle foto scattate dalla fotocamera posteriore, comprese le modalità Foto, Ritratto, Pro e Nightscape sarà applicata una filigrana</string>
     <string name="settings_watermark_summary_8250">Alle foto scattate dalla fotocamera posteriore, comprese le modalità Foto, Ritratto, Pro e Nightscape sarà applicata una filigrana</string>
+    <string name="settings_watermark_timestamp">Ora</string>
     <string name="settings_watermark_title">Filigrana Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Correzione obiettivo ultra-grandangolare</string>
     <string name="show_kill_apps_processing_dialog">Cancellazione</string>

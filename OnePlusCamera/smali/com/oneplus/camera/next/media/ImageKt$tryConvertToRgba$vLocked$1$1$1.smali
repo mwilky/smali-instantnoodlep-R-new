@@ -119,7 +119,7 @@
 
     const-string p0, "Image"
 
-    const-string/jumbo p1, "tryConvertToRgba() - Failed to lock result buffer"
+    const-string p1, "tryConvertToRgba() - Failed to lock result buffer"
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 

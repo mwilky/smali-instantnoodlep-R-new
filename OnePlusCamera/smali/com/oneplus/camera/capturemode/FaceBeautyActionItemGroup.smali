@@ -709,7 +709,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b1
+    const p1, 0x7f0802a9
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -728,7 +728,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b0
+    const p1, 0x7f0802a8
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -747,7 +747,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802af
+    const p1, 0x7f0802a7
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -766,7 +766,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b2
+    const p1, 0x7f0802aa
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

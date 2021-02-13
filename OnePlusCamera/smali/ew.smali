@@ -1,45 +1,46 @@
 .class final Lew;
-.super Ljava/lang/IllegalArgumentException;
+.super Ljava/lang/Object;
 .source "PG"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # direct methods
-.method constructor <init>(II)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "index",
-            "length"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x36
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Unpaired surrogate at index "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " of "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 0
+
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final remove()V
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
 .end method

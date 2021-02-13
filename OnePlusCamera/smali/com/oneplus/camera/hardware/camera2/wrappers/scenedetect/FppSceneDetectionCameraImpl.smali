@@ -736,7 +736,7 @@
     :cond_0
     iget-object v1, p1, Lcom/megvii/sencerecognizedsdk/NativeResult;->results:[Lcom/megvii/sencerecognizedsdk/MGSCResult;
 
-    const-string/jumbo v5, "totalResult.results"
+    const-string v5, "totalResult.results"
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -332,7 +332,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->STOPPING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->RELEASING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -342,7 +342,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->UNAVAILABLE:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->STOPPING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -352,7 +352,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->UNAVAILABLE:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -362,13 +362,25 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
     move-result v1
 
     aput v5, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$WhenMappings;->$EnumSwitchMapping$8:[I
+
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
 
     return-void
 .end method

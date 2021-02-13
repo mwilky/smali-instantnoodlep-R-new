@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$macroSuggestionChangedCallback$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4959:1\n602#2:4960\n695#2,2:4962\n858#3:4961\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$macroSuggestionChangedCallback$1\n*L\n578#1:4960\n607#1,2:4962\n598#1:4961\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$macroSuggestionChangedCallback$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 3 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n*L\n1#1,4965:1\n602#2:4966\n695#2,2:4968\n858#3:4967\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode$macroSuggestionChangedCallback$1\n*L\n584#1:4966\n613#1,2:4968\n604#1:4967\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

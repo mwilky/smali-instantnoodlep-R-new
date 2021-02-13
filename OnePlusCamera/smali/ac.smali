@@ -1,16 +1,18 @@
-.class public interface abstract Lac;
-.super Ljava/lang/Object;
+.class public final Lac;
+.super Lda;
 .source "PG"
 
+# interfaces
+.implements Lei;
 
-# virtual methods
-.method public abstract a(Laf$a;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "statusCode"
-        }
-    .end annotation
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    sget-object v0, Lad;->a:Lad;
+
+    invoke-direct {p0, v0}, Lda;-><init>(Lde;)V
+
+    return-void
 .end method

@@ -16,12 +16,4 @@
 
 # virtual methods
 .method public abstract onAvailabilityStatusFetched(I)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "status"
-        }
-    .end annotation
 .end method

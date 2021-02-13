@@ -97,7 +97,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const p2, 0x7f08032c
+    const p2, 0x7f08031e
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/ui/hint/VideoNightHint;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f12008a
+    const p2, 0x7f12007b
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

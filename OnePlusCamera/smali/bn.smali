@@ -1,140 +1,44 @@
-.class final Lbn;
+.class public final synthetic Lbn;
 .super Ljava/lang/Object;
-.source "PG"
+
+# interfaces
+.implements Lap;
 
 
-# static fields
-.field private static final a:Ljava/lang/Class;
+# instance fields
+.field private final a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;)V
+    .locals 0
 
-    invoke-static {}, Lbn;->c()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    sput-object v0, Lbn;->a:Ljava/lang/Class;
+    iput-object p1, p0, Lbn;->a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
 
     return-void
 .end method
 
-.method public static a()Lbp;
-    .locals 1
 
-    sget-object v0, Lbn;->a:Ljava/lang/Class;
+# virtual methods
+.method public final a(I)V
+    .locals 2
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Lbn;->a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
 
-    :try_start_0
-    const-string v0, "getEmptyRegistry"
+    add-int/lit8 v0, p1, -0x2
 
-    invoke-static {v0}, Lbn;->a(Ljava/lang/String;)Lbp;
+    sget v1, Lcom/google/lens/sdk/LensApi;->b:I
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz p1, :cond_0
 
-    return-object v0
+    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;->onAvailabilityStatusFetched(I)V
 
-    :catch_0
+    return-void
+
     :cond_0
-    sget-object v0, Lbp;->a:Lbp;
+    const/4 p0, 0x0
 
-    return-object v0
-.end method
-
-.method private static final a(Ljava/lang/String;)Lbp;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "methodName"
-        }
-    .end annotation
-
-    sget-object v0, Lbn;->a:Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    invoke-virtual {v0, p0, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p0
-
-    new-array v0, v1, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbp;
-
-    return-object p0
-.end method
-
-.method static b()Lbp;
-    .locals 1
-
-    sget-object v0, Lbn;->a:Ljava/lang/Class;
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    const-string v0, "loadGeneratedRegistry"
-
-    invoke-static {v0}, Lbn;->a(Ljava/lang/String;)Lbp;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    invoke-static {}, Lbp;->c()Lbp;
-
-    move-result-object v0
-
-    :cond_1
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lbn;->a()Lbp;
-
-    move-result-object v0
-
-    :cond_2
-    return-object v0
-.end method
-
-.method private static c()Ljava/lang/Class;
-    .locals 1
-
-    :try_start_0
-    const-string v0, "com.google.protobuf.ExtensionRegistry"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    return-object v0
+    throw p0
 .end method

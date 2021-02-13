@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPHdrCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$onClosingCaptureSession$lockTime$1$1$1\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n*L\n1#1,372:1\n183#2:373\n183#2:374\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$onClosingCaptureSession$lockTime$1$1$1\n*L\n160#1:373\n162#1:374\n*E\n"
+    value = "SMAP\nOPHdrCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$onClosingCaptureSession$lockTime$1$1$1\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n*L\n1#1,376:1\n183#2:377\n183#2:378\n*E\n*S KotlinDebug\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$onClosingCaptureSession$lockTime$1$1$1\n*L\n164#1:377\n166#1:378\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

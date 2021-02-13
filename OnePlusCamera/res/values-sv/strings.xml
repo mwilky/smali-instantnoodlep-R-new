@@ -96,6 +96,12 @@
     <string name="filter_landscape">Liggande</string>
     <string name="filter_mono">Monokrom</string>
     <string name="filter_night">Natt</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Ingen</string>
     <string name="filter_pop">Livlig</string>
     <string name="filter_portrait">Porträtt</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Ingen textinmatning. Det går inte att spara namn i vattenstämpel.</string>
     <string name="settings_watermark_summary">En vattenstämpel tillämpas på foton som tas av den bakre kameran, inklusive lägena Foto, Porträtt, Pro och Nattvy</string>
     <string name="settings_watermark_summary_8250">En vattenstämpel tillämpas på foton som tas av den bakre kameran, inklusive lägena Foto, Porträtt, Pro och Nattvy</string>
+    <string name="settings_watermark_timestamp">Tid</string>
     <string name="settings_watermark_title">Shot on OnePlus-vattenstämpel</string>
     <string name="settings_wide_lens_distortion_correction">Korrigering för ultrabred lins</string>
     <string name="show_kill_apps_processing_dialog">Rensar upp</string>

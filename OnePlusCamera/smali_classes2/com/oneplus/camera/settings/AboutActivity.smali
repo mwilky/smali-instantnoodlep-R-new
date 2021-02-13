@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/oneplus/camera/settings/AboutActivity\n*L\n1#1,52:1\n*E\n"
+    value = "SMAP\nAboutActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AboutActivity.kt\ncom/oneplus/camera/settings/AboutActivity\n*L\n1#1,63:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -56,8 +56,6 @@
 .field private static final KEY_PRIVACE_POLICY_TYPE:I = 0x3
 
 .field private static final OPLEGAL_NOTICES_ACTION:Ljava/lang/String; = "android.oem.intent.action.OP_LEGAL"
-
-.field private static final URL_PRIVACY_POLICY:Ljava/lang/String; = "https://www.oneplus.com/global/legal/privacy-policy"
 
 
 # direct methods
@@ -104,24 +102,50 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.oem.intent.action.OP_LEGAL"
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "key_from_settings"
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    const-string v1, "key_from_settings"
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string v0, "op_legal_notices_type"
+    const/4 v0, 0x3
 
-    const/4 v1, 0x3
+    const-string v1, "op_legal_notices_type"
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    move-object v0, p0
+
+    check-cast v0, Landroid/content/Context;
+
+    const-class v1, Lcom/oneplus/camera/settings/LegalActivity;
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    const/high16 v0, 0x20000000
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    :goto_0
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/AboutActivity;->startActivity(Landroid/content/Intent;)V
 
     return-void

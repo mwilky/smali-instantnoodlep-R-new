@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,183:1\n671#2,9:184\n37#3,2:193\n*E\n*S KotlinDebug\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n*L\n79#1,9:184\n79#1,2:193\n*E\n"
+    value = "SMAP\nAgreementFragment.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,205:1\n671#2,9:206\n37#3,2:215\n*E\n*S KotlinDebug\n*F\n+ 1 AgreementFragment.kt\ncom/oneplus/camera/settings/AgreementFragment\n*L\n79#1,9:206\n79#1,2:215\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -22,7 +22,7 @@
         0x3
     }
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\u0018\u0000 \u001b2\u00020\u0001:\u0002\u001b\u001cB\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u000e\u001a\u00020\nH\u0002J\u0008\u0010\u000f\u001a\u00020\nH\u0002J\u0008\u0010\u0010\u001a\u00020\nH\u0002J&\u0010\u0011\u001a\u0004\u0018\u00010\u00122\u0006\u0010\u0013\u001a\u00020\u00142\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u00162\u0008\u0010\u0017\u001a\u0004\u0018\u00010\u0018H\u0017J\u0008\u0010\u0019\u001a\u00020\u001aH\u0003R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082D\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\t\u001a\u00020\n8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u000b\u0010\u0002\u001a\u0004\u0008\u000c\u0010\r\u00a8\u0006\u001d"
+        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\u0018\u0000 \u001c2\u00020\u0001:\u0002\u001c\u001dB\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u000e\u001a\u00020\nH\u0002J\u0008\u0010\u000f\u001a\u00020\nH\u0002J\u0008\u0010\u0010\u001a\u00020\nH\u0002J\u0008\u0010\u0011\u001a\u00020\nH\u0002J&\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0014\u001a\u00020\u00152\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u00172\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0017J\u0008\u0010\u001a\u001a\u00020\u001bH\u0003R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082D\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\t\u001a\u00020\n8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u000b\u0010\u0002\u001a\u0004\u0008\u000c\u0010\r\u00a8\u0006\u001e"
     }
     d2 = {
         "Lcom/oneplus/camera/settings/AgreementFragment;",
@@ -42,6 +42,7 @@
         "getCHSAgreement",
         "getCHTAgreement",
         "getENAgreement",
+        "getHRAgreement",
         "onCreateView",
         "Landroid/view/View;",
         "inflater",
@@ -72,6 +73,8 @@
 
 .field private static final APP_AGREEMENT_URL_EN:Ljava/lang/String; = "file:///android_asset/copyright.html"
 
+.field private static final APP_AGREEMENT_URL_HR:Ljava/lang/String; = "file:///android_asset/copyright_hr.html"
+
 .field public static final ARG_AGREEMENT_TYPE:Ljava/lang/String; = "agreementType"
 
 .field public static final Companion:Lcom/oneplus/camera/settings/AgreementFragment$Companion;
@@ -83,6 +86,8 @@
 .field private static final SHARE_AGREEMENT_URL_CHT:Ljava/lang/String; = "file:///android_asset/share_copyright_cht.html"
 
 .field private static final SHARE_AGREEMENT_URL_EN:Ljava/lang/String; = "file:///android_asset/share_copyright.html"
+
+.field private static final SHARE_AGREEMENT_URL_HR:Ljava/lang/String; = "file:///android_asset/share_copyright_hr.html"
 
 .field private static final TAG:Ljava/lang/String;
 
@@ -131,7 +136,7 @@
 
     invoke-direct {p0, v1, v0, v2, v0}, Lcom/oneplus/camera/settings/AbstractSettingsFragment;-><init>(ILjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const-wide/16 v0, 0xa
+    const-wide/16 v0, 0x64
 
     iput-wide v0, p0, Lcom/oneplus/camera/settings/AgreementFragment;->showWebViewDelayTime:J
 
@@ -295,6 +300,41 @@
     return-object v0
 .end method
 
+.method private final getHRAgreement()Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->getArguments()Landroid/os/Bundle;
+
+    move-result-object p0
+
+    const-string v0, "file:///android_asset/copyright_hr.html"
+
+    if-eqz p0, :cond_0
+
+    const-string v1, "agreementType"
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const-string v1, "agreementTypeShare"
+
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "file:///android_asset/share_copyright_hr.html"
+
+    move-object v0, p0
+
+    :cond_0
+    return-object v0
+.end method
+
 .method private final showWebView()V
     .locals 1
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -331,7 +371,7 @@
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 5
+    .locals 6
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -343,7 +383,7 @@
 
     move-result-object p3
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_d
 
     const v0, 0x7f0d006c
 
@@ -351,7 +391,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -571,7 +611,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_b
 
     check-cast p2, [Ljava/lang/String;
 
@@ -579,23 +619,19 @@
 
     move-result-object v1
 
-    aget-object v0, p2, v0
+    aget-object v3, p2, v0
 
-    const-string v3, "zh"
+    const-string v5, "zh"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_9
+    if-eqz v3, :cond_9
 
     array-length v0, p2
 
     if-le v0, v4, :cond_6
-
-    aget-object v0, p2, v4
-
-    if-eqz v0, :cond_6
 
     aget-object p2, p2, v4
 
@@ -636,9 +672,9 @@
 
     invoke-direct {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->getCHSAgreement()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_7
     aget-object v0, p2, v2
@@ -659,20 +695,47 @@
 
     move-result p2
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_a
 
     :cond_8
     invoke-direct {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->getCHTAgreement()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
+
+    goto :goto_3
 
     :cond_9
+    aget-object v0, p2, v0
+
+    const-string v3, "hr"
+
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    aget-object p2, p2, v2
+
+    const-string v0, "HR"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_a
+
+    invoke-direct {p0}, Lcom/oneplus/camera/settings/AgreementFragment;->getHRAgreement()Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_a
     :goto_4
     invoke-virtual {p1, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     goto :goto_5
 
-    :cond_a
+    :cond_b
     new-instance p0, Lkotlin/TypeCastException;
 
     const-string p1, "null cannot be cast to non-null type kotlin.Array<T>"
@@ -681,7 +744,7 @@
 
     throw p0
 
-    :cond_b
+    :cond_c
     new-instance p0, Lkotlin/TypeCastException;
 
     const-string p1, "null cannot be cast to non-null type android.widget.FrameLayout"
@@ -690,7 +753,7 @@
 
     throw p0
 
-    :cond_c
+    :cond_d
     :goto_5
     return-object p3
 .end method

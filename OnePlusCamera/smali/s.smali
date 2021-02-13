@@ -4,32 +4,30 @@
 
 
 # static fields
-.field public static final a:Lbo;
+.field public static final a:Lcq;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 6
 
-    sget-object v0, Ly;->c:Ly;
+    sget-object v0, Lah;->b:Lah;
 
-    sget-object v1, Lr;->e:Lr;
+    sget-object v1, Laa;->e:Laa;
 
-    sget-object v2, Lr;->e:Lr;
+    sget-object v2, Laa;->e:Laa;
 
-    sget-object v5, Lex;->k:Lex;
+    sget-object v4, Lfy;->k:Lfy;
 
-    const-class v6, Lr;
+    const-class v5, Laa;
 
-    const/4 v3, 0x0
+    const v3, 0x9198308
 
-    const v4, 0x9198308
-
-    invoke-static/range {v0 .. v6}, Lby;->a(Ldh;Ljava/lang/Object;Ldh;Lcg;ILex;Ljava/lang/Class;)Lbo;
+    invoke-static/range {v0 .. v5}, Lde;->a(Leh;Ljava/lang/Object;Leh;ILfy;Ljava/lang/Class;)Lcq;
 
     move-result-object v0
 
-    sput-object v0, Ls;->a:Lbo;
+    sput-object v0, Ls;->a:Lcq;
 
     return-void
 .end method

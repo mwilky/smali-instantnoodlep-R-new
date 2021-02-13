@@ -150,7 +150,7 @@
     return v1
 
     :catch_0
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

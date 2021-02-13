@@ -96,6 +96,12 @@
     <string name="filter_landscape">Пејзаж</string>
     <string name="filter_mono">Црно-бело</string>
     <string name="filter_night">Ноќ</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Нема</string>
     <string name="filter_pop">Живописно</string>
     <string name="filter_portrait">Портрет</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Не е внесен текст; не може да се зачува името во воден жиг.</string>
     <string name="settings_watermark_summary">Ќе се додаде воден жиг на фотографиите направени со задната камера, вклучувајќи ги тие направени со режимите Фотографија, Портрет, Професионално и Ноќен пејзаж</string>
     <string name="settings_watermark_summary_8250">Ќе се додаде воден жиг на фотографиите направени со задната камера, вклучувајќи ги тие направени со режимите Фотографија, Портрет, Професионално и Ноќен пејзаж</string>
+    <string name="settings_watermark_timestamp">Време</string>
     <string name="settings_watermark_title">Воден жиг „Shot on OnePlus“</string>
     <string name="settings_wide_lens_distortion_correction">Корекција на ултра-широк објектив</string>
     <string name="show_kill_apps_processing_dialog">Се брише</string>

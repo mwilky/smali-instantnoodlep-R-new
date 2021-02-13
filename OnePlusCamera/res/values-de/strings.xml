@@ -96,6 +96,12 @@
     <string name="filter_landscape">Landschaft</string>
     <string name="filter_mono">Schwarzweiß</string>
     <string name="filter_night">Nacht</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Keiner</string>
     <string name="filter_pop">Lebendig</string>
     <string name="filter_portrait">Portrait</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Keine Texteingabe, Name kann nicht in Wasserzeichen gespeichert werden.</string>
     <string name="settings_watermark_summary">Ein Wasserzeichen wird auf Fotos angewandt, die mit der Rückkamera aufgenommen wurden (u. a. in den Modi Foto, Portrait, Pro und Nachtaufnahme)</string>
     <string name="settings_watermark_summary_8250">Ein Wasserzeichen wird auf Fotos angewandt, die mit der Rückkamera aufgenommen wurden (u. a. in den Modi Foto, Portrait, Pro und Nachtaufnahme)</string>
+    <string name="settings_watermark_timestamp">Zeit</string>
     <string name="settings_watermark_title">Shot on OnePlus-Wasserzeichen</string>
     <string name="settings_wide_lens_distortion_correction">Ultraweitwinkel-Linsenkorrektur</string>
     <string name="show_kill_apps_processing_dialog">Wird gelöscht</string>

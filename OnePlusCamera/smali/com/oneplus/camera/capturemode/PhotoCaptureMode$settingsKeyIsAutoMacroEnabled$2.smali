@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$settingsKeyIsAutoMacroEnabled$2;->this$0:Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
-    const v0, 0x7f12017a
+    const v0, 0x7f12016e
 
     invoke-static {p0, v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/PhotoCaptureMode;I)Ljava/lang/String;
 

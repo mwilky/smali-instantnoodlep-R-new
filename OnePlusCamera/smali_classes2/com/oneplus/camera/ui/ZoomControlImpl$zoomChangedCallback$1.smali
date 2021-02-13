@@ -28,6 +28,10 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1115:1\n12#2,3:1116\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1\n*L\n157#1,3:1116\n*E\n"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     bv = {
         0x1,
@@ -77,7 +81,7 @@
 
 # virtual methods
 .method public final onPropertyChanged(Lcom/oneplus/base/PropertySource;Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangeEventArgs;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -112,6 +116,34 @@
     move-result p2
 
     invoke-static {p1, p2}, Lcom/oneplus/camera/ui/ZoomControlImpl;->access$updateFlashEnablingStateByZoom(Lcom/oneplus/camera/ui/ZoomControlImpl;F)V
+
+    iget-object p1, p0, Lcom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/ZoomControlImpl;
+
+    check-cast p1, Lcom/oneplus/base/component/Component;
+
+    sget-object p2, Lcom/oneplus/base/component/Component;->PROP_OWNER:Lcom/oneplus/base/PropertyKey;
+
+    invoke-interface {p1, p2}, Lcom/oneplus/base/component/Component;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string p2, "this[Component.PROP_OWNER]"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Lcom/oneplus/base/component/ComponentOwner;
+
+    sget-object p2, Lcom/oneplus/threading/DispatcherPriority;->DEFAULT:Lcom/oneplus/threading/DispatcherPriority;
+
+    const-class p3, Lcom/oneplus/camera/ui/actionpanel/PrimaryActionPanel;
+
+    new-instance v0, Lcom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1$$special$$inlined$findComponent$1;
+
+    invoke-direct {v0}, Lcom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1$$special$$inlined$findComponent$1;-><init>()V
+
+    check-cast v0, Lcom/oneplus/base/component/ComponentSearchCallback;
+
+    invoke-static {p1, p2, p3, v0}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/ZoomControlImpl$zoomChangedCallback$1;->this$0:Lcom/oneplus/camera/ui/ZoomControlImpl;
 

@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureRateActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureRateActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem\n*L\n1#1,258:1\n*E\n"
+    value = "SMAP\nVideoCaptureRateActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureRateActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem\n*L\n1#1,226:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -252,13 +252,9 @@
 
     const-string v1, "drawable"
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
     const/16 v2, 0x3c
-
-    if-eq p1, v2, :cond_2
-
-    const/16 v2, 0x78
 
     if-eq p1, v2, :cond_1
 
@@ -281,13 +277,13 @@
 
     move-result-object p1
 
-    const-string v2, "icon_video_capture_rate_120fps"
+    const-string v2, "icon_video_capture_rate_60fps"
 
     invoke-static {p1, v1, v2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_3
 
     check-cast p1, Ljava/lang/Number;
 
@@ -320,52 +316,13 @@
 
     move-result-object p1
 
-    const-string v2, "icon_video_capture_rate_60fps"
-
-    invoke-static {p1, v1, v2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
     const-string v2, "icon_video_capture_rate_30fps"
 
     invoke-static {p1, v1, v2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_3
 
     check-cast p1, Ljava/lang/Number;
 
@@ -387,13 +344,13 @@
 
     move-result-object v0
 
-    :cond_4
+    :cond_3
     :goto_1
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     goto :goto_2
 
-    :cond_5
+    :cond_4
     new-instance p0, Lcom/oneplus/drawable/EmptyDrawable;
 
     invoke-direct {p0}, Lcom/oneplus/drawable/EmptyDrawable;-><init>()V
@@ -595,7 +552,7 @@
     invoke-direct {v3, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     :goto_4
-    if-ge v2, v1, :cond_a
+    if-ge v2, v1, :cond_9
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -635,13 +592,9 @@
 
     const-string v7, "string"
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_8
 
     const/16 v8, 0x3c
-
-    if-eq v4, v8, :cond_8
-
-    const/16 v8, 0x78
 
     if-eq v4, v8, :cond_7
 
@@ -652,37 +605,6 @@
     goto :goto_7
 
     :cond_7
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    const-string v8, "action_item_video_capture_rate_120fps"
-
-    invoke-static {v5, v7, v8}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    const-string v8, "video_capture_rate_action_item_120fps"
-
-    invoke-static {v7, v6, v8}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    goto :goto_6
-
-    :cond_8
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
     move-result-object v5
@@ -713,7 +635,7 @@
 
     goto :goto_6
 
-    :cond_9
+    :cond_8
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
     move-result-object v5
@@ -774,7 +696,7 @@
 
     goto/16 :goto_4
 
-    :cond_a
+    :cond_9
     check-cast v3, Ljava/util/List;
 
     return-object v3

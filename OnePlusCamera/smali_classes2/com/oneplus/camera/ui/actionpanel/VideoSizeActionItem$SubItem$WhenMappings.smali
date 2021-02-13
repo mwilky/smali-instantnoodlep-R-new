@@ -60,17 +60,5 @@
 
     aput v2, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem$WhenMappings;->$EnumSwitchMapping$0:[I
-
-    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_8K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-
     return-void
 .end method

@@ -611,7 +611,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v0
 
@@ -2632,7 +2632,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/CameraActivityComponent;->onInitialize()V
 
-    const v0, 0x7f120182
+    const v0, 0x7f120176
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/location/LocationManagerImpl;->getString(I)Ljava/lang/String;
 
@@ -2646,7 +2646,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v1
 

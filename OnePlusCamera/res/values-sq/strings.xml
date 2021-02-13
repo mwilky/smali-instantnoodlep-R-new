@@ -96,6 +96,12 @@
     <string name="filter_landscape">Peizazh</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Natë</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Asnjë</string>
     <string name="filter_pop">E gjallë</string>
     <string name="filter_portrait">Portret</string>
@@ -125,7 +131,7 @@
     <string name="location_permission_description">Lejet e vendndodhjes janë refuzuar. Lejoni që Kamera të ketë akses te vendndodhja.</string>
     <string name="macro_enabled">Super makro</string>
     <string name="macro_flash_disabled">Blici çaktivizohet në modalitetin macro</string>
-    <string name="macro_hint">Distanca e rekomanduar e gjuajtjes është 1-1.5 inç</string>
+    <string name="macro_hint">Distanca e rekomanduar e gjuajtjes është 3-4 cm</string>
     <string name="manual_capture_control_auto">Automatike</string>
     <string name="manual_capture_control_manual">Manuale</string>
     <string name="manual_capture_long_exposure_tips">Fotografimi</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nuk ka hyrje teksti; nuk është e mundur të emërohet shenja.</string>
     <string name="settings_watermark_summary">Do të vendoset një shenjë në fotot që janë bërë me kamerën e pasme, ku përfshihen modalitetet Foto, Portret, Pro dhe Peizazh nate</string>
     <string name="settings_watermark_summary_8250">Do të vendoset një shenjë në fotot që janë bërë me kamerën e pasme, ku përfshihen modalitetet Foto, Portret, Pro dhe Peizazh nate</string>
+    <string name="settings_watermark_timestamp">Koha</string>
     <string name="settings_watermark_title">Shenja \"Shot on OnePlus\"</string>
     <string name="settings_wide_lens_distortion_correction">Korrigjim i lentes ultra të gjerë</string>
     <string name="show_kill_apps_processing_dialog">Pastrim</string>

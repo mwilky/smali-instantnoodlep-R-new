@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160004
+    const v1, 0x7f160005
 
     const/4 v2, 0x2
 

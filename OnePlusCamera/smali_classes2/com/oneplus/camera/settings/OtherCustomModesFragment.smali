@@ -125,7 +125,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f160005
+    const v1, 0x7f160006
 
     const/4 v2, 0x2
 
@@ -280,7 +280,7 @@
 
     if-eqz p0, :cond_0
 
-    const v0, 0x7f120163
+    const v0, 0x7f120157
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -372,7 +372,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f120072
+    const v0, 0x7f120063
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -389,7 +389,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f12006d
+    const v0, 0x7f12005e
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -406,7 +406,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f120073
+    const v0, 0x7f120064
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -423,7 +423,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f12006e
+    const v0, 0x7f12005f
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -440,7 +440,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f12006c
+    const v0, 0x7f12005d
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -457,7 +457,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f120069
+    const v0, 0x7f12005a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -474,7 +474,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f120071
+    const v0, 0x7f120062
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -491,7 +491,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f12006f
+    const v0, 0x7f120060
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 
@@ -508,7 +508,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f12006b
+    const v0, 0x7f12005c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/OtherCustomModesFragment;->getString(I)Ljava/lang/String;
 

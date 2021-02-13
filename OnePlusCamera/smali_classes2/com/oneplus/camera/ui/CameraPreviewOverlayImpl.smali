@@ -663,7 +663,7 @@
     :goto_1
     sget-object v6, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->COLLAPSED:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
-    const v7, 0x7f04036a
+    const v7, 0x7f04036b
 
     if-ne v2, v6, :cond_4
 
@@ -671,7 +671,7 @@
 
     move-result v2
 
-    const v6, 0x7f04037a
+    const v6, 0x7f04037b
 
     invoke-static {p0, v6, v5, v4, v3}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -682,7 +682,7 @@
     goto :goto_2
 
     :cond_4
-    const v2, 0x7f040364
+    const v2, 0x7f040365
 
     invoke-static {p0, v2, v5, v4, v3}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 

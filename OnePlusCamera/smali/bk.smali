@@ -1,42 +1,45 @@
-.class final Lbk;
+.class public final synthetic Lbk;
 .super Ljava/lang/Object;
-.source "PG"
 
 # interfaces
-.implements Lbg;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final a:Lcom/google/lens/sdk/LensApi;
+
+.field private final b:Landroid/app/Activity;
+
+.field private final c:Lbs;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Lcom/google/lens/sdk/LensApi;Landroid/app/Activity;Lbs;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbk;->a:Lcom/google/lens/sdk/LensApi;
+
+    iput-object p2, p0, Lbk;->b:Landroid/app/Activity;
+
+    iput-object p3, p0, Lbk;->c:Lbs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([BII)[B
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "bytes",
-            "offset",
-            "size"
-        }
-    .end annotation
+.method public final run()V
+    .locals 2
 
-    new-array p0, p3, [B
+    iget-object v0, p0, Lbk;->a:Lcom/google/lens/sdk/LensApi;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lbk;->b:Landroid/app/Activity;
 
-    invoke-static {p1, p2, p0, v0, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    iget-object p0, p0, Lbk;->c:Lbs;
 
-    return-object p0
+    invoke-virtual {v0, v1, p0}, Lcom/google/lens/sdk/LensApi;->a(Landroid/app/Activity;Lbs;)V
+
+    return-void
 .end method

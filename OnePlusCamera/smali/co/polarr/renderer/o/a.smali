@@ -94,7 +94,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "to_log"
+    const-string v2, "to_log"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -176,7 +176,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "tolerance"
+    const-string v2, "tolerance"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -354,7 +354,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "to_log"
+    const-string v4, "to_log"
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

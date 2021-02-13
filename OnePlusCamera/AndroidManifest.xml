@@ -119,6 +119,7 @@
         <activity android:exported="false" android:name="com.oneplus.camera.settings.WatermarkActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.AboutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.AgreementActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
+        <activity android:exported="false" android:name="com.oneplus.camera.settings.LegalActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.settings.LogSwitchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Android.Settings"/>
         <activity android:exported="false" android:name="com.oneplus.camera.FeatureEditorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.OnePlus.DayNight"/>
         <receiver android:exported="false" android:name="com.oneplus.camera.ui.QuickShareIntentSenderReceiver"/>

@@ -641,7 +641,7 @@
 
     :cond_2
     :goto_1
-    const v0, 0x7f040494
+    const v0, 0x7f040495
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -650,7 +650,7 @@
     goto :goto_3
 
     :cond_3
-    const v0, 0x7f040493
+    const v0, 0x7f040494
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -690,7 +690,7 @@
 
     :cond_6
     :goto_2
-    const v0, 0x7f040492
+    const v0, 0x7f040493
 
     invoke-static {p0, v0, v4, v6, v5}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -926,7 +926,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d007b
+    const v1, 0x7f0d007c
 
     const/4 v2, 0x0
 
@@ -942,7 +942,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->hintsContainer:Landroid/view/View;
 
-    const v0, 0x7f0a02bb
+    const v0, 0x7f0a02bc
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -952,7 +952,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->topMostHintsContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0211
+    const v0, 0x7f0a0212
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -962,7 +962,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/hint/TopHintPanelImpl;->primaryHintsContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0250
+    const v0, 0x7f0a0251
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

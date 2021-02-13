@@ -791,7 +791,7 @@
     invoke-virtual {p2, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_6
-    const p2, 0x7f0a0256
+    const p2, 0x7f0a0257
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/ui/ManualCaptureControlPanel;->findViewById(I)Landroid/view/View;
 
@@ -799,7 +799,7 @@
 
     if-eqz p2, :cond_7
 
-    const v4, 0x7f0a0257
+    const v4, 0x7f0a0258
 
     invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -807,7 +807,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    const v5, 0x7f0a0258
+    const v5, 0x7f0a0259
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -844,7 +844,7 @@
 
     invoke-direct {p2}, Lcom/oneplus/drawable/ShadowTextDrawable;-><init>()V
 
-    const v2, 0x7f1200e1
+    const v2, 0x7f1200d5
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1503,7 +1503,7 @@
 
     const-string v1, "context.getString(R.stri\u2026ual_capture_control_auto)"
 
-    const v2, 0x7f1200e1
+    const v2, 0x7f1200d5
 
     const/4 v3, 0x0
 
@@ -2054,7 +2054,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1200e2
+    const v1, 0x7f1200d6
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2239,7 +2239,7 @@
 
     new-array v11, v4, [I
 
-    const v12, 0x7f04028a
+    const v12, 0x7f04028b
 
     aput v12, v11, v5
 

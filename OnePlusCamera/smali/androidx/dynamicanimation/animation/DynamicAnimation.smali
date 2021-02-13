@@ -117,7 +117,7 @@
 
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$1;
 
-    const-string/jumbo v1, "translationX"
+    const-string v1, "translationX"
 
     invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$1;-><init>(Ljava/lang/String;)V
 
@@ -125,7 +125,7 @@
 
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$2;
 
-    const-string/jumbo v1, "translationY"
+    const-string v1, "translationY"
 
     invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$2;-><init>(Ljava/lang/String;)V
 
@@ -133,7 +133,7 @@
 
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$3;
 
-    const-string/jumbo v1, "translationZ"
+    const-string v1, "translationZ"
 
     invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$3;-><init>(Ljava/lang/String;)V
 

@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2709:1\n12#2,3:2710\n12#2,3:2713\n12#2,3:2716\n12#2,3:2719\n12#2,3:2722\n50#3,3:2725\n37#4,2:2728\n37#4,2:2730\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n856#1,3:2710\n859#1,3:2713\n878#1,3:2716\n881#1,3:2719\n888#1,3:2722\n895#1,3:2725\n1832#1,2:2728\n1858#1,2:2730\n*E\n"
+    value = "SMAP\nCaptureBarImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2710:1\n12#2,3:2711\n12#2,3:2714\n12#2,3:2717\n12#2,3:2720\n12#2,3:2723\n50#3,3:2726\n37#4,2:2729\n37#4,2:2731\n*E\n*S KotlinDebug\n*F\n+ 1 CaptureBarImpl.kt\ncom/oneplus/camera/ui/CaptureBarImpl\n*L\n856#1,3:2711\n859#1,3:2714\n878#1,3:2717\n881#1,3:2720\n888#1,3:2723\n895#1,3:2726\n1832#1,2:2729\n1858#1,2:2731\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -6216,6 +6216,10 @@
 
     if-eq v0, v4, :cond_1
 
+    const/4 v4, 0x5
+
+    if-eq v0, v4, :cond_1
+
     move v0, v2
 
     goto :goto_1
@@ -7990,7 +7994,7 @@
 
     if-eqz v0, :cond_4
 
-    const v2, 0x7f0a020e
+    const v2, 0x7f0a020f
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8000,7 +8004,7 @@
 
     if-eqz v2, :cond_3
 
-    const v4, 0x7f0a0210
+    const v4, 0x7f0a0211
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8008,7 +8012,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonTouchReceiver:Landroid/view/View;
 
-    const v4, 0x7f0a020d
+    const v4, 0x7f0a020e
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8036,7 +8040,7 @@
 
     iput-object v4, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonBackgroundContainer:Landroid/view/ViewGroup;
 
-    const v4, 0x7f0a020f
+    const v4, 0x7f0a0210
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -8248,7 +8252,7 @@
     :goto_2
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->primaryButtonContainer:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a024f
+    const v2, 0x7f0a0250
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8258,7 +8262,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->secondaryButton:Landroid/widget/ImageButton;
 
-    const v2, 0x7f0a0288
+    const v2, 0x7f0a0289
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -8266,7 +8270,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/CaptureBarImpl;->cameraSwitchButton:Landroid/view/View;
 
-    const v2, 0x7f0a01ea
+    const v2, 0x7f0a01eb
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

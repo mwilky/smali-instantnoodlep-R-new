@@ -19,43 +19,43 @@
 
 .field public static final coordinatorLayoutStyle:I = 0x7f04012e
 
-.field public static final font:I = 0x7f0401d7
+.field public static final font:I = 0x7f0401d8
 
-.field public static final fontProviderAuthority:I = 0x7f0401d9
+.field public static final fontProviderAuthority:I = 0x7f0401da
 
-.field public static final fontProviderCerts:I = 0x7f0401da
+.field public static final fontProviderCerts:I = 0x7f0401db
 
-.field public static final fontProviderFetchStrategy:I = 0x7f0401db
+.field public static final fontProviderFetchStrategy:I = 0x7f0401dc
 
-.field public static final fontProviderFetchTimeout:I = 0x7f0401dc
+.field public static final fontProviderFetchTimeout:I = 0x7f0401dd
 
-.field public static final fontProviderPackage:I = 0x7f0401dd
+.field public static final fontProviderPackage:I = 0x7f0401de
 
-.field public static final fontProviderQuery:I = 0x7f0401de
+.field public static final fontProviderQuery:I = 0x7f0401df
 
-.field public static final fontStyle:I = 0x7f0401df
+.field public static final fontStyle:I = 0x7f0401e0
 
-.field public static final fontVariationSettings:I = 0x7f0401e0
+.field public static final fontVariationSettings:I = 0x7f0401e1
 
-.field public static final fontWeight:I = 0x7f0401e1
+.field public static final fontWeight:I = 0x7f0401e2
 
-.field public static final keylines:I = 0x7f04024b
+.field public static final keylines:I = 0x7f04024c
 
-.field public static final layout_anchor:I = 0x7f04025a
+.field public static final layout_anchor:I = 0x7f04025b
 
-.field public static final layout_anchorGravity:I = 0x7f04025b
+.field public static final layout_anchorGravity:I = 0x7f04025c
 
-.field public static final layout_behavior:I = 0x7f04025c
+.field public static final layout_behavior:I = 0x7f04025d
 
-.field public static final layout_dodgeInsetEdges:I = 0x7f04025f
+.field public static final layout_dodgeInsetEdges:I = 0x7f040260
 
-.field public static final layout_insetEdge:I = 0x7f040260
+.field public static final layout_insetEdge:I = 0x7f040261
 
-.field public static final layout_keyline:I = 0x7f040261
+.field public static final layout_keyline:I = 0x7f040262
 
-.field public static final statusBarBackground:I = 0x7f040405
+.field public static final statusBarBackground:I = 0x7f040406
 
-.field public static final ttcIndex:I = 0x7f04049c
+.field public static final ttcIndex:I = 0x7f04049d
 
 
 # direct methods

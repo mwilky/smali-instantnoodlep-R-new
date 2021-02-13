@@ -1,359 +1,141 @@
-.class final Lz;
-.super Landroid/os/AsyncTask;
+.class public final Lz;
+.super Lde;
 .source "PG"
+
+# interfaces
+.implements Lei;
+
+
+# static fields
+.field public static final f:Lz;
 
 
 # instance fields
-.field private a:Laf$a;
+.field public a:I
 
-.field private b:Laf$a;
+.field public b:I
 
-.field private final synthetic c:Lx;
+.field public c:I
+
+.field public d:I
+
+.field public e:I
 
 
 # direct methods
-.method constructor <init>(Lx;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lz;->c:Lx;
+    new-instance v0, Lz;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {v0}, Lz;-><init>()V
+
+    sput-object v0, Lz;->f:Lz;
+
+    const-class v1, Lz;
+
+    invoke-static {v1, v0}, Lde;->a(Ljava/lang/Class;Lde;)V
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;)Laf$a;
-    .locals 7
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "uri"
-        }
-    .end annotation
+.method private constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lde;-><init>()V
 
-    :try_start_0
-    iget-object p0, p0, Lz;->c:Lx;
-
-    iget-object p0, p0, Lx;->c:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_5
-
-    :try_start_1
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    const/4 p0, 0x0
-
-    invoke-interface {v0, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    const/16 p1, 0xc
-
-    if-le p0, p1, :cond_1
-
-    move p0, p1
-
-    :cond_1
-    invoke-static {p0}, Laf$a;->a(I)Laf$a;
-
-    move-result-object p1
-
-    if-nez p1, :cond_3
-
-    sget-object p0, Laf$a;->g:Laf$a;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    return-object p0
-
-    :cond_3
-    :try_start_2
-    invoke-static {p0}, Laf$a;->a(I)Laf$a;
-
-    move-result-object p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_4
-    return-object p0
-
-    :cond_5
-    :goto_0
-    :try_start_3
-    sget-object p0, Laf$a;->c:Laf$a;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_6
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    :try_start_4
-    const-string p1, "LensSdkParamsReader"
-
-    const-string v1, "Failed to start Lens due to unexpected exception."
-
-    invoke-static {p1, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    sget-object p0, Laf$a;->c:Laf$a;
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    return-object p0
-
-    :goto_1
-    if-eqz v0, :cond_7
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_7
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "params"
-        }
-    .end annotation
+.method protected final a(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object p1, Lx;->a:Ljava/lang/String;
+    add-int/lit8 p1, p1, -0x1
 
-    invoke-direct {p0, p1}, Lz;->a(Ljava/lang/String;)Laf$a;
+    const/4 p0, 0x1
 
-    move-result-object p1
+    if-eqz p1, :cond_4
 
-    iput-object p1, p0, Lz;->a:Laf$a;
+    if-eq p1, p0, :cond_3
 
-    sget-object p1, Lx;->b:Ljava/lang/String;
+    const/4 p2, 0x4
 
-    invoke-direct {p0, p1}, Lz;->a(Ljava/lang/String;)Laf$a;
+    const/4 v0, 0x3
 
-    move-result-object p1
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Lz;->b:Laf$a;
+    if-eq p1, v1, :cond_2
 
-    const/4 p0, 0x0
+    if-eq p1, v0, :cond_1
+
+    if-eq p1, p2, :cond_0
+
+    sget-object p0, Lz;->f:Lz;
 
     return-object p0
-.end method
 
-.method protected final synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "result"
-        }
-    .end annotation
+    :cond_0
+    new-instance p0, Ly;
 
-    iget-object p1, p0, Lz;->a:Laf$a;
+    invoke-direct {p0}, Ly;-><init>()V
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return-object p0
 
-    move-result-object p1
+    :cond_1
+    new-instance p0, Lz;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {p0}, Lz;-><init>()V
 
-    move-result-object v0
+    return-object p0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    :cond_2
+    const/4 p1, 0x5
 
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x19
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Lens availability result:"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lz;->b:Laf$a;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1d
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Stickers availability result:"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lz;->c:Lx;
-
-    iget-object v0, p1, Lx;->e:Laf;
-
-    sget v1, Lby$e;->e:I
+    new-array p1, p1, [Ljava/lang/Object;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lby;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    const-string v3, "a"
 
-    move-result-object v1
+    aput-object v3, p1, v2
 
-    check-cast v1, Lby$b;
+    const-string v2, "b"
 
-    invoke-virtual {v1, v0}, Lby$b;->a(Lby;)Lby$b;
+    aput-object v2, p1, p0
 
-    check-cast v1, Lby$b;
+    const-string p0, "c"
 
-    iget-object v0, p0, Lz;->a:Laf$a;
+    aput-object p0, p1, v1
 
-    invoke-virtual {v1, v0}, Lby$b;->a(Laf$a;)Lby$b;
+    const-string p0, "d"
 
-    move-result-object v0
+    aput-object p0, p1, v0
 
-    iget-object v1, p0, Lz;->b:Laf$a;
+    const-string p0, "e"
 
-    invoke-virtual {v0, v1}, Lby$b;->b(Laf$a;)Lby$b;
+    aput-object p0, p1, p2
 
-    move-result-object v0
+    sget-object p0, Lz;->f:Lz;
 
-    invoke-virtual {v0}, Lby$b;->f()Ldh;
+    const-string p2, "\u0001\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1004\u0000\u0002\u1004\u0001\u0003\u1004\u0002\u0004\u1004\u0003"
 
-    move-result-object v0
+    invoke-static {p0, p2, p1}, Lz;->a(Leh;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Lby;
+    move-result-object p0
 
-    check-cast v0, Laf;
+    return-object p0
 
-    iput-object v0, p1, Lx;->e:Laf;
+    :cond_3
+    const/4 p0, 0x0
 
-    iget-object p1, p0, Lz;->c:Lx;
+    return-object p0
 
-    const/4 v0, 0x1
+    :cond_4
+    invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    iput-boolean v0, p1, Lx;->f:Z
+    move-result-object p0
 
-    iget-object p1, p1, Lx;->d:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Laa;
-
-    iget-object v1, p0, Lz;->c:Lx;
-
-    iget-object v1, v1, Lx;->e:Laf;
-
-    invoke-interface {v0, v1}, Laa;->a(Laf;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lz;->c:Lx;
-
-    iget-object p0, p0, Lx;->d:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->clear()V
-
-    return-void
+    return-object p0
 .end method

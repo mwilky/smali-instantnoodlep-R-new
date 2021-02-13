@@ -38,7 +38,7 @@
     <string name="agree">ಒಪ್ಪಿಕೊಳ್ಳುತ್ತೇನೆ</string>
     <string name="app_name">ಕ್ಯಾಮೆರಾ</string>
     <string name="app_name_video">ಕ್ಯಾಮ್‌ಕಾರ್ಡರ್</string>
-    <string name="auto">ಆಟೊ</string>
+    <string name="auto">ಸ್ವಯಂ</string>
     <string name="bokeh_hint">ಆಳವಾದ ಪರಿಣಾಮ</string>
     <string name="bokeh_hint_camera_is_covered">ಕ್ಯಾಮರಾಗೆ ಅಡಚಣೆ ಎದುರಾಗಿದೆ</string>
     <string name="bokeh_hint_low_light">ಹೆಚ್ಚಿನ ಬೆಳಕು ಅಗತ್ಯವಿದೆ</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್</string>
     <string name="filter_mono">ಮೊನೊ</string>
     <string name="filter_night">ರಾತ್ರಿ</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="filter_pop">ವಿಭಿನ್ನ</string>
     <string name="filter_portrait">ಪೊರ್ಟ್ರೈಟ್</string>
@@ -126,7 +132,7 @@
     <string name="macro_enabled">ಸೂಪರ್ ಮ್ಯಾಕ್ರೋ</string>
     <string name="macro_flash_disabled">ಮ್ಯಾಕ್ರೋ ಮೋಡ್‌ನಲ್ಲಿ ಫ್ಲ್ಯಾಶ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="macro_hint">ಶಿಫಾರಸು ಮಾಡಿದ ಶೂಟಿಂಗ್ ದೂರ 1-1.5 ಇಂಚುಗಳು</string>
-    <string name="manual_capture_control_auto">ಆಟೊ</string>
+    <string name="manual_capture_control_auto">ಸ್ವಯಂ</string>
     <string name="manual_capture_control_manual">ಮ್ಯಾನ್ಯುವಲ್</string>
     <string name="manual_capture_long_exposure_tips">ಸೆರೆಹಿಡಿಯಲಾಗುತ್ತಿದೆ</string>
     <string name="manual_mode_custom_setting_saved">ಉಳಿಸಲಾಗಿದೆ</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">ಯಾವುದೇ ಪಠ್ಯ ಇನ್‌ಪುಟ್ ಇಲ್ಲ; ವಾಟರ್‌ಮಾರ್ಕ್‌ನಲ್ಲಿ ಹೆಸರನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="settings_watermark_summary">ಫೋಟೋಗಳು, ಪೋರ್ಟ್ರೇಟ್, ಪ್ರೋ ಮತ್ತು ನೈಟ್‌ಸ್ಕೇಪ್ ಮೋಡ್‌ಗಳು ಸೇರಿದಂತೆ ಹಿಂಬದಿ ಕ್ಯಾಮರಾದಿಂದ ತೆಗೆಯಲಾದ ಫೋಟೋಗಳಿಗೆ ವಾಟರ್‌ಮಾರ್ಕ್ ಅನ್ನು ಅನ್ವಯಿಸಲಾಗುತ್ತದೆ</string>
     <string name="settings_watermark_summary_8250">ಫೋಟೋಗಳು, ಪೋರ್ಟ್ರೇಟ್, ಪ್ರೋ ಮತ್ತು ನೈಟ್‌ಸ್ಕೇಪ್ ಮೋಡ್‌ಗಳು ಸೇರಿದಂತೆ ಹಿಂಬದಿ ಕ್ಯಾಮರಾದಿಂದ ತೆಗೆಯಲಾದ ಫೋಟೋಗಳಿಗೆ ವಾಟರ್‌ಮಾರ್ಕ್ ಅನ್ನು ಅನ್ವಯಿಸಲಾಗುತ್ತದೆ</string>
+    <string name="settings_watermark_timestamp">ಸಮಯ</string>
     <string name="settings_watermark_title">Shot on OnePlus ವಾಟರ್‌ಮಾರ್ಕ್</string>
     <string name="settings_wide_lens_distortion_correction">ಅಲ್ಟ್ರಾ ವೈಡ್ ಲೆನ್ಸ್ ಸರಿಪಡಿಸುವಿಕೆ</string>
     <string name="show_kill_apps_processing_dialog">ತೆರವುಗೊಳಿಸಲಾಗುತ್ತಿದೆ</string>

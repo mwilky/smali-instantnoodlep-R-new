@@ -122,13 +122,13 @@
 
     invoke-direct {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f1200db
+    const v0, 0x7f1200cf
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f1200da
+    const v0, 0x7f1200ce
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -146,7 +146,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f1200d9
+    const p1, 0x7f1200cd
 
     sget-object v0, Lcom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1$dialog$2;->INSTANCE:Lcom/oneplus/camera/settings/SettingsFragment$onPreferenceLoaded$5$1$1$dialog$2;
 

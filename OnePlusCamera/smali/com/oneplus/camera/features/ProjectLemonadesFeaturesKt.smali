@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,6:1\n112#2,2:7\n114#2,2:11\n116#2,2:14\n13#3,2:9\n15#3:13\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:7\n3#1,2:11\n3#1,2:14\n3#1,2:9\n3#1:13\n*E\n"
+    value = "SMAP\nProjectLemonadesFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,9:1\n112#2,2:10\n114#2,2:14\n116#2,2:17\n13#3,2:12\n15#3:16\n*E\n*S KotlinDebug\n*F\n+ 1 ProjectLemonadesFeatures.kt\ncom/oneplus/camera/features/ProjectLemonadesFeaturesKt\n*L\n3#1,2:10\n3#1,2:14\n3#1,2:17\n3#1,2:12\n3#1:16\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -33,7 +33,7 @@
 
 # direct methods
 .method public static final initializeLemonadesFeatures()V
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/oneplus/camera/features/FeatureInitializer;
 
@@ -44,6 +44,20 @@
     move-result-wide v1
 
     const/4 v3, 0x1
+
+    const-string v4, "Filter.IsNightCityAndNorthCaliforniaEnabled"
+
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v4, "FloatingButtonUI.CheckFocusStateOfUWCamera"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v4, "NightCaptureMode.IsFilterEnabled"
+
+    invoke-virtual {v0, v4, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v4, "ObjectTracking.IsEnabled"
 

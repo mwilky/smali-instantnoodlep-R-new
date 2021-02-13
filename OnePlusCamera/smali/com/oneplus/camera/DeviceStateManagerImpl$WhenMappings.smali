@@ -50,13 +50,25 @@
 
     sget-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl$WhenMappings;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->STOPPED:Lcom/oneplus/base/BaseActivity$State;
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->RESUMING:Lcom/oneplus/base/BaseActivity$State;
 
     invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
 
     move-result v1
 
     const/4 v2, 0x2
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/DeviceStateManagerImpl$WhenMappings;->$EnumSwitchMapping$0:[I
+
+    sget-object v1, Lcom/oneplus/base/BaseActivity$State;->STOPPED:Lcom/oneplus/base/BaseActivity$State;
+
+    invoke-virtual {v1}, Lcom/oneplus/base/BaseActivity$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
 
     aput v2, v0, v1
 

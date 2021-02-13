@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPHdrCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$Builder\n*L\n1#1,372:1\n*E\n"
+    value = "SMAP\nOPHdrCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHdrCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl$Builder\n*L\n1#1,376:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -71,7 +71,7 @@
 
 # virtual methods
 .method public build(Lcom/oneplus/camera/next/hardware/Camera;)Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl;
-    .locals 4
+    .locals 6
 
     const-string p0, "camera"
 
@@ -95,21 +95,21 @@
 
     if-gez p0, :cond_0
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_0
     instance-of p0, p1, Lcom/oneplus/camera/next/hardware/camera2/Camera2;
 
     if-nez p0, :cond_1
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_1
     instance-of p0, p1, Lcom/oneplus/camera/hardware/OPCameraCore;
 
     if-nez p0, :cond_2
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_2
     move-object p0, p1
@@ -126,7 +126,7 @@
 
     if-eqz v1, :cond_3
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_3
     invoke-interface {p0}, Lcom/oneplus/camera/hardware/OPCameraCore;->getPersistentCache()Lcom/oneplus/cache/PersistentBundle;
@@ -145,7 +145,7 @@
 
     move-result p0
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
     move-object v1, p1
@@ -160,32 +160,32 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    const/4 v4, 0x0
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {v1, v3, v5}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->get(Landroid/hardware/camera2/CameraCharacteristics;Landroid/hardware/camera2/CameraCharacteristics$Key;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Integer;
+    check-cast v1, Ljava/lang/Number;
 
-    if-nez v1, :cond_5
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_5
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
+    move v1, v4
 
     :goto_0
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v1, 0x0
-
-    :goto_1
     invoke-interface {p0}, Lcom/oneplus/camera/hardware/OPCameraCore;->getPersistentCache()Lcom/oneplus/cache/PersistentBundle;
 
     move-result-object p0
@@ -194,8 +194,8 @@
 
     move p0, v1
 
-    :goto_2
-    if-eqz p0, :cond_7
+    :goto_1
+    if-eqz p0, :cond_6
 
     new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl;
 
@@ -203,8 +203,8 @@
 
     invoke-direct {v0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHdrCamcorderImpl;-><init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
 
-    :cond_7
-    :goto_3
+    :cond_6
+    :goto_2
     return-object v0
 .end method
 

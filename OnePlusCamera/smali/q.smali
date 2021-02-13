@@ -1,35 +1,18 @@
 .class public final Lq;
-.super Ljava/lang/Object;
+.super Lda;
 .source "PG"
 
-
-# static fields
-.field public static final a:Lbo;
+# interfaces
+.implements Lei;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
-    sget-object v0, Ln;->c:Ln;
+    sget-object v0, Lr;->a:Lr;
 
-    sget-object v1, Lp;->c:Lp;
-
-    sget-object v2, Lp;->c:Lp;
-
-    sget-object v5, Lex;->k:Lex;
-
-    const-class v6, Lp;
-
-    const/4 v3, 0x0
-
-    const v4, 0x9198309
-
-    invoke-static/range {v0 .. v6}, Lby;->a(Ldh;Ljava/lang/Object;Ldh;Lcg;ILex;Ljava/lang/Class;)Lbo;
-
-    move-result-object v0
-
-    sput-object v0, Lq;->a:Lbo;
+    invoke-direct {p0, v0}, Lda;-><init>(Lde;)V
 
     return-void
 .end method

@@ -1,90 +1,125 @@
-.class final Lau;
+.class final synthetic Lau;
 .super Ljava/lang/Object;
-.source "PG"
+
+# interfaces
+.implements Lai;
 
 
-# static fields
-.field public static final a:Ljava/lang/Class;
-
-.field private static final b:Z
+# instance fields
+.field private final a:Lba;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lba;)V
+    .locals 0
 
-    const-string v0, "libcore.io.Memory"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lau;->a(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Lau;->a:Ljava/lang/Class;
-
-    const-string v0, "org.robolectric.Robolectric"
-
-    invoke-static {v0}, Lau;->a(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lau;->b:Z
+    iput-object p1, p0, Lau;->a:Lba;
 
     return-void
 .end method
 
-.method private static a(Ljava/lang/String;)Ljava/lang/Class;
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "name"
-        }
-    .end annotation
 
-    :try_start_0
-    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+# virtual methods
+.method public final a(Lbi;)V
+    .locals 4
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v0, "LensServiceConnImpl"
 
-    return-object p0
+    iget-object p0, p0, Lau;->a:Lba;
 
-    :catchall_0
-    const/4 p0, 0x0
+    iget v1, p1, Lbi;->d:I
 
-    return-object p0
-.end method
+    invoke-static {v1}, Lbh;->a(I)I
 
-.method static a()Z
-    .locals 1
+    move-result v1
 
-    sget-object v0, Lau;->a:Ljava/lang/Class;
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    sget-boolean v0, Lau;->b:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    sget v1, Lbh;->a:I
 
     :cond_0
-    const/4 v0, 0x0
+    sget v2, Lbh;->b:I
 
-    return v0
+    if-ne v1, v2, :cond_2
+
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v1, "com.google.android.apps.gsa.publicsearch.IPublicSearchService"
+
+    invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "com.google.android.googlequicksearchbox"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 v1, 0x7
+
+    :try_start_0
+    iget-object v2, p0, Lba;->b:Landroid/content/Context;
+
+    const/16 v3, 0x41
+
+    invoke-virtual {v2, p1, p0, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const-string p1, "Unable to bind Lens service."
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget p1, Lbh;->j:I
+
+    iput p1, p0, Lba;->h:I
+
+    invoke-virtual {p0, v1}, Lba;->a(I)V
+
+    return-void
+
+    :cond_1
+    const/4 p1, 0x3
+
+    invoke-virtual {p0, p1}, Lba;->a(I)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v2, "Unable to bind Lens service due to security exception."
+
+    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    sget p1, Lbh;->j:I
+
+    iput p1, p0, Lba;->h:I
+
+    invoke-virtual {p0, v1}, Lba;->a(I)V
+
+    return-void
+
+    :cond_2
+    iget p1, p1, Lbi;->d:I
+
+    invoke-static {p1}, Lbh;->a(I)I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    sget p1, Lbh;->a:I
+
+    :cond_3
+    iput p1, p0, Lba;->h:I
+
+    const/4 p1, 0x6
+
+    invoke-virtual {p0, p1}, Lba;->a(I)V
+
+    return-void
 .end method

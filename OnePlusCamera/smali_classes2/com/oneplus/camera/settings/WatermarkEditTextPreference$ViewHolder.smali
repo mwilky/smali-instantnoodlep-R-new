@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nWatermarkEditTextPreference.kt\nKotlin\n*S Kotlin\n*F\n+ 1 WatermarkEditTextPreference.kt\ncom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder\n*L\n1#1,157:1\n*E\n"
+    value = "SMAP\nWatermarkEditTextPreference.kt\nKotlin\n*S Kotlin\n*F\n+ 1 WatermarkEditTextPreference.kt\ncom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder\n*L\n1#1,158:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -92,7 +92,7 @@
 
     check-cast p1, Landroid/widget/EditText;
 
-    const v0, 0x7f1201b3
+    const v0, 0x7f1201a8
 
     if-eqz p1, :cond_0
 
@@ -129,6 +129,10 @@
     check-cast v1, Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p1, v1}, Landroid/widget/EditText;->setImeOptions(I)V
 
     new-instance v1, Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder$$special$$inlined$apply$lambda$1;
 
@@ -206,7 +210,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder;->this$0:Lcom/oneplus/camera/settings/WatermarkEditTextPreference;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->getBrandText()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->getCustomNameText()Ljava/lang/String;
 
     move-result-object v0
 

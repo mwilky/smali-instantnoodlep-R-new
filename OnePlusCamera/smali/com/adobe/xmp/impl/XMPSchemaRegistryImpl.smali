@@ -174,7 +174,7 @@
 
     const-string v5, "http://purl.org/dc/elements/1.1/"
 
-    const-string/jumbo v6, "title"
+    const-string v6, "title"
 
     invoke-virtual/range {v2 .. v7}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerAlias(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/AliasOptions;)V
 
@@ -268,7 +268,7 @@
 
     const-string v6, "http://purl.org/dc/elements/1.1/"
 
-    const-string/jumbo v7, "title"
+    const-string v7, "title"
 
     invoke-virtual/range {v3 .. v8}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;->registerAlias(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/AliasOptions;)V
 
@@ -336,7 +336,7 @@
 
     const-string v6, "http://purl.org/dc/elements/1.1/"
 
-    const-string/jumbo v7, "title"
+    const-string v7, "title"
 
     move-object v3, p0
 
@@ -496,7 +496,7 @@
 
     const-string v6, "http://purl.org/dc/elements/1.1/"
 
-    const-string/jumbo v7, "title"
+    const-string v7, "title"
 
     move-object v3, p0
 

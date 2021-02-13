@@ -37,7 +37,7 @@
     <string name="content_description_face_beauty">Kecantikan muka</string>
     <string name="content_description_flash">Denyar</string>
     <string name="content_description_gallery">Galeri</string>
-    <string name="content_description_hyper_image_stabilization">Super Stable</string>
+    <string name="content_description_hyper_image_stabilization">Super Stabil</string>
     <string name="content_description_picture_format">Format Gambar</string>
     <string name="content_description_resolution">Resolusi</string>
     <string name="content_description_self_timer">Pemasa</string>
@@ -67,6 +67,12 @@
     <string name="filter_landscape">Landskap</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Malam</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Tiada</string>
     <string name="filter_pop">Terang</string>
     <string name="filter_portrait">Potret</string>
@@ -85,7 +91,7 @@
     <string name="full_size_picutre_enabled_hint">48MP memberikan resolusi yang lebih tinggi dan menangkap perincian dalam senario yang cerah</string>
     <string name="full_size_picutre_enabled_hint_64mp">64MP memberikan resolusi yang lebih tinggi dan menangkap perincian dalam senario yang cerah</string>
     <string name="handshake_detected">Gegaran yang kuat boleh menyebabkan foto menjadi kabur</string>
-    <string name="hyper_image_stabilization_enabled">Super Stable</string>
+    <string name="hyper_image_stabilization_enabled">Super Stabil</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">Zum kamera dinyahdayakan dalam Super Stable</string>
     <string name="lens_stain_detected">Lensa mungkin kotor, cuba bersihkan ia untuk kualiti gambar yang lebih baik</string>
     <string name="loading_text">Memuatkan...</string>
@@ -150,7 +156,7 @@
     <string name="select_minutes">Pilih minit</string>
     <string name="select_year">Pilih tahun</string>
     <string name="settings">Seting</string>
-    <string name="settings_about">Perihal</string>
+    <string name="settings_about">Tentang</string>
     <string name="settings_about_agreement">Perjanjian Pengguna</string>
     <string name="settings_about_copyright">"OnePlus Hak Cipta Terpelihara
 @2017 OnePlus inc."</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">Tiada input teks; tidak dapat simpan nama dalam tera air.</string>
     <string name="settings_watermark_summary">Tera air akan digunakan pada foto yang diambil kamera belakang, termasuk mod Foto, Potret, Pro dan Pemandangan malam</string>
     <string name="settings_watermark_summary_8250">Tera air akan digunakan pada foto yang diambil kamera belakang, termasuk mod Foto, Potret, Pro dan Pemandangan malam</string>
+    <string name="settings_watermark_timestamp">Masa</string>
     <string name="settings_watermark_title">Tera air Shot On OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Pembetulan Lensa Ultra Lebar</string>
     <string name="show_kill_apps_processing_dialog">Sedang mengosongkan</string>

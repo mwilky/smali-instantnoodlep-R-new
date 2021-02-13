@@ -270,7 +270,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f120069
+    const v0, 0x7f12005a
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1177,7 +1177,7 @@
 
     if-gtz v5, :cond_4
 
-    const v8, 0x7f0804ea
+    const v8, 0x7f0804df
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1186,7 +1186,7 @@
     goto :goto_4
 
     :cond_4
-    const v8, 0x7f0804e8
+    const v8, 0x7f0804dd
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2135,7 +2135,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120095
+    const v0, 0x7f120086
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/BokehCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -2624,7 +2624,7 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v4
 

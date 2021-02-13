@@ -96,6 +96,12 @@
     <string name="filter_landscape">Manzara</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Gece</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Yok</string>
     <string name="filter_pop">Canlı</string>
     <string name="filter_portrait">Portre</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Metin girişi yok; ad filigrana kaydedilemiyor.</string>
     <string name="settings_watermark_summary">Fotoğraf, Portre, Pro ve Gece manzarası modları dahil, arka kamera ile çekilen fotoğraflara filigran uygulanır</string>
     <string name="settings_watermark_summary_8250">Fotoğraf, Portre, Pro ve Gece manzarası modları dahil, arka kamera ile çekilen fotoğraflara filigran uygulanır</string>
+    <string name="settings_watermark_timestamp">Zaman</string>
     <string name="settings_watermark_title">Shot on OnePlus filigranı</string>
     <string name="settings_wide_lens_distortion_correction">Ultra Geniş Mercek Düzeltme</string>
     <string name="show_kill_apps_processing_dialog">Temizleniyor</string>

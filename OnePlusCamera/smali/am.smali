@@ -1,41 +1,43 @@
-.class public final Lam;
+.class public final synthetic Lam;
 .super Ljava/lang/Object;
-.source "PG"
+
+# interfaces
+.implements Lap;
 
 
 # instance fields
-.field public a:Landroid/graphics/Bitmap;
+.field private final a:Laq;
 
-.field public b:Ljava/lang/Long;
+.field private final b:Lap;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Laq;Lap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lam;->a:Laq;
+
+    iput-object p2, p0, Lam;->b:Lap;
+
     return-void
-.end method
-
-.method public static a()Lao;
-    .locals 1
-
-    new-instance v0, Lao;
-
-    invoke-direct {v0}, Lao;-><init>()V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b()Lao;
-    .locals 1
+.method public final a(I)V
+    .locals 0
 
-    new-instance v0, Lao;
+    iget-object p1, p0, Lam;->a:Laq;
 
-    invoke-direct {v0, p0}, Lao;-><init>(Lam;)V
+    iget-object p0, p0, Lam;->b:Lap;
 
-    return-object v0
+    invoke-virtual {p1}, Laq;->g()I
+
+    move-result p1
+
+    invoke-interface {p0, p1}, Lap;->a(I)V
+
+    return-void
 .end method

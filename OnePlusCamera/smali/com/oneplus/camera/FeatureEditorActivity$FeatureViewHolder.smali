@@ -98,7 +98,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/FeatureEditorActivity$FeatureViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a025f
+    const p2, 0x7f0a0260
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/FeatureEditorActivity$FeatureViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a02b0
+    const p2, 0x7f0a02b1
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureRateActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureRateActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem\n*L\n1#1,258:1\n*E\n"
+    value = "SMAP\nVideoCaptureRateActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureRateActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem\n*L\n1#1,226:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -166,13 +166,9 @@
 
     const-string v2, "drawable"
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_4
 
     const/16 v3, 0x3c
-
-    if-eq v0, v3, :cond_4
-
-    const/16 v3, 0x78
 
     if-eq v0, v3, :cond_1
 
@@ -197,13 +193,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_120fps_no_background"
+    const-string v0, "icon_sub_panel_video_capture_rate_60fps_no_background"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -238,13 +234,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_120fps"
+    const-string v0, "icon_sub_panel_video_capture_rate_60fps"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -273,13 +269,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_120fps_disabled"
+    const-string v0, "icon_sub_panel_video_capture_rate_60fps_disabled"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -302,7 +298,7 @@
     :goto_1
     move-object v1, p0
 
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_4
     and-int/lit8 p1, p1, 0x1
@@ -315,13 +311,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_60fps_no_background"
+    const-string v0, "icon_sub_panel_video_capture_rate_30fps_no_background"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -341,7 +337,7 @@
 
     move-result-object v1
 
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_5
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->isIconEnabled()Z
@@ -356,13 +352,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_60fps"
+    const-string v0, "icon_sub_panel_video_capture_rate_30fps"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -391,13 +387,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_capture_rate_60fps_disabled"
+    const-string v0, "icon_sub_panel_video_capture_rate_30fps_disabled"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_7
 
     check-cast p1, Ljava/lang/Number;
 
@@ -420,127 +416,12 @@
     goto :goto_1
 
     :cond_7
-    and-int/lit8 p1, p1, 0x1
-
-    if-nez p1, :cond_8
-
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_capture_rate_30fps_no_background"
-
-    invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_a
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->isIconEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_9
-
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_capture_rate_30fps"
-
-    invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_a
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    goto/16 :goto_1
-
-    :cond_9
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_capture_rate_30fps_disabled"
-
-    invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_a
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoCaptureRateActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    goto/16 :goto_1
-
-    :cond_a
     :goto_2
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_8
 
     goto :goto_3
 
-    :cond_b
+    :cond_8
     new-instance p0, Lcom/oneplus/drawable/EmptyDrawable;
 
     invoke-direct {p0}, Lcom/oneplus/drawable/EmptyDrawable;-><init>()V

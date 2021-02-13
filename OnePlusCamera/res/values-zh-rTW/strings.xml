@@ -99,7 +99,10 @@
     <string name="filter_landscape">風景</string>
     <string name="filter_mono">黑白</string>
     <string name="filter_night">夜晚</string>
+    <string name="filter_night_black_gold">黑金</string>
     <string name="filter_night_city">夜之城</string>
+    <string name="filter_night_cyberpunk">粉青</string>
+    <string name="filter_night_teal_orange">黃藍</string>
     <string name="filter_none">標準</string>
     <string name="filter_north_california">加州北部</string>
     <string name="filter_pop">鮮艷</string>
@@ -271,6 +274,7 @@
     <string name="settings_watermark_name_empty_dialog">無法儲存空白名稱至浮水印。</string>
     <string name="settings_watermark_summary">使用後鏡頭、人像模式、專業模式和夜景模式拍照時加上 Shot on OnePlus 浮水印</string>
     <string name="settings_watermark_summary_8250">使用後鏡頭、人像模式、專業模式和夜景模式拍照時加上 Shot on OnePlus 浮水印</string>
+    <string name="settings_watermark_timestamp">時間</string>
     <string name="settings_watermark_title">Shot on OnePlus 浮水印</string>
     <string name="settings_wide_lens_distortion_correction">超廣角變形修正</string>
     <string name="show_kill_apps_processing_dialog">背景應用清除中...</string>

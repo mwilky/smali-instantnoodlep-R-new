@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,632:1\n112#2,2:633\n114#2,2:637\n116#2,2:640\n13#3,2:635\n15#3:639\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:633\n3#1,2:637\n3#1,2:640\n3#1,2:635\n3#1:639\n*E\n"
+    value = "SMAP\nBaseFeatures.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n+ 2 FeatureInitializer.kt\ncom/oneplus/camera/features/FeatureInitializerKt\n+ 3 Timing.kt\nkotlin/system/TimingKt\n*L\n1#1,635:1\n112#2,2:636\n114#2,2:640\n116#2,2:643\n13#3,2:638\n15#3:642\n*E\n*S KotlinDebug\n*F\n+ 1 BaseFeatures.kt\ncom/oneplus/camera/features/BaseFeaturesKt\n*L\n3#1,2:636\n3#1,2:640\n3#1,2:643\n3#1,2:638\n3#1:642\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -683,13 +683,19 @@
 
     invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
+    const-string v13, "FaceRenderer.FaceFrameExtension.Top"
+
+    const-wide v14, 0x3ff4cccccccccccdL    # 1.3
+
+    invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
+
     const-string v13, "FaceRenderer.FaceFrameTimeout"
 
     invoke-virtual {v0, v13, v8}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
 
     const-string v13, "FaceRenderer.FaceSizeScale"
 
-    const-wide v14, 0x3ff4cccccccccccdL    # 1.3
+    const-wide v14, 0x3ff3333333333333L    # 1.2
 
     invoke-virtual {v0, v13, v14, v15}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;D)V
 
@@ -708,6 +714,10 @@
     const/16 v14, 0x7530
 
     invoke-virtual {v0, v13, v14}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;I)V
+
+    const-string v13, "Filter.IsNightCityAndNorthCaliforniaEnabled"
+
+    invoke-virtual {v0, v13, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v13, "FilterPanel.CollapsingDuration"
 
@@ -1100,6 +1110,10 @@
     invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 
     const-string v5, "NightCaptureMode.EnableByDefault"
+
+    invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
+
+    const-string v5, "NightCaptureMode.IsFilterEnabled"
 
     invoke-virtual {v0, v5, v3}, Lcom/oneplus/camera/features/FeatureInitializer;->set(Ljava/lang/String;Z)V
 

@@ -37,7 +37,7 @@
     <string name="content_description_face_beauty">பேஸ் பியூட்டி</string>
     <string name="content_description_flash">ஃபிளாஷ்</string>
     <string name="content_description_gallery">கேலரி</string>
-    <string name="content_description_hyper_image_stabilization">Super Stable</string>
+    <string name="content_description_hyper_image_stabilization">சூப்பர் ஸ்டேபிள்</string>
     <string name="content_description_picture_format">பட வடிவமைப்பு</string>
     <string name="content_description_resolution">தெளிவுத்திறன்</string>
     <string name="content_description_self_timer">டைமர்</string>
@@ -67,6 +67,12 @@
     <string name="filter_landscape">நிலப்பரப்பு</string>
     <string name="filter_mono">மோனோ</string>
     <string name="filter_night">இரவு</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">இல்லை</string>
     <string name="filter_pop">தெளிவு</string>
     <string name="filter_portrait">போர்ட்ரைட்</string>
@@ -85,7 +91,7 @@
     <string name="full_size_picutre_enabled_hint">48MP உயர்ந்த தெளிவுத்திறனை வழங்குகிறது மற்றும் நன்கு ஒளிரும் காட்சிகளின் விவரங்களைப் படம்பிடிக்கிறது</string>
     <string name="full_size_picutre_enabled_hint_64mp">64MP உயர்ந்த பிரிதிறனை வழங்குகிறது மற்றும் நன்கு ஒளிரும் காட்சிகளின் விவரங்களைப் படம்பிடிக்கிறது</string>
     <string name="handshake_detected">அதிகமாக அசைப்பது மங்கலான புகைப்படங்களை ஏற்படுத்தக்கூடும்</string>
-    <string name="hyper_image_stabilization_enabled">Super Stable</string>
+    <string name="hyper_image_stabilization_enabled">சூப்பர் ஸ்டேபிள்</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">Super Stable பயன்முறையில் கேமராவை ஜூம் செய்யும் அம்சம் முடக்கப்பட்டுள்ளது</string>
     <string name="lens_stain_detected">லென்ஸ் அழுக்காக இருக்கலாம், படத் தரத்தை அதிகரிக்க அதை சுத்தம் செய்துவிட்டு மீண்டும் முயற்சிக்கவும்</string>
     <string name="loading_text">ஏற்றுகிறது...</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">உரை உள்ளீடு இல்லை; வாட்டர்மார்க்கில் பெயரைச் சேமிக்க முடியவில்லை.</string>
     <string name="settings_watermark_summary">பின்பக்க கேமராவைப் பயன்படுத்தி புகைப்படம், போர்ட்ரெய்ட், புரோ, Nightscape பயன்முறைகளில் எடுக்கப்படும் படங்களுக்கு வாட்டர்மார்க் பயன்படுத்தப்படும்</string>
     <string name="settings_watermark_summary_8250">பின்பக்க கேமராவைப் பயன்படுத்தி புகைப்படம், போர்ட்ரெய்ட், புரோ, Nightscape பயன்முறைகளில் எடுக்கப்படும் படங்களுக்கு வாட்டர்மார்க் பயன்படுத்தப்படும்</string>
+    <string name="settings_watermark_timestamp">நேரம்</string>
     <string name="settings_watermark_title">“Shot on OnePlus\" வாட்டர்மார்க்</string>
     <string name="settings_wide_lens_distortion_correction">அல்ட்ரா வைட் லென்ஸ் கரெக்ஷன்</string>
     <string name="show_kill_apps_processing_dialog">அழிக்கிறது</string>

@@ -79,7 +79,7 @@
 
     const/4 v0, 0x0
 
-    const-string/jumbo v1, "transitionVisibilityMode"
+    const-string v1, "transitionVisibilityMode"
 
     invoke-static {p1, p2, v1, v0, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 

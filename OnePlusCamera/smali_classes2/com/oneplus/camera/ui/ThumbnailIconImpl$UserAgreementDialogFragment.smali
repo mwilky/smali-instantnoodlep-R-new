@@ -20,7 +20,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment\n*L\n1#1,3984:1\n*E\n"
+    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment\n*L\n1#1,4111:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -94,13 +94,13 @@
 
     invoke-static {p1, v0}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p1, 0x7f120139
+    const p1, 0x7f12012d
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const v0, 0x7f120138
+    const v0, 0x7f12012c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment;->getString(I)Ljava/lang/String;
 
@@ -193,7 +193,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120056
+    const v0, 0x7f120047
 
     new-instance v1, Lcom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment$onCreateDialog$2;
 
@@ -205,7 +205,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f120090
+    const p1, 0x7f120081
 
     sget-object v0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment$onCreateDialog$3;->INSTANCE:Lcom/oneplus/camera/ui/ThumbnailIconImpl$UserAgreementDialogFragment$onCreateDialog$3;
 

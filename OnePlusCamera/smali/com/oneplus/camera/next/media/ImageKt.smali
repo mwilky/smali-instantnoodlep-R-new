@@ -2483,7 +2483,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "transferringAction"
+    const-string v0, "transferringAction"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2551,7 +2551,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToNV21() - Unsupported format: "
+    const-string v1, "tryConvertToNV21() - Unsupported format: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2792,7 +2792,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToNV21() - Unsupported format: "
+    const-string v1, "tryConvertToNV21() - Unsupported format: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2923,7 +2923,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v0, "tryConvertToNV21() - Format of result image is "
+    const-string v0, "tryConvertToNV21() - Format of result image is "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2955,7 +2955,7 @@
 
     if-eq v0, v5, :cond_1
 
-    const-string/jumbo p0, "tryConvertToNV21() - Width of image are different"
+    const-string p0, "tryConvertToNV21() - Width of image are different"
 
     invoke-static {v3, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2972,7 +2972,7 @@
 
     if-eq v0, v5, :cond_2
 
-    const-string/jumbo p0, "tryConvertToNV21() - Height of image are different"
+    const-string p0, "tryConvertToNV21() - Height of image are different"
 
     invoke-static {v3, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3047,7 +3047,7 @@
 
     if-eqz v1, :cond_1
 
-    const-string/jumbo p0, "tryConvertToNV21() - Result buffer is read-only"
+    const-string p0, "tryConvertToNV21() - Result buffer is read-only"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3080,7 +3080,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToNV21() - Insufficient result buffer size: "
+    const-string v1, "tryConvertToNV21() - Insufficient result buffer size: "
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3117,7 +3117,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToNV21() - Unsupported format: "
+    const-string v1, "tryConvertToNV21() - Unsupported format: "
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3188,7 +3188,7 @@
 
     if-nez p1, :cond_4
 
-    const-string/jumbo p0, "tryConvertToNV21() - Failed to lock Y buffer"
+    const-string p0, "tryConvertToNV21() - Failed to lock Y buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3199,7 +3199,7 @@
 
     if-nez p1, :cond_5
 
-    const-string/jumbo p0, "tryConvertToNV21() - Failed to lock U buffer"
+    const-string p0, "tryConvertToNV21() - Failed to lock U buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3208,7 +3208,7 @@
     :cond_5
     if-nez p0, :cond_7
 
-    const-string/jumbo p0, "tryConvertToNV21() - Failed to lock V buffer"
+    const-string p0, "tryConvertToNV21() - Failed to lock V buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3269,7 +3269,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToRgba() - Unsupported format: "
+    const-string v1, "tryConvertToRgba() - Unsupported format: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3397,7 +3397,7 @@
 
     if-eqz v1, :cond_1
 
-    const-string/jumbo p0, "tryConvertToRgba() - Result buffer is read-only"
+    const-string p0, "tryConvertToRgba() - Result buffer is read-only"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3426,7 +3426,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToRgba() - Insufficient result buffer size: "
+    const-string v1, "tryConvertToRgba() - Insufficient result buffer size: "
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3457,7 +3457,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tryConvertToRgba() - Unsupported format: "
+    const-string v1, "tryConvertToRgba() - Unsupported format: "
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3532,7 +3532,7 @@
 
     if-nez p1, :cond_4
 
-    const-string/jumbo p0, "tryConvertToRgba() - Failed to lock Y buffer"
+    const-string p0, "tryConvertToRgba() - Failed to lock Y buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3543,7 +3543,7 @@
 
     if-nez p1, :cond_5
 
-    const-string/jumbo p0, "tryConvertToRgba() - Failed to lock U buffer"
+    const-string p0, "tryConvertToRgba() - Failed to lock U buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3552,7 +3552,7 @@
     :cond_5
     if-nez p0, :cond_6
 
-    const-string/jumbo p0, "tryConvertToRgba() - Failed to lock V buffer"
+    const-string p0, "tryConvertToRgba() - Failed to lock V buffer"
 
     invoke-static {v2, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3622,7 +3622,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo p2, "tryCreateThumbnailImage() - Unsupported format: "
+    const-string p2, "tryCreateThumbnailImage() - Unsupported format: "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3717,7 +3717,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "tryCreateThumbnailImage() - Incorrect size: "
+    const-string v2, "tryCreateThumbnailImage() - Incorrect size: "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3764,7 +3764,7 @@
 
     move-result-object p0
 
-    const-string/jumbo p2, "tryCreateThumbnailImage() - Unhandled error occurred"
+    const-string p2, "tryCreateThumbnailImage() - Unhandled error occurred"
 
     invoke-static {p0, p2, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -4014,7 +4014,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "tryFlipHorizontally() - Unsupported format: "
+    const-string v2, "tryFlipHorizontally() - Unsupported format: "
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4274,7 +4274,7 @@
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "tryFlipVertically() - Unsupported format: "
+    const-string v2, "tryFlipVertically() - Unsupported format: "
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

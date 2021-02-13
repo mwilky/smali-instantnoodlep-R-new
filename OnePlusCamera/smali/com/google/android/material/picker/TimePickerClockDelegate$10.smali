@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$10;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {p0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1900(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
+    invoke-static {p0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$2000(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
 
     move-result-object v0
 

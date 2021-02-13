@@ -105,7 +105,7 @@
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/ui/hint/HyperImageStabilizationHint;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f1200d4
+    const p2, 0x7f1200c8
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

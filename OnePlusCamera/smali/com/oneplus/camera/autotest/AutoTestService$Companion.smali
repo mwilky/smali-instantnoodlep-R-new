@@ -78,7 +78,7 @@
 .method public final attach(Ljava/lang/String;Lcom/oneplus/camera/CameraActivity;)Z
     .locals 1
 
-    const-string/jumbo p0, "token"
+    const-string p0, "token"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -140,7 +140,7 @@
 .method public final detach(Ljava/lang/String;)Z
     .locals 1
 
-    const-string/jumbo p0, "token"
+    const-string p0, "token"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

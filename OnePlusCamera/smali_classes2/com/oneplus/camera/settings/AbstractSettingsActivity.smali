@@ -201,7 +201,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a01fc
+    const v1, 0x7f0a01fd
 
     if-eqz v0, :cond_0
 
@@ -260,7 +260,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/AbstractSettingsActivity;->settingsFragment:Lcom/oneplus/camera/settings/AbstractSettingsFragment;
 
-    const p1, 0x7f0a02b7
+    const p1, 0x7f0a02b8
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/settings/AbstractSettingsActivity;->findViewById(I)Landroid/view/View;
 

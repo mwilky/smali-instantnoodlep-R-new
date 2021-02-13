@@ -32,7 +32,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPNormalCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Timing.kt\nkotlin/system/TimingKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,906:1\n183#2:907\n183#2:908\n183#2:909\n13#3,3:910\n396#4:913\n396#4:914\n396#4:915\n874#5:916\n874#5:917\n874#5:918\n902#5:919\n874#5:920\n902#5:921\n*E\n*S KotlinDebug\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n*L\n153#1:907\n155#1:908\n160#1:909\n354#1,3:910\n44#1:913\n45#1:914\n46#1:915\n74#1:916\n75#1:917\n76#1:918\n77#1:919\n78#1:920\n79#1:921\n*E\n"
+    value = "SMAP\nOPNormalCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Timing.kt\nkotlin/system/TimingKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,910:1\n183#2:911\n183#2:912\n183#2:913\n13#3,3:914\n396#4:917\n396#4:918\n396#4:919\n874#5:920\n874#5:921\n874#5:922\n902#5:923\n874#5:924\n902#5:925\n*E\n*S KotlinDebug\n*F\n+ 1 OPNormalCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl\n*L\n153#1:911\n155#1:912\n160#1:913\n358#1,3:914\n44#1:917\n45#1:918\n46#1:919\n74#1:920\n75#1:921\n76#1:922\n77#1:923\n78#1:924\n79#1:925\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -2186,14 +2186,27 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "captureSession"
+    const-string v0, "captureSession"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "params"
+    const-string v0, "params"
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    invoke-super {p0, p1, p2, p3}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/NormalCamcorderImpl;->onClosingCaptureSession(Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/CameraCaptureSession;Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;)Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    move-result-object p1
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    if-ne p1, v0, :cond_0
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_0
     move-object p1, p0
 
     check-cast p1, Lcom/oneplus/camera/next/hardware/Camcorder;
@@ -2202,13 +2215,13 @@
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_0
+    :cond_1
     invoke-static {p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->stopRepeatingSafely(Landroid/hardware/camera2/CameraCaptureSession;)V
 
     sget-object p1, Lcom/oneplus/base/HardwarePlatform;->Companion:Lcom/oneplus/base/HardwarePlatform$Companion;
@@ -2231,7 +2244,7 @@
 
     const/4 v2, 0x0
 
-    if-gez p1, :cond_1
+    if-gez p1, :cond_2
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -2253,11 +2266,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-static {p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->abortCapturesSafely(Landroid/hardware/camera2/CameraCaptureSession;)V
 
     :goto_0
@@ -2281,7 +2294,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->FEATURE_STOP_REPEATING_WHEN_CLOSING_CAPTURE_SESSION_DELAY:Lcom/oneplus/util/Feature;
 
@@ -2293,7 +2306,7 @@
 
     cmp-long v3, p1, v3
 
-    if-lez v3, :cond_2
+    if-lez v3, :cond_3
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -2315,7 +2328,7 @@
 
     move-result p3
 
-    if-eqz p3, :cond_2
+    if-eqz p3, :cond_3
 
     iget-object p3, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNormalCamcorderImpl;->TAG:Ljava/lang/String;
 
@@ -2341,7 +2354,7 @@
 
     invoke-static {p1, p2}, Ljava/lang/Thread;->sleep(J)V
 
-    :cond_2
+    :cond_3
     sget-object p1, Lcom/oneplus/threading/Dispatcher;->Companion:Lcom/oneplus/threading/Dispatcher$Companion;
 
     invoke-virtual {p1}, Lcom/oneplus/threading/Dispatcher$Companion;->getCurrent()Lcom/oneplus/threading/Dispatcher;
@@ -2402,7 +2415,7 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_4
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0

@@ -24,7 +24,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Feature.kt\ncom/oneplus/util/Feature\n+ 5 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,2454:1\n858#2:2455\n858#2:2456\n858#2:2457\n858#2:2458\n858#2:2461\n858#2:2462\n858#2:2463\n858#2:2464\n858#2:2465\n858#2:2466\n858#2:2467\n858#2:2468\n858#2:2469\n858#2:2486\n858#2:2487\n858#2:2488\n858#2:2489\n858#2:2490\n858#2:2491\n858#2:2492\n695#3,2:2459\n270#4:2470\n12#5,3:2471\n12#5,3:2474\n12#5,3:2477\n12#5,3:2480\n12#5,3:2483\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n*L\n255#1:2455\n658#1:2456\n662#1:2457\n669#1:2458\n851#1:2461\n857#1:2462\n876#1:2463\n879#1:2464\n882#1:2465\n885#1:2466\n947#1:2467\n948#1:2468\n949#1:2469\n1112#1:2486\n1203#1:2487\n2340#1:2488\n2348#1:2489\n2356#1:2490\n2389#1:2491\n2389#1:2492\n681#1,2:2459\n1012#1:2470\n1044#1,3:2471\n1073#1,3:2474\n1078#1,3:2477\n1081#1,3:2480\n1086#1,3:2483\n*E\n"
+    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 4 Feature.kt\ncom/oneplus/util/Feature\n+ 5 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,2547:1\n858#2:2548\n858#2:2549\n858#2:2550\n858#2:2551\n858#2:2554\n858#2:2555\n858#2:2556\n858#2:2557\n858#2:2558\n858#2:2559\n858#2:2560\n858#2:2561\n858#2:2562\n858#2:2563\n858#2:2580\n858#2:2581\n858#2:2582\n858#2:2583\n858#2:2584\n858#2:2585\n858#2:2586\n858#2:2587\n695#3,2:2552\n270#4:2564\n12#5,3:2565\n12#5,3:2568\n12#5,3:2571\n12#5,3:2574\n12#5,3:2577\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode\n*L\n270#1:2548\n680#1:2549\n684#1:2550\n691#1:2551\n873#1:2554\n879#1:2555\n898#1:2556\n901#1:2557\n904#1:2558\n907#1:2559\n969#1:2560\n970#1:2561\n971#1:2562\n972#1:2563\n1156#1:2580\n1247#1:2581\n2425#1:2582\n2433#1:2583\n2441#1:2584\n2449#1:2585\n2482#1:2586\n2482#1:2587\n703#1,2:2552\n1041#1:2564\n1073#1,3:2565\n1102#1,3:2568\n1107#1,3:2571\n1110#1,3:2574\n1115#1,3:2577\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -34,7 +34,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u008b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0010\u0007\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\"\n\u0002\u0008\n\n\u0002\u0010!\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010 \n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u001b*\u0001u\u0018\u0000 \u00e0\u00012\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0004\u00df\u0001\u00e0\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0016\u0010x\u001a\u0008\u0012\u0004\u0012\u00020y0J2\u0006\u0010z\u001a\u00020\u0011H\u0003J\u0008\u0010{\u001a\u00020|H\u0003J\u0008\u0010}\u001a\u00020=H\u0015J\u0008\u0010~\u001a\u00020=H\u0003J\u0008\u0010\u007f\u001a\u00020|H\u0003J#\u0010\u0080\u0001\u001a\u0004\u0018\u00010\u00112\t\u0008\u0002\u0010\u0081\u0001\u001a\u00020\"2\u000b\u0008\u0002\u0010\u0082\u0001\u001a\u0004\u0018\u000103H\u0003J\u0019\u0010%\u001a\u00030\u0083\u00012\u000e\u0010\u0084\u0001\u001a\t\u0012\u0004\u0012\u00020\"0\u0085\u0001H\u0003J$\u0010\u0086\u0001\u001a\u00030\u0083\u00012\u0007\u0010\u0087\u0001\u001a\u00020\u001a2\u000f\u0010\u0084\u0001\u001a\n\u0012\u0005\u0012\u00030\u0088\u00010\u0085\u0001H\u0017J\t\u0010\u0089\u0001\u001a\u00020|H\u0003J\u001f\u0010\u008a\u0001\u001a\u0005\u0018\u00010\u008b\u00012\u0008\u0010\u008c\u0001\u001a\u00030\u008d\u00012\u0007\u0010\u008e\u0001\u001a\u00020HH\u0017J \u0010\u008f\u0001\u001a\u00020|\"\u0005\u0008\u0000\u0010\u0090\u00012\u000e\u0010\u0091\u0001\u001a\t\u0012\u0005\u0012\u0003H\u0090\u00010\nH\u0015J\u001d\u0010\u0092\u0001\u001a\u00020|2\u0008\u0010\u0093\u0001\u001a\u00030\u0094\u00012\u0008\u0010\u0095\u0001\u001a\u00030\u0094\u0001H\u0015J\u0011\u0010\u0096\u0001\u001a\u00020=2\u0006\u0010z\u001a\u00020\u0011H\u0015J\u001a\u0010\u0097\u0001\u001a\u00020|2\u0006\u0010z\u001a\u00020\u00112\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J\t\u0010\u0098\u0001\u001a\u00020|H\u0015J\u0019\u0010\u0099\u0001\u001a\u00020=2\u000e\u0010\u009a\u0001\u001a\t\u0012\u0004\u0012\u00020\u00110\u009b\u0001H\u0015J\t\u0010\u009c\u0001\u001a\u00020|H\u0015J\u0011\u0010\u009d\u0001\u001a\u00020|2\u0006\u0010z\u001a\u00020\u0011H\u0015J\u001f\u0010\u009e\u0001\u001a\u00030\u0083\u00012\n\u0010\u009f\u0001\u001a\u0005\u0018\u00010\u00a0\u00012\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J\u001f\u0010\u00a1\u0001\u001a\u00030\u0083\u00012\n\u0010\u00a2\u0001\u001a\u0005\u0018\u00010\u00a0\u00012\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J\u001a\u0010\u00a3\u0001\u001a\u00020=2\u0006\u0010z\u001a\u00020\u00112\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J\u0015\u0010\u00a4\u0001\u001a\u00020|2\n\u0010\u0091\u0001\u001a\u0005\u0018\u00010\u00a5\u0001H\u0003J\t\u0010\u00a6\u0001\u001a\u00020|H\u0015J\u001c\u0010\u00a7\u0001\u001a\u0004\u0018\u00010y2\u0006\u0010z\u001a\u00020\u00112\u0007\u0010\u00a8\u0001\u001a\u00020;H\u0015J\u0014\u0010\u00a9\u0001\u001a\r\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\n0\u009b\u0001H\u0015J\u0011\u0010\u00aa\u0001\u001a\n\u0012\u0005\u0012\u00030\u00ab\u00010\u009b\u0001H\u0015J\t\u0010\u00ac\u0001\u001a\u00020|H\u0003J\u0012\u0010\u00ad\u0001\u001a\u00020|2\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J\u0011\u0010\u00ae\u0001\u001a\u00020|2\u0006\u0010z\u001a\u00020\u0011H\u0015J\u001d\u0010\u00af\u0001\u001a\u00020|2\u0008\u0010\u00b0\u0001\u001a\u00030\u00b1\u00012\u0008\u0010\u00b2\u0001\u001a\u00030\u00b1\u0001H\u0015J%\u0010\u00b3\u0001\u001a\u00020=2\u0006\u0010z\u001a\u00020\u00112\u0007\u0010\u00a8\u0001\u001a\u00020;2\t\u0010\u00b4\u0001\u001a\u0004\u0018\u00010yH\u0015J\u001d\u0010\u00b5\u0001\u001a\u0004\u0018\u00010\u00112\u0007\u0010\u00b4\u0001\u001a\u00020y2\u0007\u0010\u0082\u0001\u001a\u000203H\u0015J\u0014\u0010\u00b6\u0001\u001a\u0004\u0018\u00010;2\u0007\u0010\u008e\u0001\u001a\u00020HH\u0015J#\u0010\u00b7\u0001\u001a\u00020|2\u0018\u0010\u00b8\u0001\u001a\u0013\u0012\u000e\u0012\u000c\u0012\u0007\u0008\u0001\u0012\u00030\u00bb\u00010\u00ba\u00010\u00b9\u0001H\u0015J,\u0010\u00bc\u0001\u001a\u00020y2\u0006\u0010z\u001a\u00020\u00112\u000e\u0010\u00bd\u0001\u001a\t\u0012\u0004\u0012\u00020y0\u009b\u00012\t\u0010\u00be\u0001\u001a\u0004\u0018\u00010yH\u0015J$\u0010\u00bf\u0001\u001a\t\u0012\u0004\u0012\u00020y0\u009b\u00012\u0006\u0010z\u001a\u00020\u00112\n\u0010\u00c0\u0001\u001a\u0005\u0018\u00010\u00c1\u0001H\u0015J\u0013\u0010\u00c2\u0001\u001a\u00020|2\u0008\u0010\u00c3\u0001\u001a\u00030\u00c4\u0001H\u0015J\u001d\u0010\u00c5\u0001\u001a\u00020|2\u0008\u0010\u0093\u0001\u001a\u00030\u00c6\u00012\u0008\u0010\u0095\u0001\u001a\u00030\u00c6\u0001H\u0015J\u0012\u0010\'\u001a\u00030\u0083\u00012\u0007\u0010\u0081\u0001\u001a\u00020\"H\u0003J\u001c\u0010\u00c7\u0001\u001a\u00030\u0083\u00012\u0007\u0010\u0087\u0001\u001a\u00020\u001a2\u0007\u0010!\u001a\u00030\u0088\u0001H\u0017J\u0014\u0010\u00c8\u0001\u001a\u00020|2\t\u0008\u0002\u0010\u00c9\u0001\u001a\u00020=H\u0003J\u001f\u0010\u00c8\u0001\u001a\u00020|2\t\u0008\u0002\u0010\u00ca\u0001\u001a\u00020\u001a2\t\u0008\u0002\u0010\u00c9\u0001\u001a\u00020=H\u0003J\t\u0010\u00cb\u0001\u001a\u00020|H\u0003J\t\u0010\u00cc\u0001\u001a\u00020|H\u0003J\t\u0010\u00cd\u0001\u001a\u00020|H\u0003J$\u0010\u00ce\u0001\u001a\u00020|2\u0006\u00108\u001a\u0002092\u000b\u0008\u0002\u0010\u00cf\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d0\u0001J$\u0010\u00d1\u0001\u001a\u00020|2\u0006\u0010\u000b\u001a\u00020\u000c2\u000b\u0008\u0002\u0010\u00cf\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d2\u0001J$\u0010\u00d3\u0001\u001a\u00020|2\u0006\u00104\u001a\u0002052\u000b\u0008\u0002\u0010\u00cf\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d4\u0001J$\u0010\u00d5\u0001\u001a\u00020|2\u0006\u0010D\u001a\u00020E2\u000b\u0008\u0002\u0010\u00cf\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d6\u0001J\t\u0010\u00d7\u0001\u001a\u00020=H\u0015J\t\u0010\u00d8\u0001\u001a\u00020|H\u0003J\t\u0010\u00d9\u0001\u001a\u00020|H\u0003J\t\u0010\u00da\u0001\u001a\u00020|H\u0003J\t\u0010\u00db\u0001\u001a\u00020|H\u0003J\u0011\u0010\u00dc\u0001\u001a\u00020|2\u0006\u0010z\u001a\u00020\u0011H\u0003J\t\u0010\u00dd\u0001\u001a\u00020|H\u0003J\t\u0010\u00de\u0001\u001a\u00020|H\u0003R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000f\u001a\u0008\u0012\u0004\u0012\u00020\u00110\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R$\u0010\u0014\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0004\u0012\u00020\u00170\u0016j\u0008\u0012\u0004\u0012\u00020\u0017`\u00180\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0019\u001a\u00020\u001a8\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001b\u0010\u001c\u001a\u0004\u0008\u001d\u0010\u001eR\u000e\u0010\u001f\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010#\u001a\u00020\"2\u0006\u0010!\u001a\u00020\"8V@VX\u0097\u000e\u00a2\u0006\u0012\u0012\u0004\u0008$\u0010\u001c\u001a\u0004\u0008%\u0010&\"\u0004\u0008\'\u0010(R\u0014\u0010)\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010,X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010-\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00100\u001a\u0004\u0018\u000101X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00102\u001a\u000203X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u000105X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u000109X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010<\u001a\u00020=8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008>\u0010\u001c\u001a\u0004\u0008<\u0010?R\u001a\u0010@\u001a\u00020=8FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008A\u0010\u001c\u001a\u0004\u0008@\u0010?R\u0014\u0010B\u001a\u00020=8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008B\u0010?R\u000e\u0010C\u001a\u00020=X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010D\u001a\u0004\u0018\u00010EX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010F\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020HX\u0082\u000e\u00a2\u0006\u0002\n\u0000R!\u0010I\u001a\u0008\u0012\u0004\u0012\u00020\u001a0J8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008M\u0010N\u001a\u0004\u0008K\u0010LR\u000e\u0010O\u001a\u00020\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010P\u001a\u00020H8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008Q\u0010\u001c\u001a\u0004\u0008R\u0010SR\"\u0010T\u001a\u0008\u0012\u0004\u0012\u00020\"0U8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008V\u0010\u001c\u001a\u0004\u0008W\u0010XR$\u0010Y\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0004\u0012\u00020\u001a0\u0016j\u0008\u0012\u0004\u0012\u00020\u001a`\u00180\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010Z\u001a\u00020[X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\\\u001a\u0004\u0018\u00010]X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010^\u001a\u00020=8BX\u0083\u0004\u00a2\u0006\u000c\u0012\u0004\u0008_\u0010\u001c\u001a\u0004\u0008`\u0010?R\u000e\u0010a\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010b\u001a\u0004\u0018\u00010cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010d\u001a\u0004\u0018\u00010cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010e\u001a\u0004\u0018\u00010fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010g\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010h\u001a\u0004\u0018\u00010iX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010j\u001a\u0008\u0012\u0004\u0012\u00020\"0kX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010l\u001a\u0004\u0018\u00010mX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010n\u001a\u0008\u0012\u0004\u0012\u00020o0kX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010p\u001a\u0004\u0018\u00010qX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010r\u001a\u0004\u0018\u00010sX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010t\u001a\u00020uX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010vR\u0010\u0010w\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00e1\u0001"
+        "\u0000\u0093\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0010\u0007\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\"\n\u0002\u0008\u000b\n\u0002\u0010!\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010 \n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u001b*\u0001y\u0018\u0000 \u00e7\u00012\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0004\u00e6\u0001\u00e7\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0016\u0010|\u001a\u0008\u0012\u0004\u0012\u00020}0J2\u0006\u0010~\u001a\u00020\u0011H\u0003J\t\u0010\u007f\u001a\u00030\u0080\u0001H\u0003J\t\u0010\u0081\u0001\u001a\u00020=H\u0015J\t\u0010\u0082\u0001\u001a\u00020=H\u0003J\n\u0010\u0083\u0001\u001a\u00030\u0080\u0001H\u0003J#\u0010\u0084\u0001\u001a\u0004\u0018\u00010\u00112\t\u0008\u0002\u0010\u0085\u0001\u001a\u00020\"2\u000b\u0008\u0002\u0010\u0086\u0001\u001a\u0004\u0018\u000103H\u0003J\u0019\u0010%\u001a\u00030\u0087\u00012\u000e\u0010\u0088\u0001\u001a\t\u0012\u0004\u0012\u00020\"0\u0089\u0001H\u0003J$\u0010\u008a\u0001\u001a\u00030\u0087\u00012\u0007\u0010\u008b\u0001\u001a\u00020\u001a2\u000f\u0010\u0088\u0001\u001a\n\u0012\u0005\u0012\u00030\u008c\u00010\u0089\u0001H\u0017J\n\u0010\u008d\u0001\u001a\u00030\u0080\u0001H\u0003J\u001f\u0010\u008e\u0001\u001a\u0005\u0018\u00010\u008f\u00012\u0008\u0010\u0090\u0001\u001a\u00030\u0091\u00012\u0007\u0010\u0092\u0001\u001a\u00020HH\u0017J!\u0010\u0093\u0001\u001a\u00030\u0080\u0001\"\u0005\u0008\u0000\u0010\u0094\u00012\u000e\u0010\u0095\u0001\u001a\t\u0012\u0005\u0012\u0003H\u0094\u00010\nH\u0015J\u001e\u0010\u0096\u0001\u001a\u00030\u0080\u00012\u0008\u0010\u0097\u0001\u001a\u00030\u0098\u00012\u0008\u0010\u0099\u0001\u001a\u00030\u0098\u0001H\u0015J\u0011\u0010\u009a\u0001\u001a\u00020=2\u0006\u0010~\u001a\u00020\u0011H\u0015J\u001b\u0010\u009b\u0001\u001a\u00030\u0080\u00012\u0006\u0010~\u001a\u00020\u00112\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\n\u0010\u009c\u0001\u001a\u00030\u0080\u0001H\u0015J\u0019\u0010\u009d\u0001\u001a\u00020=2\u000e\u0010\u009e\u0001\u001a\t\u0012\u0004\u0012\u00020\u00110\u009f\u0001H\u0015J\n\u0010\u00a0\u0001\u001a\u00030\u0080\u0001H\u0015J\u0012\u0010\u00a1\u0001\u001a\u00030\u0080\u00012\u0006\u0010~\u001a\u00020\u0011H\u0015J\u001f\u0010\u00a2\u0001\u001a\u00030\u0087\u00012\n\u0010\u00a3\u0001\u001a\u0005\u0018\u00010\u00a4\u00012\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\u001f\u0010\u00a5\u0001\u001a\u00030\u0087\u00012\n\u0010\u00a6\u0001\u001a\u0005\u0018\u00010\u00a4\u00012\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\u001a\u0010\u00a7\u0001\u001a\u00020=2\u0006\u0010~\u001a\u00020\u00112\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\u0016\u0010\u00a8\u0001\u001a\u00030\u0080\u00012\n\u0010\u0095\u0001\u001a\u0005\u0018\u00010\u00a9\u0001H\u0003J\n\u0010\u00aa\u0001\u001a\u00030\u0080\u0001H\u0015J\u001c\u0010\u00ab\u0001\u001a\u0004\u0018\u00010}2\u0006\u0010~\u001a\u00020\u00112\u0007\u0010\u00ac\u0001\u001a\u00020;H\u0015J\u0014\u0010\u00ad\u0001\u001a\r\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\n0\u009f\u0001H\u0015J\u0011\u0010\u00ae\u0001\u001a\n\u0012\u0005\u0012\u00030\u00af\u00010\u009f\u0001H\u0015J\n\u0010\u00b0\u0001\u001a\u00030\u0080\u0001H\u0003J\u0013\u0010\u00b1\u0001\u001a\u00030\u0080\u00012\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\u0012\u0010\u00b2\u0001\u001a\u00030\u0080\u00012\u0006\u0010~\u001a\u00020\u0011H\u0015J\u001e\u0010\u00b3\u0001\u001a\u00030\u0080\u00012\u0008\u0010\u00b4\u0001\u001a\u00030\u00b5\u00012\u0008\u0010\u00b6\u0001\u001a\u00030\u00b5\u0001H\u0015J%\u0010\u00b7\u0001\u001a\u00020=2\u0006\u0010~\u001a\u00020\u00112\u0007\u0010\u00ac\u0001\u001a\u00020;2\t\u0010\u00b8\u0001\u001a\u0004\u0018\u00010}H\u0015J\u001d\u0010\u00b9\u0001\u001a\u0004\u0018\u00010\u00112\u0007\u0010\u00b8\u0001\u001a\u00020}2\u0007\u0010\u0086\u0001\u001a\u000203H\u0015J\u0014\u0010\u00ba\u0001\u001a\u0004\u0018\u00010;2\u0007\u0010\u0092\u0001\u001a\u00020HH\u0015J\u0017\u0010\u00bb\u0001\u001a\u0004\u0018\u00010\u001a2\n\u0010\u00bc\u0001\u001a\u0005\u0018\u00010\u00bd\u0001H\u0015J$\u0010\u00be\u0001\u001a\u00030\u0080\u00012\u0018\u0010\u00bf\u0001\u001a\u0013\u0012\u000e\u0012\u000c\u0012\u0007\u0008\u0001\u0012\u00030\u00c2\u00010\u00c1\u00010\u00c0\u0001H\u0015J,\u0010\u00c3\u0001\u001a\u00020}2\u0006\u0010~\u001a\u00020\u00112\u000e\u0010\u00c4\u0001\u001a\t\u0012\u0004\u0012\u00020}0\u009f\u00012\t\u0010\u00c5\u0001\u001a\u0004\u0018\u00010}H\u0015J$\u0010\u00c6\u0001\u001a\t\u0012\u0004\u0012\u00020}0\u009f\u00012\u0006\u0010~\u001a\u00020\u00112\n\u0010\u00c7\u0001\u001a\u0005\u0018\u00010\u00c8\u0001H\u0015J\u0014\u0010\u00c9\u0001\u001a\u00030\u0080\u00012\u0008\u0010\u00ca\u0001\u001a\u00030\u00cb\u0001H\u0015J\u001e\u0010\u00cc\u0001\u001a\u00030\u0080\u00012\u0008\u0010\u0097\u0001\u001a\u00030\u00cd\u00012\u0008\u0010\u0099\u0001\u001a\u00030\u00cd\u0001H\u0015J\u0012\u0010\'\u001a\u00030\u0087\u00012\u0007\u0010\u0085\u0001\u001a\u00020\"H\u0003J\u001c\u0010\u00ce\u0001\u001a\u00030\u0087\u00012\u0007\u0010\u008b\u0001\u001a\u00020\u001a2\u0007\u0010!\u001a\u00030\u008c\u0001H\u0017J\u0015\u0010\u00cf\u0001\u001a\u00030\u0080\u00012\t\u0008\u0002\u0010\u00d0\u0001\u001a\u00020=H\u0003J \u0010\u00cf\u0001\u001a\u00030\u0080\u00012\t\u0008\u0002\u0010\u00d1\u0001\u001a\u00020\u001a2\t\u0008\u0002\u0010\u00d0\u0001\u001a\u00020=H\u0003J\n\u0010\u00d2\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00d3\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00d4\u0001\u001a\u00030\u0080\u0001H\u0003J%\u0010\u00d5\u0001\u001a\u00030\u0080\u00012\u0006\u00108\u001a\u0002092\u000b\u0008\u0002\u0010\u00d6\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d7\u0001J%\u0010\u00d8\u0001\u001a\u00030\u0080\u00012\u0006\u0010\u000b\u001a\u00020\u000c2\u000b\u0008\u0002\u0010\u00d6\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00d9\u0001J%\u0010\u00da\u0001\u001a\u00030\u0080\u00012\u0006\u00104\u001a\u0002052\u000b\u0008\u0002\u0010\u00d6\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00db\u0001J%\u0010\u00dc\u0001\u001a\u00030\u0080\u00012\u0006\u0010D\u001a\u00020E2\u000b\u0008\u0002\u0010\u00d6\u0001\u001a\u0004\u0018\u00010=H\u0003\u00a2\u0006\u0003\u0010\u00dd\u0001J\t\u0010\u00de\u0001\u001a\u00020=H\u0015J\n\u0010\u00df\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00e0\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00e1\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00e2\u0001\u001a\u00030\u0080\u0001H\u0003J\u0012\u0010\u00e3\u0001\u001a\u00030\u0080\u00012\u0006\u0010~\u001a\u00020\u0011H\u0003J\n\u0010\u00e4\u0001\u001a\u00030\u0080\u0001H\u0003J\n\u0010\u00e5\u0001\u001a\u00030\u0080\u0001H\u0003R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000f\u001a\u0008\u0012\u0004\u0012\u00020\u00110\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R$\u0010\u0014\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0004\u0012\u00020\u00170\u0016j\u0008\u0012\u0004\u0012\u00020\u0017`\u00180\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0019\u001a\u00020\u001a8\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001b\u0010\u001c\u001a\u0004\u0008\u001d\u0010\u001eR\u000e\u0010\u001f\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010#\u001a\u00020\"2\u0006\u0010!\u001a\u00020\"8V@VX\u0097\u000e\u00a2\u0006\u0012\u0012\u0004\u0008$\u0010\u001c\u001a\u0004\u0008%\u0010&\"\u0004\u0008\'\u0010(R\u0014\u0010)\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010,X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010-\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010*X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00100\u001a\u0004\u0018\u000101X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00102\u001a\u000203X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u000105X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u00010\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u000109X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010<\u001a\u00020=8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008>\u0010\u001c\u001a\u0004\u0008<\u0010?R\u001a\u0010@\u001a\u00020=8FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008A\u0010\u001c\u001a\u0004\u0008@\u0010?R\u0014\u0010B\u001a\u00020=8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008B\u0010?R\u000e\u0010C\u001a\u00020=X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010D\u001a\u0004\u0018\u00010EX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010F\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010G\u001a\u00020HX\u0082\u000e\u00a2\u0006\u0002\n\u0000R!\u0010I\u001a\u0008\u0012\u0004\u0012\u00020\u001a0J8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008M\u0010N\u001a\u0004\u0008K\u0010LR\u000e\u0010O\u001a\u00020=X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010P\u001a\u00020\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010Q\u001a\u00020H8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008R\u0010\u001c\u001a\u0004\u0008S\u0010TR\"\u0010U\u001a\u0008\u0012\u0004\u0012\u00020\"0V8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008W\u0010\u001c\u001a\u0004\u0008X\u0010YR$\u0010Z\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0004\u0012\u00020\u001a0\u0016j\u0008\u0012\u0004\u0012\u00020\u001a`\u00180\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010[\u001a\u00020\\X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010]\u001a\u0004\u0018\u00010^X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010_\u001a\u00020=8BX\u0083\u0004\u00a2\u0006\u000c\u0012\u0004\u0008`\u0010\u001c\u001a\u0004\u0008a\u0010?R\u000e\u0010b\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010c\u001a\u0004\u0018\u00010dX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010e\u001a\u0004\u0018\u00010dX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010f\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010g\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010h\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010i\u001a\u0004\u0018\u00010jX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010k\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010l\u001a\u0004\u0018\u00010mX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010n\u001a\u0008\u0012\u0004\u0012\u00020\"0oX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010p\u001a\u0004\u0018\u00010qX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010r\u001a\u0008\u0012\u0004\u0012\u00020s0oX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010t\u001a\u0004\u0018\u00010uX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010v\u001a\u0004\u0018\u00010wX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010x\u001a\u00020yX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010zR\u0010\u0010{\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u00e8\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/capturemode/VideoCaptureMode;",
@@ -116,6 +116,7 @@
         "()Ljava/util/Set;",
         "packagesNotUsingMultiLensesForServiceMode$delegate",
         "Lkotlin/Lazy;",
+        "saveNormalResolutionInHIS",
         "settingsKeyIsHevcEnabled",
         "sortingIndex",
         "sortingIndex$annotations",
@@ -138,6 +139,9 @@
         "videoBokenNotSupportHint",
         "Lcom/oneplus/camera/ui/hint/SimpleHint;",
         "videoBokenSuggestionHint",
+        "videoHdrNotSupportHintHandle",
+        "videoHisNotSupportHintHandle",
+        "videoNightNotSupportHintHandle",
         "zoomAdapter",
         "Lcom/oneplus/camera/ui/ZoomAdapter;",
         "zoomAdapterHandleSet",
@@ -220,6 +224,9 @@
         "resolution",
         "onSelectCamera",
         "onSelectCameraSettings",
+        "onSelectFlashDisableMessage",
+        "flashDisableReason",
+        "Lcom/oneplus/camera/capturemode/AbstractCaptureMode$FlashDisableReason;",
         "onSelectSimpleFeatureCamerasToEnable",
         "selectedInterfaces",
         "",
@@ -302,6 +309,8 @@
 
 .field private static final FEATURE_IS_FILTER_ENABLED:Lcom/oneplus/util/Feature;
 
+.field private static final FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_IS_OIS_ENABLED:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_IS_VIDEO_HDR_ENABLED:Lcom/oneplus/util/Feature;
@@ -326,13 +335,23 @@
     .end annotation
 .end field
 
-.field private static final FILTER_ORDERING:[Ljava/lang/String;
+.field private static final FILTER_ORDERING:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public static final ID:Ljava/lang/String; = "Video"
 
 .field private static final SETTINGS_KEY_FILTER_BACK:Ljava/lang/String; = "Filter.Back"
 
 .field private static final SETTINGS_KEY_FILTER_FRONT:Ljava/lang/String; = "Filter.Front"
+
+.field private static final SETTINGS_KEY_VIDEO_RESOLUTION_HIS_BACK:Ljava/lang/String; = "Resolution.Video.HIS.Back"
 
 .field private static final TARGET_RESOLUTIONS:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -490,6 +509,8 @@
 
 .field private final packagesNotUsingMultiLensesForServiceMode$delegate:Lkotlin/Lazy;
 
+.field private saveNormalResolutionInHIS:Z
+
 .field private final settingsKeyIsHevcEnabled:Ljava/lang/String;
 
 .field private final supportedDiscreteZoomFactors:Ljava/util/List;
@@ -522,6 +543,12 @@
 .field private videoBokenNotSupportHint:Lcom/oneplus/camera/ui/hint/SimpleHint;
 
 .field private videoBokenSuggestionHint:Lcom/oneplus/camera/ui/hint/SimpleHint;
+
+.field private videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+.field private videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+.field private videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
 
 .field private zoomAdapter:Lcom/oneplus/camera/ui/ZoomAdapter;
 
@@ -796,245 +823,281 @@
 
     aput-object v4, v3, v0
 
-    new-instance v0, Landroid/util/Size;
+    new-instance v4, Landroid/util/Size;
 
-    invoke-direct {v0, v13, v14}, Landroid/util/Size;-><init>(II)V
+    invoke-direct {v4, v13, v14}, Landroid/util/Size;-><init>(II)V
 
-    aput-object v0, v3, v15
+    aput-object v4, v3, v15
 
     invoke-static {v3}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-direct {v1, v2, v0}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-static {v1}, Lkotlin/collections/MapsKt;->mapOf(Lkotlin/Pair;)Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TARGET_RESOLUTIONS_VIDEO_HDR:Ljava/util/Map;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TARGET_RESOLUTIONS_VIDEO_HDR:Ljava/util/Map;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.PackagesNotUsingMultiLensesInServiceMode"
+    const-string v2, "VideoCaptureMode.PackagesNotUsingMultiLensesInServiceMode"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_PACKAGES_NOT_USING_MULTI_LENSES_IN_SERVICE_MODE:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_PACKAGES_NOT_USING_MULTI_LENSES_IN_SERVICE_MODE:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.Disable4KFilter"
+    const-string v2, "VideoCaptureMode.Disable4KFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.Disable4KHis"
+    const-string v2, "VideoCaptureMode.Disable4KHis"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K_HIS:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K_HIS:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.Disable4K60FPSFilter"
+    const-string v2, "VideoCaptureMode.Disable4K60FPSFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K60FPS_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_4K60FPS_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.DisableBokehFilter"
+    const-string v2, "VideoCaptureMode.DisableBokehFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_BOKEH_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_BOKEH_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.Disable1080P60FPSFilter"
+    const-string v2, "VideoCaptureMode.Disable1080P60FPSFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_1080P60FPS_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_1080P60FPS_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.DisableHyperStabilizationFilter"
+    const-string v2, "VideoCaptureMode.DisableHyperStabilizationFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_HYPER_STABILIZATION_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_HYPER_STABILIZATION_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.DisableNightFilter"
+    const-string v2, "VideoCaptureMode.DisableNightFilter"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_NIGHT_FILTER:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_DISABLE_NIGHT_FILTER:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.EnableBackCameraFaceDetection"
+    const-string v2, "VideoCaptureMode.EnableBackCameraFaceDetection"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_ENABLE_BACK_CAM_FACE_DETECTION:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_ENABLE_BACK_CAM_FACE_DETECTION:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.EnableMultiLenses"
+    const-string v2, "VideoCaptureMode.EnableMultiLenses"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_ENABLE_MULTI_LENSES:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_ENABLE_MULTI_LENSES:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.FixedResolutionForServiceMode"
+    const-string v2, "VideoCaptureMode.FixedResolutionForServiceMode"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_FIXED_RESOLUTION_FOR_SERVICE_MODE:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_FIXED_RESOLUTION_FOR_SERVICE_MODE:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.ForceOpeningSpecificLens"
+    const-string v2, "VideoCaptureMode.ForceOpeningSpecificLens"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_FORCE_OPENING_SPECIFIC_LENS:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_FORCE_OPENING_SPECIFIC_LENS:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.IsColorEdgeCorrectionEnabled"
+    const-string v2, "VideoCaptureMode.IsColorEdgeCorrectionEnabled"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_COLOR_EDGE_CORRECTION_ENABLED:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_COLOR_EDGE_CORRECTION_ENABLED:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.IsFilterEnabled"
+    const-string v2, "VideoCaptureMode.IsFilterEnabled"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_FILTER_ENABLED:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_FILTER_ENABLED:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.IsOisEnabled"
+    const-string v2, "Filter.IsNightCityAndNorthCaliforniaEnabled"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_OIS_ENABLED:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.IsVideoHdrEnabled"
+    const-string v2, "VideoCaptureMode.IsOisEnabled"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_VIDEO_HDR_ENABLED:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_OIS_ENABLED:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.LimitMaxZoom"
+    const-string v2, "VideoCaptureMode.IsVideoHdrEnabled"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_LIMIT_MAX_ZOOM:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_VIDEO_HDR_ENABLED:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.LimitMaxZoom4K60Fps"
+    const-string v2, "VideoCaptureMode.LimitMaxZoom"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_LIMIT_MAX_ZOOM_4K_60FPS:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_LIMIT_MAX_ZOOM:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.ShowVideoBokenSuggestionDuration"
+    const-string v2, "VideoCaptureMode.LimitMaxZoom4K60Fps"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_SHOW_VIDEO_BOKEN_SUGGESTION_DURATION:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_LIMIT_MAX_ZOOM_4K_60FPS:Lcom/oneplus/util/Feature;
 
-    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v1, "VideoCaptureMode.UseMultiLensesInServiceMode"
+    const-string v2, "VideoCaptureMode.ShowVideoBokenSuggestionDuration"
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_USE_MULTI_LENSES_IN_SERVICE_MODE:Lcom/oneplus/util/Feature;
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_SHOW_VIDEO_BOKEN_SUGGESTION_DURATION:Lcom/oneplus/util/Feature;
 
-    const-string v1, "Empty"
+    sget-object v1, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
-    const-string v2, "Pop"
+    const-string v2, "VideoCaptureMode.UseMultiLensesInServiceMode"
 
-    const-string v3, "NightCity"
+    invoke-virtual {v1, v2}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
 
-    const-string v4, "NorthCalifornia"
+    move-result-object v1
 
-    const-string v5, "Vintage"
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_USE_MULTI_LENSES_IN_SERVICE_MODE:Lcom/oneplus/util/Feature;
 
-    const-string v6, "Yummy"
+    const-string v2, "Empty"
 
-    const-string v7, "Night"
+    const-string v3, "Pop"
 
-    const-string v8, "BlackWhite"
+    const-string v4, "Vintage"
 
-    filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
+    const-string v5, "Yummy"
 
-    move-result-object v0
+    const-string v6, "Night"
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    const-string v7, "BlackWhite"
+
+    filled-new-array/range {v2 .. v7}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkotlin/collections/CollectionsKt;->mutableListOf([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/oneplus/base/Device;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v2
+
+    sget-object v3, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    if-eq v2, v3, :cond_0
+
+    sget-object v2, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v2}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    const-string v2, "NightCity"
+
+    invoke-interface {v1, v0, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    const-string v0, "NorthCalifornia"
+
+    invoke-interface {v1, v15, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1
+    sput-object v1, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     sget-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$Companion$FILTER_ID_COMPARATOR$1;->INSTANCE:Lcom/oneplus/camera/capturemode/VideoCaptureMode$Companion$FILTER_ID_COMPARATOR$1;
 
@@ -1050,6 +1113,10 @@
 
     invoke-static {v0}, Lcom/oneplus/base/Settings;->addPrivateKey(Ljava/lang/String;)V
 
+    const-string v0, "Resolution.Video.HIS.Back"
+
+    invoke-static {v0}, Lcom/oneplus/base/Settings;->addPrivateKey(Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -1060,7 +1127,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120073
+    const v1, 0x7f120064
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1148,7 +1215,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f12017c
+    const v1, 0x7f120170
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1179,6 +1246,24 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoBokenHintHandle:Lcom/oneplus/base/Handle;
+
+    sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
 
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
@@ -1317,10 +1402,10 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getFILTER_ORDERING$cp()[Ljava/lang/String;
+.method public static final synthetic access$getFILTER_ORDERING$cp()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     return-object v0
 .end method
@@ -1405,6 +1490,30 @@
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->topHintPanel:Lcom/oneplus/camera/ui/hint/TopHintPanel;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/base/Handle;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getVideoHisNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/base/Handle;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getVideoNightNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/base/Handle;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
 
     return-object p0
 .end method
@@ -1545,6 +1654,30 @@
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->topHintPanel:Lcom/oneplus/camera/ui/hint/TopHintPanel;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/base/Handle;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVideoHisNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/base/Handle;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVideoNightNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/base/Handle;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
 
     return-void
 .end method
@@ -2735,7 +2868,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f120180
+    const v2, 0x7f120174
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3250,7 +3383,7 @@
 
     new-instance v7, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v8, 0x7f1200b5
+    const v8, 0x7f1200a9
 
     const v9, 0x7f08019b
 
@@ -3303,7 +3436,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200c0
+    const v9, 0x7f1200b4
 
     const v11, 0x7f0801b5
 
@@ -3326,7 +3459,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a3
+    const v9, 0x7f120094
 
     const v11, 0x7f080198
 
@@ -3349,7 +3482,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200bd
+    const v9, 0x7f1200b1
 
     const v11, 0x7f0801b4
 
@@ -3372,7 +3505,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b3
+    const v9, 0x7f1200a4
 
     const v11, 0x7f0801b0
 
@@ -3395,7 +3528,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b7
+    const v9, 0x7f1200ab
 
     const v11, 0x7f0801b3
 
@@ -3418,7 +3551,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b6
+    const v9, 0x7f1200aa
 
     const v11, 0x7f0801b2
 
@@ -3441,7 +3574,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b4
+    const v9, 0x7f1200a6
 
     const v11, 0x7f0801b1
 
@@ -3690,7 +3823,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02e7
+    const v1, 0x7f0a02e8
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -3784,7 +3917,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/hint/SimpleHint;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/ui/hint/Hint$Role;Lcom/oneplus/camera/ui/hint/Hint$Priority;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const v0, 0x7f1201fa
+    const v0, 0x7f1201f0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3869,7 +4002,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/hint/SimpleHint;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/ui/hint/Hint$Role;Lcom/oneplus/camera/ui/hint/Hint$Priority;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const v0, 0x7f1201f6
+    const v0, 0x7f1201ec
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4290,7 +4423,7 @@
 
     if-gtz v4, :cond_4
 
-    const v7, 0x7f0804ea
+    const v7, 0x7f0804df
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4299,7 +4432,7 @@
     goto :goto_4
 
     :cond_4
-    const v7, 0x7f0804e8
+    const v7, 0x7f0804dd
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5071,7 +5204,7 @@
 
     move-result-object v9
 
-    const v12, 0x7f0804e9
+    const v12, 0x7f0804de
 
     invoke-virtual {v0, v12}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5098,7 +5231,7 @@
 
     if-eqz v12, :cond_f
 
-    const v12, 0x7f0804ec
+    const v12, 0x7f0804e1
 
     invoke-virtual {v0, v12}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5107,7 +5240,7 @@
     goto :goto_6
 
     :cond_f
-    const v12, 0x7f0804eb
+    const v12, 0x7f0804e0
 
     invoke-virtual {v0, v12}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5134,7 +5267,7 @@
 
     if-eqz v12, :cond_11
 
-    const v12, 0x7f0804e7
+    const v12, 0x7f0804dc
 
     invoke-virtual {v0, v12}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5143,7 +5276,7 @@
     goto :goto_6
 
     :cond_11
-    const v12, 0x7f0804e6
+    const v12, 0x7f0804db
 
     invoke-virtual {v0, v12}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5608,16 +5741,89 @@
     :cond_5
     if-eqz p1, :cond_6
 
-    const-class v0, Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+    const-class v1, Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+
+    invoke-interface {p1, v1}, Lcom/oneplus/camera/next/hardware/Camera;->asInterface(Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera;
+
+    move-result-object v1
+
+    goto :goto_4
+
+    :cond_6
+    move-object v1, v0
+
+    :goto_4
+    check-cast v1, Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+
+    if-eqz v1, :cond_8
+
+    sget-object v5, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+
+    invoke-virtual {v5}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_VIDEO_ENCODER()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->settingsKeyIsHevcEnabled:Ljava/lang/String;
+
+    invoke-virtual {v6, v7, v4}, Lcom/oneplus/camera/CameraSettings;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    iget-object v6, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v8, "updateVideoEncoder() - set HEVC video encoder to bokeh camcorder : camera : "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lcom/oneplus/camera/next/hardware/Camera;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v6, v2
+
+    goto :goto_5
+
+    :cond_7
+    move v6, v3
+
+    :goto_5
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-interface {v1, v5, v6}, Lcom/oneplus/camera/next/hardware/BokehCamcorder;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    :cond_8
+    if-eqz p1, :cond_9
+
+    const-class v0, Lcom/oneplus/camera/next/hardware/NightCamcorder;
 
     invoke-interface {p1, v0}, Lcom/oneplus/camera/next/hardware/Camera;->asInterface(Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera;
 
     move-result-object v0
 
-    :cond_6
-    check-cast v0, Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+    :cond_9
+    check-cast v0, Lcom/oneplus/camera/next/hardware/NightCamcorder;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_b
 
     sget-object v1, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
 
@@ -5635,7 +5841,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_a
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
 
@@ -5643,7 +5849,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "updateVideoEncoder() - set HEVC video encoder to bokeh camcorder : camera : "
+    const-string/jumbo v4, "updateVideoEncoder() - set HEVC video encoder to night camcorder : camera : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5659,19 +5865,19 @@
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_4
+    goto :goto_6
 
-    :cond_7
+    :cond_a
     move v2, v3
 
-    :goto_4
+    :goto_6
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    invoke-interface {v0, v1, p0}, Lcom/oneplus/camera/next/hardware/BokehCamcorder;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+    invoke-interface {v0, v1, p0}, Lcom/oneplus/camera/next/hardware/NightCamcorder;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
-    :cond_8
+    :cond_b
     return-void
 .end method
 
@@ -6858,11 +7064,11 @@
 
     instance-of v0, p1, Lcom/oneplus/camera/ui/actionpanel/HyperImageStabilizationActionItem;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x2
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
@@ -6879,7 +7085,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_15
 
     invoke-interface {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItem;->getData()Ljava/lang/Object;
 
@@ -6897,13 +7103,13 @@
 
     move-result p1
 
-    xor-int/2addr p1, v1
+    xor-int/2addr p1, v2
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_15
 
-    invoke-static {p0, v0, v4, v3, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleHis$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;Ljava/lang/Boolean;ILjava/lang/Object;)V
+    invoke-static {p0, v0, v4, v1, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleHis$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;Ljava/lang/Boolean;ILjava/lang/Object;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_1
     instance-of v0, p1, Lcom/oneplus/camera/ui/actionpanel/VideoBokehActionItem;
@@ -6932,16 +7138,16 @@
     :cond_3
     iget-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->bokehCamcorder:Lcom/oneplus/camera/next/hardware/BokehCamcorder;
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_15
 
-    invoke-static {p0, p1, v4, v3, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoBokeh$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/BokehCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v4, v1, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoBokeh$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/BokehCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_4
     instance-of v0, p1, Lcom/oneplus/camera/ui/actionpanel/VideoHdrActionItem;
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_13
 
     instance-of v0, p1, Lcom/oneplus/camera/ui/actionpanel/VideoHdrActionItem$SubItem;
 
@@ -6953,7 +7159,7 @@
 
     if-nez v0, :cond_5
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_5
     instance-of v0, p1, Lcom/oneplus/camera/ui/actionpanel/VideoNightActionItem;
@@ -6971,11 +7177,11 @@
     :cond_6
     iget-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->nightCamcorder:Lcom/oneplus/camera/next/hardware/NightCamcorder;
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_15
 
-    invoke-static {p0, p1, v4, v3, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoNight$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/NightCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v4, v1, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoNight$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/NightCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_7
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->filterActionItem:Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;
@@ -7001,18 +7207,18 @@
 
     if-eqz v0, :cond_9
 
-    invoke-static {p1, v2, v1, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->expand$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)Z
+    invoke-static {p1, v3, v2, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->expand$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_9
-    invoke-static {p1, v2, v1, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->collapse$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)V
+    invoke-static {p1, v3, v2, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->collapse$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)V
 
     :cond_a
     :goto_0
-    move p1, v2
+    move p1, v3
 
-    goto :goto_5
+    goto/16 :goto_6
 
     :cond_b
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->filterDisabledActionItem:Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;
@@ -7057,9 +7263,9 @@
 
     move-result-object p1
 
-    const v0, 0x7f1200aa
+    const v0, 0x7f12009b
 
-    invoke-static {p1, v0, v2, v3, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -7070,9 +7276,9 @@
 
     move-result-object p1
 
-    const v0, 0x7f1200ac
+    const v0, 0x7f12009d
 
-    invoke-static {p1, v0, v2, v3, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -7083,9 +7289,9 @@
 
     move-result-object p1
 
-    const v0, 0x7f1200ab
+    const v0, 0x7f12009c
 
-    invoke-static {p1, v0, v2, v3, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v0, v3, v1, v4}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -7104,44 +7310,102 @@
     :goto_2
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->filterDisabledToastHandle:Lcom/oneplus/base/Handle;
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_f
-    invoke-super {p0, p1}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onActionItemClick(Lcom/oneplus/camera/ui/actionpanel/ActionItem;)V
+    invoke-interface {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItem;->getData()Ljava/lang/Object;
 
-    goto :goto_4
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
+
+    if-nez v0, :cond_10
+
+    invoke-interface {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItem;->getData()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/oneplus/util/AspectRatio;
+
+    if-nez v0, :cond_10
+
+    invoke-interface {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItem;->getData()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v0, v0, Ljava/lang/Double;
+
+    if-eqz v0, :cond_12
 
     :cond_10
+    invoke-static {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItemKt;->isIconEnabled(Lcom/oneplus/camera/ui/actionpanel/ActionItem;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    invoke-static {p1}, Lcom/oneplus/camera/ui/actionpanel/ActionItemKt;->isSelected(Lcom/oneplus/camera/ui/actionpanel/ActionItem;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
+
+    if-eqz v0, :cond_11
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCameraKt;->isEnabled(Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;)Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_11
+
+    move v0, v2
+
+    goto :goto_3
+
+    :cond_11
+    move v0, v3
+
     :goto_3
+    iput-boolean v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->saveNormalResolutionInHIS:Z
+
+    :cond_12
+    invoke-super {p0, p1}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onActionItemClick(Lcom/oneplus/camera/ui/actionpanel/ActionItem;)V
+
+    goto :goto_5
+
+    :cond_13
+    :goto_4
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->isCameraPreviewActive()Z
 
     move-result p1
 
-    if-nez p1, :cond_11
+    if-nez p1, :cond_14
 
     return-void
 
-    :cond_11
+    :cond_14
     iget-object p1, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hdrCamcorder:Lcom/oneplus/camera/next/hardware/HdrCamcorder;
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_15
 
-    invoke-static {p0, p1, v4, v3, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoHdr$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/HdrCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v4, v1, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->toggleVideoHdr$default(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/camera/next/hardware/HdrCamcorder;Ljava/lang/Boolean;ILjava/lang/Object;)V
 
-    :cond_12
-    :goto_4
-    move p1, v1
-
+    :cond_15
     :goto_5
-    if-eqz p1, :cond_13
+    move p1, v2
+
+    :goto_6
+    if-eqz p1, :cond_16
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->filterPanel:Lcom/oneplus/camera/ui/FilterPanel;
 
-    if-eqz p0, :cond_13
+    if-eqz p0, :cond_16
 
-    invoke-static {p0, v2, v1, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->collapse$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)V
+    invoke-static {p0, v3, v2, v4}, Lcom/oneplus/camera/ui/FilterPanel$DefaultImpls;->collapse$default(Lcom/oneplus/camera/ui/FilterPanel;IILjava/lang/Object;)V
 
-    :cond_13
+    :cond_16
     return-void
 .end method
 
@@ -7922,13 +8186,13 @@
 
     check-cast v6, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
 
-    sget-object v7, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    sget-object v7, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     invoke-interface {v6}, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;->getId()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lkotlin/collections/ArraysKt;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v7, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -8213,6 +8477,33 @@
     invoke-interface {v0, v4, v5}, Lcom/oneplus/camera/next/hardware/BokehCamcorder;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
     :cond_3
+    const-class v0, Lcom/oneplus/camera/next/hardware/NightCamcorder;
+
+    invoke-interface {p1, v0}, Lcom/oneplus/camera/next/hardware/Camera;->asInterface(Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/camera/next/hardware/NightCamcorder;
+
+    if-eqz v0, :cond_4
+
+    sget-object v4, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+
+    invoke-virtual {v4}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_VIDEO_ENCODER()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v4
+
+    sget-object v5, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+
+    invoke-virtual {v5}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_VIDEO_ENCODER()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lcom/oneplus/base/PropertyKey;->defaultValue:Ljava/lang/Object;
+
+    invoke-interface {v0, v4, v5}, Lcom/oneplus/camera/next/hardware/NightCamcorder;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    :cond_4
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->filterDisabledToastHandle:Lcom/oneplus/base/Handle;
 
     invoke-static {v0, v2, v1, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
@@ -8306,6 +8597,61 @@
     move-object v2, p0
 
     invoke-static/range {v2 .. v8}, Lcom/oneplus/camera/OnePlusCameraComponent;->hide$default(Lcom/oneplus/camera/OnePlusCameraComponent;Landroid/view/View;JLkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoBokenHintHandle:Lcom/oneplus/base/Handle;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_4
+    move-object v0, v3
+
+    :goto_0
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoBokenHintHandle:Lcom/oneplus/base/Handle;
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    if-eqz v0, :cond_5
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_5
+    move-object v0, v3
+
+    :goto_1
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoNightNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHisNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
+
+    if-eqz v0, :cond_6
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v3
+
+    :cond_6
+    iput-object v3, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->videoHdrNotSupportHintHandle:Lcom/oneplus/base/Handle;
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onExit(Lcom/oneplus/camera/capturemode/CaptureMode;I)Lcom/oneplus/camera/next/hardware/OperationResult;
 
@@ -8657,7 +9003,7 @@
 .end method
 
 .method protected onLoadVideoResolutionFromSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;)Lcom/oneplus/camera/resolution/Resolution;
-    .locals 1
+    .locals 3
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -8673,6 +9019,8 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->FEATURE_FIXED_RESOLUTION_FOR_SERVICE_MODE:Lcom/oneplus/util/Feature;
@@ -8683,17 +9031,62 @@
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x0
-
     goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onLoadVideoResolutionFromSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;)Lcom/oneplus/camera/resolution/Resolution;
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCameraKt;->isEnabled(Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;)Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_1
+
+    :try_start_0
+    sget-object p1, Lcom/oneplus/camera/resolution/Resolution;->Companion:Lcom/oneplus/camera/resolution/Resolution$Companion;
+
+    const-string v0, "Resolution.Video.HIS.Back"
+
+    const-string v2, ""
+
+    invoke-virtual {p2, v0, v2}, Lcom/oneplus/camera/CameraSettings;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "settings.getString(SETTI\u2026_RESOLUTION_HIS_BACK, \"\")"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Lcom/oneplus/camera/resolution/Resolution$Companion;->unflattenFromString(Ljava/lang/String;)Lcom/oneplus/camera/resolution/Resolution;
 
     move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v1, p0
+
+    goto :goto_0
+
+    :catchall_0
+    iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->TAG:Ljava/lang/String;
+
+    const-string p1, "onLoadVideoResolutionFromSettings() - Failed to parse resolution from \'Resolution.Video.Back\' in settings"
+
+    invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onLoadVideoResolutionFromSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;)Lcom/oneplus/camera/resolution/Resolution;
+
+    move-result-object v1
 
     :goto_0
-    return-object p0
+    return-object v1
 .end method
 
 .method protected onPreparePrimaryActionItems()Ljava/util/List;
@@ -9571,7 +9964,7 @@
 .end method
 
 .method protected onSaveVideoResolutionToSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;Lcom/oneplus/camera/resolution/Resolution;)Z
-    .locals 3
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -9599,7 +9992,7 @@
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hdrCamcorder:Lcom/oneplus/camera/next/hardware/HdrCamcorder;
@@ -9616,44 +10009,50 @@
 
     if-ne v0, v2, :cond_1
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_1
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->isHISSupportOneResolutionOnly()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
 
-    if-eqz v0, :cond_2
+    const-string v3, "Resolution.Video.HIS.Back"
+
+    if-eqz v0, :cond_3
 
     invoke-static {v0}, Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCameraKt;->isEnabled(Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;)Z
 
     move-result v0
 
-    if-ne v0, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->nightCamcorder:Lcom/oneplus/camera/next/hardware/NightCamcorder;
-
-    if-eqz v0, :cond_3
-
-    check-cast v0, Lcom/oneplus/camera/next/hardware/Camcorder;
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->isEnabled(Lcom/oneplus/camera/next/hardware/Camcorder;)Z
-
-    move-result v0
-
     if-ne v0, v2, :cond_3
 
-    goto :goto_0
+    if-eqz p3, :cond_2
+
+    invoke-virtual {p3}, Lcom/oneplus/camera/resolution/Resolution;->flattenToString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, v3, p1}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
+
+    iget-boolean p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->saveNormalResolutionInHIS:Z
+
+    if-eqz p0, :cond_7
+
+    invoke-virtual {p3}, Lcom/oneplus/camera/resolution/Resolution;->flattenToString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "Resolution.Video.Back"
+
+    invoke-virtual {p2, p1, p0}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p2, v3}, Lcom/oneplus/camera/CameraSettings;->reset(Ljava/lang/String;)V
+
+    goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->bokehCamcorder:Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->nightCamcorder:Lcom/oneplus/camera/next/hardware/NightCamcorder;
 
     if-eqz v0, :cond_4
 
@@ -9665,14 +10064,64 @@
 
     if-ne v0, v2, :cond_4
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->bokehCamcorder:Lcom/oneplus/camera/next/hardware/BokehCamcorder;
+
+    if-eqz v0, :cond_5
+
+    check-cast v0, Lcom/oneplus/camera/next/hardware/Camcorder;
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->isEnabled(Lcom/oneplus/camera/next/hardware/Camcorder;)Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz p3, :cond_6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p3}, Lcom/oneplus/camera/resolution/Resolution;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x78
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/oneplus/camera/resolution/Resolution;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v3, v0}, Lcom/oneplus/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {p2, v3}, Lcom/oneplus/camera/CameraSettings;->reset(Ljava/lang/String;)V
+
+    :goto_0
     invoke-super {p0, p1, p2, p3}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onSaveVideoResolutionToSettings(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/CameraSettings;Lcom/oneplus/camera/resolution/Resolution;)Z
 
     move-result v1
 
-    :goto_0
+    :cond_7
+    :goto_1
     return v1
 .end method
 
@@ -9893,6 +10342,35 @@
 
     :goto_0
     return-object p1
+.end method
+
+.method protected onSelectFlashDisableMessage(Lcom/oneplus/camera/capturemode/AbstractCaptureMode$FlashDisableReason;)Ljava/lang/String;
+    .locals 2
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->hisCamera:Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCameraKt;->isEnabled(Lcom/oneplus/camera/next/hardware/HyperImageStabilizationCamera;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/oneplus/camera/capturemode/AbstractVideoCaptureMode;->onSelectFlashDisableMessage(Lcom/oneplus/camera/capturemode/AbstractCaptureMode$FlashDisableReason;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method protected onSelectSimpleFeatureCamerasToEnable(Ljava/util/Set;)V

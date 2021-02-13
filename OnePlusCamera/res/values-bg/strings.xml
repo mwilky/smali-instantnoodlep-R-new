@@ -96,6 +96,12 @@
     <string name="filter_landscape">Пейзаж</string>
     <string name="filter_mono">Моно</string>
     <string name="filter_night">Нощ</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Няма</string>
     <string name="filter_pop">Ярки цветове</string>
     <string name="filter_portrait">Портрет</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Няма въведен текст. Неуспешно записване на име във водния знак.</string>
     <string name="settings_watermark_summary">Ще бъде приложен воден знак на снимки, заснети със задната камера, включително режимите „Снимка“, „Портрет“, „Про“ и „Нощен режим“</string>
     <string name="settings_watermark_summary_8250">Ще бъде приложен воден знак на снимки, заснети със задната камера, включително режимите „Снимка“, „Портрет“, „Про“ и „Нощен режим“</string>
+    <string name="settings_watermark_timestamp">Час</string>
     <string name="settings_watermark_title">Воден знак на Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Корекция на ултраширокоъгълен обектив</string>
     <string name="show_kill_apps_processing_dialog">Изчистване</string>

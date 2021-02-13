@@ -571,7 +571,7 @@
     goto :goto_0
 
     :cond_0
-    const p2, 0x7f1201a0
+    const p2, 0x7f120195
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/settings/VideoResolutionSelectorActivity;->getString(I)Ljava/lang/String;
 

@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0a0239
+    const v4, 0x7f0a023a
 
     invoke-virtual {v0, v4}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -552,7 +552,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/ScreenFlashPresenter;->baseView:Landroid/view/View;
 
-    const v4, 0x7f0a023a
+    const v4, 0x7f0a023b
 
     invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

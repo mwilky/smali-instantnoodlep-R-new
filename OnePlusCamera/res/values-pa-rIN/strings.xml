@@ -11,7 +11,7 @@
     <string name="agree">ਸਹਿਮਤੀ ਦਿਓ</string>
     <string name="app_name">ਕੈਮਰਾ</string>
     <string name="app_name_video">ਕੈਮਕੌਰਡਰ</string>
-    <string name="auto">ਸਵੈਚਲਿਤ</string>
+    <string name="auto">ਆਟੋ</string>
     <string name="bokeh_hint">ਗਹਿਰਾਈ ਪ੍ਰਭਾਵ</string>
     <string name="bokeh_hint_camera_is_covered">ਕੈਮਰਾ ਰੋਕਿਆ ਗਿਆ</string>
     <string name="bokeh_hint_low_light">ਹੋਰ ਰੋਸ਼ਣੀ ਚਾਹੀਦੀ ਹੈ</string>
@@ -37,7 +37,7 @@
     <string name="content_description_face_beauty">ਚਿਹਰਾ ਖੂਬਸੂਰਤੀ</string>
     <string name="content_description_flash">ਫਲੈਸ਼</string>
     <string name="content_description_gallery">ਗੈਲਰੀ</string>
-    <string name="content_description_hyper_image_stabilization">ਸੁਪਰ ਟਿਕਾਅ</string>
+    <string name="content_description_hyper_image_stabilization">ਅਤਿਅੰਤ ਸਥਿਰ</string>
     <string name="content_description_picture_format">ਤਸਵੀਰ ਫਾਰਮੇਟ</string>
     <string name="content_description_resolution">ਮਤਾ</string>
     <string name="content_description_self_timer">ਟਾਈਮਰ</string>
@@ -67,6 +67,12 @@
     <string name="filter_landscape">ਲੈਂਡਸਕੇਪ</string>
     <string name="filter_mono">ਮੋਨੋ</string>
     <string name="filter_night">ਰਾਤ</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="filter_pop">ਸਪਸ਼ਟ</string>
     <string name="filter_portrait">ਪੋਰਟਰੇਟ</string>
@@ -85,7 +91,7 @@
     <string name="full_size_picutre_enabled_hint">48MP ਉੱਚ ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਅਤੇ ਚੰਗੇ ਪ੍ਰਕਾਸ਼ਮਾਨ ਦ੍ਰਿਸ਼ਾਂ ਵਿੱਚ ਵੇਰਵੇ ਕੈਪਚਰ ਕਰਦਾ ਹੈ</string>
     <string name="full_size_picutre_enabled_hint_64mp">64MP ਉੱਚ ਪੱਧਰੀ ਸਥਿਰਤਾ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦਾ ਹੈ ਅਤੇ ਬਿਹਤਰ ਰੌਸ਼ਨੀ ਵਾਲੇ ਦਿੑਸ਼ਾਂ ਵਿਚ ਵੇਰਵਿਆਂ ਨੂੰ ਕੈਪਚਰ ਕਰਦਾ ਹੈ</string>
     <string name="handshake_detected">ਤੇਜ਼ੀ ਨਾਲ ਹਿਲਾਉਣ ਕਰਕੇ ਫ਼ੋਟੋਆਂ ਧੁੰਦਲੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ</string>
-    <string name="hyper_image_stabilization_enabled">ਸੁਪਰ ਟਿਕਾਅ</string>
+    <string name="hyper_image_stabilization_enabled">ਅਤਿਅੰਤ ਸਥਿਰ</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">ਸੁਪਰ ਟਿਕਾਅ ਵਿੱਚ ਕੈਮਰਾ ਜ਼ੂਮ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਹੁੰਦਾ ਹੈ</string>
     <string name="lens_stain_detected">ਲੈਂਸ ਗੰਦਾ ਹੋ ਸਕਦਾ ਹੈ, ਬਿਹਤਰ ਤਸਵੀਰ ਕਵਾਲਿਟੀ ਲਈ ਇਸ ਨੂੰ ਸਾਫ ਕਰਕੇ ਦੇਖੋ</string>
     <string name="loading_text">ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...</string>
@@ -97,7 +103,7 @@
     <string name="macro_enabled">ਸੁਪਰ ਮੈਕਰੋ</string>
     <string name="macro_flash_disabled">ਫਲੈਸ਼ ਨੂੰ ਮੈਕਰੋ ਮੋਡ ਵਿੱਚ ਅਸਮਰੱਥ ਕੀਤਾ ਹੋਇਆ ਹੈ</string>
     <string name="macro_hint">ਸਿਫਾਰਸ਼ੀ ਸ਼ੂਟਿੰਗ ਦੂਰੀ 1-1.5 ਇੰਚ ਹੈ</string>
-    <string name="manual_capture_control_auto">ਸਵੈਚਲਿਤ</string>
+    <string name="manual_capture_control_auto">ਆਟੋ</string>
     <string name="manual_capture_control_manual">ਹੱਥੀਂ</string>
     <string name="manual_capture_long_exposure_tips">ਕੈਪਚਰ ਕਰ ਰਿਹਾ</string>
     <string name="manual_mode_custom_setting_saved">ਸਹੇਜਿਆ ਗਿਆ</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">ਕੋਈ ਲਿਖਤ ਇਨਪੁੱਟ ਨਹੀਂ; ਵਾਟਰਮਾਰਕ ਵਿੱਚ ਨਾਮ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ।</string>
     <string name="settings_watermark_summary">"ਪਿਛਲੇ ਕੈਮਰੇ ਨਾਲ ਲਿੱਤੀਆਂ ਗਈਆਂ ਫ਼ੋਟੋਆਂ 'ਤੇ ਵਾਟਰਮਾਰਕ ਲਗਾਇਆ ਜਾਵੇਗਾ, ਜਿਸ ਵਿੱਚ ਫ਼ੋਟੋ, ਪੋਰਟਰੇਟ, ਪ੍ਰੋ ਅਤੇ ਨਾਇਟਸਕੇਪ ਮੋਡ ਸ਼ਾਮਲ ਹਨ"</string>
     <string name="settings_watermark_summary_8250">"ਪਿਛਲੇ ਕੈਮਰੇ ਨਾਲ ਲਿੱਤੀਆਂ ਗਈਆਂ ਫ਼ੋਟੋਆਂ 'ਤੇ ਵਾਟਰਮਾਰਕ ਲਗਾਇਆ ਜਾਵੇਗਾ, ਜਿਸ ਵਿੱਚ ਫ਼ੋਟੋ, ਪੋਰਟਰੇਟ, ਪ੍ਰੋ ਅਤੇ ਨਾਇਟਸਕੇਪ ਮੋਡ ਸ਼ਾਮਲ ਹਨ"</string>
+    <string name="settings_watermark_timestamp">ਸਮਾਂ</string>
     <string name="settings_watermark_title">Shot on OnePlus ਵਾਟਰਮਾਰਕ</string>
     <string name="settings_wide_lens_distortion_correction">ਅਲਟਰਾ ਵਿਆਪਕ ਲੈੱਨਜ਼ ਸੁਧਾਰ</string>
     <string name="show_kill_apps_processing_dialog">ਸਾਫ ਹੋ ਰਿਹਾ ਹੈ</string>

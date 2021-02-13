@@ -156,7 +156,7 @@
     <color name="empty_thumb">#ff000000</color>
     <color name="error_color_material_dark">#ffff7043</color>
     <color name="error_color_material_light">#ffff5722</color>
-    <color name="face_frame">#4cffffff</color>
+    <color name="face_frame">#ffffc700</color>
     <color name="filmstrip_in_out_animation_background">#ff000000</color>
     <color name="floating_button_background">#29000000</color>
     <color name="floating_button_border">#29ffffff</color>
@@ -400,7 +400,7 @@
     <color name="op_control_text_color_red_light">#ffc41442</color>
     <color name="op_control_text_color_secondary_dark">#89ffffff</color>
     <color name="op_control_text_color_secondary_default">@color/op_control_text_color_secondary_light</color>
-    <color name="op_control_text_color_secondary_light">#66000000</color>
+    <color name="op_control_text_color_secondary_light">#8c000000</color>
     <color name="op_control_text_color_teal_dark">#ff4fbcb5</color>
     <color name="op_control_text_color_teal_default">@color/op_control_text_color_teal_light</color>
     <color name="op_control_text_color_teal_light">#ff00ccb5</color>

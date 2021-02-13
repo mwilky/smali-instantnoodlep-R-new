@@ -933,7 +933,7 @@
 
     if-eqz v1, :cond_a
 
-    const v4, 0x7f1200b9
+    const v4, 0x7f1200ad
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -948,7 +948,7 @@
     goto :goto_2
 
     :cond_5
-    const v4, 0x7f1200bf
+    const v4, 0x7f1200b3
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -963,7 +963,7 @@
     goto :goto_2
 
     :cond_6
-    const v4, 0x7f1200c1
+    const v4, 0x7f1200b5
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -976,7 +976,7 @@
     if-eqz v4, :cond_7
 
     :goto_2
-    const v1, 0x7f1200a5
+    const v1, 0x7f120096
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -987,7 +987,7 @@
     goto :goto_4
 
     :cond_7
-    const v4, 0x7f1200b4
+    const v4, 0x7f1200a6
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -1002,7 +1002,7 @@
     goto :goto_3
 
     :cond_8
-    const v4, 0x7f1200b6
+    const v4, 0x7f1200aa
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -1015,7 +1015,7 @@
     if-eqz v1, :cond_9
 
     :goto_3
-    const v1, 0x7f1200a6
+    const v1, 0x7f120097
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/FilterPanelImpl;->getString(I)Ljava/lang/String;
 
@@ -2688,7 +2688,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0401b9
+    const v1, 0x7f0401ba
 
     invoke-virtual {p0, v1, v0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
 
@@ -2696,7 +2696,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/ui/FilterPanelImpl;->itemImageCornerRadius:I
 
-    const v1, 0x7f0401c0
+    const v1, 0x7f0401c1
 
     invoke-virtual {p0, v1, v0}, Lcom/oneplus/camera/ui/FilterPanelImpl;->obtainStyledDimensionPixels(II)I
 

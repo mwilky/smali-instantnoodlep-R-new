@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nWatermarkEditTextPreference.kt\nKotlin\n*S Kotlin\n*F\n+ 1 WatermarkEditTextPreference.kt\ncom/oneplus/camera/settings/WatermarkEditTextPreference\n*L\n1#1,157:1\n*E\n"
+    value = "SMAP\nWatermarkEditTextPreference.kt\nKotlin\n*S Kotlin\n*F\n+ 1 WatermarkEditTextPreference.kt\ncom/oneplus/camera/settings/WatermarkEditTextPreference\n*L\n1#1,158:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -22,7 +22,7 @@
         0x3
     }
     d1 = {
-        "\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\u0005\u0018\u0000 &2\u00020\u0001:\u0002&\'B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010\u001b\u001a\u00020\u0014H\u0007J\u0012\u0010\u001c\u001a\u00020\u00142\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0017J\u001a\u0010\u001f\u001a\u00020\u00142\u0006\u0010 \u001a\u00020!2\u0008\u0010\"\u001a\u0004\u0018\u00010#H\u0015J\u0010\u0010$\u001a\u00020\u00142\u0006\u0010%\u001a\u00020!H\u0017R\u0018\u0010\u0007\u001a\u000c\u0012\u0008\u0012\u00060\tR\u00020\u00000\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u000b@BX\u0086\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR9\u0010\u000f\u001a!\u0012\u0015\u0012\u0013\u0018\u00010\u000b\u00a2\u0006\u000c\u0008\u0011\u0012\u0008\u0008\u0012\u0012\u0004\u0008\u0008(\u0013\u0012\u0004\u0012\u00020\u0014\u0018\u00010\u0010X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0015\u0010\u0016\"\u0004\u0008\u0017\u0010\u0018R\u000e\u0010\u0019\u001a\u00020\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006("
+        "\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\u0005\u0018\u0000 &2\u00020\u0001:\u0002&\'B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010\u001b\u001a\u00020\u0010H\u0007J\u0012\u0010\u001c\u001a\u00020\u00102\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0017J\u001a\u0010\u001f\u001a\u00020\u00102\u0006\u0010 \u001a\u00020!2\u0008\u0010\"\u001a\u0004\u0018\u00010#H\u0015J\u0010\u0010$\u001a\u00020\u00102\u0006\u0010%\u001a\u00020!H\u0017R\u0018\u0010\u0007\u001a\u000c\u0012\u0008\u0012\u00060\tR\u00020\u00000\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000R9\u0010\n\u001a!\u0012\u0015\u0012\u0013\u0018\u00010\u000c\u00a2\u0006\u000c\u0008\r\u0012\u0008\u0008\u000e\u0012\u0004\u0008\u0008(\u000f\u0012\u0004\u0012\u00020\u0010\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012\"\u0004\u0008\u0013\u0010\u0014R\u001e\u0010\u0016\u001a\u00020\u000c2\u0006\u0010\u0015\u001a\u00020\u000c@BX\u0086\u000e\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u0018R\u000e\u0010\u0019\u001a\u00020\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006("
     }
     d2 = {
         "Lcom/oneplus/camera/settings/WatermarkEditTextPreference;",
@@ -35,13 +35,9 @@
         "availableViewHolders",
         "",
         "Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder;",
-        "<set-?>",
-        "",
-        "brandText",
-        "getBrandText",
-        "()Ljava/lang/String;",
         "brandTextChangedListener",
         "Lkotlin/Function1;",
+        "",
         "Lkotlin/ParameterName;",
         "name",
         "text",
@@ -50,6 +46,10 @@
         "()Lkotlin/jvm/functions/Function1;",
         "setBrandTextChangedListener",
         "(Lkotlin/jvm/functions/Function1;)V",
+        "<set-?>",
+        "customNameText",
+        "getCustomNameText",
+        "()Ljava/lang/String;",
         "persistStringOperation",
         "Lcom/oneplus/threading/UniqueDispatcherOperation;",
         "notifyPause",
@@ -93,8 +93,6 @@
     .end annotation
 .end field
 
-.field private brandText:Ljava/lang/String;
-
 .field private brandTextChangedListener:Lkotlin/jvm/functions/Function1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -106,6 +104,8 @@
         }
     .end annotation
 .end field
+
+.field private customNameText:Ljava/lang/String;
 
 .field private final persistStringOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
@@ -176,15 +176,15 @@
 
     const-string p1, ""
 
-    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final synthetic access$getBrandText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;)Ljava/lang/String;
+.method public static final synthetic access$getCustomNameText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -207,24 +207,16 @@
     return p0
 .end method
 
-.method public static final synthetic access$setBrandText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;Ljava/lang/String;)V
+.method public static final synthetic access$setCustomNameText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getBrandText()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
-
-    return-object p0
-.end method
-
 .method public final getBrandTextChangedListener()Lkotlin/jvm/functions/Function1;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -238,6 +230,14 @@
     .end annotation
 
     iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandTextChangedListener:Lkotlin/jvm/functions/Function1;
+
+    return-object p0
+.end method
+
+.method public final getCustomNameText()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -328,7 +328,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -344,7 +344,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     check-cast v1, Ljava/lang/CharSequence;
 
@@ -378,7 +378,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->brandText:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->customNameText:Ljava/lang/String;
 
     iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->availableViewHolders:Ljava/util/Set;
 

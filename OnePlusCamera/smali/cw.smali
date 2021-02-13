@@ -1,347 +1,1420 @@
-.class final Lcw;
-.super Lct;
+.class public final enum Lcw;
+.super Ljava/lang/Enum;
 .source "PG"
 
 
 # static fields
-.field private static final c:Ljava/lang/Class;
+.field public static final enum A:Lcw;
+
+.field public static final enum B:Lcw;
+
+.field public static final enum C:Lcw;
+
+.field public static final enum D:Lcw;
+
+.field public static final enum E:Lcw;
+
+.field public static final enum F:Lcw;
+
+.field public static final enum G:Lcw;
+
+.field public static final enum H:Lcw;
+
+.field public static final enum I:Lcw;
+
+.field public static final enum J:Lcw;
+
+.field public static final enum K:Lcw;
+
+.field public static final enum L:Lcw;
+
+.field public static final enum M:Lcw;
+
+.field public static final enum N:Lcw;
+
+.field public static final enum O:Lcw;
+
+.field public static final enum P:Lcw;
+
+.field public static final enum Q:Lcw;
+
+.field public static final enum R:Lcw;
+
+.field public static final enum S:Lcw;
+
+.field public static final enum T:Lcw;
+
+.field public static final enum U:Lcw;
+
+.field public static final enum V:Lcw;
+
+.field public static final enum W:Lcw;
+
+.field public static final enum X:Lcw;
+
+.field public static final enum Y:Lcw;
+
+.field public static final enum a:Lcw;
+
+.field private static final ab:[Lcw;
+
+.field private static final synthetic ac:[Lcw;
+
+.field public static final enum b:Lcw;
+
+.field public static final enum c:Lcw;
+
+.field public static final enum d:Lcw;
+
+.field public static final enum e:Lcw;
+
+.field public static final enum f:Lcw;
+
+.field public static final enum g:Lcw;
+
+.field public static final enum h:Lcw;
+
+.field public static final enum i:Lcw;
+
+.field public static final enum j:Lcw;
+
+.field public static final enum k:Lcw;
+
+.field public static final enum l:Lcw;
+
+.field public static final enum m:Lcw;
+
+.field public static final enum n:Lcw;
+
+.field public static final enum o:Lcw;
+
+.field public static final enum p:Lcw;
+
+.field public static final enum q:Lcw;
+
+.field public static final enum r:Lcw;
+
+.field public static final enum s:Lcw;
+
+.field public static final enum t:Lcw;
+
+.field public static final enum u:Lcw;
+
+.field public static final enum v:Lcw;
+
+.field public static final enum w:Lcw;
+
+.field public static final enum x:Lcw;
+
+.field public static final enum y:Lcw;
+
+.field public static final enum z:Lcw;
+
+
+# instance fields
+.field public final Z:I
+
+.field private final aa:Lcv;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 13
 
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    new-instance v6, Lcw;
 
-    move-result-object v0
+    sget-object v4, Lcv;->a:Lcv;
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    sget-object v5, Ldm;->e:Ldm;
 
-    move-result-object v0
+    const-string v1, "DOUBLE"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    sput-object v0, Lcw;->c:Ljava/lang/Class;
+    move-object v0, v6
 
-    return-void
-.end method
+    invoke-direct/range {v0 .. v5}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
 
-.method constructor <init>()V
-    .locals 0
+    sput-object v6, Lcw;->a:Lcw;
 
-    invoke-direct {p0}, Lct;-><init>()V
+    new-instance v0, Lcw;
 
-    return-void
-.end method
+    sget-object v11, Lcv;->a:Lcv;
 
-.method private static a(Ljava/lang/Object;JI)Ljava/util/List;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "message",
-            "offset",
-            "additionalCapacity"
-        }
-    .end annotation
+    sget-object v12, Ldm;->d:Ldm;
 
-    invoke-static {p0, p1, p2}, Lcw;->b(Ljava/lang/Object;J)Ljava/util/List;
+    const-string v8, "FLOAT"
 
-    move-result-object v0
+    const/4 v9, 0x1
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    const/4 v10, 0x1
 
-    move-result v1
+    move-object v7, v0
 
-    if-eqz v1, :cond_2
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
 
-    instance-of v1, v0, Lcu;
+    sput-object v0, Lcw;->b:Lcw;
 
-    if-eqz v1, :cond_0
+    new-instance v0, Lcw;
 
-    new-instance v0, Lcr;
+    sget-object v5, Lcv;->a:Lcv;
 
-    invoke-direct {v0, p3}, Lcr;-><init>(I)V
+    sget-object v6, Ldm;->c:Ldm;
 
-    goto :goto_0
+    const-string v2, "INT64"
 
-    :cond_0
-    instance-of v1, v0, Ldr;
+    const/4 v3, 0x2
 
-    if-eqz v1, :cond_1
-
-    instance-of v1, v0, Lcj;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lcj;
-
-    invoke-interface {v0, p3}, Lcj;->a(I)Lcj;
-
-    move-result-object p3
-
-    move-object v0, p3
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p3}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_0
-    invoke-static {p0, p1, p2, v0}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v1, Lcw;->c:Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/2addr v2, p3
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-static {p0, p1, p2, v1}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
-
-    :goto_1
-    move-object v0, v1
-
-    goto :goto_2
-
-    :cond_3
-    instance-of v1, v0, Leo;
-
-    if-eqz v1, :cond_4
-
-    new-instance v1, Lcr;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/2addr v2, p3
-
-    invoke-direct {v1, v2}, Lcr;-><init>(I)V
-
-    check-cast v0, Leo;
-
-    invoke-virtual {v1, v0}, Lar;->addAll(Ljava/util/Collection;)Z
-
-    invoke-static {p0, p1, p2, v1}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_4
-    instance-of v1, v0, Ldr;
-
-    if-eqz v1, :cond_5
-
-    instance-of v1, v0, Lcj;
-
-    if-eqz v1, :cond_5
+    const/4 v4, 0x2
 
     move-object v1, v0
 
-    check-cast v1, Lcj;
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
 
-    invoke-interface {v1}, Lcj;->a()Z
+    sput-object v0, Lcw;->c:Lcw;
 
-    move-result v2
+    new-instance v0, Lcw;
 
-    if-nez v2, :cond_5
+    sget-object v11, Lcv;->a:Lcv;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    sget-object v12, Ldm;->c:Ldm;
 
-    move-result v0
+    const-string v8, "UINT64"
 
-    add-int/2addr v0, p3
+    const/4 v9, 0x3
 
-    invoke-interface {v1, v0}, Lcj;->a(I)Lcj;
+    const/4 v10, 0x3
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->d:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->b:Ldm;
+
+    const-string v2, "INT32"
+
+    const/4 v3, 0x4
+
+    const/4 v4, 0x4
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->e:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->c:Ldm;
+
+    const-string v8, "FIXED64"
+
+    const/4 v9, 0x5
+
+    const/4 v10, 0x5
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->f:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->b:Ldm;
+
+    const-string v2, "FIXED32"
+
+    const/4 v3, 0x6
+
+    const/4 v4, 0x6
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->g:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->f:Ldm;
+
+    const-string v8, "BOOL"
+
+    const/4 v9, 0x7
+
+    const/4 v10, 0x7
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->h:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->g:Ldm;
+
+    const-string v2, "STRING"
+
+    const/16 v3, 0x8
+
+    const/16 v4, 0x8
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->i:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->j:Ldm;
+
+    const-string v8, "MESSAGE"
+
+    const/16 v9, 0x9
+
+    const/16 v10, 0x9
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->j:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->h:Ldm;
+
+    const-string v2, "BYTES"
+
+    const/16 v3, 0xa
+
+    const/16 v4, 0xa
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->k:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "UINT32"
+
+    const/16 v9, 0xb
+
+    const/16 v10, 0xb
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->l:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->i:Ldm;
+
+    const-string v2, "ENUM"
+
+    const/16 v3, 0xc
+
+    const/16 v4, 0xc
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->m:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SFIXED32"
+
+    const/16 v9, 0xd
+
+    const/16 v10, 0xd
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->n:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SFIXED64"
+
+    const/16 v3, 0xe
+
+    const/16 v4, 0xe
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->o:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SINT32"
+
+    const/16 v9, 0xf
+
+    const/16 v10, 0xf
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->p:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->a:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SINT64"
+
+    const/16 v3, 0x10
+
+    const/16 v4, 0x10
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->q:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->a:Lcv;
+
+    sget-object v12, Ldm;->j:Ldm;
+
+    const-string v8, "GROUP"
+
+    const/16 v9, 0x11
+
+    const/16 v10, 0x11
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->r:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->e:Ldm;
+
+    const-string v2, "DOUBLE_LIST"
+
+    const/16 v3, 0x12
+
+    const/16 v4, 0x12
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->s:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->d:Ldm;
+
+    const-string v8, "FLOAT_LIST"
+
+    const/16 v9, 0x13
+
+    const/16 v10, 0x13
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->t:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "INT64_LIST"
+
+    const/16 v3, 0x14
+
+    const/16 v4, 0x14
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->u:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->c:Ldm;
+
+    const-string v8, "UINT64_LIST"
+
+    const/16 v9, 0x15
+
+    const/16 v10, 0x15
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->v:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->b:Ldm;
+
+    const-string v2, "INT32_LIST"
+
+    const/16 v3, 0x16
+
+    const/16 v4, 0x16
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->w:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->c:Ldm;
+
+    const-string v8, "FIXED64_LIST"
+
+    const/16 v9, 0x17
+
+    const/16 v10, 0x17
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->x:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->b:Ldm;
+
+    const-string v2, "FIXED32_LIST"
+
+    const/16 v3, 0x18
+
+    const/16 v4, 0x18
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->y:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->f:Ldm;
+
+    const-string v8, "BOOL_LIST"
+
+    const/16 v9, 0x19
+
+    const/16 v10, 0x19
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->z:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->g:Ldm;
+
+    const-string v2, "STRING_LIST"
+
+    const/16 v3, 0x1a
+
+    const/16 v4, 0x1a
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->A:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->j:Ldm;
+
+    const-string v8, "MESSAGE_LIST"
+
+    const/16 v9, 0x1b
+
+    const/16 v10, 0x1b
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->B:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->h:Ldm;
+
+    const-string v2, "BYTES_LIST"
+
+    const/16 v3, 0x1c
+
+    const/16 v4, 0x1c
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->C:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "UINT32_LIST"
+
+    const/16 v9, 0x1d
+
+    const/16 v10, 0x1d
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->D:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->i:Ldm;
+
+    const-string v2, "ENUM_LIST"
+
+    const/16 v3, 0x1e
+
+    const/16 v4, 0x1e
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->E:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SFIXED32_LIST"
+
+    const/16 v9, 0x1f
+
+    const/16 v10, 0x1f
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->F:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SFIXED64_LIST"
+
+    const/16 v3, 0x20
+
+    const/16 v4, 0x20
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->G:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SINT32_LIST"
+
+    const/16 v9, 0x21
+
+    const/16 v10, 0x21
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->H:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->b:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SINT64_LIST"
+
+    const/16 v3, 0x22
+
+    const/16 v4, 0x22
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->I:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->e:Ldm;
+
+    const-string v8, "DOUBLE_LIST_PACKED"
+
+    const/16 v9, 0x23
+
+    const/16 v10, 0x23
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->J:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->d:Ldm;
+
+    const-string v2, "FLOAT_LIST_PACKED"
+
+    const/16 v3, 0x24
+
+    const/16 v4, 0x24
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->K:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->c:Ldm;
+
+    const-string v8, "INT64_LIST_PACKED"
+
+    const/16 v9, 0x25
+
+    const/16 v10, 0x25
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->L:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "UINT64_LIST_PACKED"
+
+    const/16 v3, 0x26
+
+    const/16 v4, 0x26
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->M:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "INT32_LIST_PACKED"
+
+    const/16 v9, 0x27
+
+    const/16 v10, 0x27
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->N:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "FIXED64_LIST_PACKED"
+
+    const/16 v3, 0x28
+
+    const/16 v4, 0x28
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->O:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "FIXED32_LIST_PACKED"
+
+    const/16 v9, 0x29
+
+    const/16 v10, 0x29
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->P:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->f:Ldm;
+
+    const-string v2, "BOOL_LIST_PACKED"
+
+    const/16 v3, 0x2a
+
+    const/16 v4, 0x2a
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->Q:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "UINT32_LIST_PACKED"
+
+    const/16 v9, 0x2b
+
+    const/16 v10, 0x2b
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->R:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->i:Ldm;
+
+    const-string v2, "ENUM_LIST_PACKED"
+
+    const/16 v3, 0x2c
+
+    const/16 v4, 0x2c
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->S:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SFIXED32_LIST_PACKED"
+
+    const/16 v9, 0x2d
+
+    const/16 v10, 0x2d
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->T:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SFIXED64_LIST_PACKED"
+
+    const/16 v3, 0x2e
+
+    const/16 v4, 0x2e
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->U:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->c:Lcv;
+
+    sget-object v12, Ldm;->b:Ldm;
+
+    const-string v8, "SINT32_LIST_PACKED"
+
+    const/16 v9, 0x2f
+
+    const/16 v10, 0x2f
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->V:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->c:Lcv;
+
+    sget-object v6, Ldm;->c:Ldm;
+
+    const-string v2, "SINT64_LIST_PACKED"
+
+    const/16 v3, 0x30
+
+    const/16 v4, 0x30
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->W:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v11, Lcv;->b:Lcv;
+
+    sget-object v12, Ldm;->j:Ldm;
+
+    const-string v8, "GROUP_LIST"
+
+    const/16 v9, 0x31
+
+    const/16 v10, 0x31
+
+    move-object v7, v0
+
+    invoke-direct/range {v7 .. v12}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->X:Lcw;
+
+    new-instance v0, Lcw;
+
+    sget-object v5, Lcv;->d:Lcv;
+
+    sget-object v6, Ldm;->a:Ldm;
+
+    const-string v2, "MAP"
+
+    const/16 v3, 0x32
+
+    const/16 v4, 0x32
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcw;-><init>(Ljava/lang/String;IILcv;Ldm;)V
+
+    sput-object v0, Lcw;->Y:Lcw;
+
+    const/16 v0, 0x33
+
+    new-array v0, v0, [Lcw;
+
+    sget-object v1, Lcw;->a:Lcw;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcw;->b:Lcw;
+
+    const/4 v3, 0x1
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->c:Lcw;
+
+    const/4 v3, 0x2
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->d:Lcw;
+
+    const/4 v3, 0x3
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->e:Lcw;
+
+    const/4 v3, 0x4
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->f:Lcw;
+
+    const/4 v3, 0x5
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->g:Lcw;
+
+    const/4 v3, 0x6
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->h:Lcw;
+
+    const/4 v3, 0x7
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->i:Lcw;
+
+    const/16 v3, 0x8
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->j:Lcw;
+
+    const/16 v3, 0x9
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->k:Lcw;
+
+    const/16 v3, 0xa
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->l:Lcw;
+
+    const/16 v3, 0xb
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->m:Lcw;
+
+    const/16 v3, 0xc
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->n:Lcw;
+
+    const/16 v3, 0xd
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->o:Lcw;
+
+    const/16 v3, 0xe
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->p:Lcw;
+
+    const/16 v3, 0xf
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->q:Lcw;
+
+    const/16 v3, 0x10
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->r:Lcw;
+
+    const/16 v3, 0x11
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->s:Lcw;
+
+    const/16 v3, 0x12
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->t:Lcw;
+
+    const/16 v3, 0x13
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->u:Lcw;
+
+    const/16 v3, 0x14
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->v:Lcw;
+
+    const/16 v3, 0x15
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->w:Lcw;
+
+    const/16 v3, 0x16
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->x:Lcw;
+
+    const/16 v3, 0x17
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->y:Lcw;
+
+    const/16 v3, 0x18
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->z:Lcw;
+
+    const/16 v3, 0x19
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->A:Lcw;
+
+    const/16 v3, 0x1a
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->B:Lcw;
+
+    const/16 v3, 0x1b
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->C:Lcw;
+
+    const/16 v3, 0x1c
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->D:Lcw;
+
+    const/16 v3, 0x1d
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->E:Lcw;
+
+    const/16 v3, 0x1e
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->F:Lcw;
+
+    const/16 v3, 0x1f
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->G:Lcw;
+
+    const/16 v3, 0x20
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->H:Lcw;
+
+    const/16 v3, 0x21
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->I:Lcw;
+
+    const/16 v3, 0x22
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->J:Lcw;
+
+    const/16 v3, 0x23
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->K:Lcw;
+
+    const/16 v3, 0x24
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->L:Lcw;
+
+    const/16 v3, 0x25
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->M:Lcw;
+
+    const/16 v3, 0x26
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->N:Lcw;
+
+    const/16 v3, 0x27
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->O:Lcw;
+
+    const/16 v3, 0x28
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->P:Lcw;
+
+    const/16 v3, 0x29
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->Q:Lcw;
+
+    const/16 v3, 0x2a
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->R:Lcw;
+
+    const/16 v3, 0x2b
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->S:Lcw;
+
+    const/16 v3, 0x2c
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->T:Lcw;
+
+    const/16 v3, 0x2d
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->U:Lcw;
+
+    const/16 v3, 0x2e
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->V:Lcw;
+
+    const/16 v3, 0x2f
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->W:Lcw;
+
+    const/16 v3, 0x30
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->X:Lcw;
+
+    const/16 v3, 0x31
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcw;->Y:Lcw;
+
+    const/16 v3, 0x32
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcw;->ac:[Lcw;
+
+    invoke-static {}, Lcw;->values()[Lcw;
 
     move-result-object v0
 
-    invoke-static {p0, p1, p2, v0}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
+    array-length v1, v0
 
-    :cond_5
-    :goto_2
-    return-object v0
-.end method
+    new-array v3, v1, [Lcw;
 
-.method private static b(Ljava/lang/Object;J)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "message",
-            "offset"
-        }
-    .end annotation
+    sput-object v3, Lcw;->ab:[Lcw;
 
-    invoke-static {p0, p1, p2}, Lep;->f(Ljava/lang/Object;J)Ljava/lang/Object;
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    move-result-object p0
+    aget-object v3, v0, v2
 
-    check-cast p0, Ljava/util/List;
+    sget-object v4, Lcw;->ab:[Lcw;
 
-    return-object p0
-.end method
+    iget v5, v3, Lcw;->Z:I
 
+    aput-object v3, v4, v5
 
-# virtual methods
-.method final a(Ljava/lang/Object;J)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "message",
-            "offset"
-        }
-    .end annotation
-
-    invoke-static {p1, p2, p3}, Lep;->f(Ljava/lang/Object;J)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    instance-of v0, p0, Lcu;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lcu;
-
-    invoke-interface {p0}, Lcu;->e()Lcu;
-
-    move-result-object p0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcw;->c:Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    return-void
-
-    :cond_1
-    instance-of v0, p0, Ldr;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p0, Lcj;
-
-    if-eqz v0, :cond_3
-
-    check-cast p0, Lcj;
-
-    invoke-interface {p0}, Lcj;->a()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p0}, Lcj;->b()V
-
-    :cond_2
-    return-void
-
-    :cond_3
-    invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-static {p1, p2, p3, p0}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
-
     return-void
 .end method
 
-.method final a(Ljava/lang/Object;Ljava/lang/Object;J)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "msg",
-            "otherMsg",
-            "offset"
-        }
-    .end annotation
+.method private constructor <init>(Ljava/lang/String;IILcv;Ldm;)V
+    .locals 0
 
-    invoke-static {p2, p3, p4}, Lcw;->b(Ljava/lang/Object;J)Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p0
+    iput p3, p0, Lcw;->Z:I
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    iput-object p4, p0, Lcw;->aa:Lcv;
 
-    move-result p2
+    sget-object p0, Ldm;->a:Ldm;
 
-    invoke-static {p1, p3, p4, p2}, Lcw;->a(Ljava/lang/Object;JI)Ljava/util/List;
+    sget-object p0, Lcv;->a:Lcv;
 
-    move-result-object p2
+    invoke-virtual {p4}, Lcv;->ordinal()I
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    sget-object p0, Lcv;->a:Lcv;
 
-    move-result v0
+    if-ne p4, p0, :cond_0
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-lez v0, :cond_0
-
-    if-lez v1, :cond_0
-
-    invoke-interface {p2, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {p5}, Ldm;->ordinal()I
 
     :cond_0
-    if-lez v0, :cond_1
-
-    move-object p0, p2
-
-    :cond_1
-    invoke-static {p1, p3, p4, p0}, Lep;->a(Ljava/lang/Object;JLjava/lang/Object;)V
-
     return-void
+.end method
+
+.method public static values()[Lcw;
+    .locals 1
+
+    sget-object v0, Lcw;->ac:[Lcw;
+
+    invoke-virtual {v0}, [Lcw;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcw;
+
+    return-object v0
 .end method

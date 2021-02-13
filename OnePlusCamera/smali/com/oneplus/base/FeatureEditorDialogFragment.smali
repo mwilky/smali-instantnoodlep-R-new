@@ -126,7 +126,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 

@@ -96,6 +96,12 @@
     <string name="filter_landscape">Landscape</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Gabi</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Wala</string>
     <string name="filter_pop">Vivid</string>
     <string name="filter_portrait">Portrait</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Pumili ng mga minuto</string>
     <string name="select_year">Pumili ng taon</string>
     <string name="settings">Mga Pangtugma</string>
-    <string name="settings_about">Tungkol sa</string>
+    <string name="settings_about">Tungkol Dito</string>
     <string name="settings_about_agreement">Kasunduan ng User</string>
     <string name="settings_about_copyright">"OnePlus Nakalaan ang Lahat ng Karapatan
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Walang input na text; hindi na-save ang pangalan sa watermark.</string>
     <string name="settings_watermark_summary">May ilalapat na watermark sa mga litrato na kinuha gamit ang camera sa likod, kabilang ang mga mode ng Photo, Portrait, Pro at Nightscape</string>
     <string name="settings_watermark_summary_8250">May ilalapat na watermark sa mga litrato na kinuha gamit ang camera sa likod, kabilang ang mga mode ng Photo, Portrait, Pro at Nightscape</string>
+    <string name="settings_watermark_timestamp">Oras</string>
     <string name="settings_watermark_title">Shot on OnePlus watermark</string>
     <string name="settings_wide_lens_distortion_correction">Pag-correct sa Ultra Wide na Lens</string>
     <string name="show_kill_apps_processing_dialog">Paglilinis</string>

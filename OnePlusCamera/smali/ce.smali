@@ -1,6 +1,8 @@
-.class public interface abstract Lce;
+.class interface abstract Lce;
 .super Ljava/lang/Object;
 .source "PG"
 
-# interfaces
-.implements Lcj;
+
+# virtual methods
+.method public abstract a([BII)[B
+.end method

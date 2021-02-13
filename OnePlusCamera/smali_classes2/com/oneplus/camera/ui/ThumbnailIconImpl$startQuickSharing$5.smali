@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$startQuickSharing$5\n*L\n1#1,3984:1\n*E\n"
+    value = "SMAP\nThumbnailIconImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThumbnailIconImpl.kt\ncom/oneplus/camera/ui/ThumbnailIconImpl$startQuickSharing$5\n*L\n1#1,4111:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -98,6 +98,14 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$startQuickSharing$5;->this$0:Lcom/oneplus/camera/ui/ThumbnailIconImpl;
 
+    invoke-static {v0}, Lcom/oneplus/camera/ui/ThumbnailIconImpl;->access$isActualMediaSaved$p(Lcom/oneplus/camera/ui/ThumbnailIconImpl;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/camera/ui/ThumbnailIconImpl$startQuickSharing$5;->this$0:Lcom/oneplus/camera/ui/ThumbnailIconImpl;
+
     invoke-static {v0}, Lcom/oneplus/camera/ui/ThumbnailIconImpl;->access$getTAG$p(Lcom/oneplus/camera/ui/ThumbnailIconImpl;)Ljava/lang/String;
 
     move-result-object v0
@@ -138,7 +146,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f04038e
+    const v3, 0x7f04038f
 
     const/4 v4, 0x0
 

@@ -86,13 +86,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02c7
+    const v1, 0x7f0a02c8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const v2, 0x7f12010c
+    const v2, 0x7f120100
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -184,7 +184,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802fb
+    const p1, 0x7f0802ed
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -201,7 +201,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802f8
+    const p1, 0x7f0802ea
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

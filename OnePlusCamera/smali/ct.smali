@@ -1,67 +1,77 @@
-.class abstract Lct;
+.class final Lct;
 .super Ljava/lang/Object;
 .source "PG"
 
 
 # static fields
-.field public static final a:Lct;
+.field public static final a:Lej;
 
-.field public static final b:Lct;
+.field private static final b:Lej;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    new-instance v0, Lcw;
+    new-instance v0, Lej;
 
-    invoke-direct {v0}, Lcw;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lct;->a:Lct;
+    invoke-direct {v0, v1}, Lej;-><init>([B)V
 
-    new-instance v0, Lcv;
+    sput-object v0, Lct;->a:Lej;
 
-    invoke-direct {v0}, Lcv;-><init>()V
+    :try_start_0
+    const-string v0, "com.google.protobuf.ExtensionSchemaFull"
 
-    sput-object v0, Lct;->b:Lct;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    new-array v3, v2, [Ljava/lang/Class;
+
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lej;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-object v0, v1
+
+    :goto_0
+    sput-object v0, Lct;->b:Lej;
 
     return-void
 .end method
 
-.method constructor <init>()V
-    .locals 0
+.method static a()Lej;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lct;->b:Lej;
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
+    return-object v0
 
-# virtual methods
-.method abstract a(Ljava/lang/Object;J)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "msg",
-            "offset"
-        }
-    .end annotation
-.end method
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-.method abstract a(Ljava/lang/Object;Ljava/lang/Object;J)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "msg",
-            "otherMsg",
-            "offset"
-        }
-    .end annotation
+    const-string v1, "Protobuf runtime is not correctly loaded."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

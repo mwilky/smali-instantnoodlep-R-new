@@ -96,6 +96,12 @@
     <string name="filter_landscape">풍경</string>
     <string name="filter_mono">모노</string>
     <string name="filter_night">야간</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">없음</string>
     <string name="filter_pop">선명</string>
     <string name="filter_portrait">인물</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">텍스트 입력이 없습니다. 워터마크에 이름을 저장할 수 없습니다.</string>
     <string name="settings_watermark_summary">사진, 인물 사진, 프로 및 야경 모드를 포함하여 후면 카메라에서 찍은 사진에 워터마크가 적용됩니다.</string>
     <string name="settings_watermark_summary_8250">사진, 인물 사진, 프로 및 야경 모드를 포함하여 후면 카메라에서 찍은 사진에 워터마크가 적용됩니다.</string>
+    <string name="settings_watermark_timestamp">시간</string>
     <string name="settings_watermark_title">Shot on OnePlus 워터마크</string>
     <string name="settings_wide_lens_distortion_correction">초광각 렌즈 보정</string>
     <string name="show_kill_apps_processing_dialog">지우는 중</string>

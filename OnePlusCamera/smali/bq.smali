@@ -1,86 +1,90 @@
-.class final Lbq;
+.class public final Lbq;
 .super Ljava/lang/Object;
 .source "PG"
 
+# interfaces
+.implements Lai;
 
-# static fields
-.field public static final a:Lbr;
 
-.field private static final b:Lbr;
+# instance fields
+.field private final a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
+
+.field private final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;I)V
+    .locals 0
 
-    new-instance v0, Lbr;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lbq;->a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
 
-    invoke-direct {v0, v1}, Lbr;-><init>(B)V
-
-    sput-object v0, Lbq;->a:Lbr;
-
-    invoke-static {}, Lbq;->b()Lbr;
-
-    move-result-object v0
-
-    sput-object v0, Lbq;->b:Lbr;
+    iput p2, p0, Lbq;->b:I
 
     return-void
 .end method
 
-.method static a()Lbr;
+
+# virtual methods
+.method public final a(Lbi;)V
     .locals 2
 
-    sget-object v0, Lbq;->b:Lbr;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Protobuf runtime is not correctly loaded."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method private static b()Lbr;
-    .locals 3
-
-    :try_start_0
-    const-string v0, "com.google.protobuf.ExtensionSchemaFull"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
+    iget v0, p0, Lbq;->b:I
 
     const/4 v1, 0x0
 
-    new-array v2, v1, [Ljava/lang/Class;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    iget p1, p1, Lbi;->e:I
 
-    move-result-object v0
+    invoke-static {p1}, Lbh;->a(I)I
 
-    new-array v1, v1, [Ljava/lang/Object;
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lbr;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_0
+    sget p1, Lbh;->a:I
 
-    return-object v0
+    :goto_0
+    add-int/lit8 v0, p1, -0x2
 
-    :catch_0
-    const/4 v0, 0x0
+    if-eqz p1, :cond_1
 
-    return-object v0
+    goto :goto_2
+
+    :cond_1
+    throw v1
+
+    :cond_2
+    iget p1, p1, Lbi;->d:I
+
+    invoke-static {p1}, Lbh;->a(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget p1, Lbh;->a:I
+
+    :goto_1
+    add-int/lit8 v0, p1, -0x2
+
+    if-eqz p1, :cond_4
+
+    :goto_2
+    iget-object p0, p0, Lbq;->a:Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;
+
+    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensAvailabilityCallback;->onAvailabilityStatusFetched(I)V
+
+    return-void
+
+    :cond_4
+    throw v1
 .end method

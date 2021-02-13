@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 5 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,1307:1\n858#2:1308\n858#2:1309\n858#2:1313\n50#3,3:1310\n50#3,3:1326\n12#4,3:1314\n12#4,3:1317\n12#4,3:1320\n12#4,3:1323\n12#4,3:1329\n27#5:1332\n27#5:1333\n27#5:1334\n*E\n*S KotlinDebug\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode\n*L\n687#1:1308\n688#1:1309\n733#1:1313\n715#1,3:1310\n857#1,3:1326\n824#1,3:1314\n846#1,3:1317\n851#1,3:1320\n854#1,3:1323\n860#1,3:1329\n926#1:1332\n931#1:1333\n934#1:1334\n*E\n"
+    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n+ 4 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 5 Sizes.kt\ncom/oneplus/util/SizesKt\n*L\n1#1,1314:1\n858#2:1315\n858#2:1316\n858#2:1320\n50#3,3:1317\n50#3,3:1333\n12#4,3:1321\n12#4,3:1324\n12#4,3:1327\n12#4,3:1330\n12#4,3:1336\n27#5:1339\n27#5:1340\n27#5:1341\n*E\n*S KotlinDebug\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode\n*L\n687#1:1315\n688#1:1316\n733#1:1320\n715#1,3:1317\n857#1,3:1333\n824#1,3:1321\n846#1,3:1324\n851#1,3:1327\n854#1,3:1330\n860#1,3:1336\n926#1:1339\n931#1:1340\n934#1:1341\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -405,7 +405,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12006d
+    const v0, 0x7f12005e
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1285,7 +1285,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f040323
+    const v1, 0x7f040324
 
     const/4 v2, 0x0
 
@@ -1339,7 +1339,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f040322
+    const v1, 0x7f040323
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -1357,7 +1357,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a01e5
+    const v1, 0x7f0a01e6
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -1373,7 +1373,7 @@
 
     if-eqz v0, :cond_2
 
-    const v1, 0x7f0a01e2
+    const v1, 0x7f0a01e3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1381,7 +1381,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
 
-    const v1, 0x7f0a01e3
+    const v1, 0x7f0a01e4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1391,7 +1391,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a01e4
+    const v1, 0x7f0a01e5
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1640,7 +1640,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    const v5, 0x7f120124
+    const v5, 0x7f120118
 
     if-nez v0, :cond_1
 
@@ -1675,7 +1675,7 @@
     goto/16 :goto_3
 
     :cond_2
-    const v0, 0x7f120123
+    const v0, 0x7f120117
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1684,7 +1684,7 @@
     goto/16 :goto_3
 
     :cond_3
-    const v0, 0x7f120122
+    const v0, 0x7f120116
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1700,7 +1700,7 @@
     goto :goto_3
 
     :cond_5
-    const v0, 0x7f120121
+    const v0, 0x7f120115
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1709,7 +1709,7 @@
     goto :goto_3
 
     :cond_6
-    const v0, 0x7f120126
+    const v0, 0x7f12011a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1758,7 +1758,7 @@
 
     if-ltz v0, :cond_9
 
-    const v0, 0x7f120127
+    const v0, 0x7f12011b
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1776,7 +1776,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f120128
+    const v0, 0x7f12011c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1789,7 +1789,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f12012a
+    const v0, 0x7f12011e
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1802,7 +1802,7 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule(J)Z
 
-    const v0, 0x7f120129
+    const v0, 0x7f12011d
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -2114,11 +2114,13 @@
 .end method
 
 .method private final updatePreviewPicture()V
-    .locals 13
+    .locals 17
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    move-object v0, p0
+    move-object/from16 v7, p0
+
+    move-object v0, v7
 
     check-cast v0, Lcom/oneplus/camera/capturemode/CaptureMode;
 
@@ -2128,262 +2130,287 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "updatePreviewPicture() - Capture mode is not entering or entered"
+    const-string/jumbo v1, "updatePreviewPicture() - Capture mode is not entering or entered"
 
-    invoke-static {p0, v0}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->panoramaCamera:Lcom/oneplus/camera/next/hardware/PanoramaCamera;
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getPhotoCaptureState()Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
 
-    if-eqz v0, :cond_16
+    move-result-object v0
+
+    sget-object v1, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$WhenMappings;->$EnumSwitchMapping$10:[I
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
+
+    move-result v0
+
+    aget v0, v1, v0
+
+    const/4 v8, 0x1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v8, :cond_1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->panoramaCamera:Lcom/oneplus/camera/next/hardware/PanoramaCamera;
+
+    if-eqz v0, :cond_17
 
     invoke-interface {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCamera;->getPreviewPicture()Landroid/graphics/Bitmap;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-interface {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCamera;->getPreviewPictureBounds()Landroid/graphics/Rect;
 
-    move-result-object v2
-
-    if-eqz v2, :cond_15
-
-    sget-object v3, Lcom/oneplus/camera/next/hardware/PanoramaCamera;->Companion:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Companion;
-
-    invoke-virtual {v3}, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Companion;->getFEATURE_PROFILE_PANORAMA_FRAME()Lcom/oneplus/util/Feature;
-
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/oneplus/util/Feature;->isTrue()Z
+    if-eqz v3, :cond_16
 
-    move-result v3
+    sget-object v4, Lcom/oneplus/camera/next/hardware/PanoramaCamera;->Companion:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Companion;
 
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v5, "updatePreviewPicture() - Preview picture bounds : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Companion;->getFEATURE_PROFILE_PANORAMA_FRAME()Lcom/oneplus/util/Feature;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4}, Lcom/oneplus/util/Feature;->isTrue()Z
 
-    :cond_1
-    iget-object v3, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+    move-result v4
 
-    const/4 v4, 0x0
+    if-eqz v4, :cond_2
 
-    if-eqz v3, :cond_4
+    iget-object v4, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
-    if-nez v1, :cond_2
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    move-object v3, v4
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast v3, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+    const-string/jumbo v6, "updatePreviewPicture() - Preview picture bounds : "
 
-    iput-object v3, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v3, v4
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getPreviewPicture()Landroid/graphics/Bitmap;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    if-ne v5, v1, :cond_3
+    invoke-static {v4, v5}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
+    :cond_2
+    iget-object v4, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+
+    const/4 v9, 0x0
+
+    if-eqz v4, :cond_5
+
+    if-nez v2, :cond_3
+
+    move-object v4, v9
+
+    check-cast v4, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+
+    iput-object v4, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+
+    move-object v4, v9
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {v3, v1}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPicture(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getPreviewPicture()Landroid/graphics/Bitmap;
 
-    invoke-virtual {v3, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
+    move-result-object v5
 
-    :goto_0
-    if-eqz v3, :cond_4
+    if-ne v5, v2, :cond_4
 
-    goto :goto_1
+    invoke-virtual {v4, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
+
+    goto :goto_0
 
     :cond_4
-    if-eqz v1, :cond_5
+    invoke-virtual {v4, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPicture(Landroid/graphics/Bitmap;)V
 
-    new-instance v3, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+    invoke-virtual {v4, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
 
-    invoke-direct {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;-><init>()V
-
-    invoke-virtual {v3, v1}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPicture(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {v3, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
-
-    iput-object v3, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+    :goto_0
+    if-eqz v4, :cond_5
 
     goto :goto_1
 
     :cond_5
-    move-object v3, v4
+    if-eqz v2, :cond_6
+
+    new-instance v4, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+
+    invoke-direct {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;-><init>()V
+
+    invoke-virtual {v4, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPicture(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {v4, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setPreviewPictureBounds(Landroid/graphics/Rect;)V
+
+    iput-object v4, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDrawable:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;
+
+    goto :goto_1
+
+    :cond_6
+    move-object v4, v9
 
     :goto_1
-    iget v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDisplayedHeight:I
+    iget v2, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureDisplayedHeight:I
 
-    int-to-float v1, v1
+    int-to-float v2, v2
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
     int-to-float v5, v5
 
-    div-float/2addr v1, v5
+    div-float/2addr v2, v5
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkotlin/math/MathKt;->roundToInt(F)I
 
     move-result v2
 
-    int-to-float v2, v2
+    iget v3, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureMinDisplayedWidth:I
 
-    mul-float/2addr v1, v2
+    iget v5, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewFrameThickness:I
 
-    invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
+    add-int/2addr v3, v5
 
-    move-result v1
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
-    iget v2, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureMinDisplayedWidth:I
+    move-result v16
 
-    iget v5, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewFrameThickness:I
+    iget-object v2, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureView:Landroid/widget/ImageView;
 
-    add-int/2addr v2, v5
+    const v3, 0x7f060238
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+    const/4 v6, 0x0
 
-    move-result v1
+    if-eqz v2, :cond_b
 
-    iget-object v2, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureView:Landroid/widget/ImageView;
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
 
-    const v5, 0x7f060238
+    move-result-object v5
 
-    const/4 v11, 0x2
+    invoke-virtual {v5}, Lcom/oneplus/base/ScreenSize;->getWidth()I
 
-    const/4 v12, 0x0
-
-    if-eqz v2, :cond_a
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/oneplus/base/ScreenSize;->getWidth()I
-
-    move-result v6
+    move-result v5
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getHeight()I
 
-    move-result v7
+    move-result v10
 
-    mul-int/2addr v6, v7
+    mul-int/2addr v5, v10
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
 
-    move-result-object v7
+    move-result-object v10
 
-    invoke-virtual {v7}, Lcom/oneplus/base/ScreenSize;->getHeight()I
+    invoke-virtual {v10}, Lcom/oneplus/base/ScreenSize;->getHeight()I
 
-    move-result v7
+    move-result v10
 
-    div-int/2addr v6, v7
+    div-int/2addr v5, v10
 
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
+    invoke-virtual {v7, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 
-    move-result v7
+    move-result v10
 
-    const v8, 0x7f040322
+    const v11, 0x7f040323
 
-    invoke-static {p0, v8, v12, v11, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+    invoke-static {v7, v11, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
-    move-result v8
+    move-result v11
 
-    if-eqz v3, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getHeight()I
 
-    move-result v9
+    move-result v12
 
-    invoke-virtual {v3, v6, v9, v7, v8}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setFrameBorderAppearance(IIII)V
-
-    :cond_6
-    if-eqz v3, :cond_7
-
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getLeftArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
-
-    move-result-object v6
-
-    invoke-virtual {v3, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setLeftArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
+    invoke-virtual {v4, v5, v12, v10, v11}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setFrameBorderAppearance(IIII)V
 
     :cond_7
-    if-eqz v3, :cond_8
+    if-eqz v4, :cond_8
 
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getRightArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getLeftArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v3, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setRightArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
+    invoke-virtual {v4, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setLeftArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
 
     :cond_8
-    const v6, 0x7f04031d
+    if-eqz v4, :cond_9
 
-    invoke-static {p0, v6, v12, v11, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getRightArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
 
-    move-result v6
+    move-result-object v5
 
-    const v7, 0x7f04031b
-
-    invoke-static {p0, v7, v12, v11, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
-
-    move-result v7
-
-    const v8, 0x7f04031c
-
-    invoke-static {p0, v8, v12, v11, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
-
-    move-result v8
-
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v3, v6, v7, v8}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowAppearance(III)V
+    invoke-virtual {v4, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setRightArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
 
     :cond_9
-    move-object v6, v3
+    const v5, 0x7f04031e
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    invoke-static {v7, v5, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-result v5
+
+    const v10, 0x7f04031c
+
+    invoke-static {v7, v10, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+
+    move-result v10
+
+    const v11, 0x7f04031d
+
+    invoke-static {v7, v11, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+
+    move-result v11
+
+    if-eqz v4, :cond_a
+
+    invoke-virtual {v4, v5, v10, v11}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowAppearance(III)V
 
     :cond_a
-    const v2, 0x7f040321
+    move-object v5, v4
 
-    invoke-static {p0, v2, v12, v11, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+    check-cast v5, Landroid/graphics/drawable/Drawable;
 
-    move-result v7
+    invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    if-eqz v3, :cond_f
+    :cond_b
+    const v2, 0x7f040322
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
+    invoke-static {v7, v2, v6, v1, v9}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
+
+    move-result v12
+
+    if-eqz v4, :cond_10
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
 
     move-result-object v2
 
@@ -2391,136 +2418,79 @@
 
     move-result v2
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    if-nez v2, :cond_c
+    if-nez v2, :cond_d
 
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
+    invoke-virtual {v7, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getHorizontalLineDashPathEffect()Landroid/graphics/DashPathEffect;
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getHorizontalLineDashPathEffect()Landroid/graphics/DashPathEffect;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Landroid/graphics/PathEffect;
+    check-cast v1, Landroid/graphics/PathEffect;
 
-    invoke-virtual {v3, v0, v7, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance(IILandroid/graphics/PathEffect;)V
+    invoke-virtual {v4, v0, v12, v1}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance(IILandroid/graphics/PathEffect;)V
 
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->defaultPreviewPictureGravity:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->defaultPreviewPictureGravity:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
 
-    invoke-virtual {v3, v0, v12}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;Z)V
+    invoke-virtual {v4, v0, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;Z)V
 
-    invoke-virtual {v3, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
+    invoke-virtual {v4, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getLeftArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getLeftArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
 
     move-result-object v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-virtual {v0}, Lcom/oneplus/drawable/AnimatorDrawable;->startAnimator()V
 
-    :cond_b
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getRightArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
+    :cond_c
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getRightArrowDrawable()Lcom/oneplus/drawable/AnimatorDrawable;
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     invoke-virtual {v0}, Lcom/oneplus/drawable/AnimatorDrawable;->startAnimator()V
 
     goto/16 :goto_2
-
-    :cond_c
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getDirection(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
-
-    move-result-object v2
-
-    sget-object v8, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;->RIGHT:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
-
-    if-ne v2, v8, :cond_d
-
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
-
-    move-result v6
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x4
-
-    const/4 v10, 0x0
-
-    move-object v5, v3
-
-    invoke-static/range {v5 .. v10}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;IILandroid/graphics/PathEffect;ILjava/lang/Object;)V
-
-    sget-object v2, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;->LEFT:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
-
-    invoke-static {v3, v2, v12, v11, v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;ZILjava/lang/Object;)V
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getAttachingCenterYDiff(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)F
-
-    move-result v0
-
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v2
-
-    div-int/2addr v2, v11
-
-    int-to-float v2, v2
-
-    mul-float/2addr v0, v2
-
-    invoke-virtual {v3, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
-
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
-
-    move-object v0, v4
-
-    check-cast v0, Lcom/oneplus/drawable/AnimatorDrawable;
-
-    invoke-virtual {v3, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setLeftArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
-
-    goto :goto_2
 
     :cond_d
     invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getDirection(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
 
     move-result-object v2
 
-    sget-object v8, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;->LEFT:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
+    sget-object v10, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;->RIGHT:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
 
-    if-ne v2, v8, :cond_e
+    if-ne v2, v10, :cond_e
 
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
+    invoke-virtual {v7, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 
-    move-result v6
+    move-result v11
 
-    const/4 v8, 0x0
+    const/4 v13, 0x0
 
-    const/4 v9, 0x4
+    const/4 v14, 0x4
 
-    const/4 v10, 0x0
+    const/4 v15, 0x0
 
-    move-object v5, v3
+    move-object v10, v4
 
-    invoke-static/range {v5 .. v10}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;IILandroid/graphics/PathEffect;ILjava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;IILandroid/graphics/PathEffect;ILjava/lang/Object;)V
 
-    sget-object v2, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;->RIGHT:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
+    sget-object v2, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;->LEFT:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
 
-    invoke-static {v3, v2, v12, v11, v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;ZILjava/lang/Object;)V
+    invoke-static {v4, v2, v6, v1, v9}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;ZILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getAttachingCenterYDiff(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)F
 
     move-result v0
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -2528,64 +2498,121 @@
 
     move-result v2
 
-    div-int/2addr v2, v11
+    div-int/2addr v2, v1
 
-    int-to-float v2, v2
+    int-to-float v1, v2
 
-    mul-float/2addr v0, v2
+    mul-float/2addr v0, v1
 
-    invoke-virtual {v3, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
+    invoke-virtual {v4, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
 
-    move-object v0, v4
+    move-object v0, v9
 
     check-cast v0, Lcom/oneplus/drawable/AnimatorDrawable;
 
-    invoke-virtual {v3, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setRightArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
+    invoke-virtual {v4, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setLeftArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
 
     goto :goto_2
 
     :cond_e
-    invoke-virtual {p0, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
-
-    move-result v0
-
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getHorizontalLineDashPathEffect()Landroid/graphics/DashPathEffect;
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getDirection(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
 
     move-result-object v2
 
-    check-cast v2, Landroid/graphics/PathEffect;
+    sget-object v10, Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;->LEFT:Lcom/oneplus/camera/next/hardware/PanoramaCamera$Direction;
 
-    invoke-virtual {v3, v0, v7, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance(IILandroid/graphics/PathEffect;)V
+    if-ne v2, v10, :cond_f
 
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->defaultPreviewPictureGravity:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
+    invoke-virtual {v7, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 
-    invoke-virtual {v3, v0, v12}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;Z)V
+    move-result v11
 
-    invoke-virtual {v3, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
+    const/4 v13, 0x0
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
+    const/4 v14, 0x4
+
+    const/4 v15, 0x0
+
+    move-object v10, v4
+
+    invoke-static/range {v10 .. v15}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;IILandroid/graphics/PathEffect;ILjava/lang/Object;)V
+
+    sget-object v2, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;->RIGHT:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
+
+    invoke-static {v4, v2, v6, v1, v9}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity$default(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;ZILjava/lang/Object;)V
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/PanoramaCameraKt;->getAttachingCenterYDiff(Lcom/oneplus/camera/next/hardware/PanoramaCamera;)F
+
+    move-result v0
+
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    div-int/2addr v2, v1
+
+    int-to-float v1, v2
+
+    mul-float/2addr v0, v1
+
+    invoke-virtual {v4, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
+
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
+
+    move-object v0, v9
+
+    check-cast v0, Lcom/oneplus/drawable/AnimatorDrawable;
+
+    invoke-virtual {v4, v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setRightArrowDrawable(Lcom/oneplus/drawable/AnimatorDrawable;)V
+
+    goto :goto_2
 
     :cond_f
-    :goto_2
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->container:Landroid/view/View;
+    invoke-virtual {v7, v3}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getColor(I)I
 
-    if-eqz v0, :cond_10
+    move-result v0
+
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getHorizontalLineDashPathEffect()Landroid/graphics/DashPathEffect;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/PathEffect;
+
+    invoke-virtual {v4, v0, v12, v1}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setHorizontalLineAppearance(IILandroid/graphics/PathEffect;)V
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->defaultPreviewPictureGravity:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;
+
+    invoke-virtual {v4, v0, v6}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setGravity(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable$Gravity;Z)V
+
+    invoke-virtual {v4, v5}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->setArrowTranslationY(F)V
+
+    invoke-virtual {v4}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$PreviewDrawable;->resetArrowDrawables()V
+
+    :cond_10
+    :goto_2
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->container:Landroid/view/View;
+
+    if-eqz v0, :cond_11
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
-    if-eqz v0, :cond_11
-
-    :cond_10
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->updateVisibility()V
+    if-eqz v0, :cond_12
 
     :cond_11
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
+    invoke-direct/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->updateVisibility()V
 
-    if-eqz v0, :cond_12
+    :cond_12
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
+
+    if-eqz v0, :cond_14
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -2593,65 +2620,77 @@
 
     if-eqz v0, :cond_13
 
-    :cond_12
-    iget-object v6, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
-
-    const-wide/16 v7, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x4
-
-    const/4 v11, 0x0
-
-    move-object v5, p0
-
-    invoke-static/range {v5 .. v11}, Lcom/oneplus/camera/OnePlusCameraComponent;->show$default(Lcom/oneplus/camera/OnePlusCameraComponent;Landroid/view/View;JLkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+    goto :goto_3
 
     :cond_13
-    iget v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewFrameThickness:I
+    move v11, v6
 
-    add-int/2addr v1, v0
+    goto :goto_4
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
+    :cond_14
+    :goto_3
+    iget-object v1, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewPictureContainer:Landroid/view/View;
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/oneplus/base/ScreenSize;->getWidth()I
+    const/4 v4, 0x0
 
-    move-result v0
+    const/4 v5, 0x4
 
-    if-lt v1, v0, :cond_14
+    const/4 v10, 0x0
 
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
+    move-object/from16 v0, p0
+
+    move v11, v6
+
+    move-object v6, v10
+
+    invoke-static/range {v0 .. v6}, Lcom/oneplus/camera/OnePlusCameraComponent;->show$default(Lcom/oneplus/camera/OnePlusCameraComponent;Landroid/view/View;JLkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+
+    :goto_4
+    iget v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->previewFrameThickness:I
+
+    add-int v0, v16, v0
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->getScreenSize()Lcom/oneplus/base/ScreenSize;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oneplus/base/ScreenSize;->getWidth()I
+
+    move-result v1
+
+    if-lt v0, v1, :cond_15
+
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "updatePreviewPicture() - Stop capture"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->captureHandle:Lcom/oneplus/camera/PhotoCaptureController$CaptureHandle;
+    iget-object v0, v7, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->captureHandle:Lcom/oneplus/camera/PhotoCaptureController$CaptureHandle;
 
-    check-cast p0, Lcom/oneplus/base/Handle;
+    check-cast v0, Lcom/oneplus/base/Handle;
 
-    const/4 v0, 0x1
-
-    invoke-static {p0, v12, v0, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    :cond_14
-    return-void
+    invoke-static {v0, v11, v8, v9}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     :cond_15
-    check-cast p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;
-
-    iget-object v0, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "updatePreviewPicture() - No preview picture bounds"
-
-    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->updateVisibility()V
+    return-void
 
     :cond_16
+    move-object v0, v7
+
+    check-cast v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;
+
+    iget-object v1, v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v2, "updatePreviewPicture() - No preview picture bounds"
+
+    invoke-static {v1, v2}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {v0}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->updateVisibility()V
+
+    :cond_17
     return-void
 .end method
 

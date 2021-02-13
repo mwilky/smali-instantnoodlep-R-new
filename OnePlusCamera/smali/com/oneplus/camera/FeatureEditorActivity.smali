@@ -649,7 +649,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/camera/FeatureEditorActivity;->updateFilterClearButtonVisibility()V
 
-    const p1, 0x7f0a02b7
+    const p1, 0x7f0a02b8
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/FeatureEditorActivity;->findViewById(I)Landroid/view/View;
 
@@ -669,7 +669,7 @@
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
 
-    const v0, 0x7f080263
+    const v0, 0x7f08025b
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(I)V
 

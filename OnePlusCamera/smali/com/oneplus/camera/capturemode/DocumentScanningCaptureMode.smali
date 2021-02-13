@@ -112,7 +112,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12006a
+    const v0, 0x7f12005b
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

@@ -5,4 +5,5 @@
     <SwitchPreference android:title="@string/settings_watermark" android:key="@string/settings_key_watermark_is_enabled" android:defaultValue="false" />
     <SwitchPreference android:title="@string/settings_watermark_name" android:key="@string/settings_key_watermark_is_brand_text_enabled" android:defaultValue="false" />
     <com.oneplus.camera.settings.WatermarkEditTextPreference android:layout="@layout/layout_settings_edit_text" android:key="@string/settings_key_watermark_brand_text" />
+    <SwitchPreference android:title="@string/settings_watermark_timestamp" android:key="@string/settings_key_watermark_is_timestamp_enabled" android:defaultValue="false" />
 </PreferenceScreen>

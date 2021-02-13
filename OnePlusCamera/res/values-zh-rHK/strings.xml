@@ -91,6 +91,12 @@
     <string name="filter_landscape">風景</string>
     <string name="filter_mono">黑白</string>
     <string name="filter_night">夜晚</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">標準</string>
     <string name="filter_pop">鮮豔</string>
     <string name="filter_portrait">人物</string>
@@ -102,7 +108,7 @@
     <string name="flash_disabled_high_device_temperature">手機溫度過高，無法使用閃光燈</string>
     <string name="flash_disabled_low_battery_level">由於電池電量低而禁用閃光燈</string>
     <string name="full_size_picutre_disabled">目前模式不支持切換分辨率</string>
-    <string name="full_size_picutre_disabled_burst_shot">當使用48MP模式時，無法使用連拍</string>
+    <string name="full_size_picutre_disabled_burst_shot">當使用高像素模式時，無法使用連拍</string>
     <string name="full_size_picutre_disabled_burst_shot_64mp">當使用64MP模式時，無法使用連拍</string>
     <string name="full_size_picutre_disabled_hint">12MP 提供更好的動態範圍和暗光表現（推薦）</string>
     <string name="full_size_picutre_disabled_hint_64mp">16MP 提供更好的動態範圍和暗光表現（推薦）</string>
@@ -243,6 +249,7 @@
     <string name="settings_watermark_name_empty_dialog">無法保存空白名稱至水印。</string>
     <string name="settings_watermark_summary">使用後置鏡頭、人像模式、專業模式和夜景模式拍照時添加 Shot on OnePlus 水印</string>
     <string name="settings_watermark_summary_8250">使用後置鏡頭、人像模式、專業模式和夜景模式拍照時添加 Shot on OnePlus 水印</string>
+    <string name="settings_watermark_timestamp">時間</string>
     <string name="settings_watermark_title">Shot on OnePlus 水印</string>
     <string name="settings_wide_lens_distortion_correction">超廣角畸變矯正</string>
     <string name="show_kill_apps_processing_dialog">後台清除中...</string>

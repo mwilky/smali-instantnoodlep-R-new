@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
@@ -55,11 +55,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$400(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$500(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -77,12 +77,26 @@
 
     iget-object v1, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
-    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerDialog;->access$500(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerDialog;->access$600(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
 
     move-result-object v1
 
+    iget-object v2, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
+
+    invoke-static {v2}, Lcom/google/android/material/picker/TimePickerDialog;->access$200(Lcom/google/android/material/picker/TimePickerDialog;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x154
+
+    goto :goto_0
+
+    :cond_0
     const/16 v2, 0x140
 
+    :goto_0
     invoke-static {v1, v2}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
 
     move-result v1
@@ -93,7 +107,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$600(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerDialog;->access$700(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,7 +135,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/picker/TimePickerDialog$1;->this$0:Lcom/google/android/material/picker/TimePickerDialog;
 
-    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerDialog;->access$700(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/google/android/material/picker/TimePickerDialog;->access$800(Lcom/google/android/material/picker/TimePickerDialog;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -141,7 +155,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

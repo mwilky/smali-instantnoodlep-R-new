@@ -70,7 +70,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "turnOff"
+    const-string p0, "turnOff"
 
     return-object p0
 .end method
@@ -90,7 +90,7 @@
 .method public final getSignature()Ljava/lang/String;
     .locals 0
 
-    const-string/jumbo p0, "turnOff(Lcom/oneplus/base/Handle;)V"
+    const-string p0, "turnOff(Lcom/oneplus/base/Handle;)V"
 
     return-object p0
 .end method

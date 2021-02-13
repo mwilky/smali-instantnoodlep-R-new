@@ -64,7 +64,7 @@
     <string name="content_description_face_beauty">Correction de visage</string>
     <string name="content_description_flash">Flash</string>
     <string name="content_description_gallery">Galerie</string>
-    <string name="content_description_hyper_image_stabilization">Super stable</string>
+    <string name="content_description_hyper_image_stabilization">Super Stable</string>
     <string name="content_description_picture_format">"Format d'image"</string>
     <string name="content_description_resolution">Résolution</string>
     <string name="content_description_self_timer">Retardateur</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">Paysage</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Nuit</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Aucun</string>
     <string name="filter_pop">Vif</string>
     <string name="filter_portrait">Portrait</string>
@@ -114,7 +120,7 @@
     <string name="full_size_picutre_enabled_hint">La résolution 48MP offre une résolution plus élevée et capture les détails des scènes bien éclairées</string>
     <string name="full_size_picutre_enabled_hint_64mp">La résolution 64MP offre une résolution plus élevée et capture les détails des scènes bien éclairées</string>
     <string name="handshake_detected">"Secouer violemment l'appareil peut générer des photos floues"</string>
-    <string name="hyper_image_stabilization_enabled">Super stable</string>
+    <string name="hyper_image_stabilization_enabled">Super Stable</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">"Le zoom de l'appareil photo est désactivé en mode Super stable"</string>
     <string name="lens_stain_detected">"La lentille est peut-être sale, essayez de l'essuyer pour une meilleure qualité d'image"</string>
     <string name="loading_text">Chargement…</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Sélectionner les minutes</string>
     <string name="select_year">"Sélectionner l'année"</string>
     <string name="settings">Paramètres</string>
-    <string name="settings_about">À propos de</string>
+    <string name="settings_about">À propos</string>
     <string name="settings_about_agreement">"Contrat d'utilisation"</string>
     <string name="settings_about_copyright">"OnePlus Tous droits réservés
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">"Aucun texte n'a été saisi. Impossible d'enregistrer le nom dans le filigrane."</string>
     <string name="settings_watermark_summary">Un filigrane sera appliqué aux photos prises par l’appareil photo arrière, cela inclut les photos prises sous les modes Photo, Portrait, Pro et Paysage nocturne</string>
     <string name="settings_watermark_summary_8250">Un filigrane sera appliqué aux photos prises par l’appareil photo arrière, cela inclut les photos prises sous les modes Photo, Portrait, Pro et Paysage nocturne</string>
+    <string name="settings_watermark_timestamp">Heure</string>
     <string name="settings_watermark_title">Filigrane Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">"Correction d'objectif ultra-large"</string>
     <string name="show_kill_apps_processing_dialog">Effacement</string>

@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoSizeActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSizeActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem\n*L\n1#1,298:1\n*E\n"
+    value = "SMAP\nVideoSizeActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSizeActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem\n*L\n1#1,257:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -150,13 +150,9 @@
 
     const-string v3, "drawable"
 
-    if-eq v0, v1, :cond_6
+    if-eq v0, v1, :cond_3
 
     const/4 v4, 0x2
-
-    if-eq v0, v4, :cond_3
-
-    const/4 v4, 0x3
 
     if-eq v0, v4, :cond_0
 
@@ -181,13 +177,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_8k_no_background"
+    const-string v0, "icon_sub_panel_video_size_4k_no_background"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -222,13 +218,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_8k"
+    const-string v0, "icon_sub_panel_video_size_4k"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -257,13 +253,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_8k_disabled"
+    const-string v0, "icon_sub_panel_video_size_4k_disabled"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -286,7 +282,7 @@
     :goto_0
     move-object v2, p0
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :cond_3
     and-int/2addr p1, v1
@@ -299,13 +295,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_4k_no_background"
+    const-string v0, "icon_sub_panel_video_size_1080p_no_background"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -325,7 +321,7 @@
 
     move-result-object v2
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :cond_4
     invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->isIconEnabled()Z
@@ -340,13 +336,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_4k"
+    const-string v0, "icon_sub_panel_video_size_1080p"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -375,13 +371,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_sub_panel_video_size_4k_disabled"
+    const-string v0, "icon_sub_panel_video_size_1080p_disabled"
 
     invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_6
 
     check-cast p1, Ljava/lang/Number;
 
@@ -404,127 +400,12 @@
     goto :goto_0
 
     :cond_6
-    and-int/2addr p1, v1
-
-    if-nez p1, :cond_7
-
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_size_1080p_no_background"
-
-    invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->isIconEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_size_1080p"
-
-    invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    goto/16 :goto_0
-
-    :cond_8
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "icon_sub_panel_video_size_1080p_disabled"
-
-    invoke-static {p1, v3, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$SubItem;->onePlusCamera:Lcom/oneplus/camera/OnePlusCamera;
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    goto/16 :goto_0
-
-    :cond_9
     :goto_1
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_7
 
     goto :goto_2
 
-    :cond_a
+    :cond_7
     new-instance p0, Lcom/oneplus/drawable/EmptyDrawable;
 
     invoke-direct {p0}, Lcom/oneplus/drawable/EmptyDrawable;-><init>()V

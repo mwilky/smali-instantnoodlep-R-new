@@ -1,505 +1,315 @@
-.class Lbh;
-.super Lba;
+.class public final Lbh;
+.super Ljava/lang/Object;
 .source "PG"
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
+.field public static final enum a:I = 0x1
 
+.field public static final enum b:I = 0x2
 
-# instance fields
-.field public final c:[B
+.field public static final enum c:I = 0x3
+
+.field public static final enum d:I = 0x4
+
+.field public static final enum e:I = 0x5
+
+.field public static final enum f:I = 0x6
+
+.field public static final enum g:I = 0x7
+
+.field public static final enum h:I = 0x8
+
+.field public static final enum i:I = 0xa
+
+.field public static final enum j:I = 0xb
+
+.field public static final enum k:I = 0xc
+
+.field public static final enum l:I = 0xd
+
+.field public static final enum m:I = 0xe
+
+.field private static final synthetic n:[I
 
 
 # direct methods
-.method constructor <init>([B)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "bytes"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lba;-><init>(B)V
-
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Lbh;->c:[B
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p0
-.end method
-
-
-# virtual methods
-.method public a(I)B
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lbh;->c:[B
-
-    aget-byte p0, p0, p1
-
-    return p0
-.end method
-
-.method public a()I
-    .locals 0
-
-    iget-object p0, p0, Lbh;->c:[B
-
-    array-length p0, p0
-
-    return p0
-.end method
-
-.method protected final a(III)I
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "h",
-            "offset",
-            "length"
-        }
-    .end annotation
-
-    iget-object p2, p0, Lbh;->c:[B
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result p0
-
-    invoke-static {p1, p2, p0, p3}, Lcc;->a(I[BII)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final a(II)Lba;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "beginIndex",
-            "endIndex"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lba;->a()I
-
-    move-result v0
-
-    invoke-static {p1, p2, v0}, Lbh;->b(III)I
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    sget-object p0, Lba;->a:Lba;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lbd;
-
-    iget-object v1, p0, Lbh;->c:[B
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result p0
-
-    add-int/2addr p0, p1
-
-    invoke-direct {v0, v1, p0, p2}, Lbd;-><init>([BII)V
-
-    return-object v0
-.end method
-
-.method protected final a(Ljava/nio/charset/Charset;)Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "charset"
-        }
-    .end annotation
 
-    new-instance v0, Ljava/lang/String;
+    const/16 v0, 0xd
 
-    iget-object v1, p0, Lbh;->c:[B
+    new-array v0, v0, [I
 
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lba;->a()I
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, p0, p1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
-
-    return-object v0
-.end method
-
-.method final a(Lax;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "output"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lbh;->c:[B
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lba;->a()I
-
-    move-result p0
-
-    invoke-virtual {p1, v0, v1, p0}, Lax;->a([BII)V
-
-    return-void
-.end method
-
-.method protected a([BIII)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "target",
-            "sourceOffset",
-            "targetOffset",
-            "numberToCopy"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lbh;->c:[B
-
-    const/4 p2, 0x0
-
-    invoke-static {p0, p2, p1, p2, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
-.end method
-
-.method final a(Lba;II)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "other",
-            "offset",
-            "length"
-        }
-    .end annotation
-
-    invoke-virtual {p1}, Lba;->a()I
-
-    move-result p2
-
-    if-gt p3, p2, :cond_3
-
-    add-int/lit8 p2, p3, 0x0
-
-    invoke-virtual {p1}, Lba;->a()I
-
-    move-result v0
-
-    if-gt p2, v0, :cond_2
-
-    instance-of v0, p1, Lbh;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lbh;
-
-    iget-object p2, p0, Lbh;->c:[B
-
-    iget-object v0, p1, Lbh;->c:[B
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Lbh;->e()I
-
-    move-result p1
-
-    invoke-static {p2, p0, v0, p1, p3}, Lep;->a([BI[BII)I
-
-    move-result p0
-
-    const/4 p1, -0x1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v1
-
-    :cond_1
-    invoke-virtual {p1, v1, p2}, Lba;->a(II)Lba;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v1, p3}, Lba;->a(II)Lba;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lba;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Lba;->a()I
-
-    move-result p1
-
-    const/16 p2, 0x3b
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string p2, "Ran off end of other: 0"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, ", "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Lba;->a()I
-
-    move-result p0
-
-    const/16 p2, 0x28
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string p2, "Length too large: "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method b(I)B
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lbh;->c:[B
-
-    aget-byte p0, p0, p1
-
-    return p0
-.end method
-
-.method public final d()Z
-    .locals 2
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result v0
-
-    iget-object v1, p0, Lbh;->c:[B
-
-    invoke-virtual {p0}, Lba;->a()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    invoke-static {v1, v0, p0}, Les;->a([BII)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method protected e()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "other"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lba;
+    sget v1, Lbh;->a:I
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    aput v1, v0, v2
 
-    return v2
+    sget v1, Lbh;->b:I
 
-    :cond_1
-    invoke-virtual {p0}, Lba;->a()I
+    const/4 v2, 0x1
 
-    move-result v1
+    aput v1, v0, v2
 
-    move-object v3, p1
+    sget v1, Lbh;->c:I
 
-    check-cast v3, Lba;
+    const/4 v2, 0x2
 
-    invoke-virtual {v3}, Lba;->a()I
+    aput v1, v0, v2
 
-    move-result v3
+    sget v1, Lbh;->d:I
 
-    if-eq v1, v3, :cond_2
+    const/4 v2, 0x3
 
-    return v2
+    aput v1, v0, v2
 
-    :cond_2
-    invoke-virtual {p0}, Lba;->a()I
+    sget v1, Lbh;->e:I
 
-    move-result v1
+    const/4 v2, 0x4
 
-    if-nez v1, :cond_3
+    aput v1, v0, v2
 
-    return v0
+    sget v1, Lbh;->f:I
 
-    :cond_3
-    instance-of v0, p1, Lbh;
+    const/4 v2, 0x5
 
-    if-eqz v0, :cond_5
+    aput v1, v0, v2
 
-    check-cast p1, Lbh;
+    sget v1, Lbh;->g:I
 
-    iget v0, p0, Lba;->b:I
+    const/4 v2, 0x6
 
-    iget v1, p1, Lba;->b:I
+    aput v1, v0, v2
 
-    if-eqz v0, :cond_4
+    sget v1, Lbh;->h:I
 
-    if-eqz v1, :cond_4
+    const/4 v2, 0x7
 
-    if-eq v0, v1, :cond_4
+    aput v1, v0, v2
 
-    return v2
+    sget v1, Lbh;->i:I
 
-    :cond_4
-    invoke-virtual {p0}, Lba;->a()I
+    const/16 v2, 0x8
 
-    move-result v0
+    aput v1, v0, v2
 
-    invoke-virtual {p0, p1, v2, v0}, Lba;->a(Lba;II)Z
+    sget v1, Lbh;->j:I
 
-    move-result p0
+    const/16 v2, 0x9
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->k:I
+
+    const/16 v2, 0xa
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->l:I
+
+    const/16 v2, 0xb
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->m:I
+
+    const/16 v2, 0xc
+
+    aput v1, v0, v2
+
+    sput-object v0, Lbh;->n:[I
+
+    return-void
+.end method
+
+.method public static a(I)I
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    :pswitch_0
+    const/4 p0, 0x0
 
     return p0
 
-    :cond_5
-    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
+    :pswitch_1
+    sget p0, Lbh;->m:I
 
     return p0
+
+    :pswitch_2
+    sget p0, Lbh;->l:I
+
+    return p0
+
+    :pswitch_3
+    sget p0, Lbh;->k:I
+
+    return p0
+
+    :pswitch_4
+    sget p0, Lbh;->j:I
+
+    return p0
+
+    :pswitch_5
+    sget p0, Lbh;->i:I
+
+    return p0
+
+    :pswitch_6
+    sget p0, Lbh;->h:I
+
+    return p0
+
+    :pswitch_7
+    sget p0, Lbh;->g:I
+
+    return p0
+
+    :pswitch_8
+    sget p0, Lbh;->f:I
+
+    return p0
+
+    :pswitch_9
+    sget p0, Lbh;->e:I
+
+    return p0
+
+    :pswitch_a
+    sget p0, Lbh;->d:I
+
+    return p0
+
+    :pswitch_b
+    sget p0, Lbh;->c:I
+
+    return p0
+
+    :pswitch_c
+    sget p0, Lbh;->b:I
+
+    return p0
+
+    :pswitch_d
+    sget p0, Lbh;->a:I
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static a()Ldh;
+    .locals 1
+
+    sget-object v0, Lbg;->a:Ldh;
+
+    return-object v0
+.end method
+
+.method public static values$ar$edu$e1b3d39f_0()[I
+    .locals 3
+
+    const/16 v0, 0xd
+
+    new-array v0, v0, [I
+
+    sget v1, Lbh;->a:I
+
+    const/4 v2, 0x0
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->b:I
+
+    const/4 v2, 0x1
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->c:I
+
+    const/4 v2, 0x2
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->d:I
+
+    const/4 v2, 0x3
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->e:I
+
+    const/4 v2, 0x4
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->f:I
+
+    const/4 v2, 0x5
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->g:I
+
+    const/4 v2, 0x6
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->h:I
+
+    const/4 v2, 0x7
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->i:I
+
+    const/16 v2, 0x8
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->j:I
+
+    const/16 v2, 0x9
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->k:I
+
+    const/16 v2, 0xa
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->l:I
+
+    const/16 v2, 0xb
+
+    aput v1, v0, v2
+
+    sget v1, Lbh;->m:I
+
+    const/16 v2, 0xc
+
+    aput v1, v0, v2
+
+    return-object v0
 .end method

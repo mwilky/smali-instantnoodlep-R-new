@@ -82,7 +82,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference$persistStringOperation$1;->this$0:Lcom/oneplus/camera/settings/WatermarkEditTextPreference;
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->getBrandText()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->getCustomNameText()Ljava/lang/String;
 
     move-result-object v0
 

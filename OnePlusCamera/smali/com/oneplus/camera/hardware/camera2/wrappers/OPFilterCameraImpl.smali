@@ -37,7 +37,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPFilterCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPFilterCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n+ 5 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,686:1\n858#2:687\n858#2:688\n858#2:689\n858#2:690\n183#3:691\n124#3:692\n124#3:693\n183#3:694\n183#3:695\n183#3:696\n183#3:697\n183#3:698\n183#3:699\n183#3:700\n183#3:701\n183#3:702\n183#3:703\n183#3:704\n183#3:705\n183#3:706\n183#3:707\n183#3:708\n183#3:709\n183#3:710\n902#4:711\n902#4:712\n902#4:713\n902#4:714\n902#4:715\n902#4:716\n396#5:717\n*E\n*S KotlinDebug\n*F\n+ 1 OPFilterCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl\n*L\n141#1:687\n146#1:688\n151#1:689\n156#1:690\n382#1:691\n383#1:692\n383#1:693\n385#1:694\n386#1:695\n392#1:696\n396#1:697\n396#1:698\n417#1:699\n418#1:700\n422#1:701\n423#1:702\n468#1:703\n469#1:704\n473#1:705\n474#1:706\n481#1:707\n482#1:708\n486#1:709\n487#1:710\n53#1:711\n54#1:712\n55#1:713\n56#1:714\n57#1:715\n58#1:716\n60#1:717\n*E\n"
+    value = "SMAP\nOPFilterCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPFilterCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 4 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n+ 5 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,692:1\n858#2:693\n858#2:694\n858#2:695\n858#2:696\n183#3:697\n124#3:698\n124#3:699\n183#3:700\n183#3:701\n183#3:702\n183#3:703\n183#3:704\n183#3:705\n183#3:706\n183#3:707\n183#3:708\n183#3:709\n183#3:710\n183#3:711\n183#3:712\n183#3:713\n183#3:714\n183#3:715\n183#3:716\n902#4:717\n902#4:718\n902#4:719\n902#4:720\n902#4:721\n902#4:722\n396#5:723\n*E\n*S KotlinDebug\n*F\n+ 1 OPFilterCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl\n*L\n141#1:693\n146#1:694\n151#1:695\n156#1:696\n382#1:697\n383#1:698\n383#1:699\n385#1:700\n386#1:701\n392#1:702\n396#1:703\n396#1:704\n417#1:705\n418#1:706\n422#1:707\n423#1:708\n468#1:709\n469#1:710\n473#1:711\n474#1:712\n481#1:713\n482#1:714\n486#1:715\n487#1:716\n53#1:717\n54#1:718\n55#1:719\n56#1:720\n57#1:721\n58#1:722\n60#1:723\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -600,7 +600,7 @@
 
     new-instance v1, Ljava/util/HashSet;
 
-    const/16 v2, 0x11
+    const/16 v2, 0x1b
 
     new-array v2, v2, [Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
 
@@ -966,6 +966,226 @@
 
     aput-object v3, v2, v5
 
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "NorthCalifornia"
+
+    const/16 v8, 0x19
+
+    const-string v9, "NorthCalifornia.Photo"
+
+    const-string v10, "NorthCalifornia.Video"
+
+    const-string v11, "cyberpunk-kitsch-3.1.CUBE.rgb.bin"
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x11
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "NightCity"
+
+    const/16 v8, 0x1a
+
+    const-string v9, "NightCity.Photo"
+
+    const-string v10, "NightCity.Video"
+
+    const-string v11, "cyberpunk-neoMilitarism-2.4-final.CUBE.rgb.bin"
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x12
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "FUGU"
+
+    const/16 v8, 0x1d
+
+    const-string v9, "FUGU.Photo"
+
+    const-string v10, "FUGU.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x13
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "LENGDIAO"
+
+    const/16 v8, 0x1f
+
+    const-string v9, "LENGDIAO.Photo"
+
+    const-string v10, "LENGDIAO.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x14
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "SENLIN_2020"
+
+    const/16 v8, 0x1e
+
+    const-string v9, "SENLIN_2020.Photo"
+
+    const-string v10, "SENLIN_2020.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x15
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "YUANQI_2020"
+
+    const/16 v8, 0x20
+
+    const-string v9, "YUANQI_2020.Photo"
+
+    const-string v10, "YUANQI_2020.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x16
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "OPLUS_BLACK_GOLD"
+
+    const/16 v8, 0x22
+
+    const-string v9, "OPLUS_BLACK_GOLD.Photo"
+
+    const-string v10, "OPLUS_BLACK_GOLD.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x17
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "OPLUS_CYBERPUNK"
+
+    const/16 v8, 0x21
+
+    const-string v9, "OPLUS_CYBERPUNK.Photo"
+
+    const-string v10, "OPLUS_CYBERPUNK.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x18
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "OPLUS_INFRA"
+
+    const/16 v8, 0x23
+
+    const-string v9, "OPLUS_INFRA.Photo"
+
+    const-string v10, "OPLUS_INFRA.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x19
+
+    aput-object v3, v2, v5
+
+    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
+
+    const-string v7, "OPLUS_TEAL_ORANGE"
+
+    const/16 v8, 0x24
+
+    const-string v9, "OPLUS_TEAL_ORANGE.Photo"
+
+    const-string v10, "OPLUS_TEAL_ORANGE.Photo"
+
+    const-string v11, ""
+
+    move-object v6, v3
+
+    invoke-direct/range {v6 .. v11}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast v3, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
+
+    const/16 v5, 0x1a
+
+    aput-object v3, v2, v5
+
     invoke-static {v2}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -1038,55 +1258,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    goto :goto_0
-
     :cond_0
-    invoke-static {}, Lcom/oneplus/base/Device;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    if-ne v2, v3, :cond_1
-
-    new-instance v2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
-
-    const/16 v7, 0x19
-
-    const-string v6, "NorthCalifornia"
-
-    const-string v8, "NorthCalifornia.Photo"
-
-    const-string v9, "NorthCalifornia.Video"
-
-    const-string v10, "cyberpunk-kitsch-3.1.CUBE.rgb.bin"
-
-    move-object v5, v2
-
-    invoke-direct/range {v5 .. v10}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;
-
-    const/16 v13, 0x1a
-
-    const-string v12, "NightCity"
-
-    const-string v14, "NightCity.Photo"
-
-    const-string v15, "NightCity.Video"
-
-    const-string v16, "cyberpunk-neoMilitarism-2.4-final.CUBE.rgb.bin"
-
-    move-object v11, v2
-
-    invoke-direct/range {v11 .. v16}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPFilterCameraImpl$Filter;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
     check-cast v1, Ljava/lang/Iterable;
 
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->toSet(Ljava/lang/Iterable;)Ljava/util/Set;

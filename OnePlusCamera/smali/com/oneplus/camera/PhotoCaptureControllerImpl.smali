@@ -1283,7 +1283,7 @@
 
     move-result v2
 
-    const v3, 0x7f120093
+    const v3, 0x7f120084
 
     const-string v4, "capture() - Low storage"
 
@@ -1429,7 +1429,7 @@
 
     cmp-long v6, v9, v11
 
-    const v9, 0x7f120094
+    const v9, 0x7f120085
 
     if-lez v6, :cond_4
 
@@ -4576,13 +4576,13 @@
 
     invoke-direct {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f1201cd
+    const v2, 0x7f1201c3
 
     invoke-virtual {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v2, 0x7f1201cc
+    const v2, 0x7f1201c2
 
     sget-object v3, Lcom/oneplus/camera/PhotoCaptureControllerImpl$onMediaSavingCompleted$dialog$1;->INSTANCE:Lcom/oneplus/camera/PhotoCaptureControllerImpl$onMediaSavingCompleted$dialog$1;
 
@@ -7578,7 +7578,7 @@
 
     check-cast p3, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v2, 0x7f120098
+    const v2, 0x7f120089
 
     const/4 v3, 0x2
 
@@ -8799,7 +8799,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/CameraActivityComponent;->onInitialize()V
 
-    const v0, 0x7f120184
+    const v0, 0x7f120178
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -8807,7 +8807,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->shutterSoundSettingsKey:Ljava/lang/String;
 
-    const v0, 0x7f120183
+    const v0, 0x7f120177
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/PhotoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 

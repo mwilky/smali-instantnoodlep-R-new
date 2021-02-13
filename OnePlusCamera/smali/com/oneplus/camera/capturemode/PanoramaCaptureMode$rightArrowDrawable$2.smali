@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$rightArrowDrawable$2\n*L\n1#1,1307:1\n*E\n"
+    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$rightArrowDrawable$2\n*L\n1#1,1314:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -78,7 +78,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$rightArrowDrawable$2;->this$0:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;
 
-    const v2, 0x7f080266
+    const v2, 0x7f08025e
 
     invoke-static {v1, v2}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;->access$getDrawable(Lcom/oneplus/camera/capturemode/PanoramaCaptureMode;I)Landroid/graphics/drawable/Drawable;
 

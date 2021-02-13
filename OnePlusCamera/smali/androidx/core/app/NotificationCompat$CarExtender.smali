@@ -310,7 +310,7 @@
 
     move-result-wide v1
 
-    const-string/jumbo p0, "timestamp"
+    const-string p0, "timestamp"
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
@@ -495,7 +495,7 @@
 
     new-instance v1, Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;
 
-    const-string/jumbo v2, "timestamp"
+    const-string v2, "timestamp"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 

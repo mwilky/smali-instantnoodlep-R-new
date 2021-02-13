@@ -1,341 +1,275 @@
-.class public final enum Lco;
-.super Ljava/lang/Enum;
+.class final Lco;
+.super Ljava/lang/Object;
 .source "PG"
 
-
-# static fields
-.field public static final enum a:Lco;
-
-.field public static final enum b:Lco;
-
-.field public static final enum c:Lco;
-
-.field public static final enum d:Lco;
-
-.field public static final enum e:Lco;
-
-.field public static final enum f:Lco;
-
-.field public static final enum g:Lco;
-
-.field public static final enum h:Lco;
-
-.field public static final enum i:Lco;
-
-.field public static final enum j:Lco;
-
-.field private static final synthetic l:[Lco;
+# interfaces
+.implements Lgb;
 
 
 # instance fields
-.field public final k:Ljava/lang/Class;
+.field public final a:Lcn;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
-
-    new-instance v6, Lco;
-
-    const-class v3, Ljava/lang/Void;
-
-    const-class v4, Ljava/lang/Void;
-
-    const-string v1, "VOID"
-
-    const/4 v2, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, v6
-
-    invoke-direct/range {v0 .. v5}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v6, Lco;->a:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v10, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-class v11, Ljava/lang/Integer;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    const-string v8, "INT"
-
-    const/4 v9, 0x1
-
-    move-object v7, v0
-
-    invoke-direct/range {v7 .. v12}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->b:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const-class v6, Ljava/lang/Long;
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    const-string v3, "LONG"
-
-    const/4 v4, 0x2
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v7}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->c:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v11, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    const-class v12, Ljava/lang/Float;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v13
-
-    const-string v9, "FLOAT"
-
-    const/4 v10, 0x3
-
-    move-object v8, v0
-
-    invoke-direct/range {v8 .. v13}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->d:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v5, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
-
-    const-class v6, Ljava/lang/Double;
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v7
-
-    const-string v3, "DOUBLE"
-
-    const/4 v4, 0x4
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v7}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->e:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v11, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-class v12, Ljava/lang/Boolean;
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v13
-
-    const-string v9, "BOOLEAN"
-
-    const/4 v10, 0x5
-
-    move-object v8, v0
-
-    invoke-direct/range {v8 .. v13}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->f:Lco;
-
-    new-instance v0, Lco;
-
-    const-class v5, Ljava/lang/String;
-
-    const-class v6, Ljava/lang/String;
-
-    const-string v3, "STRING"
-
-    const/4 v4, 0x6
-
-    const-string v7, ""
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v7}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->g:Lco;
-
-    new-instance v0, Lco;
-
-    const-class v11, Lba;
-
-    const-class v12, Lba;
-
-    sget-object v13, Lba;->a:Lba;
-
-    const-string v9, "BYTE_STRING"
-
-    const/4 v10, 0x7
-
-    move-object v8, v0
-
-    invoke-direct/range {v8 .. v13}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->h:Lco;
-
-    new-instance v0, Lco;
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-class v6, Ljava/lang/Integer;
-
-    const-string v3, "ENUM"
-
-    const/16 v4, 0x8
-
-    const/4 v7, 0x0
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v7}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->i:Lco;
-
-    new-instance v0, Lco;
-
-    const-class v11, Ljava/lang/Object;
-
-    const-class v12, Ljava/lang/Object;
-
-    const-string v9, "MESSAGE"
-
-    const/16 v10, 0x9
-
-    const/4 v13, 0x0
-
-    move-object v8, v0
-
-    invoke-direct/range {v8 .. v13}, Lco;-><init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-
-    sput-object v0, Lco;->j:Lco;
-
-    const/16 v0, 0xa
-
-    new-array v0, v0, [Lco;
-
-    sget-object v2, Lco;->a:Lco;
-
-    aput-object v2, v0, v1
-
-    sget-object v1, Lco;->b:Lco;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->c:Lco;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->d:Lco;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->e:Lco;
-
-    const/4 v2, 0x4
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->f:Lco;
-
-    const/4 v2, 0x5
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->g:Lco;
-
-    const/4 v2, 0x6
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->h:Lco;
-
-    const/4 v2, 0x7
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->i:Lco;
-
-    const/16 v2, 0x8
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lco;->j:Lco;
-
-    const/16 v2, 0x9
-
-    aput-object v1, v0, v2
-
-    sput-object v0, Lco;->l:[Lco;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "$enum$name",
-            "$enum$ordinal",
-            "type",
-            "boxedType",
-            "defaultDefault"
-        }
-    .end annotation
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p4, p0, Lco;->k:Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public static values()[Lco;
+.method public constructor <init>(Lcn;)V
     .locals 1
 
-    sget-object v0, Lco;->l:[Lco;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, [Lco;->clone()Ljava/lang/Object;
+    const-string v0, "output"
 
-    move-result-object v0
+    invoke-static {p1, v0}, Ldj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, [Lco;
+    iput-object p1, p0, Lco;->a:Lcn;
 
-    return-object v0
+    iget-object p1, p0, Lco;->a:Lcn;
+
+    iput-object p0, p1, Lcn;->b:Lco;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)V
+    .locals 1
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, p1, v0}, Lcn;->f(II)V
+
+    return-void
+.end method
+
+.method public final a(ID)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->a(ID)V
+
+    return-void
+.end method
+
+.method public final a(IF)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->a(IF)V
+
+    return-void
+.end method
+
+.method public final a(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->i(II)V
+
+    return-void
+.end method
+
+.method public final a(IJ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->e(IJ)V
+
+    return-void
+.end method
+
+.method public final a(ILck;)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->b(ILck;)V
+
+    return-void
+.end method
+
+.method public final a(ILjava/lang/Object;)V
+    .locals 1
+
+    instance-of v0, p2, Lck;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    check-cast p2, Lck;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->c(ILck;)V
+
+    return-void
+
+    :cond_0
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    check-cast p2, Leh;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->a(ILeh;)V
+
+    return-void
+.end method
+
+.method public final a(ILjava/lang/Object;Les;)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    check-cast p2, Leh;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->b(ILeh;Les;)V
+
+    return-void
+.end method
+
+.method public final a(ILjava/lang/String;)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->b(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final a(IZ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->a(IZ)V
+
+    return-void
+.end method
+
+.method public final b(I)V
+    .locals 1
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, p1, v0}, Lcn;->f(II)V
+
+    return-void
+.end method
+
+.method public final b(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->g(II)V
+
+    return-void
+.end method
+
+.method public final b(IJ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->f(IJ)V
+
+    return-void
+.end method
+
+.method public final b(ILjava/lang/Object;Les;)V
+    .locals 1
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    check-cast p2, Leh;
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, p1, v0}, Lcn;->f(II)V
+
+    iget-object v0, p0, Lcn;->b:Lco;
+
+    invoke-interface {p3, p2, v0}, Les;->a(Ljava/lang/Object;Lgb;)V
+
+    const/4 p2, 0x4
+
+    invoke-virtual {p0, p1, p2}, Lcn;->f(II)V
+
+    return-void
+.end method
+
+.method public final c(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->g(II)V
+
+    return-void
+.end method
+
+.method public final c(IJ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->e(IJ)V
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->i(II)V
+
+    return-void
+.end method
+
+.method public final d(IJ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->f(IJ)V
+
+    return-void
+.end method
+
+.method public final e(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->h(II)V
+
+    return-void
+.end method
+
+.method public final e(IJ)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcn;->a(IJ)V
+
+    return-void
+.end method
+
+.method public final f(II)V
+    .locals 0
+
+    iget-object p0, p0, Lco;->a:Lcn;
+
+    invoke-virtual {p0, p1, p2}, Lcn;->a(II)V
+
+    return-void
 .end method

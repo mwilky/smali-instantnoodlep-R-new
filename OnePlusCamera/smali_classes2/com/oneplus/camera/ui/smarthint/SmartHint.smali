@@ -884,7 +884,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v2, 0x7f0804cd
+    const v2, 0x7f0804c2
 
     invoke-virtual {v1, v2}, Lcom/oneplus/camera/CameraActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -904,7 +904,7 @@
 
     iget-object v1, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v3, 0x7f1201c8
+    const v3, 0x7f1201be
 
     invoke-virtual {v1, v3}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -989,7 +989,7 @@
 
     iget-object v4, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v5, 0x7f1201c9
+    const v5, 0x7f1201bf
 
     invoke-virtual {v4, v5}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1062,7 +1062,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v5, 0x7f0804cc
+    const v5, 0x7f0804c1
 
     invoke-virtual {v2, v5}, Lcom/oneplus/camera/CameraActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1072,7 +1072,7 @@
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/smarthint/SmartHint;->activity:Lcom/oneplus/camera/CameraActivity;
 
-    const v5, 0x7f1201c7
+    const v5, 0x7f1201bd
 
     invoke-virtual {v2, v5}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 

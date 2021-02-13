@@ -1102,6 +1102,49 @@
     return-void
 .end method
 
+.method public setEnabled(Z)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListTitleView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mListSummaryView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/material/listview/ListItemView;->mCustomViewLayout:Landroid/widget/LinearLayout;
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object p0, p0, Lcom/google/android/material/listview/ListItemView;->mCustomViewLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    :cond_2
+    return-void
+.end method
+
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 

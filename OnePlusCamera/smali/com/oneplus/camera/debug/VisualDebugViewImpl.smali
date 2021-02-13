@@ -388,7 +388,7 @@
 
     if-eqz v3, :cond_4
 
-    const v3, 0x7f04037a
+    const v3, 0x7f04037b
 
     invoke-static {p0, v3, v6, v5, v4}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimensionPixels$default(Lcom/oneplus/camera/OnePlusCameraComponent;IIILjava/lang/Object;)I
 
@@ -1132,7 +1132,7 @@
 
     if-gez v0, :cond_3
 
-    const p3, 0x7f0404dd
+    const p3, 0x7f0404de
 
     const/4 v0, 0x2
 

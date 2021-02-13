@@ -136,7 +136,7 @@
 
     const v1, 0x7f1300e4
 
-    const v2, 0x7f080373
+    const v2, 0x7f080361
 
     const/4 v3, 0x0
 
@@ -247,7 +247,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/ManualCaptureControlPanel$ItemViewHolder;->container:Landroid/view/View;
 
-    const v0, 0x7f080374
+    const v0, 0x7f080362
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 

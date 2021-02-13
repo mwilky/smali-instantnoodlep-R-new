@@ -44,7 +44,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMorphoPanoramaCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MorphoPanoramaCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,1525:1\n858#2:1526\n858#2:1527\n858#2:1528\n858#2:1529\n858#2:1530\n858#2:1531\n858#2:1532\n1299#3,3:1533\n1299#3,8:1536\n1305#3,2:1544\n1299#3,3:1546\n1299#3,8:1549\n1305#3,2:1557\n1299#3,8:1559\n396#4:1567\n396#4:1568\n396#4:1569\n396#4:1570\n396#4:1571\n396#4:1572\n396#4:1573\n396#4:1574\n396#4:1575\n396#4:1576\n*E\n*S KotlinDebug\n*F\n+ 1 MorphoPanoramaCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl\n*L\n366#1:1526\n367#1:1527\n368#1:1528\n369#1:1529\n541#1:1530\n541#1:1531\n541#1:1532\n928#1,3:1533\n928#1,8:1536\n928#1,2:1544\n1234#1,3:1546\n1234#1,8:1549\n1234#1,2:1557\n1406#1,8:1559\n102#1:1567\n103#1:1568\n104#1:1569\n105#1:1570\n106#1:1571\n107#1:1572\n108#1:1573\n109#1:1574\n110#1:1575\n111#1:1576\n*E\n"
+    value = "SMAP\nMorphoPanoramaCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MorphoPanoramaCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,1532:1\n858#2:1533\n858#2:1534\n858#2:1535\n858#2:1536\n858#2:1537\n858#2:1538\n858#2:1539\n1299#3,3:1540\n1299#3,8:1543\n1305#3,2:1551\n1299#3,3:1553\n1299#3,8:1556\n1305#3,2:1564\n1299#3,8:1566\n396#4:1574\n396#4:1575\n396#4:1576\n396#4:1577\n396#4:1578\n396#4:1579\n396#4:1580\n396#4:1581\n396#4:1582\n396#4:1583\n*E\n*S KotlinDebug\n*F\n+ 1 MorphoPanoramaCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl\n*L\n366#1:1533\n367#1:1534\n368#1:1535\n369#1:1536\n541#1:1537\n541#1:1538\n541#1:1539\n935#1,3:1540\n935#1,8:1543\n935#1,2:1551\n1241#1,3:1553\n1241#1,8:1556\n1241#1,2:1564\n1413#1,8:1566\n102#1:1574\n103#1:1575\n104#1:1576\n105#1:1577\n106#1:1578\n107#1:1579\n108#1:1580\n109#1:1581\n110#1:1582\n111#1:1583\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -1260,6 +1260,26 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getPreviewPicture$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;->getPreviewPicture()Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getPreviewPictureBounds$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;)Landroid/graphics/Rect;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;->getPreviewPictureBounds()Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getRgbaAllocation$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;)Landroid/renderscript/Allocation;
     .locals 0
 
@@ -1416,6 +1436,14 @@
     return-void
 .end method
 
+.method public static final synthetic access$raise(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;->raise(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
+
+    return-void
+.end method
+
 .method public static final synthetic access$setAttachedFrameIndex$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;I)V
     .locals 0
 
@@ -1568,6 +1596,22 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static final synthetic access$setPreviewPicture$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;->previewPicture:Landroid/graphics/Bitmap;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setPreviewPictureBounds$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;Landroid/graphics/Rect;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;->previewPictureBounds:Landroid/graphics/Rect;
+
+    return-void
 .end method
 
 .method public static final synthetic access$setProcessPreviewFrameEnabled$p(Lcom/oneplus/camera/hardware/camera2/wrappers/MorphoPanoramaCameraImpl;Z)V

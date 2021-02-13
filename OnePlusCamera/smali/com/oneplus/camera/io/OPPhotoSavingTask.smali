@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPPhotoSavingTask.kt\ncom/oneplus/camera/io/OPPhotoSavingTask\n*L\n1#1,138:1\n*E\n"
+    value = "SMAP\nOPPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPPhotoSavingTask.kt\ncom/oneplus/camera/io/OPPhotoSavingTask\n*L\n1#1,183:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -21,7 +21,7 @@
         0x3
     }
     d1 = {
-        "\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\r\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0016\u0018\u0000 !2\u00020\u0001:\u0001!BE\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0015J\u001c\u0010\u001b\u001a\u00020\u001c2\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u001e2\u0008\u0010\u001f\u001a\u0004\u0018\u00010 H\u0015R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00128TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0016\u00a8\u0006\""
+        "\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\r\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0016\u0018\u0000 %2\u00020\u0001:\u0001%BE\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0015J\u0018\u0010\u001b\u001a\u00020\u00182\u0006\u0010\u001c\u001a\u00020\u000f2\u0006\u0010\u001d\u001a\u00020\u001eH\u0015J\u001c\u0010\u001f\u001a\u00020 2\u0008\u0010!\u001a\u0004\u0018\u00010\"2\u0008\u0010#\u001a\u0004\u0018\u00010$H\u0015R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00128TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0016\u00a8\u0006&"
     }
     d2 = {
         "Lcom/oneplus/camera/io/OPPhotoSavingTask;",
@@ -51,6 +51,10 @@
         "",
         "image",
         "Lcom/oneplus/media/EncodedImage;",
+        "onInsertExif",
+        "imageFormat",
+        "exifInterface",
+        "Lcom/oneplus/media/ExifInterface;",
         "onWriteData",
         "",
         "file",
@@ -74,10 +78,12 @@
 
 .field private static final FEATURE_MIN_FILE_SIZE:Lcom/oneplus/util/Feature;
 
+.field private static final PREFIX_ALLIES1:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
     new-instance v0, Lcom/oneplus/camera/io/OPPhotoSavingTask$Companion;
 
@@ -96,6 +102,59 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/io/OPPhotoSavingTask;->FEATURE_MIN_FILE_SIZE:Lcom/oneplus/util/Feature;
+
+    const/4 v0, 0x4
+
+    new-array v1, v0, [C
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v0, :cond_2
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    if-eq v3, v4, :cond_0
+
+    const/4 v4, 0x2
+
+    if-eq v3, v4, :cond_0
+
+    const/4 v4, 0x3
+
+    if-eq v3, v4, :cond_1
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v4, 0x70
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v4, 0x6f
+
+    :goto_1
+    int-to-char v4, v4
+
+    aput-char v4, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    sput-object v0, Lcom/oneplus/camera/io/OPPhotoSavingTask;->PREFIX_ALLIES1:Ljava/lang/String;
 
     return-void
 .end method
@@ -538,6 +597,159 @@
     invoke-interface {p1, p0, v0}, Lcom/oneplus/media/XMPContainer;->setXMPProperty(Lcom/oneplus/media/XMPPropertyKey;Ljava/lang/Object;)V
 
     :cond_c
+    return-void
+.end method
+
+.method protected onInsertExif(ILcom/oneplus/media/ExifInterface;)V
+    .locals 3
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
+    .end annotation
+
+    const-string v0, "exifInterface"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/io/PhotoSavingTask;->onInsertExif(ILcom/oneplus/media/ExifInterface;)V
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/OPPhotoSavingTask;->getCaptureHandle()Lcom/oneplus/camera/CaptureHandle;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/oneplus/camera/CaptureHandle;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lcom/oneplus/camera/next/hardware/CameraInfo;
+
+    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/CameraInfoKt;->isFrontCamera(Lcom/oneplus/camera/next/hardware/CameraInfo;)Z
+
+    move-result p1
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/OPPhotoSavingTask;->getCaptureHandle()Lcom/oneplus/camera/CaptureHandle;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/CaptureHandle;->getCaptureMode()Lcom/oneplus/camera/capturemode/CaptureMode;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-interface {p0}, Lcom/oneplus/camera/capturemode/CaptureMode;->getId()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
+    if-nez p0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result p1
+
+    const v1, 0x3d622c1
+
+    const-string v2, "UserComment"
+
+    if-eq p1, v1, :cond_4
+
+    const v0, 0x43a10a95
+
+    if-eq p1, v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const-string p1, "Panorama"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object p1, Lcom/oneplus/camera/io/OPPhotoSavingTask;->PREFIX_ALLIES1:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "_4"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, v2, p0}, Lcom/oneplus/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_4
+    const-string p1, "Bokeh"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    or-int/lit8 p0, v0, 0x10
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v0, Lcom/oneplus/camera/io/OPPhotoSavingTask;->PREFIX_ALLIES1:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x5f
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, v2, p0}, Lcom/oneplus/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_5
+    :goto_2
     return-void
 .end method
 

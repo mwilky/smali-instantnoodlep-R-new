@@ -1,56 +1,45 @@
-.class final Law;
+.class final synthetic Law;
 .super Ljava/lang/Object;
-.source "PG"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:I
+.field private final a:Lba;
 
-.field public b:J
+.field private final b:[B
 
-.field public c:Ljava/lang/Object;
-
-.field public final d:Lbp;
+.field private final c:Lk;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lba;[BLk;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lbp;->a()Lbp;
+    iput-object p1, p0, Law;->a:Lba;
 
-    move-result-object v0
+    iput-object p2, p0, Law;->b:[B
 
-    iput-object v0, p0, Law;->d:Lbp;
+    iput-object p3, p0, Law;->c:Lk;
 
     return-void
 .end method
 
-.method constructor <init>(Lbp;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "extensionRegistry"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Law;->a:Lba;
 
-    iput-object p1, p0, Law;->d:Lbp;
+    iget-object v1, p0, Law;->b:[B
+
+    iget-object p0, p0, Law;->c:Lk;
+
+    invoke-virtual {v0, v1, p0}, Lba;->c([BLk;)V
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p0
 .end method

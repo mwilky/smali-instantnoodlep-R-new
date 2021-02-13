@@ -131,12 +131,6 @@
 
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
     const-string/jumbo p2, "vibrator"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -147,7 +141,6 @@
 
     iput-object p1, p0, Landroidx/preference/SwitchPreference;->mVibrator:Landroid/os/Vibrator;
 
-    :cond_0
     return-void
 .end method
 

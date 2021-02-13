@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a0198
+    const v0, 0x7f0a0199
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -284,7 +284,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120083
+    const v1, 0x7f120074
 
     invoke-static {p1, v1}, Lcom/oneplus/camera/capturemode/ManualCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/ManualCaptureMode;I)Ljava/lang/String;
 
@@ -372,7 +372,7 @@
 
     const/4 v0, 0x1
 
-    const v1, 0x7f080249
+    const v1, 0x7f080241
 
     if-eq p1, v0, :cond_c
 
@@ -386,12 +386,12 @@
 
     if-eqz p2, :cond_0
 
-    const v1, 0x7f080255
+    const v1, 0x7f08024d
 
     goto/16 :goto_3
 
     :cond_0
-    const v1, 0x7f080257
+    const v1, 0x7f08024f
 
     goto/16 :goto_3
 
@@ -479,7 +479,7 @@
 
     if-ne p0, v2, :cond_5
 
-    const v1, 0x7f08024a
+    const v1, 0x7f080242
 
     goto :goto_3
 
@@ -550,7 +550,7 @@
     move-result-object v4
 
     :cond_8
-    const p0, 0x7f08024f
+    const p0, 0x7f080247
 
     if-nez v4, :cond_9
 
@@ -563,7 +563,7 @@
 
     if-ne p2, v2, :cond_a
 
-    const p0, 0x7f08024c
+    const p0, 0x7f080244
 
     :goto_1
     move v1, p0
@@ -586,12 +586,12 @@
     :cond_c
     if-eqz p2, :cond_d
 
-    const v1, 0x7f080251
+    const v1, 0x7f080249
 
     goto :goto_3
 
     :cond_d
-    const v1, 0x7f080253
+    const v1, 0x7f08024b
 
     :goto_3
     return v1

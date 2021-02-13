@@ -95,11 +95,15 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$onInitialize$2;->this$0:Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;
 
-    invoke-static {p0}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->access$getActiveFirstLevelItem$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)Lcom/oneplus/camera/ui/actionpanel/ActionItemGroup;
+    check-cast p0, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;
+
+    invoke-static {p0}, Lcom/oneplus/camera/ui/actionpanel/ActionPanelKt;->getSubPanelState(Lcom/oneplus/camera/ui/actionpanel/ActionPanel;)Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    sget-object p1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->EXPANDED:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+
+    if-ne p0, p1, :cond_0
 
     sget-object p0, Lcom/oneplus/camera/ui/KeyEventResult;->HANDLED:Lcom/oneplus/camera/ui/KeyEventResult;
 

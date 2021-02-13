@@ -3831,7 +3831,7 @@
 
     const-string v4, "dot"
 
-    const-string/jumbo v5, "triangle"
+    const-string v5, "triangle"
 
     const-string v6, "diamond"
 

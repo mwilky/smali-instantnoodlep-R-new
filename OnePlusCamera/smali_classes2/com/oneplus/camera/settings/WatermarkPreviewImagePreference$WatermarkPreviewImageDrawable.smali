@@ -20,7 +20,7 @@
         0x3
     }
     d1 = {
-        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0010\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0019H\u0016J\u0008\u0010\u001a\u001a\u00020\u0005H\u0016J\u0010\u0010\u001b\u001a\u00020\u00172\u0006\u0010\u001c\u001a\u00020\u0005H\u0016J\u0012\u0010\u001d\u001a\u00020\u00172\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u001fH\u0016R$\u0010\t\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0008@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\n\u0010\u000b\"\u0004\u0008\u000c\u0010\rR\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R$\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0010@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012\"\u0004\u0008\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006 "
+        "\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0010\t\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0010\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!H\u0016J\u0008\u0010\"\u001a\u00020\u0005H\u0016J\u0010\u0010#\u001a\u00020\u001f2\u0006\u0010$\u001a\u00020\u0005H\u0016J\u0012\u0010%\u001a\u00020\u001f2\u0008\u0010&\u001a\u0004\u0018\u00010\'H\u0016R$\u0010\t\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0008@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\n\u0010\u000b\"\u0004\u0008\u000c\u0010\rR$\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0007\u001a\u00020\u000e@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011\"\u0004\u0008\u0012\u0010\u0013R$\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0007\u001a\u00020\u0014@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0015\u0010\u0016\"\u0004\u0008\u0017\u0010\u0018R$\u0010\u0019\u001a\u00020\u00142\u0006\u0010\u0007\u001a\u00020\u0014@FX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0019\u0010\u0016\"\u0004\u0008\u001a\u0010\u0018R\u000e\u0010\u001b\u001a\u00020\u001cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006("
     }
     d2 = {
         "Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;",
@@ -37,13 +37,21 @@
         "()Ljava/lang/String;",
         "setBrandText",
         "(Ljava/lang/String;)V",
-        "brandWatermarkDrawable",
-        "Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;",
         "",
-        "isWatermarkEnabled",
+        "dateTime",
+        "getDateTime",
+        "()J",
+        "setDateTime",
+        "(J)V",
+        "",
+        "isSloganEnabled",
         "()Z",
-        "setWatermarkEnabled",
+        "setSloganEnabled",
         "(Z)V",
+        "isTimeStampEnabled",
+        "setTimeStampEnabled",
+        "watermarkDrawable",
+        "Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;",
         "watermarkHeight",
         "draw",
         "",
@@ -69,9 +77,13 @@
 # instance fields
 .field private brandText:Ljava/lang/String;
 
-.field private final brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+.field private dateTime:J
 
-.field private isWatermarkEnabled:Z
+.field private isSloganEnabled:Z
+
+.field private isTimeStampEnabled:Z
+
+.field private final watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
 .field private final watermarkHeight:I
 
@@ -86,17 +98,19 @@
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    new-instance v0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    sget-object v0, Lcom/oneplus/camera/drawable/WatermarkDrawable;->Companion:Lcom/oneplus/camera/drawable/WatermarkDrawable$Companion;
 
-    invoke-direct {v0, p1, p2}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;-><init>(Landroid/content/Context;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/oneplus/camera/drawable/WatermarkDrawable$Companion;->createDrawable(Landroid/content/Context;I)Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
-    iput-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f070286
+    const p2, 0x7f070287
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -120,11 +134,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isWatermarkEnabled:Z
+    iget-boolean v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isSloganEnabled:Z
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-boolean v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isTimeStampEnabled:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
     new-instance v1, Landroid/graphics/Rect;
 
@@ -158,13 +177,13 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setBounds(Landroid/graphics/Rect;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -176,6 +195,14 @@
     return-object p0
 .end method
 
+.method public final getDateTime()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->dateTime:J
+
+    return-wide v0
+.end method
+
 .method public getOpacity()I
     .locals 0
 
@@ -184,10 +211,18 @@
     return p0
 .end method
 
-.method public final isWatermarkEnabled()Z
+.method public final isSloganEnabled()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isWatermarkEnabled:Z
+    iget-boolean p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isSloganEnabled:Z
+
+    return p0
+.end method
+
+.method public final isTimeStampEnabled()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isTimeStampEnabled:Z
 
     return p0
 .end method
@@ -195,9 +230,9 @@
 .method public setAlpha(I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->setAlpha(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setAlpha(I)V
 
     return-void
 .end method
@@ -211,9 +246,9 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandText:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
-    invoke-virtual {v0, p1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->setSubtitleText(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setCustomName(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->invalidateSelf()V
 
@@ -223,17 +258,49 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-object p0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     return-void
 .end method
 
-.method public final setWatermarkEnabled(Z)V
-    .locals 0
+.method public final setDateTime(J)V
+    .locals 1
 
-    iput-boolean p1, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isWatermarkEnabled:Z
+    iput-wide p1, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->dateTime:J
+
+    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
+
+    invoke-virtual {v0, p1, p2}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setDateTime(J)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setSloganEnabled(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isSloganEnabled:Z
+
+    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setSloganEnabled(Z)V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setTimeStampEnabled(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->isTimeStampEnabled:Z
+
+    iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->watermarkDrawable:Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
+
+    invoke-virtual {v0, p1}, Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;->setDateTimeEnable(Z)V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/settings/WatermarkPreviewImagePreference$WatermarkPreviewImageDrawable;->invalidateSelf()V
 

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTouch3AControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl$runDragFocusPointTutorialAnimation$2$1\n*L\n1#1,2564:1\n*E\n"
+    value = "SMAP\nTouch3AControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Touch3AControlImpl.kt\ncom/oneplus/camera/ui/Touch3AControlImpl$runDragFocusPointTutorialAnimation$2$1\n*L\n1#1,2568:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

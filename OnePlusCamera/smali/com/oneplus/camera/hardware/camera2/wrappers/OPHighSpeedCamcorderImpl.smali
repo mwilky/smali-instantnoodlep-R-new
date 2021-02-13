@@ -25,6 +25,10 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nOPHighSpeedCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHighSpeedCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl\n*L\n1#1,162:1\n*E\n"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     bv = {
         0x1,
@@ -32,7 +36,7 @@
         0x3
     }
     d1 = {
-        "\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 \'2\u00020\u00012\u00020\u00022\u0008\u0012\u0004\u0012\u00020\u00040\u0003:\u0002&\'B\u000f\u0008\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0006J.\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u000c\u0010\u001d\u001a\u0008\u0012\u0004\u0012\u00020\u001f0\u001eH\u0017J*\u0010 \u001a\u00020\u0011\"\u0004\u0008\u0000\u0010!2\u000c\u0010\"\u001a\u0008\u0012\u0004\u0012\u0002H!0#2\u0006\u0010$\u001a\u0002H!H\u0097\u0002\u00a2\u0006\u0002\u0010%R\u001a\u0010\u0007\u001a\u00020\u00088TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0010\u001a\u00020\u00118TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0012\u0010\n\u001a\u0004\u0008\u0013\u0010\u0014\u00a8\u0006("
+        "\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 ,2\u00020\u00012\u00020\u00022\u0008\u0012\u0004\u0012\u00020\u00040\u0003:\u0002+,B\u000f\u0008\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0006J.\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u000c\u0010\u001d\u001a\u0008\u0012\u0004\u0012\u00020\u001f0\u001eH\u0017J\u0018\u0010 \u001a\u00020\u00112\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$H\u0015J*\u0010%\u001a\u00020\u0011\"\u0004\u0008\u0000\u0010&2\u000c\u0010\'\u001a\u0008\u0012\u0004\u0012\u0002H&0(2\u0006\u0010)\u001a\u0002H&H\u0097\u0002\u00a2\u0006\u0002\u0010*R\u001a\u0010\u0007\u001a\u00020\u00088TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u000e\u0010\r\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u000eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0010\u001a\u00020\u00118TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0012\u0010\n\u001a\u0004\u0008\u0013\u0010\u0014\u00a8\u0006-"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;",
@@ -67,6 +71,11 @@
         "selectedUnit",
         "",
         "",
+        "onPrepareMediaRecorder",
+        "mediaRecorder",
+        "Landroid/media/MediaRecorder;",
+        "params",
+        "Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;",
         "set",
         "TValue",
         "key",
@@ -93,6 +102,12 @@
 
 .field private static final FEATURE_USE_OPEN_GL_PREVIEW_OUTPUT:Lcom/oneplus/util/Feature;
 
+.field private static final PREFIX_ALLIES1:Ljava/lang/String;
+
+.field private static final TITLE_HFR_FPS_PREFIX:Ljava/lang/String; = "slow_motion_hfr_"
+
+.field private static final TITLE_HFR_FPS_SUFFIX:Ljava/lang/String; = ":0,0,0,0"
+
 
 # instance fields
 .field private disableCaptureDecisionHandle:Lcom/oneplus/base/Handle;
@@ -102,7 +117,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
     new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl$Companion;
 
@@ -131,6 +146,59 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->FEATURE_USE_OPEN_GL_PREVIEW_OUTPUT:Lcom/oneplus/util/Feature;
+
+    const/4 v0, 0x4
+
+    new-array v1, v0, [C
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v0, :cond_2
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    if-eq v3, v4, :cond_0
+
+    const/4 v4, 0x2
+
+    if-eq v3, v4, :cond_0
+
+    const/4 v4, 0x3
+
+    if-eq v3, v4, :cond_1
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v4, 0x70
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v4, 0x6f
+
+    :goto_1
+    int-to-char v4, v4
+
+    aput-char v4, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->PREFIX_ALLIES1:Ljava/lang/String;
 
     return-void
 .end method
@@ -367,6 +435,176 @@
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
+.end method
+
+.method protected onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
+    .locals 10
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
+    .end annotation
+
+    const-string v0, "mediaRecorder"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "params"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/HighSpeedCamcorderImpl;->onPrepareMediaRecorder(Landroid/media/MediaRecorder;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    if-nez p2, :cond_1
+
+    return v0
+
+    :cond_1
+    move-object p2, p0
+
+    check-cast p2, Lcom/oneplus/camera/next/hardware/Camcorder;
+
+    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getCaptureRate(Lcom/oneplus/camera/next/hardware/Camcorder;)D
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v1
+
+    const-wide/high16 v2, 0x403e000000000000L    # 30.0
+
+    if-eqz v1, :cond_2
+
+    move-wide v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getCaptureRate(Lcom/oneplus/camera/next/hardware/Camcorder;)D
+
+    move-result-wide v4
+
+    :goto_0
+    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getVideoFrameRate(Lcom/oneplus/camera/next/hardware/Camcorder;)D
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/CamcorderKt;->getVideoFrameRate(Lcom/oneplus/camera/next/hardware/Camcorder;)D
+
+    move-result-wide v2
+
+    :goto_1
+    div-double v6, v4, v2
+
+    const/4 p2, 0x2
+
+    int-to-double v8, p2
+
+    cmpg-double p2, v6, v8
+
+    if-gez p2, :cond_4
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->TAG:Ljava/lang/String;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "onPrepareMediaRecorder() - Not recording slow motion, capture rate: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string p2, ", frame rate: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
+
+    :cond_4
+    iget-object p2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->TAG:Ljava/lang/String;
+
+    const-string v1, "onPrepareMediaRecorder() - Prepare slow motion media recorder with allies1 gallery"
+
+    invoke-static {p2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->PREFIX_ALLIES1:Ljava/lang/String;
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5f
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->getRawId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "slow_motion_hfr_"
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ":0,0,0,0"
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lcom/oneplus/camera/media/MediaRecordersKt;->setTitle(Landroid/media/MediaRecorder;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "onPrepareMediaRecorder() - Fail to set title"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    return v0
 .end method
 
 .method public onReleaseCaptureDecisionResources(Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;)V

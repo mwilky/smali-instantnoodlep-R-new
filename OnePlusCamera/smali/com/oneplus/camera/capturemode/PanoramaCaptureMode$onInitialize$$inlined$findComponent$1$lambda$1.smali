@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$onInitialize$1$1\n*L\n1#1,1307:1\n*E\n"
+    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$onInitialize$1$1\n*L\n1#1,1314:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

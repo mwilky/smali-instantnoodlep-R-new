@@ -162,7 +162,7 @@
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/CaptureModesPanelImpl$ItemViewHolder;->view:Landroid/view/View;
 
-    const v0, 0x7f0a01c7
+    const v0, 0x7f0a01c8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -66,6 +66,10 @@
         }
     .end annotation
 
+    iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;->this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+
+    invoke-virtual {v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->lock()V
+
     new-instance v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
 
     iget-object v1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;->val$key:Ljava/lang/Object;
@@ -96,9 +100,13 @@
 
     aput-object p1, v0, v1
 
+    iget-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;->this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+
+    invoke-static {p1}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->access$508(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)I
+
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;->this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
 
-    invoke-static {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->access$508(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;)I
+    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->unlock()V
 
     return-void
 .end method
