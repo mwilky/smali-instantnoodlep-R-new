@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/engineer/rtg;->ugm(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/server/engineer/ssp;->ugm(Landroid/content/Context;)Z
 
     move-result v0
 

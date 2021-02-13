@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$igw;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->e(Lcom/android/server/am/OnePlusBackgroundFrozen;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->f(Lcom/android/server/am/OnePlusBackgroundFrozen;Lorg/json/JSONArray;)V
 
     return-void
 .end method

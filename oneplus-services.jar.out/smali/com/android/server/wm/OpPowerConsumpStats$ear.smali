@@ -84,7 +84,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v3
 
@@ -102,7 +102,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result v3
 
@@ -146,7 +146,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -187,7 +187,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v2
 
@@ -211,7 +211,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result v2
 
@@ -283,7 +283,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
@@ -319,7 +319,7 @@
 
     const-string p0, "DozeFragmentTimer clear"
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -381,7 +381,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v2
 
@@ -395,7 +395,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$ear;->tsu:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result p0
 
@@ -469,7 +469,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -478,7 +478,7 @@
     :cond_0
     const-string p0, "DozeFragmentTimer getCacheDozeFragment not Timing , return null"
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 

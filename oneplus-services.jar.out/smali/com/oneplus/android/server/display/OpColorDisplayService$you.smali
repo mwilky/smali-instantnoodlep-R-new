@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onChange(ZLandroid/net/Uri;)V
-    .locals 4
+    .locals 6
 
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
@@ -48,7 +48,7 @@
     move-result-object p1
 
     :goto_0
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     const/4 p2, -0x1
 
@@ -56,77 +56,152 @@
 
     move-result v0
 
-    const v1, -0x563eaf93
+    const/4 v1, 0x4
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
-    const/4 v3, 0x1
+    const/4 v3, 0x2
 
-    if-eq v0, v1, :cond_3
+    const/4 v4, 0x0
 
-    const v1, 0xf66fb82
+    const/4 v5, 0x1
 
-    if-eq v0, v1, :cond_2
-
-    const v1, 0x51621985
-
-    if-eq v0, v1, :cond_1
+    sparse-switch v0, :sswitch_data_0
 
     goto :goto_1
 
-    :cond_1
+    :sswitch_0
     const-string v0, "screen_color_mode_advanced_settings_value"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_1
 
-    move p2, v3
+    move p2, v5
 
     goto :goto_1
 
-    :cond_2
+    :sswitch_1
+    const-string v0, "oem_black_mode"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move p2, v2
+
+    goto :goto_1
+
+    :sswitch_2
     const-string v0, "screen_color_mode_settings_value"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_1
 
-    const/4 p2, 0x0
+    move p2, v4
 
     goto :goto_1
 
-    :cond_3
+    :sswitch_3
+    const-string v0, "colour_cast"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move p2, v1
+
+    goto :goto_1
+
+    :sswitch_4
     const-string v0, "oem_screen_better_value"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_1
 
-    move p2, v2
+    move p2, v3
 
-    :cond_4
+    :cond_1
     :goto_1
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
+
+    if-eq p2, v5, :cond_7
 
     if-eq p2, v3, :cond_6
 
-    if-eq p2, v2, :cond_5
+    if-eq p2, v2, :cond_4
+
+    if-eq p2, v1, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$600(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1, v5}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$702(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)Z
+
+    goto :goto_2
+
+    :cond_3
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$702(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)Z
+
+    goto :goto_2
+
+    :cond_4
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$300(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1, v5}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$402(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)Z
 
     goto :goto_2
 
     :cond_5
+    iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p1, v4}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$402(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)Z
+
+    :goto_2
+    iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$500(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
+
+    goto :goto_3
+
+    :cond_6
     invoke-static {}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$100()Z
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_8
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
@@ -136,14 +211,23 @@
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/display/tsu;->cjf()V
 
-    goto :goto_2
-
-    :cond_6
-    iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
-
-    invoke-static {p0, v3}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$000(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
+    goto :goto_3
 
     :cond_7
-    :goto_2
+    iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->zta:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p0, v5}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$000(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
+
+    :cond_8
+    :goto_3
     return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x563eaf93 -> :sswitch_4
+        0xcf535d2 -> :sswitch_3
+        0xf66fb82 -> :sswitch_2
+        0x2eb945cb -> :sswitch_1
+        0x51621985 -> :sswitch_0
+    .end sparse-switch
 .end method

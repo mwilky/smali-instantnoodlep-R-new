@@ -788,7 +788,7 @@
     :cond_3
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y2(I)Z
+    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
 
     move-result v1
 
@@ -822,7 +822,7 @@
     :cond_5
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
+    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A2(I)Z
 
     move-result v1
 

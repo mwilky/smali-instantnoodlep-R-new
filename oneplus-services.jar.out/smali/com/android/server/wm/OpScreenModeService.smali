@@ -450,11 +450,11 @@
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-static {}, Lcom/android/server/oxb/you;->ivd()Lcom/android/server/oxb/you;
+    invoke-static {}, Lcom/android/server/cjf/you;->ivd()Lcom/android/server/cjf/you;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/android/server/oxb/you;->g(Lcom/android/server/wm/OpScreenModeService;)V
+    invoke-virtual {v0, p0}, Lcom/android/server/cjf/you;->g(Lcom/android/server/wm/OpScreenModeService;)V
 
     return-void
 .end method
@@ -3715,13 +3715,13 @@
     :cond_3
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/OpScreenModeService;->setRefreshRate(Lcom/android/server/wm/ActivityRecord;I)V
 
-    invoke-static {}, Lcom/android/server/oxb/you;->ivd()Lcom/android/server/oxb/you;
+    invoke-static {}, Lcom/android/server/cjf/you;->ivd()Lcom/android/server/cjf/you;
 
     move-result-object p0
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->mPackageName:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/oxb/you;->lqr(Ljava/lang/String;I)V
+    invoke-virtual {p0, p1, v0}, Lcom/android/server/cjf/you;->lqr(Ljava/lang/String;I)V
 
     :cond_4
     return-void

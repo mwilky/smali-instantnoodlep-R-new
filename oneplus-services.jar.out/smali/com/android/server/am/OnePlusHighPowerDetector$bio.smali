@@ -1,6 +1,9 @@
-.class final Lcom/android/server/am/OnePlusHighPowerDetector$bio;
-.super Landroid/os/Handler;
+.class Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Lcom/oneplus/config/ConfigObserver$ConfigUpdater;
 
 
 # annotations
@@ -9,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x0
     name = "bio"
 .end annotation
 
@@ -19,28 +22,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/os/Looper;)V
-    .locals 1
+.method constructor <init>(Lcom/android/server/am/OnePlusHighPowerDetector;)V
+    .locals 0
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$bio;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    const/4 p1, 0x0
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+.method public updateConfig(Lorg/json/JSONArray;)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$bio;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/OnePlusHighPowerDetector;->O(Landroid/os/Message;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm(Lcom/android/server/am/OnePlusHighPowerDetector;Lorg/json/JSONArray;)V
 
     return-void
 .end method

@@ -3285,7 +3285,7 @@
     return-void
 .end method
 
-.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mAms:Lcom/android/server/am/ActivityManagerService;
@@ -3367,7 +3367,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p3}, Lcom/color/app/ColorAppSwitchConfig;->getPackageSet()Ljava/util/HashSet;
+    invoke-virtual {p3}, Lcom/oplus/app/OplusAppSwitchConfig;->getPackageSet()Ljava/util/HashSet;
 
     move-result-object v0
 
@@ -3432,13 +3432,13 @@
     :cond_6
     iget-object v2, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchRuleInfo;->buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
+    invoke-static {v2, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchRuleInfo;->buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
 
     move-result-object v2
 
     new-instance v3, Lcom/android/server/wm/OPAppSwitchManagerService$bio;
 
-    invoke-direct {v3, p0, p1, p3}, Lcom/android/server/wm/OPAppSwitchManagerService$bio;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)V
+    invoke-direct {v3, p0, p1, p3}, Lcom/android/server/wm/OPAppSwitchManagerService$bio;-><init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)V
 
     iput-object v3, v2, Lcom/android/server/wm/OPAppSwitchRuleInfo;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
@@ -3479,7 +3479,7 @@
     return v1
 .end method
 
-.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/wm/OPAppSwitchManagerService;->mAms:Lcom/android/server/am/ActivityManagerService;
@@ -3566,7 +3566,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, p1, v1, p2}, Lcom/android/server/wm/OPAppSwitchRuleInfo;->buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
+    invoke-static {p0, p1, v1, p2}, Lcom/android/server/wm/OPAppSwitchRuleInfo;->buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
 
     move-result-object p0
 

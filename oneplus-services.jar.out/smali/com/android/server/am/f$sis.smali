@@ -47,11 +47,11 @@
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/f$sis;->zta:Lcom/android/server/am/f;
 
-    invoke-static {p1}, Lcom/android/server/am/f;->bvj(Lcom/android/server/am/f;)V
+    invoke-static {p1}, Lcom/android/server/am/f;->ibl(Lcom/android/server/am/f;)V
 
     iget-object p0, p0, Lcom/android/server/am/f$sis;->zta:Lcom/android/server/am/f;
 
-    invoke-static {p0}, Lcom/android/server/am/f;->ibl(Lcom/android/server/am/f;)V
+    invoke-static {p0}, Lcom/android/server/am/f;->gwm(Lcom/android/server/am/f;)V
 
     :goto_0
     return-void

@@ -1275,7 +1275,7 @@
 
     if-eqz v0, :cond_17
 
-    invoke-virtual {v0, p1}, Lcom/android/server/wtn;->D(Ljava/time/LocalTime;)V
+    invoke-virtual {v0, p1}, Lcom/android/server/wtn;->E(Ljava/time/LocalTime;)V
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;
 
@@ -1289,7 +1289,7 @@
 
     move-result-wide v3
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/server/wtn;->B(J)V
+    invoke-virtual {v0, v3, v4}, Lcom/android/server/wtn;->C(J)V
 
     :cond_17
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$qbh;->zta:Lcom/android/server/OpPowerControllerService;

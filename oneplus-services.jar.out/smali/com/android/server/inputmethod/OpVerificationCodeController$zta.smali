@@ -171,7 +171,7 @@
 
     iget-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$zta;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ear/you;
+    invoke-static {p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ire/you;
 
     move-result-object p1
 
@@ -179,11 +179,11 @@
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$zta;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ear/you;
+    invoke-static {p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ire/you;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/ear/you;->oif(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p2}, Lcom/android/server/ire/you;->oif(Landroid/os/Bundle;)V
 
     :cond_3
     return-void

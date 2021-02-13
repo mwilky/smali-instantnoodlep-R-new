@@ -15,76 +15,64 @@
 
 
 # instance fields
-.field private sis:I
+.field final synthetic sis:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-.field final synthetic tsu:Lcom/android/server/am/OnePlusHighPowerDetector;
+.field private you:Z
 
-.field private you:I
-
-.field private zta:Ljava/lang/String;
+.field private zta:J
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;II)V
+.method constructor <init>(Lcom/android/server/am/OnePlusHighPowerDetector;JZ)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->tsu:Lcom/android/server/am/OnePlusHighPowerDetector;
+    iput-object p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->sis:Lcom/android/server/am/OnePlusHighPowerDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-wide p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:J
 
-    iput-object p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:Ljava/lang/String;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:I
-
-    iput p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->sis:I
-
-    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:Ljava/lang/String;
-
-    iput p3, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:I
-
-    iput p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->sis:I
+    iput-boolean p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:Z
 
     return-void
 .end method
 
 
 # virtual methods
+.method public sis()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:Z
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "SpecailNativeProcessInfo{mProcess="
+    const-string v1, "# NotifyTimeAndIntervel ["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:Ljava/lang/String;
+    iget-wide v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mCount="
+    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mBatteryDrop="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->sis:I
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
+    const-string p0, "]"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -95,18 +83,26 @@
     return-object p0
 .end method
 
-.method public you()I
+.method public tsu(J)V
     .locals 0
 
-    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:I
+    iput-wide p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:J
 
-    return p0
+    return-void
 .end method
 
-.method public zta()I
+.method public you()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->zta:J
+
+    return-wide v0
+.end method
+
+.method public zta()Z
     .locals 0
 
-    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->sis:I
+    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$wtn;->you:Z
 
     return p0
 .end method

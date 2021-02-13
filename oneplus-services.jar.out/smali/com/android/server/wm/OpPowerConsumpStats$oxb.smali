@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$oxb;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->hmo(Lcom/android/server/wm/OpPowerConsumpStats;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->fto(Lcom/android/server/wm/OpPowerConsumpStats;Lorg/json/JSONArray;)V
 
     return-void
 .end method

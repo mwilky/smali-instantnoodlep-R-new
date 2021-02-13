@@ -1,4 +1,4 @@
-.class abstract Lcom/android/server/gwm$igw;
+.class Lcom/android/server/gwm$igw;
 .super Landroid/database/ContentObserver;
 .source ""
 
@@ -9,46 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x400
+    accessFlags = 0x2
     name = "igw"
 .end annotation
 
 
 # instance fields
-.field final synthetic you:Lcom/android/server/gwm;
-
-.field private zta:Ljava/lang/String;
+.field final synthetic zta:Lcom/android/server/gwm;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/gwm;Landroid/os/Handler;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/android/server/gwm;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/gwm$igw;->you:Lcom/android/server/gwm;
+    iput-object p1, p0, Lcom/android/server/gwm$igw;->zta:Lcom/android/server/gwm;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    iput-object p3, p0, Lcom/android/server/gwm$igw;->zta:Ljava/lang/String;
-
-    invoke-static {}, Lcom/android/server/gwm;->bvj()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lcom/android/server/gwm$igw;->zta:Ljava/lang/String;
-
-    invoke-static {p2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p1, p2, p3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
-
-    invoke-virtual {p0}, Lcom/android/server/gwm$igw;->you()V
+    invoke-direct {p0, p3}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
@@ -56,44 +32,30 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 0
+    .locals 1
 
-    invoke-virtual {p0}, Lcom/android/server/gwm$igw;->you()V
+    invoke-static {}, Lcom/android/server/gwm;->vdb()Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public you()V
-    .locals 3
+    if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/android/server/gwm;->bvj()Landroid/content/Context;
+    const-string p1, "CommonFrontMonitor"
 
-    move-result-object v0
+    const-string v0, "[SMART5G] Smart5GWhitelistContentObserver whitelist changed !!"
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/gwm$igw;->zta:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 v2, 0x0
+    iget-object p0, p0, Lcom/android/server/gwm$igw;->zta:Lcom/android/server/gwm;
 
-    :goto_0
-    invoke-virtual {p0, v2}, Lcom/android/server/gwm$igw;->zta(Z)V
+    invoke-static {p0}, Lcom/android/server/gwm;->zgw(Lcom/android/server/gwm;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    const/4 p1, 0x5
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
-.end method
-
-.method abstract zta(Z)V
 .end method

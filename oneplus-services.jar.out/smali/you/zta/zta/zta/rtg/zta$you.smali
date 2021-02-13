@@ -19,6 +19,8 @@
 
 .field private static final cno:Ljava/lang/String; = "supl.google.com"
 
+.field private static final gck:Ljava/lang/String; = "lahaina"
+
 .field private static final igw:Ljava/lang/String; = "3"
 
 .field private static final kth:Ljava/lang/String; = "7275"
@@ -30,6 +32,8 @@
 .field private static final ssp:Ljava/lang/String; = "supl.qxwz.com"
 
 .field private static final tsu:Ljava/lang/String; = "supl2019.lbs.sprint.com"
+
+.field private static final wtn:Ljava/lang/String; = "0xf"
 
 .field private static final you:Ljava/lang/String; = "0x20002"
 
@@ -57,85 +61,8 @@
     return-void
 .end method
 
-.method private sis(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 3
-
-    const/4 p0, 0x0
-
-    if-eqz p1, :cond_4
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz p2, :cond_4
-
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x2
-
-    const-string v0, "310120"
-
-    const-string v1, "312530"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    move v1, p0
-
-    :goto_0
-    if-ge p0, p2, :cond_3
-
-    aget-object v2, v0, p0
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const/4 v1, 0x1
-
-    :cond_2
-    add-int/lit8 p0, p0, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return v1
-
-    :cond_4
-    :goto_1
-    return p0
-.end method
-
-.method private ssp(Ljava/util/Properties;)V
-    .locals 18
+.method private cno(Ljava/util/Properties;)V
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -159,189 +86,257 @@
 
     const-string v5, "supl.google.com"
 
-    const-string v6, "3"
+    const-string v6, "0xf"
 
-    const-string v7, "LPP_PROFILE"
+    const-string v7, "0x20004"
 
-    const-string v8, "7275"
+    const-string v8, "3"
 
-    const-string v9, "SUPL_PORT"
+    const-string v9, "7275"
 
-    const-string v10, "SUPL_HOST"
+    const-string v10, "SUPL_PORT"
 
-    if-eqz v4, :cond_6
+    const-string v11, "SUPL_HOST"
 
-    array-length v11, v4
+    const-string v12, "SUPL_VER"
 
-    const/4 v12, 0x2
+    const-string v13, "LPP_PROFILE"
 
-    if-ge v11, v12, :cond_0
+    if-eqz v4, :cond_9
 
-    goto/16 :goto_1
+    array-length v14, v4
+
+    const/4 v15, 0x2
+
+    if-ge v14, v15, :cond_0
+
+    goto/16 :goto_4
 
     :cond_0
-    const/4 v11, 0x0
+    const/4 v14, 0x0
 
-    aget-object v12, v4, v11
+    aget-object v15, v4, v14
 
-    const/4 v13, 0x1
+    const/4 v14, 0x1
 
-    aget-object v4, v4, v13
+    aget-object v4, v4, v14
 
-    invoke-direct {v0, v12}, Lyou/zta/zta/zta/rtg/zta$you;->zta(Ljava/lang/String;)Z
+    invoke-direct {v0, v15}, Lyou/zta/zta/zta/rtg/zta$you;->zta(Ljava/lang/String;)Z
 
-    move-result v14
+    move-result v16
 
-    const-string v15, "0x20002"
+    const-string v14, "0x20002"
 
-    const-string v11, "SUPL_VER"
+    if-eqz v16, :cond_2
 
-    if-eqz v14, :cond_1
+    invoke-direct/range {p0 .. p0}, Lyou/zta/zta/zta/rtg/zta$you;->tsu()Z
 
-    invoke-virtual {v1, v11, v15}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    move-result v0
 
-    const-string v0, "supl.qxwz.com"
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, v10, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v12, v7}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v9, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_1
-    invoke-direct {v0, v12, v4}, Lyou/zta/zta/zta/rtg/zta$you;->tsu(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v14
-
-    const/16 v17, 0x49
-
-    if-eqz v14, :cond_3
-
-    new-array v14, v13, [I
-
-    const/16 v16, 0x0
-
-    aput v17, v14, v16
-
-    invoke-static {v14}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v14
-
-    if-eqz v14, :cond_2
-
-    const-string v14, "tmo"
-
-    invoke-virtual {v14, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v14
-
-    if-eqz v14, :cond_2
-
-    move v14, v13
+    invoke-virtual {v1, v13, v6}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_2
-    const/4 v14, 0x0
+    :cond_1
+    invoke-virtual {v1, v12, v14}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     :goto_0
-    if-eqz v14, :cond_3
+    const-string v0, "supl.qxwz.com"
+
+    invoke-virtual {v1, v11, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v10, v9}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_2
+    invoke-direct {v0, v15, v4}, Lyou/zta/zta/zta/rtg/zta$you;->rtg(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v16
+
+    const/16 v17, 0x49
+
+    if-eqz v16, :cond_4
+
+    move-object/from16 v16, v5
+
+    move-object/from16 v18, v6
+
+    const/4 v5, 0x1
+
+    new-array v6, v5, [I
+
+    const/4 v5, 0x0
+
+    aput v17, v6, v5
+
+    invoke-static {v6}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const-string v5, "tmo"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const/4 v5, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v5, 0x0
+
+    :goto_1
+    if-eqz v5, :cond_5
 
     const-string v0, "tmo settings"
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v0, "0x20004"
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v12, v7}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "supl.geo.t-mobile.com"
 
-    invoke-virtual {v1, v10, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v11, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v9, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v10, v9}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v7, v6}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v13, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     return-void
 
-    :cond_3
-    invoke-direct {v0, v12, v4}, Lyou/zta/zta/zta/rtg/zta$you;->sis(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    new-array v0, v13, [I
-
-    const/4 v4, 0x0
-
-    aput v17, v0, v4
-
-    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    const-string v0, "sprint"
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    move v4, v13
-
     :cond_4
-    if-eqz v4, :cond_5
+    move-object/from16 v16, v5
+
+    move-object/from16 v18, v6
+
+    :cond_5
+    invoke-direct {v0, v15, v4}, Lyou/zta/zta/zta/rtg/zta$you;->sis(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [I
+
+    const/4 v6, 0x0
+
+    aput v17, v5, v6
+
+    invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    const-string v5, "sprint"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move v4, v6
+
+    :goto_2
+    if-eqz v4, :cond_7
 
     const-string v0, "sprint settings"
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v11, v15}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v12, v14}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "supl2019.lbs.sprint.com"
 
-    invoke-virtual {v1, v10, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v11, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v9, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v10, v9}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v7, v6}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_5
-    const-string v0, "default settings"
-
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v1, v10, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    invoke-virtual {v1, v9, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    invoke-virtual {v1, v7, v6}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v13, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     return-void
 
-    :cond_6
-    :goto_1
-    const-string v0, "mccmnc is null, use global default one"
+    :cond_7
+    const-string v3, "default settings"
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v10, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct/range {p0 .. p0}, Lyou/zta/zta/zta/rtg/zta$you;->tsu()Z
 
-    invoke-virtual {v1, v9, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    move-result v0
 
-    invoke-virtual {v1, v7, v6}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    if-eqz v0, :cond_8
+
+    invoke-virtual {v1, v12, v7}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-object/from16 v3, v18
+
+    invoke-virtual {v1, v13, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_8
+    invoke-virtual {v1, v13, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    :goto_3
+    move-object/from16 v4, v16
+
+    invoke-virtual {v1, v11, v4}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v10, v9}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_9
+    :goto_4
+    move-object v4, v5
+
+    move-object v3, v6
+
+    const-string v5, "mccmnc is null, use global default one"
+
+    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct/range {p0 .. p0}, Lyou/zta/zta/zta/rtg/zta$you;->tsu()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v1, v12, v7}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v13, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    goto :goto_5
+
+    :cond_a
+    invoke-virtual {v1, v13, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    :goto_5
+    invoke-virtual {v1, v11, v4}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v10, v9}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private tsu(Ljava/lang/String;Ljava/lang/String;)Z
+.method private rtg(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 13
 
     const/4 p0, 0x0
@@ -435,6 +430,120 @@
 
     :cond_4
     :goto_1
+    return p0
+.end method
+
+.method private sis(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 3
+
+    const/4 p0, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz p2, :cond_4
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x2
+
+    const-string v0, "310120"
+
+    const-string v1, "312530"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    move v1, p0
+
+    :goto_0
+    if-ge p0, p2, :cond_3
+
+    aget-object v2, v0, p0
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const/4 v1, 0x1
+
+    :cond_2
+    add-int/lit8 p0, p0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return v1
+
+    :cond_4
+    :goto_1
+    return p0
+.end method
+
+.method private tsu()Z
+    .locals 1
+
+    const-string p0, "ro.board.platform"
+
+    invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "lahaina"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    const-string v0, "OpGnssConf"
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "Support 5G NR Supl"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const-string p0, "Not Support 5G NR Supl"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
     return p0
 .end method
 
@@ -637,10 +746,10 @@
 
 
 # virtual methods
-.method public rtg(Ljava/util/Properties;)V
+.method public ssp(Ljava/util/Properties;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lyou/zta/zta/zta/rtg/zta$you;->ssp(Ljava/util/Properties;)V
+    invoke-direct {p0, p1}, Lyou/zta/zta/zta/rtg/zta$you;->cno(Ljava/util/Properties;)V
 
     return-void
 .end method

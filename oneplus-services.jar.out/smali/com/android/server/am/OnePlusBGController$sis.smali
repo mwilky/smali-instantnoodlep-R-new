@@ -1429,7 +1429,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/OnePlusBGController$sis;->zta:Lcom/android/server/am/OnePlusBGController;
 
-    invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/vdb;
+    invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/zgw;
 
     move-result-object p2
 
@@ -1443,14 +1443,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/vdb;
+    check-cast v0, Lcom/android/server/zgw;
 
-    invoke-static {p2, v0}, Lcom/android/server/am/OnePlusBGController;->zgw(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/vdb;)Lcom/android/server/vdb;
+    invoke-static {p2, v0}, Lcom/android/server/am/OnePlusBGController;->zgw(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/zgw;)Lcom/android/server/zgw;
 
     :cond_1e
     iget-object p2, p0, Lcom/android/server/am/OnePlusBGController$sis;->zta:Lcom/android/server/am/OnePlusBGController;
 
-    invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/vdb;
+    invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/zgw;
 
     move-result-object p2
 
@@ -1458,11 +1458,11 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBGController$sis;->zta:Lcom/android/server/am/OnePlusBGController;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/vdb;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBGController;->vdb(Lcom/android/server/am/OnePlusBGController;)Lcom/android/server/zgw;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->isOptApp(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/zgw;->isOptApp(Ljava/lang/String;)Z
 
     move-result p0
 

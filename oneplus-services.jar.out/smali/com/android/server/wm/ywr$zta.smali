@@ -324,9 +324,11 @@
 .end method
 
 .method private ire(Z)V
-    .locals 4
+    .locals 5
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    const-string v1, "OemSceneModeActivityStack"
 
     if-eqz v0, :cond_0
 
@@ -334,17 +336,15 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "gameModeShowToolBox(): handle showToolBoxGuideline, isStrong="
+    const-string v2, "gameModeShowToolBox(): handle showToolBoxGuideline, isStrong="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    const-string v1, "OemSceneModeActivityStack"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -353,15 +353,15 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    new-instance v1, Landroid/content/ComponentName;
+    new-instance v2, Landroid/content/ComponentName;
 
-    const-string v2, "com.oneplus.gamespace"
+    const-string v3, "com.oneplus.gamespace"
 
-    const-string v3, "com.oneplus.gamespace.service.RemoteService"
+    const-string v4, "com.oneplus.gamespace.service.RemoteService"
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     if-eqz p1, :cond_1
 
@@ -375,12 +375,43 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/ywr$zta;->sis:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Failed to start service: intent="
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
     return-void
 .end method
 
@@ -2605,7 +2636,7 @@
 .end method
 
 .method public qbh(II)Z
-    .locals 4
+    .locals 6
 
     iget-object v0, p0, Lcom/android/server/wm/ywr$zta;->sis:Landroid/content/Context;
 
@@ -2627,6 +2658,8 @@
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/ywr$zta;->vdb(II)Z
@@ -2637,55 +2670,81 @@
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
+    const-string v2, "OemSceneModeActivityStack"
+
     if-eqz v0, :cond_0
 
-    const-string v0, "OemSceneModeActivityStack"
+    const-string v0, "gameModeShowToolBox(): startService for gamespace tool box"
 
-    const-string v1, "gameModeShowToolBox(): startService for gamespace tool box"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    new-instance v1, Landroid/content/ComponentName;
+    new-instance v3, Landroid/content/ComponentName;
 
-    const-string v2, "com.oneplus.gamespace"
+    const-string v4, "com.oneplus.gamespace"
 
-    const-string v3, "com.oneplus.gamespace.service.RemoteService"
+    const-string v5, "com.oneplus.gamespace.service.RemoteService"
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    const-string v1, "oneplus.intent.action.FLOAT_TOOLBOX"
+    const-string v3, "oneplus.intent.action.FLOAT_TOOLBOX"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v1, "RawX"
+    const-string v3, "RawX"
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string p1, "RawY"
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/ywr$zta;->sis:Landroid/content/Context;
 
     sget-object p1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     const/4 p0, 0x1
 
     return p0
 
-    :cond_1
-    const/4 p0, 0x0
+    :catch_0
+    move-exception p0
 
-    return p0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "Failed to start service: intent="
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, ", "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return v1
 .end method
 
 .method public veq(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V

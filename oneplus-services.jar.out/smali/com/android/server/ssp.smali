@@ -28,7 +28,7 @@
 
     iget-object p0, p0, Lcom/android/server/ssp;->zta:Landroid/content/Intent;
 
-    invoke-static {p0}, Lcom/android/server/obl;->obl(Landroid/content/Intent;)V
+    invoke-static {p0}, Lcom/android/server/oxb;->obl(Landroid/content/Intent;)V
 
     return-void
 .end method

@@ -2185,17 +2185,36 @@
 .end method
 
 .method public startApkInstall(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v0
+
+    const/16 v1, 0x3e8
+
+    if-eq v0, v1, :cond_0
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v0
+
+    const/16 v1, 0x3e9
+
+    if-eq v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/android/server/OnePlusExService;->mContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mInstallTask:Lcom/android/server/gck;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/gck;->ywr(Landroid/content/Context;Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

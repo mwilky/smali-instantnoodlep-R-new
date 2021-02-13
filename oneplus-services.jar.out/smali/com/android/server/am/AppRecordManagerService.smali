@@ -3806,11 +3806,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/OnePlusUtil$you;->ywr(Lcom/android/server/OnePlusUtil$you$sis;)V
 
-    invoke-static {}, Lcom/android/server/ywr;->gwm()Lcom/android/server/ywr;
+    invoke-static {}, Lcom/android/server/qbh;->gwm()Lcom/android/server/qbh;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/server/ywr;->vdb(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/android/server/qbh;->vdb(Landroid/content/Context;)V
 
     iget-object v0, p0, Lcom/android/server/am/AppRecordManagerService;->mContext:Landroid/content/Context;
 
@@ -5654,11 +5654,11 @@
 .method public schedulePerformPoll()V
     .locals 0
 
-    invoke-static {}, Lcom/android/server/ywr;->gwm()Lcom/android/server/ywr;
+    invoke-static {}, Lcom/android/server/qbh;->gwm()Lcom/android/server/qbh;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/ywr;->obl()V
+    invoke-virtual {p0}, Lcom/android/server/qbh;->obl()V
 
     return-void
 .end method

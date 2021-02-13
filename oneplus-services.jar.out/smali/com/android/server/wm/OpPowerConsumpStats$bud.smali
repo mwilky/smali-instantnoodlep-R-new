@@ -332,7 +332,7 @@
 
     iput-wide v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bud;->you:J
 
-    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Y()Z
+    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Z()Z
 
     move-result v0
 
@@ -391,7 +391,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Y()Z
+    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Z()Z
 
     move-result v0
 
@@ -468,7 +468,7 @@
 
     :cond_0
     :try_start_1
-    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Y()Z
+    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->Z()Z
 
     move-result v0
 

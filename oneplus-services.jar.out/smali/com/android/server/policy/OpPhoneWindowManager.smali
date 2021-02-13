@@ -2807,7 +2807,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/android/server/am/cjf;->v(Z)V
+    invoke-virtual {p1, v0}, Lcom/android/server/am/cjf;->w(Z)V
 
     :cond_0
     invoke-static {v0}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
@@ -2856,7 +2856,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->v(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->w(Z)V
 
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V

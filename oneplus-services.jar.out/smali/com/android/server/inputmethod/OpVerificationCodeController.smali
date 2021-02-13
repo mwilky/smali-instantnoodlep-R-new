@@ -35,9 +35,9 @@
 
 
 # instance fields
-.field private mActionListener:Lcom/android/server/ear/zta$zta;
+.field private mActionListener:Lcom/android/server/ire/zta$zta;
 
-.field private final mActionProviderImpl:Lcom/android/server/ear/zta;
+.field private final mActionProviderImpl:Lcom/android/server/ire/zta;
 
 .field private mCommitTimeInterval:I
 
@@ -53,7 +53,7 @@
 
 .field private volatile mOpLatestImeBounds:Landroid/graphics/Rect;
 
-.field private mOpVCAction:Lcom/android/server/ear/you;
+.field private mOpVCAction:Lcom/android/server/ire/you;
 
 .field private mPreImeVisible:Z
 
@@ -148,7 +148,7 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController$you;-><init>(Lcom/android/server/inputmethod/OpVerificationCodeController;)V
 
-    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ear/zta;
+    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ire/zta;
 
     sget-boolean v0, Lcom/android/server/inputmethod/OpVerificationCodeController;->DEBUG:Z
 
@@ -210,10 +210,10 @@
     return p1
 .end method
 
-.method static synthetic access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ear/zta$zta;)Lcom/android/server/ear/zta$zta;
+.method static synthetic access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ire/zta$zta;)Lcom/android/server/ire/zta$zta;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
+    iput-object p1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ire/zta$zta;
 
     return-object p1
 .end method
@@ -268,10 +268,10 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ear/you;
+.method static synthetic access$500(Lcom/android/server/inputmethod/OpVerificationCodeController;)Lcom/android/server/ire/you;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ire/you;
 
     return-object p0
 .end method
@@ -1132,7 +1132,7 @@
 .method private initActionIfPossible()V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
+    iget-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ire/you;
 
     const-string v1, "OpVerificationCodeController"
 
@@ -1161,15 +1161,15 @@
     goto :goto_0
 
     :cond_2
-    new-instance v0, Lcom/android/server/ear/you;
+    new-instance v0, Lcom/android/server/ire/you;
 
     iget-object v1, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ear/zta;
+    iget-object v2, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionProviderImpl:Lcom/android/server/ire/zta;
 
-    invoke-direct {v0, v1, v2}, Lcom/android/server/ear/you;-><init>(Landroid/content/Context;Lcom/android/server/ear/zta;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/server/ire/you;-><init>(Landroid/content/Context;Lcom/android/server/ire/zta;)V
 
-    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ear/you;
+    iput-object v0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mOpVCAction:Lcom/android/server/ire/you;
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -2091,11 +2091,11 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ire/zta$zta;
 
     if-eqz p0, :cond_3
 
-    invoke-interface {p0, p1}, Lcom/android/server/ear/zta$zta;->zta(I)V
+    invoke-interface {p0, p1}, Lcom/android/server/ire/zta$zta;->zta(I)V
 
     :cond_3
     return-void
@@ -2113,11 +2113,11 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ear/zta$zta;
+    iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController;->mActionListener:Lcom/android/server/ire/zta$zta;
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0, p1}, Lcom/android/server/ear/zta$zta;->zta(I)V
+    invoke-interface {p0, p1}, Lcom/android/server/ire/zta$zta;->zta(I)V
 
     goto :goto_0
 

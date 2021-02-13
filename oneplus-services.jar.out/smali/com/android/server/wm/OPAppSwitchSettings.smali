@@ -280,9 +280,9 @@
 
     if-lez p0, :cond_5
 
-    iget-object p0, p1, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p0, p1, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
-    invoke-virtual {p0, v1, v2}, Lcom/color/app/ColorAppSwitchConfig;->addAppConfig(ILjava/util/List;)V
+    invoke-virtual {p0, v1, v2}, Lcom/oplus/app/OplusAppSwitchConfig;->addAppConfig(ILjava/util/List;)V
 
     goto :goto_2
 

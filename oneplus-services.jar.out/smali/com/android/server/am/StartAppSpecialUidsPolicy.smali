@@ -1038,7 +1038,7 @@
 .end method
 
 .method public kth(Ljava/lang/String;Ljava/lang/String;IILcom/android/server/am/StartAppSpecialUidsPolicy$StartType;Lcom/android/server/am/StartAppRecorder$zta;Lcom/android/server/am/ServiceRecord;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->sis:Lcom/android/server/am/AppRecordManagerService;
 
@@ -1046,41 +1046,48 @@
 
     move-result p1
 
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
     if-eqz p1, :cond_1
 
     sget-object p1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
     if-eq p5, p1, :cond_1
 
-    const/4 p1, 0x1
+    sget-object p1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->you:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    sget-object v0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->you:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
-
-    if-ne p5, v0, :cond_0
+    if-ne p5, p1, :cond_0
 
     if-eqz p7, :cond_0
 
-    iget-object v0, p7, Lcom/android/server/am/ServiceRecord;->serviceInfo:Landroid/content/pm/ServiceInfo;
+    iget-object p1, p7, Lcom/android/server/am/ServiceRecord;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
     invoke-static {}, Lcom/android/server/am/hmo;->ire()Lcom/android/server/am/hmo;
 
-    move-result-object v0
+    move-result-object p1
 
     iget-object p7, p7, Lcom/android/server/am/ServiceRecord;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object p7, p7, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
 
-    invoke-virtual {v0, p7}, Lcom/android/server/am/hmo;->vdw(Ljava/lang/String;)Z
+    invoke-virtual {p1, p7}, Lcom/android/server/am/hmo;->vdw(Ljava/lang/String;)Z
 
-    move-result p7
+    move-result p1
 
-    if-eqz p7, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p1, 0x0
+    move p1, v1
+
+    goto :goto_0
 
     :cond_0
+    move p1, v0
+
+    :goto_0
     if-eqz p1, :cond_1
 
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
@@ -1089,7 +1096,7 @@
 
     const-string p0, "SpecialUidsPolicy: caller is a system app"
 
-    :goto_0
+    :goto_1
     iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->you:Ljava/lang/String;
 
     return-void
@@ -1109,10 +1116,10 @@
 
     const-string p0, "SpecialUidsPolicy: callee is a special app"
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
-    if-ne p3, p4, :cond_4
+    if-ne p3, p4, :cond_5
 
     sget-object p1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->rtg:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
@@ -1126,23 +1133,48 @@
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-eqz p1, :cond_3
+
+    :goto_2
+    move v0, v1
+
+    goto :goto_3
 
     :cond_3
+    sget-object p1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->sis:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
+
+    if-ne p5, p1, :cond_4
+
+    invoke-static {}, Lcom/android/server/am/hmo;->ire()Lcom/android/server/am/hmo;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p4}, Lcom/android/server/am/hmo;->c(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :goto_3
+    if-eqz v0, :cond_5
+
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
     iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
     const-string p0, "SpecialUidsPolicy: callee has same uid as caller\'s"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_4
+    :cond_5
     invoke-static {p4}, Lcom/android/server/am/StartAppSpecialUidsPolicy;->ywr(I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -1150,9 +1182,9 @@
 
     const-string p0, "SpecialUidsPolicy: callee is a hide launcher app"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-object p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->cno:Ljava/util/Set;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1163,11 +1195,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_7
 
     sget-object p1, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    if-ne p5, p1, :cond_6
+    if-ne p5, p1, :cond_7
 
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -1175,23 +1207,10 @@
 
     const-string p0, "SpecialUidsPolicy: caller is a launcher app"
 
-    goto :goto_0
-
-    :cond_6
-    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->bio:I
-
-    if-ne p1, p3, :cond_7
-
-    sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
-
-    iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
-
-    const-string p0, "SpecialUidsPolicy: caller is a dialer app"
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_7
-    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->kth:I
+    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->bio:I
 
     if-ne p1, p3, :cond_8
 
@@ -1199,12 +1218,12 @@
 
     iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const-string p0, "SpecialUidsPolicy: caller is a sms app"
+    const-string p0, "SpecialUidsPolicy: caller is a dialer app"
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_8
-    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->igw:I
+    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->kth:I
 
     if-ne p1, p3, :cond_9
 
@@ -1212,12 +1231,12 @@
 
     iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const-string p0, "SpecialUidsPolicy: caller is a assistant app"
+    const-string p0, "SpecialUidsPolicy: caller is a sms app"
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_9
-    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->wtn:I
+    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->igw:I
 
     if-ne p1, p3, :cond_a
 
@@ -1225,11 +1244,24 @@
 
     iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
 
-    const-string p0, "SpecialUidsPolicy: caller is a nfc app"
+    const-string p0, "SpecialUidsPolicy: caller is a assistant app"
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_a
+    iget p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->wtn:I
+
+    if-ne p1, p3, :cond_b
+
+    sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
+
+    iput-object p0, p6, Lcom/android/server/am/StartAppRecorder$zta;->zta:Lcom/android/server/am/StartAppRecorder$CanStart;
+
+    const-string p0, "SpecialUidsPolicy: caller is a nfc app"
+
+    goto/16 :goto_1
+
+    :cond_b
     iget-object p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->gck:Ljava/util/Set;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1240,7 +1272,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->you:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -1248,9 +1280,9 @@
 
     const-string p0, "SpecialUidsPolicy: caller is a accessibility app"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_b
+    :cond_c
     iget-object p1, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->ssp:Ljava/util/Set;
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1261,15 +1293,15 @@
 
     move-result p1
 
-    if-eqz p1, :cond_c
+    if-eqz p1, :cond_d
 
     iget-boolean p0, p0, Lcom/android/server/am/StartAppSpecialUidsPolicy;->rtg:Z
 
-    if-eqz p0, :cond_c
+    if-eqz p0, :cond_d
 
     sget-object p0, Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;->zta:Lcom/android/server/am/StartAppSpecialUidsPolicy$StartType;
 
-    if-eq p5, p0, :cond_c
+    if-eq p5, p0, :cond_d
 
     sget-object p0, Lcom/android/server/am/StartAppRecorder$CanStart;->sis:Lcom/android/server/am/StartAppRecorder$CanStart;
 
@@ -1277,9 +1309,9 @@
 
     const-string p0, "SpecialUidsPolicy: callee is a high power usage app"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_c
+    :cond_d
     return-void
 .end method
 

@@ -1398,12 +1398,6 @@
     :try_start_0
     iget-object v1, p0, Lyou/zta/zta/zta/cno/zta;->tsu:Ljava/util/List;
 
-    const-string v2, "com.tencent.mm"
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Lyou/zta/zta/zta/cno/zta;->tsu:Ljava/util/List;
-
     const-string v2, "com.google.android.gms"
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z

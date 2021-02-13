@@ -62,7 +62,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -90,7 +90,9 @@
 
     const-string v7, "com.rekoo.pubgm"
 
-    filled-new-array/range {v1 .. v7}, [Ljava/lang/String;
+    const-string v8, "com.the511plus.MultiTouchTester"
+
+    filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
 

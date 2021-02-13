@@ -26,7 +26,7 @@
 
 .field private mOnePlusThemeController:Lcom/oneplus/server/theme/zta;
 
-.field private mOpCommonFrontMonitor:Lcom/android/server/ibl;
+.field private mOpCommonFrontMonitor:Lcom/android/server/gwm;
 
 .field private mSurfaceFlinger:Landroid/os/IBinder;
 
@@ -381,11 +381,11 @@
 .method public hookMediaProvider(II)V
     .locals 0
 
-    invoke-static {}, Lcom/android/server/ibl;->fto()Lcom/android/server/ibl;
+    invoke-static {}, Lcom/android/server/gwm;->lqr()Lcom/android/server/gwm;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/ibl;->vju(II)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/gwm;->bud(II)V
 
     return-void
 .end method
@@ -732,15 +732,15 @@
 
     invoke-virtual {v0}, Lcom/oneplus/server/theme/zta;->ibl()V
 
-    invoke-static {}, Lcom/android/server/ibl;->fto()Lcom/android/server/ibl;
+    invoke-static {}, Lcom/android/server/gwm;->lqr()Lcom/android/server/gwm;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/ibl;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/gwm;
 
     iget-object v1, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/ibl;->bud(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/server/gwm;->les(Landroid/content/Context;)V
 
     sget-boolean v0, Lcom/oneplus/server/zta;->p:Z
 

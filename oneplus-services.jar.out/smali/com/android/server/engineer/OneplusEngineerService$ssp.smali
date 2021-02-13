@@ -52,7 +52,7 @@
 
     invoke-static {p0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0}, Lcom/android/server/engineer/rtg;->obl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/engineer/ssp;->obl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -69,7 +69,7 @@
     const/4 p0, 0x1
 
     :goto_0
-    invoke-static {v1, p0}, Lcom/android/server/engineer/sis;->dma(II)Z
+    invoke-static {v1, p0}, Lcom/android/server/engineer/tsu;->dma(II)Z
 
     goto :goto_1
 

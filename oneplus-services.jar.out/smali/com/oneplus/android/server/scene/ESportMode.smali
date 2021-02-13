@@ -437,11 +437,11 @@
     invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ESportMode;->setTelephonyEsportMode(Z)V
 
     :goto_1
-    invoke-static {}, Lcom/android/server/cjf/zta;->you()Lcom/android/server/cjf/zta;
+    invoke-static {}, Lcom/android/server/ear/zta;->you()Lcom/android/server/ear/zta;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/cjf/zta;->rtg(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/ear/zta;->rtg(Z)V
 
     invoke-static {}, Lcom/android/server/am/cjf;->lqr()Lcom/android/server/am/cjf;
 
@@ -453,7 +453,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->C(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/cjf;->D(Z)V
 
     :cond_3
     return-void

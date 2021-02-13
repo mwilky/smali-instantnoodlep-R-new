@@ -25,7 +25,7 @@
 
 .field public static final bvj:I = 0x5f
 
-.field private static c:Ljava/lang/Object; = null
+.field public static final c:I = 0x1d9
 
 .field public static final cgv:I = 0x1d7
 
@@ -33,24 +33,15 @@
 
 .field private static final cno:Ljava/lang/String; = "/system_ext/etc/oneplus_cpt_list.xml"
 
-.field private static final d:Ljava/lang/String; = "compatibility_config_values"
+.field private static d:Ljava/lang/Object; = null
 
 .field public static final dma:I = 0x0
 
-.field private static e:I = 0x0
+.field private static final e:Ljava/lang/String; = "compatibility_config_values"
 
 .field public static final ear:I = 0x47
 
-.field private static final f:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static f:I = 0x0
 
 .field public static final fto:I = 0xe6
 
@@ -58,8 +49,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
             "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
@@ -68,6 +59,17 @@
 .field private static final gck:Z
 
 .field public static final gwm:I = 0x1bc
+
+.field private static final h:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public static final hmo:I = 0xf
 
@@ -166,15 +168,15 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sput-object v0, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
-    sput v1, Lcom/android/server/pm/tsu;->e:I
+    sput v1, Lcom/android/server/pm/tsu;->f:I
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/tsu;->f:Ljava/util/Map;
+    sput-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
 
     const/4 v1, 0x2
 
@@ -186,7 +188,7 @@
 
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/tsu;->f:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
 
     const/4 v4, 0x1
 
@@ -198,7 +200,7 @@
 
     invoke-interface {v0, v5, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/tsu;->f:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
 
     const-string v6, "arm64-v8a"
 
@@ -208,15 +210,15 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
+    sput-object v0, Lcom/android/server/pm/tsu;->h:Ljava/util/Map;
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/tsu;->h:Ljava/util/Map;
 
     invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/tsu;->h:Ljava/util/Map;
 
     invoke-interface {v0, v2, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1327,7 +1329,7 @@
     return-void
 
     :cond_2
-    sget-object v3, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object v3, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter v3
 
@@ -1429,11 +1431,11 @@
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_2
-    sget v0, Lcom/android/server/pm/tsu;->e:I
+    sget v0, Lcom/android/server/pm/tsu;->f:I
 
     add-int/2addr v0, v2
 
-    sput v0, Lcom/android/server/pm/tsu;->e:I
+    sput v0, Lcom/android/server/pm/tsu;->f:I
 
     :goto_3
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1487,7 +1489,7 @@
 
     if-eqz v1, :cond_8
 
-    sget-object v0, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object v0, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -2497,7 +2499,7 @@
     goto :goto_0
 
     :cond_7
-    sget p1, Lcom/android/server/pm/tsu;->e:I
+    sget p1, Lcom/android/server/pm/tsu;->f:I
 
     if-eq p1, v4, :cond_8
 
@@ -2545,7 +2547,7 @@
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/pm/tsu;->oif(Ljava/lang/String;Landroid/util/SparseArray;)V
 
-    sget-object p1, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object p1, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter p1
     :try_end_0
@@ -2554,7 +2556,7 @@
     :try_start_1
     iput-object v0, p0, Lcom/android/server/pm/tsu;->zta:Landroid/util/SparseArray;
 
-    sput v4, Lcom/android/server/pm/tsu;->e:I
+    sput v4, Lcom/android/server/pm/tsu;->f:I
 
     monitor-exit p1
 
@@ -2896,7 +2898,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object v1, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -3140,7 +3142,7 @@
     return-object v0
 
     :cond_1
-    sget-object v1, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object v1, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -3294,7 +3296,7 @@
     return p0
 
     :cond_0
-    sget-object v0, Lcom/android/server/pm/tsu;->c:Ljava/lang/Object;
+    sget-object v0, Lcom/android/server/pm/tsu;->d:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -3347,7 +3349,7 @@
 .method public rtg(Ljava/lang/String;)I
     .locals 0
 
-    sget-object p0, Lcom/android/server/pm/tsu;->f:Ljava/util/Map;
+    sget-object p0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3365,7 +3367,7 @@
 .method public ssp(I)Ljava/lang/String;
     .locals 0
 
-    sget-object p0, Lcom/android/server/pm/tsu;->g:Ljava/util/Map;
+    sget-object p0, Lcom/android/server/pm/tsu;->h:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v1}, Lcom/android/server/engineer/rtg;->obl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/server/engineer/ssp;->obl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0}, Lcom/android/server/engineer/rtg;->vdb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/android/server/engineer/ssp;->vdb(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -176,7 +176,7 @@
 
     invoke-static {v6, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0}, Lcom/android/server/engineer/rtg;->vdb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/android/server/engineer/ssp;->vdb(Ljava/lang/String;)Z
 
     move-result v1
 

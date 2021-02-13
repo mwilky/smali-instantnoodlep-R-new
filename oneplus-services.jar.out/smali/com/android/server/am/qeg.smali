@@ -431,15 +431,63 @@
     :cond_3
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y2(I)Z
+    invoke-static {v1}, Lcom/android/server/am/OpBGFrozenInjector;->isUidFrozen(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/android/server/am/OpBGFrozenInjector;->isInPacketWhiteList(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-boolean v1, Lcom/android/server/am/qeg;->ssp:Z
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isUidFrozen && Packetlist ->#return false "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    return v0
+
+    :cond_5
+    iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
     sget-boolean v0, Lcom/android/server/am/qeg;->ssp:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -459,21 +507,21 @@
 
     invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4
+    :cond_6
     return v4
 
-    :cond_5
+    :cond_7
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
+    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A2(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_9
 
     sget-boolean v0, Lcom/android/server/am/qeg;->ssp:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -493,10 +541,10 @@
 
     invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_6
+    :cond_8
     return v4
 
-    :cond_7
+    :cond_9
     return v0
 .end method
 

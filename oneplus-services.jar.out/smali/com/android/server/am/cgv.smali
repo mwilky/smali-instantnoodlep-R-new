@@ -7,12 +7,14 @@
 
 
 # static fields
-.field private static final sis:Z
+.field private static final rtg:Ljava/lang/String; = "OpBGFrozen"
 
-.field private static final tsu:Ljava/lang/String; = "OpBGFrozen"
+.field private static final tsu:Z
 
 
 # instance fields
+.field private sis:Lcom/android/server/dma;
+
 .field private you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
 .field private zta:Z
@@ -24,7 +26,7 @@
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    sput-boolean v0, Lcom/android/server/am/cgv;->sis:Z
+    sput-boolean v0, Lcom/android/server/am/cgv;->tsu:Z
 
     return-void
 .end method
@@ -53,7 +55,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A0(IILandroid/hardware/display/IDisplayManagerCallback;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B0(IILandroid/hardware/display/IDisplayManagerCallback;)V
 
     return-void
 .end method
@@ -68,7 +70,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->B0(IILcom/android/server/am/ProcessRecord;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->C0(IILcom/android/server/am/ProcessRecord;)V
 
     return-void
 .end method
@@ -83,7 +85,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/OnePlusBackgroundFrozen;->D0(Lcom/android/server/am/ProcessRecord;Landroid/content/Intent;Lcom/android/server/am/ServiceRecord;Ljava/lang/String;)V
+    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/OnePlusBackgroundFrozen;->E0(Lcom/android/server/am/ProcessRecord;Landroid/content/Intent;Lcom/android/server/am/ServiceRecord;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -98,7 +100,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->E0(IILandroid/content/Intent;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->F0(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -113,7 +115,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/OnePlusBackgroundFrozen;->F0(IIZLjava/lang/String;)V
+    invoke-static {p1, p2, p3, p4}, Lcom/android/server/am/OnePlusBackgroundFrozen;->G0(IIZLjava/lang/String;)V
 
     return-void
 .end method
@@ -181,7 +183,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->H0(III)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->I0(III)V
 
     return-void
 .end method
@@ -196,7 +198,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->I0(I)V
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->J0(I)V
 
     return-void
 .end method
@@ -213,7 +215,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-virtual {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->J0()V
+    invoke-virtual {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->K0()V
 
     return-void
 .end method
@@ -228,7 +230,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->L0(II)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->M0(II)V
 
     return-void
 .end method
@@ -243,7 +245,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->R0(IZ)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->S0(IZ)V
 
     return-void
 .end method
@@ -260,7 +262,7 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->i1()Z
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->j1()Z
 
     move-result p0
 
@@ -277,7 +279,27 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Z1(IZLcom/android/server/am/ProcessRecord;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->a2(IZLcom/android/server/am/ProcessRecord;)V
+
+    return-void
+.end method
+
+.method public initEnv(Landroid/content/Context;Lcom/android/server/location/LocationManagerService$LocationManagerServiceInner;)V
+    .locals 2
+
+    const-string v0, "OpBGFrozen"
+
+    const-string v1, "===initEnv==="
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/android/server/dma;->vdb()Lcom/android/server/dma;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/am/cgv;->sis:Lcom/android/server/dma;
+
+    invoke-virtual {v0, p1, p2}, Lcom/android/server/dma;->zgw(Landroid/content/Context;Lcom/android/server/location/LocationManagerService$LocationManagerServiceInner;)V
 
     return-void
 .end method
@@ -291,7 +313,7 @@
 
     invoke-static {p2, p3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->e2(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->f2(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p3
 
@@ -310,6 +332,25 @@
     invoke-static {p2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
+.end method
+
+.method public isBlockedGpsUid(I)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/am/cgv;->zta:Z
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-static {p1}, Lcom/android/server/dma;->oxb(I)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public isDeliverDisplayChange(I)Z
@@ -331,6 +372,27 @@
     return p0
 .end method
 
+.method public isInPacketWhiteList(Ljava/lang/String;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/am/cgv;->zta:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
+
+    invoke-virtual {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r2(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public isResStopServiceForIdle(ILjava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
@@ -343,7 +405,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->t2(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->u2(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
@@ -362,7 +424,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w2(I)Z
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x2(I)Z
 
     move-result p0
 
@@ -381,7 +443,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x2(I)Z
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y2(I)Z
 
     move-result p0
 
@@ -398,7 +460,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->P2(IZ)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Q2(IZ)V
 
     return-void
 .end method
@@ -413,7 +475,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->T2(I)V
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->U2(I)V
 
     return-void
 .end method
@@ -428,7 +490,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->V2(IIZZLandroid/content/Intent;)V
+    invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->W2(IIZZLandroid/content/Intent;)V
 
     return-void
 .end method
@@ -443,7 +505,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->W2(II)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->X2(II)V
 
     return-void
 .end method
@@ -458,7 +520,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Y2(II)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Z2(II)V
 
     return-void
 .end method
@@ -492,7 +554,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x3(IILjava/lang/String;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y3(IILjava/lang/String;)V
 
     return-void
 .end method
@@ -519,7 +581,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-virtual {p0, p4, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->W0(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {p0, p4, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->X0(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
@@ -539,7 +601,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->G3(Lcom/android/server/am/ProcessRecord;I)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->H3(Lcom/android/server/am/ProcessRecord;I)V
 
     return-void
 .end method
@@ -554,7 +616,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->N3(IIILjava/lang/String;I)V
+    invoke-static {p1, p2, p3, p4, p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O3(IIILjava/lang/String;I)V
 
     return-void
 .end method
@@ -569,7 +631,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O3(ILjava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->P3(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -584,7 +646,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->P3(II)V
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Q3(II)V
 
     return-void
 .end method
@@ -601,7 +663,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->R3(Lcom/android/server/am/ConnectionRecord;Lcom/android/server/am/ProcessRecord;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->S3(Lcom/android/server/am/ConnectionRecord;Lcom/android/server/am/ProcessRecord;)V
 
     return-void
 .end method
@@ -618,7 +680,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->S3(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ProcessRecord;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->T3(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ProcessRecord;)V
 
     return-void
 .end method
@@ -635,7 +697,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/cgv;->you:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-virtual {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->T3()V
+    invoke-virtual {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->U3()V
 
     return-void
 .end method
@@ -650,7 +712,7 @@
     return-void
 
     :cond_0
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Y3(IZLjava/lang/String;)V
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Z3(IZLjava/lang/String;)V
 
     return-void
 .end method

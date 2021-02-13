@@ -36,7 +36,7 @@
 
     iput-wide v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$gwm;->you:J
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->Z(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a0(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -67,7 +67,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit p1
 
@@ -88,7 +88,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$gwm;->sis:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->Z(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->a0(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$gwm;->sis:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->Z(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->a0(Lcom/android/server/wm/OpPowerConsumpStats;)Ljava/lang/Object;
 
     move-result-object v0
 
