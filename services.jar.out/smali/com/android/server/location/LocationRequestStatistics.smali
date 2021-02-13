@@ -137,7 +137,7 @@
 .end method
 
 .method public updateForeground(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 3
+    .locals 2
 
     new-instance v0, Lcom/android/server/location/LocationRequestStatistics$PackageProviderKey;
 
@@ -156,9 +156,5 @@
     invoke-static {v1, p4}, Lcom/android/server/location/LocationRequestStatistics$PackageStatistics;->access$200(Lcom/android/server/location/LocationRequestStatistics$PackageStatistics;Z)V
 
     :cond_0
-    xor-int/lit8 v2, p4, 0x1
-
-    invoke-static {p1, p3, v2}, Lcom/android/server/am/OpAppRecordInjector;->notePauseGps(Ljava/lang/String;Ljava/lang/String;Z)V
-
     return-void
 .end method

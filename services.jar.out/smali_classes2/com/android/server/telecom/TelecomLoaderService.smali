@@ -28,6 +28,8 @@
 
 .field private mServiceConnection:Lcom/android/server/telecom/TelecomLoaderService$TelecomServiceConnection;
 
+.field private mServiceRepo:Lcom/android/server/telecom/InternalServiceRepository;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -64,12 +66,12 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/server/telecom/TelecomLoaderService;)V
-    .locals 0
+.method static synthetic access$000(Lcom/android/server/telecom/TelecomLoaderService;)Lcom/android/server/telecom/InternalServiceRepository;
+    .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
+    iget-object v0, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceRepo:Lcom/android/server/telecom/InternalServiceRepository;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$100(Lcom/android/server/telecom/TelecomLoaderService;)Landroid/content/Context;
@@ -96,7 +98,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/telecom/TelecomLoaderService;I)V
+.method static synthetic access$400(Lcom/android/server/telecom/TelecomLoaderService;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/android/server/telecom/TelecomLoaderService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/telecom/TelecomLoaderService;->updateSimCallManagerPermissions(I)V
@@ -254,6 +264,26 @@
     invoke-direct {v1, p0}, Lcom/android/server/telecom/-$$Lambda$TelecomLoaderService$4O6PYSHBsC0Q5H-Y3LkvD32Vcjk;-><init>(Lcom/android/server/telecom/TelecomLoaderService;)V
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->setSimCallManagerPackagesProvider(Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackagesProvider;)V
+
+    return-void
+.end method
+
+.method private setupServiceRepository()V
+    .locals 2
+
+    const-class v0, Lcom/android/server/DeviceIdleInternal;
+
+    invoke-virtual {p0, v0}, Lcom/android/server/telecom/TelecomLoaderService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/DeviceIdleInternal;
+
+    new-instance v1, Lcom/android/server/telecom/InternalServiceRepository;
+
+    invoke-direct {v1, v0}, Lcom/android/server/telecom/InternalServiceRepository;-><init>(Lcom/android/server/DeviceIdleInternal;)V
+
+    iput-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService;->mServiceRepo:Lcom/android/server/telecom/InternalServiceRepository;
 
     return-void
 .end method
@@ -541,6 +571,8 @@
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->registerDefaultAppNotifier()V
 
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->registerCarrierConfigChangedReceiver()V
+
+    invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->setupServiceRepository()V
 
     invoke-direct {p0}, Lcom/android/server/telecom/TelecomLoaderService;->connectToTelecom()V
 

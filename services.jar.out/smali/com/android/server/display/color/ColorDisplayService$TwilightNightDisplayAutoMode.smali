@@ -37,7 +37,7 @@
 
     const-class v0, Lcom/android/server/twilight/TwilightManager;
 
-    invoke-static {p1, v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3100(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -148,7 +148,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$TwilightNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3400(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v1
 
@@ -158,7 +158,7 @@
 
     const-class v2, Lcom/android/server/twilight/TwilightManager;
 
-    invoke-static {v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3500(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -170,7 +170,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/android/server/display/color/ColorDisplayService;->access$3202(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+    invoke-static {v2, v3}, Lcom/android/server/display/color/ColorDisplayService;->access$3402(Lcom/android/server/display/color/ColorDisplayService;Z)Z
 
     :cond_3
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$TwilightNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
@@ -196,7 +196,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TwilightNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3000(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TwilightNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3000(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
 
     move-result-object v0
 

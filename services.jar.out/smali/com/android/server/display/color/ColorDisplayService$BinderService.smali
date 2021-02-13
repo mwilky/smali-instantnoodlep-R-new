@@ -58,7 +58,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p2}, Lcom/android/server/display/color/ColorDisplayService;->access$5600(Lcom/android/server/display/color/ColorDisplayService;Ljava/io/PrintWriter;)V
+    invoke-static {v2, p2}, Lcom/android/server/display/color/ColorDisplayService;->access$5900(Lcom/android/server/display/color/ColorDisplayService;Ljava/io/PrintWriter;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -154,7 +154,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$5200(Lcom/android/server/display/color/ColorDisplayService;)I
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$5500(Lcom/android/server/display/color/ColorDisplayService;)I
 
     move-result v2
     :try_end_0
@@ -282,7 +282,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$5000(Lcom/android/server/display/color/ColorDisplayService;)I
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$5300(Lcom/android/server/display/color/ColorDisplayService;)I
 
     move-result v2
     :try_end_0
@@ -310,7 +310,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4800(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$5100(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v2
     :try_end_0
@@ -338,7 +338,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3800(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4000(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v2
     :try_end_0
@@ -410,7 +410,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4000(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4200(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v2
 
@@ -422,7 +422,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4000(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$4200(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v2
 
@@ -492,7 +492,7 @@
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v3, v0, p1, p2}, Lcom/android/server/display/color/ColorDisplayService;->access$4900(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/String;Ljava/lang/String;I)Z
+    invoke-static {v3, v0, p1, p2}, Lcom/android/server/display/color/ColorDisplayService;->access$5200(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v3
     :try_end_0
@@ -532,7 +532,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$4700(Lcom/android/server/display/color/ColorDisplayService;I)V
+    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5000(Lcom/android/server/display/color/ColorDisplayService;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -572,7 +572,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5500(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5800(Lcom/android/server/display/color/ColorDisplayService;Z)Z
 
     move-result v2
     :try_end_0
@@ -660,7 +660,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5100(Lcom/android/server/display/color/ColorDisplayService;I)Z
+    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5400(Lcom/android/server/display/color/ColorDisplayService;I)Z
 
     move-result v2
     :try_end_0
@@ -744,7 +744,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5400(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
+    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5700(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
 
     move-result v2
     :try_end_0
@@ -784,7 +784,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$BinderService;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5300(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
+    invoke-static {v2, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$5600(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
 
     move-result v2
     :try_end_0

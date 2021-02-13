@@ -2009,6 +2009,29 @@
     return v0
 .end method
 
+.method private isTopActivityLaunchedBehind()Z
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/server/wm/Task;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, v0, Lcom/android/server/wm/ActivityRecord;->mLaunchTaskBehind:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    return v1
+.end method
+
 .method private static isTopRunning(Lcom/android/server/wm/ActivityRecord;ILandroid/os/IBinder;)Z
     .locals 1
 
@@ -9095,7 +9118,7 @@
 .end method
 
 .method getVisibility(Lcom/android/server/wm/ActivityRecord;)I
-    .locals 20
+    .locals 21
 
     move-object/from16 v0, p1
 
@@ -9105,7 +9128,7 @@
 
     const/4 v2, 0x2
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->isForceHidden()Z
 
@@ -9113,14 +9136,23 @@
 
     if-eqz v1, :cond_0
 
-    move-object/from16 v14, p0
+    move-object/from16 v3, p0
 
     goto/16 :goto_8
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wm/Task;->isTopActivityLaunchedBehind()Z
+
+    move-result v1
 
     const/4 v3, 0x0
+
+    if-eqz v1, :cond_1
+
+    return v3
+
+    :cond_1
+    const/4 v1, 0x0
 
     const/4 v4, 0x0
 
@@ -9130,56 +9162,58 @@
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x1
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->getParent()Lcom/android/server/wm/WindowContainer;
 
-    move-result-object v9
-
-    invoke-virtual {v9}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
-
     move-result-object v10
 
-    const/4 v11, 0x1
+    invoke-virtual {v10}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
-    if-eqz v10, :cond_2
+    move-result-object v11
 
-    invoke-virtual {v9}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
+    const/4 v12, 0x1
 
-    move-result-object v10
+    if-eqz v11, :cond_3
 
-    invoke-virtual {v10, v0}, Lcom/android/server/wm/Task;->getVisibility(Lcom/android/server/wm/ActivityRecord;)I
+    invoke-virtual {v10}, Lcom/android/server/wm/WindowContainer;->asTask()Lcom/android/server/wm/Task;
 
-    move-result v10
+    move-result-object v11
 
-    if-ne v10, v2, :cond_1
+    invoke-virtual {v11, v0}, Lcom/android/server/wm/Task;->getVisibility(Lcom/android/server/wm/ActivityRecord;)I
+
+    move-result v11
+
+    if-ne v11, v2, :cond_2
 
     return v2
 
-    :cond_1
-    if-ne v10, v11, :cond_2
-
-    const/4 v5, 0x1
-
     :cond_2
+    if-ne v11, v12, :cond_3
+
+    const/4 v6, 0x1
+
+    :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->getWindowingMode()I
 
-    move-result v10
+    move-result v11
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->isActivityTypeAssistant()Z
 
-    move-result v12
-
-    invoke-virtual {v9}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
-
     move-result v13
 
-    sub-int/2addr v13, v11
+    invoke-virtual {v10}, Lcom/android/server/wm/WindowContainer;->getChildCount()I
+
+    move-result v14
+
+    sub-int/2addr v14, v12
 
     :goto_0
-    if-ltz v13, :cond_f
+    if-ltz v14, :cond_10
 
-    invoke-virtual {v9, v13}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
+    invoke-virtual {v10, v14}, Lcom/android/server/wm/WindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
 
     move-result-object v17
 
@@ -9187,119 +9221,92 @@
 
     move-result-object v15
 
-    if-nez v15, :cond_3
+    if-nez v15, :cond_4
 
-    move-object/from16 v14, p0
+    move-object/from16 v3, p0
 
     goto/16 :goto_4
 
-    :cond_3
-    invoke-virtual {v15}, Lcom/android/server/wm/Task;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
-
-    move-result-object v18
-
-    if-eqz v18, :cond_4
-
-    move/from16 v18, v11
-
-    goto :goto_1
-
     :cond_4
-    const/16 v18, 0x0
-
-    :goto_1
-    move-object/from16 v14, p0
-
-    if-ne v15, v14, :cond_7
-
-    if-nez v18, :cond_6
-
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/wm/Task;->isInTask(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
+    invoke-virtual {v15}, Lcom/android/server/wm/Task;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v19
 
-    if-nez v19, :cond_6
-
-    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->isActivityTypeHome()Z
-
-    move-result v19
-
     if-eqz v19, :cond_5
 
-    goto :goto_2
+    move/from16 v19, v12
+
+    goto :goto_1
 
     :cond_5
     const/16 v19, 0x0
 
-    goto :goto_3
+    :goto_1
+    move-object/from16 v3, p0
+
+    if-ne v15, v3, :cond_8
+
+    if-nez v19, :cond_7
+
+    invoke-virtual/range {p0 .. p1}, Lcom/android/server/wm/Task;->isInTask(Lcom/android/server/wm/ActivityRecord;)Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v20
+
+    if-nez v20, :cond_7
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/Task;->isActivityTypeHome()Z
+
+    move-result v20
+
+    if-eqz v20, :cond_6
+
+    goto :goto_2
 
     :cond_6
+    const/16 v20, 0x0
+
+    goto :goto_3
+
+    :cond_7
     :goto_2
-    move/from16 v19, v11
+    move/from16 v20, v12
 
     :goto_3
-    move/from16 v8, v19
+    move/from16 v9, v20
 
     goto :goto_5
 
-    :cond_7
-    if-nez v18, :cond_8
-
-    goto :goto_4
-
     :cond_8
-    invoke-virtual {v15}, Lcom/android/server/wm/Task;->getWindowingMode()I
-
-    move-result v2
-
-    if-ne v2, v11, :cond_a
-
-    invoke-virtual {v15, v0}, Lcom/android/server/wm/Task;->isTranslucent(Lcom/android/server/wm/ActivityRecord;)Z
-
-    move-result v16
-
-    if-eqz v16, :cond_9
-
-    const/4 v5, 0x1
+    if-nez v19, :cond_9
 
     goto :goto_4
 
     :cond_9
-    const/4 v11, 0x2
+    invoke-virtual {v15}, Lcom/android/server/wm/Task;->getWindowingMode()I
 
-    return v11
+    move-result v2
 
-    :cond_a
-    const/4 v11, 0x3
-
-    if-ne v2, v11, :cond_b
-
-    if-nez v3, :cond_b
-
-    const/4 v1, 0x1
+    if-ne v2, v12, :cond_b
 
     invoke-virtual {v15, v0}, Lcom/android/server/wm/Task;->isTranslucent(Lcom/android/server/wm/ActivityRecord;)Z
 
-    move-result v6
+    move-result v18
 
-    xor-int/lit8 v11, v6, 0x1
+    if-eqz v18, :cond_a
 
-    move v3, v11
+    const/4 v6, 0x1
 
-    const/4 v11, 0x3
+    goto :goto_4
 
-    if-ne v10, v11, :cond_c
+    :cond_a
+    const/4 v12, 0x2
 
-    if-eqz v3, :cond_c
-
-    const/4 v11, 0x2
-
-    return v11
+    return v12
 
     :cond_b
-    const/4 v11, 0x4
+    const/4 v12, 0x3
 
-    if-ne v2, v11, :cond_c
+    if-ne v2, v12, :cond_c
 
     if-nez v4, :cond_c
 
@@ -9309,122 +9316,151 @@
 
     move-result v7
 
-    xor-int/lit8 v11, v7, 0x1
+    xor-int/lit8 v12, v7, 0x1
 
-    move v4, v11
+    move v4, v12
 
-    const/4 v11, 0x4
+    const/4 v12, 0x3
 
-    if-ne v10, v11, :cond_c
-
-    if-eqz v4, :cond_c
-
-    const/4 v11, 0x2
-
-    return v11
-
-    :cond_c
-    if-eqz v3, :cond_d
+    if-ne v11, v12, :cond_d
 
     if-eqz v4, :cond_d
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
-    return v11
+    return v12
+
+    :cond_c
+    const/4 v12, 0x4
+
+    if-ne v2, v12, :cond_d
+
+    if-nez v5, :cond_d
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v15, v0}, Lcom/android/server/wm/Task;->isTranslucent(Lcom/android/server/wm/ActivityRecord;)Z
+
+    move-result v8
+
+    xor-int/lit8 v12, v8, 0x1
+
+    move v5, v12
+
+    const/4 v12, 0x4
+
+    if-ne v11, v12, :cond_d
+
+    if-eqz v5, :cond_d
+
+    const/4 v12, 0x2
+
+    return v12
 
     :cond_d
-    const/4 v11, 0x2
+    if-eqz v4, :cond_e
 
-    if-eqz v12, :cond_e
+    if-eqz v5, :cond_e
 
-    if-eqz v1, :cond_e
+    const/4 v12, 0x2
 
-    return v11
+    return v12
 
     :cond_e
+    const/4 v12, 0x2
+
+    if-eqz v13, :cond_f
+
+    if-eqz v1, :cond_f
+
+    return v12
+
+    :cond_f
     :goto_4
-    add-int/lit8 v13, v13, -0x1
+    add-int/lit8 v14, v14, -0x1
 
     const/4 v2, 0x2
 
-    const/4 v11, 0x1
+    const/4 v3, 0x0
+
+    const/4 v12, 0x1
 
     goto/16 :goto_0
 
-    :cond_f
-    move-object/from16 v14, p0
+    :cond_10
+    move-object/from16 v3, p0
 
     :goto_5
-    if-nez v8, :cond_10
+    if-nez v9, :cond_11
 
     const/4 v2, 0x2
 
     return v2
 
-    :cond_10
+    :cond_11
     const/4 v2, 0x1
 
-    if-eq v10, v2, :cond_13
+    if-eq v11, v2, :cond_14
 
-    const/4 v11, 0x3
+    const/4 v12, 0x3
 
-    if-eq v10, v11, :cond_12
+    if-eq v11, v12, :cond_13
 
-    const/4 v11, 0x4
+    const/4 v12, 0x4
 
-    if-eq v10, v11, :cond_11
+    if-eq v11, v12, :cond_12
 
     goto :goto_6
 
-    :cond_11
-    if-eqz v7, :cond_16
-
-    return v2
-
     :cond_12
-    if-eqz v6, :cond_16
+    if-eqz v8, :cond_17
 
     return v2
 
     :cond_13
-    if-eqz v7, :cond_14
+    if-eqz v7, :cond_17
 
     return v2
 
     :cond_14
-    if-eqz v6, :cond_16
+    if-eqz v8, :cond_15
+
+    return v2
+
+    :cond_15
+    if-eqz v7, :cond_17
 
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_STACK:Z
 
-    if-eqz v2, :cond_15
+    if-eqz v2, :cond_16
 
     const-string v2, "WindowManager"
 
-    const-string v11, "getVisibility: make stack invisible behind translucent split-screen primary"
+    const-string v12, "getVisibility: make stack invisible behind translucent split-screen primary"
 
-    invoke-static {v2, v11}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v12}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_15
+    :cond_16
     const/4 v2, 0x2
 
     return v2
 
-    :cond_16
+    :cond_17
     :goto_6
-    if-eqz v5, :cond_17
+    if-eqz v6, :cond_18
 
-    move v11, v2
+    move/from16 v16, v2
 
     goto :goto_7
 
-    :cond_17
-    const/4 v11, 0x0
+    :cond_18
+    const/16 v16, 0x0
 
     :goto_7
-    return v11
+    return v16
 
-    :cond_18
-    move-object/from16 v14, p0
+    :cond_19
+    move-object/from16 v3, p0
 
     :goto_8
     const/4 v1, 0x2

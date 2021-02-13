@@ -8,16 +8,6 @@
 
 .field private static final TAG:Ljava/lang/String;
 
-.field private static final WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private static isMmsLocked:Z
 
 .field public static mUpdatingXml:Z
@@ -25,7 +15,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     const-class v0, Lcom/android/server/appop/OpAppOpsService;
 
@@ -44,22 +34,6 @@
     sput-boolean v0, Lcom/android/server/appop/OpAppOpsService;->isMmsLocked:Z
 
     sput-boolean v0, Lcom/android/server/appop/OpAppOpsService;->mUpdatingXml:Z
-
-    const-string v0, "com.oneplus.brickmode"
-
-    const-string v1, "com.oneplus.filemanager"
-
-    const-string v2, "com.oneplus.screenrecord"
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/android/server/appop/OpAppOpsService;->WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
 
     return-void
 .end method
@@ -301,51 +275,6 @@
 
     :cond_2
     return-void
-.end method
-
-.method public static maybeChangeOpModeToAllowed(Ljava/lang/String;II)I
-    .locals 3
-
-    sget-object v0, Lcom/android/server/appop/OpAppOpsService;->WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
-
-    invoke-interface {v0, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x42
-
-    if-ne p1, v0, :cond_0
-
-    sget-object v0, Lcom/android/server/appop/OpAppOpsService;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Allowing package "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " to request install packages"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    return p2
 .end method
 
 .method public static shouldUpdateXml(Landroid/util/AtomicFile;I)Z

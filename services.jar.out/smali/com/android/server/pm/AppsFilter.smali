@@ -285,12 +285,6 @@
 
     if-nez v1, :cond_5
 
-    invoke-interface {v0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isForceQueryable()Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
     iget-boolean v1, p1, Lcom/android/server/pm/PackageSetting;->forceQueryableOverride:Z
 
     if-nez v1, :cond_5
@@ -302,6 +296,12 @@
     if-eqz v1, :cond_4
 
     iget-boolean v1, p0, Lcom/android/server/pm/AppsFilter;->mSystemAppsQueryable:Z
+
+    if-nez v1, :cond_5
+
+    invoke-interface {v0}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isForceQueryable()Z
+
+    move-result v1
 
     if-nez v1, :cond_5
 

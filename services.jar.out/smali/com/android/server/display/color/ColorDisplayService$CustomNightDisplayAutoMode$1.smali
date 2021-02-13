@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode$1;->this$1:Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;->access$2900(Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;)V
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;->access$3100(Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;)V
 
     return-void
 .end method

@@ -42,15 +42,15 @@
 
     const/4 v3, 0x1
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_7
 
     const/4 v3, 0x2
 
-    if-eq v0, v3, :cond_4
+    if-eq v0, v3, :cond_6
 
     const/4 v3, 0x3
 
-    if-eq v0, v3, :cond_2
+    if-eq v0, v3, :cond_3
 
     const/4 v3, 0x4
 
@@ -72,7 +72,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -80,6 +80,11 @@
 
     check-cast v3, Lcom/android/server/usb/UsbPortManager$RawPortInfo;
 
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     iget-object v4, v1, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     iget-object v5, v3, Lcom/android/server/usb/UsbPortManager$RawPortInfo;->portId:Ljava/lang/String;
@@ -114,16 +119,16 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const-string v0, "UsbPortManager"
 
     const-string v3, "MSG_USB_CONTAMINANT_RECOVERED message handled."
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    goto/16 :goto_2
 
-    :cond_2
+    :cond_3
     invoke-static {}, Lcom/android/server/usb/UsbPortManager;->access$300()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -137,7 +142,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_5
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -145,6 +150,11 @@
 
     check-cast v3, Lcom/android/server/usb/UsbPortManager$RawPortInfo;
 
+    if-nez v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
     iget-object v4, v1, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     iget-object v5, v3, Lcom/android/server/usb/UsbPortManager$RawPortInfo;->portId:Ljava/lang/String;
@@ -179,7 +189,7 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_5
     const-string v0, "UsbPortManager"
 
     const-string v3, "MSG_USB_CONTAMINANT_DETECTED message handled."
@@ -194,7 +204,7 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_6
     iget-object v0, v1, Lcom/android/server/usb/UsbPortManager$1;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     invoke-static {v0}, Lcom/android/server/usb/UsbPortManager;->access$1000(Lcom/android/server/usb/UsbPortManager;)Landroid/content/Context;
@@ -213,7 +223,7 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_7
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3

@@ -388,7 +388,7 @@
 .end method
 
 .method public onAppOpsChanged(IILjava/lang/String;I)V
-    .locals 4
+    .locals 7
 
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -403,7 +403,7 @@
 
     const/16 v3, 0x42
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     if-eq p1, v3, :cond_4
 
@@ -415,7 +415,7 @@
 
     if-eq p1, v2, :cond_0
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
     if-eqz p4, :cond_1
@@ -453,30 +453,84 @@
 
     :cond_4
     :try_start_2
-    invoke-direct {p0, p1, p2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(II)V
+    invoke-static {}, Lcom/android/server/StorageManagerService;->access$6800()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2, p3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
+
+    move-result-object v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    :try_start_3
+    invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "REQUESTING_INSTALL_PACKAGES changed: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v2, p3, v3, v4, v5}, Landroid/app/IActivityManager;->killApplication(Ljava/lang/String;IILjava/lang/String;)V
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v3
+
+    :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
 
     :cond_5
-    :goto_1
-    if-nez p4, :cond_7
+    :try_start_4
+    invoke-direct {p0, p1, p2}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->killAppForOpChange(II)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :cond_6
+    :goto_2
+    if-nez p4, :cond_8
 
     const/16 v2, 0x3b
 
-    if-eq p1, v2, :cond_6
+    if-eq p1, v2, :cond_7
 
     const/16 v2, 0x3c
 
-    if-eq p1, v2, :cond_6
+    if-eq p1, v2, :cond_7
 
-    if-ne p1, v3, :cond_7
+    if-ne p1, v3, :cond_8
 
-    :cond_6
-    :try_start_3
+    :cond_7
+    :try_start_5
     const-class v2, Landroid/os/UserManagerInternal;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -493,13 +547,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     invoke-virtual {p0, p2, p3}, Lcom/android/server/StorageManagerService$StorageManagerInternalImpl;->onExternalStoragePolicyChanged(ILjava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    :cond_7
+    :cond_8
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     nop

@@ -715,7 +715,7 @@
 
     iget-boolean v0, p0, Lcom/android/server/biometrics/OpClientMonitor;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     :try_start_0
     new-instance v0, Landroid/os/Bundle;
@@ -730,10 +730,15 @@
 
     iget-object v1, p0, Lcom/android/server/biometrics/OpClientMonitor;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/server/biometrics/OpClientMonitor;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
     invoke-interface {v1, v0, p1}, Lcom/android/internal/statusbar/IStatusBarService;->showFodDialog(Landroid/os/Bundle;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    :cond_0
     goto :goto_0
 
     :catch_0
@@ -745,7 +750,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_0
+    :cond_1
     :goto_0
     return-void
 .end method

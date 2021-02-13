@@ -8582,7 +8582,7 @@
 .end method
 
 .method protected initializeSyntheticPasswordLocked([BLcom/android/internal/widget/LockscreenCredential;I)Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;
-    .locals 16
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -8618,6 +8618,27 @@
 
     move-result-wide v11
 
+    nop
+
+    invoke-virtual {v0, v9}, Lcom/android/server/locksettings/LockSettingsService;->getSyntheticPasswordHandleLocked(I)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    const/4 v13, 0x1
+
+    if-nez v4, :cond_0
+
+    move v3, v13
+
+    :cond_0
+    const-string v4, "Cannot reinitialize SP"
+
+    invoke-static {v3, v4}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
+
     iget-object v3, v0, Lcom/android/server/locksettings/LockSettingsService;->mSpManager:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/locksettings/LockSettingsService;->getGateKeeperService()Landroid/service/gatekeeper/IGateKeeperService;
@@ -8626,13 +8647,13 @@
 
     invoke-virtual {v3, v4, v1, v2, v9}, Lcom/android/server/locksettings/SyntheticPasswordManager;->newSyntheticPasswordAndSid(Landroid/service/gatekeeper/IGateKeeperService;[BLcom/android/internal/widget/LockscreenCredential;I)Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;
 
-    move-result-object v13
+    move-result-object v14
 
-    invoke-direct {v0, v9, v13}, Lcom/android/server/locksettings/LockSettingsService;->onAuthTokenKnownForUser(ILcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;)V
+    invoke-direct {v0, v9, v14}, Lcom/android/server/locksettings/LockSettingsService;->onAuthTokenKnownForUser(ILcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;)V
 
     const/4 v3, 0x0
 
-    if-nez v13, :cond_0
+    if-nez v14, :cond_1
 
     const-string v4, "initializeSyntheticPasswordLocked returns null auth token"
 
@@ -8640,24 +8661,24 @@
 
     return-object v3
 
-    :cond_0
+    :cond_1
     iget-object v4, v0, Lcom/android/server/locksettings/LockSettingsService;->mSpManager:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/locksettings/LockSettingsService;->getGateKeeperService()Landroid/service/gatekeeper/IGateKeeperService;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5, v2, v13, v9}, Lcom/android/server/locksettings/SyntheticPasswordManager;->createPasswordBasedSyntheticPassword(Landroid/service/gatekeeper/IGateKeeperService;Lcom/android/internal/widget/LockscreenCredential;Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;I)J
+    invoke-virtual {v4, v5, v2, v14, v9}, Lcom/android/server/locksettings/SyntheticPasswordManager;->createPasswordBasedSyntheticPassword(Landroid/service/gatekeeper/IGateKeeperService;Lcom/android/internal/widget/LockscreenCredential;Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;I)J
 
-    move-result-wide v14
+    move-result-wide v6
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/internal/widget/LockscreenCredential;->isNone()Z
 
     move-result v4
 
-    if-nez v4, :cond_2
+    if-nez v4, :cond_3
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     iget-object v3, v0, Lcom/android/server/locksettings/LockSettingsService;->mSpManager:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
@@ -8665,30 +8686,34 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4, v13, v9}, Lcom/android/server/locksettings/SyntheticPasswordManager;->newSidForUser(Landroid/service/gatekeeper/IGateKeeperService;Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;I)V
+    invoke-virtual {v3, v4, v14, v9}, Lcom/android/server/locksettings/SyntheticPasswordManager;->newSidForUser(Landroid/service/gatekeeper/IGateKeeperService;Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;I)V
 
-    :cond_1
+    :cond_2
     iget-object v3, v0, Lcom/android/server/locksettings/LockSettingsService;->mSpManager:Lcom/android/server/locksettings/SyntheticPasswordManager;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/locksettings/LockSettingsService;->getGateKeeperService()Landroid/service/gatekeeper/IGateKeeperService;
 
     move-result-object v4
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v15, 0x0
 
-    move-object v5, v13
+    move-object v5, v14
+
+    move-wide/from16 v17, v6
+
+    move-wide v6, v15
 
     move/from16 v8, p3
 
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/locksettings/SyntheticPasswordManager;->verifyChallenge(Landroid/service/gatekeeper/IGateKeeperService;Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;JI)Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    invoke-virtual {v13}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;->deriveDiskEncryptionKey()[B
+    invoke-virtual {v14}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;->deriveDiskEncryptionKey()[B
 
     move-result-object v3
 
     invoke-direct {v0, v9, v3}, Lcom/android/server/locksettings/LockSettingsService;->setAuthlessUserKeyProtection(I[B)V
 
-    invoke-virtual {v13}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;->deriveKeyStorePassword()[B
+    invoke-virtual {v14}, Lcom/android/server/locksettings/SyntheticPasswordManager$AuthenticationToken;->deriveKeyStorePassword()[B
 
     move-result-object v3
 
@@ -8696,7 +8721,9 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
+    move-wide/from16 v17, v6
+
     invoke-direct {v0, v9, v3}, Lcom/android/server/locksettings/LockSettingsService;->clearUserKeyProtection(I[B)V
 
     invoke-direct {v0, v3, v9}, Lcom/android/server/locksettings/LockSettingsService;->setKeystorePassword([BI)V
@@ -8706,35 +8733,35 @@
     :goto_0
     invoke-direct {v0, v9}, Lcom/android/server/locksettings/LockSettingsService;->fixateNewestUserKeyAuth(I)V
 
-    invoke-direct {v0, v14, v15, v9}, Lcom/android/server/locksettings/LockSettingsService;->setSyntheticPasswordHandleLocked(JI)V
+    move-wide/from16 v3, v17
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v3, v4, v9}, Lcom/android/server/locksettings/LockSettingsService;->setSyntheticPasswordHandleLocked(JI)V
 
-    invoke-static {v3}, Lcom/android/internal/os/RuntimeInit;->setInitializedFinished(Z)V
+    invoke-static {v13}, Lcom/android/internal/os/RuntimeInit;->setInitializedFinished(Z)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v5
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "Initialize SyntheticPassword used "
+    const-string v8, "Initialize SyntheticPassword used "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sub-long v6, v3, v11
+    sub-long v0, v5, v11
 
-    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v0
 
-    invoke-static {v10, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v10, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object v13
+    return-object v14
 .end method
 
 .method isSyntheticPasswordBasedCredential(I)Z
@@ -9644,10 +9671,26 @@
 .end method
 
 .method protected shouldMigrateToSyntheticPasswordLocked(I)Z
-    .locals 1
+    .locals 4
+
+    invoke-virtual {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->getSyntheticPasswordHandleLocked(I)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 

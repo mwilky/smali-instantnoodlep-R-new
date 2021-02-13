@@ -453,10 +453,25 @@
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     :cond_1
+    :try_start_1
     iget-object v0, v1, Lcom/android/server/job/JobServiceContext;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    const-string v5, "JobServiceContext"
+
+    const-string/jumbo v6, "unbindService fail."
+
+    invoke-static {v5, v6, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     const/4 v0, 0x0
 
     iput-object v0, v1, Lcom/android/server/job/JobServiceContext;->mWakeLock:Landroid/os/PowerManager$WakeLock;

@@ -55,7 +55,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 43
+    .locals 44
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -193,7 +193,9 @@
 
     const-string v42, "com.iqiyi.i18n"
 
-    filled-new-array/range {v2 .. v42}, [Ljava/lang/String;
+    const-string v43, "com.eterno"
+
+    filled-new-array/range {v2 .. v43}, [Ljava/lang/String;
 
     move-result-object v1
 

@@ -3105,7 +3105,7 @@
 
     iget-object v0, v0, Lcom/android/server/pm/InstallSource;->initiatingPackageName:Ljava/lang/String;
 
-    const-string v1, "installInitiatingPackageName"
+    const-string/jumbo v1, "installInitiatingPackageName"
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -3113,7 +3113,7 @@
 
     iget-object v0, v0, Lcom/android/server/pm/InstallSource;->originatingPackageName:Ljava/lang/String;
 
-    const-string v1, "installOriginatingPackageName"
+    const-string/jumbo v1, "installOriginatingPackageName"
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)Lcom/android/internal/util/IndentingPrintWriter;
 
@@ -6674,7 +6674,7 @@
 
     nop
 
-    const-string v2, "installInitiatingPackageName"
+    const-string/jumbo v2, "installInitiatingPackageName"
 
     invoke-static {v0, v2}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
@@ -6682,7 +6682,7 @@
 
     nop
 
-    const-string v2, "installOriginatingPackageName"
+    const-string/jumbo v2, "installOriginatingPackageName"
 
     invoke-static {v0, v2}, Lcom/android/internal/util/XmlUtils;->readStringAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
@@ -6792,7 +6792,7 @@
 
     iput v6, v7, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    const-string v6, "installFlags"
+    const-string/jumbo v6, "installFlags"
 
     invoke-static {v0, v6}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
@@ -6800,7 +6800,7 @@
 
     iput v6, v7, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    const-string v6, "installLocation"
+    const-string/jumbo v6, "installLocation"
 
     invoke-static {v0, v6}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
@@ -6882,7 +6882,7 @@
 
     iput-object v5, v7, Landroid/content/pm/PackageInstaller$SessionParams;->volumeUuid:Ljava/lang/String;
 
-    const-string v5, "installRason"
+    const-string/jumbo v5, "installRason"
 
     invoke-static {v0, v5}, Lcom/android/internal/util/XmlUtils;->readIntAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
@@ -12580,7 +12580,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
-    const-string v1, "installInitiatingPackageName"
+    const-string/jumbo v1, "installInitiatingPackageName"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
@@ -12588,7 +12588,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v1, "installOriginatingPackageName"
+    const-string/jumbo v1, "installOriginatingPackageName"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->mInstallSource:Lcom/android/server/pm/InstallSource;
 
@@ -12726,7 +12726,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
-    const-string v1, "installFlags"
+    const-string/jumbo v1, "installFlags"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
@@ -12734,7 +12734,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeIntAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;I)V
 
-    const-string v1, "installLocation"
+    const-string/jumbo v1, "installLocation"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
@@ -12806,7 +12806,7 @@
 
     invoke-static {p1, v1, v3}, Lcom/android/internal/util/XmlUtils;->writeStringAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const-string v1, "installRason"
+    const-string/jumbo v1, "installRason"
 
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 

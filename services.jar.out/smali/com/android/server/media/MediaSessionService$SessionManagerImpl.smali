@@ -5032,7 +5032,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_5
 
     iget-object v4, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
 
@@ -5055,7 +5055,7 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_4
 
     invoke-static {v6}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$400(Lcom/android/server/media/MediaSessionService$FullUserRecord;)I
 
@@ -5116,6 +5116,54 @@
 
     :cond_1
     :try_start_2
+    iget-object v7, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
+
+    invoke-static {v7, v1}, Lcom/android/server/media/MediaSessionService;->access$1200(Lcom/android/server/media/MediaSessionService;I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "com.google.android.googlequicksearchbox"
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    const-string v7, "MediaSessionService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Disable the volume key long-press listener for "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v9, p0, Lcom/android/server/media/MediaSessionService$SessionManagerImpl;->this$0:Lcom/android/server/media/MediaSessionService;
+
+    invoke-static {v9, v1}, Lcom/android/server/media/MediaSessionService;->access$1200(Lcom/android/server/media/MediaSessionService;I)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :cond_2
+    :try_start_3
     invoke-static {v6, p1}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$602(Lcom/android/server/media/MediaSessionService$FullUserRecord;Landroid/media/session/IOnVolumeKeyLongPressListener;)Landroid/media/session/IOnVolumeKeyLongPressListener;
 
     invoke-static {v6, v1}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$3402(Lcom/android/server/media/MediaSessionService$FullUserRecord;I)I
@@ -5153,12 +5201,12 @@
     invoke-static {v6}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$600(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Landroid/media/session/IOnVolumeKeyLongPressListener;
 
     move-result-object v7
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
-    :try_start_3
+    :try_start_4
     invoke-static {v6}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$600(Lcom/android/server/media/MediaSessionService$FullUserRecord;)Landroid/media/session/IOnVolumeKeyLongPressListener;
 
     move-result-object v7
@@ -5174,16 +5222,16 @@
     const/4 v9, 0x0
 
     invoke-interface {v7, v8, v9}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
-    :try_end_3
-    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_4
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_0
 
     :catch_0
     move-exception v7
 
-    :try_start_4
+    :try_start_5
     const-string v8, "MediaSessionService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -5210,11 +5258,11 @@
 
     invoke-static {v6, v8}, Lcom/android/server/media/MediaSessionService$FullUserRecord;->access$602(Lcom/android/server/media/MediaSessionService$FullUserRecord;Landroid/media/session/IOnVolumeKeyLongPressListener;)Landroid/media/session/IOnVolumeKeyLongPressListener;
 
-    :cond_2
+    :cond_3
     :goto_0
     monitor-exit v4
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -5222,9 +5270,9 @@
 
     return-void
 
-    :cond_3
+    :cond_4
     :goto_1
-    :try_start_5
+    :try_start_6
     const-string v7, "MediaSessionService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -5244,8 +5292,8 @@
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     monitor-exit v4
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -5254,15 +5302,15 @@
     :catchall_0
     move-exception v5
 
-    :try_start_6
-    monitor-exit v4
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
     :try_start_7
+    monitor-exit v4
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    :try_start_8
     throw v5
 
-    :cond_4
+    :cond_5
     new-instance v4, Ljava/lang/SecurityException;
 
     const-string v5, "Must hold the SET_VOLUME_KEY_LONG_PRESS_LISTENER permission."
@@ -5270,8 +5318,8 @@
     invoke-direct {v4, v5}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v4
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     :catchall_1
     move-exception v4

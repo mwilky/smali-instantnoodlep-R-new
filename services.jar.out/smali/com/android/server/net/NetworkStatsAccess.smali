@@ -21,7 +21,7 @@
 .end method
 
 .method public static checkAccessLevel(Landroid/content/Context;ILjava/lang/String;)I
-    .locals 8
+    .locals 9
 
     const-class v0, Landroid/app/admin/DevicePolicyManagerInternal;
 
@@ -79,15 +79,19 @@
     move v5, v2
 
     :goto_1
-    if-nez v4, :cond_7
-
-    if-nez v5, :cond_7
-
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v6
 
+    if-nez v4, :cond_7
+
+    if-nez v5, :cond_7
+
     const/16 v7, 0x3e8
+
+    if-eq v6, v7, :cond_7
+
+    const/16 v7, 0x431
 
     if-ne v6, v7, :cond_2
 
@@ -96,40 +100,40 @@
     :cond_2
     invoke-static {p0, p1, p2}, Lcom/android/server/net/NetworkStatsAccess;->hasAppOpsPermission(Landroid/content/Context;ILjava/lang/String;)Z
 
-    move-result v6
-
-    if-nez v6, :cond_6
-
-    const-string v7, "android.permission.READ_NETWORK_USAGE_HISTORY"
-
-    invoke-virtual {p0, v7}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
-
     move-result v7
 
-    if-nez v7, :cond_3
+    if-nez v7, :cond_6
+
+    const-string v8, "android.permission.READ_NETWORK_USAGE_HISTORY"
+
+    invoke-virtual {p0, v8}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result v8
+
+    if-nez v8, :cond_3
 
     goto :goto_3
 
     :cond_3
     if-eqz v0, :cond_4
 
-    const/4 v7, -0x1
+    const/4 v8, -0x1
 
-    invoke-virtual {v0, p1, v7}, Landroid/app/admin/DevicePolicyManagerInternal;->isActiveAdminWithPolicy(II)Z
+    invoke-virtual {v0, p1, v8}, Landroid/app/admin/DevicePolicyManagerInternal;->isActiveAdminWithPolicy(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_4
+    if-eqz v8, :cond_4
 
-    move v7, v3
+    move v8, v3
 
     goto :goto_2
 
     :cond_4
-    move v7, v2
+    move v8, v2
 
     :goto_2
-    if-eqz v7, :cond_5
+    if-eqz v8, :cond_5
 
     return v3
 

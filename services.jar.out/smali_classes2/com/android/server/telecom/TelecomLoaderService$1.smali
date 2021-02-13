@@ -65,7 +65,7 @@
 
     iget-object v4, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
-    invoke-static {v4, v3}, Lcom/android/server/telecom/TelecomLoaderService;->access$500(Lcom/android/server/telecom/TelecomLoaderService;I)V
+    invoke-static {v4, v3}, Lcom/android/server/telecom/TelecomLoaderService;->access$600(Lcom/android/server/telecom/TelecomLoaderService;I)V
 
     add-int/lit8 v2, v2, 0x1
 

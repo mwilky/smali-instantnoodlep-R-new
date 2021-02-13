@@ -203,7 +203,7 @@
 .end method
 
 .method private foreachUnsafe(Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -229,7 +229,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -237,11 +237,22 @@
 
     check-cast v1, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;
 
+    invoke-virtual {v1}, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->getUid()I
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/android/server/am/OpBGFrozenInjector;->isBlockedGpsUid(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
     invoke-direct {p0, v1, p1}, Lcom/android/server/location/RemoteListenerHelper;->post(Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
 
+    :cond_0
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -413,11 +424,17 @@
     const/4 v3, 0x0
 
     :goto_0
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v4
+
+    invoke-virtual {v2, v4}, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->setUid(I)V
+
     invoke-virtual {p0, v3}, Lcom/android/server/location/RemoteListenerHelper;->getHandlerOperation(I)Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-direct {p0, v2, v4}, Lcom/android/server/location/RemoteListenerHelper;->post(Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
+    invoke-direct {p0, v2, v5}, Lcom/android/server/location/RemoteListenerHelper;->post(Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
 
     monitor-exit v1
 

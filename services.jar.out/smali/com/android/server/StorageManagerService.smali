@@ -137,6 +137,16 @@
 
 .field private static final WATCHDOG_ENABLE:Z = true
 
+.field private static final WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final ZRAM_ENABLED_PROPERTY:Ljava/lang/String; = "persist.sys.zram_enabled"
 
 .field public static sMediaStoreAuthorityProcessName:Ljava/lang/String;
@@ -337,6 +347,22 @@
     move-result v0
 
     sput-boolean v0, Lcom/android/server/StorageManagerService;->ENABLE_ISOLATED_STORAGE:Z
+
+    const-string v0, "com.oneplus.brickmode"
+
+    const-string v1, "com.oneplus.filemanager"
+
+    const-string v2, "com.oneplus.screenrecord"
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/StorageManagerService;->WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
 
     const-string v0, "StorageManagerService"
 
@@ -1375,6 +1401,14 @@
     iget-boolean v0, p0, Lcom/android/server/StorageManagerService;->mIsFuseEnabled:Z
 
     return v0
+.end method
+
+.method static synthetic access$6800()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lcom/android/server/StorageManagerService;->WHITELIST_FOR_REQUESTING_INSTALL_PACKAGES:Ljava/util/List;
+
+    return-object v0
 .end method
 
 .method static synthetic access$700(Lcom/android/server/StorageManagerService;I)V

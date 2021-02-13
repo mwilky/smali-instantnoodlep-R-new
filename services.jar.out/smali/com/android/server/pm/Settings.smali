@@ -5379,7 +5379,7 @@
 
     move-object/from16 v20, v0
 
-    const-string v0, "installInitiator"
+    const-string/jumbo v0, "installInitiator"
 
     invoke-interface {v13, v15, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -5387,7 +5387,7 @@
 
     move-object/from16 v22, v0
 
-    const-string v0, "installOriginator"
+    const-string/jumbo v0, "installOriginator"
 
     invoke-interface {v13, v15, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -5395,7 +5395,7 @@
 
     move-object/from16 v21, v0
 
-    const-string v0, "installInitiatorUninstalled"
+    const-string/jumbo v0, "installInitiatorUninstalled"
 
     invoke-interface {v13, v15, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -23292,6 +23292,16 @@
     return v1
 .end method
 
+.method removeRenamedPackageLPw(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/pm/Settings;->mRenamedPackages:Landroid/util/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
 .method removeUserLPw(I)V
     .locals 4
 
@@ -25768,7 +25778,7 @@
 
     iget-object v4, v2, Lcom/android/server/pm/InstallSource;->initiatingPackageName:Ljava/lang/String;
 
-    const-string v5, "installInitiator"
+    const-string/jumbo v5, "installInitiator"
 
     invoke-interface {p1, v0, v5, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -25777,7 +25787,7 @@
 
     if-eqz v4, :cond_b
 
-    const-string v4, "installInitiatorUninstalled"
+    const-string/jumbo v4, "installInitiatorUninstalled"
 
     invoke-interface {p1, v0, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -25788,7 +25798,7 @@
 
     iget-object v4, v2, Lcom/android/server/pm/InstallSource;->originatingPackageName:Ljava/lang/String;
 
-    const-string v5, "installOriginator"
+    const-string/jumbo v5, "installOriginator"
 
     invoke-interface {p1, v0, v5, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 

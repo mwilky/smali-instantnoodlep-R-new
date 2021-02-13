@@ -56,7 +56,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/color/ColorDisplayService$4;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$2300(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v2}, Lcom/android/server/display/color/ColorDisplayService;->access$2400(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v2
 
@@ -71,7 +71,7 @@
     const/4 v0, 0x2
 
     :cond_0
-    invoke-static {v1, v0}, Lcom/android/server/display/color/ColorDisplayService;->access$2400(Lcom/android/server/display/color/ColorDisplayService;I)V
+    invoke-static {v1, v0}, Lcom/android/server/display/color/ColorDisplayService;->access$2500(Lcom/android/server/display/color/ColorDisplayService;I)V
 
     :cond_1
     return-void
@@ -88,13 +88,13 @@
 
     iget v1, p0, Lcom/android/server/display/color/ColorDisplayService$4;->val$to:I
 
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2500(Lcom/android/server/display/color/ColorDisplayService;I)V
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2600(Lcom/android/server/display/color/ColorDisplayService;I)V
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$4;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     const/4 v1, -0x1
 
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2602(Lcom/android/server/display/color/ColorDisplayService;I)I
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2702(Lcom/android/server/display/color/ColorDisplayService;I)I
 
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$4;->val$tintController:Lcom/android/server/display/color/TintController;
@@ -107,7 +107,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$4;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2300(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2400(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v1
 
@@ -127,7 +127,7 @@
     const/4 v1, 0x1
 
     :goto_0
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2400(Lcom/android/server/display/color/ColorDisplayService;I)V
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2500(Lcom/android/server/display/color/ColorDisplayService;I)V
 
     :cond_2
     return-void

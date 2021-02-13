@@ -301,7 +301,7 @@
     return-object v1
 .end method
 
-.method private declared-synchronized triggerScheduledFlushEarly()V
+.method private triggerScheduledFlushEarly()V
     .locals 4
 
     monitor-enter p0
@@ -337,6 +337,10 @@
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
     :cond_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     iget-object v0, p0, Lcom/android/server/people/data/AbstractProtoDiskReadWriter;->mScheduledExecutorService:Ljava/util/concurrent/ScheduledExecutorService;
 
     new-instance v1, Lcom/android/server/people/data/-$$Lambda$AbstractProtoDiskReadWriter$nRGnkY2tYZySym1eNN1hpDLyKgc;
@@ -346,8 +350,6 @@
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const-wide/16 v1, 0x1388
 
@@ -359,29 +361,24 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     :catch_0
     move-exception v1
 
-    :try_start_2
     sget-object v2, Lcom/android/server/people/data/AbstractProtoDiskReadWriter;->TAG:Ljava/lang/String;
 
     const-string v3, "Failed to save data immediately."
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_0
-    monitor-exit p0
-
     return-void
 
     :cond_2
     :goto_1
+    :try_start_2
     monitor-exit p0
 
     return-void
@@ -390,6 +387,8 @@
     move-exception v0
 
     monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v0
 .end method
@@ -622,7 +621,7 @@
     return-object v1
 .end method
 
-.method declared-synchronized saveImmediately(Ljava/lang/String;Ljava/lang/Object;)V
+.method saveImmediately(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -639,20 +638,23 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0}, Lcom/android/server/people/data/AbstractProtoDiskReadWriter;->triggerScheduledFlushEarly()V
+    monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit p0
+    invoke-direct {p0}, Lcom/android/server/people/data/AbstractProtoDiskReadWriter;->triggerScheduledFlushEarly()V
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
+    :try_start_1
     monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p1
+    throw v0
 .end method
 
 .method declared-synchronized scheduleSave(Ljava/lang/String;Ljava/lang/Object;)V

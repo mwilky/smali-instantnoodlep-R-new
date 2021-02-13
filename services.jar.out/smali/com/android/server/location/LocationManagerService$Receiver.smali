@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x14
+    accessFlags = 0x11
     name = "Receiver"
 .end annotation
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/location/LocationManagerService$Receiver;->updateMonitoring(Z)V
 
-    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$1700(Lcom/android/server/location/LocationManagerService;)Landroid/os/PowerManager;
+    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$1900(Lcom/android/server/location/LocationManagerService;)Landroid/os/PowerManager;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/location/LocationManagerService$Receiver;)V
+.method static synthetic access$2500(Lcom/android/server/location/LocationManagerService$Receiver;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/location/LocationManagerService$Receiver;->decrementPendingBroadcastsLocked()V
@@ -163,7 +163,7 @@
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/location/LocationManagerService$Receiver;Ljava/lang/String;Z)Z
+.method static synthetic access$2600(Lcom/android/server/location/LocationManagerService$Receiver;Ljava/lang/String;Z)Z
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/LocationManagerService$Receiver;->callProviderEnabledLocked(Ljava/lang/String;Z)Z
@@ -173,7 +173,7 @@
     return v0
 .end method
 
-.method static synthetic access$3300(Lcom/android/server/location/LocationManagerService$Receiver;)Ljava/lang/Object;
+.method static synthetic access$3500(Lcom/android/server/location/LocationManagerService$Receiver;)Ljava/lang/Object;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->mKey:Ljava/lang/Object;
@@ -238,7 +238,7 @@
 
     iget-object v6, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v6}, Lcom/android/server/location/LocationManagerService;->access$2100(Lcom/android/server/location/LocationManagerService;)Landroid/os/Handler;
+    invoke-static {v6}, Lcom/android/server/location/LocationManagerService;->access$2300(Lcom/android/server/location/LocationManagerService;)Landroid/os/Handler;
 
     move-result-object v8
 
@@ -371,7 +371,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
 
     move-result-object v0
 
@@ -403,7 +403,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
 
     move-result-object v0
 
@@ -426,7 +426,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
 
     move-result-object v0
 
@@ -439,7 +439,7 @@
     :cond_4
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppOpsHelper;
 
     move-result-object v0
 
@@ -460,7 +460,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$600(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$400(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -469,7 +469,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v1, p0}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$Receiver;)V
+    invoke-static {v1, p0}, Lcom/android/server/location/LocationManagerService;->access$2400(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$Receiver;)V
 
     invoke-virtual {p0}, Lcom/android/server/location/LocationManagerService$Receiver;->clearPendingBroadcastsLocked()V
 
@@ -540,7 +540,7 @@
 
     iget-object v5, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v5}, Lcom/android/server/location/LocationManagerService;->access$2100(Lcom/android/server/location/LocationManagerService;)Landroid/os/Handler;
+    invoke-static {v5}, Lcom/android/server/location/LocationManagerService;->access$2300(Lcom/android/server/location/LocationManagerService;)Landroid/os/Handler;
 
     move-result-object v7
 
@@ -754,7 +754,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$600(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$400(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -920,7 +920,7 @@
 
     iget-object v5, v3, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mProvider:Ljava/lang/String;
 
-    invoke-static {v4, v5}, Lcom/android/server/location/LocationManagerService;->access$1800(Lcom/android/server/location/LocationManagerService;Ljava/lang/String;)Lcom/android/server/location/LocationManagerService$LocationProviderManager;
+    invoke-static {v4, v5}, Lcom/android/server/location/LocationManagerService;->access$2000(Lcom/android/server/location/LocationManagerService;Ljava/lang/String;)Lcom/android/server/location/LocationManagerService$LocationProviderManager;
 
     move-result-object v4
 
@@ -945,7 +945,7 @@
 
     iget-object v5, p0, Lcom/android/server/location/LocationManagerService$Receiver;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v5, v3}, Lcom/android/server/location/LocationManagerService;->access$1900(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
+    invoke-static {v5, v3}, Lcom/android/server/location/LocationManagerService;->access$2100(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
 
     move-result v5
 

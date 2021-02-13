@@ -77,7 +77,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$PassiveLocationProviderManager;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$600(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$400(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
 
     move-result-object v0
 

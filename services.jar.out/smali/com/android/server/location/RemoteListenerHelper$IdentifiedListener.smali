@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field private mBlock:Z
+
 .field private final mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
 .field private final mListener:Landroid/os/IInterface;
@@ -34,12 +36,14 @@
     .end annotation
 .end field
 
+.field private mUid:I
+
 .field final synthetic this$0:Lcom/android/server/location/RemoteListenerHelper;
 
 
 # direct methods
 .method private constructor <init>(Lcom/android/server/location/RemoteListenerHelper;Ljava/lang/Object;Landroid/os/IInterface;Lcom/android/server/location/CallerIdentity;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TTRequest;TT",
@@ -52,6 +56,10 @@
     iput-object p1, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->this$0:Lcom/android/server/location/RemoteListenerHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->mBlock:Z
 
     iput-object p3, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->mListener:Landroid/os/IInterface;
 
@@ -99,4 +107,20 @@
     iget-object v0, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->mRequest:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public getUid()I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->mUid:I
+
+    return v0
+.end method
+
+.method public setUid(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/location/RemoteListenerHelper$IdentifiedListener;->mUid:I
+
+    return-void
 .end method

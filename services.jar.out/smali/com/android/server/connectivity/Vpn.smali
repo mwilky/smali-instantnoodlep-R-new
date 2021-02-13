@@ -5363,7 +5363,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Vpn;->setLockdown(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/connectivity/Vpn;->setVpnForcedLocked(Z)V
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/Vpn;->mAlwaysOn:Z
 

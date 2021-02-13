@@ -314,11 +314,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
-    if-eqz p2, :cond_11
+    if-eqz p2, :cond_12
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_11
 
     invoke-virtual/range {p1 .. p1}, Landroid/hardware/display/VirtualDisplayConfig;->getSurface()Landroid/view/Surface;
 
@@ -485,9 +485,42 @@
 
     :cond_a
     :goto_5
+    const-string v3, "com.oneplus.screenrecord"
+
+    invoke-virtual {v3, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_b
+
+    and-int/lit16 v2, v2, -0x401
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "createVirtualDisplay skip trust for "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "DisplayManagerService"
+
+    invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b
     const-string v3, "createVirtualDisplay()"
 
-    if-eq v12, v0, :cond_c
+    if-eq v12, v0, :cond_d
+
+    and-int/lit16 v0, v2, 0x400
+
+    if-eqz v0, :cond_d
 
     const-string v0, "android.permission.ADD_TRUSTED_DISPLAY"
 
@@ -495,55 +528,61 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     goto :goto_6
 
-    :cond_b
-    and-int/lit16 v0, v2, -0x201
-
-    move v14, v0
-
-    goto :goto_7
-
     :cond_c
-    :goto_6
-    or-int/lit16 v0, v2, 0x400
+    const v0, 0x534e4554
 
-    const-string v2, "com.oneplus.screenrecord"
+    const/4 v3, 0x3
 
-    invoke-virtual {v2, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-array v3, v3, [Ljava/lang/Object;
 
-    move-result v2
+    const/4 v4, 0x0
 
-    if-eqz v2, :cond_d
+    const-string v5, "162627132"
 
-    and-int/lit16 v0, v0, -0x401
+    aput-object v5, v3, v4
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v4
 
-    const-string v4, "createVirtualDisplay skip trust for "
+    const/4 v5, 0x1
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v4, v3, v5
 
-    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v5, "Attempt to create a trusted display without holding permission!"
 
-    move-result-object v2
+    aput-object v5, v3, v4
 
-    const-string v4, "DisplayManagerService"
+    invoke-static {v0, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    invoke-static {v4, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v0, Ljava/lang/SecurityException;
 
-    move v14, v0
+    const-string v3, "Requires ADD_TRUSTED_DISPLAY permission to create a trusted virtual display."
 
-    goto :goto_7
+    invoke-direct {v0, v3}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_d
-    move v14, v0
+    :goto_6
+    and-int/lit16 v0, v2, 0x400
+
+    if-nez v0, :cond_e
+
+    and-int/lit16 v2, v2, -0x201
+
+    move v14, v2
+
+    goto :goto_7
+
+    :cond_e
+    move v14, v2
 
     :goto_7
     const/16 v15, 0x600
@@ -552,7 +591,7 @@
 
     const/16 v2, 0x200
 
-    if-ne v0, v2, :cond_f
+    if-ne v0, v2, :cond_10
 
     const-string v0, "android.permission.INTERNAL_SYSTEM_WINDOW"
 
@@ -560,11 +599,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     goto :goto_8
 
-    :cond_e
+    :cond_f
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v2, "Requires INTERNAL_SYSTEM_WINDOW permission"
@@ -573,7 +612,7 @@
 
     throw v0
 
-    :cond_f
+    :cond_10
     :goto_8
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -613,7 +652,7 @@
 
     throw v0
 
-    :cond_10
+    :cond_11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v2, "virtualDisplayConfig must not be null"
@@ -622,7 +661,7 @@
 
     throw v0
 
-    :cond_11
+    :cond_12
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "appToken must not be null"
@@ -631,7 +670,7 @@
 
     throw v0
 
-    :cond_12
+    :cond_13
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string/jumbo v2, "packageName must match the calling uid"

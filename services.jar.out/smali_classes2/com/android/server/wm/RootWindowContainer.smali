@@ -1766,6 +1766,12 @@
 
     if-ne p3, p1, :cond_1
 
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isFocusable()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
     move v3, v0
 
     goto :goto_0
@@ -2650,92 +2656,128 @@
 .end method
 
 .method attachApplication(Lcom/android/server/wm/WindowProcessController;)Z
-    .locals 8
+    .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    iget-object v0, p1, Lcom/android/server/wm/WindowProcessController;->mName:Ljava/lang/String;
-
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     invoke-virtual {p0}, Lcom/android/server/wm/RootWindowContainer;->getChildCount()I
 
-    move-result v2
+    move-result v1
 
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     :goto_0
+    const/4 v2, 0x0
+
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    if-ltz v1, :cond_4
 
-    if-ltz v2, :cond_2
+    iput-object v3, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpRemoteException:Landroid/os/RemoteException;
 
-    invoke-virtual {p0, v2}, Lcom/android/server/wm/RootWindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
+    iput-boolean v2, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpBoolean:Z
+
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/RootWindowContainer;->getChildAt(I)Lcom/android/server/wm/WindowContainer;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/wm/DisplayContent;
+
+    invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaCount()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, -0x1
+
+    :goto_1
+    if-ltz v4, :cond_3
+
+    invoke-virtual {v2, v4}, Lcom/android/server/wm/DisplayContent;->getTaskDisplayAreaAt(I)Lcom/android/server/wm/TaskDisplayArea;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/server/wm/DisplayContent;
+    invoke-virtual {v5}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
 
-    invoke-virtual {v5}, Lcom/android/server/wm/DisplayContent;->getFocusedStack()Lcom/android/server/wm/ActivityStack;
+    move-result v6
 
-    move-result-object v6
+    add-int/lit8 v6, v6, -0x1
 
-    if-nez v6, :cond_0
+    :goto_2
+    if-ltz v6, :cond_2
 
-    goto :goto_1
-
-    :cond_0
-    iput-object v3, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpRemoteException:Landroid/os/RemoteException;
-
-    iput-boolean v4, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpBoolean:Z
-
-    sget-object v3, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$5fbF65VSmaJkPHxEhceOGTat7JE;->INSTANCE:Lcom/android/server/wm/-$$Lambda$RootWindowContainer$5fbF65VSmaJkPHxEhceOGTat7JE;
-
-    const-class v4, Lcom/android/server/wm/ActivityRecord;
-
-    invoke-static {v4}, Lcom/android/internal/util/function/pooled/PooledLambda;->__(Ljava/lang/Class;)Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;
-
-    move-result-object v4
-
-    invoke-virtual {v6}, Lcom/android/server/wm/ActivityStack;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+    invoke-virtual {v5, v6}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
 
     move-result-object v7
 
-    invoke-static {v3, p0, v4, p1, v7}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainFunction(Lcom/android/internal/util/function/QuadFunction;Ljava/lang/Object;Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/android/internal/util/function/pooled/PooledFunction;
+    invoke-virtual {v7, v3}, Lcom/android/server/wm/ActivityStack;->getVisibility(Lcom/android/server/wm/ActivityRecord;)I
 
-    move-result-object v3
+    move-result v8
 
-    invoke-virtual {v6, v3}, Lcom/android/server/wm/ActivityStack;->forAllActivities(Ljava/util/function/Function;)Z
+    const/4 v9, 0x2
 
-    invoke-interface {v3}, Lcom/android/internal/util/function/pooled/PooledFunction;->recycle()V
+    if-ne v8, v9, :cond_0
 
-    iget-object v4, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpRemoteException:Landroid/os/RemoteException;
+    goto :goto_3
 
-    if-nez v4, :cond_1
+    :cond_0
+    sget-object v8, Lcom/android/server/wm/-$$Lambda$RootWindowContainer$5fbF65VSmaJkPHxEhceOGTat7JE;->INSTANCE:Lcom/android/server/wm/-$$Lambda$RootWindowContainer$5fbF65VSmaJkPHxEhceOGTat7JE;
 
-    iget-boolean v4, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpBoolean:Z
+    const-class v9, Lcom/android/server/wm/ActivityRecord;
 
-    or-int/2addr v1, v4
+    invoke-static {v9}, Lcom/android/internal/util/function/pooled/PooledLambda;->__(Ljava/lang/Class;)Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;
 
-    :goto_1
-    add-int/lit8 v2, v2, -0x1
+    move-result-object v9
+
+    invoke-virtual {v7}, Lcom/android/server/wm/ActivityStack;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v10
+
+    invoke-static {v8, p0, v9, p1, v10}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainFunction(Lcom/android/internal/util/function/QuadFunction;Ljava/lang/Object;Lcom/android/internal/util/function/pooled/ArgumentPlaceholder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/android/internal/util/function/pooled/PooledFunction;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Lcom/android/server/wm/ActivityStack;->forAllActivities(Ljava/util/function/Function;)Z
+
+    invoke-interface {v8}, Lcom/android/internal/util/function/pooled/PooledFunction;->recycle()V
+
+    iget-object v9, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpRemoteException:Landroid/os/RemoteException;
+
+    if-nez v9, :cond_1
+
+    add-int/lit8 v6, v6, -0x1
+
+    goto :goto_2
+
+    :cond_1
+    throw v9
+
+    :cond_2
+    :goto_3
+    add-int/lit8 v4, v4, -0x1
+
+    goto :goto_1
+
+    :cond_3
+    iget-boolean v3, p0, Lcom/android/server/wm/RootWindowContainer;->mTmpBoolean:Z
+
+    or-int/2addr v0, v3
+
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_1
-    throw v4
+    :cond_4
+    if-nez v0, :cond_5
 
-    :cond_2
-    if-nez v1, :cond_3
+    invoke-virtual {p0, v3, v2, v2}, Lcom/android/server/wm/RootWindowContainer;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
 
-    invoke-virtual {p0, v3, v4, v4}, Lcom/android/server/wm/RootWindowContainer;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZ)V
-
-    :cond_3
-    return v1
+    :cond_5
+    return v0
 .end method
 
 .method canShowStrictModeViolation(I)Z

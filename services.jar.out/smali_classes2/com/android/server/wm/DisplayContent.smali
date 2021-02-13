@@ -10040,7 +10040,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->isVisible()Z
 
@@ -10051,7 +10051,7 @@
     goto :goto_1
 
     :cond_3
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mAppTransition:Lcom/android/server/wm/AppTransition;
 
@@ -10059,7 +10059,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mOpeningApps:Landroid/util/ArraySet;
 
@@ -10080,35 +10080,54 @@
 
     and-int/lit8 v0, v0, 0x2
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_5
 
     return v1
 
     :cond_5
-    :goto_0
+    sget-object v0, Lcom/android/server/wm/ActivityStack$ActivityState;->RESUMED:Lcom/android/server/wm/ActivityStack$ActivityState;
+
+    invoke-virtual {p1, v0}, Lcom/android/server/wm/ActivityRecord;->isState(Lcom/android/server/wm/ActivityStack$ActivityState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getRootTask()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/android/server/wm/ActivityStack;->mInResumeTopActivity:Z
+
+    if-nez v0, :cond_8
+
     return v1
 
     :cond_6
+    :goto_0
+    return v1
+
+    :cond_7
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->topRunningActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v0
 
-    if-eq p1, v0, :cond_7
+    if-eq p1, v0, :cond_8
 
     return v1
 
-    :cond_7
+    :cond_8
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayContent;->rotationForActivityInDifferentOrientation(Lcom/android/server/wm/ActivityRecord;)I
 
     move-result v0
 
     const/4 v3, -0x1
 
-    if-ne v0, v3, :cond_8
+    if-ne v0, v3, :cond_9
 
     return v1
 
-    :cond_8
+    :cond_9
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v3
@@ -10117,27 +10136,27 @@
 
     move-result v3
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_a
 
     return v1
 
-    :cond_9
+    :cond_a
     iget-object v3, p0, Lcom/android/server/wm/DisplayContent;->mPinnedStackControllerLocked:Lcom/android/server/wm/PinnedStackController;
 
     invoke-virtual {v3}, Lcom/android/server/wm/PinnedStackController;->isPipActiveOrWindowingModeChanging()Z
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     return v1
 
-    :cond_a
+    :cond_b
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/DisplayContent;->setFixedRotationLaunchingApp(Lcom/android/server/wm/ActivityRecord;I)V
 
     return v2
 
-    :cond_b
+    :cond_c
     :goto_1
     return v1
 .end method

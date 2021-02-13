@@ -1763,9 +1763,9 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
@@ -1775,7 +1775,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
@@ -1785,17 +1785,38 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    const-string v3, "com.oneplus.camera:pictureProcessing"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    const-string v3, "com.oneplus.camera:captureDecision"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
-    if-lez v1, :cond_0
+    if-lez v1, :cond_1
 
     iput v2, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sDebugOptAdj:Z
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     const-string v1, "OomAdjusterInjector"
 
@@ -1825,17 +1846,17 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sEnableTuneFgService:Z
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     monitor-exit v0
 
     return-void
 
-    :cond_1
-    if-eqz p1, :cond_5
+    :cond_2
+    if-eqz p1, :cond_6
 
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -1849,13 +1870,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasForegroundServices()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     sget-object v1, Lcom/android/server/am/OomAdjusterInjector;->sFgServiceBlackList:Ljava/util/ArrayList;
 
@@ -1865,7 +1886,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     const-string/jumbo v1, "started-services"
 
@@ -1895,7 +1916,7 @@
 
     sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sDebugOptAdj:Z
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     const-string v1, "OomAdjusterInjector"
 
@@ -1927,7 +1948,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     sget-object v1, Lcom/android/server/am/OomAdjusterInjector;->sPersistBlackList:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -1936,17 +1957,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     sget v2, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
 
-    if-ge v1, v2, :cond_5
+    if-ge v1, v2, :cond_6
 
     iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->hasShownUi:Z
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
 
@@ -1956,13 +1977,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     const/16 v2, 0x2bc
 
-    if-ge v1, v2, :cond_3
+    if-ge v1, v2, :cond_4
 
     invoke-virtual {p0, v2}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
 
@@ -1972,7 +1993,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const/16 v1, 0x384
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
@@ -1983,7 +2004,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     sget v1, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
@@ -1995,7 +2016,7 @@
     :goto_0
     sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sDebugOptAdj:Z
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     const-string v1, "OomAdjusterInjector"
 
@@ -2025,7 +2046,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_6
     :goto_1
     monitor-exit v0
 

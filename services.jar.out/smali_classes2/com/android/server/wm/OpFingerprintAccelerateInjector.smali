@@ -28,6 +28,42 @@
     return-void
 .end method
 
+.method public static getAppUnsupportAccelerateList()Ljava/util/List;
+    .locals 4
+
+    invoke-static {}, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->initInstance()V
+
+    const/4 v0, 0x0
+
+    sget-object v1, Lcom/android/server/wm/OpFingerprintAccelerateInjector;->sIfp:Landroid/hardware/fingerprint/IFingerprintService;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    invoke-interface {v1}, Landroid/hardware/fingerprint/IFingerprintService;->getAppUnsupportAccelerateList()Ljava/util/List;
+
+    move-result-object v1
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    const-string v2, "OpFingerprintAccelerate"
+
+    const-string v3, "getAppUnsupportAccelerateList: "
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-object v0
+.end method
+
 .method private static initInstance()V
     .locals 1
 

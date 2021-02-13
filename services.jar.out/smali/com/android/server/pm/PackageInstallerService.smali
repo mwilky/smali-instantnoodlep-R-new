@@ -1943,6 +1943,44 @@
     return v1
 .end method
 
+.method private isExtraSessionForStagedInstall(Lcom/android/server/pm/PackageInstallerSession;)Z
+    .locals 2
+
+    iget-object v0, p1, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
+
+    iget v0, v0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
+    const/high16 v1, 0x800000
+
+    and-int/2addr v0, v1
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
+
+    iget v0, v0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
+    const/high16 v1, 0x80000
+
+    and-int/2addr v0, v1
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 .method public static isStageName(Ljava/lang/String;)Z
     .locals 5
 
@@ -2295,7 +2333,7 @@
 
     const/4 v12, 0x1
 
-    if-eq v3, v12, :cond_6
+    if-eq v3, v12, :cond_7
 
     const/4 v3, 0x2
 
@@ -2318,7 +2356,7 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     :try_start_1
     iget-object v4, p0, Lcom/android/server/pm/PackageInstallerService;->mInternalCallback:Lcom/android/server/pm/PackageInstallerService$InternalCallback;
@@ -2429,10 +2467,21 @@
     goto :goto_1
 
     :cond_3
+    invoke-direct {p0, v3}, Lcom/android/server/pm/PackageInstallerService;->isExtraSessionForStagedInstall(Lcom/android/server/pm/PackageInstallerSession;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    const/4 v8, 0x0
+
+    goto :goto_1
+
+    :cond_4
     const/4 v8, 0x1
 
     :goto_1
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_5
 
     iget-object v9, p0, Lcom/android/server/pm/PackageInstallerService;->mSessions:Landroid/util/SparseArray;
 
@@ -2442,7 +2491,7 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     invoke-direct {p0, v3}, Lcom/android/server/pm/PackageInstallerService;->addHistoricalSessionLocked(Lcom/android/server/pm/PackageInstallerSession;)V
 
     :goto_2
@@ -2468,11 +2517,11 @@
 
     goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     :goto_3
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     goto :goto_5
 
     :catchall_0
@@ -2519,7 +2568,7 @@
 
     move-result v2
 
-    if-ge v0, v2, :cond_7
+    if-ge v0, v2, :cond_8
 
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerService;->mSessions:Landroid/util/SparseArray;
 
@@ -2535,7 +2584,7 @@
 
     goto :goto_7
 
-    :cond_7
+    :cond_8
     return-void
 .end method
 

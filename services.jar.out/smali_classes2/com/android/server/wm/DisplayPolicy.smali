@@ -1381,7 +1381,7 @@
     goto :goto_1
 
     :cond_0
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_9
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarOpaqueFlag(I)I
 
@@ -1390,7 +1390,7 @@
     goto :goto_1
 
     :cond_1
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     if-nez p2, :cond_3
 
@@ -1401,7 +1401,7 @@
     goto :goto_0
 
     :cond_2
-    if-eqz p5, :cond_8
+    if-eqz p5, :cond_9
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarTransparentFlag(I)I
 
@@ -1422,19 +1422,29 @@
     goto :goto_1
 
     :cond_4
-    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarOpaqueFlag(I)I
+    iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x20
+
+    if-eqz v0, :cond_5
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarTransparentFlag(I)I
 
     move-result p1
 
     goto :goto_1
 
     :cond_5
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_8
-
-    if-eqz p4, :cond_6
-
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarOpaqueFlag(I)I
 
     move-result p1
@@ -1442,7 +1452,20 @@
     goto :goto_1
 
     :cond_6
-    if-eqz p3, :cond_7
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_9
+
+    if-eqz p4, :cond_7
+
+    invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarOpaqueFlag(I)I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_7
+    if-eqz p3, :cond_8
 
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarTranslucentFlag(I)I
 
@@ -1450,12 +1473,12 @@
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     invoke-direct {p0, p1}, Lcom/android/server/wm/DisplayPolicy;->setNavBarOpaqueFlag(I)I
 
     move-result p1
 
-    :cond_8
+    :cond_9
     :goto_1
     return p1
 .end method

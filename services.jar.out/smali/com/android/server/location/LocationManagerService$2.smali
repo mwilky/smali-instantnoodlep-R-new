@@ -61,7 +61,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$2;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$800(Lcom/android/server/location/LocationManagerService;)V
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$1000(Lcom/android/server/location/LocationManagerService;)V
 
     :cond_1
     return-void

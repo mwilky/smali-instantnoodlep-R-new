@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method static synthetic access$2900(Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;)V
+.method static synthetic access$3100(Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;->updateActivated()V
@@ -276,7 +276,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3000(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$CustomNightDisplayAutoMode;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3000(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
+    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;)Ljava/time/LocalDateTime;
 
     move-result-object v1
 

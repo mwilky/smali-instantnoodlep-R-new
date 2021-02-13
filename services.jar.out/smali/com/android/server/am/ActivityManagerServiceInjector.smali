@@ -1285,15 +1285,15 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/color/app/ColorAppSwitchConfig;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v1, Lcom/oplus/app/OplusAppSwitchConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/color/app/ColorAppSwitchConfig;
+    check-cast v1, Lcom/oplus/app/OplusAppSwitchConfig;
 
-    invoke-static {v3, v0, v1}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-static {v3, v0, v1}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v2
 
@@ -1390,15 +1390,15 @@
 
     invoke-static {v5, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object v0, Lcom/color/app/ColorAppSwitchConfig;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v0, Lcom/oplus/app/OplusAppSwitchConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/color/app/ColorAppSwitchConfig;
+    check-cast v0, Lcom/oplus/app/OplusAppSwitchConfig;
 
-    invoke-static {v3, v0}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-static {v3, v0}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v1
 
