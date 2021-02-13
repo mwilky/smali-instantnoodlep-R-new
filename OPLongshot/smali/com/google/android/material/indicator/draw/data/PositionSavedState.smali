@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/indicator/draw/data/PositionSavedState;
 .super Landroid/view/View$BaseSavedState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -16,15 +16,15 @@
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
-.field public b:I
+.field private b:I
 
-.field public c:I
+.field private c:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/indicator/draw/data/PositionSavedState$1;
@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/indicator/draw/data/PositionSavedState$1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/material/indicator/draw/data/PositionSavedState$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/indicator/draw/data/PositionSavedState;-><init>(Landroid/os/Parcel;)V

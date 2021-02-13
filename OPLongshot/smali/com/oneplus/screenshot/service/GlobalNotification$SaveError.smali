@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;
+.class Lcom/oneplus/screenshot/service/GlobalNotification$SaveError;
 .super Lcom/oneplus/screenshot/service/GlobalNotification$Builder;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "SaveError"
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
+.field final synthetic this$0:Lcom/oneplus/screenshot/service/GlobalNotification;
 
 
 # direct methods
@@ -69,7 +69,7 @@
 
 
 # virtual methods
-.method public getBigContentViews()Landroid/widget/RemoteViews;
+.method protected getBigContentViews()Landroid/widget/RemoteViews;
     .locals 1
 
     const/4 v0, 0x0
@@ -77,7 +77,7 @@
     return-object v0
 .end method
 
-.method public getContentViews()Landroid/widget/RemoteViews;
+.method protected getContentViews()Landroid/widget/RemoteViews;
     .locals 1
 
     const/4 v0, 0x0
@@ -85,7 +85,7 @@
     return-object v0
 .end method
 
-.method public getSmallIcon()I
+.method protected getSmallIcon()I
     .locals 1
 
     const v0, 0x7f0801f1
@@ -93,7 +93,7 @@
     return v0
 .end method
 
-.method public getTicker()Ljava/lang/String;
+.method protected getTicker()Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/service/GlobalNotification$Builder;->mResources:Landroid/content/res/Resources;

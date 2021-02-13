@@ -1,6 +1,6 @@
 .class public final enum Lcom/appaac/haptic/HapticEffect$Effect;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/appaac/haptic/HapticEffect$Effect;
+.field private static final synthetic $VALUES:[Lcom/appaac/haptic/HapticEffect$Effect;
 
 .field public static final enum EFFECT1:Lcom/appaac/haptic/HapticEffect$Effect;
 
@@ -54,13 +54,13 @@
 
 
 # instance fields
-.field public mDuration:I
+.field private mDuration:I
 
-.field public mName:Ljava/lang/String;
+.field private mName:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 14
 
     new-instance v0, Lcom/appaac/haptic/HapticEffect$Effect;
@@ -370,7 +370,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -427,7 +427,7 @@
     return v0
 .end method
 
-.method public getName()Ljava/lang/String;
+.method getName()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/appaac/haptic/HapticEffect$Effect;->mName:Ljava/lang/String;

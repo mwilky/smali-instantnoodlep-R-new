@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/material/edgeeffect/Rotation;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/android/material/edgeeffect/Rotation;
+.field private static final synthetic $VALUES:[Lcom/google/android/material/edgeeffect/Rotation;
 
 .field public static final enum INVERSE_LANDSCAPE:Lcom/google/android/material/edgeeffect/Rotation;
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field public final m_DeviceOrientation:I
+.field private final m_DeviceOrientation:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 7
 
     new-instance v0, Lcom/google/android/material/edgeeffect/Rotation;
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

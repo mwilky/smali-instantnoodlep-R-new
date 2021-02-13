@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/AsyncDifferConfig;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,12 +21,12 @@
 
 
 # instance fields
-.field public final mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+.field private final mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+.field private final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -38,14 +38,14 @@
     .end annotation
 .end field
 
-.field public final mMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field private final mMainThreadExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
+.method constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 0
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/Nullable;

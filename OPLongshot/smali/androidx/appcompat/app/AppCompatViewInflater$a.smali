@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AppCompatViewInflater$a;
+.class Landroidx/appcompat/app/AppCompatViewInflater$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field private final a:Landroid/view/View;
 
-.field public final b:Ljava/lang/String;
+.field private final b:Ljava/lang/String;
 
-.field public c:Ljava/lang/reflect/Method;
+.field private c:Ljava/lang/reflect/Method;
 
-.field public d:Landroid/content/Context;
+.field private d:Landroid/content/Context;
 
 
 # direct methods
@@ -48,9 +48,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;Ljava/lang/String;)V
+.method private a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/Nullable;
@@ -212,6 +210,8 @@
     throw p2
 .end method
 
+
+# virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 4
     .param p1    # Landroid/view/View;
@@ -231,7 +231,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/app/AppCompatViewInflater$a;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Landroidx/appcompat/app/AppCompatViewInflater$a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Landroidx/appcompat/app/AppCompatViewInflater$a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     :try_start_0

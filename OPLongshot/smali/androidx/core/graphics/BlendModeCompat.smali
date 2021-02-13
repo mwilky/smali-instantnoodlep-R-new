@@ -1,6 +1,6 @@
 .class public final enum Landroidx/core/graphics/BlendModeCompat;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Landroidx/core/graphics/BlendModeCompat;
+.field private static final synthetic $VALUES:[Landroidx/core/graphics/BlendModeCompat;
 
 .field public static final enum CLEAR:Landroidx/core/graphics/BlendModeCompat;
 
@@ -120,7 +120,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 16
 
     new-instance v0, Landroidx/core/graphics/BlendModeCompat;
@@ -568,7 +568,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActionMenuPresenter$a;
+.class Landroidx/appcompat/widget/ActionMenuPresenter$a;
 .super Landroidx/appcompat/view/menu/MenuPopupHelper;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$a;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    sget v5, Lb/c/a;->actionOverflowMenuStyle:I
+    sget v5, La/a/a;->actionOverflowMenuStyle:I
 
     const/4 v4, 0x0
 
@@ -73,7 +73,7 @@
 
 
 # virtual methods
-.method public onDismiss()V
+.method protected onDismiss()V
     .locals 2
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$a;->a:Landroidx/appcompat/widget/ActionMenuPresenter;

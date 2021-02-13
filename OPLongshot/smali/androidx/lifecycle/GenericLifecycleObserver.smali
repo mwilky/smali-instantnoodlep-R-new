@@ -1,9 +1,9 @@
 .class public interface abstract Landroidx/lifecycle/GenericLifecycleObserver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/l/c;
+.implements Landroidx/lifecycle/c;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 
 # virtual methods
-.method public abstract synthetic onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
-    .param p1    # Lb/l/e;
+.method public abstract synthetic onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
+    .param p1    # Landroidx/lifecycle/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

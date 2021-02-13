@@ -1,6 +1,6 @@
-.class public Landroidx/animation/BidirectionalTypeConverter$InvertedConverter;
+.class Landroidx/animation/BidirectionalTypeConverter$InvertedConverter;
 .super Landroidx/animation/BidirectionalTypeConverter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "InvertedConverter"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public mConverter:Landroidx/animation/BidirectionalTypeConverter;
+.field private mConverter:Landroidx/animation/BidirectionalTypeConverter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/animation/BidirectionalTypeConverter<",
@@ -38,7 +38,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/animation/BidirectionalTypeConverter;)V
+.method constructor <init>(Landroidx/animation/BidirectionalTypeConverter;)V
     .locals 2
     .param p1    # Landroidx/animation/BidirectionalTypeConverter;
         .annotation build Landroidx/annotation/NonNull;

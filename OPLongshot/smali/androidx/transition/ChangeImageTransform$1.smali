@@ -1,6 +1,6 @@
-.class public final Landroidx/transition/ChangeImageTransform$1;
+.class final Landroidx/transition/ChangeImageTransform$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

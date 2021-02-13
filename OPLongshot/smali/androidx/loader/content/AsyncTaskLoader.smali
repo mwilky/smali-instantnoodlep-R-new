@@ -1,6 +1,6 @@
 .class public abstract Landroidx/loader/content/AsyncTaskLoader;
 .super Landroidx/loader/content/Loader;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -22,13 +22,13 @@
 
 
 # static fields
-.field public static final DEBUG:Z = false
+.field static final DEBUG:Z = false
 
-.field public static final TAG:Ljava/lang/String; = "AsyncTaskLoader"
+.field static final TAG:Ljava/lang/String; = "AsyncTaskLoader"
 
 
 # instance fields
-.field public volatile mCancellingTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
+.field volatile mCancellingTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/AsyncTaskLoader<",
@@ -38,13 +38,13 @@
     .end annotation
 .end field
 
-.field public final mExecutor:Ljava/util/concurrent/Executor;
+.field private final mExecutor:Ljava/util/concurrent/Executor;
 
-.field public mHandler:Landroid/os/Handler;
+.field mHandler:Landroid/os/Handler;
 
-.field public mLastLoadCompleteTime:J
+.field mLastLoadCompleteTime:J
 
-.field public volatile mTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
+.field volatile mTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/AsyncTaskLoader<",
@@ -54,7 +54,7 @@
     .end annotation
 .end field
 
-.field public mUpdateThrottle:J
+.field mUpdateThrottle:J
 
 
 # direct methods
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
+.method private constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
     .locals 2
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public dispatchOnCancelled(Landroidx/loader/content/AsyncTaskLoader$LoadTask;Ljava/lang/Object;)V
+.method dispatchOnCancelled(Landroidx/loader/content/AsyncTaskLoader$LoadTask;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -140,7 +140,7 @@
     return-void
 .end method
 
-.method public dispatchOnLoadComplete(Landroidx/loader/content/AsyncTaskLoader$LoadTask;Ljava/lang/Object;)V
+.method dispatchOnLoadComplete(Landroidx/loader/content/AsyncTaskLoader$LoadTask;Ljava/lang/Object;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -281,7 +281,7 @@
     return-void
 .end method
 
-.method public executePendingTask()V
+.method executePendingTask()V
     .locals 6
 
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader;->mCancellingTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
@@ -395,7 +395,7 @@
     .end annotation
 .end method
 
-.method public onCancelLoad()Z
+.method protected onCancelLoad()Z
     .locals 4
 
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader;->mTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
@@ -500,7 +500,7 @@
     return-void
 .end method
 
-.method public onForceLoad()V
+.method protected onForceLoad()V
     .locals 1
 
     invoke-super {p0}, Landroidx/loader/content/Loader;->onForceLoad()V
@@ -518,7 +518,7 @@
     return-void
 .end method
 
-.method public onLoadInBackground()Ljava/lang/Object;
+.method protected onLoadInBackground()Ljava/lang/Object;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

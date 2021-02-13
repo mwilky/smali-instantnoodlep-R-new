@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/tabbar/TabBarItemView$b;
+.class Lcom/google/android/material/tabbar/TabBarItemView$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/tabbar/TabBarItemView;
+.field final synthetic a:Lcom/google/android/material/tabbar/TabBarItemView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
+.method constructor <init>(Lcom/google/android/material/tabbar/TabBarItemView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/tabbar/TabBarItemView$b;->a:Lcom/google/android/material/tabbar/TabBarItemView;

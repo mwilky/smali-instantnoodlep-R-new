@@ -1,9 +1,9 @@
-.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
+.class Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/a/b/b/d0/a;
+.implements Lcom/google/android/material/shadow/a;
 
 
 # annotations
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+.field final synthetic a:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;->a:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;

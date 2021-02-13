@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/menu/MenuAdapter;
 .super Landroid/widget/BaseAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field public mAdapterMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field mAdapterMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field public mExpandedIndex:I
+.field private mExpandedIndex:I
 
-.field public mForceShowIcon:Z
+.field private mForceShowIcon:Z
 
-.field public final mInflater:Landroid/view/LayoutInflater;
+.field private final mInflater:Landroid/view/LayoutInflater;
 
-.field public final mItemLayoutRes:I
+.field private final mItemLayoutRes:I
 
-.field public final mOverflowOnly:Z
+.field private final mOverflowOnly:Z
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public findExpandedIndex()V
+.method findExpandedIndex()V
     .locals 5
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mAdapterMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -134,19 +134,15 @@
     :goto_0
     iget v1, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mExpandedIndex:I
 
-    if-gez v1, :cond_1
-
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
+
+    if-gez v1, :cond_1
 
     return v0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
     add-int/lit8 v0, v0, -0x1
 
     return v0

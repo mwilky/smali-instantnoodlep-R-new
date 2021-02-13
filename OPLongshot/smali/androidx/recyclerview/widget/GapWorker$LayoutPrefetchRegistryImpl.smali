@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;
+.class Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$k$c;
@@ -18,23 +18,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "LayoutPrefetchRegistryImpl"
 .end annotation
 
 
 # instance fields
-.field public mCount:I
+.field mCount:I
 
-.field public mPrefetchArray:[I
+.field mPrefetchArray:[I
 
-.field public mPrefetchDx:I
+.field mPrefetchDx:I
 
-.field public mPrefetchDy:I
+.field mPrefetchDy:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -125,7 +125,7 @@
     throw p1
 .end method
 
-.method public clearPrefetchPositions()V
+.method clearPrefetchPositions()V
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mPrefetchArray:[I
@@ -144,7 +144,7 @@
     return-void
 .end method
 
-.method public collectPrefetchPositionsFromView(Landroidx/recyclerview/widget/RecyclerView;Z)V
+.method collectPrefetchPositionsFromView(Landroidx/recyclerview/widget/RecyclerView;Z)V
     .locals 4
 
     const/4 v0, 0x0
@@ -176,9 +176,9 @@
 
     if-eqz p2, :cond_1
 
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Lb/n/d/a;
+    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mAdapterHelper:Landroidx/recyclerview/widget/a;
 
-    invoke-virtual {v1}, Lb/n/d/a;->p()Z
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->p()Z
 
     move-result v1
 
@@ -229,7 +229,7 @@
     return-void
 .end method
 
-.method public lastPrefetchIncludedPosition(I)Z
+.method lastPrefetchIncludedPosition(I)Z
     .locals 4
 
     iget-object v0, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mPrefetchArray:[I
@@ -266,7 +266,7 @@
     return v1
 .end method
 
-.method public setPrefetchVector(II)V
+.method setPrefetchVector(II)V
     .locals 0
 
     iput p1, p0, Landroidx/recyclerview/widget/GapWorker$LayoutPrefetchRegistryImpl;->mPrefetchDx:I

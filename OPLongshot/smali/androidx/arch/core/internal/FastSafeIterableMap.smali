@@ -1,6 +1,6 @@
 .class public Landroidx/arch/core/internal/FastSafeIterableMap;
 .super Landroidx/arch/core/internal/SafeIterableMap;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field public mHashMap:Ljava/util/HashMap;
+.field private mHashMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -104,7 +104,7 @@
     return p1
 .end method
 
-.method public get(Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method protected get(Ljava/lang/Object;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

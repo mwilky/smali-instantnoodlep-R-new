@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;
+.class Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+.field final synthetic a:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/StaggeredGridLayoutManager;)V
+.method constructor <init>(Landroidx/recyclerview/widget/StaggeredGridLayoutManager;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;->a:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;

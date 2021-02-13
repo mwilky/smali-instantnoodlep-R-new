@@ -1,19 +1,19 @@
 .class public abstract Lcom/oneplus/screenshot/longshot/state/BaseState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/state/LongshotAction;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "AbsBaseState"
+.field private static final TAG:Ljava/lang/String; = "AbsBaseState"
 
 
 # instance fields
-.field public mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
+.field protected mOnStateListener:Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;
 
-.field public mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field protected mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
 
 # direct methods

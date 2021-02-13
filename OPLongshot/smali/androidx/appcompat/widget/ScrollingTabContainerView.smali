@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ScrollingTabContainerView;
 .super Landroid/widget/HorizontalScrollView;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -24,39 +24,39 @@
 
 
 # static fields
-.field public static final FADE_DURATION:I = 0xc8
+.field private static final FADE_DURATION:I = 0xc8
 
-.field public static final TAG:Ljava/lang/String; = "ScrollingTabContainerView"
+.field private static final TAG:Ljava/lang/String; = "ScrollingTabContainerView"
 
-.field public static final sAlphaInterpolator:Landroid/view/animation/Interpolator;
+.field private static final sAlphaInterpolator:Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field public mAllowCollapse:Z
+.field private mAllowCollapse:Z
 
-.field public mContentHeight:I
+.field private mContentHeight:I
 
-.field public mMaxTabWidth:I
+.field mMaxTabWidth:I
 
-.field public mSelectedTabIndex:I
+.field private mSelectedTabIndex:I
 
-.field public mStackedTabMaxWidth:I
+.field mStackedTabMaxWidth:I
 
-.field public mTabClickListener:Landroidx/appcompat/widget/ScrollingTabContainerView$c;
+.field private mTabClickListener:Landroidx/appcompat/widget/ScrollingTabContainerView$c;
 
-.field public mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
+.field mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
 
-.field public mTabSelector:Ljava/lang/Runnable;
+.field mTabSelector:Ljava/lang/Runnable;
 
-.field public mTabSpinner:Landroid/widget/Spinner;
+.field private mTabSpinner:Landroid/widget/Spinner;
 
-.field public final mVisAnimListener:Landroidx/appcompat/widget/ScrollingTabContainerView$e;
+.field protected final mVisAnimListener:Landroidx/appcompat/widget/ScrollingTabContainerView$e;
 
-.field public mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
+.field protected mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
@@ -131,7 +131,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/c/a;->actionDropDownStyle:I
+    sget v2, La/a/a;->actionDropDownStyle:I
 
     const/4 v3, 0x0
 
@@ -161,7 +161,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/c/a;->actionBarTabBarStyle:I
+    sget v2, La/a/a;->actionBarTabBarStyle:I
 
     const/4 v3, 0x0
 
@@ -495,20 +495,6 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    sget-object v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->sAlphaInterpolator:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mVisAnimListener:Landroidx/appcompat/widget/ScrollingTabContainerView$e;
-
-    invoke-virtual {v0, v2, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView$e;->a(Landroid/view/ViewPropertyAnimator;I)Landroidx/appcompat/widget/ScrollingTabContainerView$e;
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
-
     goto :goto_0
 
     :cond_2
@@ -520,6 +506,7 @@
 
     move-result-object v2
 
+    :goto_0
     invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     sget-object v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->sAlphaInterpolator:Landroid/view/animation/Interpolator;
@@ -534,11 +521,10 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    :goto_0
     return-void
 .end method
 
-.method public createTabView(Landroidx/appcompat/app/ActionBar$d;Z)Landroidx/appcompat/widget/ScrollingTabContainerView$d;
+.method createTabView(Landroidx/appcompat/app/ActionBar$d;Z)Landroidx/appcompat/widget/ScrollingTabContainerView$d;
     .locals 2
 
     new-instance v0, Landroidx/appcompat/widget/ScrollingTabContainerView$d;
@@ -606,7 +592,7 @@
     return-void
 .end method
 
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -750,16 +736,14 @@
 
     move-result p2
 
-    iput p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mMaxTabWidth:I
-
     goto :goto_2
 
     :cond_3
     const/4 p2, -0x1
 
+    :goto_2
     iput p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mMaxTabWidth:I
 
-    :goto_2
     iget p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mContentHeight:I
 
     invoke-static {p2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -778,7 +762,7 @@
     move v0, v1
 
     :goto_3
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mTabLayout:Landroidx/appcompat/widget/LinearLayoutCompat;
 
@@ -803,11 +787,6 @@
     :cond_5
     invoke-direct {p0}, Landroidx/appcompat/widget/ScrollingTabContainerView;->performExpand()Z
 
-    goto :goto_4
-
-    :cond_6
-    invoke-direct {p0}, Landroidx/appcompat/widget/ScrollingTabContainerView;->performExpand()Z
-
     :goto_4
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getMeasuredWidth()I
 
@@ -819,15 +798,15 @@
 
     move-result p1
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_6
 
-    if-eq v0, p1, :cond_7
+    if-eq v0, p1, :cond_6
 
     iget p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ScrollingTabContainerView;->setTabSelected(I)V
 
-    :cond_7
+    :cond_6
     return-void
 .end method
 

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/TimePickerClockDelegate$b;
+.class Lcom/google/android/material/picker/TimePickerClockDelegate$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
+.field final synthetic a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
+.method constructor <init>(Lcom/google/android/material/picker/TimePickerClockDelegate;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$b;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$b;->a:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->C(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->D(Lcom/google/android/material/picker/TimePickerClockDelegate;)Lcom/google/android/material/picker/NumericTextView;
 
     move-result-object v1
 

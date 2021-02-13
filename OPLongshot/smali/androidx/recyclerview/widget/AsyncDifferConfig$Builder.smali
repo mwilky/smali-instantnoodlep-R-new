@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,15 +24,15 @@
 
 
 # static fields
-.field public static sDiffExecutor:Ljava/util/concurrent/Executor;
+.field private static sDiffExecutor:Ljava/util/concurrent/Executor;
 
-.field public static final sExecutorLock:Ljava/lang/Object;
+.field private static final sExecutorLock:Ljava/lang/Object;
 
 
 # instance fields
-.field public mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+.field private mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
-.field public final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+.field private final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/DiffUtil$ItemCallback<",
@@ -41,14 +41,14 @@
     .end annotation
 .end field
 
-.field public mMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field private mMainThreadExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;

@@ -1,6 +1,6 @@
 .class public Landroidx/collection/LruCache;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -17,13 +17,13 @@
 
 
 # instance fields
-.field public createCount:I
+.field private createCount:I
 
-.field public evictionCount:I
+.field private evictionCount:I
 
-.field public hitCount:I
+.field private hitCount:I
 
-.field public final map:Ljava/util/LinkedHashMap;
+.field private final map:Ljava/util/LinkedHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashMap<",
@@ -32,13 +32,13 @@
     .end annotation
 .end field
 
-.field public maxSize:I
+.field private maxSize:I
 
-.field public missCount:I
+.field private missCount:I
 
-.field public putCount:I
+.field private putCount:I
 
-.field public size:I
+.field private size:I
 
 
 # direct methods
@@ -121,7 +121,7 @@
 
 
 # virtual methods
-.method public create(Ljava/lang/Object;)Ljava/lang/Object;
+.method protected create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
@@ -163,7 +163,7 @@
     throw v0
 .end method
 
-.method public entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
     .param p2    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
@@ -682,7 +682,7 @@
     throw v0
 .end method
 
-.method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+.method protected sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;

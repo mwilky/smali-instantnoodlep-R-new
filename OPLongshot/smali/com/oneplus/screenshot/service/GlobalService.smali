@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalService;
 .super Landroid/app/Service;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -10,7 +10,7 @@
 
 .field public static final EXTRA_URI:Ljava/lang/String; = "uri"
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.GlobalService"
+.field private static final TAG:Ljava/lang/String; = "Longshot.GlobalService"
 
 
 # direct methods

@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveTracker;
+.class Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveTracker;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "MoveTracker"
 .end annotation
 
 
 # instance fields
-.field public endTime:J
+.field endTime:J
 
-.field public isStart:Z
+.field private isStart:Z
 
-.field public mEndPoint:Landroid/graphics/Point;
+.field mEndPoint:Landroid/graphics/Point;
 
-.field public mStartPoint:Landroid/graphics/Point;
+.field mStartPoint:Landroid/graphics/Point;
 
-.field public moveDistance:I
+.field moveDistance:I
 
-.field public startTime:J
+.field startTime:J
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/longshot/state/LongshotMode;)V
+.method constructor <init>(Lcom/oneplus/screenshot/longshot/state/LongshotMode;)V
     .locals 3
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode$MoveTracker;->this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
@@ -85,7 +85,7 @@
     return v0
 .end method
 
-.method public moveTracker()V
+.method moveTracker()V
     .locals 0
 
     return-void

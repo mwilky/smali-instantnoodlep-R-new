@@ -1,6 +1,6 @@
 .class public Landroidx/core/graphics/TypefaceCompatApi26Impl;
 .super Landroidx/core/graphics/TypefaceCompatApi21Impl;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -16,33 +16,33 @@
 
 
 # static fields
-.field public static final ABORT_CREATION_METHOD:Ljava/lang/String; = "abortCreation"
+.field private static final ABORT_CREATION_METHOD:Ljava/lang/String; = "abortCreation"
 
-.field public static final ADD_FONT_FROM_ASSET_MANAGER_METHOD:Ljava/lang/String; = "addFontFromAssetManager"
+.field private static final ADD_FONT_FROM_ASSET_MANAGER_METHOD:Ljava/lang/String; = "addFontFromAssetManager"
 
-.field public static final ADD_FONT_FROM_BUFFER_METHOD:Ljava/lang/String; = "addFontFromBuffer"
+.field private static final ADD_FONT_FROM_BUFFER_METHOD:Ljava/lang/String; = "addFontFromBuffer"
 
-.field public static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
+.field private static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
 
-.field public static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
+.field private static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
 
-.field public static final FREEZE_METHOD:Ljava/lang/String; = "freeze"
+.field private static final FREEZE_METHOD:Ljava/lang/String; = "freeze"
 
-.field public static final RESOLVE_BY_FONT_TABLE:I = -0x1
+.field private static final RESOLVE_BY_FONT_TABLE:I = -0x1
 
-.field public static final TAG:Ljava/lang/String; = "TypefaceCompatApi26Impl"
+.field private static final TAG:Ljava/lang/String; = "TypefaceCompatApi26Impl"
 
 
 # instance fields
-.field public final mAbortCreation:Ljava/lang/reflect/Method;
+.field protected final mAbortCreation:Ljava/lang/reflect/Method;
 
-.field public final mAddFontFromAssetManager:Ljava/lang/reflect/Method;
+.field protected final mAddFontFromAssetManager:Ljava/lang/reflect/Method;
 
-.field public final mAddFontFromBuffer:Ljava/lang/reflect/Method;
+.field protected final mAddFontFromBuffer:Ljava/lang/reflect/Method;
 
-.field public final mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
+.field protected final mCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
-.field public final mFontFamily:Ljava/lang/Class;
+.field protected final mFontFamily:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public final mFontFamilyCtor:Ljava/lang/reflect/Constructor;
+.field protected final mFontFamilyCtor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field public final mFreeze:Ljava/lang/reflect/Method;
+.field protected final mFreeze:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -433,7 +433,7 @@
 
 
 # virtual methods
-.method public createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
+.method protected createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 5
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -914,7 +914,7 @@
     return-object p1
 .end method
 
-.method public obtainAbortCreationMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method protected obtainAbortCreationMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -938,7 +938,7 @@
     return-object p1
 .end method
 
-.method public obtainAddFontFromAssetManagerMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method protected obtainAddFontFromAssetManagerMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1006,7 +1006,7 @@
     return-object p1
 .end method
 
-.method public obtainAddFontFromBufferMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method protected obtainAddFontFromBufferMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1056,7 +1056,7 @@
     return-object p1
 .end method
 
-.method public obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method protected obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1106,7 +1106,7 @@
     return-object p1
 .end method
 
-.method public obtainFontFamily()Ljava/lang/Class;
+.method protected obtainFontFamily()Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1125,7 +1125,7 @@
     return-object v0
 .end method
 
-.method public obtainFontFamilyCtor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+.method protected obtainFontFamilyCtor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1148,7 +1148,7 @@
     return-object p1
 .end method
 
-.method public obtainFreezeMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method protected obtainFreezeMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

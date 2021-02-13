@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transition/MaskEvaluator;
+.class Lcom/google/android/material/transition/MaskEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,17 +10,17 @@
 
 
 # instance fields
-.field public final endPath:Landroid/graphics/Path;
+.field private final endPath:Landroid/graphics/Path;
 
-.field public final path:Landroid/graphics/Path;
+.field private final path:Landroid/graphics/Path;
 
-.field public final pathProvider:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
+.field private final pathProvider:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
 
-.field public final startPath:Landroid/graphics/Path;
+.field private final startPath:Landroid/graphics/Path;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public clip(Landroid/graphics/Canvas;)V
+.method clip(Landroid/graphics/Canvas;)V
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method public evaluate(FLcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/RectF;Lcom/google/android/material/transition/MaterialContainerTransform$c;)V
+.method evaluate(FLcom/google/android/material/shape/ShapeAppearanceModel;Lcom/google/android/material/shape/ShapeAppearanceModel;Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/RectF;Lcom/google/android/material/transition/MaterialContainerTransform$c;)V
     .locals 8
 
     iget v0, p7, Lcom/google/android/material/transition/MaterialContainerTransform$c;->a:F

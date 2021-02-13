@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ScrollingTabContainerView$e;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x4
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public a:Z
+.field private a:Z
 
-.field public b:I
+.field private b:I
 
-.field public final synthetic c:Landroidx/appcompat/widget/ScrollingTabContainerView;
+.field final synthetic c:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;)V
+.method protected constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$e;->c:Landroidx/appcompat/widget/ScrollingTabContainerView;

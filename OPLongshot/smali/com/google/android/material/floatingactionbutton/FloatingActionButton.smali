@@ -1,12 +1,12 @@
 .class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 .super Lcom/google/android/material/internal/VisibilityAwareImageButton;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/g/l/p;
+.implements Landroidx/core/view/p;
 .implements Landroidx/core/widget/TintableImageSourceView;
-.implements Lc/a/b/b/w/a;
-.implements Lc/a/b/b/e0/j;
+.implements Lb/a/b/a/o/a;
+.implements Lcom/google/android/material/shape/j;
 .implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;
 
 
@@ -24,73 +24,73 @@
 
 
 # static fields
-.field public static final s:I
+.field private static final s:I
 
 
 # instance fields
-.field public a:Z
+.field private a:Z
 
-.field public b:Landroid/content/res/ColorStateList;
+.field private b:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public c:Landroid/graphics/PorterDuff$Mode;
+.field private c:Landroid/graphics/PorterDuff$Mode;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public d:Landroid/content/res/ColorStateList;
+.field private d:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public e:Landroid/graphics/PorterDuff$Mode;
+.field private e:Landroid/graphics/PorterDuff$Mode;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public f:Landroid/content/res/ColorStateList;
+.field private f:Landroid/content/res/ColorStateList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public g:I
+.field private g:I
 
-.field public h:I
+.field private h:I
 
-.field public i:I
+.field private i:I
 
-.field public j:I
+.field private j:I
 
-.field public k:I
+.field private k:I
 
-.field public l:Z
+.field l:Z
 
-.field public final m:Landroid/graphics/Rect;
+.field final m:Landroid/graphics/Rect;
 
-.field public final n:Landroid/graphics/Rect;
+.field private final n:Landroid/graphics/Rect;
 
-.field public final o:Landroidx/appcompat/widget/AppCompatImageHelper;
+.field private final o:Landroidx/appcompat/widget/AppCompatImageHelper;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final p:Lc/a/b/b/w/b;
+.field private final p:Lb/a/b/a/o/b;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public q:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+.field private q:Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
-.field public r:Landroid/view/ViewOutlineProvider;
+.field r:Landroid/view/ViewOutlineProvider;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lc/a/b/b/k;->Widget_Design_FloatingActionButton:I
+    sget v0, Lb/a/b/a/k;->Widget_Design_FloatingActionButton:I
 
     sput v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->s:I
 
@@ -108,7 +108,7 @@
         .end annotation
     .end param
 
-    sget v0, Lc/a/b/b/b;->floatingActionButtonStyle:I
+    sget v0, Lb/a/b/a/b;->floatingActionButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -128,7 +128,7 @@
 
     sget v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->s:I
 
-    invoke-static {p1, p2, p3, v0}, Lc/a/b/b/i0/a/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, p3, v0}, Lb/a/b/a/q/a/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lc/a/b/b/l;->FloatingActionButton:[I
+    sget-object v3, Lb/a/b/a/l;->FloatingActionButton:[I
 
     sget v5, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->s:I
 
@@ -176,7 +176,7 @@
 
     move-result-object v1
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_backgroundTint:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_backgroundTint:I
 
     invoke-static {v0, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -184,7 +184,7 @@
 
     iput-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->b:Landroid/content/res/ColorStateList;
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_backgroundTintMode:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_backgroundTintMode:I
 
     const/4 v3, -0x1
 
@@ -200,7 +200,7 @@
 
     iput-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->c:Landroid/graphics/PorterDuff$Mode;
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_rippleColor:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_rippleColor:I
 
     invoke-static {v0, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
@@ -208,7 +208,7 @@
 
     iput-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->f:Landroid/content/res/ColorStateList;
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_fabSize:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_fabSize:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -216,7 +216,7 @@
 
     iput v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->h:I
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_fabCustomSize:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_fabCustomSize:I
 
     invoke-virtual {v1, v2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -224,7 +224,7 @@
 
     iput v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->i:I
 
-    sget v2, Lc/a/b/b/l;->FloatingActionButton_borderWidth:I
+    sget v2, Lb/a/b/a/l;->FloatingActionButton_borderWidth:I
 
     invoke-virtual {v1, v2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -242,11 +242,7 @@
 
     move-result-object v2
 
-    sget v4, Lc/a/b/b/d;->op_control_shadow_z3:I
-
-    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v2
+    sget v4, Lb/a/b/a/d;->op_control_shadow_z3:I
 
     goto :goto_0
 
@@ -255,14 +251,14 @@
 
     move-result-object v2
 
-    sget v4, Lc/a/b/b/d;->op_float_action_button_shadow_z8:I
+    sget v4, Lb/a/b/a/d;->op_float_action_button_shadow_z8:I
 
+    :goto_0
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    :goto_0
-    sget v4, Lc/a/b/b/l;->FloatingActionButton_hoveredFocusedTranslationZ:I
+    sget v4, Lb/a/b/a/l;->FloatingActionButton_hoveredFocusedTranslationZ:I
 
     const/4 v5, 0x0
 
@@ -270,11 +266,11 @@
 
     move-result v4
 
-    sget v6, Lc/a/b/b/l;->FloatingActionButton_pressedTranslationZ:I
+    sget v6, Lb/a/b/a/l;->FloatingActionButton_pressedTranslationZ:I
 
     invoke-virtual {v1, v6, v5}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
-    sget v5, Lc/a/b/b/l;->FloatingActionButton_useCompatPadding:I
+    sget v5, Lb/a/b/a/l;->FloatingActionButton_useCompatPadding:I
 
     invoke-virtual {v1, v5, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -286,13 +282,13 @@
 
     move-result-object v5
 
-    sget v6, Lc/a/b/b/d;->mtrl_fab_min_touch_target:I
+    sget v6, Lb/a/b/a/d;->mtrl_fab_min_touch_target:I
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    sget v6, Lc/a/b/b/l;->FloatingActionButton_maxImageSize:I
+    sget v6, Lb/a/b/a/l;->FloatingActionButton_maxImageSize:I
 
     invoke-virtual {v1, v6, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -300,23 +296,23 @@
 
     iput v6, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->k:I
 
-    sget v6, Lc/a/b/b/l;->FloatingActionButton_showMotionSpec:I
+    sget v6, Lb/a/b/a/l;->FloatingActionButton_showMotionSpec:I
 
-    invoke-static {v0, v1, v6}, Lc/a/b/b/m/a;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Lc/a/b/b/m/a;
+    invoke-static {v0, v1, v6}, Lcom/google/android/material/animation/a;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Lcom/google/android/material/animation/a;
 
     move-result-object v6
 
-    sget v7, Lc/a/b/b/l;->FloatingActionButton_hideMotionSpec:I
+    sget v7, Lb/a/b/a/l;->FloatingActionButton_hideMotionSpec:I
 
-    invoke-static {v0, v1, v7}, Lc/a/b/b/m/a;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Lc/a/b/b/m/a;
+    invoke-static {v0, v1, v7}, Lcom/google/android/material/animation/a;->b(Landroid/content/Context;Landroid/content/res/TypedArray;I)Lcom/google/android/material/animation/a;
 
     move-result-object v7
 
     sget v8, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->s:I
 
-    sget-object v9, Lcom/google/android/material/shape/ShapeAppearanceModel;->m:Lc/a/b/b/e0/b;
+    sget-object v9, Lcom/google/android/material/shape/ShapeAppearanceModel;->m:Lcom/google/android/material/shape/b;
 
-    invoke-static {v0, p2, p3, v8, v9}, Lcom/google/android/material/shape/ShapeAppearanceModel;->g(Landroid/content/Context;Landroid/util/AttributeSet;IILc/a/b/b/e0/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
+    invoke-static {v0, p2, p3, v8, v9}, Lcom/google/android/material/shape/ShapeAppearanceModel;->g(Landroid/content/Context;Landroid/util/AttributeSet;IILcom/google/android/material/shape/b;)Lcom/google/android/material/shape/ShapeAppearanceModel$b;
 
     move-result-object v0
 
@@ -324,13 +320,13 @@
 
     move-result-object v0
 
-    sget v8, Lc/a/b/b/l;->FloatingActionButton_ensureMinTouchTargetSize:I
+    sget v8, Lb/a/b/a/l;->FloatingActionButton_ensureMinTouchTargetSize:I
 
     invoke-virtual {v1, v8, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v8
 
-    sget v9, Lc/a/b/b/l;->FloatingActionButton_android_enabled:I
+    sget v9, Lb/a/b/a/l;->FloatingActionButton_android_enabled:I
 
     invoke-virtual {v1, v9, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -338,7 +334,7 @@
 
     invoke-virtual {p0, v3}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
-    sget v3, Lc/a/b/b/l;->FloatingActionButton_scrollHide:I
+    sget v3, Lb/a/b/a/l;->FloatingActionButton_scrollHide:I
 
     invoke-virtual {v1, v3, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -356,11 +352,11 @@
 
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageHelper;->loadFromAttributes(Landroid/util/AttributeSet;I)V
 
-    new-instance p1, Lc/a/b/b/w/b;
+    new-instance p1, Lb/a/b/a/o/b;
 
-    invoke-direct {p1, p0}, Lc/a/b/b/w/b;-><init>(Lc/a/b/b/w/a;)V
+    invoke-direct {p1, p0}, Lb/a/b/a/o/b;-><init>(Lb/a/b/a/o/a;)V
 
-    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
@@ -412,13 +408,13 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {p1, v6}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lcom/google/android/material/animation/a;)V
 
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     move-result-object p1
 
-    invoke-virtual {p1, v7}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {p1, v7}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lcom/google/android/material/animation/a;)V
 
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
@@ -437,7 +433,7 @@
     return-void
 .end method
 
-.method public static synthetic b(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)I
+.method static synthetic b(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)I
     .locals 0
 
     iget p0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j:I
@@ -445,12 +441,45 @@
     return p0
 .end method
 
-.method public static synthetic c(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic c(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
+.end method
+
+.method private g()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/shadow/a;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/shadow/a;)V
+
+    return-object v0
 .end method
 
 .method private getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
@@ -460,7 +489,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->g()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->g()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     move-result-object v0
 
@@ -472,7 +501,176 @@
     return-object v0
 .end method
 
-.method public static r(II)I
+.method private j(I)I
+    .locals 3
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->i:I
+
+    if-eqz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x1
+
+    if-eq p1, v1, :cond_2
+
+    if-eq p1, v2, :cond_1
+
+    sget p1, Lb/a/b/a/d;->op_control_avatar_size2:I
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    sget p1, Lb/a/b/a/d;->design_fab_size_mini:I
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->screenHeightDp:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    const/16 v0, 0x1d6
+
+    if-ge p1, v0, :cond_3
+
+    invoke-direct {p0, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
+
+    move-result p1
+
+    :goto_1
+    return p1
+.end method
+
+.method private p(Landroid/graphics/Rect;)V
+    .locals 3
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget v0, p1, Landroid/graphics/Rect;->left:I
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->m:Landroid/graphics/Rect;
+
+    iget v2, v1, Landroid/graphics/Rect;->left:I
+
+    add-int/2addr v0, v2
+
+    iput v0, p1, Landroid/graphics/Rect;->left:I
+
+    iget v0, p1, Landroid/graphics/Rect;->top:I
+
+    iget v2, v1, Landroid/graphics/Rect;->top:I
+
+    add-int/2addr v0, v2
+
+    iput v0, p1, Landroid/graphics/Rect;->top:I
+
+    iget v0, p1, Landroid/graphics/Rect;->right:I
+
+    iget v2, v1, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr v0, v2
+
+    iput v0, p1, Landroid/graphics/Rect;->right:I
+
+    iget v0, p1, Landroid/graphics/Rect;->bottom:I
+
+    iget v1, v1, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p1, Landroid/graphics/Rect;->bottom:I
+
+    return-void
+.end method
+
+.method private q()V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->d:Landroid/content/res/ColorStateList;
+
+    if-nez v1, :cond_1
+
+    invoke-static {v0}, Landroidx/core/graphics/drawable/a;->c(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->getDrawableState()[I
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->e:Landroid/graphics/PorterDuff$Mode;
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v1, v2}, Landroidx/appcompat/widget/AppCompatDrawableManager;->getPorterDuffColorFilter(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-void
+.end method
+
+.method private static r(II)I
     .locals 2
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
@@ -514,14 +712,37 @@
     return p0
 .end method
 
+.method private v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
+    .locals 1
+    .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$d;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$d;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public a()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
-    invoke-virtual {v0}, Lc/a/b/b/w/b;->c()Z
+    invoke-virtual {v0}, Lb/a/b/a/o/b;->c()Z
 
     move-result v0
 
@@ -544,7 +765,7 @@
     return-void
 .end method
 
-.method public drawableStateChanged()V
+.method protected drawableStateChanged()V
     .locals 2
 
     invoke-super {p0}, Landroid/widget/ImageButton;->drawableStateChanged()V
@@ -605,39 +826,6 @@
     invoke-virtual {v0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->addTransformationCallback(Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$h;)V
 
     return-void
-.end method
-
-.method public final g()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;
-
-    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
-
-    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
-
-    invoke-direct {v0, p0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/a/b/b/d0/a;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
-
-    new-instance v1, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;
-
-    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$f;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;)V
-
-    invoke-direct {v0, p0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lc/a/b/b/d0/a;)V
-
-    return-object v0
 .end method
 
 .method public getBackgroundTintList()Landroid/content/res/ColorStateList;
@@ -752,16 +940,16 @@
 .method public getExpandedComponentIdHint()I
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
-    invoke-virtual {v0}, Lc/a/b/b/w/b;->b()I
+    invoke-virtual {v0}, Lb/a/b/a/o/b;->b()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public getHideMotionSpec()Lc/a/b/b/m/a;
+.method public getHideMotionSpec()Lcom/google/android/material/animation/a;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -770,7 +958,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getHideMotionSpec()Lc/a/b/b/m/a;
+    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getHideMotionSpec()Lcom/google/android/material/animation/a;
 
     move-result-object v0
 
@@ -842,7 +1030,7 @@
     return-object v0
 .end method
 
-.method public getShowMotionSpec()Lc/a/b/b/m/a;
+.method public getShowMotionSpec()Lcom/google/android/material/animation/a;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -851,7 +1039,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getShowMotionSpec()Lc/a/b/b/m/a;
+    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->getShowMotionSpec()Lcom/google/android/material/animation/a;
 
     move-result-object v0
 
@@ -866,12 +1054,12 @@
     return v0
 .end method
 
-.method public getSizeDimension()I
+.method getSizeDimension()I
     .locals 1
 
     iget v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->h:I
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
+    invoke-direct {p0, v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
 
     move-result v0
 
@@ -957,7 +1145,7 @@
 
     invoke-virtual {p1, v1, v1, v0, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p(Landroid/graphics/Rect;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x1
 
@@ -986,86 +1174,9 @@
 
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p(Landroid/graphics/Rect;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p(Landroid/graphics/Rect;)V
 
     return-void
-.end method
-
-.method public final j(I)I
-    .locals 3
-
-    iget v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->i:I
-
-    if-eqz v0, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x1
-
-    if-eq p1, v1, :cond_2
-
-    if-eq p1, v2, :cond_1
-
-    sget p1, Lc/a/b/b/d;->op_control_avatar_size2:I
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    sget p1, Lc/a/b/b/d;->design_fab_size_mini:I
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/content/res/Configuration;->screenWidthDp:I
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->screenHeightDp:I
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    const/16 v0, 0x1d6
-
-    if-ge p1, v0, :cond_3
-
-    invoke-virtual {p0, v2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->j(I)I
-
-    move-result p1
-
-    :goto_0
-    return p1
 .end method
 
 .method public jumpDrawablesToCurrentState()V
@@ -1096,7 +1207,7 @@
     return-void
 .end method
 
-.method public l(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;Z)V
+.method l(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;Z)V
     .locals 1
     .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
         .annotation build Landroidx/annotation/Nullable;
@@ -1107,7 +1218,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
 
     move-result-object p1
 
@@ -1193,7 +1304,7 @@
     return v0
 .end method
 
-.method public onAttachedToWindow()V
+.method protected onAttachedToWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/ImageButton;->onAttachedToWindow()V
@@ -1207,7 +1318,7 @@
     return-void
 .end method
 
-.method public onDetachedFromWindow()V
+.method protected onDetachedFromWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/ImageButton;->onDetachedFromWindow()V
@@ -1221,7 +1332,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 2
 
     invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getSizeDimension()I
@@ -1277,7 +1388,7 @@
     return-void
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
 
     instance-of v0, p1, Lcom/google/android/material/stateful/ExtendableSavedState;
@@ -1297,7 +1408,7 @@
 
     invoke-super {p0, v0}, Landroid/widget/ImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
     iget-object p1, p1, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
 
@@ -1313,12 +1424,12 @@
 
     check-cast p1, Landroid/os/Bundle;
 
-    invoke-virtual {v0, p1}, Lc/a/b/b/w/b;->d(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lb/a/b/a/o/b;->d(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 4
 
     invoke-super {p0}, Landroid/widget/ImageButton;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -1338,9 +1449,9 @@
 
     iget-object v0, v1, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
 
-    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
-    invoke-virtual {v2}, Lc/a/b/b/w/b;->e()Landroid/os/Bundle;
+    invoke-virtual {v2}, Lb/a/b/a/o/b;->e()Landroid/os/Bundle;
 
     move-result-object v2
 
@@ -1402,101 +1513,6 @@
     move-result p1
 
     return p1
-.end method
-
-.method public final p(Landroid/graphics/Rect;)V
-    .locals 3
-    .param p1    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget v0, p1, Landroid/graphics/Rect;->left:I
-
-    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->m:Landroid/graphics/Rect;
-
-    iget v2, v1, Landroid/graphics/Rect;->left:I
-
-    add-int/2addr v0, v2
-
-    iput v0, p1, Landroid/graphics/Rect;->left:I
-
-    iget v0, p1, Landroid/graphics/Rect;->top:I
-
-    iget v2, v1, Landroid/graphics/Rect;->top:I
-
-    add-int/2addr v0, v2
-
-    iput v0, p1, Landroid/graphics/Rect;->top:I
-
-    iget v0, p1, Landroid/graphics/Rect;->right:I
-
-    iget v2, v1, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr v0, v2
-
-    iput v0, p1, Landroid/graphics/Rect;->right:I
-
-    iget v0, p1, Landroid/graphics/Rect;->bottom:I
-
-    iget v1, v1, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v0, v1
-
-    iput v0, p1, Landroid/graphics/Rect;->bottom:I
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/widget/ImageButton;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->d:Landroid/content/res/ColorStateList;
-
-    if-nez v1, :cond_1
-
-    invoke-static {v0}, Lb/g/f/f/a;->c(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/widget/ImageButton;->getDrawableState()[I
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->e:Landroid/graphics/PorterDuff$Mode;
-
-    if-nez v2, :cond_2
-
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v1, v2}, Landroidx/appcompat/widget/AppCompatDrawableManager;->getPorterDuffColorFilter(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    return-void
 .end method
 
 .method public s(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)V
@@ -1770,16 +1786,16 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lc/a/b/b/w/b;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->p:Lb/a/b/a/o/b;
 
-    invoke-virtual {v0, p1}, Lc/a/b/b/w/b;->f(I)V
+    invoke-virtual {v0, p1}, Lb/a/b/a/o/b;->f(I)V
 
     return-void
 .end method
 
-.method public setHideMotionSpec(Lc/a/b/b/m/a;)V
+.method public setHideMotionSpec(Lcom/google/android/material/animation/a;)V
     .locals 1
-    .param p1    # Lc/a/b/b/m/a;
+    .param p1    # Lcom/google/android/material/animation/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -1788,7 +1804,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lcom/google/android/material/animation/a;)V
 
     return-void
 .end method
@@ -1804,11 +1820,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lc/a/b/b/m/a;->c(Landroid/content/Context;I)Lc/a/b/b/m/a;
+    invoke-static {v0, p1}, Lcom/google/android/material/animation/a;->c(Landroid/content/Context;I)Lcom/google/android/material/animation/a;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setHideMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setHideMotionSpec(Lcom/google/android/material/animation/a;)V
 
     return-void
 .end method
@@ -1838,7 +1854,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
 
     :cond_0
     return-void
@@ -1855,7 +1871,7 @@
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageHelper;->setImageResource(I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
 
     return-void
 .end method
@@ -1973,9 +1989,9 @@
     return-void
 .end method
 
-.method public setShowMotionSpec(Lc/a/b/b/m/a;)V
+.method public setShowMotionSpec(Lcom/google/android/material/animation/a;)V
     .locals 1
-    .param p1    # Lc/a/b/b/m/a;
+    .param p1    # Lcom/google/android/material/animation/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -1984,7 +2000,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lcom/google/android/material/animation/a;)V
 
     return-void
 .end method
@@ -2000,11 +2016,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lc/a/b/b/m/a;->c(Landroid/content/Context;I)Lc/a/b/b/m/a;
+    invoke-static {v0, p1}, Lcom/google/android/material/animation/a;->c(Landroid/content/Context;I)Lcom/google/android/material/animation/a;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setShowMotionSpec(Lc/a/b/b/m/a;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setShowMotionSpec(Lcom/google/android/material/animation/a;)V
 
     return-void
 .end method
@@ -2065,7 +2081,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->d:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
 
     :cond_0
     return-void
@@ -2084,7 +2100,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->e:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->q()V
 
     :cond_0
     return-void
@@ -2159,7 +2175,7 @@
     return-void
 .end method
 
-.method public t(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;Z)V
+.method t(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;Z)V
     .locals 1
     .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
         .annotation build Landroidx/annotation/Nullable;
@@ -2170,7 +2186,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
 
     move-result-object p1
 
@@ -2224,27 +2240,4 @@
 
     :cond_0
     return-void
-.end method
-
-.method public final v(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$i;
-    .locals 1
-    .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$d;
-
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton$d;-><init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/floatingactionbutton/FloatingActionButton$e;)V
-
-    return-object v0
 .end method

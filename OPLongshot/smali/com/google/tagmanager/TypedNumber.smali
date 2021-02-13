@@ -1,6 +1,6 @@
-.class public Lcom/google/tagmanager/TypedNumber;
+.class Lcom/google/tagmanager/TypedNumber;
 .super Ljava/lang/Number;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field public mDouble:D
+.field private mDouble:D
 
-.field public mInt64:J
+.field private mInt64:J
 
-.field public mIsInt64:Z
+.field private mIsInt64:Z
 
 
 # direct methods
-.method public constructor <init>(D)V
+.method private constructor <init>(D)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public constructor <init>(J)V
+.method private constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V

@@ -1,6 +1,6 @@
-.class public final Landroidx/appcompat/app/AppCompatDelegateImpl$a;
+.class final Landroidx/appcompat/app/AppCompatDelegateImpl$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Thread$UncaughtExceptionHandler;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field final synthetic a:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+.method constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$a;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
@@ -32,9 +32,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/Throwable;)Z
+.method private a(Ljava/lang/Throwable;)Z
     .locals 2
 
     instance-of v0, p1, Landroid/content/res/Resources$NotFoundException;
@@ -72,10 +70,12 @@
     return v1
 .end method
 
+
+# virtual methods
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 3
 
-    invoke-virtual {p0, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl$a;->a(Ljava/lang/Throwable;)Z
+    invoke-direct {p0, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl$a;->a(Ljava/lang/Throwable;)Z
 
     move-result v0
 

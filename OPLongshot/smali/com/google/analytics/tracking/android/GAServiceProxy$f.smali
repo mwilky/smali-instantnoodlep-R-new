@@ -1,6 +1,6 @@
-.class public Lcom/google/analytics/tracking/android/GAServiceProxy$f;
+.class Lcom/google/analytics/tracking/android/GAServiceProxy$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "f"
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/util/Map;
+.field private final a:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -26,11 +26,11 @@
     .end annotation
 .end field
 
-.field public final b:J
+.field private final b:J
 
-.field public final c:Ljava/lang/String;
+.field private final c:Ljava/lang/String;
 
-.field public final d:Ljava/util/List;
+.field private final d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",

@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/Native;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const-string v0, "encryptjni"

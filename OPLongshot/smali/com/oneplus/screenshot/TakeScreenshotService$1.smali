@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/TakeScreenshotService$1;
+.class Lcom/oneplus/screenshot/TakeScreenshotService$1;
 .super Landroid/os/Handler;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/TakeScreenshotService;
+.field final synthetic this$0:Lcom/oneplus/screenshot/TakeScreenshotService;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/TakeScreenshotService;)V
+.method constructor <init>(Lcom/oneplus/screenshot/TakeScreenshotService;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/TakeScreenshotService$1;->this$0:Lcom/oneplus/screenshot/TakeScreenshotService;

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/edgeeffect/SpringNestScrollView$b;
+.class Lcom/google/android/material/edgeeffect/SpringNestScrollView$b;
 .super Lcom/google/android/material/edgeeffect/SpringNestScrollView$SEdgeEffectFactory;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
+.field final synthetic a:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)V
+.method private constructor <init>(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/edgeeffect/SpringNestScrollView$b;->a:Lcom/google/android/material/edgeeffect/SpringNestScrollView;
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/google/android/material/edgeeffect/SpringNestScrollView;Lcom/google/android/material/edgeeffect/SpringNestScrollView$1;)V
+.method synthetic constructor <init>(Lcom/google/android/material/edgeeffect/SpringNestScrollView;Lcom/google/android/material/edgeeffect/SpringNestScrollView$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/edgeeffect/SpringNestScrollView$b;-><init>(Lcom/google/android/material/edgeeffect/SpringNestScrollView;)V
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+.method protected a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/snackbar/SnackbarContentLayout;
 .super Landroid/widget/LinearLayout;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lc/a/b/b/g0/a;
+.implements Lcom/google/android/material/snackbar/a;
 
 
 # annotations
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public actionView:Landroid/widget/Button;
+.field private actionView:Landroid/widget/Button;
 
-.field public maxInlineActionWidth:I
+.field private maxInlineActionWidth:I
 
-.field public maxWidth:I
+.field private maxWidth:I
 
-.field public messageView:Landroid/widget/TextView;
+.field private messageView:Landroid/widget/TextView;
 
 
 # direct methods
@@ -52,13 +52,13 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lc/a/b/b/l;->SnackbarLayout:[I
+    sget-object v0, Lb/a/b/a/l;->SnackbarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/l;->SnackbarLayout_android_maxWidth:I
+    sget p2, Lb/a/b/a/l;->SnackbarLayout_android_maxWidth:I
 
     const/4 v0, -0x1
 
@@ -68,7 +68,7 @@
 
     iput p2, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->maxWidth:I
 
-    sget p2, Lc/a/b/b/l;->SnackbarLayout_maxActionInlineWidth:I
+    sget p2, Lb/a/b/a/l;->SnackbarLayout_maxActionInlineWidth:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public static updateTopBottomPadding(Landroid/view/View;II)V
+.method private static updateTopBottomPadding(Landroid/view/View;II)V
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -199,7 +199,7 @@
 
     move-result-object v0
 
-    sget v2, Lc/a/b/b/d;->op_control_margin_space3:I
+    sget v2, Lb/a/b/a/d;->op_control_margin_space3:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -378,12 +378,12 @@
     return-object v0
 .end method
 
-.method public onFinishInflate()V
+.method protected onFinishInflate()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    sget v0, Lc/a/b/b/f;->snackbar_text:I
+    sget v0, Lb/a/b/a/f;->snackbar_text:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -393,7 +393,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->messageView:Landroid/widget/TextView;
 
-    sget v0, Lc/a/b/b/f;->snackbar_action:I
+    sget v0, Lb/a/b/a/f;->snackbar_action:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -406,7 +406,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 7
 
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
@@ -436,7 +436,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/d;->design_snackbar_padding_vertical_2lines:I
+    sget v1, Lb/a/b/a/d;->design_snackbar_padding_vertical_2lines:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -446,7 +446,7 @@
 
     move-result-object v1
 
-    sget v2, Lc/a/b/b/d;->design_snackbar_padding_vertical:I
+    sget v2, Lb/a/b/a/d;->design_snackbar_padding_vertical:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -537,7 +537,7 @@
     return-void
 .end method
 
-.method public updateActionTextColorAlphaIfNeeded(F)V
+.method updateActionTextColorAlphaIfNeeded(F)V
     .locals 2
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -552,13 +552,13 @@
 
     move-result v0
 
-    sget v1, Lc/a/b/b/b;->colorSurface:I
+    sget v1, Lb/a/b/a/b;->colorSurface:I
 
-    invoke-static {p0, v1}, Lc/a/b/b/s/a;->b(Landroid/view/View;I)I
+    invoke-static {p0, v1}, Lb/a/b/a/m/a;->b(Landroid/view/View;I)I
 
     move-result v1
 
-    invoke-static {v1, v0, p1}, Lc/a/b/b/s/a;->d(IIF)I
+    invoke-static {v1, v0, p1}, Lb/a/b/a/m/a;->d(IIF)I
 
     move-result p1
 

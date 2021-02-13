@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/service/GlobalNotification;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,31 +13,31 @@
 
 
 # static fields
-.field public static final NOTIFICATION_TAG:Ljava/lang/String; = "Longshot"
+.field private static final NOTIFICATION_TAG:Ljava/lang/String; = "Longshot"
 
 .field public static final SAVE_DONE:I = 0x1
 
 .field public static final SAVE_ERROR:I = 0x2
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.GlobalNotification"
+.field private static final TAG:Ljava/lang/String; = "Longshot.GlobalNotification"
 
-.field public static sInstance:Lcom/oneplus/screenshot/service/GlobalNotification;
+.field private static sInstance:Lcom/oneplus/screenshot/service/GlobalNotification;
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public mNotificationManager:Landroid/app/NotificationManager;
+.field private mNotificationManager:Landroid/app/NotificationManager;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
+.method private constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/service/GlobalNotification;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/oneplus/screenshot/service/GlobalNotification;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/screenshot/service/GlobalNotification;->mContext:Landroid/content/Context;

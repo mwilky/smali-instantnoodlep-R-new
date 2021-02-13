@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/bottomsheet/BottomSheetBehavior$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

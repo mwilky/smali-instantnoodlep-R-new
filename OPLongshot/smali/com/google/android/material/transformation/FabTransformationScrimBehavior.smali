@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transformation/FabTransformationScrimBehavior;
 .super Lcom/google/android/material/transformation/ExpandableTransformationBehavior;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,9 +9,9 @@
 
 
 # instance fields
-.field public final b:Lc/a/b/b/m/b;
+.field private final b:Lcom/google/android/material/animation/b;
 
-.field public final c:Lc/a/b/b/m/b;
+.field private final c:Lcom/google/android/material/animation/b;
 
 
 # direct methods
@@ -20,23 +20,23 @@
 
     invoke-direct {p0}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>()V
 
-    new-instance v0, Lc/a/b/b/m/b;
+    new-instance v0, Lcom/google/android/material/animation/b;
 
     const-wide/16 v1, 0x4b
 
     const-wide/16 v3, 0x96
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lc/a/b/b/m/b;-><init>(JJ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/material/animation/b;-><init>(JJ)V
 
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lc/a/b/b/m/b;
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lcom/google/android/material/animation/b;
 
-    new-instance v0, Lc/a/b/b/m/b;
+    new-instance v0, Lcom/google/android/material/animation/b;
 
     const-wide/16 v1, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lc/a/b/b/m/b;-><init>(JJ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/material/animation/b;-><init>(JJ)V
 
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lc/a/b/b/m/b;
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lcom/google/android/material/animation/b;
 
     return-void
 .end method
@@ -46,78 +46,28 @@
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance p1, Lc/a/b/b/m/b;
+    new-instance p1, Lcom/google/android/material/animation/b;
 
     const-wide/16 v0, 0x4b
 
     const-wide/16 v2, 0x96
 
-    invoke-direct {p1, v0, v1, v2, v3}, Lc/a/b/b/m/b;-><init>(JJ)V
+    invoke-direct {p1, v0, v1, v2, v3}, Lcom/google/android/material/animation/b;-><init>(JJ)V
 
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lc/a/b/b/m/b;
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lcom/google/android/material/animation/b;
 
-    new-instance p1, Lc/a/b/b/m/b;
+    new-instance p1, Lcom/google/android/material/animation/b;
 
     const-wide/16 v0, 0x0
 
-    invoke-direct {p1, v0, v1, v2, v3}, Lc/a/b/b/m/b;-><init>(JJ)V
+    invoke-direct {p1, v0, v1, v2, v3}, Lcom/google/android/material/animation/b;-><init>(JJ)V
 
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lc/a/b/b/m/b;
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lcom/google/android/material/animation/b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 6
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    move-object v0, p0
-
-    move-object v1, p2
-
-    move v2, p3
-
-    move v3, p4
-
-    move-object v4, p1
-
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c(Landroid/view/View;ZZLjava/util/List;Ljava/util/List;)V
-
-    new-instance p4, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p4}, Landroid/animation/AnimatorSet;-><init>()V
-
-    invoke-static {p4, p1}, Lcom/google/android/material/animation/AnimatorSetCompat;->playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
-
-    new-instance p1, Lcom/google/android/material/transformation/FabTransformationScrimBehavior$a;
-
-    invoke-direct {p1, p0, p3, p2}, Lcom/google/android/material/transformation/FabTransformationScrimBehavior$a;-><init>(Lcom/google/android/material/transformation/FabTransformationScrimBehavior;ZLandroid/view/View;)V
-
-    invoke-virtual {p4, p1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p4
-.end method
-
-.method public final c(Landroid/view/View;ZZLjava/util/List;Ljava/util/List;)V
+.method private c(Landroid/view/View;ZZLjava/util/List;Ljava/util/List;)V
     .locals 3
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -143,12 +93,12 @@
 
     if-eqz p2, :cond_0
 
-    iget-object p5, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lc/a/b/b/m/b;
+    iget-object p5, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->b:Lcom/google/android/material/animation/b;
 
     goto :goto_0
 
     :cond_0
-    iget-object p5, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lc/a/b/b/m/b;
+    iget-object p5, p0, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c:Lcom/google/android/material/animation/b;
 
     :goto_0
     const/4 v0, 0x0
@@ -190,11 +140,61 @@
     move-result-object p1
 
     :goto_1
-    invoke-virtual {p5, p1}, Lc/a/b/b/m/b;->a(Landroid/animation/Animator;)V
+    invoke-virtual {p5, p1}, Lcom/google/android/material/animation/b;->a(Landroid/animation/Animator;)V
 
     invoke-interface {p4, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method protected b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+    .locals 6
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move v2, p3
+
+    move v3, p4
+
+    move-object v4, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/transformation/FabTransformationScrimBehavior;->c(Landroid/view/View;ZZLjava/util/List;Ljava/util/List;)V
+
+    new-instance p4, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p4}, Landroid/animation/AnimatorSet;-><init>()V
+
+    invoke-static {p4, p1}, Lcom/google/android/material/animation/AnimatorSetCompat;->playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
+
+    new-instance p1, Lcom/google/android/material/transformation/FabTransformationScrimBehavior$a;
+
+    invoke-direct {p1, p0, p3, p2}, Lcom/google/android/material/transformation/FabTransformationScrimBehavior$a;-><init>(Lcom/google/android/material/transformation/FabTransformationScrimBehavior;ZLandroid/view/View;)V
+
+    invoke-virtual {p4, p1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object p4
 .end method
 
 .method public layoutDependsOn(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z

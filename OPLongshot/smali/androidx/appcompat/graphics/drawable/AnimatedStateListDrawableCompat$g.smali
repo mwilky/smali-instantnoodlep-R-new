@@ -1,6 +1,6 @@
-.class public abstract Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$g;
+.class abstract Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$g;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x40a
     name = "g"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$a;)V
+.method synthetic constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$g;-><init>()V

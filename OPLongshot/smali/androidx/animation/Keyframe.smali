@@ -1,6 +1,6 @@
 .class public abstract Landroidx/animation/Keyframe;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field public mFraction:F
+.field mFraction:F
 
-.field public mHasValue:Z
+.field mHasValue:Z
 
-.field public mInterpolator:Lb/b/d;
+.field private mInterpolator:Landroidx/animation/d;
 
-.field public mValueType:Ljava/lang/Class;
+.field mValueType:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field public mValueWasSetOnStart:Z
+.field mValueWasSetOnStart:Z
 
 
 # direct methods
@@ -53,7 +53,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Lb/b/d;
+    iput-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-void
 .end method
@@ -219,12 +219,12 @@
     return v0
 .end method
 
-.method public getInterpolator()Lb/b/d;
+.method public getInterpolator()Landroidx/animation/d;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Lb/b/d;
+    iget-object v0, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-object v0
 .end method
@@ -272,14 +272,14 @@
     return-void
 .end method
 
-.method public setInterpolator(Lb/b/d;)V
+.method public setInterpolator(Landroidx/animation/d;)V
     .locals 0
-    .param p1    # Lb/b/d;
+    .param p1    # Landroidx/animation/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    iput-object p1, p0, Landroidx/animation/Keyframe;->mInterpolator:Lb/b/d;
+    iput-object p1, p0, Landroidx/animation/Keyframe;->mInterpolator:Landroidx/animation/d;
 
     return-void
 .end method
@@ -296,7 +296,7 @@
     .end annotation
 .end method
 
-.method public setValueWasSetOnStart(Z)V
+.method setValueWasSetOnStart(Z)V
     .locals 0
 
     iput-boolean p1, p0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z
@@ -304,7 +304,7 @@
     return-void
 .end method
 
-.method public valueWasSetOnStart()Z
+.method valueWasSetOnStart()Z
     .locals 1
 
     iget-boolean v0, p0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z

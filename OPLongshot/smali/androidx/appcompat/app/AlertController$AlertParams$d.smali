@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AlertController$AlertParams$d;
+.class Landroidx/appcompat/app/AlertController$AlertParams$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/AlertController;
+.field final synthetic a:Landroidx/appcompat/app/AlertController;
 
-.field public final synthetic b:Landroidx/appcompat/app/AlertController$AlertParams;
+.field final synthetic b:Landroidx/appcompat/app/AlertController$AlertParams;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;)V
+.method constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$d;->b:Landroidx/appcompat/app/AlertController$AlertParams;
@@ -83,7 +83,7 @@
 
     iget-object p4, p0, Landroidx/appcompat/app/AlertController$AlertParams$d;->a:Landroidx/appcompat/app/AlertController;
 
-    iget-object p4, p4, Landroidx/appcompat/app/AlertController;->b:Lb/c/k/d;
+    iget-object p4, p4, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
 
     invoke-virtual {p1}, Landroid/widget/CheckedTextView;->isChecked()Z
 

@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/Logger$LogLevel;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/tagmanager/Logger$LogLevel;
+.field private static final synthetic $VALUES:[Lcom/google/tagmanager/Logger$LogLevel;
 
 .field public static final enum DEBUG:Lcom/google/tagmanager/Logger$LogLevel;
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 9
 
     new-instance v0, Lcom/google/tagmanager/Logger$LogLevel;
@@ -133,7 +133,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

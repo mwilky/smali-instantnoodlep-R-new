@@ -1,6 +1,6 @@
-.class public abstract Lcom/google/android/material/transition/MaterialTransitionSet;
+.class abstract Lcom/google/android/material/transition/MaterialTransitionSet;
 .super Landroid/transition/TransitionSet;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -19,12 +19,12 @@
 
 
 # instance fields
-.field public context:Landroid/content/Context;
+.field protected context:Landroid/content/Context;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public primaryTransition:Landroid/transition/Transition;
+.field private primaryTransition:Landroid/transition/Transition;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -35,14 +35,14 @@
     .end annotation
 .end field
 
-.field public secondaryTransition:Landroid/transition/Transition;
+.field private secondaryTransition:Landroid/transition/Transition;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroid/transition/TransitionSet;-><init>()V
@@ -52,7 +52,7 @@
 
 
 # virtual methods
-.method public abstract getDefaultPrimaryTransition()Landroid/transition/Transition;
+.method abstract getDefaultPrimaryTransition()Landroid/transition/Transition;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -63,7 +63,7 @@
     .end annotation
 .end method
 
-.method public abstract getDefaultSecondaryTransition()Landroid/transition/Transition;
+.method abstract getDefaultSecondaryTransition()Landroid/transition/Transition;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
@@ -94,7 +94,7 @@
     return-object v0
 .end method
 
-.method public initialize(Landroid/content/Context;)V
+.method protected initialize(Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transition/MaterialTransitionSet;->context:Landroid/content/Context;

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x4
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/ReferenceQueue;
+.field private final a:Ljava/lang/ref/ReferenceQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/ReferenceQueue<",
@@ -25,11 +25,11 @@
     .end annotation
 .end field
 
-.field public final synthetic b:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field final synthetic b:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
+.method protected constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;->b:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;

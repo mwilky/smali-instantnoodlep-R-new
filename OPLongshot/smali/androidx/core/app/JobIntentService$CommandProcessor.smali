@@ -1,6 +1,6 @@
-.class public final Landroidx/core/app/JobIntentService$CommandProcessor;
+.class final Landroidx/core/app/JobIntentService$CommandProcessor;
 .super Landroid/os/AsyncTask;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x10
     name = "CommandProcessor"
 .end annotation
 
@@ -25,11 +25,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/core/app/JobIntentService;
+.field final synthetic this$0:Landroidx/core/app/JobIntentService;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/app/JobIntentService;)V
+.method constructor <init>(Landroidx/core/app/JobIntentService;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Void;
@@ -53,13 +53,13 @@
     return-object p1
 .end method
 
-.method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
+.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 2
 
     :goto_0
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->a()Landroidx/core/app/JobIntentService$d;
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->a()Landroidx/core/app/JobIntentService$a;
 
     move-result-object p1
 
@@ -67,13 +67,13 @@
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-interface {p1}, Landroidx/core/app/JobIntentService$d;->getIntent()Landroid/content/Intent;
+    invoke-interface {p1}, Landroidx/core/app/JobIntentService$a;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/core/app/JobIntentService;->e(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Landroidx/core/app/JobIntentService;->d(Landroid/content/Intent;)V
 
-    invoke-interface {p1}, Landroidx/core/app/JobIntentService$d;->a()V
+    invoke-interface {p1}, Landroidx/core/app/JobIntentService$a;->a()V
 
     goto :goto_0
 
@@ -83,7 +83,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic onCancelled(Ljava/lang/Object;)V
+.method protected bridge synthetic onCancelled(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Void;
@@ -93,17 +93,17 @@
     return-void
 .end method
 
-.method public onCancelled(Ljava/lang/Void;)V
+.method protected onCancelled(Ljava/lang/Void;)V
     .locals 0
 
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->g()V
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->e()V
 
     return-void
 .end method
 
-.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/lang/Void;
@@ -113,12 +113,12 @@
     return-void
 .end method
 
-.method public onPostExecute(Ljava/lang/Void;)V
+.method protected onPostExecute(Ljava/lang/Void;)V
     .locals 0
 
     iget-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
-    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->g()V
+    invoke-virtual {p1}, Landroidx/core/app/JobIntentService;->e()V
 
     return-void
 .end method

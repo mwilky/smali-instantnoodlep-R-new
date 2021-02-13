@@ -1,6 +1,6 @@
-.class public Landroidx/lifecycle/LiveData$a;
+.class Landroidx/lifecycle/LiveData$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/lifecycle/LiveData;
+.field final synthetic a:Landroidx/lifecycle/LiveData;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/LiveData;)V
+.method constructor <init>(Landroidx/lifecycle/LiveData;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/LiveData$a;->a:Landroidx/lifecycle/LiveData;

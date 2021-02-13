@@ -1,6 +1,6 @@
 .class public final Lcom/oneplus/screenshot/R$raw;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -17,9 +17,11 @@
 # static fields
 .field public static final focus_mode_scanning:I = 0x7f0f0000
 
+.field public static final screenshot_sound:I = 0x7f0f0001
+
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

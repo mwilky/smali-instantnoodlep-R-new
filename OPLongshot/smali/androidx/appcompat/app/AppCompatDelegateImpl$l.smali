@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AppCompatDelegateImpl$l;
+.class Landroidx/appcompat/app/AppCompatDelegateImpl$l;
 .super Landroidx/appcompat/view/WindowCallbackWrapper;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "l"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/view/Window$Callback;)V
+.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/view/Window$Callback;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+.method final a(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 2
 
     new-instance v0, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;
@@ -44,13 +44,13 @@
 
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-virtual {p1, v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->startSupportActionMode(Lb/c/m/a$a;)Lb/c/m/a;
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->startSupportActionMode(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;->getActionModeWrapper(Lb/c/m/a;)Landroid/view/ActionMode;
+    invoke-virtual {v0, p1}, Landroidx/appcompat/view/SupportActionModeWrapper$CallbackWrapper;->getActionModeWrapper(Landroidx/appcompat/view/a;)Landroid/view/ActionMode;
 
     move-result-object p1
 

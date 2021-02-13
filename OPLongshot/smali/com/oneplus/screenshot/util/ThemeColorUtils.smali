@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/util/ThemeColorUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "ThemeColorUtils"
+.field private static final TAG:Ljava/lang/String; = "ThemeColorUtils"
 
 .field public static final THEME_ANDROID:I = 0x2
 
@@ -14,15 +14,15 @@
 
 .field public static qsAccent:I = 0x64
 
-.field public static sAccentColor:I = 0x0
+.field private static sAccentColor:I = 0x0
 
-.field public static sCurrentTheme:I = -0x1
+.field private static sCurrentTheme:I = -0x1
 
-.field public static sSpecialTheme:Z = false
+.field private static sSpecialTheme:Z = false
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -60,7 +60,7 @@
     return v0
 .end method
 
-.method public static getThemeAccentColor(Landroid/content/Context;ILjava/lang/String;)I
+.method private static getThemeAccentColor(Landroid/content/Context;ILjava/lang/String;)I
     .locals 1
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -208,7 +208,7 @@
     return v1
 .end method
 
-.method public static updateAccentColor(Landroid/content/Context;)V
+.method private static updateAccentColor(Landroid/content/Context;)V
     .locals 3
 
     sget v0, Lcom/oneplus/screenshot/util/ThemeColorUtils;->sCurrentTheme:I

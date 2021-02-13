@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/textfield/TextInputLayout$SavedState;
+.class Lcom/google/android/material/textfield/TextInputLayout$SavedState;
 .super Landroid/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "SavedState"
 .end annotation
 
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field public a:Ljava/lang/CharSequence;
+.field a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/textfield/TextInputLayout$SavedState$1;
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcelable;)V
+.method constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V

@@ -1,6 +1,6 @@
 .class public final Landroidx/core/content/res/FontResourcesParserCompat$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/content/res/FontResourcesParserCompat$a;
@@ -18,27 +18,27 @@
 
 
 # instance fields
-.field public final a:Lb/g/i/a;
+.field private final a:Landroidx/core/provider/a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final b:I
+.field private final b:I
 
-.field public final c:I
+.field private final c:I
 
 
 # direct methods
-.method public constructor <init>(Lb/g/i/a;II)V
+.method public constructor <init>(Landroidx/core/provider/a;II)V
     .locals 0
-    .param p1    # Lb/g/i/a;
+    .param p1    # Landroidx/core/provider/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/g/i/a;
+    iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Landroidx/core/provider/a;
 
     iput p2, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->c:I
 
@@ -57,12 +57,12 @@
     return v0
 .end method
 
-.method public b()Lb/g/i/a;
+.method public b()Landroidx/core/provider/a;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Lb/g/i/a;
+    iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$d;->a:Landroidx/core/provider/a;
 
     return-object v0
 .end method

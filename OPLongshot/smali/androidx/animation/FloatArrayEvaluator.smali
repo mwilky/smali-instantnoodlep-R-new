@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/FloatArrayEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field public mArray:[F
+.field private mArray:[F
 
 
 # direct methods

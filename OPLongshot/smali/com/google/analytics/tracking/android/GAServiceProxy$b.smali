@@ -1,6 +1,6 @@
-.class public Lcom/google/analytics/tracking/android/GAServiceProxy$b;
+.class Lcom/google/analytics/tracking/android/GAServiceProxy$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
+.field final synthetic a:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
+.method constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$b;->a:Lcom/google/analytics/tracking/android/GAServiceProxy;

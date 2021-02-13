@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/tagmanager/Container$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

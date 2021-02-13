@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/edgeeffect/SpringListView2$b;
+.class Lcom/google/android/material/edgeeffect/SpringListView2$b;
 .super Landroid/widget/EdgeEffect;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "b"
 .end annotation

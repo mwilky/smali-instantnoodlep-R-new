@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/longshot/state/MainState$3;
+.class Lcom/oneplus/screenshot/longshot/state/MainState$3;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/longshot/state/MainState;)V
+.method constructor <init>(Lcom/oneplus/screenshot/longshot/state/MainState;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/state/MainState$3;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070229
+    const v2, 0x7f07022a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -173,7 +173,7 @@
 
     const-string v5, "Click"
 
-    invoke-static {v1, v3, v4, v5, v2}, Lc/b/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3, v4, v5, v2}, Lb/b/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
@@ -197,9 +197,10 @@
 
     move-result-object v1
 
+    :goto_0
     invoke-static {v0, v1}, Lcom/oneplus/screenshot/longshot/state/MainState;->access$200(Lcom/oneplus/screenshot/longshot/state/MainState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
     sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
@@ -234,9 +235,7 @@
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->UNSUPPORTED:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->updateState(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
@@ -257,9 +256,10 @@
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/state/LongshotState;->WAITTING_PREVIEW:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
+    :goto_1
     invoke-interface {v0, v1, v2}, Lcom/oneplus/screenshot/longshot/state/LongshotContext;->updateState(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_4
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/MainState$3;->this$0:Lcom/oneplus/screenshot/longshot/state/MainState;
@@ -268,8 +268,8 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/oneplus/screenshot/longshot/state/MainState;->access$200(Lcom/oneplus/screenshot/longshot/state/MainState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
+    goto :goto_0
 
-    :goto_0
+    :goto_2
     return-void
 .end method

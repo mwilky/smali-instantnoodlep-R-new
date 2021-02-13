@@ -1,22 +1,22 @@
 .class public Lcom/oneplus/screenshot/util/SharedPrefs;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # static fields
 .field public static final LONGSHOT_GUIDE_EDIT:Ljava/lang/String; = "longshot_guide_edit"
 
-.field public static final PREFS_NAME:Ljava/lang/String; = "com.oneplus.screenshot"
+.field private static final PREFS_NAME:Ljava/lang/String; = "com.oneplus.screenshot"
 
-.field public static final TAG:Ljava/lang/String; = "SharedPrefs"
+.field private static final TAG:Ljava/lang/String; = "SharedPrefs"
 
 
 # instance fields
-.field public mSharedPrefs:Landroid/content/SharedPreferences;
+.field private mSharedPrefs:Landroid/content/SharedPreferences;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void

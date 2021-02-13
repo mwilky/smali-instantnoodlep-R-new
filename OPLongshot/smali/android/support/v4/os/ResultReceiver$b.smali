@@ -1,6 +1,6 @@
-.class public Landroid/support/v4/os/ResultReceiver$b;
+.class Landroid/support/v4/os/ResultReceiver$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final a:I
+.field final a:I
 
-.field public final b:Landroid/os/Bundle;
+.field final b:Landroid/os/Bundle;
 
-.field public final synthetic c:Landroid/support/v4/os/ResultReceiver;
+.field final synthetic c:Landroid/support/v4/os/ResultReceiver;
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
+.method constructor <init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
     .locals 0
 
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$b;->c:Landroid/support/v4/os/ResultReceiver;

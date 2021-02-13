@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActivityChooserView$g;
+.class Landroidx/appcompat/widget/ActivityChooserView$g;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -15,17 +15,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "g"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
+.field final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
+.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$g;->a:Landroidx/appcompat/widget/ActivityChooserView;
@@ -35,9 +35,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
+.method private a()V
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$g;->a:Landroidx/appcompat/widget/ActivityChooserView;
@@ -52,6 +50,8 @@
     return-void
 .end method
 
+
+# virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
@@ -139,7 +139,7 @@
 .method public onDismiss()V
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView$g;->a()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserView$g;->a()V
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$g;->a:Landroidx/appcompat/widget/ActivityChooserView;
 

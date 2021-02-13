@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/view/menu/ExpandedMenuView;
 .super Landroid/widget/ListView;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuBuilder$ItemInvoker;
@@ -17,17 +17,17 @@
 
 
 # static fields
-.field public static final TINT_ATTRS:[I
+.field private static final TINT_ATTRS:[I
 
 
 # instance fields
-.field public mAnimations:I
+.field private mAnimations:I
 
-.field public mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+.field private mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x2
@@ -139,7 +139,7 @@
     return p1
 .end method
 
-.method public onDetachedFromWindow()V
+.method protected onDetachedFromWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/ListView;->onDetachedFromWindow()V

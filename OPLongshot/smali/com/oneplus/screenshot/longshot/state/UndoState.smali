@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/UndoState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsJoinState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "UndoState"
+.field private static final TAG:Ljava/lang/String; = "UndoState"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
+.method protected createJoinTask()Lcom/oneplus/screenshot/longshot/task/JoinTask;
     .locals 4
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/task/UndoTask;
@@ -42,7 +42,7 @@
     return-object v0
 .end method
 
-.method public getSuccessText()Ljava/lang/String;
+.method protected getSuccessText()Ljava/lang/String;
     .locals 1
 
     const-string v0, ""
@@ -50,7 +50,7 @@
     return-object v0
 .end method
 
-.method public prepareSuccess()V
+.method protected prepareSuccess()V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public updateIndex()V
+.method protected updateIndex()V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/BaseState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;

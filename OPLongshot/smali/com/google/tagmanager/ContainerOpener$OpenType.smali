@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/tagmanager/ContainerOpener$OpenType;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/tagmanager/ContainerOpener$OpenType;
+.field private static final synthetic $VALUES:[Lcom/google/tagmanager/ContainerOpener$OpenType;
 
 .field public static final enum PREFER_FRESH:Lcom/google/tagmanager/ContainerOpener$OpenType;
 
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lcom/google/tagmanager/ContainerOpener$OpenType;
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

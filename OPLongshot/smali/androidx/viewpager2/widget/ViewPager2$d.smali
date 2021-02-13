@@ -1,6 +1,6 @@
-.class public Landroidx/viewpager2/widget/ViewPager2$d;
+.class Landroidx/viewpager2/widget/ViewPager2$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public final a:I
+.field private final a:I
 
-.field public final b:Landroidx/recyclerview/widget/RecyclerView;
+.field private final b:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public constructor <init>(ILandroidx/recyclerview/widget/RecyclerView;)V
+.method constructor <init>(ILandroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

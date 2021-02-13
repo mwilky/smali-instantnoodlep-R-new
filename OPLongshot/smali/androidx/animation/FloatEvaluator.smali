@@ -1,6 +1,6 @@
 .class public final Landroidx/animation/FloatEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/TypeEvaluator;

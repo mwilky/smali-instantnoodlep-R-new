@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/CircularArray;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public mCapacityBitmask:I
+.field private mCapacityBitmask:I
 
-.field public mElements:[Ljava/lang/Object;
+.field private mElements:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TE;"
@@ -25,9 +25,9 @@
     .end annotation
 .end field
 
-.field public mHead:I
+.field private mHead:I
 
-.field public mTail:I
+.field private mTail:I
 
 
 # direct methods

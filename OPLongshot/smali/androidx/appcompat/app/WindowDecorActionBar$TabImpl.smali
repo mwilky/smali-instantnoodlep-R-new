@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/app/WindowDecorActionBar$TabImpl;
 .super Landroidx/appcompat/app/ActionBar$d;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,21 +21,21 @@
 
 
 # instance fields
-.field public mCallback:Landroidx/appcompat/app/ActionBar$e;
+.field private mCallback:Landroidx/appcompat/app/ActionBar$e;
 
-.field public mContentDesc:Ljava/lang/CharSequence;
+.field private mContentDesc:Ljava/lang/CharSequence;
 
-.field public mCustomView:Landroid/view/View;
+.field private mCustomView:Landroid/view/View;
 
-.field public mIcon:Landroid/graphics/drawable/Drawable;
+.field private mIcon:Landroid/graphics/drawable/Drawable;
 
-.field public mPosition:I
+.field private mPosition:I
 
-.field public mTag:Ljava/lang/Object;
+.field private mTag:Ljava/lang/Object;
 
-.field public mText:Ljava/lang/CharSequence;
+.field private mText:Ljava/lang/CharSequence;
 
-.field public final synthetic this$0:Landroidx/appcompat/app/WindowDecorActionBar;
+.field final synthetic this$0:Landroidx/appcompat/app/WindowDecorActionBar;
 
 
 # direct methods

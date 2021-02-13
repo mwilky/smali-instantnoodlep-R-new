@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/NumberPicker$d;
+.class Lcom/google/android/material/picker/NumberPicker$d;
 .super Landroid/view/accessibility/AccessibilityNodeProvider;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field private final a:Landroid/graphics/Rect;
 
-.field public final b:[I
+.field private final b:[I
 
-.field public c:I
+.field private c:I
 
-.field public final synthetic d:Lcom/google/android/material/picker/NumberPicker;
+.field final synthetic d:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -51,9 +51,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+.method private a(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 3
 
     invoke-static {}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -84,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setSource(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->g()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->g()Z
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->addChild(Landroid/view/View;I)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->h()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->h()Z
 
     move-result v1
 
@@ -259,7 +257,7 @@
     return-object v0
 .end method
 
-.method public final b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+.method private b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 2
 
     invoke-static {}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -374,7 +372,7 @@
     return-object v0
 .end method
 
-.method public final c(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+.method private c(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -446,301 +444,7 @@
     return-object v0
 .end method
 
-.method public createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-    .locals 7
-
-    const/4 v0, -0x1
-
-    if-eq p1, v0, :cond_3
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_0
-
-    invoke-super {p0, p1}, Landroid/view/accessibility/AccessibilityNodeProvider;->createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const/4 v1, 0x3
-
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result v3
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollY()I
-
-    move-result v4
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
-
-    move-result v0
-
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLeft()I
-
-    move-result v5
-
-    sub-int/2addr v0, v5
-
-    add-int v5, p1, v0
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->j(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v0
-
-    add-int v6, p1, v0
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v6}, Lcom/google/android/material/picker/NumberPicker$d;->b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->j(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v1}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getRight()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLeft()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    add-int/2addr v1, v2
-
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v2}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v3}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/google/android/material/picker/NumberPicker$d;->c(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    const/4 v1, 0x1
-
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result v3
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
-
-    move-result v0
-
-    sub-int v4, p1, v0
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
-
-    move-result v0
-
-    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLeft()I
-
-    move-result v5
-
-    sub-int/2addr v0, v5
-
-    add-int v5, p1, v0
-
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollY()I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getBottom()I
-
-    move-result v0
-
-    iget-object v6, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v6}, Landroid/widget/LinearLayout;->getTop()I
-
-    move-result v6
-
-    sub-int/2addr v0, v6
-
-    add-int v6, p1, v0
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v6}, Lcom/google/android/material/picker/NumberPicker$d;->b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_3
-    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result p1
-
-    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getScrollY()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getScrollX()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getRight()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLeft()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    add-int/2addr v1, v2
-
-    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getScrollY()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getBottom()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
-
-    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getTop()I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/google/android/material/picker/NumberPicker$d;->a(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final d(Ljava/lang/String;ILjava/util/List;)V
+.method private d(Ljava/lang/String;ILjava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -765,10 +469,10 @@
 
     if-eq p2, v0, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
 
     move-result-object p2
 
@@ -832,6 +536,7 @@
 
     if-eqz p2, :cond_3
 
+    :goto_0
     invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker$d;->createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
@@ -871,18 +576,14 @@
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0, v0}, Lcom/google/android/material/picker/NumberPicker$d;->createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_4
-    :goto_0
+    :goto_1
     return-void
 
     :cond_5
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
 
     move-result-object p2
 
@@ -916,7 +617,7 @@
     return-void
 .end method
 
-.method public final e()Ljava/lang/String;
+.method private e()Ljava/lang/String;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -992,7 +693,7 @@
     return-object v0
 .end method
 
-.method public final f()Ljava/lang/String;
+.method private f()Ljava/lang/String;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -1068,78 +769,7 @@
     return-object v0
 .end method
 
-.method public findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I)",
-            "Ljava/util/List<",
-            "Landroid/view/accessibility/AccessibilityNodeInfo;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v2, -0x1
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    if-eq p2, v2, :cond_2
-
-    if-eq p2, v5, :cond_1
-
-    if-eq p2, v4, :cond_1
-
-    if-eq p2, v3, :cond_1
-
-    invoke-super {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeProvider;->findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    invoke-virtual {p0, v0, p2, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
-
-    return-object v1
-
-    :cond_2
-    invoke-virtual {p0, v0, v3, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
-
-    invoke-virtual {p0, v0, v4, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
-
-    invoke-virtual {p0, v0, v5, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
-
-    return-object v1
-.end method
-
-.method public final g()Z
+.method private g()Z
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -1179,7 +809,7 @@
     return v0
 .end method
 
-.method public final h()Z
+.method private h()Z
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -1219,7 +849,7 @@
     return v0
 .end method
 
-.method public final i(IILjava/lang/String;)V
+.method private i(IILjava/lang/String;)V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -1294,7 +924,7 @@
     return-void
 .end method
 
-.method public final j(I)V
+.method private j(I)V
     .locals 2
 
     iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
@@ -1353,6 +983,373 @@
     return-void
 .end method
 
+
+# virtual methods
+.method public createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
+    .locals 7
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/view/accessibility/AccessibilityNodeProvider;->createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 v1, 0x3
+
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result v3
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollY()I
+
+    move-result v4
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v0
+
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLeft()I
+
+    move-result v5
+
+    sub-int/2addr v0, v5
+
+    add-int v5, p1, v0
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->j(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v0
+
+    add-int v6, p1, v0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/picker/NumberPicker$d;->b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->j(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v1}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLeft()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v2}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v3}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/android/material/picker/NumberPicker$d;->c(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    const/4 v1, 0x1
+
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result v3
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {p1}, Lcom/google/android/material/picker/NumberPicker;->g(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-static {v0}, Lcom/google/android/material/picker/NumberPicker;->l(Lcom/google/android/material/picker/NumberPicker;)I
+
+    move-result v0
+
+    sub-int v4, p1, v0
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v0
+
+    iget-object v5, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getLeft()I
+
+    move-result v5
+
+    sub-int/2addr v0, v5
+
+    add-int v5, p1, v0
+
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollY()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getBottom()I
+
+    move-result v0
+
+    iget-object v6, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v6}, Landroid/widget/LinearLayout;->getTop()I
+
+    move-result v6
+
+    sub-int/2addr v0, v6
+
+    add-int v6, p1, v0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/picker/NumberPicker$d;->b(ILjava/lang/String;IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_3
+    iget-object p1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getScrollY()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getScrollX()I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLeft()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getScrollY()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getBottom()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/google/android/material/picker/NumberPicker$d;->d:Lcom/google/android/material/picker/NumberPicker;
+
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getTop()I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    add-int/2addr v2, v3
+
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/android/material/picker/NumberPicker$d;->a(IIII)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Ljava/util/List<",
+            "Landroid/view/accessibility/AccessibilityNodeInfo;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-eq p2, v2, :cond_2
+
+    if-eq p2, v5, :cond_1
+
+    if-eq p2, v4, :cond_1
+
+    if-eq p2, v3, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeProvider;->findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    invoke-direct {p0, v0, p2, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
+
+    return-object v1
+
+    :cond_2
+    invoke-direct {p0, v0, v3, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
+
+    invoke-direct {p0, v0, v4, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
+
+    invoke-direct {p0, v0, v5, v1}, Lcom/google/android/material/picker/NumberPicker$d;->d(Ljava/lang/String;ILjava/util/List;)V
+
+    return-object v1
+.end method
+
 .method public k(II)V
     .locals 1
 
@@ -1368,43 +1365,42 @@
 
     if-eq p1, v0, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->g()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->e()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/material/picker/NumberPicker$d;->i(IILjava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, p2}, Lcom/google/android/material/picker/NumberPicker$d;->j(I)V
+    invoke-direct {p0, p2}, Lcom/google/android/material/picker/NumberPicker$d;->j(I)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->h()Z
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/google/android/material/picker/NumberPicker$d;->f()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/material/picker/NumberPicker$d;->i(IILjava/lang/String;)V
+    :goto_0
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/picker/NumberPicker$d;->i(IILjava/lang/String;)V
 
     :cond_3
-    :goto_0
+    :goto_1
     return-void
 .end method
 

@@ -1,6 +1,6 @@
-.class public abstract Landroidx/collection/MapCollections;
+.class abstract Landroidx/collection/MapCollections;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public mEntrySet:Landroidx/collection/MapCollections$EntrySet;
+.field mEntrySet:Landroidx/collection/MapCollections$EntrySet;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field public mKeySet:Landroidx/collection/MapCollections$KeySet;
+.field mKeySet:Landroidx/collection/MapCollections$KeySet;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public mValues:Landroidx/collection/MapCollections$ValuesCollection;
+.field mValues:Landroidx/collection/MapCollections$ValuesCollection;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -65,7 +65,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -309,13 +309,13 @@
 
 
 # virtual methods
-.method public abstract colClear()V
+.method protected abstract colClear()V
 .end method
 
-.method public abstract colGetEntry(II)Ljava/lang/Object;
+.method protected abstract colGetEntry(II)Ljava/lang/Object;
 .end method
 
-.method public abstract colGetMap()Ljava/util/Map;
+.method protected abstract colGetMap()Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -325,16 +325,16 @@
     .end annotation
 .end method
 
-.method public abstract colGetSize()I
+.method protected abstract colGetSize()I
 .end method
 
-.method public abstract colIndexOfKey(Ljava/lang/Object;)I
+.method protected abstract colIndexOfKey(Ljava/lang/Object;)I
 .end method
 
-.method public abstract colIndexOfValue(Ljava/lang/Object;)I
+.method protected abstract colIndexOfValue(Ljava/lang/Object;)I
 .end method
 
-.method public abstract colPut(Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected abstract colPut(Ljava/lang/Object;Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)V"
@@ -342,10 +342,10 @@
     .end annotation
 .end method
 
-.method public abstract colRemoveAt(I)V
+.method protected abstract colRemoveAt(I)V
 .end method
 
-.method public abstract colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
+.method protected abstract colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITV;)TV;"

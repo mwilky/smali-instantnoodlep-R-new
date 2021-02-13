@@ -1,6 +1,6 @@
 .class public final Landroidx/core/content/res/ComplexColorCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,19 +12,19 @@
 
 
 # static fields
-.field public static final LOG_TAG:Ljava/lang/String; = "ComplexColorCompat"
+.field private static final LOG_TAG:Ljava/lang/String; = "ComplexColorCompat"
 
 
 # instance fields
-.field public mColor:I
+.field private mColor:I
 
-.field public final mColorStateList:Landroid/content/res/ColorStateList;
+.field private final mColorStateList:Landroid/content/res/ColorStateList;
 
-.field public final mShader:Landroid/graphics/Shader;
+.field private final mShader:Landroid/graphics/Shader;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+.method private constructor <init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
     .locals 0
     .param p3    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public static createFromXml(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
+.method private static createFromXml(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 6
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -193,7 +193,7 @@
     throw p0
 .end method
 
-.method public static from(I)Landroidx/core/content/res/ComplexColorCompat;
+.method static from(I)Landroidx/core/content/res/ComplexColorCompat;
     .locals 2
     .param p0    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -209,7 +209,7 @@
     return-object v0
 .end method
 
-.method public static from(Landroid/content/res/ColorStateList;)Landroidx/core/content/res/ComplexColorCompat;
+.method static from(Landroid/content/res/ColorStateList;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
     .param p0    # Landroid/content/res/ColorStateList;
         .annotation build Landroidx/annotation/NonNull;
@@ -229,7 +229,7 @@
     return-object v0
 .end method
 
-.method public static from(Landroid/graphics/Shader;)Landroidx/core/content/res/ComplexColorCompat;
+.method static from(Landroid/graphics/Shader;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
     .param p0    # Landroid/graphics/Shader;
         .annotation build Landroidx/annotation/NonNull;

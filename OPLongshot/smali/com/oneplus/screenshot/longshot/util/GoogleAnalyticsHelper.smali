@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,29 +12,29 @@
 
 
 # static fields
-.field public static final SYSTEM_PROPERTY_KEY_ENABLE_GA:Ljava/lang/String; = "persist.op.ga"
+.field private static final SYSTEM_PROPERTY_KEY_ENABLE_GA:Ljava/lang/String; = "persist.op.ga"
 
-.field public static final SYSTEM_PROPERTY_KEY_IS_BETA_ROM:Ljava/lang/String; = "ro.build.beta"
+.field private static final SYSTEM_PROPERTY_KEY_IS_BETA_ROM:Ljava/lang/String; = "ro.build.beta"
 
-.field public static final TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String;
 
-.field public static mIsOnlineConfigEnabled:Z
+.field private static mIsOnlineConfigEnabled:Z
 
-.field public static mTracker:Lc/a/a/c/a/b0;
+.field private static mTracker:Lcom/google/analytics/tracking/android/b0;
 
-.field public static sContext:Landroid/content/Context;
+.field private static sContext:Landroid/content/Context;
 
-.field public static sGetConfigFail:Z
+.field private static sGetConfigFail:Z
 
-.field public static sInit:Z
+.field private static sInit:Z
 
-.field public static sInstance:Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;
+.field private static sInstance:Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;
 
-.field public static sOnlineConfigObserver:Lc/b/b/b/b;
+.field private static sOnlineConfigObserver:Lb/b/b/b/b;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000()Ljava/lang/String;
+.method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->TAG:Ljava/lang/String;
@@ -88,7 +88,7 @@
     return-object v0
 .end method
 
-.method public static synthetic access$100()Landroid/content/Context;
+.method static synthetic access$100()Landroid/content/Context;
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sContext:Landroid/content/Context;
@@ -96,7 +96,7 @@
     return-object v0
 .end method
 
-.method public static synthetic access$200(Lorg/json/JSONArray;)V
+.method static synthetic access$200(Lorg/json/JSONArray;)V
     .locals 0
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->getOnlineConfig(Lorg/json/JSONArray;)V
@@ -112,7 +112,7 @@
     return-object p0
 .end method
 
-.method public static getOnlineConfig(Lorg/json/JSONArray;)V
+.method private static getOnlineConfig(Lorg/json/JSONArray;)V
     .locals 7
 
     const-string v0, "get GA online config error. "
@@ -251,25 +251,25 @@
 
     sget-object v4, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lc/a/a/c/a/p;->e(Landroid/content/Context;)Lc/a/a/c/a/p;
+    invoke-static {v4}, Lcom/google/analytics/tracking/android/p;->d(Landroid/content/Context;)Lcom/google/analytics/tracking/android/p;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lc/a/a/c/a/p;->f()Lcom/google/analytics/tracking/android/Logger;
+    invoke-virtual {v4}, Lcom/google/analytics/tracking/android/p;->e()Lcom/google/analytics/tracking/android/Logger;
 
     move-result-object v5
 
     sget-object v6, Lcom/google/analytics/tracking/android/Logger$LogLevel;->VERBOSE:Lcom/google/analytics/tracking/android/Logger$LogLevel;
 
-    invoke-interface {v5, v6}, Lcom/google/analytics/tracking/android/Logger;->b(Lcom/google/analytics/tracking/android/Logger$LogLevel;)V
+    invoke-interface {v5, v6}, Lcom/google/analytics/tracking/android/Logger;->a(Lcom/google/analytics/tracking/android/Logger$LogLevel;)V
 
     const-string v5, "UA-92966593-4"
 
-    invoke-virtual {v4, v5}, Lc/a/a/c/a/p;->g(Ljava/lang/String;)Lc/a/a/c/a/b0;
+    invoke-virtual {v4, v5}, Lcom/google/analytics/tracking/android/p;->f(Ljava/lang/String;)Lcom/google/analytics/tracking/android/b0;
 
     move-result-object v4
 
-    sput-object v4, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->mTracker:Lc/a/a/c/a/b0;
+    sput-object v4, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->mTracker:Lcom/google/analytics/tracking/android/b0;
 
     goto :goto_1
 
@@ -290,7 +290,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_2
+    goto :goto_4
 
     :catch_0
     move-exception p0
@@ -300,18 +300,6 @@
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sGetConfigFail:Z
 
     goto :goto_2
 
@@ -324,6 +312,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
+    :goto_2
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -334,9 +323,7 @@
 
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sGetConfigFail:Z
-
-    goto :goto_2
+    goto :goto_3
 
     :cond_3
     sget-object p0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->TAG:Ljava/lang/String;
@@ -345,9 +332,10 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :goto_3
     sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sGetConfigFail:Z
 
-    :goto_2
+    :goto_4
     return-void
 .end method
 
@@ -371,7 +359,7 @@
 
     if-eqz p0, :cond_1
 
-    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object p0
 
@@ -385,18 +373,18 @@
     return-void
 .end method
 
-.method public static isBetaRom()Z
+.method private static isBetaRom()Z
     .locals 3
 
     const-string v0, "ro.build.beta"
 
-    invoke-static {v0}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "persist.op.ga"
 
-    invoke-static {v1}, Lc/b/b/j/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/oneplus/compat/os/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -428,7 +416,7 @@
     return v0
 .end method
 
-.method public static isPrivacyEnabled(Landroid/content/Context;)Z
+.method private static isPrivacyEnabled(Landroid/content/Context;)Z
     .locals 3
 
     const/4 v0, 0x1
@@ -458,10 +446,10 @@
     return v0
 .end method
 
-.method public static registerGAOnlineConfigObserver(Landroid/content/Context;)V
+.method private static registerGAOnlineConfigObserver(Landroid/content/Context;)V
     .locals 4
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sOnlineConfigObserver:Lc/b/b/b/b;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sOnlineConfigObserver:Lb/b/b/b/b;
 
     if-nez v0, :cond_0
 
@@ -471,24 +459,24 @@
 
     invoke-direct {v0, v1}, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper$OnlineConfigUpdater;-><init>(Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper$1;)V
 
-    new-instance v1, Lc/b/b/b/b;
+    new-instance v1, Lb/b/b/b/b;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object v2
 
     const-string v3, "OPSystemUIGAConfig"
 
-    invoke-direct {v1, p0, v2, v0, v3}, Lc/b/b/b/b;-><init>(Landroid/content/Context;Landroid/os/Handler;Lc/b/b/b/b$c;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2, v0, v3}, Lb/b/b/b/b;-><init>(Landroid/content/Context;Landroid/os/Handler;Lb/b/b/b/b$c;Ljava/lang/String;)V
 
-    sput-object v1, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sOnlineConfigObserver:Lc/b/b/b/b;
+    sput-object v1, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->sOnlineConfigObserver:Lb/b/b/b/b;
 
     :try_start_0
-    invoke-virtual {v1}, Lc/b/b/b/b;->a()V
+    invoke-virtual {v1}, Lb/b/b/b/b;->a()V
 
     sget-object p0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->TAG:Ljava/lang/String;
 
@@ -531,21 +519,21 @@
 .method public send(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->mTracker:Lc/a/a/c/a/b0;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;->mTracker:Lcom/google/analytics/tracking/android/b0;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p3, p2, v1}, Lc/a/a/c/a/t;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lc/a/a/c/a/t;
+    invoke-static {p1, p3, p2, v1}, Lcom/google/analytics/tracking/android/t;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lcom/google/analytics/tracking/android/t;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lc/a/a/c/a/t;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/google/analytics/tracking/android/t;->a()Ljava/util/Map;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lc/a/a/c/a/b0;->b(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lcom/google/analytics/tracking/android/b0;->a(Ljava/util/Map;)V
 
     :cond_0
     return-void

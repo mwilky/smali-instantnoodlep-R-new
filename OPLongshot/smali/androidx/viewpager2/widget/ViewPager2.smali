@@ -1,6 +1,6 @@
 .class public final Landroidx/viewpager2/widget/ViewPager2;
 .super Landroid/view/ViewGroup;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -19,67 +19,53 @@
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field private final a:Landroid/graphics/Rect;
 
-.field public final b:Landroid/graphics/Rect;
+.field private final b:Landroid/graphics/Rect;
 
-.field public c:Lb/t/b/b;
+.field private c:Landroidx/viewpager2/widget/b;
 
-.field public d:I
+.field d:I
 
-.field public e:Z
+.field e:Z
 
-.field public f:Landroidx/recyclerview/widget/RecyclerView$g;
+.field private f:Landroidx/recyclerview/widget/RecyclerView$g;
 
-.field public g:Landroidx/recyclerview/widget/LinearLayoutManager;
+.field private g:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field public h:I
+.field private h:I
 
-.field public i:Landroid/os/Parcelable;
+.field private i:Landroid/os/Parcelable;
 
-.field public j:Landroidx/recyclerview/widget/RecyclerView;
+.field j:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public k:Lb/n/d/l;
+.field private k:Landroidx/recyclerview/widget/l;
 
-.field public l:Lb/t/b/e;
+.field l:Landroidx/viewpager2/widget/e;
 
-.field public m:Lb/t/b/b;
+.field private m:Landroidx/viewpager2/widget/b;
 
-.field public n:Lb/t/b/c;
+.field private n:Landroidx/viewpager2/widget/c;
 
-.field public o:Lb/t/b/d;
+.field private o:Landroidx/viewpager2/widget/d;
 
-.field public p:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
+.field private p:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-.field public q:Z
+.field private q:Z
 
-.field public r:I
+.field private r:I
 
-.field public s:Landroidx/viewpager2/widget/ViewPager2$a;
+.field s:Landroidx/viewpager2/widget/ViewPager2$a;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Z
-    .locals 1
-
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Lb/t/b/c;
-
-    invoke-virtual {v0}, Lb/t/b/c;->a()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method private b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 1
     .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
         .annotation build Landroidx/annotation/Nullable;
@@ -103,6 +89,118 @@
     return-void
 .end method
 
+.method private e()V
+    .locals 4
+
+    iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->i:Landroid/os/Parcelable;
+
+    if-eqz v2, :cond_3
+
+    instance-of v3, v0, Landroidx/viewpager2/adapter/b;
+
+    if-eqz v3, :cond_2
+
+    move-object v3, v0
+
+    check-cast v3, Landroidx/viewpager2/adapter/b;
+
+    invoke-interface {v3, v2}, Landroidx/viewpager2/adapter/b;->restoreState(Landroid/os/Parcelable;)V
+
+    :cond_2
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->i:Landroid/os/Parcelable;
+
+    :cond_3
+    const/4 v2, 0x0
+
+    iget v3, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-static {v3, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->d:I
+
+    iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
+
+    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
+
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->s:Landroidx/viewpager2/widget/ViewPager2$a;
+
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$a;->h()V
+
+    return-void
+.end method
+
+.method private h(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+            "*>;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->f:Landroidx/recyclerview/widget/RecyclerView$g;
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$g;)V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Z
+    .locals 1
+
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/viewpager2/widget/c;
+
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/c;->a()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public c(Landroidx/viewpager2/widget/ViewPager2$b;)V
     .locals 1
     .param p1    # Landroidx/viewpager2/widget/ViewPager2$b;
@@ -110,9 +208,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->c:Lb/t/b/b;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->c:Landroidx/viewpager2/widget/b;
 
-    invoke-virtual {v0, p1}, Lb/t/b/b;->a(Landroidx/viewpager2/widget/ViewPager2$b;)V
+    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/b;->a(Landroidx/viewpager2/widget/ViewPager2$b;)V
 
     return-void
 .end method
@@ -144,9 +242,9 @@
 .method public d()V
     .locals 5
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Lb/t/b/d;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Landroidx/viewpager2/widget/d;
 
-    invoke-virtual {v0}, Lb/t/b/d;->a()Landroidx/viewpager2/widget/ViewPager2$c;
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/d;->a()Landroidx/viewpager2/widget/ViewPager2$c;
 
     move-result-object v0
 
@@ -155,9 +253,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v0}, Lb/t/b/e;->c()D
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/e;->c()D
 
     move-result-wide v0
 
@@ -181,14 +279,14 @@
 
     move-result v1
 
-    iget-object v3, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Lb/t/b/d;
+    iget-object v3, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Landroidx/viewpager2/widget/d;
 
-    invoke-virtual {v3, v2, v0, v1}, Lb/t/b/d;->b(IFI)V
+    invoke-virtual {v3, v2, v0, v1}, Landroidx/viewpager2/widget/d;->b(IFI)V
 
     return-void
 .end method
 
-.method public dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
+.method protected dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -234,81 +332,7 @@
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->e()V
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 4
-
-    iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    :cond_1
-    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->i:Landroid/os/Parcelable;
-
-    if-eqz v2, :cond_3
-
-    instance-of v3, v0, Lb/t/a/b;
-
-    if-eqz v3, :cond_2
-
-    move-object v3, v0
-
-    check-cast v3, Lb/t/a/b;
-
-    invoke-interface {v3, v2}, Lb/t/a/b;->restoreState(Landroid/os/Parcelable;)V
-
-    :cond_2
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->i:Landroid/os/Parcelable;
-
-    :cond_3
-    const/4 v2, 0x0
-
-    iget v3, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-static {v3, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->d:I
-
-    iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->h:I
-
-    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
-
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->s:Landroidx/viewpager2/widget/ViewPager2$a;
-
-    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$a;->h()V
+    invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2;->e()V
 
     return-void
 .end method
@@ -336,7 +360,7 @@
     throw p1
 .end method
 
-.method public g(IZ)V
+.method g(IZ)V
     .locals 8
 
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
@@ -390,9 +414,9 @@
 
     if-ne p1, v0, :cond_3
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v0}, Lb/t/b/e;->e()Z
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/e;->e()Z
 
     move-result v0
 
@@ -420,24 +444,24 @@
 
     invoke-virtual {v2}, Landroidx/viewpager2/widget/ViewPager2$a;->j()V
 
-    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v2}, Lb/t/b/e;->e()Z
+    invoke-virtual {v2}, Landroidx/viewpager2/widget/e;->e()Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v0}, Lb/t/b/e;->c()D
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/e;->c()D
 
     move-result-wide v0
 
     :cond_5
-    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v2, p1, p2}, Lb/t/b/e;->f(IZ)V
+    invoke-virtual {v2, p1, p2}, Landroidx/viewpager2/widget/e;->f(IZ)V
 
     if-nez p2, :cond_6
 
@@ -581,7 +605,7 @@
     return v0
 .end method
 
-.method public getPageSize()I
+.method getPageSize()I
     .locals 3
 
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
@@ -632,37 +656,13 @@
 .method public getScrollState()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Lb/t/b/e;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->l:Landroidx/viewpager2/widget/e;
 
-    invoke-virtual {v0}, Lb/t/b/e;->d()I
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/e;->d()I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final h(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
-    .locals 1
-    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-            "*>;)V"
-        }
-    .end annotation
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->f:Landroidx/recyclerview/widget/RecyclerView$g;
-
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$g;)V
-
-    :cond_0
-    return-void
 .end method
 
 .method public i(Landroidx/viewpager2/widget/ViewPager2$b;)V
@@ -672,23 +672,23 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->c:Lb/t/b/b;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->c:Landroidx/viewpager2/widget/b;
 
-    invoke-virtual {v0, p1}, Lb/t/b/b;->c(Landroidx/viewpager2/widget/ViewPager2$b;)V
+    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/b;->c(Landroidx/viewpager2/widget/ViewPager2$b;)V
 
     return-void
 .end method
 
-.method public j()V
+.method j()V
     .locals 2
 
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->k:Lb/n/d/l;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->k:Landroidx/recyclerview/widget/l;
 
     if-eqz v0, :cond_2
 
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->g:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v1}, Lb/n/d/p;->h(Landroidx/recyclerview/widget/RecyclerView$k;)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/p;->h(Landroidx/recyclerview/widget/RecyclerView$k;)Landroid/view/View;
 
     move-result-object v0
 
@@ -713,9 +713,9 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->m:Lb/t/b/b;
+    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->m:Landroidx/viewpager2/widget/b;
 
-    invoke-virtual {v1, v0}, Lb/t/b/b;->b(I)V
+    invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/b;->b(I)V
 
     :cond_1
     const/4 v0, 0x0
@@ -746,7 +746,7 @@
     return-void
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 3
 
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
@@ -833,7 +833,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 5
 
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
@@ -913,7 +913,7 @@
     return-void
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
     instance-of v0, p1, Landroidx/viewpager2/widget/ViewPager2$SavedState;
@@ -944,7 +944,7 @@
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -980,9 +980,10 @@
 
     if-eqz v0, :cond_1
 
+    :goto_0
     iput-object v0, v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->c:Landroid/os/Parcelable;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
@@ -991,20 +992,20 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lb/t/a/b;
+    instance-of v2, v0, Landroidx/viewpager2/adapter/b;
 
     if-eqz v2, :cond_2
 
-    check-cast v0, Lb/t/a/b;
+    check-cast v0, Landroidx/viewpager2/adapter/b;
 
-    invoke-interface {v0}, Lb/t/a/b;->saveState()Landroid/os/Parcelable;
+    invoke-interface {v0}, Landroidx/viewpager2/adapter/b;->saveState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    iput-object v0, v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->c:Landroid/os/Parcelable;
+    goto :goto_0
 
     :cond_2
-    :goto_0
+    :goto_1
     return-object v1
 .end method
 
@@ -1085,7 +1086,7 @@
 
     invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/ViewPager2$a;->d(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    invoke-virtual {p0, v0}, Landroidx/viewpager2/widget/ViewPager2;->h(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, v0}, Landroidx/viewpager2/widget/ViewPager2;->h(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1095,13 +1096,13 @@
 
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->d:I
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->e()V
+    invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2;->e()V
 
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->s:Landroidx/viewpager2/widget/ViewPager2$a;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2$a;->c(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, p1}, Landroidx/viewpager2/widget/ViewPager2;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method
@@ -1187,9 +1188,9 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_1
-
     iget-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->q:Z
+
+    if-eqz p1, :cond_1
 
     if-nez v1, :cond_0
 
@@ -1213,8 +1214,6 @@
     goto :goto_0
 
     :cond_1
-    iget-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->q:Z
-
     if-eqz v1, :cond_2
 
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->j:Landroidx/recyclerview/widget/RecyclerView;
@@ -1231,9 +1230,9 @@
 
     :cond_2
     :goto_0
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Lb/t/b/d;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Landroidx/viewpager2/widget/d;
 
-    invoke-virtual {v0}, Lb/t/b/d;->a()Landroidx/viewpager2/widget/ViewPager2$c;
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/d;->a()Landroidx/viewpager2/widget/ViewPager2$c;
 
     move-result-object v0
 
@@ -1242,9 +1241,9 @@
     return-void
 
     :cond_3
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Lb/t/b/d;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->o:Landroidx/viewpager2/widget/d;
 
-    invoke-virtual {v0, p1}, Lb/t/b/d;->c(Landroidx/viewpager2/widget/ViewPager2$c;)V
+    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/d;->c(Landroidx/viewpager2/widget/ViewPager2$c;)V
 
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->d()V
 

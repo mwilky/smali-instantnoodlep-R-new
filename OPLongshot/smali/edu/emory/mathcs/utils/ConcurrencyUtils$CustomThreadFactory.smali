@@ -1,6 +1,6 @@
-.class public Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomThreadFactory;
+.class Ledu/emory/mathcs/utils/ConcurrencyUtils$CustomThreadFactory;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "CustomThreadFactory"
 .end annotation
 
 
 # static fields
-.field public static final defaultFactory:Ljava/util/concurrent/ThreadFactory;
+.field private static final defaultFactory:Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final handler:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field private final handler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+.method constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/ArraySet;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -23,37 +23,37 @@
 
 
 # static fields
-.field public static final BASE_SIZE:I = 0x4
+.field private static final BASE_SIZE:I = 0x4
 
-.field public static final CACHE_SIZE:I = 0xa
+.field private static final CACHE_SIZE:I = 0xa
 
-.field public static final DEBUG:Z = false
+.field private static final DEBUG:Z = false
 
-.field public static final INT:[I
+.field private static final INT:[I
 
-.field public static final OBJECT:[Ljava/lang/Object;
+.field private static final OBJECT:[Ljava/lang/Object;
 
-.field public static final TAG:Ljava/lang/String; = "ArraySet"
+.field private static final TAG:Ljava/lang/String; = "ArraySet"
 
-.field public static sBaseCache:[Ljava/lang/Object;
+.field private static sBaseCache:[Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static sBaseCacheSize:I
+.field private static sBaseCacheSize:I
 
-.field public static sTwiceBaseCache:[Ljava/lang/Object;
+.field private static sTwiceBaseCache:[Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static sTwiceBaseCacheSize:I
+.field private static sTwiceBaseCacheSize:I
 
 
 # instance fields
-.field public mArray:[Ljava/lang/Object;
+.field mArray:[Ljava/lang/Object;
 
-.field public mCollections:Landroidx/collection/MapCollections;
+.field private mCollections:Landroidx/collection/MapCollections;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -62,13 +62,13 @@
     .end annotation
 .end field
 
-.field public mHashes:[I
+.field private mHashes:[I
 
-.field public mSize:I
+.field mSize:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
     const/4 v0, 0x0
@@ -307,7 +307,7 @@
     return-void
 .end method
 
-.method public static freeArrays([I[Ljava/lang/Object;I)V
+.method private static freeArrays([I[Ljava/lang/Object;I)V
     .locals 7
 
     array-length v0, p0
@@ -476,7 +476,7 @@
     :cond_0
     iget-object v1, p0, Landroidx/collection/ArraySet;->mHashes:[I
 
-    invoke-static {v1, v0, p2}, Lb/e/a;->a([III)I
+    invoke-static {v1, v0, p2}, Landroidx/collection/a;->a([III)I
 
     move-result v1
 
@@ -577,7 +577,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Lb/e/a;->a([III)I
+    invoke-static {v1, v0, v2}, Landroidx/collection/a;->a([III)I
 
     move-result v1
 

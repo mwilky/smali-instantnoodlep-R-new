@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/CheckableImageButton$a;
-.super Lb/g/l/a;
-.source "SourceFile"
+.class Lcom/google/android/material/internal/CheckableImageButton$a;
+.super Landroidx/core/view/a;
+.source ""
 
 
 # annotations
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/internal/CheckableImageButton;
+.field final synthetic a:Lcom/google/android/material/internal/CheckableImageButton;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/CheckableImageButton;)V
+.method constructor <init>(Lcom/google/android/material/internal/CheckableImageButton;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/CheckableImageButton$a;->a:Lcom/google/android/material/internal/CheckableImageButton;
 
-    invoke-direct {p0}, Lb/g/l/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/CheckableImageButton$a;->a:Lcom/google/android/material/internal/CheckableImageButton;
 
@@ -51,14 +51,14 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
     .locals 0
-    .param p2    # Lb/g/l/y/d;
+    .param p2    # Landroidx/core/view/accessibility/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/CheckableImageButton$a;->a:Lcom/google/android/material/internal/CheckableImageButton;
 
@@ -66,7 +66,7 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->U(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->U(Z)V
 
     iget-object p1, p0, Lcom/google/android/material/internal/CheckableImageButton$a;->a:Lcom/google/android/material/internal/CheckableImageButton;
 
@@ -74,7 +74,7 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->V(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->V(Z)V
 
     return-void
 .end method

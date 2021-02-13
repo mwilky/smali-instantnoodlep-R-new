@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/button/MaterialButtonToggleGroup$a;
-.super Lb/g/l/a;
-.source "SourceFile"
+.class Lcom/google/android/material/button/MaterialButtonToggleGroup$a;
+.super Landroidx/core/view/a;
+.source ""
 
 
 # annotations
@@ -9,36 +9,36 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+.field final synthetic a:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
+.method constructor <init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$a;->a:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
-    invoke-direct {p0}, Lb/g/l/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
     .locals 7
-    .param p2    # Lb/g/l/y/d;
+    .param p2    # Landroidx/core/view/accessibility/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
 
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButtonToggleGroup$a;->a:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
@@ -60,11 +60,11 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v1 .. v6}, Lb/g/l/y/d$c;->a(IIIIZZ)Lb/g/l/y/d$c;
+    invoke-static/range {v1 .. v6}, Landroidx/core/view/accessibility/d$c;->a(IIIIZZ)Landroidx/core/view/accessibility/d$c;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lb/g/l/y/d;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/d;->Z(Ljava/lang/Object;)V
 
     return-void
 .end method

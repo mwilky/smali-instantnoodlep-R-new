@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/anim/BackgroundInterpolator;
 .super Lcom/oneplus/screenshot/anim/DropInterpolator;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "BackgroundInterpolator"
+.field private static final TAG:Ljava/lang/String; = "BackgroundInterpolator"
 
 
 # direct methods

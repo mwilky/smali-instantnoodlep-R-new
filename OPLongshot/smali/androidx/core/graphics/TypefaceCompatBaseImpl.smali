@@ -1,6 +1,6 @@
-.class public Landroidx/core/graphics/TypefaceCompatBaseImpl;
+.class Landroidx/core/graphics/TypefaceCompatBaseImpl;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,13 +18,13 @@
 
 
 # static fields
-.field public static final INVALID_KEY:I = 0x0
+.field private static final INVALID_KEY:I = 0x0
 
-.field public static final TAG:Ljava/lang/String; = "TypefaceCompatBaseImpl"
+.field private static final TAG:Ljava/lang/String; = "TypefaceCompatBaseImpl"
 
 
 # instance fields
-.field public mFontFamilies:Ljava/util/concurrent/ConcurrentHashMap;
+.field private mFontFamilies:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -96,7 +96,7 @@
     return-object p1
 .end method
 
-.method public static findBestFont([Ljava/lang/Object;ILandroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;)Ljava/lang/Object;
+.method private static findBestFont([Ljava/lang/Object;ILandroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;)Ljava/lang/Object;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -195,7 +195,7 @@
     return-object v3
 .end method
 
-.method public static getUniqueKey(Landroid/graphics/Typeface;)J
+.method private static getUniqueKey(Landroid/graphics/Typeface;)J
     .locals 6
     .param p0    # Landroid/graphics/Typeface;
         .annotation build Landroidx/annotation/Nullable;
@@ -371,7 +371,7 @@
     return-object v0
 .end method
 
-.method public createFromInputStream(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
+.method protected createFromInputStream(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     .locals 1
 
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatUtil;->getTempFile(Landroid/content/Context;)Ljava/io/File;
@@ -489,7 +489,7 @@
     return-object p4
 .end method
 
-.method public findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
+.method protected findBestInfo([Landroidx/core/provider/FontsContractCompat$b;I)Landroidx/core/provider/FontsContractCompat$b;
     .locals 1
 
     new-instance v0, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;
@@ -505,7 +505,7 @@
     return-object p1
 .end method
 
-.method public getFontFamily(Landroid/graphics/Typeface;)Landroidx/core/content/res/FontResourcesParserCompat$b;
+.method getFontFamily(Landroid/graphics/Typeface;)Landroidx/core/content/res/FontResourcesParserCompat$b;
     .locals 4
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/DiffUtil;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # static fields
-.field public static final a:Ljava/util/Comparator;
+.field private static final a:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/recyclerview/widget/DiffUtil$1;
@@ -218,13 +218,15 @@
 
     iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
 
+    :goto_2
     iput v7, v6, Landroidx/recyclerview/widget/DiffUtil$d;->b:I
 
     iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
 
+    :goto_3
     iput v7, v6, Landroidx/recyclerview/widget/DiffUtil$d;->d:I
 
-    goto :goto_2
+    goto :goto_4
 
     :cond_2
     iget-boolean v7, v5, Landroidx/recyclerview/widget/DiffUtil$e;->d:Z
@@ -234,12 +236,6 @@
     iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
 
     add-int/lit8 v7, v7, -0x1
-
-    iput v7, v6, Landroidx/recyclerview/widget/DiffUtil$d;->b:I
-
-    iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
-
-    iput v7, v6, Landroidx/recyclerview/widget/DiffUtil$d;->d:I
 
     goto :goto_2
 
@@ -252,9 +248,9 @@
 
     add-int/lit8 v7, v7, -0x1
 
-    iput v7, v6, Landroidx/recyclerview/widget/DiffUtil$d;->d:I
+    goto :goto_3
 
-    :goto_2
+    :goto_4
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     iget-boolean v6, v5, Landroidx/recyclerview/widget/DiffUtil$e;->e:Z
@@ -273,15 +269,7 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    iput v6, v14, Landroidx/recyclerview/widget/DiffUtil$d;->a:I
-
-    iget v5, v5, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
-
-    add-int/2addr v5, v7
-
-    iput v5, v14, Landroidx/recyclerview/widget/DiffUtil$d;->c:I
-
-    goto :goto_3
+    goto :goto_5
 
     :cond_4
     iget v6, v5, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
@@ -298,9 +286,7 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    iput v5, v14, Landroidx/recyclerview/widget/DiffUtil$d;->c:I
-
-    goto :goto_3
+    goto :goto_6
 
     :cond_5
     iget v6, v5, Landroidx/recyclerview/widget/DiffUtil$e;->a:I
@@ -309,15 +295,16 @@
 
     add-int/2addr v6, v7
 
+    :goto_5
     iput v6, v14, Landroidx/recyclerview/widget/DiffUtil$d;->a:I
 
     iget v5, v5, Landroidx/recyclerview/widget/DiffUtil$e;->b:I
 
     add-int/2addr v5, v7
 
+    :goto_6
     iput v5, v14, Landroidx/recyclerview/widget/DiffUtil$d;->c:I
 
-    :goto_3
     invoke-interface {v2, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
@@ -349,7 +336,7 @@
     return-object v8
 .end method
 
-.method public static c(Landroidx/recyclerview/widget/DiffUtil$a;IIII[I[II)Landroidx/recyclerview/widget/DiffUtil$e;
+.method private static c(Landroidx/recyclerview/widget/DiffUtil$a;IIII[I[II)Landroidx/recyclerview/widget/DiffUtil$e;
     .locals 19
 
     move-object/from16 v0, p0

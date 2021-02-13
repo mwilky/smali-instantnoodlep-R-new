@@ -1,6 +1,6 @@
-.class public final Lcom/google/android/material/transition/FadeThrough$a;
+.class final Lcom/google/android/material/transition/FadeThrough$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:F
+.field final synthetic b:F
 
-.field public final synthetic c:F
+.field final synthetic c:F
 
-.field public final synthetic d:F
+.field final synthetic d:F
 
-.field public final synthetic e:F
+.field final synthetic e:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;FFFF)V
+.method constructor <init>(Landroid/view/View;FFFF)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transition/FadeThrough$a;->a:Landroid/view/View;

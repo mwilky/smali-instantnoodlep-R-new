@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ContentFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,21 +18,21 @@
 
 
 # instance fields
-.field public mAttachListener:Landroidx/appcompat/widget/ContentFrameLayout$a;
+.field private mAttachListener:Landroidx/appcompat/widget/ContentFrameLayout$a;
 
-.field public final mDecorPadding:Landroid/graphics/Rect;
+.field private final mDecorPadding:Landroid/graphics/Rect;
 
-.field public mFixedHeightMajor:Landroid/util/TypedValue;
+.field private mFixedHeightMajor:Landroid/util/TypedValue;
 
-.field public mFixedHeightMinor:Landroid/util/TypedValue;
+.field private mFixedHeightMinor:Landroid/util/TypedValue;
 
-.field public mFixedWidthMajor:Landroid/util/TypedValue;
+.field private mFixedWidthMajor:Landroid/util/TypedValue;
 
-.field public mFixedWidthMinor:Landroid/util/TypedValue;
+.field private mFixedWidthMinor:Landroid/util/TypedValue;
 
-.field public mMinWidthMajor:Landroid/util/TypedValue;
+.field private mMinWidthMajor:Landroid/util/TypedValue;
 
-.field public mMinWidthMinor:Landroid/util/TypedValue;
+.field private mMinWidthMinor:Landroid/util/TypedValue;
 
 
 # direct methods
@@ -219,7 +219,7 @@
     return-object v0
 .end method
 
-.method public onAttachedToWindow()V
+.method protected onAttachedToWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
@@ -234,7 +234,7 @@
     return-void
 .end method
 
-.method public onDetachedFromWindow()V
+.method protected onDetachedFromWindow()V
     .locals 1
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
@@ -249,7 +249,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 13
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;

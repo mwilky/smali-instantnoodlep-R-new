@@ -1,6 +1,6 @@
-.class public Landroidx/transition/GhostViewHolder;
+.class Landroidx/transition/GhostViewHolder;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,16 +12,16 @@
 
 
 # instance fields
-.field public mAttached:Z
+.field private mAttached:Z
 
-.field public mParent:Landroid/view/ViewGroup;
+.field private mParent:Landroid/view/ViewGroup;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
+.method constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -36,17 +36,17 @@
 
     iput-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Lb/p/k;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
+    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lb/p/t;->add(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Landroidx/transition/t;->add(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
@@ -55,14 +55,14 @@
     return-void
 .end method
 
-.method public static getHolder(Landroid/view/ViewGroup;)Landroidx/transition/GhostViewHolder;
+.method static getHolder(Landroid/view/ViewGroup;)Landroidx/transition/GhostViewHolder;
     .locals 1
     .param p0    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    sget v0, Lb/p/k;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
 
@@ -139,7 +139,7 @@
     return v2
 .end method
 
-.method public static getParents(Landroid/view/View;Ljava/util/ArrayList;)V
+.method private static getParents(Landroid/view/View;Ljava/util/ArrayList;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -169,7 +169,7 @@
     return-void
 .end method
 
-.method public static isOnTop(Landroid/view/View;Landroid/view/View;)Z
+.method private static isOnTop(Landroid/view/View;Landroid/view/View;)Z
     .locals 6
 
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -227,7 +227,7 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
-    invoke-static {v0, v2}, Lb/p/u;->a(Landroid/view/ViewGroup;I)I
+    invoke-static {v0, v2}, Landroidx/transition/u;->a(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
@@ -257,7 +257,7 @@
     return v3
 .end method
 
-.method public static isOnTop(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+.method private static isOnTop(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -361,7 +361,7 @@
 
 
 # virtual methods
-.method public addGhostView(Landroidx/transition/GhostViewPort;)V
+.method addGhostView(Landroidx/transition/GhostViewPort;)V
     .locals 2
 
     new-instance v0, Ljava/util/ArrayList;
@@ -451,7 +451,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    sget v0, Lb/p/k;->ghost_view_holder:I
+    sget v0, Landroidx/transition/k;->ghost_view_holder:I
 
     const/4 v2, 0x0
 
@@ -459,11 +459,11 @@
 
     iget-object p1, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
+    invoke-static {p1}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lb/p/t;->remove(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Landroidx/transition/t;->remove(Landroid/view/View;)V
 
     iput-boolean v1, p0, Landroidx/transition/GhostViewHolder;->mAttached:Z
 
@@ -471,7 +471,7 @@
     return-void
 .end method
 
-.method public popToOverlayTop()V
+.method popToOverlayTop()V
     .locals 2
 
     iget-boolean v0, p0, Landroidx/transition/GhostViewHolder;->mAttached:Z
@@ -480,19 +480,19 @@
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
+    invoke-static {v0}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lb/p/t;->remove(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Landroidx/transition/t;->remove(Landroid/view/View;)V
 
     iget-object v0, p0, Landroidx/transition/GhostViewHolder;->mParent:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lb/p/u;->b(Landroid/view/ViewGroup;)Lb/p/t;
+    invoke-static {v0}, Landroidx/transition/u;->b(Landroid/view/ViewGroup;)Landroidx/transition/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lb/p/t;->add(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Landroidx/transition/t;->add(Landroid/view/View;)V
 
     return-void
 

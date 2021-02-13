@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/MessageThreadUtil$1$a;
+.class Landroidx/recyclerview/widget/MessageThreadUtil$1$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
+.field final synthetic a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil$1;)V
+.method constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil$1;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$a;->a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
@@ -37,6 +37,7 @@
 .method public run()V
     .locals 3
 
+    :goto_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$a;->a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/MessageThreadUtil$1;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
@@ -45,7 +46,6 @@
 
     move-result-object v0
 
-    :goto_0
     if-eqz v0, :cond_3
 
     iget v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$b;->b:I
@@ -82,7 +82,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$a;->a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
@@ -95,7 +95,7 @@
 
     invoke-interface {v1, v2, v0}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->removeTile(II)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
     iget-object v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$b;->h:Ljava/lang/Object;
@@ -110,7 +110,7 @@
 
     invoke-interface {v2, v0, v1}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->addTile(ILandroidx/recyclerview/widget/TileList$Tile;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$a;->a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
@@ -122,15 +122,6 @@
     iget v0, v0, Landroidx/recyclerview/widget/MessageThreadUtil$b;->d:I
 
     invoke-interface {v1, v2, v0}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->updateItemCount(II)V
-
-    :goto_1
-    iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$a;->a:Landroidx/recyclerview/widget/MessageThreadUtil$1;
-
-    iget-object v0, v0, Landroidx/recyclerview/widget/MessageThreadUtil$1;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$a;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/MessageThreadUtil$a;->a()Landroidx/recyclerview/widget/MessageThreadUtil$b;
-
-    move-result-object v0
 
     goto :goto_0
 

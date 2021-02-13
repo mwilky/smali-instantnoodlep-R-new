@@ -1,6 +1,6 @@
-.class public Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
+.class Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "LoaderObserver"
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field public final mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+.field private final mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -41,9 +41,9 @@
     .end annotation
 .end field
 
-.field public mDeliveredData:Z
+.field private mDeliveredData:Z
 
-.field public final mLoader:Landroidx/loader/content/Loader;
+.field private final mLoader:Landroidx/loader/content/Loader;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -57,7 +57,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
+.method constructor <init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
     .locals 1
     .param p1    # Landroidx/loader/content/Loader;
         .annotation build Landroidx/annotation/NonNull;
@@ -108,7 +108,7 @@
     return-void
 .end method
 
-.method public hasDeliveredData()Z
+.method hasDeliveredData()Z
     .locals 1
 
     iget-boolean v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
@@ -178,7 +178,7 @@
     return-void
 .end method
 
-.method public reset()V
+.method reset()V
     .locals 2
     .annotation build Landroidx/annotation/MainThread;
     .end annotation

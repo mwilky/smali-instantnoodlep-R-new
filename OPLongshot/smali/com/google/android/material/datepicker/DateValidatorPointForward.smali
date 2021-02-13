@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/datepicker/DateValidatorPointForward;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/datepicker/CalendarConstraints$b;
@@ -19,11 +19,11 @@
 
 
 # instance fields
-.field public final a:J
+.field private final a:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/datepicker/DateValidatorPointForward$1;
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public constructor <init>(J)V
+.method private constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JLcom/google/android/material/datepicker/DateValidatorPointForward$1;)V
+.method synthetic constructor <init>(JLcom/google/android/material/datepicker/DateValidatorPointForward$1;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/datepicker/DateValidatorPointForward;-><init>(J)V

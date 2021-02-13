@@ -1,33 +1,33 @@
-.class public Landroidx/lifecycle/FullLifecycleObserverAdapter;
+.class Landroidx/lifecycle/FullLifecycleObserverAdapter;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/l/c;
+.implements Landroidx/lifecycle/c;
 
 
 # instance fields
-.field public final a:Lb/l/b;
+.field private final a:Landroidx/lifecycle/b;
 
-.field public final b:Lb/l/c;
+.field private final b:Landroidx/lifecycle/c;
 
 
 # direct methods
-.method public constructor <init>(Lb/l/b;Lb/l/c;)V
+.method constructor <init>(Landroidx/lifecycle/b;Landroidx/lifecycle/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iput-object p1, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    iput-object p2, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Lb/l/c;
+    iput-object p2, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
 
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$a;->a:[I
@@ -52,51 +52,51 @@
     throw p1
 
     :pswitch_1
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->b(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->b(Landroidx/lifecycle/e;)V
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->e(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->e(Landroidx/lifecycle/e;)V
 
     goto :goto_0
 
     :pswitch_3
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->d(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->d(Landroidx/lifecycle/e;)V
 
     goto :goto_0
 
     :pswitch_4
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->a(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->a(Landroidx/lifecycle/e;)V
 
     goto :goto_0
 
     :pswitch_5
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->f(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->f(Landroidx/lifecycle/e;)V
 
     goto :goto_0
 
     :pswitch_6
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Lb/l/b;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Lb/l/b;->c(Lb/l/e;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->c(Landroidx/lifecycle/e;)V
 
     :goto_0
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Lb/l/c;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/c;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lb/l/c;->onStateChanged(Lb/l/e;Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/c;->onStateChanged(Landroidx/lifecycle/e;Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_0
     return-void

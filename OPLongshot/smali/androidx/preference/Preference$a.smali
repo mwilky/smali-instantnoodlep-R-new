@@ -1,6 +1,6 @@
-.class public Landroidx/preference/Preference$a;
+.class Landroidx/preference/Preference$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/preference/Preference;
+.field final synthetic a:Landroidx/preference/Preference;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/preference/Preference;)V
+.method constructor <init>(Landroidx/preference/Preference;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/preference/Preference$a;->a:Landroidx/preference/Preference;

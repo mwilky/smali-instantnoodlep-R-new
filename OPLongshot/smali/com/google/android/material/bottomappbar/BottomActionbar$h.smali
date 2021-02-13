@@ -1,6 +1,6 @@
-.class public interface abstract Lcom/google/android/material/bottomappbar/BottomActionbar$h;
+.class interface abstract Lcom/google/android/material/bottomappbar/BottomActionbar$h;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "h"
 .end annotation
 

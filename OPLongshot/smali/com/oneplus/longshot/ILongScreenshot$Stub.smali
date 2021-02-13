@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/ILongScreenshot$Stub;
 .super Landroid/os/Binder;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/ILongScreenshot;
@@ -24,31 +24,31 @@
 
 
 # static fields
-.field public static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.ILongScreenshot"
+.field private static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.ILongScreenshot"
 
-.field public static final TRANSACTION_dumpViewInfo:I = 0xb
+.field static final TRANSACTION_dumpViewInfo:I = 0xb
 
-.field public static final TRANSACTION_getConfigValues:I = 0xc
+.field static final TRANSACTION_getConfigValues:I = 0xc
 
-.field public static final TRANSACTION_isHandleState:I = 0x4
+.field static final TRANSACTION_isHandleState:I = 0x4
 
-.field public static final TRANSACTION_isMoveState:I = 0x3
+.field static final TRANSACTION_isMoveState:I = 0x3
 
-.field public static final TRANSACTION_notifyLongshotScrollChanged:I = 0x8
+.field static final TRANSACTION_notifyLongshotScrollChanged:I = 0x8
 
-.field public static final TRANSACTION_notifyScroll:I = 0x2
+.field static final TRANSACTION_notifyScroll:I = 0x2
 
-.field public static final TRANSACTION_notifyScrollViewSearchComplete:I = 0xa
+.field static final TRANSACTION_notifyScrollViewSearchComplete:I = 0xa
 
-.field public static final TRANSACTION_notifyScrollViewTop:I = 0x6
+.field static final TRANSACTION_notifyScrollViewTop:I = 0x6
 
-.field public static final TRANSACTION_notifyWindowLayerChange:I = 0x9
+.field static final TRANSACTION_notifyWindowLayerChange:I = 0x9
 
-.field public static final TRANSACTION_onUnscrollableView:I = 0x7
+.field static final TRANSACTION_onUnscrollableView:I = 0x7
 
-.field public static final TRANSACTION_start:I = 0x1
+.field static final TRANSACTION_start:I = 0x1
 
-.field public static final TRANSACTION_stopLongshot:I = 0x5
+.field static final TRANSACTION_stopLongshot:I = 0x5
 
 
 # direct methods

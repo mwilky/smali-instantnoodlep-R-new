@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/match/StitchBgOverMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/StitchBgNextMatcher;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "StitchBgOverMatcher"
+.field private static final TAG:Ljava/lang/String; = "StitchBgOverMatcher"
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method public canDump()Z
+.method protected canDump()Z
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;->OVER:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
@@ -54,7 +54,7 @@
     return v0
 .end method
 
-.method public getTag()Ljava/lang/String;
+.method protected getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "StitchBgOver"

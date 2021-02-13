@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/datepicker/MaterialDatePicker$Builder;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field public calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+.field calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
 
-.field public final dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+.field final dateSelector:Lcom/google/android/material/datepicker/DateSelector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/material/datepicker/DateSelector<",
@@ -35,11 +35,11 @@
     .end annotation
 .end field
 
-.field public inputMode:I
+.field inputMode:I
 
-.field public overrideThemeResId:I
+.field overrideThemeResId:I
 
-.field public selection:Ljava/lang/Object;
+.field selection:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -50,13 +50,13 @@
     .end annotation
 .end field
 
-.field public titleText:Ljava/lang/CharSequence;
+.field titleText:Ljava/lang/CharSequence;
 
-.field public titleTextResId:I
+.field titleTextResId:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/DateSelector;)V
+.method private constructor <init>(Lcom/google/android/material/datepicker/DateSelector;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

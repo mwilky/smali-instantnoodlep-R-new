@@ -1,19 +1,19 @@
 .class public abstract Lcom/oneplus/screenshot/anim/BaseInterpolator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/animation/Interpolator;
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "BaseInterpolator"
+.field private static final TAG:Ljava/lang/String; = "BaseInterpolator"
 
 
 # instance fields
-.field public mDurationFactor:F
+.field protected mDurationFactor:F
 
-.field public mFactor:F
+.field protected mFactor:F
 
 
 # direct methods
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
+.method private constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

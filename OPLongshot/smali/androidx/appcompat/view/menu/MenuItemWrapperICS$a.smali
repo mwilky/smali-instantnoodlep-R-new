@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$a;
+.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$a;
 .super Landroidx/core/view/ActionProvider;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final mInner:Landroid/view/ActionProvider;
+.field final mInner:Landroid/view/ActionProvider;
 
-.field public final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
+.field final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$a;->this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
@@ -78,7 +78,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$a;->this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    invoke-virtual {v1, p1}, Lb/c/m/d/a;->getSubMenuWrapper(Landroid/view/SubMenu;)Landroid/view/SubMenu;
+    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/a;->getSubMenuWrapper(Landroid/view/SubMenu;)Landroid/view/SubMenu;
 
     move-result-object p1
 

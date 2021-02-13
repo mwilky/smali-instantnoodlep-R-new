@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/view/menu/ActionMenuItem;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/core/internal/view/SupportMenuItem;
@@ -15,63 +15,63 @@
 
 
 # static fields
-.field public static final CHECKABLE:I = 0x1
+.field private static final CHECKABLE:I = 0x1
 
-.field public static final CHECKED:I = 0x2
+.field private static final CHECKED:I = 0x2
 
-.field public static final ENABLED:I = 0x10
+.field private static final ENABLED:I = 0x10
 
-.field public static final EXCLUSIVE:I = 0x4
+.field private static final EXCLUSIVE:I = 0x4
 
-.field public static final HIDDEN:I = 0x8
+.field private static final HIDDEN:I = 0x8
 
-.field public static final NO_ICON:I
+.field private static final NO_ICON:I
 
 
 # instance fields
-.field public final mCategoryOrder:I
+.field private final mCategoryOrder:I
 
-.field public mClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
+.field private mClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-.field public mContentDescription:Ljava/lang/CharSequence;
+.field private mContentDescription:Ljava/lang/CharSequence;
 
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public mFlags:I
+.field private mFlags:I
 
-.field public final mGroup:I
+.field private final mGroup:I
 
-.field public mHasIconTint:Z
+.field private mHasIconTint:Z
 
-.field public mHasIconTintMode:Z
+.field private mHasIconTintMode:Z
 
-.field public mIconDrawable:Landroid/graphics/drawable/Drawable;
+.field private mIconDrawable:Landroid/graphics/drawable/Drawable;
 
-.field public mIconResId:I
+.field private mIconResId:I
 
-.field public mIconTintList:Landroid/content/res/ColorStateList;
+.field private mIconTintList:Landroid/content/res/ColorStateList;
 
-.field public mIconTintMode:Landroid/graphics/PorterDuff$Mode;
+.field private mIconTintMode:Landroid/graphics/PorterDuff$Mode;
 
-.field public final mId:I
+.field private final mId:I
 
-.field public mIntent:Landroid/content/Intent;
+.field private mIntent:Landroid/content/Intent;
 
-.field public final mOrdering:I
+.field private final mOrdering:I
 
-.field public mShortcutAlphabeticChar:C
+.field private mShortcutAlphabeticChar:C
 
-.field public mShortcutAlphabeticModifiers:I
+.field private mShortcutAlphabeticModifiers:I
 
-.field public mShortcutNumericChar:C
+.field private mShortcutNumericChar:C
 
-.field public mShortcutNumericModifiers:I
+.field private mShortcutNumericModifiers:I
 
-.field public mTitle:Ljava/lang/CharSequence;
+.field private mTitle:Ljava/lang/CharSequence;
 
-.field public mTitleCondensed:Ljava/lang/CharSequence;
+.field private mTitleCondensed:Ljava/lang/CharSequence;
 
-.field public mTooltipText:Ljava/lang/CharSequence;
+.field private mTooltipText:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -137,7 +137,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Lb/g/f/f/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroidx/core/graphics/drawable/a;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mIconTintList:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v1}, Lb/g/f/f/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/a;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget-boolean v0, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mHasIconTintMode:Z
@@ -166,7 +166,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mIconTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v0, v1}, Lb/g/f/f/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v0, v1}, Landroidx/core/graphics/drawable/a;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
     return-void
@@ -697,7 +697,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mContext:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lb/g/e/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/content/b;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

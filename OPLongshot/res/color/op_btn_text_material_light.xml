@@ -2,5 +2,5 @@
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:color="@color/op_control_text_color_secondary_dark" />
-    <item android:color="?opAccentBtnTextColor" android:alpha="1.0" />
+    <item android:color="@color/oneplus_accent_button_text_color" android:alpha="1.0" />
 </selector>

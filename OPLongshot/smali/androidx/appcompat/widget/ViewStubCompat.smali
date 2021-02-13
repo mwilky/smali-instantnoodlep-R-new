@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/ViewStubCompat;
 .super Landroid/view/View;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field public mInflateListener:Landroidx/appcompat/widget/ViewStubCompat$a;
+.field private mInflateListener:Landroidx/appcompat/widget/ViewStubCompat$a;
 
-.field public mInflatedId:I
+.field private mInflatedId:I
 
-.field public mInflatedViewRef:Ljava/lang/ref/WeakReference;
+.field private mInflatedViewRef:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -32,9 +32,9 @@
     .end annotation
 .end field
 
-.field public mInflater:Landroid/view/LayoutInflater;
+.field private mInflater:Landroid/view/LayoutInflater;
 
-.field public mLayoutResource:I
+.field private mLayoutResource:I
 
 
 # direct methods
@@ -73,13 +73,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->mLayoutResource:I
 
-    sget-object v1, Lb/c/j;->ViewStubCompat:[I
+    sget-object v1, La/a/j;->ViewStubCompat:[I
 
     invoke-virtual {p1, p2, v1, p3, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/c/j;->ViewStubCompat_android_inflatedId:I
+    sget p2, La/a/j;->ViewStubCompat_android_inflatedId:I
 
     const/4 p3, -0x1
 
@@ -89,7 +89,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->mInflatedId:I
 
-    sget p2, Lb/c/j;->ViewStubCompat_android_layout:I
+    sget p2, La/a/j;->ViewStubCompat_android_layout:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -97,7 +97,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->mLayoutResource:I
 
-    sget p2, Lb/c/j;->ViewStubCompat_android_id:I
+    sget p2, La/a/j;->ViewStubCompat_android_id:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -120,7 +120,7 @@
 
 
 # virtual methods
-.method public dispatchDraw(Landroid/graphics/Canvas;)V
+.method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
     return-void
@@ -265,7 +265,7 @@
     throw v0
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 0
 
     const/4 p1, 0x0

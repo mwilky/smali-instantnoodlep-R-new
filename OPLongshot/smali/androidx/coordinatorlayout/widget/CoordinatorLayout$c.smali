@@ -1,6 +1,6 @@
-.class public Landroidx/coordinatorlayout/widget/CoordinatorLayout$c;
+.class Landroidx/coordinatorlayout/widget/CoordinatorLayout$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "c"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.field final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
+.method constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$c;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;

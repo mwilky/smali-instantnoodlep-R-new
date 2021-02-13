@@ -1,6 +1,6 @@
 .class public Landroidx/collection/SparseArrayCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -19,21 +19,21 @@
 
 
 # static fields
-.field public static final DELETED:Ljava/lang/Object;
+.field private static final DELETED:Ljava/lang/Object;
 
 
 # instance fields
-.field public mGarbage:Z
+.field private mGarbage:Z
 
-.field public mKeys:[I
+.field private mKeys:[I
 
-.field public mSize:I
+.field private mSize:I
 
-.field public mValues:[Ljava/lang/Object;
+.field private mValues:[Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/Object;
@@ -66,18 +66,18 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Lb/e/a;->a:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
-    sget-object p1, Lb/e/a;->c:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lb/e/a;->e(I)I
+    invoke-static {p1}, Landroidx/collection/a;->e(I)I
 
     move-result p1
 
@@ -197,7 +197,7 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    invoke-static {v1}, Lb/e/a;->e(I)I
+    invoke-static {v1}, Landroidx/collection/a;->e(I)I
 
     move-result v1
 
@@ -417,7 +417,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Lb/e/a;->a([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 
@@ -457,7 +457,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Lb/e/a;->a([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 
@@ -554,7 +554,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Lb/e/a;->a([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result v0
 
@@ -608,7 +608,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Lb/e/a;->a([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result v0
 
@@ -625,7 +625,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v1}, Lb/e/a;->e(I)I
+    invoke-static {v1}, Landroidx/collection/a;->e(I)I
 
     move-result v1
 
@@ -764,7 +764,7 @@
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
 
-    invoke-static {v0, v1, p1}, Lb/e/a;->a([III)I
+    invoke-static {v0, v1, p1}, Landroidx/collection/a;->a([III)I
 
     move-result p1
 

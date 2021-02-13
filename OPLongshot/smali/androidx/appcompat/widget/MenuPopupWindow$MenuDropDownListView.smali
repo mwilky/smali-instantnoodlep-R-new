@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/MenuPopupWindow$MenuDropDownListView;
-.super Lb/c/n/x;
-.source "SourceFile"
+.super Landroidx/appcompat/widget/x;
+.source ""
 
 
 # annotations
@@ -21,20 +21,20 @@
 
 
 # instance fields
-.field public final mAdvanceKey:I
+.field final mAdvanceKey:I
 
-.field public mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
+.field private mHoverListener:Landroidx/appcompat/widget/MenuItemHoverListener;
 
-.field public mHoveredMenuItem:Landroid/view/MenuItem;
+.field private mHoveredMenuItem:Landroid/view/MenuItem;
 
-.field public final mRetreatKey:I
+.field final mRetreatKey:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 3
 
-    invoke-direct {p0, p1, p2}, Lb/c/n/x;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/content/Context;Z)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -92,7 +92,7 @@
 .method public bridge synthetic hasFocus()Z
     .locals 1
 
-    invoke-super {p0}, Lb/c/n/x;->hasFocus()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->hasFocus()Z
 
     move-result v0
 
@@ -102,7 +102,7 @@
 .method public bridge synthetic hasWindowFocus()Z
     .locals 1
 
-    invoke-super {p0}, Lb/c/n/x;->hasWindowFocus()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->hasWindowFocus()Z
 
     move-result v0
 
@@ -112,7 +112,7 @@
 .method public bridge synthetic isFocused()Z
     .locals 1
 
-    invoke-super {p0}, Lb/c/n/x;->isFocused()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->isFocused()Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
 .method public bridge synthetic isInTouchMode()Z
     .locals 1
 
-    invoke-super {p0}, Lb/c/n/x;->isInTouchMode()Z
+    invoke-super {p0}, Landroidx/appcompat/widget/x;->isInTouchMode()Z
 
     move-result v0
 
@@ -132,7 +132,7 @@
 .method public bridge synthetic lookForSelectablePosition(IZ)I
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lb/c/n/x;->lookForSelectablePosition(IZ)I
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/x;->lookForSelectablePosition(IZ)I
 
     move-result p1
 
@@ -142,7 +142,7 @@
 .method public bridge synthetic measureHeightOfChildrenCompat(IIIII)I
     .locals 0
 
-    invoke-super/range {p0 .. p5}, Lb/c/n/x;->measureHeightOfChildrenCompat(IIIII)I
+    invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/x;->measureHeightOfChildrenCompat(IIIII)I
 
     move-result p1
 
@@ -152,7 +152,7 @@
 .method public bridge synthetic onForwardedEvent(Landroid/view/MotionEvent;I)Z
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lb/c/n/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/x;->onForwardedEvent(Landroid/view/MotionEvent;I)Z
 
     move-result p1
 
@@ -184,16 +184,14 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/appcompat/view/menu/MenuAdapter;
-
     goto :goto_0
 
     :cond_0
     const/4 v1, 0x0
 
+    :goto_0
     check-cast v0, Landroidx/appcompat/view/menu/MenuAdapter;
 
-    :goto_0
     const/4 v2, 0x0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -263,7 +261,7 @@
     invoke-interface {v1, v0, v2}, Landroidx/appcompat/widget/MenuItemHoverListener;->onItemHoverEnter(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V
 
     :cond_3
-    invoke-super {p0, p1}, Lb/c/n/x;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -354,7 +352,7 @@
 .method public bridge synthetic onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    invoke-super {p0, p1}, Lb/c/n/x;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -372,7 +370,7 @@
 .method public bridge synthetic setSelector(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lb/c/n/x;->setSelector(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/x;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

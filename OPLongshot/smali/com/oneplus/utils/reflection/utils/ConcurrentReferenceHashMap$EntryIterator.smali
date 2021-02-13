@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;
+.class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "EntryIterator"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public last:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
+.field private last:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry<",
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field public next:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
+.field private next:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry<",
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field public reference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field private reference:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference<",
@@ -54,9 +54,9 @@
     .end annotation
 .end field
 
-.field public referenceIndex:I
+.field private referenceIndex:I
 
-.field public references:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field private references:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -66,9 +66,9 @@
     .end annotation
 .end field
 
-.field public segmentIndex:I
+.field private segmentIndex:I
 
-.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
@@ -291,7 +291,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lc/b/h/b/d/a;->c(Z)V
+    invoke-static {v0}, Lcom/oneplus/utils/reflection/utils/a;->c(Z)V
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$EntryIterator;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 

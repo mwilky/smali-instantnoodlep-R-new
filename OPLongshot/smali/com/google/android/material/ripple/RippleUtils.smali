@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/ripple/RippleUtils;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,32 +12,32 @@
 
 
 # static fields
-.field public static final ENABLED_PRESSED_STATE_SET:[I
+.field private static final ENABLED_PRESSED_STATE_SET:[I
 
-.field public static final FOCUSED_STATE_SET:[I
+.field private static final FOCUSED_STATE_SET:[I
 
-.field public static final HOVERED_FOCUSED_STATE_SET:[I
+.field private static final HOVERED_FOCUSED_STATE_SET:[I
 
-.field public static final HOVERED_STATE_SET:[I
+.field private static final HOVERED_STATE_SET:[I
 
-.field public static final LOG_TAG:Ljava/lang/String;
+.field static final LOG_TAG:Ljava/lang/String;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final PRESSED_STATE_SET:[I
+.field private static final PRESSED_STATE_SET:[I
 
-.field public static final SELECTED_FOCUSED_STATE_SET:[I
+.field private static final SELECTED_FOCUSED_STATE_SET:[I
 
-.field public static final SELECTED_HOVERED_FOCUSED_STATE_SET:[I
+.field private static final SELECTED_HOVERED_FOCUSED_STATE_SET:[I
 
-.field public static final SELECTED_HOVERED_STATE_SET:[I
+.field private static final SELECTED_HOVERED_STATE_SET:[I
 
-.field public static final SELECTED_PRESSED_STATE_SET:[I
+.field private static final SELECTED_PRESSED_STATE_SET:[I
 
-.field public static final SELECTED_STATE_SET:[I
+.field private static final SELECTED_STATE_SET:[I
 
-.field public static final TRANSPARENT_DEFAULT_COLOR_WARNING:Ljava/lang/String; = "Use a non-transparent color for the default color as it will be used to finish ripple animations."
+.field static final TRANSPARENT_DEFAULT_COLOR_WARNING:Ljava/lang/String; = "Use a non-transparent color for the default color as it will be used to finish ripple animations."
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -46,7 +46,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -189,7 +189,7 @@
     .end array-data
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -370,7 +370,7 @@
     return-object p0
 .end method
 
-.method public static doubleAlpha(I)I
+.method private static doubleAlpha(I)I
     .locals 2
     .param p0    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -395,14 +395,14 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, Lb/g/f/d;->d(II)I
+    invoke-static {p0, v0}, Landroidx/core/graphics/d;->d(II)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static getColorForState(Landroid/content/res/ColorStateList;[I)I
+.method private static getColorForState(Landroid/content/res/ColorStateList;[I)I
     .locals 1
     .param p0    # Landroid/content/res/ColorStateList;
         .annotation build Landroidx/annotation/Nullable;

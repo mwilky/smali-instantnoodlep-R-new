@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/EpicenterTranslateClipReveal;
 .super Landroid/transition/Visibility;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -20,25 +20,25 @@
 
 
 # static fields
-.field public static final PROPNAME_BOUNDS:Ljava/lang/String; = "android:epicenterReveal:bounds"
+.field private static final PROPNAME_BOUNDS:Ljava/lang/String; = "android:epicenterReveal:bounds"
 
-.field public static final PROPNAME_CLIP:Ljava/lang/String; = "android:epicenterReveal:clip"
+.field private static final PROPNAME_CLIP:Ljava/lang/String; = "android:epicenterReveal:clip"
 
-.field public static final PROPNAME_TRANSLATE_X:Ljava/lang/String; = "android:epicenterReveal:translateX"
+.field private static final PROPNAME_TRANSLATE_X:Ljava/lang/String; = "android:epicenterReveal:translateX"
 
-.field public static final PROPNAME_TRANSLATE_Y:Ljava/lang/String; = "android:epicenterReveal:translateY"
+.field private static final PROPNAME_TRANSLATE_Y:Ljava/lang/String; = "android:epicenterReveal:translateY"
 
-.field public static final PROPNAME_TRANSLATE_Z:Ljava/lang/String; = "android:epicenterReveal:translateZ"
+.field private static final PROPNAME_TRANSLATE_Z:Ljava/lang/String; = "android:epicenterReveal:translateZ"
 
-.field public static final PROPNAME_Z:Ljava/lang/String; = "android:epicenterReveal:z"
+.field private static final PROPNAME_Z:Ljava/lang/String; = "android:epicenterReveal:z"
 
 
 # instance fields
-.field public final mInterpolatorX:Landroid/animation/TimeInterpolator;
+.field private final mInterpolatorX:Landroid/animation/TimeInterpolator;
 
-.field public final mInterpolatorY:Landroid/animation/TimeInterpolator;
+.field private final mInterpolatorY:Landroid/animation/TimeInterpolator;
 
-.field public final mInterpolatorZ:Landroid/animation/TimeInterpolator;
+.field private final mInterpolatorZ:Landroid/animation/TimeInterpolator;
 
 
 # direct methods
@@ -63,7 +63,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lb/c/j;->EpicenterTranslateClipReveal:[I
+    sget-object v0, La/a/j;->EpicenterTranslateClipReveal:[I
 
     const/4 v1, 0x0
 
@@ -71,7 +71,7 @@
 
     move-result-object p2
 
-    sget v0, Lb/c/j;->EpicenterTranslateClipReveal_interpolatorX:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorX:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -83,17 +83,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
-
     goto :goto_0
 
     :cond_0
     sget-object v0, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_0
     iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorX:Landroid/animation/TimeInterpolator;
 
-    :goto_0
-    sget v0, Lb/c/j;->EpicenterTranslateClipReveal_interpolatorY:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorY:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -105,17 +103,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorY:Landroid/animation/TimeInterpolator;
-
     goto :goto_1
 
     :cond_1
     sget-object v0, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_1
     iput-object v0, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorY:Landroid/animation/TimeInterpolator;
 
-    :goto_1
-    sget v0, Lb/c/j;->EpicenterTranslateClipReveal_interpolatorZ:I
+    sget v0, La/a/j;->EpicenterTranslateClipReveal_interpolatorZ:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -127,16 +123,14 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorZ:Landroid/animation/TimeInterpolator;
-
     goto :goto_2
 
     :cond_2
     sget-object p1, Landroidx/animation/AnimatorUtils;->LinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
+    :goto_2
     iput-object p1, p0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal;->mInterpolatorZ:Landroid/animation/TimeInterpolator;
 
-    :goto_2
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -247,7 +241,7 @@
     return-void
 .end method
 
-.method public static createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
+.method private static createRectAnimator(Landroid/view/View;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroidx/appcompat/widget/EpicenterTranslateClipReveal$b;Landroidx/appcompat/widget/EpicenterTranslateClipReveal$b;FLandroid/transition/TransitionValues;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;Landroid/animation/TimeInterpolator;)Landroid/animation/Animator;
     .locals 5
 
     new-instance v0, Landroidx/appcompat/widget/EpicenterTranslateClipReveal$StateEvaluator;

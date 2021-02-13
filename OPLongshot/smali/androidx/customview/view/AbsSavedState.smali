@@ -1,6 +1,6 @@
 .class public abstract Landroidx/customview/view/AbsSavedState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -21,11 +21,11 @@
 
 
 # instance fields
-.field public final mSuperState:Landroid/os/Parcelable;
+.field private final mSuperState:Landroid/os/Parcelable;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/customview/view/AbsSavedState$a;
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 1
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method protected constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
@@ -99,7 +99,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcelable;)V
+.method protected constructor <init>(Landroid/os/Parcelable;)V
     .locals 1
     .param p1    # Landroid/os/Parcelable;
         .annotation build Landroidx/annotation/NonNull;
@@ -134,7 +134,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroidx/customview/view/AbsSavedState$a;)V
+.method synthetic constructor <init>(Landroidx/customview/view/AbsSavedState$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/customview/view/AbsSavedState;-><init>()V

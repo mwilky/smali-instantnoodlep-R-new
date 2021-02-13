@@ -1,6 +1,6 @@
 .class public Landroidx/core/app/NotificationCompat$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,37 +15,37 @@
 
 
 # instance fields
-.field public A:Ljava/lang/String;
+.field A:Ljava/lang/String;
 
-.field public B:Landroid/os/Bundle;
+.field B:Landroid/os/Bundle;
 
-.field public C:I
+.field C:I
 
-.field public D:I
+.field D:I
 
-.field public E:Landroid/app/Notification;
+.field E:Landroid/app/Notification;
 
-.field public F:Landroid/widget/RemoteViews;
+.field F:Landroid/widget/RemoteViews;
 
-.field public G:Landroid/widget/RemoteViews;
+.field G:Landroid/widget/RemoteViews;
 
-.field public H:Landroid/widget/RemoteViews;
+.field H:Landroid/widget/RemoteViews;
 
-.field public I:Ljava/lang/String;
+.field I:Ljava/lang/String;
 
-.field public J:I
+.field J:I
 
-.field public K:Ljava/lang/String;
+.field K:Ljava/lang/String;
 
-.field public L:J
+.field L:J
 
-.field public M:I
+.field M:I
 
-.field public N:Z
+.field N:Z
 
-.field public O:Landroidx/core/app/NotificationCompat$a;
+.field O:Landroidx/core/app/NotificationCompat$a;
 
-.field public P:Landroid/app/Notification;
+.field P:Landroid/app/Notification;
 
 .field public Q:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -84,7 +84,7 @@
     .end annotation
 .end field
 
-.field public c:Ljava/util/ArrayList;
+.field c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -94,55 +94,55 @@
     .end annotation
 .end field
 
-.field public d:Ljava/lang/CharSequence;
+.field d:Ljava/lang/CharSequence;
 
-.field public e:Ljava/lang/CharSequence;
+.field e:Ljava/lang/CharSequence;
 
-.field public f:Landroid/app/PendingIntent;
+.field f:Landroid/app/PendingIntent;
 
-.field public g:Landroid/app/PendingIntent;
+.field g:Landroid/app/PendingIntent;
 
-.field public h:Landroid/widget/RemoteViews;
+.field h:Landroid/widget/RemoteViews;
 
-.field public i:Landroid/graphics/Bitmap;
+.field i:Landroid/graphics/Bitmap;
 
-.field public j:Ljava/lang/CharSequence;
+.field j:Ljava/lang/CharSequence;
 
-.field public k:I
+.field k:I
 
-.field public l:I
+.field l:I
 
-.field public m:Z
+.field m:Z
 
-.field public n:Z
+.field n:Z
 
-.field public o:Landroidx/core/app/NotificationCompat$c;
+.field o:Landroidx/core/app/NotificationCompat$c;
 
-.field public p:Ljava/lang/CharSequence;
+.field p:Ljava/lang/CharSequence;
 
-.field public q:[Ljava/lang/CharSequence;
+.field q:[Ljava/lang/CharSequence;
 
-.field public r:I
+.field r:I
 
-.field public s:I
+.field s:I
 
-.field public t:Z
+.field t:Z
 
-.field public u:Ljava/lang/String;
+.field u:Ljava/lang/String;
 
-.field public v:Z
+.field v:Z
 
-.field public w:Ljava/lang/String;
+.field w:Ljava/lang/String;
 
-.field public x:Z
+.field x:Z
 
-.field public y:Z
+.field y:Z
 
-.field public z:Z
+.field z:Z
 
 
 # direct methods
-.method public static b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method protected static b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 2
 
     if-nez p0, :cond_0

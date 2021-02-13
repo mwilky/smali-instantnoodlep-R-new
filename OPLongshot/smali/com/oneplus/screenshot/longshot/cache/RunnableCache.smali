@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/RunnableCache;
 .super Ljava/util/ArrayList;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field public mHandler:Landroid/os/Handler;
+.field private mHandler:Landroid/os/Handler;
 
 
 # direct methods

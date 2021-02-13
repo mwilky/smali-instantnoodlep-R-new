@@ -1,6 +1,6 @@
 .class public abstract Lcom/oneplus/longshot/IViewPropCallback$Stub;
 .super Landroid/os/Binder;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/longshot/IViewPropCallback;
@@ -24,11 +24,11 @@
 
 
 # static fields
-.field public static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.IViewPropCallback"
+.field private static final DESCRIPTOR:Ljava/lang/String; = "com.oneplus.longshot.IViewPropCallback"
 
-.field public static final TRANSACTION_getViewProps:I = 0x1
+.field static final TRANSACTION_getViewProps:I = 0x1
 
-.field public static final TRANSACTION_performScroll:I = 0x2
+.field static final TRANSACTION_performScroll:I = 0x2
 
 
 # direct methods

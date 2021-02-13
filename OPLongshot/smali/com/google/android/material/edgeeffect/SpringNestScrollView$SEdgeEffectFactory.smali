@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringNestScrollView$SEdgeEffectFactory;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+.method protected a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
     .locals 0
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;

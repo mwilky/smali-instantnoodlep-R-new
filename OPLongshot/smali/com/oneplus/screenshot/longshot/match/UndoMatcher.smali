@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/match/UndoMatcher;
 .super Lcom/oneplus/screenshot/longshot/match/BaseMatcher;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "UndoMatcher"
+.field private static final TAG:Ljava/lang/String; = "UndoMatcher"
 
 
 # direct methods
@@ -128,7 +128,7 @@
 
 
 # virtual methods
-.method public canDump()Z
+.method protected canDump()Z
     .locals 1
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;->PREV:Lcom/oneplus/screenshot/longshot/dump/BitmapDumper$Options;
@@ -140,7 +140,7 @@
     return v0
 .end method
 
-.method public createDumper()V
+.method protected createDumper()V
     .locals 6
 
     new-instance v0, Lcom/oneplus/screenshot/longshot/dump/PrevDumper;
@@ -192,7 +192,7 @@
     return-void
 .end method
 
-.method public getTag()Ljava/lang/String;
+.method protected getTag()Ljava/lang/String;
     .locals 1
 
     const-string v0, "Undo"

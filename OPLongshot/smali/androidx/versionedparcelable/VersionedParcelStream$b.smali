@@ -1,6 +1,6 @@
-.class public Landroidx/versionedparcelable/VersionedParcelStream$b;
+.class Landroidx/versionedparcelable/VersionedParcelStream$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "b"
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/io/ByteArrayOutputStream;
+.field final a:Ljava/io/ByteArrayOutputStream;
 
-.field public final b:Ljava/io/DataOutputStream;
+.field final b:Ljava/io/DataOutputStream;
 
-.field public final c:I
+.field private final c:I
 
-.field public final d:Ljava/io/DataOutputStream;
+.field private final d:Ljava/io/DataOutputStream;
 
 
 # direct methods
-.method public constructor <init>(ILjava/io/DataOutputStream;)V
+.method constructor <init>(ILjava/io/DataOutputStream;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public a()V
+.method a()V
     .locals 4
 
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelStream$b;->b:Ljava/io/DataOutputStream;

@@ -1,6 +1,6 @@
-.class public Landroidx/fragment/app/Fragment$d;
+.class Landroidx/fragment/app/Fragment$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,53 +9,53 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/view/View;
+.field a:Landroid/view/View;
 
-.field public b:Landroid/animation/Animator;
+.field b:Landroid/animation/Animator;
 
-.field public c:I
+.field c:I
 
-.field public d:I
+.field d:I
 
-.field public e:I
+.field e:I
 
-.field public f:I
+.field f:I
 
-.field public g:Ljava/lang/Object;
+.field g:Ljava/lang/Object;
 
-.field public h:Ljava/lang/Object;
+.field h:Ljava/lang/Object;
 
-.field public i:Ljava/lang/Object;
+.field i:Ljava/lang/Object;
 
-.field public j:Ljava/lang/Object;
+.field j:Ljava/lang/Object;
 
-.field public k:Ljava/lang/Object;
+.field k:Ljava/lang/Object;
 
-.field public l:Ljava/lang/Object;
+.field l:Ljava/lang/Object;
 
-.field public m:Ljava/lang/Boolean;
+.field m:Ljava/lang/Boolean;
 
-.field public n:Ljava/lang/Boolean;
+.field n:Ljava/lang/Boolean;
 
-.field public o:Lb/g/d/d;
+.field o:Landroidx/core/app/d;
 
-.field public p:Lb/g/d/d;
+.field p:Landroidx/core/app/d;
 
-.field public q:Z
+.field q:Z
 
-.field public r:Landroidx/fragment/app/Fragment$f;
+.field r:Landroidx/fragment/app/Fragment$f;
 
-.field public s:Z
+.field s:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -76,9 +76,9 @@
 
     iput-object v1, p0, Landroidx/fragment/app/Fragment$d;->l:Ljava/lang/Object;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Lb/g/d/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->o:Landroidx/core/app/d;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Lb/g/d/d;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$d;->p:Landroidx/core/app/d;
 
     return-void
 .end method

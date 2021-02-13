@@ -1,6 +1,6 @@
-.class public final Lcom/google/android/material/transition/TransitionUtils$b;
+.class final Lcom/google/android/material/transition/TransitionUtils$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/transition/TransitionUtils$d;
@@ -12,25 +12,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/RectF;
+.field final synthetic a:Landroid/graphics/RectF;
 
-.field public final synthetic b:Landroid/graphics/RectF;
+.field final synthetic b:Landroid/graphics/RectF;
 
-.field public final synthetic c:F
+.field final synthetic c:F
 
-.field public final synthetic d:F
+.field final synthetic d:F
 
-.field public final synthetic e:F
+.field final synthetic e:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)V
+.method constructor <init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/transition/TransitionUtils$b;->a:Landroid/graphics/RectF;
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public a(Lc/a/b/b/e0/b;Lc/a/b/b/e0/b;)Lc/a/b/b/e0/b;
+.method public a(Lcom/google/android/material/shape/b;Lcom/google/android/material/shape/b;)Lcom/google/android/material/shape/b;
     .locals 3
-    .param p1    # Lc/a/b/b/e0/b;
+    .param p1    # Lcom/google/android/material/shape/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lc/a/b/b/e0/b;
+    .param p2    # Lcom/google/android/material/shape/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -65,13 +65,13 @@
 
     iget-object v0, p0, Lcom/google/android/material/transition/TransitionUtils$b;->a:Landroid/graphics/RectF;
 
-    invoke-interface {p1, v0}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {p1, v0}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result p1
 
     iget-object v0, p0, Lcom/google/android/material/transition/TransitionUtils$b;->b:Landroid/graphics/RectF;
 
-    invoke-interface {p2, v0}, Lc/a/b/b/e0/b;->getCornerSize(Landroid/graphics/RectF;)F
+    invoke-interface {p2, v0}, Lcom/google/android/material/shape/b;->getCornerSize(Landroid/graphics/RectF;)F
 
     move-result p2
 
@@ -85,9 +85,9 @@
 
     move-result p1
 
-    new-instance p2, Lc/a/b/b/e0/a;
+    new-instance p2, Lcom/google/android/material/shape/a;
 
-    invoke-direct {p2, p1}, Lc/a/b/b/e0/a;-><init>(F)V
+    invoke-direct {p2, p1}, Lcom/google/android/material/shape/a;-><init>(F)V
 
     return-object p2
 .end method

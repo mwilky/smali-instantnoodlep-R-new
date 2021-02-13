@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/analytics/containertag/common/Key;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/analytics/containertag/common/Key;
+.field private static final synthetic $VALUES:[Lcom/google/analytics/containertag/common/Key;
 
 .field public static final enum ACCOUNT:Lcom/google/analytics/containertag/common/Key;
 
@@ -404,11 +404,11 @@
 
 
 # instance fields
-.field public final id:Ljava/lang/String;
+.field private final id:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 16
 
     new-instance v0, Lcom/google/analytics/containertag/common/Key;
@@ -3868,7 +3868,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

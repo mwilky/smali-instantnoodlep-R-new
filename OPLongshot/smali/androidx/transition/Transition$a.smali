@@ -1,6 +1,6 @@
-.class public final Landroidx/transition/Transition$a;
-.super Lb/p/i;
-.source "SourceFile"
+.class final Landroidx/transition/Transition$a;
+.super Landroidx/transition/i;
+.source ""
 
 
 # annotations
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lb/p/i;-><init>()V
+    invoke-direct {p0}, Landroidx/transition/i;-><init>()V
 
     return-void
 .end method

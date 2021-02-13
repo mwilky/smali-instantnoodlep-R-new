@@ -1,6 +1,6 @@
-.class public abstract Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
+.class abstract Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x40a
     name = "ListIterator"
 .end annotation
 
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field public mExpectedEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field mExpectedEnd:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field public mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -55,7 +55,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
+.method constructor <init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -112,7 +112,7 @@
 
 
 # virtual methods
-.method public abstract backward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method abstract backward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,7 +124,7 @@
     .end annotation
 .end method
 
-.method public abstract forward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method abstract forward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

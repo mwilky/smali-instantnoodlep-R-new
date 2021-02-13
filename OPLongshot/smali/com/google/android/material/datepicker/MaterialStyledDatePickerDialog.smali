@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;
 .super Landroid/app/DatePickerDialog;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,34 +13,34 @@
 
 
 # static fields
-.field public static final DEF_STYLE_ATTR:I = 0x101035c
+.field private static final DEF_STYLE_ATTR:I = 0x101035c
     .annotation build Landroidx/annotation/AttrRes;
     .end annotation
 .end field
 
-.field public static final DEF_STYLE_RES:I
+.field private static final DEF_STYLE_RES:I
     .annotation build Landroidx/annotation/StyleRes;
     .end annotation
 .end field
 
 
 # instance fields
-.field public final background:Landroid/graphics/drawable/Drawable;
+.field private final background:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final backgroundInsets:Landroid/graphics/Rect;
+.field private final backgroundInsets:Landroid/graphics/Rect;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lc/a/b/b/k;->MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner:I
+    sget v0, Lb/a/b/a/k;->MaterialAlertDialog_MaterialComponents_Picker_Date_Spinner:I
 
     sput v0, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;->DEF_STYLE_RES:I
 
@@ -108,7 +108,7 @@
 
     move-result-object p2
 
-    sget p3, Lc/a/b/b/b;->colorSurface:I
+    sget p3, Lb/a/b/a/b;->colorSurface:I
 
     const-class p4, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;
 
@@ -136,24 +136,18 @@
 
     if-lt p4, p5, :cond_0
 
-    invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->T(Landroid/content/res/ColorStateList;)V
-
     goto :goto_0
 
     :cond_0
     const/4 p2, 0x0
 
+    :goto_0
     invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     invoke-virtual {p3, p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->T(Landroid/content/res/ColorStateList;)V
 
-    :goto_0
     sget p2, Lcom/google/android/material/datepicker/MaterialStyledDatePickerDialog;->DEF_STYLE_RES:I
 
     invoke-static {p1, p6, p2}, Lcom/google/android/material/dialog/MaterialDialogs;->getDialogBackgroundInsets(Landroid/content/Context;II)Landroid/graphics/Rect;
@@ -203,7 +197,7 @@
 
 
 # virtual methods
-.method public onCreate(Landroid/os/Bundle;)V
+.method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 
     invoke-super {p0, p1}, Landroid/app/DatePickerDialog;->onCreate(Landroid/os/Bundle;)V

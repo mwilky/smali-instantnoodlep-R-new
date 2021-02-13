@@ -1,10 +1,10 @@
-.class public Lcom/google/android/material/picker/DayPickerViewPager;
+.class Lcom/google/android/material/picker/DayPickerViewPager;
 .super Landroidx/viewpager/widget/ViewPager;
-.source "SourceFile"
+.source ""
 
 
 # instance fields
-.field public final j0:Ljava/util/ArrayList;
+.field private final j0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 13
 
     const/4 v0, 0x1

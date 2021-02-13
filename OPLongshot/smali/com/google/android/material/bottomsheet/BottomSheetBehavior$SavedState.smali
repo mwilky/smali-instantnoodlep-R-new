@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xc
     name = "SavedState"
 .end annotation
 
@@ -27,19 +27,19 @@
 
 
 # instance fields
-.field public final a:I
+.field final a:I
 
-.field public b:I
+.field b:I
 
-.field public c:Z
+.field c:Z
 
-.field public d:Z
+.field d:Z
 
-.field public e:Z
+.field e:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$SavedState$1;

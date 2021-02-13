@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActivityChooserModel;
+.class Landroidx/appcompat/widget/ActivityChooserModel;
 .super Landroid/database/DataSetObservable;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -16,13 +16,13 @@
 
 
 # static fields
-.field public static final n:Ljava/lang/String;
+.field static final n:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field private final a:Ljava/lang/Object;
 
-.field public final b:Ljava/util/List;
+.field private final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field public final c:Ljava/util/List;
+.field private final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -42,29 +42,29 @@
     .end annotation
 .end field
 
-.field public final d:Landroid/content/Context;
+.field final d:Landroid/content/Context;
 
-.field public final e:Ljava/lang/String;
+.field final e:Ljava/lang/String;
 
-.field public f:Landroid/content/Intent;
+.field private f:Landroid/content/Intent;
 
-.field public g:Landroidx/appcompat/widget/ActivityChooserModel$a;
+.field private g:Landroidx/appcompat/widget/ActivityChooserModel$a;
 
-.field public h:I
+.field private h:I
 
-.field public i:Z
+.field i:Z
 
-.field public j:Z
+.field private j:Z
 
-.field public k:Z
+.field private k:Z
 
-.field public l:Z
+.field private l:Z
 
-.field public m:Landroidx/appcompat/widget/ActivityChooserModel$c;
+.field private m:Landroidx/appcompat/widget/ActivityChooserModel$c;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const-class v0, Landroidx/appcompat/widget/ActivityChooserModel;
@@ -82,9 +82,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
+.method private a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
     .locals 1
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
@@ -99,11 +97,11 @@
 
     iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->k:Z
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->k()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->k()V
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->j()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->j()V
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->o()Z
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->o()Z
 
     invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
@@ -111,124 +109,24 @@
     return p1
 .end method
 
-.method public b(I)Landroid/content/Intent;
-    .locals 6
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    monitor-exit v0
-
-    return-object v2
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
-
-    new-instance v1, Landroid/content/ComponentName;
-
-    iget-object v3, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
-
-    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-direct {v1, v3, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p1, Landroid/content/Intent;
-
-    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
-
-    invoke-direct {p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->m:Landroidx/appcompat/widget/ActivityChooserModel$c;
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Landroid/content/Intent;
-
-    invoke-direct {v3, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    iget-object v4, p0, Landroidx/appcompat/widget/ActivityChooserModel;->m:Landroidx/appcompat/widget/ActivityChooserModel$c;
-
-    invoke-interface {v4, p0, v3}, Landroidx/appcompat/widget/ActivityChooserModel$c;->a(Landroidx/appcompat/widget/ActivityChooserModel;Landroid/content/Intent;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    monitor-exit v0
-
-    return-object v2
-
-    :cond_1
-    new-instance v2, Landroidx/appcompat/widget/ActivityChooserModel$b;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    invoke-direct {v2, v1, v3, v4, v5}, Landroidx/appcompat/widget/ActivityChooserModel$b;-><init>(Landroid/content/ComponentName;JF)V
-
-    invoke-virtual {p0, v2}, Landroidx/appcompat/widget/ActivityChooserModel;->a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
-
-    monitor-exit v0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final c()V
+.method private c()V
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->i()Z
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->i()Z
 
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->l()Z
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->l()Z
 
     move-result v1
 
     or-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->k()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->k()V
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->o()Z
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->o()Z
 
     invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
@@ -236,209 +134,7 @@
     return-void
 .end method
 
-.method public d(I)Landroid/content/pm/ResolveInfo;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
-
-    monitor-exit v0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public e()I
-    .locals 2
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public f(Landroid/content/pm/ResolveInfo;)I
-    .locals 5
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
-
-    iget-object v4, v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
-
-    if-ne v4, p1, :cond_0
-
-    monitor-exit v0
-
-    return v3
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    monitor-exit v0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public g()Landroid/content/pm/ResolveInfo;
-    .locals 3
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
-
-    iget-object v1, v1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :cond_0
-    monitor-exit v0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public h()I
-    .locals 2
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final i()Z
+.method private i()Z
     .locals 6
 
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->l:Z
@@ -503,7 +199,7 @@
     return v1
 .end method
 
-.method public final j()V
+.method private j()V
     .locals 6
 
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->j:Z
@@ -568,7 +264,7 @@
     throw v0
 .end method
 
-.method public final k()V
+.method private k()V
     .locals 4
 
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
@@ -613,7 +309,7 @@
     return-void
 .end method
 
-.method public final l()Z
+.method private l()Z
     .locals 2
 
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->i:Z
@@ -640,7 +336,7 @@
 
     iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->j:Z
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->m()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->m()V
 
     return v0
 
@@ -648,7 +344,7 @@
     return v1
 .end method
 
-.method public final m()V
+.method private m()V
     .locals 10
 
     const-string v0, "Error reading historical recrod file: "
@@ -891,6 +587,361 @@
     return-void
 .end method
 
+.method private o()Z
+    .locals 4
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->g:Landroidx/appcompat/widget/ActivityChooserModel$a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->g:Landroidx/appcompat/widget/ActivityChooserModel$a;
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
+
+    iget-object v2, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
+
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v0, v1, v2, v3}, Landroidx/appcompat/widget/ActivityChooserModel$a;->a(Landroid/content/Intent;Ljava/util/List;Ljava/util/List;)V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public b(I)Landroid/content/Intent;
+    .locals 6
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    monitor-exit v0
+
+    return-object v2
+
+    :cond_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
+
+    new-instance v1, Landroid/content/ComponentName;
+
+    iget-object v3, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    iget-object p1, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
+
+    iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    invoke-direct {v1, v3, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Landroid/content/Intent;
+
+    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
+
+    invoke-direct {p1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->m:Landroidx/appcompat/widget/ActivityChooserModel$c;
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    iget-object v4, p0, Landroidx/appcompat/widget/ActivityChooserModel;->m:Landroidx/appcompat/widget/ActivityChooserModel$c;
+
+    invoke-interface {v4, p0, v3}, Landroidx/appcompat/widget/ActivityChooserModel$c;->a(Landroidx/appcompat/widget/ActivityChooserModel;Landroid/content/Intent;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    monitor-exit v0
+
+    return-object v2
+
+    :cond_1
+    new-instance v2, Landroidx/appcompat/widget/ActivityChooserModel$b;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-direct {v2, v1, v3, v4, v5}, Landroidx/appcompat/widget/ActivityChooserModel$b;-><init>(Landroid/content/ComponentName;JF)V
+
+    invoke-direct {p0, v2}, Landroidx/appcompat/widget/ActivityChooserModel;->a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
+
+    monitor-exit v0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public d(I)Landroid/content/pm/ResolveInfo;
+    .locals 2
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
+
+    iget-object p1, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
+
+    monitor-exit v0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public e()I
+    .locals 2
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public f(Landroid/content/pm/ResolveInfo;)I
+    .locals 5
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
+
+    iget-object v4, v4, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
+
+    if-ne v4, p1, :cond_0
+
+    monitor-exit v0
+
+    return v3
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, -0x1
+
+    monitor-exit v0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public g()Landroid/content/pm/ResolveInfo;
+    .locals 3
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
+
+    iget-object v1, v1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :cond_0
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public h()I
+    .locals 2
+
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+
+    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
 .method public n(I)V
     .locals 5
 
@@ -899,7 +950,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
+    invoke-direct {p0}, Landroidx/appcompat/widget/ActivityChooserModel;->c()V
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
 
@@ -961,7 +1012,7 @@
 
     invoke-direct {p1, v2, v3, v4, v1}, Landroidx/appcompat/widget/ActivityChooserModel$b;-><init>(Landroid/content/ComponentName;JF)V
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActivityChooserModel;->a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/ActivityChooserModel;->a(Landroidx/appcompat/widget/ActivityChooserModel$b;)Z
 
     monitor-exit v0
 
@@ -975,55 +1026,4 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
-.end method
-
-.method public final o()Z
-    .locals 4
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->g:Landroidx/appcompat/widget/ActivityChooserModel$a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserModel;->g:Landroidx/appcompat/widget/ActivityChooserModel$a;
-
-    iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel;->f:Landroid/content/Intent;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/ActivityChooserModel;->b:Ljava/util/List;
-
-    iget-object v3, p0, Landroidx/appcompat/widget/ActivityChooserModel;->c:Ljava/util/List;
-
-    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-interface {v0, v1, v2, v3}, Landroidx/appcompat/widget/ActivityChooserModel$a;->a(Landroid/content/Intent;Ljava/util/List;Ljava/util/List;)V
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
 .end method

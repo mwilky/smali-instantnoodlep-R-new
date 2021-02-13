@@ -1,6 +1,6 @@
 .class public abstract Landroidx/customview/widget/ExploreByTouchHelper;
-.super Lb/g/l/a;
-.source "SourceFile"
+.super Landroidx/core/view/a;
+.source ""
 
 
 # annotations
@@ -12,33 +12,33 @@
 
 
 # static fields
-.field public static final k:Landroid/graphics/Rect;
+.field private static final k:Landroid/graphics/Rect;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field private final a:Landroid/graphics/Rect;
 
-.field public final b:Landroid/graphics/Rect;
+.field private final b:Landroid/graphics/Rect;
 
-.field public final c:Landroid/graphics/Rect;
+.field private final c:Landroid/graphics/Rect;
 
-.field public final d:[I
+.field private final d:[I
 
-.field public final e:Landroid/view/accessibility/AccessibilityManager;
+.field private final e:Landroid/view/accessibility/AccessibilityManager;
 
-.field public final f:Landroid/view/View;
+.field private final f:Landroid/view/View;
 
-.field public g:Landroidx/customview/widget/ExploreByTouchHelper$a;
+.field private g:Landroidx/customview/widget/ExploreByTouchHelper$a;
 
-.field public h:I
+.field h:I
 
-.field public i:I
+.field i:I
 
-.field public j:I
+.field private j:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 3
 
     new-instance v0, Landroid/graphics/Rect;
@@ -69,7 +69,7 @@
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lb/g/l/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -146,9 +146,7 @@
     throw p1
 .end method
 
-
-# virtual methods
-.method public final A(I)V
+.method private A(I)V
     .locals 2
 
     iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->j:I
@@ -171,7 +169,7 @@
     return-void
 .end method
 
-.method public final a(I)Z
+.method private a(I)Z
     .locals 1
 
     iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
@@ -200,62 +198,35 @@
     return p1
 .end method
 
-.method public final b(I)Z
-    .locals 2
-
-    iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->i:I
-
-    const/4 v1, 0x0
-
-    if-eq v0, p1, :cond_0
-
-    return v1
-
-    :cond_0
-    const/high16 v0, -0x80000000
-
-    iput v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->i:I
-
-    invoke-virtual {p0, p1, v1}, Landroidx/customview/widget/ExploreByTouchHelper;->t(IZ)V
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->z(II)Z
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final c(II)Landroid/view/accessibility/AccessibilityEvent;
+.method private c(II)Landroid/view/accessibility/AccessibilityEvent;
     .locals 1
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->d(II)Landroid/view/accessibility/AccessibilityEvent;
+    invoke-direct {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->d(II)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->e(I)Landroid/view/accessibility/AccessibilityEvent;
+    invoke-direct {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->e(I)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final d(II)Landroid/view/accessibility/AccessibilityEvent;
+.method private d(II)Landroid/view/accessibility/AccessibilityEvent;
     .locals 3
 
     invoke-static {p2}, Landroid/view/accessibility/AccessibilityEvent;->obtain(I)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Lb/g/l/y/d;
+    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->n(I)Landroidx/core/view/accessibility/d;
 
     move-result-object v0
 
@@ -263,37 +234,37 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->u()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->u()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->p()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->p()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {p2, v1}, Landroid/view/accessibility/AccessibilityEvent;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->G()Z
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->G()Z
 
     move-result v1
 
     invoke-virtual {p2, v1}, Landroid/view/accessibility/AccessibilityEvent;->setScrollable(Z)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->F()Z
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->F()Z
 
     move-result v1
 
     invoke-virtual {p2, v1}, Landroid/view/accessibility/AccessibilityEvent;->setPassword(Z)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->B()Z
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->B()Z
 
     move-result v1
 
     invoke-virtual {p2, v1}, Landroid/view/accessibility/AccessibilityEvent;->setEnabled(Z)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->z()Z
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->z()Z
 
     move-result v1
 
@@ -330,7 +301,7 @@
 
     :cond_1
     :goto_0
-    invoke-virtual {v0}, Lb/g/l/y/d;->n()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->n()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -338,7 +309,7 @@
 
     iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-static {p2, v0, p1}, Lb/g/l/y/e;->c(Landroid/view/accessibility/AccessibilityRecord;Landroid/view/View;I)V
+    invoke-static {p2, v0, p1}, Landroidx/core/view/accessibility/e;->c(Landroid/view/accessibility/AccessibilityRecord;Landroid/view/View;I)V
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
@@ -355,7 +326,7 @@
     return-object p2
 .end method
 
-.method public final e(I)Landroid/view/accessibility/AccessibilityEvent;
+.method private e(I)Landroid/view/accessibility/AccessibilityEvent;
     .locals 1
 
     invoke-static {p1}, Landroid/view/accessibility/AccessibilityEvent;->obtain(I)Landroid/view/accessibility/AccessibilityEvent;
@@ -369,46 +340,46 @@
     return-object p1
 .end method
 
-.method public final f(I)Lb/g/l/y/d;
+.method private f(I)Landroidx/core/view/accessibility/d;
     .locals 7
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-static {}, Lb/g/l/y/d;->I()Lb/g/l/y/d;
+    invoke-static {}, Landroidx/core/view/accessibility/d;->I()Landroidx/core/view/accessibility/d;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/g/l/y/d;->c0(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/accessibility/d;->c0(Z)V
 
-    invoke-virtual {v0, v1}, Lb/g/l/y/d;->e0(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/accessibility/d;->e0(Z)V
 
     const-string v2, "android.view.View"
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->W(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->W(Ljava/lang/CharSequence;)V
 
     sget-object v2, Landroidx/customview/widget/ExploreByTouchHelper;->k:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->R(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->R(Landroid/graphics/Rect;)V
 
     sget-object v2, Landroidx/customview/widget/ExploreByTouchHelper;->k:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->S(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->S(Landroid/graphics/Rect;)V
 
     iget-object v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->l0(Landroid/view/View;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->l0(Landroid/view/View;)V
 
-    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->s(ILb/g/l/y/d;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->s(ILandroidx/core/view/accessibility/d;)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->u()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->u()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->p()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->p()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -429,7 +400,7 @@
     :goto_0
     iget-object v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->b:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->k(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->k(Landroid/graphics/Rect;)V
 
     iget-object v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->b:Landroid/graphics/Rect;
 
@@ -441,7 +412,7 @@
 
     if-nez v2, :cond_c
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->j()I
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->j()I
 
     move-result v2
 
@@ -465,11 +436,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->j0(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->j0(Ljava/lang/CharSequence;)V
 
     iget-object v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v2, p1}, Lb/g/l/y/d;->r0(Landroid/view/View;I)V
+    invoke-virtual {v0, v2, p1}, Landroidx/core/view/accessibility/d;->r0(Landroid/view/View;I)V
 
     iget v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
 
@@ -477,18 +448,18 @@
 
     if-ne v2, p1, :cond_2
 
-    invoke-virtual {v0, v1}, Lb/g/l/y/d;->P(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/accessibility/d;->P(Z)V
 
-    invoke-virtual {v0, v3}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {v0, v3}, Landroidx/core/view/accessibility/d;->a(I)V
 
     goto :goto_1
 
     :cond_2
-    invoke-virtual {v0, v4}, Lb/g/l/y/d;->P(Z)V
+    invoke-virtual {v0, v4}, Landroidx/core/view/accessibility/d;->P(Z)V
 
     const/16 v2, 0x40
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->a(I)V
 
     :goto_1
     iget v2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->i:I
@@ -507,22 +478,22 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {v0, v2}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {v0, v2}, Landroidx/core/view/accessibility/d;->a(I)V
 
     goto :goto_3
 
     :cond_4
-    invoke-virtual {v0}, Lb/g/l/y/d;->C()Z
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->C()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    invoke-virtual {v0, v1}, Lb/g/l/y/d;->a(I)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/accessibility/d;->a(I)V
 
     :cond_5
     :goto_3
-    invoke-virtual {v0, p1}, Lb/g/l/y/d;->f0(Z)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/d;->f0(Z)V
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
@@ -532,7 +503,7 @@
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, p1}, Lb/g/l/y/d;->l(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/d;->l(Landroid/graphics/Rect;)V
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
@@ -546,36 +517,36 @@
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, p1}, Lb/g/l/y/d;->k(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/d;->k(Landroid/graphics/Rect;)V
 
-    iget p1, v0, Lb/g/l/y/d;->b:I
+    iget p1, v0, Landroidx/core/view/accessibility/d;->b:I
 
     const/4 v2, -0x1
 
     if-eq p1, v2, :cond_7
 
-    invoke-static {}, Lb/g/l/y/d;->I()Lb/g/l/y/d;
+    invoke-static {}, Landroidx/core/view/accessibility/d;->I()Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
-    iget v3, v0, Lb/g/l/y/d;->b:I
+    iget v3, v0, Landroidx/core/view/accessibility/d;->b:I
 
     :goto_4
     if-eq v3, v2, :cond_6
 
     iget-object v5, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v5, v2}, Lb/g/l/y/d;->m0(Landroid/view/View;I)V
+    invoke-virtual {p1, v5, v2}, Landroidx/core/view/accessibility/d;->m0(Landroid/view/View;I)V
 
     sget-object v5, Landroidx/customview/widget/ExploreByTouchHelper;->k:Landroid/graphics/Rect;
 
-    invoke-virtual {p1, v5}, Lb/g/l/y/d;->R(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, v5}, Landroidx/core/view/accessibility/d;->R(Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0, v3, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->s(ILb/g/l/y/d;)V
+    invoke-virtual {p0, v3, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->s(ILandroidx/core/view/accessibility/d;)V
 
     iget-object v3, p0, Landroidx/customview/widget/ExploreByTouchHelper;->b:Landroid/graphics/Rect;
 
-    invoke-virtual {p1, v3}, Lb/g/l/y/d;->k(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, v3}, Landroidx/core/view/accessibility/d;->k(Landroid/graphics/Rect;)V
 
     iget-object v3, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
@@ -587,12 +558,12 @@
 
     invoke-virtual {v3, v6, v5}, Landroid/graphics/Rect;->offset(II)V
 
-    iget v3, p1, Lb/g/l/y/d;->b:I
+    iget v3, p1, Landroidx/core/view/accessibility/d;->b:I
 
     goto :goto_4
 
     :cond_6
-    invoke-virtual {p1}, Lb/g/l/y/d;->M()V
+    invoke-virtual {p1}, Landroidx/core/view/accessibility/d;->M()V
 
     :cond_7
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
@@ -674,17 +645,17 @@
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, p1}, Lb/g/l/y/d;->S(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/accessibility/d;->S(Landroid/graphics/Rect;)V
 
     iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->a:Landroid/graphics/Rect;
 
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->m(Landroid/graphics/Rect;)Z
+    invoke-direct {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->m(Landroid/graphics/Rect;)Z
 
     move-result p1
 
     if-eqz p1, :cond_9
 
-    invoke-virtual {v0, v1}, Lb/g/l/y/d;->u0(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/accessibility/d;->u0(Z)V
 
     :cond_9
     return-object v0
@@ -717,20 +688,20 @@
     throw p1
 .end method
 
-.method public final g()Lb/g/l/y/d;
+.method private g()Landroidx/core/view/accessibility/d;
     .locals 6
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-static {v0}, Lb/g/l/y/d;->J(Landroid/view/View;)Lb/g/l/y/d;
+    invoke-static {v0}, Landroidx/core/view/accessibility/d;->J(Landroid/view/View;)Landroidx/core/view/accessibility/d;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-static {v1, v0}, Landroidx/core/view/ViewCompat;->V(Landroid/view/View;Lb/g/l/y/d;)V
+    invoke-static {v1, v0}, Landroidx/core/view/ViewCompat;->V(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -738,7 +709,7 @@
 
     invoke-virtual {p0, v1}, Landroidx/customview/widget/ExploreByTouchHelper;->j(Ljava/util/List;)V
 
-    invoke-virtual {v0}, Lb/g/l/y/d;->m()I
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/d;->m()I
 
     move-result v2
 
@@ -784,7 +755,7 @@
 
     move-result v5
 
-    invoke-virtual {v0, v4, v5}, Lb/g/l/y/d;->c(Landroid/view/View;I)V
+    invoke-virtual {v0, v4, v5}, Landroidx/core/view/accessibility/d;->c(Landroid/view/View;I)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -792,6 +763,224 @@
 
     :cond_2
     return-object v0
+.end method
+
+.method private m(Landroid/graphics/Rect;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWindowVisibility()I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return v0
+
+    :cond_1
+    iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    instance-of v1, p1, Landroid/view/View;
+
+    if-eqz v1, :cond_4
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    cmpg-float v1, v1, v2
+
+    if-lez v1, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    :cond_3
+    return v0
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    const/4 v0, 0x1
+
+    :cond_5
+    :goto_0
+    return v0
+.end method
+
+.method private v(IILandroid/os/Bundle;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p2, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p2, v0, :cond_2
+
+    const/16 v0, 0x40
+
+    if-eq p2, v0, :cond_1
+
+    const/16 v0, 0x80
+
+    if-eq p2, v0, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->o(IILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-direct {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->a(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    invoke-direct {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->x(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->b(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->y(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method private w(ILandroid/os/Bundle;)Z
+    .locals 1
+
+    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
+
+    invoke-static {v0, p1, p2}, Landroidx/core/view/ViewCompat;->X(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method private x(I)Z
+    .locals 2
+
+    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->e:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->e:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
+
+    if-eq v0, p1, :cond_2
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_1
+
+    invoke-direct {p0, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->a(I)Z
+
+    :cond_1
+    iput p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
+
+    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    const v0, 0x8000
+
+    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->z(II)Z
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+
+# virtual methods
+.method public final b(I)Z
+    .locals 2
+
+    iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->i:I
+
+    const/4 v1, 0x0
+
+    if-eq v0, p1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->i:I
+
+    invoke-virtual {p0, p1, v1}, Landroidx/customview/widget/ExploreByTouchHelper;->t(IZ)V
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->z(II)Z
+
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public getAccessibilityNodeProvider(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
@@ -868,7 +1057,7 @@
 
     if-eq p1, v4, :cond_2
 
-    invoke-virtual {p0, v4}, Landroidx/customview/widget/ExploreByTouchHelper;->A(I)V
+    invoke-direct {p0, v4}, Landroidx/customview/widget/ExploreByTouchHelper;->A(I)V
 
     return v3
 
@@ -888,7 +1077,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->A(I)V
+    invoke-direct {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->A(I)V
 
     if-eq p1, v4, :cond_4
 
@@ -899,10 +1088,10 @@
     return v1
 .end method
 
-.method public abstract i(FF)I
+.method protected abstract i(FF)I
 .end method
 
-.method public abstract j(Ljava/util/List;)V
+.method protected abstract j(Ljava/util/List;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -950,100 +1139,21 @@
 
     const/16 v1, 0x800
 
-    invoke-virtual {p0, p1, v1}, Landroidx/customview/widget/ExploreByTouchHelper;->c(II)Landroid/view/accessibility/AccessibilityEvent;
+    invoke-direct {p0, p1, v1}, Landroidx/customview/widget/ExploreByTouchHelper;->c(II)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lb/g/l/y/b;->b(Landroid/view/accessibility/AccessibilityEvent;I)V
+    invoke-static {p1, p2}, Landroidx/core/view/accessibility/b;->b(Landroid/view/accessibility/AccessibilityEvent;I)V
 
     iget-object p2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-static {v0, p2, p1}, Lb/g/l/s;->h(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-static {v0, p2, p1}, Landroidx/core/view/s;->h(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     :cond_0
     return-void
 .end method
 
-.method public final m(Landroid/graphics/Rect;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWindowVisibility()I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    iget-object p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    :goto_0
-    instance-of v1, p1, Landroid/view/View;
-
-    if-eqz v1, :cond_4
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    cmpg-float v1, v1, v2
-
-    if-lez v1, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return v0
-
-    :cond_4
-    if-eqz p1, :cond_5
-
-    const/4 v0, 0x1
-
-    :cond_5
-    :goto_2
-    return v0
-.end method
-
-.method public n(I)Lb/g/l/y/d;
+.method n(I)Landroidx/core/view/accessibility/d;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1052,21 +1162,21 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/customview/widget/ExploreByTouchHelper;->g()Lb/g/l/y/d;
+    invoke-direct {p0}, Landroidx/customview/widget/ExploreByTouchHelper;->g()Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->f(I)Lb/g/l/y/d;
+    invoke-direct {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->f(I)Landroidx/core/view/accessibility/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public abstract o(IILandroid/os/Bundle;)Z
+.method protected abstract o(IILandroid/os/Bundle;)Z
     .param p3    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -1076,24 +1186,24 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->p(Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lb/g/l/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lb/g/l/y/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/d;)V
 
-    invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->r(Lb/g/l/y/d;)V
+    invoke-virtual {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->r(Landroidx/core/view/accessibility/d;)V
 
     return-void
 .end method
 
-.method public p(Landroid/view/accessibility/AccessibilityEvent;)V
+.method protected p(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
     .param p1    # Landroid/view/accessibility/AccessibilityEvent;
         .annotation build Landroidx/annotation/NonNull;
@@ -1103,16 +1213,16 @@
     return-void
 .end method
 
-.method public abstract q(ILandroid/view/accessibility/AccessibilityEvent;)V
+.method protected abstract q(ILandroid/view/accessibility/AccessibilityEvent;)V
     .param p2    # Landroid/view/accessibility/AccessibilityEvent;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 .end method
 
-.method public r(Lb/g/l/y/d;)V
+.method protected r(Landroidx/core/view/accessibility/d;)V
     .locals 0
-    .param p1    # Lb/g/l/y/d;
+    .param p1    # Landroidx/core/view/accessibility/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1120,158 +1230,38 @@
     return-void
 .end method
 
-.method public abstract s(ILb/g/l/y/d;)V
-    .param p2    # Lb/g/l/y/d;
+.method protected abstract s(ILandroidx/core/view/accessibility/d;)V
+    .param p2    # Landroidx/core/view/accessibility/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 .end method
 
-.method public t(IZ)V
+.method protected t(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public u(IILandroid/os/Bundle;)Z
+.method u(IILandroid/os/Bundle;)Z
     .locals 1
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->v(IILandroid/os/Bundle;)Z
+    invoke-direct {p0, p1, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->v(IILandroid/os/Bundle;)Z
 
     move-result p1
 
     return p1
 
     :cond_0
-    invoke-virtual {p0, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->w(ILandroid/os/Bundle;)Z
+    invoke-direct {p0, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->w(ILandroid/os/Bundle;)Z
 
     move-result p1
 
     return p1
-.end method
-
-.method public final v(IILandroid/os/Bundle;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p2, v0, :cond_2
-
-    const/16 v0, 0x40
-
-    if-eq p2, v0, :cond_1
-
-    const/16 v0, 0x80
-
-    if-eq p2, v0, :cond_0
-
-    invoke-virtual {p0, p1, p2, p3}, Landroidx/customview/widget/ExploreByTouchHelper;->o(IILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->a(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->x(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->b(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    invoke-virtual {p0, p1}, Landroidx/customview/widget/ExploreByTouchHelper;->y(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final w(ILandroid/os/Bundle;)Z
-    .locals 1
-
-    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
-
-    invoke-static {v0, p1, p2}, Landroidx/core/view/ViewCompat;->X(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final x(I)Z
-    .locals 2
-
-    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->e:Landroid/view/accessibility/AccessibilityManager;
-
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->e:Landroid/view/accessibility/AccessibilityManager;
-
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
-
-    if-eq v0, p1, :cond_2
-
-    const/high16 v1, -0x80000000
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p0, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->a(I)Z
-
-    :cond_1
-    iput p1, p0, Landroidx/customview/widget/ExploreByTouchHelper;->h:I
-
-    iget-object v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    const v0, 0x8000
-
-    invoke-virtual {p0, p1, v0}, Landroidx/customview/widget/ExploreByTouchHelper;->z(II)Z
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    return v1
 .end method
 
 .method public final y(I)Z
@@ -1356,13 +1346,13 @@
     return v0
 
     :cond_1
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->c(II)Landroid/view/accessibility/AccessibilityEvent;
+    invoke-direct {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->c(II)Landroid/view/accessibility/AccessibilityEvent;
 
     move-result-object p1
 
     iget-object p2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->f:Landroid/view/View;
 
-    invoke-static {v1, p2, p1}, Lb/g/l/s;->h(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-static {v1, p2, p1}, Landroidx/core/view/s;->h(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result p1
 

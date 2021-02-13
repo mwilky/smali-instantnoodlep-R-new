@@ -1,6 +1,6 @@
-.class public abstract Landroidx/animation/PathKeyframes$IntKeyframesBase;
+.class abstract Landroidx/animation/PathKeyframes$IntKeyframesBase;
 .super Landroidx/animation/PathKeyframes$SimpleKeyframes;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/animation/Keyframes$IntKeyframes;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x408
     name = "IntKeyframesBase"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 1
 
     const/4 v0, 0x0

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transformation/FabTransformationBehavior$a;
+.class Lcom/google/android/material/transformation/FabTransformationBehavior$a;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,21 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Z
+.field final synthetic a:Z
 
-.field public final synthetic b:Landroid/view/View;
+.field final synthetic b:Landroid/view/View;
 
-.field public final synthetic c:Landroid/view/View;
+.field final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;ZLandroid/view/View;Landroid/view/View;)V
+.method constructor <init>(Lcom/google/android/material/transformation/FabTransformationBehavior;ZLandroid/view/View;Landroid/view/View;)V
     .locals 0
 
     iput-boolean p2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Z

@@ -1,6 +1,6 @@
-.class public final Landroidx/savedstate/Recreator$a;
+.class final Landroidx/savedstate/Recreator$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/savedstate/SavedStateRegistry$b;
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x18
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field final a:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/savedstate/SavedStateRegistry;)V
+.method constructor <init>(Landroidx/savedstate/SavedStateRegistry;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
+.method a(Ljava/lang/String;)V
     .locals 1
 
     iget-object v0, p0, Landroidx/savedstate/Recreator$a;->a:Ljava/util/Set;

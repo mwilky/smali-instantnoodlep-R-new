@@ -1,6 +1,6 @@
 .class public Landroid/support/v4/os/ResultReceiver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -40,15 +40,15 @@
 
 
 # instance fields
-.field public final mHandler:Landroid/os/Handler;
+.field final mHandler:Landroid/os/Handler;
 
-.field public final mLocal:Z
+.field final mLocal:Z
 
-.field public mReceiver:La/a/a/b/a;
+.field mReceiver:Landroid/support/v4/os/a;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroid/support/v4/os/ResultReceiver$1;
@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -91,11 +91,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, La/a/a/b/a$a;->g(Landroid/os/IBinder;)La/a/a/b/a;
+    invoke-static {p1}, Landroid/support/v4/os/a$a;->d(Landroid/os/IBinder;)Landroid/support/v4/os/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:La/a/a/b/a;
+    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/a;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
     return v0
 .end method
 
-.method public onReceiveResult(ILandroid/os/Bundle;)V
+.method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 0
 
     return-void
@@ -142,12 +142,12 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:La/a/a/b/a;
+    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/a;
 
     if-eqz v0, :cond_2
 
     :try_start_0
-    invoke-interface {v0, p1, p2}, La/a/a/b/a;->f(ILandroid/os/Bundle;)V
+    invoke-interface {v0, p1, p2}, Landroid/support/v4/os/a;->c(ILandroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -162,7 +162,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:La/a/a/b/a;
+    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/a;
 
     if-nez p2, :cond_0
 
@@ -170,10 +170,10 @@
 
     invoke-direct {p2, p0}, Landroid/support/v4/os/ResultReceiver$a;-><init>(Landroid/support/v4/os/ResultReceiver;)V
 
-    iput-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:La/a/a/b/a;
+    iput-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/a;
 
     :cond_0
-    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:La/a/a/b/a;
+    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/a;
 
     invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 

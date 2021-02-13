@@ -1,6 +1,6 @@
-.class public Lcom/google/tagmanager/TypeOrFailure;
+.class Lcom/google/tagmanager/TypeOrFailure;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public mFailure:Lcom/google/tagmanager/LoadCallback$Failure;
+.field private mFailure:Lcom/google/tagmanager/LoadCallback$Failure;
 
-.field public mType:Ljava/lang/Object;
+.field private mType:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"

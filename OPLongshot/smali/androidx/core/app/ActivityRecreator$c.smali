@@ -1,6 +1,6 @@
-.class public final Landroidx/core/app/ActivityRecreator$c;
+.class final Landroidx/core/app/ActivityRecreator$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Object;
+.field final synthetic a:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/app/ActivityRecreator$c;->a:Ljava/lang/Object;

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/GlobalScreenshot$KeyEventCallBack;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 
 # direct methods

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/anim/TargetAnimator$TargetProp;
 .super Ljava/util/HashMap;
-.source "SourceFile"
+.source ""
 
 
 # annotations

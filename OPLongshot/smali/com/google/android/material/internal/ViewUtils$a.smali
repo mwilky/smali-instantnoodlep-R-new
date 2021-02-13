@@ -1,6 +1,6 @@
-.class public final Lcom/google/android/material/internal/ViewUtils$a;
+.class final Lcom/google/android/material/internal/ViewUtils$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field final synthetic a:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method constructor <init>(Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/ViewUtils$a;->a:Landroid/view/View;

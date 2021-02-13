@@ -1,6 +1,6 @@
-.class public Landroidx/versionedparcelable/VersionedParcel$a;
+.class Landroidx/versionedparcelable/VersionedParcel$a;
 .super Ljava/io/ObjectInputStream;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroidx/versionedparcelable/VersionedParcel;Ljava/io/InputStream;)V
+.method constructor <init>(Landroidx/versionedparcelable/VersionedParcel;Ljava/io/InputStream;)V
     .locals 0
 
     invoke-direct {p0, p2}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public resolveClass(Ljava/io/ObjectStreamClass;)Ljava/lang/Class;
+.method protected resolveClass(Ljava/io/ObjectStreamClass;)Ljava/lang/Class;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {

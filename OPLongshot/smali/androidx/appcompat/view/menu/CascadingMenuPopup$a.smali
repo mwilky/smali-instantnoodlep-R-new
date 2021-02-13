@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/CascadingMenuPopup$a;
+.class Landroidx/appcompat/view/menu/CascadingMenuPopup$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
+.field final synthetic a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/view/menu/CascadingMenuPopup;)V
+.method constructor <init>(Landroidx/appcompat/view/menu/CascadingMenuPopup;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$a;->a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
@@ -69,7 +69,7 @@
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/MenuPopupWindow;
 
-    invoke-virtual {v0}, Lb/c/n/y;->isModal()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/y;->isModal()Z
 
     move-result v0
 
@@ -113,7 +113,7 @@
 
     iget-object v1, v1, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/MenuPopupWindow;
 
-    invoke-virtual {v1}, Lb/c/n/y;->show()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/y;->show()V
 
     goto :goto_0
 

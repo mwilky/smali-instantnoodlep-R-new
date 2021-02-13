@@ -1,6 +1,6 @@
-.class public Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState;
+.class Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -13,13 +13,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "AnimatedVectorDrawableDelegateState"
 .end annotation
 
 
 # instance fields
-.field public final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
+.field private final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
 
 # direct methods
@@ -72,7 +72,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     iget-object v2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 
@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 
@@ -116,7 +116,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lb/q/a/a/b;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/b;->a:Landroid/graphics/drawable/Drawable;
 
     iget-object p2, v0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->e:Landroid/graphics/drawable/Drawable$Callback;
 

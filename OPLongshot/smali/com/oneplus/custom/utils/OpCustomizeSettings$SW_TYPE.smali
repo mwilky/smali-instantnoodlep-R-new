@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+.field private static final synthetic $VALUES:[Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
 .field public static final enum ATT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -47,7 +47,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 13
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
@@ -197,7 +197,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

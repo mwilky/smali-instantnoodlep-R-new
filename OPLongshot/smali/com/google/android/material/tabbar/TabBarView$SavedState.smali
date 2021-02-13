@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/tabbar/TabBarView$SavedState;
+.class Lcom/google/android/material/tabbar/TabBarView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
@@ -16,14 +16,14 @@
 
 
 # instance fields
-.field public a:Landroid/os/Bundle;
+.field a:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/tabbar/TabBarView$SavedState$1;
@@ -53,14 +53,12 @@
     move-result-object p2
 
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/tabbar/TabBarView$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/tabbar/TabBarView$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method private b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
@@ -76,6 +74,8 @@
     return-void
 .end method
 
+
+# virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
     .param p1    # Landroid/os/Parcel;

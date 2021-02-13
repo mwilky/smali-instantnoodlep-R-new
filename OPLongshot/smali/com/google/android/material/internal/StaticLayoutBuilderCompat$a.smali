@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;
+.class Lcom/google/android/material/internal/StaticLayoutBuilderCompat$a;
 .super Ljava/lang/Exception;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method constructor <init>(Ljava/lang/Throwable;)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

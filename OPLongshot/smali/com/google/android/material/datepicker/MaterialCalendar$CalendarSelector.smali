@@ -1,6 +1,6 @@
-.class public final enum Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
+.class final enum Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
+    accessFlags = 0x4018
     name = "CalendarSelector"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
+.field private static final synthetic $VALUES:[Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 
 .field public static final enum DAY:Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
 
@@ -31,7 +31,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lcom/google/android/material/datepicker/MaterialCalendar$CalendarSelector;
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

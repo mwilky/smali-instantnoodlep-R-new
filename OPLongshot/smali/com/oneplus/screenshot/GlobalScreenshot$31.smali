@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/GlobalScreenshot$31;
+.class Lcom/oneplus/screenshot/GlobalScreenshot$31;
 .super Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+.field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
+.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$31;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
@@ -115,9 +115,24 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isToDelayScreenshotSave:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$31;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    iget-object v1, v0, Lcom/oneplus/screenshot/GlobalScreenshot;->mHandler:Landroid/os/Handler;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3300(Lcom/oneplus/screenshot/GlobalScreenshot;)Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    :cond_0
     sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$31;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
@@ -129,6 +144,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method

@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/snackbar/BaseTransientBottomBar$j;
+.class Lcom/google/android/material/snackbar/BaseTransientBottomBar$j;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:I
+.field final synthetic a:I
 
-.field public final synthetic b:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+.field final synthetic b:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
+.method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$j;->b:Lcom/google/android/material/snackbar/BaseTransientBottomBar;

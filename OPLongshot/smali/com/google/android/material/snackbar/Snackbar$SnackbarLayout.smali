@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;
 .super Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 5
 
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V

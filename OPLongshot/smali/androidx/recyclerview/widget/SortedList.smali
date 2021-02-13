@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/SortedList;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -22,25 +22,25 @@
 
 
 # static fields
-.field public static final CAPACITY_GROWTH:I = 0xa
+.field private static final CAPACITY_GROWTH:I = 0xa
 
-.field public static final DELETION:I = 0x2
+.field private static final DELETION:I = 0x2
 
-.field public static final INSERTION:I = 0x1
+.field private static final INSERTION:I = 0x1
 
 .field public static final INVALID_POSITION:I = -0x1
 
-.field public static final LOOKUP:I = 0x4
+.field private static final LOOKUP:I = 0x4
 
-.field public static final MIN_CAPACITY:I = 0xa
+.field private static final MIN_CAPACITY:I = 0xa
 
 
 # instance fields
-.field public mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
+.field private mBatchedCallback:Landroidx/recyclerview/widget/SortedList$BatchedCallback;
 
-.field public mCallback:Landroidx/recyclerview/widget/SortedList$Callback;
+.field private mCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
-.field public mData:[Ljava/lang/Object;
+.field mData:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TT;"
@@ -48,9 +48,9 @@
     .end annotation
 .end field
 
-.field public mNewDataStart:I
+.field private mNewDataStart:I
 
-.field public mOldData:[Ljava/lang/Object;
+.field private mOldData:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TT;"
@@ -58,13 +58,13 @@
     .end annotation
 .end field
 
-.field public mOldDataSize:I
+.field private mOldDataSize:I
 
-.field public mOldDataStart:I
+.field private mOldDataStart:I
 
-.field public mSize:I
+.field private mSize:I
 
-.field public final mTClass:Ljava/lang/Class;
+.field private final mTClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -1112,6 +1112,7 @@
     :cond_7
     if-lez v5, :cond_8
 
+    :goto_2
     invoke-direct {p0, v4}, Landroidx/recyclerview/widget/SortedList;->replaceAllInsert(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -1127,9 +1128,7 @@
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/SortedList;->replaceAllRemove()V
 
-    invoke-direct {p0, v4}, Landroidx/recyclerview/widget/SortedList;->replaceAllInsert(Ljava/lang/Object;)V
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_9
     iget-object v5, p0, Landroidx/recyclerview/widget/SortedList;->mData:[Ljava/lang/Object;

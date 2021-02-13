@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

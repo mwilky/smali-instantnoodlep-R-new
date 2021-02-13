@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
+.method protected a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
     .locals 0
     .param p1    # Landroidx/recyclerview/widget/RecyclerView;
         .annotation build Landroidx/annotation/NonNull;

@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/view/menu/MenuPresenter$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

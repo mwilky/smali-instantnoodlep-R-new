@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/internal/CollapsingTextHelper;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,150 +12,150 @@
 
 
 # static fields
-.field public static final DEBUG_DRAW:Z = false
+.field private static final DEBUG_DRAW:Z = false
 
-.field public static final DEBUG_DRAW_PAINT:Landroid/graphics/Paint;
+.field private static final DEBUG_DRAW_PAINT:Landroid/graphics/Paint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public static final ELLIPSIS_NORMAL:Ljava/lang/String; = "\u2026"
+.field private static final ELLIPSIS_NORMAL:Ljava/lang/String; = "\u2026"
 
-.field public static final TAG:Ljava/lang/String; = "CollapsingTextHelper"
+.field private static final TAG:Ljava/lang/String; = "CollapsingTextHelper"
 
-.field public static final USE_SCALING_TEXTURE:Z
+.field private static final USE_SCALING_TEXTURE:Z
 
 
 # instance fields
-.field public boundsChanged:Z
+.field private boundsChanged:Z
 
-.field public final collapsedBounds:Landroid/graphics/Rect;
+.field private final collapsedBounds:Landroid/graphics/Rect;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public collapsedDrawX:F
+.field private collapsedDrawX:F
 
-.field public collapsedDrawY:F
+.field private collapsedDrawY:F
 
-.field public collapsedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
+.field private collapsedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
-.field public collapsedShadowColor:Landroid/content/res/ColorStateList;
+.field private collapsedShadowColor:Landroid/content/res/ColorStateList;
 
-.field public collapsedShadowDx:F
+.field private collapsedShadowDx:F
 
-.field public collapsedShadowDy:F
+.field private collapsedShadowDy:F
 
-.field public collapsedShadowRadius:F
+.field private collapsedShadowRadius:F
 
-.field public collapsedTextBlend:F
+.field private collapsedTextBlend:F
 
-.field public collapsedTextColor:Landroid/content/res/ColorStateList;
+.field private collapsedTextColor:Landroid/content/res/ColorStateList;
 
-.field public collapsedTextGravity:I
+.field private collapsedTextGravity:I
 
-.field public collapsedTextSize:F
+.field private collapsedTextSize:F
 
-.field public collapsedTypeface:Landroid/graphics/Typeface;
+.field private collapsedTypeface:Landroid/graphics/Typeface;
 
-.field public final currentBounds:Landroid/graphics/RectF;
+.field private final currentBounds:Landroid/graphics/RectF;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public currentDrawX:F
+.field private currentDrawX:F
 
-.field public currentDrawY:F
+.field private currentDrawY:F
 
-.field public currentTextSize:F
+.field private currentTextSize:F
 
-.field public currentTypeface:Landroid/graphics/Typeface;
+.field private currentTypeface:Landroid/graphics/Typeface;
 
-.field public drawTitle:Z
+.field private drawTitle:Z
 
-.field public final expandedBounds:Landroid/graphics/Rect;
+.field private final expandedBounds:Landroid/graphics/Rect;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public expandedDrawX:F
+.field private expandedDrawX:F
 
-.field public expandedDrawY:F
+.field private expandedDrawY:F
 
-.field public expandedFirstLineDrawX:F
+.field private expandedFirstLineDrawX:F
 
-.field public expandedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
+.field private expandedFontCallback:Lcom/google/android/material/resources/CancelableFontCallback;
 
-.field public expandedFraction:F
+.field private expandedFraction:F
 
-.field public expandedShadowColor:Landroid/content/res/ColorStateList;
+.field private expandedShadowColor:Landroid/content/res/ColorStateList;
 
-.field public expandedShadowDx:F
+.field private expandedShadowDx:F
 
-.field public expandedShadowDy:F
+.field private expandedShadowDy:F
 
-.field public expandedShadowRadius:F
+.field private expandedShadowRadius:F
 
-.field public expandedTextBlend:F
+.field private expandedTextBlend:F
 
-.field public expandedTextColor:Landroid/content/res/ColorStateList;
+.field private expandedTextColor:Landroid/content/res/ColorStateList;
 
-.field public expandedTextGravity:I
+.field private expandedTextGravity:I
 
-.field public expandedTextSize:F
+.field private expandedTextSize:F
 
-.field public expandedTitleTexture:Landroid/graphics/Bitmap;
+.field private expandedTitleTexture:Landroid/graphics/Bitmap;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public expandedTypeface:Landroid/graphics/Typeface;
+.field private expandedTypeface:Landroid/graphics/Typeface;
 
-.field public isRtl:Z
+.field private isRtl:Z
 
-.field public maxLines:I
+.field private maxLines:I
 
-.field public positionInterpolator:Landroid/animation/TimeInterpolator;
+.field private positionInterpolator:Landroid/animation/TimeInterpolator;
 
-.field public scale:F
+.field private scale:F
 
-.field public state:[I
+.field private state:[I
 
-.field public text:Ljava/lang/CharSequence;
+.field private text:Ljava/lang/CharSequence;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public textLayout:Landroid/text/StaticLayout;
+.field private textLayout:Landroid/text/StaticLayout;
 
-.field public final textPaint:Landroid/text/TextPaint;
+.field private final textPaint:Landroid/text/TextPaint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public textSizeInterpolator:Landroid/animation/TimeInterpolator;
+.field private textSizeInterpolator:Landroid/animation/TimeInterpolator;
 
-.field public textToDraw:Ljava/lang/CharSequence;
+.field private textToDraw:Ljava/lang/CharSequence;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public textToDrawCollapsed:Ljava/lang/CharSequence;
+.field private textToDrawCollapsed:Ljava/lang/CharSequence;
 
-.field public texturePaint:Landroid/graphics/Paint;
+.field private texturePaint:Landroid/graphics/Paint;
 
-.field public final tmpPaint:Landroid/text/TextPaint;
+.field private final tmpPaint:Landroid/text/TextPaint;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public useTexture:Z
+.field private useTexture:Z
 
-.field public final view:Landroid/view/View;
+.field private final view:Landroid/view/View;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 3
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method public static blendColors(IIF)I
+.method private static blendColors(IIF)I
     .locals 5
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -410,7 +410,7 @@
 
     iget-boolean v5, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
-    invoke-static {v4, v5}, Lb/g/l/b;->b(II)I
+    invoke-static {v4, v5}, Landroidx/core/view/b;->b(II)I
 
     move-result v4
 
@@ -498,7 +498,7 @@
     :goto_2
     iput v10, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawY:F
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_4
     iget-object v6, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
@@ -506,8 +506,6 @@
     iget v6, v6, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v6, v6
-
-    iput v6, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawY:F
 
     goto :goto_3
 
@@ -526,9 +524,10 @@
 
     sub-float/2addr v6, v10
 
+    :goto_3
     iput v6, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawY:F
 
-    :goto_3
+    :goto_4
     const v6, 0x800007
 
     and-int/2addr v4, v6
@@ -549,7 +548,7 @@
 
     iput v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawX:F
 
-    goto :goto_4
+    goto :goto_6
 
     :cond_6
     iget-object v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
@@ -558,11 +557,7 @@
 
     int-to-float v4, v4
 
-    sub-float/2addr v4, v1
-
-    iput v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawX:F
-
-    goto :goto_4
+    goto :goto_5
 
     :cond_7
     iget-object v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
@@ -575,11 +570,12 @@
 
     div-float/2addr v1, v9
 
+    :goto_5
     sub-float/2addr v4, v1
 
     iput v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedDrawX:F
 
-    :goto_4
+    :goto_6
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextSize:F
 
     invoke-direct {p0, v1}, Lcom/google/android/material/internal/CollapsingTextHelper;->calculateUsingTextSize(F)V
@@ -598,12 +594,12 @@
 
     move-result v1
 
-    goto :goto_5
+    goto :goto_7
 
     :cond_8
     move v1, v3
 
-    :goto_5
+    :goto_7
     iget-object v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v4, :cond_9
@@ -629,19 +625,19 @@
 
     move-result v2
 
-    goto :goto_6
+    goto :goto_8
 
     :cond_a
     move v2, v3
 
-    :goto_6
+    :goto_8
     iput v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedFirstLineDrawX:F
 
     iget v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedTextGravity:I
 
     iget-boolean v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
-    invoke-static {v2, v4}, Lb/g/l/b;->b(II)I
+    invoke-static {v2, v4}, Landroidx/core/view/b;->b(II)I
 
     move-result v2
 
@@ -693,7 +689,7 @@
 
     sub-float/2addr v3, v5
 
-    goto :goto_7
+    goto :goto_9
 
     :cond_b
     iget-object v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -706,10 +702,7 @@
 
     add-float/2addr v3, v4
 
-    :goto_7
-    iput v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
-
-    goto :goto_8
+    goto :goto_9
 
     :cond_c
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->shouldDrawMultiline()Z
@@ -737,7 +730,7 @@
 
     iput v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
 
-    goto :goto_8
+    goto :goto_a
 
     :cond_e
     iget-object v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -754,9 +747,10 @@
 
     sub-float/2addr v3, v4
 
+    :goto_9
     iput v3, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawY:F
 
-    :goto_8
+    :goto_a
     and-int/2addr v2, v6
 
     if-eq v2, v11, :cond_10
@@ -771,7 +765,7 @@
 
     iput v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
 
-    goto :goto_9
+    goto :goto_c
 
     :cond_f
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -780,11 +774,7 @@
 
     int-to-float v2, v2
 
-    sub-float/2addr v2, v1
-
-    iput v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
-
-    goto :goto_9
+    goto :goto_b
 
     :cond_10
     iget-object v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedBounds:Landroid/graphics/Rect;
@@ -797,11 +787,12 @@
 
     div-float/2addr v1, v9
 
+    :goto_b
     sub-float/2addr v2, v1
 
     iput v2, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedDrawX:F
 
-    :goto_9
+    :goto_c
     invoke-direct {p0}, Lcom/google/android/material/internal/CollapsingTextHelper;->clearTexture()V
 
     invoke-direct {p0, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->setInterpolatedTextSize(F)V
@@ -832,12 +823,12 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lb/g/j/c;->b:Lb/g/j/b;
+    sget-object v0, Landroidx/core/text/c;->b:Landroidx/core/text/b;
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lb/g/j/c;->a:Lb/g/j/b;
+    sget-object v0, Landroidx/core/text/c;->a:Landroidx/core/text/b;
 
     :goto_0
     const/4 v1, 0x0
@@ -846,7 +837,7 @@
 
     move-result v2
 
-    invoke-interface {v0, p1, v1, v2}, Lb/g/j/b;->a(Ljava/lang/CharSequence;II)Z
+    invoke-interface {v0, p1, v1, v2}, Landroidx/core/text/b;->a(Ljava/lang/CharSequence;II)Z
 
     move-result p1
 
@@ -938,8 +929,6 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
-
     goto :goto_0
 
     :cond_0
@@ -949,9 +938,9 @@
 
     move-result v1
 
+    :goto_0
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    :goto_0
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->textPaint:Landroid/text/TextPaint;
 
     iget v1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->expandedShadowRadius:F
@@ -1933,7 +1922,7 @@
     return-void
 .end method
 
-.method public static isClose(FF)Z
+.method private static isClose(FF)Z
     .locals 0
 
     sub-float/2addr p0, p1
@@ -1981,7 +1970,7 @@
     return v1
 .end method
 
-.method public static lerp(FFFLandroid/animation/TimeInterpolator;)F
+.method private static lerp(FFFLandroid/animation/TimeInterpolator;)F
     .locals 0
     .param p3    # Landroid/animation/TimeInterpolator;
         .annotation build Landroidx/annotation/Nullable;
@@ -2002,7 +1991,7 @@
     return p0
 .end method
 
-.method public static rectEquals(Landroid/graphics/Rect;IIII)Z
+.method private static rectEquals(Landroid/graphics/Rect;IIII)Z
     .locals 1
     .param p0    # Landroid/graphics/Rect;
         .annotation build Landroidx/annotation/NonNull;
@@ -2585,7 +2574,7 @@
     return v0
 .end method
 
-.method public onBoundsChanged()V
+.method onBoundsChanged()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->collapsedBounds:Landroid/graphics/Rect;
@@ -3053,7 +3042,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0, v1}, Lb/g/g/a;->a(FFF)F
+    invoke-static {p1, v0, v1}, La/d/d/a;->a(FFF)F
 
     move-result p1
 

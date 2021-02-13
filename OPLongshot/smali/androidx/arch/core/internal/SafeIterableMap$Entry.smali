@@ -1,6 +1,6 @@
-.class public Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.class Landroidx/arch/core/internal/SafeIterableMap$Entry;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/Map$Entry;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "Entry"
 .end annotation
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field public final mKey:Ljava/lang/Object;
+.field final mKey:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field public mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field public final mValue:Ljava/lang/Object;
+.field final mValue:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -73,7 +73,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;

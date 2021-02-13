@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/Toolbar$d;
+.class Landroidx/appcompat/widget/Toolbar$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public a:Landroidx/appcompat/view/menu/MenuBuilder;
+.field a:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field public b:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field b:Landroidx/appcompat/view/menu/MenuItemImpl;
 
-.field public final synthetic c:Landroidx/appcompat/widget/Toolbar;
+.field final synthetic c:Landroidx/appcompat/widget/Toolbar;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
+.method constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/Toolbar$d;->c:Landroidx/appcompat/widget/Toolbar;
@@ -45,13 +45,13 @@
 
     iget-object p1, p1, Landroidx/appcompat/widget/Toolbar;->i:Landroid/view/View;
 
-    instance-of v0, p1, Lb/c/m/b;
+    instance-of v0, p1, Landroidx/appcompat/view/b;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lb/c/m/b;
+    check-cast p1, Landroidx/appcompat/view/b;
 
-    invoke-interface {p1}, Lb/c/m/b;->b()V
+    invoke-interface {p1}, Landroidx/appcompat/view/b;->b()V
 
     :cond_0
     iget-object p1, p0, Landroidx/appcompat/widget/Toolbar$d;->c:Landroidx/appcompat/widget/Toolbar;
@@ -208,13 +208,13 @@
 
     iget-object p2, p2, Landroidx/appcompat/widget/Toolbar;->i:Landroid/view/View;
 
-    instance-of v0, p2, Lb/c/m/b;
+    instance-of v0, p2, Landroidx/appcompat/view/b;
 
     if-eqz v0, :cond_4
 
-    check-cast p2, Lb/c/m/b;
+    check-cast p2, Landroidx/appcompat/view/b;
 
-    invoke-interface {p2}, Lb/c/m/b;->a()V
+    invoke-interface {p2}, Landroidx/appcompat/view/b;->a()V
 
     :cond_4
     return p1

@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/viewpager2/widget/ViewPager2$OffscreenPageLimit;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

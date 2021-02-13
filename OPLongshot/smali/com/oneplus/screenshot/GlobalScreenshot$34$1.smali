@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/GlobalScreenshot$34$1;
+.class Lcom/oneplus/screenshot/GlobalScreenshot$34$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$1:Lcom/oneplus/screenshot/GlobalScreenshot$34;
+.field final synthetic this$1:Lcom/oneplus/screenshot/GlobalScreenshot$34;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot$34;)V
+.method constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot$34;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34$1;->this$1:Lcom/oneplus/screenshot/GlobalScreenshot$34;

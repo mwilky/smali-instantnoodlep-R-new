@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/material/behavior/SwipeDismissBehavior$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

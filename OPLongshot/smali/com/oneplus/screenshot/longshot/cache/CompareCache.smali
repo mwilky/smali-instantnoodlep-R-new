@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/cache/CompareCache;
 .super Ljava/util/LinkedList;
-.source "SourceFile"
+.source ""
 
 
 # annotations

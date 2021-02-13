@@ -1,6 +1,6 @@
 .class public abstract Landroidx/fragment/app/FragmentHostCallback;
-.super Lb/j/a/c;
-.source "SourceFile"
+.super Landroidx/fragment/app/c;
+.source ""
 
 
 # annotations
@@ -9,34 +9,34 @@
         "<E:",
         "Ljava/lang/Object;",
         ">",
-        "Lb/j/a/c;"
+        "Landroidx/fragment/app/c;"
     }
 .end annotation
 
 
 # instance fields
-.field public final mActivity:Landroid/app/Activity;
+.field private final mActivity:Landroid/app/Activity;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final mContext:Landroid/content/Context;
+.field private final mContext:Landroid/content/Context;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final mFragmentManager:Lb/j/a/g;
+.field final mFragmentManager:Landroidx/fragment/app/g;
 
-.field public final mHandler:Landroid/os/Handler;
+.field private final mHandler:Landroid/os/Handler;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final mWindowAnimations:I
+.field private final mWindowAnimations:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Landroid/content/Context;Landroid/os/Handler;I)V
+.method constructor <init>(Landroid/app/Activity;Landroid/content/Context;Landroid/os/Handler;I)V
     .locals 1
     .param p1    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/Nullable;
@@ -51,13 +51,13 @@
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lb/j/a/c;-><init>()V
+    invoke-direct {p0}, Landroidx/fragment/app/c;-><init>()V
 
-    new-instance v0, Lb/j/a/g;
+    new-instance v0, Landroidx/fragment/app/g;
 
-    invoke-direct {v0}, Lb/j/a/g;-><init>()V
+    invoke-direct {v0}, Landroidx/fragment/app/g;-><init>()V
 
-    iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Lb/j/a/g;
+    iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Landroidx/fragment/app/g;
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
@@ -116,7 +116,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
+.method constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 2
     .param p1    # Landroidx/fragment/app/FragmentActivity;
         .annotation build Landroidx/annotation/NonNull;
@@ -136,7 +136,7 @@
 
 
 # virtual methods
-.method public getActivity()Landroid/app/Activity;
+.method getActivity()Landroid/app/Activity;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -146,7 +146,7 @@
     return-object v0
 .end method
 
-.method public getContext()Landroid/content/Context;
+.method getContext()Landroid/content/Context;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -156,7 +156,7 @@
     return-object v0
 .end method
 
-.method public getHandler()Landroid/os/Handler;
+.method getHandler()Landroid/os/Handler;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -166,7 +166,7 @@
     return-object v0
 .end method
 
-.method public onAttachFragment(Landroidx/fragment/app/Fragment;)V
+.method onAttachFragment(Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/Fragment;
         .annotation build Landroidx/annotation/NonNull;
@@ -400,7 +400,7 @@
 
     move-object/from16 v8, p8
 
-    invoke-static/range {v1 .. v8}, Landroidx/core/app/ActivityCompat;->m(Landroid/app/Activity;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    invoke-static/range {v1 .. v8}, Landroidx/core/app/ActivityCompat;->k(Landroid/app/Activity;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
 
     return-void
 

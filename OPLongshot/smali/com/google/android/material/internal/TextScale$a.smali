@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/TextScale$a;
+.class Lcom/google/android/material/internal/TextScale$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -8,21 +8,21 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/internal/TextScale;->createAnimator(Landroid/view/ViewGroup;Lb/p/q;Lb/p/q;)Landroid/animation/Animator;
+    value = Lcom/google/android/material/internal/TextScale;->createAnimator(Landroid/view/ViewGroup;Landroidx/transition/q;Landroidx/transition/q;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/TextView;
+.field final synthetic a:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/TextScale;Landroid/widget/TextView;)V
+.method constructor <init>(Lcom/google/android/material/internal/TextScale;Landroid/widget/TextView;)V
     .locals 0
 
     iput-object p2, p0, Lcom/google/android/material/internal/TextScale$a;->a:Landroid/widget/TextView;

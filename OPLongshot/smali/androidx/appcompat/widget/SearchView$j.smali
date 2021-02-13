@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/SearchView$j;
+.class Landroidx/appcompat/widget/SearchView$j;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/SearchView;
+.field final synthetic a:Landroidx/appcompat/widget/SearchView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
+.method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$j;->a:Landroidx/appcompat/widget/SearchView;

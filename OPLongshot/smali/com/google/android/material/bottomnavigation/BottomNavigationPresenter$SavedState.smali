@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;
+.class Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "SavedState"
 .end annotation
 
@@ -30,16 +30,16 @@
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:Lcom/google/android/material/internal/ParcelableSparseArray;
+.field b:Lcom/google/android/material/internal/ParcelableSparseArray;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/bottomnavigation/BottomNavigationPresenter$SavedState$1;
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;

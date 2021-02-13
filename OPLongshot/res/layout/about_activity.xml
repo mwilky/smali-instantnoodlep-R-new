@@ -14,9 +14,9 @@
     </ScrollView>
     <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/op_control_margin_space7" android:layout_alignParentBottom="true">
         <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/about_button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/op_control_margin_space2" android:layout_marginStart="@dimen/op_control_margin_space3" android:layout_marginEnd="@dimen/op_control_margin_space3">
-            <Button android:id="@android:id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_terms_service" android:onClick="gotoTermsService" style="?smallBorderlessButtonStyle" />
+            <Button android:id="@android:id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/op_about_button_max_size" android:text="@string/about_terms_service" android:singleLine="true" android:onClick="gotoTermsService" style="?smallBorderlessButtonStyle" />
             <Space android:id="@id/button_space" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/op_control_margin_space3" />
-            <Button android:id="@android:id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_privacy_policy" android:onClick="gotoPrivacy" style="?smallBorderlessButtonStyle" />
+            <Button android:id="@android:id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_privacy_policy" android:singleLine="true" android:onClick="gotoPrivacy" style="?smallBorderlessButtonStyle" />
         </LinearLayout>
         <TextView android:textAppearance="@style/op_control_text_style_body1" android:textColor="@color/op_control_text_color_secondary_default" android:gravity="center" android:layout_gravity="center" android:id="@id/app_right_reserved" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </LinearLayout>

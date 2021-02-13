@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;
-.super Lb/g/l/v;
-.source "SourceFile"
+.class Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;
+.super Landroidx/core/view/v;
+.source ""
 
 
 # annotations
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl$f;
+.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl$f;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl$f;)V
+.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl$f;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;->a:Landroidx/appcompat/app/AppCompatDelegateImpl$f;
 
-    invoke-direct {p0}, Lb/g/l/v;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/v;-><init>()V
 
     return-void
 .end method
@@ -48,17 +48,17 @@
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$f;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Lb/g/l/t;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/t;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
+    invoke-virtual {p1, v0}, Landroidx/core/view/t;->f(Landroidx/core/view/u;)Landroidx/core/view/t;
 
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;->a:Landroidx/appcompat/app/AppCompatDelegateImpl$f;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$f;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Lb/g/l/t;
+    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/t;
 
     return-void
 .end method

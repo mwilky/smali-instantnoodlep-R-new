@@ -1,6 +1,6 @@
-.class public interface abstract Landroidx/lifecycle/ReportFragment$a;
+.class interface abstract Landroidx/lifecycle/ReportFragment$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "a"
 .end annotation
 

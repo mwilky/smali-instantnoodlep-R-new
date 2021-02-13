@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/indicator/PageIndicator;
 .super Landroid/view/ViewGroup;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,31 +12,31 @@
 
 
 # static fields
-.field public static final ANIMATION_DURATION:J = 0x7dL
+.field private static final ANIMATION_DURATION:J = 0x7dL
 
-.field public static final DEBUG:Z = false
+.field private static final DEBUG:Z = false
 
-.field public static final SINGLE_SCALE:F = 0.4f
+.field private static final SINGLE_SCALE:F = 0.4f
 
-.field public static final TAG:Ljava/lang/String; = "OPPageIndicator"
+.field private static final TAG:Ljava/lang/String; = "OPPageIndicator"
 
 
 # instance fields
-.field public mAnimating:Z
+.field private mAnimating:Z
 
-.field public final mAnimationDone:Ljava/lang/Runnable;
+.field private final mAnimationDone:Ljava/lang/Runnable;
 
-.field public mMinorAlpha:F
+.field private mMinorAlpha:F
 
-.field public final mPageDotWidth:I
+.field private final mPageDotWidth:I
 
-.field public final mPageIndicatorHeight:I
+.field private final mPageIndicatorHeight:I
 
-.field public final mPageIndicatorWidth:I
+.field private final mPageIndicatorWidth:I
 
-.field public mPosition:I
+.field private mPosition:I
 
-.field public final mQueuedPositions:Ljava/util/ArrayList;
+.field private final mQueuedPositions:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/d;->qs_page_indicator_width:I
+    sget p2, Lb/a/b/a/d;->qs_page_indicator_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/d;->qs_page_indicator_height:I
+    sget p2, Lb/a/b/a/d;->qs_page_indicator_height:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -125,7 +125,7 @@
 
     move-result-object p1
 
-    sget p2, Lc/a/b/b/g;->pageIndicator_alpha_material:I
+    sget p2, Lb/a/b/a/g;->pageIndicator_alpha_material:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public static synthetic access$002(Lcom/google/android/material/indicator/PageIndicator;Z)Z
+.method static synthetic access$002(Lcom/google/android/material/indicator/PageIndicator;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/google/android/material/indicator/PageIndicator;->mAnimating:Z
@@ -168,7 +168,7 @@
     return p1
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/indicator/PageIndicator;)Ljava/util/ArrayList;
+.method static synthetic access$100(Lcom/google/android/material/indicator/PageIndicator;)Ljava/util/ArrayList;
     .locals 0
 
     iget-object p0, p0, Lcom/google/android/material/indicator/PageIndicator;->mQueuedPositions:Ljava/util/ArrayList;
@@ -176,7 +176,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/google/android/material/indicator/PageIndicator;I)V
+.method static synthetic access$200(Lcom/google/android/material/indicator/PageIndicator;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/material/indicator/PageIndicator;->setPosition(I)V
@@ -337,35 +337,34 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception p1
-
-    invoke-static {v1, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_2
     move-exception p1
 
+    :goto_0
     invoke-static {v1, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_3
     const-string p1, "Could not find method forceAnimationOnUI."
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
@@ -394,24 +393,24 @@
 
     if-eqz p2, :cond_0
 
-    sget p1, Lc/a/b/b/e;->op_major_b_a_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_b_a_animation:I
 
     return p1
 
     :cond_0
-    sget p1, Lc/a/b/b/e;->op_major_b_c_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_b_c_animation:I
 
     return p1
 
     :cond_1
     if-eqz p2, :cond_2
 
-    sget p1, Lc/a/b/b/e;->op_major_a_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_a_b_animation:I
 
     return p1
 
     :cond_2
-    sget p1, Lc/a/b/b/e;->op_major_c_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_major_c_b_animation:I
 
     return p1
 
@@ -420,24 +419,24 @@
 
     if-eqz p2, :cond_4
 
-    sget p1, Lc/a/b/b/e;->op_minor_b_c_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_b_c_animation:I
 
     return p1
 
     :cond_4
-    sget p1, Lc/a/b/b/e;->op_minor_b_a_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_b_a_animation:I
 
     return p1
 
     :cond_5
     if-eqz p2, :cond_6
 
-    sget p1, Lc/a/b/b/e;->op_minor_c_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_c_b_animation:I
 
     return p1
 
     :cond_6
-    sget p1, Lc/a/b/b/e;->op_minor_a_b_animation:I
+    sget p1, Lb/a/b/a/e;->op_minor_a_b_animation:I
 
     return p1
 .end method
@@ -494,7 +493,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    sget v4, Lc/a/b/b/e;->op_major_a_b:I
+    sget v4, Lb/a/b/a/e;->op_major_a_b:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -550,7 +549,7 @@
 
 
 # virtual methods
-.method public isVisibleToUser2()Z
+.method isVisibleToUser2()Z
     .locals 7
 
     const-string v0, "Could not invoke isVisibleToUser."
@@ -600,32 +599,31 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_1
     move-exception v3
-
-    invoke-static {v1, v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
     :catch_2
     move-exception v3
 
+    :goto_0
     invoke-static {v1, v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_3
     const-string v0, "Could not find method isVisibleToUser."
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
+    :goto_1
     return v2
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -672,7 +670,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 3
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -744,7 +742,7 @@
 
     move-result-object v1
 
-    sget v2, Lc/a/b/b/j;->op_accessibility_quick_settings_page:I
+    sget v2, Lb/a/b/a/j;->op_accessibility_quick_settings_page:I
 
     const/4 v3, 0x2
 
@@ -928,7 +926,7 @@
 
     invoke-direct {v2, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lc/a/b/b/e;->op_minor_a_b:I
+    sget v3, Lb/a/b/a/e;->op_minor_a_b:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 

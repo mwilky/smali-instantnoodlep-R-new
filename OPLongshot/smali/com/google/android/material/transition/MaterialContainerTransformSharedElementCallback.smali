@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;
 .super Landroid/app/SharedElementCallback;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,7 +10,7 @@
 
 
 # static fields
-.field public static capturedSharedElement:Ljava/lang/ref/WeakReference;
+.field private static capturedSharedElement:Ljava/lang/ref/WeakReference;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -25,14 +25,14 @@
 
 
 # instance fields
-.field public entering:Z
+.field private entering:Z
 
-.field public returnEndBounds:Landroid/graphics/Rect;
+.field private returnEndBounds:Landroid/graphics/Rect;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public transparentWindowBackgroundEnabled:Z
+.field private transparentWindowBackgroundEnabled:Z
 
 
 # direct methods
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Landroid/view/Window;)V
+.method static synthetic access$000(Landroid/view/Window;)V
     .locals 0
 
     invoke-static {p0}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->removeWindowBackground(Landroid/view/Window;)V
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public static synthetic access$100(Landroid/view/Window;)V
+.method static synthetic access$100(Landroid/view/Window;)V
     .locals 0
 
     invoke-static {p0}, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->restoreWindowBackground(Landroid/view/Window;)V
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static synthetic access$200()Ljava/lang/ref/WeakReference;
+.method static synthetic access$200()Ljava/lang/ref/WeakReference;
     .locals 1
 
     sget-object v0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->capturedSharedElement:Ljava/lang/ref/WeakReference;
@@ -74,7 +74,7 @@
     return-object v0
 .end method
 
-.method public static synthetic access$202(Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+.method static synthetic access$202(Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
     .locals 0
 
     sput-object p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;->capturedSharedElement:Ljava/lang/ref/WeakReference;
@@ -82,7 +82,7 @@
     return-object p0
 .end method
 
-.method public static removeWindowBackground(Landroid/view/Window;)V
+.method private static removeWindowBackground(Landroid/view/Window;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -101,7 +101,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lb/g/f/b;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
+    invoke-static {v1, v0}, Landroidx/core/graphics/b;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public static restoreWindowBackground(Landroid/view/Window;)V
+.method private static restoreWindowBackground(Landroid/view/Window;)V
     .locals 0
 
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -198,7 +198,7 @@
     return-void
 .end method
 
-.method public static updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/MaterialContainerTransform;)V
+.method private static updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/MaterialContainerTransform;)V
     .locals 4
 
     invoke-virtual {p1}, Landroid/transition/Transition;->getDuration()J
@@ -279,7 +279,7 @@
 
     move-result-object p2
 
-    instance-of p2, p2, Lc/a/b/b/e0/j;
+    instance-of p2, p2, Lcom/google/android/material/shape/j;
 
     if-eqz p2, :cond_0
 
@@ -289,9 +289,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lc/a/b/b/e0/j;
+    check-cast p2, Lcom/google/android/material/shape/j;
 
-    invoke-interface {p2}, Lc/a/b/b/e0/j;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
+    invoke-interface {p2}, Lcom/google/android/material/shape/j;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p2
 

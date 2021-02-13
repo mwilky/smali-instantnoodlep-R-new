@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
+.class Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "NavigationMenuAdapter"
 .end annotation
 
@@ -23,23 +23,23 @@
 
 
 # static fields
-.field public static final STATE_ACTION_VIEWS:Ljava/lang/String; = "android:menu:action_views"
+.field private static final STATE_ACTION_VIEWS:Ljava/lang/String; = "android:menu:action_views"
 
-.field public static final STATE_CHECKED_ITEM:Ljava/lang/String; = "android:menu:checked"
+.field private static final STATE_CHECKED_ITEM:Ljava/lang/String; = "android:menu:checked"
 
-.field public static final VIEW_TYPE_HEADER:I = 0x3
+.field private static final VIEW_TYPE_HEADER:I = 0x3
 
-.field public static final VIEW_TYPE_NORMAL:I = 0x0
+.field private static final VIEW_TYPE_NORMAL:I = 0x0
 
-.field public static final VIEW_TYPE_SEPARATOR:I = 0x2
+.field private static final VIEW_TYPE_SEPARATOR:I = 0x2
 
-.field public static final VIEW_TYPE_SUBHEADER:I = 0x1
+.field private static final VIEW_TYPE_SUBHEADER:I = 0x1
 
 
 # instance fields
-.field public checkedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field private checkedItem:Landroidx/appcompat/view/menu/MenuItemImpl;
 
-.field public final items:Ljava/util/ArrayList;
+.field private final items:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -49,13 +49,13 @@
     .end annotation
 .end field
 
-.field public final synthetic this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
+.field final synthetic this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-.field public updateSuspended:Z
+.field private updateSuspended:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/internal/NavigationMenuPresenter;)V
+.method constructor <init>(Lcom/google/android/material/internal/NavigationMenuPresenter;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
@@ -589,7 +589,7 @@
     throw p1
 .end method
 
-.method public getRowCount()I
+.method getRowCount()I
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;

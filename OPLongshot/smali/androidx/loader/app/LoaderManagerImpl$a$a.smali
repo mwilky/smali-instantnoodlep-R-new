@@ -1,9 +1,9 @@
-.class public final Landroidx/loader/app/LoaderManagerImpl$a$a;
+.class final Landroidx/loader/app/LoaderManagerImpl$a$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/l/i$a;
+.implements Landroidx/lifecycle/i$a;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Class;)Lb/l/h;
+.method public a(Ljava/lang/Class;)Landroidx/lifecycle/h;
     .locals 0
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -40,7 +40,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
-            "Lb/l/h;",
+            "Landroidx/lifecycle/h;",
             ">(",
             "Ljava/lang/Class<",
             "TT;>;)TT;"

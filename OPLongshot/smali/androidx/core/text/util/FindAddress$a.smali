@@ -1,6 +1,6 @@
-.class public Landroidx/core/text/util/FindAddress$a;
+.class Landroidx/core/text/util/FindAddress$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public a:I
+.field a:I
 
-.field public b:I
+.field b:I
 
-.field public c:I
+.field c:I
 
-.field public d:I
+.field d:I
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method constructor <init>(IIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Z
+.method a(Ljava/lang/String;)Z
     .locals 2
 
     const/4 v0, 0x0

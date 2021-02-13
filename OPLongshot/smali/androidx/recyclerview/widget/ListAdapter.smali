@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/ListAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
+.field final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncListDiffer<",
@@ -27,7 +27,7 @@
     .end annotation
 .end field
 
-.field public final mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
+.field private final mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncListDiffer$ListListener<",
@@ -38,7 +38,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+.method protected constructor <init>(Landroidx/recyclerview/widget/AsyncDifferConfig;)V
     .locals 2
     .param p1    # Landroidx/recyclerview/widget/AsyncDifferConfig;
         .annotation build Landroidx/annotation/NonNull;
@@ -62,11 +62,11 @@
 
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    new-instance v1, Lb/n/d/b;
+    new-instance v1, Landroidx/recyclerview/widget/b;
 
-    invoke-direct {v1, p0}, Lb/n/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v1, p0}, Landroidx/recyclerview/widget/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Landroidx/recyclerview/widget/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
+.method protected constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 3
     .param p1    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
         .annotation build Landroidx/annotation/NonNull;
@@ -101,9 +101,9 @@
 
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    new-instance v1, Lb/n/d/b;
+    new-instance v1, Landroidx/recyclerview/widget/b;
 
-    invoke-direct {v1, p0}, Lb/n/d/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v1, p0}, Landroidx/recyclerview/widget/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     new-instance v2, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
@@ -113,7 +113,7 @@
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Lb/n/d/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+    invoke-direct {v0, v1, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;-><init>(Landroidx/recyclerview/widget/i;Landroidx/recyclerview/widget/AsyncDifferConfig;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
@@ -148,7 +148,7 @@
     return-object v0
 .end method
 
-.method public getItem(I)Ljava/lang/Object;
+.method protected getItem(I)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/internal/Command;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -19,15 +19,15 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field public b:Ljava/lang/String;
+.field private b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+.field private c:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/gms/analytics/internal/Command$1;
@@ -47,12 +47,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/analytics/internal/Command;->d(Landroid/os/Parcel;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/analytics/internal/Command;->d(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -71,25 +71,7 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final d(Landroid/os/Parcel;)V
+.method private d(Landroid/os/Parcel;)V
     .locals 1
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -111,6 +93,24 @@
     iput-object p1, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/analytics/internal/Command;->c:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public describeContents()I

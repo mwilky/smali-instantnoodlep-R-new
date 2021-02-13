@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;
+.class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;
 .super Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -22,19 +22,19 @@
 
 
 # instance fields
-.field public final synthetic this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+.field final synthetic this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
 
-.field public final synthetic val$hash:I
+.field final synthetic val$hash:I
 
-.field public final synthetic val$head:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.field final synthetic val$head:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
 
-.field public final synthetic val$index:I
+.field final synthetic val$index:I
 
-.field public final synthetic val$key:Ljava/lang/Object;
+.field final synthetic val$key:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;Ljava/lang/Object;ILcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;I)V
+.method constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;Ljava/lang/Object;ILcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment$1;->this$1:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;

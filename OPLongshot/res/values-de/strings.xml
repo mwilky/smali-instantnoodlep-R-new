@@ -48,7 +48,7 @@
     <string name="permission_btn_text_grant">OK</string>
     <string name="permission_dialog_title">Berechtigungserklärung</string>
     <string name="preference_copied">\"%1$s\" in Zwischenablage kopiert.</string>
-    <string name="quick_share_description1">"Drucke zum Freigeben lange auf 
+    <string name="quick_share_description1">"Drücke zum Freigeben lange auf 
 die Miniaturansicht"</string>
     <string name="quick_share_more_text">Mehr</string>
     <string name="quick_share_send_description_text">An einen Freund senden</string>

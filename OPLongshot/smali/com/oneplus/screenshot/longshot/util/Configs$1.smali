@@ -1,6 +1,6 @@
-.class public final Lcom/oneplus/screenshot/longshot/util/Configs$1;
+.class final Lcom/oneplus/screenshot/longshot/util/Configs$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic val$context:Landroid/content/Context;
+.field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/util/Configs$1;->val$context:Landroid/content/Context;

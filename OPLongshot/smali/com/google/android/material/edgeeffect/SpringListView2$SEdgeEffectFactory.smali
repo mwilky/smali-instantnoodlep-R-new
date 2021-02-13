@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/edgeeffect/SpringListView2$SEdgeEffectFactory;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
+.method protected abstract a(Landroid/view/View;I)Landroid/widget/EdgeEffect;
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation

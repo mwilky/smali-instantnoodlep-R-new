@@ -1,16 +1,16 @@
 .class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenShotFrameLayout;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "Longshot.SmallScreenShotFrameLayout"
+.field private static final TAG:Ljava/lang/String; = "Longshot.SmallScreenShotFrameLayout"
 
 
 # instance fields
-.field public isMeasureFirst:Z
+.field private isMeasureFirst:Z
 
-.field public mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/TraceCallBack;
+.field private mCallback:Lcom/oneplus/screenshot/longshot/smallscreen/TraceCallBack;
 
 
 # direct methods
@@ -59,7 +59,7 @@
     return p1
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V

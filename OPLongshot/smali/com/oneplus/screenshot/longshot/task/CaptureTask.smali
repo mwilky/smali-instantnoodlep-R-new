@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/task/CaptureTask;
 .super Landroid/os/AsyncTask;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -23,35 +23,35 @@
 
 
 # static fields
-.field public static final DEGREE_0:I = 0x0
+.field private static final DEGREE_0:I = 0x0
 
-.field public static final DEGREE_180:I = 0xb4
+.field private static final DEGREE_180:I = 0xb4
 
-.field public static final DEGREE_270:I = 0x5a
+.field private static final DEGREE_270:I = 0x5a
 
-.field public static final DEGREE_90:I = 0x10e
+.field private static final DEGREE_90:I = 0x10e
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.CaptureTask"
+.field private static final TAG:Ljava/lang/String; = "Longshot.CaptureTask"
 
 
 # instance fields
-.field public mContext:Landroid/content/Context;
+.field private mContext:Landroid/content/Context;
 
-.field public mDisplayMetrics:Landroid/util/DisplayMetrics;
+.field private mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-.field public mIsFirst:Z
+.field private mIsFirst:Z
 
-.field public mIsNavgationBarVisiable:Z
+.field private mIsNavgationBarVisiable:Z
 
-.field public mIsStatusbarVisiable:Z
+.field private mIsStatusbarVisiable:Z
 
-.field public mListener:Lcom/oneplus/screenshot/longshot/task/CaptureTask$OnCaptureListener;
+.field private mListener:Lcom/oneplus/screenshot/longshot/task/CaptureTask$OnCaptureListener;
 
-.field public mMatrix:Landroid/graphics/Matrix;
+.field private mMatrix:Landroid/graphics/Matrix;
 
-.field public mRotation:I
+.field private mRotation:I
 
-.field public mWindowToken:Landroid/os/IBinder;
+.field private mWindowToken:Landroid/os/IBinder;
 
 
 # direct methods
@@ -236,7 +236,7 @@
 
 
 # virtual methods
-.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Integer;
@@ -248,7 +248,7 @@
     return-object p1
 .end method
 
-.method public varargs doInBackground([Ljava/lang/Integer;)Ljava/util/List;
+.method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/util/List;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -332,17 +332,17 @@
 
     const-string v7, "Longshot.capture"
 
-    invoke-static {v7}, Lb/g/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v7}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
-    invoke-static {v3, v5, v6, v2}, Lc/b/b/m/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
+    invoke-static {v3, v5, v6, v2}, Lb/b/b/l/d;->a(Landroid/graphics/Rect;III)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    invoke-static {}, Lb/g/h/d;->b()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     const-string v7, "Longshot.hwBitmap.copy"
 
-    invoke-static {v7}, Lb/g/h/d;->a(Ljava/lang/String;)V
+    invoke-static {v7}, Landroidx/core/os/d;->a(Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -380,7 +380,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lb/g/h/d;->b()V
+    invoke-static {}, Landroidx/core/os/d;->b()V
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -474,13 +474,13 @@
     return-object p1
 .end method
 
-.method public onCancelled()V
+.method protected onCancelled()V
     .locals 0
 
     return-void
 .end method
 
-.method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
+.method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     check-cast p1, Ljava/util/List;
@@ -490,7 +490,7 @@
     return-void
 .end method
 
-.method public onPostExecute(Ljava/util/List;)V
+.method protected onPostExecute(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

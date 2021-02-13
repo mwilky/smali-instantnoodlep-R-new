@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 .super Ljava/util/AbstractMap;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/util/concurrent/ConcurrentMap;
@@ -41,21 +41,21 @@
 
 
 # static fields
-.field public static final DEFAULT_CONCURRENCY_LEVEL:I = 0x10
+.field private static final DEFAULT_CONCURRENCY_LEVEL:I = 0x10
 
-.field public static final DEFAULT_INITIAL_CAPACITY:I = 0x10
+.field private static final DEFAULT_INITIAL_CAPACITY:I = 0x10
 
-.field public static final DEFAULT_LOAD_FACTOR:F = 0.75f
+.field private static final DEFAULT_LOAD_FACTOR:F = 0.75f
 
-.field public static final DEFAULT_REFERENCE_TYPE:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
+.field private static final DEFAULT_REFERENCE_TYPE:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
 
-.field public static final MAXIMUM_CONCURRENCY_LEVEL:I = 0x10000
+.field private static final MAXIMUM_CONCURRENCY_LEVEL:I = 0x10000
 
-.field public static final MAXIMUM_SEGMENT_SIZE:I = 0x40000000
+.field private static final MAXIMUM_SEGMENT_SIZE:I = 0x40000000
 
 
 # instance fields
-.field public entrySet:Ljava/util/Set;
+.field private entrySet:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -65,11 +65,11 @@
     .end annotation
 .end field
 
-.field public final loadFactor:F
+.field private final loadFactor:F
 
-.field public final referenceType:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
+.field private final referenceType:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
 
-.field public final segments:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+.field private final segments:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -79,11 +79,11 @@
     .end annotation
 .end field
 
-.field public final shift:I
+.field private final shift:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     sget-object v0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;->SOFT:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
@@ -164,7 +164,7 @@
     :goto_0
     const-string v3, "Initial capacity must not be negative"
 
-    invoke-static {v2, v3}, Lc/b/h/b/d/a;->a(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -182,7 +182,7 @@
     :goto_1
     const-string v3, "Load factor must be positive"
 
-    invoke-static {v2, v3}, Lc/b/h/b/d/a;->a(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     if-lez p3, :cond_2
 
@@ -196,11 +196,11 @@
     :goto_2
     const-string v3, "Concurrency level must be positive"
 
-    invoke-static {v2, v3}, Lc/b/h/b/d/a;->a(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oneplus/utils/reflection/utils/a;->a(ZLjava/lang/String;)V
 
     const-string v2, "Reference type must not be null"
 
-    invoke-static {p4, v2}, Lc/b/h/b/d/a;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v2}, Lcom/oneplus/utils/reflection/utils/a;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput p2, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->loadFactor:F
 
@@ -285,7 +285,7 @@
     return-void
 .end method
 
-.method public static synthetic access$600(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+.method static synthetic access$600(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->segments:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
@@ -293,7 +293,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$700(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
+.method static synthetic access$700(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->referenceType:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$ReferenceType;
@@ -301,7 +301,7 @@
     return-object p0
 .end method
 
-.method public static calculateShift(II)I
+.method protected static calculateShift(II)I
     .locals 2
 
     const/4 v0, 0x1
@@ -468,7 +468,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lc/b/h/b/d/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -485,7 +485,7 @@
     return p1
 .end method
 
-.method public createReferenceManager()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
+.method protected createReferenceManager()Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -571,7 +571,7 @@
     return-object v0
 .end method
 
-.method public getHash(Ljava/lang/Object;)I
+.method protected getHash(Ljava/lang/Object;)I
     .locals 2
 
     if-nez p1, :cond_0
@@ -619,7 +619,7 @@
     return p1
 .end method
 
-.method public final getLoadFactor()F
+.method protected final getLoadFactor()F
     .locals 1
 
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->loadFactor:F
@@ -627,7 +627,7 @@
     return v0
 .end method
 
-.method public final getReference(Ljava/lang/Object;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
+.method protected final getReference(Ljava/lang/Object;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Restructure;)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -655,7 +655,7 @@
     return-object p1
 .end method
 
-.method public final getSegment(I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
+.method protected final getSegment(I)Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -672,7 +672,7 @@
     return-object p1
 .end method
 
-.method public final getSegmentsSize()I
+.method protected final getSegmentsSize()I
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;->segments:[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;

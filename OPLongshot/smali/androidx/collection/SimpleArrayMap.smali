@@ -1,6 +1,6 @@
 .class public Landroidx/collection/SimpleArrayMap;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -17,37 +17,37 @@
 
 
 # static fields
-.field public static final BASE_SIZE:I = 0x4
+.field private static final BASE_SIZE:I = 0x4
 
-.field public static final CACHE_SIZE:I = 0xa
+.field private static final CACHE_SIZE:I = 0xa
 
-.field public static final CONCURRENT_MODIFICATION_EXCEPTIONS:Z = true
+.field private static final CONCURRENT_MODIFICATION_EXCEPTIONS:Z = true
 
-.field public static final DEBUG:Z = false
+.field private static final DEBUG:Z = false
 
-.field public static final TAG:Ljava/lang/String; = "ArrayMap"
+.field private static final TAG:Ljava/lang/String; = "ArrayMap"
 
-.field public static mBaseCache:[Ljava/lang/Object;
+.field static mBaseCache:[Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static mBaseCacheSize:I
+.field static mBaseCacheSize:I
 
-.field public static mTwiceBaseCache:[Ljava/lang/Object;
+.field static mTwiceBaseCache:[Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static mTwiceBaseCacheSize:I
+.field static mTwiceBaseCacheSize:I
 
 
 # instance fields
-.field public mArray:[Ljava/lang/Object;
+.field mArray:[Ljava/lang/Object;
 
-.field public mHashes:[I
+.field mHashes:[I
 
-.field public mSize:I
+.field mSize:I
 
 
 # direct methods
@@ -56,11 +56,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lb/e/a;->a:[I
+    sget-object v0, Landroidx/collection/a;->a:[I
 
     iput-object v0, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object v0, Lb/e/a;->c:[Ljava/lang/Object;
+    sget-object v0, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object v0, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -78,11 +78,11 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Lb/e/a;->a:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object p1, Lb/e/a;->c:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -256,11 +256,11 @@
     return-void
 .end method
 
-.method public static binarySearchHashes([III)I
+.method private static binarySearchHashes([III)I
     .locals 0
 
     :try_start_0
-    invoke-static {p0, p1, p2}, Lb/e/a;->a([III)I
+    invoke-static {p0, p1, p2}, Landroidx/collection/a;->a([III)I
 
     move-result p0
     :try_end_0
@@ -276,7 +276,7 @@
     throw p0
 .end method
 
-.method public static freeArrays([I[Ljava/lang/Object;I)V
+.method private static freeArrays([I[Ljava/lang/Object;I)V
     .locals 8
 
     const-class v0, Landroidx/collection/SimpleArrayMap;
@@ -420,11 +420,11 @@
 
     iget-object v2, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
-    sget-object v3, Lb/e/a;->a:[I
+    sget-object v3, Landroidx/collection/a;->a:[I
 
     iput-object v3, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object v3, Lb/e/a;->c:[Ljava/lang/Object;
+    sget-object v3, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object v3, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
@@ -807,7 +807,7 @@
     return v6
 .end method
 
-.method public indexOf(Ljava/lang/Object;I)I
+.method indexOf(Ljava/lang/Object;I)I
     .locals 5
 
     iget v0, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
@@ -940,7 +940,7 @@
     return p1
 .end method
 
-.method public indexOfNull()I
+.method indexOfNull()I
     .locals 5
 
     iget v0, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
@@ -1035,7 +1035,7 @@
     return v0
 .end method
 
-.method public indexOfValue(Ljava/lang/Object;)I
+.method indexOfValue(Ljava/lang/Object;)I
     .locals 5
 
     iget v0, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
@@ -1507,11 +1507,11 @@
 
     invoke-static {p1, v0, v3}, Landroidx/collection/SimpleArrayMap;->freeArrays([I[Ljava/lang/Object;I)V
 
-    sget-object p1, Lb/e/a;->a:[I
+    sget-object p1, Landroidx/collection/a;->a:[I
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
 
-    sget-object p1, Lb/e/a;->c:[Ljava/lang/Object;
+    sget-object p1, Landroidx/collection/a;->c:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 

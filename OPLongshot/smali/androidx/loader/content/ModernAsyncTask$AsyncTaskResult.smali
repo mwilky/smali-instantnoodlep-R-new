@@ -1,6 +1,6 @@
-.class public Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;
+.class Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "AsyncTaskResult"
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field public final mData:[Ljava/lang/Object;
+.field final mData:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TData;"
@@ -32,11 +32,11 @@
     .end annotation
 .end field
 
-.field public final mTask:Landroidx/loader/content/ModernAsyncTask;
+.field final mTask:Landroidx/loader/content/ModernAsyncTask;
 
 
 # direct methods
-.method public varargs constructor <init>(Landroidx/loader/content/ModernAsyncTask;[Ljava/lang/Object;)V
+.method varargs constructor <init>(Landroidx/loader/content/ModernAsyncTask;[Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

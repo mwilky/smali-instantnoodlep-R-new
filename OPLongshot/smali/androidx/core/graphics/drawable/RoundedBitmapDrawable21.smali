@@ -1,6 +1,6 @@
-.class public Landroidx/core/graphics/drawable/RoundedBitmapDrawable21;
-.super Lb/g/f/f/b;
-.source "SourceFile"
+.class Landroidx/core/graphics/drawable/RoundedBitmapDrawable21;
+.super Landroidx/core/graphics/drawable/b;
+.source ""
 
 
 # annotations
@@ -10,10 +10,10 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+.method protected constructor <init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lb/g/f/f/b;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {p0, p1, p2}, Landroidx/core/graphics/drawable/b;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     return-void
 .end method
@@ -27,11 +27,11 @@
         .end annotation
     .end param
 
-    invoke-virtual {p0}, Lb/g/f/f/b;->updateDstRect()V
+    invoke-virtual {p0}, Landroidx/core/graphics/drawable/b;->updateDstRect()V
 
-    iget-object v0, p0, Lb/g/f/f/b;->mDstRect:Landroid/graphics/Rect;
+    iget-object v0, p0, Landroidx/core/graphics/drawable/b;->mDstRect:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Lb/g/f/f/b;->getCornerRadius()F
+    invoke-virtual {p0}, Landroidx/core/graphics/drawable/b;->getCornerRadius()F
 
     move-result v1
 
@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public gravityCompatApply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
+.method gravityCompatApply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 6
 
     const/4 v5, 0x0
@@ -63,7 +63,7 @@
 .method public hasMipMap()Z
     .locals 1
 
-    iget-object v0, p0, Lb/g/f/f/b;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Landroidx/core/graphics/drawable/b;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
@@ -87,7 +87,7 @@
 .method public setMipMap(Z)V
     .locals 1
 
-    iget-object v0, p0, Lb/g/f/f/b;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Landroidx/core/graphics/drawable/b;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 

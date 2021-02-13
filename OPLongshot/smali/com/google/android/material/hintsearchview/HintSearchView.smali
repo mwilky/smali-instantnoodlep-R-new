@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/hintsearchview/HintSearchView;
 .super Landroid/widget/LinearLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field public mHintText:Ljava/lang/String;
+.field private mHintText:Ljava/lang/String;
 
-.field public mHintView:Landroid/widget/TextView;
+.field private mHintView:Landroid/widget/TextView;
 
-.field public mIconSearch:Landroid/widget/ImageView;
+.field private mIconSearch:Landroid/widget/ImageView;
 
-.field public mOptionIconDrawable:Landroid/graphics/drawable/Drawable;
+.field private mOptionIconDrawable:Landroid/graphics/drawable/Drawable;
 
-.field public mSearchIconDrawable:Landroid/graphics/drawable/Drawable;
+.field private mSearchIconDrawable:Landroid/graphics/drawable/Drawable;
 
-.field public mSearchIconTintColor:I
+.field private mSearchIconTintColor:I
 
 
 # direct methods
@@ -37,7 +37,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lc/a/b/b/b;->hintSearchViewStyle:I
+    sget v0, Lb/a/b/a/b;->hintSearchViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/hintsearchview/HintSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/h;->op_persistent_search_view:I
+    sget v1, Lb/a/b/a/h;->op_persistent_search_view:I
 
     const/4 v2, 0x1
 
@@ -67,15 +67,15 @@
 
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
-    sget-object v0, Lc/a/b/b/l;->HintSearchView:[I
+    sget-object v0, Lb/a/b/a/l;->HintSearchView:[I
 
-    sget v1, Lc/a/b/b/k;->Oneplus_Widget_Desgin_HintSearchView:I
+    sget v1, Lb/a/b/a/k;->Oneplus_Widget_Desgin_HintSearchView:I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget p3, Lc/a/b/b/l;->HintSearchView_android_icon:I
+    sget p3, Lb/a/b/a/l;->HintSearchView_android_icon:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -83,7 +83,7 @@
 
     iput-object p3, p0, Lcom/google/android/material/hintsearchview/HintSearchView;->mSearchIconDrawable:Landroid/graphics/drawable/Drawable;
 
-    sget p3, Lc/a/b/b/l;->HintSearchView_android_text:I
+    sget p3, Lb/a/b/a/l;->HintSearchView_android_text:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -91,13 +91,13 @@
 
     iput-object p3, p0, Lcom/google/android/material/hintsearchview/HintSearchView;->mHintText:Ljava/lang/String;
 
-    sget p3, Lc/a/b/b/l;->HintSearchView_iconTintColor:I
+    sget p3, Lb/a/b/a/l;->HintSearchView_iconTintColor:I
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/c;->op_control_icon_color_active_light:I
+    sget v1, Lb/a/b/a/c;->op_control_icon_color_active_light:I
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -117,13 +117,13 @@
 
     iput p3, p0, Lcom/google/android/material/hintsearchview/HintSearchView;->mSearchIconTintColor:I
 
-    sget p3, Lc/a/b/b/l;->HintSearchView_android_textColorHint:I
+    sget p3, Lb/a/b/a/l;->HintSearchView_android_textColorHint:I
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/c;->op_control_text_color_hint_light:I
+    sget v1, Lb/a/b/a/c;->op_control_text_color_hint_light:I
 
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -139,7 +139,7 @@
 
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    sget p2, Lc/a/b/b/f;->persistent_search_hint:I
+    sget p2, Lb/a/b/a/f;->persistent_search_hint:I
 
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/hintsearchview/HintSearchView;->mHintView:Landroid/widget/TextView;
 
-    sget p2, Lc/a/b/b/f;->persistent_search_icon1:I
+    sget p2, Lb/a/b/a/f;->persistent_search_icon1:I
 
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 

@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/preview/PreviewController;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
@@ -15,33 +15,33 @@
 
 
 # static fields
-.field public static final MSG_BG_CREATE_PREVIEW:I = 0x3e8
+.field private static final MSG_BG_CREATE_PREVIEW:I = 0x3e8
 
-.field public static final TAG:Ljava/lang/String; = "Longshot.PreviewController"
+.field private static final TAG:Ljava/lang/String; = "Longshot.PreviewController"
 
 
 # instance fields
-.field public isPreviewStop:Z
+.field private isPreviewStop:Z
 
-.field public isStarted:Z
+.field private isStarted:Z
 
-.field public mBackgroundHandler:Landroid/os/Handler;
+.field private mBackgroundHandler:Landroid/os/Handler;
 
-.field public mCallback:Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
+.field private mCallback:Lcom/oneplus/screenshot/longshot/preview/PreviewController$Callback;
 
-.field public mCurrentBitmapCacheIndex:I
+.field private mCurrentBitmapCacheIndex:I
 
-.field public mCurrentpage:I
+.field private mCurrentpage:I
 
-.field public mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
+.field private mLongshotContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-.field public mMoveDistance:I
+.field private mMoveDistance:I
 
-.field public mPageHeight:I
+.field private mPageHeight:I
 
-.field public mPreviewWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+.field private mPreviewWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-.field public mRedyToPreviewCacheCount:I
+.field private mRedyToPreviewCacheCount:I
 
 
 # direct methods
@@ -70,7 +70,7 @@
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/preview/PreviewController$1;
 
-    invoke-static {}, Lc/b/b/j/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lcom/oneplus/compat/os/a;->a()Landroid/os/Handler;
 
     move-result-object v2
 
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
+.method static synthetic access$000(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->addBitmap(Lcom/oneplus/screenshot/longshot/cache/BitmapCache;ZZ)V
@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method public static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Z)V
+.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewController;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->updateBitmapFinish(Z)V
@@ -666,8 +666,6 @@
 
     iget-object v1, v1, Lcom/oneplus/screenshot/StitchViewService;->mFirstPreview:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
-
     goto :goto_0
 
     :cond_0
@@ -687,10 +685,10 @@
 
     check-cast v1, Landroid/graphics/Bitmap;
 
+    :goto_0
     invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->setFirstBitmap(Landroid/graphics/Bitmap;)V
 
     :cond_1
-    :goto_0
     return-void
 .end method
 

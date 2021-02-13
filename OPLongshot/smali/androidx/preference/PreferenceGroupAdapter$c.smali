@@ -1,6 +1,6 @@
-.class public Landroidx/preference/PreferenceGroupAdapter$c;
+.class Landroidx/preference/PreferenceGroupAdapter$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/preference/Preference$d;
@@ -8,23 +8,23 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/preference/PreferenceGroupAdapter;->createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Lb/m/b;
+    value = Landroidx/preference/PreferenceGroupAdapter;->createExpandButton(Landroidx/preference/PreferenceGroup;Ljava/util/List;)Landroidx/preference/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/preference/PreferenceGroup;
+.field final synthetic a:Landroidx/preference/PreferenceGroup;
 
-.field public final synthetic b:Landroidx/preference/PreferenceGroupAdapter;
+.field final synthetic b:Landroidx/preference/PreferenceGroupAdapter;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/preference/PreferenceGroupAdapter;Landroidx/preference/PreferenceGroup;)V
+.method constructor <init>(Landroidx/preference/PreferenceGroupAdapter;Landroidx/preference/PreferenceGroup;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/preference/PreferenceGroupAdapter$c;->b:Landroidx/preference/PreferenceGroupAdapter;

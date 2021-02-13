@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/datepicker/MaterialCalendar$c;
-.super Lc/a/b/b/t/g;
-.source "SourceFile"
+.class Lcom/google/android/material/datepicker/MaterialCalendar$c;
+.super Lcom/google/android/material/datepicker/g;
+.source ""
 
 
 # annotations
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic I:I
+.field final synthetic I:I
 
-.field public final synthetic J:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field final synthetic J:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Landroid/content/Context;IZI)V
+.method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Landroid/content/Context;IZI)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$c;->J:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     iput p5, p0, Lcom/google/android/material/datepicker/MaterialCalendar$c;->I:I
 
-    invoke-direct {p0, p2, p3, p4}, Lc/a/b/b/t/g;-><init>(Landroid/content/Context;IZ)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/google/android/material/datepicker/g;-><init>(Landroid/content/Context;IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public M1(Landroidx/recyclerview/widget/RecyclerView$v;[I)V
+.method protected M1(Landroidx/recyclerview/widget/RecyclerView$v;[I)V
     .locals 2
     .param p1    # Landroidx/recyclerview/widget/RecyclerView$v;
         .annotation build Landroidx/annotation/NonNull;

@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/dump/SameDumper;
 .super Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "SameDumper"
+.field private static final TAG:Ljava/lang/String; = "SameDumper"
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public getTag()Ljava/lang/String;
+.method protected getTag()Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

@@ -1,6 +1,6 @@
-.class public Landroidx/lifecycle/Transformations$2$1;
+.class Landroidx/lifecycle/Transformations$2$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/lifecycle/Transformations$2;
+.field final synthetic this$0:Landroidx/lifecycle/Transformations$2;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/Transformations$2;)V
+.method constructor <init>(Landroidx/lifecycle/Transformations$2;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/Transformations$2$1;->this$0:Landroidx/lifecycle/Transformations$2;

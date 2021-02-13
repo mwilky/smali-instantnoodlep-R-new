@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/anim/TargetAnimator$OnAnimUpdate;
+.class Lcom/oneplus/screenshot/anim/TargetAnimator$OnAnimUpdate;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/oneplus/screenshot/anim/TargetAnimator$Runner;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "OnAnimUpdate"
 .end annotation
 
 
 # instance fields
-.field public mValue:F
+.field private mValue:F
 
-.field public final synthetic this$0:Lcom/oneplus/screenshot/anim/TargetAnimator;
+.field final synthetic this$0:Lcom/oneplus/screenshot/anim/TargetAnimator;
 
 
 # direct methods

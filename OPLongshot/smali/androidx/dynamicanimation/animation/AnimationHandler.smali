@@ -1,24 +1,22 @@
-.class public Landroidx/dynamicanimation/animation/AnimationHandler;
+.class Landroidx/dynamicanimation/animation/AnimationHandler;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;,
-        Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;,
+        Landroidx/dynamicanimation/animation/AnimationHandler$c;,
+        Landroidx/dynamicanimation/animation/AnimationHandler$d;,
         Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;,
-        Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;,
-        Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;
+        Landroidx/dynamicanimation/animation/AnimationHandler$a;,
+        Landroidx/dynamicanimation/animation/AnimationHandler$b;
     }
 .end annotation
 
 
 # static fields
-.field public static final FRAME_DELAY_MS:J = 0xaL
-
-.field public static final sAnimatorHandler:Ljava/lang/ThreadLocal;
+.field public static final g:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
@@ -30,50 +28,50 @@
 
 
 # instance fields
-.field public final mAnimationCallbacks:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public final mCallbackDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
-
-.field public mCurrentFrameTime:J
-
-.field public final mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+.field private final a:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
-            "Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;",
+            "Landroidx/dynamicanimation/animation/AnimationHandler$b;",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public mListDirty:Z
+.field final b:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroidx/dynamicanimation/animation/AnimationHandler$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+.field private final c:Landroidx/dynamicanimation/animation/AnimationHandler$a;
+
+.field private d:Landroidx/dynamicanimation/animation/AnimationHandler$c;
+
+.field e:J
+
+.field private f:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    sput-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
+    sput-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->g:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -82,39 +80,39 @@
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->a:Landroidx/collection/SimpleArrayMap;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
-    new-instance v0, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
+    new-instance v0, Landroidx/dynamicanimation/animation/AnimationHandler$a;
 
-    invoke-direct {v0, p0}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler;)V
+    invoke-direct {v0, p0}, Landroidx/dynamicanimation/animation/AnimationHandler$a;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler;)V
 
-    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mCallbackDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->c:Landroidx/dynamicanimation/animation/AnimationHandler$a;
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mCurrentFrameTime:J
+    iput-wide v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->e:J
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mListDirty:Z
+    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->f:Z
 
     return-void
 .end method
 
-.method private cleanUpList()V
+.method private b()V
     .locals 2
 
-    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mListDirty:Z
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->f:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -125,7 +123,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -133,7 +131,7 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -145,16 +143,16 @@
     :cond_1
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mListDirty:Z
+    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->f:Z
 
     :cond_2
     return-void
 .end method
 
-.method public static getFrameTime()J
+.method public static d()Landroidx/dynamicanimation/animation/AnimationHandler;
     .locals 2
 
-    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
+    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->g:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -162,36 +160,7 @@
 
     if-nez v0, :cond_0
 
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-
-    :cond_0
-    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/dynamicanimation/animation/AnimationHandler;
-
-    iget-wide v0, v0, Landroidx/dynamicanimation/animation/AnimationHandler;->mCurrentFrameTime:J
-
-    return-wide v0
-.end method
-
-.method public static getInstance()Landroidx/dynamicanimation/animation/AnimationHandler;
-    .locals 2
-
-    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
+    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->g:Ljava/lang/ThreadLocal;
 
     new-instance v1, Landroidx/dynamicanimation/animation/AnimationHandler;
 
@@ -200,7 +169,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     :cond_0
-    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
+    sget-object v0, Landroidx/dynamicanimation/animation/AnimationHandler;->g:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -211,10 +180,10 @@
     return-object v0
 .end method
 
-.method private isCallbackDue(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;J)Z
+.method private f(Landroidx/dynamicanimation/animation/AnimationHandler$b;J)Z
     .locals 4
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->a:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -237,7 +206,7 @@
 
     if-gez p2, :cond_1
 
-    iget-object p2, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+    iget-object p2, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->a:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p2, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -251,10 +220,10 @@
 
 
 # virtual methods
-.method public addAnimationFrameCallback(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;J)V
+.method public a(Landroidx/dynamicanimation/animation/AnimationHandler$b;J)V
     .locals 3
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -262,14 +231,14 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/AnimationHandler;->getProvider()Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/AnimationHandler;->e()Landroidx/dynamicanimation/animation/AnimationHandler$c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;->postFrameCallback()V
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/AnimationHandler$c;->postFrameCallback()V
 
     :cond_0
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -277,7 +246,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -288,7 +257,7 @@
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->a:Landroidx/collection/SimpleArrayMap;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -306,7 +275,7 @@
     return-void
 .end method
 
-.method public doAnimationFrame(J)V
+.method c(J)V
     .locals 5
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -316,7 +285,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    iget-object v3, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v3, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -324,26 +293,26 @@
 
     if-ge v2, v3, :cond_2
 
-    iget-object v3, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v3, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;
+    check-cast v3, Landroidx/dynamicanimation/animation/AnimationHandler$b;
 
     if-nez v3, :cond_0
 
     goto :goto_1
 
     :cond_0
-    invoke-direct {p0, v3, v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler;->isCallbackDue(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;J)Z
+    invoke-direct {p0, v3, v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler;->f(Landroidx/dynamicanimation/animation/AnimationHandler$b;J)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    invoke-interface {v3, p1, p2}, Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;->doAnimationFrame(J)Z
+    invoke-interface {v3, p1, p2}, Landroidx/dynamicanimation/animation/AnimationHandler$b;->doAnimationFrame(J)Z
 
     :cond_1
     :goto_1
@@ -352,15 +321,15 @@
     goto :goto_0
 
     :cond_2
-    invoke-direct {p0}, Landroidx/dynamicanimation/animation/AnimationHandler;->cleanUpList()V
+    invoke-direct {p0}, Landroidx/dynamicanimation/animation/AnimationHandler;->b()V
 
     return-void
 .end method
 
-.method public getProvider()Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+.method e()Landroidx/dynamicanimation/animation/AnimationHandler$c;
     .locals 2
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->d:Landroidx/dynamicanimation/animation/AnimationHandler$c;
 
     if-nez v0, :cond_1
 
@@ -372,38 +341,36 @@
 
     new-instance v0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;
 
-    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mCallbackDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->c:Landroidx/dynamicanimation/animation/AnimationHandler$a;
 
-    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
-
-    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider16;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$a;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;
+    new-instance v0, Landroidx/dynamicanimation/animation/AnimationHandler$d;
 
-    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mCallbackDispatcher:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->c:Landroidx/dynamicanimation/animation/AnimationHandler$a;
 
-    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler$FrameCallbackProvider14;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationCallbackDispatcher;)V
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/AnimationHandler$d;-><init>(Landroidx/dynamicanimation/animation/AnimationHandler$a;)V
 
-    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+    :goto_0
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->d:Landroidx/dynamicanimation/animation/AnimationHandler$c;
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->d:Landroidx/dynamicanimation/animation/AnimationHandler$c;
 
     return-object v0
 .end method
 
-.method public removeCallback(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;)V
+.method public g(Landroidx/dynamicanimation/animation/AnimationHandler$b;)V
     .locals 2
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mDelayedCallbackStartTime:Landroidx/collection/SimpleArrayMap;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->a:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -411,7 +378,7 @@
 
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->b:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -419,16 +386,8 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mListDirty:Z
+    iput-boolean p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->f:Z
 
     :cond_0
-    return-void
-.end method
-
-.method public setProvider(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;)V
-    .locals 0
-
-    iput-object p1, p0, Landroidx/dynamicanimation/animation/AnimationHandler;->mProvider:Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallbackProvider;
-
     return-void
 .end method

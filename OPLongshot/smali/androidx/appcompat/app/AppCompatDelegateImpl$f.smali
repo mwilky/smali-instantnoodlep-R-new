@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/app/AppCompatDelegateImpl$f;
+.class Landroidx/appcompat/app/AppCompatDelegateImpl$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -8,21 +8,21 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/app/AppCompatDelegateImpl;->startSupportActionModeFromWindow(Lb/c/m/a$a;)Lb/c/m/a;
+    value = Landroidx/appcompat/app/AppCompatDelegateImpl;->startSupportActionModeFromWindow(Landroidx/appcompat/view/a$a;)Landroidx/appcompat/view/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field final synthetic a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$f;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -75,23 +75,23 @@
 
     iget-object v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
 
-    invoke-static {v2}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Lb/g/l/t;
+    invoke-static {v2}, Landroidx/core/view/ViewCompat;->c(Landroid/view/View;)Landroidx/core/view/t;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lb/g/l/t;->a(F)Lb/g/l/t;
+    invoke-virtual {v2, v1}, Landroidx/core/view/t;->a(F)Landroidx/core/view/t;
 
-    iput-object v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Lb/g/l/t;
+    iput-object v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/t;
 
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$f;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Lb/g/l/t;
+    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/t;
 
     new-instance v1, Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;
 
     invoke-direct {v1, p0}, Landroidx/appcompat/app/AppCompatDelegateImpl$f$a;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl$f;)V
 
-    invoke-virtual {v0, v1}, Lb/g/l/t;->f(Lb/g/l/u;)Lb/g/l/t;
+    invoke-virtual {v0, v1}, Landroidx/core/view/t;->f(Landroidx/core/view/u;)Landroidx/core/view/t;
 
     goto :goto_0
 

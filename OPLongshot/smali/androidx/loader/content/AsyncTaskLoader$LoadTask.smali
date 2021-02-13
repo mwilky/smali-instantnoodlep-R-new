@@ -1,6 +1,6 @@
-.class public final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
+.class final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
 .super Landroidx/loader/content/ModernAsyncTask;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x11
+    accessFlags = 0x10
     name = "LoadTask"
 .end annotation
 
@@ -28,15 +28,15 @@
 
 
 # instance fields
-.field public final mDone:Ljava/util/concurrent/CountDownLatch;
+.field private final mDone:Ljava/util/concurrent/CountDownLatch;
 
-.field public final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
+.field final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
 
-.field public waiting:Z
+.field waiting:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/loader/content/AsyncTaskLoader;)V
+.method constructor <init>(Landroidx/loader/content/AsyncTaskLoader;)V
     .locals 1
 
     iput-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     check-cast p1, [Ljava/lang/Void;
@@ -68,7 +68,7 @@
     return-object p1
 .end method
 
-.method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
+.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -85,7 +85,7 @@
 
     move-result-object p1
     :try_end_0
-    .catch Lb/g/h/c; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroidx/core/os/c; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
 
@@ -106,7 +106,7 @@
     throw p1
 .end method
 
-.method public onCancelled(Ljava/lang/Object;)V
+.method protected onCancelled(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -137,7 +137,7 @@
     throw p1
 .end method
 
-.method public onPostExecute(Ljava/lang/Object;)V
+.method protected onPostExecute(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

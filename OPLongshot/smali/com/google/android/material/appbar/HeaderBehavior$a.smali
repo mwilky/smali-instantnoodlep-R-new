@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/appbar/HeaderBehavior$a;
+.class Lcom/google/android/material/appbar/HeaderBehavior$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,15 +12,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.field private final a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public final b:Landroid/view/View;
+.field private final b:Landroid/view/View;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -28,11 +28,11 @@
     .end annotation
 .end field
 
-.field public final synthetic c:Lcom/google/android/material/appbar/HeaderBehavior;
+.field final synthetic c:Lcom/google/android/material/appbar/HeaderBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/appbar/HeaderBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
+.method constructor <init>(Lcom/google/android/material/appbar/HeaderBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

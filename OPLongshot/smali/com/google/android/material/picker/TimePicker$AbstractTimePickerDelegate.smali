@@ -1,6 +1,6 @@
-.class public abstract Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;
+.class abstract Lcom/google/android/material/picker/TimePicker$AbstractTimePickerDelegate;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/picker/TimePicker$c;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x408
     name = "AbstractTimePickerDelegate"
 .end annotation
 
@@ -24,15 +24,15 @@
 
 
 # instance fields
-.field public final a:Lcom/google/android/material/picker/TimePicker;
+.field protected final a:Lcom/google/android/material/picker/TimePicker;
 
-.field public final b:Landroid/content/Context;
+.field protected final b:Landroid/content/Context;
 
-.field public final c:Ljava/util/Locale;
+.field protected final c:Ljava/util/Locale;
 
-.field public d:Lcom/google/android/material/picker/TimePicker$b;
+.field protected d:Lcom/google/android/material/picker/TimePicker$b;
 
-.field public e:Lcom/google/android/material/picker/TimePicker$b;
+.field protected e:Lcom/google/android/material/picker/TimePicker$b;
 
 
 # direct methods

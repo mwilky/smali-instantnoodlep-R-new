@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/longshot/state/LongshotMode$MyHandler;
 .super Landroid/os/Handler;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/state/LongshotMode;
 
 
 # direct methods

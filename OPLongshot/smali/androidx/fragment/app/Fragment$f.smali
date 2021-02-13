@@ -1,6 +1,6 @@
-.class public interface abstract Landroidx/fragment/app/Fragment$f;
+.class interface abstract Landroidx/fragment/app/Fragment$f;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "f"
 .end annotation
 

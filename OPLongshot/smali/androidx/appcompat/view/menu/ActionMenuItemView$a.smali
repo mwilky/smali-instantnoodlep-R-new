@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/view/menu/ActionMenuItemView$a;
+.class Landroidx/appcompat/view/menu/ActionMenuItemView$a;
 .super Landroidx/appcompat/widget/ForwardingListener;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/view/menu/ActionMenuItemView;
+.field final synthetic a:Landroidx/appcompat/view/menu/ActionMenuItemView;
 
 
 # direct methods
@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method public onForwardingStarted()Z
+.method protected onForwardingStarted()Z
     .locals 3
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItemView$a;->a:Landroidx/appcompat/view/menu/ActionMenuItemView;

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/picker/DatePicker;
 .super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -16,17 +16,17 @@
 
 
 # static fields
-.field public static final c:Ljava/lang/String;
+.field private static final c:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Lcom/google/android/material/picker/DatePicker$b;
+.field private final a:Lcom/google/android/material/picker/DatePicker$b;
 
-.field public final b:I
+.field private final b:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const-class v0, Lcom/google/android/material/picker/DatePicker;
@@ -65,13 +65,13 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    sget-object v0, Lc/a/b/b/l;->DatePicker:[I
+    sget-object v0, Lb/a/b/a/l;->DatePicker:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lc/a/b/b/l;->DatePicker_dialogMode:I
+    sget v1, Lb/a/b/a/l;->DatePicker_dialogMode:I
 
     const/4 v2, 0x0
 
@@ -79,7 +79,7 @@
 
     move-result v1
 
-    sget v3, Lc/a/b/b/l;->DatePicker_android_datePickerMode:I
+    sget v3, Lb/a/b/a/l;->DatePicker_android_datePickerMode:I
 
     const/4 v4, 0x1
 
@@ -87,7 +87,7 @@
 
     move-result v3
 
-    sget v4, Lc/a/b/b/l;->DatePicker_android_firstDayOfWeek:I
+    sget v4, Lb/a/b/a/l;->DatePicker_android_firstDayOfWeek:I
 
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    sget v3, Lc/a/b/b/g;->date_picker_mode:I
+    sget v3, Lb/a/b/a/g;->date_picker_mode:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -123,22 +123,23 @@
 
     if-eq v1, v0, :cond_1
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/material/picker/DatePicker;->b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/picker/DatePicker;->b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
 
     move-result-object p1
 
+    :goto_1
     iput-object p1, p0, Lcom/google/android/material/picker/DatePicker;->a:Lcom/google/android/material/picker/DatePicker$b;
+
+    goto :goto_2
+
+    :cond_1
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/material/picker/DatePicker;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
+
+    move-result-object p1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/material/picker/DatePicker;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/material/picker/DatePicker;->a:Lcom/google/android/material/picker/DatePicker$b;
-
-    :goto_1
+    :goto_2
     if-eqz v2, :cond_2
 
     invoke-virtual {p0, v2}, Lcom/google/android/material/picker/DatePicker;->setFirstDayOfWeek(I)V
@@ -155,12 +156,10 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
+.method private a(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
     .locals 7
 
-    new-instance v6, Lc/a/b/b/b0/a;
+    new-instance v6, Lcom/google/android/material/picker/a;
 
     move-object v0, v6
 
@@ -174,11 +173,35 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lc/a/b/b/b0/a;-><init>(Lcom/google/android/material/picker/DatePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/picker/a;-><init>(Lcom/google/android/material/picker/DatePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-object v6
 .end method
 
+.method private b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
+    .locals 7
+
+    new-instance v6, Lcom/google/android/material/picker/b;
+
+    move-object v0, v6
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/material/picker/b;-><init>(Lcom/google/android/material/picker/DatePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    return-object v6
+.end method
+
+
+# virtual methods
 .method public autofill(Landroid/view/autofill/AutofillValue;)V
     .locals 3
 
@@ -238,29 +261,7 @@
     return-void
 .end method
 
-.method public final b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/picker/DatePicker$b;
-    .locals 7
-
-    new-instance v6, Lc/a/b/b/b0/b;
-
-    move-object v0, v6
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lc/a/b/b/b0/b;-><init>(Lcom/google/android/material/picker/DatePicker;Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    return-object v6
-.end method
-
-.method public dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
+.method protected dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -491,7 +492,7 @@
     return v0
 .end method
 
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -503,26 +504,26 @@
     return-void
 .end method
 
-.method public onLayout(ZIIII)V
+.method protected onLayout(ZIIII)V
     .locals 0
 
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     iget-object p1, p0, Lcom/google/android/material/picker/DatePicker;->a:Lcom/google/android/material/picker/DatePicker$b;
 
-    instance-of p2, p1, Lc/a/b/b/b0/a;
+    instance-of p2, p1, Lcom/google/android/material/picker/a;
 
     if-eqz p2, :cond_0
 
-    check-cast p1, Lc/a/b/b/b0/a;
+    check-cast p1, Lcom/google/android/material/picker/a;
 
-    invoke-virtual {p1}, Lc/a/b/b/b0/a;->D()V
+    invoke-virtual {p1}, Lcom/google/android/material/picker/a;->D()V
 
     :cond_0
     return-void
 .end method
 
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
     check-cast p1, Landroid/view/View$BaseSavedState;
@@ -540,7 +541,7 @@
     return-void
 .end method
 
-.method public onSaveInstanceState()Landroid/os/Parcelable;
+.method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
     invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;

@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/LinearLayoutCompat$a;
 .super Landroid/view/ViewGroup$MarginLayoutParams;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -60,13 +60,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/LinearLayoutCompat$a;->b:I
 
-    sget-object v1, Lb/c/j;->LinearLayoutCompat_Layout:[I
+    sget-object v1, La/a/j;->LinearLayoutCompat_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lb/c/j;->LinearLayoutCompat_Layout_android_layout_weight:I
+    sget p2, La/a/j;->LinearLayoutCompat_Layout_android_layout_weight:I
 
     const/4 v1, 0x0
 
@@ -76,7 +76,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/LinearLayoutCompat$a;->a:F
 
-    sget p2, Lb/c/j;->LinearLayoutCompat_Layout_android_layout_gravity:I
+    sget p2, La/a/j;->LinearLayoutCompat_Layout_android_layout_gravity:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 

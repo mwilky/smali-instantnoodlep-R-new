@@ -1,24 +1,24 @@
-.class public Lcom/google/android/material/snackbar/BaseTransientBottomBar$c;
+.class Lcom/google/android/material/snackbar/BaseTransientBottomBar$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/g/l/m;
+.implements Landroidx/core/view/m;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lc/a/b/b/g0/a;)V
+    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
+.method constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Lb/g/l/x;)Lb/g/l/x;
+.method public a(Landroid/view/View;Landroidx/core/view/x;)Landroidx/core/view/x;
     .locals 4
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
@@ -43,7 +43,7 @@
 
     move-result v2
 
-    invoke-virtual {p2}, Lb/g/l/x;->b()I
+    invoke-virtual {p2}, Landroidx/core/view/x;->b()I
 
     move-result v3
 

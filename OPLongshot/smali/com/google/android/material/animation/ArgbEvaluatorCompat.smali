@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -18,11 +18,11 @@
 
 
 # static fields
-.field public static final instance:Lcom/google/android/material/animation/ArgbEvaluatorCompat;
+.field private static final instance:Lcom/google/android/material/animation/ArgbEvaluatorCompat;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Lcom/google/android/material/animation/ArgbEvaluatorCompat;

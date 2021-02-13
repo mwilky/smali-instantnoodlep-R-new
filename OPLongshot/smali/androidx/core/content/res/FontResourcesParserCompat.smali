@@ -1,6 +1,6 @@
 .class public Landroidx/core/content/res/FontResourcesParserCompat;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -22,7 +22,7 @@
 
 
 # static fields
-.field public static final DEFAULT_TIMEOUT_MILLIS:I = 0x1f4
+.field private static final DEFAULT_TIMEOUT_MILLIS:I = 0x1f4
 
 .field public static final FETCH_STRATEGY_ASYNC:I = 0x1
 
@@ -30,13 +30,13 @@
 
 .field public static final INFINITE_TIMEOUT_VALUE:I = -0x1
 
-.field public static final ITALIC:I = 0x1
+.field private static final ITALIC:I = 0x1
 
-.field public static final NORMAL_WEIGHT:I = 0x190
+.field private static final NORMAL_WEIGHT:I = 0x190
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public static getType(Landroid/content/res/TypedArray;I)I
+.method private static getType(Landroid/content/res/TypedArray;I)I
     .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -229,7 +229,7 @@
     throw p0
 .end method
 
-.method public static readFamilies(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$a;
+.method private static readFamilies(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$a;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -264,7 +264,7 @@
     return-object v1
 .end method
 
-.method public static readFamily(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$a;
+.method private static readFamily(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$a;
     .locals 8
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -273,31 +273,31 @@
 
     move-result-object v0
 
-    sget-object v1, Lb/g/c;->FontFamily:[I
+    sget-object v1, La/d/c;->FontFamily:[I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Lb/g/c;->FontFamily_fontProviderAuthority:I
+    sget v1, La/d/c;->FontFamily_fontProviderAuthority:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    sget v2, Lb/g/c;->FontFamily_fontProviderPackage:I
+    sget v2, La/d/c;->FontFamily_fontProviderPackage:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget v3, Lb/g/c;->FontFamily_fontProviderQuery:I
+    sget v3, La/d/c;->FontFamily_fontProviderQuery:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget v4, Lb/g/c;->FontFamily_fontProviderCerts:I
+    sget v4, La/d/c;->FontFamily_fontProviderCerts:I
 
     const/4 v5, 0x0
 
@@ -305,7 +305,7 @@
 
     move-result v4
 
-    sget v5, Lb/g/c;->FontFamily_fontProviderFetchStrategy:I
+    sget v5, La/d/c;->FontFamily_fontProviderFetchStrategy:I
 
     const/4 v6, 0x1
 
@@ -313,7 +313,7 @@
 
     move-result v5
 
-    sget v6, Lb/g/c;->FontFamily_fontProviderFetchTimeout:I
+    sget v6, La/d/c;->FontFamily_fontProviderFetchTimeout:I
 
     const/16 v7, 0x1f4
 
@@ -349,11 +349,11 @@
 
     new-instance p1, Landroidx/core/content/res/FontResourcesParserCompat$d;
 
-    new-instance v0, Lb/g/i/a;
+    new-instance v0, Landroidx/core/provider/a;
 
-    invoke-direct {v0, v1, v2, v3, p0}, Lb/g/i/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v1, v2, v3, p0}, Landroidx/core/provider/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
-    invoke-direct {p1, v0, v5, v6}, Landroidx/core/content/res/FontResourcesParserCompat$d;-><init>(Lb/g/i/a;II)V
+    invoke-direct {p1, v0, v5, v6}, Landroidx/core/content/res/FontResourcesParserCompat$d;-><init>(Landroidx/core/provider/a;II)V
 
     return-object p1
 
@@ -436,20 +436,20 @@
     return-object p0
 .end method
 
-.method public static readFont(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$c;
+.method private static readFont(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$c;
     .locals 9
 
     invoke-static {p0}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v0
 
-    sget-object v1, Lb/g/c;->FontFamilyFont:[I
+    sget-object v1, La/d/c;->FontFamilyFont:[I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget v0, Lb/g/c;->FontFamilyFont_fontWeight:I
+    sget v0, La/d/c;->FontFamilyFont_fontWeight:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -457,12 +457,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lb/g/c;->FontFamilyFont_fontWeight:I
+    sget v0, La/d/c;->FontFamilyFont_fontWeight:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lb/g/c;->FontFamilyFont_android_fontWeight:I
+    sget v0, La/d/c;->FontFamilyFont_android_fontWeight:I
 
     :goto_0
     const/16 v1, 0x190
@@ -471,7 +471,7 @@
 
     move-result v4
 
-    sget v0, Lb/g/c;->FontFamilyFont_fontStyle:I
+    sget v0, La/d/c;->FontFamilyFont_fontStyle:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -479,12 +479,12 @@
 
     if-eqz v0, :cond_1
 
-    sget v0, Lb/g/c;->FontFamilyFont_fontStyle:I
+    sget v0, La/d/c;->FontFamilyFont_fontStyle:I
 
     goto :goto_1
 
     :cond_1
-    sget v0, Lb/g/c;->FontFamilyFont_android_fontStyle:I
+    sget v0, La/d/c;->FontFamilyFont_android_fontStyle:I
 
     :goto_1
     const/4 v1, 0x0
@@ -505,7 +505,7 @@
     move v5, v1
 
     :goto_2
-    sget v0, Lb/g/c;->FontFamilyFont_ttcIndex:I
+    sget v0, La/d/c;->FontFamilyFont_ttcIndex:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -513,15 +513,15 @@
 
     if-eqz v0, :cond_3
 
-    sget v0, Lb/g/c;->FontFamilyFont_ttcIndex:I
+    sget v0, La/d/c;->FontFamilyFont_ttcIndex:I
 
     goto :goto_3
 
     :cond_3
-    sget v0, Lb/g/c;->FontFamilyFont_android_ttcIndex:I
+    sget v0, La/d/c;->FontFamilyFont_android_ttcIndex:I
 
     :goto_3
-    sget v2, Lb/g/c;->FontFamilyFont_fontVariationSettings:I
+    sget v2, La/d/c;->FontFamilyFont_fontVariationSettings:I
 
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -529,12 +529,12 @@
 
     if-eqz v2, :cond_4
 
-    sget v2, Lb/g/c;->FontFamilyFont_fontVariationSettings:I
+    sget v2, La/d/c;->FontFamilyFont_fontVariationSettings:I
 
     goto :goto_4
 
     :cond_4
-    sget v2, Lb/g/c;->FontFamilyFont_android_fontVariationSettings:I
+    sget v2, La/d/c;->FontFamilyFont_android_fontVariationSettings:I
 
     :goto_4
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -545,7 +545,7 @@
 
     move-result v7
 
-    sget v0, Lb/g/c;->FontFamilyFont_font:I
+    sget v0, La/d/c;->FontFamilyFont_font:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -553,12 +553,12 @@
 
     if-eqz v0, :cond_5
 
-    sget v0, Lb/g/c;->FontFamilyFont_font:I
+    sget v0, La/d/c;->FontFamilyFont_font:I
 
     goto :goto_5
 
     :cond_5
-    sget v0, Lb/g/c;->FontFamilyFont_android_font:I
+    sget v0, La/d/c;->FontFamilyFont_android_font:I
 
     :goto_5
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -594,7 +594,7 @@
     return-object p0
 .end method
 
-.method public static skip(Lorg/xmlpull/v1/XmlPullParser;)V
+.method private static skip(Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -630,7 +630,7 @@
     return-void
 .end method
 
-.method public static toByteArrayList([Ljava/lang/String;)Ljava/util/List;
+.method private static toByteArrayList([Ljava/lang/String;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {

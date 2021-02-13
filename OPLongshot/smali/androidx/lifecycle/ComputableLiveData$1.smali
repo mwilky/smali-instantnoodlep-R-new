@@ -1,6 +1,6 @@
-.class public Landroidx/lifecycle/ComputableLiveData$1;
+.class Landroidx/lifecycle/ComputableLiveData$1;
 .super Landroidx/lifecycle/LiveData;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
+.field final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
+.method constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData$1;->this$0:Landroidx/lifecycle/ComputableLiveData;
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public onActive()V
+.method protected onActive()V
     .locals 2
 
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData$1;->this$0:Landroidx/lifecycle/ComputableLiveData;

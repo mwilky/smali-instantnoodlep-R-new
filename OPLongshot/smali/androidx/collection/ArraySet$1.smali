@@ -1,6 +1,6 @@
-.class public Landroidx/collection/ArraySet$1;
+.class Landroidx/collection/ArraySet$1;
 .super Landroidx/collection/MapCollections;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -22,11 +22,11 @@
 
 
 # instance fields
-.field public final synthetic this$0:Landroidx/collection/ArraySet;
+.field final synthetic this$0:Landroidx/collection/ArraySet;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/collection/ArraySet;)V
+.method constructor <init>(Landroidx/collection/ArraySet;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public colClear()V
+.method protected colClear()V
     .locals 1
 
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method public colGetEntry(II)Ljava/lang/Object;
+.method protected colGetEntry(II)Ljava/lang/Object;
     .locals 0
 
     iget-object p2, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -60,7 +60,7 @@
     return-object p1
 .end method
 
-.method public colGetMap()Ljava/util/Map;
+.method protected colGetMap()Ljava/util/Map;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -79,7 +79,7 @@
     throw v0
 .end method
 
-.method public colGetSize()I
+.method protected colGetSize()I
     .locals 1
 
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -89,7 +89,7 @@
     return v0
 .end method
 
-.method public colIndexOfKey(Ljava/lang/Object;)I
+.method protected colIndexOfKey(Ljava/lang/Object;)I
     .locals 1
 
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -101,7 +101,7 @@
     return p1
 .end method
 
-.method public colIndexOfValue(Ljava/lang/Object;)I
+.method protected colIndexOfValue(Ljava/lang/Object;)I
     .locals 1
 
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -113,7 +113,7 @@
     return p1
 .end method
 
-.method public colPut(Ljava/lang/Object;Ljava/lang/Object;)V
+.method protected colPut(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -128,7 +128,7 @@
     return-void
 .end method
 
-.method public colRemoveAt(I)V
+.method protected colRemoveAt(I)V
     .locals 1
 
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
@@ -138,7 +138,7 @@
     return-void
 .end method
 
-.method public colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
+.method protected colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

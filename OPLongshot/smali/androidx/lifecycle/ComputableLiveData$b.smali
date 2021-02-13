@@ -1,6 +1,6 @@
-.class public Landroidx/lifecycle/ComputableLiveData$b;
+.class Landroidx/lifecycle/ComputableLiveData$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/lifecycle/ComputableLiveData;
+.field final synthetic a:Landroidx/lifecycle/ComputableLiveData;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
+.method constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData$b;->a:Landroidx/lifecycle/ComputableLiveData;

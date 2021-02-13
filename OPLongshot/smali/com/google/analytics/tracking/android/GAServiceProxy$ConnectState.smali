@@ -1,6 +1,6 @@
-.class public final enum Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
+.class final enum Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4019
+    accessFlags = 0x401a
     name = "ConnectState"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
+.field private static final synthetic $VALUES:[Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
 
 .field public static final enum BLOCKED:Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 10
 
     new-instance v0, Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

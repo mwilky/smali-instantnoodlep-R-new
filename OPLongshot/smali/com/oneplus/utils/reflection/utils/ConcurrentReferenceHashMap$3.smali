@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$3;
+.class Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$3;
 .super Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -24,13 +24,13 @@
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
-.field public final synthetic val$value:Ljava/lang/Object;
+.field final synthetic val$value:Ljava/lang/Object;
 
 
 # direct methods
-.method public varargs constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;Ljava/lang/Object;)V
+.method varargs constructor <init>(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$TaskOption;Ljava/lang/Object;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$3;->this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Boolean;
+.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Boolean;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -65,7 +65,7 @@
 
     iget-object v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$3;->val$value:Ljava/lang/Object;
 
-    invoke-static {p2, v0}, Lc/b/h/b/d/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lcom/oneplus/utils/reflection/utils/c;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -83,7 +83,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
+.method protected bridge synthetic execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$3;->execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Boolean;

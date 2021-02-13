@@ -1,6 +1,6 @@
 .class public Lcom/oneplus/screenshot/ScreenshotServiceErrorReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "SourceFile"
+.source ""
 
 
 # direct methods

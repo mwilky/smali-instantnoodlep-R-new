@@ -1,6 +1,6 @@
-.class public Landroidx/appcompat/widget/ActivityChooserView$a;
+.class Landroidx/appcompat/widget/ActivityChooserView$a;
 .super Landroid/database/DataSetObserver;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
+.field final synthetic a:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
+.method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$a;->a:Landroidx/appcompat/widget/ActivityChooserView;

@@ -1,6 +1,6 @@
-.class public interface abstract annotation Lcom/google/android/material/picker/RadialTimePickerView$PickerType;
+.class interface abstract annotation Lcom/google/android/material/picker/RadialTimePickerView$PickerType;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2609
+    accessFlags = 0x2608
     name = "PickerType"
 .end annotation
 

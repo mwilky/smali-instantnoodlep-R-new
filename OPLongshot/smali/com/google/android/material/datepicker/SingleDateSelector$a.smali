@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/datepicker/SingleDateSelector$a;
-.super Lc/a/b/b/t/c;
-.source "SourceFile"
+.class Lcom/google/android/material/datepicker/SingleDateSelector$a;
+.super Lcom/google/android/material/datepicker/c;
+.source ""
 
 
 # annotations
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic f:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
+.field final synthetic f:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
 
-.field public final synthetic g:Lcom/google/android/material/datepicker/SingleDateSelector;
+.field final synthetic g:Lcom/google/android/material/datepicker/SingleDateSelector;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
+.method constructor <init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/SingleDateSelector$a;->g:Lcom/google/android/material/datepicker/SingleDateSelector;
 
     iput-object p6, p0, Lcom/google/android/material/datepicker/SingleDateSelector$a;->f:Lcom/google/android/material/datepicker/OnSelectionChangedListener;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Lc/a/b/b/t/c;-><init>(Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;)V
+    invoke-direct {p0, p2, p3, p4, p5}, Lcom/google/android/material/datepicker/c;-><init>(Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Ljava/lang/Long;)V
+.method b(Ljava/lang/Long;)V
     .locals 3
     .param p1    # Ljava/lang/Long;
         .annotation build Landroidx/annotation/Nullable;

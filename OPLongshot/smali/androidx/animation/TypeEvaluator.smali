@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/animation/TypeEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

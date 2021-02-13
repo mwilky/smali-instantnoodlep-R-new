@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/FastScroller$c;
+.class Landroidx/recyclerview/widget/FastScroller$c;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,19 +9,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "c"
 .end annotation
 
 
 # instance fields
-.field public a:Z
+.field private a:Z
 
-.field public final synthetic b:Landroidx/recyclerview/widget/FastScroller;
+.field final synthetic b:Landroidx/recyclerview/widget/FastScroller;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
+.method constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/FastScroller$c;->b:Landroidx/recyclerview/widget/FastScroller;

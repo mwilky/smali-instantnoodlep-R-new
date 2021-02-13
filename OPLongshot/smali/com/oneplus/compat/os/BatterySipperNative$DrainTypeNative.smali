@@ -1,6 +1,6 @@
 .class public final enum Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
 .super Ljava/lang/Enum;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final synthetic $VALUES:[Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
+.field private static final synthetic $VALUES:[Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
 
 .field public static final enum AMBIENT_DISPLAY:Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
 
@@ -46,7 +46,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 17
 
     new-instance v0, Lcom/oneplus/compat/os/BatterySipperNative$DrainTypeNative;
@@ -252,7 +252,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

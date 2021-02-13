@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
+.class Lcom/google/android/material/floatingactionbutton/FloatingActionButton$TransformationCallbackWrapper;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$h;
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "TransformationCallbackWrapper"
 .end annotation
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field public final listener:Lcom/google/android/material/animation/TransformationCallback;
+.field private final listener:Lcom/google/android/material/animation/TransformationCallback;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -40,11 +40,11 @@
     .end annotation
 .end field
 
-.field public final synthetic this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+.field final synthetic this$0:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/animation/TransformationCallback;)V
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/animation/TransformationCallback;)V
     .locals 0
     .param p1    # Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
         .annotation build Landroidx/annotation/NonNull;

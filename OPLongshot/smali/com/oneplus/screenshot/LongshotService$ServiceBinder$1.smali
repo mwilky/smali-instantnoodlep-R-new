@@ -1,6 +1,6 @@
-.class public Lcom/oneplus/screenshot/LongshotService$ServiceBinder$1;
+.class Lcom/oneplus/screenshot/LongshotService$ServiceBinder$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic this$1:Lcom/oneplus/screenshot/LongshotService$ServiceBinder;
+.field final synthetic this$1:Lcom/oneplus/screenshot/LongshotService$ServiceBinder;
 
-.field public final synthetic val$infoObject:Lorg/json/JSONObject;
+.field final synthetic val$infoObject:Lorg/json/JSONObject;
 
-.field public final synthetic val$listener:Lcom/oneplus/longshot/IViewPropCallback;
+.field final synthetic val$listener:Lcom/oneplus/longshot/IViewPropCallback;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/LongshotService$ServiceBinder;Lorg/json/JSONObject;Lcom/oneplus/longshot/IViewPropCallback;)V
+.method constructor <init>(Lcom/oneplus/screenshot/LongshotService$ServiceBinder;Lorg/json/JSONObject;Lcom/oneplus/longshot/IViewPropCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/screenshot/LongshotService$ServiceBinder$1;->this$1:Lcom/oneplus/screenshot/LongshotService$ServiceBinder;

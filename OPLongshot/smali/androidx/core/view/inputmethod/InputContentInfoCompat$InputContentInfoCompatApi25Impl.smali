@@ -1,6 +1,6 @@
-.class public final Landroidx/core/view/inputmethod/InputContentInfoCompat$InputContentInfoCompatApi25Impl;
+.class final Landroidx/core/view/inputmethod/InputContentInfoCompat$InputContentInfoCompatApi25Impl;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -10,14 +10,14 @@
 
 
 # instance fields
-.field public final mObject:Landroid/view/inputmethod/InputContentInfo;
+.field final mObject:Landroid/view/inputmethod/InputContentInfo;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+.method constructor <init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
     .locals 1
     .param p1    # Landroid/net/Uri;
         .annotation build Landroidx/annotation/NonNull;
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;)V
+.method constructor <init>(Ljava/lang/Object;)V
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;

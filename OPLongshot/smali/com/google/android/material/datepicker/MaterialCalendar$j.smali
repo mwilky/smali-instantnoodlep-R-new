@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/datepicker/MaterialCalendar$j;
+.class Lcom/google/android/material/datepicker/MaterialCalendar$j;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
+.field final synthetic a:Lcom/google/android/material/datepicker/MonthsPagerAdapter;
 
-.field public final synthetic b:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field final synthetic b:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;)V
+.method constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/MonthsPagerAdapter;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar$j;->b:Lcom/google/android/material/datepicker/MaterialCalendar;

@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/material/appbar/AppBarLayout$Behavior$DragCallback;
 .super Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$BaseDragCallback;
-.source "SourceFile"
+.source ""
 
 
 # annotations

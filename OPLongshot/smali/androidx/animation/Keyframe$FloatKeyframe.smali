@@ -1,6 +1,6 @@
-.class public Landroidx/animation/Keyframe$FloatKeyframe;
+.class Landroidx/animation/Keyframe$FloatKeyframe;
 .super Landroidx/animation/Keyframe;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "FloatKeyframe"
 .end annotation
 
@@ -23,11 +23,11 @@
 
 
 # instance fields
-.field public mValue:F
+.field mValue:F
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method constructor <init>(F)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/animation/Keyframe;-><init>()V
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public constructor <init>(FF)V
+.method constructor <init>(FF)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/animation/Keyframe;-><init>()V
@@ -92,11 +92,11 @@
     invoke-direct {v0, v1}, Landroidx/animation/Keyframe$FloatKeyframe;-><init>(F)V
 
     :goto_0
-    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getInterpolator()Lb/b/d;
+    invoke-virtual {p0}, Landroidx/animation/Keyframe;->getInterpolator()Landroidx/animation/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe;->setInterpolator(Lb/b/d;)V
+    invoke-virtual {v0, v1}, Landroidx/animation/Keyframe;->setInterpolator(Landroidx/animation/d;)V
 
     iget-boolean v1, p0, Landroidx/animation/Keyframe;->mValueWasSetOnStart:Z
 

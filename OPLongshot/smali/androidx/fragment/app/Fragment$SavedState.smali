@@ -1,6 +1,6 @@
 .class public Landroidx/fragment/app/Fragment$SavedState;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -39,11 +39,11 @@
 
 
 # instance fields
-.field public final mState:Landroid/os/Bundle;
+.field final mState:Landroid/os/Bundle;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/fragment/app/Fragment$SavedState$1;
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Bundle;)V
+.method constructor <init>(Landroid/os/Bundle;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;

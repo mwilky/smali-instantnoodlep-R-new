@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/internal/ViewGroupOverlayApi18;
+.class Lcom/google/android/material/internal/ViewGroupOverlayApi18;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/internal/ViewOverlayImpl;
@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public final viewGroupOverlay:Landroid/view/ViewGroupOverlay;
+.field private final viewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
+.method constructor <init>(Landroid/view/ViewGroup;)V
     .locals 0
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;

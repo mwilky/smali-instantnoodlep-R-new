@@ -1,6 +1,6 @@
 .class public Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;
 .super Landroidx/lifecycle/MutableLiveData;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroidx/loader/content/Loader$OnLoadCompleteListener;
@@ -30,16 +30,16 @@
 
 
 # instance fields
-.field public final mArgs:Landroid/os/Bundle;
+.field private final mArgs:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final mId:I
+.field private final mId:I
 
-.field public mLifecycleOwner:Lb/l/e;
+.field private mLifecycleOwner:Landroidx/lifecycle/e;
 
-.field public final mLoader:Landroidx/loader/content/Loader;
+.field private final mLoader:Landroidx/loader/content/Loader;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
+.field private mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/app/LoaderManagerImpl$LoaderObserver<",
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field public mPriorLoader:Landroidx/loader/content/Loader;
+.field private mPriorLoader:Landroidx/loader/content/Loader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader<",
@@ -71,7 +71,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILandroid/os/Bundle;Landroidx/loader/content/Loader;Landroidx/loader/content/Loader;)V
+.method constructor <init>(ILandroid/os/Bundle;Landroidx/loader/content/Loader;Landroidx/loader/content/Loader;)V
     .locals 0
     .param p2    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
@@ -113,7 +113,7 @@
 
 
 # virtual methods
-.method public destroy(Z)Landroidx/loader/content/Loader;
+.method destroy(Z)Landroidx/loader/content/Loader;
     .locals 2
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -313,7 +313,7 @@
     return-void
 .end method
 
-.method public getLoader()Landroidx/loader/content/Loader;
+.method getLoader()Landroidx/loader/content/Loader;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -331,7 +331,7 @@
     return-object v0
 .end method
 
-.method public isCallbackWaitingForData()Z
+.method isCallbackWaitingForData()Z
     .locals 2
 
     invoke-virtual {p0}, Landroidx/lifecycle/LiveData;->hasActiveObservers()Z
@@ -361,10 +361,10 @@
     return v1
 .end method
 
-.method public markForRedelivery()V
+.method markForRedelivery()V
     .locals 2
 
-    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
+    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Landroidx/lifecycle/e;
 
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
@@ -374,13 +374,13 @@
 
     invoke-super {p0, v1}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
 
-    invoke-virtual {p0, v0, v1}, Landroidx/lifecycle/LiveData;->observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
+    invoke-virtual {p0, v0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/e;Landroidx/lifecycle/Observer;)V
 
     :cond_0
     return-void
 .end method
 
-.method public onActive()V
+.method protected onActive()V
     .locals 2
 
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->c:Z
@@ -413,7 +413,7 @@
     return-void
 .end method
 
-.method public onInactive()V
+.method protected onInactive()V
     .locals 2
 
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->c:Z
@@ -535,16 +535,16 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Landroidx/lifecycle/e;
 
     iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
     return-void
 .end method
 
-.method public setCallback(Lb/l/e;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
+.method setCallback(Landroidx/lifecycle/e;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
     .locals 2
-    .param p1    # Lb/l/e;
+    .param p1    # Landroidx/lifecycle/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -561,7 +561,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/l/e;",
+            "Landroidx/lifecycle/e;",
             "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
             "TD;>;)",
             "Landroidx/loader/content/Loader<",
@@ -575,7 +575,7 @@
 
     invoke-direct {v0, v1, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;-><init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
 
-    invoke-virtual {p0, p1, v0}, Landroidx/lifecycle/LiveData;->observe(Lb/l/e;Landroidx/lifecycle/Observer;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/e;Landroidx/lifecycle/Observer;)V
 
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
@@ -584,7 +584,7 @@
     invoke-virtual {p0, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->removeObserver(Landroidx/lifecycle/Observer;)V
 
     :cond_0
-    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Lb/l/e;
+    iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLifecycleOwner:Landroidx/lifecycle/e;
 
     iput-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 

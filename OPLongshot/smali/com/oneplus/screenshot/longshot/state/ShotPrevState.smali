@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/screenshot/longshot/state/ShotPrevState;
 .super Lcom/oneplus/screenshot/longshot/state/AbsShotState;
-.source "SourceFile"
+.source ""
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = "ShotPrevState"
+.field private static final TAG:Ljava/lang/String; = "ShotPrevState"
 
 
 # direct methods

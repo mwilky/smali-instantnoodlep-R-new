@@ -1,6 +1,6 @@
-.class public Landroidx/transition/PathProperty;
+.class Landroidx/transition/PathProperty;
 .super Landroid/util/Property;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field public mCurrentFraction:F
+.field private mCurrentFraction:F
 
-.field public final mPathLength:F
+.field private final mPathLength:F
 
-.field public final mPathMeasure:Landroid/graphics/PathMeasure;
+.field private final mPathMeasure:Landroid/graphics/PathMeasure;
 
-.field public final mPointF:Landroid/graphics/PointF;
+.field private final mPointF:Landroid/graphics/PointF;
 
-.field public final mPosition:[F
+.field private final mPosition:[F
 
-.field public final mProperty:Landroid/util/Property;
+.field private final mProperty:Landroid/util/Property;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Property<",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Property;Landroid/graphics/Path;)V
+.method constructor <init>(Landroid/util/Property;Landroid/graphics/Path;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

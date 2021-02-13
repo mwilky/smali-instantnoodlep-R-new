@@ -1,6 +1,6 @@
-.class public Landroidx/versionedparcelable/VersionedParcelStream$a;
+.class Landroidx/versionedparcelable/VersionedParcelStream$a;
 .super Ljava/io/FilterInputStream;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/versionedparcelable/VersionedParcelStream;
+.field final synthetic a:Landroidx/versionedparcelable/VersionedParcelStream;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/versionedparcelable/VersionedParcelStream;Ljava/io/InputStream;)V
+.method constructor <init>(Landroidx/versionedparcelable/VersionedParcelStream;Ljava/io/InputStream;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/versionedparcelable/VersionedParcelStream$a;->a:Landroidx/versionedparcelable/VersionedParcelStream;

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/SortedListAdapterCallback;
 .super Landroidx/recyclerview/widget/SortedList$Callback;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field public final mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+.field final mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
 
 # direct methods

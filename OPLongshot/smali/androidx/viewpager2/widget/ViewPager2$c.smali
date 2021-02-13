@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/viewpager2/widget/ViewPager2$c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations

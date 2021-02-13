@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
+.class Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "FullSpanItem"
 .end annotation
 
@@ -36,17 +36,17 @@
 
 
 # instance fields
-.field public mGapDir:I
+.field mGapDir:I
 
-.field public mGapPerSpan:[I
+.field mGapPerSpan:[I
 
-.field public mHasUnwantedGapAfter:Z
+.field mHasUnwantedGapAfter:Z
 
-.field public mPosition:I
+.field mPosition:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1;
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -125,7 +125,7 @@
     return v0
 .end method
 
-.method public getGapForSpan(I)I
+.method getGapForSpan(I)I
     .locals 1
 
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I

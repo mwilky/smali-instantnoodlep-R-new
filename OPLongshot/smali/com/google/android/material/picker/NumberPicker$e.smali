@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/picker/NumberPicker$e;
+.class Lcom/google/android/material/picker/NumberPicker$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/picker/NumberPicker;
+.field final synthetic a:Lcom/google/android/material/picker/NumberPicker;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
+.method constructor <init>(Lcom/google/android/material/picker/NumberPicker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/picker/NumberPicker$e;->a:Lcom/google/android/material/picker/NumberPicker;

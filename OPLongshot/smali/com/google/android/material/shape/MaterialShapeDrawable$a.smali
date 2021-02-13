@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/shape/MaterialShapeDrawable$a;
+.class Lcom/google/android/material/shape/MaterialShapeDrawable$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/shape/MaterialShapeDrawable;
+.field final synthetic a:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable;)V
+.method constructor <init>(Lcom/google/android/material/shape/MaterialShapeDrawable;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable$a;->a:Lcom/google/android/material/shape/MaterialShapeDrawable;
@@ -34,9 +34,9 @@
 
 
 # virtual methods
-.method public onCornerPathCreated(Lc/a/b/b/e0/i;Landroid/graphics/Matrix;I)V
+.method public onCornerPathCreated(Lcom/google/android/material/shape/i;Landroid/graphics/Matrix;I)V
     .locals 2
-    .param p1    # Lc/a/b/b/e0/i;
+    .param p1    # Lcom/google/android/material/shape/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lc/a/b/b/e0/i;->e()Z
+    invoke-virtual {p1}, Lcom/google/android/material/shape/i;->e()Z
 
     move-result v1
 
@@ -55,11 +55,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable$a;->a:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->b(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lc/a/b/b/e0/i$g;
+    invoke-static {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->b(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lcom/google/android/material/shape/i$g;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2}, Lc/a/b/b/e0/i;->f(Landroid/graphics/Matrix;)Lc/a/b/b/e0/i$g;
+    invoke-virtual {p1, p2}, Lcom/google/android/material/shape/i;->f(Landroid/graphics/Matrix;)Lcom/google/android/material/shape/i$g;
 
     move-result-object p1
 
@@ -68,9 +68,9 @@
     return-void
 .end method
 
-.method public onEdgePathCreated(Lc/a/b/b/e0/i;Landroid/graphics/Matrix;I)V
+.method public onEdgePathCreated(Lcom/google/android/material/shape/i;Landroid/graphics/Matrix;I)V
     .locals 3
-    .param p1    # Lc/a/b/b/e0/i;
+    .param p1    # Lcom/google/android/material/shape/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -83,7 +83,7 @@
 
     add-int/lit8 v1, p3, 0x4
 
-    invoke-virtual {p1}, Lc/a/b/b/e0/i;->e()Z
+    invoke-virtual {p1}, Lcom/google/android/material/shape/i;->e()Z
 
     move-result v2
 
@@ -91,11 +91,11 @@
 
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable$a;->a:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->c(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lc/a/b/b/e0/i$g;
+    invoke-static {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->c(Lcom/google/android/material/shape/MaterialShapeDrawable;)[Lcom/google/android/material/shape/i$g;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2}, Lc/a/b/b/e0/i;->f(Landroid/graphics/Matrix;)Lc/a/b/b/e0/i$g;
+    invoke-virtual {p1, p2}, Lcom/google/android/material/shape/i;->f(Landroid/graphics/Matrix;)Lcom/google/android/material/shape/i$g;
 
     move-result-object p1
 

@@ -1,6 +1,6 @@
-.class public Landroidx/recyclerview/widget/RecyclerView$q$a;
+.class Landroidx/recyclerview/widget/RecyclerView$q$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field final a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -25,15 +25,15 @@
     .end annotation
 .end field
 
-.field public b:I
+.field b:I
 
-.field public c:J
+.field c:J
 
-.field public d:J
+.field d:J
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

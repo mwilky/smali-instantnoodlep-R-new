@@ -1,6 +1,6 @@
-.class public abstract Landroidx/viewpager2/adapter/FragmentStateAdapter$d;
+.class abstract Landroidx/viewpager2/adapter/FragmentStateAdapter$d;
 .super Landroidx/recyclerview/widget/RecyclerView$g;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x40a
     name = "d"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$g;-><init>()V
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$a;)V
+.method synthetic constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$a;)V
     .locals 0
 
     invoke-direct {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$d;-><init>()V

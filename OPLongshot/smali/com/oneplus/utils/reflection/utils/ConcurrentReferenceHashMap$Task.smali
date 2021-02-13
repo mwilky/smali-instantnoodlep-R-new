@@ -1,6 +1,6 @@
-.class public abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
+.class abstract Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Task;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x401
+    accessFlags = 0x402
     name = "Task"
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field public final options:Ljava/util/EnumSet;
+.field private final options:Ljava/util/EnumSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/EnumSet<",
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field public final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
+.field final synthetic this$0:Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap;
 
 
 # direct methods
@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
+.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -91,7 +91,7 @@
     return-object p1
 .end method
 
-.method public execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
+.method protected execute(Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Entry;Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$a;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

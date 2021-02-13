@@ -1,6 +1,6 @@
 .class public Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -12,39 +12,39 @@
 
 
 # static fields
-.field public static final PI:D = 3.141592653589793
+.field private static final PI:D = 3.141592653589793
 
-.field public static final TWO_PI:D = 6.283185307179586
+.field private static final TWO_PI:D = 6.283185307179586
 
-.field public static final factors:[I
+.field private static final factors:[I
 
 
 # instance fields
-.field public bk1:[D
+.field private bk1:[D
 
-.field public bk2:[D
+.field private bk2:[D
 
-.field public ip:[I
+.field private ip:[I
 
-.field public n:I
+.field private n:I
 
-.field public nBluestein:I
+.field private nBluestein:I
 
-.field public nc:I
+.field private nc:I
 
-.field public nw:I
+.field private nw:I
 
-.field public plan:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
+.field private plan:Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$Plans;
 
-.field public w:[D
+.field private w:[D
 
-.field public wtable:[D
+.field private wtable:[D
 
-.field public wtable_r:[D
+.field private wtable_r:[D
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x4
@@ -336,7 +336,7 @@
     throw p1
 .end method
 
-.method public static synthetic access$000(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;)[D
+.method static synthetic access$000(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;)[D
     .locals 0
 
     iget-object p0, p0, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->bk1:[D
@@ -344,7 +344,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;)[D
+.method static synthetic access$100(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;)[D
     .locals 0
 
     iget-object p0, p0, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->bk2:[D
@@ -352,7 +352,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;I[DI[DI)V
+.method static synthetic access$200(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;I[DI[DI)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftmdl1(I[DI[DI)V
@@ -360,7 +360,7 @@
     return-void
 .end method
 
-.method public static synthetic access$300(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;II[DII[D)V
+.method static synthetic access$300(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;II[DII[D)V
     .locals 0
 
     invoke-direct/range {p0 .. p6}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftleaf(II[DII[D)V
@@ -368,7 +368,7 @@
     return-void
 .end method
 
-.method public static synthetic access$400(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;III[DII[D)I
+.method static synthetic access$400(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;III[DII[D)I
     .locals 0
 
     invoke-direct/range {p0 .. p7}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cfttree(III[DII[D)I
@@ -378,7 +378,7 @@
     return p0
 .end method
 
-.method public static synthetic access$500(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;I[DI[DI)V
+.method static synthetic access$500(Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;I[DI[DI)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftmdl2(I[DI[DI)V
@@ -3400,9 +3400,9 @@
     goto/16 :goto_d
 
     :cond_7
-    if-lez p3, :cond_8
-
     move v0, v11
+
+    if-lez p3, :cond_8
 
     :goto_7
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->n:I
@@ -3456,8 +3456,6 @@
     goto :goto_7
 
     :cond_8
-    move v0, v11
-
     :goto_8
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->n:I
 
@@ -3530,9 +3528,9 @@
 
     invoke-direct/range {v0 .. v6}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftbsub(I[DI[II[D)V
 
-    if-lez p3, :cond_a
-
     move v0, v11
+
+    if-lez p3, :cond_a
 
     :goto_9
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->nBluestein:I
@@ -3584,8 +3582,6 @@
     goto :goto_9
 
     :cond_a
-    move v0, v11
-
     :goto_a
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->nBluestein:I
 
@@ -4537,9 +4533,9 @@
     goto/16 :goto_d
 
     :cond_7
-    if-lez p3, :cond_8
-
     move v0, v11
+
+    if-lez p3, :cond_8
 
     :goto_7
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->n:I
@@ -4575,8 +4571,6 @@
     goto :goto_7
 
     :cond_8
-    move v0, v11
-
     :goto_8
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->n:I
 
@@ -4631,9 +4625,9 @@
 
     invoke-direct/range {v0 .. v6}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftbsub(I[DI[II[D)V
 
-    if-lez p3, :cond_a
-
     move v0, v11
+
+    if-lez p3, :cond_a
 
     :goto_9
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->nBluestein:I
@@ -4685,8 +4679,6 @@
     goto :goto_9
 
     :cond_a
-    move v0, v11
-
     :goto_a
     iget v1, v8, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->nBluestein:I
 
@@ -11034,17 +11026,11 @@
 
     invoke-direct {p0, v7, v0, v9, v11}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftf161([DI[DI)V
 
-    if-eqz p2, :cond_0
-
-    const/16 v1, 0x80
-
     add-int/lit16 v3, v8, 0x180
 
     move-object v0, p0
 
-    move-object/from16 v2, p3
-
-    move-object/from16 v4, p6
+    if-eqz p2, :cond_0
 
     move v5, v10
 
@@ -11057,16 +11043,6 @@
     goto :goto_0
 
     :cond_0
-    const/16 v1, 0x80
-
-    add-int/lit16 v3, v8, 0x180
-
-    move-object v0, p0
-
-    move-object/from16 v2, p3
-
-    move-object/from16 v4, p6
-
     move v5, v14
 
     invoke-direct/range {v0 .. v5}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftmdl2(I[DI[DI)V
@@ -11173,17 +11149,11 @@
 
     invoke-direct {p0, v7, v0, v9, v11}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftf081([DI[DI)V
 
-    if-eqz p2, :cond_2
-
-    const/16 v1, 0x40
-
     add-int/lit16 v3, v8, 0xc0
 
     move-object v0, p0
 
-    move-object/from16 v2, p3
-
-    move-object/from16 v4, p6
+    if-eqz p2, :cond_2
 
     move v5, v10
 
@@ -11196,16 +11166,6 @@
     goto :goto_1
 
     :cond_2
-    const/16 v1, 0x40
-
-    add-int/lit16 v3, v8, 0xc0
-
-    move-object v0, p0
-
-    move-object/from16 v2, p3
-
-    move-object/from16 v4, p6
-
     move v5, v13
 
     invoke-direct/range {v0 .. v5}, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->cftmdl2(I[DI[DI)V
@@ -12537,9 +12497,9 @@
 
     add-int v2, p3, v0
 
-    if-eq v13, v11, :cond_1
-
     add-int/lit8 v15, v14, 0x1
+
+    if-eq v13, v11, :cond_1
 
     new-instance v16, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$15;
 
@@ -12568,8 +12528,6 @@
     goto :goto_2
 
     :cond_1
-    add-int/lit8 v15, v14, 0x1
-
     new-instance v16, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D$16;
 
     move-object/from16 v0, v16
@@ -12618,9 +12576,9 @@
 
     and-int/lit8 v6, p3, 0x1
 
-    if-eqz v6, :cond_0
-
     add-int v3, v0, p2
+
+    if-eqz v6, :cond_0
 
     shr-int/lit8 v0, p1, 0x1
 
@@ -12639,8 +12597,6 @@
     goto :goto_3
 
     :cond_0
-    add-int v3, v0, p2
-
     sub-int v5, p6, p1
 
     move-object v0, p0
@@ -12864,7 +12820,7 @@
     return-void
 .end method
 
-.method public static getReminder(I[I)I
+.method private static getReminder(I[I)I
     .locals 3
 
     if-lez p0, :cond_2
@@ -13659,7 +13615,7 @@
 
 
 # virtual methods
-.method public cfftf([DII)V
+.method cfftf([DII)V
     .locals 28
 
     move-object/from16 v12, p0
@@ -14130,7 +14086,7 @@
     return-void
 .end method
 
-.method public cffti()V
+.method cffti()V
     .locals 31
 
     move-object/from16 v0, p0
@@ -14414,7 +14370,7 @@
     goto/16 :goto_1
 .end method
 
-.method public cffti(II)V
+.method cffti(II)V
     .locals 33
 
     move-object/from16 v0, p0
@@ -14903,7 +14859,7 @@
     return-void
 .end method
 
-.method public passf2(II[DI[DIII)V
+.method passf2(II[DI[DIII)V
     .locals 23
 
     move/from16 v0, p1
@@ -15089,7 +15045,7 @@
     return-void
 .end method
 
-.method public passf3(II[DI[DIII)V
+.method passf3(II[DI[DIII)V
     .locals 43
 
     move/from16 v0, p1
@@ -15413,7 +15369,7 @@
     return-void
 .end method
 
-.method public passf4(II[DI[DIII)V
+.method passf4(II[DI[DIII)V
     .locals 44
 
     move/from16 v0, p1
@@ -15779,7 +15735,7 @@
     return-void
 .end method
 
-.method public passf5(II[DI[DIII)V
+.method passf5(II[DI[DIII)V
     .locals 70
 
     move/from16 v0, p1
@@ -16363,7 +16319,7 @@
     return-void
 .end method
 
-.method public passfg([IIIII[DI[DIII)V
+.method passfg([IIIII[DI[DIII)V
     .locals 40
 
     move-object/from16 v0, p0
@@ -17271,7 +17227,7 @@
     return-void
 .end method
 
-.method public radb2(II[DI[DII)V
+.method radb2(II[DI[DII)V
     .locals 31
 
     move/from16 v0, p1
@@ -17506,7 +17462,7 @@
     return-void
 .end method
 
-.method public radb3(II[DI[DII)V
+.method radb3(II[DI[DII)V
     .locals 43
 
     move/from16 v0, p1
@@ -17773,7 +17729,7 @@
     return-void
 .end method
 
-.method public radb4(II[DI[DII)V
+.method radb4(II[DI[DII)V
     .locals 56
 
     move/from16 v0, p1
@@ -18202,7 +18158,7 @@
     return-void
 .end method
 
-.method public radb5(II[DI[DII)V
+.method radb5(II[DI[DII)V
     .locals 81
 
     move/from16 v0, p1
@@ -18689,7 +18645,7 @@
     return-void
 .end method
 
-.method public radbg(IIII[DI[DII)V
+.method radbg(IIII[DI[DII)V
     .locals 39
 
     move-object/from16 v0, p0
@@ -19829,7 +19785,7 @@
     return-void
 .end method
 
-.method public radf2(II[DI[DII)V
+.method radf2(II[DI[DII)V
     .locals 31
 
     move/from16 v0, p1
@@ -20053,7 +20009,7 @@
     return-void
 .end method
 
-.method public radf3(II[DI[DII)V
+.method radf3(II[DI[DII)V
     .locals 44
 
     move/from16 v0, p1
@@ -20320,7 +20276,7 @@
     return-void
 .end method
 
-.method public radf4(II[DI[DII)V
+.method radf4(II[DI[DII)V
     .locals 54
 
     move/from16 v0, p1
@@ -20731,7 +20687,7 @@
     return-void
 .end method
 
-.method public radf5(II[DI[DII)V
+.method radf5(II[DI[DII)V
     .locals 70
 
     move/from16 v0, p1
@@ -21208,7 +21164,7 @@
     return-void
 .end method
 
-.method public radfg(IIII[DI[DII)V
+.method radfg(IIII[DI[DII)V
     .locals 40
 
     move-object/from16 v0, p0
@@ -21319,11 +21275,11 @@
     :cond_2
     move-wide/from16 v20, v11
 
-    if-gt v15, v3, :cond_5
-
     neg-int v11, v1
 
     const/4 v12, 0x1
+
+    if-gt v15, v3, :cond_5
 
     :goto_3
     if-ge v12, v2, :cond_8
@@ -21419,10 +21375,6 @@
     goto :goto_3
 
     :cond_5
-    neg-int v11, v1
-
-    const/4 v12, 0x1
-
     :goto_6
     if-ge v12, v2, :cond_8
 
@@ -21450,9 +21402,9 @@
     const/4 v11, 0x2
 
     :goto_8
-    if-ge v11, v1, :cond_6
-
     const/16 v17, 0x2
+
+    if-ge v11, v1, :cond_6
 
     add-int/lit8 v10, v10, 0x2
 
@@ -21507,8 +21459,6 @@
     goto :goto_8
 
     :cond_6
-    const/16 v17, 0x2
-
     add-int/lit8 v9, v9, 0x1
 
     move/from16 v11, v24
@@ -21989,9 +21939,9 @@
     goto :goto_16
 
     :cond_17
-    if-lt v1, v3, :cond_19
-
     move/from16 v0, v16
+
+    if-lt v1, v3, :cond_19
 
     :goto_18
     if-ge v0, v3, :cond_1b
@@ -22027,8 +21977,6 @@
     goto :goto_18
 
     :cond_19
-    move/from16 v0, v16
-
     :goto_1a
     if-ge v0, v1, :cond_1b
 
@@ -22572,16 +22520,14 @@
 
     if-nez v1, :cond_2
 
-    div-int/2addr v0, v10
-
     goto :goto_0
 
     :cond_2
     add-int/2addr v0, v14
 
+    :goto_0
     div-int/2addr v0, v10
 
-    :goto_0
     move v1, v14
 
     :goto_1
@@ -22984,7 +22930,7 @@
     return-void
 .end method
 
-.method public realInverse2([DIZ)V
+.method protected realInverse2([DIZ)V
     .locals 10
 
     iget v0, p0, Ledu/emory/mathcs/jtransforms/fft/DoubleFFT_1D;->n:I
@@ -23315,16 +23261,14 @@
 
     if-nez v1, :cond_3
 
-    div-int/2addr v0, v10
-
     goto :goto_0
 
     :cond_3
     add-int/2addr v0, v14
 
+    :goto_0
     div-int/2addr v0, v10
 
-    :goto_0
     move v1, v14
 
     :goto_1
@@ -23551,7 +23495,7 @@
     return-void
 .end method
 
-.method public rfftb([DI)V
+.method rfftb([DI)V
     .locals 22
 
     move-object/from16 v10, p0
@@ -23897,7 +23841,7 @@
     return-void
 .end method
 
-.method public rfftf([DI)V
+.method rfftf([DI)V
     .locals 18
 
     move-object/from16 v10, p0
@@ -24253,7 +24197,7 @@
     return-void
 .end method
 
-.method public rffti()V
+.method rffti()V
     .locals 27
 
     move-object/from16 v0, p0

@@ -1,6 +1,6 @@
-.class public Landroidx/core/graphics/TypefaceCompatApi24Impl;
+.class Landroidx/core/graphics/TypefaceCompatApi24Impl;
 .super Landroidx/core/graphics/TypefaceCompatBaseImpl;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -16,19 +16,19 @@
 
 
 # static fields
-.field public static final ADD_FONT_WEIGHT_STYLE_METHOD:Ljava/lang/String; = "addFontWeightStyle"
+.field private static final ADD_FONT_WEIGHT_STYLE_METHOD:Ljava/lang/String; = "addFontWeightStyle"
 
-.field public static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
+.field private static final CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD:Ljava/lang/String; = "createFromFamiliesWithDefault"
 
-.field public static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
+.field private static final FONT_FAMILY_CLASS:Ljava/lang/String; = "android.graphics.FontFamily"
 
-.field public static final TAG:Ljava/lang/String; = "TypefaceCompatApi24Impl"
+.field private static final TAG:Ljava/lang/String; = "TypefaceCompatApi24Impl"
 
-.field public static final sAddFontWeightStyle:Ljava/lang/reflect/Method;
+.field private static final sAddFontWeightStyle:Ljava/lang/reflect/Method;
 
-.field public static final sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
+.field private static final sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
-.field public static final sFontFamily:Ljava/lang/Class;
+.field private static final sFontFamily:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field public static final sFontFamilyCtor:Ljava/lang/reflect/Constructor;
+.field private static final sFontFamilyCtor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -48,7 +48,7 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 9
 
     const/4 v0, 0x0
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Landroidx/core/graphics/TypefaceCompatBaseImpl;-><init>()V
@@ -182,7 +182,7 @@
     return-void
 .end method
 
-.method public static addFontWeightStyle(Ljava/lang/Object;Ljava/nio/ByteBuffer;IIZ)Z
+.method private static addFontWeightStyle(Ljava/lang/Object;Ljava/nio/ByteBuffer;IIZ)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -245,7 +245,7 @@
     return v0
 .end method
 
-.method public static createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
+.method private static createFromFamiliesWithDefault(Ljava/lang/Object;)Landroid/graphics/Typeface;
     .locals 4
 
     const/4 v0, 0x0
@@ -313,7 +313,7 @@
     return v0
 .end method
 
-.method public static newFamily()Ljava/lang/Object;
+.method private static newFamily()Ljava/lang/Object;
     .locals 2
 
     :try_start_0

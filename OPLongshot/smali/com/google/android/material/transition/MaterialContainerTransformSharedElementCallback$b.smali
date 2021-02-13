@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$b;
+.class Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$b;
 .super Lcom/google/android/material/transition/TransitionListenerAdapter;
-.source "SourceFile"
+.source ""
 
 
 # annotations
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/app/Activity;
+.field final synthetic a:Landroid/app/Activity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback;Landroid/app/Activity;)V
     .locals 0
 
     iput-object p2, p0, Lcom/google/android/material/transition/MaterialContainerTransformSharedElementCallback$b;->a:Landroid/app/Activity;

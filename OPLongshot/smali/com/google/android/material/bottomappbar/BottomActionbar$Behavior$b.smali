@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;
+.class Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
+.field final synthetic a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)V
+.method constructor <init>(Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior$b;->a:Lcom/google/android/material/bottomappbar/BottomActionbar$Behavior;
@@ -92,7 +92,7 @@
 
     move-result-object p4
 
-    sget p5, Lc/a/b/b/d;->max_bottomappbar_width:I
+    sget p5, Lb/a/b/a/d;->max_bottomappbar_width:I
 
     goto :goto_0
 
@@ -107,7 +107,7 @@
 
     move-result-object p4
 
-    sget p5, Lc/a/b/b/d;->max_bottomappbar_width_normal:I
+    sget p5, Lb/a/b/a/d;->max_bottomappbar_width_normal:I
 
     :goto_0
     invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -186,18 +186,18 @@
 
     move-result-object p5
 
-    invoke-static {p5}, Lc/b/a/d;->b(Landroid/content/Context;)Z
+    invoke-static {p5}, Lb/b/a/c;->b(Landroid/content/Context;)Z
 
     move-result p5
 
     if-eqz p5, :cond_2
 
-    sget p5, Lc/a/b/b/d;->op_control_margin_screen_bottom2:I
+    sget p5, Lb/a/b/a/d;->op_control_margin_screen_bottom2:I
 
     goto :goto_1
 
     :cond_2
-    sget p5, Lc/a/b/b/d;->op_control_margin_screen_bottom3:I
+    sget p5, Lb/a/b/a/d;->op_control_margin_screen_bottom3:I
 
     :goto_1
     invoke-virtual {p4, p5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

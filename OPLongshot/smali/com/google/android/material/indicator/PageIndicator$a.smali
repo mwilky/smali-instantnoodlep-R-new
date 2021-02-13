@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/indicator/PageIndicator$a;
+.class Lcom/google/android/material/indicator/PageIndicator$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,17 +12,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/android/material/indicator/PageIndicator;
+.field final synthetic a:Lcom/google/android/material/indicator/PageIndicator;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/indicator/PageIndicator;)V
+.method constructor <init>(Lcom/google/android/material/indicator/PageIndicator;)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/indicator/PageIndicator$a;->a:Lcom/google/android/material/indicator/PageIndicator;

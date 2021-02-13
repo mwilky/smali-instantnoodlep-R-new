@@ -1,6 +1,6 @@
-.class public Landroidx/transition/RectEvaluator;
+.class Landroidx/transition/RectEvaluator;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/animation/TypeEvaluator;
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field public mRect:Landroid/graphics/Rect;
+.field private mRect:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/Rect;)V
+.method constructor <init>(Landroid/graphics/Rect;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,6 +1,6 @@
-.class public Landroidx/preference/Preference$e;
+.class Landroidx/preference/Preference$e;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Landroid/view/View$OnCreateContextMenuListener;
@@ -13,17 +13,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0xa
     name = "e"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroidx/preference/Preference;
+.field private final a:Landroidx/preference/Preference;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/preference/Preference;)V
+.method constructor <init>(Landroidx/preference/Preference;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -63,7 +63,7 @@
     :cond_0
     invoke-interface {p1, p2}, Landroid/view/ContextMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
-    sget p2, Lb/m/l;->copy:I
+    sget p2, Landroidx/preference/l;->copy:I
 
     const/4 p3, 0x0
 
@@ -121,7 +121,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/m/l;->preference_copied:I
+    sget v2, Landroidx/preference/l;->preference_copied:I
 
     const/4 v3, 0x1
 

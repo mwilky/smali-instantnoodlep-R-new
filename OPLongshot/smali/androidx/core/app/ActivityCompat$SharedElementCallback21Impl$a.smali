@@ -1,9 +1,9 @@
-.class public Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl$a;
+.class Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
-.implements Lb/g/d/d$a;
+.implements Landroidx/core/app/d$a;
 
 
 # annotations
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;Landroid/app/SharedElementCallback$OnSharedElementsReadyListener;)V
+.method constructor <init>(Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;Landroid/app/SharedElementCallback$OnSharedElementsReadyListener;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

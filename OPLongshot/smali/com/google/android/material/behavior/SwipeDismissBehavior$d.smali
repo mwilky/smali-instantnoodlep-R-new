@@ -1,6 +1,6 @@
-.class public Lcom/google/android/material/behavior/SwipeDismissBehavior$d;
+.class Lcom/google/android/material/behavior/SwipeDismissBehavior$d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -12,21 +12,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x2
     name = "d"
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field private final a:Landroid/view/View;
 
-.field public final b:Z
+.field private final b:Z
 
-.field public final synthetic c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+.field final synthetic c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;Landroid/view/View;Z)V
+.method constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;Landroid/view/View;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$d;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
@@ -47,13 +47,13 @@
 
     iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$d;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lb/i/a/a;
+    iget-object v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Landroidx/customview/widget/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lb/i/a/a;->k(Z)Z
+    invoke-virtual {v0, v1}, Landroidx/customview/widget/a;->k(Z)Z
 
     move-result v0
 
