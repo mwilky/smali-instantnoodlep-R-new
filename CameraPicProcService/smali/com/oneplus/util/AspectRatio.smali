@@ -40,6 +40,8 @@
 
 .field public static final enum RATIO_4x3:Lcom/oneplus/util/AspectRatio;
 
+.field public static final enum RATIO_5x3:Lcom/oneplus/util/AspectRatio;
+
 .field public static final enum UNKNOWN:Lcom/oneplus/util/AspectRatio;
 
 
@@ -51,7 +53,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 16
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
@@ -91,105 +93,113 @@
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const/4 v5, 0x5
+    const/16 v5, 0xb
 
-    const/16 v6, 0xb
+    const/4 v6, 0x5
 
     const/4 v7, 0x3
 
     const-string v8, "RATIO_11x5"
 
-    invoke-direct {v0, v8, v7, v6, v5}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v8, v7, v5, v6}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_11x5:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const/4 v8, 0x6
+    const/16 v8, 0xd
 
-    const/4 v9, 0x4
+    const/4 v9, 0x6
 
-    const-string v10, "RATIO_13x6"
+    const/4 v10, 0x4
 
-    const/16 v11, 0xd
+    const-string v11, "RATIO_13x6"
 
-    invoke-direct {v0, v10, v9, v11, v8}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v11, v10, v8, v9}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_13x6:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const-string v10, "RATIO_19x9"
+    const-string v11, "RATIO_19x9"
 
-    const/16 v11, 0x13
+    const/16 v12, 0x13
 
-    invoke-direct {v0, v10, v5, v11, v3}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v11, v6, v12, v3}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_19x9:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const/16 v10, 0x10
+    const/16 v11, 0x10
 
-    const-string v11, "RATIO_16x9"
+    const-string v12, "RATIO_16x9"
 
-    invoke-direct {v0, v11, v8, v10, v3}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v12, v9, v11, v3}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_16x9:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const/4 v11, 0x7
+    const/4 v12, 0x7
 
-    const/16 v12, 0xa
+    const/16 v13, 0xa
 
-    const-string v13, "RATIO_16x10"
+    const-string v14, "RATIO_16x10"
 
-    invoke-direct {v0, v13, v11, v10, v12}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v14, v12, v11, v13}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_16x10:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const/16 v10, 0x8
+    const/16 v11, 0x8
 
-    const-string v13, "RATIO_4x3"
+    const-string v14, "RATIO_5x3"
 
-    invoke-direct {v0, v13, v10, v9, v7}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v14, v11, v6, v7}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+
+    sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_5x3:Lcom/oneplus/util/AspectRatio;
+
+    new-instance v0, Lcom/oneplus/util/AspectRatio;
+
+    const-string v14, "RATIO_4x3"
+
+    invoke-direct {v0, v14, v3, v10, v7}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_4x3:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const-string v13, "RATIO_3x2"
+    const-string v14, "RATIO_3x2"
 
-    invoke-direct {v0, v13, v3, v7, v4}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v14, v13, v7, v4}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_3x2:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const-string v13, "RATIO_2x1"
+    const-string v14, "RATIO_2x1"
 
-    invoke-direct {v0, v13, v12, v4, v2}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v14, v5, v4, v2}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_2x1:Lcom/oneplus/util/AspectRatio;
 
     new-instance v0, Lcom/oneplus/util/AspectRatio;
 
-    const-string v13, "RATIO_1x1"
+    const/16 v14, 0xc
 
-    invoke-direct {v0, v13, v6, v2, v2}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
+    const-string v15, "RATIO_1x1"
+
+    invoke-direct {v0, v15, v14, v2, v2}, Lcom/oneplus/util/AspectRatio;-><init>(Ljava/lang/String;III)V
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->RATIO_1x1:Lcom/oneplus/util/AspectRatio;
 
-    const/16 v0, 0xc
+    new-array v0, v8, [Lcom/oneplus/util/AspectRatio;
 
-    new-array v0, v0, [Lcom/oneplus/util/AspectRatio;
+    sget-object v8, Lcom/oneplus/util/AspectRatio;->UNKNOWN:Lcom/oneplus/util/AspectRatio;
 
-    sget-object v13, Lcom/oneplus/util/AspectRatio;->UNKNOWN:Lcom/oneplus/util/AspectRatio;
-
-    aput-object v13, v0, v1
+    aput-object v8, v0, v1
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_21x9:Lcom/oneplus/util/AspectRatio;
 
@@ -205,35 +215,39 @@
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_13x6:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v9
+    aput-object v1, v0, v10
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_19x9:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v6
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_16x9:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v8
+    aput-object v1, v0, v9
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_16x10:Lcom/oneplus/util/AspectRatio;
+
+    aput-object v1, v0, v12
+
+    sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_5x3:Lcom/oneplus/util/AspectRatio;
 
     aput-object v1, v0, v11
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_4x3:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v10
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_3x2:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v13
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_2x1:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v12
+    aput-object v1, v0, v5
 
     sget-object v1, Lcom/oneplus/util/AspectRatio;->RATIO_1x1:Lcom/oneplus/util/AspectRatio;
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v14
 
     sput-object v0, Lcom/oneplus/util/AspectRatio;->$VALUES:[Lcom/oneplus/util/AspectRatio;
 

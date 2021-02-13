@@ -70,6 +70,8 @@
 
 .field public static final FILTER_TYPE_FOOD:Ljava/lang/String; = "Food"
 
+.field public static final FILTER_TYPE_FUGU_PHOTO:Ljava/lang/String; = "FUGU.Photo"
+
 .field public static final FILTER_TYPE_INFRARED_PHOTO:Ljava/lang/String; = "Infrared.Photo"
 
 .field public static final FILTER_TYPE_INSCLARE_PHOTO:Ljava/lang/String; = "Insclare.Photo"
@@ -79,6 +81,8 @@
 .field public static final FILTER_TYPE_INSVALENCIA_PHOTO:Ljava/lang/String; = "Insvalencia.Photo"
 
 .field public static final FILTER_TYPE_LANDSCAPE:Ljava/lang/String; = "Landscape"
+
+.field public static final FILTER_TYPE_LENGDIAO_PHOTO:Ljava/lang/String; = "LENGDIAO.Photo"
 
 .field public static final FILTER_TYPE_MONO_PHOTO:Ljava/lang/String; = "Mono.Photo"
 
@@ -94,6 +98,14 @@
 
 .field public static final FILTER_TYPE_NORTH_CALIFORNIA_VIDEO:Ljava/lang/String; = "NorthCalifornia.Video"
 
+.field public static final FILTER_TYPE_OPLUS_BLACK_GOLD_PHOTO:Ljava/lang/String; = "OPLUS_BLACK_GOLD.Photo"
+
+.field public static final FILTER_TYPE_OPLUS_CYBERPUNK_PHOTO:Ljava/lang/String; = "OPLUS_CYBERPUNK.Photo"
+
+.field public static final FILTER_TYPE_OPLUS_INFRA_PHOTO:Ljava/lang/String; = "OPLUS_INFRA.Photo"
+
+.field public static final FILTER_TYPE_OPLUS_TEAL_ORANGE_PHOTO:Ljava/lang/String; = "OPLUS_TEAL_ORANGE.Photo"
+
 .field public static final FILTER_TYPE_POP_PHOTO:Ljava/lang/String; = "Pop.Photo"
 
 .field public static final FILTER_TYPE_POP_VIDEO:Ljava/lang/String; = "Pop.Video"
@@ -101,6 +113,8 @@
 .field public static final FILTER_TYPE_PORTRAIT:Ljava/lang/String; = "Portrait"
 
 .field public static final FILTER_TYPE_SAREK_PHOTO:Ljava/lang/String; = "SAREK.Photo"
+
+.field public static final FILTER_TYPE_SENLIN_2020_PHOTO:Ljava/lang/String; = "SENLIN_2020.Photo"
 
 .field public static final FILTER_TYPE_SNAPSEED_PHOTO:Ljava/lang/String; = "SnapSeed.Photo"
 
@@ -115,6 +129,8 @@
 .field public static final FILTER_TYPE_YLLAAS_PHOTO:Ljava/lang/String; = "YLLAAS.Photo"
 
 .field public static final FILTER_TYPE_YOUCAM_PHOTO:Ljava/lang/String; = "YouCam.Photo"
+
+.field public static final FILTER_TYPE_YUANQI_2020_PHOTO:Ljava/lang/String; = "YUANQI_2020.Photo"
 
 .field public static final FILTER_TYPE_YUMMY_VIDEO:Ljava/lang/String; = "Yummy.Video"
 

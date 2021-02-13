@@ -238,6 +238,10 @@
 
     sub-long v2, v0, v2
 
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v2
+
     const-wide/16 v4, 0x1f4
 
     cmp-long v2, v2, v4

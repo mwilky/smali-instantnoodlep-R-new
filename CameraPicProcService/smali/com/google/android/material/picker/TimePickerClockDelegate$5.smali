@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -91,7 +91,7 @@
     :goto_0
     iget v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    if-ge v2, v1, :cond_1
+    if-ge v2, v1, :cond_2
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
@@ -101,8 +101,22 @@
 
     iget-object v1, v1, Lcom/google/android/material/picker/TimePickerClockDelegate;->mContext:Landroid/content/Context;
 
+    iget-object v2, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$5;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-static {v2}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1100(Lcom/google/android/material/picker/TimePickerClockDelegate;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/16 v2, 0x176
+
+    goto :goto_1
+
+    :cond_1
     const/16 v2, 0x162
 
+    :goto_1
     invoke-static {v1, v2}, Lcom/google/android/material/internal/ViewUtils;->dpToPx(Landroid/content/Context;I)F
 
     move-result v1
@@ -163,10 +177,10 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/google/android/material/picker/TimePickerClockDelegate$5;->this$0:Lcom/google/android/material/picker/TimePickerClockDelegate;
 
-    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1100(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/google/android/material/picker/TimePickerClockDelegate;->access$1200(Lcom/google/android/material/picker/TimePickerClockDelegate;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 

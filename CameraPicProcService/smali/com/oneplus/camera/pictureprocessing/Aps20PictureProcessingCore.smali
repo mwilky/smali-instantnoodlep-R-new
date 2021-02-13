@@ -21,7 +21,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAps20PictureProcessingCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n+ 2 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2389:1\n717#2:2390\n725#2:2391\n717#2:2392\n717#2:2393\n756#2:2394\n756#2:2395\n756#2:2396\n756#2:2397\n717#2:2398\n725#2:2399\n717#2:2400\n717#2:2401\n756#2:2402\n756#2:2403\n756#2:2404\n756#2:2405\n725#2:2406\n725#2:2407\n756#2:2408\n756#2:2409\n756#2:2410\n756#2:2411\n37#3,2:2412\n37#3,2:2414\n*E\n*S KotlinDebug\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n*L\n402#1:2390\n403#1:2391\n404#1:2392\n404#1:2393\n407#1:2394\n412#1:2395\n420#1:2396\n423#1:2397\n517#1:2398\n518#1:2399\n519#1:2400\n519#1:2401\n522#1:2402\n527#1:2403\n535#1:2404\n538#1:2405\n543#1:2406\n548#1:2407\n550#1:2408\n553#1:2409\n1829#1:2410\n1829#1:2411\n1884#1,2:2412\n1912#1,2:2414\n*E\n"
+    value = "SMAP\nAps20PictureProcessingCore.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n+ 2 NativeCameraMetadata.kt\ncom/oneplus/camera/next/hardware/camera2/NativeCameraMetadata\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2397:1\n717#2:2398\n725#2:2399\n717#2:2400\n717#2:2401\n756#2:2402\n756#2:2403\n756#2:2404\n756#2:2405\n717#2:2406\n725#2:2407\n717#2:2408\n717#2:2409\n756#2:2410\n756#2:2411\n756#2:2412\n756#2:2413\n725#2:2414\n725#2:2415\n756#2:2416\n756#2:2417\n756#2:2418\n756#2:2419\n37#3,2:2420\n37#3,2:2422\n*E\n*S KotlinDebug\n*F\n+ 1 Aps20PictureProcessingCore.kt\ncom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore\n*L\n410#1:2398\n411#1:2399\n412#1:2400\n412#1:2401\n415#1:2402\n420#1:2403\n428#1:2404\n431#1:2405\n525#1:2406\n526#1:2407\n527#1:2408\n527#1:2409\n530#1:2410\n535#1:2411\n543#1:2412\n546#1:2413\n551#1:2414\n556#1:2415\n558#1:2416\n561#1:2417\n1837#1:2418\n1837#1:2419\n1892#1,2:2420\n1920#1,2:2422\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -1445,7 +1445,7 @@
 
     const/4 v1, 0x4
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_13
     const-string v0, "NightCity.Video"
@@ -1458,7 +1458,7 @@
 
     const/16 v1, 0x1a
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_14
     const-string v0, "NorthCalifornia.Video"
@@ -1471,7 +1471,7 @@
 
     const/16 v1, 0x1c
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_15
     const-string v0, "Vintage.Video"
@@ -1484,7 +1484,7 @@
 
     const/4 v1, 0x5
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_16
     const-string v0, "Yummy.Video"
@@ -1497,7 +1497,7 @@
 
     const/4 v1, 0x6
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_17
     const-string v0, "Night.Video"
@@ -1510,7 +1510,7 @@
 
     const/4 v1, 0x7
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_18
     const-string v0, "BlackWhite.Video"
@@ -1523,7 +1523,7 @@
 
     const/16 v1, 0x8
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_19
     const-string v0, "None"
@@ -1534,9 +1534,113 @@
 
     if-eqz v0, :cond_1a
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_1a
+    const-string v0, "FUGU.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1b
+
+    const/16 v1, 0x1d
+
+    goto :goto_0
+
+    :cond_1b
+    const-string v0, "SENLIN_2020.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    const/16 v1, 0x1e
+
+    goto :goto_0
+
+    :cond_1c
+    const-string v0, "LENGDIAO.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/16 v1, 0x1f
+
+    goto :goto_0
+
+    :cond_1d
+    const-string v0, "YUANQI_2020.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1e
+
+    const/16 v1, 0x20
+
+    goto :goto_0
+
+    :cond_1e
+    const-string v0, "OPLUS_CYBERPUNK.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1f
+
+    const/16 v1, 0x21
+
+    goto :goto_0
+
+    :cond_1f
+    const-string v0, "OPLUS_BLACK_GOLD.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_20
+
+    const/16 v1, 0x22
+
+    goto :goto_0
+
+    :cond_20
+    const-string v0, "OPLUS_INFRA.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_21
+
+    const/16 v1, 0x23
+
+    goto :goto_0
+
+    :cond_21
+    const-string v0, "OPLUS_TEAL_ORANGE.Photo"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_22
+
+    const/16 v1, 0x24
+
+    goto :goto_0
+
+    :cond_22
     iget-object v0, p0, Lcom/oneplus/camera/pictureprocessing/Aps20PictureProcessingCore;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;

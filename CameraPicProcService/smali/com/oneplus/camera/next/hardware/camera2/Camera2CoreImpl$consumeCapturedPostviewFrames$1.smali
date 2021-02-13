@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$consumeCapturedPostviewFrames$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n*L\n1#1,7979:1\n1299#2,3:7980\n1305#2,2:7984\n1214#3:7983\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$consumeCapturedPostviewFrames$1\n*L\n1090#1,3:7980\n1090#1,2:7984\n1090#1:7983\n*E\n"
+    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$consumeCapturedPostviewFrames$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n*L\n1#1,7986:1\n1299#2,3:7987\n1305#2,2:7991\n1214#3:7990\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl$consumeCapturedPostviewFrames$1\n*L\n1090#1,3:7987\n1090#1,2:7991\n1090#1:7990\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

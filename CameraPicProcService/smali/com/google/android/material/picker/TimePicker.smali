@@ -588,6 +588,25 @@
     return-void
 .end method
 
+.method public setHasTitle(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/material/picker/TimePicker;->mDelegate:Lcom/google/android/material/picker/TimePicker$TimePickerDelegate;
+
+    if-eqz v0, :cond_0
+
+    instance-of v1, v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lcom/google/android/material/picker/TimePickerClockDelegate;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/picker/TimePickerClockDelegate;->setHasTitle(Z)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setHour(I)V
     .locals 3
 

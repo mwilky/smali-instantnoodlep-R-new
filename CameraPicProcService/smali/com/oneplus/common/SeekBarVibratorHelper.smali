@@ -80,7 +80,7 @@
 
 # virtual methods
 .method public doSeekBarVibrate(Landroid/widget/SeekBar;I)V
-    .locals 4
+    .locals 6
 
     invoke-static {}, Lcom/appaac/haptic/AACHapticUtils;->getInstance()Lcom/appaac/haptic/AACHapticUtils;
 
@@ -99,7 +99,7 @@
 
     move-result v0
 
-    const/16 v1, 0x32
+    const/16 v1, 0x64
 
     if-ne p2, v0, :cond_1
 
@@ -115,27 +115,9 @@
 
     move-result-object p2
 
-    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT1:Lcom/appaac/haptic/HapticEffect$Effect;
+    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT3:Lcom/appaac/haptic/HapticEffect$Effect;
 
     invoke-virtual {p2, v0, v1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPrebaked(Lcom/appaac/haptic/HapticEffect$Effect;I)V
-
-    new-instance p2, Landroid/os/Handler;
-
-    invoke-direct {p2}, Landroid/os/Handler;-><init>()V
-
-    new-instance v0, Lcom/oneplus/common/SeekBarVibratorHelper$1;
-
-    invoke-direct {v0, p0}, Lcom/oneplus/common/SeekBarVibratorHelper$1;-><init>(Lcom/oneplus/common/SeekBarVibratorHelper;)V
-
-    sget-object v1, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT1:Lcom/appaac/haptic/HapticEffect$Effect;
-
-    invoke-virtual {v1}, Lcom/appaac/haptic/HapticEffect$Effect;->getDuration()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    invoke-virtual {p2, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
@@ -164,27 +146,9 @@
 
     move-result-object p2
 
-    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT1:Lcom/appaac/haptic/HapticEffect$Effect;
+    sget-object v0, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT3:Lcom/appaac/haptic/HapticEffect$Effect;
 
     invoke-virtual {p2, v0, v1}, Lcom/appaac/haptic/AACHapticUtils;->playExtPrebaked(Lcom/appaac/haptic/HapticEffect$Effect;I)V
-
-    new-instance p2, Landroid/os/Handler;
-
-    invoke-direct {p2}, Landroid/os/Handler;-><init>()V
-
-    new-instance v0, Lcom/oneplus/common/SeekBarVibratorHelper$2;
-
-    invoke-direct {v0, p0}, Lcom/oneplus/common/SeekBarVibratorHelper$2;-><init>(Lcom/oneplus/common/SeekBarVibratorHelper;)V
-
-    sget-object v1, Lcom/appaac/haptic/HapticEffect$Effect;->EFFECT1:Lcom/appaac/haptic/HapticEffect$Effect;
-
-    invoke-virtual {v1}, Lcom/appaac/haptic/HapticEffect$Effect;->getDuration()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    invoke-virtual {p2, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMin()I
 
@@ -197,23 +161,21 @@
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    iget-wide v2, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->time:J
+    iget-wide v4, p0, Lcom/oneplus/common/SeekBarVibratorHelper;->time:J
 
-    sub-long/2addr v0, v2
+    sub-long/2addr v2, v4
 
-    const-wide/16 v2, 0x14
+    const-wide/16 v4, 0x14
 
-    cmp-long v0, v0, v2
+    cmp-long v0, v2, v4
 
     if-lez v0, :cond_6
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v0
-
-    const/16 v1, 0x64
 
     if-lt v0, v1, :cond_3
 

@@ -245,16 +245,21 @@
 .method public clear()V
     .locals 1
 
+    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->lock()V
+
+    :try_start_0
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->count:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->unlock()V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->lock()V
-
-    :try_start_0
+    :try_start_1
     iget v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->initialSize:I
 
     invoke-direct {p0, v0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->createReferenceArray(I)[Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Reference;
@@ -266,8 +271,8 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->count:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     invoke-virtual {p0}, Lcom/oneplus/utils/reflection/utils/ConcurrentReferenceHashMap$Segment;->unlock()V
 

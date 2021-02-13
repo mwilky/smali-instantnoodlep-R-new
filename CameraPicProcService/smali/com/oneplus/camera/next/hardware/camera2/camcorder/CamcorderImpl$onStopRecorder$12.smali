@@ -3,7 +3,7 @@
 .source "CamcorderImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function1;
+.implements Lkotlin/jvm/functions/Function0;
 
 
 # annotations
@@ -19,8 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/functions/Function1<",
-        "Lcom/oneplus/gl/GLThread;",
+        "Lkotlin/jvm/functions/Function0<",
         "Lkotlin/Unit;",
         ">;"
     }
@@ -33,13 +32,11 @@
         0x3
     }
     d1 = {
-        "\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n\u00a2\u0006\u0002\u0008\u0004"
+        "\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
     }
     d2 = {
         "<anonymous>",
         "",
-        "it",
-        "Lcom/oneplus/gl/GLThread;",
         "invoke"
     }
     k = 0x3
@@ -52,16 +49,24 @@
 
 
 # instance fields
+.field final synthetic $params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
+
+.field final synthetic $recorderToken:Ljava/lang/Object;
+
 .field final synthetic this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;)V
+.method constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;Ljava/lang/Object;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)V
     .locals 0
 
     iput-object p1, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
 
-    const/4 p1, 0x1
+    iput-object p2, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->$recorderToken:Ljava/lang/Object;
+
+    iput-object p3, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->$params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
+
+    const/4 p1, 0x0
 
     invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
 
@@ -70,62 +75,30 @@
 
 
 # virtual methods
-.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lcom/oneplus/gl/GLThread;
+    invoke-virtual {p0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->invoke()V
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->invoke(Lcom/oneplus/gl/GLThread;)V
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final invoke(Lcom/oneplus/gl/GLThread;)V
-    .locals 2
-
-    const-string v0, "it"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object p1, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
-
-    invoke-static {p1}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->access$getExternalOESTexture$p(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;)Lcom/oneplus/gl/ExternalOESTexture;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lcom/oneplus/gl/ExternalOESTexture;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+.method public final invoke()V
+    .locals 5
 
     iget-object v0, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
 
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->access$getTAG$p(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->$recorderToken:Ljava/lang/Object;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$12;->$params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
 
-    const-string v1, "onStopRecorder() - Failed to remove texture listener"
+    sget-object v3, Lcom/oneplus/camera/next/hardware/Camcorder$Error;->MEDIA_RECORDER:Lcom/oneplus/camera/next/hardware/Camcorder$Error;
 
-    invoke-static {v0, v1, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v4, "onStopRecorder() - Fail to stop or reset MediaRecorder"
 
-    :cond_0
-    :goto_0
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->access$onError(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;Ljava/lang/Object;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;Lcom/oneplus/camera/next/hardware/Camcorder$Error;Ljava/lang/String;)V
+
     return-void
 .end method

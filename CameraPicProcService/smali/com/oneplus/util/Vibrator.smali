@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVibrator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Vibrator.kt\ncom/oneplus/util/Vibrator\n*L\n1#1,194:1\n*E\n"
+    value = "SMAP\nVibrator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Vibrator.kt\ncom/oneplus/util/Vibrator\n*L\n1#1,220:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -52,27 +52,33 @@
 
 .field private static final TAG:Ljava/lang/String; = "Vibrator"
 
-.field public static final VIBRATE_SCENE_ID_ADJUST_ANGLE:I = 0x3ec
+.field private static VIBRATE_SCENE_ID_ADJUST_ANGLE:I
 
-.field public static final VIBRATE_SCENE_ID_ADJUST_KNOB:I = 0x3ee
+.field private static VIBRATE_SCENE_ID_ADJUST_KNOB:I
 
-.field public static final VIBRATE_SCENE_ID_BURST:I = 0x3ed
+.field private static VIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH:I
 
-.field public static final VIBRATE_SCENE_ID_LONG_PRESS:I = 0x4
+.field private static VIBRATE_SCENE_ID_BURST:I
 
-.field public static final VIBRATE_SCENE_ID_QUICK_SHARE:I = 0x3f1
+.field private static VIBRATE_SCENE_ID_LONG_PRESS:I
 
-.field public static final VIBRATE_SCENE_ID_QUICK_VIDEO:I = 0x3f1
+.field private static VIBRATE_SCENE_ID_MOON_ADJUST_WHEEL:I
 
-.field public static final VIBRATE_SCENE_ID_SHUTTER:I = 0x3ed
+.field private static VIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON:I
 
-.field public static final VIBRATE_SCENE_ID_SNAP_EFFECT:I = 0x3f0
+.field private static VIBRATE_SCENE_ID_QUICK_SHARE:I
 
-.field public static final VIBRATE_SCENE_ID_SWITCH_MODE:I = 0x3ef
+.field private static VIBRATE_SCENE_ID_QUICK_VIDEO:I
 
-.field public static final VIBRATE_SCENE_ID_VIRTUAL_KEY:I = 0x1
+.field private static VIBRATE_SCENE_ID_SHUTTER:I
 
-.field public static final VIBRATE_SCENE_ID_ZOOM_CHANGE:I = 0x1
+.field private static VIBRATE_SCENE_ID_SNAP_EFFECT:I
+
+.field private static VIBRATE_SCENE_ID_SWITCH_MODE:I
+
+.field private static VIBRATE_SCENE_ID_VIRTUAL_KEY:I
+
+.field private static VIBRATE_SCENE_ID_ZOOM_CHANGE:I
 
 .field private static final disableVibratorHandles:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -99,7 +105,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/oneplus/util/Vibrator$Companion;
 
@@ -109,29 +115,108 @@
 
     sput-object v0, Lcom/oneplus/util/Vibrator;->Companion:Lcom/oneplus/util/Vibrator$Companion;
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    check-cast v0, Ljava/util/List;
-
-    sput-object v0, Lcom/oneplus/util/Vibrator;->disableVibratorHandles:Ljava/util/List;
-
     const/4 v0, 0x1
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_VIRTUAL_KEY:I
+
+    const/4 v1, 0x4
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_LONG_PRESS:I
+
+    const/16 v1, 0x3ec
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_ANGLE:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ZOOM_CHANGE:I
+
+    const/16 v1, 0x3ee
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_KNOB:I
+
+    const/16 v2, 0x28bf
+
+    sput v2, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_ADJUST_WHEEL:I
+
+    sput v2, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH:I
+
+    const/16 v1, 0x3ef
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SWITCH_MODE:I
+
+    const/16 v1, 0x3f0
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SNAP_EFFECT:I
+
+    const/16 v1, 0x3f1
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_SHARE:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_VIDEO:I
+
+    const/16 v1, 0x3ed
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_BURST:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SHUTTER:I
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    check-cast v1, Ljava/util/List;
+
+    sput-object v1, Lcom/oneplus/util/Vibrator;->disableVibratorHandles:Ljava/util/List;
 
     sput-boolean v0, Lcom/oneplus/util/Vibrator;->hasVibratorEffect:Z
 
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    new-array v0, v0, [J
+    new-array v1, v1, [J
 
-    fill-array-data v0, :array_0
+    fill-array-data v1, :array_0
 
-    sput-object v0, Lcom/oneplus/util/Vibrator;->INTENSITIES:[J
+    sput-object v1, Lcom/oneplus/util/Vibrator;->INTENSITIES:[J
 
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v1, 0x44
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_VIRTUAL_KEY:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_LONG_PRESS:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_ANGLE:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ZOOM_CHANGE:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_KNOB:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_ADJUST_WHEEL:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH:I
+
+    sput v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SWITCH_MODE:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SNAP_EFFECT:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_SHARE:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_VIDEO:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_BURST:I
+
+    sput v1, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SHUTTER:I
+
+    :cond_0
     return-void
-
-    nop
 
     :array_0
     .array-data 8
@@ -179,6 +264,118 @@
     sget-object v0, Lcom/oneplus/util/Vibrator;->setVibratorEffectMethod:Ljava/lang/reflect/Method;
 
     return-object v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_ADJUST_ANGLE$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_ANGLE:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_ADJUST_KNOB$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_KNOB:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_BURST$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_BURST:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_LONG_PRESS$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_LONG_PRESS:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_MOON_ADJUST_WHEEL$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_ADJUST_WHEEL:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_QUICK_SHARE$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_SHARE:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_QUICK_VIDEO$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_VIDEO:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_SHUTTER$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SHUTTER:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_SNAP_EFFECT$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SNAP_EFFECT:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_SWITCH_MODE$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SWITCH_MODE:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_VIRTUAL_KEY$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_VIRTUAL_KEY:I
+
+    return v0
+.end method
+
+.method public static final synthetic access$getVIBRATE_SCENE_ID_ZOOM_CHANGE$cp()I
+    .locals 1
+
+    sget v0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ZOOM_CHANGE:I
+
+    return v0
 .end method
 
 .method public static final synthetic access$getVibrationEnable$cp()I
@@ -233,6 +430,118 @@
     .locals 0
 
     sput-object p0, Lcom/oneplus/util/Vibrator;->setVibratorEffectMethod:Ljava/lang/reflect/Method;
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_ADJUST_ANGLE$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_ANGLE:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_ADJUST_KNOB$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_KNOB:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ADJUST_TILT_SHIFT_STRENGTH:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_BURST$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_BURST:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_LONG_PRESS$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_LONG_PRESS:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_MOON_ADJUST_WHEEL$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_ADJUST_WHEEL:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_MOON_TOUCH_AUTO_ICON:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_QUICK_SHARE$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_SHARE:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_QUICK_VIDEO$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_QUICK_VIDEO:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_SHUTTER$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SHUTTER:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_SNAP_EFFECT$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SNAP_EFFECT:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_SWITCH_MODE$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_SWITCH_MODE:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_VIRTUAL_KEY$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_VIRTUAL_KEY:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$setVIBRATE_SCENE_ID_ZOOM_CHANGE$cp(I)V
+    .locals 0
+
+    sput p0, Lcom/oneplus/util/Vibrator;->VIBRATE_SCENE_ID_ZOOM_CHANGE:I
 
     return-void
 .end method
