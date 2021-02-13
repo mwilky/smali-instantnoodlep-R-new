@@ -15,139 +15,141 @@
 
 
 # static fields
-.field private static final A:Ljava/lang/String; = "opcg_sleep_time_data"
+.field private static A:Lcom/android/server/wtn; = null
 
-.field private static final B:Ljava/lang/String; = "|"
+.field private static final B:Ljava/lang/String; = "opcg_sleep_time_data"
 
-.field private static final C:Ljava/lang/String; = "\\|"
+.field private static final C:Ljava/lang/String; = "|"
 
-.field private static final D:Ljava/lang/String; = "opcg_recover_charge_data"
+.field private static final D:Ljava/lang/String; = "\\|"
 
-.field static final E:J = 0x2710L
+.field private static final E:Ljava/lang/String; = "opcg_recover_charge_data"
 
-.field private static final F:J = 0x6ddd00L
+.field static final F:J = 0x2710L
 
-.field private static final G:I = 0x0
+.field private static final G:J = 0x6ddd00L
 
-.field private static final H:I = 0x1
+.field private static final H:I = 0x0
 
-.field private static final I:I = 0x2
+.field private static final I:I = 0x1
 
-.field private static final J:I = -0x1
+.field private static final J:I = 0x2
 
-.field private static final K:I = 0x0
+.field private static final K:I = -0x1
 
-.field private static final L:I = 0x1
+.field private static final L:I = 0x0
 
-.field private static final M:I = 0x2
+.field private static final M:I = 0x1
 
-.field private static final a:Ljava/lang/String; = "net.oneplus.chargingguarder.intent.enable"
+.field private static final N:I = 0x2
 
-.field private static final b:Ljava/lang/String; = "net.oneplus.charingguarder.intent.OPCG"
+.field private static final a:Ljava/lang/String; = "com.oneplus.action.INTENT_TRANSIT_ACTIVITY"
 
-.field public static final bud:Ljava/lang/String; = "/sys/class/power_supply/bms/battery_health"
+.field private static final b:Ljava/lang/String; = "net.oneplus.chargingguarder.intent.enable"
 
-.field private static final c:Ljava/lang/String; = "net.oneplus.charingguarder.intent.mdm"
+.field public static final bud:Ljava/lang/String; = "/sys/class/power_supply/battery/op_disable_charge"
 
-.field public static final cgv:Ljava/lang/String; = "OnePlusChargingGuarder"
+.field private static final c:Ljava/lang/String; = "net.oneplus.charingguarder.intent.OPCG"
 
-.field private static final d:Ljava/lang/String; = "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
+.field private static final d:Ljava/lang/String; = "net.oneplus.charingguarder.intent.mdm"
 
-.field private static final e:Ljava/lang/String; = "com.oneplus.chargingguarder.open_quietmode"
+.field private static final e:Ljava/lang/String; = "android.app.action.NEXT_ALARM_CLOCK_CHANGED"
 
-.field private static final f:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode"
+.field private static final f:Ljava/lang/String; = "com.oneplus.chargingguarder.open_quietmode"
 
-.field private static final g:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode.notification"
+.field private static final g:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode"
 
-.field private static final h:Ljava/lang/String; = "/sys/class/power_supply/wireless/online"
+.field private static final h:Ljava/lang/String; = "com.oneplus.chargingguarder.close_quietmode.notification"
 
-.field private static final i:Ljava/lang/String; = "/proc/wireless/quiet_mode"
+.field private static final i:Ljava/lang/String; = "/sys/class/power_supply/wireless/online"
 
-.field private static final irq:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_min"
+.field private static final irq:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_max"
 
-.field private static final ivd:Ljava/lang/String; = "com.oneplus.action.INTENT_TRANSIT_ACTIVITY"
+.field private static final ivd:Ljava/lang/String; = "Charging Guarder"
 
-.field public static final j:I = 0x8
+.field private static final j:Ljava/lang/String; = "/proc/wireless/quiet_mode"
 
-.field private static final k:J = 0x249f00L
+.field public static final k:I = 0x8
 
-.field private static final l:J = 0x36ee80L
+.field private static final l:J = 0x249f00L
 
-.field private static final les:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_max"
+.field public static final les:Ljava/lang/String; = "/sys/class/power_supply/bms/battery_health"
 
-.field private static final m:I = 0x1
+.field private static final m:J = 0x36ee80L
 
-.field private static final n:I = 0x2
+.field private static final n:I = 0x1
 
-.field private static final o:I = 0x3
+.field private static final o:I = 0x2
 
-.field private static p:I = 0x0
+.field private static final p:I = 0x3
 
-.field private static final q:I = -0x2
+.field private static q:I = 0x0
 
-.field private static final qeg:Ljava/lang/String; = "Charging Guarder"
+.field private static final qeg:Ljava/lang/String; = "charging_guarder_notification"
 
-.field private static final r:I = -0x1
+.field private static final r:I = -0x2
 
-.field private static final s:I = 0x0
+.field private static final s:I = -0x1
 
-.field private static final t:I = 0x1
+.field private static final t:I = 0x0
 
-.field private static final u:I = 0x2
+.field private static final u:I = 0x1
 
-.field private static final v:I = 0x1
+.field private static final v:I = 0x2
 
-.field private static final vdw:Ljava/lang/String; = "charging_guarder_notification"
+.field private static final vdw:Ljava/lang/String; = "/sys/class/power_supply/bms/vbat_cell_min"
 
-.field public static final vju:Ljava/lang/String; = "/sys/class/power_supply/battery/op_disable_charge"
+.field public static final vju:Ljava/lang/String; = "OnePlusChargingGuarder"
 
-.field private static final w:I = 0x0
+.field private static final w:I = 0x1
 
-.field private static final x:Ljava/lang/String; = "NYNCG4I0TI"
+.field private static final x:I = 0x0
 
-.field private static final y:Ljava/lang/String; = "OnePlusChargingGuarder"
+.field private static final y:Ljava/lang/String; = "NYNCG4I0TI"
 
-.field private static z:Lcom/android/server/wtn;
+.field private static final z:Ljava/lang/String; = "OnePlusChargingGuarder"
 
 
 # instance fields
-.field private bio:Lcom/android/server/wtn$you;
+.field private bio:Landroid/app/AlarmManager;
 
-.field private bvj:Lcom/android/server/wtn$sis;
+.field private bvj:Landroid/content/ContentResolver;
+
+.field private cgv:Z
 
 .field private cjf:Z
 
 .field private cno:J
 
-.field private dma:J
+.field private dma:I
 
-.field private ear:J
+.field private ear:Z
 
-.field private fto:I
+.field private fto:Z
 
-.field private gck:I
+.field private gck:Landroid/app/NotificationManager;
 
 .field private gwm:I
 
-.field private hmo:Z
+.field private hmo:I
 
-.field private ibl:I
+.field private ibl:Lcom/android/server/wtn$sis;
 
-.field private igw:Landroid/content/Context;
+.field private igw:Lcom/android/server/wtn$you;
 
-.field private ire:I
+.field private ire:J
 
-.field private kth:Landroid/app/AlarmManager;
+.field private kth:J
 
 .field private lqr:I
 
 .field private obl:Z
 
-.field private oif:Landroid/content/ContentResolver;
+.field oif:Landroid/telephony/TelephonyManager;
 
 .field private oxb:Z
 
-.field qbh:Landroid/telephony/TelephonyManager;
+.field qbh:Landroid/os/BatteryManager;
 
 .field private rtg:J
 
@@ -157,17 +159,17 @@
 
 .field private tsu:J
 
-.field private ugm:Lnet/oneplus/odm/OpDeviceManagerInjector;
+.field private ugm:I
 
-.field private vdb:Z
+.field private vdb:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
-.field private veq:Z
+.field private veq:I
 
-.field private wtn:Landroid/app/NotificationManager;
+.field private wtn:Landroid/content/Context;
 
 .field private you:Lcom/android/server/wtn$tsu;
 
-.field ywr:Landroid/os/BatteryManager;
+.field private ywr:J
 
 .field private zgw:Z
 
@@ -192,19 +194,19 @@
 
     const/4 v1, 0x2
 
-    iput v1, p0, Lcom/android/server/wtn;->gck:I
+    iput v1, p0, Lcom/android/server/wtn;->dma:I
 
     const-wide/16 v2, 0x0
 
-    iput-wide v2, p0, Lcom/android/server/wtn;->dma:J
+    iput-wide v2, p0, Lcom/android/server/wtn;->ywr:J
 
     const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/android/server/wtn;->vdb:Z
 
     iput-boolean v2, p0, Lcom/android/server/wtn;->zgw:Z
 
     iput-boolean v2, p0, Lcom/android/server/wtn;->obl:Z
+
+    iput-boolean v2, p0, Lcom/android/server/wtn;->oxb:Z
 
     const/4 v3, 0x1
 
@@ -218,31 +220,31 @@
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/server/wtn;->oxb:Z
+    iput-boolean v4, p0, Lcom/android/server/wtn;->cjf:Z
 
-    iput-boolean v2, p0, Lcom/android/server/wtn;->cjf:Z
+    iput-boolean v2, p0, Lcom/android/server/wtn;->ear:Z
 
     const/4 v4, -0x1
 
-    iput v4, p0, Lcom/android/server/wtn;->ire:I
+    iput v4, p0, Lcom/android/server/wtn;->hmo:I
 
-    iput-boolean v2, p0, Lcom/android/server/wtn;->hmo:Z
-
-    iput v2, p0, Lcom/android/server/wtn;->fto:I
+    iput-boolean v2, p0, Lcom/android/server/wtn;->fto:Z
 
     iput v2, p0, Lcom/android/server/wtn;->lqr:I
 
-    iput-boolean v2, p0, Lcom/android/server/wtn;->veq:Z
+    iput v2, p0, Lcom/android/server/wtn;->veq:I
 
-    iput-object p1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iput-boolean v2, p0, Lcom/android/server/wtn;->cgv:Z
+
+    iput-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iput-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
-    iget-object p1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v5, "phone"
 
@@ -252,15 +254,19 @@
 
     check-cast p1, Landroid/telephony/TelephonyManager;
 
-    iput-object p1, p0, Lcom/android/server/wtn;->qbh:Landroid/telephony/TelephonyManager;
+    iput-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/telephony/TelephonyManager;
 
     const-wide/32 v5, 0x249f00
 
     iput-wide v5, p0, Lcom/android/server/wtn;->cno:J
 
+    const-wide/32 v5, 0x36ee80
+
+    iput-wide v5, p0, Lcom/android/server/wtn;->kth:J
+
     const-wide/32 v5, 0x6ddd00
 
-    iput-wide v5, p0, Lcom/android/server/wtn;->ear:J
+    iput-wide v5, p0, Lcom/android/server/wtn;->ire:J
 
     new-instance p1, Lcom/android/server/wtn$tsu;
 
@@ -276,7 +282,7 @@
 
     iput-object p1, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
 
-    iget-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const-string v5, "charging_guarder_enabled"
 
@@ -284,52 +290,52 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/android/server/wtn;->ibl:I
+    iput p1, p0, Lcom/android/server/wtn;->gwm:I
 
-    invoke-direct {p0}, Lcom/android/server/wtn;->h()V
+    invoke-direct {p0}, Lcom/android/server/wtn;->i()V
 
-    iget-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     invoke-static {p1, v5, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/server/wtn;->ibl:I
+    iput p1, p0, Lcom/android/server/wtn;->gwm:I
 
     if-eq p1, v3, :cond_1
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wtn;->u()Z
+    invoke-direct {p0}, Lcom/android/server/wtn;->v()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     invoke-static {p1, v5, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    iput v4, p0, Lcom/android/server/wtn;->ibl:I
+    iput v4, p0, Lcom/android/server/wtn;->gwm:I
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     invoke-static {p1, v5, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    iput v1, p0, Lcom/android/server/wtn;->ibl:I
+    iput v1, p0, Lcom/android/server/wtn;->gwm:I
 
     :cond_1
     :goto_0
-    iget-object p1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const-string v1, "charging_optimized_status"
 
     invoke-static {p1, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    iget-object p1, p0, Lcom/android/server/wtn;->bvj:Lcom/android/server/wtn$sis;
+    iget-object p1, p0, Lcom/android/server/wtn;->ibl:Lcom/android/server/wtn$sis;
 
     if-nez p1, :cond_2
 
@@ -339,20 +345,20 @@
 
     invoke-direct {p1, p0, v1}, Lcom/android/server/wtn$sis;-><init>(Lcom/android/server/wtn;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/android/server/wtn;->bvj:Lcom/android/server/wtn$sis;
+    iput-object p1, p0, Lcom/android/server/wtn;->ibl:Lcom/android/server/wtn$sis;
 
     :cond_2
     new-instance p1, Lcom/android/server/wtn$you;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/wtn$you;-><init>(Lcom/android/server/wtn;Lcom/android/server/wtn$zta;)V
 
-    iput-object p1, p0, Lcom/android/server/wtn;->bio:Lcom/android/server/wtn$you;
+    iput-object p1, p0, Lcom/android/server/wtn;->igw:Lcom/android/server/wtn$you;
 
-    iget-object p1, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
+    iget-object p1, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
 
     if-nez p1, :cond_3
 
-    iget-object p1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v0, "alarm"
 
@@ -362,10 +368,10 @@
 
     check-cast p1, Landroid/app/AlarmManager;
 
-    iput-object p1, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
+    iput-object p1, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
 
     :cond_3
-    iget-object p1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v0, "notification"
 
@@ -375,9 +381,9 @@
 
     check-cast p1, Landroid/app/NotificationManager;
 
-    iput-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/app/NotificationManager;
+    iput-object p1, p0, Lcom/android/server/wtn;->gck:Landroid/app/NotificationManager;
 
-    iget-object p1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v0, "batterymanager"
 
@@ -387,7 +393,7 @@
 
     check-cast p1, Landroid/os/BatteryManager;
 
-    iput-object p1, p0, Lcom/android/server/wtn;->ywr:Landroid/os/BatteryManager;
+    iput-object p1, p0, Lcom/android/server/wtn;->qbh:Landroid/os/BatteryManager;
 
     new-instance p1, Landroid/content/IntentFilter;
 
@@ -465,26 +471,26 @@
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/server/wtn;->wtn:Landroid/app/NotificationManager;
+    iget-object p1, p0, Lcom/android/server/wtn;->gck:Landroid/app/NotificationManager;
 
-    invoke-direct {p0, p1}, Lcom/android/server/wtn;->j(Landroid/app/NotificationManager;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wtn;->k(Landroid/app/NotificationManager;)V
 
     invoke-static {}, Lnet/oneplus/odm/OpDeviceManagerInjector;->getInstance()Lnet/oneplus/odm/OpDeviceManagerInjector;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/wtn;->ugm:Lnet/oneplus/odm/OpDeviceManagerInjector;
-
-    invoke-virtual {p0}, Lcom/android/server/wtn;->y()V
-
-    invoke-virtual {p0}, Lcom/android/server/wtn;->s()V
+    iput-object p1, p0, Lcom/android/server/wtn;->vdb:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
     invoke-virtual {p0}, Lcom/android/server/wtn;->z()V
+
+    invoke-virtual {p0}, Lcom/android/server/wtn;->t()V
+
+    invoke-virtual {p0}, Lcom/android/server/wtn;->A()V
 
     return-void
 .end method
 
-.method private G(Ljava/lang/String;Ljava/lang/String;)V
+.method private H(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
     const-string p0, " sucessfully!"
@@ -604,83 +610,95 @@
     throw v3
 .end method
 
-.method static synthetic a(Lcom/android/server/wtn;)I
+.method static synthetic a(Lcom/android/server/wtn;)Landroid/content/Context;
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wtn;->gck:I
+    iget-object p0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic b(Lcom/android/server/wtn;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/wtn;->dma:I
 
     return p0
 .end method
 
-.method static synthetic b(Lcom/android/server/wtn;I)I
+.method static synthetic bio(Lcom/android/server/wtn;Z)Z
     .locals 0
 
-    iput p1, p0, Lcom/android/server/wtn;->gck:I
+    iput-boolean p1, p0, Lcom/android/server/wtn;->cgv:Z
 
     return p1
 .end method
 
-.method static synthetic bio(Lcom/android/server/wtn;)I
+.method static synthetic bud(Lcom/android/server/wtn;)Landroid/app/AlarmManager;
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wtn;->gwm:I
+    iget-object p0, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
 
-    return p0
+    return-object p0
 .end method
 
-.method static synthetic bud(Lcom/android/server/wtn;Landroid/app/AlarmManager;)Landroid/app/AlarmManager;
+.method static synthetic bvj(Lcom/android/server/wtn;Z)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
+    iput-boolean p1, p0, Lcom/android/server/wtn;->oxb:Z
 
-    return-object p1
+    return p1
 .end method
 
-.method static synthetic bvj(Lcom/android/server/wtn;)I
+.method static synthetic c(Lcom/android/server/wtn;I)I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wtn;->fto:I
+    iput p1, p0, Lcom/android/server/wtn;->dma:I
 
-    return p0
-.end method
-
-.method static synthetic c(Lcom/android/server/wtn;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wtn;->oxb:Z
-
-    return p0
+    return p1
 .end method
 
 .method static synthetic cgv(Lcom/android/server/wtn;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/wtn;->rtg:J
+    iget-wide v0, p0, Lcom/android/server/wtn;->cno:J
 
     return-wide v0
 .end method
 
-.method static synthetic cjf(Lcom/android/server/wtn;)I
-    .locals 2
-
-    iget v0, p0, Lcom/android/server/wtn;->lqr:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lcom/android/server/wtn;->lqr:I
-
-    return v0
-.end method
-
-.method static synthetic cno(Lcom/android/server/wtn;)Z
+.method static synthetic cjf(Lcom/android/server/wtn;I)I
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wtn;->veq:Z
+    iput p1, p0, Lcom/android/server/wtn;->veq:I
+
+    return p1
+.end method
+
+.method static synthetic cno(Lcom/android/server/wtn;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wtn;->ear:Z
+
+    return p1
+.end method
+
+.method static synthetic d(Lcom/android/server/wtn;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wtn;->cjf:Z
 
     return p0
 .end method
 
-.method static synthetic d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+.method static synthetic dma(Lcom/android/server/wtn;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wtn;->zgw:Z
+
+    return p1
+.end method
+
+.method static synthetic e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
@@ -688,7 +706,43 @@
     return-object p0
 .end method
 
-.method static synthetic dma(Lcom/android/server/wtn;)Z
+.method static synthetic ear(Lcom/android/server/wtn;)I
+    .locals 2
+
+    iget v0, p0, Lcom/android/server/wtn;->veq:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/android/server/wtn;->veq:I
+
+    return v0
+.end method
+
+.method static synthetic f(Lcom/android/server/wtn;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/wtn;->ywr:J
+
+    return-wide v0
+.end method
+
+.method static synthetic fto(Lcom/android/server/wtn;)Lcom/android/server/wtn$you;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wtn;->igw:Lcom/android/server/wtn$you;
+
+    return-object p0
+.end method
+
+.method static synthetic g(Lcom/android/server/wtn;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/server/wtn;->ywr:J
+
+    return-wide p1
+.end method
+
+.method static synthetic gck(Lcom/android/server/wtn;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/wtn;->zgw:Z
@@ -696,70 +750,34 @@
     return p0
 .end method
 
-.method static synthetic e(Lcom/android/server/wtn;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/wtn;->dma:J
-
-    return-wide v0
-.end method
-
-.method static synthetic ear(Lcom/android/server/wtn;)I
+.method static synthetic gwm(Lcom/android/server/wtn;I)I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wtn;->ire:I
-
-    return p0
-.end method
-
-.method static synthetic f(Lcom/android/server/wtn;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/server/wtn;->dma:J
-
-    return-wide p1
-.end method
-
-.method static synthetic fto(Lcom/android/server/wtn;)Landroid/content/IntentFilter;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->zta:Landroid/content/IntentFilter;
-
-    return-object p0
-.end method
-
-.method static synthetic g(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic gck(Lcom/android/server/wtn;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/wtn;->vdb:Z
+    iput p1, p0, Lcom/android/server/wtn;->lqr:I
 
     return p1
 .end method
 
-.method static synthetic gwm(Lcom/android/server/wtn;)I
-    .locals 2
+.method static synthetic h(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    iget v0, p0, Lcom/android/server/wtn;->fto:I
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wtn;->H(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lcom/android/server/wtn;->fto:I
-
-    return v0
+    return-void
 .end method
 
-.method private h()V
+.method static synthetic hmo(Lcom/android/server/wtn;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/wtn;->hmo:I
+
+    return p1
+.end method
+
+.method private i()V
     .locals 3
 
-    iget v0, p0, Lcom/android/server/wtn;->ibl:I
+    iget v0, p0, Lcom/android/server/wtn;->gwm:I
 
     const/4 v1, 0x1
 
@@ -767,7 +785,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/wtn;->u()Z
+    invoke-direct {p0}, Lcom/android/server/wtn;->v()Z
 
     move-result v0
 
@@ -775,35 +793,67 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const/4 v2, -0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const/4 v2, 0x2
 
     :goto_0
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    iput v2, p0, Lcom/android/server/wtn;->ibl:I
+    iput v2, p0, Lcom/android/server/wtn;->gwm:I
 
     :cond_1
     return-void
 .end method
 
-.method static synthetic hmo(Lcom/android/server/wtn;)Lcom/android/server/wtn$you;
+.method static synthetic ibl(Lcom/android/server/wtn;)I
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wtn;->bio:Lcom/android/server/wtn$you;
+    iget p0, p0, Lcom/android/server/wtn;->lqr:I
+
+    return p0
+.end method
+
+.method static synthetic igw(Lcom/android/server/wtn;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/wtn;->ugm:I
+
+    return p0
+.end method
+
+.method static synthetic ire(Lcom/android/server/wtn;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/wtn;->hmo:I
+
+    return p0
+.end method
+
+.method static synthetic irq(Lcom/android/server/wtn;)Lnet/oneplus/odm/OpDeviceManagerInjector;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wtn;->vdb:Lnet/oneplus/odm/OpDeviceManagerInjector;
 
     return-object p0
 .end method
 
-.method private i(Ljava/lang/String;)Landroid/app/Notification;
+.method static synthetic ivd(Lcom/android/server/wtn;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/wtn;->i()V
+
+    return-void
+.end method
+
+.method private j(Ljava/lang/String;)Landroid/app/Notification;
     .locals 8
 
     new-instance v0, Landroid/content/Intent;
@@ -834,7 +884,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const/4 v2, 0x0
 
@@ -842,7 +892,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v3, 0x50f001e
 
@@ -850,7 +900,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const/4 v4, 0x1
 
@@ -870,7 +920,7 @@
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     sget-object v6, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
@@ -882,7 +932,7 @@
 
     new-instance v3, Landroid/app/Notification$Action$Builder;
 
-    iget-object v5, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v6, 0x50f001c
 
@@ -906,7 +956,7 @@
 
     new-instance v5, Landroid/app/Notification$Builder;
 
-    iget-object v6, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v7, "charging_guarder_notification"
 
@@ -918,7 +968,7 @@
 
     move-result-object v5
 
-    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v6, 0x106001c
 
@@ -991,47 +1041,7 @@
     return-object p0
 .end method
 
-.method static synthetic ibl(Lcom/android/server/wtn;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wtn;->fto:I
-
-    return p1
-.end method
-
-.method static synthetic igw(Lcom/android/server/wtn;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wtn;->gwm:I
-
-    return p1
-.end method
-
-.method static synthetic ire(Lcom/android/server/wtn;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/wtn;->ire:I
-
-    return p1
-.end method
-
-.method static synthetic irq(Lcom/android/server/wtn;)Lnet/oneplus/odm/OpDeviceManagerInjector;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->ugm:Lnet/oneplus/odm/OpDeviceManagerInjector;
-
-    return-object p0
-.end method
-
-.method static synthetic ivd(Lcom/android/server/wtn;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method private j(Landroid/app/NotificationManager;)V
+.method private k(Landroid/app/NotificationManager;)V
     .locals 3
 
     if-nez p1, :cond_0
@@ -1066,7 +1076,15 @@
     return-void
 .end method
 
-.method private k()Landroid/app/Notification;
+.method static synthetic kth(Lcom/android/server/wtn;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/wtn;->cgv:Z
+
+    return p0
+.end method
+
+.method private l()Landroid/app/Notification;
     .locals 8
 
     new-instance v0, Landroid/content/Intent;
@@ -1079,7 +1097,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const/4 v2, 0x0
 
@@ -1087,7 +1105,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v3, 0x50f00ca
 
@@ -1095,7 +1113,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v4, 0x50f00c9
 
@@ -1109,7 +1127,7 @@
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     sget-object v6, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
@@ -1121,7 +1139,7 @@
 
     new-instance v4, Landroid/app/Notification$Action$Builder;
 
-    iget-object v5, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v6, 0x50f00c8
 
@@ -1145,7 +1163,7 @@
 
     new-instance v5, Landroid/app/Notification$Builder;
 
-    iget-object v6, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const-string v7, "charging_guarder_notification"
 
@@ -1157,7 +1175,7 @@
 
     move-result-object v5
 
-    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     const v6, 0x106001c
 
@@ -1226,41 +1244,47 @@
     return-object p0
 .end method
 
-.method static synthetic kth(Lcom/android/server/wtn;Z)Z
+.method static synthetic les(Lcom/android/server/wtn;Landroid/app/AlarmManager;)Landroid/app/AlarmManager;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/wtn;->veq:Z
+    iput-object p1, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
+
+    return-object p1
+.end method
+
+.method static synthetic lqr(Lcom/android/server/wtn;)Landroid/content/IntentFilter;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wtn;->zta:Landroid/content/IntentFilter;
+
+    return-object p0
+.end method
+
+.method static synthetic obl(Lcom/android/server/wtn;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/wtn;->fto:Z
 
     return p1
 .end method
 
-.method static synthetic les(Lcom/android/server/wtn;Ljava/lang/String;)Landroid/app/Notification;
+.method static synthetic oif(Lcom/android/server/wtn;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/wtn;->i(Ljava/lang/String;)Landroid/app/Notification;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic lqr(Lcom/android/server/wtn;)Lcom/android/server/wtn$sis;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->bvj:Lcom/android/server/wtn$sis;
-
-    return-object p0
-.end method
-
-.method static synthetic obl(Lcom/android/server/wtn;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/wtn;->lqr:I
+    iget-boolean p0, p0, Lcom/android/server/wtn;->oxb:Z
 
     return p0
 .end method
 
-.method static synthetic oif(Lcom/android/server/wtn;Z)Z
+.method static synthetic oxb(Lcom/android/server/wtn;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/wtn;->veq:I
+
+    return p0
+.end method
+
+.method static synthetic qbh(Lcom/android/server/wtn;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/wtn;->obl:Z
@@ -1268,34 +1292,28 @@
     return p1
 .end method
 
-.method static synthetic oxb(Lcom/android/server/wtn;I)I
+.method static synthetic qeg(Lcom/android/server/wtn;)Landroid/app/Notification;
     .locals 0
 
-    iput p1, p0, Lcom/android/server/wtn;->lqr:I
+    invoke-direct {p0}, Lcom/android/server/wtn;->l()Landroid/app/Notification;
 
-    return p1
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method static synthetic qbh(Lcom/android/server/wtn;)Z
-    .locals 0
+.method static synthetic rtg(Lcom/android/server/wtn;)J
+    .locals 2
 
-    iget-boolean p0, p0, Lcom/android/server/wtn;->obl:Z
+    iget-wide v0, p0, Lcom/android/server/wtn;->kth:J
 
-    return p0
+    return-wide v0
 .end method
 
-.method static synthetic qeg(Lcom/android/server/wtn;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wtn;->h()V
-
-    return-void
-.end method
-
-.method public static r(Landroid/content/Context;)Lcom/android/server/wtn;
+.method public static s(Landroid/content/Context;)Lcom/android/server/wtn;
     .locals 1
 
-    sget-object v0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+    sget-object v0, Lcom/android/server/wtn;->A:Lcom/android/server/wtn;
 
     if-nez v0, :cond_0
 
@@ -1303,36 +1321,28 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/wtn;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+    sput-object v0, Lcom/android/server/wtn;->A:Lcom/android/server/wtn;
 
     :cond_0
-    sget-object p0, Lcom/android/server/wtn;->z:Lcom/android/server/wtn;
+    sget-object p0, Lcom/android/server/wtn;->A:Lcom/android/server/wtn;
 
     return-object p0
-.end method
-
-.method static synthetic rtg(Lcom/android/server/wtn;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wtn;->cjf:Z
-
-    return p0
 .end method
 
 .method static synthetic sis(Lcom/android/server/wtn;I)I
     .locals 0
 
-    iput p1, p0, Lcom/android/server/wtn;->ibl:I
+    iput p1, p0, Lcom/android/server/wtn;->gwm:I
 
     return p1
 .end method
 
-.method static synthetic ssp(Lcom/android/server/wtn;Z)Z
+.method static synthetic ssp(Lcom/android/server/wtn;)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/wtn;->cjf:Z
+    iget-boolean p0, p0, Lcom/android/server/wtn;->ear:Z
 
-    return p1
+    return p0
 .end method
 
 .method static synthetic tsu(Lcom/android/server/wtn;)J
@@ -1343,10 +1353,22 @@
     return-wide v0
 .end method
 
-.method private u()Z
+.method static synthetic ugm(Lcom/android/server/wtn;)I
+    .locals 2
+
+    iget v0, p0, Lcom/android/server/wtn;->lqr:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/android/server/wtn;->lqr:I
+
+    return v0
+.end method
+
+.method private v()Z
     .locals 6
 
-    iget-object v0, p0, Lcom/android/server/wtn;->qbh:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/server/wtn;->oif:Landroid/telephony/TelephonyManager;
 
     const/4 v1, 0x0
 
@@ -1375,7 +1397,7 @@
     return v1
 
     :cond_0
-    invoke-direct {p0, v0}, Lcom/android/server/wtn;->v(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/server/wtn;->w(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1415,15 +1437,41 @@
     return v1
 .end method
 
-.method static synthetic ugm(Lcom/android/server/wtn;)Z
+.method static synthetic vdb(Lcom/android/server/wtn;)Landroid/content/ContentResolver;
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/wtn;->hmo:Z
+    iget-object p0, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
-    return p0
+    return-object p0
 .end method
 
-.method private v(Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic vdw(Lcom/android/server/wtn;Ljava/lang/String;)Landroid/app/Notification;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/wtn;->j(Ljava/lang/String;)Landroid/app/Notification;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic veq(Lcom/android/server/wtn;)Lcom/android/server/wtn$sis;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/wtn;->ibl:Lcom/android/server/wtn$sis;
+
+    return-object p0
+.end method
+
+.method static synthetic vju(Lcom/android/server/wtn;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/wtn;->rtg:J
+
+    return-wide v0
+.end method
+
+.method private w(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
     const/4 p0, 0x0
@@ -1612,76 +1660,42 @@
     return-object p0
 .end method
 
-.method static synthetic vdb(Lcom/android/server/wtn;Z)Z
+.method static synthetic wtn(Lcom/android/server/wtn;I)I
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/wtn;->hmo:Z
+    iput p1, p0, Lcom/android/server/wtn;->ugm:I
 
     return p1
-.end method
-
-.method static synthetic vdw(Lcom/android/server/wtn;)Landroid/app/Notification;
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/wtn;->k()Landroid/app/Notification;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic veq(Lcom/android/server/wtn;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/wtn;->cno:J
-
-    return-wide v0
-.end method
-
-.method static synthetic vju(Lcom/android/server/wtn;)Landroid/app/AlarmManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
-
-    return-object p0
-.end method
-
-.method static synthetic wtn(Lcom/android/server/wtn;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/wtn;->vdb:Z
-
-    return p0
 .end method
 
 .method static synthetic you(Lcom/android/server/wtn;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/wtn;->ear:J
+    iget-wide v0, p0, Lcom/android/server/wtn;->ire:J
 
     return-wide v0
 .end method
 
-.method static synthetic ywr(Lcom/android/server/wtn;Z)Z
+.method static synthetic ywr(Lcom/android/server/wtn;)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/wtn;->zgw:Z
+    iget-boolean p0, p0, Lcom/android/server/wtn;->obl:Z
 
-    return p1
+    return p0
 .end method
 
-.method static synthetic zgw(Lcom/android/server/wtn;)Landroid/content/ContentResolver;
+.method static synthetic zgw(Lcom/android/server/wtn;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-boolean p0, p0, Lcom/android/server/wtn;->fto:Z
 
-    return-object p0
+    return p0
 .end method
 
 .method static synthetic zta(Lcom/android/server/wtn;)I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/wtn;->ibl:I
+    iget p0, p0, Lcom/android/server/wtn;->gwm:I
 
     return p0
 .end method
@@ -1689,6 +1703,129 @@
 
 # virtual methods
 .method public A()V
+    .locals 8
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v2
+
+    const/4 v3, 0x5
+
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result v4
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v4, 0xb
+
+    const/4 v5, 0x3
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v4, 0xc
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v4, 0xd
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
+
+    const-wide/16 v6, 0x3e8
+
+    add-long/2addr v0, v6
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v6
+
+    cmp-long v0, v0, v6
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    :goto_0
+    invoke-virtual {v2, v3, v0}, Ljava/util/Calendar;->set(II)V
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v2
+
+    iget-object v0, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
+
+    const-string v4, "alarm"
+
+    invoke-virtual {v0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    iput-object v0, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
+
+    :cond_1
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v4, "net.oneplus.charingguarder.intent.mdm"
+
+    invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
+
+    invoke-static {v4, v1, v0, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/server/wtn;->bio:Landroid/app/AlarmManager;
+
+    invoke-virtual {p0, v5, v2, v3, v0}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "it will set a alarm to report mdm data in "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OnePlusChargingGuarder"
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public B()V
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1707,7 +1844,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object p0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1724,7 +1861,7 @@
     return-void
 .end method
 
-.method public B(J)V
+.method public C(J)V
     .locals 2
 
     const-wide/16 v0, 0x3e8
@@ -1753,16 +1890,16 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0}, Lcom/android/server/wtn;->F()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->G()V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/wtn;->cjf:Z
+    iput-boolean p1, p0, Lcom/android/server/wtn;->ear:Z
 
     return-void
 .end method
 
-.method public C(J)V
+.method public D(J)V
     .locals 2
 
     iput-wide p1, p0, Lcom/android/server/wtn;->tsu:J
@@ -1790,7 +1927,7 @@
     return-void
 .end method
 
-.method public D(Ljava/time/LocalTime;)V
+.method public E(Ljava/time/LocalTime;)V
     .locals 1
 
     iput-object p1, p0, Lcom/android/server/wtn;->sis:Ljava/time/LocalTime;
@@ -1818,7 +1955,7 @@
     return-void
 .end method
 
-.method public E()V
+.method public F()V
     .locals 1
 
     iget-object p0, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
@@ -1834,7 +1971,7 @@
     return-void
 .end method
 
-.method public F()V
+.method public G()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wtn;->sis:Ljava/time/LocalTime;
@@ -1907,25 +2044,25 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    invoke-virtual {p0}, Lcom/android/server/wtn;->A()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->B()V
 
     return-void
 .end method
 
-.method public l()V
+.method public m()V
     .locals 3
 
     const-string v0, "1"
 
     const-string v1, "/sys/class/power_supply/battery/op_disable_charge"
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/android/server/wtn;->H(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/android/server/wtn;->gck:I
+    iput v0, p0, Lcom/android/server/wtn;->dma:I
 
-    iget-object v1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object v1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const-string v2, "charging_optimized_status"
 
@@ -1939,7 +2076,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wtn;->gck:I
+    iget p0, p0, Lcom/android/server/wtn;->dma:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1954,7 +2091,7 @@
     return-void
 .end method
 
-.method m(Ljava/io/PrintWriter;)V
+.method n(Ljava/io/PrintWriter;)V
     .locals 3
 
     const-string v0, "**** OnePlusChargingGuarder ****"
@@ -2005,7 +2142,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/wtn;->gck:I
+    iget v1, p0, Lcom/android/server/wtn;->dma:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2023,7 +2160,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/wtn;->ibl:I
+    iget v1, p0, Lcom/android/server/wtn;->gwm:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2041,7 +2178,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wtn;->ire:I
+    iget p0, p0, Lcom/android/server/wtn;->hmo:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2054,7 +2191,7 @@
     return-void
 .end method
 
-.method public n()V
+.method public o()V
     .locals 8
 
     const-string v0, "OnePlusChargingGuarder"
@@ -2063,11 +2200,11 @@
 
     const-string v2, "/sys/class/power_supply/battery/op_disable_charge"
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/wtn;->G(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v2}, Lcom/android/server/wtn;->H(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
-    iput v1, p0, Lcom/android/server/wtn;->gck:I
+    iput v1, p0, Lcom/android/server/wtn;->dma:I
 
     :try_start_0
     invoke-static {}, Landroid/app/NotificationManager;->getService()Landroid/app/INotificationManager;
@@ -2110,7 +2247,7 @@
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    iget-object v1, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object v1, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const/4 v2, 0x0
 
@@ -2126,7 +2263,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wtn;->gck:I
+    iget p0, p0, Lcom/android/server/wtn;->dma:I
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2139,7 +2276,7 @@
     return-void
 .end method
 
-.method public o()I
+.method public p()I
     .locals 5
 
     const/16 p0, 0xa
@@ -2254,7 +2391,7 @@
     return v3
 .end method
 
-.method public p()I
+.method public q()I
     .locals 4
 
     const/16 p0, 0xa
@@ -2315,10 +2452,10 @@
     return v0
 .end method
 
-.method public q()I
+.method public r()I
     .locals 2
 
-    iget-object p0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object p0, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const-string v0, "charging_guarder_enabled"
 
@@ -2331,10 +2468,10 @@
     return p0
 .end method
 
-.method public s()V
+.method public t()V
     .locals 6
 
-    iget-object v0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2356,10 +2493,10 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/wtn;->dma:J
+    iput-wide v0, p0, Lcom/android/server/wtn;->ywr:J
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/server/wtn;->wtn:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2447,16 +2584,16 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/android/server/wtn;->F()V
+    invoke-virtual {p0}, Lcom/android/server/wtn;->G()V
 
     :cond_2
     return-void
 .end method
 
-.method public t()Z
+.method public u()Z
     .locals 1
 
-    iget p0, p0, Lcom/android/server/wtn;->gck:I
+    iget p0, p0, Lcom/android/server/wtn;->dma:I
 
     const/4 v0, 0x1
 
@@ -2470,7 +2607,7 @@
     return p0
 .end method
 
-.method public w(Lorg/json/JSONObject;)V
+.method public x(Lorg/json/JSONObject;)V
     .locals 5
 
     const-string v0, "advance_period"
@@ -2479,9 +2616,17 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
 
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/android/server/wtn;->cno:J
+
+    const-string v0, "advance_enter_period"
+
+    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
+
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/wtn;->cno:J
+    iput-wide v0, p0, Lcom/android/server/wtn;->kth:J
 
     const-string v0, "disable_charge_optimizated_period"
 
@@ -2491,7 +2636,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/wtn;->ear:J
+    iput-wide v0, p0, Lcom/android/server/wtn;->ire:J
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2513,7 +2658,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v0, p0, Lcom/android/server/wtn;->ibl:I
+    iget v0, p0, Lcom/android/server/wtn;->gwm:I
 
     const/4 v2, 0x2
 
@@ -2524,7 +2669,7 @@
     if-ne v0, v2, :cond_2
 
     :cond_0
-    iget v0, p0, Lcom/android/server/wtn;->ibl:I
+    iget v0, p0, Lcom/android/server/wtn;->gwm:I
 
     const-string v4, "function_option"
 
@@ -2541,9 +2686,9 @@
     goto :goto_1
 
     :cond_1
-    iput p1, p0, Lcom/android/server/wtn;->ibl:I
+    iput p1, p0, Lcom/android/server/wtn;->gwm:I
 
-    iget-object v0, p0, Lcom/android/server/wtn;->oif:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/server/wtn;->bvj:Landroid/content/ContentResolver;
 
     const-string v2, "charging_guarder_enabled"
 
@@ -2558,7 +2703,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wtn;->ibl:I
+    iget p0, p0, Lcom/android/server/wtn;->gwm:I
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2602,8 +2747,8 @@
     goto :goto_0
 .end method
 
-.method public x(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
+.method public y(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
 
     const-string p0, "BufferedReader close exception :"
 
@@ -2613,22 +2758,24 @@
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    const-string p1, ""
+
+    const/4 v2, 0x0
 
     :try_start_0
-    new-instance v2, Ljava/io/BufferedReader;
+    new-instance v3, Ljava/io/BufferedReader;
 
-    new-instance v3, Ljava/io/FileReader;
+    new-instance v4, Ljava/io/FileReader;
 
-    invoke-direct {v3, v1}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
+    invoke-direct {v4, v1}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
 
-    invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v3, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     :try_start_1
-    invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2636,20 +2783,20 @@
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v2
 
-    if-lez v3, :cond_0
+    if-lez v2, :cond_0
 
     move-object p1, v1
 
     :cond_0
-    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
+    invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -2662,6 +2809,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    :goto_0
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -2681,38 +2829,26 @@
     :catchall_0
     move-exception p1
 
+    move-object v2, v3
+
     goto :goto_3
 
     :catch_1
     move-exception v1
 
-    move-object v5, v1
+    move-object v2, v3
 
-    move-object v1, p1
-
-    move-object p1, v2
-
-    move-object v2, v5
-
-    goto :goto_0
+    goto :goto_1
 
     :catchall_1
-    move-exception v1
-
-    move-object v2, p1
-
-    move-object p1, v1
+    move-exception p1
 
     goto :goto_3
 
     :catch_2
     move-exception v1
 
-    move-object v2, v1
-
-    move-object v1, p1
-
-    :goto_0
+    :goto_1
     :try_start_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2722,54 +2858,39 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    if-eqz p1, :cond_1
+    if-eqz v2, :cond_1
 
     :try_start_4
-    invoke-virtual {p1}, Ljava/io/BufferedReader;->close()V
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_3
-    move-exception p1
+    move-exception v1
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_0
 
     :cond_1
-    :goto_1
-    move-object p1, v1
-
     :goto_2
     return-object p1
 
@@ -2809,7 +2930,7 @@
     throw p1
 .end method
 
-.method public y()V
+.method public z()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/wtn;->you:Lcom/android/server/wtn$tsu;
@@ -2825,129 +2946,6 @@
     const-wide/16 v1, 0x2710
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return-void
-.end method
-
-.method public z()V
-    .locals 8
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v2
-
-    const/4 v3, 0x5
-
-    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
-
-    move-result v4
-
-    invoke-virtual {v2, v3, v4}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v4, 0xb
-
-    const/4 v5, 0x3
-
-    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v4, 0xc
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v4, 0xd
-
-    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->set(II)V
-
-    const-wide/16 v6, 0x3e8
-
-    add-long/2addr v0, v6
-
-    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v6
-
-    cmp-long v0, v0, v6
-
-    const/4 v1, 0x1
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
-
-    move-result v0
-
-    :goto_0
-    invoke-virtual {v2, v3, v0}, Ljava/util/Calendar;->set(II)V
-
-    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v2
-
-    iget-object v0, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
-
-    const-string v4, "alarm"
-
-    invoke-virtual {v0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/AlarmManager;
-
-    iput-object v0, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
-
-    :cond_1
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v4, "net.oneplus.charingguarder.intent.mdm"
-
-    invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v4, p0, Lcom/android/server/wtn;->igw:Landroid/content/Context;
-
-    invoke-static {v4, v1, v0, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lcom/android/server/wtn;->kth:Landroid/app/AlarmManager;
-
-    invoke-virtual {p0, v5, v2, v3, v0}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "it will set a alarm to report mdm data in "
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "OnePlusChargingGuarder"
-
-    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

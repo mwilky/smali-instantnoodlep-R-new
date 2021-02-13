@@ -97,11 +97,11 @@
 .method public initNetworkPolicy(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    invoke-static {}, Lcom/android/server/cjf/zta;->you()Lcom/android/server/cjf/zta;
+    invoke-static {}, Lcom/android/server/ear/zta;->you()Lcom/android/server/ear/zta;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/cjf/zta;->sis(Lcom/android/server/net/NetworkPolicyManagerService;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/ear/zta;->sis(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
     return-void
 .end method

@@ -78,7 +78,7 @@
 
 
 # instance fields
-.field private bio:Lcom/android/server/vdb;
+.field private bio:Lcom/android/server/zgw;
 
 .field private bvj:Lcom/android/server/am/k;
 
@@ -2670,7 +2670,7 @@
 .method private vju()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iget-object v0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
     if-nez v0, :cond_0
 
@@ -2680,9 +2680,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/vdb;
+    check-cast v0, Lcom/android/server/zgw;
 
-    iput-object v0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iput-object v0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
     :cond_0
     invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
@@ -4587,9 +4587,9 @@
     goto :goto_1
 
     :cond_3
-    iget-object p2, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iget-object p2, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
-    invoke-virtual {p2, v0}, Lcom/android/server/vdb;->cjf(Ljava/lang/String;)Z
+    invoke-virtual {p2, v0}, Lcom/android/server/zgw;->cjf(Ljava/lang/String;)Z
 
     move-result p2
 
@@ -5772,9 +5772,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object p1, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iget-object p1, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
-    invoke-virtual {p1, v6}, Lcom/android/server/vdb;->cjf(Ljava/lang/String;)Z
+    invoke-virtual {p1, v6}, Lcom/android/server/zgw;->cjf(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -6561,9 +6561,9 @@
 .method protected irq(Ljava/lang/String;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iget-object p0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->cjf(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/zgw;->cjf(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -6770,9 +6770,9 @@
 .method protected les(Ljava/lang/String;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/vdb;
+    iget-object p0, p0, Lcom/android/server/am/hmo;->bio:Lcom/android/server/zgw;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/vdb;->isOptApp(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/zgw;->isOptApp(Ljava/lang/String;)Z
 
     move-result p0
 

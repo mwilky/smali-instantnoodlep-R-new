@@ -93,7 +93,7 @@
 
     const-string p0, "ChargeFragmentTimer clear"
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -185,7 +185,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v3
 
@@ -203,7 +203,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result v3
 
@@ -213,7 +213,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a0(Lcom/android/server/wm/OpPowerConsumpStats;I)Ljava/lang/String;
+    invoke-static {v3, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->b0(Lcom/android/server/wm/OpPowerConsumpStats;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -221,7 +221,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Z
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->a(Lcom/android/server/wm/OpPowerConsumpStats;)Z
 
     move-result p1
 
@@ -238,7 +238,7 @@
     :cond_1
     iget-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result p1
 
@@ -297,7 +297,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -339,7 +339,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v2
 
@@ -365,7 +365,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result v2
 
@@ -473,7 +473,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -482,7 +482,7 @@
     :cond_0
     const-string p0, "ChargeFragmentTimer getCacheChargeFragment not Timing , return null"
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -537,7 +537,7 @@
 
     const-string p0, "ChargeFragmentTimer updatePlugType plugType:FASTCHARGE"
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
@@ -591,7 +591,7 @@
 
     iget-object v3, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v3}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v3
 
@@ -621,7 +621,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     monitor-exit v0
 
@@ -739,7 +739,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->les(Lcom/android/server/wm/OpPowerConsumpStats;)J
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->irq(Lcom/android/server/wm/OpPowerConsumpStats;)J
 
     move-result-wide v2
 
@@ -763,7 +763,7 @@
 
     iget-object v2, p0, Lcom/android/server/wm/OpPowerConsumpStats$obl;->ssp:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->c(Lcom/android/server/wm/OpPowerConsumpStats;)I
+    invoke-static {v2}, Lcom/android/server/wm/OpPowerConsumpStats;->d(Lcom/android/server/wm/OpPowerConsumpStats;)I
 
     move-result v2
 
@@ -845,7 +845,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->X(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->Y(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 

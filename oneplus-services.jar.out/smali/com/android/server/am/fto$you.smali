@@ -39,28 +39,28 @@
 
 
 # virtual methods
-.method public dma(ILjava/lang/String;Z)V
-    .locals 0
+.method public gck(ILjava/lang/String;Z)V
+    .locals 1
 
-    sget-boolean p2, Lcom/android/server/am/fto;->ssp:Z
+    sget-boolean v0, Lcom/android/server/am/fto;->ssp:Z
 
-    if-nez p2, :cond_0
+    if-nez v0, :cond_0
 
     invoke-static {}, Lcom/android/server/am/fto;->zta()Z
 
-    move-result p2
+    move-result v0
 
-    if-eqz p2, :cond_1
+    if-eqz v0, :cond_1
 
     :cond_0
-    const-string p2, "noteCameraChanged"
+    const-string v0, "noteTrafficChanged"
 
-    invoke-static {p2}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
 
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/fto$you;->you:Lcom/android/server/am/fto;
 
-    invoke-static {p0, p1, p3}, Lcom/android/server/am/fto;->kth(Lcom/android/server/am/fto;IZ)V
+    invoke-static {p0, p1, p2, p3}, Lcom/android/server/am/fto;->you(Lcom/android/server/am/fto;ILjava/lang/String;Z)V
 
     return-void
 .end method
@@ -91,32 +91,6 @@
     return-void
 .end method
 
-.method public wtn(ILjava/lang/String;Z)V
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/fto;->ssp:Z
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/android/server/am/fto;->zta()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const-string v0, "noteTrafficChanged"
-
-    invoke-static {v0}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
-
-    :cond_1
-    iget-object p0, p0, Lcom/android/server/am/fto$you;->you:Lcom/android/server/am/fto;
-
-    invoke-static {p0, p1, p2, p3}, Lcom/android/server/am/fto;->you(Lcom/android/server/am/fto;ILjava/lang/String;Z)V
-
-    return-void
-.end method
-
 .method public you(ILjava/lang/String;Z)V
     .locals 1
 
@@ -139,6 +113,32 @@
     iget-object p0, p0, Lcom/android/server/am/fto$you;->you:Lcom/android/server/am/fto;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/am/fto;->sis(Lcom/android/server/am/fto;ILjava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public ywr(ILjava/lang/String;Z)V
+    .locals 0
+
+    sget-boolean p2, Lcom/android/server/am/fto;->ssp:Z
+
+    if-nez p2, :cond_0
+
+    invoke-static {}, Lcom/android/server/am/fto;->zta()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    :cond_0
+    const-string p2, "noteCameraChanged"
+
+    invoke-static {p2}, Lcom/android/server/am/fto;->dma(Ljava/lang/String;)V
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/server/am/fto$you;->you:Lcom/android/server/am/fto;
+
+    invoke-static {p0, p1, p3}, Lcom/android/server/am/fto;->kth(Lcom/android/server/am/fto;IZ)V
 
     return-void
 .end method

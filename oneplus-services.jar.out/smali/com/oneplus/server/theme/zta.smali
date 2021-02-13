@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final a:Ljava/lang/String; = "com.oplus.permission.safe.OpThemeBroadcastPerm"
+
 .field private static final bio:Ljava/lang/String; = "OnePlusThemeController"
 
 .field private static final bud:Ljava/lang/String; = "oneplus_basiccolor_black"
@@ -441,7 +443,7 @@
 .end method
 
 .method private oif()V
-    .locals 3
+    .locals 5
 
     sget-boolean v0, Lcom/oneplus/server/theme/zta;->igw:Z
 
@@ -480,19 +482,33 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v1, "android.intent.action.USER_BACKGROUND"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     const-string v1, "com.oem.intent.action.parallel_overlay_ready"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "oneplus.change_white_theme_again"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/oneplus/server/theme/zta;->zta:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/oneplus/server/theme/zta;->ssp:Landroid/content/BroadcastReceiver;
+
+    const/4 v3, 0x0
+
+    const-string v4, "com.oplus.permission.safe.OpThemeBroadcastPerm"
+
+    invoke-virtual {v1, v2, v0, v4, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v1, "oneplus.change_white_theme_again"
+    const-string v1, "android.intent.action.USER_BACKGROUND"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
@@ -997,6 +1013,18 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v3, ", CurUiMode "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/oneplus/server/theme/zta;->sis:Landroid/app/IUiModeManager;
+
+    invoke-interface {v3}, Landroid/app/IUiModeManager;->getNightMode()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1015,6 +1043,14 @@
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_2
+
+    iget-object v1, p0, Lcom/oneplus/server/theme/zta;->sis:Landroid/app/IUiModeManager;
+
+    invoke-interface {v1}, Landroid/app/IUiModeManager;->getNightMode()I
+
+    move-result v1
+
+    if-ne v1, v2, :cond_3
 
     iget-object p0, p0, Lcom/oneplus/server/theme/zta;->sis:Landroid/app/IUiModeManager;
 

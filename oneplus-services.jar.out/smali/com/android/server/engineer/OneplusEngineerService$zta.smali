@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/server/engineer/rtg;->bvj()Z
+    invoke-static {}, Lcom/android/server/engineer/ssp;->bvj()Z
 
     move-result p0
 

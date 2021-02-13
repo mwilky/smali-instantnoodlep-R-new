@@ -97,7 +97,7 @@
 
     iget-object v4, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v4}, Lcom/android/server/am/f;->gwm(Lcom/android/server/am/f;)Z
+    invoke-static {v4}, Lcom/android/server/am/f;->ugm(Lcom/android/server/am/f;)Z
 
     move-result v4
 
@@ -111,12 +111,12 @@
 
     const-string v6, "0"
 
-    invoke-static {v4, v5, v6}, Lcom/android/server/am/f;->vdb(Lcom/android/server/am/f;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6}, Lcom/android/server/am/f;->zgw(Lcom/android/server/am/f;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget-object v4, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v4, v3}, Lcom/android/server/am/f;->ugm(Lcom/android/server/am/f;Z)Z
+    invoke-static {v4, v3}, Lcom/android/server/am/f;->vdb(Lcom/android/server/am/f;Z)Z
 
     :cond_1
     const-string v3, "black"
@@ -141,7 +141,7 @@
 
     iget-object v3, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v3}, Lcom/android/server/am/f;->zgw(Lcom/android/server/am/f;)Ljava/util/ArrayList;
+    invoke-static {v3}, Lcom/android/server/am/f;->obl(Lcom/android/server/am/f;)Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -152,7 +152,7 @@
     :try_start_1
     iget-object v4, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v4}, Lcom/android/server/am/f;->zgw(Lcom/android/server/am/f;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lcom/android/server/am/f;->obl(Lcom/android/server/am/f;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -169,7 +169,7 @@
 
     iget-object v5, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v5}, Lcom/android/server/am/f;->zgw(Lcom/android/server/am/f;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/android/server/am/f;->obl(Lcom/android/server/am/f;)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -196,7 +196,7 @@
 
     iget-object v5, p0, Lcom/android/server/am/f$you;->zta:Lcom/android/server/am/f;
 
-    invoke-static {v5}, Lcom/android/server/am/f;->zgw(Lcom/android/server/am/f;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/android/server/am/f;->obl(Lcom/android/server/am/f;)Ljava/util/ArrayList;
 
     move-result-object v5
 

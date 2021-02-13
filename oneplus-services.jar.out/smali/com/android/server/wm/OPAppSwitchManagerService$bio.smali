@@ -20,13 +20,13 @@
 # instance fields
 .field final synthetic sis:Lcom/android/server/wm/OPAppSwitchManagerService;
 
-.field you:Lcom/color/app/ColorAppSwitchConfig;
+.field you:Lcom/oplus/app/OplusAppSwitchConfig;
 
 .field final zta:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)V
+.method constructor <init>(Lcom/android/server/wm/OPAppSwitchManagerService;Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->sis:Lcom/android/server/wm/OPAppSwitchManagerService;
@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->zta:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/color/app/ColorAppSwitchConfig;
+    iput-object p3, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/oplus/app/OplusAppSwitchConfig;
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/oplus/app/OplusAppSwitchConfig;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -76,9 +76,9 @@
 
     iget-object v1, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->zta:Ljava/lang/String;
 
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchManagerService$bio;->you:Lcom/oplus/app/OplusAppSwitchConfig;
 
-    invoke-virtual {v0, v1, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-virtual {v0, v1, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     return-void
 .end method

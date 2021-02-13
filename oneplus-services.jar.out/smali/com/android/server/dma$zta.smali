@@ -32,104 +32,79 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 1
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/dma;->zta()Lcom/android/server/dma;
 
     move-result-object p1
 
-    const-string v0, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_1
-
-    const-string p1, "LightIdle_Status"
-
-    invoke-virtual {p2, p1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    iget-object p1, p0, Lcom/android/server/dma$zta;->zta:Lcom/android/server/dma;
+    if-nez p2, :cond_1
 
-    invoke-static {p1}, Lcom/android/server/dma;->sis(Lcom/android/server/dma;)Landroid/os/PowerManager;
+    return-void
+
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    const-string p1, ""
+
+    :try_start_0
+    const-string v0, "code"
+
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_1
-    const-string p2, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+    const-string p2, "dump"
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_3
+    if-eqz p2, :cond_2
 
-    iget-object p1, p0, Lcom/android/server/dma$zta;->zta:Lcom/android/server/dma;
+    iget-object p0, p0, Lcom/android/server/dma$zta;->zta:Lcom/android/server/dma;
 
-    invoke-static {p1}, Lcom/android/server/dma;->sis(Lcom/android/server/dma;)Landroid/os/PowerManager;
+    invoke-static {p0}, Lcom/android/server/dma;->kth(Lcom/android/server/dma;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mDebugReceiver code:"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " Exception e:"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
+    const-string p2, "OPGPS"
 
-    move-result p1
+    invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_2
-
-    :goto_0
-    iget-object p0, p0, Lcom/android/server/dma$zta;->zta:Lcom/android/server/dma;
-
-    invoke-static {p0}, Lcom/android/server/dma;->ssp(Lcom/android/server/dma;)Lcom/android/server/dma$sis;
-
-    move-result-object p0
-
-    invoke-static {v3, v2}, Lcom/android/server/dma;->wtn(II)I
-
-    move-result p1
-
-    goto :goto_2
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
-    :goto_1
-    iget-object p0, p0, Lcom/android/server/dma$zta;->zta:Lcom/android/server/dma;
-
-    invoke-static {p0}, Lcom/android/server/dma;->ssp(Lcom/android/server/dma;)Lcom/android/server/dma$sis;
-
-    move-result-object p0
-
-    invoke-static {v3, v1}, Lcom/android/server/dma;->wtn(II)I
-
-    move-result p1
-
-    :goto_2
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_3
+    :goto_0
     return-void
 .end method

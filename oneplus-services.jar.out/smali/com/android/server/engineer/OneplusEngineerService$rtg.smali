@@ -37,7 +37,7 @@
 .method public run()V
     .locals 6
 
-    invoke-static {}, Lcom/android/server/engineer/rtg;->bvj()Z
+    invoke-static {}, Lcom/android/server/engineer/ssp;->bvj()Z
 
     move-result p0
 
@@ -61,11 +61,11 @@
 
     const v0, 0xf4252
 
-    invoke-static {v0}, Lcom/android/server/engineer/sis;->ssp(I)[B
+    invoke-static {v0}, Lcom/android/server/engineer/tsu;->ssp(I)[B
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/engineer/rtg;->hmo([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/server/engineer/ssp;->hmo([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     array-length v2, p0
 
-    invoke-static {v0, p0, v2}, Lcom/android/server/engineer/sis;->bio(I[BI)Z
+    invoke-static {v0, p0, v2}, Lcom/android/server/engineer/tsu;->bio(I[BI)Z
 
     move-result p0
 
@@ -134,7 +134,7 @@
     :cond_1
     const p0, 0xf425a
 
-    invoke-static {p0}, Lcom/android/server/engineer/sis;->ssp(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/tsu;->ssp(I)[B
 
     move-result-object p0
 

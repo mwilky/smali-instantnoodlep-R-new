@@ -369,7 +369,7 @@
 
     check-cast p0, Ljava/util/HashSet;
 
-    invoke-virtual {p0, p2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     monitor-exit v0
 
@@ -493,6 +493,38 @@
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
+.end method
+
+.method public ear(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
+
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/HashSet;
+
+    invoke-virtual {p0, p2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public gck(Ljava/lang/String;IILjava/lang/String;II)V
@@ -769,16 +801,8 @@
     return-void
 .end method
 
-.method public obl(Lcom/android/server/am/AppRecordManager$ListenerType;IZ)V
+.method public obl(Lcom/android/server/am/AppRecordManager$ListenerType;ILjava/lang/String;ZZ)V
     .locals 2
-
-    iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
 
@@ -815,9 +839,17 @@
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    const-string p2, "pkg"
+
+    invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
     const-string p2, "using"
 
-    invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    invoke-virtual {p1, p2, p4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p2, "from"
+
+    invoke-virtual {p1, p2, p5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -883,36 +915,63 @@
     return-void
 .end method
 
-.method public oxb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
-    .locals 1
+.method public oxb(Lcom/android/server/am/AppRecordManager$ListenerType;IZ)V
+    .locals 2
 
     iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
 
-    monitor-enter v0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :try_start_0
-    iget-object p0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    iget-object v0, p0, Lcom/android/server/am/wtn;->zta:Ljava/util/HashMap;
 
-    check-cast p0, Ljava/util/HashSet;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    monitor-exit v0
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     return-void
 
-    :catchall_0
-    move-exception p0
+    :cond_0
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    throw p0
+    invoke-virtual {p1}, Lcom/android/server/am/AppRecordManager$ListenerType;->zta()I
+
+    move-result p1
+
+    iput p1, v0, Landroid/os/Message;->what:I
+
+    new-instance p1, Landroid/os/Bundle;
+
+    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v1, "uid"
+
+    invoke-virtual {p1, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p2, "using"
+
+    invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object p0, p0, Lcom/android/server/am/wtn;->you:Lcom/android/server/am/wtn$zta;
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
 .end method
 
 .method public qbh(IIJ)V

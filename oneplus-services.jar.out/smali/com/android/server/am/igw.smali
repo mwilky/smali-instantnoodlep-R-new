@@ -27,19 +27,25 @@
     return-void
 .end method
 
+.method public bvj(IIZ)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public cno(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public dma(ILjava/lang/String;Z)V
+.method public dma(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public gck(IZ)V
+.method public gck(ILjava/lang/String;Z)V
     .locals 0
 
     return-void
@@ -111,13 +117,13 @@
     return-void
 .end method
 
-.method public oif(IIZ)V
+.method public oif(IZ)V
     .locals 0
 
     return-void
 .end method
 
-.method public qbh(IZ)V
+.method public qbh(ILjava/lang/String;Z)V
     .locals 0
 
     return-void
@@ -147,7 +153,7 @@
     return-void
 .end method
 
-.method public wtn(ILjava/lang/String;Z)V
+.method public wtn(ILjava/lang/String;ZZ)V
     .locals 0
 
     return-void

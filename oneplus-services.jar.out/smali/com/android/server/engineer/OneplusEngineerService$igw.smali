@@ -54,7 +54,7 @@
 
     new-array v0, p2, [B
 
-    invoke-static {p0, v0, p2}, Lcom/android/server/engineer/sis;->bio(I[BI)Z
+    invoke-static {p0, v0, p2}, Lcom/android/server/engineer/tsu;->bio(I[BI)Z
 
     move-result p0
 

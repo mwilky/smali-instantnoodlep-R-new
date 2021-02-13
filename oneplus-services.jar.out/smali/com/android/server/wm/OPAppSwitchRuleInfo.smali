@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field public config:Lcom/color/app/ColorAppSwitchConfig;
+.field public config:Lcom/oplus/app/OplusAppSwitchConfig;
 
 .field private context:Landroid/content/Context;
 
@@ -59,16 +59,16 @@
 
     iput-boolean v0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->isStatic:Z
 
-    new-instance p1, Lcom/color/app/ColorAppSwitchConfig;
+    new-instance p1, Lcom/oplus/app/OplusAppSwitchConfig;
 
-    invoke-direct {p1}, Lcom/color/app/ColorAppSwitchConfig;-><init>()V
+    invoke-direct {p1}, Lcom/oplus/app/OplusAppSwitchConfig;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iput-object p1, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)V
+.method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,17 +87,17 @@
 
     iput-object p3, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->observer:Lcom/android/server/wm/IOPAppSwitchObserver;
 
-    iput-object p4, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iput-object p4, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
     return-void
 .end method
 
-.method public static buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
+.method public static buildDynamicRuleInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Lcom/android/server/wm/OPAppSwitchRuleInfo;
     .locals 1
 
     new-instance v0, Lcom/android/server/wm/OPAppSwitchRuleInfo;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchRuleInfo;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchRuleInfo;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)V
 
     return-object v0
 .end method
@@ -125,16 +125,16 @@
 
     const/4 v0, 0x1
 
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
     if-ne p1, v0, :cond_0
 
-    iget-object p0, p0, Lcom/color/app/ColorAppSwitchConfig;->mActivitySet:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oplus/app/OplusAppSwitchConfig;->mActivitySet:Ljava/util/HashSet;
 
     return-object p0
 
     :cond_0
-    iget-object p0, p0, Lcom/color/app/ColorAppSwitchConfig;->mPackageSet:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/oplus/app/OplusAppSwitchConfig;->mPackageSet:Ljava/util/HashSet;
 
     return-object p0
 .end method
@@ -305,13 +305,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
-    iget p0, p0, Lcom/color/app/ColorAppSwitchConfig;->observerFingerPrint:I
+    iget p0, p0, Lcom/oplus/app/OplusAppSwitchConfig;->observerFingerPrint:I
 
-    iget-object p1, p1, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p1, p1, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
-    iget p1, p1, Lcom/color/app/ColorAppSwitchConfig;->observerFingerPrint:I
+    iget p1, p1, Lcom/oplus/app/OplusAppSwitchConfig;->observerFingerPrint:I
 
     if-ne p0, p1, :cond_0
 
@@ -398,13 +398,13 @@
     if-eqz v5, :cond_5
 
     :cond_2
-    new-instance v3, Lcom/color/app/ColorAppEnterInfo;
+    new-instance v3, Lcom/oplus/app/OplusAppEnterInfo;
 
-    invoke-direct {v3}, Lcom/color/app/ColorAppEnterInfo;-><init>()V
+    invoke-direct {v3}, Lcom/oplus/app/OplusAppEnterInfo;-><init>()V
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
-    iput-object v5, v3, Lcom/color/app/ColorAppEnterInfo;->intent:Landroid/content/Intent;
+    iput-object v5, v3, Lcom/oplus/app/OplusAppEnterInfo;->intent:Landroid/content/Intent;
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
@@ -412,19 +412,19 @@
 
     move-result-object v5
 
-    iput-object v5, v3, Lcom/color/app/ColorAppEnterInfo;->targetName:Ljava/lang/String;
+    iput-object v5, v3, Lcom/oplus/app/OplusAppEnterInfo;->targetName:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getWindowingMode()I
 
     move-result v5
 
-    iput v5, v3, Lcom/color/app/ColorAppEnterInfo;->windowMode:I
+    iput v5, v3, Lcom/oplus/app/OplusAppEnterInfo;->windowMode:I
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->launchedFromPackage:Ljava/lang/String;
 
-    iput-object v5, v3, Lcom/color/app/ColorAppEnterInfo;->launchedFromPackage:Ljava/lang/String;
+    iput-object v5, v3, Lcom/oplus/app/OplusAppEnterInfo;->launchedFromPackage:Ljava/lang/String;
 
-    iput-boolean p2, v3, Lcom/color/app/ColorAppEnterInfo;->firstStart:Z
+    iput-boolean p2, v3, Lcom/oplus/app/OplusAppEnterInfo;->firstStart:Z
 
     iget p2, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
@@ -436,7 +436,7 @@
     move v2, v4
 
     :goto_2
-    iput-boolean v2, v3, Lcom/color/app/ColorAppEnterInfo;->multiApp:Z
+    iput-boolean v2, v3, Lcom/oplus/app/OplusAppEnterInfo;->multiApp:Z
 
     :try_start_0
     sget-boolean p2, Lcom/android/server/wm/OPAppSwitchRuleInfo;->DEBUG:Z
@@ -472,7 +472,7 @@
     :cond_4
     iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->observer:Lcom/android/server/wm/IOPAppSwitchObserver;
 
-    invoke-interface {p2, v3}, Lcom/android/server/wm/IOPAppSwitchObserver;->onActivityEnter(Lcom/color/app/ColorAppEnterInfo;)V
+    invoke-interface {p2, v3}, Lcom/android/server/wm/IOPAppSwitchObserver;->onActivityEnter(Lcom/oplus/app/OplusAppEnterInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -604,15 +604,15 @@
     invoke-static {v0, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    new-instance v3, Lcom/color/app/ColorAppExitInfo;
+    new-instance v3, Lcom/oplus/app/OplusAppExitInfo;
 
-    invoke-direct {v3}, Lcom/color/app/ColorAppExitInfo;-><init>()V
+    invoke-direct {v3}, Lcom/oplus/app/OplusAppExitInfo;-><init>()V
 
-    iput-object p1, v3, Lcom/color/app/ColorAppExitInfo;->targetName:Ljava/lang/String;
+    iput-object p1, v3, Lcom/oplus/app/OplusAppExitInfo;->targetName:Ljava/lang/String;
 
     if-eqz p2, :cond_5
 
-    iput-boolean v1, v3, Lcom/color/app/ColorAppExitInfo;->hasResumingActivity:Z
+    iput-boolean v1, v3, Lcom/oplus/app/OplusAppExitInfo;->hasResumingActivity:Z
 
     iget-object v5, p2, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
@@ -620,19 +620,19 @@
 
     move-result-object v5
 
-    iput-object v5, v3, Lcom/color/app/ColorAppExitInfo;->resumingActivityName:Ljava/lang/String;
+    iput-object v5, v3, Lcom/oplus/app/OplusAppExitInfo;->resumingActivityName:Ljava/lang/String;
 
     iget-object v5, p2, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    iput-object v5, v3, Lcom/color/app/ColorAppExitInfo;->resumingPackageName:Ljava/lang/String;
+    iput-object v5, v3, Lcom/oplus/app/OplusAppExitInfo;->resumingPackageName:Ljava/lang/String;
 
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getWindowingMode()I
 
     move-result v5
 
-    iput v5, v3, Lcom/color/app/ColorAppExitInfo;->resumingWindowMode:I
+    iput v5, v3, Lcom/oplus/app/OplusAppExitInfo;->resumingWindowMode:I
 
-    iput-boolean p3, v3, Lcom/color/app/ColorAppExitInfo;->isResumingFirstStart:Z
+    iput-boolean p3, v3, Lcom/oplus/app/OplusAppExitInfo;->isResumingFirstStart:Z
 
     iget p2, p2, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
@@ -644,17 +644,17 @@
     move v1, v4
 
     :goto_2
-    iput-boolean v1, v3, Lcom/color/app/ColorAppExitInfo;->isResumingMultiApp:Z
+    iput-boolean v1, v3, Lcom/oplus/app/OplusAppExitInfo;->isResumingMultiApp:Z
 
     goto :goto_3
 
     :cond_5
-    iput-boolean v4, v3, Lcom/color/app/ColorAppExitInfo;->hasResumingActivity:Z
+    iput-boolean v4, v3, Lcom/oplus/app/OplusAppExitInfo;->hasResumingActivity:Z
 
     :goto_3
     iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->observer:Lcom/android/server/wm/IOPAppSwitchObserver;
 
-    invoke-interface {p2, v3}, Lcom/android/server/wm/IOPAppSwitchObserver;->onActivityExit(Lcom/color/app/ColorAppExitInfo;)V
+    invoke-interface {p2, v3}, Lcom/android/server/wm/IOPAppSwitchObserver;->onActivityExit(Lcom/oplus/app/OplusAppExitInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -758,29 +758,29 @@
     if-eqz v5, :cond_5
 
     :cond_2
-    new-instance v2, Lcom/color/app/ColorAppEnterInfo;
+    new-instance v2, Lcom/oplus/app/OplusAppEnterInfo;
 
-    invoke-direct {v2}, Lcom/color/app/ColorAppEnterInfo;-><init>()V
+    invoke-direct {v2}, Lcom/oplus/app/OplusAppEnterInfo;-><init>()V
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->intent:Landroid/content/Intent;
 
-    iput-object v5, v2, Lcom/color/app/ColorAppEnterInfo;->intent:Landroid/content/Intent;
+    iput-object v5, v2, Lcom/oplus/app/OplusAppEnterInfo;->intent:Landroid/content/Intent;
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    iput-object v5, v2, Lcom/color/app/ColorAppEnterInfo;->targetName:Ljava/lang/String;
+    iput-object v5, v2, Lcom/oplus/app/OplusAppEnterInfo;->targetName:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getWindowingMode()I
 
     move-result v5
 
-    iput v5, v2, Lcom/color/app/ColorAppEnterInfo;->windowMode:I
+    iput v5, v2, Lcom/oplus/app/OplusAppEnterInfo;->windowMode:I
 
     iget-object v5, p1, Lcom/android/server/wm/ActivityRecord;->launchedFromPackage:Ljava/lang/String;
 
-    iput-object v5, v2, Lcom/color/app/ColorAppEnterInfo;->launchedFromPackage:Ljava/lang/String;
+    iput-object v5, v2, Lcom/oplus/app/OplusAppEnterInfo;->launchedFromPackage:Ljava/lang/String;
 
-    iput-boolean p2, v2, Lcom/color/app/ColorAppEnterInfo;->firstStart:Z
+    iput-boolean p2, v2, Lcom/oplus/app/OplusAppEnterInfo;->firstStart:Z
 
     iget p2, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
@@ -789,7 +789,7 @@
     move v3, v4
 
     :cond_3
-    iput-boolean v3, v2, Lcom/color/app/ColorAppEnterInfo;->multiApp:Z
+    iput-boolean v3, v2, Lcom/oplus/app/OplusAppEnterInfo;->multiApp:Z
 
     :try_start_0
     sget-boolean p2, Lcom/android/server/wm/OPAppSwitchRuleInfo;->DEBUG:Z
@@ -825,7 +825,7 @@
     :cond_4
     iget-object p2, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->observer:Lcom/android/server/wm/IOPAppSwitchObserver;
 
-    invoke-interface {p2, v2}, Lcom/android/server/wm/IOPAppSwitchObserver;->onAppEnter(Lcom/color/app/ColorAppEnterInfo;)V
+    invoke-interface {p2, v2}, Lcom/android/server/wm/IOPAppSwitchObserver;->onAppEnter(Lcom/oplus/app/OplusAppEnterInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -959,15 +959,15 @@
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    new-instance v2, Lcom/color/app/ColorAppExitInfo;
+    new-instance v2, Lcom/oplus/app/OplusAppExitInfo;
 
-    invoke-direct {v2}, Lcom/color/app/ColorAppExitInfo;-><init>()V
+    invoke-direct {v2}, Lcom/oplus/app/OplusAppExitInfo;-><init>()V
 
-    iput-object p1, v2, Lcom/color/app/ColorAppExitInfo;->targetName:Ljava/lang/String;
+    iput-object p1, v2, Lcom/oplus/app/OplusAppExitInfo;->targetName:Ljava/lang/String;
 
     if-eqz p2, :cond_5
 
-    iput-boolean v4, v2, Lcom/color/app/ColorAppExitInfo;->hasResumingActivity:Z
+    iput-boolean v4, v2, Lcom/oplus/app/OplusAppExitInfo;->hasResumingActivity:Z
 
     iget-object v5, p2, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
@@ -975,19 +975,19 @@
 
     move-result-object v5
 
-    iput-object v5, v2, Lcom/color/app/ColorAppExitInfo;->resumingActivityName:Ljava/lang/String;
+    iput-object v5, v2, Lcom/oplus/app/OplusAppExitInfo;->resumingActivityName:Ljava/lang/String;
 
     iget-object v5, p2, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    iput-object v5, v2, Lcom/color/app/ColorAppExitInfo;->resumingPackageName:Ljava/lang/String;
+    iput-object v5, v2, Lcom/oplus/app/OplusAppExitInfo;->resumingPackageName:Ljava/lang/String;
 
     invoke-virtual {p2}, Lcom/android/server/wm/ActivityRecord;->getWindowingMode()I
 
     move-result v5
 
-    iput v5, v2, Lcom/color/app/ColorAppExitInfo;->resumingWindowMode:I
+    iput v5, v2, Lcom/oplus/app/OplusAppExitInfo;->resumingWindowMode:I
 
-    iput-boolean p3, v2, Lcom/color/app/ColorAppExitInfo;->isResumingFirstStart:Z
+    iput-boolean p3, v2, Lcom/oplus/app/OplusAppExitInfo;->isResumingFirstStart:Z
 
     iget p2, p2, Lcom/android/server/wm/ActivityRecord;->mUserId:I
 
@@ -996,17 +996,17 @@
     move v3, v4
 
     :cond_4
-    iput-boolean v3, v2, Lcom/color/app/ColorAppExitInfo;->isResumingMultiApp:Z
+    iput-boolean v3, v2, Lcom/oplus/app/OplusAppExitInfo;->isResumingMultiApp:Z
 
     goto :goto_2
 
     :cond_5
-    iput-boolean v3, v2, Lcom/color/app/ColorAppExitInfo;->hasResumingActivity:Z
+    iput-boolean v3, v2, Lcom/oplus/app/OplusAppExitInfo;->hasResumingActivity:Z
 
     :goto_2
     iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->observer:Lcom/android/server/wm/IOPAppSwitchObserver;
 
-    invoke-interface {p0, v2}, Lcom/android/server/wm/IOPAppSwitchObserver;->onAppExit(Lcom/color/app/ColorAppExitInfo;)V
+    invoke-interface {p0, v2}, Lcom/android/server/wm/IOPAppSwitchObserver;->onAppExit(Lcom/oplus/app/OplusAppExitInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1123,9 +1123,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/color/app/ColorAppSwitchConfig;
+    iget-object p0, p0, Lcom/android/server/wm/OPAppSwitchRuleInfo;->config:Lcom/oplus/app/OplusAppSwitchConfig;
 
-    iget p0, p0, Lcom/color/app/ColorAppSwitchConfig;->observerFingerPrint:I
+    iget p0, p0, Lcom/oplus/app/OplusAppSwitchConfig;->observerFingerPrint:I
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

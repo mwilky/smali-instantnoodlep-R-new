@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wm/OpPowerConsumpStats;->s1()V
+    value = Lcom/android/server/wm/OpPowerConsumpStats;->t1()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -91,7 +91,7 @@
 
     move-result-object p4
 
-    invoke-static {p4}, Lcom/android/server/wm/OpPowerConsumpStats;->cjf(Ljava/lang/String;)V
+    invoke-static {p4}, Lcom/android/server/wm/OpPowerConsumpStats;->ear(Ljava/lang/String;)V
 
     if-nez p2, :cond_0
 
@@ -107,7 +107,7 @@
 
     const-string p0, "skipping frontPackageChanged to SCREEN OFF event..."
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->cjf(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->ear(Ljava/lang/String;)V
 
     return-void
 
@@ -116,7 +116,7 @@
 
     const/16 p2, 0x10
 
-    invoke-static {p0, p2, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->bvj(Lcom/android/server/wm/OpPowerConsumpStats;ILjava/lang/String;)V
+    invoke-static {p0, p2, p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ibl(Lcom/android/server/wm/OpPowerConsumpStats;ILjava/lang/String;)V
 
     return-void
 .end method

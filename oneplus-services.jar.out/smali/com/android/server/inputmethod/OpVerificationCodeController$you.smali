@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/ear/zta;
+.implements Lcom/android/server/ire/zta;
 
 
 # annotations
@@ -89,12 +89,12 @@
     return p0
 .end method
 
-.method public sis(Lcom/android/server/ear/zta$zta;)V
+.method public sis(Lcom/android/server/ire/zta$zta;)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/inputmethod/OpVerificationCodeController$you;->zta:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ear/zta$zta;)Lcom/android/server/ear/zta$zta;
+    invoke-static {p0, p1}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$1102(Lcom/android/server/inputmethod/OpVerificationCodeController;Lcom/android/server/ire/zta$zta;)Lcom/android/server/ire/zta$zta;
 
     return-void
 .end method

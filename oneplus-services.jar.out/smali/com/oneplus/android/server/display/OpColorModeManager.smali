@@ -50,6 +50,9 @@
 .method private static native nativeSetActiveModesId(I)V
 .end method
 
+.method private static native nativeSetIgcParameter(D)V
+.end method
+
 .method private static native nativeSetPanelMode(IZ)V
 .end method
 
@@ -135,6 +138,35 @@
 
     :cond_0
     return v1
+.end method
+
+.method public gck(IZ)V
+    .locals 0
+
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    goto :goto_0
+
+    :pswitch_1
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->zta()V
+
+    :goto_0
+    invoke-static {p1, p2}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetPanelMode(IZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x10
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method public igw(I)V
@@ -430,33 +462,12 @@
     return p0
 .end method
 
-.method public wtn(IZ)V
+.method public wtn(D)V
     .locals 0
 
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    goto :goto_0
-
-    :pswitch_1
-    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->zta()V
-
-    :goto_0
-    invoke-static {p1, p2}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetPanelMode(IZ)V
+    invoke-static {p1, p2}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetIgcParameter(D)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x10
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
 .end method
 
 .method public you(I)I

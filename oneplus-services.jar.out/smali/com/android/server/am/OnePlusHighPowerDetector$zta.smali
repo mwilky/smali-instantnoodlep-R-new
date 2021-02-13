@@ -42,7 +42,7 @@
 
     move-result-object v2
 
-    sget-boolean v3, Lcom/android/server/am/OnePlusHighPowerDetector;->Q:Z
+    sget-boolean v3, Lcom/android/server/am/OnePlusHighPowerDetector;->V:Z
 
     if-eqz v3, :cond_0
 
@@ -60,7 +60,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     :cond_0
     const-string v3, "android.intent.action.SCREEN_OFF"
@@ -87,7 +87,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->dma(Z)Z
+    invoke-static {v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Z)Z
 
     new-array v1, v11, [I
 
@@ -99,7 +99,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v1
 
@@ -129,19 +129,19 @@
     :cond_2
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->obl(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1e
+    if-nez v1, :cond_1f
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
     const-wide/16 v1, -0x1
 
-    invoke-static {v0, v1, v2}, Lcom/android/server/am/OnePlusHighPowerDetector;->obl(Lcom/android/server/am/OnePlusHighPowerDetector;J)J
+    invoke-static {v0, v1, v2}, Lcom/android/server/am/OnePlusHighPowerDetector;->cjf(Lcom/android/server/am/OnePlusHighPowerDetector;J)J
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     if-eqz v3, :cond_6
 
-    invoke-static {v11}, Lcom/android/server/am/OnePlusHighPowerDetector;->dma(Z)Z
+    invoke-static {v11}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Z)Z
 
     new-array v1, v11, [I
 
@@ -170,7 +170,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v1
 
@@ -178,7 +178,7 @@
 
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->oxb(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
+    invoke-static {v1, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->ear(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
 
     :cond_4
     new-array v1, v11, [I
@@ -191,7 +191,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v1
 
@@ -199,10 +199,10 @@
 
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->cjf(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
+    invoke-static {v1, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->ire(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
 
     :cond_5
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v1
 
@@ -210,7 +210,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->ear(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
+    invoke-static {v0, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->hmo(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
 
     goto/16 :goto_2
 
@@ -275,7 +275,7 @@
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     if-eqz v2, :cond_7
 
@@ -332,7 +332,7 @@
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     iget-object v14, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
@@ -350,7 +350,7 @@
 
     move-result v19
 
-    invoke-static/range {v14 .. v19}, Lcom/android/server/am/OnePlusHighPowerDetector;->ire(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;IILjava/lang/String;I)V
+    invoke-static/range {v14 .. v19}, Lcom/android/server/am/OnePlusHighPowerDetector;->you(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;IILjava/lang/String;I)V
 
     :cond_7
     const-string v3, "soff"
@@ -363,13 +363,13 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->obl(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
@@ -388,13 +388,13 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->obl(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
@@ -413,11 +413,11 @@
 
     const-string v1, "enable fake test"
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v11}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
+    invoke-static {v0, v11}, Lcom/android/server/am/OnePlusHighPowerDetector;->oxb(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
 
     goto/16 :goto_2
 
@@ -432,11 +432,11 @@
 
     const-string v1, "disable fake test"
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
+    invoke-static {v0, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->oxb(Lcom/android/server/am/OnePlusHighPowerDetector;Z)Z
 
     goto/16 :goto_2
 
@@ -463,7 +463,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->x0(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->B0(Ljava/lang/String;)V
 
     invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -490,7 +490,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->you(Lcom/android/server/am/OnePlusHighPowerDetector;)V
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->sis(Lcom/android/server/am/OnePlusHighPowerDetector;)V
 
     goto/16 :goto_2
 
@@ -511,7 +511,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->sis(Lcom/android/server/am/OnePlusHighPowerDetector;)V
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->tsu(Lcom/android/server/am/OnePlusHighPowerDetector;)V
 
     goto/16 :goto_2
 
@@ -542,7 +542,7 @@
 
     iget-object v3, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->tsu(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->rtg(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v3
 
@@ -566,7 +566,7 @@
 
     iget-object v3, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->rtg(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v3}, Lcom/android/server/am/OnePlusHighPowerDetector;->ssp(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v3
 
@@ -590,7 +590,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->ssp(Lcom/android/server/am/OnePlusHighPowerDetector;)Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->cno(Lcom/android/server/am/OnePlusHighPowerDetector;)Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;
 
     move-result-object v0
 
@@ -631,11 +631,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v9, :cond_1e
+    if-eqz v9, :cond_1f
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v9, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->cno(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;I)V
+    invoke-static {v0, v9, v12}, Lcom/android/server/am/OnePlusHighPowerDetector;->kth(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;I)V
 
     goto/16 :goto_2
 
@@ -656,7 +656,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->kth(Lcom/android/server/am/OnePlusHighPowerDetector;)V
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->bio(Lcom/android/server/am/OnePlusHighPowerDetector;)V
 
     goto/16 :goto_2
 
@@ -669,7 +669,7 @@
 
     if-eqz v0, :cond_12
 
-    if-eqz v9, :cond_1e
+    if-eqz v9, :cond_1f
 
     const-string v0, "OHPD"
 
@@ -731,7 +731,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->bio()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->gck()Landroid/content/Context;
 
     move-result-object v0
 
@@ -746,7 +746,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->igw()Lcom/android/server/am/ActivityManagerService;
 
@@ -863,22 +863,22 @@
 
     move-result v1
 
-    if-eqz v2, :cond_1e
+    if-eqz v2, :cond_1f
 
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
-    if-nez v5, :cond_1e
+    if-nez v5, :cond_1f
 
-    if-eq v3, v4, :cond_1e
+    if-eq v3, v4, :cond_1f
 
-    if-eq v1, v4, :cond_1e
+    if-eq v1, v4, :cond_1f
 
     :goto_0
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v2, v3, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->gck(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;II)V
+    invoke-static {v0, v2, v3, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->dma(Lcom/android/server/am/OnePlusHighPowerDetector;Ljava/lang/String;II)V
 
     goto/16 :goto_2
 
@@ -909,22 +909,22 @@
 
     move-result v1
 
-    if-eqz v2, :cond_1e
+    if-eqz v2, :cond_1f
 
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
-    if-nez v5, :cond_1e
+    if-nez v5, :cond_1f
 
-    if-eq v3, v4, :cond_1e
+    if-eq v3, v4, :cond_1f
 
-    if-eq v1, v4, :cond_1e
+    if-eq v1, v4, :cond_1f
 
     goto :goto_0
 
     :cond_16
-    const-string v3, "com.oem.intent.action.bgc_clean_noti"
+    const-string v3, "com.oem.intent.action.enable_force_stop_feature"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -934,12 +934,12 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->ywr(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/content/Intent;)V
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->ywr(Lcom/android/server/am/OnePlusHighPowerDetector;)V
 
     goto/16 :goto_2
 
     :cond_17
-    const-string v3, "com.oem.intent.action.ignore_pkg"
+    const-string v3, "com.oem.intent.action.bgc_clean_noti"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -947,7 +947,6 @@
 
     if-eqz v3, :cond_18
 
-    :goto_1
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
     invoke-static {v0, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->qbh(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/content/Intent;)V
@@ -955,7 +954,7 @@
     goto/16 :goto_2
 
     :cond_18
-    const-string v3, "com.oem.intent.action.ignore_high_pkg"
+    const-string v3, "com.oem.intent.action.ignore_pkg"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -963,10 +962,15 @@
 
     if-eqz v3, :cond_19
 
-    goto :goto_1
+    :goto_1
+    iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+    invoke-static {v0, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->oif(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/content/Intent;)V
+
+    goto/16 :goto_2
 
     :cond_19
-    const-string v3, "com.oem.intent.action.ignore_bgc_pkg"
+    const-string v3, "com.oem.intent.action.ignore_high_pkg"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -977,13 +981,24 @@
     goto :goto_1
 
     :cond_1a
+    const-string v3, "com.oem.intent.action.ignore_bgc_pkg"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1b
+
+    goto :goto_1
+
+    :cond_1b
     const-string v3, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1c
+    if-eqz v3, :cond_1d
 
     const-string v1, "OHPD"
 
@@ -993,15 +1008,15 @@
 
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->oif(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->bvj(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
 
     move-result-object v1
 
-    if-nez v1, :cond_1b
+    if-nez v1, :cond_1c
 
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->bio()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->gck()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1013,20 +1028,20 @@
 
     check-cast v2, Landroid/os/PowerManager;
 
-    invoke-static {v1, v2}, Lcom/android/server/am/OnePlusHighPowerDetector;->bvj(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/os/PowerManager;)Landroid/os/PowerManager;
+    invoke-static {v1, v2}, Lcom/android/server/am/OnePlusHighPowerDetector;->ibl(Lcom/android/server/am/OnePlusHighPowerDetector;Landroid/os/PowerManager;)Landroid/os/PowerManager;
 
-    :cond_1b
+    :cond_1c
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->oif(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->bvj(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1e
+    if-eqz v1, :cond_1f
 
     iget-object v1, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->oif(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
+    invoke-static {v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->bvj(Lcom/android/server/am/OnePlusHighPowerDetector;)Landroid/os/PowerManager;
 
     move-result-object v1
 
@@ -1034,7 +1049,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1e
+    if-eqz v1, :cond_1f
 
     const-string v1, "OHPD"
 
@@ -1044,13 +1059,13 @@
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    sget v1, Lcom/android/server/am/OnePlusHighPowerDetector;->p1:I
+    sget v1, Lcom/android/server/am/OnePlusHighPowerDetector;->E1:I
 
-    invoke-static {v0, v12, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->ibl(Lcom/android/server/am/OnePlusHighPowerDetector;II)I
+    invoke-static {v0, v12, v1}, Lcom/android/server/am/OnePlusHighPowerDetector;->gwm(Lcom/android/server/am/OnePlusHighPowerDetector;II)I
 
     move-result v0
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1f
 
     invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->igw()Lcom/android/server/am/ActivityManagerService;
 
@@ -1059,7 +1074,7 @@
     monitor-enter v1
 
     :try_start_1
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
@@ -1067,7 +1082,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
@@ -1075,11 +1090,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/server/am/OnePlusHighPowerDetector;->y1:[I
+    sget-object v3, Lcom/android/server/am/OnePlusHighPowerDetector;->N1:[I
 
     aget v3, v3, v12
 
@@ -1100,14 +1115,14 @@
 
     throw v0
 
-    :cond_1c
+    :cond_1d
     const-string v3, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1e
+    if-eqz v2, :cond_1f
 
     const-string v2, "LightIdle_Status"
 
@@ -1115,9 +1130,9 @@
 
     move-result v1
 
-    sget-boolean v2, Lcom/android/server/am/OnePlusHighPowerDetector;->Q:Z
+    sget-boolean v2, Lcom/android/server/am/OnePlusHighPowerDetector;->V:Z
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1e
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1137,24 +1152,24 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1d
-    if-eqz v1, :cond_1e
+    :cond_1e
+    if-eqz v1, :cond_1f
 
     iget-object v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector$zta;->zta:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->vdb(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
+    invoke-static {v0}, Lcom/android/server/am/OnePlusHighPowerDetector;->obl(Lcom/android/server/am/OnePlusHighPowerDetector;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1f
 
-    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->ugm()Lcom/android/server/am/OnePlusHighPowerDetector$bio;
+    invoke-static {}, Lcom/android/server/am/OnePlusHighPowerDetector;->zgw()Lcom/android/server/am/OnePlusHighPowerDetector$igw;
 
     move-result-object v0
 
     invoke-virtual {v0, v6}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    :cond_1e
+    :cond_1f
     :goto_2
     return-void
 .end method

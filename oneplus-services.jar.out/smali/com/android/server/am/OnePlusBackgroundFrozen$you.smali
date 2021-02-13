@@ -91,7 +91,7 @@
 
     move-result-object p1
 
-    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -108,12 +108,12 @@
     :cond_1
     const-string p1, "detect pre-condition pkg installed, \'Both\' close Appboot & Background-freeze features"
 
-    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v5, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$you;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->O(Lcom/android/server/am/OnePlusBackgroundFrozen;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->P(Lcom/android/server/am/OnePlusBackgroundFrozen;)Landroid/content/Context;
 
     move-result-object p0
 
@@ -150,7 +150,7 @@
 
     move-result-object p2
 
-    invoke-static {v5, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v5, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

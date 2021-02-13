@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public onActivityEnter(Lcom/color/app/ColorAppEnterInfo;)V
+.method public onActivityEnter(Lcom/oplus/app/OplusAppEnterInfo;)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/wm/OPStaticBroadcastObserver;->DEBUG:Z
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public onActivityExit(Lcom/color/app/ColorAppExitInfo;)V
+.method public onActivityExit(Lcom/oplus/app/OplusAppExitInfo;)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/wm/OPStaticBroadcastObserver;->DEBUG:Z
@@ -156,7 +156,7 @@
     return-void
 .end method
 
-.method public onAppEnter(Lcom/color/app/ColorAppEnterInfo;)V
+.method public onAppEnter(Lcom/oplus/app/OplusAppEnterInfo;)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/wm/OPStaticBroadcastObserver;->DEBUG:Z
@@ -211,7 +211,7 @@
     return-void
 .end method
 
-.method public onAppExit(Lcom/color/app/ColorAppExitInfo;)V
+.method public onAppExit(Lcom/oplus/app/OplusAppExitInfo;)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/wm/OPStaticBroadcastObserver;->DEBUG:Z

@@ -58,6 +58,8 @@
 
 .field public static final veq:Ljava/lang/String; = "517-"
 
+.field public static final vju:Ljava/lang/String; = "523-"
+
 .field public static final wtn:I = 0x13
 
 .field public static final you:I = 0x0

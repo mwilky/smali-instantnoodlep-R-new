@@ -1,115 +1,48 @@
 .class Lcom/android/server/engineer/ssp$zta;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/engineer/ssp;->bio()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/engineer/ssp;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0x8
+    name = "zta"
 .end annotation
 
 
 # instance fields
-.field final synthetic zta:Lcom/android/server/engineer/ssp;
+.field public sis:Ljava/lang/String;
+
+.field public you:Ljava/lang/String;
+
+.field public zta:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/engineer/ssp;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/engineer/ssp$zta;->zta:Lcom/android/server/engineer/ssp;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput p1, p0, Lcom/android/server/engineer/ssp$zta;->zta:I
 
     return-void
 .end method
 
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcom/android/server/engineer/ssp;->zta()Z
+    iput p1, p0, Lcom/android/server/engineer/ssp$zta;->zta:I
 
-    move-result p1
+    iput-object p2, p0, Lcom/android/server/engineer/ssp$zta;->you:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    iput-object p3, p0, Lcom/android/server/engineer/ssp$zta;->sis:Ljava/lang/String;
 
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lcom/android/server/engineer/ssp$zta;->zta:Lcom/android/server/engineer/ssp;
-
-    invoke-virtual {v0}, Lcom/android/server/engineer/ssp;->rtg()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", onReceive intent = "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "RomUpdateHelper"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    :try_start_0
-    const-string p1, "ROM_UPDATE_CONFIG_LIST"
-
-    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lcom/android/server/engineer/ssp$zta;->zta:Lcom/android/server/engineer/ssp;
-
-    invoke-static {p2}, Lcom/android/server/engineer/ssp;->you(Lcom/android/server/engineer/ssp;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lcom/android/server/engineer/ssp$zta;->zta:Lcom/android/server/engineer/ssp;
-
-    invoke-virtual {p0}, Lcom/android/server/engineer/ssp;->ssp()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
-
-    :cond_1
-    :goto_0
     return-void
 .end method

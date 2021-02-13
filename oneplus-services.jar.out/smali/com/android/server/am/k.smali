@@ -1298,7 +1298,7 @@
 
     if-eqz p4, :cond_2
 
-    invoke-static {p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w2(I)Z
+    invoke-static {p5}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x2(I)Z
 
     move-result p1
 

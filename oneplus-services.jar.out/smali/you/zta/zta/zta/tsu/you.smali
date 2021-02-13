@@ -17,7 +17,17 @@
     .end annotation
 .end field
 
-.field private static cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper; = null
+.field private static final bvj:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy; = null
 
 .field private static final dma:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -49,7 +59,9 @@
     .end annotation
 .end field
 
-.field private static final kth:Ljava/util/Set;
+.field private static kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper; = null
+
+.field private static final oif:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -73,7 +85,7 @@
 
 .field public static final sis:Ljava/lang/String; = "carrier_pre_load"
 
-.field private static ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy; = null
+.field private static final ssp:Ljava/lang/String; = "com.tmobile.echolocate"
 
 .field public static final tsu:Ljava/lang/String; = "carrier_sprint_first_boot"
 
@@ -104,7 +116,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 10
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -114,19 +126,19 @@
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    sput-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Ljava/util/Set;
+    sput-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
 
     const-string v1, "android.permission.CALL_PHONE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
 
     const-string v2, "android.permission.READ_PHONE_STATE"
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
 
     const-string v3, "android.permission.RECEIVE_SMS"
 
@@ -136,67 +148,59 @@
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    sput-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sput-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v4, "android.permission.PROCESS_OUTGOING_CALLS"
 
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v5, "android.permission.READ_CALL_LOG"
 
     invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v6, "android.permission.USE_SIP"
 
     invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v6, "android.permission.WRITE_CALL_LOG"
 
     invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v6, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v7, "android.permission.ACCESS_FINE_LOCATION"
 
     invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     const-string v8, "android.permission.READ_SMS"
 
     invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Landroid/util/ArraySet;
-
-    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
-
-    sput-object v0, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -216,7 +220,17 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
+
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
+
+    const-string v9, "android.permission.ACCESS_BACKGROUND_LOCATION"
+
+    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -225,18 +239,6 @@
     sput-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
-
-    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -248,49 +250,7 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    const-string v4, "android.permission.RECEIVE_MMS"
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    const-string v4, "android.permission.SEND_SMS"
-
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    const-string v5, "android.permission.READ_CONTACTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    const-string v5, "android.permission.WRITE_CONTACTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
-
-    const-string v5, "android.permission.GET_ACCOUNTS"
-
-    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -306,13 +266,87 @@
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
 
-    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    sput-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
 
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    const-string v4, "android.permission.RECEIVE_MMS"
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    const-string v4, "android.permission.SEND_SMS"
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    const-string v5, "android.permission.READ_CONTACTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    const-string v5, "android.permission.WRITE_CONTACTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
+
+    const-string v5, "android.permission.GET_ACCOUNTS"
+
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    sput-object v0, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
+
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
+
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
 
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -489,9 +523,9 @@
 .method public grantCarrierPackageDefPermissions(I)V
     .locals 6
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -507,7 +541,7 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->kth:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
 
     const/4 v5, 0x0
 
@@ -515,9 +549,9 @@
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -531,15 +565,15 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->bio:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -553,15 +587,15 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->wtn:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -575,15 +609,29 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->igw:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->wtn:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+
+    new-array v1, v2, [Ljava/util/Set;
+
+    sget-object v3, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
+
+    aput-object v3, v1, v5
+
+    const-string v3, "com.tmobile.echolocate"
+
+    invoke-virtual {p0, v0, v3, p1, v1}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
+
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -597,15 +645,15 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->wtn:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -619,15 +667,15 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->dma:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -641,15 +689,15 @@
 
     new-array v3, v2, [Ljava/util/Set;
 
-    sget-object v4, Lyou/zta/zta/zta/tsu/you;->gck:Ljava/util/Set;
+    sget-object v4, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
 
     aput-object v4, v3, v5
 
     invoke-virtual {p0, v0, v1, p1, v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantSystemNonFixedPermissions(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;Ljava/lang/String;I[Ljava/util/Set;)V
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -663,7 +711,7 @@
 
     new-array v2, v2, [Ljava/util/Set;
 
-    sget-object v3, Lyou/zta/zta/zta/tsu/you;->ywr:Ljava/util/Set;
+    sget-object v3, Lyou/zta/zta/zta/tsu/you;->oif:Ljava/util/Set;
 
     aput-object v3, v2, v5
 
@@ -691,7 +739,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
     if-eqz v0, :cond_2
 
@@ -936,9 +984,9 @@
 
     if-eqz p0, :cond_3
 
-    sget-object v0, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sget-object v0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sget-object p0, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sget-object p0, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     const/4 v4, 0x1
 
@@ -946,7 +994,7 @@
 
     new-array v6, v3, [Ljava/util/Set;
 
-    sget-object p1, Lyou/zta/zta/zta/tsu/you;->qbh:Ljava/util/Set;
+    sget-object p1, Lyou/zta/zta/zta/tsu/you;->bvj:Ljava/util/Set;
 
     aput-object p1, v6, v1
 
@@ -963,9 +1011,9 @@
 .method public initDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;)V
     .locals 0
 
-    sput-object p1, Lyou/zta/zta/zta/tsu/you;->ssp:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    sput-object p1, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    sput-object p2, Lyou/zta/zta/zta/tsu/you;->cno:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
+    sput-object p2, Lyou/zta/zta/zta/tsu/you;->kth:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy$PackageManagerWrapper;
 
     return-void
 .end method

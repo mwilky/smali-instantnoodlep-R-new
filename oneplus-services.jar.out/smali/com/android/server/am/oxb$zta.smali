@@ -1409,7 +1409,7 @@
 
     iget p0, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y2(I)Z
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
 
     move-result p0
 
@@ -1449,7 +1449,7 @@
     :cond_2
     iget p0, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z2(I)Z
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->A2(I)Z
 
     move-result p0
 

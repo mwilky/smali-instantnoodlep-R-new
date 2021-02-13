@@ -54,7 +54,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$wtn;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->qeg(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$wtn;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->qeg(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$wtn;->zta:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->qeg(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->ivd(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p0
 

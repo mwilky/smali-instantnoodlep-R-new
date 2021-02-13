@@ -47,7 +47,7 @@
 
     const-string v0, "IComunication deathRecipient!"
 
-    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     return-void
 .end method

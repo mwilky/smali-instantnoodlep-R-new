@@ -30,7 +30,7 @@
 .end method
 
 .method private bio(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 5
 
     const-string v0, "uid"
 
@@ -48,17 +48,59 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
+    move-result v2
+
+    const-string v3, "from"
+
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
     move-result p1
 
+    iget-object v3, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
+
+    invoke-static {v3}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
+
+    move-result-object v3
+
+    sget-object v4, Lcom/android/server/am/AppRecordManager$ListenerType;->kth:Lcom/android/server/am/AppRecordManager$ListenerType;
+
+    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/server/am/qbh;
+
+    invoke-interface {v4, v0, v1, v2}, Lcom/android/server/am/qbh;->qbh(ILjava/lang/String;Z)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object p0, p0, Lcom/android/server/am/wtn$zta;->zta:Lcom/android/server/am/wtn;
 
     invoke-static {p0}, Lcom/android/server/am/wtn;->sis(Lcom/android/server/am/wtn;)Ljava/util/HashMap;
 
     move-result-object p0
 
-    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->kth:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v3, Lcom/android/server/am/AppRecordManager$ListenerType;->kth:Lcom/android/server/am/AppRecordManager$ListenerType;
 
-    invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -68,24 +110,24 @@
 
     move-result-object p0
 
-    :goto_0
+    :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/android/server/am/qbh;
+    check-cast v3, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, v1, p1}, Lcom/android/server/am/qbh;->ywr(ILjava/lang/String;Z)V
+    invoke-interface {v3, v0, v1, v2, p1}, Lcom/android/server/am/qbh;->wtn(ILjava/lang/String;ZZ)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -486,7 +528,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, v1, p1}, Lcom/android/server/am/qbh;->wtn(ILjava/lang/String;Z)V
+    invoke-interface {v2, v0, v1, p1}, Lcom/android/server/am/qbh;->gck(ILjava/lang/String;Z)V
 
     goto :goto_0
 
@@ -867,7 +909,7 @@
 
     check-cast v3, Lcom/android/server/am/qbh;
 
-    invoke-interface {v3, v0, v1, p1}, Lcom/android/server/am/qbh;->oif(IIZ)V
+    invoke-interface {v3, v0, v1, p1}, Lcom/android/server/am/qbh;->bvj(IIZ)V
 
     goto :goto_0
 
@@ -1039,7 +1081,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->gck(IZ)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->dma(IZ)V
 
     goto :goto_0
 
@@ -1262,7 +1304,7 @@
 
     check-cast v3, Lcom/android/server/am/qbh;
 
-    invoke-interface {v3, v0, p1, v1}, Lcom/android/server/am/qbh;->dma(ILjava/lang/String;Z)V
+    invoke-interface {v3, v0, p1, v1}, Lcom/android/server/am/qbh;->ywr(ILjava/lang/String;Z)V
 
     goto :goto_0
 
@@ -1736,7 +1778,7 @@
 
     check-cast v2, Lcom/android/server/am/qbh;
 
-    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->qbh(IZ)V
+    invoke-interface {v2, v0, p1}, Lcom/android/server/am/qbh;->oif(IZ)V
 
     goto :goto_0
 

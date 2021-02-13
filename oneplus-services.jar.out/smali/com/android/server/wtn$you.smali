@@ -54,7 +54,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {v0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->c(Lcom/android/server/wtn;)Z
+    invoke-static {v0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Z
 
     move-result v0
 
@@ -93,7 +93,7 @@
 
     iget-object v6, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v6}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)J
+    invoke-static {v6}, Lcom/android/server/wtn;->f(Lcom/android/server/wtn;)J
 
     move-result-wide v6
 
@@ -129,13 +129,13 @@
     move-result-object v5
 
     :goto_0
-    invoke-static {v4, v5, v0}, Lcom/android/server/wtn;->g(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/android/server/wtn;->h(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {v0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5, v0}, Lcom/android/server/wtn;->g(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/android/server/wtn;->h(Lcom/android/server/wtn;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
@@ -166,7 +166,7 @@
 
     move-result-wide v4
 
-    invoke-static {v0, v4, v5}, Lcom/android/server/wtn;->f(Lcom/android/server/wtn;J)J
+    invoke-static {v0, v4, v5}, Lcom/android/server/wtn;->g(Lcom/android/server/wtn;J)J
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -174,7 +174,7 @@
 
     iget-object v4, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v4}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)J
+    invoke-static {v4}, Lcom/android/server/wtn;->f(Lcom/android/server/wtn;)J
 
     move-result-wide v4
 
@@ -182,7 +182,7 @@
 
     iget-object v4, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v4}, Lcom/android/server/wtn;->ivd(Lcom/android/server/wtn;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/server/wtn;->a(Lcom/android/server/wtn;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -200,7 +200,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {v0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object v0
 
@@ -216,9 +216,13 @@
 
     move-result-wide v4
 
-    const-wide/32 v6, 0x36ee80
+    iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    sub-long/2addr v4, v6
+    invoke-static {v0}, Lcom/android/server/wtn;->rtg(Lcom/android/server/wtn;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
@@ -230,7 +234,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)J
+    invoke-static {v0}, Lcom/android/server/wtn;->f(Lcom/android/server/wtn;)J
 
     move-result-wide v6
 
@@ -240,7 +244,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0, v2}, Lcom/android/server/wtn;->ssp(Lcom/android/server/wtn;Z)Z
+    invoke-static {v0, v2}, Lcom/android/server/wtn;->cno(Lcom/android/server/wtn;Z)Z
 
     goto :goto_2
 
@@ -391,7 +395,7 @@
 
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p0
 
@@ -406,7 +410,7 @@
     :cond_8
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p0
 
@@ -435,7 +439,7 @@
 
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p0
 
@@ -448,7 +452,7 @@
     :cond_a
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p0
 
@@ -461,7 +465,7 @@
     :cond_b
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p0
 
@@ -499,7 +503,7 @@
     move p1, v2
 
     :goto_7
-    invoke-static {v0, p1}, Lcom/android/server/wtn;->kth(Lcom/android/server/wtn;Z)Z
+    invoke-static {v0, p1}, Lcom/android/server/wtn;->bio(Lcom/android/server/wtn;Z)Z
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
@@ -537,7 +541,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->bio(Lcom/android/server/wtn;)I
+    invoke-static {v0}, Lcom/android/server/wtn;->igw(Lcom/android/server/wtn;)I
 
     move-result v0
 
@@ -569,11 +573,11 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0, p1}, Lcom/android/server/wtn;->igw(Lcom/android/server/wtn;I)I
+    invoke-static {v0, p1}, Lcom/android/server/wtn;->wtn(Lcom/android/server/wtn;I)I
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {v0}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object v0
 
@@ -583,7 +587,7 @@
 
     iget-object v4, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v4}, Lcom/android/server/wtn;->cno(Lcom/android/server/wtn;)Z
+    invoke-static {v4}, Lcom/android/server/wtn;->kth(Lcom/android/server/wtn;)Z
 
     move-result v4
 
@@ -600,7 +604,7 @@
     :cond_f
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->c(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -614,7 +618,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/server/wtn;->gck(Lcom/android/server/wtn;Z)Z
+    invoke-static {p1, v0}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;Z)Z
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
@@ -624,11 +628,11 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;Z)Z
+    invoke-static {p1, v0}, Lcom/android/server/wtn;->qbh(Lcom/android/server/wtn;Z)Z
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->wtn(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->gck(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -640,7 +644,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->a(Lcom/android/server/wtn;)I
+    invoke-static {p1}, Lcom/android/server/wtn;->b(Lcom/android/server/wtn;)I
 
     move-result p1
 
@@ -648,7 +652,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->wtn(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->gck(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -656,7 +660,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p1}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p1
 
@@ -671,7 +675,7 @@
     :cond_10
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p1}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p1
 
@@ -685,7 +689,7 @@
     :cond_11
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->cno(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->kth(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -693,7 +697,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -701,7 +705,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->a(Lcom/android/server/wtn;)I
+    invoke-static {p1}, Lcom/android/server/wtn;->b(Lcom/android/server/wtn;)I
 
     move-result p1
 
@@ -709,7 +713,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p1}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p1
 
@@ -722,13 +726,13 @@
     :cond_12
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;)Z
 
     move-result p1
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->qbh(Lcom/android/server/wtn;)Z
+    invoke-static {v0}, Lcom/android/server/wtn;->oif(Lcom/android/server/wtn;)Z
 
     move-result v0
 
@@ -736,7 +740,7 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -744,11 +748,11 @@
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->gwm(Lcom/android/server/wtn;)I
+    invoke-static {p1}, Lcom/android/server/wtn;->ugm(Lcom/android/server/wtn;)I
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->d(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
+    invoke-static {p1}, Lcom/android/server/wtn;->e(Lcom/android/server/wtn;)Lcom/android/server/wtn$tsu;
 
     move-result-object p1
 
@@ -769,7 +773,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->ugm(Lcom/android/server/wtn;)Z
+    invoke-static {v0}, Lcom/android/server/wtn;->zgw(Lcom/android/server/wtn;)Z
 
     move-result v0
 
@@ -777,12 +781,12 @@
 
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->cjf(Lcom/android/server/wtn;)I
+    invoke-static {v0}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
 
     :cond_14
     iget-object v0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {v0}, Lcom/android/server/wtn;->cno(Lcom/android/server/wtn;)Z
+    invoke-static {v0}, Lcom/android/server/wtn;->kth(Lcom/android/server/wtn;)Z
 
     move-result v0
 
@@ -798,7 +802,7 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
+    invoke-static {p2}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;)I
 
     move-result p2
 
@@ -806,14 +810,14 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2, v7}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;I)I
+    invoke-static {p2, v7}, Lcom/android/server/wtn;->hmo(Lcom/android/server/wtn;I)I
 
     goto :goto_9
 
     :cond_15
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;)Z
+    invoke-static {p2}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;)Z
 
     move-result p2
 
@@ -821,7 +825,7 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
+    invoke-static {p2}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;)I
 
     move-result p2
 
@@ -829,7 +833,7 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
+    invoke-static {p2}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;)I
 
     move-result p2
 
@@ -837,14 +841,14 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2, v2}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;I)I
+    invoke-static {p2, v2}, Lcom/android/server/wtn;->hmo(Lcom/android/server/wtn;I)I
 
     goto :goto_9
 
     :cond_16
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2}, Lcom/android/server/wtn;->ear(Lcom/android/server/wtn;)I
+    invoke-static {p2}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;)I
 
     move-result p2
 
@@ -852,17 +856,17 @@
 
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2, v3}, Lcom/android/server/wtn;->ire(Lcom/android/server/wtn;I)I
+    invoke-static {p2, v3}, Lcom/android/server/wtn;->hmo(Lcom/android/server/wtn;I)I
 
     :cond_17
     :goto_9
     iget-object p2, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p2, p1}, Lcom/android/server/wtn;->vdb(Lcom/android/server/wtn;Z)Z
+    invoke-static {p2, p1}, Lcom/android/server/wtn;->obl(Lcom/android/server/wtn;Z)Z
 
     iget-object p1, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p1}, Lcom/android/server/wtn;->wtn(Lcom/android/server/wtn;)Z
+    invoke-static {p1}, Lcom/android/server/wtn;->gck(Lcom/android/server/wtn;)Z
 
     move-result p1
 
@@ -870,17 +874,15 @@
 
     iget-object p0, p0, Lcom/android/server/wtn$you;->you:Lcom/android/server/wtn;
 
-    invoke-static {p0}, Lcom/android/server/wtn;->dma(Lcom/android/server/wtn;)Z
+    invoke-static {p0}, Lcom/android/server/wtn;->ywr(Lcom/android/server/wtn;)Z
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/server/wtn;->oif(Lcom/android/server/wtn;Z)Z
+    invoke-static {p0, p1}, Lcom/android/server/wtn;->bvj(Lcom/android/server/wtn;Z)Z
 
     :cond_18
     :goto_a
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

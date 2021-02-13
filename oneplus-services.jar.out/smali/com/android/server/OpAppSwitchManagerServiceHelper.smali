@@ -321,28 +321,28 @@
     return-void
 .end method
 
-.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 0
 
     invoke-static {}, Lcom/android/server/wm/OPAppSwitchManagerService;->getInstance()Lcom/android/server/wm/OPAppSwitchManagerService;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchManagerService;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/OPAppSwitchManagerService;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 0
 
     invoke-static {}, Lcom/android/server/wm/OPAppSwitchManagerService;->getInstance()Lcom/android/server/wm/OPAppSwitchManagerService;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/OPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/OPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result p0
 

@@ -315,7 +315,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/wtn;->cjf(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/wtn;->ear(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     return-void
 .end method
@@ -515,7 +515,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/wtn;->oxb(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/wtn;->cjf(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/qbh;)V
 
     return-void
 .end method

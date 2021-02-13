@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 12
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q()Lcom/android/server/am/OnePlusBackgroundFrozen;
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r()Lcom/android/server/am/OnePlusBackgroundFrozen;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     const-string v0, ""
 
@@ -114,7 +114,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     const-string p1, "dump"
 
@@ -126,7 +126,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->X(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->Y(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -141,7 +141,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->i0(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->j0(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -156,7 +156,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->p0(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashMap;
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r0(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -175,7 +175,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->p0(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashMap;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r0(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashMap;
 
     move-result-object p0
 
@@ -185,7 +185,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     monitor-exit p1
 
@@ -228,7 +228,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -248,7 +248,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -268,7 +268,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -290,7 +290,7 @@
 
     invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->tsu(Z)Z
 
-    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->vju()I
+    invoke-static {}, Lcom/android/server/am/OnePlusBackgroundFrozen;->bud()I
 
     goto/16 :goto_3
 
@@ -323,7 +323,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(ILjava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->z(ILjava/lang/String;)V
 
     if-lt p0, v1, :cond_1b
 
@@ -331,7 +331,7 @@
 
     if-gt p0, p1, :cond_1b
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->les(I)I
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->irq(I)I
 
     const-string p1, "persist.sys.opbf.debug_loglevel"
 
@@ -366,7 +366,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->irq(Lcom/android/server/am/OnePlusBackgroundFrozen;IZ)V
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->vdw(Lcom/android/server/am/OnePlusBackgroundFrozen;IZ)V
 
     goto/16 :goto_3
 
@@ -381,7 +381,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->vdw(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -396,7 +396,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->qeg(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->ivd(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -420,7 +420,7 @@
     sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     :goto_1
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->b(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/Boolean;Ljava/lang/String;)V
+    invoke-static {p0, p2, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->c(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/Boolean;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -447,7 +447,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->d(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
+    invoke-static {v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->e(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
 
     move-result-object v1
 
@@ -460,7 +460,7 @@
     :try_start_3
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->d(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->e(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
 
     move-result-object p0
 
@@ -471,7 +471,7 @@
     :cond_b
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->d(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->e(Lcom/android/server/am/OnePlusBackgroundFrozen;)Ljava/util/HashSet;
 
     move-result-object p0
 
@@ -524,7 +524,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->f(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->g(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -539,7 +539,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->g(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->h(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -592,7 +592,7 @@
 
     iget-object v4, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static/range {v4 .. v11}, Lcom/android/server/am/OnePlusBackgroundFrozen;->h(Lcom/android/server/am/OnePlusBackgroundFrozen;IJJJ)V
+    invoke-static/range {v4 .. v11}, Lcom/android/server/am/OnePlusBackgroundFrozen;->i(Lcom/android/server/am/OnePlusBackgroundFrozen;IJJJ)V
 
     goto/16 :goto_3
 
@@ -607,7 +607,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->i(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->j(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -628,7 +628,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->j(Lcom/android/server/am/OnePlusBackgroundFrozen;I)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->k(Lcom/android/server/am/OnePlusBackgroundFrozen;I)V
 
     goto/16 :goto_3
 
@@ -665,7 +665,7 @@
 
     const-string v1, "debug"
 
-    invoke-static {p0, p1, p2, v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->k(Lcom/android/server/am/OnePlusBackgroundFrozen;IZLjava/lang/String;)V
+    invoke-static {p0, p1, p2, v1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l(Lcom/android/server/am/OnePlusBackgroundFrozen;IZLjava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -680,7 +680,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->l(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->m(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
 
     goto/16 :goto_3
 
@@ -721,7 +721,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, p1, v2, v3, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->m(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;IZZ)I
+    invoke-static {p0, p1, v2, v3, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->n(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;IZZ)I
 
     goto/16 :goto_3
 
@@ -852,7 +852,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->n(Lcom/android/server/am/OnePlusBackgroundFrozen;)Lcom/android/server/am/OnePlusBackgroundFrozen$bio;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->o(Lcom/android/server/am/OnePlusBackgroundFrozen;)Lcom/android/server/am/OnePlusBackgroundFrozen$bio;
 
     move-result-object p0
 
@@ -877,7 +877,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->p(Lcom/android/server/am/OnePlusBackgroundFrozen;I)I
+    invoke-static {p1, p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->q(Lcom/android/server/am/OnePlusBackgroundFrozen;I)I
 
     const-string p1, "OPBF"
 
@@ -891,7 +891,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->o(Lcom/android/server/am/OnePlusBackgroundFrozen;)I
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->p(Lcom/android/server/am/OnePlusBackgroundFrozen;)I
 
     move-result p0
 
@@ -924,7 +924,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->r(Lcom/android/server/am/OnePlusBackgroundFrozen;)Lcom/android/server/am/ActivityManagerService;
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->s(Lcom/android/server/am/OnePlusBackgroundFrozen;)Lcom/android/server/am/ActivityManagerService;
 
     move-result-object p0
 
@@ -973,13 +973,13 @@
 
     move-result p2
 
-    invoke-static {p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->t(Z)Z
+    invoke-static {p2}, Lcom/android/server/am/OnePlusBackgroundFrozen;->u(Z)Z
 
-    invoke-static {v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->v(Z)Z
+    invoke-static {v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w(Z)Z
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x(Lcom/android/server/am/OnePlusBackgroundFrozen;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -992,7 +992,7 @@
 
     if-eqz p1, :cond_1b
 
-    invoke-static {v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->t(Z)Z
+    invoke-static {v3}, Lcom/android/server/am/OnePlusBackgroundFrozen;->u(Z)Z
 
     const-string p1, "force"
 
@@ -1000,11 +1000,11 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->v(Z)Z
+    invoke-static {p1}, Lcom/android/server/am/OnePlusBackgroundFrozen;->w(Z)Z
 
     iget-object p0, p0, Lcom/android/server/am/OnePlusBackgroundFrozen$sis;->zta:Lcom/android/server/am/OnePlusBackgroundFrozen;
 
-    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->x(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
+    invoke-static {p0}, Lcom/android/server/am/OnePlusBackgroundFrozen;->y(Lcom/android/server/am/OnePlusBackgroundFrozen;)V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
