@@ -128,13 +128,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02ee
+    const v1, 0x7f0a02ef
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const v2, 0x7f120089
+    const v2, 0x7f12007a
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

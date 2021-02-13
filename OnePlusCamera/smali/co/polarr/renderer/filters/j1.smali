@@ -15,7 +15,7 @@
 
     invoke-direct {p0, p1, v1, p2}, Lco/polarr/renderer/filters/o1/c;-><init>(Landroid/content/res/Resources;Ljava/lang/String;Lco/polarr/renderer/entities/Context;)V
 
-    const-string/jumbo p1, "tint"
+    const-string p1, "tint"
 
     filled-new-array {v0, p1}, [Ljava/lang/String;
 

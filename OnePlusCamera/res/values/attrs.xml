@@ -565,6 +565,7 @@
         <enum name="mini" value="1" />
         <enum name="normal" value="0" />
     </attr>
+    <attr name="faceFrameCornerRadius" format="dimension" />
     <attr name="faceFrameThickness" format="dimension" />
     <attr name="fastScrollEnabled" format="boolean" />
     <attr name="fastScrollHorizontalThumbDrawable" format="reference" />

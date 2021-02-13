@@ -96,6 +96,12 @@
     <string name="filter_landscape">Vaakatila</string>
     <string name="filter_mono">Yksiv.</string>
     <string name="filter_night">Yö</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Ei mitään</string>
     <string name="filter_pop">Eloisa</string>
     <string name="filter_portrait">Pystykuva</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Ei tekstinsyöttöä. Nimeä ei voida tallentaa vesileimaan.</string>
     <string name="settings_watermark_summary">Takakameralla otettuihin kuviin lisätään vesileima; tämä kattaa valokuva-, muotokuva-, Pro- ja yönäkymätilat</string>
     <string name="settings_watermark_summary_8250">Takakameralla otettuihin kuviin lisätään vesileima; tämä kattaa valokuva-, muotokuva-, Pro- ja yönäkymätilat</string>
+    <string name="settings_watermark_timestamp">Aika</string>
     <string name="settings_watermark_title">Kuvattu OnePlus-vesileimalla</string>
     <string name="settings_wide_lens_distortion_correction">Erittäin leveän linssin korjaus</string>
     <string name="show_kill_apps_processing_dialog">Suljetaan</string>

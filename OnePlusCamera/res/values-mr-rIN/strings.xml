@@ -67,6 +67,12 @@
     <string name="filter_landscape">लँडस्‍केप</string>
     <string name="filter_mono">मोनो</string>
     <string name="filter_night">रात्र</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">कोणताही नाही</string>
     <string name="filter_pop">स्पष्ट</string>
     <string name="filter_portrait">पोर्ट्रेट</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">मजकुराचे इनपुट नाही, वॉटरमार्क मध्ये नाव जतन करणे शक्य नाही.</string>
     <string name="settings_watermark_summary">फोटो, पोर्ट्रेट, प्रो आणि नाइटस्केप मोड समाविष्टित वॉटरमार्क हे मागील कॅमेऱ्याने घेतलेल्या फोटोंसाठी लागू होतील</string>
     <string name="settings_watermark_summary_8250">फोटो, पोर्ट्रेट, प्रो आणि नाइटस्केप मोड समाविष्टित वॉटरमार्क हे मागील कॅमेऱ्याने घेतलेल्या फोटोंसाठी लागू होतील</string>
+    <string name="settings_watermark_timestamp">वेळ</string>
     <string name="settings_watermark_title">OnePlus वॉटरमार्कवर शॉट केलेले</string>
     <string name="settings_wide_lens_distortion_correction">अल्ट्रा वाइड लेन्स सुधार</string>
     <string name="show_kill_apps_processing_dialog">क्लिअरिंग</string>

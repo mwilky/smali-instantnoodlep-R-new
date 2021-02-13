@@ -120,8 +120,7 @@
         0x7f040033
         0x7f0400ff
         0x7f04016a
-        0x7f040219
-        0x7f0402d2
+        0x7f04021a
         0x7f0402d3
         0x7f0402d4
         0x7f0402d5
@@ -155,8 +154,9 @@
         0x7f0402f1
         0x7f0402f2
         0x7f0402f3
-        0x7f04043b
+        0x7f0402f4
         0x7f04043c
+        0x7f04043d
     .end array-data
 .end method
 

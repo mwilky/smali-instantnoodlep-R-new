@@ -548,11 +548,11 @@
     :goto_3
     sget-object v5, Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;->FRONT:Lcom/oneplus/camera/next/hardware/CameraInfo$LensFacing;
 
-    const v6, 0x7f1200e6
+    const v6, 0x7f1200da
 
     const/4 v7, 0x0
 
-    const v8, 0x7f1200e5
+    const v8, 0x7f1200d9
 
     if-ne v4, v5, :cond_6
 
@@ -564,7 +564,7 @@
 
     if-nez v4, :cond_6
 
-    const v6, 0x7f120149
+    const v6, 0x7f12013d
 
     goto/16 :goto_11
 
@@ -601,7 +601,7 @@
 
     if-eqz v4, :cond_8
 
-    const v6, 0x7f1200d5
+    const v6, 0x7f1200c9
 
     goto/16 :goto_11
 
@@ -640,7 +640,7 @@
 
     if-eqz v4, :cond_a
 
-    const v6, 0x7f1201f8
+    const v6, 0x7f1201ee
 
     goto/16 :goto_11
 
@@ -679,7 +679,7 @@
 
     if-eqz v4, :cond_c
 
-    const v6, 0x7f1201fb
+    const v6, 0x7f1201f1
 
     goto/16 :goto_11
 
@@ -724,7 +724,7 @@
 
     if-ne v4, v5, :cond_f
 
-    const v6, 0x7f120148
+    const v6, 0x7f12013c
 
     goto/16 :goto_11
 

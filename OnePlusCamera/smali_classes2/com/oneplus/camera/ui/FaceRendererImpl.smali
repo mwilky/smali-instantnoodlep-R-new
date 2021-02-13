@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFaceRendererImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,372:1\n858#2:373\n858#2:374\n858#2:375\n12#3,3:376\n12#3,3:379\n12#3,3:382\n*E\n*S KotlinDebug\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n*L\n209#1:373\n212#1:374\n215#1:375\n308#1,3:376\n312#1,3:379\n315#1,3:382\n*E\n"
+    value = "SMAP\nFaceRendererImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,399:1\n858#2:400\n858#2:401\n858#2:402\n12#3,3:403\n12#3,3:406\n12#3,3:409\n*E\n*S KotlinDebug\n*F\n+ 1 FaceRendererImpl.kt\ncom/oneplus/camera/ui/FaceRendererImpl\n*L\n235#1:400\n238#1:401\n241#1:402\n334#1,3:403\n338#1,3:406\n341#1,3:409\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -27,7 +27,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00c1\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000c*\u0001\t\u0018\u0000 I2\u00020\u00012\u00020\u0002:\u0004HIJKB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u0010/\u001a\u000200H\u0003J\u0008\u00101\u001a\u000200H\u0003J\u0010\u00102\u001a\u0002032\u0006\u00104\u001a\u000205H\u0017J \u00106\u001a\u0002002\u0006\u00107\u001a\u0002082\u0006\u00109\u001a\u00020\"2\u0006\u0010:\u001a\u00020\u001aH\u0003J\u0014\u0010;\u001a\u0002002\n\u0010<\u001a\u00060\u000fR\u00020\u0000H\u0003J\u0010\u0010=\u001a\u00020>2\u0006\u0010?\u001a\u00020@H\u0015J\u0010\u0010A\u001a\u0002002\u0006\u0010?\u001a\u00020@H\u0015J\u0016\u0010B\u001a\u0002002\u000c\u0010C\u001a\u0008\u0012\u0004\u0012\u00020\u00170\u0016H\u0003J\u0008\u0010D\u001a\u000200H\u0015J\u0016\u0010E\u001a\u0002002\u000c\u0010C\u001a\u0008\u0012\u0004\u0012\u00020\u001e0\u0016H\u0003J\u0018\u0010F\u001a\u0002002\u0006\u00107\u001a\u0002082\u0006\u0010G\u001a\u00020\"H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\nR\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\r\u001a\u000c\u0012\u0008\u0012\u00060\u000fR\u00020\u00000\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0014\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00170\u00160\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u001a0\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001d\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u001e0\u00160\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001f\u001a\u0004\u0018\u00010 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\"X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010%\u001a\u001e\u0012\u0004\u0012\u00020\'\u0012\u0004\u0012\u00020\u001a0&j\u000e\u0012\u0004\u0012\u00020\'\u0012\u0004\u0012\u00020\u001a`(X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010)\u001a\u0008\u0012\u0004\u0012\u00020\u001a0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010*\u001a\u0012\u0012\u0004\u0012\u00020\u001a0+j\u0008\u0012\u0004\u0012\u00020\u001a`,X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010-\u001a\u0004\u0018\u00010.X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006L"
+        "\u0000\u00c7\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000c*\u0001\t\u0018\u0000 K2\u00020\u00012\u00020\u0002:\u0004JKLMB\u000f\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0008\u00101\u001a\u000202H\u0003J\u0008\u00103\u001a\u000202H\u0003J\u0010\u00104\u001a\u0002052\u0006\u00106\u001a\u000207H\u0017J \u00108\u001a\u0002022\u0006\u00109\u001a\u00020:2\u0006\u0010;\u001a\u00020$2\u0006\u0010<\u001a\u00020\u001cH\u0003J\u0014\u0010=\u001a\u0002022\n\u0010>\u001a\u00060\u000fR\u00020\u0000H\u0003J\u0010\u0010?\u001a\u00020@2\u0006\u0010A\u001a\u00020BH\u0015J\u0010\u0010C\u001a\u0002022\u0006\u0010A\u001a\u00020BH\u0015J\u0016\u0010D\u001a\u0002022\u000c\u0010E\u001a\u0008\u0012\u0004\u0012\u00020\u00190\u0018H\u0003J\u0008\u0010F\u001a\u000202H\u0015J\u0016\u0010G\u001a\u0002022\u000c\u0010E\u001a\u0008\u0012\u0004\u0012\u00020 0\u0018H\u0003J\u0018\u0010H\u001a\u0002022\u0006\u00109\u001a\u00020:2\u0006\u0010I\u001a\u00020$H\u0003R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\nR\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u000cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0018\u0010\r\u001a\u000c\u0012\u0008\u0012\u00060\u000fR\u00020\u00000\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0016\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00190\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u001bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001f\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020 0\u00180\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020&X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\'\u001a\u001e\u0012\u0004\u0012\u00020)\u0012\u0004\u0012\u00020\u001c0(j\u000e\u0012\u0004\u0012\u00020)\u0012\u0004\u0012\u00020\u001c`*X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010+\u001a\u0008\u0012\u0004\u0012\u00020\u001c0\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010,\u001a\u0012\u0012\u0004\u0012\u00020\u001c0-j\u0008\u0012\u0004\u0012\u00020\u001c`.X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010/\u001a\u0004\u0018\u000100X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006N"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/FaceRendererImpl;",
@@ -48,6 +48,8 @@
         "Lcom/oneplus/camera/ui/FaceRendererImpl$DisableRendererHandle;",
         "faceDetectionCamera",
         "Lcom/oneplus/camera/next/hardware/FaceDetectionCamera;",
+        "faceFrameCornerRadius",
+        "",
         "faceFramePaint",
         "Landroid/graphics/Paint;",
         "facesChangedCB",
@@ -120,6 +122,8 @@
 # static fields
 .field public static final Companion:Lcom/oneplus/camera/ui/FaceRendererImpl$Companion;
 
+.field private static final FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_FACE_FRAME_TIMEOUT:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_FACE_SIZE_SCALE:Lcom/oneplus/util/Feature;
@@ -143,6 +147,8 @@
 .end field
 
 .field private faceDetectionCamera:Lcom/oneplus/camera/next/hardware/FaceDetectionCamera;
+
+.field private faceFrameCornerRadius:F
 
 .field private final faceFramePaint:Landroid/graphics/Paint;
 
@@ -241,6 +247,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_TIMEOUT:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "FaceRenderer.FaceFrameExtension.Top"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
 
     sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
@@ -616,7 +632,7 @@
 .end method
 
 .method private final drawFace(Landroid/graphics/Canvas;Landroid/graphics/Rect;Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;)V
-    .locals 9
+    .locals 11
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -646,13 +662,13 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->viewfinder:Lcom/oneplus/camera/ui/Viewfinder;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_14
 
     invoke-virtual {p3}, Lcom/oneplus/camera/ui/FaceRendererImpl$TrackingFace;->getFace()Lcom/oneplus/camera/next/hardware/FaceDetectionCamera$Face;
 
     move-result-object p3
 
-    if-eqz p3, :cond_a
+    if-eqz p3, :cond_14
 
     iget-object v2, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
 
@@ -677,9 +693,15 @@
 
     invoke-virtual {p3, v3, v4}, Lcom/oneplus/util/Feature;->getDouble(D)D
 
+    move-result-wide v5
+
+    sget-object p3, Lcom/oneplus/camera/ui/FaceRendererImpl;->FEATURE_FACE_FRAME_EXTENSION_TOP:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {p3, v3, v4}, Lcom/oneplus/util/Feature;->getDouble(D)D
+
     move-result-wide v3
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->isInfinite(D)Z
+    invoke-static {v5, v6}, Ljava/lang/Double;->isInfinite(D)Z
 
     move-result p3
 
@@ -687,23 +709,25 @@
 
     if-nez p3, :cond_3
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
+    invoke-static {v5, v6}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result p3
 
     if-nez p3, :cond_3
 
+    move p3, v1
+
     goto :goto_0
 
     :cond_3
-    move v1, v0
+    move p3, v0
 
     :goto_0
-    if-eqz v1, :cond_9
+    if-eqz p3, :cond_9
 
-    int-to-double v0, v0
+    int-to-double v7, v0
 
-    cmpl-double p3, v3, v0
+    cmpl-double p3, v5, v7
 
     if-lez p3, :cond_9
 
@@ -713,117 +737,101 @@
 
     move-result p3
 
-    iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->tempBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
-    move-result v0
+    move-result v7
 
-    int-to-double v5, p3
+    int-to-double v8, p3
 
-    mul-double/2addr v5, v3
+    mul-double/2addr v8, v5
 
-    invoke-static {v5, v6}, Lkotlin/math/MathKt;->roundToInt(D)I
+    invoke-static {v8, v9}, Lkotlin/math/MathKt;->roundToInt(D)I
 
-    move-result v1
+    move-result v8
 
-    int-to-double v5, v0
+    int-to-double v9, v7
 
-    mul-double/2addr v5, v3
+    mul-double/2addr v9, v5
 
-    invoke-static {v5, v6}, Lkotlin/math/MathKt;->roundToInt(D)I
+    invoke-static {v9, v10}, Lkotlin/math/MathKt;->roundToInt(D)I
 
-    move-result v3
+    move-result v5
 
-    sub-int/2addr v1, p3
+    sub-int/2addr v8, p3
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 v8, v8, 0x2
 
-    sub-int/2addr v3, v0
+    sub-int/2addr v5, v7
 
-    div-int/lit8 v3, v3, 0x2
-
-    iget p3, v2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr p3, v1
-
-    iget v0, p2, Landroid/graphics/Rect;->left:I
-
-    if-ge p3, v0, :cond_4
+    div-int/lit8 v5, v5, 0x2
 
     iget p3, v2, Landroid/graphics/Rect;->left:I
 
-    iget v0, p2, Landroid/graphics/Rect;->left:I
+    sub-int/2addr p3, v8
 
-    sub-int v1, p3, v0
+    iget v6, p2, Landroid/graphics/Rect;->left:I
+
+    if-ge p3, v6, :cond_4
+
+    iget p3, v2, Landroid/graphics/Rect;->left:I
+
+    iget v6, p2, Landroid/graphics/Rect;->left:I
+
+    sub-int v8, p3, v6
 
     :cond_4
     iget p3, v2, Landroid/graphics/Rect;->right:I
 
-    add-int/2addr p3, v1
+    add-int/2addr p3, v8
 
-    iget v0, p2, Landroid/graphics/Rect;->right:I
+    iget v6, p2, Landroid/graphics/Rect;->right:I
 
-    if-le p3, v0, :cond_5
+    if-le p3, v6, :cond_5
 
     iget p3, p2, Landroid/graphics/Rect;->right:I
 
-    iget v0, v2, Landroid/graphics/Rect;->right:I
+    iget v6, v2, Landroid/graphics/Rect;->right:I
 
-    sub-int v1, p3, v0
+    sub-int v8, p3, v6
 
     :cond_5
     iget p3, v2, Landroid/graphics/Rect;->top:I
 
-    sub-int/2addr p3, v3
+    sub-int/2addr p3, v5
 
-    iget v0, p2, Landroid/graphics/Rect;->top:I
+    iget v6, p2, Landroid/graphics/Rect;->top:I
 
-    if-ge p3, v0, :cond_6
+    if-ge p3, v6, :cond_6
 
     iget p3, v2, Landroid/graphics/Rect;->top:I
 
-    iget v0, p2, Landroid/graphics/Rect;->top:I
+    iget v5, p2, Landroid/graphics/Rect;->top:I
 
-    sub-int v3, p3, v0
+    sub-int v5, p3, v5
 
     :cond_6
     iget p3, v2, Landroid/graphics/Rect;->bottom:I
 
-    add-int/2addr p3, v3
+    add-int/2addr p3, v5
 
-    iget v0, p2, Landroid/graphics/Rect;->bottom:I
+    iget v6, p2, Landroid/graphics/Rect;->bottom:I
 
-    if-le p3, v0, :cond_7
+    if-le p3, v6, :cond_7
 
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+    iget p3, p2, Landroid/graphics/Rect;->bottom:I
 
-    iget p3, v2, Landroid/graphics/Rect;->bottom:I
+    iget v5, v2, Landroid/graphics/Rect;->bottom:I
 
-    sub-int v3, p2, p3
+    sub-int v5, p3, v5
 
     :cond_7
-    neg-int p2, v1
+    neg-int p3, v8
 
-    neg-int p3, v3
+    neg-int v5, v5
 
-    invoke-virtual {v2, p2, p3}, Landroid/graphics/Rect;->inset(II)V
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result p2
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result p3
-
-    sub-int/2addr p2, p3
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    div-int/lit8 p2, p2, 0x2
+    invoke-virtual {v2, p3, v5}, Landroid/graphics/Rect;->inset(II)V
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
@@ -831,39 +839,235 @@
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
-    move-result v0
+    move-result v5
 
-    if-le p3, v0, :cond_8
+    sub-int/2addr p3, v5
 
-    iget p3, v2, Landroid/graphics/Rect;->left:I
+    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
 
-    add-int/2addr p3, p2
+    move-result p3
 
-    iput p3, v2, Landroid/graphics/Rect;->left:I
+    div-int/lit8 p3, p3, 0x2
 
-    iget p3, v2, Landroid/graphics/Rect;->right:I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    sub-int/2addr p3, p2
+    move-result v5
 
-    iput p3, v2, Landroid/graphics/Rect;->right:I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v6
+
+    if-le v5, v6, :cond_8
+
+    iget v5, v2, Landroid/graphics/Rect;->left:I
+
+    add-int/2addr v5, p3
+
+    iput v5, v2, Landroid/graphics/Rect;->left:I
+
+    iget v5, v2, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr v5, p3
+
+    iput v5, v2, Landroid/graphics/Rect;->right:I
 
     goto :goto_1
 
     :cond_8
-    iget p3, v2, Landroid/graphics/Rect;->top:I
+    iget v5, v2, Landroid/graphics/Rect;->top:I
 
-    add-int/2addr p3, p2
+    add-int/2addr v5, p3
 
-    iput p3, v2, Landroid/graphics/Rect;->top:I
+    iput v5, v2, Landroid/graphics/Rect;->top:I
 
-    iget p3, v2, Landroid/graphics/Rect;->bottom:I
+    iget v5, v2, Landroid/graphics/Rect;->bottom:I
 
-    sub-int/2addr p3, p2
+    sub-int/2addr v5, p3
 
-    iput p3, v2, Landroid/graphics/Rect;->bottom:I
+    iput v5, v2, Landroid/graphics/Rect;->bottom:I
 
     :cond_9
     :goto_1
+    invoke-static {v3, v4}, Ljava/lang/Double;->isInfinite(D)Z
+
+    move-result p3
+
+    if-nez p3, :cond_a
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result p3
+
+    if-nez p3, :cond_a
+
+    move p3, v1
+
+    goto :goto_2
+
+    :cond_a
+    move p3, v0
+
+    :goto_2
+    if-eqz p3, :cond_e
+
+    int-to-double v5, v1
+
+    cmpl-double p3, v3, v5
+
+    if-lez p3, :cond_e
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    int-to-double v7, p3
+
+    sub-double/2addr v3, v5
+
+    mul-double/2addr v7, v3
+
+    invoke-static {v7, v8}, Lkotlin/math/MathKt;->roundToInt(D)I
+
+    move-result p3
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/ui/FaceRendererImpl;->getRotation()Lcom/oneplus/base/Rotation;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcom/oneplus/camera/OnePlusCameraKt;->orientationDiffFromWindow(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/base/Rotation;)I
+
+    move-result v1
+
+    const/16 v3, 0x5a
+
+    if-eq v1, v3, :cond_d
+
+    const/16 v3, 0xb4
+
+    if-eq v1, v3, :cond_c
+
+    const/16 v3, 0x10e
+
+    if-eq v1, v3, :cond_b
+
+    iget v1, v2, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v1, p3
+
+    iput v1, v2, Landroid/graphics/Rect;->top:I
+
+    goto :goto_3
+
+    :cond_b
+    iget v1, v2, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr v1, p3
+
+    iput v1, v2, Landroid/graphics/Rect;->right:I
+
+    goto :goto_3
+
+    :cond_c
+    iget v1, v2, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr v1, p3
+
+    iput v1, v2, Landroid/graphics/Rect;->bottom:I
+
+    goto :goto_3
+
+    :cond_d
+    iget v1, v2, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v1, p3
+
+    iput v1, v2, Landroid/graphics/Rect;->left:I
+
+    :cond_e
+    :goto_3
+    iget p3, v2, Landroid/graphics/Rect;->left:I
+
+    iget v1, p2, Landroid/graphics/Rect;->left:I
+
+    if-ge p3, v1, :cond_f
+
+    iget p3, p2, Landroid/graphics/Rect;->left:I
+
+    iput p3, v2, Landroid/graphics/Rect;->left:I
+
+    :cond_f
+    iget p3, v2, Landroid/graphics/Rect;->top:I
+
+    iget v1, p2, Landroid/graphics/Rect;->top:I
+
+    if-ge p3, v1, :cond_10
+
+    iget p3, p2, Landroid/graphics/Rect;->top:I
+
+    iput p3, v2, Landroid/graphics/Rect;->top:I
+
+    :cond_10
+    iget p3, v2, Landroid/graphics/Rect;->right:I
+
+    iget v1, p2, Landroid/graphics/Rect;->right:I
+
+    if-le p3, v1, :cond_11
+
+    iget p3, p2, Landroid/graphics/Rect;->right:I
+
+    iput p3, v2, Landroid/graphics/Rect;->right:I
+
+    :cond_11
+    iget p3, v2, Landroid/graphics/Rect;->bottom:I
+
+    iget v1, p2, Landroid/graphics/Rect;->bottom:I
+
+    if-le p3, v1, :cond_12
+
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+
+    iput p2, v2, Landroid/graphics/Rect;->bottom:I
+
+    :cond_12
+    iget v9, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFrameCornerRadius:F
+
+    int-to-float p2, v0
+
+    cmpl-float p2, v9, p2
+
+    if-lez p2, :cond_13
+
+    iget p2, v2, Landroid/graphics/Rect;->left:I
+
+    int-to-float v4, p2
+
+    iget p2, v2, Landroid/graphics/Rect;->top:I
+
+    int-to-float v5, p2
+
+    iget p2, v2, Landroid/graphics/Rect;->right:I
+
+    int-to-float v6, p2
+
+    iget p2, v2, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v7, p2
+
+    iget-object v10, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
+
+    move-object v3, p1
+
+    move v8, v9
+
+    invoke-virtual/range {v3 .. v10}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
+
+    goto :goto_4
+
+    :cond_13
     iget p2, v2, Landroid/graphics/Rect;->left:I
 
     int-to-float v4, p2
@@ -884,9 +1088,10 @@
 
     move-object v3, p1
 
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawOval(FFFFLandroid/graphics/Paint;)V
+    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    :cond_a
+    :cond_14
+    :goto_4
     return-void
 .end method
 
@@ -1643,6 +1848,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
+    const v0, 0x7f0401b3
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v0, v1, v2, v3}, Lcom/oneplus/camera/OnePlusCameraComponent;->obtainStyledDimension$default(Lcom/oneplus/camera/OnePlusCameraComponent;IFILjava/lang/Object;)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFrameCornerRadius:F
+
     iget-object v0, p0, Lcom/oneplus/camera/ui/FaceRendererImpl;->faceFramePaint:Landroid/graphics/Paint;
 
     const v1, 0x7f0600b7
@@ -1657,7 +1876,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0401b3
+    const v1, 0x7f0401b4
 
     const/high16 v2, 0x40400000    # 3.0f
 

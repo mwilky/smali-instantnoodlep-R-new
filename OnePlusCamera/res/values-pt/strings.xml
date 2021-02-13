@@ -96,6 +96,12 @@
     <string name="filter_landscape">Paisagem</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Noite</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Nenhum</string>
     <string name="filter_pop">Vívido</string>
     <string name="filter_portrait">Retrato</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nenhuma entrada de texto; impossível guardar o nome na marca de água.</string>
     <string name="settings_watermark_summary">Será aplicada uma marca de água às fotografias capturadas com a câmara traseira, incluindo os modos Fotografia, Retrato, Profissional e Paisagem noturna</string>
     <string name="settings_watermark_summary_8250">Será aplicada uma marca de água às fotografias capturadas com a câmara traseira, incluindo os modos Fotografia, Retrato, Profissional e Paisagem noturna</string>
+    <string name="settings_watermark_timestamp">Hora</string>
     <string name="settings_watermark_title">marca de água Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Correção de lente ultra ampla</string>
     <string name="show_kill_apps_processing_dialog">A limpar</string>

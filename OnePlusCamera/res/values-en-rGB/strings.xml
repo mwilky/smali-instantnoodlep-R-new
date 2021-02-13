@@ -96,6 +96,12 @@
     <string name="filter_landscape">Landscape</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Night</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">None</string>
     <string name="filter_pop">Vivid</string>
     <string name="filter_portrait">Portrait</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">No text input; unable to save name in watermark.</string>
     <string name="settings_watermark_summary">A watermark will be applied to photos taken by the rear camera, including Photo, Portrait, Pro and Nightscape modes</string>
     <string name="settings_watermark_summary_8250">A watermark will be applied to photos taken by the rear camera, including Photo, Portrait, Pro and Nightscape modes</string>
+    <string name="settings_watermark_timestamp">Time</string>
     <string name="settings_watermark_title">Shot on OnePlus watermark</string>
     <string name="settings_wide_lens_distortion_correction">Ultra Wide Lens Correction</string>
     <string name="show_kill_apps_processing_dialog">Clearing</string>

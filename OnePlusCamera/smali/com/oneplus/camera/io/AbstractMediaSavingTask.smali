@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAbstractMediaSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractMediaSavingTask.kt\ncom/oneplus/camera/io/AbstractMediaSavingTask\n*L\n1#1,622:1\n*E\n"
+    value = "SMAP\nAbstractMediaSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractMediaSavingTask.kt\ncom/oneplus/camera/io/AbstractMediaSavingTask\n*L\n1#1,600:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -24,7 +24,7 @@
         0x3
     }
     d1 = {
-        "\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u000e\n\u0002\u0010\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008&\u0018\u0000 Q2\u00020\u00012\u00020\u0002:\u0001QB5\u0008\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0008\u0010\t\u001a\u0004\u0018\u00010\n\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0002\u0010\rB3\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0008\u0010\t\u001a\u0004\u0018\u00010\n\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0002\u0010\u0010J\u0008\u00102\u001a\u00020%H\u0017J\u0008\u00103\u001a\u000204H\u0003J\u0010\u00105\u001a\u00020%2\u0006\u00106\u001a\u00020%H\u0005J\u0012\u00107\u001a\u0002042\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0003J$\u00108\u001a\u0002042\u0006\u00106\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u0016H\u0003J$\u0010;\u001a\u00020%2\u000c\u0010<\u001a\u0008\u0012\u0004\u0012\u00020\"0=2\u000c\u0010>\u001a\u0008\u0012\u0004\u0012\u00020\u00160=H%J\u0008\u0010?\u001a\u00020%H\u0015J*\u0010@\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u00162\u000c\u0010A\u001a\u0008\u0012\u0004\u0012\u00020\u00160=H%J\u001c\u0010B\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u0016H%J\u0008\u0010C\u001a\u00020%H\u0017J\n\u0010D\u001a\u0004\u0018\u00010\"H\u0005J\u0018\u0010E\u001a\u00020%2\u0006\u0010F\u001a\u00020\u00162\u0006\u0010G\u001a\u00020\u001cH\u0005J \u0010E\u001a\u00020%2\u0006\u0010H\u001a\u00020I2\u0006\u0010J\u001a\u00020\"2\u0006\u0010K\u001a\u00020\"H\u0005J\u001a\u0010L\u001a\u0004\u0018\u00010\u00162\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010M\u001a\u00020\u001cH\u0005J\u0008\u0010N\u001a\u00020\u001cH\u0016J\u0008\u0010O\u001a\u00020%H\u0017J\u0008\u0010P\u001a\u00020%H\u0017R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012R\u0013\u0010\t\u001a\u0004\u0018\u00010\n\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014R\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00168VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0017\u0010\u0018\u001a\u0004\u0008\u0019\u0010\u001aR\u001c\u0010\u001b\u001a\u0004\u0018\u00010\u001c8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001d\u0010\u0018\u001a\u0004\u0008\u001e\u0010\u001fR\u0010\u0010 \u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010#\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010$\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008&\u0010\u0018\u001a\u0004\u0008$\u0010\'R\u001c\u0010(\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008)\u0010\u0018\u001a\u0004\u0008(\u0010\'R\u001c\u0010*\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008+\u0010\u0018\u001a\u0004\u0008*\u0010\'R\u0014\u0010\u000b\u001a\u00020\u000cX\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008,\u0010-R\u0011\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008.\u0010/R\u0014\u0010\u0005\u001a\u00020\u0006X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00080\u00101\u00a8\u0006R"
+        "\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u000e\n\u0002\u0010\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008&\u0018\u0000 Q2\u00020\u00012\u00020\u0002:\u0001QB5\u0008\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0008\u0010\t\u001a\u0004\u0018\u00010\n\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0002\u0010\rB3\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u0008\u0012\u0008\u0010\t\u001a\u0004\u0018\u00010\n\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0002\u0010\u0010J\u0008\u00102\u001a\u00020%H\u0017J\u0008\u00103\u001a\u000204H\u0003J\u0010\u00105\u001a\u00020%2\u0006\u00106\u001a\u00020%H\u0005J\u0012\u00107\u001a\u0002042\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0003J$\u00108\u001a\u0002042\u0006\u00106\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u0016H\u0003J$\u0010;\u001a\u00020%2\u000c\u0010<\u001a\u0008\u0012\u0004\u0012\u00020\"0=2\u000c\u0010>\u001a\u0008\u0012\u0004\u0012\u00020\u00160=H%J\u0008\u0010?\u001a\u00020%H\u0015J*\u0010@\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u00162\u000c\u0010A\u001a\u0008\u0012\u0004\u0012\u00020\u00160=H%J\u001c\u0010B\u001a\u00020%2\u0008\u00109\u001a\u0004\u0018\u00010\"2\u0008\u0010:\u001a\u0004\u0018\u00010\u0016H%J\u0008\u0010C\u001a\u00020%H\u0017J\n\u0010D\u001a\u0004\u0018\u00010\"H\u0015J\u0018\u0010E\u001a\u00020%2\u0006\u0010F\u001a\u00020\u00162\u0006\u0010G\u001a\u00020\u001cH\u0005J \u0010E\u001a\u00020%2\u0006\u0010H\u001a\u00020I2\u0006\u0010J\u001a\u00020\"2\u0006\u0010K\u001a\u00020\"H\u0005J\u001a\u0010L\u001a\u0004\u0018\u00010\u00162\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010M\u001a\u00020\u001cH\u0005J\u0008\u0010N\u001a\u00020\u001cH\u0016J\u0008\u0010O\u001a\u00020%H\u0017J\u0008\u0010P\u001a\u00020%H\u0017R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012R\u0013\u0010\t\u001a\u0004\u0018\u00010\n\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014R\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00168VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0017\u0010\u0018\u001a\u0004\u0008\u0019\u0010\u001aR\u001c\u0010\u001b\u001a\u0004\u0018\u00010\u001c8VX\u0097\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001d\u0010\u0018\u001a\u0004\u0008\u001e\u0010\u001fR\u0010\u0010 \u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010#\u001a\u0004\u0018\u00010\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010$\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008&\u0010\u0018\u001a\u0004\u0008$\u0010\'R\u001c\u0010(\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008)\u0010\u0018\u001a\u0004\u0008(\u0010\'R\u001c\u0010*\u001a\u00020%8\u0016X\u0097D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008+\u0010\u0018\u001a\u0004\u0008*\u0010\'R\u0014\u0010\u000b\u001a\u00020\u000cX\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008,\u0010-R\u0011\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008.\u0010/R\u0014\u0010\u0005\u001a\u00020\u0006X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u00080\u00101\u00a8\u0006R"
     }
     d2 = {
         "Lcom/oneplus/camera/io/AbstractMediaSavingTask;",
@@ -1014,151 +1014,55 @@
     return p0
 .end method
 
-.method protected final prepareCameraDirectory()Ljava/io/File;
-    .locals 5
+.method protected prepareCameraDirectory()Ljava/io/File;
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/io/File;
 
-    :try_start_0
-    new-instance v1, Ljava/io/File;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->getStorage()Lcom/oneplus/camera/io/Storage;
 
-    move-result-object v3
+    move-result-object p0
 
-    invoke-interface {v3}, Lcom/oneplus/camera/io/Storage;->getDirectory()Ljava/io/File;
+    invoke-interface {p0}, Lcom/oneplus/camera/io/Storage;->getDirectory()Ljava/io/File;
 
-    move-result-object v3
+    move-result-object p0
 
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "/DCIM/Camera"
+    const-string p0, "/DCIM/Camera"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
-    const-string v3, "prepareCameraDirectory() - "
+    move-result p0
 
-    if-eqz v2, :cond_1
-
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " is not a directory"
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, " created"
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/oneplus/base/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     :goto_0
-    move-object v0, v1
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v2, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "prepareCameraDirectory() - Failed to create "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v1
-
-    iget-object p0, p0, Lcom/oneplus/camera/io/AbstractMediaSavingTask;->TAG:Ljava/lang/String;
-
-    const-string v2, "prepareCameraDirectory() - Failed to prepare"
-
-    invoke-static {p0, v2, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
     return-object v0
 .end method
 

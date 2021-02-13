@@ -141,7 +141,7 @@
 
     const/4 v0, 0x2
 
-    const v1, 0x7f0a0191
+    const v1, 0x7f0a0192
 
     if-eq p0, v0, :cond_1
 
@@ -170,7 +170,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0a0194
+    const p0, 0x7f0a0195
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -219,7 +219,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b7
+    const p1, 0x7f0802af
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -249,7 +249,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b6
+    const p1, 0x7f0802ae
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -272,7 +272,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802b8
+    const p1, 0x7f0802b0
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

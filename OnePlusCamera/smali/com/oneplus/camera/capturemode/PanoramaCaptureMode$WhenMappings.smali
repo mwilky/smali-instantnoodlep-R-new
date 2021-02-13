@@ -23,6 +23,8 @@
 
 .field public static final synthetic $EnumSwitchMapping$1:[I
 
+.field public static final synthetic $EnumSwitchMapping$10:[I
+
 .field public static final synthetic $EnumSwitchMapping$2:[I
 
 .field public static final synthetic $EnumSwitchMapping$3:[I
@@ -489,6 +491,46 @@
     sget-object v1, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$HintToastState;->CLOSED:Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$HintToastState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$HintToastState;->ordinal()I
+
+    move-result v1
+
+    aput v4, v0, v1
+
+    invoke-static {}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->values()[Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$WhenMappings;->$EnumSwitchMapping$10:[I
+
+    sget-object v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$WhenMappings;->$EnumSwitchMapping$10:[I
+
+    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$WhenMappings;->$EnumSwitchMapping$10:[I
+
+    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->STARTING:Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
+
+    move-result v1
+
+    aput v3, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/capturemode/PanoramaCaptureMode$WhenMappings;->$EnumSwitchMapping$10:[I
+
+    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->CAPTURING:Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->ordinal()I
 
     move-result v1
 

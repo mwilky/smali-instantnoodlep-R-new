@@ -1337,7 +1337,7 @@
 
     sget-object v0, Lcom/oneplus/cache/FileCache;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "touch() - Failed to save state"
+    const-string v1, "touch() - Failed to save state"
 
     invoke-static {v0, v1, p0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

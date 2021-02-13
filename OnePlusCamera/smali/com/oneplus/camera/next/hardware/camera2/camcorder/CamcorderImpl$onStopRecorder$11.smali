@@ -1,9 +1,9 @@
-.class final Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;
-.super Lkotlin/jvm/internal/Lambda;
+.class final synthetic Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;
+.super Lkotlin/jvm/internal/FunctionReference;
 .source "CamcorderImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Lkotlin/jvm/functions/Function2;
 
 
 # annotations
@@ -12,14 +12,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x1018
     name = null
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/functions/Function0<",
+        "Lkotlin/jvm/internal/FunctionReference;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lcom/oneplus/base/EventKey<",
+        "Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;",
+        ">;",
+        "Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;",
         "Lkotlin/Unit;",
         ">;"
     }
@@ -32,11 +36,19 @@
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u001a\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0010\u0000\u001a\u00020\u00012#\u0010\u0002\u001a\u001f\u0012\u000c\u0012\n \u0005*\u0004\u0018\u00010\u00040\u00040\u0003\u00a2\u0006\u000c\u0008\u0006\u0012\u0008\u0008\u0007\u0012\u0004\u0008\u0008(\u00082\u0015\u0010\t\u001a\u00110\u0004\u00a2\u0006\u000c\u0008\u0006\u0012\u0008\u0008\u0007\u0012\u0004\u0008\u0008(\u0002\u00a2\u0006\u0002\u0008\n"
     }
     d2 = {
         "<anonymous>",
         "",
+        "p1",
+        "Lcom/oneplus/base/EventKey;",
+        "Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;",
+        "kotlin.jvm.PlatformType",
+        "Lkotlin/ParameterName;",
+        "name",
+        "p0",
+        "p2",
         "invoke"
     }
     k = 0x3
@@ -48,57 +60,89 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic $params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
-
-.field final synthetic $recorderToken:Ljava/lang/Object;
-
-.field final synthetic this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
-
-
 # direct methods
-.method constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;Ljava/lang/Object;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;)V
-    .locals 0
+.method constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;)V
+    .locals 1
 
-    iput-object p1, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
+    const/4 v0, 0x2
 
-    iput-object p2, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->$recorderToken:Ljava/lang/Object;
-
-    iput-object p3, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->$params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+    invoke-direct {p0, v0, p1}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic invoke()Ljava/lang/Object;
+.method public final getName()Ljava/lang/String;
     .locals 0
 
-    invoke-virtual {p0}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->invoke()V
+    const-string p0, "raise"
+
+    return-object p0
+.end method
+
+.method public final getOwner()Lkotlin/reflect/KDeclarationContainer;
+    .locals 0
+
+    const-class p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
+
+    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/reflect/KClass;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getSignature()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "raise(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V"
+
+    return-object p0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/oneplus/base/EventKey;
+
+    check-cast p2, Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;
+
+    invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->invoke(Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;)V
 
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 .end method
 
-.method public final invoke()V
-    .locals 4
+.method public final invoke(Lcom/oneplus/base/EventKey;Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/oneplus/base/EventKey<",
+            "Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;",
+            ">;",
+            "Lcom/oneplus/camera/next/hardware/VideoCaptureEventArgs;",
+            ")V"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->this$0:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
+    const-string v0, "p1"
 
-    iget-object v1, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->$recorderToken:Ljava/lang/Object;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->$params:Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;
+    const-string v0, "p2"
 
-    sget-object v2, Lcom/oneplus/camera/next/hardware/Camcorder$Error;->MEDIA_RECORDER:Lcom/oneplus/camera/next/hardware/Camcorder$Error;
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v3, "onStopRecorder() - Fail to stop or reset MediaRecorder"
+    iget-object p0, p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$onStopRecorder$11;->receiver:Ljava/lang/Object;
 
-    invoke-static {v0, v1, p0, v2, v3}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->access$onError(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;Ljava/lang/Object;Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl$InternalRecordingParams;Lcom/oneplus/camera/next/hardware/Camcorder$Error;Ljava/lang/String;)V
+    check-cast p0, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;
+
+    check-cast p2, Lcom/oneplus/base/EventArgs;
+
+    invoke-static {p0, p1, p2}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->access$raise(Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventArgs;)V
 
     return-void
 .end method

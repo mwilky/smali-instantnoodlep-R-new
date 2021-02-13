@@ -177,7 +177,7 @@
 
     new-array v1, v3, [I
 
-    const v2, 0x7f040204
+    const v2, 0x7f040205
 
     const/4 v3, 0x0
 

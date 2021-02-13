@@ -440,7 +440,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120071
+    const v1, 0x7f120062
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -596,7 +596,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1201c5
+    const v3, 0x7f1201bb
 
     invoke-virtual {p0, v3}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getString(I)Ljava/lang/String;
 
@@ -1467,7 +1467,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/oneplus/base/component/ComponentOwnersKt;->findComponent(Lcom/oneplus/base/component/ComponentOwner;Lcom/oneplus/threading/DispatcherPriority;Ljava/lang/Class;Lcom/oneplus/base/component/ComponentSearchCallback;)Lcom/oneplus/base/Handle;
 
-    const v0, 0x7f120183
+    const v0, 0x7f120177
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/SlowMotionCaptureMode;->getString(I)Ljava/lang/String;
 

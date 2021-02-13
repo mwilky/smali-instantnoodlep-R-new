@@ -64,7 +64,7 @@
     <string name="content_description_face_beauty">Upiększanie twarzy</string>
     <string name="content_description_flash">Flesz</string>
     <string name="content_description_gallery">Galeria</string>
-    <string name="content_description_hyper_image_stabilization">Wysoka stabilność</string>
+    <string name="content_description_hyper_image_stabilization">Wysoka Stabilność</string>
     <string name="content_description_picture_format">Format obrazu</string>
     <string name="content_description_resolution">Rozdzielczość</string>
     <string name="content_description_self_timer">Czasomierz</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">Krajobraz</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Noc</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Brak</string>
     <string name="filter_pop">Żywy</string>
     <string name="filter_portrait">Portret</string>
@@ -114,7 +120,7 @@
     <string name="full_size_picutre_enabled_hint">Tryb 48 MP zapewnia wyższą rozdzielczość i przechwytywanie szczegółów w dobrze oświetlonych scenach</string>
     <string name="full_size_picutre_enabled_hint_64mp">Tryb 64 MP zapewnia wyższą rozdzielczość i przechwytywanie szczegółów w dobrze oświetlonych scenach</string>
     <string name="handshake_detected">Mocne potrząsanie może spowodować rozmycie zdjęć</string>
-    <string name="hyper_image_stabilization_enabled">Wysoka stabilność</string>
+    <string name="hyper_image_stabilization_enabled">Wysoka Stabilność</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">Funkcja zbliżenia aparatu jest wyłączona w trybie Wysoka stabilność</string>
     <string name="lens_stain_detected">Obiektyw może być brudny: spróbuj go wytrzeć, aby uzyskać lepszą jakość obrazu</string>
     <string name="loading_text">Ładowanie...</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nie wprowadzono tekstu, nie można zapisać imienia w znaku wodnym.</string>
     <string name="settings_watermark_summary">Znak wodny zostanie zastosowany do zdjęć zrobionych tylnym aparatem m.in. w trybie Zdjęcie, Portret, Pro i Scena nocna</string>
     <string name="settings_watermark_summary_8250">Znak wodny zostanie zastosowany do zdjęć zrobionych tylnym aparatem m.in. w trybie Zdjęcie, Portret, Pro i Scena nocna</string>
+    <string name="settings_watermark_timestamp">Czas</string>
     <string name="settings_watermark_title">Znak wodny Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Korekcja obiektywu szerokokątnego</string>
     <string name="show_kill_apps_processing_dialog">Czyszczenie</string>

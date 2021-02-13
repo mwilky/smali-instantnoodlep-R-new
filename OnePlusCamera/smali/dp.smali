@@ -1,77 +1,29 @@
-.class public Ldp;
-.super Ljava/lang/Object;
+.class public final Ldp;
+.super Ldq;
 .source "PG"
-
-# interfaces
-.implements Lac;
-
-
-# instance fields
-.field public final a:Lcom/google/lens/sdk/LensApi;
-
-.field public final b:Lam;
-
-.field public final c:J
-
-.field public final d:Landroid/app/Activity;
-
-
-# direct methods
-.method public constructor <init>(Lcom/google/lens/sdk/LensApi;Lam;JLandroid/app/Activity;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldp;->a:Lcom/google/lens/sdk/LensApi;
-
-    iput-object p2, p0, Ldp;->b:Lam;
-
-    iput-wide p3, p0, Ldp;->c:J
-
-    iput-object p5, p0, Ldp;->d:Landroid/app/Activity;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public a(Laf$a;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
 
-    iget-object v0, p0, Ldp;->a:Lcom/google/lens/sdk/LensApi;
+    const/4 p0, 0x0
 
-    iget-object v1, p0, Ldp;->b:Lam;
+    throw p0
+.end method
 
-    iget-wide v2, p0, Ldp;->c:J
+.method public final hashCode()I
+    .locals 0
 
-    iget-object p0, p0, Ldp;->d:Landroid/app/Activity;
+    const/4 p0, 0x0
 
-    sget-object v4, Laf$a;->b:Laf$a;
+    throw p0
+.end method
 
-    if-ne p1, v4, :cond_0
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {v1}, Lam;->b()Lao;
+    const/4 p0, 0x0
 
-    move-result-object p0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lao;->a(Ljava/lang/Long;)Lao;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lao;->a()Lam;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lcom/google/lens/sdk/LensApi;->a(Lam;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, p0}, Lcom/google/lens/sdk/LensApi;->a(Landroid/app/Activity;)V
-
-    return-void
+    throw p0
 .end method

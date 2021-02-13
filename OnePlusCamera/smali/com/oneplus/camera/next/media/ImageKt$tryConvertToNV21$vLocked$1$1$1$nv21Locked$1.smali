@@ -257,7 +257,7 @@
 
     const-string v0, "Image"
 
-    const-string/jumbo v1, "tryConvertToNV21() - Failed to convert"
+    const-string v1, "tryConvertToNV21() - Failed to convert"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 

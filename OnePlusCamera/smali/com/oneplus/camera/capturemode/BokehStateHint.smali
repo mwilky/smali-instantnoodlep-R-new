@@ -108,7 +108,7 @@
 
     invoke-virtual {p0, p1}, Lcom/oneplus/camera/capturemode/BokehStateHint;->setBackgroundResId(Ljava/lang/Integer;)V
 
-    const p1, 0x7f12005c
+    const p1, 0x7f12004d
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

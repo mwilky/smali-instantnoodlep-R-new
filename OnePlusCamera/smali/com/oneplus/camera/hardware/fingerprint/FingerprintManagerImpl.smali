@@ -358,7 +358,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f120178
+    const v2, 0x7f12016c
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/hardware/fingerprint/FingerprintManagerImpl;->getString(I)Ljava/lang/String;
 

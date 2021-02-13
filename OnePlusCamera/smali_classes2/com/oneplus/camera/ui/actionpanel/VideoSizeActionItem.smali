@@ -20,7 +20,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoSizeActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSizeActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoSizeActionItem\n*L\n1#1,298:1\n*E\n"
+    value = "SMAP\nVideoSizeActionItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoSizeActionItem.kt\ncom/oneplus/camera/ui/actionpanel/VideoSizeActionItem\n*L\n1#1,257:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -363,13 +363,9 @@
 
     const-string v2, "drawable"
 
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
     if-eq p1, v0, :cond_1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x2
 
     if-eq p1, v0, :cond_0
 
@@ -392,13 +388,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_video_size_8k"
+    const-string v0, "icon_video_size_4k"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
     check-cast p1, Ljava/lang/Number;
 
@@ -431,52 +427,13 @@
 
     move-result-object p1
 
-    const-string v0, "icon_video_size_4k"
-
-    invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/oneplus/base/BaseActivity;
-
-    invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
     const-string v0, "icon_video_size_1080p"
 
     invoke-static {p1, v2, v0}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
     check-cast p1, Ljava/lang/Number;
 
@@ -498,13 +455,13 @@
 
     move-result-object v1
 
-    :cond_3
+    :cond_2
     :goto_0
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     new-instance p0, Lcom/oneplus/drawable/EmptyDrawable;
 
     invoke-direct {p0}, Lcom/oneplus/drawable/EmptyDrawable;-><init>()V
@@ -623,7 +580,7 @@
     const/4 v3, 0x0
 
     :goto_1
-    if-ge v3, v1, :cond_5
+    if-ge v3, v1, :cond_4
 
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -643,21 +600,17 @@
 
     aget v6, v6, v7
 
-    const/4 v7, 0x1
+    const-string v7, "id"
 
-    const-string v8, "id"
+    const-string v8, "string"
 
-    const-string v9, "string"
+    const/4 v9, 0x1
 
-    if-eq v6, v7, :cond_4
+    if-eq v6, v9, :cond_3
 
-    const/4 v7, 0x2
+    const/4 v9, 0x2
 
-    if-eq v6, v7, :cond_3
-
-    const/4 v7, 0x3
-
-    if-eq v6, v7, :cond_2
+    if-eq v6, v9, :cond_2
 
     move-object v6, v5
 
@@ -672,9 +625,9 @@
 
     move-result-object v5
 
-    const-string v6, "action_item_video_size_8k"
+    const-string v6, "action_item_video_size_4k"
 
-    invoke-static {v5, v9, v6}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v5, v8, v6}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v5
 
@@ -686,9 +639,9 @@
 
     move-result-object v6
 
-    const-string v7, "video_size_action_item_8k"
+    const-string v8, "video_size_action_item_4k"
 
-    invoke-static {v6, v8, v7}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v6, v7, v8}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -703,40 +656,9 @@
 
     move-result-object v5
 
-    const-string v6, "action_item_video_size_4k"
-
-    invoke-static {v5, v9, v6}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    const-string v7, "video_size_action_item_4k"
-
-    invoke-static {v6, v8, v7}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {p0}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
     const-string v6, "action_item_video_size_1080p"
 
-    invoke-static {v5, v9, v6}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v5, v8, v6}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v5
 
@@ -748,9 +670,9 @@
 
     move-result-object v6
 
-    const-string v7, "video_size_action_item_1080p"
+    const-string v8, "video_size_action_item_1080p"
 
-    invoke-static {v6, v8, v7}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v6, v7, v8}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -773,9 +695,9 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :cond_5
+    :cond_4
     check-cast v2, Ljava/util/List;
 
     return-object v2

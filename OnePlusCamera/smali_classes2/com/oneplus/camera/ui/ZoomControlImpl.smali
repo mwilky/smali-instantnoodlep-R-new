@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,1109:1\n858#2:1110\n858#2:1111\n858#2:1112\n12#3,3:1113\n12#3,3:1116\n12#3,3:1119\n50#4,3:1122\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n*L\n311#1:1110\n327#1:1111\n333#1:1112\n377#1,3:1113\n380#1,3:1116\n386#1,3:1119\n391#1,3:1122\n*E\n"
+    value = "SMAP\nZoomControlImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 ComponentOwners.kt\ncom/oneplus/base/component/ComponentOwnersKt\n*L\n1#1,1115:1\n858#2:1116\n858#2:1117\n858#2:1118\n12#3,3:1119\n12#3,3:1122\n12#3,3:1125\n50#4,3:1128\n*E\n*S KotlinDebug\n*F\n+ 1 ZoomControlImpl.kt\ncom/oneplus/camera/ui/ZoomControlImpl\n*L\n317#1:1116\n333#1:1117\n339#1:1118\n383#1,3:1119\n386#1,3:1122\n392#1,3:1125\n397#1,3:1128\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -2162,7 +2162,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0404ff
+    const v1, 0x7f040500
 
     invoke-virtual {p0, v1, v4}, Lcom/oneplus/camera/CameraActivity;->obtainStyledDimensionPixel(II)I
 
@@ -2748,7 +2748,7 @@
 
     move-result v3
 
-    const v5, 0x7f0804ec
+    const v5, 0x7f0804e1
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2788,7 +2788,7 @@
 
     move-result v7
 
-    const v4, 0x7f0804e9
+    const v4, 0x7f0804de
 
     invoke-virtual {p0, v4}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2823,7 +2823,7 @@
 
     if-eqz v1, :cond_3
 
-    const v1, 0x7f0804e7
+    const v1, 0x7f0804dc
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/ui/ZoomControlImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3917,7 +3917,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/ui/ZoomControlImpl;->zoomControlContainer:Landroid/view/View;
 
-    const v1, 0x7f0a0265
+    const v1, 0x7f0a0266
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

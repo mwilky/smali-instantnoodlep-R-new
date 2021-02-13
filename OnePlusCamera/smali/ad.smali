@@ -1,187 +1,137 @@
-.class final synthetic Lad;
-.super Ljava/lang/Object;
+.class public final Lad;
+.super Lde;
+.source "PG"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lei;
+
+
+# static fields
+.field public static final a:Lad;
 
 
 # instance fields
-.field private final a:Lae;
+.field private b:I
 
-.field private final b:[B
-
-.field private final c:Lj;
+.field private c:Z
 
 
 # direct methods
-.method constructor <init>(Lae;[BLj;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lad;
+
+    invoke-direct {v0}, Lad;-><init>()V
+
+    sput-object v0, Lad;->a:Lad;
+
+    const-class v1, Lad;
+
+    invoke-static {v1, v0}, Lde;->a(Ljava/lang/Class;Lde;)V
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lde;-><init>()V
 
-    iput-object p1, p0, Lad;->a:Lae;
+    return-void
+.end method
 
-    iput-object p2, p0, Lad;->b:[B
+.method public static synthetic a(Lad;)V
+    .locals 2
 
-    iput-object p3, p0, Lad;->c:Lj;
+    iget v0, p0, Lad;->b:I
+
+    const/4 v1, 0x1
+
+    or-int/2addr v0, v1
+
+    iput v0, p0, Lad;->b:I
+
+    iput-boolean v1, p0, Lad;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method protected final a(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lad;->a:Lae;
+    add-int/lit8 p1, p1, -0x1
 
-    iget-object v1, p0, Lad;->b:[B
+    const/4 p0, 0x1
 
-    iget-object p0, p0, Lad;->c:Lj;
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v0}, Lae;->j()Z
+    if-eq p1, p0, :cond_3
 
-    move-result p0
+    const/4 p2, 0x2
 
-    const-string v2, "LensServiceConnImpl"
+    if-eq p1, p2, :cond_2
 
-    if-eqz p0, :cond_4
+    const/4 p0, 0x3
 
-    invoke-virtual {v0}, Lae;->h()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    invoke-static {}, Lbp;->b()Lbp;
-
-    move-result-object p0
-
-    :try_start_0
-    invoke-static {v1, p0}, Ly;->a([BLbp;)Ly;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ly;->a()Lw;
-
-    move-result-object v1
-
-    sget-object v3, Lw;->b:Lw;
-
-    if-ne v1, v3, :cond_3
-
-    sget-object v1, Ls;->a:Lbo;
-
-    invoke-static {v1}, Lby;->a(Lbo;)Lbo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lbo;->a()Ldh;
-
-    move-result-object v3
-
-    sget v4, Lby$e;->f:I
-
-    const/4 v5, 0x0
-
-    invoke-virtual {p0, v4, v5}, Lby;->a(ILjava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lby;
-
-    if-ne v3, v4, :cond_2
-
-    iget-object p0, p0, Lby$d;->d:Lbt;
-
-    iget-object v3, v1, Lbo;->d:Lby$c;
-
-    invoke-virtual {p0, v3}, Lbt;->a(Lbs;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-nez p0, :cond_1
-
-    iget-object p0, v1, Lbo;->b:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, p0}, Lbo;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    :goto_0
-    check-cast p0, Lr;
-
-    invoke-virtual {p0}, Lr;->a()I
-
-    move-result v1
-
-    iput v1, v0, Lae;->b:I
-
-    invoke-virtual {p0}, Lr;->b()Lr$a;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lae;->c:Lr$a;
-
-    invoke-virtual {p0}, Lr;->c()Lr$b;
-
-    sget-object p0, Laf$a;->b:Laf$a;
-
-    iput-object p0, v0, Lae;->d:Laf$a;
+    if-eq p1, p0, :cond_1
 
     const/4 p0, 0x4
 
-    invoke-virtual {v0, p0}, Lae;->a(I)V
+    if-eq p1, p0, :cond_0
 
-    goto :goto_1
+    sget-object p0, Lad;->a:Lad;
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Lac;
+
+    invoke-direct {p0}, Lac;-><init>()V
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Lad;
+
+    invoke-direct {p0}, Lad;-><init>()V
+
+    return-object p0
 
     :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-array p1, p2, [Ljava/lang/Object;
 
-    const-string v1, "This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings."
+    const/4 p2, 0x0
 
-    invoke-direct {p0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const-string v0, "b"
 
-    throw p0
+    aput-object v0, p1, p2
+
+    const-string p2, "c"
+
+    aput-object p2, p1, p0
+
+    sget-object p0, Lad;->a:Lad;
+
+    const-string p2, "\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1007\u0000"
+
+    invoke-static {p0, p2, p1}, Lad;->a(Leh;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_3
-    iget-object p0, v0, Lae;->a:Ldb;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0}, Ldb;->c()V
-    :try_end_0
-    .catch Lcm; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    const-string v1, "Unable to parse the protobuf."
-
-    invoke-static {v2, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    sget-object p0, Laf$a;->d:Laf$a;
-
-    iput-object p0, v0, Lae;->d:Laf$a;
-
-    const/4 p0, 0x7
-
-    invoke-virtual {v0, p0}, Lae;->a(I)V
-
-    :goto_1
-    return-void
+    return-object p0
 
     :cond_4
-    :goto_2
-    const-string p0, "ServiceEvent received after connection disposed."
+    invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

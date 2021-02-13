@@ -1910,12 +1910,6 @@
 .method private notifyChange(II)V
     .locals 1
 
-    invoke-static {}, Lcom/oneplus/common/OPFeaturesUtils;->isSupportXVibrate()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
     const/4 p2, 0x5
 
     :try_start_0
@@ -1930,17 +1924,16 @@
 
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_0
     :goto_0
     iget-object p2, p0, Lcom/google/android/material/picker/NumberPicker;->mOnValueChangeListener:Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_0
 
     iget v0, p0, Lcom/google/android/material/picker/NumberPicker;->mValue:I
 
     invoke-interface {p2, p0, p1, v0}, Lcom/google/android/material/picker/NumberPicker$OnValueChangeListener;->onValueChange(Lcom/google/android/material/picker/NumberPicker;II)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 

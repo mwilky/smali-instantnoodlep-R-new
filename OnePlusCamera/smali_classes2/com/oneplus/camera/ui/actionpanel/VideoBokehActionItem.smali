@@ -99,13 +99,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02e6
+    const v1, 0x7f0a02e7
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const v2, 0x7f12008b
+    const v2, 0x7f12007c
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -275,7 +275,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f080327
+    const p1, 0x7f080319
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -288,7 +288,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f080326
+    const p1, 0x7f080318
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

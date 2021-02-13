@@ -24,7 +24,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder\n*L\n1#1,1696:1\n*E\n"
+    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl$ItemViewHolder\n*L\n1#1,1689:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -294,7 +294,7 @@
 
     if-eqz p1, :cond_6
 
-    const v0, 0x7f0a02b0
+    const v0, 0x7f0a02b1
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

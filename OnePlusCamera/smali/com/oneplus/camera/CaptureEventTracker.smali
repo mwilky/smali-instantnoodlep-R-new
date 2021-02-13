@@ -1066,7 +1066,7 @@
 
     move-result-object v4
 
-    const v8, 0x7f120179
+    const v8, 0x7f12016d
 
     invoke-virtual {p0, v8}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1153,7 +1153,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120182
+    const v5, 0x7f120176
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1195,7 +1195,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120178
+    const v5, 0x7f12016c
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1227,7 +1227,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120184
+    const v5, 0x7f120178
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -1259,7 +1259,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f120183
+    const v5, 0x7f120177
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/CaptureEventTracker;->getString(I)Ljava/lang/String;
 
@@ -2581,7 +2581,7 @@
 
     if-eqz v4, :cond_29
 
-    invoke-static {v2}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getBrandText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
+    invoke-static {v2}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getCustomNameText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -3969,7 +3969,7 @@
 
     if-eqz v3, :cond_66
 
-    invoke-static {v2}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getBrandText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
+    invoke-static {v2}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getCustomNameText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -4473,7 +4473,7 @@
 
     if-eqz v1, :cond_82
 
-    invoke-static/range {v16 .. v16}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getBrandText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
+    invoke-static/range {v16 .. v16}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getCustomNameText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
 
     move-result-object v1
 

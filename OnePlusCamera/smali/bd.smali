@@ -1,235 +1,101 @@
-.class final Lbd;
-.super Lbh;
+.class public final Lbd;
+.super Lde;
 .source "PG"
+
+# interfaces
+.implements Lei;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
-
-
-# instance fields
-.field private final d:I
-
-.field private final e:I
+.field public static final a:Lbd;
 
 
 # direct methods
-.method constructor <init>([BII)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "bytes",
-            "offset",
-            "length"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lbh;-><init>([B)V
+    new-instance v0, Lbd;
 
-    add-int v0, p2, p3
+    invoke-direct {v0}, Lbd;-><init>()V
 
-    array-length p1, p1
+    sput-object v0, Lbd;->a:Lbd;
 
-    invoke-static {p2, v0, p1}, Lbd;->b(III)I
+    const-class v1, Lbd;
 
-    iput p2, p0, Lbd;->d:I
-
-    iput p3, p0, Lbd;->e:I
+    invoke-static {v1, v0}, Lde;->a(Ljava/lang/Class;Lde;)V
 
     return-void
 .end method
 
-.method private final readObject(Ljava/io/ObjectInputStream;)V
+.method private constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "in"
-        }
-    .end annotation
 
-    new-instance p0, Ljava/io/InvalidObjectException;
+    invoke-direct {p0}, Lde;-><init>()V
 
-    const-string p1, "BoundedByteStream instances are not to be serialized directly"
-
-    invoke-direct {p0, p1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)B
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
+.method protected final a(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lba;->a()I
+    add-int/lit8 p1, p1, -0x1
 
-    move-result v0
+    const/4 p0, 0x1
 
-    add-int/lit8 v1, p1, 0x1
+    if-eqz p1, :cond_4
 
-    sub-int v1, v0, v1
+    const/4 p2, 0x0
 
-    or-int/2addr v1, p1
+    if-eq p1, p0, :cond_3
 
-    if-gez v1, :cond_1
+    const/4 p0, 0x2
 
-    if-gez p1, :cond_0
+    if-eq p1, p0, :cond_2
 
-    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
+    const/4 p0, 0x3
 
-    const/16 v0, 0x16
+    if-eq p1, p0, :cond_1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 p0, 0x4
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    if-eq p1, p0, :cond_0
 
-    const-string v0, "Index < 0: "
+    sget-object p0, Lbd;->a:Lbd;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p0
 
     :cond_0
-    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
+    new-instance p0, Lbc;
 
-    const/16 v1, 0x28
+    invoke-direct {p0}, Lbc;-><init>()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Index > length: "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", "
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p0
 
     :cond_1
-    iget-object v0, p0, Lbd;->c:[B
+    new-instance p0, Lbd;
 
-    iget p0, p0, Lbd;->d:I
+    invoke-direct {p0}, Lbd;-><init>()V
 
-    add-int/2addr p0, p1
+    return-object p0
 
-    aget-byte p0, v0, p0
+    :cond_2
+    sget-object p0, Lbd;->a:Lbd;
 
-    return p0
-.end method
+    const-string p1, "\u0001\u0000"
 
-.method public final a()I
-    .locals 0
-
-    iget p0, p0, Lbd;->e:I
-
-    return p0
-.end method
-
-.method protected final a([BIII)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "target",
-            "sourceOffset",
-            "targetOffset",
-            "numberToCopy"
-        }
-    .end annotation
-
-    iget-object p2, p0, Lbd;->c:[B
-
-    invoke-virtual {p0}, Lbh;->e()I
-
-    move-result p0
-
-    const/4 p3, 0x0
-
-    invoke-static {p2, p0, p1, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-void
-.end method
-
-.method final b(I)B
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lbd;->c:[B
-
-    iget p0, p0, Lbd;->d:I
-
-    add-int/2addr p0, p1
-
-    aget-byte p0, v0, p0
-
-    return p0
-.end method
-
-.method protected final e()I
-    .locals 0
-
-    iget p0, p0, Lbd;->d:I
-
-    return p0
-.end method
-
-.method final writeReplace()Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0}, Lba;->b()[B
+    invoke-static {p0, p1, p2}, Lbd;->a(Leh;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-static {p0}, Lba;->a([B)Lba;
+    return-object p0
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p0
 

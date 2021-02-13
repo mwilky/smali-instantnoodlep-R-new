@@ -343,7 +343,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f120153
+    const v0, 0x7f120147
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/settings/AbstractSettingsFragment;->getString(I)Ljava/lang/String;
 

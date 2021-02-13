@@ -447,7 +447,7 @@
 
     invoke-virtual {v0, v2}, Lcom/oneplus/camera/ui/hint/DefaultHint;->setIconResId(Ljava/lang/Integer;)V
 
-    const v2, 0x7f1200cd
+    const v2, 0x7f1200c1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

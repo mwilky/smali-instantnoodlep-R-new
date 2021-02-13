@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="@color/icon_selected" android:pathData="M14.2901,20.9101C9.4101,20.9101 5.43,16.9101 5.43,11.9901C5.43,7.0701 9.4001,3.0801 14.2901,3.0801C19.1701,3.0801 23.1501,7.0801 23.1501,11.9901C23.1501,16.9001 19.1701,20.9101 14.2901,20.9101ZM14.2901,4.8801C10.4001,4.8801 7.2301,8.0701 7.2301,11.9901C7.2301,15.9101 10.4001,19.1001 14.2901,19.1001C18.1801,19.1001 21.3501,15.9101 21.3501,11.9901C21.3401,8.0701 18.1801,4.8801 14.2901,4.8801Z" />
-    <path android:fillColor="@color/icon_selected" android:pathData="M16,15.13L13.14,12.21V8.02H14.95V11.48L17.29,13.87L16,15.13Z" />
-    <path android:fillColor="@color/icon_selected" android:pathData="M4.8701,17.0901H0.8501V18.8901H6.0801C5.6201,18.3401 5.2101,17.7301 4.8701,17.0901Z" android:fillType="evenOdd" />
-    <path android:fillColor="@color/icon_selected" android:pathData="M3.5901,11.9901C3.5901,11.6901 3.6101,11.3901 3.6401,11.0901H0.8501V12.8901H3.6401C3.6101,12.6001 3.5901,12.3001 3.5901,11.9901Z" android:fillType="evenOdd" />
-    <path android:fillColor="@color/icon_selected" android:pathData="M6.0801,5.0901H0.8501V6.8901H4.8601C5.2101,6.2501 5.6201,5.6501 6.0801,5.0901Z" android:fillType="evenOdd" />
-</vector>

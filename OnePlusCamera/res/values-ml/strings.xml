@@ -38,7 +38,7 @@
     <string name="agree">അംഗീകരിക്കുക</string>
     <string name="app_name">ക്യാമറ</string>
     <string name="app_name_video">ക്യാംകോഡര്‍</string>
-    <string name="auto">സ്വയമേയുള്ള</string>
+    <string name="auto">ഓട്ടോ</string>
     <string name="bokeh_hint">ഡെപ്ത് ഇഫക്ട്</string>
     <string name="bokeh_hint_camera_is_covered">ക്യാമറ തടസ്സപ്പെട്ടു</string>
     <string name="bokeh_hint_low_light">കൂടുതല്‍ വെളിച്ചം ആവശ്യമാണ്</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">ലാൻഡ്സ്‌കേപ്പ്</string>
     <string name="filter_mono">മോണോ</string>
     <string name="filter_night">നൈറ്റ്</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ഒന്നുമില്ല</string>
     <string name="filter_pop">വിവിഡ്</string>
     <string name="filter_portrait">പോര്‍ട്രെയിറ്റ്</string>
@@ -126,7 +132,7 @@
     <string name="macro_enabled">സൂപ്പർ മാക്രോ</string>
     <string name="macro_flash_disabled">മാക്രോ മോഡിൽ ഫ്ലാഷ് നിഷ്ക്രിയമാക്കി</string>
     <string name="macro_hint">ശുപാർശിക്കുന്ന ഷൂട്ടിംഗ് ദൂരം 1-1.5 ഇഞ്ച് ആണ്</string>
-    <string name="manual_capture_control_auto">സ്വയമേയുള്ള</string>
+    <string name="manual_capture_control_auto">ഓട്ടോ</string>
     <string name="manual_capture_control_manual">മാനുവല്‍</string>
     <string name="manual_capture_long_exposure_tips">ക്യാപ്ചർ ചെയ്യുന്നു</string>
     <string name="manual_mode_custom_setting_saved">സംരക്ഷിച്ചു</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">മിനിറ്റ് തിരഞ്ഞെടുക്കുക</string>
     <string name="select_year">വർഷം തിരഞ്ഞെടുക്കുക</string>
     <string name="settings">ക്രമീകരണങ്ങള്‍</string>
-    <string name="settings_about">കുറിച്ച്</string>
+    <string name="settings_about">വിവരം</string>
     <string name="settings_about_agreement">ഉപയോക്തൃ ഉടമ്പടി</string>
     <string name="settings_about_copyright">"OnePlus എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">ടെക്സ്റ്റ് ഇൻപുട്ടൊന്നുമില്ല; വാട്ടർമാർക്കിൽ പേര് സംരക്ഷിക്കാനാകില്ല.</string>
     <string name="settings_watermark_summary">ഫോട്ടോ, പോർട്രെയിറ്റ്, പ്രോ, നൈറ്റ്‌സ്‌കേപ്പ് മോഡുകൾ ഉൾപ്പെടെ പിൻ ക്യാമറ ഉപയോഗിച്ച് എടുത്ത ഫോട്ടോകളിൽ വാട്ടർമാർക്ക് പ്രയോഗിക്കും</string>
     <string name="settings_watermark_summary_8250">ഫോട്ടോ, പോർട്രെയിറ്റ്, പ്രോ, നൈറ്റ്‌സ്‌കേപ്പ് മോഡുകൾ ഉൾപ്പെടെ പിൻ ക്യാമറ ഉപയോഗിച്ച് എടുത്ത ഫോട്ടോകളിൽ വാട്ടർമാർക്ക് പ്രയോഗിക്കും</string>
+    <string name="settings_watermark_timestamp">സമയം</string>
     <string name="settings_watermark_title">Shot on OnePlus വാട്ടര്‍മാര്‍ക്ക്</string>
     <string name="settings_wide_lens_distortion_correction">അൾട്രാ വൈഡ് ലെൻസ് കറക്ഷൻ</string>
     <string name="show_kill_apps_processing_dialog">മായ്‌ക്കുന്നു</string>

@@ -109,45 +109,45 @@
 
 .field public static final italic:I = 0x7f0a0168
 
-.field public static final line1:I = 0x7f0a0177
+.field public static final line1:I = 0x7f0a0178
 
-.field public static final line3:I = 0x7f0a0178
+.field public static final line3:I = 0x7f0a0179
 
-.field public static final normal:I = 0x7f0a01d5
+.field public static final normal:I = 0x7f0a01d6
 
-.field public static final notification_background:I = 0x7f0a01d7
+.field public static final notification_background:I = 0x7f0a01d8
 
-.field public static final notification_main_column:I = 0x7f0a01d8
+.field public static final notification_main_column:I = 0x7f0a01d9
 
-.field public static final notification_main_column_container:I = 0x7f0a01d9
+.field public static final notification_main_column_container:I = 0x7f0a01da
 
-.field public static final right_icon:I = 0x7f0a022b
+.field public static final right_icon:I = 0x7f0a022c
 
-.field public static final right_side:I = 0x7f0a022c
+.field public static final right_side:I = 0x7f0a022d
 
-.field public static final tag_accessibility_actions:I = 0x7f0a028c
+.field public static final tag_accessibility_actions:I = 0x7f0a028d
 
-.field public static final tag_accessibility_clickable_spans:I = 0x7f0a028d
+.field public static final tag_accessibility_clickable_spans:I = 0x7f0a028e
 
-.field public static final tag_accessibility_heading:I = 0x7f0a028e
+.field public static final tag_accessibility_heading:I = 0x7f0a028f
 
-.field public static final tag_accessibility_pane_title:I = 0x7f0a028f
+.field public static final tag_accessibility_pane_title:I = 0x7f0a0290
 
-.field public static final tag_screen_reader_focusable:I = 0x7f0a0290
+.field public static final tag_screen_reader_focusable:I = 0x7f0a0291
 
-.field public static final tag_transition_group:I = 0x7f0a0291
+.field public static final tag_transition_group:I = 0x7f0a0292
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f0a0292
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0a0293
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f0a0293
+.field public static final tag_unhandled_key_listeners:I = 0x7f0a0294
 
-.field public static final text:I = 0x7f0a0294
+.field public static final text:I = 0x7f0a0295
 
-.field public static final text2:I = 0x7f0a0295
+.field public static final text2:I = 0x7f0a0296
 
-.field public static final time:I = 0x7f0a02aa
+.field public static final time:I = 0x7f0a02ab
 
-.field public static final title:I = 0x7f0a02b0
+.field public static final title:I = 0x7f0a02b1
 
 
 # direct methods

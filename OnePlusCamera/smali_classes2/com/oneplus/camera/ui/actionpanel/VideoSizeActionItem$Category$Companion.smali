@@ -65,13 +65,9 @@
 
     const/16 p0, 0x780
 
-    if-eq p1, p0, :cond_2
-
-    const/16 p0, 0xf00
-
     if-eq p1, p0, :cond_1
 
-    const/16 p0, 0x1e00
+    const/16 p0, 0xf00
 
     if-eq p1, p0, :cond_0
 
@@ -80,16 +76,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_8K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
-
-    goto :goto_0
-
-    :cond_1
     sget-object p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_4K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     sget-object p0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_2K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
 
     :goto_0

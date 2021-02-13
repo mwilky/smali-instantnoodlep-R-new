@@ -275,7 +275,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "tryConvertToRgba() - Spent : "
+    const-string v3, "tryConvertToRgba() - Spent : "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -296,7 +296,7 @@
     :cond_0
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "tryConvertToRgba() - Failed to convert"
+    const-string v0, "tryConvertToRgba() - Failed to convert"
 
     invoke-static {v2, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 

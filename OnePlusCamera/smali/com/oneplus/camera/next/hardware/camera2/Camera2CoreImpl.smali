@@ -39,7 +39,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n+ 5 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 6 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 7 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 8 StreamInfo.kt\ncom/oneplus/camera/next/hardware/camera2/StreamInfoKt\n+ 9 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,7983:1\n55#2:7984\n13#2:8019\n34#2:8070\n1299#3,8:7985\n1299#3,8:7996\n1299#3,8:8035\n1214#4:7993\n1214#4:8004\n1214#4:8005\n1214#4:8006\n1214#4:8007\n1214#4:8008\n1214#4:8009\n1214#4:8010\n1214#4:8011\n1214#4:8012\n1214#4:8013\n1214#4:8014\n1214#4:8015\n1214#4:8016\n1214#4:8022\n1214#4:8023\n1214#4:8024\n1214#4:8025\n1214#4:8026\n1214#4:8027\n1214#4:8028\n1214#4:8032\n1214#4:8033\n1214#4:8034\n1214#4:8043\n1214#4:8044\n1214#4:8045\n1214#4:8046\n1214#4:8047\n1214#4:8048\n1214#4:8049\n1214#4:8050\n1214#4:8051\n1214#4:8052\n1214#4:8053\n1214#4:8054\n1214#4:8055\n1214#4:8056\n1214#4:8057\n1214#4:8058\n1214#4:8059\n1214#4:8066\n37#5,2:7994\n37#5,2:8067\n37#5,2:8071\n183#6:8017\n183#6:8018\n183#6:8020\n183#6:8021\n183#6:8069\n706#7:8029\n783#7,2:8030\n181#8,6:8060\n396#9:8073\n396#9:8074\n396#9:8075\n396#9:8076\n396#9:8077\n396#9:8078\n396#9:8079\n396#9:8080\n396#9:8081\n396#9:8082\n396#9:8083\n396#9:8084\n396#9:8085\n396#9:8086\n396#9:8087\n396#9:8088\n396#9:8089\n396#9:8090\n396#9:8091\n396#9:8092\n396#9:8093\n396#9:8094\n396#9:8095\n396#9:8096\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n*L\n1225#1:7984\n3818#1:8019\n7813#1:8070\n1391#1,8:7985\n1777#1,8:7996\n4676#1,8:8035\n1489#1:7993\n1891#1:8004\n2051#1:8005\n2222#1:8006\n2434#1:8007\n2491#1:8008\n2545#1:8009\n2806#1:8010\n2856#1:8011\n3102#1:8012\n3326#1:8013\n3477#1:8014\n3617#1:8015\n3678#1:8016\n3865#1:8022\n3908#1:8023\n3950#1:8024\n3980#1:8025\n4095#1:8026\n4124#1:8027\n4212#1:8028\n4426#1:8032\n4528#1:8033\n4635#1:8034\n5289#1:8043\n5307#1:8044\n5442#1:8045\n5475#1:8046\n5587#1:8047\n5665#1:8048\n5722#1:8049\n5812#1:8050\n5861#1:8051\n5922#1:8052\n5976#1:8053\n6033#1:8054\n6100#1:8055\n6325#1:8056\n6360#1:8057\n6391#1:8058\n7343#1:8059\n7413#1:8066\n1603#1,2:7994\n7683#1,2:8067\n7851#1,2:8071\n3803#1:8017\n3808#1:8018\n3818#1:8020\n3844#1:8021\n7787#1:8069\n4224#1:8029\n4224#1,2:8030\n7403#1,6:8060\n78#1:8073\n79#1:8074\n80#1:8075\n81#1:8076\n82#1:8077\n83#1:8078\n84#1:8079\n85#1:8080\n86#1:8081\n87#1:8082\n88#1:8083\n89#1:8084\n90#1:8085\n91#1:8086\n92#1:8087\n93#1:8088\n94#1:8089\n95#1:8090\n96#1:8091\n97#1:8092\n98#1:8093\n99#1:8094\n100#1:8095\n101#1:8096\n*E\n"
+    value = "SMAP\nCamera2CoreImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n+ 2 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 3 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 4 AbstractCameraCore.kt\ncom/oneplus/camera/next/hardware/AbstractCameraCore\n+ 5 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 6 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 7 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 8 StreamInfo.kt\ncom/oneplus/camera/next/hardware/camera2/StreamInfoKt\n+ 9 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,7986:1\n55#2:7987\n13#2:8022\n34#2:8073\n1299#3,8:7988\n1299#3,8:7999\n1299#3,8:8038\n1214#4:7996\n1214#4:8007\n1214#4:8008\n1214#4:8009\n1214#4:8010\n1214#4:8011\n1214#4:8012\n1214#4:8013\n1214#4:8014\n1214#4:8015\n1214#4:8016\n1214#4:8017\n1214#4:8018\n1214#4:8019\n1214#4:8025\n1214#4:8026\n1214#4:8027\n1214#4:8028\n1214#4:8029\n1214#4:8030\n1214#4:8031\n1214#4:8035\n1214#4:8036\n1214#4:8037\n1214#4:8046\n1214#4:8047\n1214#4:8048\n1214#4:8049\n1214#4:8050\n1214#4:8051\n1214#4:8052\n1214#4:8053\n1214#4:8054\n1214#4:8055\n1214#4:8056\n1214#4:8057\n1214#4:8058\n1214#4:8059\n1214#4:8060\n1214#4:8061\n1214#4:8062\n1214#4:8069\n37#5,2:7997\n37#5,2:8070\n37#5,2:8074\n183#6:8020\n183#6:8021\n183#6:8023\n183#6:8024\n183#6:8072\n706#7:8032\n783#7,2:8033\n181#8,6:8063\n396#9:8076\n396#9:8077\n396#9:8078\n396#9:8079\n396#9:8080\n396#9:8081\n396#9:8082\n396#9:8083\n396#9:8084\n396#9:8085\n396#9:8086\n396#9:8087\n396#9:8088\n396#9:8089\n396#9:8090\n396#9:8091\n396#9:8092\n396#9:8093\n396#9:8094\n396#9:8095\n396#9:8096\n396#9:8097\n396#9:8098\n396#9:8099\n*E\n*S KotlinDebug\n*F\n+ 1 Camera2CoreImpl.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl\n*L\n1225#1:7987\n3818#1:8022\n7816#1:8073\n1391#1,8:7988\n1777#1,8:7999\n4676#1,8:8038\n1489#1:7996\n1891#1:8007\n2051#1:8008\n2222#1:8009\n2434#1:8010\n2491#1:8011\n2545#1:8012\n2806#1:8013\n2856#1:8014\n3102#1:8015\n3326#1:8016\n3477#1:8017\n3617#1:8018\n3678#1:8019\n3865#1:8025\n3908#1:8026\n3950#1:8027\n3980#1:8028\n4095#1:8029\n4124#1:8030\n4212#1:8031\n4426#1:8035\n4528#1:8036\n4635#1:8037\n5292#1:8046\n5310#1:8047\n5445#1:8048\n5478#1:8049\n5590#1:8050\n5668#1:8051\n5725#1:8052\n5815#1:8053\n5864#1:8054\n5925#1:8055\n5979#1:8056\n6036#1:8057\n6103#1:8058\n6328#1:8059\n6363#1:8060\n6394#1:8061\n7346#1:8062\n7416#1:8069\n1603#1,2:7997\n7686#1,2:8070\n7854#1,2:8074\n3803#1:8020\n3808#1:8021\n3818#1:8023\n3844#1:8024\n7790#1:8072\n4224#1:8032\n4224#1,2:8033\n7406#1,6:8063\n78#1:8076\n79#1:8077\n80#1:8078\n81#1:8079\n82#1:8080\n83#1:8081\n84#1:8082\n85#1:8083\n86#1:8084\n87#1:8085\n88#1:8086\n89#1:8087\n90#1:8088\n91#1:8089\n92#1:8090\n93#1:8091\n94#1:8092\n95#1:8093\n96#1:8094\n97#1:8095\n98#1:8096\n99#1:8097\n100#1:8098\n101#1:8099\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -7449,7 +7449,7 @@
 
     sget-object v2, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    if-ne v1, v2, :cond_13
+    if-ne v1, v2, :cond_14
 
     invoke-virtual {v15}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
 
@@ -7464,7 +7464,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_12
+    if-eqz v5, :cond_13
 
     iget-object v1, v6, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->TAG:Ljava/lang/String;
 
@@ -7494,7 +7494,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_12
 
     check-cast v1, Ljava/lang/Integer;
 
@@ -7779,11 +7779,18 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
 
+    iget-object v0, v6, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->captureSessionClosingTimeoutOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    if-eqz v0, :cond_11
+
+    invoke-virtual {v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->cancel()Z
+
+    :cond_11
     const/4 v0, 0x1
 
     return v0
 
-    :cond_11
+    :cond_12
     new-instance v0, Lkotlin/TypeCastException;
 
     const-string v1, "null cannot be cast to non-null type kotlin.Int"
@@ -7792,7 +7799,7 @@
 
     throw v0
 
-    :cond_12
+    :cond_13
     iget-object v0, v6, Lcom/oneplus/camera/next/hardware/camera2/Camera2CoreImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "onReadyToStartPreview() - Failed to select preview capture request template"
@@ -7803,7 +7810,7 @@
 
     return v0
 
-    :cond_13
+    :cond_14
     :goto_5
     move v0, v9
 

@@ -96,6 +96,12 @@
     <string name="filter_landscape">Paisagem</string>
     <string name="filter_mono">Monocromático</string>
     <string name="filter_night">Noite</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Nenhum</string>
     <string name="filter_pop">Vívido</string>
     <string name="filter_portrait">Retrato</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Selecionar os minutos</string>
     <string name="select_year">Selecionar o ano</string>
     <string name="settings">Configurações</string>
-    <string name="settings_about">Informações</string>
+    <string name="settings_about">Sobre</string>
     <string name="settings_about_agreement">Acordo de usuário</string>
     <string name="settings_about_copyright">"OnePlus Todos os Direitos Reservados
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">"Nenhum texto inserido. Não foi possível salvar o nome na marca d'água."</string>
     <string name="settings_watermark_summary">Será aplicada uma marca d’água nas fotos tiradas pela câmera traseira, incluindo em modos Foto, Retrato, Pro e Paisagem noturna.</string>
     <string name="settings_watermark_summary_8250">Será aplicada uma marca d’água nas fotos tiradas pela câmera traseira, incluindo em modos Foto, Retrato, Pro e Paisagem noturna.</string>
+    <string name="settings_watermark_timestamp">Hora</string>
     <string name="settings_watermark_title">Fotografia com marca de água OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Correção de lente ultra ampla</string>
     <string name="show_kill_apps_processing_dialog">Limpeza</string>

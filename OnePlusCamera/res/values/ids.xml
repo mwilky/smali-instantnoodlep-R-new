@@ -325,6 +325,7 @@
     <item type="id" name="largeLabel" />
     <item type="id" name="layoutPanel" />
     <item type="id" name="left_layout" />
+    <item type="id" name="legal_webview" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
     <item type="id" name="list_footer" />
@@ -666,7 +667,6 @@
     <item type="id" name="video_size_action_item_1080p" />
     <item type="id" name="video_size_action_item_4k" />
     <item type="id" name="video_size_action_item_720p" />
-    <item type="id" name="video_size_action_item_8k" />
     <item type="id" name="view_offset_helper" />
     <item type="id" name="viewfinder_container" />
     <item type="id" name="viewfinder_cover" />

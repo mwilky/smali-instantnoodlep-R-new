@@ -3087,7 +3087,7 @@
 
     if-gez v2, :cond_6
 
-    const v2, 0x7f120145
+    const v2, 0x7f120139
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3096,7 +3096,7 @@
     goto/16 :goto_5
 
     :cond_6
-    const v2, 0x7f120144
+    const v2, 0x7f120138
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3144,7 +3144,7 @@
 
     div-int/lit8 v1, v1, 0x8
 
-    const v2, 0x7f120143
+    const v2, 0x7f120137
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3153,7 +3153,7 @@
     goto :goto_5
 
     :cond_a
-    const v2, 0x7f120142
+    const v2, 0x7f120136
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3201,7 +3201,7 @@
 
     div-int/lit8 v1, v1, 0x10
 
-    const v2, 0x7f120147
+    const v2, 0x7f12013b
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3210,7 +3210,7 @@
     goto :goto_5
 
     :cond_e
-    const v2, 0x7f120146
+    const v2, 0x7f12013a
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3401,7 +3401,7 @@
 
     sget-object v2, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
 
-    const v2, 0x7f1201f9
+    const v2, 0x7f1201ef
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3463,13 +3463,13 @@
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f1201ff
+    const v0, 0x7f1201f5
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f1201fc
+    const v1, 0x7f1201f2
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -3509,7 +3509,7 @@
 
     check-cast v1, Landroid/content/DialogInterface$OnClickListener;
 
-    const v2, 0x7f1201fe
+    const v2, 0x7f1201f4
 
     invoke-virtual {v0, v2, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -3521,7 +3521,7 @@
 
     check-cast v1, Landroid/content/DialogInterface$OnClickListener;
 
-    const p0, 0x7f1201fd
+    const p0, 0x7f1201f3
 
     invoke-virtual {v0, p0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -5885,13 +5885,13 @@
 
     invoke-direct {p2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p0, 0x7f1201cd
+    const p0, 0x7f1201c3
 
     invoke-virtual {p2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    const p2, 0x7f1201cc
+    const p2, 0x7f1201c2
 
     sget-object v1, Lcom/oneplus/camera/VideoCaptureControllerImpl$notifyError$dialog$1;->INSTANCE:Lcom/oneplus/camera/VideoCaptureControllerImpl$notifyError$dialog$1;
 
@@ -6081,7 +6081,7 @@
 
     invoke-super {p0}, Lcom/oneplus/camera/CameraActivityComponent;->onInitialize()V
 
-    const v0, 0x7f120184
+    const v0, 0x7f120178
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 
@@ -6089,7 +6089,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/VideoCaptureControllerImpl;->shutterSoundSettingsKey:Ljava/lang/String;
 
-    const v0, 0x7f120183
+    const v0, 0x7f120177
 
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/VideoCaptureControllerImpl;->getString(I)Ljava/lang/String;
 

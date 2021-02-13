@@ -1,146 +1,390 @@
 .class final Lcx;
-.super Ljava/lang/Object;
+.super Lbw;
 .source "PG"
 
 # interfaces
-.implements Ldv;
+.implements Ljava/util/RandomAccess;
+.implements Ldi;
+.implements Leo;
 
 
 # static fields
-.field private static final b:Ldi;
+.field private static final b:Lcx;
 
 
 # instance fields
-.field private final a:Ldi;
+.field private c:[F
+
+.field private d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lda;
+    new-instance v0, Lcx;
 
-    invoke-direct {v0}, Lda;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lcx;->b:Ldi;
+    new-array v2, v1, [F
+
+    invoke-direct {v0, v2, v1}, Lcx;-><init>([FI)V
+
+    sput-object v0, Lcx;->b:Lcx;
+
+    sget-object v0, Lcx;->b:Lcx;
+
+    invoke-virtual {v0}, Lbw;->b()V
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lcz;
+    const/16 v0, 0xa
 
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ldi;
-
-    sget-object v2, Lbz;->a:Lbz;
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
-
-    invoke-static {}, Lcx;->a()Ldi;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    aput-object v2, v1, v3
-
-    invoke-direct {v0, v1}, Lcz;-><init>([Ldi;)V
-
-    invoke-direct {p0, v0}, Lcx;-><init>(Ldi;)V
-
-    return-void
-.end method
-
-.method private constructor <init>(Ldi;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "messageInfoFactory"
-        }
-    .end annotation
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, "messageInfoFactory"
-
-    invoke-static {p1, v0}, Lcc;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldi;
-
-    iput-object p1, p0, Lcx;->a:Ldi;
-
-    return-void
-.end method
-
-.method private static a()Ldi;
-    .locals 4
-
-    :try_start_0
-    const-string v0, "com.google.protobuf.DescriptorMessageInfoFactory"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "getInstance"
-
-    const/4 v2, 0x0
-
-    new-array v3, v2, [Ljava/lang/Class;
-
-    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
+    new-array v0, v0, [F
 
     const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-direct {p0, v0, v1}, Lcx;-><init>([FI)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldi;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    sget-object v0, Lcx;->b:Ldi;
-
-    return-object v0
+    return-void
 .end method
 
-.method private static a(Ldf;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "messageInfo"
-        }
-    .end annotation
+.method private constructor <init>([FI)V
+    .locals 0
 
-    invoke-interface {p0}, Ldf;->a()I
+    invoke-direct {p0}, Lbw;-><init>()V
+
+    iput-object p1, p0, Lcx;->c:[F
+
+    iput p2, p0, Lcx;->d:I
+
+    return-void
+.end method
+
+.method private final b(I)V
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    iget v0, p0, Lcx;->d:I
+
+    if-ge p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0, p1}, Lcx;->c(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method private final c(I)Ljava/lang/String;
+    .locals 2
+
+    iget p0, p0, Lcx;->d:I
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x23
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Index:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", Size:"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a(I)Ldi;
+    .locals 2
+
+    iget v0, p0, Lcx;->d:I
+
+    if-lt p1, v0, :cond_0
+
+    new-instance v0, Lcx;
+
+    iget-object v1, p0, Lcx;->c:[F
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    move-result-object p1
+
+    iget p0, p0, Lcx;->d:I
+
+    invoke-direct {v0, p1, p0}, Lcx;-><init>([FI)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final a(F)V
+    .locals 4
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    iget v0, p0, Lcx;->d:I
+
+    iget-object v1, p0, Lcx;->c:[F
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_0
+
+    mul-int/lit8 v2, v0, 0x3
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0x1
+
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v3, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v2, p0, Lcx;->c:[F
+
+    :cond_0
+    iget-object v0, p0, Lcx;->c:[F
+
+    iget v1, p0, Lcx;->d:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcx;->d:I
+
+    aput p1, v0, v1
+
+    return-void
+.end method
+
+.method public final bridge synthetic add(ILjava/lang/Object;)V
+    .locals 4
+
+    check-cast p2, Ljava/lang/Float;
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    if-ltz p1, :cond_1
+
+    iget v0, p0, Lcx;->d:I
+
+    if-gt p1, v0, :cond_1
+
+    iget-object v1, p0, Lcx;->c:[F
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_0
+
+    add-int/lit8 v2, p1, 0x1
+
+    sub-int/2addr v0, p1
+
+    invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x3
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/lit8 v0, v0, 0x1
+
+    new-array v0, v0, [F
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v1, p0, Lcx;->c:[F
+
+    add-int/lit8 v2, p1, 0x1
+
+    iget v3, p0, Lcx;->d:I
+
+    sub-int/2addr v3, p1
+
+    invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v0, p0, Lcx;->c:[F
+
+    :goto_0
+    iget-object v0, p0, Lcx;->c:[F
+
+    aput p2, v0, p1
+
+    iget p1, p0, Lcx;->d:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcx;->d:I
+
+    iget p1, p0, Lcx;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcx;->modCount:I
+
+    return-void
+
+    :cond_1
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0, p1}, Lcx;->c(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p2, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcx;->a(F)V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    invoke-static {p1}, Ldj;->a(Ljava/lang/Object;)V
+
+    instance-of v0, p1, Lcx;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0, p1}, Lbw;->addAll(Ljava/util/Collection;)Z
 
     move-result p0
 
-    sget v0, Lby$e;->h:I
+    return p0
 
-    if-ne p0, v0, :cond_0
+    :cond_0
+    check-cast p1, Lcx;
+
+    iget v0, p1, Lcx;->d:I
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    iget v2, p0, Lcx;->d:I
+
+    const v3, 0x7fffffff
+
+    sub-int/2addr v3, v2
+
+    if-lt v3, v0, :cond_2
+
+    add-int/2addr v2, v0
+
+    iget-object v0, p0, Lcx;->c:[F
+
+    array-length v3, v0
+
+    if-le v2, v3, :cond_1
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcx;->c:[F
+
+    :cond_1
+    iget-object v0, p1, Lcx;->c:[F
+
+    iget-object v3, p0, Lcx;->c:[F
+
+    iget v4, p0, Lcx;->d:I
+
+    iget p1, p1, Lcx;->d:I
+
+    invoke-static {v0, v1, v3, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput v2, p0, Lcx;->d:I
+
+    iget p1, p0, Lcx;->modCount:I
+
+    const/4 v0, 0x1
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lcx;->modCount:I
+
+    return v0
+
+    :cond_2
+    new-instance p0, Ljava/lang/OutOfMemoryError;
+
+    invoke-direct {p0}, Ljava/lang/OutOfMemoryError;-><init>()V
+
+    throw p0
+
+    :cond_3
+    return v1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcx;->indexOf(Ljava/lang/Object;)I
+
+    move-result p0
+
+    const/4 p1, -0x1
+
+    if-eq p0, p1, :cond_0
 
     const/4 p0, 0x1
 
@@ -152,160 +396,346 @@
     return p0
 .end method
 
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-# virtual methods
-.method public final a(Ljava/lang/Class;)Ldw;
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "messageType"
-        }
-    .end annotation
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Ldy;->a(Ljava/lang/Class;)V
+    if-eq p0, p1, :cond_4
 
-    iget-object p0, p0, Lcx;->a:Ldi;
+    instance-of v1, p1, Lcx;
 
-    invoke-interface {p0, p1}, Ldi;->b(Ljava/lang/Class;)Ldf;
+    if-nez v1, :cond_0
 
-    move-result-object v0
-
-    invoke-interface {v0}, Ldf;->b()Z
+    invoke-super {p0, p1}, Lbw;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_1
-
-    const-class p0, Lby;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p0, Ldy;->c:Lem;
-
-    sget-object p1, Lbq;->a:Lbr;
-
-    invoke-interface {v0}, Ldf;->c()Ldh;
-
-    move-result-object v0
-
-    invoke-static {p0, p1, v0}, Ldl;->a(Lem;Lbr;Ldh;)Ldl;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 
     :cond_0
-    sget-object p0, Ldy;->a:Lem;
+    check-cast p1, Lcx;
 
-    invoke-static {}, Lbq;->a()Lbr;
+    iget v1, p0, Lcx;->d:I
 
-    move-result-object p1
+    iget v2, p1, Lcx;->d:I
 
-    invoke-interface {v0}, Ldf;->c()Ldh;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    if-ne v1, v2, :cond_3
 
-    invoke-static {p0, p1, v0}, Ldl;->a(Lem;Lbr;Ldh;)Ldl;
+    iget-object p1, p1, Lcx;->c:[F
 
-    move-result-object p0
+    move v1, v3
 
-    return-object p0
+    :goto_0
+    iget v2, p0, Lcx;->d:I
 
-    :cond_1
-    const-class p0, Lby;
+    if-ge v1, v2, :cond_2
 
-    invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    iget-object v2, p0, Lcx;->c:[F
 
-    move-result p0
+    aget v2, v2, v1
 
-    if-eqz p0, :cond_3
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-static {v0}, Lcx;->a(Ldf;)Z
+    move-result v2
 
-    move-result p0
+    aget v4, p1, v1
 
-    if-eqz p0, :cond_2
+    invoke-static {v4}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    sget-object v1, Ldq;->b:Ldn;
+    move-result v4
 
-    sget-object v2, Lct;->b:Lct;
+    if-ne v2, v4, :cond_1
 
-    sget-object v3, Ldy;->c:Lem;
-
-    sget-object v4, Lbq;->a:Lbr;
-
-    sget-object v5, Ldg;->b:Ldd;
-
-    invoke-static/range {v0 .. v5}, Ldm;->a(Ldf;Ldn;Lct;Lem;Lbr;Ldd;)Ldm;
-
-    move-result-object p0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    :cond_1
+    return v3
+
     :cond_2
-    sget-object v1, Ldq;->b:Ldn;
-
-    sget-object v2, Lct;->b:Lct;
-
-    sget-object v3, Ldy;->c:Lem;
-
-    const/4 v4, 0x0
-
-    sget-object v5, Ldg;->b:Ldd;
-
-    invoke-static/range {v0 .. v5}, Ldm;->a(Ldf;Ldn;Lct;Lem;Lbr;Ldd;)Ldm;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 
     :cond_3
-    invoke-static {v0}, Lcx;->a(Ldf;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_4
-
-    sget-object v1, Ldq;->a:Ldn;
-
-    sget-object v2, Lct;->a:Lct;
-
-    sget-object v3, Ldy;->a:Lem;
-
-    invoke-static {}, Lbq;->a()Lbr;
-
-    move-result-object v4
-
-    sget-object v5, Ldg;->a:Ldd;
-
-    invoke-static/range {v0 .. v5}, Ldm;->a(Ldf;Ldn;Lct;Lem;Lbr;Ldd;)Ldm;
-
-    move-result-object p0
-
-    return-object p0
+    return v3
 
     :cond_4
-    sget-object v1, Ldq;->a:Ldn;
+    return v0
+.end method
 
-    sget-object v2, Lct;->a:Lct;
+.method public final bridge synthetic get(I)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v3, Ldy;->b:Lem;
+    invoke-direct {p0, p1}, Lcx;->b(I)V
 
-    const/4 v4, 0x0
+    iget-object p0, p0, Lcx;->c:[F
 
-    sget-object v5, Ldg;->a:Ldd;
+    aget p0, p0, p1
 
-    invoke-static/range {v0 .. v5}, Ldm;->a(Ldf;Ldn;Lct;Lem;Lbr;Ldd;)Ldm;
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
 
-    :goto_0
     return-object p0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    iget v2, p0, Lcx;->d:I
+
+    if-ge v1, v2, :cond_0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lcx;->c:[F
+
+    aget v2, v2, v1
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 4
+
+    instance-of v0, p1, Ljava/lang/Float;
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget v0, p0, Lcx;->d:I
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    iget-object v3, p0, Lcx;->c:[F
+
+    aget v3, v3, v2
+
+    cmpl-float v3, v3, p1
+
+    if-eqz v3, :cond_0
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+
+    :cond_1
+    return v1
+.end method
+
+.method public final bridge synthetic remove(I)Ljava/lang/Object;
+    .locals 4
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    invoke-direct {p0, p1}, Lcx;->b(I)V
+
+    iget-object v0, p0, Lcx;->c:[F
+
+    aget v1, v0, p1
+
+    iget v2, p0, Lcx;->d:I
+
+    add-int/lit8 v3, v2, -0x1
+
+    if-ge p1, v3, :cond_0
+
+    add-int/lit8 v3, p1, 0x1
+
+    sub-int/2addr v2, p1
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-static {v0, v3, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_0
+    iget p1, p0, Lcx;->d:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lcx;->d:I
+
+    iget p1, p0, Lcx;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcx;->modCount:I
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 3
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget v2, p0, Lcx;->d:I
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lcx;->c:[F
+
+    aget v2, v2, v1
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object p1, p0, Lcx;->c:[F
+
+    add-int/lit8 v0, v1, 0x1
+
+    iget v2, p0, Lcx;->d:I
+
+    sub-int/2addr v2, v1
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-static {p1, v0, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lcx;->d:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lcx;->d:I
+
+    iget p1, p0, Lcx;->modCount:I
+
+    const/4 v0, 0x1
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lcx;->modCount:I
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+.end method
+
+.method protected final removeRange(II)V
+    .locals 2
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    if-lt p2, p1, :cond_0
+
+    iget-object v0, p0, Lcx;->c:[F
+
+    iget v1, p0, Lcx;->d:I
+
+    sub-int/2addr v1, p2
+
+    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget v0, p0, Lcx;->d:I
+
+    sub-int/2addr p2, p1
+
+    sub-int/2addr v0, p2
+
+    iput v0, p0, Lcx;->d:I
+
+    iget p1, p0, Lcx;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcx;->modCount:I
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string p1, "toIndex < fromIndex"
+
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p2, Ljava/lang/Float;
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    invoke-virtual {p0}, Lbw;->c()V
+
+    invoke-direct {p0, p1}, Lcx;->b(I)V
+
+    iget-object p0, p0, Lcx;->c:[F
+
+    aget v0, p0, p1
+
+    aput p2, p0, p1
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final size()I
+    .locals 0
+
+    iget p0, p0, Lcx;->d:I
+
+    return p0
 .end method

@@ -323,7 +323,7 @@
     move-object v0, v1
 
     :goto_0
-    const v2, 0x7f120183
+    const v2, 0x7f120177
 
     if-eqz v0, :cond_2
 
@@ -964,7 +964,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1
-    const v2, 0x7f12017b
+    const v2, 0x7f12016f
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -989,7 +989,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_2
-    const v2, 0x7f12017e
+    const v2, 0x7f120172
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1029,7 +1029,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_4
-    const v2, 0x7f120177
+    const v2, 0x7f12016b
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1054,7 +1054,7 @@
     sget-object v2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_5
-    const v2, 0x7f12017a
+    const v2, 0x7f12016e
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1238,7 +1238,7 @@
     move v6, v4
 
     :goto_2
-    const v7, 0x7f120180
+    const v7, 0x7f120174
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1278,7 +1278,7 @@
     sget-object v7, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_10
-    const v7, 0x7f12017c
+    const v7, 0x7f120170
 
     invoke-virtual {p0, v7}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1362,7 +1362,7 @@
 
     if-eqz v1, :cond_19
 
-    const v5, 0x7f12017f
+    const v5, 0x7f120173
 
     invoke-virtual {p0, v5}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1442,7 +1442,7 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/settings/SettingsFragment;->generalCategory:Landroidx/preference/PreferenceCategory;
 
-    const v1, 0x7f120182
+    const v1, 0x7f120176
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1495,7 +1495,7 @@
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1c
-    const v1, 0x7f120178
+    const v1, 0x7f12016c
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1535,7 +1535,7 @@
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_1e
-    const v1, 0x7f120183
+    const v1, 0x7f120177
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1617,7 +1617,7 @@
 
     if-lt v1, v5, :cond_22
 
-    const v1, 0x7f1201b6
+    const v1, 0x7f1201ab
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1628,7 +1628,7 @@
     goto :goto_5
 
     :cond_22
-    const v1, 0x7f1201b5
+    const v1, 0x7f1201aa
 
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/settings/SettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -1700,7 +1700,7 @@
     move-object v1, v3
 
     :goto_6
-    const v5, 0x7f120157
+    const v5, 0x7f12014b
 
     new-array v6, v2, [Ljava/lang/Object;
 

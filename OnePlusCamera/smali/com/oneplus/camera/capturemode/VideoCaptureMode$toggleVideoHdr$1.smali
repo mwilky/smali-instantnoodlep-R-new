@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,2454:1\n602#2:2455\n695#2,2:2456\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1\n*L\n1982#1:2455\n1989#1,2:2456\n*E\n"
+    value = "SMAP\nVideoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1\n+ 2 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n*L\n1#1,2547:1\n602#2:2548\n695#2,2:2549\n*E\n*S KotlinDebug\n*F\n+ 1 VideoCaptureMode.kt\ncom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1\n*L\n2059#1:2548\n2070#1,2:2549\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -80,7 +80,7 @@
 
 # virtual methods
 .method public final invoke()Lcom/oneplus/camera/next/hardware/OperationResult;
-    .locals 10
+    .locals 11
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
@@ -171,13 +171,13 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
+    iget-object v4, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
-    invoke-static {v2}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getCamera$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/camera/next/hardware/Camera;
+    invoke-static {v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getCamera$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/camera/next/hardware/Camera;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -215,15 +215,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
     check-cast v0, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;
 
-    const-class v2, Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;
+    const-class v4, Lcom/oneplus/camera/next/hardware/ObjectTrackingCamera;
 
-    invoke-static {v0, v2}, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;->access$disableSimpleFeatureCamera(Lcom/oneplus/camera/capturemode/AbstractCaptureMode;Ljava/lang/Class;)Z
+    invoke-static {v0, v4}, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;->access$disableSimpleFeatureCamera(Lcom/oneplus/camera/capturemode/AbstractCaptureMode;Ljava/lang/Class;)Z
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
@@ -231,70 +231,99 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     invoke-static {v0}, Lcom/oneplus/camera/resolution/ResolutionManagerKt;->getVideoResolution(Lcom/oneplus/camera/resolution/ResolutionManager;)Lcom/oneplus/camera/resolution/Resolution;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0}, Lcom/oneplus/camera/resolution/Resolution;->isValid()Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {v0}, Lcom/oneplus/camera/resolution/Resolution;->getHasCaptureRate()Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {v0}, Lcom/oneplus/camera/resolution/Resolution;->getCaptureRate()D
 
-    move-result-wide v4
+    move-result-wide v5
 
-    const-wide/high16 v6, 0x404e000000000000L    # 60.0
+    const-wide/high16 v7, 0x404e000000000000L    # 60.0
 
-    const-wide v8, 0x3fb999999999999aL    # 0.1
+    const-wide v9, 0x3fb999999999999aL    # 0.1
 
-    invoke-static/range {v4 .. v9}, Lcom/oneplus/base/NumbersKt;->isCloseTo(DDD)Z
+    invoke-static/range {v5 .. v10}, Lcom/oneplus/base/NumbersKt;->isCloseTo(DDD)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/base/HandlesKt;->isValid(Lcom/oneplus/base/Handle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Lcom/oneplus/base/Handle;
+
+    move-result-object v4
+
+    invoke-static {v4, v1, v2, v3}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$setVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/base/Handle;)V
+
+    :cond_5
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
     invoke-virtual {v0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
-    move-result-object v0
+    move-result-object v2
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
-    const v2, 0x7f120204
+    const v4, 0x7f1201fa
 
-    invoke-static {p0, v2}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/VideoCaptureMode;I)Ljava/lang/String;
+    invoke-static {p0, v4}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getString(Lcom/oneplus/camera/capturemode/VideoCaptureMode;I)Ljava/lang/String;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/CharSequence;
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v0, p0, v1, v2, v3}, Lcom/oneplus/camera/OnePlusCamera$DefaultImpls;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {v2, p0, v1, v4, v3}, Lcom/oneplus/camera/OnePlusCamera$DefaultImpls;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$setVideoHdrNotSupportHintHandle$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;Lcom/oneplus/base/Handle;)V
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
     invoke-static {v0}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$isObjectTrackingEnabled$p(Lcom/oneplus/camera/capturemode/VideoCaptureMode;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/VideoCaptureMode$toggleVideoHdr$1;->this$0:Lcom/oneplus/camera/capturemode/VideoCaptureMode;
 
@@ -304,7 +333,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;->access$enableSimpleFeatureCamera(Lcom/oneplus/camera/capturemode/AbstractCaptureMode;Ljava/lang/Class;I)Z
 
-    :cond_6
+    :cond_7
     :goto_2
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 

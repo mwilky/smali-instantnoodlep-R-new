@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$1$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Arrays.kt\ncom/oneplus/util/ArraysKt\n*L\n1#1,468:1\n1299#2,3:469\n1299#2,3:472\n662#2,3:475\n666#2:483\n1305#2,2:484\n1305#2,2:486\n12#3,5:478\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$1$action$1\n*L\n116#1,3:469\n116#1,3:472\n116#1,3:475\n116#1:483\n116#1,2:484\n116#1,2:486\n116#1,5:478\n*E\n"
+    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$1$action$1\n+ 2 Image.kt\ncom/oneplus/camera/next/media/ImageKt\n+ 3 Arrays.kt\ncom/oneplus/util/ArraysKt\n*L\n1#1,489:1\n1299#2,3:490\n1299#2,3:493\n662#2,3:496\n666#2:504\n1305#2,2:505\n1305#2,2:507\n12#3,5:499\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$1$action$1\n*L\n132#1,3:490\n132#1,3:493\n132#1,3:496\n132#1:504\n132#1,2:505\n132#1,2:507\n132#1,5:499\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -190,16 +190,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     :try_start_1
-    iget-object v6, v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;
-
-    invoke-static {v6}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->access$getTAG$p(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "onPostviewCaptured() - Apply watermark [start]"
-
-    invoke-static {v6, v7}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
     invoke-static {v2, v5}, Lcom/oneplus/camera/next/media/ImageKt;->tryConvertToNV21(Lcom/oneplus/camera/next/media/Image;Lcom/oneplus/camera/next/media/Image;)Z
 
     move-result v6
@@ -288,6 +278,40 @@
     invoke-static {v4, v6}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_2
+
+    iget-object v0, v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$$inlined$let$lambda$1;->$params$inlined:Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->access$getEXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW$cp()Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    move-result-object v4
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v4, v6}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+
+    iget-object v0, v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$$inlined$let$lambda$1;->$params$inlined:Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->access$getEXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW$cp()Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    move-result-object v4
+
+    const/4 v6, 0x1
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v4, v6}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
 
     iget-object v0, v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$onPostviewCaptured$$inlined$let$lambda$1;->this$0:Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;
 

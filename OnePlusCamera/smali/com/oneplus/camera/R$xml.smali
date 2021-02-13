@@ -23,15 +23,17 @@
 
 .field public static final settings_custom_modes:I = 0x7f160003
 
-.field public static final settings_log_switch:I = 0x7f160004
+.field public static final settings_legal:I = 0x7f160004
 
-.field public static final settings_other_custom_modes:I = 0x7f160005
+.field public static final settings_log_switch:I = 0x7f160005
 
-.field public static final settings_video_resolution:I = 0x7f160006
+.field public static final settings_other_custom_modes:I = 0x7f160006
 
-.field public static final settings_watermark:I = 0x7f160007
+.field public static final settings_video_resolution:I = 0x7f160007
 
-.field public static final shortcuts:I = 0x7f160008
+.field public static final settings_watermark:I = 0x7f160008
+
+.field public static final shortcuts:I = 0x7f160009
 
 
 # direct methods

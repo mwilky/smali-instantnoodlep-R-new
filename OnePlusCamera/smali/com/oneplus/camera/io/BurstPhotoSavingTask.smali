@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBurstPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BurstPhotoSavingTask.kt\ncom/oneplus/camera/io/BurstPhotoSavingTask\n*L\n1#1,129:1\n*E\n"
+    value = "SMAP\nBurstPhotoSavingTask.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BurstPhotoSavingTask.kt\ncom/oneplus/camera/io/BurstPhotoSavingTask\n*L\n1#1,153:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -15,7 +15,7 @@
         0x3
     }
     d1 = {
-        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0018\u00002\u00020\u0001BC\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010J8\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\t2\u0006\u0010\u0014\u001a\u00020\t2\u000e\u0010\u0015\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00170\u00162\u000e\u0010\u0018\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\t0\u0016H\u0003J$\u0010\u0019\u001a\u00020\u00122\u000c\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u001b0\u00162\u000c\u0010\u001c\u001a\u0008\u0012\u0004\u0012\u00020\u00170\u0016H\u0015\u00a8\u0006\u001d"
+        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001BC\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u00a2\u0006\u0002\u0010\u0010J8\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\t2\u0006\u0010\u0014\u001a\u00020\t2\u000e\u0010\u0015\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00170\u00162\u000e\u0010\u0018\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\t0\u0016H\u0003J$\u0010\u0019\u001a\u00020\u00122\u000c\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u001b0\u00162\u000c\u0010\u001c\u001a\u0008\u0012\u0004\u0012\u00020\u00170\u0016H\u0015J\n\u0010\u001d\u001a\u0004\u0018\u00010\u001bH\u0015\u00a8\u0006\u001e"
     }
     d2 = {
         "Lcom/oneplus/camera/io/BurstPhotoSavingTask;",
@@ -47,6 +47,7 @@
         "fileRef",
         "Ljava/io/File;",
         "pendingContentUriRef",
+        "prepareCameraDirectory",
         "OnePlusCameraInterfaces_release"
     }
     k = 0x1
@@ -116,76 +117,120 @@
 
     move-result-object v3
 
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
 
-    const/16 v5, 0x1d
+    move-result v4
 
-    if-ne v4, v5, :cond_0
+    if-eqz v4, :cond_1
 
-    sget-object v4, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v4}, Landroid/provider/MediaStore;->setIncludePending(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v4
+    const-string v5, "DCIM/Camera/Cshot/"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getCaptureHandle()Lcom/oneplus/camera/CaptureHandle;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v5}, Lcom/oneplus/camera/CaptureHandle;->getCaptureTime()J
+
+    move-result-wide v5
 
     goto :goto_0
 
     :cond_0
-    sget-object v4, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    const-wide/16 v5, 0x0
 
     :goto_0
-    new-instance v5, Landroid/os/Bundle;
+    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+    const/16 v5, 0x2f
 
-    const-string v6, "android:query-arg-sql-selection"
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    const-string v7, "relative_path=? AND _display_name=?"
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v4
 
-    const/4 v6, 0x2
+    goto :goto_1
 
-    new-array v7, v6, [Ljava/lang/String;
+    :cond_1
+    const-string v4, "DCIM/Camera/"
 
-    const/4 v8, 0x0
+    :goto_1
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v9, "DCIM/Camera/"
+    const/16 v6, 0x1d
 
-    aput-object v9, v7, v8
+    if-ne v5, v6, :cond_2
+
+    sget-object v5, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-static {v5}, Landroid/provider/MediaStore;->setIncludePending(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v5
+
+    goto :goto_2
+
+    :cond_2
+    sget-object v5, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    :goto_2
+    new-instance v6, Landroid/os/Bundle;
+
+    invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
+
+    const-string v7, "android:query-arg-sql-selection"
+
+    const-string v8, "relative_path=? AND _display_name=?"
+
+    invoke-virtual {v6, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v7, 0x2
+
+    new-array v8, v7, [Ljava/lang/String;
+
+    const/4 v9, 0x0
+
+    aput-object v4, v8, v9
 
     const/4 v10, 0x1
 
-    aput-object v3, v7, v10
+    aput-object v3, v8, v10
 
     const-string v11, "android:query-arg-sql-selection-args"
 
-    invoke-virtual {v5, v11, v7}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-virtual {v6, v11, v8}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v11, 0x1e
 
-    if-lt v7, v11, :cond_1
+    if-lt v8, v11, :cond_3
 
-    const-string v7, "android:query-arg-match-pending"
+    const-string v8, "android:query-arg-match-pending"
 
-    invoke-virtual {v5, v7, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v6, v8, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_1
+    :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-interface {v7}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+    invoke-interface {v8}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
 
-    move-result-object v7
+    move-result-object v8
 
-    check-cast v7, Lcom/oneplus/base/GlobalContext;
+    check-cast v8, Lcom/oneplus/base/GlobalContext;
 
-    invoke-virtual {v7}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v8}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v7
+    move-result-object v8
 
     const-string v11, "relative_path"
 
@@ -199,30 +244,30 @@
 
     const/4 v14, 0x0
 
-    invoke-virtual {v7, v4, v13, v5, v14}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    invoke-virtual {v8, v5, v13, v6, v14}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v4, :cond_7
+    if-eqz v5, :cond_9
 
-    check-cast v4, Ljava/io/Closeable;
+    check-cast v5, Ljava/io/Closeable;
 
-    move-object v5, v14
+    move-object v6, v14
 
-    check-cast v5, Ljava/lang/Throwable;
+    check-cast v6, Ljava/lang/Throwable;
 
     :try_start_0
-    move-object v7, v4
+    move-object v8, v5
 
-    check-cast v7, Landroid/database/Cursor;
+    check-cast v8, Landroid/database/Cursor;
 
-    invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v13
 
-    if-eqz v13, :cond_5
+    if-eqz v13, :cond_7
 
-    invoke-interface {v7, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v8, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
@@ -240,12 +285,12 @@
 
     move v14, v10
 
-    :goto_1
-    const/16 v6, 0x3e8
+    :goto_3
+    const/16 v7, 0x3e8
 
-    if-gt v14, v6, :cond_4
+    if-gt v14, v7, :cond_6
 
-    if-ne v14, v6, :cond_2
+    if-ne v14, v7, :cond_4
 
     iget-object v0, v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
 
@@ -267,29 +312,29 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v4, v5}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v5, v6}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    return v8
+    return v9
 
-    :cond_2
+    :cond_4
     :try_start_1
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "__"
+    const-string v9, "__"
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v8, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
+    sget-object v9, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
 
-    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v10, "Locale.US"
 
-    invoke-static {v8, v10}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v10, "%02d"
 
@@ -313,19 +358,19 @@
 
     move-result-object v1
 
-    invoke-static {v8, v10, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v9, v10, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v8, "java.lang.String.format(locale, format, *args)"
+    const-string v9, "java.lang.String.format(locale, format, *args)"
 
-    invoke-static {v1, v8}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -335,46 +380,46 @@
 
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->prepareCameraDirectory()Ljava/io/File;
 
-    move-result-object v6
+    move-result-object v7
 
-    iget-object v8, v15, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
+    iget-object v9, v15, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v8, Ljava/lang/String;
+    check-cast v9, Ljava/lang/String;
 
-    invoke-direct {v1, v6, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v1, v7, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_5
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_3
+    :cond_5
     add-int/lit8 v14, v14, 0x1
 
     move-object/from16 v1, p1
 
     move-object/from16 v13, v17
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     const/4 v10, 0x1
 
-    goto :goto_1
+    goto :goto_3
 
-    :cond_4
-    :goto_2
+    :cond_6
+    :goto_4
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v2, 0x2
 
-    invoke-interface {v7, v2}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v8, v2}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v6
+    move-result-wide v7
 
-    invoke-static {v1, v6, v7}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
+    invoke-static {v1, v7, v8}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -382,72 +427,72 @@
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    iget-object v6, v15, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
+    iget-object v7, v15, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v6, Ljava/lang/String;
+    check-cast v7, Ljava/lang/String;
 
-    invoke-virtual {v2, v12, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v12, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-interface {v6}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
+    invoke-interface {v7}, Lcom/oneplus/camera/OnePlusCameraApp;->getContext()Landroid/content/Context;
 
-    move-result-object v6
+    move-result-object v7
 
-    check-cast v6, Lcom/oneplus/base/GlobalContext;
+    check-cast v7, Lcom/oneplus/base/GlobalContext;
 
-    invoke-virtual {v6}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v7}, Lcom/oneplus/base/GlobalContext;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v6
+    move-result-object v7
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    invoke-virtual {v6, v1, v2, v7, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v7, v1, v2, v8, v8}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v2
 
-    iget-object v6, v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
+    iget-object v7, v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "findDisplayNameAndInsert() -  Counts: "
+    const-string v9, "findDisplayNameAndInsert() -  Counts: "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, ", move existed file to "
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, v15, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ", uri: "
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_5
+    :cond_7
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v4, v5}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v5, v6}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     new-instance v1, Landroid/content/ContentValues;
 
@@ -455,7 +500,7 @@
 
     invoke-virtual {v1, v12, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v11, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v11, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -487,7 +532,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_8
 
     const-string v0, "this.onePlusCameraApp.co\u2026ame\")\n\t\t\treturn false\n\t\t}"
 
@@ -505,7 +550,7 @@
 
     return v0
 
-    :cond_6
+    :cond_8
     check-cast v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;
 
     iget-object v0, v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
@@ -545,11 +590,11 @@
 
     move-object v2, v0
 
-    invoke-static {v4, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v5, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v2
 
-    :cond_7
+    :cond_9
     check-cast v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;
 
     iget-object v0, v0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
@@ -566,7 +611,7 @@
 
 # virtual methods
 .method protected onGenerateFileForWritingData(Lcom/oneplus/base/Ref;Lcom/oneplus/base/Ref;)Z
-    .locals 11
+    .locals 13
     .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
     .end annotation
 
@@ -604,81 +649,83 @@
 
     move-result-object v2
 
+    const-wide/16 v3, 0x0
+
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Lcom/oneplus/camera/CaptureHandle;->getCaptureTime()J
 
-    move-result-wide v2
+    move-result-wide v5
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v2, 0x0
+    move-wide v5, v3
 
     :goto_0
-    const-string v4, "IMG_"
+    const-string v2, "IMG_"
 
-    check-cast v4, Ljava/lang/CharSequence;
+    check-cast v2, Ljava/lang/CharSequence;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 v6, 0x5f
+    const/16 v8, 0x5f
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget-object v6, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
+    sget-object v8, Lkotlin/jvm/internal/StringCompanionObject;->INSTANCE:Lkotlin/jvm/internal/StringCompanionObject;
 
-    sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string v7, "Locale.US"
+    const-string v9, "Locale.US"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v7, 0x1
+    const/4 v9, 0x1
 
-    new-array v8, v7, [Ljava/lang/Object;
+    new-array v10, v9, [Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getMediaIndex()I
 
-    move-result v9
+    move-result v11
 
-    add-int/2addr v9, v7
+    add-int/2addr v11, v9
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v9
+    move-result-object v11
 
-    const/4 v10, 0x0
+    const/4 v12, 0x0
 
-    aput-object v9, v8, v10
+    aput-object v11, v10, v12
 
-    array-length v9, v8
+    array-length v11, v10
 
-    invoke-static {v8, v9}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v10, v11}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v10
+
+    const-string v11, "%03d"
+
+    invoke-static {v8, v11, v10}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
-    const-string v9, "%03d"
+    const-string v10, "java.lang.String.format(locale, format, *args)"
 
-    invoke-static {v6, v9, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v8, v10}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v6
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "java.lang.String.format(locale, format, *args)"
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v7, Ljava/lang/CharSequence;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/oneplus/camera/io/PhotoSavingTask$Companion;->generateDefaultFileName(JLjava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v5, v6, v2, v7}, Lcom/oneplus/camera/io/PhotoSavingTask$Companion;->generateDefaultFileName(JLjava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -686,23 +733,23 @@
 
     invoke-direct {v2}, Lcom/oneplus/base/SimpleRef;-><init>()V
 
-    new-instance v3, Lcom/oneplus/base/SimpleRef;
+    new-instance v5, Lcom/oneplus/base/SimpleRef;
 
-    invoke-direct {v3}, Lcom/oneplus/base/SimpleRef;-><init>()V
+    invoke-direct {v5}, Lcom/oneplus/base/SimpleRef;-><init>()V
 
-    move-object v4, v2
+    move-object v6, v2
 
-    check-cast v4, Lcom/oneplus/base/Ref;
+    check-cast v6, Lcom/oneplus/base/Ref;
 
-    move-object v5, v3
+    move-object v7, v5
 
-    check-cast v5, Lcom/oneplus/base/Ref;
+    check-cast v7, Lcom/oneplus/base/Ref;
 
-    invoke-direct {p0, v1, v0, v4, v5}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->findDisplayNameAndInsert(Ljava/lang/String;Ljava/lang/String;Lcom/oneplus/base/Ref;Lcom/oneplus/base/Ref;)Z
+    invoke-direct {p0, v1, v0, v6, v7}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->findDisplayNameAndInsert(Ljava/lang/String;Ljava/lang/String;Lcom/oneplus/base/Ref;Lcom/oneplus/base/Ref;)Z
 
-    move-result v4
+    move-result v6
 
-    if-nez v4, :cond_1
+    if-nez v6, :cond_1
 
     iget-object p0, p0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
 
@@ -710,28 +757,80 @@
 
     invoke-static {p0, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v10
+    return v12
 
     :cond_1
     invoke-virtual {v2}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v6
 
-    check-cast v4, Landroid/net/Uri;
+    check-cast v6, Landroid/net/Uri;
 
-    invoke-virtual {v3}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
+    invoke-virtual {v5}, Lcom/oneplus/base/SimpleRef;->get()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Ljava/lang/String;
+    check-cast v5, Ljava/lang/String;
 
-    if-eqz v3, :cond_2
+    if-eqz v5, :cond_4
 
-    new-instance v0, Ljava/io/File;
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v0, :cond_3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getStorage()Lcom/oneplus/camera/io/Storage;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/oneplus/camera/io/Storage;->getDirectory()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/DCIM/Camera/Cshot/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getCaptureHandle()Lcom/oneplus/camera/CaptureHandle;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/CaptureHandle;->getCaptureTime()J
+
+    move-result-wide v3
+
+    :cond_2
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x2f
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getStorage()Lcom/oneplus/camera/io/Storage;
 
@@ -745,27 +844,30 @@
 
     move-result-object p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, "/DCIM/Camera/"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    :goto_1
+    new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-interface {p1, v0}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
 
-    invoke-interface {p2, v4}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
+    invoke-interface {p2, v6}, Lcom/oneplus/base/Ref;->set(Ljava/lang/Object;)V
 
-    return v7
+    return v9
 
-    :cond_2
+    :cond_4
     check-cast p0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;
 
     iget-object p1, p0, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->TAG:Ljava/lang/String;
@@ -798,7 +900,7 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_5
 
     invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getOnePlusCameraApp()Lcom/oneplus/camera/OnePlusCameraApp;
 
@@ -818,6 +920,79 @@
 
     invoke-virtual {p0, p1, p2, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    :cond_3
-    return v10
+    :cond_5
+    return v12
+.end method
+
+.method protected prepareCameraDirectory()Ljava/io/File;
+    .locals 5
+    .annotation runtime Lcom/oneplus/base/AccessOnWorkerThread;
+    .end annotation
+
+    invoke-super {p0}, Lcom/oneplus/camera/io/PhotoSavingTask;->prepareCameraDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/base/Device;->isSupportedOS1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    new-instance v1, Ljava/io/File;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Cshot/"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/io/BurstPhotoSavingTask;->getCaptureHandle()Lcom/oneplus/camera/CaptureHandle;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/CaptureHandle;->getCaptureTime()J
+
+    move-result-wide v3
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v3, 0x0
+
+    :goto_0
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, v0, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+
+    invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    move-object v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    move-object v0, p0
+
+    :cond_2
+    :goto_1
+    return-object v0
 .end method

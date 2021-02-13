@@ -1,130 +1,74 @@
-.class public Ldc;
-.super Ljava/lang/Object;
+.class public abstract Ldc;
+.super Lde;
 .source "PG"
 
 # interfaces
-.implements Lac;
+.implements Lei;
 
 
 # instance fields
-.field public final a:Ldb;
-
-.field public final b:Lac;
+.field public d:Lcu;
 
 
 # direct methods
-.method public constructor <init>(Ldb;Lac;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldc;->a:Ldb;
-
-    iput-object p2, p0, Ldc;->b:Lac;
-
-    return-void
-.end method
-
-.method static a(Ldb;Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "metadata",
-            "key",
-            "value"
-        }
-    .end annotation
-
-    iget-object v0, p0, Ldb;->a:Lex;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1, p1}, Lbt;->a(Lex;ILjava/lang/Object;)I
-
-    move-result p1
-
-    iget-object p0, p0, Ldb;->c:Lex;
-
-    const/4 v0, 0x2
-
-    invoke-static {p0, v0, p2}, Lbt;->a(Lex;ILjava/lang/Object;)I
-
-    move-result p0
-
-    add-int/2addr p1, p0
-
-    return p1
-.end method
-
-.method public static a(Landroid/content/Context;Ldb;Lx;)Lab;
+.method public constructor <init>()V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "callbacks",
-            "lensSdkParamsReader"
-        }
-    .end annotation
 
-    new-instance v0, Lae;
+    invoke-direct {p0}, Lde;-><init>()V
 
-    invoke-direct {v0, p0, p1, p2}, Lae;-><init>(Landroid/content/Context;Ldb;Lx;)V
+    sget-object v0, Lcu;->c:Lcu;
 
-    return-object v0
-.end method
-
-.method static a(Lbl;Ldb;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "output",
-            "metadata",
-            "key",
-            "value"
-        }
-    .end annotation
-
-    iget-object v0, p1, Ldb;->a:Lex;
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1, p2}, Lbt;->a(Lbl;Lex;ILjava/lang/Object;)V
-
-    iget-object p1, p1, Ldb;->c:Lex;
-
-    const/4 p2, 0x2
-
-    invoke-static {p0, p1, p2, p3}, Lbt;->a(Lbl;Lex;ILjava/lang/Object;)V
+    iput-object v0, p0, Ldc;->d:Lcu;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Laf$a;)V
-    .locals 0
+.method public final a(Lcq;)V
+    .locals 1
 
-    iget-object p1, p0, Ldc;->a:Ldb;
+    iget-object p1, p1, Lcq;->a:Leh;
 
-    iget-object p0, p0, Ldc;->b:Lac;
+    const/4 v0, 0x6
 
-    invoke-virtual {p1, p0}, Ldb;->d(Lac;)V
+    invoke-virtual {p0, v0}, Lde;->b(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lde;
+
+    if-ne p1, p0, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method final d()Lcu;
+    .locals 2
+
+    iget-object v0, p0, Ldc;->d:Lcu;
+
+    iget-boolean v1, v0, Lcu;->b:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lcu;->c()Lcu;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ldc;->d:Lcu;
+
+    :cond_0
+    iget-object p0, p0, Ldc;->d:Lcu;
+
+    return-object p0
 .end method

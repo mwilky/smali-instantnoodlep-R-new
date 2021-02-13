@@ -38,7 +38,7 @@
     <string name="agree">Прийняти</string>
     <string name="app_name">Камера</string>
     <string name="app_name_video">Відеокамера</string>
-    <string name="auto">Авто</string>
+    <string name="auto">Автоматично</string>
     <string name="bokeh_hint">Ефект глибини</string>
     <string name="bokeh_hint_camera_is_covered">Камеру закрито</string>
     <string name="bokeh_hint_low_light">Необхідно більш яскраве освітлення</string>
@@ -64,7 +64,7 @@
     <string name="content_description_face_beauty">Красиве обличчя</string>
     <string name="content_description_flash">Спалах</string>
     <string name="content_description_gallery">Галерея</string>
-    <string name="content_description_hyper_image_stabilization">Висока стабільність</string>
+    <string name="content_description_hyper_image_stabilization">Посилена стабілізація</string>
     <string name="content_description_picture_format">Формат зображення</string>
     <string name="content_description_resolution">Роздільна здатність</string>
     <string name="content_description_self_timer">Таймер</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">Пейзаж</string>
     <string name="filter_mono">Одноколірний</string>
     <string name="filter_night">Ніч</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Немає</string>
     <string name="filter_pop">Яскраве зображення</string>
     <string name="filter_portrait">Портрет</string>
@@ -114,7 +120,7 @@
     <string name="full_size_picutre_enabled_hint">48 Мп — вища роздільна здатність і зйомка деталей за хороших умов освітлення</string>
     <string name="full_size_picutre_enabled_hint_64mp">64 Мп — вища роздільна здатність і зйомка деталей за гарної освітленості</string>
     <string name="handshake_detected">Сильне трясіння може призвести до розмитості фотографій.</string>
-    <string name="hyper_image_stabilization_enabled">Висока стабільність</string>
+    <string name="hyper_image_stabilization_enabled">Посилена стабілізація</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">Зум камери в режимі Super Stable вимкнуто.</string>
     <string name="lens_stain_detected">Можливо, об’єктив забруднився. Протріть його, щоб покращити якість зображення.</string>
     <string name="loading_text">Завантаження…</string>
@@ -126,7 +132,7 @@
     <string name="macro_enabled">Супермакро</string>
     <string name="macro_flash_disabled">Спалах вимкнено в режимі макрозйомки</string>
     <string name="macro_hint">Рекомендується знімати з відстані 3–4 см</string>
-    <string name="manual_capture_control_auto">Авто</string>
+    <string name="manual_capture_control_auto">Автоматично</string>
     <string name="manual_capture_control_manual">Уручну</string>
     <string name="manual_capture_long_exposure_tips">Зйомка</string>
     <string name="manual_mode_custom_setting_saved">Збережено</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Виберіть значення для хвилин</string>
     <string name="select_year">Виберіть рік</string>
     <string name="settings">Параметри</string>
-    <string name="settings_about">Інформація</string>
+    <string name="settings_about">Відомості</string>
     <string name="settings_about_agreement">Угода з користувачем</string>
     <string name="settings_about_copyright">"OnePlus. Усі права захищено.
 @ OnePlus Inc., 2017 р."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Поле пусте. Не вдалося зберегти назву водяного знака.</string>
     <string name="settings_watermark_summary">Додавати водяний знак до фото, знятих на задню камеру, зокрема в режимах \"Фото\", \"Портрет\", \"Професійний\" і \"Нічний сюжет\"</string>
     <string name="settings_watermark_summary_8250">Додавати водяний знак до фото, знятих на задню камеру, зокрема в режимах \"Фото\", \"Портрет\", \"Професійний\" і \"Нічний сюжет\"</string>
+    <string name="settings_watermark_timestamp">Час</string>
     <string name="settings_watermark_title">Водяний знак Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Корекція перспективи надширококутного об’єктива</string>
     <string name="show_kill_apps_processing_dialog">Очищення</string>

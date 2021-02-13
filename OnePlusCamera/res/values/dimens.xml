@@ -448,6 +448,7 @@
     <dimen name="oneplus_search_view_preferred_width">370.0dip</dimen>
     <dimen name="oneplus_smooth_round_radius">6.0dip</dimen>
     <dimen name="op_abc_config_prefDialogWidth">270.0dip</dimen>
+    <dimen name="op_about_button_max_size">480.0px</dimen>
     <dimen name="op_app_bar_collapsed_text_size">42.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_margin">16.0px</dimen>
     <dimen name="op_app_bar_collapsed_top_subtitle_margin">12.0px</dimen>
@@ -661,4 +662,6 @@
     <dimen name="watermark_slogan_title_no_subtext_margin_top">15.0px</dimen>
     <dimen name="watermark_slogan_title_text_height">40.0px</dimen>
     <dimen name="watermark_slogan_title_text_size">41.0px</dimen>
+    <dimen name="watermark_subtitle_datetime_text_height">24.0px</dimen>
+    <dimen name="watermark_subtitle_datetime_text_size">18.0px</dimen>
 </resources>

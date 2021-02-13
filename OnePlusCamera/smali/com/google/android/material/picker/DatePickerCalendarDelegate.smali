@@ -640,7 +640,7 @@
     :goto_1
     aput p0, v4, v7
 
-    const-string/jumbo p0, "translationY"
+    const-string p0, "translationY"
 
     invoke-static {v2, p0, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 

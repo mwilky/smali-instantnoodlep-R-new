@@ -536,7 +536,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f12017e
+    const v0, 0x7f120172
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1368,7 +1368,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120080
+    const v4, 0x7f120071
 
     invoke-virtual {v3, v4}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
@@ -1385,7 +1385,7 @@
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/ui/FloatingButtonUI;->addAutoRotateView(Landroid/view/View;)V
 
     :cond_3
-    const v2, 0x7f0a0237
+    const v2, 0x7f0a0238
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2382,7 +2382,7 @@
 
     move-result v1
 
-    const v2, 0x7f080286
+    const v2, 0x7f08027e
 
     if-eqz v1, :cond_27
 
@@ -2411,7 +2411,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080283
+    const v1, 0x7f08027b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2430,7 +2430,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080280
+    const v1, 0x7f080278
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2519,7 +2519,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080284
+    const v1, 0x7f08027c
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2555,7 +2555,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080289
+    const v1, 0x7f080281
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2567,7 +2567,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080287
+    const v1, 0x7f08027f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2579,7 +2579,7 @@
 
     if-eqz v0, :cond_26
 
-    const v1, 0x7f080288
+    const v1, 0x7f080280
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

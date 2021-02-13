@@ -102,7 +102,7 @@
 
     check-cast p1, Lcom/oneplus/base/BaseActivity;
 
-    const p2, 0x7f0802fd
+    const p2, 0x7f0802ef
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p2}, Lcom/oneplus/camera/ui/hint/TripodHint;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f12010b
+    const p2, 0x7f1200ff
 
     invoke-virtual {p1, p2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

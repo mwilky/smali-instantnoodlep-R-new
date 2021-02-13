@@ -26,7 +26,7 @@
 
 # direct methods
 .method static synthetic constructor <clinit>()V
-    .locals 5
+    .locals 4
 
     invoke-static {}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->values()[Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
 
@@ -62,18 +62,6 @@
 
     aput v3, v0, v1
 
-    sget-object v0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$WhenMappings;->$EnumSwitchMapping$0:[I
-
-    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_8K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->ordinal()I
-
-    move-result v1
-
-    const/4 v4, 0x3
-
-    aput v4, v0, v1
-
     invoke-static {}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->values()[Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
 
     move-result-object v0
@@ -103,16 +91,6 @@
     move-result v1
 
     aput v3, v0, v1
-
-    sget-object v0, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$WhenMappings;->$EnumSwitchMapping$1:[I
-
-    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->CATEGORY_8K:Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/actionpanel/VideoSizeActionItem$Category;->ordinal()I
-
-    move-result v1
-
-    aput v4, v0, v1
 
     return-void
 .end method

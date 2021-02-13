@@ -432,7 +432,7 @@
     :try_start_0
     iget-object p1, p0, Lcom/oneplus/camera/FlashlightControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v3, "turnOff() - Send message to service"
+    const-string v3, "turnOff() - Send message to service"
 
     invoke-static {p1, v3}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -457,7 +457,7 @@
 
     iget-object v3, p0, Lcom/oneplus/camera/FlashlightControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "turnOff() - Failed to send message"
+    const-string v4, "turnOff() - Failed to send message"
 
     invoke-static {v3, v4, p1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -763,7 +763,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/oneplus/camera/FlashlightControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v2, "turnOn() - Send message to service"
+    const-string v2, "turnOn() - Send message to service"
 
     invoke-static {v0, v2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -790,7 +790,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/FlashlightControllerImpl;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "turnOn() - Failed to send message"
+    const-string v1, "turnOn() - Failed to send message"
 
     invoke-static {p0, v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 

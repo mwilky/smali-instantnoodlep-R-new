@@ -67,6 +67,12 @@
     <string name="filter_landscape">લેન્ડસ્કેપ</string>
     <string name="filter_mono">મોનો</string>
     <string name="filter_night">રાત્રિ</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">કોઈ નહીં</string>
     <string name="filter_pop">સ્પષ્ટ</string>
     <string name="filter_portrait">પોર્ટ્રેટ</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">કોઈ ટેક્સ્ટ ઇનપુટ નથી; વૉટરમાર્કમાં નામ સાચવવામાં અસમર્થ.</string>
     <string name="settings_watermark_summary">પાછળના કૅમેરા દ્વારા લેવામાં આવેલા ફોટા પર એક વૉટરમાર્ક લગાવવામાં આવશે, જેમાં ફોટો, પોર્ટ્રેટ, પ્રો અને નાઇટસ્કૅપ મોડ સમાવિષ્ટ છે</string>
     <string name="settings_watermark_summary_8250">પાછળના કૅમેરા દ્વારા લેવામાં આવેલા ફોટા પર એક વૉટરમાર્ક લગાવવામાં આવશે, જેમાં ફોટો, પોર્ટ્રેટ, પ્રો અને નાઇટસ્કૅપ મોડ સમાવિષ્ટ છે</string>
+    <string name="settings_watermark_timestamp">સમય</string>
     <string name="settings_watermark_title">Shot on OnePlus વૉટરમાર્ક</string>
     <string name="settings_wide_lens_distortion_correction">અલ્ટ્રા વાઇડ લેન્સ દુરસ્તી</string>
     <string name="show_kill_apps_processing_dialog">સાફ કરી રહ્યું છે</string>

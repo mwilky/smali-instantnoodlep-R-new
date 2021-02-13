@@ -544,7 +544,7 @@
 .method public final verifyOneTimeToken(Ljava/lang/String;)Z
     .locals 1
 
-    const-string/jumbo v0, "token"
+    const-string v0, "token"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

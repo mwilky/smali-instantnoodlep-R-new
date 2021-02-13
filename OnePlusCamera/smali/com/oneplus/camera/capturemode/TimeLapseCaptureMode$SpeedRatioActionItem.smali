@@ -116,7 +116,7 @@
 
     move-result-object v2
 
-    const p1, 0x7f0a0276
+    const p1, 0x7f0a0277
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -154,7 +154,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_5X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0274
+    const p2, 0x7f0a0275
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -170,7 +170,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const p2, 0x7f0802a7
+    const p2, 0x7f08029f
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -194,7 +194,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_15X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0272
+    const p2, 0x7f0a0273
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -204,7 +204,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const p2, 0x7f08029f
+    const p2, 0x7f080297
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -226,7 +226,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_60X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0275
+    const p2, 0x7f0a0276
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -236,7 +236,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const p2, 0x7f0802ab
+    const p2, 0x7f0802a3
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -258,7 +258,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_120X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0271
+    const p2, 0x7f0a0272
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -268,7 +268,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const p2, 0x7f08029b
+    const p2, 0x7f080293
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -290,7 +290,7 @@
 
     sget-object v2, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;->SPEED_480X:Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode$SpeedRatio;
 
-    const p2, 0x7f0a0273
+    const p2, 0x7f0a0274
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -300,7 +300,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/ui/actionpanel/SimpleActionItem;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const p2, 0x7f0802a3
+    const p2, 0x7f08029b
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -443,7 +443,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802a3
+    const p1, 0x7f08029b
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -460,7 +460,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f08029b
+    const p1, 0x7f080293
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -477,7 +477,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802ab
+    const p1, 0x7f0802a3
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -494,7 +494,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f08029f
+    const p1, 0x7f080297
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -511,7 +511,7 @@
 
     check-cast p0, Lcom/oneplus/base/BaseActivity;
 
-    const p1, 0x7f0802a7
+    const p1, 0x7f08029f
 
     invoke-virtual {p0, p1}, Lcom/oneplus/base/BaseActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

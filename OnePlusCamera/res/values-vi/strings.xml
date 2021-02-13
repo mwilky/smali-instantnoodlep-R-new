@@ -96,6 +96,12 @@
     <string name="filter_landscape">Ngang</string>
     <string name="filter_mono">Đơn sắc</string>
     <string name="filter_night">Ban đêm</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Không có</string>
     <string name="filter_pop">Sống động</string>
     <string name="filter_portrait">Dọc</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Không có mục nhập văn bản; không thể lưu tên trong hình chìm mờ.</string>
     <string name="settings_watermark_summary">Hình chìm mờ sẽ được áp dụng cho những ảnh được chụp bằng máy ảnh sau, bao gồm chế độ Ảnh, Chân dung, Chuyên nghiệp và Cảnh ban đêm</string>
     <string name="settings_watermark_summary_8250">Hình chìm mờ sẽ được áp dụng cho những ảnh được chụp bằng máy ảnh sau, bao gồm chế độ Ảnh, Chân dung, Chuyên nghiệp và Cảnh ban đêm</string>
+    <string name="settings_watermark_timestamp">Thời gian</string>
     <string name="settings_watermark_title">Chụp trên hình chìm mờ OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Hiệu chỉnh Ống kính Siêu Rộng</string>
     <string name="show_kill_apps_processing_dialog">Đang xóa</string>

@@ -40,6 +40,8 @@
 
 .field private static volatile m_IsOxygenOS:Ljava/lang/Boolean;
 
+.field private static volatile m_IsSupportedOS1:Ljava/lang/Boolean;
+
 .field private static supportMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -334,11 +336,15 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    if-nez v0, :cond_2
+    move-result v2
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -353,12 +359,12 @@
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v2
 
-    sub-int/2addr v3, v1
+    sub-int/2addr v2, v1
 
     :goto_0
-    if-ltz v3, :cond_9
+    if-ltz v2, :cond_9
 
     sget-object v4, Lcom/oneplus/base/Device;->m_IsAllies1:Ljava/lang/Boolean;
 
@@ -369,19 +375,19 @@
     :cond_3
     const/16 v4, 0x6f
 
-    if-eqz v3, :cond_6
+    if-eqz v2, :cond_6
 
-    if-eq v3, v1, :cond_5
+    if-eq v2, v1, :cond_5
 
     const/4 v5, 0x2
 
-    if-eq v3, v5, :cond_5
+    if-eq v2, v5, :cond_5
 
     const/4 v5, 0x3
 
-    if-eq v3, v5, :cond_4
+    if-eq v2, v5, :cond_4
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
@@ -390,13 +396,13 @@
     goto :goto_2
 
     :cond_4
-    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
     if-eq v5, v4, :cond_8
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
@@ -405,7 +411,7 @@
     goto :goto_2
 
     :cond_5
-    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
 
@@ -413,7 +419,7 @@
 
     if-eq v4, v5, :cond_8
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
@@ -422,7 +428,7 @@
     goto :goto_2
 
     :cond_6
-    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
@@ -433,7 +439,7 @@
     goto :goto_1
 
     :cond_7
-    move v4, v2
+    move v4, v3
 
     :goto_1
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -444,7 +450,7 @@
 
     :cond_8
     :goto_2
-    add-int/lit8 v3, v3, -0x1
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
@@ -460,7 +466,7 @@
 .end method
 
 .method public static isChinaRegion()Z
-    .locals 2
+    .locals 3
 
     sget-object v0, Lcom/oneplus/base/Device;->m_IsChinaRegion:Ljava/lang/Boolean;
 
@@ -475,25 +481,25 @@
     return v0
 
     :cond_0
-    const-string v0, "sys.radio.mcc"
+    const-string v0, "ro.product.locale"
 
     invoke-static {v0}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_1
 
-    const-string v1, "460"
+    const-string v2, "CN"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -502,6 +508,31 @@
     goto :goto_0
 
     :cond_1
+    const-string v0, "sys.radio.mcc"
+
+    invoke-static {v0}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const-string v2, "460"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->m_IsChinaRegion:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :cond_2
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -918,7 +949,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1294,7 +1325,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1310,6 +1341,63 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public static isSupportedOS1()Z
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsSupportedOS1:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsSupportedOS1:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const-string v0, "ro.oplus.version.base"
+
+    invoke-static {v0}, Lcom/oneplus/base/Device;->getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->m_IsSupportedOS1:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/base/Device;->m_IsSupportedOS1:Ljava/lang/Boolean;
+
+    :goto_0
+    sget-object v0, Lcom/oneplus/base/Device;->m_IsSupportedOS1:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
     return v0
 .end method
 

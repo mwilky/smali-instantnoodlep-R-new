@@ -776,7 +776,7 @@
 
     move-result-object p4
 
-    const v2, 0x7f0a0229
+    const v2, 0x7f0a022a
 
     invoke-virtual {p4, v2}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 

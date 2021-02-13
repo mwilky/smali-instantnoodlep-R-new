@@ -1,27 +1,18 @@
-.class interface abstract Ldi;
+.class public interface abstract Ldi;
 .super Ljava/lang/Object;
 .source "PG"
 
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/util/RandomAccess;
+
 
 # virtual methods
-.method public abstract a(Ljava/lang/Class;)Z
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "clazz"
-        }
-    .end annotation
+.method public abstract a(I)Ldi;
 .end method
 
-.method public abstract b(Ljava/lang/Class;)Ldf;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "clazz"
-        }
-    .end annotation
+.method public abstract a()Z
+.end method
+
+.method public abstract b()V
 .end method

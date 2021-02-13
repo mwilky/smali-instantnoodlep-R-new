@@ -198,7 +198,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070286
+    const v0, 0x7f070287
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -206,7 +206,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseWatermarkHeight:I
 
-    const v0, 0x7f070288
+    const v0, 0x7f070289
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -214,7 +214,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseCustomFlagDrawableWidth:I
 
-    const v0, 0x7f070287
+    const v0, 0x7f070288
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -222,7 +222,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseCustomFlagDrawableMarginLeft:I
 
-    const v0, 0x7f07028c
+    const v0, 0x7f07028d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -230,7 +230,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseLogoDrawableWidth:I
 
-    const v0, 0x7f070289
+    const v0, 0x7f07028a
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -238,7 +238,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseLogoDrawableHeight:I
 
-    const v0, 0x7f07028a
+    const v0, 0x7f07028b
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -246,7 +246,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseLogoDrawableMarginLeft:I
 
-    const v0, 0x7f07028b
+    const v0, 0x7f07028c
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -254,7 +254,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseLogoDrawableMarginRight:I
 
-    const v0, 0x7f070290
+    const v0, 0x7f070291
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -262,7 +262,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleMarginLeft:I
 
-    const v0, 0x7f070291
+    const v0, 0x7f070292
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -270,7 +270,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleMarginTop:I
 
-    const v1, 0x7f070293
+    const v1, 0x7f070294
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -278,7 +278,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleTextHeight:I
 
-    const v1, 0x7f070294
+    const v1, 0x7f070295
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -288,7 +288,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleTextSize:F
 
-    const v1, 0x7f07028d
+    const v1, 0x7f07028e
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -296,7 +296,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseSubtitleMarginTop:I
 
-    const v1, 0x7f07028e
+    const v1, 0x7f07028f
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -304,7 +304,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseSubtitleTextHeight:I
 
-    const v1, 0x7f07028f
+    const v1, 0x7f070290
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -314,7 +314,7 @@
 
     iput v1, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseSubtitleTextSize:F
 
-    const v1, 0x7f070292
+    const v1, 0x7f070293
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -328,7 +328,7 @@
 
     iput p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->baseTitleMarginTop:I
 
-    const p2, 0x7f12020a
+    const p2, 0x7f120200
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -340,7 +340,7 @@
 
     iput-object p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->title:Ljava/lang/String;
 
-    const p2, 0x7f120209
+    const p2, 0x7f1201ff
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -381,7 +381,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f120208
+    const v2, 0x7f1201fe
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -410,7 +410,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f12020b
+    const v2, 0x7f120201
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -439,7 +439,7 @@
 
     new-array v1, v4, [Ljava/lang/Object;
 
-    const v2, 0x7f120206
+    const v2, 0x7f1201fc
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -467,7 +467,7 @@
     :goto_0
     iput-object p2, p0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->subtitle:Ljava/lang/String;
 
-    const p2, 0x7f120205
+    const p2, 0x7f1201fb
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -540,7 +540,7 @@
     invoke-static {v3, v4, v2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
-    const v2, 0x7f120207
+    const v2, 0x7f1201fd
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -551,7 +551,7 @@
     :cond_4
     new-instance v2, Lcom/oneplus/drawable/ShadowDrawable;
 
-    const v3, 0x7f0804e2
+    const v3, 0x7f0804d7
 
     const v4, 0x7f1302b7
 
@@ -613,7 +613,7 @@
 
     new-instance p2, Lcom/oneplus/drawable/ShadowDrawable;
 
-    const v1, 0x7f0804e3
+    const v1, 0x7f0804d8
 
     invoke-direct {p2, p1, v1, v4}, Lcom/oneplus/drawable/ShadowDrawable;-><init>(Landroid/content/Context;II)V
 

@@ -96,6 +96,12 @@
     <string name="filter_landscape">Krajina</string>
     <string name="filter_mono">Čiernobiele</string>
     <string name="filter_night">Noc</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Žiadne</string>
     <string name="filter_pop">Živé</string>
     <string name="filter_portrait">Portrét</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Vyberte minúty</string>
     <string name="select_year">Vyberte rok</string>
     <string name="settings">Nastavenia</string>
-    <string name="settings_about">O produkte</string>
+    <string name="settings_about">Informácie</string>
     <string name="settings_about_agreement">Zmluva používateľa</string>
     <string name="settings_about_copyright">"OnePlus – Všetky práva vyhradené
 @2017 OnePlus Inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nebol zadaný text, nie je možné uložiť meno vo vodoznaku.</string>
     <string name="settings_watermark_summary">Vodoznak sa použije u všetkých fotografií zhotovených zadnou kamerou vrátane režimov Fotografia, Portrét, Pro a Nočná scéna</string>
     <string name="settings_watermark_summary_8250">Vodoznak sa použije u všetkých fotografií zhotovených zadnou kamerou vrátane režimov Fotografia, Portrét, Pro a Nočná scéna</string>
+    <string name="settings_watermark_timestamp">Čas</string>
     <string name="settings_watermark_title">Vodoznak Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Korekcia ultraširokouhlého objektívu</string>
     <string name="show_kill_apps_processing_dialog">Prebieha mazanie</string>

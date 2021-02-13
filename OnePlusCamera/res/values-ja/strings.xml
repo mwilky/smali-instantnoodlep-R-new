@@ -96,6 +96,12 @@
     <string name="filter_landscape">ランドスケープ</string>
     <string name="filter_mono">モノクロ</string>
     <string name="filter_night">夜間</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">なし</string>
     <string name="filter_pop">鮮明</string>
     <string name="filter_portrait">ポートレート</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">テキストが入力されていません。透かしに名前を保存できません。</string>
     <string name="settings_watermark_summary">リアカメラ（写真モード、ポートレートモード、プロモード、夜景モード）で撮影した写真には、透かしが適用されます</string>
     <string name="settings_watermark_summary_8250">リアカメラ（写真モード、ポートレートモード、プロモード、夜景モード）で撮影した写真には、透かしが適用されます</string>
+    <string name="settings_watermark_timestamp">時間</string>
     <string name="settings_watermark_title">Shot on OnePlus 透かし</string>
     <string name="settings_wide_lens_distortion_correction">超ワイドレンズ補正</string>
     <string name="show_kill_apps_processing_dialog">消去しています</string>

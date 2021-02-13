@@ -776,7 +776,7 @@
     :cond_2
     iget-object v10, v1, Lcom/oneplus/sencerecognizedsdk/NativeResult;->results:[Lcom/oneplus/sencerecognizedsdk/MGSCResult;
 
-    const-string/jumbo v12, "totalResult.results"
+    const-string v12, "totalResult.results"
 
     invoke-static {v10, v12}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -46,8 +46,8 @@
     <string name="bokeh_hint_no_subject">Geen onderwerp gevonden</string>
     <string name="bokeh_hint_object_distance_too_close">Neem meer afstand</string>
     <string name="bokeh_hint_object_distance_too_far">Ga dichterbij staan</string>
-    <string name="bokeh_hint_place_object_in_distance">Plaats het onderwerp op een afstand van 1–7 meter</string>
-    <string name="bokeh_hint_place_object_in_distance_far">Plaats het onderwerp op een afstand van 2–7 meter</string>
+    <string name="bokeh_hint_place_object_in_distance">Plaats het onderwerp op een afstand van 0,3 – 2 meter</string>
+    <string name="bokeh_hint_place_object_in_distance_far">Plaats het onderwerp op een afstand van 0,6 – 2 meter</string>
     <string name="burst_disabled">Burst is uitgeschakeld in de huidige modus</string>
     <string name="capture_mode_bokeh">Portret</string>
     <string name="capture_mode_manual">Pro</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">Liggend</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Nacht</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Geen</string>
     <string name="filter_pop">Levendig</string>
     <string name="filter_portrait">Portret</string>
@@ -125,7 +131,7 @@
     <string name="location_permission_description">Locatiemachtigingen zijn geweigerd. Geef de camera toegang tot de locatie.</string>
     <string name="macro_enabled">Supermacro</string>
     <string name="macro_flash_disabled">De flits is uitgeschakeld in macromodus</string>
-    <string name="macro_hint">De aanbevolen opnameafstand is 1-1,5 inch</string>
+    <string name="macro_hint">De aanbevolen opnameafstand is 3 - 4 cm.</string>
     <string name="manual_capture_control_auto">Auto</string>
     <string name="manual_capture_control_manual">Handmatig</string>
     <string name="manual_capture_long_exposure_tips">Vastleggen</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Geen tekstinvoer, kan naam niet opslaan in watermerk.</string>
     <string name="settings_watermark_summary">"Er wordt een watermerk toegevoegd aan foto's die zijn gemaakt met de camera aan de achterzijde, inclusief in de modi Foto, Portret, Pro en Nachtscène"</string>
     <string name="settings_watermark_summary_8250">"Er wordt een watermerk toegevoegd aan foto's die zijn gemaakt met de camera aan de achterzijde, inclusief in de modi Foto, Portret, Pro en Nachtscène"</string>
+    <string name="settings_watermark_timestamp">Tijd</string>
     <string name="settings_watermark_title">Shot on OnePlus-watermerk</string>
     <string name="settings_wide_lens_distortion_correction">Correctie ultragroothoeklens</string>
     <string name="show_kill_apps_processing_dialog">Wissen</string>

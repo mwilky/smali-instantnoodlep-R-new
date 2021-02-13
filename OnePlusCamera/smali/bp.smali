@@ -1,223 +1,83 @@
-.class public Lbp;
-.super Ljava/lang/Object;
+.class public final Lbp;
+.super Landroid/app/KeyguardManager$KeyguardDismissCallback;
 .source "PG"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lbp$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final a:Lbp;
-
-.field private static volatile b:Z = false
-
-.field private static volatile c:Lbp;
-
-.field private static volatile d:Lbp;
-
-
 # instance fields
-.field private final e:Ljava/util/Map;
+.field final synthetic a:Ljava/lang/Runnable;
+
+.field final synthetic b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    invoke-static {}, Lbp;->d()Ljava/lang/Class;
-
-    new-instance v0, Lbp;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lbp;-><init>(B)V
-
-    sput-object v0, Lbp;->a:Lbp;
-
-    return-void
-.end method
-
-.method constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lbp;->e:Ljava/util/Map;
-
-    return-void
-.end method
-
-.method constructor <init>(B)V
+.method public constructor <init>(Ljava/lang/Runnable;Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "empty"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbp;->a:Ljava/lang/Runnable;
 
-    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
+    iput-object p2, p0, Lbp;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lbp;->e:Ljava/util/Map;
+    invoke-direct {p0}, Landroid/app/KeyguardManager$KeyguardDismissCallback;-><init>()V
 
     return-void
-.end method
-
-.method public static a()Lbp;
-    .locals 2
-
-    sget-object v0, Lbp;->c:Lbp;
-
-    if-nez v0, :cond_1
-
-    const-class v1, Lbp;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lbp;->c:Lbp;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lbn;->a()Lbp;
-
-    move-result-object v0
-
-    sput-object v0, Lbp;->c:Lbp;
-
-    :cond_0
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    return-object v0
-.end method
-
-.method public static b()Lbp;
-    .locals 2
-
-    sget-object v0, Lbp;->d:Lbp;
-
-    if-nez v0, :cond_1
-
-    const-class v1, Lbp;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lbp;->d:Lbp;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lbn;->b()Lbp;
-
-    move-result-object v0
-
-    sput-object v0, Lbp;->d:Lbp;
-
-    :cond_0
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    return-object v0
-.end method
-
-.method static c()Lbp;
-    .locals 1
-
-    const-class v0, Lbp;
-
-    invoke-static {v0}, Lbw;->a(Ljava/lang/Class;)Lbp;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static d()Ljava/lang/Class;
-    .locals 1
-
-    :try_start_0
-    const-string v0, "com.google.protobuf.Extension"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Ldh;I)Lbo;
+.method public final onDismissCancelled()V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x10
-        }
-        names = {
-            "containingTypeDefaultInstance",
-            "fieldNumber"
-        }
-    .end annotation
 
-    iget-object p0, p0, Lbp;->e:Ljava/util/Map;
+    iget-object p0, p0, Lbp;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
 
-    new-instance v0, Lbp$a;
+    if-eqz p0, :cond_0
 
-    invoke-direct {v0, p1, p2}, Lbp$a;-><init>(Ljava/lang/Object;I)V
+    const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
 
-    move-result-object p0
+    :cond_0
+    return-void
+.end method
 
-    check-cast p0, Lbo;
+.method public final onDismissError()V
+    .locals 1
 
-    return-object p0
+    iget-object p0, p0, Lbp;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
+
+    :goto_0
+    const-string p0, "LensApi"
+
+    const-string v0, "Error dismissing keyguard"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final onDismissSucceeded()V
+    .locals 1
+
+    iget-object v0, p0, Lbp;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    iget-object p0, p0, Lbp;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
+
+    :cond_0
+    return-void
 .end method

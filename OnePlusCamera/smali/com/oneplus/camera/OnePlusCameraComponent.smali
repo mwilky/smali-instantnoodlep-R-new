@@ -3624,7 +3624,7 @@
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    const-string/jumbo v0, "toRotation"
+    const-string v0, "toRotation"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3757,7 +3757,7 @@
 
     move-object/from16 v7, p9
 
-    const-string/jumbo v0, "toRotation"
+    const-string v0, "toRotation"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3867,7 +3867,7 @@
         }
     .end annotation
 
-    const-string/jumbo v0, "toRotation"
+    const-string v0, "toRotation"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

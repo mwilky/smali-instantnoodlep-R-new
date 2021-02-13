@@ -22,7 +22,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPHighSpeedCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHighSpeedCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl$Builder\n*L\n1#1,111:1\n*E\n"
+    value = "SMAP\nOPHighSpeedCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPHighSpeedCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPHighSpeedCamcorderImpl$Builder\n*L\n1#1,162:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

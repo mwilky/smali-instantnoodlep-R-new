@@ -99,7 +99,7 @@
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "tree == null"
+    const-string v1, "tree == null"
 
     invoke-direct {p0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

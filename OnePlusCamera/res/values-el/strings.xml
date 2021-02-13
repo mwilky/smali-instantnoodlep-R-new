@@ -96,6 +96,12 @@
     <string name="filter_landscape">Τοπίο</string>
     <string name="filter_mono">Μονό</string>
     <string name="filter_night">Νύχτα</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Καθόλου</string>
     <string name="filter_pop">Ζωντανά χρώματα</string>
     <string name="filter_portrait">Πορτρέτο</string>
@@ -152,7 +158,7 @@
     <string name="panorama_message_wrong_direction">Η καταγραφή διακόπηκε επειδή η κάμερα μετακινήθηκε προς τα πίσω.</string>
     <string name="permission_btn_text_denied">Έξοδος</string>
     <string name="permission_btn_text_grant">OΚ</string>
-    <string name="permission_dialog_entering_from_lock_screen_confirm">OK</string>
+    <string name="permission_dialog_entering_from_lock_screen_confirm">Εντάξει</string>
     <string name="permission_dialog_entering_from_lock_screen_description">Για να να χρησιμοποιήσετε την εφαρμογή «Κάμερα», ξεκλειδώστε τη συσκευή και επιτρέψτε την πρόσβασή της στην εφαρμογή «Κάμερα», στον χώρο αποθήκευσης και στο μικρόφωνο.</string>
     <string name="permission_dialog_entering_from_lock_screen_title">Απαιτούνται άδειες.</string>
     <string name="permission_dialog_title">Δήλωση χορήγησης άδειας</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">Επιλογή λεπτών</string>
     <string name="select_year">Επιλογή έτους</string>
     <string name="settings">Ρυθμίσεις</string>
-    <string name="settings_about">Σχετικά</string>
+    <string name="settings_about">Πληροφορίες</string>
     <string name="settings_about_agreement">Συμφωνία χρήστη</string>
     <string name="settings_about_copyright">"OnePlus Με επιφύλαξη κάθε νόμιμου δικαιώματος.
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Δεν υπάρχει καταχωρισμένο κείμενο. Δεν είναι δυνατή η αποθήκευση του ονόματος στο υδατογράφημα.</string>
     <string name="settings_watermark_summary">Θα εφαρμόζεται ένα υδατογράφημα στις φωτογραφίες που τραβάτε με την πίσω κάμερα, συμπεριλαμβανομένων των λειτουργιών «Φωτογραφία», «Πορτρέτο», «Επαγγελματική» και «Νυχτερινό τοπίο».</string>
     <string name="settings_watermark_summary_8250">Θα εφαρμόζεται ένα υδατογράφημα στις φωτογραφίες που τραβάτε με την πίσω κάμερα, συμπεριλαμβανομένων των λειτουργιών «Φωτογραφία», «Πορτρέτο», «Επαγγελματική» και «Νυχτερινό τοπίο».</string>
+    <string name="settings_watermark_timestamp">Ώρα</string>
     <string name="settings_watermark_title">Υδατογράφημα Shot On OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Διόρθωση υπερευρυγώνιου φακού</string>
     <string name="show_kill_apps_processing_dialog">Γίνεται εκκαθάριση</string>
@@ -268,9 +275,9 @@
     <string name="smart_hint_try_portrait_mode">Δοκιμάστε τη «Λειτουργία πορτρέτου»</string>
     <string name="smart_hint_try_wide_selfie">Δοκιμάστε να τραβήξετε σέλφι με την ευρυγώνια κάμερα.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="storage_to_sd_card_fail_confirm">OΚ</string>
+    <string name="storage_to_sd_card_fail_confirm">Εντάξει</string>
     <string name="storage_to_sd_card_fail_description">Παρουσιάστηκε σφάλμα κατά την αποθήκευση. Ελέγξτε την κάρτα SD και δοκιμάστε ξανά</string>
-    <string name="storage_to_sd_card_max_file_size_confirm">OΚ</string>
+    <string name="storage_to_sd_card_max_file_size_confirm">Εντάξει</string>
     <string name="storage_to_sd_card_max_file_size_description">Η εγγραφή βίντεο σταμάτησε καθώς ξεπέρασε το μέγιστο μέγεθος αρχείου.</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="thumbnail_icon_gallery_no_media">Καμία φωτογραφία</string>
@@ -305,7 +312,7 @@
     <string name="video_message_nightscape_zoom_disabled">Το ζουμ απενεργοποιείται κατά τη χρήση της λειτουργίας «Νυχτερινό τοπίο»</string>
     <string name="video_message_prepare_error">Δεν είναι δυνατή η καταγραφή βίντεο καθώς η εφαρμογή είναι ήδη σε χρήση. Κλείστε τις εφαρμογές στο παρασκήνιο και προσπαθήστε ξανά.</string>
     <string name="video_message_prepare_error_cancel">Ακύρωση</string>
-    <string name="video_message_prepare_error_ok">OΚ</string>
+    <string name="video_message_prepare_error_ok">Εντάξει</string>
     <string name="video_message_prepare_error_title">Συμβουλή</string>
     <string name="video_message_super_stable_only_support_1080p_30fps">Η λειτουργία «Υπερσταθεροποίηση» υποστηρίζει 1080P 30FPS</string>
     <string name="video_message_super_stable_only_support_30fps">Η λειτουργία «Υπερσταθεροποίηση» υποστηρίζει 1080P 30FPS και 4K 30FPS.</string>

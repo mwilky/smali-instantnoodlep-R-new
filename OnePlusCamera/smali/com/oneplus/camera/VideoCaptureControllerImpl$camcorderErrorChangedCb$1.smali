@@ -149,13 +149,13 @@
 
     invoke-direct {p1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p0, 0x7f1201cf
+    const p0, 0x7f1201c5
 
     invoke-virtual {p1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    const p1, 0x7f1201ce
+    const p1, 0x7f1201c4
 
     sget-object p2, Lcom/oneplus/camera/VideoCaptureControllerImpl$camcorderErrorChangedCb$1$dialog$1;->INSTANCE:Lcom/oneplus/camera/VideoCaptureControllerImpl$camcorderErrorChangedCb$1$dialog$1;
 

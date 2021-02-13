@@ -1,91 +1,54 @@
-.class public final Laj;
-.super Landroid/app/KeyguardManager$KeyguardDismissCallback;
+.class final Laj;
+.super Ljava/lang/Object;
 .source "PG"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final synthetic a:Ljava/lang/Runnable;
-
-.field private final synthetic b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
+.field final synthetic a:Lak;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;)V
+.method public constructor <init>(Lak;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$startLensActivityRunnable",
-            "val$launchStatusCallback"
-        }
-    .end annotation
 
-    iput-object p1, p0, Laj;->a:Ljava/lang/Runnable;
+    iput-object p1, p0, Laj;->a:Lak;
 
-    iput-object p2, p0, Laj;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
-
-    invoke-direct {p0}, Landroid/app/KeyguardManager$KeyguardDismissCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismissCancelled()V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object p0, p0, Laj;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
+    iget-object v0, p0, Laj;->a:Lak;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0}, Lak;->getStatus()Landroid/os/AsyncTask$Status;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
+    sget-object v1, Landroid/os/AsyncTask$Status;->FINISHED:Landroid/os/AsyncTask$Status;
 
-    :cond_0
-    return-void
-.end method
+    if-eq v0, v1, :cond_0
 
-.method public final onDismissError()V
-    .locals 1
+    iget-object v0, p0, Laj;->a:Lak;
 
-    iget-object p0, p0, Laj;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
+    const/4 v1, 0x1
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0, v1}, Lak;->cancel(Z)Z
 
-    const/4 v0, 0x1
+    iget-object p0, p0, Laj;->a:Lak;
 
-    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
+    sget v0, Lbh;->f:I
 
-    :cond_0
-    const-string p0, "LensApi"
+    sget v1, Lbh;->f:I
 
-    const-string v0, "Error dismissing keyguard"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public final onDismissSucceeded()V
-    .locals 1
-
-    iget-object v0, p0, Laj;->a:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    iget-object p0, p0, Laj;->b:Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0}, Lcom/google/lens/sdk/LensApi$LensLaunchStatusCallback;->onLaunchStatusFetched(I)V
+    invoke-virtual {p0, v0, v1}, Lak;->a(II)V
 
     :cond_0
     return-void

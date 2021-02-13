@@ -32,8 +32,6 @@
 
 .field public static final LENS_UNAVAILABLE_DEVICE_LOCKED:I = 0x5
 
-.field public static final LENS_UNAVAILABLE_DEVICE_OPA_NOT_ELIGIBLE:I = 0x7
-
 .field public static final LENS_UNAVAILABLE_FEATURE_UNAVAILABLE:I = 0xb
 
 .field public static final LENS_UNAVAILABLE_INVALID_CURSOR:I = 0x4

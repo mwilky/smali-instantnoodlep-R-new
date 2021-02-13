@@ -141,7 +141,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120111
+    const p3, 0x7f120105
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -162,7 +162,7 @@
 
     check-cast p2, Lcom/oneplus/base/BaseActivity;
 
-    const p3, 0x7f120110
+    const p3, 0x7f120104
 
     invoke-virtual {p2, p3}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 

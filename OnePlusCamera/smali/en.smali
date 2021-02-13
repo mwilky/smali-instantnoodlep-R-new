@@ -2,173 +2,55 @@
 .super Ljava/lang/Object;
 .source "PG"
 
-# interfaces
-.implements Ljava/util/ListIterator;
 
+# static fields
+.field public static final a:Lfs;
 
-# instance fields
-.field private a:Ljava/util/ListIterator;
-
-.field private final synthetic b:I
-
-.field private final synthetic c:Leo;
+.field public static final b:Lfs;
 
 
 # direct methods
-.method constructor <init>(Leo;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$index"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Len;->c:Leo;
+    :try_start_0
+    const-string v0, "com.google.protobuf.NewInstanceSchemaFull"
 
-    iput p2, p0, Len;->b:I
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iget-object p1, p0, Len;->c:Leo;
+    const/4 v1, 0x0
 
-    iget-object p1, p1, Leo;->a:Lcu;
+    new-array v2, v1, [Ljava/lang/Class;
 
-    iget p2, p0, Len;->b:I
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    invoke-interface {p1, p2}, Lcu;->listIterator(I)Ljava/util/ListIterator;
+    move-result-object v0
 
-    move-result-object p1
+    new-array v1, v1, [Ljava/lang/Object;
 
-    iput-object p1, p0, Len;->a:Ljava/util/ListIterator;
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfs;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-object v0, Len;->a:Lfs;
+
+    new-instance v0, Lfs;
+
+    invoke-direct {v0}, Lfs;-><init>()V
+
+    sput-object v0, Len;->b:Lfs;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic add(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final hasNext()Z
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->hasNext()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final hasPrevious()Z
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final synthetic next()Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final nextIndex()I
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->nextIndex()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final synthetic previous()Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final previousIndex()I
-    .locals 0
-
-    iget-object p0, p0, Len;->a:Ljava/util/ListIterator;
-
-    invoke-interface {p0}, Ljava/util/ListIterator;->previousIndex()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final remove()V
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final synthetic set(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
 .end method

@@ -96,6 +96,12 @@
     <string name="filter_landscape">Pokrajina</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Noč</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Brez</string>
     <string name="filter_pop">Živo</string>
     <string name="filter_portrait">Portret</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Ni vnosa besedila. Imena v vodnem žigu ni mogoče shraniti.</string>
     <string name="settings_watermark_summary">Na fotografijah, posnetih z zadnjo kamero, bo uporabljen vodni žig, vključno z načini Fotografija, Portret, Pro in Nočni prizor</string>
     <string name="settings_watermark_summary_8250">Na fotografijah, posnetih z zadnjo kamero, bo uporabljen vodni žig, vključno z načini Fotografija, Portret, Pro in Nočni prizor</string>
+    <string name="settings_watermark_timestamp">Čas</string>
     <string name="settings_watermark_title">Vodni žig Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Popravek ultra širokega objektiva</string>
     <string name="show_kill_apps_processing_dialog">Čiščenje</string>

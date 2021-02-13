@@ -88,7 +88,7 @@
 
     iget-object v0, p0, Lcom/oneplus/camera/settings/WatermarkFragment$onPreferenceLoaded$$inlined$apply$lambda$5;->this$0:Lcom/oneplus/camera/settings/WatermarkFragment;
 
-    invoke-static {v0}, Lcom/oneplus/camera/settings/WatermarkFragment;->access$getBrandTextEnablePreference$p(Lcom/oneplus/camera/settings/WatermarkFragment;)Landroidx/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/oneplus/camera/settings/WatermarkFragment;->access$getCustomNameTextEnablePreference$p(Lcom/oneplus/camera/settings/WatermarkFragment;)Landroidx/preference/SwitchPreference;
 
     move-result-object v0
 

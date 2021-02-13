@@ -1,231 +1,225 @@
-.class public final enum Lfa;
-.super Ljava/lang/Enum;
+.class final Lfa;
+.super Ljava/lang/Object;
 .source "PG"
 
+# interfaces
+.implements Ljava/util/Iterator;
 
-# static fields
-.field public static final enum a:Lfa;
 
-.field public static final enum b:Lfa;
+# instance fields
+.field final synthetic a:Lfc;
 
-.field public static final enum c:Lfa;
+.field private b:I
 
-.field public static final enum d:Lfa;
+.field private c:Z
 
-.field public static final enum e:Lfa;
-
-.field public static final enum f:Lfa;
-
-.field public static final enum g:Lfa;
-
-.field public static final enum h:Lfa;
-
-.field public static final enum i:Lfa;
-
-.field private static final synthetic j:[Lfa;
+.field private d:Ljava/util/Iterator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
-
-    new-instance v0, Lfa;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const-string v3, "INT"
-
-    invoke-direct {v0, v3, v1, v2}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->a:Lfa;
-
-    new-instance v0, Lfa;
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    const-string v4, "LONG"
-
-    invoke-direct {v0, v4, v3, v2}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->b:Lfa;
-
-    new-instance v0, Lfa;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    const/4 v4, 0x2
-
-    const-string v5, "FLOAT"
-
-    invoke-direct {v0, v5, v4, v2}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->c:Lfa;
-
-    new-instance v0, Lfa;
-
-    const-wide/16 v5, 0x0
-
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const/4 v5, 0x3
-
-    const-string v6, "DOUBLE"
-
-    invoke-direct {v0, v6, v5, v2}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->d:Lfa;
-
-    new-instance v0, Lfa;
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    const/4 v6, 0x4
-
-    const-string v7, "BOOLEAN"
-
-    invoke-direct {v0, v7, v6, v2}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->e:Lfa;
-
-    new-instance v0, Lfa;
-
-    const/4 v2, 0x5
-
-    const-string v7, "STRING"
-
-    const-string v8, ""
-
-    invoke-direct {v0, v7, v2, v8}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->f:Lfa;
-
-    new-instance v0, Lfa;
-
-    sget-object v7, Lba;->a:Lba;
-
-    const/4 v8, 0x6
-
-    const-string v9, "BYTE_STRING"
-
-    invoke-direct {v0, v9, v8, v7}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->g:Lfa;
-
-    new-instance v0, Lfa;
-
-    const/4 v7, 0x0
-
-    const/4 v9, 0x7
-
-    const-string v10, "ENUM"
-
-    invoke-direct {v0, v10, v9, v7}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->h:Lfa;
-
-    new-instance v0, Lfa;
-
-    const/16 v10, 0x8
-
-    const-string v11, "MESSAGE"
-
-    invoke-direct {v0, v11, v10, v7}, Lfa;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
-
-    sput-object v0, Lfa;->i:Lfa;
-
-    const/16 v0, 0x9
-
-    new-array v0, v0, [Lfa;
-
-    sget-object v7, Lfa;->a:Lfa;
-
-    aput-object v7, v0, v1
-
-    sget-object v1, Lfa;->b:Lfa;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lfa;->c:Lfa;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lfa;->d:Lfa;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lfa;->e:Lfa;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lfa;->f:Lfa;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lfa;->g:Lfa;
-
-    aput-object v1, v0, v8
-
-    sget-object v1, Lfa;->h:Lfa;
-
-    aput-object v1, v0, v9
-
-    sget-object v1, Lfa;->i:Lfa;
-
-    aput-object v1, v0, v10
-
-    sput-object v0, Lfa;->j:[Lfa;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/Object;)V
+.method public constructor <init>(Lfc;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000,
-            0x10
-        }
-        names = {
-            "$enum$name",
-            "$enum$ordinal",
-            "defaultDefault"
-        }
-    .end annotation
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lfa;->a:Lfc;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lfa;->b:I
 
     return-void
 .end method
 
-.method public static values()[Lfa;
+.method private final a()Ljava/util/Iterator;
     .locals 1
 
-    sget-object v0, Lfa;->j:[Lfa;
+    iget-object v0, p0, Lfa;->d:Ljava/util/Iterator;
 
-    invoke-virtual {v0}, [Lfa;->clone()Ljava/lang/Object;
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    iget-object v0, v0, Lfc;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    check-cast v0, [Lfa;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    return-object v0
+    move-result-object v0
+
+    iput-object v0, p0, Lfa;->d:Ljava/util/Iterator;
+
+    :cond_0
+    iget-object p0, p0, Lfa;->d:Ljava/util/Iterator;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 4
+
+    iget v0, p0, Lfa;->b:I
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    iget-object v2, p0, Lfa;->a:Lfc;
+
+    iget-object v2, v2, Lfc;->a:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-lt v0, v2, :cond_2
+
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    iget-object v0, v0, Lfc;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-direct {p0}, Lfa;->a()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v3
+
+    :cond_1
+    move v1, v3
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lfa;->c:Z
+
+    iget v1, p0, Lfa;->b:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lfa;->b:I
+
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    iget-object v0, v0, Lfc;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_0
+
+    invoke-direct {p0}, Lfa;->a()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/Map$Entry;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    iget-object v0, v0, Lfc;->a:Ljava/util/List;
+
+    iget p0, p0, Lfa;->b:I
+
+    invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/Map$Entry;
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public final remove()V
+    .locals 3
+
+    iget-boolean v0, p0, Lfa;->c:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lfa;->c:Z
+
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    invoke-virtual {v0}, Lfc;->c()V
+
+    iget v0, p0, Lfa;->b:I
+
+    iget-object v1, p0, Lfa;->a:Lfc;
+
+    iget-object v1, v1, Lfc;->a:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lt v0, v1, :cond_0
+
+    invoke-direct {p0}, Lfa;->a()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->remove()V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lfa;->a:Lfc;
+
+    iget v1, p0, Lfa;->b:I
+
+    add-int/lit8 v2, v1, -0x1
+
+    iput v2, p0, Lfa;->b:I
+
+    invoke-virtual {v0, v1}, Lfc;->c(I)Ljava/lang/Object;
+
+    return-void
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "remove() was called before next()"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

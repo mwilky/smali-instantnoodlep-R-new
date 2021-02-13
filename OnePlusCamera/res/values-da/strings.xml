@@ -96,6 +96,12 @@
     <string name="filter_landscape">Landskab</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Nat</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Ingen</string>
     <string name="filter_pop">Levende</string>
     <string name="filter_portrait">Portræt</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Ingen tekstangivelser, kunne ikke gemme navnet i vandmærke.</string>
     <string name="settings_watermark_summary">Der påføres et vandmærke på fotos, der tages med det bagudvendte kamera, herunder Foto-, Portræt-, Pro- og Nattemiljøtilstand</string>
     <string name="settings_watermark_summary_8250">Der påføres et vandmærke på fotos, der tages med det bagudvendte kamera, herunder Foto-, Portræt-, Pro- og Nattemiljøtilstand</string>
+    <string name="settings_watermark_timestamp">Tid</string>
     <string name="settings_watermark_title">Shot on OnePlus-vandmærke</string>
     <string name="settings_wide_lens_distortion_correction">Korrektion af ultrabredt objektiv</string>
     <string name="show_kill_apps_processing_dialog">Sletter</string>

@@ -29,7 +29,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode$shutterStateChangedCallback$1\n*L\n1#1,938:1\n*E\n"
+    value = "SMAP\nNightCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NightCaptureMode.kt\ncom/oneplus/camera/capturemode/NightCaptureMode$shutterStateChangedCallback$1\n*L\n1#1,1277:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -307,7 +307,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f12010e
+    const p2, 0x7f120102
 
     if-eqz p1, :cond_6
 
@@ -327,7 +327,7 @@
 
     if-ge p1, p3, :cond_6
 
-    const p1, 0x7f12010d
+    const p1, 0x7f120101
 
     move p2, p1
 

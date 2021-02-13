@@ -1,11 +1,18 @@
-.class public interface abstract Lbf;
-.super Ljava/lang/Object;
+.class public final Lbf;
+.super Lda;
 .source "PG"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Lei;
 
 
-# virtual methods
-.method public abstract a()B
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    sget-object v0, Lbi;->f:Lbi;
+
+    invoke-direct {p0, v0}, Lda;-><init>(Lde;)V
+
+    return-void
 .end method

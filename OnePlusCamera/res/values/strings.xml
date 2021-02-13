@@ -55,11 +55,7 @@
     <string name="action_item_video_1080p_60fps">1080P 60FPS</string>
     <string name="action_item_video_1080p_960fps">1080P 960FPS</string>
     <string name="action_item_video_4k">4K 30FPS</string>
-    <string name="action_item_video_4k_120fps">4K 120FPS</string>
-    <string name="action_item_video_4k_240fps">4K 240FPS</string>
-    <string name="action_item_video_4k_480fps">4K 480FPS</string>
     <string name="action_item_video_4k_60fps">4K 60FPS</string>
-    <string name="action_item_video_4k_960fps">4K 960FPS</string>
     <string name="action_item_video_4k_cine">4K CINE 30FPS</string>
     <string name="action_item_video_4k_cine_60fps">4K CINE 60FPS</string>
     <string name="action_item_video_720p">720P 30FPS</string>
@@ -68,24 +64,13 @@
     <string name="action_item_video_720p_480fps">720P 480FPS</string>
     <string name="action_item_video_720p_60fps">720P 60FPS</string>
     <string name="action_item_video_720p_960fps">720P 960FPS</string>
-    <string name="action_item_video_8k">8K 30FPS</string>
-    <string name="action_item_video_8k_120fps">8K 120FPS</string>
-    <string name="action_item_video_8k_240fps">8K 240FPS</string>
-    <string name="action_item_video_8k_480fps">8K 480FPS</string>
-    <string name="action_item_video_8k_60fps">8K 60FPS</string>
-    <string name="action_item_video_8k_960fps">8K 960FPS</string>
     <string name="action_item_video_aspect_ratio_16x9">16:9</string>
     <string name="action_item_video_aspect_ratio_21x9">21:9</string>
-    <string name="action_item_video_capture_rate_120fps">120FPS</string>
-    <string name="action_item_video_capture_rate_240fps">240FPS</string>
     <string name="action_item_video_capture_rate_30fps">30FPS</string>
-    <string name="action_item_video_capture_rate_480fps">480FPS</string>
     <string name="action_item_video_capture_rate_60fps">60FPS</string>
-    <string name="action_item_video_capture_rate_960fps">960FPS</string>
     <string name="action_item_video_size_1080p">1080P</string>
     <string name="action_item_video_size_4k">4K</string>
     <string name="action_item_video_size_720p">720P</string>
-    <string name="action_item_video_size_8k">8K</string>
     <string name="agree">Agree</string>
     <string name="app_name">Camera</string>
     <string name="app_name_video">Camcorder</string>
@@ -180,7 +165,13 @@
     <string name="filter_landscape">Landscape</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Night</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
     <string name="filter_night_city">NIGHT CITY</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">None</string>
     <string name="filter_north_california">"NORTH
 CALIFORNIA"</string>
@@ -395,6 +386,7 @@ CALIFORNIA"</string>
     <string name="settings_key_watermark_display_lens_count">Watermark.DisplayLensCount</string>
     <string name="settings_key_watermark_is_brand_text_enabled">Watermark.IsBrandTextEnabled</string>
     <string name="settings_key_watermark_is_enabled">Watermark.IsEnabled</string>
+    <string name="settings_key_watermark_is_timestamp_enabled">Watermark.IsTimeStampEnabled</string>
     <string name="settings_other">Other</string>
     <string name="settings_photo_aspect_ratio">Aspect ratio</string>
     <string name="settings_picture_mirror">Mirrored selfie photo</string>
@@ -441,6 +433,7 @@ CALIFORNIA"</string>
     <string name="settings_watermark_name_empty_dialog">No text input; unable to save name in watermark.</string>
     <string name="settings_watermark_summary">A watermark will be applied to photos taken by the rear camera, including Photo, Portrait, Pro and Nightscape modes</string>
     <string name="settings_watermark_summary_8250">A watermark will be applied to photos taken by the rear camera, including Photo, Portrait, Pro and Nightscape modes</string>
+    <string name="settings_watermark_timestamp">Time</string>
     <string name="settings_watermark_title">Shot on OnePlus watermark</string>
     <string name="settings_wide_lens_distortion_correction">Ultra Wide Lens Correction</string>
     <string name="shortcut_bokeh">@string/capture_mode_bokeh</string>

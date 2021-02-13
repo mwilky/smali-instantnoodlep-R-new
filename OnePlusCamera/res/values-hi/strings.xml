@@ -96,6 +96,12 @@
     <string name="filter_landscape">लैंडस्केप</string>
     <string name="filter_mono">मोनो</string>
     <string name="filter_night">रात</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">कोई नहीं</string>
     <string name="filter_pop">विविड</string>
     <string name="filter_portrait">पोर्ट्रेट</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">मिनट चुनें</string>
     <string name="select_year">साल चुनें</string>
     <string name="settings">सेटिंग्स</string>
-    <string name="settings_about">बारे में</string>
+    <string name="settings_about">इसके बारे में</string>
     <string name="settings_about_agreement">उपयोगकर्ता अनुबंध</string>
     <string name="settings_about_copyright">"OnePlus सर्वाधिकार सुरक्षित
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">कोई टेक्स्ट इनपुट नहीं; वॉटरमार्क में नाम सहेजने में असमर्थ।</string>
     <string name="settings_watermark_summary">पीछे वाले कैमरे से ली गई फ़ोटो पर वॉटरमार्क लागू होगा, जिसमें फ़ोटो, पोर्ट्रेट, प्रो और नाइटस्केप मोड शामिल हैं</string>
     <string name="settings_watermark_summary_8250">पीछे वाले कैमरे से ली गई फ़ोटो पर वॉटरमार्क लागू होगा, जिसमें फ़ोटो, पोर्ट्रेट, प्रो और नाइटस्केप मोड शामिल हैं</string>
+    <string name="settings_watermark_timestamp">समय</string>
     <string name="settings_watermark_title">Shot on OnePlus वाटरमार्क</string>
     <string name="settings_wide_lens_distortion_correction">अल्ट्रा वाइड लेंस सुधार</string>
     <string name="show_kill_apps_processing_dialog">समाशोधन</string>

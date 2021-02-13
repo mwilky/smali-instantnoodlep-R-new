@@ -942,7 +942,7 @@
 
     invoke-static {v0}, Lcom/oneplus/base/ThreadDependentObjectsKt;->verifyAccess(Lcom/oneplus/base/ThreadDependentObject;)V
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v0
 
@@ -1149,7 +1149,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/CameraApp;->settings:Lcom/oneplus/camera/CameraSettings;
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v1
 
@@ -1710,7 +1710,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "trimMemory() - Level: "
+    const-string v2, "trimMemory() - Level: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

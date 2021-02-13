@@ -96,6 +96,12 @@
     <string name="filter_landscape">ทิวทัศน์</string>
     <string name="filter_mono">โมโน</string>
     <string name="filter_night">กลางคืน</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ไม่มี</string>
     <string name="filter_pop">สดใส</string>
     <string name="filter_portrait">ภาพบุคคล</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">ไม่มีข้อความป้อนเข้ามา ไม่สามารถบันทึกชื่อในลายน้ำได้</string>
     <string name="settings_watermark_summary">จะมีการติดลายน้ำบนภาพที่ถ่ายโดยกล้องหลัง รวมถึงโหมดภาพถ่ายบุคคล โหมดโปร และโหมดทิวทัศน์กลางคืน</string>
     <string name="settings_watermark_summary_8250">จะมีการติดลายน้ำบนภาพที่ถ่ายโดยกล้องหลัง รวมถึงโหมดภาพถ่ายบุคคล โหมดโปร และโหมดทิวทัศน์กลางคืน</string>
+    <string name="settings_watermark_timestamp">เวลา</string>
     <string name="settings_watermark_title">ลายน้ำ Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">การปรับเลนส์มุมกว้างพิเศษ</string>
     <string name="show_kill_apps_processing_dialog">กำลังล้าง</string>

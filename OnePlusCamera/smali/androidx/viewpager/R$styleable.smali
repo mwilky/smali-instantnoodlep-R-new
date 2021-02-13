@@ -149,12 +149,12 @@
 
     :array_1
     .array-data 4
-        0x7f0401d9
         0x7f0401da
         0x7f0401db
         0x7f0401dc
         0x7f0401dd
         0x7f0401de
+        0x7f0401df
     .end array-data
 
     :array_2
@@ -164,11 +164,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f0401d7
-        0x7f0401df
+        0x7f0401d8
         0x7f0401e0
         0x7f0401e1
-        0x7f04049c
+        0x7f0401e2
+        0x7f04049d
     .end array-data
 
     :array_3

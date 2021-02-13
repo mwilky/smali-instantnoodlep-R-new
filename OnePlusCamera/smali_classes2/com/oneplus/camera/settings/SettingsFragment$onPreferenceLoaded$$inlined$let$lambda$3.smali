@@ -103,7 +103,7 @@
 
     check-cast p0, Landroid/content/Context;
 
-    const p1, 0x7f120196
+    const p1, 0x7f12018b
 
     const/4 p2, 0x0
 

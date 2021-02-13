@@ -96,6 +96,12 @@
     <string name="filter_landscape">Krajina</string>
     <string name="filter_mono">Monochromatický</string>
     <string name="filter_night">Noc</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Žádný</string>
     <string name="filter_pop">Živý</string>
     <string name="filter_portrait">Portrét</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nebyl zadán žádný text, nelze uložit jméno do vodoznaku.</string>
     <string name="settings_watermark_summary">Vodoznak bude aplikován na fotografie pořízené zadním fotoaparátem, včetně režimů Fotografie, Portrét, Pro a Noční scéna</string>
     <string name="settings_watermark_summary_8250">Vodoznak bude aplikován na fotografie pořízené zadním fotoaparátem, včetně režimů Fotografie, Portrét, Pro a Noční scéna</string>
+    <string name="settings_watermark_timestamp">Čas</string>
     <string name="settings_watermark_title">Vodoznak Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Korekce ultraširokého objektivu</string>
     <string name="show_kill_apps_processing_dialog">Vymazání</string>

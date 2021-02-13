@@ -80,7 +80,7 @@
 
     if-eqz p0, :cond_1
 
-    const p2, 0x7f120153
+    const p2, 0x7f120147
 
     invoke-static {p1, p2}, Lcom/oneplus/camera/ui/CaptureModesPanelImpl;->access$getString(Lcom/oneplus/camera/ui/CaptureModesPanelImpl;I)Ljava/lang/String;
 

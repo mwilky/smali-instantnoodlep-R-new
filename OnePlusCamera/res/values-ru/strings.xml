@@ -96,6 +96,12 @@
     <string name="filter_landscape">Альбомная ориентация</string>
     <string name="filter_mono">Монохром</string>
     <string name="filter_night">Ночь</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Нет</string>
     <string name="filter_pop">Яркие</string>
     <string name="filter_portrait">Портрет</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Пустое поле. Не удалось сохранить имя в водяном знаке.</string>
     <string name="settings_watermark_summary">На все фотографии, снятые основной камерой, включая режимы Фото, Портрет, Профессиональный и Ночной пейзаж, будет наложен водяной знак</string>
     <string name="settings_watermark_summary_8250">На все фотографии, снятые основной камерой, включая режимы Фото, Портрет, Профессиональный и Ночной пейзаж, будет наложен водяной знак</string>
+    <string name="settings_watermark_timestamp">Время</string>
     <string name="settings_watermark_title">Водяной знак «Shot on OnePlus»</string>
     <string name="settings_wide_lens_distortion_correction">Коррекция перспективы широкоугольного объектива</string>
     <string name="show_kill_apps_processing_dialog">Очистка</string>

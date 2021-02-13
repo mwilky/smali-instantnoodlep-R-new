@@ -85,6 +85,8 @@
 
 .field public static final enum OPLMNPC4:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
+.field public static final enum OPLMNSEC2:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
 .field public static final enum OPN1MB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
 .field public static final enum OPN2GB:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
@@ -438,7 +440,17 @@
 
     sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPLMNPC4:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
-    const/16 v0, 0x22
+    new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    const-string v14, "OPLMNSEC2"
+
+    const/16 v15, 0x22
+
+    invoke-direct {v0, v14, v15}, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPLMNSEC2:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    const/16 v0, 0x23
 
     new-array v0, v0, [Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
@@ -617,6 +629,12 @@
     sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPLMNPC4:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
 
     const/16 v2, 0x21
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->OPLMNSEC2:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    const/16 v2, 0x22
 
     aput-object v1, v0, v2
 

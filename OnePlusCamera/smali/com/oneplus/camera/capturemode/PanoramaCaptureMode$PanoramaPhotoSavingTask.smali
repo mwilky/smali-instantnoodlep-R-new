@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$PanoramaPhotoSavingTask\n*L\n1#1,1307:1\n*E\n"
+    value = "SMAP\nPanoramaCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PanoramaCaptureMode.kt\ncom/oneplus/camera/capturemode/PanoramaCaptureMode$PanoramaPhotoSavingTask\n*L\n1#1,1314:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -151,7 +151,7 @@
 
     sget-object v0, Lcom/oneplus/media/GPanoXMP;->KEY_USE_PANORAMA_VIEWER:Lcom/oneplus/media/XMPPropertyKey;
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-interface {p1, v0, v1}, Lcom/oneplus/media/XMPContainer;->setXMPProperty(Lcom/oneplus/media/XMPPropertyKey;Ljava/lang/Object;)V
 

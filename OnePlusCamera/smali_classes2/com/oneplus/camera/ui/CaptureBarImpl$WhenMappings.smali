@@ -40,7 +40,7 @@
 
 # direct methods
 .method static synthetic constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     invoke-static {}, Lcom/oneplus/camera/ui/CaptureModesPanel$State;->values()[Lcom/oneplus/camera/ui/CaptureModesPanel$State;
 
@@ -178,7 +178,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->STOPPING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->RELEASING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -188,7 +188,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->UNAVAILABLE:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->STOPPING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -198,7 +198,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->UNAVAILABLE:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -210,7 +210,7 @@
 
     sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl$WhenMappings;->$EnumSwitchMapping$4:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
     invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
 
@@ -219,6 +219,18 @@
     const/4 v5, 0x4
 
     aput v5, v0, v1
+
+    sget-object v0, Lcom/oneplus/camera/ui/CaptureBarImpl$WhenMappings;->$EnumSwitchMapping$4:[I
+
+    sget-object v1, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->READY:Lcom/oneplus/camera/VideoCaptureController$CaptureState;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->ordinal()I
+
+    move-result v1
+
+    const/4 v6, 0x5
+
+    aput v6, v0, v1
 
     invoke-static {}, Lcom/oneplus/camera/VideoCaptureController$CaptureState;->values()[Lcom/oneplus/camera/VideoCaptureController$CaptureState;
 
@@ -378,9 +390,7 @@
 
     move-result v1
 
-    const/4 v5, 0x5
-
-    aput v5, v0, v1
+    aput v6, v0, v1
 
     invoke-static {}, Lcom/oneplus/camera/PhotoCaptureController$CaptureState;->values()[Lcom/oneplus/camera/PhotoCaptureController$CaptureState;
 

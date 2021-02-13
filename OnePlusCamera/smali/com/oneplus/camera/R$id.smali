@@ -765,767 +765,767 @@
 
 .field public static final left_layout:I = 0x7f0a0176
 
-.field public static final line1:I = 0x7f0a0177
+.field public static final legal_webview:I = 0x7f0a0177
 
-.field public static final line3:I = 0x7f0a0178
+.field public static final line1:I = 0x7f0a0178
 
-.field public static final listMode:I = 0x7f0a0179
+.field public static final line3:I = 0x7f0a0179
 
-.field public static final list_footer:I = 0x7f0a017a
+.field public static final listMode:I = 0x7f0a017a
 
-.field public static final list_item:I = 0x7f0a017b
+.field public static final list_footer:I = 0x7f0a017b
 
-.field public static final list_summary:I = 0x7f0a017c
+.field public static final list_item:I = 0x7f0a017c
 
-.field public static final list_title:I = 0x7f0a017d
+.field public static final list_summary:I = 0x7f0a017d
 
-.field public static final list_widget_frame:I = 0x7f0a017e
+.field public static final list_title:I = 0x7f0a017e
 
-.field public static final loading_layout:I = 0x7f0a017f
+.field public static final list_widget_frame:I = 0x7f0a017f
 
-.field public static final loading_view:I = 0x7f0a0180
+.field public static final loading_layout:I = 0x7f0a0180
 
-.field public static final lock_button_container:I = 0x7f0a0181
+.field public static final loading_view:I = 0x7f0a0181
 
-.field public static final lock_button_icon_container:I = 0x7f0a0182
+.field public static final lock_button_container:I = 0x7f0a0182
 
-.field public static final lock_divider_1:I = 0x7f0a0183
+.field public static final lock_button_icon_container:I = 0x7f0a0183
 
-.field public static final lock_divider_2:I = 0x7f0a0184
+.field public static final lock_divider_1:I = 0x7f0a0184
 
-.field public static final lock_divider_3:I = 0x7f0a0185
+.field public static final lock_divider_2:I = 0x7f0a0185
 
-.field public static final lock_divider_4:I = 0x7f0a0186
+.field public static final lock_divider_3:I = 0x7f0a0186
 
-.field public static final lock_divider_5:I = 0x7f0a0187
+.field public static final lock_divider_4:I = 0x7f0a0187
 
-.field public static final lock_divider_6:I = 0x7f0a0188
+.field public static final lock_divider_5:I = 0x7f0a0188
 
-.field public static final lock_icon:I = 0x7f0a0189
+.field public static final lock_divider_6:I = 0x7f0a0189
 
-.field public static final lock_icon_stroke:I = 0x7f0a018a
+.field public static final lock_icon:I = 0x7f0a018a
 
-.field public static final lottie_panel:I = 0x7f0a018b
+.field public static final lock_icon_stroke:I = 0x7f0a018b
 
-.field public static final macro_action_item:I = 0x7f0a018c
+.field public static final lottie_panel:I = 0x7f0a018c
 
-.field public static final mantle:I = 0x7f0a018d
+.field public static final macro_action_item:I = 0x7f0a018d
 
-.field public static final manual_capture_control_panel:I = 0x7f0a018e
+.field public static final mantle:I = 0x7f0a018e
 
-.field public static final manual_capture_control_ui:I = 0x7f0a018f
+.field public static final manual_capture_control_panel:I = 0x7f0a018f
 
-.field public static final manual_custom_saving_icon:I = 0x7f0a0190
+.field public static final manual_capture_control_ui:I = 0x7f0a0190
 
-.field public static final manual_custom_settings_action_item_c1:I = 0x7f0a0191
+.field public static final manual_custom_saving_icon:I = 0x7f0a0191
 
-.field public static final manual_custom_settings_action_item_c2:I = 0x7f0a0192
+.field public static final manual_custom_settings_action_item_c1:I = 0x7f0a0192
 
-.field public static final manual_custom_settings_action_item_group:I = 0x7f0a0193
+.field public static final manual_custom_settings_action_item_c2:I = 0x7f0a0193
 
-.field public static final manual_custom_settings_action_item_off:I = 0x7f0a0194
+.field public static final manual_custom_settings_action_item_group:I = 0x7f0a0194
 
-.field public static final manual_histogram:I = 0x7f0a0195
+.field public static final manual_custom_settings_action_item_off:I = 0x7f0a0195
 
-.field public static final manual_histogram_container:I = 0x7f0a0196
+.field public static final manual_histogram:I = 0x7f0a0196
 
-.field public static final manual_level:I = 0x7f0a0197
+.field public static final manual_histogram_container:I = 0x7f0a0197
 
-.field public static final manual_picture_format_action_item_group:I = 0x7f0a0198
+.field public static final manual_level:I = 0x7f0a0198
 
-.field public static final manual_picture_format_action_item_jpg:I = 0x7f0a0199
+.field public static final manual_picture_format_action_item_group:I = 0x7f0a0199
 
-.field public static final manual_picture_format_action_item_jpg_full_size:I = 0x7f0a019a
+.field public static final manual_picture_format_action_item_jpg:I = 0x7f0a019a
 
-.field public static final manual_picture_format_action_item_raw:I = 0x7f0a019b
+.field public static final manual_picture_format_action_item_jpg_full_size:I = 0x7f0a019b
 
-.field public static final manual_save_custom_settings_button:I = 0x7f0a019c
+.field public static final manual_picture_format_action_item_raw:I = 0x7f0a019c
 
-.field public static final manual_save_custom_settings_button_base:I = 0x7f0a019d
+.field public static final manual_save_custom_settings_button:I = 0x7f0a019d
 
-.field public static final manual_save_custom_settings_button_text:I = 0x7f0a019e
+.field public static final manual_save_custom_settings_button_base:I = 0x7f0a019e
 
-.field public static final masked:I = 0x7f0a019f
+.field public static final manual_save_custom_settings_button_text:I = 0x7f0a019f
 
-.field public static final message:I = 0x7f0a01a0
+.field public static final masked:I = 0x7f0a01a0
 
-.field public static final middle:I = 0x7f0a01a1
+.field public static final message:I = 0x7f0a01a1
 
-.field public static final min:I = 0x7f0a01a2
+.field public static final middle:I = 0x7f0a01a2
 
-.field public static final mini:I = 0x7f0a01a3
+.field public static final min:I = 0x7f0a01a3
 
-.field public static final minute:I = 0x7f0a01a4
+.field public static final mini:I = 0x7f0a01a4
 
-.field public static final minutes:I = 0x7f0a01a5
+.field public static final minute:I = 0x7f0a01a5
 
-.field public static final month:I = 0x7f0a01a6
+.field public static final minutes:I = 0x7f0a01a6
 
-.field public static final month_grid:I = 0x7f0a01a7
+.field public static final month:I = 0x7f0a01a7
 
-.field public static final month_navigation_bar:I = 0x7f0a01a8
+.field public static final month_grid:I = 0x7f0a01a8
 
-.field public static final month_navigation_fragment_toggle:I = 0x7f0a01a9
+.field public static final month_navigation_bar:I = 0x7f0a01a9
 
-.field public static final month_navigation_next:I = 0x7f0a01aa
+.field public static final month_navigation_fragment_toggle:I = 0x7f0a01aa
 
-.field public static final month_navigation_previous:I = 0x7f0a01ab
+.field public static final month_navigation_next:I = 0x7f0a01ab
 
-.field public static final month_title:I = 0x7f0a01ac
+.field public static final month_navigation_previous:I = 0x7f0a01ac
 
-.field public static final month_view:I = 0x7f0a01ad
+.field public static final month_title:I = 0x7f0a01ad
 
-.field public static final more_icon:I = 0x7f0a01ae
+.field public static final month_view:I = 0x7f0a01ae
 
-.field public static final more_icon_container:I = 0x7f0a01af
+.field public static final more_icon:I = 0x7f0a01af
 
-.field public static final mtrl_calendar_day_selector_frame:I = 0x7f0a01b0
+.field public static final more_icon_container:I = 0x7f0a01b0
 
-.field public static final mtrl_calendar_days_of_week:I = 0x7f0a01b1
+.field public static final mtrl_calendar_day_selector_frame:I = 0x7f0a01b1
 
-.field public static final mtrl_calendar_frame:I = 0x7f0a01b2
+.field public static final mtrl_calendar_days_of_week:I = 0x7f0a01b2
 
-.field public static final mtrl_calendar_main_pane:I = 0x7f0a01b3
+.field public static final mtrl_calendar_frame:I = 0x7f0a01b3
 
-.field public static final mtrl_calendar_months:I = 0x7f0a01b4
+.field public static final mtrl_calendar_main_pane:I = 0x7f0a01b4
 
-.field public static final mtrl_calendar_selection_frame:I = 0x7f0a01b5
+.field public static final mtrl_calendar_months:I = 0x7f0a01b5
 
-.field public static final mtrl_calendar_text_input_frame:I = 0x7f0a01b6
+.field public static final mtrl_calendar_selection_frame:I = 0x7f0a01b6
 
-.field public static final mtrl_calendar_year_selector_frame:I = 0x7f0a01b7
+.field public static final mtrl_calendar_text_input_frame:I = 0x7f0a01b7
 
-.field public static final mtrl_card_checked_layer_id:I = 0x7f0a01b8
+.field public static final mtrl_calendar_year_selector_frame:I = 0x7f0a01b8
 
-.field public static final mtrl_child_content_container:I = 0x7f0a01b9
+.field public static final mtrl_card_checked_layer_id:I = 0x7f0a01b9
 
-.field public static final mtrl_internal_children_alpha_tag:I = 0x7f0a01ba
+.field public static final mtrl_child_content_container:I = 0x7f0a01ba
 
-.field public static final mtrl_picker_fullscreen:I = 0x7f0a01bb
+.field public static final mtrl_internal_children_alpha_tag:I = 0x7f0a01bb
 
-.field public static final mtrl_picker_header:I = 0x7f0a01bc
+.field public static final mtrl_picker_fullscreen:I = 0x7f0a01bc
 
-.field public static final mtrl_picker_header_selection_text:I = 0x7f0a01bd
+.field public static final mtrl_picker_header:I = 0x7f0a01bd
 
-.field public static final mtrl_picker_header_title_and_selection:I = 0x7f0a01be
+.field public static final mtrl_picker_header_selection_text:I = 0x7f0a01be
 
-.field public static final mtrl_picker_header_toggle:I = 0x7f0a01bf
+.field public static final mtrl_picker_header_title_and_selection:I = 0x7f0a01bf
 
-.field public static final mtrl_picker_text_input_date:I = 0x7f0a01c0
+.field public static final mtrl_picker_header_toggle:I = 0x7f0a01c0
 
-.field public static final mtrl_picker_text_input_range_end:I = 0x7f0a01c1
+.field public static final mtrl_picker_text_input_date:I = 0x7f0a01c1
 
-.field public static final mtrl_picker_text_input_range_start:I = 0x7f0a01c2
+.field public static final mtrl_picker_text_input_range_end:I = 0x7f0a01c2
 
-.field public static final mtrl_picker_title_text:I = 0x7f0a01c3
+.field public static final mtrl_picker_text_input_range_start:I = 0x7f0a01c3
 
-.field public static final multi_action_button_left:I = 0x7f0a01c4
+.field public static final mtrl_picker_title_text:I = 0x7f0a01c4
 
-.field public static final multi_action_button_right:I = 0x7f0a01c5
+.field public static final multi_action_button_left:I = 0x7f0a01c5
 
-.field public static final multiply:I = 0x7f0a01c6
+.field public static final multi_action_button_right:I = 0x7f0a01c6
 
-.field public static final name:I = 0x7f0a01c7
+.field public static final multiply:I = 0x7f0a01c7
 
-.field public static final navigation_background:I = 0x7f0a01c8
+.field public static final name:I = 0x7f0a01c8
 
-.field public static final navigation_divider:I = 0x7f0a01c9
+.field public static final navigation_background:I = 0x7f0a01c9
 
-.field public static final navigation_header_container:I = 0x7f0a01ca
+.field public static final navigation_divider:I = 0x7f0a01ca
 
-.field public static final negative_button:I = 0x7f0a01cb
+.field public static final navigation_header_container:I = 0x7f0a01cb
 
-.field public static final never:I = 0x7f0a01cc
+.field public static final negative_button:I = 0x7f0a01cc
 
-.field public static final next:I = 0x7f0a01cd
+.field public static final never:I = 0x7f0a01cd
 
-.field public static final next_button:I = 0x7f0a01ce
+.field public static final next:I = 0x7f0a01ce
 
-.field public static final night_capture_control_ui:I = 0x7f0a01cf
+.field public static final next_button:I = 0x7f0a01cf
 
-.field public static final night_zoom_switcher_item_default:I = 0x7f0a01d0
+.field public static final night_capture_control_ui:I = 0x7f0a01d0
 
-.field public static final night_zoom_switcher_item_tele:I = 0x7f0a01d1
+.field public static final night_zoom_switcher_item_default:I = 0x7f0a01d1
 
-.field public static final night_zoom_switcher_item_wide:I = 0x7f0a01d2
+.field public static final night_zoom_switcher_item_tele:I = 0x7f0a01d2
 
-.field public static final noScroll:I = 0x7f0a01d3
+.field public static final night_zoom_switcher_item_wide:I = 0x7f0a01d3
 
-.field public static final none:I = 0x7f0a01d4
+.field public static final noScroll:I = 0x7f0a01d4
 
-.field public static final normal:I = 0x7f0a01d5
+.field public static final none:I = 0x7f0a01d5
 
-.field public static final normal_imageview:I = 0x7f0a01d6
+.field public static final normal:I = 0x7f0a01d6
 
-.field public static final notification_background:I = 0x7f0a01d7
+.field public static final normal_imageview:I = 0x7f0a01d7
 
-.field public static final notification_main_column:I = 0x7f0a01d8
+.field public static final notification_background:I = 0x7f0a01d8
 
-.field public static final notification_main_column_container:I = 0x7f0a01d9
+.field public static final notification_main_column:I = 0x7f0a01d9
 
-.field public static final numberPicker:I = 0x7f0a01da
+.field public static final notification_main_column_container:I = 0x7f0a01da
 
-.field public static final numberpicker_input:I = 0x7f0a01db
+.field public static final numberPicker:I = 0x7f0a01db
 
-.field public static final off:I = 0x7f0a01dc
+.field public static final numberpicker_input:I = 0x7f0a01dc
 
-.field public static final on:I = 0x7f0a01dd
+.field public static final off:I = 0x7f0a01dd
 
-.field public static final oos11_primary_action_panel:I = 0x7f0a01de
+.field public static final on:I = 0x7f0a01de
 
-.field public static final op_text_input_counter:I = 0x7f0a01df
+.field public static final oos11_primary_action_panel:I = 0x7f0a01df
 
-.field public static final op_text_input_error:I = 0x7f0a01e0
+.field public static final op_text_input_counter:I = 0x7f0a01e0
 
-.field public static final outline:I = 0x7f0a01e1
+.field public static final op_text_input_error:I = 0x7f0a01e1
 
-.field public static final panorama_preview_container:I = 0x7f0a01e2
+.field public static final outline:I = 0x7f0a01e2
 
-.field public static final panorama_preview_picture:I = 0x7f0a01e3
+.field public static final panorama_preview_container:I = 0x7f0a01e3
 
-.field public static final panorama_toast:I = 0x7f0a01e4
+.field public static final panorama_preview_picture:I = 0x7f0a01e4
 
-.field public static final panorama_ui:I = 0x7f0a01e5
+.field public static final panorama_toast:I = 0x7f0a01e5
 
-.field public static final parallax:I = 0x7f0a01e6
+.field public static final panorama_ui:I = 0x7f0a01e6
 
-.field public static final parentPanel:I = 0x7f0a01e7
+.field public static final parallax:I = 0x7f0a01e7
 
-.field public static final parent_matrix:I = 0x7f0a01e8
+.field public static final parentPanel:I = 0x7f0a01e8
 
-.field public static final password_toggle:I = 0x7f0a01e9
+.field public static final parent_matrix:I = 0x7f0a01e9
 
-.field public static final pause_resume_video_button:I = 0x7f0a01ea
+.field public static final password_toggle:I = 0x7f0a01ea
 
-.field public static final peekHeight:I = 0x7f0a01eb
+.field public static final pause_resume_video_button:I = 0x7f0a01eb
 
-.field public static final persistent_search_hint:I = 0x7f0a01ec
+.field public static final peekHeight:I = 0x7f0a01ec
 
-.field public static final persistent_search_icon1:I = 0x7f0a01ed
+.field public static final persistent_search_hint:I = 0x7f0a01ed
 
-.field public static final photo_capture_mode:I = 0x7f0a01ee
+.field public static final persistent_search_icon1:I = 0x7f0a01ee
 
-.field public static final photo_full_size_picture_action_item:I = 0x7f0a01ef
+.field public static final photo_capture_mode:I = 0x7f0a01ef
 
-.field public static final photo_full_size_picture_action_sub_item_12mp:I = 0x7f0a01f0
+.field public static final photo_full_size_picture_action_item:I = 0x7f0a01f0
 
-.field public static final photo_full_size_picture_action_sub_item_16mp:I = 0x7f0a01f1
+.field public static final photo_full_size_picture_action_sub_item_12mp:I = 0x7f0a01f1
 
-.field public static final photo_full_size_picture_action_sub_item_48mp:I = 0x7f0a01f2
+.field public static final photo_full_size_picture_action_sub_item_16mp:I = 0x7f0a01f2
 
-.field public static final photo_full_size_picture_action_sub_item_64mp:I = 0x7f0a01f3
+.field public static final photo_full_size_picture_action_sub_item_48mp:I = 0x7f0a01f3
 
-.field public static final photo_full_size_picture_switcher_item_default:I = 0x7f0a01f4
+.field public static final photo_full_size_picture_action_sub_item_64mp:I = 0x7f0a01f4
 
-.field public static final photo_full_size_picture_switcher_item_wide:I = 0x7f0a01f5
+.field public static final photo_full_size_picture_switcher_item_default:I = 0x7f0a01f5
 
-.field public static final photo_macro_disable_flash_action_item:I = 0x7f0a01f6
+.field public static final photo_full_size_picture_switcher_item_wide:I = 0x7f0a01f6
 
-.field public static final pickers:I = 0x7f0a01f7
+.field public static final photo_macro_disable_flash_action_item:I = 0x7f0a01f7
 
-.field public static final pin:I = 0x7f0a01f8
+.field public static final pickers:I = 0x7f0a01f8
 
-.field public static final pm_label:I = 0x7f0a01f9
+.field public static final pin:I = 0x7f0a01f9
 
-.field public static final pm_label2:I = 0x7f0a01fa
+.field public static final pm_label:I = 0x7f0a01fa
 
-.field public static final positive_button:I = 0x7f0a01fb
+.field public static final pm_label2:I = 0x7f0a01fb
 
-.field public static final preference:I = 0x7f0a01fc
+.field public static final positive_button:I = 0x7f0a01fc
 
-.field public static final prefs:I = 0x7f0a01fd
+.field public static final preference:I = 0x7f0a01fd
 
-.field public static final prefs_frame:I = 0x7f0a01fe
+.field public static final prefs:I = 0x7f0a01fe
 
-.field public static final prev:I = 0x7f0a01ff
+.field public static final prefs_frame:I = 0x7f0a01ff
 
-.field public static final preview_image:I = 0x7f0a0200
+.field public static final prev:I = 0x7f0a0200
 
-.field public static final primary_action_drawer:I = 0x7f0a0201
+.field public static final preview_image:I = 0x7f0a0201
 
-.field public static final primary_action_drawer_anchor_icon:I = 0x7f0a0202
+.field public static final primary_action_drawer:I = 0x7f0a0202
 
-.field public static final primary_action_drawer_background:I = 0x7f0a0203
+.field public static final primary_action_drawer_anchor_icon:I = 0x7f0a0203
 
-.field public static final primary_action_drawer_sub_items_panel:I = 0x7f0a0204
+.field public static final primary_action_drawer_background:I = 0x7f0a0204
 
-.field public static final primary_action_drawer_top_container:I = 0x7f0a0205
+.field public static final primary_action_drawer_sub_items_panel:I = 0x7f0a0205
 
-.field public static final primary_action_panel:I = 0x7f0a0206
+.field public static final primary_action_drawer_top_container:I = 0x7f0a0206
 
-.field public static final primary_action_panel_background:I = 0x7f0a0207
+.field public static final primary_action_panel:I = 0x7f0a0207
 
-.field public static final primary_action_panel_divider:I = 0x7f0a0208
+.field public static final primary_action_panel_background:I = 0x7f0a0208
 
-.field public static final primary_action_panel_line_down:I = 0x7f0a0209
+.field public static final primary_action_panel_divider:I = 0x7f0a0209
 
-.field public static final primary_action_panel_line_up:I = 0x7f0a020a
+.field public static final primary_action_panel_line_down:I = 0x7f0a020a
 
-.field public static final primary_action_panel_sub_items_panel:I = 0x7f0a020b
+.field public static final primary_action_panel_line_up:I = 0x7f0a020b
 
-.field public static final primary_action_panel_sub_items_panel_container:I = 0x7f0a020c
+.field public static final primary_action_panel_sub_items_panel:I = 0x7f0a020c
 
-.field public static final primary_button_background_container:I = 0x7f0a020d
+.field public static final primary_action_panel_sub_items_panel_container:I = 0x7f0a020d
 
-.field public static final primary_button_container:I = 0x7f0a020e
+.field public static final primary_button_background_container:I = 0x7f0a020e
 
-.field public static final primary_button_icon_container:I = 0x7f0a020f
+.field public static final primary_button_container:I = 0x7f0a020f
 
-.field public static final primary_button_touch_receiver:I = 0x7f0a0210
+.field public static final primary_button_icon_container:I = 0x7f0a0210
 
-.field public static final primary_hints_container:I = 0x7f0a0211
+.field public static final primary_button_touch_receiver:I = 0x7f0a0211
 
-.field public static final processing_dialog_container:I = 0x7f0a0212
+.field public static final primary_hints_container:I = 0x7f0a0212
 
-.field public static final progress_circular:I = 0x7f0a0213
+.field public static final processing_dialog_container:I = 0x7f0a0213
 
-.field public static final progress_horizontal:I = 0x7f0a0214
+.field public static final progress_circular:I = 0x7f0a0214
 
-.field public static final progress_number:I = 0x7f0a0215
+.field public static final progress_horizontal:I = 0x7f0a0215
 
-.field public static final progress_percent:I = 0x7f0a0216
+.field public static final progress_number:I = 0x7f0a0216
 
-.field public static final quick_sharing_app_icon_panel:I = 0x7f0a0217
+.field public static final progress_percent:I = 0x7f0a0217
 
-.field public static final quick_sharing_container:I = 0x7f0a0218
+.field public static final quick_sharing_app_icon_panel:I = 0x7f0a0218
 
-.field public static final quick_sharing_description:I = 0x7f0a0219
+.field public static final quick_sharing_container:I = 0x7f0a0219
 
-.field public static final quick_sharing_image_progress_bar:I = 0x7f0a021a
+.field public static final quick_sharing_description:I = 0x7f0a021a
 
-.field public static final quick_sharing_message:I = 0x7f0a021b
+.field public static final quick_sharing_image_progress_bar:I = 0x7f0a021b
 
-.field public static final quick_sharing_message_container:I = 0x7f0a021c
+.field public static final quick_sharing_message:I = 0x7f0a021c
 
-.field public static final quick_sharing_preview_transition_view:I = 0x7f0a021d
+.field public static final quick_sharing_message_container:I = 0x7f0a021d
 
-.field public static final quick_sharing_thumb__icon:I = 0x7f0a021e
+.field public static final quick_sharing_preview_transition_view:I = 0x7f0a021e
 
-.field public static final quick_video_zoom_switcher:I = 0x7f0a021f
+.field public static final quick_sharing_thumb__icon:I = 0x7f0a021f
 
-.field public static final radial_picker:I = 0x7f0a0220
+.field public static final quick_video_zoom_switcher:I = 0x7f0a0220
 
-.field public static final radio:I = 0x7f0a0221
+.field public static final radial_picker:I = 0x7f0a0221
 
-.field public static final recycler_view:I = 0x7f0a0222
+.field public static final radio:I = 0x7f0a0222
 
-.field public static final release_note_detail:I = 0x7f0a0223
+.field public static final recycler_view:I = 0x7f0a0223
 
-.field public static final release_note_panel:I = 0x7f0a0224
+.field public static final release_note_detail:I = 0x7f0a0224
 
-.field public static final release_note_title:I = 0x7f0a0225
+.field public static final release_note_panel:I = 0x7f0a0225
 
-.field public static final remove_icon:I = 0x7f0a0226
+.field public static final release_note_title:I = 0x7f0a0226
 
-.field public static final reset:I = 0x7f0a0227
+.field public static final remove_icon:I = 0x7f0a0227
 
-.field public static final review_action_panel:I = 0x7f0a0228
+.field public static final reset:I = 0x7f0a0228
 
-.field public static final review_screen:I = 0x7f0a0229
+.field public static final review_action_panel:I = 0x7f0a0229
 
-.field public static final right:I = 0x7f0a022a
+.field public static final review_screen:I = 0x7f0a022a
 
-.field public static final right_icon:I = 0x7f0a022b
+.field public static final right:I = 0x7f0a022b
 
-.field public static final right_side:I = 0x7f0a022c
+.field public static final right_icon:I = 0x7f0a022c
 
-.field public static final ripple_left:I = 0x7f0a022d
+.field public static final right_side:I = 0x7f0a022d
 
-.field public static final ripple_right:I = 0x7f0a022e
+.field public static final ripple_left:I = 0x7f0a022e
 
-.field public static final root_layout:I = 0x7f0a022f
+.field public static final ripple_right:I = 0x7f0a022f
 
-.field public static final rotatable_container:I = 0x7f0a0230
+.field public static final root_layout:I = 0x7f0a0230
 
-.field public static final rotated_container:I = 0x7f0a0231
+.field public static final rotatable_container:I = 0x7f0a0231
 
-.field public static final rounded:I = 0x7f0a0232
+.field public static final rotated_container:I = 0x7f0a0232
 
-.field public static final row_index_key:I = 0x7f0a0233
+.field public static final rounded:I = 0x7f0a0233
 
-.field public static final save_non_transition_alpha:I = 0x7f0a0234
+.field public static final row_index_key:I = 0x7f0a0234
 
-.field public static final save_overlay_view:I = 0x7f0a0235
+.field public static final save_non_transition_alpha:I = 0x7f0a0235
 
-.field public static final scale:I = 0x7f0a0236
+.field public static final save_overlay_view:I = 0x7f0a0236
 
-.field public static final scene_enhancement_icon:I = 0x7f0a0237
+.field public static final scale:I = 0x7f0a0237
 
-.field public static final screen:I = 0x7f0a0238
+.field public static final scene_enhancement_icon:I = 0x7f0a0238
 
-.field public static final screen_flash:I = 0x7f0a0239
+.field public static final screen:I = 0x7f0a0239
 
-.field public static final screen_flash_icon:I = 0x7f0a023a
+.field public static final screen_flash:I = 0x7f0a023a
 
-.field public static final screen_flash_mode_action_item_auto:I = 0x7f0a023b
+.field public static final screen_flash_icon:I = 0x7f0a023b
 
-.field public static final screen_flash_mode_action_item_group:I = 0x7f0a023c
+.field public static final screen_flash_mode_action_item_auto:I = 0x7f0a023c
 
-.field public static final screen_flash_mode_action_item_off:I = 0x7f0a023d
+.field public static final screen_flash_mode_action_item_group:I = 0x7f0a023d
 
-.field public static final screen_flash_mode_action_item_on:I = 0x7f0a023e
+.field public static final screen_flash_mode_action_item_off:I = 0x7f0a023e
 
-.field public static final scroll:I = 0x7f0a023f
+.field public static final screen_flash_mode_action_item_on:I = 0x7f0a023f
 
-.field public static final scrollIndicatorDown:I = 0x7f0a0240
+.field public static final scroll:I = 0x7f0a0240
 
-.field public static final scrollIndicatorUp:I = 0x7f0a0241
+.field public static final scrollIndicatorDown:I = 0x7f0a0241
 
-.field public static final scrollView:I = 0x7f0a0242
+.field public static final scrollIndicatorUp:I = 0x7f0a0242
 
-.field public static final scrollable:I = 0x7f0a0243
+.field public static final scrollView:I = 0x7f0a0243
 
-.field public static final search_badge:I = 0x7f0a0244
+.field public static final scrollable:I = 0x7f0a0244
 
-.field public static final search_bar:I = 0x7f0a0245
+.field public static final search_badge:I = 0x7f0a0245
 
-.field public static final search_button:I = 0x7f0a0246
+.field public static final search_bar:I = 0x7f0a0246
 
-.field public static final search_close_btn:I = 0x7f0a0247
+.field public static final search_button:I = 0x7f0a0247
 
-.field public static final search_edit_frame:I = 0x7f0a0248
+.field public static final search_close_btn:I = 0x7f0a0248
 
-.field public static final search_go_btn:I = 0x7f0a0249
+.field public static final search_edit_frame:I = 0x7f0a0249
 
-.field public static final search_mag_icon:I = 0x7f0a024a
+.field public static final search_go_btn:I = 0x7f0a024a
 
-.field public static final search_plate:I = 0x7f0a024b
+.field public static final search_mag_icon:I = 0x7f0a024b
 
-.field public static final search_src_text:I = 0x7f0a024c
+.field public static final search_plate:I = 0x7f0a024c
 
-.field public static final search_voice_btn:I = 0x7f0a024d
+.field public static final search_src_text:I = 0x7f0a024d
 
-.field public static final second_level_items_container:I = 0x7f0a024e
+.field public static final search_voice_btn:I = 0x7f0a024e
 
-.field public static final secondary_button:I = 0x7f0a024f
+.field public static final second_level_items_container:I = 0x7f0a024f
 
-.field public static final secondary_hints_container:I = 0x7f0a0250
+.field public static final secondary_button:I = 0x7f0a0250
 
-.field public static final seekbar:I = 0x7f0a0251
+.field public static final secondary_hints_container:I = 0x7f0a0251
 
-.field public static final seekbar_value:I = 0x7f0a0252
+.field public static final seekbar:I = 0x7f0a0252
 
-.field public static final select_background:I = 0x7f0a0253
+.field public static final seekbar_value:I = 0x7f0a0253
 
-.field public static final select_dialog_listview:I = 0x7f0a0254
+.field public static final select_background:I = 0x7f0a0254
 
-.field public static final selected:I = 0x7f0a0255
+.field public static final select_dialog_listview:I = 0x7f0a0255
 
-.field public static final sensitivity_item_container:I = 0x7f0a0256
+.field public static final selected:I = 0x7f0a0256
 
-.field public static final sensitivity_item_image:I = 0x7f0a0257
+.field public static final sensitivity_item_container:I = 0x7f0a0257
 
-.field public static final sensitivity_item_text:I = 0x7f0a0258
+.field public static final sensitivity_item_image:I = 0x7f0a0258
 
-.field public static final separator:I = 0x7f0a0259
+.field public static final sensitivity_item_text:I = 0x7f0a0259
 
-.field public static final separator_shape:I = 0x7f0a025a
+.field public static final separator:I = 0x7f0a025a
 
-.field public static final setting_container:I = 0x7f0a025b
+.field public static final separator_shape:I = 0x7f0a025b
 
-.field public static final setting_icon:I = 0x7f0a025c
+.field public static final setting_container:I = 0x7f0a025c
 
-.field public static final settings_icon_container:I = 0x7f0a025d
+.field public static final setting_icon:I = 0x7f0a025d
 
-.field public static final settings_text:I = 0x7f0a025e
+.field public static final settings_icon_container:I = 0x7f0a025e
 
-.field public static final shortcut:I = 0x7f0a025f
+.field public static final settings_text:I = 0x7f0a025f
 
-.field public static final showCustom:I = 0x7f0a0260
+.field public static final shortcut:I = 0x7f0a0260
 
-.field public static final showHome:I = 0x7f0a0261
+.field public static final showCustom:I = 0x7f0a0261
 
-.field public static final showTitle:I = 0x7f0a0262
+.field public static final showHome:I = 0x7f0a0262
 
-.field public static final shutter_animation:I = 0x7f0a0263
+.field public static final showTitle:I = 0x7f0a0263
 
-.field public static final single_action_button:I = 0x7f0a0264
+.field public static final shutter_animation:I = 0x7f0a0264
 
-.field public static final single_zoom_switcher:I = 0x7f0a0265
+.field public static final single_action_button:I = 0x7f0a0265
 
-.field public static final singlechoice_subtitle:I = 0x7f0a0266
+.field public static final single_zoom_switcher:I = 0x7f0a0266
 
-.field public static final skipCollapsed:I = 0x7f0a0267
+.field public static final singlechoice_subtitle:I = 0x7f0a0267
 
-.field public static final skip_button:I = 0x7f0a0268
+.field public static final skipCollapsed:I = 0x7f0a0268
 
-.field public static final slide:I = 0x7f0a0269
+.field public static final skip_button:I = 0x7f0a0269
 
-.field public static final smallLabel:I = 0x7f0a026a
+.field public static final slide:I = 0x7f0a026a
 
-.field public static final snackbar_action:I = 0x7f0a026b
+.field public static final smallLabel:I = 0x7f0a026b
 
-.field public static final snackbar_text:I = 0x7f0a026c
+.field public static final snackbar_action:I = 0x7f0a026c
 
-.field public static final snap:I = 0x7f0a026d
+.field public static final snackbar_text:I = 0x7f0a026d
 
-.field public static final snapMargins:I = 0x7f0a026e
+.field public static final snap:I = 0x7f0a026e
 
-.field public static final space:I = 0x7f0a026f
+.field public static final snapMargins:I = 0x7f0a026f
 
-.field public static final spacer:I = 0x7f0a0270
+.field public static final space:I = 0x7f0a0270
 
-.field public static final speed_ratio_action_item_120:I = 0x7f0a0271
+.field public static final spacer:I = 0x7f0a0271
 
-.field public static final speed_ratio_action_item_15:I = 0x7f0a0272
+.field public static final speed_ratio_action_item_120:I = 0x7f0a0272
 
-.field public static final speed_ratio_action_item_480:I = 0x7f0a0273
+.field public static final speed_ratio_action_item_15:I = 0x7f0a0273
 
-.field public static final speed_ratio_action_item_5:I = 0x7f0a0274
+.field public static final speed_ratio_action_item_480:I = 0x7f0a0274
 
-.field public static final speed_ratio_action_item_60:I = 0x7f0a0275
+.field public static final speed_ratio_action_item_5:I = 0x7f0a0275
 
-.field public static final speed_ratio_action_item_group:I = 0x7f0a0276
+.field public static final speed_ratio_action_item_60:I = 0x7f0a0276
 
-.field public static final spinner:I = 0x7f0a0277
+.field public static final speed_ratio_action_item_group:I = 0x7f0a0277
 
-.field public static final split_action_bar:I = 0x7f0a0278
+.field public static final spinner:I = 0x7f0a0278
 
-.field public static final spring_layout:I = 0x7f0a0279
+.field public static final split_action_bar:I = 0x7f0a0279
 
-.field public static final src_atop:I = 0x7f0a027a
+.field public static final spring_layout:I = 0x7f0a027a
 
-.field public static final src_in:I = 0x7f0a027b
+.field public static final src_atop:I = 0x7f0a027b
 
-.field public static final src_over:I = 0x7f0a027c
+.field public static final src_in:I = 0x7f0a027c
 
-.field public static final start:I = 0x7f0a027d
+.field public static final src_over:I = 0x7f0a027d
 
-.field public static final stretch:I = 0x7f0a027e
+.field public static final start:I = 0x7f0a027e
 
-.field public static final sub_item_panel_setting_icon:I = 0x7f0a027f
+.field public static final stretch:I = 0x7f0a027f
 
-.field public static final sub_items_panel_list_container:I = 0x7f0a0280
+.field public static final sub_item_panel_setting_icon:I = 0x7f0a0280
 
-.field public static final sub_items_panel_settings_container:I = 0x7f0a0281
+.field public static final sub_items_panel_list_container:I = 0x7f0a0281
 
-.field public static final sub_items_panel_settings_icon:I = 0x7f0a0282
+.field public static final sub_items_panel_settings_container:I = 0x7f0a0282
 
-.field public static final sub_items_panel_title_text:I = 0x7f0a0283
+.field public static final sub_items_panel_settings_icon:I = 0x7f0a0283
 
-.field public static final submenuarrow:I = 0x7f0a0284
+.field public static final sub_items_panel_title_text:I = 0x7f0a0284
 
-.field public static final submit_area:I = 0x7f0a0285
+.field public static final submenuarrow:I = 0x7f0a0285
 
-.field public static final summary:I = 0x7f0a0286
+.field public static final submit_area:I = 0x7f0a0286
 
-.field public static final switchWidget:I = 0x7f0a0287
+.field public static final summary:I = 0x7f0a0287
 
-.field public static final switch_camera_button:I = 0x7f0a0288
+.field public static final switchWidget:I = 0x7f0a0288
 
-.field public static final switch_divider:I = 0x7f0a0289
+.field public static final switch_camera_button:I = 0x7f0a0289
 
-.field public static final switch_imageview:I = 0x7f0a028a
+.field public static final switch_divider:I = 0x7f0a028a
 
-.field public static final tabMode:I = 0x7f0a028b
+.field public static final switch_imageview:I = 0x7f0a028b
 
-.field public static final tag_accessibility_actions:I = 0x7f0a028c
+.field public static final tabMode:I = 0x7f0a028c
 
-.field public static final tag_accessibility_clickable_spans:I = 0x7f0a028d
+.field public static final tag_accessibility_actions:I = 0x7f0a028d
 
-.field public static final tag_accessibility_heading:I = 0x7f0a028e
+.field public static final tag_accessibility_clickable_spans:I = 0x7f0a028e
 
-.field public static final tag_accessibility_pane_title:I = 0x7f0a028f
+.field public static final tag_accessibility_heading:I = 0x7f0a028f
 
-.field public static final tag_screen_reader_focusable:I = 0x7f0a0290
+.field public static final tag_accessibility_pane_title:I = 0x7f0a0290
 
-.field public static final tag_transition_group:I = 0x7f0a0291
+.field public static final tag_screen_reader_focusable:I = 0x7f0a0291
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f0a0292
+.field public static final tag_transition_group:I = 0x7f0a0292
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f0a0293
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0a0293
 
-.field public static final text:I = 0x7f0a0294
+.field public static final tag_unhandled_key_listeners:I = 0x7f0a0294
 
-.field public static final text2:I = 0x7f0a0295
+.field public static final text:I = 0x7f0a0295
 
-.field public static final textEnd:I = 0x7f0a0296
+.field public static final text2:I = 0x7f0a0296
 
-.field public static final textSpacerNoButtons:I = 0x7f0a0297
+.field public static final textEnd:I = 0x7f0a0297
 
-.field public static final textSpacerNoTitle:I = 0x7f0a0298
+.field public static final textSpacerNoButtons:I = 0x7f0a0298
 
-.field public static final textStart:I = 0x7f0a0299
+.field public static final textSpacerNoTitle:I = 0x7f0a0299
 
-.field public static final text_input_end_icon:I = 0x7f0a029a
+.field public static final textStart:I = 0x7f0a029a
 
-.field public static final text_input_password_toggle:I = 0x7f0a029b
+.field public static final text_input_end_icon:I = 0x7f0a029b
 
-.field public static final text_input_start_icon:I = 0x7f0a029c
+.field public static final text_input_password_toggle:I = 0x7f0a029c
 
-.field public static final text_layout:I = 0x7f0a029d
+.field public static final text_input_start_icon:I = 0x7f0a029d
 
-.field public static final textinput_counter:I = 0x7f0a029e
+.field public static final text_layout:I = 0x7f0a029e
 
-.field public static final textinput_error:I = 0x7f0a029f
+.field public static final textinput_counter:I = 0x7f0a029f
 
-.field public static final textinput_helper_text:I = 0x7f0a02a0
+.field public static final textinput_error:I = 0x7f0a02a0
 
-.field public static final textinput_placeholder:I = 0x7f0a02a1
+.field public static final textinput_helper_text:I = 0x7f0a02a1
 
-.field public static final textinput_prefix_text:I = 0x7f0a02a2
+.field public static final textinput_placeholder:I = 0x7f0a02a2
 
-.field public static final textinput_suffix_text:I = 0x7f0a02a3
+.field public static final textinput_prefix_text:I = 0x7f0a02a3
 
-.field public static final thumbnail_icon:I = 0x7f0a02a4
+.field public static final textinput_suffix_text:I = 0x7f0a02a4
 
-.field public static final thumbnail_icon_background:I = 0x7f0a02a5
+.field public static final thumbnail_icon:I = 0x7f0a02a5
 
-.field public static final thumbnail_icon_base:I = 0x7f0a02a6
+.field public static final thumbnail_icon_background:I = 0x7f0a02a6
 
-.field public static final thumbnail_icon_container:I = 0x7f0a02a7
+.field public static final thumbnail_icon_base:I = 0x7f0a02a7
 
-.field public static final thumbnail_icon_ripple_one:I = 0x7f0a02a8
+.field public static final thumbnail_icon_container:I = 0x7f0a02a8
 
-.field public static final thumbnail_icon_ripple_two:I = 0x7f0a02a9
+.field public static final thumbnail_icon_ripple_one:I = 0x7f0a02a9
 
-.field public static final time:I = 0x7f0a02aa
+.field public static final thumbnail_icon_ripple_two:I = 0x7f0a02aa
 
-.field public static final timePicker:I = 0x7f0a02ab
+.field public static final time:I = 0x7f0a02ab
 
-.field public static final timePickerLayout:I = 0x7f0a02ac
+.field public static final timePicker:I = 0x7f0a02ac
 
-.field public static final time_header:I = 0x7f0a02ad
+.field public static final timePickerLayout:I = 0x7f0a02ad
 
-.field public static final time_header_layout:I = 0x7f0a02ae
+.field public static final time_header:I = 0x7f0a02ae
 
-.field public static final timelapse_capture_mode:I = 0x7f0a02af
+.field public static final time_header_layout:I = 0x7f0a02af
 
-.field public static final title:I = 0x7f0a02b0
+.field public static final timelapse_capture_mode:I = 0x7f0a02b0
 
-.field public static final titleDividerNoCustom:I = 0x7f0a02b1
+.field public static final title:I = 0x7f0a02b1
 
-.field public static final title_layout:I = 0x7f0a02b2
+.field public static final titleDividerNoCustom:I = 0x7f0a02b2
 
-.field public static final title_template:I = 0x7f0a02b3
+.field public static final title_layout:I = 0x7f0a02b3
 
-.field public static final toggle_mode:I = 0x7f0a02b4
+.field public static final title_template:I = 0x7f0a02b4
 
-.field public static final toggle_mode_layout:I = 0x7f0a02b5
+.field public static final toggle_mode:I = 0x7f0a02b5
 
-.field public static final tool_bar:I = 0x7f0a02b6
+.field public static final toggle_mode_layout:I = 0x7f0a02b6
 
-.field public static final toolbar:I = 0x7f0a02b7
+.field public static final tool_bar:I = 0x7f0a02b7
 
-.field public static final tooltips_cancel:I = 0x7f0a02b8
+.field public static final toolbar:I = 0x7f0a02b8
 
-.field public static final top:I = 0x7f0a02b9
+.field public static final tooltips_cancel:I = 0x7f0a02b9
 
-.field public static final topPanel:I = 0x7f0a02ba
+.field public static final top:I = 0x7f0a02ba
 
-.field public static final top_most_hints_container:I = 0x7f0a02bb
+.field public static final topPanel:I = 0x7f0a02bb
 
-.field public static final touch:I = 0x7f0a02bc
+.field public static final top_most_hints_container:I = 0x7f0a02bc
 
-.field public static final touch_3a_control_container:I = 0x7f0a02bd
+.field public static final touch:I = 0x7f0a02bd
 
-.field public static final touch_3a_control_touch_receiver:I = 0x7f0a02be
+.field public static final touch_3a_control_container:I = 0x7f0a02be
 
-.field public static final touch_outside:I = 0x7f0a02bf
+.field public static final touch_3a_control_touch_receiver:I = 0x7f0a02bf
 
-.field public static final touch_receiver:I = 0x7f0a02c0
+.field public static final touch_outside:I = 0x7f0a02c0
 
-.field public static final tracking_indicator:I = 0x7f0a02c1
+.field public static final touch_receiver:I = 0x7f0a02c1
 
-.field public static final transition_current_scene:I = 0x7f0a02c2
+.field public static final tracking_indicator:I = 0x7f0a02c2
 
-.field public static final transition_layout_save:I = 0x7f0a02c3
+.field public static final transition_current_scene:I = 0x7f0a02c3
 
-.field public static final transition_position:I = 0x7f0a02c4
+.field public static final transition_layout_save:I = 0x7f0a02c4
 
-.field public static final transition_scene_layoutid_cache:I = 0x7f0a02c5
+.field public static final transition_position:I = 0x7f0a02c5
 
-.field public static final transition_transform:I = 0x7f0a02c6
+.field public static final transition_scene_layoutid_cache:I = 0x7f0a02c6
 
-.field public static final tripod_mode_action_item:I = 0x7f0a02c7
+.field public static final transition_transform:I = 0x7f0a02c7
 
-.field public static final tutorial_confirm_text:I = 0x7f0a02c8
+.field public static final tripod_mode_action_item:I = 0x7f0a02c8
 
-.field public static final tutorial_custom_mode_arrow:I = 0x7f0a02c9
+.field public static final tutorial_confirm_text:I = 0x7f0a02c9
 
-.field public static final tutorial_custom_mode_container:I = 0x7f0a02ca
+.field public static final tutorial_custom_mode_arrow:I = 0x7f0a02ca
 
-.field public static final tutorial_custom_mode_text:I = 0x7f0a02cb
+.field public static final tutorial_custom_mode_container:I = 0x7f0a02cb
 
-.field public static final tutorial_focal_point_animation_circle:I = 0x7f0a02cc
+.field public static final tutorial_custom_mode_text:I = 0x7f0a02cc
 
-.field public static final tutorial_focal_point_image:I = 0x7f0a02cd
+.field public static final tutorial_focal_point_animation_circle:I = 0x7f0a02cd
 
-.field public static final tutorial_focal_point_text:I = 0x7f0a02ce
+.field public static final tutorial_focal_point_image:I = 0x7f0a02ce
 
-.field public static final tutorial_inner_touch_receiver:I = 0x7f0a02cf
+.field public static final tutorial_focal_point_text:I = 0x7f0a02cf
 
-.field public static final tutorial_quick_share_arrow:I = 0x7f0a02d0
+.field public static final tutorial_inner_touch_receiver:I = 0x7f0a02d0
 
-.field public static final tutorial_quick_share_container:I = 0x7f0a02d1
+.field public static final tutorial_quick_share_arrow:I = 0x7f0a02d1
 
-.field public static final tutorial_quick_share_description:I = 0x7f0a02d2
+.field public static final tutorial_quick_share_container:I = 0x7f0a02d2
 
-.field public static final tutorial_quick_share_image:I = 0x7f0a02d3
+.field public static final tutorial_quick_share_description:I = 0x7f0a02d3
 
-.field public static final tutorial_quick_video_action_text:I = 0x7f0a02d4
+.field public static final tutorial_quick_share_image:I = 0x7f0a02d4
 
-.field public static final tutorial_quick_video_arrow:I = 0x7f0a02d5
+.field public static final tutorial_quick_video_action_text:I = 0x7f0a02d5
 
-.field public static final tutorial_quick_video_container:I = 0x7f0a02d6
+.field public static final tutorial_quick_video_arrow:I = 0x7f0a02d6
 
-.field public static final tutorial_quick_video_drag_left:I = 0x7f0a02d7
+.field public static final tutorial_quick_video_container:I = 0x7f0a02d7
 
-.field public static final tutorial_quick_video_drag_right:I = 0x7f0a02d8
+.field public static final tutorial_quick_video_drag_left:I = 0x7f0a02d8
 
-.field public static final tutorial_quick_video_text:I = 0x7f0a02d9
+.field public static final tutorial_quick_video_drag_right:I = 0x7f0a02d9
 
-.field public static final tutorial_save_custom_mode_image:I = 0x7f0a02da
+.field public static final tutorial_quick_video_text:I = 0x7f0a02da
 
-.field public static final tutorial_touch_receiver:I = 0x7f0a02db
+.field public static final tutorial_save_custom_mode_image:I = 0x7f0a02db
 
-.field public static final tutorial_ui_container:I = 0x7f0a02dc
+.field public static final tutorial_touch_receiver:I = 0x7f0a02dc
 
-.field public static final tutorial_ui_image:I = 0x7f0a02dd
+.field public static final tutorial_ui_container:I = 0x7f0a02dd
 
-.field public static final unchecked:I = 0x7f0a02de
+.field public static final tutorial_ui_image:I = 0x7f0a02de
 
-.field public static final uniform:I = 0x7f0a02df
+.field public static final unchecked:I = 0x7f0a02df
 
-.field public static final unlabeled:I = 0x7f0a02e0
+.field public static final uniform:I = 0x7f0a02e0
 
-.field public static final up:I = 0x7f0a02e1
+.field public static final unlabeled:I = 0x7f0a02e1
 
-.field public static final useLogo:I = 0x7f0a02e2
+.field public static final up:I = 0x7f0a02e2
 
-.field public static final version:I = 0x7f0a02e3
+.field public static final useLogo:I = 0x7f0a02e3
 
-.field public static final video_aspect_ratio_action_item_16_9:I = 0x7f0a02e4
+.field public static final version:I = 0x7f0a02e4
 
-.field public static final video_aspect_ratio_action_item_21_9:I = 0x7f0a02e5
+.field public static final video_aspect_ratio_action_item_16_9:I = 0x7f0a02e5
 
-.field public static final video_bokeh_action_item:I = 0x7f0a02e6
+.field public static final video_aspect_ratio_action_item_21_9:I = 0x7f0a02e6
 
-.field public static final video_capture_mode:I = 0x7f0a02e7
+.field public static final video_bokeh_action_item:I = 0x7f0a02e7
 
-.field public static final video_capture_rate_action_item_120fps:I = 0x7f0a02e8
+.field public static final video_capture_mode:I = 0x7f0a02e8
 
-.field public static final video_capture_rate_action_item_240fps:I = 0x7f0a02e9
+.field public static final video_capture_rate_action_item_120fps:I = 0x7f0a02e9
 
-.field public static final video_capture_rate_action_item_30fps:I = 0x7f0a02ea
+.field public static final video_capture_rate_action_item_240fps:I = 0x7f0a02ea
 
-.field public static final video_capture_rate_action_item_480fps:I = 0x7f0a02eb
+.field public static final video_capture_rate_action_item_30fps:I = 0x7f0a02eb
 
-.field public static final video_capture_rate_action_item_60fps:I = 0x7f0a02ec
+.field public static final video_capture_rate_action_item_480fps:I = 0x7f0a02ec
 
-.field public static final video_capture_rate_action_item_960fps:I = 0x7f0a02ed
+.field public static final video_capture_rate_action_item_60fps:I = 0x7f0a02ed
 
-.field public static final video_hdr_action_item:I = 0x7f0a02ee
+.field public static final video_capture_rate_action_item_960fps:I = 0x7f0a02ee
 
-.field public static final video_night_action_item:I = 0x7f0a02ef
+.field public static final video_hdr_action_item:I = 0x7f0a02ef
 
-.field public static final video_size_action_item_1080p:I = 0x7f0a02f0
+.field public static final video_night_action_item:I = 0x7f0a02f0
 
-.field public static final video_size_action_item_4k:I = 0x7f0a02f1
+.field public static final video_size_action_item_1080p:I = 0x7f0a02f1
 
-.field public static final video_size_action_item_720p:I = 0x7f0a02f2
+.field public static final video_size_action_item_4k:I = 0x7f0a02f2
 
-.field public static final video_size_action_item_8k:I = 0x7f0a02f3
+.field public static final video_size_action_item_720p:I = 0x7f0a02f3
 
 .field public static final view_offset_helper:I = 0x7f0a02f4
 

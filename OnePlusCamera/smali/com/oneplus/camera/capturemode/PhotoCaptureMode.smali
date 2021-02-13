@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 4 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 5 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 6 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,4959:1\n1054#2:4960\n1054#2:4961\n1054#2:4962\n1054#2:4963\n858#2:4964\n858#2:4965\n858#2:4967\n858#2:4968\n858#2:4969\n858#2:4970\n858#2:4971\n858#2:4975\n858#2:4978\n858#2:4980\n858#2:4981\n858#2:4982\n858#2:4983\n858#2:4984\n858#2:4985\n858#2:4986\n858#2:4987\n858#2:4992\n858#2:4993\n858#2:5000\n858#2:5001\n858#2:5002\n858#2:5003\n858#2:5004\n858#2:5005\n858#2:5024\n858#2:5025\n858#2:5026\n858#2:5028\n858#2:5029\n858#2:5030\n858#2:5031\n858#2:5032\n858#2:5033\n858#2:5034\n858#2:5047\n858#2:5048\n858#2:5049\n13#3:4966\n13#3:5027\n13#3:5040\n13#3:5043\n695#4,2:4972\n695#4,2:4976\n1185#4:4988\n1185#4:4989\n695#4,2:4990\n602#4:5035\n695#4,2:5036\n602#4:5039\n695#4,2:5041\n602#4:5044\n695#4,2:5045\n19#5:4974\n19#5:4979\n19#5:5038\n12#6,3:4994\n12#6,3:4997\n12#6,3:5006\n12#6,3:5009\n12#6,3:5012\n12#6,3:5015\n12#6,3:5018\n12#6,3:5021\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode\n*L\n1127#1:4960\n1148#1:4961\n1156#1:4962\n1156#1:4963\n1222#1:4964\n1298#1:4965\n1579#1:4967\n1589#1:4968\n1590#1:4969\n1596#1:4970\n1742#1:4971\n1901#1:4975\n2037#1:4978\n2096#1:4980\n2103#1:4981\n2106#1:4982\n2112#1:4983\n2118#1:4984\n2121#1:4985\n2124#1:4986\n2139#1:4987\n2189#1:4992\n2214#1:4993\n2529#1:5000\n2532#1:5001\n2537#1:5002\n2542#1:5003\n2584#1:5004\n2607#1:5005\n3309#1:5024\n3340#1:5025\n3345#1:5026\n3379#1:5028\n3379#1:5029\n3379#1:5030\n3379#1:5031\n3379#1:5032\n3530#1:5033\n3905#1:5034\n4609#1:5047\n4609#1:5048\n4770#1:5049\n1575#1:4966\n3356#1:5027\n4363#1:5040\n4375#1:5043\n1832#1,2:4972\n2014#1,2:4976\n2149#1:4988\n2149#1:4989\n2150#1,2:4990\n3905#1:5035\n3905#1,2:5036\n4361#1:5039\n4374#1,2:5041\n4396#1:5044\n4403#1,2:5045\n1900#1:4974\n2037#1:4979\n4133#1:5038\n2472#1,3:4994\n2483#1,3:4997\n2797#1,3:5006\n2964#1,3:5009\n3009#1,3:5012\n3014#1,3:5015\n3017#1,3:5018\n3020#1,3:5021\n*E\n"
+    value = "SMAP\nPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Sizes.kt\ncom/oneplus/util/SizesKt\n+ 4 AbstractCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractCaptureMode\n+ 5 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 6 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,4965:1\n1054#2:4966\n1054#2:4967\n1054#2:4968\n1054#2:4969\n858#2:4970\n858#2:4971\n858#2:4973\n858#2:4974\n858#2:4975\n858#2:4976\n858#2:4977\n858#2:4981\n858#2:4984\n858#2:4986\n858#2:4987\n858#2:4988\n858#2:4989\n858#2:4990\n858#2:4991\n858#2:4992\n858#2:4993\n858#2:4998\n858#2:4999\n858#2:5006\n858#2:5007\n858#2:5008\n858#2:5009\n858#2:5010\n858#2:5011\n858#2:5030\n858#2:5031\n858#2:5032\n858#2:5034\n858#2:5035\n858#2:5036\n858#2:5037\n858#2:5038\n858#2:5039\n858#2:5040\n858#2:5053\n858#2:5054\n858#2:5055\n13#3:4972\n13#3:5033\n13#3:5046\n13#3:5049\n695#4,2:4978\n695#4,2:4982\n1185#4:4994\n1185#4:4995\n695#4,2:4996\n602#4:5041\n695#4,2:5042\n602#4:5045\n695#4,2:5047\n602#4:5050\n695#4,2:5051\n19#5:4980\n19#5:4985\n19#5:5044\n12#6,3:5000\n12#6,3:5003\n12#6,3:5012\n12#6,3:5015\n12#6,3:5018\n12#6,3:5021\n12#6,3:5024\n12#6,3:5027\n*E\n*S KotlinDebug\n*F\n+ 1 PhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/PhotoCaptureMode\n*L\n1133#1:4966\n1154#1:4967\n1162#1:4968\n1162#1:4969\n1228#1:4970\n1304#1:4971\n1585#1:4973\n1595#1:4974\n1596#1:4975\n1602#1:4976\n1748#1:4977\n1907#1:4981\n2043#1:4984\n2102#1:4986\n2109#1:4987\n2112#1:4988\n2118#1:4989\n2124#1:4990\n2127#1:4991\n2130#1:4992\n2145#1:4993\n2195#1:4998\n2220#1:4999\n2535#1:5006\n2538#1:5007\n2543#1:5008\n2548#1:5009\n2590#1:5010\n2613#1:5011\n3315#1:5030\n3346#1:5031\n3351#1:5032\n3385#1:5034\n3385#1:5035\n3385#1:5036\n3385#1:5037\n3385#1:5038\n3536#1:5039\n3911#1:5040\n4615#1:5053\n4615#1:5054\n4776#1:5055\n1581#1:4972\n3362#1:5033\n4369#1:5046\n4381#1:5049\n1838#1,2:4978\n2020#1,2:4982\n2155#1:4994\n2155#1:4995\n2156#1,2:4996\n3911#1:5041\n3911#1,2:5042\n4367#1:5045\n4380#1,2:5047\n4402#1:5050\n4409#1,2:5051\n1906#1:4980\n2043#1:4985\n4139#1:5044\n2478#1,3:5000\n2489#1,3:5003\n2803#1,3:5012\n2970#1,3:5015\n3015#1,3:5018\n3020#1,3:5021\n3023#1,3:5024\n3026#1,3:5027\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -507,6 +507,8 @@
 
 .field private static final FEATURE_IS_FILTER_ENABLED:Lcom/oneplus/util/Feature;
 
+.field private static final FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
+
 .field private static final FEATURE_MAX_MACRO_ZOOM:Lcom/oneplus/util/Feature;
 
 .field private static final FEATURE_MIN_ENABLE_MACRO_ZOOM_SENSOR_SIZE:Lcom/oneplus/util/Feature;
@@ -621,7 +623,15 @@
 
 .field private static final FILTER_ITEM_DATA_MONO_CAMERA:Ljava/lang/String; = "MonoCamera"
 
-.field private static final FILTER_ORDERING:[Ljava/lang/String;
+.field private static final FILTER_ORDERING:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public static final ID:Ljava/lang/String; = "Photo"
 
@@ -1107,7 +1117,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 19
+    .locals 17
 
     const-class v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;
 
@@ -1358,6 +1368,16 @@
     move-result-object v0
 
     sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FEATURE_IS_FILTER_ENABLED:Lcom/oneplus/util/Feature;
+
+    sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
+
+    const-string v1, "Filter.IsNightCityAndNorthCaliforniaEnabled"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/util/Feature$Companion;->create(Ljava/lang/String;)Lcom/oneplus/util/Feature;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
 
     sget-object v0, Lcom/oneplus/util/Feature;->Companion:Lcom/oneplus/util/Feature$Companion;
 
@@ -1705,41 +1725,71 @@
 
     const-string v3, "Pop"
 
-    const-string v4, "NightCity"
+    const-string v4, "Sarek"
 
-    const-string v5, "NorthCalifornia"
+    const-string v5, "Vaeroy"
 
-    const-string v6, "Sarek"
+    const-string v6, "Yllaas"
 
-    const-string v7, "Vaeroy"
+    const-string v7, "B612"
 
-    const-string v8, "Yllaas"
+    const-string v8, "Insjuno"
 
-    const-string v9, "B612"
+    const-string v9, "BeautyPlus"
 
-    const-string v10, "Insjuno"
+    const-string v10, "Insvalencia"
 
-    const-string v11, "BeautyPlus"
+    const-string v11, "YouCam"
 
-    const-string v12, "Insvalencia"
+    const-string v12, "Insclare"
 
-    const-string v13, "YouCam"
+    const-string v13, "SweetSnap"
 
-    const-string v14, "Insclare"
+    const-string v14, "BlackWhite"
 
-    const-string v15, "SweetSnap"
+    const-string v15, "FaceApp"
 
-    const-string v16, "BlackWhite"
+    const-string v16, "SnapSeed"
 
-    const-string v17, "FaceApp"
-
-    const-string v18, "SnapSeed"
-
-    filled-new-array/range {v1 .. v18}, [Ljava/lang/String;
+    filled-new-array/range {v1 .. v16}, [Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    invoke-static {v0}, Lkotlin/collections/CollectionsKt;->mutableListOf([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/oneplus/base/Device;->getCustomType()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->RED:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+
+    if-eq v1, v2, :cond_0
+
+    sget-object v1, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FEATURE_IS_NIGHTCITY_AND_NORTHCALIFORNIA_ENABLED:Lcom/oneplus/util/Feature;
+
+    invoke-virtual {v1}, Lcom/oneplus/util/Feature;->isTrue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v1, 0x3
+
+    const-string v2, "NightCity"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    const/4 v1, 0x4
+
+    const-string v2, "NorthCalifornia"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    :cond_1
+    sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     sget-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode$Companion$FILTER_ID_COMPARATOR$1;->INSTANCE:Lcom/oneplus/camera/capturemode/PhotoCaptureMode$Companion$FILTER_ID_COMPARATOR$1;
 
@@ -1749,25 +1799,25 @@
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const v1, 0x3ecccccd    # 0.4f
 
-    const/4 v2, 0x0
+    const v2, 0x3e99999a    # 0.3f
 
-    const v3, 0x3ecccccd    # 0.4f
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    const v4, 0x3e99999a    # 0.3f
+    const/4 v4, 0x0
 
-    invoke-direct {v0, v3, v2, v4, v1}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v0, v1, v4, v2, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->INTERPOLATOR_QUICK_VIDEO_RECORDING_UI_TRANSITION:Landroid/view/animation/PathInterpolator;
 
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    const v3, 0x3ea8f5c3    # 0.33f
+    const v1, 0x3ea8f5c3    # 0.33f
 
-    const v4, 0x3f2b851f    # 0.67f
+    const v2, 0x3f2b851f    # 0.67f
 
-    invoke-direct {v0, v3, v2, v4, v1}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {v0, v1, v4, v2, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->INTERPOLATOR_QUICK_VIDEO_RECORDING_UI_TRANSITION_V2:Landroid/view/animation/PathInterpolator;
 
@@ -1827,7 +1877,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v0, 0x7f12006e
+    const v0, 0x7f12005f
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2303,7 +2353,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f120177
+    const v1, 0x7f12016b
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2880,10 +2930,10 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getFILTER_ORDERING$cp()[Ljava/lang/String;
+.method public static final synthetic access$getFILTER_ORDERING$cp()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     return-object v0
 .end method
@@ -4920,7 +4970,7 @@
 
     aput v2, v6, v3
 
-    const-string/jumbo v7, "translationX"
+    const-string v7, "translationX"
 
     invoke-static {v1, v7, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
@@ -5086,8 +5136,6 @@
     :cond_4
     :goto_0
     return-object v5
-
-    nop
 
     :array_0
     .array-data 4
@@ -8494,7 +8542,7 @@
 
     new-instance v7, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v8, 0x7f1200b5
+    const v8, 0x7f1200a9
 
     const v9, 0x7f08019b
 
@@ -8547,7 +8595,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200ae
+    const v9, 0x7f12009f
 
     const v11, 0x7f0801a3
 
@@ -8570,7 +8618,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a0
+    const v9, 0x7f120091
 
     const v11, 0x7f0801a1
 
@@ -8593,7 +8641,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200ba
+    const v9, 0x7f1200ae
 
     const v11, 0x7f0801aa
 
@@ -8616,7 +8664,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a4
+    const v9, 0x7f120095
 
     const v11, 0x7f080198
 
@@ -8639,7 +8687,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b9
+    const v9, 0x7f1200ad
 
     const v11, 0x7f0801a9
 
@@ -8662,7 +8710,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200bb
+    const v9, 0x7f1200af
 
     const v11, 0x7f0801ab
 
@@ -8685,7 +8733,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a1
+    const v9, 0x7f120092
 
     const v11, 0x7f08019f
 
@@ -8708,7 +8756,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b7
+    const v9, 0x7f1200ab
 
     const v11, 0x7f0801a8
 
@@ -8731,7 +8779,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200bc
+    const v9, 0x7f1200b0
 
     const v11, 0x7f0801ac
 
@@ -8754,7 +8802,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200af
+    const v9, 0x7f1200a0
 
     const v11, 0x7f0801a4
 
@@ -8777,7 +8825,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b6
+    const v9, 0x7f1200aa
 
     const v11, 0x7f0801a7
 
@@ -8800,7 +8848,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200a2
+    const v9, 0x7f120093
 
     const v11, 0x7f0801a0
 
@@ -8823,7 +8871,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b4
+    const v9, 0x7f1200a6
 
     const v11, 0x7f0801a6
 
@@ -8846,7 +8894,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200b0
+    const v9, 0x7f1200a1
 
     const v11, 0x7f0801a5
 
@@ -8869,7 +8917,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200c2
+    const v9, 0x7f1200b6
 
     const v11, 0x7f0801af
 
@@ -8892,7 +8940,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200c1
+    const v9, 0x7f1200b5
 
     const v11, 0x7f0801ae
 
@@ -8915,7 +8963,7 @@
 
     new-instance v8, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v9, 0x7f1200bf
+    const v9, 0x7f1200b3
 
     const v11, 0x7f0801ad
 
@@ -8971,7 +9019,7 @@
 
     new-instance p2, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v7, 0x7f1200ad
+    const v7, 0x7f12009e
 
     const v8, 0x7f0801a2
 
@@ -9018,7 +9066,7 @@
 
     new-instance p2, Lcom/oneplus/camera/ui/SimpleFilterPanelItem;
 
-    const v7, 0x7f1200b2
+    const v7, 0x7f1200a3
 
     const v8, 0x7f08019a
 
@@ -9365,7 +9413,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d007f
+    const v2, 0x7f0d0080
 
     invoke-virtual {v1, v2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -9398,7 +9446,7 @@
 
     if-eqz v1, :cond_3
 
-    const v2, 0x7f0a02c8
+    const v2, 0x7f0a02c9
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -9421,7 +9469,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v2, 0x7f0a02dd
+    const v2, 0x7f0a02de
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -9569,7 +9617,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0081
+    const v2, 0x7f0d0082
 
     invoke-virtual {v1, v2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -9588,7 +9636,7 @@
 
     if-eqz v1, :cond_3
 
-    const v2, 0x7f0a02c8
+    const v2, 0x7f0a02c9
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -10572,7 +10620,7 @@
     move-object p1, v2
 
     :goto_0
-    const v0, 0x7f1200cb
+    const v0, 0x7f1200bf
 
     if-nez p1, :cond_1
 
@@ -10587,7 +10635,7 @@
 
     if-ne v4, v5, :cond_2
 
-    const v0, 0x7f1200cc
+    const v0, 0x7f1200c0
 
     goto :goto_2
 
@@ -10690,7 +10738,7 @@
     move-object p1, v2
 
     :goto_3
-    const v0, 0x7f1200c9
+    const v0, 0x7f1200bd
 
     if-nez p1, :cond_6
 
@@ -10705,7 +10753,7 @@
 
     if-ne v4, v5, :cond_7
 
-    const v0, 0x7f1200ca
+    const v0, 0x7f1200be
 
     goto :goto_5
 
@@ -11277,15 +11325,15 @@
     goto :goto_2
 
     :cond_5
-    const v6, 0x7f0804e9
+    const v6, 0x7f0804de
 
     const v7, 0x7f0a0303
 
-    const v8, 0x7f0804ec
+    const v8, 0x7f0804e1
 
     const v9, 0x7f0a0304
 
-    const v10, 0x7f0804e7
+    const v10, 0x7f0804dc
 
     const v11, 0x7f0a0302
 
@@ -11890,13 +11938,13 @@
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    const v2, 0x7f0804e6
+    const v2, 0x7f0804db
 
     invoke-virtual {p0, v2}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    const v3, 0x7f0804eb
+    const v3, 0x7f0804e0
 
     invoke-virtual {p0, v3}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -14119,7 +14167,7 @@
 
     move-result-object p1
 
-    const v4, 0x7f1200c6
+    const v4, 0x7f1200ba
 
     invoke-static {p1, v4, v1, v0, v3}, Lcom/oneplus/camera/OnePlusCameraKt;->showToast$default(Lcom/oneplus/camera/OnePlusCamera;IIILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
@@ -16238,7 +16286,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a0181
+    const v1, 0x7f0a0182
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -16248,7 +16296,7 @@
 
     if-eqz v0, :cond_8
 
-    const v1, 0x7f0a0189
+    const v1, 0x7f0a018a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16265,7 +16313,7 @@
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->addAutoRotateView(Landroid/view/View;)V
 
     :cond_0
-    const v1, 0x7f0a018a
+    const v1, 0x7f0a018b
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16283,7 +16331,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->quickVideoRecordingSnapZoneView:Landroid/view/View;
 
-    const v1, 0x7f0a0188
+    const v1, 0x7f0a0189
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16296,7 +16344,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    const v1, 0x7f0a0187
+    const v1, 0x7f0a0188
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16309,7 +16357,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    const v1, 0x7f0a0186
+    const v1, 0x7f0a0187
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16322,7 +16370,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
-    const v1, 0x7f0a0185
+    const v1, 0x7f0a0186
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16335,7 +16383,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_4
-    const v1, 0x7f0a0184
+    const v1, 0x7f0a0185
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16348,7 +16396,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_5
-    const v1, 0x7f0a0183
+    const v1, 0x7f0a0184
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16361,7 +16409,7 @@
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    const v1, 0x7f0a022d
+    const v1, 0x7f0a022e
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16371,7 +16419,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->quickVideoRecordingRippleLeft:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a022e
+    const v1, 0x7f0a022f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16381,7 +16429,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->quickVideoRecordingRippleRight:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a02d7
+    const v1, 0x7f0a02d8
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16398,7 +16446,7 @@
     invoke-virtual {p0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->addAutoRotateView(Landroid/view/View;)V
 
     :cond_7
-    const v1, 0x7f0a02d8
+    const v1, 0x7f0a02d9
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -16415,7 +16463,7 @@
     invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->addAutoRotateView(Landroid/view/View;)V
 
     :cond_8
-    const v0, 0x7f0404a7
+    const v0, 0x7f0404a8
 
     const/4 v1, 0x0
 
@@ -16425,7 +16473,7 @@
 
     iput v0, p0, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->tutorialImageCornerRadius:I
 
-    const v0, 0x7f0404ce
+    const v0, 0x7f0404cf
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->obtainStyledDimensionPixels(II)I
 
@@ -16443,7 +16491,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v2, 0x7f0a01ee
+    const v2, 0x7f0a01ef
 
     invoke-virtual {v0, v2}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -16497,7 +16545,7 @@
     invoke-virtual {v2, v3}, Lcom/oneplus/camera/widget/ZoomSwitcher;->setItemClickListener(Lcom/oneplus/camera/widget/Switcher$OnItemClickListener;)V
 
     :cond_a
-    const v2, 0x7f0a021f
+    const v2, 0x7f0a0220
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -16581,7 +16629,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02dc
+    const v1, 0x7f0a02dd
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -17226,13 +17274,13 @@
 
     check-cast v7, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
 
-    sget-object v8, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    sget-object v8, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     invoke-interface {v7}, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;->getId()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Lkotlin/collections/ArraysKt;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v8, v9}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -17326,13 +17374,13 @@
 
     check-cast v2, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;
 
-    sget-object v3, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:[Ljava/lang/String;
+    sget-object v3, Lcom/oneplus/camera/capturemode/PhotoCaptureMode;->FILTER_ORDERING:Ljava/util/List;
 
     invoke-interface {v2}, Lcom/oneplus/camera/next/hardware/FilterCamera$Filter;->getId()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Lkotlin/collections/ArraysKt;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v3, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -17970,7 +18018,7 @@
 
     check-cast v1, Lcom/oneplus/base/BaseActivity;
 
-    const v2, 0x7f1200df
+    const v2, 0x7f1200d3
 
     invoke-virtual {v1, v2}, Lcom/oneplus/base/BaseActivity;->getString(I)Ljava/lang/String;
 
@@ -18453,7 +18501,7 @@
 
     new-instance v7, Lcom/oneplus/camera/ui/actionpanel/MacroActionItem;
 
-    const v8, 0x7f120082
+    const v8, 0x7f120073
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -18682,7 +18730,7 @@
     move-result-object v4
 
     :cond_e
-    const v0, 0x7f120079
+    const v0, 0x7f12006a
 
     if-nez v4, :cond_f
 
@@ -18697,7 +18745,7 @@
 
     if-ne v3, v7, :cond_10
 
-    const v0, 0x7f12007a
+    const v0, 0x7f12006b
 
     goto :goto_9
 
@@ -18956,7 +19004,7 @@
 
     new-instance v4, Lcom/oneplus/camera/ui/hint/MacroSuggestionHint;
 
-    const v5, 0x7f1200e0
+    const v5, 0x7f1200d4
 
     invoke-direct {v4, v1, v3, v5}, Lcom/oneplus/camera/ui/hint/MacroSuggestionHint;-><init>(Lcom/oneplus/camera/OnePlusCamera;Lcom/oneplus/camera/next/hardware/MacroCamera;I)V
 

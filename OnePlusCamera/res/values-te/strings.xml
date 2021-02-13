@@ -96,6 +96,12 @@
     <string name="filter_landscape">ల్యాండ్‌స్కేప్</string>
     <string name="filter_mono">మోనో</string>
     <string name="filter_night">రాత్రి</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ఏదీ వద్దు</string>
     <string name="filter_pop">వివిడ్</string>
     <string name="filter_portrait">పోర్ట్రెయిట్</string>
@@ -182,7 +188,7 @@
     <string name="select_minutes">నిమిషాలను ఎంచుకోండి</string>
     <string name="select_year">సంవత్సరాన్ని ఎంచుకోండి</string>
     <string name="settings">సెట్టింగ్‌లు</string>
-    <string name="settings_about">గురించి</string>
+    <string name="settings_about">పరిచయం</string>
     <string name="settings_about_agreement">వినియోగదారు ఒప్పందం</string>
     <string name="settings_about_copyright">"OnePlus అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి
 @2017 OnePlus inc."</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">టెక్స్ట్ ఇన్‌పుట్ లేదు; వాటర్‌మార్క్‌లో పేరుని సేవ్ చేయలేకున్నాము.</string>
     <string name="settings_watermark_summary">ఫోటో, పోర్ట్రెయిట్, ప్రో మరియు నైట్‌స్కేప్ మోడ్‌లతో సహా వెనుక కెమెరా ద్వారా తీసే ఫోటోలకు వాటర్‌మార్క్ వర్తింపజేయబడుతుంది</string>
     <string name="settings_watermark_summary_8250">ఫోటో, పోర్ట్రెయిట్, ప్రో మరియు నైట్‌స్కేప్ మోడ్‌లతో సహా వెనుక కెమెరా ద్వారా తీసే ఫోటోలకు వాటర్‌మార్క్ వర్తింపజేయబడుతుంది</string>
+    <string name="settings_watermark_timestamp">సమయం</string>
     <string name="settings_watermark_title">OnePlusలో తీయబడింది అనే వాటర్‌మార్క్</string>
     <string name="settings_wide_lens_distortion_correction">ఆల్ట్రా వైడ్ లెన్స్ సర్దుబాటు</string>
     <string name="show_kill_apps_processing_dialog">క్లియరింగ్</string>

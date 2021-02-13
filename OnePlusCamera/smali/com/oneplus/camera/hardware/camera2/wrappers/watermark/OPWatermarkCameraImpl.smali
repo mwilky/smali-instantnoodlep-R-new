@@ -32,7 +32,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,468:1\n396#2:469\n396#2:470\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n*L\n46#1:469\n47#1:470\n*E\n"
+    value = "SMAP\nOPWatermarkCameraImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n*L\n1#1,489:1\n396#2:490\n396#2:491\n396#2:492\n*E\n*S KotlinDebug\n*F\n+ 1 OPWatermarkCameraImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl\n*L\n50#1:490\n51#1:491\n52#1:492\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -42,7 +42,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00a4\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0008\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0016\u0018\u0000 D2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u0008\u0012\u0004\u0012\u00020\u00060\u00052\u00020\u0007:\u0002DEB\r\u0012\u0006\u0010\u0008\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\tJ \u0010\u0012\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0014H\u0003J\u0008\u0010\u0017\u001a\u00020\u0018H\u0015JB\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020\u00102\u0006\u0010#\u001a\u00020$2\u0008\u0010%\u001a\u0004\u0018\u00010&H\u0017J0\u0010\'\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001f2\u0006\u0010(\u001a\u00020\u00102\u0006\u0010)\u001a\u00020$H\u0017J.\u0010*\u001a\u00020\u001a2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020!2\u0006\u0010.\u001a\u00020/2\u000c\u00100\u001a\u0008\u0012\u0004\u0012\u00020\u001001H\u0017J>\u00102\u001a\u00020\u001a2\u0006\u00103\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u00142\u0006\u00104\u001a\u00020\u00102\u0006\u00105\u001a\u00020$2\u0006\u0010.\u001a\u00020/2\u000c\u00106\u001a\u0008\u0012\u0004\u0012\u00020\u001001H\u0017J\u0018\u00107\u001a\u0002082\u0006\u00109\u001a\u00020:2\u0006\u0010;\u001a\u00020:H\u0017J\u0018\u0010<\u001a\u00020\u00182\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0014H\u0003J\u0008\u0010=\u001a\u000208H\u0003J*\u0010>\u001a\u00020\u0018\"\u0004\u0008\u0000\u0010?2\u000c\u0010@\u001a\u0008\u0012\u0004\u0012\u0002H?0A2\u0006\u0010B\u001a\u0002H?H\u0097\u0002\u00a2\u0006\u0002\u0010CR\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u00110\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006F"
+        "\u0000\u00b4\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0008\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0016\u0018\u0000 L2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u0008\u0012\u0004\u0012\u00020\u00060\u00052\u00020\u0007:\u0002LMB\r\u0012\u0006\u0010\u0008\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\tJ8\u0010\u0014\u001a\u00020\u000e2\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00162\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u00162\u0006\u0010\u001c\u001a\u00020\u001dH\u0003J\u0008\u0010\u001e\u001a\u00020\u001aH\u0015JB\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\u00162\u0006\u0010$\u001a\u00020%2\u0006\u0010&\u001a\u00020\'2\u0006\u0010(\u001a\u00020\u000e2\u0006\u0010)\u001a\u00020*2\u0008\u0010+\u001a\u0004\u0018\u00010,H\u0017J0\u0010-\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\u00162\u0006\u0010$\u001a\u00020%2\u0006\u0010.\u001a\u00020\u000e2\u0006\u0010/\u001a\u00020*H\u0017J.\u00100\u001a\u00020 2\u0006\u00101\u001a\u0002022\u0006\u00103\u001a\u00020\'2\u0006\u00104\u001a\u0002052\u000c\u00106\u001a\u0008\u0012\u0004\u0012\u00020\u000e07H\u0017J>\u00108\u001a\u00020 2\u0006\u00109\u001a\u00020\"2\u0006\u0010#\u001a\u00020\u00162\u0006\u0010:\u001a\u00020\u000e2\u0006\u0010;\u001a\u00020*2\u0006\u00104\u001a\u0002052\u000c\u0010<\u001a\u0008\u0012\u0004\u0012\u00020\u000e07H\u0017J\u0018\u0010=\u001a\u00020>2\u0006\u0010?\u001a\u00020@2\u0006\u0010A\u001a\u00020@H\u0017J*\u0010B\u001a\u00020\u000e2\u0006\u0010C\u001a\u00020\u00162\u0006\u0010D\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00162\u0008\u0008\u0002\u0010E\u001a\u00020\u001dH\u0003J*\u0010F\u001a\u00020\u001a\"\u0004\u0008\u0000\u0010G2\u000c\u0010H\u001a\u0008\u0012\u0004\u0012\u0002HG0I2\u0006\u0010J\u001a\u0002HGH\u0097\u0002\u00a2\u0006\u0002\u0010KR\u000e\u0010\n\u001a\u00020\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u000c\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u000f0\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006N"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;",
@@ -55,21 +55,27 @@
         "Lcom/oneplus/camera/next/hardware/WatermarkCamera;",
         "camera",
         "(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V",
-        "brandWatermarkDrawable",
-        "Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;",
         "nv21aBuffer",
         "",
         "preparedWatermarkInfos",
         "",
         "",
         "Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;",
+        "resetWatermarkOperation",
+        "Lcom/oneplus/threading/UniqueDispatcherOperation;",
+        "watermarkDrawable",
+        "Lcom/oneplus/camera/drawable/WatermarkDrawable;",
         "generateWatermarkId",
         "width",
         "",
         "height",
         "orientation",
-        "onCheckSupportingState",
+        "sloganEnable",
         "",
+        "customText",
+        "dateTime",
+        "",
+        "onCheckSupportingState",
         "onPictureCaptured",
         "Lcom/oneplus/camera/next/hardware/OperationResult;",
         "params",
@@ -106,7 +112,9 @@
         "Lcom/oneplus/camera/next/hardware/OperationState;",
         "newState",
         "prepareWatermark",
-        "resetWatermark",
+        "imageWidth",
+        "imageHeight",
+        "captureTime",
         "set",
         "TValue",
         "key",
@@ -149,12 +157,20 @@
     .end annotation
 .end field
 
-.field private static final VERSION:I = 0x2
+.field private static final EXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/oneplus/camera/next/hardware/Camera$ExtraKey<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final VERSION:I = 0x3
 
 
 # instance fields
-.field private brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
-
 .field private nv21aBuffer:[B
 
 .field private final preparedWatermarkInfos:Ljava/util/Map;
@@ -167,6 +183,10 @@
         }
     .end annotation
 .end field
+
+.field private final resetWatermarkOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+.field private watermarkDrawable:Lcom/oneplus/camera/drawable/WatermarkDrawable;
 
 
 # direct methods
@@ -197,7 +217,19 @@
 
     const-class v1, Ljava/lang/Boolean;
 
-    const-string v2, "OPWatermarkCameraImpl.IsWatermarkAppliedOnPostview"
+    const-string v2, "OPWatermarkCameraImpl.IsWatermarkApplyingOnPostview"
+
+    invoke-virtual {v0, v2, v1}, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;->create(Ljava/lang/String;Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;->Companion:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;
+
+    const-class v1, Ljava/lang/Boolean;
+
+    const-string v2, "OPWatermarkCameraImpl.IsWatermarkApplIEDOnPostview"
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion;->create(Ljava/lang/String;Ljava/lang/Class;)Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
 
@@ -209,7 +241,7 @@
 .end method
 
 .method public constructor <init>(Lcom/oneplus/camera/next/hardware/camera2/Camera2;)V
-    .locals 1
+    .locals 3
 
     const-string v0, "camera"
 
@@ -233,6 +265,22 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
 
+    new-instance p1, Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    new-instance v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$resetWatermarkOperation$1;
+
+    invoke-direct {v0, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$resetWatermarkOperation$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;)V
+
+    check-cast v0, Lkotlin/jvm/functions/Function0;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v1, v0, v2, v1}, Lcom/oneplus/threading/UniqueDispatcherOperation;-><init>(Lcom/oneplus/threading/Dispatcher;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    iput-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->resetWatermarkOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
     return-void
 .end method
 
@@ -244,6 +292,22 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static final synthetic access$getEXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW$cp()Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    return-object v0
+.end method
+
+.method public static final synthetic access$getEXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW$cp()Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    return-object v0
 .end method
 
 .method public static final synthetic access$getNv21aBuffer$p(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;)[B
@@ -268,6 +332,16 @@
     .locals 0
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getPictureProcessingService()Lcom/oneplus/camera/pictureprocessing/IPictureProcessingService;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getPictureProcessingServiceThread$p(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;)Lcom/oneplus/base/HandlerThread;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getPictureProcessingServiceThread()Lcom/oneplus/base/HandlerThread;
 
     move-result-object p0
 
@@ -303,105 +377,153 @@
     .end annotation
 .end method
 
-.method private final generateWatermarkId(III)Ljava/lang/String;
-    .locals 1
+.method private final generateWatermarkId(IIIZIJ)Ljava/lang/String;
+    .locals 2
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v0, "v2_"
+    const-string/jumbo v1, "v3_"
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 p1, 0x5f
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-object p0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p6, p7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "generateWatermarkId() - markId: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p0, p2}, Lcom/oneplus/base/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method private final prepareWatermark(II)Z
-    .locals 18
+.method private final prepareWatermark(IIIJ)Ljava/lang/String;
+    .locals 14
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
-    move-object/from16 v7, p0
+    move-object v8, p0
 
-    move/from16 v8, p1
+    move/from16 v9, p3
 
-    move/from16 v9, p2
+    move-wide/from16 v10, p4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->isAppPictureProcessingEnabled()Z
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->isAppPictureProcessingEnabled()Z
 
     move-result v0
 
-    const/4 v10, 0x0
+    const-string v12, ""
 
     if-nez v0, :cond_0
 
-    return v10
+    return-object v12
 
     :cond_0
-    iget-object v0, v7, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    iget-object v0, v8, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->resetWatermarkOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
+
+    invoke-virtual {v0}, Lcom/oneplus/threading/UniqueDispatcherOperation;->invokeIfScheduled()Z
+
+    move-object v13, v8
+
+    check-cast v13, Lcom/oneplus/camera/next/hardware/WatermarkCamera;
+
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->isDateTimeEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    const-string v1, "TimeZone.getDefault()"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/util/TimeZone;->getRawOffset()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    add-long/2addr v0, v10
+
+    const v2, 0xea60
+
+    int-to-long v2, v2
+
+    div-long/2addr v0, v2
+
+    mul-long/2addr v0, v2
 
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
-
-    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    move-object v2, v7
-
-    check-cast v2, Lcom/oneplus/camera/next/hardware/WatermarkCamera;
-
-    invoke-static {v2}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getDisplayLensCounts(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;-><init>(Landroid/content/Context;I)V
-
-    iput-object v0, v7, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->brandWatermarkDrawable:Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;
+    const-wide/16 v0, 0x0
 
     :goto_0
-    move-object v6, v0
+    move-wide v6, v0
 
-    move-object v0, v7
+    sget-object v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;->Companion:Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;
 
-    check-cast v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getBrandText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_CUSTOM_NAME_TEXT()Lcom/oneplus/base/PropertyKey;
 
     move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v0
+    move-result v0
 
     goto :goto_1
 
@@ -409,253 +531,247 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {v6, v0}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->setSubtitleText(Ljava/lang/String;)V
+    move v5, v0
 
-    new-instance v0, Lkotlin/ranges/IntRange;
-
-    const/16 v1, 0x10e
-
-    invoke-direct {v0, v10, v1}, Lkotlin/ranges/IntRange;-><init>(II)V
-
-    check-cast v0, Lkotlin/ranges/IntProgression;
-
-    const/16 v5, 0x5a
-
-    invoke-static {v0, v5}, Lkotlin/ranges/RangesKt;->step(Lkotlin/ranges/IntProgression;I)Lkotlin/ranges/IntProgression;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkotlin/ranges/IntProgression;->getFirst()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Lkotlin/ranges/IntProgression;->getLast()I
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->isSloganEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Z
 
     move-result v4
 
-    invoke-virtual {v0}, Lkotlin/ranges/IntProgression;->getStep()I
+    move-object v0, p0
 
-    move-result v17
+    move v1, p1
 
-    if-ltz v17, :cond_3
+    move/from16 v2, p2
 
-    if-gt v1, v4, :cond_a
+    move/from16 v3, p3
 
-    goto :goto_2
+    invoke-direct/range {v0 .. v7}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->generateWatermarkId(IIIZIJ)Ljava/lang/String;
 
-    :cond_3
-    if-lt v1, v4, :cond_a
+    move-result-object v7
 
-    :goto_2
-    move v3, v1
+    iget-object v0, v8, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
 
-    :goto_3
-    invoke-direct {v7, v8, v9, v3}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->generateWatermarkId(III)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v0, v7, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {v0, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
+    if-eqz v0, :cond_3
+
+    return-object v7
+
+    :cond_3
+    iget-object v0, v8, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->watermarkDrawable:Lcom/oneplus/camera/drawable/WatermarkDrawable;
+
     if-eqz v0, :cond_4
 
-    move v10, v3
-
-    move v15, v4
-
-    move/from16 v16, v5
-
-    move-object v11, v6
-
-    goto/16 :goto_6
+    goto :goto_2
 
     :cond_4
-    rem-int/lit16 v0, v3, 0xb4
+    sget-object v0, Lcom/oneplus/camera/drawable/WatermarkDrawable;->Companion:Lcom/oneplus/camera/drawable/WatermarkDrawable$Companion;
 
-    if-nez v0, :cond_5
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
 
-    move v0, v8
+    move-result-object v1
 
-    move v1, v9
+    invoke-interface {v1}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getDisplayLensCounts(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/drawable/WatermarkDrawable$Companion;->createDrawable(Landroid/content/Context;I)Lcom/oneplus/camera/drawable/OnePlusWatermarkDrawable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/camera/drawable/WatermarkDrawable;
+
+    iput-object v0, v8, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->watermarkDrawable:Lcom/oneplus/camera/drawable/WatermarkDrawable;
+
+    :goto_2
+    invoke-virtual {v0, v10, v11}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->setDateTime(J)V
+
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->getCustomNameText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_3
+    invoke-virtual {v0, v1}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->setCustomName(Ljava/lang/String;)V
+
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->isSloganEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->setSloganEnabled(Z)V
+
+    invoke-static {v13}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->isDateTimeEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->setDateTimeEnable(Z)V
+
+    rem-int/lit16 v1, v9, 0xb4
+
+    if-nez v1, :cond_6
+
+    move v10, p1
+
+    move/from16 v11, p2
 
     goto :goto_4
 
-    :cond_5
-    move v1, v8
+    :cond_6
+    move v11, p1
 
-    move v0, v9
+    move/from16 v10, p2
 
     :goto_4
-    const/4 v14, 0x0
+    const/4 v4, 0x0
 
-    const/4 v15, 0x4
+    const/4 v5, 0x4
 
-    const/16 v16, 0x0
+    const/4 v6, 0x0
 
-    move-object v11, v6
+    move-object v1, v0
 
-    move v12, v0
+    move v2, v10
 
-    move v13, v1
+    move v3, v11
 
-    invoke-static/range {v11 .. v16}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->calculateWatermarkBounds$default(Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;IILandroid/graphics/Rect;ILjava/lang/Object;)Landroid/graphics/Rect;
+    invoke-static/range {v1 .. v6}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->calculateWatermarkBounds$default(Lcom/oneplus/camera/drawable/WatermarkDrawable;IILandroid/graphics/Rect;ILjava/lang/Object;)Landroid/graphics/Rect;
 
-    move-result-object v11
+    move-result-object v5
 
-    if-eq v3, v5, :cond_8
+    const/16 v1, 0x5a
 
-    const/16 v12, 0xb4
+    if-eq v9, v1, :cond_9
 
-    if-eq v3, v12, :cond_7
+    const/16 v1, 0xb4
 
-    const/16 v12, 0x118
+    if-eq v9, v1, :cond_8
 
-    if-eq v3, v12, :cond_6
+    const/16 v1, 0x10e
 
-    move-object v5, v11
+    if-eq v9, v1, :cond_7
 
-    goto :goto_5
-
-    :cond_6
-    new-instance v12, Landroid/graphics/Rect;
-
-    iget v13, v11, Landroid/graphics/Rect;->bottom:I
-
-    sub-int v13, v9, v13
-
-    iget v14, v11, Landroid/graphics/Rect;->left:I
-
-    iget v15, v11, Landroid/graphics/Rect;->top:I
-
-    sub-int v15, v9, v15
-
-    iget v5, v11, Landroid/graphics/Rect;->right:I
-
-    invoke-direct {v12, v13, v14, v15, v5}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    move-object v5, v12
+    move-object v1, v5
 
     goto :goto_5
 
     :cond_7
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v1, Landroid/graphics/Rect;
 
-    iget v12, v11, Landroid/graphics/Rect;->right:I
+    iget v2, v5, Landroid/graphics/Rect;->bottom:I
 
-    sub-int v12, v8, v12
+    sub-int v2, p2, v2
 
-    iget v13, v11, Landroid/graphics/Rect;->bottom:I
+    iget v3, v5, Landroid/graphics/Rect;->left:I
 
-    sub-int v13, v9, v13
+    iget v4, v5, Landroid/graphics/Rect;->top:I
 
-    iget v14, v11, Landroid/graphics/Rect;->left:I
+    sub-int v4, p2, v4
 
-    sub-int v14, v8, v14
+    iget v6, v5, Landroid/graphics/Rect;->right:I
 
-    iget v15, v11, Landroid/graphics/Rect;->top:I
-
-    sub-int v15, v9, v15
-
-    invoke-direct {v5, v12, v13, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v1, v2, v3, v4, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
     goto :goto_5
 
     :cond_8
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v1, Landroid/graphics/Rect;
 
-    iget v12, v11, Landroid/graphics/Rect;->top:I
+    iget v2, v5, Landroid/graphics/Rect;->right:I
 
-    iget v13, v11, Landroid/graphics/Rect;->right:I
+    sub-int v2, p1, v2
 
-    sub-int v13, v9, v13
+    iget v3, v5, Landroid/graphics/Rect;->bottom:I
 
-    iget v14, v11, Landroid/graphics/Rect;->bottom:I
+    sub-int v3, p2, v3
 
-    iget v15, v11, Landroid/graphics/Rect;->left:I
+    iget v4, v5, Landroid/graphics/Rect;->left:I
 
-    sub-int v15, v9, v15
+    sub-int v4, p1, v4
 
-    invoke-direct {v5, v12, v13, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
+    iget v6, v5, Landroid/graphics/Rect;->top:I
+
+    sub-int v6, p2, v6
+
+    invoke-direct {v1, v2, v3, v4, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    goto :goto_5
+
+    :cond_9
+    new-instance v1, Landroid/graphics/Rect;
+
+    iget v2, v5, Landroid/graphics/Rect;->top:I
+
+    iget v3, v5, Landroid/graphics/Rect;->right:I
+
+    sub-int v3, p2, v3
+
+    iget v4, v5, Landroid/graphics/Rect;->bottom:I
+
+    iget v6, v5, Landroid/graphics/Rect;->left:I
+
+    sub-int v6, p2, v6
+
+    invoke-direct {v1, v2, v3, v4, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
     :goto_5
-    new-instance v12, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;
+    new-instance v6, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;
 
-    invoke-direct {v12, v5}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v6, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;-><init>(Landroid/graphics/Rect;)V
 
-    iget-object v5, v7, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+    iget-object v1, v8, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
 
-    invoke-interface {v5, v2, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v7, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/drawable/BrandWatermarkDrawable;->createWatermarkBitmap(II)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v10, v11}, Lcom/oneplus/camera/drawable/WatermarkDrawable;->createWatermarkBitmap(II)Landroid/graphics/Bitmap;
 
-    move-result-object v5
+    move-result-object v3
 
-    if-eqz v5, :cond_9
+    if-eqz v3, :cond_a
 
-    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getPictureProcessingServiceThread()Lcom/oneplus/base/HandlerThread;
+    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getPictureProcessingServiceThread()Lcom/oneplus/base/HandlerThread;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/oneplus/base/HandlerThread;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
 
-    move-result-object v13
+    move-result-object v10
 
-    new-instance v14, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$prepareWatermark$1;
+    new-instance v11, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$prepareWatermark$1;
 
-    move-object v0, v14
+    move-object v0, v11
 
-    move-object/from16 v1, p0
+    move-object v1, p0
 
-    move-object v15, v2
+    move/from16 v2, p3
 
-    move v2, v3
-
-    move v10, v3
-
-    move-object v3, v5
-
-    move v5, v4
-
-    move-object v4, v15
-
-    move v15, v5
-
-    const/16 v16, 0x5a
-
-    move-object v5, v11
-
-    move-object v11, v6
-
-    move-object v6, v12
+    move-object v4, v7
 
     invoke-direct/range {v0 .. v6}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$prepareWatermark$1;-><init>(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;ILandroid/graphics/Bitmap;Ljava/lang/String;Landroid/graphics/Rect;Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;)V
 
-    check-cast v14, Lkotlin/jvm/functions/Function0;
+    check-cast v11, Lkotlin/jvm/functions/Function0;
 
-    invoke-virtual {v13, v14}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
+    invoke-virtual {v10, v11}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
 
-    :goto_6
-    if-eq v10, v15, :cond_a
+    return-object v7
 
-    add-int v3, v10, v17
-
-    move-object v6, v11
-
-    move v4, v15
-
-    move/from16 v5, v16
-
-    const/4 v10, 0x0
-
-    goto/16 :goto_3
-
-    :cond_9
-    move-object v15, v2
-
-    move-object v0, v7
+    :cond_a
+    move-object v0, v8
 
     check-cast v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;
 
@@ -669,7 +785,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v3, 0x5d
 
@@ -683,77 +799,47 @@
 
     iget-object v0, v0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
 
-    invoke-interface {v0, v15}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_a
-    const/4 v0, 0x1
-
-    return v0
+    return-object v12
 .end method
 
-.method private final resetWatermark()V
-    .locals 4
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
-    .end annotation
+.method static synthetic prepareWatermark$default(Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;IIIJILjava/lang/Object;)Ljava/lang/String;
+    .locals 6
 
-    iget-object v0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+    if-nez p7, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    and-int/lit8 p6, p6, 0x8
 
-    move-result-object v0
+    if-eqz p6, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    const-wide/16 p4, 0x0
 
     :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-wide v4, p4
 
-    move-result v1
+    move-object v0, p0
 
-    if-eqz v1, :cond_1
+    move v1, p1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v2, p2
 
-    move-result-object v1
+    move v3, p3
 
-    check-cast v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;
+    invoke-direct/range {v0 .. v5}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(IIIJ)Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;->getRawWatermarkFile()Ljava/io/File;
+    move-result-object p0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getPictureProcessingServiceThread()Lcom/oneplus/base/HandlerThread;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/oneplus/base/HandlerThread;->getDispatcher()Lcom/oneplus/threading/Dispatcher;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$resetWatermark$$inlined$let$lambda$1;
-
-    invoke-direct {v3, v1, p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$resetWatermark$$inlined$let$lambda$1;-><init>(Ljava/io/File;Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;)V
-
-    check-cast v3, Lkotlin/jvm/functions/Function0;
-
-    invoke-virtual {v2, v3}, Lcom/oneplus/threading/Dispatcher;->post(Lkotlin/jvm/functions/Function0;)J
-
-    goto :goto_0
+    return-object p0
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {p0}, Ljava/util/Map;->clear()V
+    const-string p1, "Super calls with default arguments not supported in this target, function: prepareWatermark"
 
-    return-void
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
@@ -1198,8 +1284,6 @@
     move v15, v14
 
     :goto_0
-    iget-object v0, v10, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
-
     invoke-interface/range {p6 .. p6}, Lcom/oneplus/camera/next/media/Image;->getWidth()I
 
     move-result v1
@@ -1208,11 +1292,21 @@
 
     move-result v2
 
-    invoke-direct {v10, v1, v2, v15}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->generateWatermarkId(III)Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getCaptureTime()J
 
-    move-result-object v1
+    move-result-wide v4
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v0, p0
+
+    move v3, v15
+
+    invoke-direct/range {v0 .. v5}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(IIIJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, v10, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1551,49 +1645,11 @@
 
     invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v0, v9
-
-    check-cast v0, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
-
-    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCameraKt;->isDisabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->isMultiPictureShot()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    invoke-interface/range {p5 .. p5}, Lcom/oneplus/camera/next/media/Image;->getFormat()I
-
-    move-result v0
-
-    const/16 v1, 0x23
-
-    if-eq v0, v1, :cond_1
-
-    invoke-static/range {p5 .. p5}, Lcom/oneplus/camera/next/media/ImageKt;->isNv21Format(Lcom/oneplus/camera/next/media/Image;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
-
-    return-object v0
-
-    :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLYING_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
 
     const/4 v2, 0x2
 
@@ -1615,41 +1671,81 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
     iget-object v0, v9, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
 
-    const-string v1, "onPostviewCaptured() - Watermark applied"
+    const-string v1, "onPostviewCaptured() - Applying watermark, consume all the other postviews"
+
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    goto/16 :goto_3
+
+    :cond_0
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+
+    invoke-static {v0, v3, v11, v2, v11}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->get$default(Lcom/oneplus/camera/next/hardware/Camera$Extras;Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v9, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
+
+    const-string v1, "onPostviewCaptured() - Watermark applied on postview"
 
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    return-object v0
+    goto/16 :goto_3
 
-    :cond_2
-    invoke-interface/range {p5 .. p5}, Lcom/oneplus/camera/next/media/Image;->getWidth()I
+    :cond_1
+    move-object v0, v9
+
+    check-cast v0, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCameraKt;->isDisabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
 
     move-result v0
 
-    invoke-interface/range {p5 .. p5}, Lcom/oneplus/camera/next/media/Image;->getHeight()I
+    if-nez v0, :cond_7
 
-    move-result v1
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->isMultiPictureShot()Z
 
-    invoke-direct {v9, v0, v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(II)Z
+    move-result v0
 
-    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
+    if-nez v0, :cond_7
 
-    move-result-object v0
+    invoke-interface/range {p5 .. p5}, Lcom/oneplus/camera/next/media/Image;->getFormat()I
 
-    sget-object v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->EXTRA_IS_WATERMARK_APPLIED_ON_POSTVIEW:Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;
+    move-result v0
 
-    invoke-static {v12}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/16 v1, 0x23
 
-    move-result-object v2
+    if-eq v0, v1, :cond_2
 
-    invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/next/hardware/Camera$Extras;->set(Lcom/oneplus/camera/next/hardware/Camera$ExtraKey;Ljava/lang/Object;)V
+    invoke-static/range {p5 .. p5}, Lcom/oneplus/camera/next/media/ImageKt;->isNv21Format(Lcom/oneplus/camera/next/media/Image;)Z
 
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto/16 :goto_2
+
+    :cond_2
     sget-object v0, Lcom/oneplus/camera/next/hardware/Camera;->Companion:Lcom/oneplus/camera/next/hardware/Camera$Companion;
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camera$Companion;->getPROP_CAPTURE_ROTATION()Lcom/oneplus/base/PropertyKey;
@@ -1682,8 +1778,6 @@
     move v14, v13
 
     :goto_0
-    iget-object v0, v9, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
-
     invoke-interface/range {p5 .. p5}, Lcom/oneplus/camera/next/media/Image;->getWidth()I
 
     move-result v1
@@ -1692,11 +1786,21 @@
 
     move-result v2
 
-    invoke-direct {v9, v1, v2, v14}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->generateWatermarkId(III)Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getCaptureTime()J
 
-    move-result-object v1
+    move-result-wide v4
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v0, p0
+
+    move v3, v14
+
+    invoke-direct/range {v0 .. v5}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(IIIJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, v9, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1817,7 +1921,7 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_6
     move-object v0, v9
@@ -1864,13 +1968,13 @@
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    :goto_2
-    return-object v0
+    goto :goto_3
 
     :cond_7
-    :goto_3
+    :goto_2
     sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
+    :goto_3
     return-object v0
 .end method
 
@@ -2070,7 +2174,7 @@
 .end method
 
 .method public onPreparePictureProcessing(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;ILjava/lang/String;Lcom/oneplus/camera/next/media/Image;Landroid/os/Bundle;Ljava/util/Set;)Lcom/oneplus/camera/next/hardware/OperationResult;
-    .locals 5
+    .locals 18
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -2089,313 +2193,347 @@
         }
     .end annotation
 
-    const-string p2, "captureParams"
+    move-object/from16 v6, p0
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v7, p5
 
-    const-string p2, "processingId"
+    move-object/from16 v8, p6
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "captureParams"
 
-    const-string p2, "frame"
+    move-object/from16 v9, p1
 
-    invoke-static {p4, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p2, "processingParams"
+    const-string v0, "processingId"
 
-    invoke-static {p5, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v1, p3
 
-    const-string p2, "processingUnit"
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p6, p2}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "frame"
 
-    move-object p2, p0
+    move-object/from16 v1, p4
 
-    check-cast p2, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p2}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCameraKt;->isDisabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
+    const-string v0, "processingParams"
 
-    move-result p2
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-eqz p2, :cond_0
+    const-string v0, "processingUnit"
 
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p0
+    move-object v0, v6
+
+    check-cast v0, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;
+
+    invoke-static {v0}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCameraKt;->isDisabled(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object v0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->isMultiPictureShot()Z
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->isMultiPictureShot()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    sget-object p1, Lcom/oneplus/camera/next/hardware/Camera;->Companion:Lcom/oneplus/camera/next/hardware/Camera$Companion;
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camera;->Companion:Lcom/oneplus/camera/next/hardware/Camera$Companion;
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/Camera$Companion;->getPROP_CAPTURE_ROTATION()Lcom/oneplus/base/PropertyKey;
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camera$Companion;->getPROP_CAPTURE_ROTATION()Lcom/oneplus/base/PropertyKey;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v6, v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lcom/oneplus/base/Rotation;
+    check-cast v0, Lcom/oneplus/base/Rotation;
 
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_2
 
-    move-object p2, p0
+    move-object v2, v6
 
-    check-cast p2, Lcom/oneplus/camera/next/hardware/Camera;
+    check-cast v2, Lcom/oneplus/camera/next/hardware/Camera;
 
-    invoke-static {p2, p1}, Lcom/oneplus/camera/next/hardware/CameraKt;->calculateOrientationDiff(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/base/Rotation;)I
+    invoke-static {v2, v0}, Lcom/oneplus/camera/next/hardware/CameraKt;->calculateOrientationDiff(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/base/Rotation;)I
 
-    move-result p1
+    move-result v0
+
+    move v11, v0
 
     goto :goto_0
 
     :cond_2
-    const/4 p1, 0x0
+    const/4 v11, 0x0
 
     :goto_0
-    new-instance p2, Ljava/util/HashSet;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    new-instance p3, Landroid/util/Size;
+    new-instance v2, Landroid/util/Size;
 
-    invoke-interface {p4}, Lcom/oneplus/camera/next/media/Image;->getWidth()I
+    invoke-interface/range {p4 .. p4}, Lcom/oneplus/camera/next/media/Image;->getWidth()I
 
-    move-result v0
+    move-result v3
 
-    invoke-interface {p4}, Lcom/oneplus/camera/next/media/Image;->getHeight()I
-
-    move-result p4
-
-    invoke-direct {p3, v0, p4}, Landroid/util/Size;-><init>(II)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getOutputStreams()Ljava/util/List;
-
-    move-result-object p3
-
-    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p3
-
-    :cond_3
-    :goto_1
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p4
-
-    if-eqz p4, :cond_5
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;
-
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isPicture()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isRealTime()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isYuvPreview()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isYuvPostview()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_4
-    new-instance v0, Landroid/util/Size;
-
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->getWidth()I
+    invoke-interface/range {p4 .. p4}, Lcom/oneplus/camera/next/media/Image;->getHeight()I
 
     move-result v1
 
-    invoke-virtual {p4}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->getHeight()I
+    invoke-direct {v2, v3, v1}, Landroid/util/Size;-><init>(II)V
 
-    move-result p4
+    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1, p4}, Landroid/util/Size;-><init>(II)V
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->getOutputStreams()Ljava/util/List;
 
-    invoke-virtual {p2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_3
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isPicture()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isRealTime()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isYuvPreview()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->isYuvPostview()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    :cond_4
+    new-instance v3, Landroid/util/Size;
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->getWidth()I
+
+    move-result v4
+
+    invoke-virtual {v2}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->getHeight()I
+
+    move-result v2
+
+    invoke-direct {v3, v4, v2}, Landroid/util/Size;-><init>(II)V
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_5
-    new-instance p3, Ljava/util/ArrayList;
+    new-instance v12, Ljava/util/ArrayList;
 
-    invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance p4, Ljava/util/ArrayList;
+    new-instance v13, Ljava/util/ArrayList;
 
-    invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v14, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    move-result-object p2
+    move-result-object v15
 
     :goto_2
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v15}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v15}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/util/Size;
+
+    const-string v0, "pictureSize"
+
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Landroid/util/Size;->getWidth()I
 
     move-result v1
 
-    if-eqz v1, :cond_8
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/util/Size;
-
-    const-string v2, "pictureSize"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+    invoke-virtual {v4}, Landroid/util/Size;->getHeight()I
 
     move-result v2
 
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+    invoke-virtual/range {p1 .. p1}, Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;->getCaptureTime()J
 
-    move-result v3
+    move-result-wide v16
 
-    invoke-direct {p0, v2, v3, p1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->generateWatermarkId(III)Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    move-result-object v2
+    move v3, v11
 
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+    move-object v10, v4
 
-    move-result v3
+    move-wide/from16 v4, v16
 
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+    invoke-direct/range {v0 .. v5}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(IIIJ)Ljava/lang/String;
 
-    move-result v4
+    move-result-object v0
 
-    invoke-direct {p0, v3, v4}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->prepareWatermark(II)Z
+    move-object v1, v0
 
-    move-result v3
+    check-cast v1, Ljava/lang/CharSequence;
 
-    if-eqz v3, :cond_7
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
-    iget-object v3, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+    move-result v1
 
-    invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_6
 
-    move-result-object v3
+    const/4 v1, 0x1
 
-    check-cast v3, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;
+    goto :goto_3
 
-    if-eqz v3, :cond_6
+    :cond_6
+    const/4 v1, 0x0
 
-    new-instance v4, Lcom/oneplus/util/MutableSize;
+    :goto_3
+    if-eqz v1, :cond_7
 
-    invoke-direct {v4, v1}, Lcom/oneplus/util/MutableSize;-><init>(Landroid/util/Size;)V
+    iget-object v0, v6, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
 
-    invoke-virtual {p3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;->getBounds()Landroid/graphics/Rect;
+    const-string v2, "onPreparePictureProcessing() - Failed to prepare watermark for picture size "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onPreparePictureProcessing() - No watermark info for \'"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
     :cond_7
-    iget-object v2, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
+    iget-object v1, v6, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "onPreparePictureProcessing() - Failed to prepare watermark for picture size "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v1, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;
+
+    if-eqz v1, :cond_8
+
+    new-instance v2, Lcom/oneplus/util/MutableSize;
+
+    invoke-direct {v2, v10}, Lcom/oneplus/util/MutableSize;-><init>(Landroid/util/Size;)V
+
+    invoke-virtual {v12, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl$WatermarkInfo;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
     :cond_8
-    const-string p0, "Watermark"
+    iget-object v1, v6, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->TAG:Ljava/lang/String;
 
-    invoke-interface {p6, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string p0, "WatermarkPictureSizeList"
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p5, p0, p3}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    const-string v3, "onPreparePictureProcessing() - No watermark info for \'"
 
-    const-string p0, "WatermarkIdLIST"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p5, p0, p4}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, "WatermarkBoundsList"
+    const/16 v0, 0x27
 
-    invoke-virtual {p5, p0, v0}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/oneplus/base/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :cond_9
+    const-string v0, "Watermark"
+
+    invoke-interface {v8, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    const-string v0, "WatermarkPictureSizeList"
+
+    invoke-virtual {v7, v0, v12}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    const-string v0, "WatermarkIdLIST"
+
+    invoke-virtual {v7, v0, v13}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    const-string v0, "WatermarkBoundsList"
+
+    invoke-virtual {v7, v0, v14}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object v0
 .end method
 
 .method public onPrepareProcessingInputFrames(Lcom/oneplus/camera/next/hardware/Camera$CaptureParams;ILjava/lang/String;Landroid/os/Bundle;)Lcom/oneplus/camera/next/hardware/OperationResult;
@@ -2794,7 +2932,7 @@
 .end method
 
 .method public set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
-    .locals 1
+    .locals 4
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
@@ -2814,7 +2952,7 @@
 
     sget-object v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;->Companion:Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_BRAND_TEXT()Lcom/oneplus/base/PropertyKey;
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_DATE_TIME_ENABLED()Lcom/oneplus/base/PropertyKey;
 
     move-result-object v0
 
@@ -2822,11 +2960,43 @@
 
     move-result v0
 
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    sget-object v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;->Companion:Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_SLOGAN_ENABLED()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;->Companion:Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_CUSTOM_NAME_TEXT()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     sget-object v0, Lcom/oneplus/camera/next/hardware/WatermarkCamera;->Companion:Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;
 
     invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/WatermarkCamera$Companion;->getPROP_DISPLAY_LENS_COUNTS()Lcom/oneplus/base/PropertyKey;
@@ -2837,31 +3007,39 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSimpleFeatureCamera;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
-    invoke-direct {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->resetWatermark()V
+    iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->resetWatermarkOperation:Lcom/oneplus/threading/UniqueDispatcherOperation;
 
-    const/4 p0, 0x1
+    const-wide/16 v2, 0x0
+
+    const/4 p2, 0x0
+
+    invoke-static {p1, v2, v3, v1, p2}, Lcom/oneplus/threading/UniqueDispatcherOperation;->schedule$default(Lcom/oneplus/threading/UniqueDispatcherOperation;JILjava/lang/Object;)Z
+
+    iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/watermark/OPWatermarkCameraImpl;->preparedWatermarkInfos:Ljava/util/Map;
+
+    invoke-interface {p0}, Ljava/util/Map;->clear()V
 
     goto :goto_1
 
-    :cond_1
-    const/4 p0, 0x0
+    :cond_3
+    const/4 v1, 0x0
 
     goto :goto_1
 
-    :cond_2
+    :cond_4
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPSimpleFeatureCamera;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v1
 
     :goto_1
-    return p0
+    return v1
 .end method

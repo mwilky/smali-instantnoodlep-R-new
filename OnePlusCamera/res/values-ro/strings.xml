@@ -96,6 +96,12 @@
     <string name="filter_landscape">Peisaj</string>
     <string name="filter_mono">Monocromatic</string>
     <string name="filter_night">Noapte</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Niciunul</string>
     <string name="filter_pop">Intens</string>
     <string name="filter_portrait">Portret</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nu ați introdus niciun text; nu se poate salva numele în filigran.</string>
     <string name="settings_watermark_summary">Fotografiile făcute cu camera din spate, inclusiv cele făcute în modurile Foto, Portret, Pro și Scenă nocturnă, vor fi marcate cu un filigran</string>
     <string name="settings_watermark_summary_8250">Fotografiile făcute cu camera din spate, inclusiv cele făcute în modurile Foto, Portret, Pro și Scenă nocturnă, vor fi marcate cu un filigran</string>
+    <string name="settings_watermark_timestamp">Timp</string>
     <string name="settings_watermark_title">Filigran „Shot on OnePlus”</string>
     <string name="settings_wide_lens_distortion_correction">Corecție obiectiv ultralarg</string>
     <string name="show_kill_apps_processing_dialog">Golire</string>

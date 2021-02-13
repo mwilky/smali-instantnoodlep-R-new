@@ -446,7 +446,7 @@
 
     check-cast p1, Lcom/oneplus/camera/OnePlusCamera;
 
-    const v1, 0x7f120072
+    const v1, 0x7f120063
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -494,7 +494,7 @@
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->zoomAdapterHandleSet:Lcom/oneplus/base/Handle;
 
-    const-string/jumbo p1, "timelapse"
+    const-string p1, "timelapse"
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->defaultCameraSettingsName:Ljava/lang/String;
 
@@ -1115,7 +1115,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v1, 0x7f0a02af
+    const v1, 0x7f0a02b0
 
     invoke-virtual {v0, v1}, Lcom/oneplus/base/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -1628,7 +1628,7 @@
 
     move-result-object v12
 
-    const v5, 0x7f0804e9
+    const v5, 0x7f0804de
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1655,7 +1655,7 @@
 
     if-eqz v5, :cond_10
 
-    const v5, 0x7f0804ec
+    const v5, 0x7f0804e1
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1664,7 +1664,7 @@
     goto :goto_8
 
     :cond_10
-    const v5, 0x7f0804eb
+    const v5, 0x7f0804e0
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1694,7 +1694,7 @@
 
     if-eqz v5, :cond_12
 
-    const v5, 0x7f0804e7
+    const v5, 0x7f0804dc
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1703,7 +1703,7 @@
     goto :goto_8
 
     :cond_12
-    const v5, 0x7f0804e6
+    const v5, 0x7f0804db
 
     invoke-virtual {v0, v5}, Lcom/oneplus/camera/capturemode/TimeLapseCaptureMode;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -99,19 +99,19 @@
 .method public final compare(Ljava/lang/String;Ljava/lang/String;)I
     .locals 1
 
-    invoke-static {}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getFILTER_ORDERING$cp()[Ljava/lang/String;
+    invoke-static {}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getFILTER_ORDERING$cp()Ljava/util/List;
 
     move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/collections/ArraysKt;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-interface {p0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
 
-    invoke-static {}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getFILTER_ORDERING$cp()[Ljava/lang/String;
+    invoke-static {}, Lcom/oneplus/camera/capturemode/VideoCaptureMode;->access$getFILTER_ORDERING$cp()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, p2}, Lkotlin/collections/ArraysKt;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-interface {v0, p2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 

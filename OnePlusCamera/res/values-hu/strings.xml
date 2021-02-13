@@ -96,6 +96,12 @@
     <string name="filter_landscape">Tájkép</string>
     <string name="filter_mono">Monó</string>
     <string name="filter_night">Éjszaka</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Nincs</string>
     <string name="filter_pop">Élénk</string>
     <string name="filter_portrait">Portré</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">Nincs bevitt szöveg; nem lehet nevet menteni a vízjelen.</string>
     <string name="settings_watermark_summary">A hátlapi kamerával a Fotó, Álló, Profi és Éjszakai módban készült fényképekre vízjel kerül</string>
     <string name="settings_watermark_summary_8250">A hátlapi kamerával a Fotó, Álló, Profi és Éjszakai módban készült fényképekre vízjel kerül</string>
+    <string name="settings_watermark_timestamp">Idő</string>
     <string name="settings_watermark_title">Shot on OnePlus - vízjellel</string>
     <string name="settings_wide_lens_distortion_correction">Ultra széles objektív korrekció</string>
     <string name="show_kill_apps_processing_dialog">Leállítás</string>

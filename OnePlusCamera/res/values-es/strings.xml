@@ -38,7 +38,7 @@
     <string name="agree">Aceptar</string>
     <string name="app_name">Cámara</string>
     <string name="app_name_video">Videocámara</string>
-    <string name="auto">Automático</string>
+    <string name="auto">Auto</string>
     <string name="bokeh_hint">Efecto de profundidad</string>
     <string name="bokeh_hint_camera_is_covered">Cámara obstruida</string>
     <string name="bokeh_hint_low_light">Se requiere más luz</string>
@@ -96,6 +96,12 @@
     <string name="filter_landscape">Horizontal</string>
     <string name="filter_mono">Mono</string>
     <string name="filter_night">Noche</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Ninguno</string>
     <string name="filter_pop">Intenso</string>
     <string name="filter_portrait">Retrato</string>
@@ -112,7 +118,7 @@
     <string name="full_size_picutre_disabled_hint">12 MP ofrece un mejor rango dinámico (recomendado)</string>
     <string name="full_size_picutre_disabled_hint_64mp">16 MP ofrece un mejor rango dinámico (recomendado)</string>
     <string name="full_size_picutre_enabled_hint">48MP ofrece una resolución más alta y captura detalales en escenas bien iluminadas</string>
-    <string name="full_size_picutre_enabled_hint_64mp">48 MP ofrece una resolución más alta y captura detalles en escenas bien iluminadas</string>
+    <string name="full_size_picutre_enabled_hint_64mp">64 MP ofrece una resolución más alta y captura detalles en escenas bien iluminadas</string>
     <string name="handshake_detected">Los temblores intensos pueden provocar fotos borrosas</string>
     <string name="hyper_image_stabilization_enabled">Súper estable</string>
     <string name="hyper_image_stabilization_hint_zoom_disabled">El zoom de la cámara está desactivado en el modo Súper estable</string>
@@ -126,7 +132,7 @@
     <string name="macro_enabled">Supermacro</string>
     <string name="macro_flash_disabled">El flash está desactivado en el modo macro</string>
     <string name="macro_hint">La distancia recomendada para hacer fotos es 3-4 cm</string>
-    <string name="manual_capture_control_auto">Automático</string>
+    <string name="manual_capture_control_auto">Auto</string>
     <string name="manual_capture_control_manual">Manual</string>
     <string name="manual_capture_long_exposure_tips">Capturando</string>
     <string name="manual_mode_custom_setting_saved">Guardado</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">No se ha introducido texto. No se ha podido guardar el nombre en la marca de agua.</string>
     <string name="settings_watermark_summary">Se aplicará una marca de agua a las fotos tomadas con la cámara posterior, incluyendo los modos Foto, Retrato, Pro y Paisaje nocturno.</string>
     <string name="settings_watermark_summary_8250">Se aplicará una marca de agua a las fotos tomadas con la cámara posterior, incluyendo los modos Foto, Retrato, Pro y Paisaje nocturno.</string>
+    <string name="settings_watermark_timestamp">Hora</string>
     <string name="settings_watermark_title">Marca de agua Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Corrección de objetivo ultra gran angular</string>
     <string name="show_kill_apps_processing_dialog">Borrando</string>

@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAbstractPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractPhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractPhotoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,1073:1\n858#2:1074\n858#2:1075\n858#2:1076\n858#2:1077\n858#2:1078\n858#2:1079\n858#2:1080\n1054#2:1084\n1054#2:1087\n858#2:1089\n858#2:1090\n1054#2:1091\n1054#2:1092\n858#2:1095\n858#2:1096\n12#3,3:1081\n19#4:1085\n19#4:1086\n19#4:1088\n250#5,2:1093\n*E\n*S KotlinDebug\n*F\n+ 1 AbstractPhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractPhotoCaptureMode\n*L\n255#1:1074\n272#1:1075\n283#1:1076\n299#1:1077\n343#1:1078\n346#1:1079\n353#1:1080\n576#1:1084\n619#1:1087\n681#1:1089\n692#1:1090\n735#1:1091\n786#1:1092\n877#1:1095\n1044#1:1096\n528#1,3:1081\n577#1:1085\n578#1:1086\n620#1:1088\n808#1,2:1093\n*E\n"
+    value = "SMAP\nAbstractPhotoCaptureMode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AbstractPhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractPhotoCaptureMode\n+ 2 Camera.kt\ncom/oneplus/camera/next/hardware/CameraKt\n+ 3 Components.kt\ncom/oneplus/base/component/ComponentsKt\n+ 4 Settings.kt\ncom/oneplus/base/SettingsKt\n+ 5 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,1091:1\n858#2:1092\n858#2:1093\n858#2:1094\n858#2:1095\n858#2:1096\n858#2:1097\n858#2:1098\n1054#2:1102\n1054#2:1105\n858#2:1107\n858#2:1108\n1054#2:1109\n1054#2:1110\n858#2:1113\n858#2:1114\n12#3,3:1099\n19#4:1103\n19#4:1104\n19#4:1106\n250#5,2:1111\n*E\n*S KotlinDebug\n*F\n+ 1 AbstractPhotoCaptureMode.kt\ncom/oneplus/camera/capturemode/AbstractPhotoCaptureMode\n*L\n258#1:1092\n275#1:1093\n286#1:1094\n302#1:1095\n346#1:1096\n349#1:1097\n356#1:1098\n579#1:1102\n622#1:1105\n684#1:1107\n695#1:1108\n738#1:1109\n789#1:1110\n880#1:1113\n1047#1:1114\n531#1,3:1099\n580#1:1103\n581#1:1104\n623#1:1106\n811#1,2:1111\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -24,7 +24,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00dd\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u001a\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0011*\u0001\u001f\u0008&\u0018\u0000 \u0081\u00012\u00020\u0001:\u0008\u0081\u0001\u0082\u0001\u0083\u0001\u0084\u0001B#\u0008\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0002\u0010\u0008J\u001c\u0010:\u001a\u00020;\"\u0004\u0008\u0000\u0010<2\u000c\u0010=\u001a\u0008\u0012\u0004\u0012\u0002H<0>H\u0015J\u0018\u0010?\u001a\u00020;2\u0006\u0010@\u001a\u00020A2\u0006\u0010B\u001a\u00020AH\u0015J\u0010\u0010C\u001a\u00020\u00152\u0006\u0010D\u001a\u00020EH\u0015J\u001c\u0010F\u001a\u00020;2\u0008\u0010G\u001a\u0004\u0018\u00010E2\u0008\u0010H\u001a\u0004\u0018\u00010EH\u0015J\u0008\u0010I\u001a\u00020;H\u0015J\u0010\u0010J\u001a\u00020;2\u0006\u0010D\u001a\u00020EH\u0003J\u0010\u0010K\u001a\u00020;2\u0006\u0010L\u001a\u00020MH\u0015J\u0016\u0010N\u001a\u00020\u00152\u000c\u0010O\u001a\u0008\u0012\u0004\u0012\u00020E02H\u0015J\u0010\u0010P\u001a\u00020;2\u0006\u0010D\u001a\u00020EH\u0015J\u001a\u0010Q\u001a\u00020R2\u0008\u0010S\u001a\u0004\u0018\u00010T2\u0006\u0010U\u001a\u00020\u0007H\u0015J\u001a\u0010V\u001a\u00020R2\u0008\u0010W\u001a\u0004\u0018\u00010T2\u0006\u0010U\u001a\u00020\u0007H\u0015J\u0018\u0010X\u001a\u00020\u00152\u0006\u0010D\u001a\u00020E2\u0006\u0010U\u001a\u00020\u0007H\u0015J\u0008\u0010Y\u001a\u00020;H\u0015J\u0012\u0010Z\u001a\u0004\u0018\u00010\u000b2\u0006\u0010D\u001a\u00020EH\u0015J\u0012\u0010[\u001a\u0004\u0018\u00010\u00132\u0006\u0010D\u001a\u00020EH\u0015J \u0010\\\u001a\u0004\u0018\u00010*2\u0006\u0010D\u001a\u00020E2\u000c\u0010]\u001a\u0008\u0012\u0004\u0012\u00020*02H\u0015J\u0012\u0010^\u001a\u0004\u0018\u0001002\u0006\u0010D\u001a\u00020EH\u0015J\u0010\u0010_\u001a\u00020;2\u0006\u0010U\u001a\u00020\u0007H\u0015J\u0008\u0010`\u001a\u00020;H\u0015J\u0008\u0010a\u001a\u00020;H\u0015J\u0018\u0010b\u001a\u00020\u00152\u0006\u0010D\u001a\u00020E2\u0006\u0010c\u001a\u00020\u000bH\u0015J\u0018\u0010d\u001a\u00020\u00152\u0006\u0010D\u001a\u00020E2\u0006\u0010e\u001a\u00020\u0013H\u0015J\u001a\u0010f\u001a\u00020\u00152\u0006\u0010D\u001a\u00020E2\u0008\u0010g\u001a\u0004\u0018\u00010*H\u0015J\u0018\u0010h\u001a\u00020\u00152\u0006\u0010D\u001a\u00020E2\u0006\u0010e\u001a\u000200H\u0015J\u001e\u0010i\u001a\u00020*2\u0006\u0010D\u001a\u00020E2\u000c\u0010j\u001a\u0008\u0012\u0004\u0012\u00020*02H\u0015J(\u0010k\u001a\u00020*2\u0006\u0010D\u001a\u00020E2\u000c\u0010j\u001a\u0008\u0012\u0004\u0012\u00020*022\u0008\u0010l\u001a\u0004\u0018\u00010*H\u0015J \u0010m\u001a\u0008\u0012\u0004\u0012\u00020*022\u0006\u0010D\u001a\u00020E2\u0008\u0010n\u001a\u0004\u0018\u00010oH\u0015J\u001e\u0010p\u001a\u00020;2\u0014\u0010q\u001a\u0010\u0012\u000c\u0012\n\u0012\u0006\u0008\u0001\u0012\u00020t0s0rH\u0015J\u0008\u0010u\u001a\u00020;H\u0015J \u0010v\u001a\u00020;2\u0006\u0010L\u001a\u00020M2\u0006\u0010w\u001a\u00020\u00072\u0006\u0010x\u001a\u00020\u0007H\u0015J\u0008\u0010y\u001a\u00020;H\u0003J\u0008\u0010z\u001a\u00020;H\u0003J \u0010{\u001a\u0008\u0012\u0004\u0012\u00020*022\u0006\u0010D\u001a\u00020E2\u0008\u0010n\u001a\u0004\u0018\u00010oH\u0005J\u0008\u0010|\u001a\u00020;H\u0003J\u0008\u0010}\u001a\u00020;H\u0003J\u0008\u0010~\u001a\u00020;H\u0003J\u0008\u0010\u007f\u001a\u00020;H\u0003J\t\u0010\u0080\u0001\u001a\u00020;H\u0003R\u0014\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\u000b0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0012\u001a\u0008\u0012\u0004\u0012\u00020\u00130\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0014\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0016\u0010\u0017\u001a\u0004\u0008\u0014\u0010\u0018R\u001c\u0010\u0019\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001a\u0010\u0017\u001a\u0004\u0008\u0019\u0010\u0018R\u000e\u0010\u001b\u001a\u00020\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u001c\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001d\u0010\u0017\u001a\u0004\u0008\u001c\u0010\u0018R\u0010\u0010\u001e\u001a\u00020\u001fX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010 R\u000e\u0010!\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\"\u001a\u0008\u0012\u0004\u0012\u00020$0#X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010%\u001a\u0008\u0012\u0004\u0012\u00020\'0&X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010(\u001a\u0008\u0012\u0004\u0012\u00020*0)X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010,X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010-\u001a\u0008\u0012\u0004\u0012\u00020.0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010/\u001a\u0008\u0012\u0004\u0012\u0002000\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u00101\u001a\n\u0012\u0004\u0012\u00020*\u0018\u000102X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00105\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u000108X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00109\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0085\u0001"
+        "\u0000\u00dd\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u001a\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0011*\u0001\u001f\u0008&\u0018\u0000 \u0082\u00012\u00020\u0001:\u0008\u0082\u0001\u0083\u0001\u0084\u0001\u0085\u0001B#\u0008\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\n\u0008\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0002\u0010\u0008J\u001c\u0010;\u001a\u00020<\"\u0004\u0008\u0000\u0010=2\u000c\u0010>\u001a\u0008\u0012\u0004\u0012\u0002H=0?H\u0015J\u0018\u0010@\u001a\u00020<2\u0006\u0010A\u001a\u00020B2\u0006\u0010C\u001a\u00020BH\u0015J\u0010\u0010D\u001a\u00020\u00152\u0006\u0010E\u001a\u00020FH\u0015J\u001c\u0010G\u001a\u00020<2\u0008\u0010H\u001a\u0004\u0018\u00010F2\u0008\u0010I\u001a\u0004\u0018\u00010FH\u0015J\u0008\u0010J\u001a\u00020<H\u0015J\u0010\u0010K\u001a\u00020<2\u0006\u0010E\u001a\u00020FH\u0003J\u0010\u0010L\u001a\u00020<2\u0006\u0010M\u001a\u00020NH\u0015J\u0016\u0010O\u001a\u00020\u00152\u000c\u0010P\u001a\u0008\u0012\u0004\u0012\u00020F02H\u0015J\u0010\u0010Q\u001a\u00020<2\u0006\u0010E\u001a\u00020FH\u0015J\u001a\u0010R\u001a\u00020S2\u0008\u0010T\u001a\u0004\u0018\u00010U2\u0006\u0010V\u001a\u00020\u0007H\u0015J\u001a\u0010W\u001a\u00020S2\u0008\u0010X\u001a\u0004\u0018\u00010U2\u0006\u0010V\u001a\u00020\u0007H\u0015J\u0018\u0010Y\u001a\u00020\u00152\u0006\u0010E\u001a\u00020F2\u0006\u0010V\u001a\u00020\u0007H\u0015J\u0008\u0010Z\u001a\u00020<H\u0015J\u0012\u0010[\u001a\u0004\u0018\u00010\u000b2\u0006\u0010E\u001a\u00020FH\u0015J\u0012\u0010\\\u001a\u0004\u0018\u00010\u00132\u0006\u0010E\u001a\u00020FH\u0015J \u0010]\u001a\u0004\u0018\u00010*2\u0006\u0010E\u001a\u00020F2\u000c\u0010^\u001a\u0008\u0012\u0004\u0012\u00020*02H\u0015J\u0012\u0010_\u001a\u0004\u0018\u0001002\u0006\u0010E\u001a\u00020FH\u0015J\u0010\u0010`\u001a\u00020<2\u0006\u0010V\u001a\u00020\u0007H\u0015J\u0008\u0010a\u001a\u00020<H\u0015J\u0008\u0010b\u001a\u00020<H\u0015J\u0018\u0010c\u001a\u00020\u00152\u0006\u0010E\u001a\u00020F2\u0006\u0010d\u001a\u00020\u000bH\u0015J\u0018\u0010e\u001a\u00020\u00152\u0006\u0010E\u001a\u00020F2\u0006\u0010f\u001a\u00020\u0013H\u0015J\u001a\u0010g\u001a\u00020\u00152\u0006\u0010E\u001a\u00020F2\u0008\u0010h\u001a\u0004\u0018\u00010*H\u0015J\u0018\u0010i\u001a\u00020\u00152\u0006\u0010E\u001a\u00020F2\u0006\u0010f\u001a\u000200H\u0015J\u001e\u0010j\u001a\u00020*2\u0006\u0010E\u001a\u00020F2\u000c\u0010k\u001a\u0008\u0012\u0004\u0012\u00020*02H\u0015J(\u0010l\u001a\u00020*2\u0006\u0010E\u001a\u00020F2\u000c\u0010k\u001a\u0008\u0012\u0004\u0012\u00020*022\u0008\u0010m\u001a\u0004\u0018\u00010*H\u0015J \u0010n\u001a\u0008\u0012\u0004\u0012\u00020*022\u0006\u0010E\u001a\u00020F2\u0008\u0010o\u001a\u0004\u0018\u00010pH\u0015J\u001e\u0010q\u001a\u00020<2\u0014\u0010r\u001a\u0010\u0012\u000c\u0012\n\u0012\u0006\u0008\u0001\u0012\u00020u0t0sH\u0015J\u0008\u0010v\u001a\u00020<H\u0015J \u0010w\u001a\u00020<2\u0006\u0010M\u001a\u00020N2\u0006\u0010x\u001a\u00020\u00072\u0006\u0010y\u001a\u00020\u0007H\u0015J\u0008\u0010z\u001a\u00020<H\u0003J\u0008\u0010{\u001a\u00020<H\u0003J \u0010|\u001a\u0008\u0012\u0004\u0012\u00020*022\u0006\u0010E\u001a\u00020F2\u0008\u0010o\u001a\u0004\u0018\u00010pH\u0005J\u0008\u0010}\u001a\u00020<H\u0015J\u0008\u0010~\u001a\u00020<H\u0003J\u0008\u0010\u007f\u001a\u00020<H\u0003J\t\u0010\u0080\u0001\u001a\u00020<H\u0003J\t\u0010\u0081\u0001\u001a\u00020<H\u0003R\u0014\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\u000b0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0012\u001a\u0008\u0012\u0004\u0012\u00020\u00130\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u0014\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0016\u0010\u0017\u001a\u0004\u0008\u0014\u0010\u0018R\u001c\u0010\u0019\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001a\u0010\u0017\u001a\u0004\u0008\u0019\u0010\u0018R\u000e\u0010\u001b\u001a\u00020\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u001c\u001a\u00020\u00158\u0014X\u0095D\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u001d\u0010\u0017\u001a\u0004\u0008\u001c\u0010\u0018R\u0010\u0010\u001e\u001a\u00020\u001fX\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010 R\u000e\u0010!\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\"\u001a\u0008\u0012\u0004\u0012\u00020$0#X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010%\u001a\u0008\u0012\u0004\u0012\u00020\'0&X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010(\u001a\u0008\u0012\u0004\u0012\u00020*0)X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010,X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010-\u001a\u0008\u0012\u0004\u0012\u00020.0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010/\u001a\u0008\u0012\u0004\u0012\u0002000\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u00101\u001a\n\u0012\u0004\u0012\u00020*\u0018\u000102X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00103\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00104\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00105\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u00107\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u000109X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010:\u001a\u00020\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0086\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;",
@@ -81,6 +81,7 @@
         "settingsKeyWatermarkBrandText",
         "settingsKeyWatermarkDisplayLensCount",
         "settingsKeyWatermarkIsBrandTextEnabled",
+        "settingsKeyWatermarkIsDateTimeEnabled",
         "settingsKeyWatermarkIsEnabled",
         "watermarkCamera",
         "Lcom/oneplus/camera/next/hardware/WatermarkCamera;",
@@ -320,6 +321,8 @@
 
 .field private final settingsKeyWatermarkIsBrandTextEnabled:Ljava/lang/String;
 
+.field private final settingsKeyWatermarkIsDateTimeEnabled:Ljava/lang/String;
+
 .field private final settingsKeyWatermarkIsEnabled:Ljava/lang/String;
 
 .field private watermarkCamera:Lcom/oneplus/camera/next/hardware/WatermarkCamera;
@@ -481,7 +484,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     check-cast p1, Ljava/lang/Number;
 
@@ -503,7 +506,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkDisplayLensCount:Ljava/lang/String;
 
@@ -517,7 +520,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     check-cast p1, Ljava/lang/Number;
 
@@ -539,7 +542,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkBrandText:Ljava/lang/String;
 
@@ -553,7 +556,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     check-cast p1, Ljava/lang/Number;
 
@@ -575,7 +578,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsBrandTextEnabled:Ljava/lang/String;
 
@@ -583,7 +586,45 @@
 
     move-result-object p1
 
-    const-string p2, "settings_key_watermark_is_enabled"
+    const-string v2, "settings_key_watermark_is_enabled"
+
+    invoke-static {p1, v0, v2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v2, "Cannot find settings key : watermark is enable"
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getOnePlusCamera()Lcom/oneplus/camera/OnePlusCamera;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/oneplus/base/ContextObject;
+
+    invoke-static {v3}, Lcom/oneplus/base/ContextObjectKt;->getResources(Lcom/oneplus/base/ContextObject;)Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsEnabled:Ljava/lang/String;
+
+    invoke-interface {p2}, Lcom/oneplus/camera/OnePlusCamera;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string p2, "settings_key_watermark_is_timestamp_enabled"
 
     invoke-static {p1, v0, p2}, Lcom/oneplus/camera/BuiltInResourcesKt;->getBuiltInResourceId(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -613,7 +654,7 @@
 
     if-eqz p1, :cond_0
 
-    iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsEnabled:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsDateTimeEnabled:Ljava/lang/String;
 
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
@@ -672,15 +713,22 @@
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p1, "Cannot find settings key : watermark is enable"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     check-cast p0, Ljava/lang/Throwable;
 
     throw p0
 
     :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    check-cast p0, Ljava/lang/Throwable;
+
+    throw p0
+
+    :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Cannot find settings key : watermark is brand text enabled"
@@ -691,7 +739,7 @@
 
     throw p0
 
-    :cond_2
+    :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Cannot find settings key : watermark brand text"
@@ -702,7 +750,7 @@
 
     throw p0
 
-    :cond_3
+    :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Cannot find settings key : max lens count"
@@ -1002,61 +1050,6 @@
     return-void
 .end method
 
-.method private final syncCountDownSecondsFromSettings()V
-    .locals 2
-    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
-    .end annotation
-
-    move-object v0, p0
-
-    check-cast v0, Lcom/oneplus/camera/capturemode/CaptureMode;
-
-    invoke-static {v0}, Lcom/oneplus/camera/capturemode/CaptureModeKt;->isEnteringOrEntered(Lcom/oneplus/camera/capturemode/CaptureMode;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->isCountDownTimerSupported()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onLoadCountDownTimerFromSettings(Lcom/oneplus/camera/next/hardware/Camera;)Ljava/time/Duration;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
-
-    move-result-object p0
-
-    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
-
-    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_DEFAULT_COUNT_DOWN_SECONDS()Lcom/oneplus/base/PropertyKey;
-
-    move-result-object v1
-
-    invoke-interface {p0, v1, v0}, Lcom/oneplus/camera/PhotoCaptureController;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
-
-    :cond_2
-    return-void
-.end method
-
 .method private final syncCountDownSecondsToSettings()V
     .locals 3
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
@@ -1292,13 +1285,13 @@
 .end method
 
 .method private final syncWatermarkFromSettings()V
-    .locals 6
+    .locals 8
     .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
     .end annotation
 
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkCamera:Lcom/oneplus/camera/next/hardware/WatermarkCamera;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->isWatermarkSupported()Z
 
@@ -1310,69 +1303,35 @@
 
     const/4 v4, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsEnabled:Ljava/lang/String;
+    iget-object v5, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsDateTimeEnabled:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Lcom/oneplus/camera/CameraSettings;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
-
-    if-eqz v1, :cond_1
 
     invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
 
-    move-result-object v1
+    move-result-object v5
 
-    iget-object v5, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsBrandTextEnabled:Ljava/lang/String;
+    iget-object v6, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsEnabled:Ljava/lang/String;
 
-    invoke-virtual {v1, v5}, Lcom/oneplus/camera/CameraSettings;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {v5, v6}, Lcom/oneplus/camera/CameraSettings;->getBoolean(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v5
+
+    if-nez v5, :cond_1
 
     if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
-
-    move-result-object v1
-
-    iget-object v5, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkBrandText:Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Lcom/oneplus/camera/CameraSettings;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/CharSequence;
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v4
-
-    :goto_0
-    invoke-static {v0, v1}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->setBrandText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
-
-    invoke-static {v1}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-static {v0, v3, v2, v4}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
-
-    goto :goto_1
-
-    :cond_1
     iget-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
 
     invoke-static {v0, v3, v2, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
@@ -1381,8 +1340,73 @@
 
     iput-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
 
+    goto :goto_2
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkIsBrandTextEnabled:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Lcom/oneplus/camera/CameraSettings;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getSettings()Lcom/oneplus/camera/CameraSettings;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->settingsKeyWatermarkBrandText:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Lcom/oneplus/camera/CameraSettings;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/CharSequence;
+
+    goto :goto_1
+
     :cond_2
+    move-object v6, v4
+
     :goto_1
+    invoke-static {v0, v6}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->setCustomNameText(Lcom/oneplus/camera/next/hardware/WatermarkCamera;Ljava/lang/CharSequence;)V
+
+    invoke-static {v0, v1}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->setDateTimeEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;Z)V
+
+    invoke-static {v0, v5}, Lcom/oneplus/camera/next/hardware/WatermarkCameraKt;->setSloganEnabled(Lcom/oneplus/camera/next/hardware/WatermarkCamera;Z)V
+
+    iget-object v1, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
+
+    invoke-static {v1}, Lcom/oneplus/base/HandlesKt;->isInvalid(Lcom/oneplus/base/Handle;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-static {v0, v3, v2, v4}, Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera$DefaultImpls;->enable$default(Lcom/oneplus/camera/next/hardware/SimpleFeatureCamera;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
+
+    invoke-static {v0, v3, v2, v4}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->watermarkEnablingHandle:Lcom/oneplus/base/Handle;
+
+    :cond_4
+    :goto_2
     return-void
 .end method
 
@@ -2163,7 +2187,7 @@
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;->onCameraChanged(Lcom/oneplus/camera/next/hardware/Camera;Lcom/oneplus/camera/next/hardware/Camera;)V
 
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncCountDownSecondsFromSettings()V
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncCountDownSecondsFromSettings()V
 
     invoke-direct {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncFaceBeautyLevelFromSettings()V
 
@@ -2268,7 +2292,7 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/camera/capturemode/AbstractCaptureMode;->onCameraSettingsApplied(Lcom/oneplus/camera/CameraSettings;)V
 
-    invoke-direct {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncCountDownSecondsFromSettings()V
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncCountDownSecondsFromSettings()V
 
     invoke-direct {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->syncFaceBeautyLevelFromSettings()V
 
@@ -3297,7 +3321,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "timer"
+    const-string v0, "timer"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -3991,7 +4015,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-static {}, Lcom/oneplus/base/Device;->isHydrogenOS()Z
+    invoke-static {}, Lcom/oneplus/base/Device;->isChinaRegion()Z
 
     move-result v2
 
@@ -4428,4 +4452,59 @@
     :cond_3
     :goto_1
     return-object p2
+.end method
+
+.method protected syncCountDownSecondsFromSettings()V
+    .locals 2
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    move-object v0, p0
+
+    check-cast v0, Lcom/oneplus/camera/capturemode/CaptureMode;
+
+    invoke-static {v0}, Lcom/oneplus/camera/capturemode/CaptureModeKt;->isEnteringOrEntered(Lcom/oneplus/camera/capturemode/CaptureMode;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->isCountDownTimerSupported()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getCamera()Lcom/oneplus/camera/next/hardware/Camera;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->onLoadCountDownTimerFromSettings(Lcom/oneplus/camera/next/hardware/Camera;)Ljava/time/Duration;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lcom/oneplus/camera/capturemode/AbstractPhotoCaptureMode;->getPhotoCaptureController()Lcom/oneplus/camera/PhotoCaptureController;
+
+    move-result-object p0
+
+    sget-object v1, Lcom/oneplus/camera/PhotoCaptureController;->Companion:Lcom/oneplus/camera/PhotoCaptureController$Companion;
+
+    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureController$Companion;->getPROP_DEFAULT_COUNT_DOWN_SECONDS()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v1
+
+    invoke-interface {p0, v1, v0}, Lcom/oneplus/camera/PhotoCaptureController;->set(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
+
+    :cond_2
+    return-void
 .end method

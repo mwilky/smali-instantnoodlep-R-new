@@ -3,165 +3,110 @@
 .source "PG"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Let;
+
+
+# static fields
+.field private static final b:Lef;
 
 
 # instance fields
-.field private a:I
-
-.field private b:Ljava/util/Iterator;
-
-.field private final synthetic c:Ldx;
+.field public final a:Lef;
 
 
 # direct methods
-.method constructor <init>(Ldx;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ldz;->c:Ldx;
+    new-instance v0, Ldx;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ldx;-><init>()V
 
-    iget-object p1, p0, Ldz;->c:Ldx;
-
-    iget-object p1, p1, Ldx;->a:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    iput p1, p0, Ldz;->a:I
+    sput-object v0, Ldz;->b:Lef;
 
     return-void
 .end method
 
-.method private final a()Ljava/util/Iterator;
-    .locals 1
+.method public constructor <init>()V
+    .locals 6
 
-    iget-object v0, p0, Ldz;->b:Ljava/util/Iterator;
+    new-instance v0, Ldy;
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Ldz;->c:Ldx;
+    new-array v1, v1, [Lef;
 
-    iget-object v0, v0, Ldx;->d:Ljava/util/Map;
+    sget-object v2, Lcz;->a:Lcz;
 
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    aput-object v2, v1, v3
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    :try_start_0
+    const-string v2, "com.google.protobuf.DescriptorMessageInfoFactory"
 
-    move-result-object v0
+    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    iput-object v0, p0, Ldz;->b:Ljava/util/Iterator;
+    move-result-object v2
 
-    :cond_0
-    iget-object p0, p0, Ldz;->b:Ljava/util/Iterator;
+    const-string v4, "getInstance"
 
-    return-object p0
+    new-array v5, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v2, v4, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lef;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    sget-object v2, Ldz;->b:Lef;
+
+    :goto_0
+    const/4 v3, 0x1
+
+    aput-object v2, v1, v3
+
+    invoke-direct {v0, v1}, Ldy;-><init>([Lef;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "messageInfoFactory"
+
+    invoke-static {v0, v1}, Ldj;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object v0, p0, Ldz;->a:Lef;
+
+    return-void
 .end method
 
+.method public static a(Lee;)Z
+    .locals 1
 
-# virtual methods
-.method public final hasNext()Z
-    .locals 2
-
-    iget v0, p0, Ldz;->a:I
-
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Ldz;->c:Ldx;
-
-    iget-object v1, v1, Ldx;->a:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-le v0, v1, :cond_1
-
-    :cond_0
-    invoke-direct {p0}, Ldz;->a()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Lee;->c()I
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    const/4 v0, 0x1
 
-    :cond_1
-    const/4 p0, 0x1
+    if-ne p0, v0, :cond_0
 
-    return p0
+    return v0
 
-    :cond_2
+    :cond_0
     const/4 p0, 0x0
 
     return p0
-.end method
-
-.method public final synthetic next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-direct {p0}, Ldz;->a()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Ldz;->a()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Map$Entry;
-
-    return-object p0
-
-    :cond_0
-    iget-object v0, p0, Ldz;->c:Ldx;
-
-    iget-object v0, v0, Ldx;->a:Ljava/util/List;
-
-    iget v1, p0, Ldz;->a:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Ldz;->a:I
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Map$Entry;
-
-    return-object p0
-.end method
-
-.method public final remove()V
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p0
 .end method

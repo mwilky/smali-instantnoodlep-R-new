@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1696:1\n12#2,3:1697\n12#2,3:1700\n12#2,3:1703\n12#2,3:1706\n12#2,3:1709\n12#2,3:1712\n*E\n*S KotlinDebug\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n*L\n666#1,3:1697\n669#1,3:1700\n680#1,3:1703\n683#1,3:1706\n686#1,3:1709\n689#1,3:1712\n*E\n"
+    value = "SMAP\nOOS11PrimaryActionPanelImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n+ 2 Components.kt\ncom/oneplus/base/component/ComponentsKt\n*L\n1#1,1689:1\n12#2,3:1690\n12#2,3:1693\n12#2,3:1696\n12#2,3:1699\n12#2,3:1702\n12#2,3:1705\n*E\n*S KotlinDebug\n*F\n+ 1 OOS11PrimaryActionPanelImpl.kt\ncom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl\n*L\n659#1,3:1690\n662#1,3:1693\n673#1,3:1696\n676#1,3:1699\n679#1,3:1702\n682#1,3:1705\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -26,7 +26,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00de\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0007\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\r\u0018\u0000 \u0086\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u0004\u0086\u0001\u0087\u0001B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010=\u001a\u00020>H\u0003J\u0012\u0010?\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u0012\u0010A\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u0018\u0010B\u001a\u00020>2\u0006\u0010@\u001a\u00020\'2\u0006\u0010C\u001a\u00020\u0018H\u0017J\u0010\u0010D\u001a\u00020\u001b2\u0006\u0010C\u001a\u00020\u0018H\u0017J\u0008\u0010E\u001a\u00020\u001bH\u0003J\u0010\u0010F\u001a\u00020>2\u0006\u0010G\u001a\u00020\u001bH\u0003J\u0012\u0010H\u001a\u00020>2\u0008\u0008\u0002\u0010@\u001a\u00020\'H\u0003J\u001c\u0010I\u001a\u00020\'\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0\u0008H\u0003J\u0018\u0010L\u001a\u00020>2\u0006\u0010M\u001a\u00020N2\u0006\u0010O\u001a\u00020NH\u0015J\u001c\u0010P\u001a\u00020>2\u0008\u0010Q\u001a\u0004\u0018\u00010R2\u0008\u0010S\u001a\u0004\u0018\u00010RH\u0015J\u0008\u0010T\u001a\u00020>H\u0015J4\u0010U\u001a\u00020\u000b\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010X\u001a\u00020YH\u0015J:\u0010Z\u001a\u0008\u0012\u0004\u0012\u0002HJ0[\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010\\\u001a\u00020\u000bH\u0015J\u0008\u0010]\u001a\u00020>H\u0003J\u0008\u0010^\u001a\u00020>H\u0003J\u0008\u0010_\u001a\u00020>H\u0015J4\u0010`\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010a\u001a\u00020\u0018H\u0015J*\u0010b\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000c\u0010c\u001a\u0008\u0012\u0004\u0012\u0002HJ0[H\u0015J\u001c\u0010d\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0VH\u0015J$\u0010e\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010f\u001a\u00020\'H\u0015J\u001c\u0010g\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0VH\u0015J$\u0010h\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010i\u001a\u00020jH\u0015J4\u0010k\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u000e\u0010W\u001a\n\u0012\u0004\u0012\u0002HJ\u0018\u00010V2\u0006\u0010a\u001a\u00020\u0018H\u0015J$\u0010l\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010m\u001a\u00020\'H\u0015J$\u0010n\u001a\u00020>\"\u0004\u0008\u0000\u0010J2\u000c\u0010K\u001a\u0008\u0012\u0004\u0012\u0002HJ0V2\u0006\u0010o\u001a\u00020\'H\u0015J\u0008\u0010p\u001a\u00020>H\u0003J\u0008\u0010q\u001a\u00020>H\u0003J&\u0010r\u001a\u00020>2\u0006\u0010s\u001a\u00020t2\u000c\u0010u\u001a\u0008\u0012\u0004\u0012\u00020w0v2\u0006\u0010x\u001a\u00020wH\u0003J\u0010\u0010y\u001a\u00020>2\u0006\u0010z\u001a\u00020{H\u0015J\u0008\u0010|\u001a\u00020>H\u0003J\u0018\u0010}\u001a\u00020>2\u0006\u0010~\u001a\u00020)2\u0006\u0010i\u001a\u00020jH\u0003J\u0008\u0010\u007f\u001a\u00020>H\u0003J\t\u0010\u0080\u0001\u001a\u00020>H\u0003J\t\u0010\u0081\u0001\u001a\u00020>H\u0003J\t\u0010\u0082\u0001\u001a\u00020>H\u0003J\t\u0010\u0083\u0001\u001a\u00020>H\u0003J\t\u0010\u0084\u0001\u001a\u00020>H\u0003J\t\u0010\u0085\u0001\u001a\u00020>H\u0003R\u0014\u0010\u0007\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010 \u001a\u0004\u0018\u00010!X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\"\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\'X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010(\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u0004\u0018\u00010\u0002X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010-\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00100\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00101\u001a\u0012\u0012\u0004\u0012\u00020\u001b02j\u0008\u0012\u0004\u0012\u00020\u001b`3X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00105\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00106\u001a\u000207X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u00010#X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010)X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010;\u001a\u0004\u0018\u00010<X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0088\u0001"
+        "\u0000\u00de\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0007\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\r\u0018\u0000 \u0085\u00012\u00020\u00012\u00020\u00022\u00020\u0003:\u0004\u0085\u0001\u0086\u0001B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0008\u0010<\u001a\u00020=H\u0003J\u0012\u0010>\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020&H\u0003J\u0012\u0010@\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020&H\u0003J\u0018\u0010A\u001a\u00020=2\u0006\u0010?\u001a\u00020&2\u0006\u0010B\u001a\u00020\u0018H\u0017J\u0010\u0010C\u001a\u00020\u001b2\u0006\u0010B\u001a\u00020\u0018H\u0017J\u0008\u0010D\u001a\u00020\u001bH\u0003J\u0010\u0010E\u001a\u00020=2\u0006\u0010F\u001a\u00020\u001bH\u0003J\u0012\u0010G\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020&H\u0003J\u001c\u0010H\u001a\u00020&\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0\u0008H\u0003J\u0018\u0010K\u001a\u00020=2\u0006\u0010L\u001a\u00020M2\u0006\u0010N\u001a\u00020MH\u0015J\u001c\u0010O\u001a\u00020=2\u0008\u0010P\u001a\u0004\u0018\u00010Q2\u0008\u0010R\u001a\u0004\u0018\u00010QH\u0015J\u0008\u0010S\u001a\u00020=H\u0015J4\u0010T\u001a\u00020\u000b\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010W\u001a\u00020XH\u0015J:\u0010Y\u001a\u0008\u0012\u0004\u0012\u0002HI0Z\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010[\u001a\u00020\u000bH\u0015J\u0008\u0010\\\u001a\u00020=H\u0003J\u0008\u0010]\u001a\u00020=H\u0003J\u0008\u0010^\u001a\u00020=H\u0015J4\u0010_\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010`\u001a\u00020\u0018H\u0015J*\u0010a\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000c\u0010b\u001a\u0008\u0012\u0004\u0012\u0002HI0ZH\u0015J\u001c\u0010c\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0UH\u0015J$\u0010d\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010e\u001a\u00020&H\u0015J\u001c\u0010f\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0UH\u0015J$\u0010g\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010h\u001a\u00020iH\u0015J4\u0010j\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u000e\u0010V\u001a\n\u0012\u0004\u0012\u0002HI\u0018\u00010U2\u0006\u0010`\u001a\u00020\u0018H\u0015J$\u0010k\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010l\u001a\u00020&H\u0015J$\u0010m\u001a\u00020=\"\u0004\u0008\u0000\u0010I2\u000c\u0010J\u001a\u0008\u0012\u0004\u0012\u0002HI0U2\u0006\u0010n\u001a\u00020&H\u0015J\u0008\u0010o\u001a\u00020=H\u0003J\u0008\u0010p\u001a\u00020=H\u0003J&\u0010q\u001a\u00020=2\u0006\u0010r\u001a\u00020s2\u000c\u0010t\u001a\u0008\u0012\u0004\u0012\u00020v0u2\u0006\u0010w\u001a\u00020vH\u0003J\u0010\u0010x\u001a\u00020=2\u0006\u0010y\u001a\u00020zH\u0015J\u0008\u0010{\u001a\u00020=H\u0003J\u0018\u0010|\u001a\u00020=2\u0006\u0010}\u001a\u00020(2\u0006\u0010h\u001a\u00020iH\u0003J\u0008\u0010~\u001a\u00020=H\u0003J\u0008\u0010\u007f\u001a\u00020=H\u0003J\t\u0010\u0080\u0001\u001a\u00020=H\u0003J\t\u0010\u0081\u0001\u001a\u00020=H\u0003J\t\u0010\u0082\u0001\u001a\u00020=H\u0003J\t\u0010\u0083\u0001\u001a\u00020=H\u0003J\t\u0010\u0084\u0001\u001a\u00020=H\u0003R\u0014\u0010\u0007\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001f\u001a\u0004\u0018\u00010 X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010!\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010#\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020&X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\'\u001a\u0004\u0018\u00010(X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010)\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010*\u001a\u0004\u0018\u00010\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010+\u001a\u0004\u0018\u00010\u0002X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010,\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010.\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010/\u001a\u00020\u0018X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u00100\u001a\u0012\u0012\u0004\u0012\u00020\u001b01j\u0008\u0012\u0004\u0012\u00020\u001b`2X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u00103\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00104\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u00105\u001a\u000206X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00107\u001a\u0004\u0018\u00010\"X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00108\u001a\u0004\u0018\u00010\u000bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u00109\u001a\u0004\u0018\u00010(X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010:\u001a\u0004\u0018\u00010;X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0087\u0001"
     }
     d2 = {
         "Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;",
@@ -58,7 +58,6 @@
         "disableCameraSwitcherHandle",
         "Lcom/oneplus/base/Handle;",
         "disableCaptureModesPanelHandle",
-        "disableCaptureUiHandle",
         "disableCapturingHandle",
         "disableTouch3AControlHandle",
         "filterPanel",
@@ -261,8 +260,6 @@
 
 .field private disableCaptureModesPanelHandle:Lcom/oneplus/base/Handle;
 
-.field private disableCaptureUiHandle:Lcom/oneplus/base/Handle;
-
 .field private disableCapturingHandle:Lcom/oneplus/base/Handle;
 
 .field private disableTouch3AControlHandle:Lcom/oneplus/base/Handle;
@@ -440,12 +437,6 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCaptureUiHandle:Lcom/oneplus/base/Handle;
-
-    sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableTouch3AControlHandle:Lcom/oneplus/base/Handle;
 
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
@@ -521,14 +512,6 @@
     invoke-direct {p0, p1}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->enableSettingsIcon(Lcom/oneplus/base/Handle;)V
 
     return-void
-.end method
-
-.method public static final synthetic access$getActiveFirstLevelItem$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)Lcom/oneplus/camera/ui/actionpanel/ActionItemGroup;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->activeFirstLevelItem:Lcom/oneplus/camera/ui/actionpanel/ActionItemGroup;
-
-    return-object p0
 .end method
 
 .method public static final synthetic access$getCameraSwitcher$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;)Lcom/oneplus/camera/ui/CameraSwitcher;
@@ -617,14 +600,6 @@
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->scheduleUpdateUI(J)V
-
-    return-void
-.end method
-
-.method public static final synthetic access$setActiveFirstLevelItem$p(Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;Lcom/oneplus/camera/ui/actionpanel/ActionItemGroup;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->activeFirstLevelItem:Lcom/oneplus/camera/ui/actionpanel/ActionItemGroup;
 
     return-void
 .end method
@@ -1352,19 +1327,11 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->scheduleUpdateUI(J)V
 
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCaptureUiHandle:Lcom/oneplus/base/Handle;
+    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCapturingHandle:Lcom/oneplus/base/Handle;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
-
-    invoke-static {p1, v2, v0, v1}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCaptureUiHandle:Lcom/oneplus/base/Handle;
-
-    iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCapturingHandle:Lcom/oneplus/base/Handle;
 
     invoke-static {p1, v2, v0, v1}, Lcom/oneplus/base/HandlesKt;->close$default(Lcom/oneplus/base/Handle;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
@@ -2273,22 +2240,22 @@
 
     aget p1, v0, p1
 
-    const/4 v0, 0x2
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_0
+    const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_0
 
     return-void
 
     :cond_0
     iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->TAG:Ljava/lang/String;
 
-    const-string v2, "expandDrawer()"
+    const-string v1, "expandDrawer()"
 
-    invoke-static {p1, v2}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object p1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel;->Companion:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$Companion;
 
@@ -2296,31 +2263,21 @@
 
     move-result-object p1
 
-    sget-object v2, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->EXPANDING:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
+    sget-object v1, Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;->EXPANDING:Lcom/oneplus/camera/ui/actionpanel/ActionPanel$PanelState;
 
-    invoke-virtual {p0, p1, v2}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
-
-    const-string p1, "Primary Action Drawer Expanded"
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-static {p0, p1, v3, v0, v2}, Lcom/oneplus/camera/OnePlusCameraComponent;->disableCaptureUI$default(Lcom/oneplus/camera/OnePlusCameraComponent;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCaptureUiHandle:Lcom/oneplus/base/Handle;
+    invoke-virtual {p0, p1, v1}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
     iget-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->captureBar:Lcom/oneplus/camera/ui/CaptureBar;
 
-    const-string v0, "Handle.INVALID"
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const-string v3, "Handle.INVALID"
 
     if-eqz p1, :cond_1
 
-    invoke-static {p1, v3, v1, v2}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->disableCapturing$default(Lcom/oneplus/camera/ui/CaptureBar;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v2, v0, v1}, Lcom/oneplus/camera/ui/CaptureBar$DefaultImpls;->disableCapturing$default(Lcom/oneplus/camera/ui/CaptureBar;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -2331,7 +2288,7 @@
     :cond_1
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCapturingHandle:Lcom/oneplus/base/Handle;
@@ -2340,7 +2297,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-static {p1, v3, v1, v2}, Lcom/oneplus/camera/ui/CameraSwitcher$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/CameraSwitcher;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v2, v0, v1}, Lcom/oneplus/camera/ui/CameraSwitcher$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/CameraSwitcher;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -2351,7 +2308,7 @@
     :cond_2
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCameraSwitcherHandle:Lcom/oneplus/base/Handle;
@@ -2360,7 +2317,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p1, v3, v1, v2}, Lcom/oneplus/camera/ui/CaptureModesPanel$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/CaptureModesPanel;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v2, v0, v1}, Lcom/oneplus/camera/ui/CaptureModesPanel$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/CaptureModesPanel;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -2371,7 +2328,7 @@
     :cond_3
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_2
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableCaptureModesPanelHandle:Lcom/oneplus/base/Handle;
@@ -2380,7 +2337,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1, v3, v1, v2}, Lcom/oneplus/camera/ui/Touch3AControl$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/Touch3AControl;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
+    invoke-static {p1, v2, v0, v1}, Lcom/oneplus/camera/ui/Touch3AControl$DefaultImpls;->disable$default(Lcom/oneplus/camera/ui/Touch3AControl;IILjava/lang/Object;)Lcom/oneplus/base/Handle;
 
     move-result-object p1
 
@@ -2391,7 +2348,7 @@
     :cond_4
     sget-object p1, Lcom/oneplus/base/Handle;->INVALID:Lcom/oneplus/base/Handle;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_3
     iput-object p1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->disableTouch3AControlHandle:Lcom/oneplus/base/Handle;
@@ -4270,7 +4227,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f040308
+    const v10, 0x7f040309
 
     const/4 v11, 0x0
 
@@ -4522,7 +4479,7 @@
 
     if-nez v1, :cond_2
 
-    const v1, 0x7f0803ac
+    const v1, 0x7f0803a1
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4599,7 +4556,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f040308
+    const v8, 0x7f040309
 
     const/4 v9, 0x0
 
@@ -4713,7 +4670,7 @@
 
     sub-int/2addr v1, v3
 
-    const v6, 0x7f0402fe
+    const v6, 0x7f0402ff
 
     const v13, 0x43028000    # 130.5f
 
@@ -4981,7 +4938,7 @@
 
     if-nez v1, :cond_2
 
-    const v1, 0x7f0803ad
+    const v1, 0x7f0803a2
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -5467,7 +5424,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a01de
+    const v1, 0x7f0a01df
 
     invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
@@ -5495,7 +5452,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->firstLevelItemContainerView:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a020b
+    const v2, 0x7f0a020c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5503,7 +5460,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->subPanel:Landroid/view/View;
 
-    const v2, 0x7f0a020c
+    const v2, 0x7f0a020d
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5540,7 +5497,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->subPanelPrimaryActionPanel:Landroid/view/View;
 
-    const v2, 0x7f0a0280
+    const v2, 0x7f0a0281
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5550,7 +5507,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->subPanelItemListContainerView:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a0203
+    const v2, 0x7f0a0204
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5558,7 +5515,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->backgroundView:Landroid/view/View;
 
-    const v2, 0x7f0a024e
+    const v2, 0x7f0a024f
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5568,7 +5525,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->secondLevelItemContainerView:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a025b
+    const v2, 0x7f0a025c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5606,7 +5563,7 @@
     :goto_2
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v5, 0x7f0a025d
+    const v5, 0x7f0a025e
 
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5624,7 +5581,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v6, 0x7f0a027f
+    const v6, 0x7f0a0280
 
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -5641,7 +5598,7 @@
     :goto_3
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->settingsItemContainerView:Landroid/view/View;
 
-    const v2, 0x7f0a02c0
+    const v2, 0x7f0a02c1
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5653,13 +5610,13 @@
 
     move-result-object v5
 
-    const v6, 0x7f0402f9
+    const v6, 0x7f0402fa
 
     invoke-virtual {p0, v6, v4}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->obtainStyledDimensionPixels(II)I
 
     move-result v6
 
-    const v7, 0x7f0402fa
+    const v7, 0x7f0402fb
 
     invoke-virtual {p0, v7, v4}, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->obtainStyledDimensionPixels(II)I
 
@@ -5678,7 +5635,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     :cond_6
-    const v2, 0x7f0a01ae
+    const v2, 0x7f0a01af
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5688,7 +5645,7 @@
 
     if-eqz v2, :cond_7
 
-    const v5, 0x7f08039d
+    const v5, 0x7f080392
 
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -5714,7 +5671,7 @@
     :goto_4
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->moreIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a01af
+    const v2, 0x7f0a01b0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5722,7 +5679,7 @@
 
     iput-object v2, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->moreIconContainer:Landroid/view/View;
 
-    const v2, 0x7f0a025c
+    const v2, 0x7f0a025d
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5774,7 +5731,7 @@
 
     iput-object v1, p0, Lcom/oneplus/camera/ui/actionpanel/OOS11PrimaryActionPanelImpl;->firstLevelSettingsIconContainer:Landroid/view/View;
 
-    const v1, 0x7f0a020a
+    const v1, 0x7f0a020b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -6431,7 +6388,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f040304
+    const v2, 0x7f040305
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 
@@ -6449,7 +6406,7 @@
 
     check-cast v0, Lcom/oneplus/base/BaseActivity;
 
-    const v2, 0x7f040302
+    const v2, 0x7f040303
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/base/BaseActivity;->obtainStyledDimensionPixel(II)I
 

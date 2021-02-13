@@ -67,6 +67,12 @@
     <string name="filter_landscape">Maastik</string>
     <string name="filter_mono">Mustvalge</string>
     <string name="filter_night">Öö</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">Puudub</string>
     <string name="filter_pop">Ergas</string>
     <string name="filter_portrait">Portree</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">Tekstisisend puudub; nime ei saa vesimärgile salvestada.</string>
     <string name="settings_watermark_summary">Vesimärk rakendatakse tagakaameraga, sh foto-, rõhtpaigutus-, profi- ja öömaastikurežiimis tehtud fotodele</string>
     <string name="settings_watermark_summary_8250">Vesimärk rakendatakse tagakaameraga, sh foto-, rõhtpaigutus-, profi- ja öömaastikurežiimis tehtud fotodele</string>
+    <string name="settings_watermark_timestamp">Kellaaeg</string>
     <string name="settings_watermark_title">Vesimärk Shot on OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">Ülilaia objektiivi korrektsioon</string>
     <string name="show_kill_apps_processing_dialog">Kustutamine</string>

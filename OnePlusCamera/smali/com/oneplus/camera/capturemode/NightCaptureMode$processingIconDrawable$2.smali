@@ -72,7 +72,7 @@
 
     iget-object p0, p0, Lcom/oneplus/camera/capturemode/NightCaptureMode$processingIconDrawable$2;->this$0:Lcom/oneplus/camera/capturemode/NightCaptureMode;
 
-    const v0, 0x7f0804b5
+    const v0, 0x7f0804aa
 
     invoke-static {p0, v0}, Lcom/oneplus/camera/capturemode/NightCaptureMode;->access$getDrawable(Lcom/oneplus/camera/capturemode/NightCaptureMode;I)Landroid/graphics/drawable/Drawable;
 

@@ -1,46 +1,23 @@
-.class public Las;
+.class public interface abstract Las;
 .super Ljava/lang/Object;
 .source "PG"
 
-# interfaces
-.implements Lds;
 
-
-# instance fields
-.field public final a:Lby;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    invoke-static {}, Lbp;->a()Lbp;
-
-    return-void
+# virtual methods
+.method public abstract a()V
 .end method
 
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract b()I
 .end method
 
-.method public constructor <init>(Lby;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "defaultInstance"
-        }
-    .end annotation
+.method public abstract b([BLk;)V
+.end method
 
-    invoke-direct {p0}, Las;-><init>()V
+.method public abstract c()Z
+.end method
 
-    iput-object p1, p0, Las;->a:Lby;
+.method public abstract d()Z
+.end method
 
-    return-void
+.method public abstract e()I
 .end method

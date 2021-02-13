@@ -96,6 +96,12 @@
     <string name="filter_landscape">נוף</string>
     <string name="filter_mono">מונו</string>
     <string name="filter_night">לילה</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">ללא</string>
     <string name="filter_pop">חד</string>
     <string name="filter_portrait">דיוקן</string>
@@ -256,6 +262,7 @@
     <string name="settings_watermark_name_empty_dialog">לא נקלט טקסט, לא ניתן לשמור שם בסימן המים.</string>
     <string name="settings_watermark_summary">סימן מים יתווסף לתמונות שצולמו במצלמה האחורית, כולל במצבי תמונה, דיוקן, Pro ו-Nightscape</string>
     <string name="settings_watermark_summary_8250">סימן מים יתווסף לתמונות שצולמו במצלמה האחורית, כולל במצבי תמונה, דיוקן, Pro ו-Nightscape</string>
+    <string name="settings_watermark_timestamp">זמן</string>
     <string name="settings_watermark_title">צולם על גבי סימן מים של OnePlus</string>
     <string name="settings_wide_lens_distortion_correction">תיקון עדשה רחב במיוחד</string>
     <string name="show_kill_apps_processing_dialog">מחיקה</string>

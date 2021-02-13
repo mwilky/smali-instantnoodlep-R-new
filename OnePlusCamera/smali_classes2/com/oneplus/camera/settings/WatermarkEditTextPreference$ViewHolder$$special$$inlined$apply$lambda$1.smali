@@ -91,7 +91,7 @@
 
     iget-object p2, p2, Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder;->this$0:Lcom/oneplus/camera/settings/WatermarkEditTextPreference;
 
-    invoke-static {p2, p1}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->access$setBrandText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/oneplus/camera/settings/WatermarkEditTextPreference;->access$setCustomNameText$p(Lcom/oneplus/camera/settings/WatermarkEditTextPreference;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder$$special$$inlined$apply$lambda$1;->this$0:Lcom/oneplus/camera/settings/WatermarkEditTextPreference$ViewHolder;
 

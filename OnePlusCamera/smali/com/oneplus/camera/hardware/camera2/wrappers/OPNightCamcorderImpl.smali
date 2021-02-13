@@ -16,7 +16,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nOPNightCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNightCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Timing.kt\nkotlin/system/TimingKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,371:1\n183#2:372\n183#2:373\n183#2:374\n183#2:375\n183#2:376\n13#3,3:377\n396#4:380\n396#4:381\n396#4:382\n874#5:383\n874#5:384\n902#5:385\n902#5:386\n*E\n*S KotlinDebug\n*F\n+ 1 OPNightCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl\n*L\n100#1:372\n102#1:373\n107#1:374\n140#1:375\n142#1:376\n145#1,3:377\n33#1:380\n34#1:381\n35#1:382\n43#1:383\n44#1:384\n45#1:385\n46#1:386\n*E\n"
+    value = "SMAP\nOPNightCamcorderImpl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OPNightCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl\n+ 2 CaptureRequestBuilder.kt\ncom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder\n+ 3 Timing.kt\nkotlin/system/TimingKt\n+ 4 Camera.kt\ncom/oneplus/camera/next/hardware/Camera$ExtraKey$Companion\n+ 5 Camera2.kt\ncom/oneplus/camera/next/hardware/camera2/Camera2Kt\n*L\n1#1,383:1\n183#2:384\n183#2:385\n183#2:386\n183#2:387\n183#2:388\n13#3,3:389\n396#4:392\n396#4:393\n396#4:394\n874#5:395\n874#5:396\n902#5:397\n902#5:398\n*E\n*S KotlinDebug\n*F\n+ 1 OPNightCamcorderImpl.kt\ncom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl\n*L\n100#1:384\n102#1:385\n107#1:386\n144#1:387\n146#1:388\n149#1,3:389\n33#1:392\n34#1:393\n35#1:394\n43#1:395\n44#1:396\n45#1:397\n46#1:398\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -26,7 +26,7 @@
         0x3
     }
     d1 = {
-        "\u0000\u00ca\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 Y2\u00020\u00012\u00020\u00022\u00020\u0003:\u0002XYB\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0010\u0010#\u001a\u00020$2\u0006\u0010\t\u001a\u00020\nH\u0003J \u0010%\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020\u001aH\u0017J.\u0010,\u001a\u00020&2\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010-\u001a\u00020.2\u0006\u0010/\u001a\u0002002\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u00020302H\u0017J \u00104\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u0002052\u0006\u0010\t\u001a\u00020\nH\u0017J8\u00106\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u0008\u00107\u001a\u0004\u0018\u0001082\u000c\u00109\u001a\u0008\u0012\u0004\u0012\u00020;0:2\u0006\u0010<\u001a\u00020\nH\u0017J(\u0010=\u001a\u00020$2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u0002052\u0006\u0010>\u001a\u00020?2\u0006\u0010@\u001a\u00020AH\u0017J \u0010B\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u0006\u0010\t\u001a\u00020\nH\u0017J \u0010C\u001a\u00020&2\u0006\u0010D\u001a\u00020\u00082\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001aH\u0017J \u0010E\u001a\u00020&2\u0006\u0010D\u001a\u00020\u00082\u0006\u0010F\u001a\u00020G2\u0006\u0010H\u001a\u00020\u000fH\u0015J\u0018\u0010I\u001a\u00020$2\u0006\u0010J\u001a\u00020K2\u0006\u0010L\u001a\u00020KH\u0017J\u0010\u0010M\u001a\u00020$2\u0006\u0010+\u001a\u00020\u001aH\u0017J&\u0010N\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u000c\u0010O\u001a\u0008\u0012\u0004\u0012\u00020Q0PH\u0017J*\u0010R\u001a\u00020\u000f\"\u0004\u0008\u0000\u0010S2\u000c\u0010T\u001a\u0008\u0012\u0004\u0012\u0002HS0U2\u0006\u0010V\u001a\u0002HSH\u0097\u0002\u00a2\u0006\u0002\u0010WR\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u000e\u001a\u00020\u000f8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0010\u0010\u0011\u001a\u0004\u0008\u000e\u0010\u0012R\u001d\u0010\u0013\u001a\u0004\u0018\u00010\u00148BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010\u0018\u001a\u0004\u0008\u0015\u0010\u0016R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001b\u001a\u00020\u000f8TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001c\u0010\u0011\u001a\u0004\u0008\u001d\u0010\u0012R\u001d\u0010\u001e\u001a\u0004\u0018\u00010\u001f8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\"\u0010\u0018\u001a\u0004\u0008 \u0010!\u00a8\u0006Z"
+        "\u0000\u00dc\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 `2\u00020\u00012\u00020\u00022\u00020\u0003:\u0002_`B\u000f\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0010\u0010#\u001a\u00020$2\u0006\u0010\t\u001a\u00020\nH\u0003J \u0010%\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020\u001aH\u0017J.\u0010,\u001a\u00020&2\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010-\u001a\u00020.2\u0006\u0010/\u001a\u0002002\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u00020302H\u0017J \u00104\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u0002052\u0006\u0010\t\u001a\u00020\nH\u0017J8\u00106\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u0008\u00107\u001a\u0004\u0018\u0001082\u000c\u00109\u001a\u0008\u0012\u0004\u0012\u00020;0:2\u0006\u0010<\u001a\u00020\nH\u0017J(\u0010=\u001a\u00020$2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u0002052\u0006\u0010>\u001a\u00020?2\u0006\u0010@\u001a\u00020AH\u0017J \u0010B\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u0006\u0010\t\u001a\u00020\nH\u0017J \u0010C\u001a\u00020&2\u0006\u0010D\u001a\u00020\u00082\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001aH\u0017J \u0010E\u001a\u00020&2\u0006\u0010D\u001a\u00020\u00082\u0006\u0010F\u001a\u00020G2\u0006\u0010H\u001a\u00020\u000fH\u0015J\u0018\u0010I\u001a\u00020$2\u0006\u0010J\u001a\u00020K2\u0006\u0010L\u001a\u00020KH\u0017J\u0010\u0010M\u001a\u00020$2\u0006\u0010+\u001a\u00020\u001aH\u0017J&\u0010N\u001a\u00020&2\u0006\u0010\'\u001a\u00020(2\u0006\u0010+\u001a\u00020\u001a2\u000c\u0010O\u001a\u0008\u0012\u0004\u0012\u00020Q0PH\u0017J\"\u0010R\u001a\u0004\u0018\u00010S2\u0006\u0010T\u001a\u00020U2\u0006\u0010V\u001a\u00020W2\u0006\u0010X\u001a\u00020WH\u0015J*\u0010Y\u001a\u00020\u000f\"\u0004\u0008\u0000\u0010Z2\u000c\u0010[\u001a\u0008\u0012\u0004\u0012\u0002HZ0\\2\u0006\u0010]\u001a\u0002HZH\u0097\u0002\u00a2\u0006\u0002\u0010^R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001c\u0010\u000e\u001a\u00020\u000f8\u0016X\u0097\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0010\u0010\u0011\u001a\u0004\u0008\u000e\u0010\u0012R\u001d\u0010\u0013\u001a\u0004\u0018\u00010\u00148BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010\u0018\u001a\u0004\u0008\u0015\u0010\u0016R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u001b\u001a\u00020\u000f8TX\u0095\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u001c\u0010\u0011\u001a\u0004\u0008\u001d\u0010\u0012R\u001d\u0010\u001e\u001a\u0004\u0018\u00010\u001f8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\"\u0010\u0018\u001a\u0004\u0008 \u0010!\u00a8\u0006a"
     }
     d2 = {
         "Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;",
@@ -111,6 +111,13 @@
         "sessionTypeRef",
         "Lcom/oneplus/base/Ref;",
         "",
+        "onSelectProfile",
+        "Lcom/oneplus/camera/next/hardware/Camcorder$Profile;",
+        "videoSize",
+        "Landroid/util/Size;",
+        "captureRate",
+        "",
+        "frameRate",
         "set",
         "TValue",
         "key",
@@ -918,14 +925,27 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "captureSession"
+    const-string v0, "captureSession"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "params"
+    const-string v0, "params"
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
+    invoke-super {p0, p1, p2, p3}, Lcom/oneplus/camera/next/hardware/camera2/camcorder/CamcorderImpl;->onClosingCaptureSession(Landroid/hardware/camera2/CameraDevice;Landroid/hardware/camera2/CameraCaptureSession;Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;)Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    move-result-object p1
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    if-ne p1, v0, :cond_0
+
+    sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->FAILED:Lcom/oneplus/camera/next/hardware/OperationResult;
+
+    return-object p0
+
+    :cond_0
     move-object p1, p0
 
     check-cast p1, Lcom/oneplus/camera/next/hardware/Camcorder;
@@ -934,13 +954,13 @@
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->NONE:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     return-object p0
 
-    :cond_0
+    :cond_1
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
     move-result-object p1
@@ -967,7 +987,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_9
 
     sget-object p1, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->FEATURE_STOP_REPEATING_WHEN_CLOSING_CAPTURE_SESSION_DELAY:Lcom/oneplus/util/Feature;
 
@@ -979,7 +999,7 @@
 
     cmp-long p1, v5, v3
 
-    if-lez p1, :cond_1
+    if-lez p1, :cond_2
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -1001,7 +1021,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->TAG:Ljava/lang/String;
 
@@ -1027,10 +1047,10 @@
 
     invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
 
-    :cond_1
+    :cond_2
     iget-object p1, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->captureRequestBuilder:Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_8
 
     invoke-virtual {p0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->getCore()Lcom/oneplus/camera/next/hardware/CameraCore;
 
@@ -1048,12 +1068,12 @@
 
     move-result-object v3
 
-    :cond_2
+    :cond_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1067,7 +1087,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_4
 
     invoke-virtual {v5}, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;->getFormat()I
 
@@ -1075,27 +1095,27 @@
 
     const/16 v6, 0x22
 
-    if-ne v5, v6, :cond_3
+    if-ne v5, v6, :cond_4
 
     move v5, v0
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     const/4 v5, 0x0
 
     :goto_0
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_3
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     move-object v4, v2
 
     :goto_1
     check-cast v4, Lcom/oneplus/camera/next/hardware/camera2/OutputStreamInfo;
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {p1}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->getStreams()Ljava/util/List;
 
@@ -1129,7 +1149,7 @@
 
     move-result v3
 
-    if-gtz v3, :cond_5
+    if-gtz v3, :cond_6
 
     sget-object v3, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->KEY_STOP_RECORDING:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -1141,7 +1161,7 @@
 
     invoke-virtual {p1, v3, v5, v4}, Lcom/oneplus/camera/next/hardware/camera2/CaptureRequestBuilder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Class;Ljava/lang/Object;)Lkotlin/Unit;
 
-    :cond_5
+    :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -1198,7 +1218,7 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->TAG:Ljava/lang/String;
@@ -1211,7 +1231,7 @@
 
     return-object p0
 
-    :cond_7
+    :cond_8
     check-cast p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;
 
     iget-object p0, p0, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->TAG:Ljava/lang/String;
@@ -1224,7 +1244,7 @@
 
     return-object p0
 
-    :cond_8
+    :cond_9
     :goto_2
     invoke-static {p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->stopRepeatingSafely(Landroid/hardware/camera2/CameraCaptureSession;)V
 
@@ -1242,7 +1262,7 @@
 
     move-result p0
 
-    if-gez p0, :cond_9
+    if-gez p0, :cond_a
 
     invoke-virtual {p3}, Lcom/oneplus/camera/next/hardware/Camera$PreviewParams;->getExtras()Lcom/oneplus/camera/next/hardware/Camera$Extras;
 
@@ -1264,11 +1284,11 @@
 
     move-result p0
 
-    if-eqz p0, :cond_9
+    if-eqz p0, :cond_a
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     invoke-static {p2}, Lcom/oneplus/camera/next/hardware/camera2/Camera2Kt;->abortCapturesSafely(Landroid/hardware/camera2/CameraCaptureSession;)V
 
     :goto_3
@@ -1967,6 +1987,50 @@
     sget-object p0, Lcom/oneplus/camera/next/hardware/OperationResult;->SUCCEEDED:Lcom/oneplus/camera/next/hardware/OperationResult;
 
     :goto_2
+    return-object p0
+.end method
+
+.method protected onSelectProfile(Landroid/util/Size;DD)Lcom/oneplus/camera/next/hardware/Camcorder$Profile;
+    .locals 8
+    .annotation runtime Lcom/oneplus/base/AccessOnDependencyThread;
+    .end annotation
+
+    const-string/jumbo v0, "videoSize"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v1, Lcom/oneplus/camera/next/hardware/Camcorder$Profile;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Profile$Companion;
+
+    sget-object v0, Lcom/oneplus/camera/next/hardware/Camcorder;->Companion:Lcom/oneplus/camera/next/hardware/Camcorder$Companion;
+
+    invoke-virtual {v0}, Lcom/oneplus/camera/next/hardware/Camcorder$Companion;->getPROP_VIDEO_ENCODER()Lcom/oneplus/base/PropertyKey;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/camera/hardware/camera2/wrappers/OPNightCamcorderImpl;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v0, "this[Camcorder.PROP_VIDEO_ENCODER]"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Ljava/lang/Number;
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result v7
+
+    move-object v2, p1
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    invoke-virtual/range {v1 .. v7}, Lcom/oneplus/camera/next/hardware/Camcorder$Profile$Companion;->getDefaultProfile(Landroid/util/Size;DDI)Lcom/oneplus/camera/next/hardware/Camcorder$Profile;
+
+    move-result-object p0
+
     return-object p0
 .end method
 

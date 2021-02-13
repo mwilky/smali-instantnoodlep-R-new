@@ -1812,7 +1812,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    const-string/jumbo v2, "try\n\t\t\t\t\t{\n\t\t\t\t\t\tLog.v(T\u2026d\")\n\t\t\t\t\t\tcontinue\n\t\t\t\t\t}"
+    const-string v2, "try\n\t\t\t\t\t{\n\t\t\t\t\t\tLog.v(T\u2026d\")\n\t\t\t\t\t\tcontinue\n\t\t\t\t\t}"
 
     invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

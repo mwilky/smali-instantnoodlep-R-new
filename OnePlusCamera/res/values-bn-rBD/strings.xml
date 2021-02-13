@@ -11,7 +11,7 @@
     <string name="agree">সম্মত হন</string>
     <string name="app_name">ক্যামেরা</string>
     <string name="app_name_video">ক্যামকর্ডার</string>
-    <string name="auto">স্বতঃ</string>
+    <string name="auto">অটো</string>
     <string name="bokeh_hint">ডেপথের প্রভাব</string>
     <string name="bokeh_hint_camera_is_covered">ক্যামেরা বাধাপ্রাপ্ত</string>
     <string name="bokeh_hint_low_light">আরো বেশী আলো প্রয়োজন</string>
@@ -67,6 +67,12 @@
     <string name="filter_landscape">ল্যান্ডস্কেপ</string>
     <string name="filter_mono">মনো</string>
     <string name="filter_night">রাত</string>
+    <string name="filter_night_black_gold">"Classic
+Black &amp; Gold"</string>
+    <string name="filter_night_cyberpunk">"Scenic
+Pink &amp; Teal"</string>
+    <string name="filter_night_teal_orange">"Graceful
+Warm &amp; Cool"</string>
     <string name="filter_none">কোনোটিই নয়</string>
     <string name="filter_pop">প্রাণবন্ত</string>
     <string name="filter_portrait">পোট্রেট</string>
@@ -97,7 +103,7 @@
     <string name="macro_enabled">সুপার ম্যাক্রো</string>
     <string name="macro_flash_disabled">ম্যাক্রো মোডে ফ্ল্যাশ বন্ধ আছে</string>
     <string name="macro_hint">শুট করার সুপারিশকৃত দূরত্ব হল 1-1.5 ইঞ্চি</string>
-    <string name="manual_capture_control_auto">স্বতঃ</string>
+    <string name="manual_capture_control_auto">অটো</string>
     <string name="manual_capture_control_manual">ম্যানুয়াল</string>
     <string name="manual_capture_long_exposure_tips">ক্যাপচার করা</string>
     <string name="manual_mode_custom_setting_saved">সেভ করা হয়েছে</string>
@@ -224,6 +230,7 @@
     <string name="settings_watermark_name_empty_dialog">কোনো টেক্সট ইনপুট নেই; ওয়াটারমার্কে নাম সংরক্ষণ করা যাচ্ছে না।</string>
     <string name="settings_watermark_summary">পিছনের ক্যামেরায় তোলা সব ছবিতে, এমনকি পোর্টেইট, প্রো এবং নাইটস্কেপ মোডে তোলা ছবিতেও একটি ওয়াটারমার্ক প্রযুক্ত হবে</string>
     <string name="settings_watermark_summary_8250">পিছনের ক্যামেরায় তোলা সব ছবিতে, এমনকি পোর্টেইট, প্রো এবং নাইটস্কেপ মোডে তোলা ছবিতেও একটি ওয়াটারমার্ক প্রযুক্ত হবে</string>
+    <string name="settings_watermark_timestamp">সময়</string>
     <string name="settings_watermark_title">shot on OnePlus ওয়াটারমার্ক</string>
     <string name="settings_wide_lens_distortion_correction">আল্ট্রা ওয়াইড লেন্স সংশোধন</string>
     <string name="show_kill_apps_processing_dialog">পরিষ্কার হচ্ছে</string>

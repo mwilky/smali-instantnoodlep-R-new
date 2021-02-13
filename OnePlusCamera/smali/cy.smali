@@ -1,772 +1,375 @@
-.class final Lcy;
-.super Lar;
+.class public abstract Lcy;
+.super Ljava/lang/Object;
 .source "PG"
-
-# interfaces
-.implements Lck;
-.implements Ldr;
-.implements Ljava/util/RandomAccess;
 
 
 # static fields
-.field private static final b:Lcy;
+.field private static final a:Ljava/util/logging/Logger;
 
-
-# instance fields
-.field private c:[J
-
-.field private d:I
+.field private static final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lcy;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [J
-
-    invoke-direct {v0, v2, v1}, Lcy;-><init>([JI)V
-
-    sput-object v0, Lcy;->b:Lcy;
-
-    iput-boolean v1, v0, Lar;->a:Z
-
-    return-void
-.end method
-
-.method constructor <init>()V
-    .locals 2
-
-    const/16 v0, 0xa
-
-    new-array v0, v0, [J
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcy;-><init>([JI)V
-
-    return-void
-.end method
-
-.method private constructor <init>([JI)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "other",
-            "size"
-        }
-    .end annotation
-
-    invoke-direct {p0}, Lar;-><init>()V
-
-    iput-object p1, p0, Lcy;->c:[J
-
-    iput p2, p0, Lcy;->d:I
-
-    return-void
-.end method
-
-.method private final a(IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "index",
-            "element"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    if-ltz p1, :cond_1
-
-    iget v0, p0, Lcy;->d:I
-
-    if-gt p1, v0, :cond_1
-
-    iget-object v1, p0, Lcy;->c:[J
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_0
-
-    add-int/lit8 v2, p1, 0x1
-
-    sub-int/2addr v0, p1
-
-    invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_0
-
-    :cond_0
-    mul-int/lit8 v0, v0, 0x3
-
-    div-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, 0x1
-
-    new-array v0, v0, [J
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v1, p0, Lcy;->c:[J
-
-    add-int/lit8 v2, p1, 0x1
-
-    iget v3, p0, Lcy;->d:I
-
-    sub-int/2addr v3, p1
-
-    invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iput-object v0, p0, Lcy;->c:[J
-
-    :goto_0
-    iget-object v0, p0, Lcy;->c:[J
-
-    aput-wide p2, v0, p1
-
-    iget p1, p0, Lcy;->d:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lcy;->d:I
-
-    iget p1, p0, Lcy;->modCount:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lcy;->modCount:I
-
-    return-void
-
-    :cond_1
-    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p0, p1}, Lcy;->d(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p2, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method private final c(I)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
 
-    if-ltz p1, :cond_0
+    const-class v0, Lcn;
 
-    iget v0, p0, Lcy;->d:I
-
-    if-ge p1, v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p0, p1}, Lcy;->d(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method private final d(I)Ljava/lang/String;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    iget p0, p0, Lcy;->d:I
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x23
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Index:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", Size:"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final synthetic a(I)Lcj;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "capacity"
-        }
-    .end annotation
-
-    iget v0, p0, Lcy;->d:I
-
-    if-lt p1, v0, :cond_0
-
-    new-instance v0, Lcy;
-
-    iget-object v1, p0, Lcy;->c:[J
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object p1
-
-    iget p0, p0, Lcy;->d:I
-
-    invoke-direct {v0, p1, p0}, Lcy;-><init>([JI)V
-
-    return-object v0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final a(J)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "element"
-        }
-    .end annotation
-
-    iget v0, p0, Lcy;->d:I
-
-    invoke-direct {p0, v0, p1, p2}, Lcy;->a(IJ)V
-
-    return-void
-.end method
-
-.method public final synthetic add(ILjava/lang/Object;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000
-        }
-        names = {
-            "index",
-            "element"
-        }
-    .end annotation
-
-    check-cast p2, Ljava/lang/Long;
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-direct {p0, p1, v0, v1}, Lcy;->a(IJ)V
-
-    return-void
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "collection"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    invoke-static {p1}, Lcc;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    instance-of v0, p1, Lcy;
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0, p1}, Lar;->addAll(Ljava/util/Collection;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    check-cast p1, Lcy;
-
-    iget v0, p1, Lcy;->d:I
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    const v2, 0x7fffffff
-
-    iget v3, p0, Lcy;->d:I
-
-    sub-int/2addr v2, v3
-
-    if-lt v2, v0, :cond_3
-
-    add-int/2addr v3, v0
-
-    iget-object v0, p0, Lcy;->c:[J
-
-    array-length v2, v0
-
-    if-le v3, v2, :cond_2
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([JI)[J
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcy;->c:[J
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    :cond_2
-    iget-object v0, p1, Lcy;->c:[J
+    move-result-object v0
 
-    iget-object v2, p0, Lcy;->c:[J
+    sput-object v0, Lcy;->a:Ljava/util/logging/Logger;
 
-    iget v4, p0, Lcy;->d:I
+    const-string v0, "bz"
 
-    iget p1, p1, Lcy;->d:I
+    sput-object v0, Lcy;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iput v3, p0, Lcy;->d:I
-
-    iget p1, p0, Lcy;->modCount:I
-
-    const/4 v0, 0x1
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lcy;->modCount:I
-
-    return v0
-
-    :cond_3
-    new-instance p0, Ljava/lang/OutOfMemoryError;
-
-    invoke-direct {p0}, Ljava/lang/OutOfMemoryError;-><init>()V
-
-    throw p0
+    return-void
 .end method
 
-.method public final b(I)J
+.method public constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "index"
-        }
-    .end annotation
 
-    invoke-direct {p0, p1}, Lcy;->c(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p0, p0, Lcy;->c:[J
-
-    aget-wide p0, p0, p1
-
-    return-wide p0
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
+.method public static a(Ljava/lang/Class;)Lcs;
+    .locals 11
 
-    const/4 v0, 0x1
+    const-class v0, Lcy;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    instance-of v1, p1, Lcy;
+    const-class v2, Lcs;
 
-    if-nez v1, :cond_1
-
-    invoke-super {p0, p1}, Lar;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    check-cast p1, Lcy;
-
-    iget v1, p0, Lcy;->d:I
-
-    iget v2, p1, Lcy;->d:I
-
-    const/4 v3, 0x0
-
-    if-eq v1, v2, :cond_2
-
-    return v3
-
-    :cond_2
-    iget-object p1, p1, Lcy;->c:[J
-
-    move v1, v3
-
-    :goto_0
-    iget v2, p0, Lcy;->d:I
-
-    if-ge v1, v2, :cond_4
-
-    iget-object v2, p0, Lcy;->c:[J
-
-    aget-wide v4, v2, v1
-
-    aget-wide v6, p1, v1
-
-    cmp-long v2, v4, v6
-
-    if-eqz v2, :cond_3
-
-    return v3
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v0
-.end method
-
-.method public final synthetic get(I)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    invoke-virtual {p0, p1}, Lcy;->b(I)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    iget v2, p0, Lcy;->d:I
-
-    if-ge v1, v2, :cond_0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lcy;->c:[J
-
-    aget-wide v2, v2, v1
-
-    invoke-static {v2, v3}, Lcc;->a(J)I
+    invoke-virtual {p0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    add-int/2addr v0, v2
+    const/4 v3, 0x1
 
-    add-int/lit8 v1, v1, 0x1
+    const/4 v4, 0x0
 
-    goto :goto_0
+    if-nez v2, :cond_1
 
-    :cond_0
-    return v0
-.end method
-
-.method public final synthetic remove(I)Ljava/lang/Object;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    invoke-direct {p0, p1}, Lcy;->c(I)V
-
-    iget-object v0, p0, Lcy;->c:[J
-
-    aget-wide v1, v0, p1
-
-    iget v3, p0, Lcy;->d:I
-
-    add-int/lit8 v4, v3, -0x1
-
-    if-ge p1, v4, :cond_0
-
-    add-int/lit8 v4, p1, 0x1
-
-    sub-int/2addr v3, p1
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-static {v0, v4, v0, p1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_0
-    iget p1, p0, Lcy;->d:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lcy;->d:I
-
-    iget p1, p0, Lcy;->modCount:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lcy;->modCount:I
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget v2, p0, Lcy;->d:I
-
-    if-ge v1, v2, :cond_1
-
-    iget-object v2, p0, Lcy;->c:[J
-
-    aget-wide v2, v2, v1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    iget-object p1, p0, Lcy;->c:[J
+    const/4 v2, 0x2
 
-    add-int/lit8 v0, v1, 0x1
+    new-array v2, v2, [Ljava/lang/Object;
 
-    iget v2, p0, Lcy;->d:I
+    invoke-virtual {p0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
-    sub-int/2addr v2, v1
+    move-result-object v5
 
-    const/4 v3, 0x1
+    invoke-virtual {v5}, Ljava/lang/Package;->getName()Ljava/lang/String;
 
-    sub-int/2addr v2, v3
+    move-result-object v5
 
-    invoke-static {p1, v0, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    aput-object v5, v2, v4
 
-    iget p1, p0, Lcy;->d:I
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    sub-int/2addr p1, v3
+    move-result-object v5
 
-    iput p1, p0, Lcy;->d:I
+    aput-object v5, v2, v3
 
-    iget p1, p0, Lcy;->modCount:I
+    const-string v5, "%s.BlazeGenerated%sLoader"
 
-    add-int/2addr p1, v3
+    invoke-static {v5, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    iput p1, p0, Lcy;->modCount:I
-
-    return v3
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v2
 
     goto :goto_0
 
-    :cond_1
-    return v0
-.end method
-
-.method protected final removeRange(II)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "fromIndex",
-            "toIndex"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    if-lt p2, p1, :cond_0
-
-    iget-object v0, p0, Lcy;->c:[J
-
-    iget v1, p0, Lcy;->d:I
-
-    sub-int/2addr v1, p2
-
-    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v0, p0, Lcy;->d:I
-
-    sub-int/2addr p2, p1
-
-    sub-int/2addr v0, p2
-
-    iput v0, p0, Lcy;->d:I
-
-    iget p1, p0, Lcy;->modCount:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lcy;->modCount:I
-
-    return-void
-
     :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo p1, "toIndex < fromIndex"
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000
-        }
-        names = {
-            "index",
-            "element"
-        }
-    .end annotation
-
-    check-cast p2, Ljava/lang/Long;
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0}, Lar;->c()V
-
-    invoke-direct {p0, p1}, Lcy;->c(I)V
-
-    iget-object p0, p0, Lcy;->c:[J
-
-    aget-wide v2, p0, p1
-
-    aput-wide v0, p0, p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
 
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    sget-object v2, Lcy;->b:Ljava/lang/String;
+
+    :goto_0
+    :try_start_0
+    invoke-static {v2, v3, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
+
+    :try_start_1
+    new-array v5, v4, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v5}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    new-array v5, v4, [Ljava/lang/Object;
+
+    invoke-virtual {v2, v5}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcy;
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/InstantiationException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_4
+
+    :try_start_2
+    invoke-virtual {v2}, Lcy;->a()Lcs;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcs;
+
+    return-object v2
+
+    :catch_0
+    move-exception v2
+
+    new-instance v5, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v5, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v5
+
+    :catch_1
+    move-exception v2
+
+    new-instance v5, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v5, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v5
+
+    :catch_2
+    move-exception v2
+
+    new-instance v5, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v5, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v5
+
+    :catch_3
+    move-exception v2
+
+    new-instance v5, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v5, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v5
+    :try_end_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_4
+
+    :catch_4
+    invoke-static {v0, v1}, Ljava/util/ServiceLoader;->load(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ServiceLoader;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    :try_start_3
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcy;
+
+    invoke-virtual {v2}, Lcy;->a()Lcs;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_3
+    .catch Ljava/util/ServiceConfigurationError; {:try_start_3 .. :try_end_3} :catch_5
+
+    goto :goto_1
+
+    :catch_5
+    move-exception v2
+
+    move-object v10, v2
+
+    sget-object v5, Lcy;->a:Ljava/util/logging/Logger;
+
+    sget-object v6, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v7, "Unable to load "
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_2
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v7}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v7, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_2
+    move-object v9, v2
+
+    const-string v7, "com.google.protobuf.GeneratedExtensionRegistryLoader"
+
+    const-string v8, "load"
+
+    invoke-virtual/range {v5 .. v10}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ne v0, v3, :cond_4
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcs;
+
     return-object p0
+
+    :cond_4
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_5
+
+    :try_start_4
+    new-array v0, v3, [Ljava/lang/Class;
+
+    const-class v5, Ljava/util/Collection;
+
+    aput-object v5, v0, v4
+
+    const-string v5, "combine"
+
+    invoke-virtual {p0, v5, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object p0
+
+    new-array v0, v3, [Ljava/lang/Object;
+
+    aput-object v1, v0, v4
+
+    invoke-virtual {p0, v2, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcs;
+    :try_end_4
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_4 .. :try_end_4} :catch_8
+    .catch Ljava/lang/IllegalAccessException; {:try_start_4 .. :try_end_4} :catch_7
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_4 .. :try_end_4} :catch_6
+
+    return-object p0
+
+    :catch_6
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_7
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_8
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_5
+    return-object v2
 .end method
 
-.method public final size()I
-    .locals 0
 
-    iget p0, p0, Lcy;->d:I
-
-    return p0
+# virtual methods
+.method protected abstract a()Lcs;
 .end method
