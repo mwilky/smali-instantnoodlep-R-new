@@ -461,6 +461,18 @@
     return-void
 .end method
 
+.method public getAppUnsupportAccelerateList()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
+
+    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getAppUnsupportAccelerateList()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getAuthenticatedPackage()Ljava/lang/String;
     .locals 1
 

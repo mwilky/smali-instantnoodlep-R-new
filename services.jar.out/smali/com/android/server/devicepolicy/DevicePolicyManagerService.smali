@@ -441,7 +441,7 @@
 
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
-    const-string v3, "install_non_market_apps"
+    const-string/jumbo v3, "install_non_market_apps"
 
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -52160,7 +52160,7 @@
 
     :cond_5
     :goto_1
-    const-string v2, "install_non_market_apps"
+    const-string/jumbo v2, "install_non_market_apps"
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -52317,7 +52317,7 @@
     :cond_8
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 
-    const-string v3, "install_non_market_apps is deprecated. Please use one of the user restrictions no_install_unknown_sources or no_install_unknown_sources_globally instead."
+    const-string/jumbo v3, "install_non_market_apps is deprecated. Please use one of the user restrictions no_install_unknown_sources or no_install_unknown_sources_globally instead."
 
     invoke-direct {v2, v3}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 

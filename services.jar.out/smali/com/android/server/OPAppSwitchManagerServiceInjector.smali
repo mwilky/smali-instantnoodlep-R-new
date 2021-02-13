@@ -156,7 +156,7 @@
     return-void
 .end method
 
-.method public static registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public static registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 2
 
     sget-object v0, Lcom/android/server/OPAppSwitchManagerServiceInjector;->opAppSwitchManagerServiceHelper:Lcom/android/server/IOPAppSwitchManagerService;
@@ -176,7 +176,7 @@
     :cond_0
     sget-object v0, Lcom/android/server/OPAppSwitchManagerServiceInjector;->opAppSwitchManagerServiceHelper:Lcom/android/server/IOPAppSwitchManagerService;
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/IOPAppSwitchManagerService;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/IOPAppSwitchManagerService;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v0
 
@@ -188,7 +188,7 @@
     return v0
 .end method
 
-.method public static unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public static unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 2
 
     sget-object v0, Lcom/android/server/OPAppSwitchManagerServiceInjector;->opAppSwitchManagerServiceHelper:Lcom/android/server/IOPAppSwitchManagerService;
@@ -208,7 +208,7 @@
     :cond_0
     sget-object v0, Lcom/android/server/OPAppSwitchManagerServiceInjector;->opAppSwitchManagerServiceHelper:Lcom/android/server/IOPAppSwitchManagerService;
 
-    invoke-interface {v0, p0, p1}, Lcom/android/server/IOPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-interface {v0, p0, p1}, Lcom/android/server/IOPAppSwitchManagerService;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v0
 

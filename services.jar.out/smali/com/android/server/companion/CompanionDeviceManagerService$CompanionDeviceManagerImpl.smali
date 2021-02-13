@@ -75,7 +75,7 @@
 .end method
 
 .method private checkCallerIsSystemOr(Ljava/lang/String;I)V
-    .locals 2
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -109,19 +109,46 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
-
-    invoke-static {v0}, Lcom/android/server/companion/CompanionDeviceManagerService;->access$1100(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/internal/app/IAppOpsService;
-
-    move-result-object v0
-
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
+
+    invoke-static {v1}, Lcom/android/server/companion/CompanionDeviceManagerService;->access$1100(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/internal/app/IAppOpsService;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0, p1}, Lcom/android/internal/app/IAppOpsService;->checkPackage(ILjava/lang/String;)I
 
     move-result v1
 
-    invoke-interface {v0, v1, p1}, Lcom/android/internal/app/IAppOpsService;->checkPackage(ILjava/lang/String;)I
+    if-nez v1, :cond_2
 
     return-void
+
+    :cond_2
+    new-instance v1, Ljava/lang/SecurityException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " doesn\'t belong to uid "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 .method private checkCanCallNotificationApi(Ljava/lang/String;)V

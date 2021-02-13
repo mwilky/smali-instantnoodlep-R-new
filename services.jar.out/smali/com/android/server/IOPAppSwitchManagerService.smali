@@ -19,8 +19,8 @@
 .method public abstract init(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
 .end method
 
-.method public abstract registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public abstract registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 .end method
 
-.method public abstract unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public abstract unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 .end method

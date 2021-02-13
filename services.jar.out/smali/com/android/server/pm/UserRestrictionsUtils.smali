@@ -1612,7 +1612,7 @@
     goto/16 :goto_1
 
     :sswitch_1
-    const-string v2, "install_non_market_apps"
+    const-string/jumbo v2, "install_non_market_apps"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2231,8 +2231,6 @@
     :cond_14
     return v4
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
         -0x7d29d849 -> :sswitch_19
@@ -2747,7 +2745,7 @@
 .method private static setInstallMarketAppsRestriction(Landroid/content/ContentResolver;II)V
     .locals 1
 
-    const-string v0, "install_non_market_apps"
+    const-string/jumbo v0, "install_non_market_apps"
 
     invoke-static {p0, v0, p2, p1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 

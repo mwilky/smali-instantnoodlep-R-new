@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field protected final mCallerIdentity:Lcom/android/server/location/CallerIdentity;
+.field public final mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
 
 # direct methods

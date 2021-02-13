@@ -24614,6 +24614,25 @@
     return v1
 
     :cond_4
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->inFreeformWindowingMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getStack()Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1, v1}, Lcom/android/server/wm/ActivityStack;->getTopActivity(ZZ)Lcom/android/server/wm/ActivityRecord;
+
+    move-result-object v3
+
+    if-eq p0, v3, :cond_5
+
+    return v1
+
+    :cond_5
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getDisplay()Lcom/android/server/wm/DisplayContent;
 
     move-result-object v3
@@ -24622,58 +24641,58 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-boolean v3, p0, Lcom/android/server/wm/ActivityRecord;->mSetToSleep:Z
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->canTurnScreenOn()Z
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->canShowWhenLocked()Z
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->containsDismissKeyguardWindow()Z
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     move v3, v1
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     :goto_1
     move v3, v0
 
     :goto_2
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     return v1
 
-    :cond_7
+    :cond_8
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityStack;->getTopNonFinishingActivity()Lcom/android/server/wm/ActivityRecord;
 
     move-result-object v3
 
-    if-ne p0, v3, :cond_8
+    if-ne p0, v3, :cond_9
 
     move v3, v0
 
     goto :goto_3
 
-    :cond_8
+    :cond_9
     move v3, v1
 
     :goto_3
@@ -24681,7 +24700,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     invoke-virtual {v2}, Lcom/android/server/wm/ActivityStack;->getDisplayArea()Lcom/android/server/wm/TaskDisplayArea;
 
@@ -24691,25 +24710,25 @@
 
     move-result v4
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     move v4, v0
 
     goto :goto_4
 
-    :cond_9
+    :cond_a
     move v4, v1
 
     :goto_4
     iget-boolean v5, p0, Lcom/android/server/wm/ActivityRecord;->visibleIgnoringKeyguard:Z
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_b
 
     goto :goto_5
 
-    :cond_a
+    :cond_b
     move v0, v1
 
     :goto_5
@@ -27357,7 +27376,7 @@
 .end method
 
 .method updateLetterboxSurface(Lcom/android/server/wm/WindowState;)V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->findMainWindow()Lcom/android/server/wm/WindowState;
 
@@ -27374,25 +27393,55 @@
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/ActivityRecord;->layoutLetterbox(Lcom/android/server/wm/WindowState;)V
 
-    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
+    if-nez p1, :cond_1
 
-    if-eqz v1, :cond_1
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lcom/android/server/wm/Letterbox;->needsApplySurfaceChanges()Z
+    goto :goto_0
 
-    move-result v1
+    :cond_1
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getRootTask()Lcom/android/server/wm/ActivityStack;
 
-    if-eqz v1, :cond_1
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
+    :goto_0
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityStack;->inMultiWindowMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Lcom/android/server/wm/Letterbox;->hide()V
+
+    :cond_2
+    return-void
+
+    :cond_3
+    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Lcom/android/server/wm/Letterbox;->needsApplySurfaceChanges()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Lcom/android/server/wm/ActivityRecord;->mLetterbox:Lcom/android/server/wm/Letterbox;
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v1, v2}, Lcom/android/server/wm/Letterbox;->applySurfaceChanges(Landroid/view/SurfaceControl$Transaction;)V
+    invoke-virtual {v2, v3}, Lcom/android/server/wm/Letterbox;->applySurfaceChanges(Landroid/view/SurfaceControl$Transaction;)V
 
-    :cond_1
+    :cond_4
     return-void
 .end method
 

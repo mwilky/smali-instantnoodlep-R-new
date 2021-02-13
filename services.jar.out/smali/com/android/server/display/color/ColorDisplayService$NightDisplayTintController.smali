@@ -136,7 +136,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3400(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3600(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3400(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3600(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;
 
     move-result-object v0
 
@@ -156,7 +156,7 @@
 
     const-class v1, Lcom/android/server/twilight/TwilightManager;
 
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3500(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3700(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3202(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+    invoke-static {v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3402(Lcom/android/server/display/color/ColorDisplayService;Z)Z
 
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
@@ -194,7 +194,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$3602(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+    invoke-static {v0, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$3802(Lcom/android/server/display/color/ColorDisplayService;Z)Z
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 

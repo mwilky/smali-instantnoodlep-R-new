@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$600(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$400(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     iput-object p4, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
-    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$2600(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppForegroundHelper;
+    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$2800(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppForegroundHelper;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
     iput-object v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mStackTrace:Ljava/lang/Throwable;
 
     :cond_1
-    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$2700(Lcom/android/server/location/LocationManagerService;)Ljava/util/HashMap;
+    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$2900(Lcom/android/server/location/LocationManagerService;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$2800(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
+    invoke-static {p1}, Lcom/android/server/location/LocationManagerService;->access$3000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
 
     move-result-object v2
 
@@ -170,7 +170,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/location/LocationManagerService$UpdateRecord;Z)V
+.method static synthetic access$1100(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mIsForegroundUid:Z
+
+    return v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/location/LocationManagerService$UpdateRecord;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationManagerService$UpdateRecord;->updateForeground(Z)V
@@ -178,7 +186,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Landroid/location/LocationRequest;
+.method static synthetic access$2700(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Landroid/location/LocationRequest;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mRealRequest:Landroid/location/LocationRequest;
@@ -186,7 +194,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/location/LocationManagerService$UpdateRecord;Z)V
+.method static synthetic access$3400(Lcom/android/server/location/LocationManagerService$UpdateRecord;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationManagerService$UpdateRecord;->disposeLocked(Z)V
@@ -194,7 +202,7 @@
     return-void
 .end method
 
-.method static synthetic access$3400(Lcom/android/server/location/LocationManagerService$UpdateRecord;)J
+.method static synthetic access$3600(Lcom/android/server/location/LocationManagerService$UpdateRecord;)J
     .locals 2
 
     iget-wide v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mExpirationRealtimeMs:J
@@ -202,7 +210,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$3500(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Landroid/location/Location;
+.method static synthetic access$3700(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Landroid/location/Location;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mLastFixBroadcast:Landroid/location/Location;
@@ -210,20 +218,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$3502(Lcom/android/server/location/LocationManagerService$UpdateRecord;Landroid/location/Location;)Landroid/location/Location;
+.method static synthetic access$3702(Lcom/android/server/location/LocationManagerService$UpdateRecord;Landroid/location/Location;)Landroid/location/Location;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mLastFixBroadcast:Landroid/location/Location;
 
     return-object p1
-.end method
-
-.method static synthetic access$900(Lcom/android/server/location/LocationManagerService$UpdateRecord;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mIsForegroundUid:Z
-
-    return v0
 .end method
 
 .method private disposeLocked(Z)V
@@ -235,7 +235,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$600(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$400(Lcom/android/server/location/LocationManagerService;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
 
     iget-object v1, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2800(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
+    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$3000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
 
     move-result-object v1
 
@@ -266,7 +266,7 @@
 
     iget-object v1, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2900(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationUsageLogger;
+    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$3100(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationUsageLogger;
 
     move-result-object v2
 
@@ -294,7 +294,7 @@
 
     iget-object v1, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2600(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppForegroundHelper;
+    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2800(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/AppForegroundHelper;
 
     move-result-object v1
 
@@ -312,7 +312,7 @@
 
     iget-object v1, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2700(Lcom/android/server/location/LocationManagerService;)Ljava/util/HashMap;
+    invoke-static {v1}, Lcom/android/server/location/LocationManagerService;->access$2900(Lcom/android/server/location/LocationManagerService;)Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -352,7 +352,7 @@
 
     iget-object v4, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/location/LocationManagerService$Receiver;
 
-    invoke-static {v3, v4}, Lcom/android/server/location/LocationManagerService;->access$2200(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$Receiver;)V
+    invoke-static {v3, v4}, Lcom/android/server/location/LocationManagerService;->access$2400(Lcom/android/server/location/LocationManagerService;Lcom/android/server/location/LocationManagerService$Receiver;)V
 
     :cond_3
     return-void
@@ -375,7 +375,7 @@
 
     iget-object v0, p0, Lcom/android/server/location/LocationManagerService$UpdateRecord;->this$0:Lcom/android/server/location/LocationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$2800(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
+    invoke-static {v0}, Lcom/android/server/location/LocationManagerService;->access$3000(Lcom/android/server/location/LocationManagerService;)Lcom/android/server/location/LocationRequestStatistics;
 
     move-result-object v0
 

@@ -25,6 +25,8 @@
 # instance fields
 .field private gids:[I
 
+.field private mPermissionDefinitionChanged:Z
+
 .field final name:Ljava/lang/String;
 
 .field pendingPermissionInfo:Landroid/content/pm/PermissionInfo;
@@ -219,202 +221,208 @@
 
     move-result-object v3
 
-    const/high16 v4, 0x40000000    # 2.0f
+    const/4 v4, 0x0
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    const/4 v6, 0x1
 
     if-eqz v1, :cond_5
 
-    iget-object v5, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    iget-object v7, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-static {v5, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v7
 
-    if-nez v5, :cond_5
+    if-nez v7, :cond_5
 
-    iget-object v5, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
+    iget-object v7, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
-    if-nez v5, :cond_0
+    if-nez v7, :cond_0
 
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     goto :goto_0
 
     :cond_0
     nop
 
-    invoke-virtual {v5}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v0, v5}, Landroid/content/pm/PackageManagerInternal;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/AndroidPackage;
+    invoke-virtual {v0, v7}, Landroid/content/pm/PackageManagerInternal;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/AndroidPackage;
 
-    move-result-object v5
+    move-result-object v7
 
-    if-nez v5, :cond_1
+    if-nez v7, :cond_1
 
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
-    move v5, v6
+    move v7, v8
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {v5}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
+    invoke-interface {v7}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
 
-    move-result v6
+    move-result v8
 
-    move v5, v6
+    move v7, v8
 
     :goto_0
     invoke-interface/range {p3 .. p3}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->isSystem()Z
 
-    move-result v6
+    move-result v8
 
-    if-eqz v6, :cond_4
+    if-eqz v8, :cond_4
 
-    iget v6, v1, Lcom/android/server/pm/permission/BasePermission;->type:I
+    iget v8, v1, Lcom/android/server/pm/permission/BasePermission;->type:I
 
-    const/4 v7, 0x1
+    if-ne v8, v6, :cond_2
 
-    if-ne v6, v7, :cond_2
+    iget-object v8, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
-    iget-object v6, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
-
-    if-nez v6, :cond_2
+    if-nez v8, :cond_2
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getFlags()I
 
-    move-result v6
+    move-result v8
 
-    or-int/2addr v6, v4
+    or-int/2addr v8, v5
 
-    invoke-virtual {v2, v6}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
+    invoke-virtual {v2, v8}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
 
     iput-object v2, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
     invoke-interface/range {p3 .. p3}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
 
-    move-result v6
+    move-result v8
 
-    iput v6, v1, Lcom/android/server/pm/permission/BasePermission;->uid:I
+    iput v8, v1, Lcom/android/server/pm/permission/BasePermission;->uid:I
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v8
 
-    iput-object v6, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    iput-object v8, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
-    move-object/from16 v7, p3
+    move-object/from16 v9, p3
 
     goto :goto_1
 
     :cond_2
-    if-nez v5, :cond_3
+    if-nez v7, :cond_3
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "New decl "
+    const-string v9, "New decl "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v7, p3
+    move-object/from16 v9, p3
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v8, " of permission  "
+    const-string v10, " of permission  "
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
+    move-result-object v10
+
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " is system; overriding "
+
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v10, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v8
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v10, 0x5
 
-    const-string v8, " is system; overriding "
+    invoke-static {v10, v8}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v8, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
-
-    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v8, 0x5
-
-    invoke-static {v8, v6}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
+    const/4 v4, 0x1
 
     const/4 v1, 0x0
 
     goto :goto_1
 
     :cond_3
-    move-object/from16 v7, p3
+    move-object/from16 v9, p3
 
     goto :goto_1
 
     :cond_4
-    move-object/from16 v7, p3
+    move-object/from16 v9, p3
 
     goto :goto_1
 
     :cond_5
-    move-object/from16 v7, p3
+    move-object/from16 v9, p3
 
     :goto_1
     if-nez v1, :cond_6
 
-    new-instance v5, Lcom/android/server/pm/permission/BasePermission;
+    new-instance v7, Lcom/android/server/pm/permission/BasePermission;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v6
-
-    invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
-
     move-result-object v8
 
-    const/4 v9, 0x0
+    invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    invoke-direct {v5, v6, v8, v9}, Lcom/android/server/pm/permission/BasePermission;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    move-result-object v10
 
-    move-object v1, v5
+    const/4 v11, 0x0
+
+    invoke-direct {v7, v8, v10, v11}, Lcom/android/server/pm/permission/BasePermission;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    move-object v1, v7
 
     :cond_6
-    const/4 v5, 0x0
+    invoke-virtual {v1}, Lcom/android/server/pm/permission/BasePermission;->isRuntime()Z
 
-    iget-object v6, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
+    move-result v7
 
-    const/16 v8, 0x100
+    xor-int/2addr v7, v6
 
-    const/16 v9, 0x20
+    const/4 v8, 0x0
 
-    const-string v10, "PackageManager"
+    iget-object v10, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
-    if-nez v6, :cond_d
+    const-string v13, "PackageManager"
 
-    iget-object v6, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    if-nez v10, :cond_d
 
-    const-string v11, " from package "
+    iget-object v10, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
-    const-string v12, "Permission "
+    const-string v14, " from package "
 
-    if-eqz v6, :cond_8
+    const-string v15, "Permission "
+
+    if-eqz v10, :cond_8
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v6
 
-    invoke-virtual {v6, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v10, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -423,41 +431,41 @@
     goto :goto_2
 
     :cond_7
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v6, " ignored: original from "
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v6, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v10, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-object/from16 v13, p4
+    move-object/from16 v10, p4
 
     goto/16 :goto_7
 
@@ -467,70 +475,70 @@
 
     move-result-object v6
 
-    move-object/from16 v13, p4
+    move-object/from16 v10, p4
 
-    invoke-static {v13, v6}, Lcom/android/server/pm/permission/BasePermission;->findPermissionTree(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+    invoke-static {v10, v6}, Lcom/android/server/pm/permission/BasePermission;->findPermissionTree(Ljava/util/Collection;Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
 
     move-result-object v6
 
     if-eqz v6, :cond_a
 
-    iget-object v14, v6, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    iget-object v12, v6, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v11
 
-    invoke-virtual {v14, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v12, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v14
+    move-result v11
 
-    if-eqz v14, :cond_9
+    if-eqz v11, :cond_9
 
     goto :goto_3
 
     :cond_9
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v11
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v11
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, " ignored: base tree "
+    const-string v11, " ignored: base tree "
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v8, v6, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
+    iget-object v11, v6, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, " is from package "
+    const-string v11, " is from package "
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v8, v6, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    iget-object v11, v6, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v10, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_5
 
@@ -540,145 +548,169 @@
 
     move-result v11
 
-    or-int/2addr v4, v11
+    or-int/2addr v5, v11
 
-    invoke-virtual {v2, v4}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
+    invoke-virtual {v2, v5}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
 
     iput-object v2, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
     invoke-interface/range {p3 .. p3}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getUid()I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v1, Lcom/android/server/pm/permission/BasePermission;->uid:I
+    iput v5, v1, Lcom/android/server/pm/permission/BasePermission;->uid:I
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    iput-object v4, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
+    iput-object v5, v1, Lcom/android/server/pm/permission/BasePermission;->sourcePackageName:Ljava/lang/String;
 
     if-eqz p5, :cond_c
 
-    if-nez v5, :cond_b
+    if-nez v8, :cond_b
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v8}, Ljava/lang/StringBuilder;-><init>(I)V
+    const/16 v11, 0x100
 
-    move-object v5, v4
+    invoke-direct {v5, v11}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    move-object v8, v5
 
     goto :goto_4
 
     :cond_b
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/16 v5, 0x20
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_4
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_c
     :goto_5
     goto :goto_7
 
     :cond_d
-    move-object/from16 v13, p4
+    move-object/from16 v10, p4
 
     if-eqz p5, :cond_f
 
-    if-nez v5, :cond_e
+    if-nez v8, :cond_e
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v8}, Ljava/lang/StringBuilder;-><init>(I)V
+    const/16 v6, 0x100
 
-    move-object v5, v4
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    move-object v8, v5
 
     goto :goto_6
 
     :cond_e
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/16 v5, 0x20
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_6
-    const-string v4, "DUP:"
+    const-string v5, "DUP:"
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_f
     :goto_7
-    iget-object v4, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
+    iget-object v5, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
-    if-eqz v4, :cond_10
+    if-eqz v5, :cond_10
 
-    invoke-virtual {v4}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v5}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_10
+    if-eqz v5, :cond_10
 
-    iget-object v4, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
+    iget-object v5, v1, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
 
-    invoke-virtual {v4}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+    invoke-virtual {v5}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_10
+    if-eqz v5, :cond_10
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/pm/parsing/component/ParsedPermission;->getProtectionLevel()I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v1, Lcom/android/server/pm/permission/BasePermission;->protectionLevel:I
+    iput v5, v1, Lcom/android/server/pm/permission/BasePermission;->protectionLevel:I
 
     :cond_10
-    sget-boolean v4, Lcom/android/server/pm/PackageManagerService;->DEBUG_PACKAGE_SCANNING:Z
+    invoke-virtual {v1}, Lcom/android/server/pm/permission/BasePermission;->isRuntime()Z
 
-    if-eqz v4, :cond_11
+    move-result v5
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_12
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    if-nez v4, :cond_11
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v7, :cond_12
+
+    :cond_11
+    const/4 v5, 0x1
+
+    iput-boolean v5, v1, Lcom/android/server/pm/permission/BasePermission;->mPermissionDefinitionChanged:Z
+
+    :cond_12
+    sget-boolean v5, Lcom/android/server/pm/PackageManagerService;->DEBUG_PACKAGE_SCANNING:Z
+
+    if-eqz v5, :cond_13
+
+    if-eqz v8, :cond_13
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v6, "  Permissions: "
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v10, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_11
+    :cond_13
     return-object v1
 .end method
 
@@ -2127,6 +2159,14 @@
     return v1
 .end method
 
+.method public isPermissionDefinitionChanged()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/pm/permission/BasePermission;->mPermissionDefinitionChanged:Z
+
+    return v0
+.end method
+
 .method public isPre23()Z
     .locals 1
 
@@ -2443,6 +2483,14 @@
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/pm/permission/BasePermission;->perm:Landroid/content/pm/parsing/component/ParsedPermission;
+
+    return-void
+.end method
+
+.method public setPermissionDefinitionChanged(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/pm/permission/BasePermission;->mPermissionDefinitionChanged:Z
 
     return-void
 .end method

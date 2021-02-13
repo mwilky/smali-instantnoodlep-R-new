@@ -56,6 +56,8 @@
 
 .field public static mPerfHandle:I
 
+.field private static sEnableFeatures:Z
+
 
 # instance fields
 .field mActiveUids:Lcom/android/server/am/ActiveUids;
@@ -147,7 +149,23 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const/16 v1, 0xac
+
+    const/4 v2, 0x0
+
+    aput v1, v0, v2
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/android/server/am/OomAdjuster;->sEnableFeatures:Z
 
     new-instance v0, Landroid/util/BoostFramework;
 
@@ -167,9 +185,7 @@
 
     sput v0, Lcom/android/server/am/OomAdjuster;->mCurRenderThreadTid:I
 
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/android/server/am/OomAdjuster;->mIsTopAppRenderThreadBoostEnabled:Z
+    sput-boolean v2, Lcom/android/server/am/OomAdjuster;->mIsTopAppRenderThreadBoostEnabled:Z
 
     return-void
 .end method
@@ -9122,7 +9138,7 @@
 .end method
 
 .method private updateUidsLocked(Lcom/android/server/am/ActiveUids;J)V
-    .locals 11
+    .locals 12
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -9139,22 +9155,40 @@
 
     move-result v1
 
-    const/4 v2, 0x1
-
-    sub-int/2addr v1, v2
+    add-int/lit8 v2, v1, -0x1
 
     :goto_0
-    if-ltz v1, :cond_f
+    if-ltz v2, :cond_16
 
-    invoke-virtual {p1, v1}, Lcom/android/server/am/ActiveUids;->valueAt(I)Lcom/android/server/am/UidRecord;
+    invoke-virtual {p1}, Lcom/android/server/am/ActiveUids;->size()I
+
+    move-result v3
+
+    if-le v1, v3, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/server/am/ActiveUids;->size()I
+
+    move-result v3
+
+    sub-int v3, v1, v3
+
+    sub-int/2addr v2, v3
+
+    :cond_1
+    if-gez v2, :cond_2
+
+    goto/16 :goto_6
+
+    :cond_2
+    invoke-virtual {p1, v2}, Lcom/android/server/am/ActiveUids;->valueAt(I)Lcom/android/server/am/UidRecord;
 
     move-result-object v3
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_3
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
-    :cond_1
+    :cond_3
     const/4 v4, 0x0
 
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
@@ -9163,7 +9197,7 @@
 
     const/16 v6, 0x14
 
-    if-eq v5, v6, :cond_e
+    if-eq v5, v6, :cond_15
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
@@ -9171,24 +9205,24 @@
 
     move-result v7
 
-    if-ne v5, v7, :cond_2
+    if-ne v5, v7, :cond_4
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setCapability:I
 
     iget v7, v3, Lcom/android/server/am/UidRecord;->curCapability:I
 
-    if-ne v5, v7, :cond_2
+    if-ne v5, v7, :cond_4
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
 
     iget-boolean v7, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
 
-    if-eq v5, v7, :cond_e
+    if-eq v5, v7, :cond_15
 
-    :cond_2
+    :cond_4
     sget-boolean v5, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_UID_OBSERVERS:Z
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_5
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -9254,7 +9288,7 @@
 
     invoke-static {v7, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_5
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
     move-result v5
@@ -9265,11 +9299,11 @@
 
     const/4 v7, 0x0
 
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_8
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
 
-    if-nez v5, :cond_6
+    if-nez v5, :cond_8
 
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
@@ -9277,13 +9311,13 @@
 
     move-result v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_6
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_7
 
-    :cond_4
+    :cond_6
     iput-wide p2, v3, Lcom/android/server/am/UidRecord;->lastBackgroundTime:J
 
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -9296,7 +9330,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_7
 
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -9308,14 +9342,14 @@
 
     invoke-virtual {v5, v8, v9, v10}, Lcom/android/server/am/ActivityManagerService$MainHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    :cond_5
+    :cond_7
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_a
 
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->setIdle:Z
 
-    if-nez v5, :cond_8
+    if-nez v5, :cond_a
 
     const/4 v4, 0x2
 
@@ -9323,10 +9357,10 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_8
     iget-boolean v5, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_9
 
     const/4 v4, 0x4
 
@@ -9336,113 +9370,240 @@
 
     iput-boolean v7, v3, Lcom/android/server/am/UidRecord;->idle:Z
 
-    :cond_7
+    :cond_9
     const-wide/16 v8, 0x0
 
     iput-wide v8, v3, Lcom/android/server/am/UidRecord;->lastBackgroundTime:J
 
-    :cond_8
+    :cond_a
     :goto_1
     iget v5, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
     const/16 v8, 0xb
 
-    if-le v5, v8, :cond_9
+    const/4 v9, 0x1
 
-    move v5, v2
+    if-le v5, v8, :cond_b
+
+    move v5, v9
 
     goto :goto_2
 
-    :cond_9
+    :cond_b
     move v5, v7
 
     :goto_2
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
-    move-result v9
+    move-result v10
 
-    if-le v9, v8, :cond_a
+    if-le v10, v8, :cond_c
 
-    move v7, v2
+    move v7, v9
 
-    :cond_a
-    if-ne v5, v7, :cond_b
+    :cond_c
+    if-ne v5, v7, :cond_d
 
     iget v8, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
-    if-ne v8, v6, :cond_d
+    if-ne v8, v6, :cond_f
 
-    :cond_b
-    if-eqz v7, :cond_c
+    :cond_d
+    if-eqz v7, :cond_e
 
     const/16 v6, 0x8
 
     goto :goto_3
 
-    :cond_c
+    :cond_e
     const/16 v6, 0x10
 
     :goto_3
     or-int/2addr v4, v6
 
-    :cond_d
+    :cond_f
     invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
     move-result v6
 
-    iput v6, v3, Lcom/android/server/am/UidRecord;->setProcState:I
+    sget-boolean v8, Lcom/android/server/am/OomAdjuster;->sEnableFeatures:Z
 
-    iget v6, v3, Lcom/android/server/am/UidRecord;->curCapability:I
-
-    iput v6, v3, Lcom/android/server/am/UidRecord;->setCapability:I
-
-    iget-boolean v6, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
-
-    iput-boolean v6, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
-
-    iget-boolean v6, v3, Lcom/android/server/am/UidRecord;->idle:Z
-
-    iput-boolean v6, v3, Lcom/android/server/am/UidRecord;->setIdle:Z
-
-    iget-object v6, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v6, v6, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
+    if-eqz v8, :cond_14
 
     iget v8, v3, Lcom/android/server/am/UidRecord;->uid:I
+
+    invoke-static {v8}, Landroid/os/UserHandle;->isApp(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_14
+
+    const/4 v8, 0x6
+
+    if-gt v6, v8, :cond_10
 
     iget v9, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
-    invoke-virtual {v6, v8, v9}, Lcom/android/server/wm/ActivityTaskManagerInternal;->onUidProcStateChanged(II)V
+    if-gt v9, v8, :cond_11
 
-    iget-object v6, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+    :cond_10
+    if-le v6, v8, :cond_14
 
-    const/4 v8, -0x1
+    iget v9, v3, Lcom/android/server/am/UidRecord;->setProcState:I
 
-    invoke-virtual {v6, v3, v8, v4}, Lcom/android/server/am/ActivityManagerService;->enqueueUidChangeLocked(Lcom/android/server/am/UidRecord;II)V
+    if-gt v9, v8, :cond_14
 
-    iget-object v6, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+    :cond_11
+    :try_start_0
+    iget-object v8, p0, Lcom/android/server/am/OomAdjuster;->mProcessList:Lcom/android/server/am/ProcessList;
 
-    iget v8, v3, Lcom/android/server/am/UidRecord;->uid:I
+    iget-object v8, v8, Lcom/android/server/am/ProcessList;->mLruProcesses:Ljava/util/ArrayList;
 
-    invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
+    invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :goto_4
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
 
-    iget v10, v3, Lcom/android/server/am/UidRecord;->curCapability:I
+    if-eqz v9, :cond_13
 
-    invoke-virtual {v6, v8, v9, v10}, Lcom/android/server/am/ActivityManagerService;->noteUidProcessState(III)V
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-boolean v6, v3, Lcom/android/server/am/UidRecord;->foregroundServices:Z
+    move-result-object v9
 
-    if-eqz v6, :cond_e
+    check-cast v9, Lcom/android/server/am/ProcessRecord;
 
-    iget-object v6, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+    if-eqz v9, :cond_12
 
-    iget-object v6, v6, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+    iget-object v10, v9, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
 
-    invoke-virtual {v6, v3}, Lcom/android/server/am/ActiveServices;->foregroundServiceProcStateChangedLocked(Lcom/android/server/am/UidRecord;)V
+    if-eqz v10, :cond_12
 
-    :cond_e
+    iget v10, v9, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    iget v11, v3, Lcom/android/server/am/UidRecord;->uid:I
+
+    if-ne v10, v11, :cond_12
+
+    iget-object v10, v9, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
+
+    invoke-interface {v10, v6}, Landroid/app/IApplicationThread;->dispatchUidCurProcState(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_12
+    goto :goto_4
+
+    :cond_13
+    goto :goto_5
+
+    :catch_0
+    move-exception v8
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v10, "updateUidsLocked err, uid:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v10, v3, Lcom/android/server/am/UidRecord;->uid:I
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v10, " from:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v10, v3, Lcom/android/server/am/UidRecord;->setProcState:I
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v10, " to:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v10, " err:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "OomAdjuster"
+
+    invoke-static {v10, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_14
+    :goto_5
+    iput v6, v3, Lcom/android/server/am/UidRecord;->setProcState:I
+
+    iget v8, v3, Lcom/android/server/am/UidRecord;->curCapability:I
+
+    iput v8, v3, Lcom/android/server/am/UidRecord;->setCapability:I
+
+    iget-boolean v8, v3, Lcom/android/server/am/UidRecord;->curWhitelist:Z
+
+    iput-boolean v8, v3, Lcom/android/server/am/UidRecord;->setWhitelist:Z
+
+    iget-boolean v8, v3, Lcom/android/server/am/UidRecord;->idle:Z
+
+    iput-boolean v8, v3, Lcom/android/server/am/UidRecord;->setIdle:Z
+
+    iget-object v8, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
+
+    iget v9, v3, Lcom/android/server/am/UidRecord;->uid:I
+
+    iget v10, v3, Lcom/android/server/am/UidRecord;->setProcState:I
+
+    invoke-virtual {v8, v9, v10}, Lcom/android/server/wm/ActivityTaskManagerInternal;->onUidProcStateChanged(II)V
+
+    iget-object v8, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    const/4 v9, -0x1
+
+    invoke-virtual {v8, v3, v9, v4}, Lcom/android/server/am/ActivityManagerService;->enqueueUidChangeLocked(Lcom/android/server/am/UidRecord;II)V
+
+    iget-object v8, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget v9, v3, Lcom/android/server/am/UidRecord;->uid:I
+
+    invoke-virtual {v3}, Lcom/android/server/am/UidRecord;->getCurProcState()I
+
+    move-result v10
+
+    iget v11, v3, Lcom/android/server/am/UidRecord;->curCapability:I
+
+    invoke-virtual {v8, v9, v10, v11}, Lcom/android/server/am/ActivityManagerService;->noteUidProcessState(III)V
+
+    iget-boolean v8, v3, Lcom/android/server/am/UidRecord;->foregroundServices:Z
+
+    if-eqz v8, :cond_15
+
+    iget-object v8, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+
+    invoke-virtual {v8, v3}, Lcom/android/server/am/ActiveServices;->foregroundServiceProcStateChangedLocked(Lcom/android/server/am/UidRecord;)V
+
+    :cond_15
     iget-object v5, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v5, v5, Lcom/android/server/am/ActivityManagerService;->mInternal:Landroid/app/ActivityManagerInternal;
@@ -9451,49 +9612,49 @@
 
     invoke-virtual {v5, v6}, Landroid/app/ActivityManagerInternal;->deletePendingTopUid(I)V
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
     goto/16 :goto_0
 
-    :cond_f
-    :goto_4
-    iget-object v1, p0, Lcom/android/server/am/OomAdjuster;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
+    :cond_16
+    :goto_6
+    iget-object v2, p0, Lcom/android/server/am/OomAdjuster;->mLocalPowerManager:Landroid/os/PowerManagerInternal;
 
-    if-eqz v1, :cond_10
+    if-eqz v2, :cond_17
 
-    invoke-virtual {v1}, Landroid/os/PowerManagerInternal;->finishUidChanges()V
+    invoke-virtual {v2}, Landroid/os/PowerManagerInternal;->finishUidChanges()V
 
-    :cond_10
+    :cond_17
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-lez v1, :cond_11
+    if-lez v2, :cond_18
 
-    add-int/lit8 v2, v1, -0x1
+    add-int/lit8 v3, v2, -0x1
 
-    :goto_5
-    if-ltz v2, :cond_11
+    :goto_7
+    if-ltz v3, :cond_18
 
-    iget-object v3, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
+    iget-object v4, p0, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
+    iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mServices:Lcom/android/server/am/ActiveServices;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lcom/android/server/am/UidRecord;
+    check-cast v5, Lcom/android/server/am/UidRecord;
 
-    iget v4, v4, Lcom/android/server/am/UidRecord;->uid:I
+    iget v5, v5, Lcom/android/server/am/UidRecord;->uid:I
 
-    invoke-virtual {v3, v4}, Lcom/android/server/am/ActiveServices;->stopInBackgroundLocked(I)V
+    invoke-virtual {v4, v5}, Lcom/android/server/am/ActiveServices;->stopInBackgroundLocked(I)V
 
-    add-int/lit8 v2, v2, -0x1
+    add-int/lit8 v3, v3, -0x1
 
-    goto :goto_5
+    goto :goto_7
 
-    :cond_11
+    :cond_18
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     invoke-static {}, Lcom/android/server/am/OpBGFrozenInjector;->updateLastImportantUidsIfNeeded()V

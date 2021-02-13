@@ -511,12 +511,20 @@
 .method static synthetic access$1000(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
     .locals 0
 
+    invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->addAllPermissionGroups(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+    .locals 0
+
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->removeAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;[I[Ljava/lang/String;ILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+.method static synthetic access$1200(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;[I[Ljava/lang/String;ILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/permission/PermissionManagerService;->grantRequestedRuntimePermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;[I[Ljava/lang/String;ILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
@@ -524,7 +532,7 @@
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;[ILjava/util/List;IILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+.method static synthetic access$1300(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;[ILjava/util/List;IILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
     .locals 0
 
     invoke-direct/range {p0 .. p6}, Lcom/android/server/pm/permission/PermissionManagerService;->setWhitelistedRestrictedPermissionsForUsers(Lcom/android/server/pm/parsing/pkg/AndroidPackage;[ILjava/util/List;IILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
@@ -532,7 +540,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Ljava/util/List;II)Z
+.method static synthetic access$1400(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Ljava/util/List;II)Z
     .locals 1
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/permission/PermissionManagerService;->setWhitelistedRestrictedPermissionsInternal(Ljava/lang/String;Ljava/util/List;II)Z
@@ -542,7 +550,7 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+.method static synthetic access$1500(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/permission/PermissionManagerService;->updatePermissions(Ljava/lang/String;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
@@ -550,7 +558,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;ZLcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+.method static synthetic access$1600(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;ZLcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/permission/PermissionManagerService;->updateAllPermissions(Ljava/lang/String;ZLcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
@@ -558,7 +566,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;I)V
+.method static synthetic access$1700(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;I)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->resetRuntimePermissionsInternal(Lcom/android/server/pm/parsing/pkg/AndroidPackage;I)V
@@ -566,7 +574,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;I)[Ljava/lang/String;
+.method static synthetic access$1800(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;I)[Ljava/lang/String;
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->getAppOpPermissionPackagesInternal(Ljava/lang/String;I)[Ljava/lang/String;
@@ -576,18 +584,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/pm/permission/PermissionManagerService;IIZZZLjava/lang/String;)V
+.method static synthetic access$1900(Lcom/android/server/pm/permission/PermissionManagerService;IIZZZLjava/lang/String;)V
     .locals 0
 
     invoke-direct/range {p0 .. p6}, Lcom/android/server/pm/permission/PermissionManagerService;->enforceCrossUserPermission(IIZZZLjava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1900(Lcom/android/server/pm/permission/PermissionManagerService;IIZZLjava/lang/String;)V
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/permission/PermissionManagerService;->enforceCrossUserOrProfilePermission(IIZZLjava/lang/String;)V
 
     return-void
 .end method
@@ -600,7 +600,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;)V
+.method static synthetic access$2000(Lcom/android/server/pm/permission/PermissionManagerService;IIZZLjava/lang/String;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/android/server/pm/permission/PermissionManagerService;->enforceCrossUserOrProfilePermission(IIZZLjava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2100(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/PermissionManagerService;->enforceGrantRevokeRuntimePermissionPermissions(Ljava/lang/String;)V
@@ -608,7 +616,7 @@
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionSettings;
+.method static synthetic access$2200(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionSettings;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
@@ -616,7 +624,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2200(Lcom/android/server/pm/permission/PermissionManagerService;)Ljava/lang/Object;
+.method static synthetic access$2300(Lcom/android/server/pm/permission/PermissionManagerService;)Ljava/lang/Object;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mLock:Ljava/lang/Object;
@@ -624,7 +632,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/os/UserHandle;)[B
+.method static synthetic access$2400(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/os/UserHandle;)[B
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/PermissionManagerService;->backupRuntimePermissions(Landroid/os/UserHandle;)[B
@@ -634,7 +642,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/pm/permission/PermissionManagerService;[BLandroid/os/UserHandle;)V
+.method static synthetic access$2500(Lcom/android/server/pm/permission/PermissionManagerService;[BLandroid/os/UserHandle;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->restoreRuntimePermissions([BLandroid/os/UserHandle;)V
@@ -642,7 +650,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Landroid/os/UserHandle;)V
+.method static synthetic access$2600(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->restoreDelayedRuntimePermissions(Ljava/lang/String;Landroid/os/UserHandle;)V
@@ -650,7 +658,7 @@
     return-void
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
+.method static synthetic access$2700(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/PermissionManagerService;->addOnRuntimePermissionStateChangedListener(Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
@@ -658,7 +666,7 @@
     return-void
 .end method
 
-.method static synthetic access$2700(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
+.method static synthetic access$2800(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/PermissionManagerService;->removeOnRuntimePermissionStateChangedListener(Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
@@ -666,7 +674,7 @@
     return-void
 .end method
 
-.method static synthetic access$2800(Lcom/android/server/pm/permission/PermissionManagerService;)Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
+.method static synthetic access$2900(Lcom/android/server/pm/permission/PermissionManagerService;)Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mCheckPermissionDelegate:Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
@@ -674,7 +682,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2802(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;)Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
+.method static synthetic access$2902(Lcom/android/server/pm/permission/PermissionManagerService;Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;)Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mCheckPermissionDelegate:Landroid/permission/PermissionManagerInternal$CheckPermissionDelegate;
@@ -682,7 +690,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$2900(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
+.method static synthetic access$3000(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultBrowserProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
@@ -690,7 +698,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2902(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
+.method static synthetic access$3002(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultBrowserProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultBrowserProvider;
@@ -698,7 +706,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3000(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;ZZI)Z
+.method static synthetic access$3100(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/lang/String;ZZI)Z
     .locals 1
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/permission/PermissionManagerService;->setDefaultBrowserInternal(Ljava/lang/String;ZZI)Z
@@ -708,7 +716,7 @@
     return v0
 .end method
 
-.method static synthetic access$3100(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
+.method static synthetic access$3200(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultDialerProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
@@ -716,7 +724,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3102(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
+.method static synthetic access$3202(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultDialerProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultDialerProvider;
@@ -724,7 +732,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
+.method static synthetic access$3300(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultHomeProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
@@ -732,7 +740,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3202(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
+.method static synthetic access$3302(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;)Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultHomeProvider:Lcom/android/server/pm/permission/PermissionManagerServiceInternal$DefaultHomeProvider;
@@ -740,7 +748,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$3300(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+.method static synthetic access$3400(Lcom/android/server/pm/permission/PermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -782,20 +790,22 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+.method static synthetic access$800(Lcom/android/server/pm/permission/PermissionManagerService;Ljava/util/List;Ljava/util/ArrayList;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/permission/PermissionManagerService;->revokeRuntimePermissionsIfPermissionDefinitionChanged(Ljava/util/List;Ljava/util/ArrayList;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
-    .locals 0
+.method static synthetic access$900(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)Ljava/util/List;
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->addAllPermissionGroups(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerService;->addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)Ljava/util/List;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private addAllPermissionGroups(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
@@ -1023,8 +1033,18 @@
     return-void
 .end method
 
-.method private addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
-    .locals 10
+.method private addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)Ljava/util/List;
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
+            "Z)",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPermissions()Ljava/util/List;
 
@@ -1034,218 +1054,235 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v2, 0x0
 
     :goto_0
-    if-ge v1, v0, :cond_2
+    if-ge v2, v0, :cond_3
 
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPermissions()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Landroid/content/pm/parsing/component/ParsedPermission;
+    check-cast v3, Landroid/content/pm/parsing/component/ParsedPermission;
 
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getFlags()I
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getFlags()I
 
-    move-result v3
+    move-result v4
 
-    const v4, -0x40000001    # -1.9999999f
+    const v5, -0x40000001    # -1.9999999f
 
-    and-int/2addr v3, v4
+    and-int/2addr v4, v5
 
-    invoke-virtual {v2, v3}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
+    invoke-virtual {v3, v4}, Landroid/content/pm/parsing/component/ParsedPermission;->setFlags(I)Landroid/content/pm/parsing/component/ParsedPermission;
 
-    iget-object v9, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mLock:Ljava/lang/Object;
+    iget-object v10, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mLock:Ljava/lang/Object;
 
-    monitor-enter v9
+    monitor-enter v10
 
     :try_start_0
     invoke-interface {p1}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getTargetSdkVersion()I
 
-    move-result v3
+    move-result v4
 
-    const/16 v4, 0x16
+    const/16 v5, 0x16
 
-    if-le v3, v4, :cond_0
-
-    iget-object v3, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
-
-    iget-object v3, v3, Lcom/android/server/pm/permission/PermissionSettings;->mPermissionGroups:Landroid/util/ArrayMap;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/content/pm/parsing/component/ParsedPermissionGroup;
-
-    invoke-virtual {v2, v3}, Landroid/content/pm/parsing/component/ParsedPermission;->setParsedPermissionGroup(Landroid/content/pm/parsing/component/ParsedPermissionGroup;)Landroid/content/pm/parsing/component/ParsedPermission;
-
-    sget-boolean v3, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getParsedPermissionGroup()Landroid/content/pm/parsing/component/ParsedPermissionGroup;
-
-    move-result-object v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "PackageManager"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Permission "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " from package "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " in an unknown group "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->isTree()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    if-le v4, v5, :cond_0
 
     iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+    iget-object v4, v4, Lcom/android/server/pm/permission/PermissionSettings;->mPermissionGroups:Landroid/util/ArrayMap;
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionTreeLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+    invoke-virtual {v4, v5}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/content/pm/parsing/component/ParsedPermissionGroup;
+
+    invoke-virtual {v3, v4}, Landroid/content/pm/parsing/component/ParsedPermission;->setParsedPermissionGroup(Landroid/content/pm/parsing/component/ParsedPermissionGroup;)Landroid/content/pm/parsing/component/ParsedPermission;
+
+    sget-boolean v4, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getParsedPermissionGroup()Landroid/content/pm/parsing/component/ParsedPermissionGroup;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    const-string v4, "PackageManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Permission "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, " from package "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, " in an unknown group "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getGroup()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->isTree()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionTreeLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+
+    invoke-virtual {v6}, Lcom/android/server/pm/permission/PermissionSettings;->getAllPermissionTreesLocked()Ljava/util/Collection;
+
+    move-result-object v8
+
+    move-object v6, v3
+
+    move-object v7, p1
+
+    move v9, p2
+
+    invoke-static/range {v4 .. v9}, Lcom/android/server/pm/permission/BasePermission;->createOrUpdate(Landroid/content/pm/PackageManagerInternal;Lcom/android/server/pm/permission/BasePermission;Landroid/content/pm/parsing/component/ParsedPermission;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/util/Collection;Z)Lcom/android/server/pm/permission/BasePermission;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    invoke-virtual {v5}, Lcom/android/server/pm/permission/PermissionSettings;->getAllPermissionTreesLocked()Ljava/util/Collection;
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    move-object v5, v2
-
-    move-object v6, p1
-
-    move v8, p2
-
-    invoke-static/range {v3 .. v8}, Lcom/android/server/pm/permission/BasePermission;->createOrUpdate(Landroid/content/pm/PackageManagerInternal;Lcom/android/server/pm/permission/BasePermission;Landroid/content/pm/parsing/component/ParsedPermission;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/util/Collection;Z)Lcom/android/server/pm/permission/BasePermission;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5, v3}, Lcom/android/server/pm/permission/PermissionSettings;->putPermissionTreeLocked(Ljava/lang/String;Lcom/android/server/pm/permission/BasePermission;)V
+    invoke-virtual {v5, v6, v4}, Lcom/android/server/pm/permission/PermissionSettings;->putPermissionTreeLocked(Ljava/lang/String;Lcom/android/server/pm/permission/BasePermission;)V
 
     goto :goto_1
 
     :cond_1
-    iget-object v3, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+    iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+    iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+    iget-object v6, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+
+    invoke-virtual {v6}, Lcom/android/server/pm/permission/PermissionSettings;->getAllPermissionTreesLocked()Ljava/util/Collection;
+
+    move-result-object v8
+
+    move-object v6, v3
+
+    move-object v7, p1
+
+    move v9, p2
+
+    invoke-static/range {v4 .. v9}, Lcom/android/server/pm/permission/BasePermission;->createOrUpdate(Landroid/content/pm/PackageManagerInternal;Lcom/android/server/pm/permission/BasePermission;Landroid/content/pm/parsing/component/ParsedPermission;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/util/Collection;Z)Lcom/android/server/pm/permission/BasePermission;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    invoke-virtual {v5}, Lcom/android/server/pm/permission/PermissionSettings;->getAllPermissionTreesLocked()Ljava/util/Collection;
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    move-object v5, v2
+    invoke-virtual {v5, v6, v4}, Lcom/android/server/pm/permission/PermissionSettings;->putPermissionLocked(Ljava/lang/String;Lcom/android/server/pm/permission/BasePermission;)V
 
-    move-object v6, p1
+    :goto_1
+    invoke-virtual {v4}, Lcom/android/server/pm/permission/BasePermission;->isPermissionDefinitionChanged()Z
 
-    move v8, p2
+    move-result v5
 
-    invoke-static/range {v3 .. v8}, Lcom/android/server/pm/permission/BasePermission;->createOrUpdate(Landroid/content/pm/PackageManagerInternal;Lcom/android/server/pm/permission/BasePermission;Landroid/content/pm/parsing/component/ParsedPermission;Lcom/android/server/pm/parsing/pkg/AndroidPackage;Ljava/util/Collection;Z)Lcom/android/server/pm/permission/BasePermission;
+    if-eqz v5, :cond_2
 
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
-
-    invoke-virtual {v2}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/content/pm/parsing/component/ParsedPermission;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5, v3}, Lcom/android/server/pm/permission/PermissionSettings;->putPermissionLocked(Ljava/lang/String;Lcom/android/server/pm/permission/BasePermission;)V
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_1
-    monitor-exit v9
+    :cond_2
+    monitor-exit v10
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
     :catchall_0
-    move-exception v3
+    move-exception v4
 
-    monitor-exit v9
+    monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v3
+    throw v4
 
-    :cond_2
-    return-void
+    :cond_3
+    return-object v1
 .end method
 
 .method private addOnRuntimePermissionStateChangedListener(Landroid/permission/PermissionManagerInternal$OnRuntimePermissionStateChangedListener;)V
@@ -11680,6 +11717,435 @@
     return-void
 .end method
 
+.method private revokeRuntimePermissionsIfPermissionDefinitionChanged(Ljava/util/List;Ljava/util/ArrayList;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+    .locals 31
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;",
+            "Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;",
+            ")V"
+        }
+    .end annotation
+
+    move-object/from16 v9, p0
+
+    iget-object v0, v9, Lcom/android/server/pm/permission/PermissionManagerService;->mUserManagerInt:Landroid/os/UserManagerInternal;
+
+    invoke-virtual {v0}, Landroid/os/UserManagerInternal;->getUserIds()[I
+
+    move-result-object v10
+
+    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+
+    move-result v11
+
+    array-length v12, v10
+
+    invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v13
+
+    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+
+    move-result v14
+
+    const/4 v0, 0x0
+
+    move v15, v0
+
+    :goto_0
+    if-ge v15, v11, :cond_6
+
+    move-object/from16 v8, p1
+
+    invoke-interface {v8, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Ljava/lang/String;
+
+    iget-object v0, v9, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+
+    invoke-virtual {v0, v7}, Lcom/android/server/pm/permission/PermissionSettings;->getPermission(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {v6}, Lcom/android/server/pm/permission/BasePermission;->isRuntime()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    move-object/from16 v17, v10
+
+    goto/16 :goto_4
+
+    :cond_0
+    const/4 v0, 0x0
+
+    move v5, v0
+
+    :goto_1
+    if-ge v5, v12, :cond_4
+
+    aget v3, v10, v5
+
+    const/4 v0, 0x0
+
+    move v2, v0
+
+    :goto_2
+    if-ge v2, v13, :cond_3
+
+    move-object/from16 v1, p2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v0, v9, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    move-object/from16 v17, v10
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v4, v1, v3}, Landroid/content/pm/PackageManagerInternal;->getPackageUid(Ljava/lang/String;II)I
+
+    move-result v10
+
+    const/16 v0, 0x2710
+
+    if-ge v10, v0, :cond_1
+
+    move/from16 v22, v2
+
+    move/from16 v23, v3
+
+    move/from16 v16, v5
+
+    move-object/from16 v29, v6
+
+    move-object v2, v7
+
+    goto/16 :goto_3
+
+    :cond_1
+    invoke-direct {v9, v7, v4, v3}, Lcom/android/server/pm/permission/PermissionManagerService;->checkPermissionImpl(Ljava/lang/String;Ljava/lang/String;I)I
+
+    move-result v18
+
+    invoke-virtual {v9, v7, v4, v3}, Lcom/android/server/pm/permission/PermissionManagerService;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;I)I
+
+    move-result v19
+
+    const v20, 0x8034
+
+    if-nez v18, :cond_2
+
+    const v0, 0x8034
+
+    and-int v0, v19, v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v21, "154505240"
+
+    const/16 v16, 0x0
+
+    aput-object v21, v1, v16
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    const/16 v22, 0x1
+
+    aput-object v21, v1, v22
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    move/from16 v23, v2
+
+    const-string v2, "Revoking permission "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v24, v3
+
+    const-string v3, " from package "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v25, v5
+
+    const-string v5, " due to definition change"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v26, 0x2
+
+    aput-object v0, v1, v26
+
+    const v0, 0x534e4554
+
+    invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v21, "168319670"
+
+    const/16 v16, 0x0
+
+    aput-object v21, v1, v16
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    aput-object v21, v1, v22
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v1, v26
+
+    const v0, 0x534e4554
+
+    invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "PackageManager"
+
+    invoke-static {v5, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    const/16 v21, 0x0
+
+    move-object/from16 v1, p0
+
+    move/from16 v22, v23
+
+    move-object v2, v7
+
+    move/from16 v23, v24
+
+    move-object v3, v4
+
+    move-object/from16 v27, v4
+
+    move v4, v0
+
+    move-object/from16 v28, v5
+
+    move/from16 v16, v25
+
+    move v5, v14
+
+    move-object/from16 v29, v6
+
+    move/from16 v6, v23
+
+    move-object/from16 v30, v7
+
+    move-object/from16 v7, v21
+
+    move-object/from16 v8, p3
+
+    :try_start_0
+    invoke-direct/range {v1 .. v8}, Lcom/android/server/pm/permission/PermissionManagerService;->revokeRuntimePermissionInternal(Ljava/lang/String;Ljava/lang/String;ZIILjava/lang/String;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object/from16 v2, v30
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v0
+
+    move-object v0, v1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Could not revoke "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object/from16 v2, v30
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " from "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-object/from16 v3, v27
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v4, v28
+
+    invoke-static {v4, v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_3
+
+    :cond_2
+    move/from16 v22, v2
+
+    move/from16 v23, v3
+
+    move-object v3, v4
+
+    move/from16 v16, v5
+
+    move-object/from16 v29, v6
+
+    move-object v2, v7
+
+    :goto_3
+    add-int/lit8 v0, v22, 0x1
+
+    move-object/from16 v8, p1
+
+    move-object v7, v2
+
+    move/from16 v5, v16
+
+    move-object/from16 v10, v17
+
+    move/from16 v3, v23
+
+    move-object/from16 v6, v29
+
+    move v2, v0
+
+    goto/16 :goto_2
+
+    :cond_3
+    move/from16 v22, v2
+
+    move/from16 v23, v3
+
+    move/from16 v16, v5
+
+    move-object/from16 v29, v6
+
+    move-object v2, v7
+
+    move-object/from16 v17, v10
+
+    add-int/lit8 v5, v16, 0x1
+
+    move-object/from16 v8, p1
+
+    goto/16 :goto_1
+
+    :cond_4
+    move/from16 v16, v5
+
+    move-object/from16 v29, v6
+
+    move-object v2, v7
+
+    move-object/from16 v17, v10
+
+    move-object/from16 v1, v29
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Lcom/android/server/pm/permission/BasePermission;->setPermissionDefinitionChanged(Z)V
+
+    goto :goto_4
+
+    :cond_5
+    move-object v1, v6
+
+    move-object v2, v7
+
+    move-object/from16 v17, v10
+
+    :goto_4
+    add-int/lit8 v15, v15, 0x1
+
+    move-object/from16 v10, v17
+
+    goto/16 :goto_0
+
+    :cond_6
+    return-void
+.end method
+
 .method private revokeUnusedSharedUserPermissionsLocked(Lcom/android/server/pm/SharedUserSetting;[I)[I
     .locals 17
 
@@ -13251,7 +13717,7 @@
 .end method
 
 .method private systemReady()V
-    .locals 8
+    .locals 10
 
     const/4 v0, 0x1
 
@@ -13259,7 +13725,7 @@
 
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPrivappPermissionsViolations:Landroid/util/ArraySet;
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
 
@@ -13283,135 +13749,149 @@
 
     iput-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPermissionPolicyInternal:Lcom/android/server/policy/PermissionPolicyInternal;
 
-    sget-object v1, Lcom/android/server/pm/permission/PermissionManagerService;->EMPTY_INT_ARRAY:[I
-
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
-
-    move-result-object v2
-
-    array-length v3, v2
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :goto_0
-    if-ge v5, v3, :cond_1
-
-    aget v6, v2, v5
-
-    iget-object v7, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
-
-    invoke-virtual {v7, v6}, Landroid/content/pm/PackageManagerInternal;->isPermissionUpgradeNeeded(I)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-static {v1, v6}, Lcom/android/internal/util/ArrayUtils;->appendInt([II)[I
 
     move-result-object v1
 
-    :cond_0
-    add-int/lit8 v5, v5, 0x1
+    sget-object v2, Lcom/android/server/pm/permission/PermissionManagerService;->EMPTY_INT_ARRAY:[I
 
-    goto :goto_0
+    invoke-virtual {v1}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
 
-    :cond_1
-    array-length v2, v1
+    move-result-object v3
 
-    move v3, v4
+    array-length v4, v3
 
-    :goto_1
-    if-ge v3, v2, :cond_2
+    const/4 v5, 0x0
 
-    aget v5, v1, v3
+    move v6, v5
 
-    iget-object v6, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    :goto_0
+    if-ge v6, v4, :cond_2
 
-    invoke-virtual {v6, v5}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissions(I)V
+    aget v7, v3, v6
 
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v1, v7}, Lcom/android/server/pm/UserManagerService;->getUserInfo(I)Landroid/content/pm/UserInfo;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lcom/android/server/pm/UserManagerService;->isUserToBeRemovedAtBoot(Landroid/content/pm/UserInfo;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_0
 
     goto :goto_1
 
-    :cond_2
-    iget-object v2, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
+    :cond_0
+    iget-object v9, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v9, v7}, Landroid/content/pm/PackageManagerInternal;->isPermissionUpgradeNeeded(I)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    invoke-static {v2, v7}, Lcom/android/internal/util/ArrayUtils;->appendInt([II)[I
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/pm/PackageManager;->isDeviceUpgrading()Z
+    :cond_1
+    :goto_1
+    add-int/lit8 v6, v6, 0x1
 
-    move-result v2
+    goto :goto_0
+
+    :cond_2
+    array-length v3, v2
+
+    move v4, v5
+
+    :goto_2
+    if-ge v4, v3, :cond_3
+
+    aget v6, v2, v4
+
+    iget-object v7, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+
+    invoke-virtual {v7, v6}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->grantDefaultPermissions(I)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v3, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/pm/PackageManager;->isDeviceUpgrading()Z
+
+    move-result v3
 
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
+    invoke-virtual {v4}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
 
-    move-result-object v3
+    move-result-object v4
 
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_4
 
-    invoke-static {v3}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->revokeDefaultPermissionsFromBrowserApps([I)V
+    invoke-static {v4}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicyInjector;->revokeDefaultPermissionsFromBrowserApps([I)V
 
-    :cond_3
-    sget-object v5, Lcom/android/server/pm/permission/PermissionManagerService;->EMPTY_INT_ARRAY:[I
+    :cond_4
+    sget-object v6, Lcom/android/server/pm/permission/PermissionManagerService;->EMPTY_INT_ARRAY:[I
 
-    const/16 v6, 0xb7
+    const/16 v7, 0xb7
 
-    if-ne v1, v5, :cond_5
+    if-ne v2, v6, :cond_6
 
-    iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
+    iget-object v6, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mDefaultPermissionGrantPolicy:Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
 
-    invoke-virtual {v5}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->scheduleReadDefaultPermissionExceptions()V
+    invoke-virtual {v6}, Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;->scheduleReadDefaultPermissionExceptions()V
 
-    new-array v5, v0, [I
+    new-array v6, v0, [I
 
-    const/16 v7, 0x80
+    const/16 v8, 0x80
 
-    aput v7, v5, v4
+    aput v8, v6, v5
 
-    invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v6}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result v5
+    move-result v6
 
-    if-nez v5, :cond_4
+    if-nez v6, :cond_5
 
     new-array v0, v0, [I
 
-    aput v6, v0, v4
+    aput v7, v0, v5
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/android/server/carrier/OpCarrierManagerInjector;->grantCarrierPackageDefPermissionsUnify(Landroid/content/Context;)V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_5
+    :cond_6
     new-array v0, v0, [I
 
-    aput v6, v0, v4
+    aput v7, v0, v5
 
     invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mContext:Landroid/content/Context;
 
@@ -13419,23 +13899,23 @@
 
     move-result-object v0
 
-    const-string/jumbo v4, "ro.boot.opcarrier"
+    const-string/jumbo v5, "ro.boot.opcarrier"
 
-    const-string/jumbo v5, "none"
+    const-string/jumbo v6, "none"
 
-    invoke-static {v4, v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    const-string v5, "carrier_pre_load"
+    const-string v6, "carrier_pre_load"
 
-    invoke-static {v0, v5, v4}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
-
-    :cond_6
-    :goto_2
-    return-void
+    invoke-static {v0, v6, v5}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     :cond_7
+    :goto_3
+    return-void
+
+    :cond_8
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -13990,7 +14470,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -14040,7 +14520,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_6
 
     :cond_3
     const-string v5, "PackageManager"
@@ -14079,7 +14559,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
     iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mUserManagerInt:Landroid/os/UserManagerInternal;
 
@@ -14109,10 +14589,22 @@
     goto :goto_1
 
     :cond_4
-    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
+    goto :goto_2
 
     :cond_5
-    if-nez v1, :cond_6
+    iget-object v5, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    new-instance v6, Lcom/android/server/pm/permission/-$$Lambda$PermissionManagerService$j-DIsHtFHtuJlpA7bCF_7WTaYZs;
+
+    invoke-direct {v6, p0, v4}, Lcom/android/server/pm/permission/-$$Lambda$PermissionManagerService$j-DIsHtFHtuJlpA7bCF_7WTaYZs;-><init>(Lcom/android/server/pm/permission/PermissionManagerService;Lcom/android/server/pm/permission/BasePermission;)V
+
+    invoke-virtual {v5, v6}, Landroid/content/pm/PackageManagerInternal;->forEachPackage(Ljava/util/function/Consumer;)V
+
+    :goto_2
+    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
+
+    :cond_6
+    if-nez v1, :cond_7
 
     new-instance v5, Landroid/util/ArraySet;
 
@@ -14128,30 +14620,30 @@
 
     move-object v1, v5
 
-    :cond_6
+    :cond_7
     invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     nop
 
     goto/16 :goto_0
 
-    :cond_7
+    :cond_8
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    :goto_2
+    :goto_3
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -14183,16 +14675,16 @@
 
     monitor-enter v6
 
-    if-eqz v4, :cond_8
+    if-eqz v4, :cond_9
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
     :try_start_1
     monitor-exit v6
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_8
+    :cond_9
     const-string v7, "PackageManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -14235,7 +14727,7 @@
 
     monitor-exit v6
 
-    goto :goto_2
+    goto :goto_3
 
     :catchall_0
     move-exception v2
@@ -14246,7 +14738,7 @@
 
     throw v2
 
-    :cond_9
+    :cond_a
     return v0
 
     :catchall_1
@@ -16615,6 +17107,52 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/permission/PermissionManagerService;->revokePermissionFromPackageForUser(Ljava/lang/String;Ljava/lang/String;ZILcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
 
+    return-void
+.end method
+
+.method public synthetic lambda$updatePermissionSourcePackage$13$PermissionManagerService(Lcom/android/server/pm/permission/BasePermission;Lcom/android/server/pm/parsing/pkg/AndroidPackage;)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService;->mPackageManagerInt:Landroid/content/pm/PackageManagerInternal;
+
+    invoke-interface {p2}, Lcom/android/server/pm/parsing/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManagerInternal;->getPackageSetting(Ljava/lang/String;)Lcom/android/server/pm/PackageSetting;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/android/server/pm/PackageSetting;->getPermissionsState()Lcom/android/server/pm/permission/PermissionsState;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/android/server/pm/permission/BasePermission;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/android/server/pm/permission/PermissionsState;->getInstallPermissionState(Ljava/lang/String;)Lcom/android/server/pm/permission/PermissionsState$PermissionState;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1, p1}, Lcom/android/server/pm/permission/PermissionsState;->revokeInstallPermission(Lcom/android/server/pm/permission/BasePermission;)I
+
+    const/4 v2, -0x1
+
+    const v3, 0x3fbff
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, p1, v2, v3, v4}, Lcom/android/server/pm/permission/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/permission/BasePermission;III)Z
+
+    :cond_1
     return-void
 .end method
 

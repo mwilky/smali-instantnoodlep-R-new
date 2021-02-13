@@ -442,6 +442,8 @@
 
     or-int/lit8 v1, v1, 0x4
 
+    or-int/lit16 v1, v1, 0x400
+
     new-instance v2, Landroid/hardware/display/VirtualDisplayConfig$Builder;
 
     const-string v3, "VR 2D Display"

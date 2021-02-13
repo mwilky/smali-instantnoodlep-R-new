@@ -367,6 +367,76 @@
     return v0
 .end method
 
+.method static isKeyguard(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 6
+
+    const-string v0, "android.permission.USE_BIOMETRIC_INTERNAL"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    nop
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x1040231
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v4, 0x0
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    :goto_2
+    return v1
+.end method
+
 .method public static isValidAuthenticatorConfig(I)Z
     .locals 6
 

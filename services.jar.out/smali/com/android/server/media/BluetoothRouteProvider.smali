@@ -425,6 +425,14 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/media/BluetoothRouteProvider;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getBondedDevices()Ljava/util/Set;
+
+    move-result-object v0
+
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0

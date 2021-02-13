@@ -5004,6 +5004,43 @@
     throw v1
 .end method
 
+.method public static isUserToBeRemovedAtBoot(Landroid/content/pm/UserInfo;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/content/pm/UserInfo;->partial:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/content/pm/UserInfo;->guestToRemove:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isEphemeral()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Landroid/content/pm/UserInfo;->preCreated:Z
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget v0, p0, Landroid/content/pm/UserInfo;->id:I
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method private static isUserTypeEligibleForPreCreation(Lcom/android/server/pm/UserTypeDetails;)Z
     .locals 3
 
@@ -9807,7 +9844,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_2
+    if-ge v3, v2, :cond_1
 
     iget-object v4, p0, Lcom/android/server/pm/UserManagerService;->mUsers:Landroid/util/SparseArray;
 
@@ -9819,26 +9856,11 @@
 
     iget-object v4, v4, Lcom/android/server/pm/UserManagerService$UserData;->info:Landroid/content/pm/UserInfo;
 
-    iget-boolean v5, v4, Landroid/content/pm/UserInfo;->partial:Z
-
-    if-nez v5, :cond_0
-
-    iget-boolean v5, v4, Landroid/content/pm/UserInfo;->guestToRemove:Z
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {v4}, Landroid/content/pm/UserInfo;->isEphemeral()Z
+    invoke-static {v4}, Lcom/android/server/pm/UserManagerService;->isUserToBeRemovedAtBoot(Landroid/content/pm/UserInfo;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_1
-
-    iget-boolean v5, v4, Landroid/content/pm/UserInfo;->preCreated:Z
-
-    if-nez v5, :cond_1
-
-    :cond_0
-    if-eqz v3, :cond_1
+    if-eqz v5, :cond_0
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -9850,12 +9872,12 @@
 
     iput-boolean v5, v4, Landroid/content/pm/UserInfo;->partial:Z
 
-    :cond_1
+    :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -9867,7 +9889,7 @@
     const/4 v2, 0x0
 
     :goto_1
-    if-ge v2, v1, :cond_3
+    if-ge v2, v1, :cond_2
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -9915,7 +9937,7 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     return-void
 
     :catchall_0

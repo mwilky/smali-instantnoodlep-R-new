@@ -24207,6 +24207,14 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/audio/OpAudioMonitor;->playerEvent(IIIILjava/lang/String;)V
 
+    const/4 v2, 0x2
+
+    if-eq p2, v2, :cond_2
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/android/server/audio/AudioService;->mCurrentPackageName:Ljava/lang/String;
+
     goto :goto_1
 
     :cond_1
@@ -24965,6 +24973,10 @@
     move v5, v0
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/audio/OpAudioMonitor;->playerEvent(IIIILjava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/android/server/audio/AudioService;->mCurrentPackageName:Ljava/lang/String;
 
     goto :goto_1
 

@@ -22165,33 +22165,42 @@
 .end method
 
 .method updateBatteryStats(Lcom/android/server/wm/ActivityRecord;Z)V
-    .locals 6
+    .locals 7
 
-    sget-object v0, Lcom/android/server/wm/-$$Lambda$hT1kyMEAhvB1-Uxr0DFAlnuU3cQ;->INSTANCE:Lcom/android/server/wm/-$$Lambda$hT1kyMEAhvB1-Uxr0DFAlnuU3cQ;
+    if-eqz p1, :cond_1
 
-    iget-object v1, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mAmInternal:Landroid/app/ActivityManagerInternal;
+    iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    iget-object v2, p1, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
+    if-nez v0, :cond_0
 
-    iget-object v3, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
+    goto :goto_0
 
-    iget v3, v3, Lcom/android/server/wm/WindowProcessController;->mUid:I
+    :cond_0
+    sget-object v1, Lcom/android/server/wm/-$$Lambda$hT1kyMEAhvB1-Uxr0DFAlnuU3cQ;->INSTANCE:Lcom/android/server/wm/-$$Lambda$hT1kyMEAhvB1-Uxr0DFAlnuU3cQ;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mAmInternal:Landroid/app/ActivityManagerInternal;
 
-    move-result-object v3
+    iget-object v3, p1, Lcom/android/server/wm/ActivityRecord;->mActivityComponent:Landroid/content/ComponentName;
 
-    iget v4, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
+    iget-object v0, p1, Lcom/android/server/wm/ActivityRecord;->app:Lcom/android/server/wm/WindowProcessController;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v0, v0, Lcom/android/server/wm/WindowProcessController;->mUid:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget v0, p1, Lcom/android/server/wm/ActivityRecord;->mUserId:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/QuintConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/QuintConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -22199,6 +22208,10 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/wm/ActivityTaskManagerService$H;->sendMessage(Landroid/os/Message;)Z
 
+    return-void
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 

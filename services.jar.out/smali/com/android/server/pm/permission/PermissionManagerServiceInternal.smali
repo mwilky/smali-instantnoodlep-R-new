@@ -30,7 +30,17 @@
 .method public abstract addAllPermissionGroups(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
 .end method
 
-.method public abstract addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)V
+.method public abstract addAllPermissions(Lcom/android/server/pm/parsing/pkg/AndroidPackage;Z)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
+            "Z)",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract enforceCrossUserOrProfilePermission(IIZZLjava/lang/String;)V
@@ -143,6 +153,20 @@
             "(",
             "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
             "Lcom/android/server/pm/parsing/pkg/AndroidPackage;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract revokeRuntimePermissionsIfPermissionDefinitionChanged(Ljava/util/List;Ljava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
             "Ljava/util/ArrayList<",
             "Ljava/lang/String;",
             ">;)V"

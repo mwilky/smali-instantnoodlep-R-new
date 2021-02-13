@@ -383,7 +383,15 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Z
+.method static synthetic access$1000(Lcom/android/server/pm/StagingManager;)Landroid/util/SparseIntArray;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mSessionRollbackIds:Landroid/util/SparseIntArray;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->sessionContainsApex(Lcom/android/server/pm/PackageInstallerSession;)Z
@@ -393,7 +401,7 @@
     return v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Ljava/util/List;
+.method static synthetic access$1200(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -408,7 +416,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/pm/StagingManager;Landroid/content/pm/PackageInfo;)V
+.method static synthetic access$1300(Lcom/android/server/pm/StagingManager;Landroid/content/pm/PackageInfo;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -421,7 +429,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Z
+.method static synthetic access$1400(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->sessionContainsApk(Lcom/android/server/pm/PackageInstallerSession;)Z
@@ -431,7 +439,7 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)V
+.method static synthetic access$1500(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -444,7 +452,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/pm/StagingManager;)Lcom/android/server/pm/ApexManager;
+.method static synthetic access$1600(Lcom/android/server/pm/StagingManager;)Lcom/android/server/pm/ApexManager;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
@@ -478,18 +486,20 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/pm/StagingManager;)Landroid/util/SparseArray;
+.method static synthetic access$800(Lcom/android/server/pm/StagingManager;Lcom/android/server/pm/PackageInstallerSession;)Z
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->ensureActiveApexSessionIsAborted(Lcom/android/server/pm/PackageInstallerSession;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$900(Lcom/android/server/pm/StagingManager;)Landroid/util/SparseArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mStagedSessions:Landroid/util/SparseArray;
-
-    return-object v0
-.end method
-
-.method static synthetic access$900(Lcom/android/server/pm/StagingManager;)Landroid/util/SparseIntArray;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mSessionRollbackIds:Landroid/util/SparseIntArray;
 
     return-object v0
 .end method
@@ -799,7 +809,7 @@
 .end method
 
 .method private checkStateAndResume(Lcom/android/server/pm/PackageInstallerSession;)V
-    .locals 2
+    .locals 5
 
     const-string/jumbo v0, "sys.boot_completed"
 
@@ -835,7 +845,7 @@
 
     if-eqz v0, :cond_2
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->isDestroyed()Z
@@ -861,16 +871,63 @@
 
     invoke-static {v0, v1}, Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;->access$000(Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;I)V
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_4
+    :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->resumeSession(Lcom/android/server/pm/PackageInstallerSession;)V
+    :try_end_0
+    .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "StagingManager"
+
+    const-string v2, "Staged install failed due to unhandled exception"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    new-instance v1, Lcom/android/server/pm/PackageManagerException;
+
+    const/4 v2, 0x2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Staged install failed due to unhandled exception: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;)V
+
+    invoke-virtual {p0, p1, v1}, Lcom/android/server/pm/StagingManager;->onInstallationFailure(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageManagerException;)V
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/android/server/pm/StagingManager;->onInstallationFailure(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageManagerException;)V
+
+    goto :goto_0
+
+    :goto_1
     return-void
 
     :cond_5
-    :goto_1
+    :goto_2
     return-void
 .end method
 
@@ -1205,6 +1262,64 @@
     invoke-direct {v4, v3, v0}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;)V
 
     throw v4
+.end method
+
+.method private ensureActiveApexSessionIsAborted(Lcom/android/server/pm/PackageInstallerSession;)Z
+    .locals 3
+
+    invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->sessionContainsApex(Lcom/android/server/pm/PackageInstallerSession;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
+
+    iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+
+    invoke-virtual {v0, v2}, Lcom/android/server/pm/ApexManager;->getStagedSessionInfo(I)Landroid/apex/ApexSessionInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-direct {p0, v0}, Lcom/android/server/pm/StagingManager;->isApexSessionFinalized(Landroid/apex/ApexSessionInfo;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
+
+    iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+
+    invoke-virtual {v1, v2}, Lcom/android/server/pm/ApexManager;->abortStagedSession(I)Z
+
+    move-result v1
+    :try_end_0
+    .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v1
+
+    const/4 v2, 0x0
+
+    return v2
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
 .method private extractApexSessions(Lcom/android/server/pm/PackageInstallerSession;)Ljava/util/List;
@@ -2154,6 +2269,11 @@
 
 .method private resumeSession(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/android/server/pm/PackageManagerException;
+        }
+    .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2315,39 +2435,24 @@
 
     invoke-virtual {p1, v2, v3}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
     return-void
 
     :cond_3
     nop
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     const/4 v2, 0x2
 
-    if-nez v1, :cond_4
+    if-eqz v1, :cond_7
 
-    const-string v3, "apexd did not know anything about a staged session supposed to be activated"
-
-    const-string v4, "apexd did not know anything about a staged session supposed to be activated"
-
-    invoke-virtual {p1, v2, v4}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
-
-    iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
-
-    const-string v4, "apexd did not know anything about a staged session supposed to be activated"
-
-    invoke-direct {p0, v2, v4}, Lcom/android/server/pm/StagingManager;->abortCheckpoint(ILjava/lang/String;)V
-
-    return-void
-
-    :cond_4
     invoke-static {v1}, Lcom/android/server/pm/StagingManager;->isApexSessionFailed(Landroid/apex/ApexSessionInfo;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_5
 
     const-string v3, "APEX activation failed. Check logcat messages from apexd for more information."
 
@@ -2357,7 +2462,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_4
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2375,24 +2480,25 @@
 
     move-result-object v3
 
+    :cond_4
+    new-instance v4, Lcom/android/server/pm/PackageManagerException;
+
+    invoke-direct {v4, v2, v3}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;)V
+
+    throw v4
+
     :cond_5
-    invoke-virtual {p1, v2, v3}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
-
-    iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
-
-    invoke-direct {p0, v2, v3}, Lcom/android/server/pm/StagingManager;->abortCheckpoint(ILjava/lang/String;)V
-
-    return-void
-
-    :cond_6
     iget-boolean v3, v1, Landroid/apex/ApexSessionInfo;->isActivated:Z
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     iget-boolean v3, v1, Landroid/apex/ApexSessionInfo;->isSuccess:Z
 
-    if-nez v3, :cond_7
+    if-eqz v3, :cond_6
 
+    goto :goto_0
+
+    :cond_6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2413,72 +2519,77 @@
 
     move-result-object v3
 
-    invoke-virtual {p1, v2, v3}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
+    new-instance v4, Lcom/android/server/pm/PackageManagerException;
 
-    iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+    invoke-direct {v4, v2, v3}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;)V
 
-    invoke-direct {p0, v2, v3}, Lcom/android/server/pm/StagingManager;->abortCheckpoint(ILjava/lang/String;)V
-
-    return-void
+    throw v4
 
     :cond_7
-    if-eqz v0, :cond_8
+    const-string v3, "apexd did not know anything about a staged session supposed to be activated"
 
-    :try_start_1
+    new-instance v4, Lcom/android/server/pm/PackageManagerException;
+
+    const-string v5, "apexd did not know anything about a staged session supposed to be activated"
+
+    invoke-direct {v4, v2, v5}, Lcom/android/server/pm/PackageManagerException;-><init>(ILjava/lang/String;)V
+
+    throw v4
+
+    :cond_8
+    :goto_0
+    if-eqz v0, :cond_9
+
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->checkInstallationOfApkInApexSuccessful(Lcom/android/server/pm/PackageInstallerSession;)V
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->snapshotAndRestoreForApexSession(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    const-string v2, "StagingManager"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "APEX packages in session "
 
-    const-string v4, "APEX packages in session "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v3, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
 
-    iget v4, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, " were successfully activated. Proceeding with APK packages, if any"
 
-    const-string v4, " were successfully activated. Proceeding with APK packages, if any"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    const-string v3, "StagingManager"
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_8
-    const-string v2, "StagingManager"
+    :cond_9
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "Installing APK packages in session "
 
-    const-string v4, "Installing APK packages in session "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v3, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
 
-    iget v4, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    const-string v3, "StagingManager"
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->installApksInSession(Lcom/android/server/pm/PackageInstallerSession;)V
-    :try_end_1
-    .catch Lcom/android/server/pm/PackageManagerException; {:try_start_1 .. :try_end_1} :catch_1
-
-    nop
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2506,22 +2617,22 @@
 
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionApplied()V
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
-    :try_start_2
+    :try_start_1
     invoke-direct {p0}, Lcom/android/server/pm/StagingManager;->supportsCheckpoint()Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iget-object v2, p0, Lcom/android/server/pm/StagingManager;->mSuccessfulStagedSessionIds:Ljava/util/List;
 
     monitor-enter v2
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    :try_start_3
+    :try_start_2
     iget-object v3, p0, Lcom/android/server/pm/StagingManager;->mSuccessfulStagedSessionIds:Ljava/util/List;
 
     iget v4, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
@@ -2534,29 +2645,29 @@
 
     monitor-exit v2
 
-    goto :goto_0
+    goto :goto_1
 
     :catchall_0
     move-exception v3
 
     monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    :try_start_4
+    :try_start_3
     throw v3
 
-    :cond_9
+    :cond_a
     iget-object v2, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
 
     iget v3, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
 
     invoke-virtual {v2, v3}, Lcom/android/server/pm/ApexManager;->markStagedSessionSuccessful(I)V
-    :try_end_4
-    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
 
-    :goto_0
-    goto :goto_1
+    :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception v2
@@ -2573,67 +2684,11 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/pm/ApexManager;->markStagedSessionSuccessful(I)V
 
-    :cond_a
-    :goto_1
-    return-void
-
-    :catch_1
-    move-exception v2
-
-    iget v3, v2, Lcom/android/server/pm/PackageManagerException;->error:I
-
-    invoke-virtual {v2}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v3, v4}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
-
-    iget v3, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
-
-    invoke-virtual {v2}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {p0, v3, v4}, Lcom/android/server/pm/StagingManager;->abortCheckpoint(ILjava/lang/String;)V
-
-    if-nez v0, :cond_b
-
-    return-void
-
     :cond_b
-    iget-object v3, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
-
-    invoke-virtual {v3}, Lcom/android/server/pm/ApexManager;->revertActiveSessions()Z
-
-    move-result v3
-
-    if-nez v3, :cond_c
-
-    const-string v3, "StagingManager"
-
-    const-string v4, "Failed to abort APEXd session"
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2
-
-    :cond_c
-    const-string v3, "StagingManager"
-
-    const-string v4, "Successfully aborted apexd session. Rebooting device in order to revert to the previous state of APEXd."
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v3, p0, Lcom/android/server/pm/StagingManager;->mPowerManager:Landroid/os/PowerManager;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
-
     :goto_2
     return-void
 
-    :catch_2
+    :catch_1
     move-exception v3
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2660,13 +2715,13 @@
 
     invoke-virtual {p1, v2, v4}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
     iget-object v2, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
 
     invoke-virtual {v2}, Lcom/android/server/pm/ApexManager;->revertActiveSessions()Z
 
-    :cond_d
+    :cond_c
     iget-object v2, p0, Lcom/android/server/pm/StagingManager;->mPowerManager:Landroid/os/PowerManager;
 
     const-string v4, "Checkpoint support unknown"
@@ -4479,7 +4534,7 @@
 
     iget v3, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
 
-    invoke-static {v1, v3}, Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;->access$1600(Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;I)V
+    invoke-static {v1, v3}, Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;->access$1700(Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;I)V
 
     return-void
 
@@ -4488,7 +4543,7 @@
 
     iget v2, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
 
-    invoke-static {v1, v2}, Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;->access$1700(Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;I)V
+    invoke-static {v1, v2}, Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;->access$1800(Lcom/android/server/pm/StagingManager$PreRebootVerificationHandler;I)V
 
     return-void
 .end method
@@ -4545,6 +4600,65 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
+.end method
+
+.method onInstallationFailure(Lcom/android/server/pm/PackageInstallerSession;Lcom/android/server/pm/PackageManagerException;)V
+    .locals 2
+
+    iget v0, p2, Lcom/android/server/pm/PackageManagerException;->error:I
+
+    invoke-virtual {p2}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lcom/android/server/pm/PackageInstallerSession;->setStagedSessionFailed(ILjava/lang/String;)V
+
+    iget v0, p1, Lcom/android/server/pm/PackageInstallerSession;->sessionId:I
+
+    invoke-virtual {p2}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lcom/android/server/pm/StagingManager;->abortCheckpoint(ILjava/lang/String;)V
+
+    invoke-direct {p0, p1}, Lcom/android/server/pm/StagingManager;->sessionContainsApex(Lcom/android/server/pm/PackageInstallerSession;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mApexManager:Lcom/android/server/pm/ApexManager;
+
+    invoke-virtual {v0}, Lcom/android/server/pm/ApexManager;->revertActiveSessions()Z
+
+    move-result v0
+
+    const-string v1, "StagingManager"
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Failed to abort APEXd session"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "Successfully aborted apexd session. Rebooting device in order to revert to the previous state of APEXd."
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/pm/StagingManager;->mPowerManager:Landroid/os/PowerManager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
+
+    :goto_0
+    return-void
 .end method
 
 .method restoreSession(Lcom/android/server/pm/PackageInstallerSession;Z)V

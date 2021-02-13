@@ -51919,13 +51919,6 @@
 
     nop
 
-    const/4 v3, -0x1
-
-    if-ne v2, v3, :cond_0
-
-    return v3
-
-    :cond_0
     invoke-static {v2}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v3
@@ -51934,13 +51927,13 @@
 
     move-result v4
 
-    if-eq v3, v4, :cond_1
+    if-eq v3, v4, :cond_0
 
     const-string v3, "android.permission.DUMP"
 
     invoke-virtual {p0, v3, p4}, Lcom/android/server/am/ActivityManagerService;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1
+    :cond_0
     return v2
 
     :catchall_0
@@ -54459,6 +54452,8 @@
     invoke-virtual {v3, v13}, Lcom/android/server/wm/ActivityTaskManagerInternal;->resumeTopActivities(Z)V
 
     :cond_11
+    invoke-static {v9, v12}, Lcom/oneplus/android/server/am/highpower/HighPowerDetectorInjector;->postProcessOfForceStop(Ljava/lang/String;I)V
+
     return v14
 .end method
 
@@ -70420,10 +70415,10 @@
     return-void
 .end method
 
-.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 1
 
-    invoke-static {p1, p2, p3}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-static {p1, p2, p3}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->registerAppSwitchObserver(Ljava/lang/String;Lcom/android/server/wm/IOPAppSwitchObserver;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v0
 
@@ -84387,10 +84382,10 @@
     return v0
 .end method
 
-.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+.method public unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
     .locals 1
 
-    invoke-static {p1, p2}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/color/app/ColorAppSwitchConfig;)Z
+    invoke-static {p1, p2}, Lcom/android/server/OPAppSwitchManagerServiceInjector;->unregisterAppSwitchObserver(Ljava/lang/String;Lcom/oplus/app/OplusAppSwitchConfig;)Z
 
     move-result v0
 

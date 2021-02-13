@@ -49,10 +49,19 @@
 .method public abstract importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
 .end method
 
+.method public abstract initEnv(Landroid/content/Context;Lcom/android/server/location/LocationManagerService$LocationManagerServiceInner;)V
+.end method
+
 .method public abstract initInstance(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/wm/ActivityTaskManagerService;Landroid/content/pm/IPackageManager;)V
 .end method
 
+.method public abstract isBlockedGpsUid(I)Z
+.end method
+
 .method public abstract isDeliverDisplayChange(I)Z
+.end method
+
+.method public abstract isInPacketWhiteList(Ljava/lang/String;)Z
 .end method
 
 .method public abstract isResStopServiceForIdle(ILjava/lang/String;Ljava/lang/String;)Z

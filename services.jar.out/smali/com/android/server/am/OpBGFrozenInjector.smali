@@ -492,6 +492,34 @@
     return-void
 .end method
 
+.method public static initEnv(Landroid/content/Context;Lcom/android/server/location/LocationManagerService$LocationManagerServiceInner;)V
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpBGFrozen;->initEnv(Landroid/content/Context;Lcom/android/server/location/LocationManagerService$LocationManagerServiceInner;)V
+
+    :cond_1
+    return-void
+.end method
+
 .method public static initInstance(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/wm/ActivityTaskManagerService;Landroid/content/pm/IPackageManager;)V
     .locals 1
 
@@ -518,6 +546,40 @@
 
     :cond_1
     return-void
+.end method
+
+.method public static isBlockedGpsUid(I)Z
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0}, Lcom/android/server/am/IOpBGFrozen;->isBlockedGpsUid(I)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public static isDeliverDisplayChange(I)Z
@@ -550,6 +612,40 @@
 
     :cond_1
     const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public static isInPacketWhiteList(Ljava/lang/String;)Z
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0}, Lcom/android/server/am/IOpBGFrozen;->isInPacketWhiteList(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
 
     return v0
 .end method

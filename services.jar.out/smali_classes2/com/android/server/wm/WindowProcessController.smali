@@ -82,6 +82,8 @@
 
 .field private volatile mHasOverlayUi:Z
 
+.field private mHasPendingConfigurationChange:Z
+
 .field private volatile mHasTopUi:Z
 
 .field private final mHostActivities:Ljava/util/ArrayList;
@@ -118,7 +120,7 @@
 
 .field public final mOwner:Ljava/lang/Object;
 
-.field private mPendingConfiguration:Landroid/content/res/Configuration;
+.field private mPauseConfigurationDispatchCount:I
 
 .field private volatile mPendingUiClean:Z
 
@@ -291,19 +293,34 @@
 .method private dispatchConfigurationChange(Landroid/content/res/Configuration;)V
     .locals 4
 
+    iget v0, p0, Lcom/android/server/wm/WindowProcessController;->mPauseConfigurationDispatchCount:I
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
+
     iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mThread:Landroid/app/IApplicationThread;
 
     const-string v1, "ActivityTaskManager"
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-boolean v0, p0, Lcom/android/server/wm/WindowProcessController;->mHasImeService:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -327,15 +344,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     return-void
 
-    :cond_1
+    :cond_2
     sget-boolean v0, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_CONFIGURATION:Z
 
     const-string v2, " new config "
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -359,14 +376,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
+    :cond_3
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-boolean v0, p0, Lcom/android/server/wm/WindowProcessController;->mHasImeService:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -390,7 +407,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
+    :cond_4
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -414,7 +431,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/wm/ClientLifecycleManager;->scheduleTransaction(Landroid/app/IApplicationThread;Landroid/app/servertransaction/ClientTransactionItem;)V
 
-    invoke-direct {p0, p1}, Lcom/android/server/wm/WindowProcessController;->setLastReportedConfiguration(Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowProcessController;->setLastReportedConfiguration(Landroid/content/res/Configuration;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -580,72 +597,6 @@
     return v0
 .end method
 
-.method private registerActivityConfigurationListener(Lcom/android/server/wm/ActivityRecord;)V
-    .locals 1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1, p0}, Lcom/android/server/wm/ActivityRecord;->containsListener(Lcom/android/server/wm/ConfigurationContainerListener;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/server/wm/WindowProcessController;->unregisterDisplayConfigurationListener()V
-
-    invoke-direct {p0}, Lcom/android/server/wm/WindowProcessController;->unregisterActivityConfigurationListener()V
-
-    iput-object p1, p0, Lcom/android/server/wm/WindowProcessController;->mConfigActivityRecord:Lcom/android/server/wm/ActivityRecord;
-
-    invoke-virtual {p1, p0}, Lcom/android/server/wm/ActivityRecord;->registerConfigurationChangeListener(Lcom/android/server/wm/ConfigurationContainerListener;)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method private static sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
-    .locals 3
-
-    iget-object v0, p0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
-
-    invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getActivityType()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-direct {v0, p0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
-
-    iget-object v1, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/app/WindowConfiguration;->setActivityType(I)V
-
-    return-object v0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method private setLastReportedConfiguration(Landroid/content/res/Configuration;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mLastReportedConfiguration:Landroid/content/res/Configuration;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
 .method private shouldSetProfileProc()Z
     .locals 2
 
@@ -747,7 +698,7 @@
 
     if-nez v2, :cond_1
 
-    invoke-direct {p0, v1}, Lcom/android/server/wm/WindowProcessController;->registerActivityConfigurationListener(Lcom/android/server/wm/ActivityRecord;)V
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowProcessController;->registerActivityConfigurationListener(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
 
@@ -821,27 +772,15 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/server/wm/WindowProcessController;->mPendingConfiguration:Landroid/content/res/Configuration;
+    const/4 v1, 0x1
 
-    if-nez v1, :cond_2
+    iput-boolean v1, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
 
-    new-instance v1, Landroid/content/res/Configuration;
-
-    invoke-direct {v1, v0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
-
-    iput-object v1, p0, Lcom/android/server/wm/WindowProcessController;->mPendingConfiguration:Landroid/content/res/Configuration;
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1, v0}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
-
-    :goto_0
     return-void
 
-    :cond_3
+    :cond_2
     invoke-direct {p0, v0}, Lcom/android/server/wm/WindowProcessController;->dispatchConfigurationChange(Landroid/content/res/Configuration;)V
 
     return-void
@@ -3332,21 +3271,15 @@
 .end method
 
 .method public onMergedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
+    .locals 0
 
-    nop
-
-    invoke-static {p1}, Lcom/android/server/wm/WindowProcessController;->sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    invoke-super {p0, v0}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
 .method public onProcCachedStateChanged(Z)V
-    .locals 3
+    .locals 2
 
     if-nez p1, :cond_1
 
@@ -3357,15 +3290,13 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/server/wm/WindowProcessController;->mPendingConfiguration:Landroid/content/res/Configuration;
+    iget-boolean v1, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/server/wm/WindowProcessController;->mPendingConfiguration:Landroid/content/res/Configuration;
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowProcessController;->getConfiguration()Landroid/content/res/Configuration;
 
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lcom/android/server/wm/WindowProcessController;->mPendingConfiguration:Landroid/content/res/Configuration;
+    move-result-object v1
 
     invoke-direct {p0, v1}, Lcom/android/server/wm/WindowProcessController;->dispatchConfigurationChange(Landroid/content/res/Configuration;)V
 
@@ -3389,15 +3320,9 @@
 .end method
 
 .method public onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
+    .locals 0
 
-    nop
-
-    invoke-static {p1}, Lcom/android/server/wm/WindowProcessController;->sanitizeProcessConfiguration(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    invoke-super {p0, v0}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/server/wm/ConfigurationContainer;->onRequestedOverrideConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -3613,6 +3538,18 @@
     throw v1
 .end method
 
+.method pauseConfigurationDispatch()V
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/wm/WindowProcessController;->mPauseConfigurationDispatchCount:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/android/server/wm/WindowProcessController;->mPauseConfigurationDispatchCount:I
+
+    return-void
+.end method
+
 .method postPendingUiCleanMsg(Z)V
     .locals 3
 
@@ -3641,6 +3578,66 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/wm/ActivityTaskManagerService$H;->sendMessage(Landroid/os/Message;)Z
 
+    return-void
+.end method
+
+.method prepareConfigurationForLaunchingActivity()Landroid/content/res/Configuration;
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowProcessController;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/android/server/wm/WindowProcessController;->mHasPendingConfigurationChange:Z
+
+    iget-object v1, p0, Lcom/android/server/wm/WindowProcessController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
+
+    invoke-virtual {v1}, Lcom/android/server/wm/ActivityTaskManagerService;->increaseConfigurationSeqLocked()I
+
+    move-result v1
+
+    iput v1, v0, Landroid/content/res/Configuration;->seq:I
+
+    :cond_0
+    return-object v0
+.end method
+
+.method registerActivityConfigurationListener(Lcom/android/server/wm/ActivityRecord;)V
+    .locals 1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1, p0}, Lcom/android/server/wm/ActivityRecord;->containsListener(Lcom/android/server/wm/ConfigurationContainerListener;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/android/server/wm/WindowProcessController;->mIsActivityConfigOverrideAllowed:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowProcessController;->unregisterDisplayConfigurationListener()V
+
+    invoke-direct {p0}, Lcom/android/server/wm/WindowProcessController;->unregisterActivityConfigurationListener()V
+
+    iput-object p1, p0, Lcom/android/server/wm/WindowProcessController;->mConfigActivityRecord:Lcom/android/server/wm/ActivityRecord;
+
+    invoke-virtual {p1, p0}, Lcom/android/server/wm/ActivityRecord;->registerConfigurationChangeListener(Lcom/android/server/wm/ConfigurationContainerListener;)V
+
+    return-void
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -3987,6 +3984,40 @@
     return-void
 .end method
 
+.method resolveOverrideConfiguration(Landroid/content/res/Configuration;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Lcom/android/server/wm/ConfigurationContainer;->resolveOverrideConfiguration(Landroid/content/res/Configuration;)V
+
+    invoke-virtual {p0}, Lcom/android/server/wm/WindowProcessController;->getResolvedOverrideConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget-object v1, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/app/WindowConfiguration;->setActivityType(I)V
+
+    iget v1, p1, Landroid/content/res/Configuration;->seq:I
+
+    iput v1, v0, Landroid/content/res/Configuration;->seq:I
+
+    return-void
+.end method
+
+.method resumeConfigurationDispatch()V
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/wm/WindowProcessController;->mPauseConfigurationDispatchCount:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/android/server/wm/WindowProcessController;->mPauseConfigurationDispatchCount:I
+
+    return-void
+.end method
+
 .method public setAllowBackgroundActivityStarts(Z)V
     .locals 0
 
@@ -4188,6 +4219,16 @@
     return-void
 .end method
 
+.method setLastReportedConfiguration(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowProcessController;->mLastReportedConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
+
+    return-void
+.end method
+
 .method public setNotResponding(Z)V
     .locals 0
 
@@ -4327,7 +4368,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/server/wm/WindowProcessController;->setLastReportedConfiguration(Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/WindowProcessController;->setLastReportedConfiguration(Landroid/content/res/Configuration;)V
 
     :cond_0
     monitor-exit v0

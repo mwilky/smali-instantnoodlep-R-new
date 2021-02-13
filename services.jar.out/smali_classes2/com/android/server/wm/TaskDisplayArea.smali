@@ -2302,7 +2302,7 @@
 .end method
 
 .method ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZZ)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -2315,24 +2315,45 @@
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v1, v0, -0x1
 
     :goto_0
-    if-ltz v0, :cond_0
+    if-ltz v1, :cond_2
 
-    invoke-virtual {p0, v0}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
+    invoke-virtual {p0}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
 
-    move-result-object v1
+    move-result v2
 
-    invoke-virtual {v1, p1, p2, p3, p4}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZZ)V
+    if-le v0, v2, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/wm/TaskDisplayArea;->getStackCount()I
+
+    move-result v2
+
+    sub-int v2, v0, v2
+
+    sub-int/2addr v1, v2
+
+    :cond_0
+    if-gez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0, v1}, Lcom/android/server/wm/TaskDisplayArea;->getStackAt(I)Lcom/android/server/wm/ActivityStack;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1, p2, p3, p4}, Lcom/android/server/wm/ActivityStack;->ensureActivitiesVisible(Lcom/android/server/wm/ActivityRecord;IZZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
+    :goto_1
     iget-object v0, p0, Lcom/android/server/wm/TaskDisplayArea;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mStackSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
